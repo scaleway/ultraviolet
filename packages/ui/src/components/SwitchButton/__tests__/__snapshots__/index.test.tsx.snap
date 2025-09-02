@@ -3516,18 +3516,28 @@ exports[`SwitchButton > renders neutral 1`] = `
 exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3550,28 +3560,6 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -3583,1172 +3571,15 @@ exports[`SwitchButton > renders with disabled and tooltip on SwitchButton.Option
   position: relative;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 3rem;
-}
-
-.emotion-4 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  position: relative;
-}
-
-.emotion-4[data-size='small'] {
-  height: 2.5rem;
-}
-
-.emotion-4[data-size='medium'] {
-  height: 3rem;
-}
-
-.emotion-6 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-6[data-sentiment='neutral'] {
-  background: #e9eaeb;
-}
-
-.emotion-6 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-6[data-sentiment='neutral'] {
-  background: #e9eaeb;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-  height: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-13[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-13[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-13[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-13[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-13[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-13[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-13:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-13:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-13:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-13:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-13[data-has-label='true'] .emotion-16,
-.emotion-13[data-has-label='true'] .eqr7bqq0 {
-  width: 100%;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-13:hover:not([data-error='true'][data-disabled='true']),
-.emotion-13:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.emotion-13[data-checked='true'] {
-  border: none;
-}
-
-.emotion-13 label {
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  color: #222638;
-}
-
-.emotion-13[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.emotion-13:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: transparent;
-  border: none;
-}
-
-.emotion-13 label {
-  color: #b5b7bd;
-}
-
-.emotion-13:not([data-checked='true']) label:hover {
-  background: transparent;
-  color: #b5b7bd;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-18 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-18[aria-disabled='false'],
-.emotion-18[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
-  fill: #8c40ef;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
-  fill: #e5dbfd;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
-  fill: #b3144d;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
-  fill: #ffd3e3;
-}
-
-.emotion-18[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-18[aria-disabled='true']>label,
-.emotion-18[aria-disabled='true'] .emotion-21 {
-  cursor: not-allowed;
-}
-
-.emotion-18[aria-disabled='true'] .emotion-23 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
-  fill: #f3f3f4;
-}
-
-.emotion-18[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-18[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-18[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-18 input+svg {
-  display: none;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 {
-  fill: #d9dadd;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 {
-  fill: #b3144d;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
-  fill: #8c40ef;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
-  fill: #b3144d;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 {
-  background: none;
-  fill: #8c40ef;
-}
-
-.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-18[aria-disabled='false'],
-.emotion-18[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
-  fill: #8c40ef;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
-  fill: #e5dbfd;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
-  fill: #b3144d;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
-  fill: #ffd3e3;
-}
-
-.emotion-18[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-18[aria-disabled='true']>label,
-.emotion-18[aria-disabled='true'] .emotion-21 {
-  cursor: not-allowed;
-}
-
-.emotion-18[aria-disabled='true'] .emotion-23 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-18[aria-disabled='true'] .emotion-23 .emotion-25 {
-  fill: #f3f3f4;
-}
-
-.emotion-18[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-18[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-18[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-18 input+svg {
-  display: none;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 {
-  fill: #d9dadd;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 {
-  fill: #b3144d;
-}
-
-.emotion-18:hover[aria-disabled='false']:not([data-checked='true']) .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 {
-  fill: #8c40ef;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 {
-  fill: #b3144d;
-}
-
-.emotion-18:hover[aria-disabled='false'] .emotion-21[aria-invalid='true']+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 {
-  background: none;
-  fill: #8c40ef;
-}
-
-.emotion-18 .emotion-21[aria-disabled='false']:active+.emotion-23 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-20 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-20+.emotion-23 .emotion-27 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-20:checked+svg .emotion-27 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-20:checked[aria-disabled='false'][aria-invalid='false']+.emotion-23 {
-  fill: #8c40ef;
-}
-
-.emotion-20:checked[aria-disabled='true'][aria-invalid='false']+.emotion-23 {
-  fill: #d8c5fc;
-}
-
-.emotion-20[aria-invalid='true']:not([aria-disabled='true'])+.emotion-23 {
-  fill: #e51963;
-}
-
-.emotion-20[aria-disabled='false']:active+.emotion-23 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-20[aria-disabled='false']:active+.emotion-23 .emotion-25 {
-  fill: #f1eefc;
-}
-
-.emotion-20[aria-disabled='false']:focus-visible+.emotion-23 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-20[aria-invalid='true']:focus+.emotion-23 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
-  fill: #ffebf2;
-}
-
-.emotion-20 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-20+.emotion-23 .emotion-27 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-20:checked+svg .emotion-27 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-20:checked[aria-disabled='false'][aria-invalid='false']+.emotion-23 {
-  fill: #8c40ef;
-}
-
-.emotion-20:checked[aria-disabled='true'][aria-invalid='false']+.emotion-23 {
-  fill: #d8c5fc;
-}
-
-.emotion-20[aria-invalid='true']:not([aria-disabled='true'])+.emotion-23 {
-  fill: #e51963;
-}
-
-.emotion-20[aria-disabled='false']:active+.emotion-23 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-20[aria-disabled='false']:active+.emotion-23 .emotion-25 {
-  fill: #f1eefc;
-}
-
-.emotion-20[aria-disabled='false']:focus-visible+.emotion-23 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-20[aria-invalid='true']:focus+.emotion-23 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-20[aria-invalid='true']:focus+.emotion-23 .emotion-25 {
-  fill: #ffebf2;
-}
-
-.emotion-22 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-22 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-22 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-22 .emotion-25 {
-  fill: #ffffff;
-}
-
-.emotion-28 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-.emotion-28 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-  height: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-31[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-31[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-31[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-31[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-31[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-31[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-31[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-31:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-31:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-31:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-31:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-31[data-has-label='true'] .emotion-16,
-.emotion-31[data-has-label='true'] .eqr7bqq0 {
-  width: 100%;
-}
-
-.emotion-31:hover,
-.emotion-31:active {
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-31:hover:not([data-error='true'][data-disabled='true']),
-.emotion-31:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.emotion-31[data-checked='true'] {
-  border: none;
-}
-
-.emotion-31 label {
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  color: #222638;
-}
-
-.emotion-31[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.emotion-31:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-  height: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-31[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-31[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-31[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-31[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-31[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-31[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-31[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-31:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-31:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-31:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-31:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-31[data-has-label='true'] .emotion-16,
-.emotion-31[data-has-label='true'] .eqr7bqq0 {
-  width: 100%;
-}
-
-.emotion-31:hover,
-.emotion-31:active {
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-31:hover:not([data-error='true'][data-disabled='true']),
-.emotion-31:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.emotion-31[data-checked='true'] {
-  border: none;
-}
-
-.emotion-31 label {
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  color: #222638;
-}
-
-.emotion-31[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.emotion-31:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      aria-controls="«r1d»"
-      aria-describedby="«r1d»"
-      class="emotion-0 emotion-1"
-      tabindex="0"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5"
-          data-size="small"
-        >
-          <div
-            class="emotion-6 emotion-7"
-            data-sentiment="primary"
-            style="left: 0px; width: 100px;"
-          />
-          <div
-            class="emotion-8 emotion-3"
-          >
-            <div
-              aria-controls="«r1e»"
-              aria-describedby="«r1e»"
-              class="emotion-0 emotion-1"
-              data-container-full-height="true"
-              tabindex="0"
-            >
-              <div
-                class="emotion-12 emotion-13 emotion-14"
-                data-checked="true"
-                data-disabled="true"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
-                data-testid="switch-button-left"
-                data-type="radio"
-                role="button"
-              >
-                <div
-                  class="emotion-15 emotion-16"
-                >
-                  <div
-                    aria-disabled="true"
-                    class="emotion-17 emotion-18 emotion-19"
-                    data-checked="true"
-                  >
-                    <input
-                      aria-disabled="true"
-                      aria-invalid="false"
-                      checked=""
-                      class="emotion-20 emotion-21"
-                      disabled=""
-                      id="«r1f»"
-                      name="test"
-                      tabindex="-1"
-                      type="radio"
-                      value="left"
-                    />
-                    <svg
-                      class="emotion-22 emotion-23"
-                      viewBox="0 0 24 24"
-                    >
-                      <g>
-                        <circle
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke-width="2"
-                        />
-                        <circle
-                          class="emotion-24 emotion-25"
-                          cx="12"
-                          cy="12"
-                          r="8"
-                        />
-                        <circle
-                          class="emotion-26 emotion-27"
-                          cx="12"
-                          cy="12"
-                          r="5"
-                        />
-                      </g>
-                    </svg>
-                    <label
-                      class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                      for="«r1f»"
-                    >
-                      Left
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="emotion-12 emotion-31 emotion-14"
-            data-checked="false"
-            data-disabled="false"
-            data-has-default-cursor="false"
-            data-has-label="true"
-            data-image="none"
-            data-testid="switch-button-right"
-            data-type="radio"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="emotion-15 emotion-16"
-            >
-              <div
-                aria-disabled="false"
-                class="emotion-17 emotion-18 emotion-19"
-                data-checked="false"
-              >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  class="emotion-20 emotion-21"
-                  id="«r1j»"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="right"
-                />
-                <svg
-                  class="emotion-22 emotion-23"
-                  viewBox="0 0 24 24"
-                >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="emotion-24 emotion-25"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="emotion-26 emotion-27"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
-                </svg>
-                <label
-                  class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  for="«r1j»"
-                >
-                  Right
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SwitchButton > renders with icons 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -4760,60 +3591,65 @@ exports[`SwitchButton > renders with icons 1`] = `
   position: relative;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 3rem;
 }
 
 .emotion-4 {
-  border: 1px solid #d9dadd;
+  position: absolute;
+  height: calc(100% - 0.5rem);
   border-radius: 0.25rem;
-  padding: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
-  position: relative;
-}
-
-.emotion-4[data-size='small'] {
-  height: 2.5rem;
-}
-
-.emotion-4[data-size='medium'] {
-  height: 3rem;
-}
-
-.emotion-6 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-6[data-sentiment='neutral'] {
-  background: #e9eaeb;
-}
-
-.emotion-6 {
-  position: absolute;
-  height: calc(100% - 0.5rem);
-  border-radius: 0.25rem;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.emotion-6[data-sentiment='neutral'] {
-  background: #e9eaeb;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .emotion-9 {
@@ -4947,135 +3783,18 @@ exports[`SwitchButton > renders with icons 1`] = `
   color: #641cb3;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-  height: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-9[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-9[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-9[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-9[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
 .emotion-9[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-9[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-9[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-9[data-has-label='true'] .emotion-12,
-.emotion-9[data-has-label='true'] .eqr7bqq0 {
-  width: 100%;
-}
-
-.emotion-9:hover,
-.emotion-9:active {
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-9:hover:not([data-error='true'][data-disabled='true']),
-.emotion-9:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.emotion-9[data-checked='true'] {
+  background: transparent;
   border: none;
 }
 
 .emotion-9 label {
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  color: #222638;
-}
-
-.emotion-9[data-checked='true'] label {
-  color: #ffffff;
+  color: #b5b7bd;
 }
 
 .emotion-9:not([data-checked='true']) label:hover {
-  color: #641cb3;
+  background: transparent;
+  color: #b5b7bd;
 }
 
 .emotion-11 {
@@ -5521,115 +4240,374 @@ exports[`SwitchButton > renders with icons 1`] = `
   cursor: pointer;
 }
 
-.emotion-26 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
+.emotion-24 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
-.emotion-26 .fillStroke {
-  stroke: currentColor;
-  fill: none;
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-27[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-27[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-27[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-27[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-27[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-27[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-27[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-27:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-27:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-27:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-27:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-27[data-has-label='true'] .emotion-12,
+.emotion-27[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-27:hover,
+.emotion-27:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-27:hover:not([data-error='true'][data-disabled='true']),
+.emotion-27:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-27[data-checked='true'] {
+  border: none;
+}
+
+.emotion-27 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-27[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-27:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-27[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-27[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-27[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-27[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-27[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-27[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-27[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-27:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-27:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-27:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-27:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-27[data-has-label='true'] .emotion-12,
+.emotion-27[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-27:hover,
+.emotion-27:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-27:hover:not([data-error='true'][data-disabled='true']),
+.emotion-27:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-27[data-checked='true'] {
+  border: none;
+}
+
+.emotion-27 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-27[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-27:not([data-checked='true']) label:hover {
+  color: #641cb3;
 }
 
 <div
     data-testid="testing"
   >
     <div
-      aria-controls="«r1v»"
-      aria-describedby="«r1v»"
-      class="emotion-0 emotion-1"
+      aria-controls="«r1d»"
+      aria-describedby="«r1d»"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-size="small"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             data-sentiment="primary"
             style="left: 0px; width: 100px;"
           />
           <div
-            class="emotion-8 emotion-9 emotion-10"
-            data-checked="true"
-            data-disabled="false"
-            data-has-default-cursor="false"
-            data-has-label="true"
-            data-image="none"
-            data-testid="switch-button-left"
-            data-type="radio"
-            role="button"
-            tabindex="0"
+            class="emotion-6 emotion-1"
           >
             <div
-              class="emotion-11 emotion-12"
+              aria-controls="«r1e»"
+              aria-describedby="«r1e»"
+              class="styles__w40vpo9 styles_fullHeight_true__w40vpoa"
+              tabindex="0"
             >
               <div
-                aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-8 emotion-9 emotion-10"
                 data-checked="true"
+                data-disabled="true"
+                data-has-default-cursor="false"
+                data-has-label="true"
+                data-image="none"
+                data-testid="switch-button-left"
+                data-type="radio"
+                role="button"
               >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  checked=""
-                  class="emotion-16 emotion-17"
-                  id="«r21»"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="left"
-                />
-                <svg
-                  class="emotion-18 emotion-19"
-                  viewBox="0 0 24 24"
+                <div
+                  class="emotion-11 emotion-12"
                 >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="emotion-20 emotion-21"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="emotion-22 emotion-23"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
-                </svg>
-                <label
-                  class="emotion-24 emotion-25"
-                  for="«r21»"
-                >
-                  <svg
-                    class="emotion-26 emotion-27"
-                    viewBox="0 0 16 16"
+                  <div
+                    aria-disabled="true"
+                    class="emotion-13 emotion-14 emotion-15"
+                    data-checked="true"
                   >
-                    <path
-                      d="M14.9543 10.6781C15.1672 10.2014 14.5937 9.79573 14.1149 10.0038C13.3621 10.3309 12.5313 10.5123 11.6581 10.5123C8.25024 10.5123 5.48762 7.74964 5.48762 4.34178C5.48762 3.46865 5.66897 2.63787 5.99605 1.88507C6.20408 1.40628 5.79836 0.832829 5.32171 1.0457C2.77491 2.1831 1 4.73805 1 7.70756C1 11.735 4.26491 14.9999 8.29238 14.9999C11.2619 14.9999 13.8169 13.225 14.9543 10.6781Z"
+                    <input
+                      aria-disabled="true"
+                      aria-invalid="false"
+                      checked=""
+                      class="emotion-16 emotion-17"
+                      disabled=""
+                      id="«r1f»"
+                      name="test"
+                      tabindex="-1"
+                      type="radio"
+                      value="left"
                     />
-                  </svg>
-                </label>
+                    <svg
+                      class="emotion-18 emotion-19"
+                      viewBox="0 0 24 24"
+                    >
+                      <g>
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke-width="2"
+                        />
+                        <circle
+                          class="emotion-20 emotion-21"
+                          cx="12"
+                          cy="12"
+                          r="8"
+                        />
+                        <circle
+                          class="emotion-22 emotion-23"
+                          cx="12"
+                          cy="12"
+                          r="5"
+                        />
+                      </g>
+                    </svg>
+                    <label
+                      class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                      for="«r1f»"
+                    >
+                      Left
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-8 emotion-27 emotion-10"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -5652,7 +4630,7 @@ exports[`SwitchButton > renders with icons 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   class="emotion-16 emotion-17"
-                  id="«r24»"
+                  id="«r1j»"
                   name="test"
                   tabindex="-1"
                   type="radio"
@@ -5684,11 +4662,1008 @@ exports[`SwitchButton > renders with icons 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25"
+                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  for="«r1j»"
+                >
+                  Right
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders with icons 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.emotion-2[data-size='small'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 3rem;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-4 {
+  position: absolute;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-4[data-sentiment='neutral'] {
+  background: #e9eaeb;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-7[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-7[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-7[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-7[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-7[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-7:hover,
+.emotion-7:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-7[data-checked='true'] {
+  border: none;
+}
+
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-7:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+  background: transparent;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-7[data-has-label='false']>:first-child {
+  margin-bottom: -0.25rem;
+}
+
+.emotion-7[data-has-default-cursor='true'] {
+  cursor: default;
+}
+
+.emotion-7[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-7[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-image="illustration"] {
+  padding: 0rem;
+}
+
+.emotion-7[data-image="icon"] {
+  padding: 0rem;
+  padding-right: 1rem;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
+  width: 100%;
+}
+
+.emotion-7:hover,
+.emotion-7:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-7[data-checked='true'] {
+  border: none;
+}
+
+.emotion-7 label {
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  color: #222638;
+}
+
+.emotion-7[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-7:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #e5dbfd;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffd3e3;
+}
+
+.emotion-12[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+  fill: #f3f3f4;
+}
+
+.emotion-12[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-12[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-12[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-12 input+svg {
+  display: none;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+  fill: #d9dadd;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #e5dbfd;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffd3e3;
+}
+
+.emotion-12[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
+  fill: #f3f3f4;
+}
+
+.emotion-12[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-12[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-12[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-12 input+svg {
+  display: none;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
+  fill: #d9dadd;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
+  fill: #b3144d;
+}
+
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
+  background: none;
+  fill: #8c40ef;
+}
+
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-14+.emotion-17 .emotion-21 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-14:checked+svg .emotion-21 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+  fill: #e51963;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #f1eefc;
+}
+
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+  fill: #ffebf2;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-14+.emotion-17 .emotion-21 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-14:checked+svg .emotion-21 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
+  fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
+  fill: #e51963;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
+  fill: #f1eefc;
+}
+
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
+  fill: #ffebf2;
+}
+
+.emotion-16 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-16 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-16 {
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-16 .emotion-19 {
+  fill: #ffffff;
+}
+
+.emotion-22 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-24 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.emotion-24 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="«r1v»"
+      aria-describedby="«r1v»"
+      class="styles__w40vpo9"
+      tabindex="0"
+    >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          class="emotion-2 emotion-3"
+          data-size="small"
+        >
+          <div
+            class="emotion-4 emotion-5"
+            data-sentiment="primary"
+            style="left: 0px; width: 100px;"
+          />
+          <div
+            class="emotion-6 emotion-7 emotion-8"
+            data-checked="true"
+            data-disabled="false"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            data-image="none"
+            data-testid="switch-button-left"
+            data-type="radio"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-11 emotion-12 emotion-13"
+                data-checked="true"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  checked=""
+                  class="emotion-14 emotion-15"
+                  id="«r21»"
+                  name="test"
+                  tabindex="-1"
+                  type="radio"
+                  value="left"
+                />
+                <svg
+                  class="emotion-16 emotion-17"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-18 emotion-19"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-20 emotion-21"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-22 emotion-23"
+                  for="«r21»"
+                >
+                  <svg
+                    class="emotion-24 emotion-25"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M14.9543 10.6781C15.1672 10.2014 14.5937 9.79573 14.1149 10.0038C13.3621 10.3309 12.5313 10.5123 11.6581 10.5123C8.25024 10.5123 5.48762 7.74964 5.48762 4.34178C5.48762 3.46865 5.66897 2.63787 5.99605 1.88507C6.20408 1.40628 5.79836 0.832829 5.32171 1.0457C2.77491 2.1831 1 4.73805 1 7.70756C1 11.735 4.26491 14.9999 8.29238 14.9999C11.2619 14.9999 13.8169 13.225 14.9543 10.6781Z"
+                    />
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-6 emotion-7 emotion-8"
+            data-checked="false"
+            data-disabled="false"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            data-image="none"
+            data-testid="switch-button-right"
+            data-type="radio"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="emotion-9 emotion-10"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-11 emotion-12 emotion-13"
+                data-checked="false"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="emotion-14 emotion-15"
+                  id="«r24»"
+                  name="test"
+                  tabindex="-1"
+                  type="radio"
+                  value="right"
+                />
+                <svg
+                  class="emotion-16 emotion-17"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-18 emotion-19"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-20 emotion-21"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-22 emotion-23"
                   for="«r24»"
                 >
                   <svg
-                    class="emotion-26 emotion-27"
+                    class="emotion-24 emotion-25"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5733,18 +5708,28 @@ exports[`SwitchButton > renders with icons 1`] = `
 exports[`SwitchButton > renders with tooltip 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5767,28 +5752,6 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -5800,15 +5763,15 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   position: relative;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -5820,15 +5783,15 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   position: relative;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   height: calc(100% - 0.5rem);
   border-radius: 0.25rem;
@@ -5838,11 +5801,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.emotion-6[data-sentiment='neutral'] {
+.emotion-4[data-sentiment='neutral'] {
   background: #e9eaeb;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   height: calc(100% - 0.5rem);
   border-radius: 0.25rem;
@@ -5852,11 +5815,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.emotion-6[data-sentiment='neutral'] {
+.emotion-4[data-sentiment='neutral'] {
   background: #e9eaeb;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5911,83 +5874,83 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   user-select: none;
 }
 
-.emotion-9[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-9[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-9[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-9[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-9[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-9[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-9[data-has-label='true'] .emotion-12,
-.emotion-9[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-9:hover,
-.emotion-9:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-9:hover:not([data-error='true'][data-disabled='true']),
-.emotion-9:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-9[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-9 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-9[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-9:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6042,83 +6005,83 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   user-select: none;
 }
 
-.emotion-9[data-has-label='false']>:first-child {
+.emotion-7[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-9[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-9[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-7[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-9[data-disabled='true'] {
+.emotion-7[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-9[data-image="illustration"] {
+.emotion-7[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-9[data-image="icon"] {
+.emotion-7[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-9:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-9:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-7:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-9:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-9:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-7:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-7:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-9[data-has-label='true'] .emotion-12,
-.emotion-9[data-has-label='true'] .eqr7bqq0 {
+.emotion-7[data-has-label='true'] .emotion-10,
+.emotion-7[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-9:hover,
-.emotion-9:active {
+.emotion-7:hover,
+.emotion-7:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-9:hover:not([data-error='true'][data-disabled='true']),
-.emotion-9:active:not([data-error='true'][data-disabled='true']) {
+.emotion-7:hover:not([data-error='true'][data-disabled='true']),
+.emotion-7:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-9[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   border: none;
 }
 
-.emotion-9 label {
+.emotion-7 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-9[data-checked='true'] label {
+.emotion-7[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-9:not([data-checked='true']) label:hover {
+.emotion-7:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6141,7 +6104,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-11 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6164,7 +6127,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-14 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6188,104 +6151,104 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   align-items: start;
 }
 
-.emotion-14[aria-disabled='false'],
-.emotion-14[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true']>label,
-.emotion-14[aria-disabled='true'] .emotion-17 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-14 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6309,104 +6272,104 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   align-items: start;
 }
 
-.emotion-14[aria-disabled='false'],
-.emotion-14[aria-disabled='false']>label {
+.emotion-12[aria-disabled='false'],
+.emotion-12[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true']>label,
-.emotion-14[aria-disabled='true'] .emotion-17 {
+.emotion-12[aria-disabled='true']>label,
+.emotion-12[aria-disabled='true'] .emotion-15 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-12[aria-disabled='true'] .emotion-17 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-12[aria-disabled='true'] .emotion-17 .emotion-19 {
   fill: #f3f3f4;
 }
 
-.emotion-14[data-checked='true'] {
+.emotion-12[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-14[data-error='true'] {
+.emotion-12[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-14 input+svg {
+.emotion-12 input+svg {
   display: none;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 {
   fill: #d9dadd;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false']:not([data-checked='true']) .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false']:not([data-checked='true']) .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-12:hover[aria-disabled='false'] .emotion-15[aria-invalid='true']+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-14 .emotion-17[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-12 .emotion-15[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-16 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -6416,7 +6379,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.emotion-16+.emotion-19 .emotion-23 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6426,48 +6389,48 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.emotion-16:checked+svg .emotion-23 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-16 {
+.emotion-14 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -6477,7 +6440,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.emotion-16+.emotion-19 .emotion-23 {
+.emotion-14+.emotion-17 .emotion-21 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6487,48 +6450,48 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.emotion-16:checked+svg .emotion-23 {
+.emotion-14:checked+svg .emotion-21 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+.emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
 }
 
-.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+.emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-14[aria-disabled='false']:active+.emotion-17 .emotion-19 {
   fill: #f1eefc;
 }
 
-.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+.emotion-14[aria-disabled='false']:focus-visible+.emotion-17 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-14[aria-invalid='true']:focus+.emotion-17 .emotion-19 {
   fill: #ffebf2;
 }
 
-.emotion-18 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -6537,11 +6500,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-18 .emotion-21 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-18 {
+.emotion-16 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -6550,18 +6513,18 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-18 .emotion-21 {
+.emotion-16 .emotion-19 {
   fill: #ffffff;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   cursor: pointer;
 }
 
-.emotion-24 {
+.emotion-22 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -6574,23 +6537,23 @@ exports[`SwitchButton > renders with tooltip 1`] = `
     <div
       aria-controls="«r14»"
       aria-describedby="«r14»"
-      class="emotion-0 emotion-1"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-size="small"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             data-sentiment="primary"
             style="left: 0px; width: 100px;"
           />
           <div
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-6 emotion-7 emotion-8"
             data-checked="true"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -6602,18 +6565,18 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             tabindex="0"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
                 data-checked="true"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                   id="«r16»"
                   name="test"
                   tabindex="-1"
@@ -6621,7 +6584,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   value="left"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -6632,13 +6595,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-18 emotion-19"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="5"
@@ -6646,7 +6609,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-22 emotion-23 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«r16»"
                 >
                   Left
@@ -6655,7 +6618,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             </div>
           </div>
           <div
-            class="emotion-8 emotion-9 emotion-10"
+            class="emotion-6 emotion-7 emotion-8"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -6667,17 +6630,17 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             tabindex="0"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                   id="«r1a»"
                   name="test"
                   tabindex="-1"
@@ -6685,7 +6648,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   value="right"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -6696,13 +6659,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-18 emotion-19"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-20 emotion-21"
                       cx="12"
                       cy="12"
                       r="5"
@@ -6710,7 +6673,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-22 emotion-23 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«r1a»"
                 >
                   Right
