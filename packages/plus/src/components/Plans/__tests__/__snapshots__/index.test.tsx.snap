@@ -270,18 +270,6 @@ exports[`plans > should work with default props 1`] = `
 }
 
 .emotion-30 {
-  display: inherit;
-}
-
-.emotion-30[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-30[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-32 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -290,16 +278,16 @@ exports[`plans > should work with default props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-32 .fillStroke {
+.emotion-30 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-44 {
+.emotion-40 {
   cursor: pointer;
 }
 
-.emotion-58 {
+.emotion-54 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.5rem;
@@ -308,12 +296,12 @@ exports[`plans > should work with default props 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-72 {
+.emotion-66 {
   vertical-align: middle;
   fill: #7ee0bc;
   height: 1.25rem;
@@ -322,7 +310,7 @@ exports[`plans > should work with default props 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-66 .fillStroke {
   stroke: #7ee0bc;
   fill: none;
 }
@@ -469,11 +457,11 @@ exports[`plans > should work with default props 1`] = `
                 <div
                   aria-controls="«r9»"
                   aria-describedby="«r9»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -527,17 +515,17 @@ exports[`plans > should work with default props 1`] = `
                 <div
                   aria-controls="«rd»"
                   aria-describedby="«rd»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-44 emotion-45"
+                    class="emotion-40 emotion-41"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-32 emotion-33"
+                      class="emotion-30 emotion-31"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -603,7 +591,7 @@ exports[`plans > should work with default props 1`] = `
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-58 emotion-33"
+              class="emotion-54 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -631,11 +619,11 @@ exports[`plans > should work with default props 1`] = `
                 <div
                   aria-controls="«ri»"
                   aria-describedby="«ri»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -658,7 +646,7 @@ exports[`plans > should work with default props 1`] = `
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -699,7 +687,7 @@ exports[`plans > should work with default props 1`] = `
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -1253,30 +1241,20 @@ exports[`plans > should work with group 1`] = `
 }
 
 .emotion-30 {
-  display: inherit;
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-30[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-30[data-container-full-width="true"] {
-  width: 100%;
+.emotion-30 .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 .emotion-30 {
-  display: inherit;
-}
-
-.emotion-30[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-30[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-32 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1285,38 +1263,24 @@ exports[`plans > should work with group 1`] = `
   min-height: 1rem;
 }
 
-.emotion-32 .fillStroke {
+.emotion-30 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-32 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-32 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-40 {
+.emotion-38 {
   text-transform: uppercase;
 }
 
-.emotion-52 {
+.emotion-48 {
   cursor: pointer;
 }
 
-.emotion-52 {
+.emotion-48 {
   cursor: pointer;
 }
 
-.emotion-66 {
+.emotion-62 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.5rem;
@@ -1325,12 +1289,12 @@ exports[`plans > should work with group 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-66 .fillStroke {
+.emotion-62 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-66 {
+.emotion-62 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.5rem;
@@ -1339,12 +1303,12 @@ exports[`plans > should work with group 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-66 .fillStroke {
+.emotion-62 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-80 {
+.emotion-74 {
   vertical-align: middle;
   fill: #7ee0bc;
   height: 1.25rem;
@@ -1353,12 +1317,12 @@ exports[`plans > should work with group 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-80 .fillStroke {
+.emotion-74 .fillStroke {
   stroke: #7ee0bc;
   fill: none;
 }
 
-.emotion-80 {
+.emotion-74 {
   vertical-align: middle;
   fill: #7ee0bc;
   height: 1.25rem;
@@ -1367,7 +1331,7 @@ exports[`plans > should work with group 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-80 .fillStroke {
+.emotion-74 .fillStroke {
   stroke: #7ee0bc;
   fill: none;
 }
@@ -1514,11 +1478,11 @@ exports[`plans > should work with group 1`] = `
                 <div
                   aria-controls="«r4d»"
                   aria-describedby="«r4d»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1563,7 +1527,7 @@ exports[`plans > should work with group 1`] = `
               class="emotion-28 emotion-13"
             >
               <p
-                class="emotion-40 emotion-41 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owp uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="emotion-38 emotion-39 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owp uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 group
               </p>
@@ -1596,17 +1560,17 @@ exports[`plans > should work with group 1`] = `
                 <div
                   aria-controls="«r4i»"
                   aria-describedby="«r4i»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-52 emotion-53"
+                    class="emotion-48 emotion-49"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-32 emotion-33"
+                      class="emotion-30 emotion-31"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -1672,7 +1636,7 @@ exports[`plans > should work with group 1`] = `
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-66 emotion-33"
+              class="emotion-62 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -1700,11 +1664,11 @@ exports[`plans > should work with group 1`] = `
                 <div
                   aria-controls="«r4n»"
                   aria-describedby="«r4n»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1727,7 +1691,7 @@ exports[`plans > should work with group 1`] = `
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-80 emotion-33"
+              class="emotion-74 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -1768,7 +1732,7 @@ exports[`plans > should work with group 1`] = `
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-80 emotion-33"
+              class="emotion-74 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -2055,18 +2019,6 @@ exports[`plans > should work with hideFeatureText 1`] = `
 }
 
 .emotion-30 {
-  display: inherit;
-}
-
-.emotion-30[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-30[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-32 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2075,16 +2027,16 @@ exports[`plans > should work with hideFeatureText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-32 .fillStroke {
+.emotion-30 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-44 {
+.emotion-40 {
   cursor: pointer;
 }
 
-.emotion-58 {
+.emotion-54 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.5rem;
@@ -2093,12 +2045,12 @@ exports[`plans > should work with hideFeatureText 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-72 {
+.emotion-66 {
   vertical-align: middle;
   fill: #7ee0bc;
   height: 1.25rem;
@@ -2107,7 +2059,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-66 .fillStroke {
   stroke: #7ee0bc;
   fill: none;
 }
@@ -2248,11 +2200,11 @@ exports[`plans > should work with hideFeatureText 1`] = `
                 <div
                   aria-controls="«r1g»"
                   aria-describedby="«r1g»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -2306,17 +2258,17 @@ exports[`plans > should work with hideFeatureText 1`] = `
                 <div
                   aria-controls="«r1k»"
                   aria-describedby="«r1k»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-44 emotion-45"
+                    class="emotion-40 emotion-41"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-32 emotion-33"
+                      class="emotion-30 emotion-31"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -2382,7 +2334,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-58 emotion-33"
+              class="emotion-54 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -2410,11 +2362,11 @@ exports[`plans > should work with hideFeatureText 1`] = `
                 <div
                   aria-controls="«r1p»"
                   aria-describedby="«r1p»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -2437,7 +2389,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -2478,7 +2430,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -2765,18 +2717,6 @@ exports[`plans > should work with hideLabels 1`] = `
 }
 
 .emotion-30 {
-  display: inherit;
-}
-
-.emotion-30[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-30[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-32 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2785,16 +2725,16 @@ exports[`plans > should work with hideLabels 1`] = `
   min-height: 1rem;
 }
 
-.emotion-32 .fillStroke {
+.emotion-30 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-44 {
+.emotion-40 {
   cursor: pointer;
 }
 
-.emotion-58 {
+.emotion-54 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.5rem;
@@ -2803,12 +2743,12 @@ exports[`plans > should work with hideLabels 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-72 {
+.emotion-66 {
   vertical-align: middle;
   fill: #7ee0bc;
   height: 1.25rem;
@@ -2817,7 +2757,7 @@ exports[`plans > should work with hideLabels 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-66 .fillStroke {
   stroke: #7ee0bc;
   fill: none;
 }
@@ -2964,11 +2904,11 @@ exports[`plans > should work with hideLabels 1`] = `
                 <div
                   aria-controls="«rt»"
                   aria-describedby="«rt»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3022,17 +2962,17 @@ exports[`plans > should work with hideLabels 1`] = `
                 <div
                   aria-controls="«r11»"
                   aria-describedby="«r11»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-44 emotion-45"
+                    class="emotion-40 emotion-41"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-32 emotion-33"
+                      class="emotion-30 emotion-31"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -3098,7 +3038,7 @@ exports[`plans > should work with hideLabels 1`] = `
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-58 emotion-33"
+              class="emotion-54 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -3126,11 +3066,11 @@ exports[`plans > should work with hideLabels 1`] = `
                 <div
                   aria-controls="«r16»"
                   aria-describedby="«r16»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3153,7 +3093,7 @@ exports[`plans > should work with hideLabels 1`] = `
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -3194,7 +3134,7 @@ exports[`plans > should work with hideLabels 1`] = `
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -3483,18 +3423,6 @@ exports[`plans > should work with value 1`] = `
 }
 
 .emotion-30 {
-  display: inherit;
-}
-
-.emotion-30[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-30[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-32 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -3503,16 +3431,16 @@ exports[`plans > should work with value 1`] = `
   min-height: 1rem;
 }
 
-.emotion-32 .fillStroke {
+.emotion-30 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-44 {
+.emotion-40 {
   cursor: pointer;
 }
 
-.emotion-58 {
+.emotion-54 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.5rem;
@@ -3521,12 +3449,12 @@ exports[`plans > should work with value 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-58 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-72 {
+.emotion-66 {
   vertical-align: middle;
   fill: #7ee0bc;
   height: 1.25rem;
@@ -3535,7 +3463,7 @@ exports[`plans > should work with value 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-72 .fillStroke {
+.emotion-66 .fillStroke {
   stroke: #7ee0bc;
   fill: none;
 }
@@ -3682,11 +3610,11 @@ exports[`plans > should work with value 1`] = `
                 <div
                   aria-controls="«r24»"
                   aria-describedby="«r24»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3740,17 +3668,17 @@ exports[`plans > should work with value 1`] = `
                 <div
                   aria-controls="«r28»"
                   aria-describedby="«r28»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-44 emotion-45"
+                    class="emotion-40 emotion-41"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-32 emotion-33"
+                      class="emotion-30 emotion-31"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -3816,7 +3744,7 @@ exports[`plans > should work with value 1`] = `
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-58 emotion-33"
+              class="emotion-54 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -3844,11 +3772,11 @@ exports[`plans > should work with value 1`] = `
                 <div
                   aria-controls="«r2d»"
                   aria-describedby="«r2d»"
-                  class="emotion-30 emotion-31"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-32 emotion-33"
+                    class="emotion-30 emotion-31"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3871,7 +3799,7 @@ exports[`plans > should work with value 1`] = `
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
@@ -3912,7 +3840,7 @@ exports[`plans > should work with value 1`] = `
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-72 emotion-33"
+              class="emotion-66 emotion-31"
               viewBox="0 0 20 20"
             >
               <path
