@@ -3,7 +3,7 @@ import { Stack } from '..'
 import { DivWithBackground } from './DivWithBackground'
 
 export const Template: StoryFn<typeof Stack> = props => (
-  <Stack {...props}>
+  <Stack {...props} width="100px">
     <DivWithBackground>First child</DivWithBackground>
     <DivWithBackground>Second child</DivWithBackground>
     <DivWithBackground>Third child</DivWithBackground>
