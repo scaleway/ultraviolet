@@ -1,9 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Popup } from '../Popup'
+import { tooltip } from './styles.css'
 
 type TooltipProps = Pick<
   ComponentProps<typeof Popup>,
@@ -24,10 +24,6 @@ type TooltipProps = Pick<
 > & {
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
 }
-
-const StyledPopup = styled(Popup)`
-  pointer-events: none;
-`
 
 /**
  * Tooltip component is used to display additional information on hover or focus.
@@ -54,8 +50,8 @@ export const Tooltip = forwardRef(
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
-    <StyledPopup
-      className={className}
+    <Popup
+      className={`${className ? `${className} ` : ''}${tooltip}`}
       containerFullHeight={containerFullHeight}
       containerFullWidth={containerFullWidth}
       data-testid={dataTestId}
@@ -72,6 +68,6 @@ export const Tooltip = forwardRef(
       visible={visible}
     >
       {children}
-    </StyledPopup>
+    </Popup>
   ),
 )
