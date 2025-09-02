@@ -75,7 +75,7 @@ export const Banner = ({
 
   return (
     <Stack
-      className={`${className ?? ''} ${banner({ size, variant })}`}
+      className={`${className ? `${className} ` : ''}${banner({ size, variant })}`}
       data-testid={dataTestId}
       direction="row"
       gap={2}
