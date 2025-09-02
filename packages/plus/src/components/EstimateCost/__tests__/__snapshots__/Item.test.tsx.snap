@@ -1183,30 +1183,29 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1230,6 +1229,210 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-59 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-59[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-59[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-59[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-59[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-59[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-59[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-59[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-59[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-59 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-59[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-59[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-59[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-59[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-59[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-59[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-59[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-59[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-61 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-61 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1238,225 +1441,26 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-61 {
-  display: grid;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-61[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-61[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-61[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-61[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-61[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-61[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-61[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-61[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-61 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-61[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-61[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-61[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-61[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-61[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-61[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-61[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-61[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-63 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-63 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1485,34 +1489,6 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-65 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-67 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1521,12 +1497,12 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-67 {
+.emotion-65 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1535,12 +1511,20 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-71 {
+.emotion-69 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-69 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1549,14 +1533,6 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-71 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-73 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1577,7 +1553,7 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-73 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1598,15 +1574,42 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-80 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-80 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1634,33 +1637,18 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-82 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-84 {
+.emotion-82 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1673,44 +1661,49 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-84 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
+  text-align: right;
 }
 
 .emotion-86 {
-  text-align: right;
-}
-
-.emotion-88 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-88 {
+.emotion-86 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-92 {
+.emotion-90 {
+  width: 70%;
+}
+
+.emotion-90 {
   width: 70%;
 }
 
 .emotion-92 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
   width: 70%;
+  min-width: 230px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  height: 56px;
+  background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-94 {
+.emotion-92 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1728,27 +1721,10 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
 }
 
 .emotion-94 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-96 {
   text-align: right;
 }
 
-.emotion-96 {
+.emotion-94 {
   text-align: right;
 }
 
@@ -1907,17 +1883,16 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
                         <div
                           aria-controls="«ru»"
                           aria-describedby="«ru»"
-                          class="emotion-57 emotion-58"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-59 emotion-1"
+                            class="emotion-57 emotion-1"
                           >
                             <div
                               aria-controls="«ru»"
                               aria-expanded="false"
-                              class="emotion-61 emotion-62"
+                              class="emotion-59 emotion-60"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -1929,16 +1904,16 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-63 emotion-64 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-65 emotion-66"
+                                class="emotion-63 emotion-64"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-67 emotion-24"
+                                  class="emotion-65 emotion-24"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -1960,14 +1935,14 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-69 emotion-70"
+              class="emotion-67 emotion-68"
             >
               <td
-                class="emotion-71 emotion-261"
+                class="emotion-69 emotion-261"
                 width="70%"
               >
                 <div
-                  class="emotion-73 emotion-74"
+                  class="emotion-71 emotion-72"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -1983,10 +1958,10 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-79 emotion-15"
+                    class="emotion-77 emotion-15"
                   >
                     <div
-                      class="emotion-16 emotion-82 emotion-18"
+                      class="emotion-16 emotion-80 emotion-18"
                     >
                       Test
                     </div>
@@ -1994,10 +1969,10 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-84 emotion-85"
+                class="emotion-82 emotion-83"
               >
                 <p
-                  class="emotion-86 emotion-87 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-84 emotion-85 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -2008,7 +1983,7 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-88 emotion-89"
+          class="emotion-86 emotion-87"
         >
           <colgroup>
             <col />
@@ -2020,13 +1995,13 @@ exports[`estimateCost - Item > render with labelTextVariant 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               />
               <td
-                class="emotion-94 emotion-260"
+                class="emotion-92 emotion-260"
               >
                 <h3
-                  class="emotion-96 emotion-97 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-94 emotion-95 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-30 emotion-31"
@@ -2637,18 +2612,6 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2671,7 +2634,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-61 {
+.emotion-59 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2686,85 +2649,85 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   width: 100%;
 }
 
-.emotion-61[data-size='small'] {
+.emotion-59[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-61[data-size='medium'] {
+.emotion-59[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-61[data-size='large'] {
+.emotion-59[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-61[data-state='neutral'] {
+.emotion-59[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-61[data-state='success'] {
+.emotion-59[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-61[data-state='danger'] {
+.emotion-59[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-61[data-readonly='true'] {
+.emotion-59[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-61[data-disabled='true'] {
+.emotion-59[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-63 {
+.emotion-61 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2773,7 +2736,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   align-self: center;
 }
 
-.emotion-65 {
+.emotion-63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2801,7 +2764,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   display: flex;
 }
 
-.emotion-67 {
+.emotion-65 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2810,12 +2773,12 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-71 {
+.emotion-69 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2823,7 +2786,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   min-width: 230px;
 }
 
-.emotion-73 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2844,11 +2807,11 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-80 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2875,7 +2838,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   margin-right: 4px;
 }
 
-.emotion-84 {
+.emotion-82 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2887,18 +2850,18 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   min-width: 126px;
 }
 
-.emotion-86 {
+.emotion-84 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-90 {
+.emotion-88 {
   width: 70%;
 }
 
-.emotion-92 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2915,7 +2878,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
   min-width: 126px;
 }
 
-.emotion-94 {
+.emotion-92 {
   text-align: right;
 }
 
@@ -3074,17 +3037,16 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
                         <div
                           aria-controls="«r5»"
                           aria-describedby="«r5»"
-                          class="emotion-57 emotion-58"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-59 emotion-1"
+                            class="emotion-57 emotion-1"
                           >
                             <div
                               aria-controls="«r5»"
                               aria-expanded="false"
-                              class="emotion-61 emotion-62"
+                              class="emotion-59 emotion-60"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -3096,16 +3058,16 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-63 emotion-64 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-65 emotion-66"
+                                class="emotion-63 emotion-64"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-67 emotion-24"
+                                  class="emotion-65 emotion-24"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -3127,14 +3089,14 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-69 emotion-70"
+              class="emotion-67 emotion-68"
             >
               <td
-                class="emotion-71 emotion-261"
+                class="emotion-69 emotion-261"
                 width="70%"
               >
                 <div
-                  class="emotion-73 emotion-74"
+                  class="emotion-71 emotion-72"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -3150,10 +3112,10 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-79 emotion-15"
+                    class="emotion-77 emotion-15"
                   >
                     <div
-                      class="emotion-16 emotion-82 emotion-18"
+                      class="emotion-16 emotion-80 emotion-18"
                     >
                       Test
                     </div>
@@ -3161,7 +3123,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-84 emotion-85"
+                class="emotion-82 emotion-83"
               />
             </tr>
           </tbody>
@@ -3169,7 +3131,7 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-86 emotion-87"
+          class="emotion-84 emotion-85"
         >
           <colgroup>
             <col />
@@ -3181,13 +3143,13 @@ exports[`estimateCost - Item > render with noPrice and noBorder 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-90 emotion-91"
+                class="emotion-88 emotion-89"
               />
               <td
-                class="emotion-92 emotion-260"
+                class="emotion-90 emotion-260"
               >
                 <h3
-                  class="emotion-94 emotion-95 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-92 emotion-93 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-30 emotion-31"
@@ -4392,30 +4354,29 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-59 {
-  display: inherit;
-}
-
-.emotion-59[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-59[data-container-full-width="true"] {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-59 {
-  display: inherit;
-}
-
-.emotion-59[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-59[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-61 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4439,6 +4400,210 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-61 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-61[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-61[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-61[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-61[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-61[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-61[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-61[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-61[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-61[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-61 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-61[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-61[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-61[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-61[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-61[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-61[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-61[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-61[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-61[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-63 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-63 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4447,225 +4612,26 @@ exports[`estimateCost - Item > render with notice 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-63 {
-  display: grid;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-63[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-63[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-63[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-63[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-63[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-63[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-63[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-63[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-63[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-63 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-63[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-63[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-63[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-63[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-63[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-63[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-63[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-63[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-63[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-65 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-65 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4694,34 +4660,6 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-67 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-69 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4730,12 +4668,12 @@ exports[`estimateCost - Item > render with notice 1`] = `
   min-height: 1rem;
 }
 
-.emotion-69 .fillStroke {
+.emotion-67 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-69 {
+.emotion-67 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4744,12 +4682,20 @@ exports[`estimateCost - Item > render with notice 1`] = `
   min-height: 1rem;
 }
 
-.emotion-69 .fillStroke {
+.emotion-67 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-73 {
+.emotion-71 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-71 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4758,14 +4704,6 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-73 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-75 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4786,7 +4724,7 @@ exports[`estimateCost - Item > render with notice 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-75 {
+.emotion-73 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4807,15 +4745,42 @@ exports[`estimateCost - Item > render with notice 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-83 {
+.emotion-81 {
   text-align: right;
 }
 
-.emotion-83 {
+.emotion-81 {
   text-align: right;
 }
 
-.emotion-86 {
+.emotion-84 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-84 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4843,33 +4808,18 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-86 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-88 {
+.emotion-86 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4882,44 +4832,49 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-88 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
+  text-align: right;
 }
 
 .emotion-90 {
-  text-align: right;
-}
-
-.emotion-92 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-92 {
+.emotion-90 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-96 {
+.emotion-94 {
+  width: 70%;
+}
+
+.emotion-94 {
   width: 70%;
 }
 
 .emotion-96 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
   width: 70%;
+  min-width: 230px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  height: 56px;
+  background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-98 {
+.emotion-96 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4937,27 +4892,10 @@ exports[`estimateCost - Item > render with notice 1`] = `
 }
 
 .emotion-98 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-100 {
   text-align: right;
 }
 
-.emotion-100 {
+.emotion-98 {
   text-align: right;
 }
 
@@ -5121,17 +5059,16 @@ exports[`estimateCost - Item > render with notice 1`] = `
                         <div
                           aria-controls="«r28»"
                           aria-describedby="«r28»"
-                          class="emotion-59 emotion-60"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-61 emotion-1"
+                            class="emotion-59 emotion-1"
                           >
                             <div
                               aria-controls="«r28»"
                               aria-expanded="false"
-                              class="emotion-63 emotion-64"
+                              class="emotion-61 emotion-62"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -5143,16 +5080,16 @@ exports[`estimateCost - Item > render with notice 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-63 emotion-64 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-67 emotion-68"
+                                class="emotion-65 emotion-66"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-69 emotion-26"
+                                  class="emotion-67 emotion-26"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -5174,14 +5111,14 @@ exports[`estimateCost - Item > render with notice 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-71 emotion-72"
+              class="emotion-69 emotion-70"
             >
               <td
-                class="emotion-73 emotion-281"
+                class="emotion-71 emotion-281"
                 width="70%"
               >
                 <div
-                  class="emotion-75 emotion-76"
+                  class="emotion-73 emotion-74"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -5202,10 +5139,10 @@ exports[`estimateCost - Item > render with notice 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-83 emotion-17"
+                    class="emotion-81 emotion-17"
                   >
                     <div
-                      class="emotion-18 emotion-86 emotion-20"
+                      class="emotion-18 emotion-84 emotion-20"
                     >
                       Test
                     </div>
@@ -5213,10 +5150,10 @@ exports[`estimateCost - Item > render with notice 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-88 emotion-89"
+                class="emotion-86 emotion-87"
               >
                 <p
-                  class="emotion-90 emotion-91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-88 emotion-89 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -5227,7 +5164,7 @@ exports[`estimateCost - Item > render with notice 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-92 emotion-93"
+          class="emotion-90 emotion-91"
         >
           <colgroup>
             <col />
@@ -5239,13 +5176,13 @@ exports[`estimateCost - Item > render with notice 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-96 emotion-97"
+                class="emotion-94 emotion-95"
               />
               <td
-                class="emotion-98 emotion-280"
+                class="emotion-96 emotion-280"
               >
                 <h3
-                  class="emotion-100 emotion-101 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-98 emotion-99 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-32 emotion-33"
@@ -6446,30 +6383,29 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6493,6 +6429,210 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-59 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-59[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-59[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-59[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-59[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-59[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-59[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-59[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-59[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-59 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-59[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-59[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-59[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-59[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-59[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-59[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-59[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-59[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-61 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-61 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6501,225 +6641,26 @@ exports[`estimateCost - Item > render with priceText 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-61 {
-  display: grid;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-61[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-61[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-61[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-61[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-61[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-61[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-61[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-61[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-61 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-61[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-61[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-61[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-61[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-61[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-61[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-61[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-61[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-63 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-63 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6748,34 +6689,6 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-65 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-67 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -6784,12 +6697,12 @@ exports[`estimateCost - Item > render with priceText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-67 {
+.emotion-65 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -6798,12 +6711,20 @@ exports[`estimateCost - Item > render with priceText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-71 {
+.emotion-69 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-69 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6812,14 +6733,6 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-71 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-73 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6840,7 +6753,7 @@ exports[`estimateCost - Item > render with priceText 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-73 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6861,15 +6774,42 @@ exports[`estimateCost - Item > render with priceText 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-80 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-80 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6897,33 +6837,18 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-82 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-84 {
+.emotion-82 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6936,44 +6861,49 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-84 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
+  text-align: right;
 }
 
 .emotion-86 {
-  text-align: right;
-}
-
-.emotion-88 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-88 {
+.emotion-86 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-92 {
+.emotion-90 {
+  width: 70%;
+}
+
+.emotion-90 {
   width: 70%;
 }
 
 .emotion-92 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
   width: 70%;
+  min-width: 230px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  height: 56px;
+  background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-94 {
+.emotion-92 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6991,27 +6921,10 @@ exports[`estimateCost - Item > render with priceText 1`] = `
 }
 
 .emotion-94 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-96 {
   text-align: right;
 }
 
-.emotion-96 {
+.emotion-94 {
   text-align: right;
 }
 
@@ -7170,17 +7083,16 @@ exports[`estimateCost - Item > render with priceText 1`] = `
                         <div
                           aria-controls="«r1b»"
                           aria-describedby="«r1b»"
-                          class="emotion-57 emotion-58"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-59 emotion-1"
+                            class="emotion-57 emotion-1"
                           >
                             <div
                               aria-controls="«r1b»"
                               aria-expanded="false"
-                              class="emotion-61 emotion-62"
+                              class="emotion-59 emotion-60"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -7192,16 +7104,16 @@ exports[`estimateCost - Item > render with priceText 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-63 emotion-64 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-65 emotion-66"
+                                class="emotion-63 emotion-64"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-67 emotion-24"
+                                  class="emotion-65 emotion-24"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -7223,14 +7135,14 @@ exports[`estimateCost - Item > render with priceText 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-69 emotion-70"
+              class="emotion-67 emotion-68"
             >
               <td
-                class="emotion-71 emotion-261"
+                class="emotion-69 emotion-261"
                 width="70%"
               >
                 <div
-                  class="emotion-73 emotion-74"
+                  class="emotion-71 emotion-72"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -7246,10 +7158,10 @@ exports[`estimateCost - Item > render with priceText 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-79 emotion-15"
+                    class="emotion-77 emotion-15"
                   >
                     <div
-                      class="emotion-16 emotion-82 emotion-18"
+                      class="emotion-16 emotion-80 emotion-18"
                     >
                       Test
                     </div>
@@ -7257,10 +7169,10 @@ exports[`estimateCost - Item > render with priceText 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-84 emotion-85"
+                class="emotion-82 emotion-83"
               >
                 <p
-                  class="emotion-86 emotion-87 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-84 emotion-85 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   included
                 </p>
@@ -7271,7 +7183,7 @@ exports[`estimateCost - Item > render with priceText 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-88 emotion-89"
+          class="emotion-86 emotion-87"
         >
           <colgroup>
             <col />
@@ -7283,13 +7195,13 @@ exports[`estimateCost - Item > render with priceText 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               />
               <td
-                class="emotion-94 emotion-260"
+                class="emotion-92 emotion-260"
               >
                 <h3
-                  class="emotion-96 emotion-97 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-94 emotion-95 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-30 emotion-31"
@@ -8482,30 +8394,29 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .emotion-57 {
-  display: inherit;
-}
-
-.emotion-57[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-57[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8529,6 +8440,210 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-59 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-59[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-59[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-59[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-59[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-59[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-59[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-59[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-59[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-59 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-59[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-59[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-59[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-59[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-59[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-59[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-59[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-59[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-61 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-61 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-63 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8537,225 +8652,26 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-61 {
-  display: grid;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-61[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-61[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-61[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-61[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-61[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-61[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-61[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-61[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-61 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-61[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-61[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-61[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-61[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-61[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-61[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-61[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-61[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-61[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-61[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-61[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-61[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-61:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-61[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-61[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-63 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-63 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8784,34 +8700,6 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-65 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-67 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -8820,12 +8708,12 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-67 {
+.emotion-65 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -8834,12 +8722,12 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
   min-height: 1rem;
 }
 
-.emotion-67 .fillStroke {
+.emotion-65 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-71 {
+.emotion-69 {
   padding-left: 32px;
   padding-right: 16px;
   position: relative;
@@ -8847,7 +8735,7 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
   min-width: 230px;
 }
 
-.emotion-73 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8868,7 +8756,7 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-73 {
+.emotion-71 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8889,15 +8777,42 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-79 {
+.emotion-77 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-80 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-80 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8925,33 +8840,18 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-82 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-84 {
+.emotion-82 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8964,44 +8864,49 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-84 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
+  text-align: right;
 }
 
 .emotion-86 {
-  text-align: right;
-}
-
-.emotion-88 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-88 {
+.emotion-86 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-92 {
+.emotion-90 {
+  width: 70%;
+}
+
+.emotion-90 {
   width: 70%;
 }
 
 .emotion-92 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
   width: 70%;
+  min-width: 230px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  height: 56px;
+  background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
-.emotion-94 {
+.emotion-92 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9019,27 +8924,10 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
 }
 
 .emotion-94 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-96 {
   text-align: right;
 }
 
-.emotion-96 {
+.emotion-94 {
   text-align: right;
 }
 
@@ -9198,17 +9086,16 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
                         <div
                           aria-controls="«rh»"
                           aria-describedby="«rh»"
-                          class="emotion-57 emotion-58"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-59 emotion-1"
+                            class="emotion-57 emotion-1"
                           >
                             <div
                               aria-controls="«rh»"
                               aria-expanded="false"
-                              class="emotion-61 emotion-62"
+                              class="emotion-59 emotion-60"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -9220,16 +9107,16 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-63 emotion-64 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-65 emotion-66"
+                                class="emotion-63 emotion-64"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-67 emotion-24"
+                                  class="emotion-65 emotion-24"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -9251,14 +9138,14 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-69 emotion-70"
+              class="emotion-67 emotion-68"
             >
               <td
-                class="emotion-71 emotion-261"
+                class="emotion-69 emotion-261"
                 width="70%"
               >
                 <div
-                  class="emotion-73 emotion-74"
+                  class="emotion-71 emotion-72"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -9274,10 +9161,10 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-79 emotion-15"
+                    class="emotion-77 emotion-15"
                   >
                     <div
-                      class="emotion-16 emotion-82 emotion-18"
+                      class="emotion-16 emotion-80 emotion-18"
                     >
                       Test
                     </div>
@@ -9285,10 +9172,10 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-84 emotion-85"
+                class="emotion-82 emotion-83"
               >
                 <p
-                  class="emotion-86 emotion-87 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-84 emotion-85 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -9299,7 +9186,7 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-88 emotion-89"
+          class="emotion-86 emotion-87"
         >
           <colgroup>
             <col />
@@ -9311,13 +9198,13 @@ exports[`estimateCost - Item > render with tabulation 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-92 emotion-93"
+                class="emotion-90 emotion-91"
               />
               <td
-                class="emotion-94 emotion-260"
+                class="emotion-92 emotion-260"
               >
                 <h3
-                  class="emotion-96 emotion-97 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-94 emotion-95 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-30 emotion-31"
@@ -9594,30 +9481,6 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-16 {
-  display: inherit;
-}
-
-.emotion-16[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-16[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-16 {
-  display: inherit;
-}
-
-.emotion-16[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-16[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 1.25rem;
@@ -9626,12 +9489,12 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-18 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-20 {
+.emotion-18 {
   text-align: initial;
   height: 48px;
   display: -webkit-box;
@@ -9648,7 +9511,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   justify-content: center;
 }
 
-.emotion-20 {
+.emotion-18 {
   text-align: initial;
   height: 48px;
   display: -webkit-box;
@@ -9665,7 +9528,34 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   justify-content: center;
 }
 
-.emotion-23 {
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9693,55 +9583,51 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-23 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-23:first-of-type,
+.emotion-23:last-child {
+  border: 0;
+}
+
+.emotion-23 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-23:first-of-type,
+.emotion-23:last-child {
+  border: 0;
+}
+
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 500px;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .emotion-25 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-25:first-of-type,
-.emotion-25:last-child {
-  border: 0;
-}
-
-.emotion-25 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-25:first-of-type,
-.emotion-25:last-child {
-  border: 0;
-}
-
-.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9765,29 +9651,6 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-29 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -9796,12 +9659,12 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-29 .fillStroke {
+.emotion-27 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-27 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -9810,12 +9673,12 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-29 .fillStroke {
+.emotion-27 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-31 {
+.emotion-29 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9831,7 +9694,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   justify-content: center;
 }
 
-.emotion-31 {
+.emotion-29 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9847,7 +9710,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   justify-content: center;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9874,7 +9737,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   margin-right: 4px;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9901,43 +9764,43 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   margin-right: 4px;
 }
 
-.emotion-38 {
+.emotion-36 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-38>* {
+.emotion-36>* {
   margin-top: 0;
 }
 
-.emotion-38>*+* {
+.emotion-36>*+* {
   margin-top: 16px;
 }
 
-.emotion-38 {
+.emotion-36 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-38>* {
+.emotion-36>* {
   margin-top: 0;
 }
 
-.emotion-38>*+* {
+.emotion-36>*+* {
   margin-top: 16px;
 }
 
-.emotion-40 {
+.emotion-38 {
+  background-color: #ffffff;
+}
+
+.emotion-38 {
   background-color: #ffffff;
 }
 
 .emotion-40 {
-  background-color: #ffffff;
-}
-
-.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9954,7 +9817,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   padding: 1rem;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9971,7 +9834,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   padding: 1rem;
 }
 
-.emotion-45 {
+.emotion-43 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -9981,12 +9844,12 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-45 .fillStroke {
+.emotion-43 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-45 {
+.emotion-43 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -9996,12 +9859,25 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-45 .fillStroke {
+.emotion-43 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-47 {
+.emotion-45 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
+  padding: 0;
+}
+
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -10015,19 +9891,17 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-47 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
+  max-width: 200px;
+  padding: 16px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  float: right;
 }
 
-.emotion-49 {
+.emotion-47 {
   max-width: 200px;
   padding: 16px;
   -webkit-align-items: start;
@@ -10039,17 +9913,6 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-49 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10073,7 +9936,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-51 {
+.emotion-49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10097,7 +9960,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-54 {
+.emotion-52 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -10113,41 +9976,41 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-57,
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-55,
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-57 {
+    ):not([data-error='true']):active>.emotion-55 {
   border-right-color: #8c40ef;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-57 {
+    ):not([data-error='true']):focus-within>.emotion-55 {
   border-right-color: #8c40ef;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -10155,90 +10018,90 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-57,
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-55,
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-57 {
+    ):focus>.emotion-55 {
   border-right-color: #8c40ef;
 }
 
-.emotion-54[data-readonly='true'] {
+.emotion-52[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-54[data-readonly='true']:active {
+.emotion-52[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-54[data-size='small'] {
+.emotion-52[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-54[data-size='medium'] {
+.emotion-52[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-54[data-size='large'] {
+.emotion-52[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-54[data-success='true'] {
+.emotion-52[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-54[data-success='true']>.emotion-57 {
+.emotion-52[data-success='true']>.emotion-55 {
   border-right-color: #22674e;
 }
 
-.emotion-54[data-success='true']:active {
+.emotion-52[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-54[data-success='true']:active>.emotion-57 {
+.emotion-52[data-success='true']:active>.emotion-55 {
   border-right-color: #22674e;
 }
 
-.emotion-54[data-error='true'] {
+.emotion-52[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-54[data-error='true']>.emotion-57 {
+.emotion-52[data-error='true']>.emotion-55 {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-error='true']>.emotion-57:hover {
+.emotion-52[data-error='true']>.emotion-55:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-error='true']:active {
+.emotion-52[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-54[data-error='true']:active>.emotion-57 {
+.emotion-52[data-error='true']:active>.emotion-55 {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-error='true']:active>.emotion-57:hover {
+.emotion-52[data-error='true']:active>.emotion-55:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-disabled='true'] {
+.emotion-52[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-54[data-disabled='true']>.emotion-57 {
+.emotion-52[data-disabled='true']>.emotion-55 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-54 {
+.emotion-52 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -10254,41 +10117,41 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-57,
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-55,
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-57 {
+    ):not([data-error='true']):active>.emotion-55 {
   border-right-color: #8c40ef;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-57 {
+    ):not([data-error='true']):focus-within>.emotion-55 {
   border-right-color: #8c40ef;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -10296,90 +10159,108 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-57,
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-55,
+.emotion-52:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-57 {
+    ):focus>.emotion-55 {
   border-right-color: #8c40ef;
 }
 
-.emotion-54[data-readonly='true'] {
+.emotion-52[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-54[data-readonly='true']:active {
+.emotion-52[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-54[data-size='small'] {
+.emotion-52[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-54[data-size='medium'] {
+.emotion-52[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-54[data-size='large'] {
+.emotion-52[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-54[data-success='true'] {
+.emotion-52[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-54[data-success='true']>.emotion-57 {
+.emotion-52[data-success='true']>.emotion-55 {
   border-right-color: #22674e;
 }
 
-.emotion-54[data-success='true']:active {
+.emotion-52[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-54[data-success='true']:active>.emotion-57 {
+.emotion-52[data-success='true']:active>.emotion-55 {
   border-right-color: #22674e;
 }
 
-.emotion-54[data-error='true'] {
+.emotion-52[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-54[data-error='true']>.emotion-57 {
+.emotion-52[data-error='true']>.emotion-55 {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-error='true']>.emotion-57:hover {
+.emotion-52[data-error='true']>.emotion-55:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-error='true']:active {
+.emotion-52[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-54[data-error='true']:active>.emotion-57 {
+.emotion-52[data-error='true']:active>.emotion-55 {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-error='true']:active>.emotion-57:hover {
+.emotion-52[data-error='true']:active>.emotion-55:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-54[data-disabled='true'] {
+.emotion-52[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-54[data-disabled='true']>.emotion-57 {
+.emotion-52[data-disabled='true']>.emotion-55 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-56 {
+.emotion-54 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10398,24 +10279,6 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
 }
 
 .emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-58 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -10428,51 +10291,51 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   color: #3f4250;
 }
 
-.emotion-58[data-size="small"] {
+.emotion-56[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-58[data-size="large"] {
+.emotion-56[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-58::-webkit-input-placeholder {
+.emotion-56::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-58::-moz-placeholder {
+.emotion-56::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-58:-ms-input-placeholder {
+.emotion-56:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-58::placeholder {
+.emotion-56::placeholder {
   color: #727683;
 }
 
-.emotion-58:disabled {
+.emotion-56:disabled {
   cursor: not-allowed;
 }
 
-.emotion-58:disabled::-webkit-input-placeholder {
+.emotion-56:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58:disabled::-moz-placeholder {
+.emotion-56:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58:disabled:-ms-input-placeholder {
+.emotion-56:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58:disabled::placeholder {
+.emotion-56:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58 {
+.emotion-56 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -10485,81 +10348,81 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   color: #3f4250;
 }
 
-.emotion-58[data-size="small"] {
+.emotion-56[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-58[data-size="large"] {
+.emotion-56[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-58::-webkit-input-placeholder {
+.emotion-56::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-58::-moz-placeholder {
+.emotion-56::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-58:-ms-input-placeholder {
+.emotion-56:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-58::placeholder {
+.emotion-56::placeholder {
   color: #727683;
 }
 
-.emotion-58:disabled {
+.emotion-56:disabled {
   cursor: not-allowed;
 }
 
-.emotion-58:disabled::-webkit-input-placeholder {
+.emotion-56:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58:disabled::-moz-placeholder {
+.emotion-56:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58:disabled:-ms-input-placeholder {
+.emotion-56:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-58:disabled::placeholder {
+.emotion-56:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-61 {
+.emotion-59 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-61 #unit {
+.emotion-59 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
+.emotion-59 #unit:focus,
+.emotion-59 #unit:active {
   box-shadow: none;
 }
 
-.emotion-61 {
+.emotion-59 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-61 #unit {
+.emotion-59 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
+.emotion-59 #unit:focus,
+.emotion-59 #unit:active {
   box-shadow: none;
 }
 
-.emotion-65 {
+.emotion-61 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10582,7 +10445,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-65 {
+.emotion-61 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10605,7 +10468,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-67 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -10620,85 +10483,85 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   width: 100%;
 }
 
-.emotion-67[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-67[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-67[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-67[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-67[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-67[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-67[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-67[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-67 {
+.emotion-63 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -10713,85 +10576,85 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   width: 100%;
 }
 
-.emotion-67[data-size='small'] {
+.emotion-63[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-67[data-size='medium'] {
+.emotion-63[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-67[data-size='large'] {
+.emotion-63[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-67[data-state='neutral'] {
+.emotion-63[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-63[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-63[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-67[data-state='success'] {
+.emotion-63[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
+.emotion-63[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-67[data-state='danger'] {
+.emotion-63[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-63[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-63[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-63:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-67[data-readonly='true'] {
+.emotion-63[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-67[data-disabled='true'] {
+.emotion-63[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-69 {
+.emotion-65 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -10800,7 +10663,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   align-self: center;
 }
 
-.emotion-69 {
+.emotion-65 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -10809,7 +10672,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   align-self: center;
 }
 
-.emotion-71 {
+.emotion-67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10837,7 +10700,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   display: flex;
 }
 
-.emotion-71 {
+.emotion-67 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10865,7 +10728,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   display: flex;
 }
 
-.emotion-73 {
+.emotion-69 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -10874,12 +10737,12 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-69 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-73 {
+.emotion-69 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -10888,12 +10751,12 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-height: 1rem;
 }
 
-.emotion-73 .fillStroke {
+.emotion-69 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-77 {
+.emotion-73 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -10901,7 +10764,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 230px;
 }
 
-.emotion-77 {
+.emotion-73 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -10909,7 +10772,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 230px;
 }
 
-.emotion-79 {
+.emotion-75 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10930,7 +10793,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-79 {
+.emotion-75 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10951,15 +10814,15 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-91 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-91 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-94 {
+.emotion-88 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -10986,7 +10849,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   margin-right: 4px;
 }
 
-.emotion-94 {
+.emotion-88 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -11013,7 +10876,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   margin-right: 4px;
 }
 
-.emotion-96 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11025,7 +10888,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-96 {
+.emotion-90 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11035,35 +10898,35 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   background-color: #f9f9fa;
   width: 30%;
   min-width: 126px;
+}
+
+.emotion-92 {
+  text-align: right;
+}
+
+.emotion-94 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-94 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-98 {
-  text-align: right;
-}
-
-.emotion-100 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-100 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-104 {
   width: 70%;
 }
 
-.emotion-104 {
+.emotion-98 {
   width: 70%;
 }
 
-.emotion-106 {
+.emotion-100 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11080,7 +10943,7 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-106 {
+.emotion-100 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -11097,11 +10960,11 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
   min-width: 126px;
 }
 
-.emotion-108 {
+.emotion-102 {
   text-align: right;
 }
 
-.emotion-108 {
+.emotion-102 {
   text-align: right;
 }
 
@@ -11143,11 +11006,11 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                       <div
                         aria-controls="«r1l»"
                         aria-describedby="«r1l»"
-                        class="emotion-16 emotion-17"
+                        class="uv_w40vpo9"
                         tabindex="0"
                       >
                         <svg
-                          class="emotion-18 emotion-19"
+                          class="emotion-16 emotion-17"
                           viewBox="0 0 20 20"
                         >
                           <path
@@ -11160,10 +11023,10 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                 >
                   <div
-                    class="emotion-22 emotion-23 emotion-24"
+                    class="emotion-20 emotion-21 emotion-22"
                   >
                     Test
                   </div>
@@ -11172,13 +11035,13 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
             </div>
           </li>
           <li
-            class="emotion-25 emotion-7"
+            class="emotion-23 emotion-7"
           >
             <div
-              class="emotion-27 emotion-1"
+              class="emotion-25 emotion-1"
             >
               <svg
-                class="emotion-29 emotion-19"
+                class="emotion-27 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -11190,13 +11053,13 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-31 emotion-32"
+              class="emotion-29 emotion-30"
             >
               <div
-                class="emotion-22 emotion-34 emotion-24"
+                class="emotion-20 emotion-32 emotion-22"
               >
                 <span
-                  class="emotion-36 emotion-37"
+                  class="emotion-34 emotion-35"
                 >
                   €0.00/Hour(s)
                 </span>
@@ -11214,23 +11077,23 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-38 emotion-324"
+          class="emotion-36 emotion-304"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-40 emotion-322"
+              class="emotion-38 emotion-302"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-42 emotion-43"
+                  class="emotion-40 emotion-41"
                 >
                   <svg
-                    class="emotion-44 emotion-45 emotion-19"
+                    class="emotion-42 emotion-43 emotion-17"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -11243,24 +11106,24 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-47 emotion-48"
+                class="emotion-45 emotion-46"
               >
                 <div
-                  class="emotion-49 emotion-50"
+                  class="emotion-47 emotion-48"
                 >
                   <div
-                    class="emotion-51 emotion-1"
+                    class="emotion-49 emotion-1"
                   >
                     <div
-                      class="emotion-53 emotion-54 emotion-55"
+                      class="emotion-51 emotion-52 emotion-53"
                     >
                       <div
-                        class="emotion-56 emotion-57"
+                        class="emotion-54 emotion-55"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-58 emotion-59"
+                          class="emotion-56 emotion-57"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«r1n»"
@@ -11275,22 +11138,21 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-60 emotion-61 emotion-62"
+                        class="emotion-58 emotion-59 emotion-60"
                       >
                         <div
                           aria-controls="«r1p»"
                           aria-describedby="«r1p»"
-                          class="emotion-16 emotion-17"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-65 emotion-1"
+                            class="emotion-61 emotion-1"
                           >
                             <div
                               aria-controls="«r1p»"
                               aria-expanded="false"
-                              class="emotion-67 emotion-68"
+                              class="emotion-63 emotion-64"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -11302,16 +11164,16 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-69 emotion-70 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-71 emotion-72"
+                                class="emotion-67 emotion-68"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-73 emotion-19"
+                                  class="emotion-69 emotion-17"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -11333,14 +11195,14 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-75 emotion-76"
+              class="emotion-71 emotion-72"
             >
               <td
-                class="emotion-77 emotion-321"
+                class="emotion-73 emotion-301"
                 width="70%"
               >
                 <div
-                  class="emotion-79 emotion-80"
+                  class="emotion-75 emotion-76"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -11359,11 +11221,11 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                         <div
                           aria-controls="«r1v»"
                           aria-describedby="«r1v»"
-                          class="emotion-16 emotion-17"
+                          class="uv_w40vpo9"
                           tabindex="0"
                         >
                           <svg
-                            class="emotion-18 emotion-19"
+                            class="emotion-16 emotion-17"
                             viewBox="0 0 20 20"
                           >
                             <path
@@ -11376,10 +11238,10 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-91 emotion-21"
+                    class="emotion-85 emotion-19"
                   >
                     <div
-                      class="emotion-22 emotion-94 emotion-24"
+                      class="emotion-20 emotion-88 emotion-22"
                     >
                       Test
                     </div>
@@ -11387,10 +11249,10 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-96 emotion-97"
+                class="emotion-90 emotion-91"
               >
                 <p
-                  class="emotion-98 emotion-99 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-92 emotion-93 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -11401,28 +11263,28 @@ exports[`estimateCost - Item > render with tooltipInfo 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-100 emotion-101"
+          class="emotion-94 emotion-95"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-40 emotion-322"
+              class="emotion-38 emotion-302"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-104 emotion-105"
+                class="emotion-98 emotion-99"
               />
               <td
-                class="emotion-106 emotion-320"
+                class="emotion-100 emotion-300"
               >
                 <h3
-                  class="emotion-108 emotion-109 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-102 emotion-103 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-36 emotion-37"
+                    class="emotion-34 emotion-35"
                   >
                     €0.00
                   </span>

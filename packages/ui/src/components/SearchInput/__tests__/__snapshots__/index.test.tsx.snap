@@ -2,19 +2,7 @@
 
 exports[`searchInput > renders correctly without children props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,19 +25,19 @@ exports[`searchInput > renders correctly without children props 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 .emotion-8 {
+.emotion-1 .emotion-6 {
   border: none;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-1 .emotion-12 {
   padding: 0;
 }
 
-.emotion-3 .el3h3g93 {
+.emotion-1 .el3h3g93 {
   border: none;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,69 +51,69 @@ exports[`searchInput > renders correctly without children props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-14 {
+.emotion-3>.emotion-12 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-14::-webkit-input-placeholder {
+.emotion-3>.emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::-moz-placeholder {
+.emotion-3>.emotion-12::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14:-ms-input-placeholder {
+.emotion-3>.emotion-12:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::placeholder {
+.emotion-3>.emotion-12::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-3[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-3[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14 {
+.emotion-3[data-disabled='true']>.emotion-12 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-3:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,11 +138,11 @@ exports[`searchInput > renders correctly without children props 1`] = `
   border-color: inherit;
 }
 
-.emotion-7[data-size="small"] {
+.emotion-5[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,7 +165,7 @@ exports[`searchInput > renders correctly without children props 1`] = `
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -186,12 +174,12 @@ exports[`searchInput > renders correctly without children props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-11 .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-13 {
+.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -204,11 +192,11 @@ exports[`searchInput > renders correctly without children props 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-13[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-13[data-size='small'] {
+.emotion-11[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -219,32 +207,32 @@ exports[`searchInput > renders correctly without children props 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="_r_0_"
-        aria-describedby="_r_0_"
-        class="emotion-0 emotion-1"
+        aria-controls="«r0»"
+        aria-describedby="«r0»"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-0 emotion-1 emotion-2"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="emotion-3 emotion-4"
               data-disabled="false"
               data-error="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="emotion-5 emotion-6"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -257,9 +245,9 @@ exports[`searchInput > renders correctly without children props 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
                 data-size="large"
-                id="_r_1_"
+                id="«r1»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -275,19 +263,7 @@ exports[`searchInput > renders correctly without children props 1`] = `
 
 exports[`searchInput > renders with disabled prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -310,19 +286,19 @@ exports[`searchInput > renders with disabled prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 .emotion-8 {
+.emotion-1 .emotion-6 {
   border: none;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-1 .emotion-12 {
   padding: 0;
 }
 
-.emotion-3 .el3h3g93 {
+.emotion-1 .el3h3g93 {
   border: none;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -336,69 +312,69 @@ exports[`searchInput > renders with disabled prop 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-14 {
+.emotion-3>.emotion-12 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-14::-webkit-input-placeholder {
+.emotion-3>.emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::-moz-placeholder {
+.emotion-3>.emotion-12::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14:-ms-input-placeholder {
+.emotion-3>.emotion-12:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::placeholder {
+.emotion-3>.emotion-12::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-3[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-3[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14 {
+.emotion-3[data-disabled='true']>.emotion-12 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-3:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -423,11 +399,11 @@ exports[`searchInput > renders with disabled prop 1`] = `
   border-color: inherit;
 }
 
-.emotion-7[data-size="small"] {
+.emotion-5[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -450,7 +426,7 @@ exports[`searchInput > renders with disabled prop 1`] = `
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-9 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1rem;
@@ -459,12 +435,12 @@ exports[`searchInput > renders with disabled prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-11 .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-.emotion-13 {
+.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -477,11 +453,11 @@ exports[`searchInput > renders with disabled prop 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-13[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-13[data-size='small'] {
+.emotion-11[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -492,32 +468,32 @@ exports[`searchInput > renders with disabled prop 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="_r_3_"
-        aria-describedby="_r_3_"
-        class="emotion-0 emotion-1"
+        aria-controls="«r3»"
+        aria-describedby="«r3»"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-0 emotion-1 emotion-2"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="emotion-3 emotion-4"
               data-disabled="true"
               data-error="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="emotion-5 emotion-6"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -530,10 +506,10 @@ exports[`searchInput > renders with disabled prop 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
                 data-size="large"
                 disabled=""
-                id="_r_4_"
+                id="«r4»"
                 placeholder="Type something"
                 type="text"
                 value=""
@@ -549,19 +525,7 @@ exports[`searchInput > renders with disabled prop 1`] = `
 
 exports[`searchInput > renders with error prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -584,19 +548,19 @@ exports[`searchInput > renders with error prop 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 .emotion-8 {
+.emotion-1 .emotion-6 {
   border: none;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-1 .emotion-12 {
   padding: 0;
 }
 
-.emotion-3 .el3h3g93 {
+.emotion-1 .el3h3g93 {
   border: none;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -610,69 +574,69 @@ exports[`searchInput > renders with error prop 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-14 {
+.emotion-3>.emotion-12 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-14::-webkit-input-placeholder {
+.emotion-3>.emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::-moz-placeholder {
+.emotion-3>.emotion-12::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14:-ms-input-placeholder {
+.emotion-3>.emotion-12:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::placeholder {
+.emotion-3>.emotion-12::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-3[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-3[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14 {
+.emotion-3[data-disabled='true']>.emotion-12 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-3:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -697,11 +661,11 @@ exports[`searchInput > renders with error prop 1`] = `
   border-color: inherit;
 }
 
-.emotion-7[data-size="small"] {
+.emotion-5[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -724,7 +688,7 @@ exports[`searchInput > renders with error prop 1`] = `
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -733,12 +697,12 @@ exports[`searchInput > renders with error prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-11 .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-13 {
+.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -751,15 +715,15 @@ exports[`searchInput > renders with error prop 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-13[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-13[data-size='small'] {
+.emotion-11[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -783,7 +747,7 @@ exports[`searchInput > renders with error prop 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1rem;
@@ -792,7 +756,7 @@ exports[`searchInput > renders with error prop 1`] = `
   min-height: 1rem;
 }
 
-.emotion-17 .fillStroke {
+.emotion-15 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
@@ -816,32 +780,32 @@ exports[`searchInput > renders with error prop 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="_r_h_"
-        aria-describedby="_r_h_"
-        class="emotion-0 emotion-1"
+        aria-controls="«rh»"
+        aria-describedby="«rh»"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-0 emotion-1 emotion-2"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="emotion-3 emotion-4"
               data-disabled="false"
               data-error="true"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="emotion-5 emotion-6"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -854,18 +818,18 @@ exports[`searchInput > renders with error prop 1`] = `
               </div>
               <input
                 aria-invalid="true"
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
                 data-size="large"
-                id="_r_i_"
+                id="«ri»"
                 placeholder="Type something"
                 type="text"
                 value=""
               />
               <div
-                class="emotion-15 emotion-16"
+                class="emotion-13 emotion-14"
               >
                 <svg
-                  class="emotion-17 emotion-12"
+                  class="emotion-15 emotion-10"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -891,19 +855,7 @@ exports[`searchInput > renders with error prop 1`] = `
 
 exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -926,19 +878,19 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 .emotion-8 {
+.emotion-1 .emotion-6 {
   border: none;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-1 .emotion-12 {
   padding: 0;
 }
 
-.emotion-3 .emotion-16 {
+.emotion-1 .emotion-14 {
   border: none;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -952,69 +904,69 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-14 {
+.emotion-3>.emotion-12 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-14::-webkit-input-placeholder {
+.emotion-3>.emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::-moz-placeholder {
+.emotion-3>.emotion-12::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14:-ms-input-placeholder {
+.emotion-3>.emotion-12:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::placeholder {
+.emotion-3>.emotion-12::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-3[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-3[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14 {
+.emotion-3[data-disabled='true']>.emotion-12 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-3:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1039,11 +991,11 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: inherit;
 }
 
-.emotion-7[data-size="small"] {
+.emotion-5[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1066,7 +1018,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1075,12 +1027,12 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   min-height: 1rem;
 }
 
-.emotion-11 .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-13 {
+.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1093,15 +1045,15 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-13[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-13[data-size='small'] {
+.emotion-11[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1126,7 +1078,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: inherit;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1150,7 +1102,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   cursor: text;
 }
 
-.emotion-19 {
+.emotion-17 {
   cursor: default;
   background: #f9f9fa;
   border-radius: 0.25rem;
@@ -1171,42 +1123,42 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
   align-items: center;
 }
 
-.emotion-19[data-prominence='strong'] {
+.emotion-17[data-prominence='strong'] {
   background-color: #151a2d;
   border-color: #d9dadd;
 }
 
-.emotion-19[data-prominence='strong'][data-disabled="true"] {
+.emotion-17[data-prominence='strong'][data-disabled="true"] {
   background-color: #e9eaeb;
   border-color: #e9eaeb;
 }
 
-.emotion-19[data-disabled='true'] {
+.emotion-17[data-disabled='true'] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   cursor: not-allowed;
 }
 
-.emotion-19[data-sentiment="primary"] {
+.emotion-17[data-sentiment="primary"] {
   background-color: #f1eefc;
   border-color: #8c40ef;
 }
 
-.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
+.emotion-17[data-sentiment="primary"][data-prominence='strong'] {
   background-color: #8c40ef;
 }
 
-.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+.emotion-17[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
   background-color: #e5dbfd;
 }
 
-.emotion-19[data-sentiment="primary"][data-disabled='true'] {
+.emotion-17[data-sentiment="primary"][data-disabled='true'] {
   background: #f6f5fd;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-19[data-size="small"] {
+.emotion-17[data-size="small"] {
   min-width: 1.25rem;
   height: 1.25rem;
 }
@@ -1230,32 +1182,32 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="_r_b_"
-        aria-describedby="_r_b_"
-        class="emotion-0 emotion-1"
+        aria-controls="«rb»"
+        aria-describedby="«rb»"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-0 emotion-1 emotion-2"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="emotion-3 emotion-4"
               data-disabled="false"
               data-error="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="emotion-5 emotion-6"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1268,21 +1220,21 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
                 data-size="large"
-                id="_r_c_"
+                id="«rc»"
                 placeholder="Type something"
                 type="text"
                 value=""
               />
               <div
-                class="emotion-15 emotion-16"
+                class="emotion-13 emotion-14"
               >
                 <div
-                  class="emotion-17 emotion-18"
+                  class="emotion-15 emotion-16"
                 >
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="emotion-17 emotion-18"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1295,7 +1247,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="emotion-17 emotion-18"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1308,7 +1260,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="emotion-17 emotion-18"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1333,19 +1285,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
 
 exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1368,19 +1308,19 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-3 .emotion-8 {
+.emotion-1 .emotion-6 {
   border: none;
 }
 
-.emotion-3 .emotion-14 {
+.emotion-1 .emotion-12 {
   padding: 0;
 }
 
-.emotion-3 .emotion-16 {
+.emotion-1 .emotion-14 {
   border: none;
 }
 
-.emotion-5 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1394,69 +1334,69 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-5>.emotion-14 {
+.emotion-3>.emotion-12 {
   color: #3f4250;
 }
 
-.emotion-5>.emotion-14::-webkit-input-placeholder {
+.emotion-3>.emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::-moz-placeholder {
+.emotion-3>.emotion-12::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14:-ms-input-placeholder {
+.emotion-3>.emotion-12:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5>.emotion-14::placeholder {
+.emotion-3>.emotion-12::placeholder {
   color: #727683;
 }
 
-.emotion-5[data-success='true'] {
+.emotion-3[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-5[data-readonly='true'] {
+.emotion-3[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14 {
+.emotion-3[data-disabled='true']>.emotion-12 {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
+.emotion-3[data-disabled='true']>.emotion-12::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-3:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1481,11 +1421,11 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: inherit;
 }
 
-.emotion-7[data-size="small"] {
+.emotion-5[data-size="small"] {
   padding: 0.5rem;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1508,7 +1448,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   cursor: text;
 }
 
-.emotion-11 {
+.emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -1517,12 +1457,12 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   min-height: 1rem;
 }
 
-.emotion-11 .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-13 {
+.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1535,15 +1475,15 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-13[data-size='large'] {
+.emotion-11[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-13[data-size='small'] {
+.emotion-11[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1568,7 +1508,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: inherit;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1592,7 +1532,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   cursor: text;
 }
 
-.emotion-19 {
+.emotion-17 {
   cursor: default;
   background: #f9f9fa;
   border-radius: 0.25rem;
@@ -1613,42 +1553,42 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
   align-items: center;
 }
 
-.emotion-19[data-prominence='strong'] {
+.emotion-17[data-prominence='strong'] {
   background-color: #151a2d;
   border-color: #d9dadd;
 }
 
-.emotion-19[data-prominence='strong'][data-disabled="true"] {
+.emotion-17[data-prominence='strong'][data-disabled="true"] {
   background-color: #e9eaeb;
   border-color: #e9eaeb;
 }
 
-.emotion-19[data-disabled='true'] {
+.emotion-17[data-disabled='true'] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   cursor: not-allowed;
 }
 
-.emotion-19[data-sentiment="primary"] {
+.emotion-17[data-sentiment="primary"] {
   background-color: #f1eefc;
   border-color: #8c40ef;
 }
 
-.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
+.emotion-17[data-sentiment="primary"][data-prominence='strong'] {
   background-color: #8c40ef;
 }
 
-.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+.emotion-17[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
   background-color: #e5dbfd;
 }
 
-.emotion-19[data-sentiment="primary"][data-disabled='true'] {
+.emotion-17[data-sentiment="primary"][data-disabled='true'] {
   background: #f6f5fd;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-19[data-size="small"] {
+.emotion-17[data-size="small"] {
   min-width: 1.25rem;
   height: 1.25rem;
 }
@@ -1672,32 +1612,32 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
       style="width: 100%;"
     >
       <div
-        aria-controls="_r_6_"
-        aria-describedby="_r_6_"
-        class="emotion-0 emotion-1"
+        aria-controls="«r6»"
+        aria-describedby="«r6»"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-0 emotion-1 emotion-2"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="emotion-3 emotion-4"
               data-disabled="false"
               data-error="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="emotion-5 emotion-6"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1710,21 +1650,21 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
                 data-size="large"
-                id="_r_7_"
+                id="«r7»"
                 placeholder="Type something"
                 type="text"
                 value=""
               />
               <div
-                class="emotion-15 emotion-16"
+                class="emotion-13 emotion-14"
               >
                 <div
-                  class="emotion-17 emotion-18"
+                  class="emotion-15 emotion-16"
                 >
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="emotion-17 emotion-18"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1737,7 +1677,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="emotion-17 emotion-18"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"

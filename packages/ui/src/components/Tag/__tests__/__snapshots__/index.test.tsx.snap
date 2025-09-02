@@ -196,18 +196,6 @@ exports[`tag > renders correctly neutral 1`] = `
 exports[`tag > renders correctly with copiable 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -233,18 +221,18 @@ exports[`tag > renders correctly with copiable 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.emotion-2:hover,
-.emotion-2:active {
+.emotion-0:hover,
+.emotion-0:active {
   cursor: pointer;
   background: #e9eaeb;
   border-color: #92959d;
 }
 
-.emotion-2:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4 {
+.emotion-2 {
   max-width: 14.5rem;
 }
 
@@ -252,16 +240,16 @@ exports[`tag > renders correctly with copiable 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="_r_8_"
-      aria-describedby="_r_8_"
-      class="emotion-0 emotion-1"
+      aria-controls="«r8»"
+      aria-describedby="«r8»"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
         >
           test
         </div>

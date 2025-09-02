@@ -320,7 +320,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: relative;
 }
 
-.emotion-0:hover>.emotion-9 {
+.emotion-0:hover>.emotion-7 {
   border-color: #8c40ef;
 }
 
@@ -368,18 +368,6 @@ exports[`expandableCard > works properly draggable 1`] = `
 }
 
 .emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
   vertical-align: middle;
   fill: #222638;
   height: 1rem;
@@ -388,12 +376,12 @@ exports[`expandableCard > works properly draggable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-6 .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #222638;
   fill: none;
 }
 
-.emotion-8 {
+.emotion-6 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   width: 100%;
@@ -401,27 +389,27 @@ exports[`expandableCard > works properly draggable 1`] = `
   transition: border-color 0.2s ease-in-out;
 }
 
-.emotion-8[open] {
+.emotion-6[open] {
   border-color: #8c40ef;
 }
 
-.emotion-8[open]>.emotion-16 {
+.emotion-6[open]>.emotion-14 {
   border-color: #8c40ef;
 }
 
-.emotion-8[open] .emotion-12 {
+.emotion-6[open] .emotion-10 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.emotion-8[data-clicking="true"] {
+.emotion-6[data-clicking="true"] {
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   border-color: #8c40ef;
 }
 
-.emotion-10 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -439,13 +427,13 @@ exports[`expandableCard > works properly draggable 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[data-disabled="true"] {
+.emotion-8[data-disabled="true"] {
   background: #f9f9fa;
   border-radius: 0.25rem;
   cursor: not-allowed;
 }
 
-.emotion-13 {
+.emotion-11 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -454,17 +442,17 @@ exports[`expandableCard > works properly draggable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-13 .fillStroke {
+.emotion-11 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-15 {
+.emotion-13 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   height: 1.5rem;
   border-bottom: 2px solid;
   border-color: transparent;
@@ -474,11 +462,11 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: absolute;
 }
 
-.emotion-17[data-first="true"] {
+.emotion-15[data-first="true"] {
   top: -1.5rem;
 }
 
-.emotion-17::after {
+.emotion-15::after {
   content: '';
   left: 0;
   bottom: -4px;
@@ -496,7 +484,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: absolute;
 }
 
-.emotion-27 {
+.emotion-23 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -505,7 +493,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-23 .fillStroke {
   stroke: #727683;
   fill: none;
 }
@@ -525,13 +513,13 @@ exports[`expandableCard > works properly draggable 1`] = `
         data-visible="true"
       >
         <div
-          aria-controls="_r_6_"
-          aria-describedby="_r_6_"
-          class="emotion-4 emotion-5"
+          aria-controls="«r6»"
+          aria-describedby="«r6»"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -541,15 +529,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-8 emotion-9"
+        class="emotion-6 emotion-7"
         data-clicking="true"
       >
         <summary
-          class="emotion-10 emotion-11"
+          class="emotion-8 emotion-9"
           data-disabled="false"
         >
           <svg
-            class="emotion-12 emotion-13 emotion-7"
+            class="emotion-10 emotion-11 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -565,17 +553,17 @@ exports[`expandableCard > works properly draggable 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-first="true"
       />
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-testid="card-1-dropable-area"
         style="border-color: transparent;"
       />
@@ -592,13 +580,13 @@ exports[`expandableCard > works properly draggable 1`] = `
         data-visible="false"
       >
         <div
-          aria-controls="_r_8_"
-          aria-describedby="_r_8_"
-          class="emotion-4 emotion-5"
+          aria-controls="«r8»"
+          aria-describedby="«r8»"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <svg
-            class="emotion-27 emotion-7"
+            class="emotion-23 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -608,15 +596,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-8 emotion-9"
+        class="emotion-6 emotion-7"
         data-clicking="false"
       >
         <summary
-          class="emotion-10 emotion-11"
+          class="emotion-8 emotion-9"
           data-disabled="false"
         >
           <svg
-            class="emotion-12 emotion-13 emotion-7"
+            class="emotion-10 emotion-11 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -632,13 +620,13 @@ exports[`expandableCard > works properly draggable 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-testid="card-2-dropable-area"
       />
     </div>
@@ -654,13 +642,13 @@ exports[`expandableCard > works properly draggable 1`] = `
         data-visible="false"
       >
         <div
-          aria-controls="_r_a_"
-          aria-describedby="_r_a_"
-          class="emotion-4 emotion-5"
+          aria-controls="«ra»"
+          aria-describedby="«ra»"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <svg
-            class="emotion-27 emotion-7"
+            class="emotion-23 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -670,15 +658,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-8 emotion-9"
+        class="emotion-6 emotion-7"
         data-clicking="false"
       >
         <summary
-          class="emotion-10 emotion-11"
+          class="emotion-8 emotion-9"
           data-disabled="false"
         >
           <svg
-            class="emotion-12 emotion-13 emotion-7"
+            class="emotion-10 emotion-11 emotion-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -694,13 +682,13 @@ exports[`expandableCard > works properly draggable 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-15 emotion-16"
         data-testid="card-3-dropable-area"
       />
     </div>
