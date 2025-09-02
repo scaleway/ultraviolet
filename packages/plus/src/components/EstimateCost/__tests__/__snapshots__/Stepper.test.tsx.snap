@@ -3,29 +3,6 @@
 exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-2 {
   position: fixed;
   left: 0;
   right: 0;
@@ -47,7 +24,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   z-index: 1;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,19 +41,19 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding: 1.5rem 0;
 }
 
-.emotion-6 {
+.emotion-4 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
   border: 0;
 }
 
-.emotion-6:first-of-type,
-.emotion-6:last-child {
+.emotion-4:first-of-type,
+.emotion-4:last-child {
   border: 0;
 }
 
-.emotion-8 {
+.emotion-6 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -84,51 +61,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 230px;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-14 {
+.emotion-8 {
   text-align: initial;
   height: 48px;
   display: -webkit-box;
@@ -145,7 +78,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   justify-content: center;
 }
 
-.emotion-16 {
+.emotion-10 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -161,7 +94,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   justify-content: center;
 }
 
-.emotion-18 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,41 +109,18 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   margin-right: 4px;
 }
 
-.emotion-20 {
+.emotion-14 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
 }
 
-.emotion-20:first-of-type,
-.emotion-20:last-child {
+.emotion-14:first-of-type,
+.emotion-14:last-child {
   border: 0;
 }
 
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-24 {
+.emotion-16 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -219,12 +129,12 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -251,25 +161,25 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   margin-right: 4px;
 }
 
-.emotion-33 {
+.emotion-25 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-33>* {
+.emotion-25>* {
   margin-top: 0;
 }
 
-.emotion-33>*+* {
+.emotion-25>*+* {
   margin-top: 16px;
 }
 
-.emotion-35 {
+.emotion-27 {
   background-color: #ffffff;
 }
 
-.emotion-37 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -286,7 +196,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding: 1rem;
 }
 
-.emotion-40 {
+.emotion-32 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -296,12 +206,12 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-40 .fillStroke {
+.emotion-32 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-42 {
+.emotion-34 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -314,7 +224,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding: 0;
 }
 
-.emotion-44 {
+.emotion-36 {
   max-width: 200px;
   padding: 16px;
   -webkit-align-items: start;
@@ -325,31 +235,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   float: right;
 }
 
-.emotion-46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-49 {
+.emotion-39 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -365,41 +251,41 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-52 {
+    ):not([data-error='true']):active>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-52 {
+    ):not([data-error='true']):focus-within>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -407,90 +293,90 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-52 {
+    ):focus>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49[data-readonly='true'] {
+.emotion-39[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-49[data-readonly='true']:active {
+.emotion-39[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-49[data-size='small'] {
+.emotion-39[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-49[data-size='medium'] {
+.emotion-39[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-49[data-size='large'] {
+.emotion-39[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-49[data-success='true'] {
+.emotion-39[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-49[data-success='true']>.emotion-52 {
+.emotion-39[data-success='true']>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-success='true']:active {
+.emotion-39[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-49[data-success='true']:active>.emotion-52 {
+.emotion-39[data-success='true']:active>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-error='true'] {
+.emotion-39[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52 {
+.emotion-39[data-error='true']>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52:hover {
+.emotion-39[data-error='true']>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active {
+.emotion-39[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52 {
+.emotion-39[data-error='true']:active>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52:hover {
+.emotion-39[data-error='true']:active>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-disabled='true'] {
+.emotion-39[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-49[data-disabled='true']>.emotion-52 {
+.emotion-39[data-disabled='true']>.emotion-42 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-51 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -508,7 +394,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   height: 100%;
 }
 
-.emotion-53 {
+.emotion-43 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -521,89 +407,66 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   color: #3f4250;
 }
 
-.emotion-53[data-size="small"] {
+.emotion-43[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-53[data-size="large"] {
+.emotion-43[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-53::-webkit-input-placeholder {
+.emotion-43::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::-moz-placeholder {
+.emotion-43::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-53:-ms-input-placeholder {
+.emotion-43:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::placeholder {
+.emotion-43::placeholder {
   color: #727683;
 }
 
-.emotion-53:disabled {
+.emotion-43:disabled {
   cursor: not-allowed;
 }
 
-.emotion-53:disabled::-webkit-input-placeholder {
+.emotion-43:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::-moz-placeholder {
+.emotion-43:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled:-ms-input-placeholder {
+.emotion-43:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::placeholder {
+.emotion-43:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-56 {
+.emotion-46 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-56 #unit {
+.emotion-46 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-56 #unit:focus,
-.emotion-56 #unit:active {
+.emotion-46 #unit:focus,
+.emotion-46 #unit:active {
   box-shadow: none;
 }
 
-.emotion-58 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-60 {
+.emotion-48 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -618,85 +481,85 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   width: 100%;
 }
 
-.emotion-60[data-size='small'] {
+.emotion-48[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-60[data-size='medium'] {
+.emotion-48[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-60[data-size='large'] {
+.emotion-48[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-60[data-state='neutral'] {
+.emotion-48[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-60[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-48[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-60[data-state='success'] {
+.emotion-48[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-60[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-60[data-state='success'][data-dropdownvisible='true'] {
+.emotion-48[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-60[data-state='danger'] {
+.emotion-48[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-60[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-60[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-48[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-60:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-48:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-60[data-readonly='true'] {
+.emotion-48[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-60[data-disabled='true'] {
+.emotion-48[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-50 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -705,27 +568,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   align-self: center;
 }
 
-.emotion-64 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-52 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -733,7 +576,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: flex;
 }
 
-.emotion-66 {
+.emotion-54 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -742,12 +585,12 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-66 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-70 {
+.emotion-58 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -755,7 +598,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 230px;
 }
 
-.emotion-72 {
+.emotion-60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -776,11 +619,11 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-78 {
+.emotion-62 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -799,88 +642,69 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-82:focus-within {
+.emotion-64:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-82[data-success='true'] {
+.emotion-64[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-82[data-error='true'] {
+.emotion-64[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-82:hover {
+.emotion-64:hover {
   border-color: #792dd4;
 }
 
-.emotion-82[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-82[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-82[data-controls='false']>.emotion-88 {
+.emotion-64[data-controls='false']>.emotion-70 {
   border-width: 0;
 }
 
-.emotion-82[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-82[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-82[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-84 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-66 {
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-84[data-size='small'] {
+.emotion-66[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-84[data-size='medium'] {
+.emotion-66[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-84[data-size='large'] {
+.emotion-66[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-86 {
+.emotion-68 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -889,12 +713,12 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-height: 1rem;
 }
 
-.emotion-86 .fillStroke {
+.emotion-68 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-89 {
+.emotion-71 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -911,7 +735,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   width: 100%;
 }
 
-.emotion-91 {
+.emotion-73 {
   outline: none;
   border: none;
   padding: 0;
@@ -926,18 +750,18 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   background: none;
 }
 
-.emotion-91[data-has-unit='true'] {
+.emotion-73[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-91::-webkit-outer-spin-button,
-.emotion-91::-webkit-inner-spin-button {
+.emotion-73::-webkit-outer-spin-button,
+.emotion-73::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-91 {
+.emotion-73 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -945,15 +769,15 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   appearance: textfield;
 }
 
-.emotion-91[data-size='small'] {
+.emotion-73[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-91[data-size='medium'] {
+.emotion-73[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-91[data-size='large'] {
+.emotion-73[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -961,34 +785,34 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-91:-moz-read-only {
+.emotion-73:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-91:read-only {
+.emotion-73:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-91:-moz-read-only~.exvap482 {
+.emotion-73:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-91:read-only~.exvap482 {
+.emotion-73:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-91:disabled {
+.emotion-73:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-91:disabled~.exvap482 {
+.emotion-73:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -997,16 +821,16 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   user-select: none;
 }
 
-.emotion-91:placeholder-shown~.exvap482 {
+.emotion-73:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-91[data-controls='false'] {
+.emotion-73[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-97 {
+.emotion-79 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1018,22 +842,22 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-99 {
+.emotion-81 {
   text-align: right;
 }
 
-.emotion-101 {
+.emotion-83 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-105 {
+.emotion-87 {
   width: 70%;
 }
 
-.emotion-107 {
+.emotion-89 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1050,7 +874,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-109 {
+.emotion-91 {
   text-align: right;
 }
 
@@ -1058,28 +882,31 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-testid="summary-overlay"
       >
         <ul
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               width="inherit"
             >
               <div>
                 <div
-                  class="emotion-10 emotion-1"
+                  class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
-                    class="emotion-12 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <p
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -1089,13 +916,13 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-14 emotion-15"
+                  class="emotion-8 emotion-9"
                 >
                   <div
-                    class="emotion-16 emotion-17"
+                    class="emotion-10 emotion-11"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-12 emotion-13"
                     >
                       1
                     </div>
@@ -1105,13 +932,14 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
             </div>
           </li>
           <li
-            class="emotion-20 emotion-7"
+            class="emotion-14 emotion-5"
           >
             <div
-              class="emotion-22 emotion-1"
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <svg
-                class="emotion-24 emotion-25"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -1123,13 +951,13 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="emotion-28 emotion-29 emotion-19"
+                class="emotion-20 emotion-21 emotion-13"
               >
                 <span
-                  class="emotion-31 emotion-32"
+                  class="emotion-23 emotion-24"
                 >
                   €0.00/Hour(s)
                 </span>
@@ -1147,23 +975,23 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-33 emotion-174"
+          class="emotion-25 emotion-114"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-37 emotion-38"
+                  class="emotion-29 emotion-30"
                 >
                   <svg
-                    class="emotion-39 emotion-40 emotion-25"
+                    class="emotion-31 emotion-32 emotion-17"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -1176,24 +1004,26 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-42 emotion-43"
+                class="emotion-34 emotion-35"
               >
                 <div
-                  class="emotion-44 emotion-45"
+                  class="emotion-36 emotion-37"
                 >
                   <div
-                    class="emotion-46 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
-                      class="emotion-48 emotion-49 emotion-50"
+                      class="emotion-38 emotion-39 emotion-40"
                     >
                       <div
-                        class="emotion-51 emotion-52"
+                        class="emotion-41 emotion-42"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-53 emotion-54"
+                          class="emotion-43 emotion-44"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«r3»"
@@ -1208,7 +1038,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-55 emotion-56 emotion-57"
+                        class="emotion-45 emotion-46 emotion-47"
                       >
                         <div
                           aria-controls="«r5»"
@@ -1217,12 +1047,13 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-58 emotion-1"
+                            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <div
                               aria-controls="«r5»"
                               aria-expanded="false"
-                              class="emotion-60 emotion-61"
+                              class="emotion-48 emotion-49"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -1234,16 +1065,17 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-62 emotion-63 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-50 emotion-51 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-64 emotion-65"
+                                class="emotion-52 emotion-53 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-66 emotion-25"
+                                  class="emotion-54 emotion-17"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -1265,20 +1097,22 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-68 emotion-69"
+              class="emotion-56 emotion-57"
             >
               <td
-                class="emotion-70 emotion-171"
+                class="emotion-58 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-72 emotion-73"
+                  class="emotion-60 emotion-61"
                 >
                   <div
-                    class="emotion-10 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <div
-                      class="emotion-12 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <p
                         class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -1288,14 +1122,15 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-78 emotion-15"
+                    class="emotion-62 emotion-9"
                   >
                     <div
-                      class="emotion-58 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <div>
                         <div
-                          class="emotion-82 emotion-83"
+                          class="emotion-64 emotion-65"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -1304,8 +1139,9 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-84 emotion-85"
+                            class="emotion-66 emotion-67 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="minus"
@@ -1313,7 +1149,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-86 emotion-25"
+                                class="emotion-68 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -1323,10 +1159,10 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-88 emotion-89 emotion-50"
+                            class="emotion-70 emotion-71 emotion-40"
                           >
                             <input
-                              class="emotion-91 emotion-92"
+                              class="emotion-73 emotion-74"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -1339,8 +1175,9 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-84 emotion-85"
+                            class="emotion-66 emotion-67 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="plus"
@@ -1348,7 +1185,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-86 emotion-25"
+                                class="emotion-68 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -1364,10 +1201,10 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-97 emotion-98"
+                class="emotion-79 emotion-80"
               >
                 <p
-                  class="emotion-99 emotion-100 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-81 emotion-82 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -1378,28 +1215,28 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-101 emotion-102"
+          class="emotion-83 emotion-84"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-105 emotion-106"
+                class="emotion-87 emotion-88"
               />
               <td
-                class="emotion-107 emotion-170"
+                class="emotion-89 emotion-110"
               >
                 <h3
-                  class="emotion-109 emotion-110 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-91 emotion-92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-31 emotion-32"
+                    class="emotion-23 emotion-24"
                   >
                     €0.00
                   </span>
@@ -1417,29 +1254,6 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-2 {
   position: fixed;
   left: 0;
   right: 0;
@@ -1461,7 +1275,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   z-index: 1;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1478,19 +1292,19 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding: 1.5rem 0;
 }
 
-.emotion-6 {
+.emotion-4 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
   border: 0;
 }
 
-.emotion-6:first-of-type,
-.emotion-6:last-child {
+.emotion-4:first-of-type,
+.emotion-4:last-child {
   border: 0;
 }
 
-.emotion-8 {
+.emotion-6 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1498,51 +1312,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-14 {
+.emotion-8 {
   text-align: initial;
   height: 48px;
   display: -webkit-box;
@@ -1559,7 +1329,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   justify-content: center;
 }
 
-.emotion-16 {
+.emotion-10 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1575,7 +1345,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   justify-content: center;
 }
 
-.emotion-18 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1590,41 +1360,18 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   margin-right: 4px;
 }
 
-.emotion-20 {
+.emotion-14 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
 }
 
-.emotion-20:first-of-type,
-.emotion-20:last-child {
+.emotion-14:first-of-type,
+.emotion-14:last-child {
   border: 0;
 }
 
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-24 {
+.emotion-16 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -1633,12 +1380,12 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1665,25 +1412,25 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   margin-right: 4px;
 }
 
-.emotion-33 {
+.emotion-25 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-33>* {
+.emotion-25>* {
   margin-top: 0;
 }
 
-.emotion-33>*+* {
+.emotion-25>*+* {
   margin-top: 16px;
 }
 
-.emotion-35 {
+.emotion-27 {
   background-color: #ffffff;
 }
 
-.emotion-37 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1700,7 +1447,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding: 1rem;
 }
 
-.emotion-40 {
+.emotion-32 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -1710,12 +1457,12 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-40 .fillStroke {
+.emotion-32 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-42 {
+.emotion-34 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1728,7 +1475,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding: 0;
 }
 
-.emotion-44 {
+.emotion-36 {
   max-width: 200px;
   padding: 16px;
   -webkit-align-items: start;
@@ -1739,31 +1486,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   float: right;
 }
 
-.emotion-46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-49 {
+.emotion-39 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -1779,41 +1502,41 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-52 {
+    ):not([data-error='true']):active>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-52 {
+    ):not([data-error='true']):focus-within>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -1821,90 +1544,90 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-52 {
+    ):focus>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49[data-readonly='true'] {
+.emotion-39[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-49[data-readonly='true']:active {
+.emotion-39[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-49[data-size='small'] {
+.emotion-39[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-49[data-size='medium'] {
+.emotion-39[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-49[data-size='large'] {
+.emotion-39[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-49[data-success='true'] {
+.emotion-39[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-49[data-success='true']>.emotion-52 {
+.emotion-39[data-success='true']>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-success='true']:active {
+.emotion-39[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-49[data-success='true']:active>.emotion-52 {
+.emotion-39[data-success='true']:active>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-error='true'] {
+.emotion-39[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52 {
+.emotion-39[data-error='true']>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52:hover {
+.emotion-39[data-error='true']>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active {
+.emotion-39[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52 {
+.emotion-39[data-error='true']:active>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52:hover {
+.emotion-39[data-error='true']:active>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-disabled='true'] {
+.emotion-39[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-49[data-disabled='true']>.emotion-52 {
+.emotion-39[data-disabled='true']>.emotion-42 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-51 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1922,7 +1645,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   height: 100%;
 }
 
-.emotion-53 {
+.emotion-43 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1935,89 +1658,66 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   color: #3f4250;
 }
 
-.emotion-53[data-size="small"] {
+.emotion-43[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-53[data-size="large"] {
+.emotion-43[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-53::-webkit-input-placeholder {
+.emotion-43::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::-moz-placeholder {
+.emotion-43::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-53:-ms-input-placeholder {
+.emotion-43:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::placeholder {
+.emotion-43::placeholder {
   color: #727683;
 }
 
-.emotion-53:disabled {
+.emotion-43:disabled {
   cursor: not-allowed;
 }
 
-.emotion-53:disabled::-webkit-input-placeholder {
+.emotion-43:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::-moz-placeholder {
+.emotion-43:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled:-ms-input-placeholder {
+.emotion-43:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::placeholder {
+.emotion-43:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-56 {
+.emotion-46 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-56 #unit {
+.emotion-46 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-56 #unit:focus,
-.emotion-56 #unit:active {
+.emotion-46 #unit:focus,
+.emotion-46 #unit:active {
   box-shadow: none;
 }
 
-.emotion-58 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-60 {
+.emotion-48 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2032,85 +1732,85 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   width: 100%;
 }
 
-.emotion-60[data-size='small'] {
+.emotion-48[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-60[data-size='medium'] {
+.emotion-48[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-60[data-size='large'] {
+.emotion-48[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-60[data-state='neutral'] {
+.emotion-48[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-60[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-48[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-60[data-state='success'] {
+.emotion-48[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-60[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-60[data-state='success'][data-dropdownvisible='true'] {
+.emotion-48[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-60[data-state='danger'] {
+.emotion-48[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-60[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-60[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-48[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-60:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-48:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-60[data-readonly='true'] {
+.emotion-48[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-60[data-disabled='true'] {
+.emotion-48[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-50 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2119,27 +1819,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   align-self: center;
 }
 
-.emotion-64 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-52 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2147,7 +1827,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: flex;
 }
 
-.emotion-66 {
+.emotion-54 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -2156,12 +1836,12 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-height: 1rem;
 }
 
-.emotion-66 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-70 {
+.emotion-58 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2169,7 +1849,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-72 {
+.emotion-60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2190,11 +1870,11 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-78 {
+.emotion-62 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2213,88 +1893,69 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-82:focus-within {
+.emotion-64:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-82[data-success='true'] {
+.emotion-64[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-82[data-error='true'] {
+.emotion-64[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-82:hover {
+.emotion-64:hover {
   border-color: #792dd4;
 }
 
-.emotion-82[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-82[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-82[data-controls='false']>.emotion-88 {
+.emotion-64[data-controls='false']>.emotion-70 {
   border-width: 0;
 }
 
-.emotion-82[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-82[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-82[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-84 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-66 {
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-84[data-size='small'] {
+.emotion-66[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-84[data-size='medium'] {
+.emotion-66[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-84[data-size='large'] {
+.emotion-66[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-86 {
+.emotion-68 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2303,12 +1964,12 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-height: 1rem;
 }
 
-.emotion-86 .fillStroke {
+.emotion-68 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-89 {
+.emotion-71 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -2325,7 +1986,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   width: 100%;
 }
 
-.emotion-91 {
+.emotion-73 {
   outline: none;
   border: none;
   padding: 0;
@@ -2340,18 +2001,18 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   background: none;
 }
 
-.emotion-91[data-has-unit='true'] {
+.emotion-73[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-91::-webkit-outer-spin-button,
-.emotion-91::-webkit-inner-spin-button {
+.emotion-73::-webkit-outer-spin-button,
+.emotion-73::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-91 {
+.emotion-73 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -2359,15 +2020,15 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   appearance: textfield;
 }
 
-.emotion-91[data-size='small'] {
+.emotion-73[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-91[data-size='medium'] {
+.emotion-73[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-91[data-size='large'] {
+.emotion-73[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2375,34 +2036,34 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-91:-moz-read-only {
+.emotion-73:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-91:read-only {
+.emotion-73:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-91:-moz-read-only~.exvap482 {
+.emotion-73:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-91:read-only~.exvap482 {
+.emotion-73:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-91:disabled {
+.emotion-73:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-91:disabled~.exvap482 {
+.emotion-73:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2411,16 +2072,16 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   user-select: none;
 }
 
-.emotion-91:placeholder-shown~.exvap482 {
+.emotion-73:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-91[data-controls='false'] {
+.emotion-73[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-97 {
+.emotion-79 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2432,22 +2093,22 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-99 {
+.emotion-81 {
   text-align: right;
 }
 
-.emotion-101 {
+.emotion-83 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-105 {
+.emotion-87 {
   width: 70%;
 }
 
-.emotion-107 {
+.emotion-89 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2464,7 +2125,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-109 {
+.emotion-91 {
   text-align: right;
 }
 
@@ -2472,28 +2133,31 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-testid="summary-overlay"
       >
         <ul
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               width="inherit"
             >
               <div>
                 <div
-                  class="emotion-10 emotion-1"
+                  class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
-                    class="emotion-12 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <p
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -2503,13 +2167,13 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-14 emotion-15"
+                  class="emotion-8 emotion-9"
                 >
                   <div
-                    class="emotion-16 emotion-17"
+                    class="emotion-10 emotion-11"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-12 emotion-13"
                     >
                       1
                     </div>
@@ -2519,13 +2183,14 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
             </div>
           </li>
           <li
-            class="emotion-20 emotion-7"
+            class="emotion-14 emotion-5"
           >
             <div
-              class="emotion-22 emotion-1"
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <svg
-                class="emotion-24 emotion-25"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -2537,13 +2202,13 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="emotion-28 emotion-29 emotion-19"
+                class="emotion-20 emotion-21 emotion-13"
               >
                 <span
-                  class="emotion-31 emotion-32"
+                  class="emotion-23 emotion-24"
                 >
                   €0.00/Hour(s)
                 </span>
@@ -2561,23 +2226,23 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-33 emotion-174"
+          class="emotion-25 emotion-114"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-37 emotion-38"
+                  class="emotion-29 emotion-30"
                 >
                   <svg
-                    class="emotion-39 emotion-40 emotion-25"
+                    class="emotion-31 emotion-32 emotion-17"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -2590,24 +2255,26 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-42 emotion-43"
+                class="emotion-34 emotion-35"
               >
                 <div
-                  class="emotion-44 emotion-45"
+                  class="emotion-36 emotion-37"
                 >
                   <div
-                    class="emotion-46 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
-                      class="emotion-48 emotion-49 emotion-50"
+                      class="emotion-38 emotion-39 emotion-40"
                     >
                       <div
-                        class="emotion-51 emotion-52"
+                        class="emotion-41 emotion-42"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-53 emotion-54"
+                          class="emotion-43 emotion-44"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«rk»"
@@ -2622,7 +2289,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-55 emotion-56 emotion-57"
+                        class="emotion-45 emotion-46 emotion-47"
                       >
                         <div
                           aria-controls="«rm»"
@@ -2631,12 +2298,13 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-58 emotion-1"
+                            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <div
                               aria-controls="«rm»"
                               aria-expanded="false"
-                              class="emotion-60 emotion-61"
+                              class="emotion-48 emotion-49"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -2648,16 +2316,17 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-62 emotion-63 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-50 emotion-51 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-64 emotion-65"
+                                class="emotion-52 emotion-53 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-66 emotion-25"
+                                  class="emotion-54 emotion-17"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -2679,20 +2348,22 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-68 emotion-69"
+              class="emotion-56 emotion-57"
             >
               <td
-                class="emotion-70 emotion-171"
+                class="emotion-58 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-72 emotion-73"
+                  class="emotion-60 emotion-61"
                 >
                   <div
-                    class="emotion-10 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <div
-                      class="emotion-12 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <p
                         class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -2702,14 +2373,15 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-78 emotion-15"
+                    class="emotion-62 emotion-9"
                   >
                     <div
-                      class="emotion-58 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <div>
                         <div
-                          class="emotion-82 emotion-83"
+                          class="emotion-64 emotion-65"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -2718,8 +2390,9 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-84 emotion-85"
+                            class="emotion-66 emotion-67 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="minus"
@@ -2727,7 +2400,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-86 emotion-25"
+                                class="emotion-68 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -2737,10 +2410,10 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-88 emotion-89 emotion-50"
+                            class="emotion-70 emotion-71 emotion-40"
                           >
                             <input
-                              class="emotion-91 emotion-92"
+                              class="emotion-73 emotion-74"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -2753,8 +2426,9 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-84 emotion-85"
+                            class="emotion-66 emotion-67 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="plus"
@@ -2762,7 +2436,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-86 emotion-25"
+                                class="emotion-68 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -2778,10 +2452,10 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-97 emotion-98"
+                class="emotion-79 emotion-80"
               >
                 <p
-                  class="emotion-99 emotion-100 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-81 emotion-82 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -2792,28 +2466,28 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-101 emotion-102"
+          class="emotion-83 emotion-84"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-105 emotion-106"
+                class="emotion-87 emotion-88"
               />
               <td
-                class="emotion-107 emotion-170"
+                class="emotion-89 emotion-110"
               >
                 <h3
-                  class="emotion-109 emotion-110 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-91 emotion-92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-31 emotion-32"
+                    class="emotion-23 emotion-24"
                   >
                     €0.00
                   </span>
@@ -2831,29 +2505,6 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-2 {
   position: fixed;
   left: 0;
   right: 0;
@@ -2875,7 +2526,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   z-index: 1;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2892,19 +2543,19 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding: 1.5rem 0;
 }
 
-.emotion-6 {
+.emotion-4 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
   border: 0;
 }
 
-.emotion-6:first-of-type,
-.emotion-6:last-child {
+.emotion-4:first-of-type,
+.emotion-4:last-child {
   border: 0;
 }
 
-.emotion-8 {
+.emotion-6 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2912,51 +2563,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 230px;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-14 {
+.emotion-8 {
   text-align: initial;
   height: 48px;
   display: -webkit-box;
@@ -2973,7 +2580,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   justify-content: center;
 }
 
-.emotion-16 {
+.emotion-10 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2989,7 +2596,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   justify-content: center;
 }
 
-.emotion-18 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3004,41 +2611,18 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   margin-right: 4px;
 }
 
-.emotion-20 {
+.emotion-14 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
 }
 
-.emotion-20:first-of-type,
-.emotion-20:last-child {
+.emotion-14:first-of-type,
+.emotion-14:last-child {
   border: 0;
 }
 
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-24 {
+.emotion-16 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -3047,12 +2631,12 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3079,25 +2663,25 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   margin-right: 4px;
 }
 
-.emotion-33 {
+.emotion-25 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-33>* {
+.emotion-25>* {
   margin-top: 0;
 }
 
-.emotion-33>*+* {
+.emotion-25>*+* {
   margin-top: 16px;
 }
 
-.emotion-35 {
+.emotion-27 {
   background-color: #ffffff;
 }
 
-.emotion-37 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3114,7 +2698,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding: 1rem;
 }
 
-.emotion-40 {
+.emotion-32 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -3124,12 +2708,12 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-40 .fillStroke {
+.emotion-32 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-42 {
+.emotion-34 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3142,7 +2726,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding: 0;
 }
 
-.emotion-44 {
+.emotion-36 {
   max-width: 200px;
   padding: 16px;
   -webkit-align-items: start;
@@ -3153,31 +2737,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   float: right;
 }
 
-.emotion-46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-49 {
+.emotion-39 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -3193,41 +2753,41 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-52 {
+    ):not([data-error='true']):active>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-52 {
+    ):not([data-error='true']):focus-within>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -3235,90 +2795,90 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-52 {
+    ):focus>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49[data-readonly='true'] {
+.emotion-39[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-49[data-readonly='true']:active {
+.emotion-39[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-49[data-size='small'] {
+.emotion-39[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-49[data-size='medium'] {
+.emotion-39[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-49[data-size='large'] {
+.emotion-39[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-49[data-success='true'] {
+.emotion-39[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-49[data-success='true']>.emotion-52 {
+.emotion-39[data-success='true']>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-success='true']:active {
+.emotion-39[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-49[data-success='true']:active>.emotion-52 {
+.emotion-39[data-success='true']:active>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-error='true'] {
+.emotion-39[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52 {
+.emotion-39[data-error='true']>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52:hover {
+.emotion-39[data-error='true']>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active {
+.emotion-39[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52 {
+.emotion-39[data-error='true']:active>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52:hover {
+.emotion-39[data-error='true']:active>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-disabled='true'] {
+.emotion-39[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-49[data-disabled='true']>.emotion-52 {
+.emotion-39[data-disabled='true']>.emotion-42 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-51 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3336,7 +2896,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   height: 100%;
 }
 
-.emotion-53 {
+.emotion-43 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3349,89 +2909,66 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   color: #3f4250;
 }
 
-.emotion-53[data-size="small"] {
+.emotion-43[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-53[data-size="large"] {
+.emotion-43[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-53::-webkit-input-placeholder {
+.emotion-43::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::-moz-placeholder {
+.emotion-43::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-53:-ms-input-placeholder {
+.emotion-43:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::placeholder {
+.emotion-43::placeholder {
   color: #727683;
 }
 
-.emotion-53:disabled {
+.emotion-43:disabled {
   cursor: not-allowed;
 }
 
-.emotion-53:disabled::-webkit-input-placeholder {
+.emotion-43:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::-moz-placeholder {
+.emotion-43:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled:-ms-input-placeholder {
+.emotion-43:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::placeholder {
+.emotion-43:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-56 {
+.emotion-46 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-56 #unit {
+.emotion-46 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-56 #unit:focus,
-.emotion-56 #unit:active {
+.emotion-46 #unit:focus,
+.emotion-46 #unit:active {
   box-shadow: none;
 }
 
-.emotion-58 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-60 {
+.emotion-48 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -3446,85 +2983,85 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   width: 100%;
 }
 
-.emotion-60[data-size='small'] {
+.emotion-48[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-60[data-size='medium'] {
+.emotion-48[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-60[data-size='large'] {
+.emotion-48[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-60[data-state='neutral'] {
+.emotion-48[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-60[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-48[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-60[data-state='success'] {
+.emotion-48[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-60[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-60[data-state='success'][data-dropdownvisible='true'] {
+.emotion-48[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-60[data-state='danger'] {
+.emotion-48[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-60[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-60[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-48[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-60:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-48:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-60[data-readonly='true'] {
+.emotion-48[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-60[data-disabled='true'] {
+.emotion-48[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-50 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -3533,27 +3070,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   align-self: center;
 }
 
-.emotion-64 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-52 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3561,7 +3078,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: flex;
 }
 
-.emotion-66 {
+.emotion-54 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -3570,12 +3087,12 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-height: 1rem;
 }
 
-.emotion-66 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-70 {
+.emotion-58 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3583,7 +3100,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 230px;
 }
 
-.emotion-72 {
+.emotion-60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3604,11 +3121,11 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-78 {
+.emotion-62 {
   text-align: right;
 }
 
-.emotion-82 {
+.emotion-64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3627,88 +3144,69 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-82:focus-within {
+.emotion-64:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-82[data-success='true'] {
+.emotion-64[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-82[data-error='true'] {
+.emotion-64[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-82:hover {
+.emotion-64:hover {
   border-color: #792dd4;
 }
 
-.emotion-82[data-readonly='true'] {
+.emotion-64[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-82[data-disabled='true'] {
+.emotion-64[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-82[data-controls='false']>.emotion-88 {
+.emotion-64[data-controls='false']>.emotion-70 {
   border-width: 0;
 }
 
-.emotion-82[data-size='small'] {
+.emotion-64[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-82[data-size='medium'] {
+.emotion-64[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-82[data-size='large'] {
+.emotion-64[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-84 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-66 {
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-84[data-size='small'] {
+.emotion-66[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-84[data-size='medium'] {
+.emotion-66[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-84[data-size='large'] {
+.emotion-66[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-86 {
+.emotion-68 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3717,12 +3215,12 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-height: 1rem;
 }
 
-.emotion-86 .fillStroke {
+.emotion-68 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-89 {
+.emotion-71 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -3739,7 +3237,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   width: 100%;
 }
 
-.emotion-91 {
+.emotion-73 {
   outline: none;
   border: none;
   padding: 0;
@@ -3754,18 +3252,18 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   background: none;
 }
 
-.emotion-91[data-has-unit='true'] {
+.emotion-73[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-91::-webkit-outer-spin-button,
-.emotion-91::-webkit-inner-spin-button {
+.emotion-73::-webkit-outer-spin-button,
+.emotion-73::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-91 {
+.emotion-73 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -3773,15 +3271,15 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   appearance: textfield;
 }
 
-.emotion-91[data-size='small'] {
+.emotion-73[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-91[data-size='medium'] {
+.emotion-73[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-91[data-size='large'] {
+.emotion-73[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -3789,34 +3287,34 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-91:-moz-read-only {
+.emotion-73:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-91:read-only {
+.emotion-73:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-91:-moz-read-only~.exvap482 {
+.emotion-73:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-91:read-only~.exvap482 {
+.emotion-73:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-91:disabled {
+.emotion-73:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-91:disabled~.exvap482 {
+.emotion-73:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -3825,16 +3323,16 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   user-select: none;
 }
 
-.emotion-91:placeholder-shown~.exvap482 {
+.emotion-73:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-91[data-controls='false'] {
+.emotion-73[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-97 {
+.emotion-79 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3846,22 +3344,22 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-99 {
+.emotion-81 {
   text-align: right;
 }
 
-.emotion-101 {
+.emotion-83 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-105 {
+.emotion-87 {
   width: 70%;
 }
 
-.emotion-107 {
+.emotion-89 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3878,7 +3376,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-109 {
+.emotion-91 {
   text-align: right;
 }
 
@@ -3886,28 +3384,31 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-testid="summary-overlay"
       >
         <ul
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               width="inherit"
             >
               <div>
                 <div
-                  class="emotion-10 emotion-1"
+                  class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
-                    class="emotion-12 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <p
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -3917,13 +3418,13 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-14 emotion-15"
+                  class="emotion-8 emotion-9"
                 >
                   <div
-                    class="emotion-16 emotion-17"
+                    class="emotion-10 emotion-11"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-12 emotion-13"
                     >
                       1
                     </div>
@@ -3933,13 +3434,14 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
             </div>
           </li>
           <li
-            class="emotion-20 emotion-7"
+            class="emotion-14 emotion-5"
           >
             <div
-              class="emotion-22 emotion-1"
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <svg
-                class="emotion-24 emotion-25"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -3951,13 +3453,13 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="emotion-28 emotion-29 emotion-19"
+                class="emotion-20 emotion-21 emotion-13"
               >
                 <span
-                  class="emotion-31 emotion-32"
+                  class="emotion-23 emotion-24"
                 >
                   €0.00/Hour(s)
                 </span>
@@ -3975,23 +3477,23 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-33 emotion-174"
+          class="emotion-25 emotion-114"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-37 emotion-38"
+                  class="emotion-29 emotion-30"
                 >
                   <svg
-                    class="emotion-39 emotion-40 emotion-25"
+                    class="emotion-31 emotion-32 emotion-17"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -4004,24 +3506,26 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-42 emotion-43"
+                class="emotion-34 emotion-35"
               >
                 <div
-                  class="emotion-44 emotion-45"
+                  class="emotion-36 emotion-37"
                 >
                   <div
-                    class="emotion-46 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
-                      class="emotion-48 emotion-49 emotion-50"
+                      class="emotion-38 emotion-39 emotion-40"
                     >
                       <div
-                        class="emotion-51 emotion-52"
+                        class="emotion-41 emotion-42"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-53 emotion-54"
+                          class="emotion-43 emotion-44"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«r1o»"
@@ -4036,7 +3540,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-55 emotion-56 emotion-57"
+                        class="emotion-45 emotion-46 emotion-47"
                       >
                         <div
                           aria-controls="«r1q»"
@@ -4045,12 +3549,13 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-58 emotion-1"
+                            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <div
                               aria-controls="«r1q»"
                               aria-expanded="false"
-                              class="emotion-60 emotion-61"
+                              class="emotion-48 emotion-49"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -4062,16 +3567,17 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-62 emotion-63 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-50 emotion-51 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-64 emotion-65"
+                                class="emotion-52 emotion-53 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-66 emotion-25"
+                                  class="emotion-54 emotion-17"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -4093,20 +3599,22 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-68 emotion-69"
+              class="emotion-56 emotion-57"
             >
               <td
-                class="emotion-70 emotion-171"
+                class="emotion-58 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-72 emotion-73"
+                  class="emotion-60 emotion-61"
                 >
                   <div
-                    class="emotion-10 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <div
-                      class="emotion-12 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <p
                         class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -4116,14 +3624,15 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-78 emotion-15"
+                    class="emotion-62 emotion-9"
                   >
                     <div
-                      class="emotion-58 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <div>
                         <div
-                          class="emotion-82 emotion-83"
+                          class="emotion-64 emotion-65"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -4132,8 +3641,9 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-84 emotion-85"
+                            class="emotion-66 emotion-67 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="minus"
@@ -4141,7 +3651,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-86 emotion-25"
+                                class="emotion-68 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -4151,10 +3661,10 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-88 emotion-89 emotion-50"
+                            class="emotion-70 emotion-71 emotion-40"
                           >
                             <input
-                              class="emotion-91 emotion-92"
+                              class="emotion-73 emotion-74"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -4167,8 +3677,9 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-84 emotion-85"
+                            class="emotion-66 emotion-67 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="plus"
@@ -4176,7 +3687,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-86 emotion-25"
+                                class="emotion-68 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -4192,10 +3703,10 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-97 emotion-98"
+                class="emotion-79 emotion-80"
               >
                 <p
-                  class="emotion-99 emotion-100 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-81 emotion-82 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -4206,28 +3717,28 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-101 emotion-102"
+          class="emotion-83 emotion-84"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-105 emotion-106"
+                class="emotion-87 emotion-88"
               />
               <td
-                class="emotion-107 emotion-170"
+                class="emotion-89 emotion-110"
               >
                 <h3
-                  class="emotion-109 emotion-110 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-91 emotion-92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-31 emotion-32"
+                    class="emotion-23 emotion-24"
                   >
                     €0.00
                   </span>
@@ -4245,29 +3756,6 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-2 {
   position: fixed;
   left: 0;
   right: 0;
@@ -4289,7 +3777,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   z-index: 1;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4306,19 +3794,19 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding: 1.5rem 0;
 }
 
-.emotion-6 {
+.emotion-4 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
   border: 0;
 }
 
-.emotion-6:first-of-type,
-.emotion-6:last-child {
+.emotion-4:first-of-type,
+.emotion-4:last-child {
   border: 0;
 }
 
-.emotion-8 {
+.emotion-6 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4326,51 +3814,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 230px;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-14 {
+.emotion-8 {
   text-align: initial;
   height: 48px;
   display: -webkit-box;
@@ -4387,7 +3831,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   justify-content: center;
 }
 
-.emotion-16 {
+.emotion-10 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4403,7 +3847,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   justify-content: center;
 }
 
-.emotion-18 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4418,41 +3862,18 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   margin-right: 4px;
 }
 
-.emotion-20 {
+.emotion-14 {
   min-width: 200px;
   padding: 0 24px;
   border-left: 1px solid #d9dadd;
 }
 
-.emotion-20:first-of-type,
-.emotion-20:last-child {
+.emotion-14:first-of-type,
+.emotion-14:last-child {
   border: 0;
 }
 
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-24 {
+.emotion-16 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -4461,12 +3882,12 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4493,25 +3914,25 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   margin-right: 4px;
 }
 
-.emotion-33 {
+.emotion-25 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-33>* {
+.emotion-25>* {
   margin-top: 0;
 }
 
-.emotion-33>*+* {
+.emotion-25>*+* {
   margin-top: 16px;
 }
 
-.emotion-35 {
+.emotion-27 {
   background-color: #ffffff;
 }
 
-.emotion-37 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4528,7 +3949,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding: 1rem;
 }
 
-.emotion-40 {
+.emotion-32 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1.25rem;
@@ -4538,12 +3959,12 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-40 .fillStroke {
+.emotion-32 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-42 {
+.emotion-34 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4556,7 +3977,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding: 0;
 }
 
-.emotion-44 {
+.emotion-36 {
   max-width: 200px;
   padding: 16px;
   -webkit-align-items: start;
@@ -4567,31 +3988,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   float: right;
 }
 
-.emotion-46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-49 {
+.emotion-39 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -4607,41 +4004,41 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-52 {
+    ):not([data-error='true']):active>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-52 {
+    ):not([data-error='true']):focus-within>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -4649,90 +4046,90 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-52,
-.emotion-49:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-42,
+.emotion-39:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-52 {
+    ):focus>.emotion-42 {
   border-right-color: #8c40ef;
 }
 
-.emotion-49[data-readonly='true'] {
+.emotion-39[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-49[data-readonly='true']:active {
+.emotion-39[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-49[data-size='small'] {
+.emotion-39[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-49[data-size='medium'] {
+.emotion-39[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-49[data-size='large'] {
+.emotion-39[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-49[data-success='true'] {
+.emotion-39[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-49[data-success='true']>.emotion-52 {
+.emotion-39[data-success='true']>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-success='true']:active {
+.emotion-39[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-49[data-success='true']:active>.emotion-52 {
+.emotion-39[data-success='true']:active>.emotion-42 {
   border-right-color: #22674e;
 }
 
-.emotion-49[data-error='true'] {
+.emotion-39[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52 {
+.emotion-39[data-error='true']>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']>.emotion-52:hover {
+.emotion-39[data-error='true']>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active {
+.emotion-39[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52 {
+.emotion-39[data-error='true']:active>.emotion-42 {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-error='true']:active>.emotion-52:hover {
+.emotion-39[data-error='true']:active>.emotion-42:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-49[data-disabled='true'] {
+.emotion-39[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-49[data-disabled='true']>.emotion-52 {
+.emotion-39[data-disabled='true']>.emotion-42 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-51 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4750,7 +4147,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   height: 100%;
 }
 
-.emotion-53 {
+.emotion-43 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -4763,89 +4160,66 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   color: #3f4250;
 }
 
-.emotion-53[data-size="small"] {
+.emotion-43[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-53[data-size="large"] {
+.emotion-43[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-53::-webkit-input-placeholder {
+.emotion-43::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::-moz-placeholder {
+.emotion-43::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-53:-ms-input-placeholder {
+.emotion-43:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-53::placeholder {
+.emotion-43::placeholder {
   color: #727683;
 }
 
-.emotion-53:disabled {
+.emotion-43:disabled {
   cursor: not-allowed;
 }
 
-.emotion-53:disabled::-webkit-input-placeholder {
+.emotion-43:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::-moz-placeholder {
+.emotion-43:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled:-ms-input-placeholder {
+.emotion-43:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-53:disabled::placeholder {
+.emotion-43:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-56 {
+.emotion-46 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-56 #unit {
+.emotion-46 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-56 #unit:focus,
-.emotion-56 #unit:active {
+.emotion-46 #unit:focus,
+.emotion-46 #unit:active {
   box-shadow: none;
 }
 
-.emotion-58 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-60 {
+.emotion-48 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -4860,85 +4234,85 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   width: 100%;
 }
 
-.emotion-60[data-size='small'] {
+.emotion-48[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-60[data-size='medium'] {
+.emotion-48[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-60[data-size='large'] {
+.emotion-48[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-60[data-state='neutral'] {
+.emotion-48[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-60[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-48[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-60[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-48[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-60[data-state='success'] {
+.emotion-48[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-60[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-60[data-state='success'][data-dropdownvisible='true'] {
+.emotion-48[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-60[data-state='danger'] {
+.emotion-48[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-60[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-48[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-60[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-48[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-60:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-48:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-60[data-readonly='true'] {
+.emotion-48[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-60[data-disabled='true'] {
+.emotion-48[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-62 {
+.emotion-50 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -4947,27 +4321,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   align-self: center;
 }
 
-.emotion-64 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-52 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4975,7 +4329,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: flex;
 }
 
-.emotion-66 {
+.emotion-54 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1rem;
@@ -4984,12 +4338,12 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-66 .fillStroke {
+.emotion-54 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-70 {
+.emotion-58 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4997,7 +4351,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 230px;
 }
 
-.emotion-72 {
+.emotion-60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5018,15 +4372,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-78 {
+.emotion-62 {
   margin-left: 0.5rem;
 }
 
-.emotion-80 {
+.emotion-64 {
   text-align: right;
 }
 
-.emotion-84 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5045,88 +4399,69 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-84:focus-within {
+.emotion-66:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-84[data-success='true'] {
+.emotion-66[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-84[data-error='true'] {
+.emotion-66[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-84:hover {
+.emotion-66:hover {
   border-color: #792dd4;
 }
 
-.emotion-84[data-readonly='true'] {
+.emotion-66[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-84[data-disabled='true'] {
+.emotion-66[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-84[data-controls='false']>.emotion-90 {
+.emotion-66[data-controls='false']>.emotion-72 {
   border-width: 0;
 }
 
-.emotion-84[data-size='small'] {
+.emotion-66[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-84[data-size='medium'] {
+.emotion-66[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-84[data-size='large'] {
+.emotion-66[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-86 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-68 {
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-86[data-size='small'] {
+.emotion-68[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-86[data-size='medium'] {
+.emotion-68[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-86[data-size='large'] {
+.emotion-68[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-88 {
+.emotion-70 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -5135,12 +4470,12 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-height: 1rem;
 }
 
-.emotion-88 .fillStroke {
+.emotion-70 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-91 {
+.emotion-73 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -5157,7 +4492,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   width: 100%;
 }
 
-.emotion-93 {
+.emotion-75 {
   outline: none;
   border: none;
   padding: 0;
@@ -5172,18 +4507,18 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   background: none;
 }
 
-.emotion-93[data-has-unit='true'] {
+.emotion-75[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-93::-webkit-outer-spin-button,
-.emotion-93::-webkit-inner-spin-button {
+.emotion-75::-webkit-outer-spin-button,
+.emotion-75::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-93 {
+.emotion-75 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -5191,15 +4526,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   appearance: textfield;
 }
 
-.emotion-93[data-size='small'] {
+.emotion-75[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-93[data-size='medium'] {
+.emotion-75[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-93[data-size='large'] {
+.emotion-75[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5207,34 +4542,34 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-93:-moz-read-only {
+.emotion-75:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-93:read-only {
+.emotion-75:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-93:-moz-read-only~.exvap482 {
+.emotion-75:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-93:read-only~.exvap482 {
+.emotion-75:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-93:disabled {
+.emotion-75:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-93:disabled~.exvap482 {
+.emotion-75:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -5243,16 +4578,16 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   user-select: none;
 }
 
-.emotion-93:placeholder-shown~.exvap482 {
+.emotion-75:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-93[data-controls='false'] {
+.emotion-75[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-99 {
+.emotion-81 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5264,26 +4599,26 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-101 {
+.emotion-83 {
   text-align: right;
 }
 
-.emotion-103 {
+.emotion-85 {
   text-align: right;
 }
 
-.emotion-105 {
+.emotion-87 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-109 {
+.emotion-91 {
   width: 70%;
 }
 
-.emotion-111 {
+.emotion-93 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5300,7 +4635,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-113 {
+.emotion-95 {
   text-align: right;
 }
 
@@ -5308,28 +4643,31 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         data-testid="summary-overlay"
       >
         <ul
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               width="inherit"
             >
               <div>
                 <div
-                  class="emotion-10 emotion-1"
+                  class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
-                    class="emotion-12 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <p
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -5339,13 +4677,13 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-14 emotion-15"
+                  class="emotion-8 emotion-9"
                 >
                   <div
-                    class="emotion-16 emotion-17"
+                    class="emotion-10 emotion-11"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-12 emotion-13"
                     >
                       50
                     </div>
@@ -5355,13 +4693,14 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
             </div>
           </li>
           <li
-            class="emotion-20 emotion-7"
+            class="emotion-14 emotion-5"
           >
             <div
-              class="emotion-22 emotion-1"
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <svg
-                class="emotion-24 emotion-25"
+                class="emotion-16 emotion-17"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -5373,13 +4712,13 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="emotion-28 emotion-29 emotion-19"
+                class="emotion-20 emotion-21 emotion-13"
               >
                 <span
-                  class="emotion-31 emotion-32"
+                  class="emotion-23 emotion-24"
                 >
                   €50.00/Hour(s)
                 </span>
@@ -5397,23 +4736,23 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-33 emotion-174"
+          class="emotion-25 emotion-114"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-37 emotion-38"
+                  class="emotion-29 emotion-30"
                 >
                   <svg
-                    class="emotion-39 emotion-40 emotion-25"
+                    class="emotion-31 emotion-32 emotion-17"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -5426,24 +4765,26 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-42 emotion-43"
+                class="emotion-34 emotion-35"
               >
                 <div
-                  class="emotion-44 emotion-45"
+                  class="emotion-36 emotion-37"
                 >
                   <div
-                    class="emotion-46 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
-                      class="emotion-48 emotion-49 emotion-50"
+                      class="emotion-38 emotion-39 emotion-40"
                     >
                       <div
-                        class="emotion-51 emotion-52"
+                        class="emotion-41 emotion-42"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-53 emotion-54"
+                          class="emotion-43 emotion-44"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«r15»"
@@ -5458,7 +4799,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-55 emotion-56 emotion-57"
+                        class="emotion-45 emotion-46 emotion-47"
                       >
                         <div
                           aria-controls="«r17»"
@@ -5467,12 +4808,13 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-58 emotion-1"
+                            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <div
                               aria-controls="«r17»"
                               aria-expanded="false"
-                              class="emotion-60 emotion-61"
+                              class="emotion-48 emotion-49"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -5484,16 +4826,17 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-62 emotion-63 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-50 emotion-51 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-64 emotion-65"
+                                class="emotion-52 emotion-53 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-66 emotion-25"
+                                  class="emotion-54 emotion-17"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -5515,20 +4858,22 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-68 emotion-69"
+              class="emotion-56 emotion-57"
             >
               <td
-                class="emotion-70 emotion-171"
+                class="emotion-58 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-72 emotion-73"
+                  class="emotion-60 emotion-61"
                 >
                   <div
-                    class="emotion-10 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <div
-                      class="emotion-12 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <p
                         class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
@@ -5536,21 +4881,22 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                         Chocolates
                       </p>
                       <p
-                        class="emotion-78 emotion-79 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                        class="emotion-62 emotion-63 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                       >
                         Chocolate is never free :(
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-80 emotion-15"
+                    class="emotion-64 emotion-9"
                   >
                     <div
-                      class="emotion-58 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <div>
                         <div
-                          class="emotion-84 emotion-85"
+                          class="emotion-66 emotion-67"
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
@@ -5559,8 +4905,9 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                           data-unit="false"
                         >
                           <div
-                            class="emotion-86 emotion-87"
+                            class="emotion-68 emotion-69 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="minus"
@@ -5568,7 +4915,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-88 emotion-25"
+                                class="emotion-70 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -5578,10 +4925,10 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                             </button>
                           </div>
                           <div
-                            class="emotion-90 emotion-91 emotion-50"
+                            class="emotion-72 emotion-73 emotion-40"
                           >
                             <input
-                              class="emotion-93 emotion-94"
+                              class="emotion-75 emotion-76"
                               data-controls="true"
                               data-has-unit="false"
                               data-size="small"
@@ -5594,8 +4941,9 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                             />
                           </div>
                           <div
-                            class="emotion-86 emotion-87"
+                            class="emotion-68 emotion-69 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
                             data-size="small"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <button
                               aria-label="plus"
@@ -5603,7 +4951,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                               type="button"
                             >
                               <svg
-                                class="emotion-88 emotion-25"
+                                class="emotion-70 emotion-17"
                                 viewBox="0 0 16 16"
                               >
                                 <path
@@ -5619,15 +4967,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-99 emotion-100"
+                class="emotion-81 emotion-82"
               >
                 <p
-                  class="emotion-101 emotion-102 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-83 emotion-84 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €50.00
                 </p>
                 <p
-                  class="emotion-103 emotion-104 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-85 emotion-86 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   €1.00/chocolate/hour(s)
                 </p>
@@ -5638,28 +4986,28 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-105 emotion-106"
+          class="emotion-87 emotion-88"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-35 emotion-172"
+              class="emotion-27 emotion-112"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-109 emotion-110"
+                class="emotion-91 emotion-92"
               />
               <td
-                class="emotion-111 emotion-170"
+                class="emotion-93 emotion-110"
               >
                 <h3
-                  class="emotion-113 emotion-114 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-95 emotion-96 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-31 emotion-32"
+                    class="emotion-23 emotion-24"
                   >
                     €50.00
                   </span>
