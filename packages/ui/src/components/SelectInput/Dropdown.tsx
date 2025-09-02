@@ -73,7 +73,7 @@ const NON_SEARCHABLE_KEYS = [
 ]
 
 const StyledPopup = styled(Popup)`
-  width: 100%;
+  width: 90%;
   min-width: 320px;
   background-color: ${({ theme }) =>
     theme.colors.other.elevation.background.raised};
@@ -718,7 +718,9 @@ export const Dropdown = ({
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
-  const [maxWidth, setWidth] = useState<string | number>()
+  const [maxWidth, setWidth] = useState<string | number>(
+    refSelect.current?.offsetWidth ?? '100%',
+  )
   const modalContext = useContext(ModalContext)
 
   useEffect(() => {

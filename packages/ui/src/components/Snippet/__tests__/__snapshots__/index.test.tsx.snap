@@ -76,18 +76,6 @@ exports[`snippet > renders correctly 1`] = `
 }
 
 .emotion-10 {
-  display: inherit;
-}
-
-.emotion-10[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-10[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -96,7 +84,7 @@ exports[`snippet > renders correctly 1`] = `
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -126,8 +114,7 @@ exports[`snippet > renders correctly 1`] = `
           <div
             aria-controls="«r1»"
             aria-describedby="«r1»"
-            class="emotion-10 emotion-11"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -136,7 +123,7 @@ exports[`snippet > renders correctly 1`] = `
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -244,18 +231,6 @@ exports[`snippet > renders correctly in multiline  1`] = `
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -264,17 +239,17 @@ exports[`snippet > renders correctly in multiline  1`] = `
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-28 {
+.emotion-26 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-30 {
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -283,7 +258,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   cursor: pointer;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -298,7 +273,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -314,7 +289,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -384,8 +359,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
           <div
             aria-controls="«r3»"
             aria-describedby="«r3»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -394,7 +368,7 @@ exports[`snippet > renders correctly in multiline  1`] = `
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -412,19 +386,19 @@ exports[`snippet > renders correctly in multiline  1`] = `
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -542,18 +516,6 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -562,17 +524,17 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-28 {
+.emotion-26 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-30 {
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -581,7 +543,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   cursor: pointer;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -596,7 +558,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -612,7 +574,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -682,8 +644,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
           <div
             aria-controls="«r9»"
             aria-describedby="«r9»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -692,7 +653,7 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -710,19 +671,19 @@ exports[`snippet > renders correctly in multiline with prefix command 1`] = `
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -841,18 +802,6 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -861,17 +810,17 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-28 {
+.emotion-26 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-30 {
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -880,7 +829,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   cursor: pointer;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -895,7 +844,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -911,7 +860,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -981,8 +930,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
           <div
             aria-controls="«r6»"
             aria-describedby="«r6»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -991,7 +939,7 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1009,19 +957,19 @@ exports[`snippet > renders correctly in multiline with prefix lines number 1`] =
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1115,18 +1063,6 @@ exports[`snippet > renders correctly with copiedText 1`] = `
 }
 
 .emotion-10 {
-  display: inherit;
-}
-
-.emotion-10[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-10[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1135,7 +1071,7 @@ exports[`snippet > renders correctly with copiedText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1165,8 +1101,7 @@ exports[`snippet > renders correctly with copiedText 1`] = `
           <div
             aria-controls="«ri»"
             aria-describedby="«ri»"
-            class="emotion-10 emotion-11"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -1175,7 +1110,7 @@ exports[`snippet > renders correctly with copiedText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1274,18 +1209,6 @@ exports[`snippet > renders correctly with copyText 1`] = `
 }
 
 .emotion-10 {
-  display: inherit;
-}
-
-.emotion-10[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-10[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1294,7 +1217,7 @@ exports[`snippet > renders correctly with copyText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1324,8 +1247,7 @@ exports[`snippet > renders correctly with copyText 1`] = `
           <div
             aria-controls="«rg»"
             aria-describedby="«rg»"
-            class="emotion-10 emotion-11"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -1334,7 +1256,7 @@ exports[`snippet > renders correctly with copyText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1506,30 +1428,6 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
 }
 
 .emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-24 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1538,12 +1436,12 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   min-height: 1rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-24 {
+.emotion-22 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1552,7 +1450,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
   min-height: 1rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1616,8 +1514,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
           <div
             aria-controls="«r10»"
             aria-describedby="«r10»"
-            class="emotion-22 emotion-23"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -1626,7 +1523,7 @@ exports[`snippet > renders correctly with custom number of rows 1`] = `
               type="button"
             >
               <svg
-                class="emotion-24 emotion-25"
+                class="emotion-22 emotion-23"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1734,18 +1631,6 @@ exports[`snippet > renders correctly with hideText 1`] = `
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1754,17 +1639,17 @@ exports[`snippet > renders correctly with hideText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-28 {
+.emotion-26 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-30 {
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -1773,7 +1658,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   cursor: pointer;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1788,7 +1673,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1804,7 +1689,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -1874,8 +1759,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
           <div
             aria-controls="«rk»"
             aria-describedby="«rk»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -1884,7 +1768,7 @@ exports[`snippet > renders correctly with hideText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1902,19 +1786,19 @@ exports[`snippet > renders correctly with hideText 1`] = `
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2099,30 +1983,20 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-24 {
-  display: inherit;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
+.emotion-24 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2131,31 +2005,26 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-28 {
   width: 100%;
   box-shadow: none;
 }
 
-.emotion-30 {
+.emotion-28 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -2165,15 +2034,6 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-30 {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  cursor: pointer;
-}
-
-.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2188,7 +2048,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   align-items: center;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2203,7 +2063,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2219,7 +2079,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2288,8 +2148,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
           <div
             aria-controls="«rq»"
             aria-describedby="«rq»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -2298,7 +2157,7 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2316,19 +2175,19 @@ exports[`snippet > renders correctly with initiallyExpanded 1`] = `
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="true"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Hide 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2486,30 +2345,6 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
 }
 
 .emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-24 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2518,12 +2353,12 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-24 {
+.emotion-22 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2532,7 +2367,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
   min-height: 1rem;
 }
 
-.emotion-24 .fillStroke {
+.emotion-22 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -2596,8 +2431,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
           <div
             aria-controls="«r12»"
             aria-describedby="«r12»"
-            class="emotion-22 emotion-23"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -2606,7 +2440,7 @@ exports[`snippet > renders correctly with noExpandable 1`] = `
               type="button"
             >
               <svg
-                class="emotion-24 emotion-25"
+                class="emotion-22 emotion-23"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2796,30 +2630,20 @@ exports[`snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-24 {
-  display: inherit;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
+.emotion-24 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2828,36 +2652,31 @@ exports[`snippet > renders correctly with showText 1`] = `
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-26 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-28 {
+.emotion-26 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .emotion-28 {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f9f9fa;
+  background: none;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
 }
 
-.emotion-30 {
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -2867,15 +2686,6 @@ exports[`snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-30 {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  cursor: pointer;
-}
-
-.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2890,7 +2700,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   align-items: center;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2905,7 +2715,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2921,12 +2731,12 @@ exports[`snippet > renders correctly with showText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -2942,7 +2752,7 @@ exports[`snippet > renders correctly with showText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3012,8 +2822,7 @@ exports[`snippet > renders correctly with showText 1`] = `
           <div
             aria-controls="«rn»"
             aria-describedby="«rn»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -3022,7 +2831,7 @@ exports[`snippet > renders correctly with showText 1`] = `
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3040,19 +2849,19 @@ exports[`snippet > renders correctly with showText 1`] = `
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="false"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Test 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3161,18 +2970,6 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
 }
 
 .emotion-10 {
-  display: inherit;
-}
-
-.emotion-10[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-10[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3181,7 +2978,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3211,8 +3008,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
           <div
             aria-controls="«rc»"
             aria-describedby="«rc»"
-            class="emotion-10 emotion-11"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -3221,7 +3017,7 @@ exports[`snippet > renders correctly with single line with prefix command 1`] = 
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3336,18 +3132,6 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
 }
 
 .emotion-10 {
-  display: inherit;
-}
-
-.emotion-10[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-10[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3356,7 +3140,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
   min-height: 1rem;
 }
 
-.emotion-12 .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3386,8 +3170,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
           <div
             aria-controls="«re»"
             aria-describedby="«re»"
-            class="emotion-10 emotion-11"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -3396,7 +3179,7 @@ exports[`snippet > renders correctly with single line with prefix lines number 1
               type="button"
             >
               <svg
-                class="emotion-12 emotion-13"
+                class="emotion-10 emotion-11"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3586,30 +3369,20 @@ exports[`snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-24 {
-  display: inherit;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
+.emotion-24 .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .emotion-24 {
-  display: inherit;
-}
-
-.emotion-24[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-24[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-26 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3618,31 +3391,26 @@ exports[`snippet > should click on extend button to display full content on  1`]
   min-height: 1rem;
 }
 
-.emotion-26 .fillStroke {
+.emotion-24 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-28 {
   width: 100%;
   box-shadow: none;
 }
 
-.emotion-30 {
+.emotion-28 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.emotion-28 {
   width: 100%;
   background: none;
   border: none;
@@ -3652,15 +3420,6 @@ exports[`snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-30 {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  cursor: pointer;
-}
-
-.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3675,7 +3434,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   align-items: center;
 }
 
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3690,7 +3449,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-33 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -3706,7 +3465,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-35 .fillStroke {
+.emotion-33 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -3776,8 +3535,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
           <div
             aria-controls="«rt»"
             aria-describedby="«rt»"
-            class="emotion-24 emotion-25"
-            data-container-full-width="false"
+            class="styles__w40vpo9"
             tabindex="0"
           >
             <button
@@ -3786,7 +3544,7 @@ exports[`snippet > should click on extend button to display full content on  1`]
               type="button"
             >
               <svg
-                class="emotion-26 emotion-27"
+                class="emotion-24 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -3804,19 +3562,19 @@ exports[`snippet > should click on extend button to display full content on  1`]
           </div>
         </div>
         <div
-          class="emotion-28 emotion-29"
+          class="emotion-26 emotion-27"
         >
           <button
             aria-expanded="true"
-            class="emotion-30 emotion-31"
+            class="emotion-28 emotion-29"
             type="button"
           >
             <span
-              class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-30 emotion-31 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Hide 
               <svg
-                class="emotion-34 emotion-35 emotion-27"
+                class="emotion-32 emotion-33 emotion-25"
                 viewBox="0 0 16 16"
               >
                 <path
