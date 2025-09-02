@@ -18,7 +18,7 @@ type ToNumber<T extends string> = T extends `${infer N extends number}`
   ? N
   : never
 
-type StackProps = {
+export type StackProps = {
   gap?: ResponsiveProp<
     | keyof UltravioletUITheme['space']
     | ToNumber<keyof UltravioletUITheme['space']>
@@ -66,7 +66,7 @@ const mapRepsonsiveGap = (
       )
     : {}
 
-export const Stack = ({
+export const Stack: React.FC<StackProps> = ({
   gap,
   direction = 'column',
   alignItems = 'normal',
@@ -78,7 +78,7 @@ export const Stack = ({
   'data-testid': dataTestId,
   ref,
   ...props
-}: StackProps) => {
+}) => {
   const wrapValue = useMemo(() => {
     if (typeof wrap === 'boolean') {
       return wrap ? 'wrap' : 'nowrap'
