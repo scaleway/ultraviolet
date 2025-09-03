@@ -27,7 +27,10 @@ export {
   zoomIn,
   zoomOut,
 } from './animations'
-export { fadeInVanillaExtract } from './animationVanillaExtract.css'
+export {
+  fadeInVanillaExtract,
+  pingVanillaExtract,
+} from './animationVanillaExtract.css'
 export { getUUID } from './ids'
 export { default as normalize } from './normalize'
 export type { ComparableType } from './orderBy'
