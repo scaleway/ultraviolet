@@ -1,9 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Status, statusSentiments } from '..'
+import { Status } from '..'
+import { SENTIMENTS } from '../constant'
 
 export const Sentiments: StoryFn<typeof Status> = props => (
   <>
-    {statusSentiments.map(sentiment => (
+    {SENTIMENTS.map(sentiment => (
       <Status key={sentiment} {...props} sentiment={sentiment} />
     ))}
   </>
