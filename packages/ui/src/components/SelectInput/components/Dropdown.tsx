@@ -639,6 +639,29 @@ export const Dropdown = ({
   )
   const modalContext = useContext(ModalContext)
 
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        event.target instanceof Node &&
+        ref.current &&
+        !ref.current.contains(event.target) &&
+        refSelect.current &&
+        !refSelect.current.contains(event.target)
+      ) {
+        setIsDropdownVisible(false)
+      }
+    },
+    [setIsDropdownVisible, refSelect],
+  )
+
+  useEffect(() => {
+    document.addEventListener('mouseup', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mouseup', handleClickOutside)
+    }
+  }, [handleClickOutside])
+
   useEffect(() => {
     if (refSelect.current && isDropdownVisible) {
       const position =

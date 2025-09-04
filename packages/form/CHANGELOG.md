@@ -362,16 +362,16 @@
   - `legend` type moved from `ReactNode` to `string`. Use `legendDescription` to add more information.
   - new prop `legendDescription` to add more information to the legend.
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   - `<RadioField />` no longer deprecated
   - `<DateField />` renamed `<DateInputField />` to be consistent with other input fields
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
 
   We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
 
@@ -471,7 +471,7 @@
 
 ### Major Changes
 
-- [#5285](https://github.com/scaleway/ultraviolet/pull/5285) [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5285](https://github.com/scaleway/ultraviolet/pull/5285) [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   - `<RadioField />` no longer deprecated
   - `<DateField />` renamed `<DateInputField />` to be consistent with other input fields
@@ -500,7 +500,7 @@
 
 ### Major Changes
 
-- [#5228](https://github.com/scaleway/ultraviolet/pull/5228) [`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES
+- [#5228](https://github.com/scaleway/ultraviolet/pull/5228) [`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
 
   We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
 
@@ -632,7 +632,7 @@
 
 ### Major Changes
 
-- [#5126](https://github.com/scaleway/ultraviolet/pull/5126) [`17da30c`](https://github.com/scaleway/ultraviolet/commit/17da30c133f624964daff6398e481568bd6da446) Thanks [@matthprost](https://github.com/matthprost)! - ! `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+- [#5126](https://github.com/scaleway/ultraviolet/pull/5126) [`17da30c`](https://github.com/scaleway/ultraviolet/commit/17da30c133f624964daff6398e481568bd6da446) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
 
 - [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
 
@@ -2787,7 +2787,7 @@
 
 ### Patch Changes
 
-- [#3050](https://github.com/scaleway/ultraviolet/pull/3050) [`cc8bce1d`](https://github.com/scaleway/ultraviolet/commit/cc8bce1d0fc7f326d19d6f55173f2cf386079d23) Thanks [@matthprost](https://github.com/matthprost)! - ! **Hotfix**: fixing the type error on `<DateField />` component not to required props `startDate`, `endDate`, `excludeDate` and `selectsRange`
+- [#3050](https://github.com/scaleway/ultraviolet/pull/3050) [`cc8bce1d`](https://github.com/scaleway/ultraviolet/commit/cc8bce1d0fc7f326d19d6f55173f2cf386079d23) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ **Hotfix**: fixing the type error on `<DateField />` component not to required props `startDate`, `endDate`, `excludeDate` and `selectsRange`
 
 - Updated dependencies [[`cc8bce1d`](https://github.com/scaleway/ultraviolet/commit/cc8bce1d0fc7f326d19d6f55173f2cf386079d23)]:
   - @ultraviolet/ui@1.20.2
@@ -3239,7 +3239,7 @@
 
 ### Minor Changes
 
-- [#2629](https://github.com/scaleway/ultraviolet/pull/2629) [`01ab2175`](https://github.com/scaleway/ultraviolet/commit/01ab21759aa109765a625a5bc1ad1865dde107f0) Thanks [@matthprost](https://github.com/matthprost)! - !!! **THOSE PACKAGES ARE DEPRECATED** !!!
+- [#2629](https://github.com/scaleway/ultraviolet/pull/2629) [`01ab2175`](https://github.com/scaleway/ultraviolet/commit/01ab21759aa109765a625a5bc1ad1865dde107f0) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️⚠️⚠️ **THOSE PACKAGES ARE DEPRECATED** ⚠️⚠️⚠️
 
   We renamed the scope of our packages from `@scaleway` to `@ultraviolet` and made a major update to all of them.
 

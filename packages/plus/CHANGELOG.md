@@ -466,7 +466,7 @@
 
 ### Major Changes
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
 
 - [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
 
@@ -710,7 +710,7 @@
 
 ### Major Changes
 
-- [#5126](https://github.com/scaleway/ultraviolet/pull/5126) [`17da30c`](https://github.com/scaleway/ultraviolet/commit/17da30c133f624964daff6398e481568bd6da446) Thanks [@matthprost](https://github.com/matthprost)! - ! `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
+- [#5126](https://github.com/scaleway/ultraviolet/pull/5126) [`17da30c`](https://github.com/scaleway/ultraviolet/commit/17da30c133f624964daff6398e481568bd6da446) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ `@ultraviolet/ui` is now a peer-dependency of `@ultraviolet/form` and `@ultraviolet/plus`. This means you need to have an installed version of `@ultraviolet/ui` in your project that matches the version defined by the peer-dependency.
 
 - [#5112](https://github.com/scaleway/ultraviolet/pull/5112) [`37a7d63`](https://github.com/scaleway/ultraviolet/commit/37a7d632cd1e61d7615e5356fc179ec08f3bec09) Thanks [@matthprost](https://github.com/matthprost)! - Beta release
 
@@ -856,7 +856,7 @@
 
 ### Minor Changes
 
-- [#5100](https://github.com/scaleway/ultraviolet/pull/5100) [`314b5c6`](https://github.com/scaleway/ultraviolet/commit/314b5c61bc76cb660432c79c83e01171a0441f69) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES:
+- [#5100](https://github.com/scaleway/ultraviolet/pull/5100) [`314b5c6`](https://github.com/scaleway/ultraviolet/commit/314b5c61bc76cb660432c79c83e01171a0441f69) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES:
 
   `Navigation.Item`: change in the types and deprecated category icon props:
 

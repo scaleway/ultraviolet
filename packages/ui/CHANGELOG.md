@@ -546,7 +546,7 @@
 
 ### Major Changes
 
-- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES !
+- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES ⚠️
   In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
 
   ```tsx
@@ -575,7 +575,7 @@
 
 ### Major Changes
 
-- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES !
+- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES ⚠️
   In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
 
   ```tsx
@@ -689,7 +689,7 @@
   - `Checkbox`: props "progress" and "size" removed
   - `CopyButton`: prop "noBorder" removed -> use "bordered" instead
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   `ThemeRegistry` is no longer available in this package. You can import it by adding `@ultraviolet/nextjs` package to your project. The component is the same only the import changes.
 
@@ -833,12 +833,12 @@
   </Tag>;
   ```
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   - Removal of `<PasswordStrengthMeter />` component => replaced by `<Meter />`
   - Dialog no long experimental
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
 
   We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
 
@@ -850,7 +850,7 @@
   TimeInputV2 -> TimeInput
   NumberInputV2 -> NumberInput
 
-- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5380](https://github.com/scaleway/ultraviolet/pull/5380) [`7dd79d2`](https://github.com/scaleway/ultraviolet/commit/7dd79d21854986780983094ef0deeabcc58b74b7) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   `SCWUITheme` no longer exists, use `UltravioletUITheme`. The type is the same.
 
@@ -990,7 +990,7 @@
 
 ### Major Changes
 
-- [#5366](https://github.com/scaleway/ultraviolet/pull/5366) [`f791286`](https://github.com/scaleway/ultraviolet/commit/f791286dc4e5dad0f4cbf14c53801d7890e0ee63) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5366](https://github.com/scaleway/ultraviolet/pull/5366) [`f791286`](https://github.com/scaleway/ultraviolet/commit/f791286dc4e5dad0f4cbf14c53801d7890e0ee63) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   `SCWUITheme` no longer exists, use `UltravioletUITheme`. The type is the same.
 
@@ -1064,7 +1064,7 @@
 
 ### Major Changes
 
-- [#5311](https://github.com/scaleway/ultraviolet/pull/5311) [`b8fa3f6`](https://github.com/scaleway/ultraviolet/commit/b8fa3f6542b0b99bd2887b07ac4db0487e9371a1) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5311](https://github.com/scaleway/ultraviolet/pull/5311) [`b8fa3f6`](https://github.com/scaleway/ultraviolet/commit/b8fa3f6542b0b99bd2887b07ac4db0487e9371a1) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   `ThemeRegistry` is no longer available in this package. You can import it by adding `@ultraviolet/nextjs` package to your project. The component is the same only the import changes.
 
@@ -1127,7 +1127,7 @@
 
 ### Major Changes
 
-- [#5285](https://github.com/scaleway/ultraviolet/pull/5285) [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3) Thanks [@matthprost](https://github.com/matthprost)! - ! Breaking changes:
+- [#5285](https://github.com/scaleway/ultraviolet/pull/5285) [`b3873c7`](https://github.com/scaleway/ultraviolet/commit/b3873c7a0f9e77ed9b075735e0e444c1d33d21b3) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ Breaking changes:
 
   - Removal of `<PasswordStrengthMeter />` component => replaced by `<Meter />`
   - Dialog no long experimental
@@ -1184,7 +1184,7 @@
 
 ### Major Changes
 
-- [#5228](https://github.com/scaleway/ultraviolet/pull/5228) [`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES
+- [#5228](https://github.com/scaleway/ultraviolet/pull/5228) [`0040779`](https://github.com/scaleway/ultraviolet/commit/00407792bf0cd64eee0c02db107f3c43d42fa1a4) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES
 
   We removed all old components and renamed the V2 components to remove that suffix. Thus, the followng components have changed:
 
@@ -4013,7 +4013,7 @@
 
 - [#3075](https://github.com/scaleway/ultraviolet/pull/3075) [`9d985b8f`](https://github.com/scaleway/ultraviolet/commit/9d985b8fd02dd283d6e1d5d6d4a5333a25212cf5) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Fix MenuV2 focus when opening it by replace `requestIdleCallback` by `setTimeout`
 
-- [#3076](https://github.com/scaleway/ultraviolet/pull/3076) [`2e60a083`](https://github.com/scaleway/ultraviolet/commit/2e60a08383351c63789bb6692dc202d36abc8af9) Thanks [@matthprost](https://github.com/matthprost)! - ! HOTFIX: MenuV2 not correctly working when having a modal with inputs inside of it due to on click event handler
+- [#3076](https://github.com/scaleway/ultraviolet/pull/3076) [`2e60a083`](https://github.com/scaleway/ultraviolet/commit/2e60a08383351c63789bb6692dc202d36abc8af9) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ HOTFIX: MenuV2 not correctly working when having a modal with inputs inside of it due to on click event handler
 
 ## 1.21.0
 
@@ -4037,7 +4037,7 @@
 
 ### Patch Changes
 
-- [#3050](https://github.com/scaleway/ultraviolet/pull/3050) [`cc8bce1d`](https://github.com/scaleway/ultraviolet/commit/cc8bce1d0fc7f326d19d6f55173f2cf386079d23) Thanks [@matthprost](https://github.com/matthprost)! - ! **Hotfix**: fixing the type error on `<DateField />` component not to required props `startDate`, `endDate`, `excludeDate` and `selectsRange`
+- [#3050](https://github.com/scaleway/ultraviolet/pull/3050) [`cc8bce1d`](https://github.com/scaleway/ultraviolet/commit/cc8bce1d0fc7f326d19d6f55173f2cf386079d23) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ **Hotfix**: fixing the type error on `<DateField />` component not to required props `startDate`, `endDate`, `excludeDate` and `selectsRange`
 
 ## 1.20.1
 
@@ -4556,7 +4556,7 @@
 
 ### Minor Changes
 
-- [#2629](https://github.com/scaleway/ultraviolet/pull/2629) [`01ab2175`](https://github.com/scaleway/ultraviolet/commit/01ab21759aa109765a625a5bc1ad1865dde107f0) Thanks [@matthprost](https://github.com/matthprost)! - !!! **THOSE PACKAGES ARE DEPRECATED** !!!
+- [#2629](https://github.com/scaleway/ultraviolet/pull/2629) [`01ab2175`](https://github.com/scaleway/ultraviolet/commit/01ab21759aa109765a625a5bc1ad1865dde107f0) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️⚠️⚠️ **THOSE PACKAGES ARE DEPRECATED** ⚠️⚠️⚠️
 
   We renamed the scope of our packages from `@scaleway` to `@ultraviolet` and made a major update to all of them.
 
@@ -12132,7 +12132,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.13.0](https://***REMOVED***///compare/v0.12.5...v0.13.0) (2020-07-01)
 
-### ! BREAKING CHANGES
+### ⚠ BREAKING CHANGES
 
 - **richselect:** it should break tests based on data-test
 
