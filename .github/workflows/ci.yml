@@ -156,7 +156,7 @@ jobs:
       - run: |
           pnpm install --frozen-lockfile
           pnpm run test:unit:coverage
-      - uses: codecov/codecov-action@v5.4.3
+      - uses: codecov/codecov-action@v5.5.0
         with:
           # files: packages/**/coverage/cobertura-coverage.xmls
           token: ${{ secrets.CODECOV_TOKEN }}
