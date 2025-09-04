@@ -73,7 +73,7 @@ exports[`NumberInputField > should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-8 {
+.emotion-2[data-controls='false']>.emotion-9 {
   border-width: 0;
 }
 
@@ -139,16 +139,7 @@ exports[`NumberInputField > should render correctly 1`] = `
   fill: none;
 }
 
-.emotion-9 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-8 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -156,7 +147,7 @@ exports[`NumberInputField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   outline: none;
   border: none;
   padding: 0;
@@ -171,18 +162,18 @@ exports[`NumberInputField > should render correctly 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-10[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-10::-webkit-outer-spin-button,
+.emotion-10::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-10 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -190,15 +181,15 @@ exports[`NumberInputField > should render correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -206,34 +197,34 @@ exports[`NumberInputField > should render correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-10:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-10:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.exvap482 {
+.emotion-10:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.exvap482 {
+.emotion-10:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-10:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.exvap482 {
+.emotion-10:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -242,12 +233,12 @@ exports[`NumberInputField > should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.exvap482 {
+.emotion-10:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-10[data-controls='false'] {
   text-align: left;
 }
 
@@ -291,10 +282,11 @@ exports[`NumberInputField > should render correctly 1`] = `
               </button>
             </div>
             <div
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-8 emotion-9 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+              style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
             >
               <input
-                class="emotion-11 emotion-12"
+                class="emotion-10 emotion-11"
                 data-controls="true"
                 data-has-unit="false"
                 data-size="large"
@@ -406,7 +398,7 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-8 {
+.emotion-2[data-controls='false']>.emotion-9 {
   border-width: 0;
 }
 
@@ -472,16 +464,7 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   fill: none;
 }
 
-.emotion-9 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-8 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -489,7 +472,7 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   outline: none;
   border: none;
   padding: 0;
@@ -504,18 +487,18 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-10[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-10::-webkit-outer-spin-button,
+.emotion-10::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-10 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -523,15 +506,15 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -539,34 +522,34 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-10:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-10:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.exvap482 {
+.emotion-10:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.exvap482 {
+.emotion-10:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-10:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.exvap482 {
+.emotion-10:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -575,12 +558,12 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.exvap482 {
+.emotion-10:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-10[data-controls='false'] {
   text-align: left;
 }
 
@@ -625,11 +608,12 @@ exports[`NumberInputField > should render correctly disabled 1`] = `
               </button>
             </div>
             <div
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-8 emotion-9 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+              style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
             >
               <input
                 aria-label="Number Input"
-                class="emotion-11 emotion-12"
+                class="emotion-10 emotion-11"
                 data-controls="true"
                 data-has-unit="false"
                 data-size="large"

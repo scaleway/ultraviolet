@@ -2115,7 +2115,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-13[data-controls='false']>.emotion-15 {
+.emotion-13[data-controls='false']>.emotion-16 {
   border-width: 0;
 }
 
@@ -2131,16 +2131,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   height: 3rem;
 }
 
-.emotion-16 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-15 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -2148,7 +2139,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-18 {
+.emotion-17 {
   outline: none;
   border: none;
   padding: 0;
@@ -2163,18 +2154,18 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: none;
 }
 
-.emotion-18[data-has-unit='true'] {
+.emotion-17[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-18::-webkit-outer-spin-button,
-.emotion-18::-webkit-inner-spin-button {
+.emotion-17::-webkit-outer-spin-button,
+.emotion-17::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-17 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -2182,15 +2173,15 @@ exports[`SliderField > should trigger events correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-18[data-size='small'] {
+.emotion-17[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-18[data-size='medium'] {
+.emotion-17[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-18[data-size='large'] {
+.emotion-17[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2198,34 +2189,34 @@ exports[`SliderField > should trigger events correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-18:-moz-read-only {
+.emotion-17:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-18:read-only {
+.emotion-17:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-18:-moz-read-only~.exvap482 {
+.emotion-17:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-18:read-only~.exvap482 {
+.emotion-17:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-18:disabled {
+.emotion-17:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-18:disabled~.exvap482 {
+.emotion-17:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2234,16 +2225,16 @@ exports[`SliderField > should trigger events correctly 1`] = `
   user-select: none;
 }
 
-.emotion-18:placeholder-shown~.exvap482 {
+.emotion-17:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-18[data-controls='false'] {
+.emotion-17[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-20 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2265,7 +2256,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   flex-direction: row;
 }
 
-.emotion-22 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2289,7 +2280,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-24 {
+.emotion-23 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2307,31 +2298,31 @@ exports[`SliderField > should trigger events correctly 1`] = `
   outline: none;
 }
 
-.emotion-24:focus::-moz-range-thumb {
+.emotion-23:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24:focus::-webkit-slider-thumb {
+.emotion-23:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-error='true'] {
+.emotion-23[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-24[data-direction='column'] {
+.emotion-23[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-24[aria-disabled='true'] {
+.emotion-23[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-24::-moz-range-track {
+.emotion-23::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2342,7 +2333,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-24::-moz-range-thumb {
+.emotion-23::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2364,20 +2355,20 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
+.emotion-23::-moz-range-thumb:hover,
+.emotion-23::-moz-range-thumb:active,
+.emotion-23::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
+.emotion-23::-moz-range-thumb:active,
+.emotion-23::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-24::-webkit-slider-runnable-track {
+.emotion-23::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2388,7 +2379,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-24::-webkit-slider-thumb {
+.emotion-23::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2410,14 +2401,14 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
+.emotion-23::-webkit-slider-thumb:hover,
+.emotion-23::-webkit-slider-thumb:active,
+.emotion-23::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
+.emotion-23::-webkit-slider-thumb:active,
+.emotion-23::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2469,11 +2460,12 @@ exports[`SliderField > should trigger events correctly 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-15 emotion-16 emotion-17"
+                    class="emotion-15 emotion-16 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+                    style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input"
-                      class="emotion-18 emotion-19"
+                      class="emotion-17 emotion-18"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -2492,14 +2484,14 @@ exports[`SliderField > should trigger events correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-20 emotion-3"
+            class="emotion-19 emotion-3"
           />
           <div
-            class="emotion-22 emotion-3"
+            class="emotion-21 emotion-3"
           >
             <input
               aria-label="test"
-              class="emotion-24 emotion-25"
+              class="emotion-23 emotion-24"
               data-direction="column"
               data-error="false"
               id="«rt»"
