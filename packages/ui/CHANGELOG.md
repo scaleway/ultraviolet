@@ -1,5 +1,33 @@
 # Change Log
 
+## 3.0.0-beta.6
+
+### Major Changes
+
+- [`65da279`](https://github.com/scaleway/ultraviolet/commit/65da27924e47c48bfe97e485881d2a3aeb147bb6) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Popup`, `Popover` and `Tooltip` to use vanilla-extract instead of Emotion
+
+- [`6815e33`](https://github.com/scaleway/ultraviolet/commit/6815e33cae41e61b0285fca98fb6894837f1b6ef) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Loader` and `Separator` to use vanilla-extract instead of Emotion
+
+- [`cb3aaed`](https://github.com/scaleway/ultraviolet/commit/cb3aaeddda933b0ccb0db8a484e18dcbb631d6ff) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Avatar` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [`7a6a41e`](https://github.com/scaleway/ultraviolet/commit/7a6a41e26303a8c273700e2a32784ca515067f15) Thanks [@matthprost](https://github.com/matthprost)! - Fix className useless spacing on Banner and Button
+
+- [`475669b`](https://github.com/scaleway/ultraviolet/commit/475669bd710411ec99a5370ede1523535161fbdc) Thanks [@lisalupi](https://github.com/lisalupi)! - `ActionBar` & `Text`: Use css variable instead of style with vanilla extract
+
+- [`a65dcc1`](https://github.com/scaleway/ultraviolet/commit/a65dcc1e898321d13480c88036d5196c1fa28814) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: should display values correctly on first render
+
+- [#5490](https://github.com/scaleway/ultraviolet/pull/5490) [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.12`.
+  Updated dependency `@types/react-dom` to `19.1.9`.
+
+- [#5499](https://github.com/scaleway/ultraviolet/pull/5499) [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.3`.
+  Updated dependency `@babel/runtime` to `7.28.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
+  Updated dependency `@babel/preset-env` to `7.28.3`.
+- Updated dependencies [[`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542)]:
+  - @ultraviolet/icons@4.0.4-beta.2
+
 ## 3.0.0-beta.5
 
 ### Major Changes

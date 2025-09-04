@@ -70,6 +70,18 @@
 - Updated dependencies [[`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542)]:
   - @ultraviolet/ui@2.1.1
 
+## 2.0.0-beta.6
+
+### Patch Changes
+
+- [#5454](https://github.com/scaleway/ultraviolet/pull/5454) [`9c34041`](https://github.com/scaleway/ultraviolet/commit/9c34041245eb04bb6c1cdce358ed0d4b40a49ae8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.4.7`.
+  Updated dependency `eslint-config-next` to `15.4.7`.
+
+- [#5483](https://github.com/scaleway/ultraviolet/pull/5483) [`c5d3c9e`](https://github.com/scaleway/ultraviolet/commit/c5d3c9eedebaab3e82c7e58cee37ccfb195f39f2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.4.7`.
+
+- Updated dependencies [[`65da279`](https://github.com/scaleway/ultraviolet/commit/65da27924e47c48bfe97e485881d2a3aeb147bb6), [`7a6a41e`](https://github.com/scaleway/ultraviolet/commit/7a6a41e26303a8c273700e2a32784ca515067f15), [`475669b`](https://github.com/scaleway/ultraviolet/commit/475669bd710411ec99a5370ede1523535161fbdc), [`a65dcc1`](https://github.com/scaleway/ultraviolet/commit/a65dcc1e898321d13480c88036d5196c1fa28814), [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542), [`6815e33`](https://github.com/scaleway/ultraviolet/commit/6815e33cae41e61b0285fca98fb6894837f1b6ef), [`cb3aaed`](https://github.com/scaleway/ultraviolet/commit/cb3aaeddda933b0ccb0db8a484e18dcbb631d6ff)]:
+  - @ultraviolet/ui@3.0.0-beta.6
+
 ## 2.0.0-beta.5
 
 ### Patch Changes
