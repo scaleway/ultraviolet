@@ -75,7 +75,6 @@ type DisplayValuesProps = {
   refPlusTag: RefObject<HTMLDivElement | null>
   displayShadowCopy?: boolean
 }
-
 const DisplayValues = ({
   refTag,
   nonOverflowedValues,
