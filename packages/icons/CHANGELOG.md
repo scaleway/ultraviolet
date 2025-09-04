@@ -48,6 +48,18 @@
   Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
   Updated dependency `@babel/preset-env` to `7.28.3`.
 
+## 4.0.4-beta.2
+
+### Patch Changes
+
+- [#5490](https://github.com/scaleway/ultraviolet/pull/5490) [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.12`.
+  Updated dependency `@types/react-dom` to `19.1.9`.
+
+- [#5499](https://github.com/scaleway/ultraviolet/pull/5499) [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.3`.
+  Updated dependency `@babel/runtime` to `7.28.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
+  Updated dependency `@babel/preset-env` to `7.28.3`.
+
 ## 4.0.4-beta.1
 
 ### Patch Changes
