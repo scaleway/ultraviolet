@@ -95,6 +95,7 @@ const StyledInputWrapper = styled.div<{
   background: ${({ theme }) => theme.colors.neutral.background};
   border-radius: ${({ theme }) => theme.radii.default};
   width: 100%;
+  align-content: center;
 
   &[data-size='small'] {
     height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
