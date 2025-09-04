@@ -9,7 +9,14 @@ import {
   PlusIcon,
 } from '@ultraviolet/icons'
 import type { ReactNode, RefObject } from 'react'
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
@@ -340,11 +347,6 @@ const SelectBar = ({
   const measureRef = useRef<HTMLDivElement>(null)
   const arrowRef = useRef<HTMLDivElement>(null)
   const refPlusTag = useRef<HTMLDivElement>(null)
-  // width - width of the arrow (in px) - padding between tags (in px)
-  const [innerWidth, setInnerWidth] = useState(
-    innerRef.current?.offsetWidth ??
-      0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings,
-  )
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [overflow, setOverflow] = useState(false)
   const [lastElementMaxWidth, setLastElementMaxWidth] = useState(0)
@@ -387,6 +389,16 @@ const SelectBar = ({
     setDisplayShadowCopy(true)
   }, [selectedData.selectedValues.length])
 
+  const getWidth = useCallback(() => {
+    if (refTag.current) {
+      return refTag.current.offsetWidth
+    }
+
+    return (
+      innerRef.current?.offsetWidth ??
+      0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings
+    )
+  }, [innerRef.current?.offsetWidth])
   // We then want to measure the tags length before displaying them
   // so we can determine if there is an overflow or not
   // We use useLayoutEffect to ensure the measurement is done before the browser paints
@@ -399,6 +411,7 @@ const SelectBar = ({
     if (measureRef.current && selectedData.selectedValues.length > 0) {
       const toMeasureElements: HTMLCollection = measureRef.current.children
       const toMeasureElementsArray = [...toMeasureElements]
+      const innerWidth = getWidth()
 
       const {
         measuredVisibleTags,
@@ -506,31 +519,14 @@ const SelectBar = ({
     setDisplayShadowCopy(false)
   }, [
     displayShadowCopy,
-    innerWidth,
     potentiallyNonOverflowedValues,
     selectedData.selectedValues.length,
+    getWidth,
   ])
 
   useEffect(() => {
     setSelectedData({ type: 'update' })
   }, [setSelectedData, options])
-
-  useEffect(() => {
-    const getWidth = () => {
-      if (refTag.current) {
-        setInnerWidth(refTag.current.offsetWidth)
-      } else {
-        setInnerWidth(
-          innerRef.current?.offsetWidth ??
-            0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings,
-        )
-      }
-    }
-    getWidth()
-    window.addEventListener('resize', getWidth)
-
-    return () => window.removeEventListener('resize', getWidth)
-  }, [innerRef, refTag, selectedData.selectedValues])
 
   const shouldDisplayValues = useMemo(() => {
     if (multiselect) {
