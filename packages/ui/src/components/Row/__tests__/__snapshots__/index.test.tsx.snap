@@ -20,6 +20,26 @@ exports[`Row > renders correctly with default props 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Row > renders correctly with responsive values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__x6hyh50 styles_alignItems_end_large__x6hyh535 styles_alignItems_center_medium__x6hyh52s styles_alignItems_start_small__x6hyh52x styles_gap_1.5rem_large__x6hyh5n styles_gap_1rem_medium__x6hyh5g styles_gap_0.5rem_small__x6hyh59 styles_justifyContent_end_large__x6hyh55b styles_justifyContent_center_medium__x6hyh54y styles_justifyContent_start_small__x6hyh553"
+      style="--_3mg8xe0: 2fr 1fr; --_3mg8xe1: 1fr 1fr; --_3mg8xe2: 1fr 2fr; --_3mg8xe6: 2; --_3mg8xe7: 1; --_3mg8xe8: 0;"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Row > renders correctly with specific align 1`] = `
 <DocumentFragment>
   <div
