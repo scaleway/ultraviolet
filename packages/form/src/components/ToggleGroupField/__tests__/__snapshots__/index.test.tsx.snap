@@ -123,7 +123,7 @@ exports[`GroupField > should render correctly checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-12:active .emotion-19[data-disabled='false']:after {
+.emotion-12:active .emotion-17[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -156,20 +156,6 @@ exports[`GroupField > should render correctly checked 1`] = `
 }
 
 .emotion-16 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-18 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -191,11 +177,11 @@ exports[`GroupField > should render correctly checked 1`] = `
   height: 1.5rem;
 }
 
-.emotion-18:hover {
+.emotion-16:hover {
   background-color: #d9dadd;
 }
 
-.emotion-18:after {
+.emotion-16:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -208,25 +194,25 @@ exports[`GroupField > should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.emotion-18:focus-within,
-.emotion-18:focus {
+.emotion-16:focus-within,
+.emotion-16:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-18[data-disabled="false"]:active:after {
+.emotion-16[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-18:has(:checked) {
+.emotion-16:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-18:has(:checked):hover {
+.emotion-16:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-18:has(:checked):after {
+.emotion-16:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -234,41 +220,41 @@ exports[`GroupField > should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-18:has(:checked):focus-within,
-.emotion-18:has(:checked):focus {
+.emotion-16:has(:checked):focus-within,
+.emotion-16:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-18[data-disabled="true"] {
+.emotion-16[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-18[data-disabled="true"]:has(:checked) {
+.emotion-16[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-18[data-error="true"] {
+.emotion-16[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-18[data-error="true"]:focus-within,
-.emotion-18[data-error="true"]:focus {
+.emotion-16[data-error="true"]:focus-within,
+.emotion-16[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-18[data-error="true"]:has(:checked) {
+.emotion-16[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-18[data-error="true"][data-disabled="true"] {
+.emotion-16[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-18[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-16[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-20 {
+.emotion-18 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -278,7 +264,7 @@ exports[`GroupField > should render correctly checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-20[disabled] {
+.emotion-18[disabled] {
   cursor: not-allowed;
 }
 
@@ -318,7 +304,8 @@ exports[`GroupField > should render correctly checked 1`] = `
                   class="emotion-14 emotion-1"
                 >
                   <div
-                    class="emotion-16 emotion-17"
+                    class="uv_x6hyh50 uv_x6hyh52p uv_x6hyh57"
+                    style="--uv_3mg8xe0: auto 1fr; --uv_3mg8xe1: auto 1fr; --uv_3mg8xe2: auto 1fr; --uv_3mg8xe3: auto 1fr; --uv_3mg8xe4: auto 1fr; --uv_3mg8xe5: auto 1fr;"
                   >
                     <span
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -328,13 +315,13 @@ exports[`GroupField > should render correctly checked 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-20 emotion-21"
+                    class="emotion-18 emotion-19"
                     id="«r1»"
                     name="Group.value-1"
                     type="checkbox"
@@ -350,7 +337,8 @@ exports[`GroupField > should render correctly checked 1`] = `
                   class="emotion-14 emotion-1"
                 >
                   <div
-                    class="emotion-16 emotion-17"
+                    class="uv_x6hyh50 uv_x6hyh52p uv_x6hyh57"
+                    style="--uv_3mg8xe0: auto 1fr; --uv_3mg8xe1: auto 1fr; --uv_3mg8xe2: auto 1fr; --uv_3mg8xe3: auto 1fr; --uv_3mg8xe4: auto 1fr; --uv_3mg8xe5: auto 1fr;"
                   >
                     <span
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -360,13 +348,13 @@ exports[`GroupField > should render correctly checked 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-20 emotion-21"
+                    class="emotion-18 emotion-19"
                     id="«r4»"
                     name="Group.value-2"
                     type="checkbox"
@@ -529,7 +517,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-14:active .emotion-21[data-disabled='false']:after {
+.emotion-14:active .emotion-19[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -562,20 +550,6 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
 }
 
 .emotion-18 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-20 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -597,11 +571,11 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   height: 1.5rem;
 }
 
-.emotion-20:hover {
+.emotion-18:hover {
   background-color: #d9dadd;
 }
 
-.emotion-20:after {
+.emotion-18:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -614,25 +588,25 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.emotion-20:focus-within,
-.emotion-20:focus {
+.emotion-18:focus-within,
+.emotion-18:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-20[data-disabled="false"]:active:after {
+.emotion-18[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-20:has(:checked) {
+.emotion-18:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-20:has(:checked):hover {
+.emotion-18:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-20:has(:checked):after {
+.emotion-18:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -640,41 +614,41 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-20:has(:checked):focus-within,
-.emotion-20:has(:checked):focus {
+.emotion-18:has(:checked):focus-within,
+.emotion-18:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[data-disabled="true"] {
+.emotion-18[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-20[data-disabled="true"]:has(:checked) {
+.emotion-18[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-20[data-error="true"] {
+.emotion-18[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-20[data-error="true"]:focus-within,
-.emotion-20[data-error="true"]:focus {
+.emotion-18[data-error="true"]:focus-within,
+.emotion-18[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-20[data-error="true"]:has(:checked) {
+.emotion-18[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"] {
+.emotion-18[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-20[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-18[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-22 {
+.emotion-20 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -684,7 +658,7 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-22[disabled] {
+.emotion-20[disabled] {
   cursor: not-allowed;
 }
 
@@ -733,7 +707,8 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                   class="emotion-16 emotion-1"
                 >
                   <div
-                    class="emotion-18 emotion-19"
+                    class="uv_x6hyh50 uv_x6hyh52p uv_x6hyh57"
+                    style="--uv_3mg8xe0: auto 1fr; --uv_3mg8xe1: auto 1fr; --uv_3mg8xe2: auto 1fr; --uv_3mg8xe3: auto 1fr; --uv_3mg8xe4: auto 1fr; --uv_3mg8xe5: auto 1fr;"
                   >
                     <span
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -743,13 +718,13 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
                     aria-invalid="true"
-                    class="emotion-22 emotion-23"
+                    class="emotion-20 emotion-21"
                     id="«r9»"
                     name="test.value-1"
                     type="checkbox"
@@ -765,7 +740,8 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                   class="emotion-16 emotion-1"
                 >
                   <div
-                    class="emotion-18 emotion-19"
+                    class="uv_x6hyh50 uv_x6hyh52p uv_x6hyh57"
+                    style="--uv_3mg8xe0: auto 1fr; --uv_3mg8xe1: auto 1fr; --uv_3mg8xe2: auto 1fr; --uv_3mg8xe3: auto 1fr; --uv_3mg8xe4: auto 1fr; --uv_3mg8xe5: auto 1fr;"
                   >
                     <span
                       class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -775,13 +751,13 @@ exports[`GroupField > should trigger events correctly with required prop 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
                     aria-invalid="true"
-                    class="emotion-22 emotion-23"
+                    class="emotion-20 emotion-21"
                     id="«rc»"
                     name="test.value-2"
                     type="checkbox"
