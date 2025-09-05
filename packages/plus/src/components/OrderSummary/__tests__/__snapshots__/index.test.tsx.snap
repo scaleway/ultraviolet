@@ -981,34 +981,32 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1054,13 +1052,15 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1083,7 +1083,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -1097,26 +1097,19 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1150,15 +1143,17 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1190,21 +1185,21 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.emotion-36 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1227,30 +1222,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1274,7 +1246,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1298,7 +1270,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1323,7 +1295,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1428,7 +1400,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -1447,13 +1419,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1461,7 +1433,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
               Availability Zone
             </span>
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -1476,13 +1448,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </div>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1496,16 +1468,16 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1516,13 +1488,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1539,7 +1511,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-26 emotion-27"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1559,13 +1531,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1579,7 +1551,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -1596,10 +1568,10 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1613,13 +1585,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1633,7 +1605,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -1663,10 +1635,10 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
               </div>
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1680,16 +1652,16 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1703,13 +1675,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1723,16 +1695,16 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1746,13 +1718,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1766,16 +1738,16 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1789,13 +1761,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1809,14 +1781,14 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1830,16 +1802,16 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1853,13 +1825,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1873,19 +1845,19 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1896,7 +1868,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <svg
-                  class="emotion-26 emotion-27"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1915,13 +1887,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -1935,21 +1907,21 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-152 emotion-153"
+        class="emotion-146 emotion-147"
       >
         children
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3115,34 +3087,32 @@ exports[`orderSummary > should work with children 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3188,13 +3158,15 @@ exports[`orderSummary > should work with children 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3217,7 +3189,7 @@ exports[`orderSummary > should work with children 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -3231,26 +3203,19 @@ exports[`orderSummary > should work with children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3284,15 +3249,17 @@ exports[`orderSummary > should work with children 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3324,21 +3291,21 @@ exports[`orderSummary > should work with children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.emotion-36 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3361,30 +3328,7 @@ exports[`orderSummary > should work with children 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3408,7 +3352,7 @@ exports[`orderSummary > should work with children 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3432,7 +3376,7 @@ exports[`orderSummary > should work with children 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3457,7 +3401,7 @@ exports[`orderSummary > should work with children 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3562,7 +3506,7 @@ exports[`orderSummary > should work with children 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -3581,13 +3525,13 @@ exports[`orderSummary > should work with children 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3595,7 +3539,7 @@ exports[`orderSummary > should work with children 1`] = `
               Availability Zone
             </span>
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -3610,13 +3554,13 @@ exports[`orderSummary > should work with children 1`] = `
             </div>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3630,16 +3574,16 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3650,13 +3594,13 @@ exports[`orderSummary > should work with children 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3673,7 +3617,7 @@ exports[`orderSummary > should work with children 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-26 emotion-27"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3693,13 +3637,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3713,7 +3657,7 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -3730,10 +3674,10 @@ exports[`orderSummary > should work with children 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3747,13 +3691,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3767,7 +3711,7 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -3797,10 +3741,10 @@ exports[`orderSummary > should work with children 1`] = `
               </div>
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3814,16 +3758,16 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3837,13 +3781,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3857,16 +3801,16 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3880,13 +3824,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3900,16 +3844,16 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3923,13 +3867,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3943,14 +3887,14 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3964,16 +3908,16 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -3987,13 +3931,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -4007,19 +3951,19 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -4030,7 +3974,7 @@ exports[`orderSummary > should work with children 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <svg
-                  class="emotion-26 emotion-27"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -4049,13 +3993,13 @@ exports[`orderSummary > should work with children 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -4069,21 +4013,21 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-152 emotion-153"
+        class="emotion-146 emotion-147"
       >
         children
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -4281,21 +4225,7 @@ exports[`orderSummary > should work with default props 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-28 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-28 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-126 {
+.emotion-122 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4419,7 +4349,7 @@ exports[`orderSummary > should work with default props 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-28 emotion-29"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4776,7 +4706,7 @@ exports[`orderSummary > should work with default props 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <svg
-                  class="emotion-28 emotion-29"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -4822,7 +4752,7 @@ exports[`orderSummary > should work with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-126 emotion-127"
+        class="emotion-122 emotion-123"
       >
         <div
           class="emotion-6 emotion-7"
@@ -5830,34 +5760,32 @@ exports[`orderSummary > should work with discount 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5903,13 +5831,15 @@ exports[`orderSummary > should work with discount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5932,7 +5862,7 @@ exports[`orderSummary > should work with discount 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -5946,26 +5876,19 @@ exports[`orderSummary > should work with discount 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5995,19 +5918,21 @@ exports[`orderSummary > should work with discount 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6030,7 +5955,7 @@ exports[`orderSummary > should work with discount 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6050,10 +5975,11 @@ exports[`orderSummary > should work with discount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
 }
 
-.emotion-40 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6097,11 +6023,12 @@ exports[`orderSummary > should work with discount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 0.5rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6126,32 +6053,7 @@ exports[`orderSummary > should work with discount 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid #d9dadd;
-}
-
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6174,7 +6076,7 @@ exports[`orderSummary > should work with discount 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6277,7 +6179,7 @@ exports[`orderSummary > should work with discount 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -6296,13 +6198,13 @@ exports[`orderSummary > should work with discount 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -6316,13 +6218,13 @@ exports[`orderSummary > should work with discount 1`] = `
             </span>
           </div>
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -6336,20 +6238,20 @@ exports[`orderSummary > should work with discount 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-38 emotion-39"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-42 emotion-43"
+        class="emotion-40 emotion-41"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -6358,7 +6260,7 @@ exports[`orderSummary > should work with discount 1`] = `
             </span>
           </div>
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -7360,34 +7262,32 @@ exports[`orderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7433,13 +7333,15 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7462,7 +7364,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -7476,26 +7378,19 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7525,19 +7420,21 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7560,7 +7457,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7580,10 +7477,11 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
 }
 
-.emotion-40 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7627,11 +7525,12 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 0.5rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7656,32 +7555,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid #d9dadd;
-}
-
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7704,7 +7578,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7807,7 +7681,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -7826,13 +7700,13 @@ exports[`orderSummary > should work with discount in  % 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -7846,13 +7720,13 @@ exports[`orderSummary > should work with discount in  % 1`] = `
             </span>
           </div>
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -7866,20 +7740,20 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-38 emotion-39"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-42 emotion-43"
+        class="emotion-40 emotion-41"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -7888,7 +7762,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
             </span>
           </div>
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -8890,34 +8764,32 @@ exports[`orderSummary > should work with footer 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8963,13 +8835,15 @@ exports[`orderSummary > should work with footer 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8992,7 +8866,7 @@ exports[`orderSummary > should work with footer 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -9006,26 +8880,19 @@ exports[`orderSummary > should work with footer 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9059,15 +8926,17 @@ exports[`orderSummary > should work with footer 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9099,21 +8968,21 @@ exports[`orderSummary > should work with footer 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.emotion-36 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9136,30 +9005,7 @@ exports[`orderSummary > should work with footer 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9183,7 +9029,7 @@ exports[`orderSummary > should work with footer 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9207,7 +9053,7 @@ exports[`orderSummary > should work with footer 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9232,7 +9078,7 @@ exports[`orderSummary > should work with footer 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9337,7 +9183,7 @@ exports[`orderSummary > should work with footer 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -9356,13 +9202,13 @@ exports[`orderSummary > should work with footer 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9370,7 +9216,7 @@ exports[`orderSummary > should work with footer 1`] = `
               Availability Zone
             </span>
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -9385,13 +9231,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </div>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9405,16 +9251,16 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9425,13 +9271,13 @@ exports[`orderSummary > should work with footer 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9448,7 +9294,7 @@ exports[`orderSummary > should work with footer 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-26 emotion-27"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -9468,13 +9314,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9488,7 +9334,7 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -9505,10 +9351,10 @@ exports[`orderSummary > should work with footer 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9522,13 +9368,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9542,7 +9388,7 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -9572,10 +9418,10 @@ exports[`orderSummary > should work with footer 1`] = `
               </div>
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9589,16 +9435,16 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9612,13 +9458,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9632,16 +9478,16 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9655,13 +9501,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9675,16 +9521,16 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9698,13 +9544,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9718,14 +9564,14 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9739,16 +9585,16 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9762,13 +9608,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9782,19 +9628,19 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9805,7 +9651,7 @@ exports[`orderSummary > should work with footer 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <svg
-                  class="emotion-26 emotion-27"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -9824,13 +9670,13 @@ exports[`orderSummary > should work with footer 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -9844,20 +9690,20 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-152 emotion-153"
+        class="emotion-146 emotion-147"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -10860,34 +10706,32 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10933,13 +10777,15 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10962,7 +10808,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -10976,26 +10822,19 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11025,19 +10864,21 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11060,7 +10901,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11080,10 +10921,11 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
 }
 
-.emotion-40 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11127,11 +10969,12 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 0.5rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11156,32 +10999,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid #d9dadd;
-}
-
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11204,7 +11022,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11307,7 +11125,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -11326,13 +11144,13 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -11346,13 +11164,13 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
             </span>
           </div>
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -11366,20 +11184,20 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-38 emotion-39"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-42 emotion-43"
+        class="emotion-40 emotion-41"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -11388,7 +11206,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
             </span>
           </div>
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -12390,34 +12208,32 @@ exports[`orderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12463,13 +12279,15 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12492,7 +12310,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -12506,26 +12324,19 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12546,28 +12357,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   flex-direction: row;
 }
 
-.emotion-32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-35 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12592,7 +12382,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   background-color: #ffffff;
 }
 
-.emotion-37 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12611,52 +12401,52 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-37:focus-within {
+.emotion-35:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-37[data-success='true'] {
+.emotion-35[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-37[data-error='true'] {
+.emotion-35[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-37:hover {
+.emotion-35:hover {
   border-color: #792dd4;
 }
 
-.emotion-37[data-readonly='true'] {
+.emotion-35[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-37[data-disabled='true'] {
+.emotion-35[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-37[data-controls='false']>.emotion-43 {
+.emotion-35[data-controls='false']>.emotion-39 {
   border-width: 0;
 }
 
-.emotion-37[data-size='small'] {
+.emotion-35[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-37[data-size='medium'] {
+.emotion-35[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-37[data-size='large'] {
+.emotion-35[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-39 {
+.emotion-37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12679,34 +12469,20 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   padding: 0.125rem 0.5rem;
 }
 
-.emotion-39[data-size='small'] {
+.emotion-37[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-39[data-size='medium'] {
+.emotion-37[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-39[data-size='large'] {
+.emotion-37[data-size='large'] {
   height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-41 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-41 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-44 {
+.emotion-40 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -12723,7 +12499,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   width: 100%;
 }
 
-.emotion-46 {
+.emotion-42 {
   outline: none;
   border: none;
   padding: 0;
@@ -12738,18 +12514,18 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   background: none;
 }
 
-.emotion-46[data-has-unit='true'] {
+.emotion-42[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-46::-webkit-outer-spin-button,
-.emotion-46::-webkit-inner-spin-button {
+.emotion-42::-webkit-outer-spin-button,
+.emotion-42::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-46 {
+.emotion-42 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -12757,15 +12533,15 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   appearance: textfield;
 }
 
-.emotion-46[data-size='small'] {
+.emotion-42[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-46[data-size='medium'] {
+.emotion-42[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-46[data-size='large'] {
+.emotion-42[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -12773,34 +12549,34 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-46:-moz-read-only {
+.emotion-42:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-46:read-only {
+.emotion-42:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-46:-moz-read-only~.emotion-73 {
+.emotion-42:-moz-read-only~.emotion-67 {
   background: #f9f9fa;
 }
 
-.emotion-46:read-only~.emotion-73 {
+.emotion-42:read-only~.emotion-67 {
   background: #f9f9fa;
 }
 
-.emotion-46:disabled {
+.emotion-42:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-46:disabled~.emotion-73 {
+.emotion-42:disabled~.emotion-67 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -12809,16 +12585,16 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   user-select: none;
 }
 
-.emotion-46:placeholder-shown~.emotion-73 {
+.emotion-42:placeholder-shown~.emotion-67 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-46[data-controls='false'] {
+.emotion-42[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-56 {
+.emotion-50 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12841,7 +12617,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-56 {
+.emotion-50 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12864,7 +12640,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-72 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12878,7 +12654,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-74 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12902,7 +12678,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-74 {
+.emotion-68 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12926,7 +12702,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-88 {
+.emotion-82 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12951,7 +12727,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-88 {
+.emotion-82 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12976,7 +12752,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-92 {
+.emotion-86 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12998,7 +12774,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   flex-direction: column;
 }
 
-.emotion-92 {
+.emotion-86 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13020,7 +12796,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   flex-direction: column;
 }
 
-.emotion-94 {
+.emotion-88 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13043,7 +12819,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-94 {
+.emotion-88 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13146,7 +12922,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -13165,13 +12941,13 @@ exports[`orderSummary > should work with numberInputs 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -13179,11 +12955,11 @@ exports[`orderSummary > should work with numberInputs 1`] = `
               Numers of requests
             </span>
             <div
-              class="emotion-34 emotion-35 emotion-7"
+              class="emotion-32 emotion-33 emotion-7"
             >
               <div>
                 <div
-                  class="emotion-37 emotion-38"
+                  class="emotion-35 emotion-36"
                   data-controls="true"
                   data-disabled="false"
                   data-error="false"
@@ -13192,7 +12968,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                     data-size="small"
                   >
                     <button
@@ -13201,7 +12977,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       type="button"
                     >
                       <svg
-                        class="emotion-41 emotion-27"
+                        class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                         viewBox="0 0 16 16"
                       >
                         <path
@@ -13211,10 +12987,10 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                     </button>
                   </div>
                   <div
-                    class="emotion-43 emotion-44 emotion-10"
+                    class="emotion-39 emotion-40 emotion-10"
                   >
                     <input
-                      class="emotion-46 emotion-47"
+                      class="emotion-42 emotion-43"
                       data-controls="true"
                       data-has-unit="false"
                       data-size="small"
@@ -13227,7 +13003,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                     />
                   </div>
                   <div
-                    class="emotion-39 emotion-40"
+                    class="emotion-37 emotion-38"
                     data-size="small"
                   >
                     <button
@@ -13236,7 +13012,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       type="button"
                     >
                       <svg
-                        class="emotion-41 emotion-27"
+                        class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                         viewBox="0 0 16 16"
                       >
                         <path
@@ -13251,10 +13027,10 @@ exports[`orderSummary > should work with numberInputs 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -13268,13 +13044,13 @@ exports[`orderSummary > should work with numberInputs 1`] = `
             </span>
           </div>
           <div
-            class="emotion-56 emotion-7"
+            class="emotion-50 emotion-7"
           >
             <div
-              class="emotion-56 emotion-7"
+              class="emotion-50 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -13282,11 +13058,11 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   Choose a duration
                 </span>
                 <div
-                  class="emotion-34 emotion-35 emotion-7"
+                  class="emotion-32 emotion-33 emotion-7"
                 >
                   <div>
                     <div
-                      class="emotion-37 emotion-38"
+                      class="emotion-35 emotion-36"
                       data-controls="false"
                       data-disabled="false"
                       data-error="false"
@@ -13295,10 +13071,10 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       data-unit="true"
                     >
                       <div
-                        class="emotion-43 emotion-44 emotion-10"
+                        class="emotion-39 emotion-40 emotion-10"
                       >
                         <input
-                          class="emotion-46 emotion-47"
+                          class="emotion-42 emotion-43"
                           data-controls="false"
                           data-has-unit="true"
                           data-size="small"
@@ -13310,7 +13086,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                           value="2"
                         />
                         <span
-                          class="emotion-72 emotion-73 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                          class="emotion-66 emotion-67 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                         >
                           ms
                         </span>
@@ -13320,14 +13096,14 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-74 emotion-75"
+                class="emotion-68 emotion-69"
               />
             </div>
             <div
-              class="emotion-56 emotion-7"
+              class="emotion-50 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -13336,14 +13112,14 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-74 emotion-75"
+                class="emotion-68 emotion-69"
               />
             </div>
             <div
-              class="emotion-56 emotion-7"
+              class="emotion-50 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -13352,23 +13128,23 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-74 emotion-75"
+                class="emotion-68 emotion-69"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-88 emotion-89"
+        class="emotion-82 emotion-83"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-92 emotion-7"
+            class="emotion-86 emotion-7"
           >
             <div
-              class="emotion-94 emotion-7"
+              class="emotion-88 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -14372,34 +14148,32 @@ exports[`orderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14445,13 +14219,15 @@ exports[`orderSummary > should work with price as a range 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14474,7 +14250,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -14488,26 +14264,19 @@ exports[`orderSummary > should work with price as a range 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14537,19 +14306,21 @@ exports[`orderSummary > should work with price as a range 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14572,7 +14343,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14592,10 +14363,11 @@ exports[`orderSummary > should work with price as a range 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
 }
 
-.emotion-40 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14639,11 +14411,12 @@ exports[`orderSummary > should work with price as a range 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 0.5rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14668,32 +14441,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-top: 1px solid #d9dadd;
-}
-
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14716,7 +14464,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-46 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14819,7 +14567,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -14838,13 +14586,13 @@ exports[`orderSummary > should work with price as a range 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -14858,13 +14606,13 @@ exports[`orderSummary > should work with price as a range 1`] = `
             </span>
           </div>
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -14878,20 +14626,20 @@ exports[`orderSummary > should work with price as a range 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-40 emotion-41"
+                class="emotion-38 emotion-39"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-42 emotion-43"
+        class="emotion-40 emotion-41"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-46 emotion-7"
+            class="emotion-44 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -15894,34 +15642,32 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15967,13 +15713,15 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15996,7 +15744,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -16010,26 +15758,19 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16063,15 +15804,17 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16103,21 +15846,21 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.emotion-36 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16140,30 +15883,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16187,7 +15907,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16211,7 +15931,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16236,7 +15956,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-152 {
+.emotion-146 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16261,7 +15981,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-156 {
+.emotion-150 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16283,7 +16003,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
   flex-direction: column;
 }
 
-.emotion-156 {
+.emotion-150 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16385,7 +16105,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -16404,13 +16124,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16418,7 +16138,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
               Availability Zone
             </span>
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -16433,13 +16153,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </div>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16453,16 +16173,16 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16473,13 +16193,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16496,7 +16216,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-26 emotion-27"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -16516,13 +16236,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16536,7 +16256,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -16553,10 +16273,10 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16570,13 +16290,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16590,7 +16310,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -16620,10 +16340,10 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
               </div>
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16637,16 +16357,16 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16660,13 +16380,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16680,16 +16400,16 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16703,13 +16423,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16723,16 +16443,16 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16746,13 +16466,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16766,14 +16486,14 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16787,16 +16507,16 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16810,13 +16530,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16830,19 +16550,19 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16853,7 +16573,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <svg
-                  class="emotion-26 emotion-27"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -16872,13 +16592,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -16892,23 +16612,23 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-152 emotion-153"
+        class="emotion-146 emotion-147"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-156 emotion-7"
+            class="emotion-150 emotion-7"
           >
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -17136,21 +16856,7 @@ exports[`orderSummary > should work without unitInput 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-30 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-30 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-128 {
+.emotion-124 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17284,7 +16990,7 @@ exports[`orderSummary > should work without unitInput 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-30 emotion-31"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -17641,7 +17347,7 @@ exports[`orderSummary > should work without unitInput 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <svg
-                  class="emotion-30 emotion-31"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -17687,7 +17393,7 @@ exports[`orderSummary > should work without unitInput 1`] = `
         </div>
       </div>
       <div
-        class="emotion-128 emotion-129"
+        class="emotion-124 emotion-125"
       >
         <div
           class="emotion-8 emotion-9"
@@ -19012,34 +18718,32 @@ exports[`orderSummary > works with negative category price 1`] = `
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  height: 100%;
 }
 
 .emotion-26 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-26 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19085,13 +18789,15 @@ exports[`orderSummary > works with negative category price 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.5rem;
-  overflow-y: scroll;
-  padding: 1.5rem;
-  height: 100%;
+  gap: 0.75rem;
 }
 
-.emotion-30 {
+.emotion-28:not(:last-child) {
+  border-bottom: 1px solid #d9dadd;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19114,7 +18820,7 @@ exports[`orderSummary > works with negative category price 1`] = `
   gap: 0.75rem;
 }
 
-.emotion-30:not(:last-child) {
+.emotion-28:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
@@ -19128,26 +18834,19 @@ exports[`orderSummary > works with negative category price 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.emotion-30:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-32 {
+.emotion-30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19181,15 +18880,17 @@ exports[`orderSummary > works with negative category price 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 0.5rem;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19221,21 +18922,21 @@ exports[`orderSummary > works with negative category price 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
-.emotion-36 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19258,30 +18959,7 @@ exports[`orderSummary > works with negative category price 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19305,7 +18983,7 @@ exports[`orderSummary > works with negative category price 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-42 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19329,7 +19007,7 @@ exports[`orderSummary > works with negative category price 1`] = `
   padding-left: 0.5rem;
 }
 
-.emotion-56 {
+.emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19354,7 +19032,7 @@ exports[`orderSummary > works with negative category price 1`] = `
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-56 {
+.emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19459,7 +19137,7 @@ exports[`orderSummary > works with negative category price 1`] = `
                       >
                         <svg
                           aria-label="show dropdown"
-                          class="emotion-26 emotion-27"
+                          class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -19478,13 +19156,13 @@ exports[`orderSummary > works with negative category price 1`] = `
         </div>
       </div>
       <div
-        class="emotion-28 emotion-29"
+        class="emotion-26 emotion-27"
       >
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -19492,7 +19170,7 @@ exports[`orderSummary > works with negative category price 1`] = `
               Availability Zone
             </span>
             <div
-              class="emotion-34 emotion-7"
+              class="emotion-32 emotion-7"
             >
               <span
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -19507,13 +19185,13 @@ exports[`orderSummary > works with negative category price 1`] = `
             </div>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -19527,16 +19205,16 @@ exports[`orderSummary > works with negative category price 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-30 emotion-31"
+          class="emotion-28 emotion-29"
         >
           <div
-            class="emotion-32 emotion-7"
+            class="emotion-30 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -19550,13 +19228,13 @@ exports[`orderSummary > works with negative category price 1`] = `
             </span>
           </div>
           <div
-            class="emotion-36 emotion-7"
+            class="emotion-34 emotion-7"
           >
             <div
-              class="emotion-36 emotion-7"
+              class="emotion-34 emotion-7"
             >
               <div
-                class="emotion-32 emotion-7"
+                class="emotion-30 emotion-7"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
@@ -19570,20 +19248,20 @@ exports[`orderSummary > works with negative category price 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-42 emotion-43"
+                class="emotion-40 emotion-41"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-56 emotion-57"
+        class="emotion-54 emotion-55"
       >
         <div
-          class="emotion-32 emotion-7"
+          class="emotion-30 emotion-7"
         >
           <div
-            class="emotion-34 emotion-7"
+            class="emotion-32 emotion-7"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"

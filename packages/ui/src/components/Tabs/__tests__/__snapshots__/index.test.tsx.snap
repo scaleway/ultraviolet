@@ -725,32 +725,18 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-22 .emotion-24 {
+.emotion-22 .emotion-25 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-22[aria-expanded='true'] .emotion-24 {
+.emotion-22[aria-expanded='true'] .emotion-25 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
-}
-
-.emotion-25 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-25 .fillStroke {
-  stroke: currentColor;
-  fill: none;
 }
 
 <div
@@ -835,7 +821,7 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
           >
             More
             <svg
-              class="emotion-24 emotion-25 emotion-26"
+              class="emotion-24 emotion-25 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
               viewBox="0 0 16 16"
             >
               <path
@@ -867,7 +853,7 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
           >
             More again
             <svg
-              class="emotion-24 emotion-25 emotion-26"
+              class="emotion-24 emotion-25 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
               viewBox="0 0 16 16"
             >
               <path
@@ -1579,35 +1565,21 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-124 .emotion-126 {
+.emotion-124 .emotion-127 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-124[aria-expanded='true'] .emotion-126 {
+.emotion-124[aria-expanded='true'] .emotion-127 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
-.emotion-127 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-127 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-132 {
+.emotion-131 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1656,64 +1628,64 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   box-shadow: 0px 0px 24px 6px #d9dadd66;
 }
 
-.emotion-132:hover,
-.emotion-132:active,
-.emotion-132:focus {
+.emotion-131:hover,
+.emotion-131:active,
+.emotion-131:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.emotion-132:focus-visible {
+.emotion-131:focus-visible {
   outline: auto;
 }
 
-.emotion-132[aria-selected='true'] {
+.emotion-131[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-132[aria-selected='true'] .e1hzf7cr3 {
+.emotion-131[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-132[aria-disabled='false']:not(:disabled):hover,
-.emotion-132[aria-disabled='false']:not(:disabled):focus,
-.emotion-132[aria-disabled='false']:not(:disabled):active {
+.emotion-131[aria-disabled='false']:not(:disabled):hover,
+.emotion-131[aria-disabled='false']:not(:disabled):focus,
+.emotion-131[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.emotion-132[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
-.emotion-132[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
-.emotion-132[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
+.emotion-131[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-9,
+.emotion-131[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-9,
+.emotion-131[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-9 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.emotion-132[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-132[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-132[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-131[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-131[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-131[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.emotion-132[aria-disabled='true'],
-.emotion-132:disabled {
+.emotion-131[aria-disabled='true'],
+.emotion-131:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-132 .emotion-126 {
+.emotion-131 .emotion-127 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-132[aria-expanded='true'] .emotion-126 {
+.emotion-131[aria-expanded='true'] .emotion-127 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -2106,7 +2078,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
           >
             Blabla
             <svg
-              class="emotion-126 emotion-127 emotion-128"
+              class="emotion-126 emotion-127 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
               viewBox="0 0 16 16"
             >
               <path
@@ -2131,13 +2103,13 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-131 emotion-132 emotion-125"
+            class="emotion-130 emotion-131 emotion-125"
             role="tab"
             type="button"
           >
             More
             <svg
-              class="emotion-126 emotion-127 emotion-128"
+              class="emotion-126 emotion-127 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
               viewBox="0 0 16 16"
             >
               <path
@@ -2713,32 +2685,18 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.emotion-130 .emotion-132 {
+.emotion-130 .emotion-133 {
   color: inherit;
   margin-left: 0.5rem;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.emotion-130[aria-expanded='true'] .emotion-132 {
+.emotion-130[aria-expanded='true'] .emotion-133 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
-}
-
-.emotion-133 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-133 .fillStroke {
-  stroke: currentColor;
-  fill: none;
 }
 
 <div
@@ -3140,7 +3098,7 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
                 >
                   Blabla
                   <svg
-                    class="emotion-132 emotion-133 emotion-134"
+                    class="emotion-132 emotion-133 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                     viewBox="0 0 16 16"
                   >
                     <path
