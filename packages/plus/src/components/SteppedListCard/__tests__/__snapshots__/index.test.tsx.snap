@@ -1492,35 +1492,32 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
   border: 1px solid #f1eefc;
 }
 
-.emotion-27 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
+.emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.5rem;
+  padding-top: 2rem;
 }
 
-.emotion-27 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-27 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-27 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-33 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1546,39 +1543,14 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
 }
 
 .emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.emotion-35 {
+.emotion-33 {
   margin-bottom: 1.5rem;
 }
 
 .emotion-35 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1589,7 +1561,7 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
   justify-content: right;
 }
 
-.emotion-37 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1658,7 +1630,7 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
                   class="emotion-25 emotion-17"
                 >
                   <svg
-                    class="emotion-27 emotion-28"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1680,10 +1652,10 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-31 emotion-32"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-33 emotion-34"
             >
               <h3
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -1693,7 +1665,7 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
             </div>
             Description
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <img
                 alt="blockStorage"
