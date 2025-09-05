@@ -29,7 +29,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border: none;
 }
 
-.emotion-1 .emotion-12 {
+.emotion-1 .emotion-10 {
   padding: 0;
 }
 
@@ -51,23 +51,23 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-3>.emotion-12 {
+.emotion-3>.emotion-10 {
   color: #3f4250;
 }
 
-.emotion-3>.emotion-12::-webkit-input-placeholder {
+.emotion-3>.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::-moz-placeholder {
+.emotion-3>.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12:-ms-input-placeholder {
+.emotion-3>.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::placeholder {
+.emotion-3>.emotion-10::placeholder {
   color: #727683;
 }
 
@@ -89,23 +89,23 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12 {
+.emotion-3[data-disabled='true']>.emotion-10 {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::placeholder {
   color: #b5b7bd;
 }
 
@@ -166,20 +166,6 @@ exports[`SearchInput > renders correctly without children props 1`] = `
 }
 
 .emotion-9 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -192,11 +178,11 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -232,7 +218,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-9 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -245,7 +231,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-size="large"
                 id="«r1»"
                 placeholder="Type something"
@@ -290,7 +276,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border: none;
 }
 
-.emotion-1 .emotion-12 {
+.emotion-1 .emotion-10 {
   padding: 0;
 }
 
@@ -312,23 +298,23 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-3>.emotion-12 {
+.emotion-3>.emotion-10 {
   color: #3f4250;
 }
 
-.emotion-3>.emotion-12::-webkit-input-placeholder {
+.emotion-3>.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::-moz-placeholder {
+.emotion-3>.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12:-ms-input-placeholder {
+.emotion-3>.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::placeholder {
+.emotion-3>.emotion-10::placeholder {
   color: #727683;
 }
 
@@ -350,23 +336,23 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12 {
+.emotion-3[data-disabled='true']>.emotion-10 {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::placeholder {
   color: #b5b7bd;
 }
 
@@ -427,20 +413,6 @@ exports[`SearchInput > renders with disabled prop 1`] = `
 }
 
 .emotion-9 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -453,11 +425,11 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -493,7 +465,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-9 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -506,7 +478,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-size="large"
                 disabled=""
                 id="«r4»"
@@ -552,7 +524,7 @@ exports[`SearchInput > renders with error prop 1`] = `
   border: none;
 }
 
-.emotion-1 .emotion-12 {
+.emotion-1 .emotion-10 {
   padding: 0;
 }
 
@@ -574,23 +546,23 @@ exports[`SearchInput > renders with error prop 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-3>.emotion-12 {
+.emotion-3>.emotion-10 {
   color: #3f4250;
 }
 
-.emotion-3>.emotion-12::-webkit-input-placeholder {
+.emotion-3>.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::-moz-placeholder {
+.emotion-3>.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12:-ms-input-placeholder {
+.emotion-3>.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::placeholder {
+.emotion-3>.emotion-10::placeholder {
   color: #727683;
 }
 
@@ -612,23 +584,23 @@ exports[`SearchInput > renders with error prop 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12 {
+.emotion-3[data-disabled='true']>.emotion-10 {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::placeholder {
   color: #b5b7bd;
 }
 
@@ -689,20 +661,6 @@ exports[`SearchInput > renders with error prop 1`] = `
 }
 
 .emotion-9 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -715,15 +673,15 @@ exports[`SearchInput > renders with error prop 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -745,20 +703,6 @@ exports[`SearchInput > renders with error prop 1`] = `
   flex-direction: row;
   gap: 0.5rem;
   padding: 0 1rem;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
 }
 
 <div
@@ -793,7 +737,7 @@ exports[`SearchInput > renders with error prop 1`] = `
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-9 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -806,7 +750,7 @@ exports[`SearchInput > renders with error prop 1`] = `
               </div>
               <input
                 aria-invalid="true"
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-size="large"
                 id="«ri»"
                 placeholder="Type something"
@@ -814,10 +758,10 @@ exports[`SearchInput > renders with error prop 1`] = `
                 value=""
               />
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <svg
-                  class="emotion-15 emotion-10"
+                  class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_4__vbm0wqo"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -870,11 +814,11 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border: none;
 }
 
-.emotion-1 .emotion-12 {
+.emotion-1 .emotion-10 {
   padding: 0;
 }
 
-.emotion-1 .emotion-14 {
+.emotion-1 .emotion-12 {
   border: none;
 }
 
@@ -892,23 +836,23 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-3>.emotion-12 {
+.emotion-3>.emotion-10 {
   color: #3f4250;
 }
 
-.emotion-3>.emotion-12::-webkit-input-placeholder {
+.emotion-3>.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::-moz-placeholder {
+.emotion-3>.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12:-ms-input-placeholder {
+.emotion-3>.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::placeholder {
+.emotion-3>.emotion-10::placeholder {
   color: #727683;
 }
 
@@ -930,23 +874,23 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12 {
+.emotion-3[data-disabled='true']>.emotion-10 {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::placeholder {
   color: #b5b7bd;
 }
 
@@ -1007,20 +951,6 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
 }
 
 .emotion-9 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1033,15 +963,15 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1066,7 +996,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: inherit;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1090,7 +1020,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   cursor: text;
 }
 
-.emotion-17 {
+.emotion-15 {
   cursor: default;
   background: #f9f9fa;
   border-radius: 0.25rem;
@@ -1111,42 +1041,42 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   align-items: center;
 }
 
-.emotion-17[data-prominence='strong'] {
+.emotion-15[data-prominence='strong'] {
   background-color: #151a2d;
   border-color: #d9dadd;
 }
 
-.emotion-17[data-prominence='strong'][data-disabled="true"] {
+.emotion-15[data-prominence='strong'][data-disabled="true"] {
   background-color: #e9eaeb;
   border-color: #e9eaeb;
 }
 
-.emotion-17[data-disabled='true'] {
+.emotion-15[data-disabled='true'] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   cursor: not-allowed;
 }
 
-.emotion-17[data-sentiment="primary"] {
+.emotion-15[data-sentiment="primary"] {
   background-color: #f1eefc;
   border-color: #8c40ef;
 }
 
-.emotion-17[data-sentiment="primary"][data-prominence='strong'] {
+.emotion-15[data-sentiment="primary"][data-prominence='strong'] {
   background-color: #8c40ef;
 }
 
-.emotion-17[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+.emotion-15[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
   background-color: #e5dbfd;
 }
 
-.emotion-17[data-sentiment="primary"][data-disabled='true'] {
+.emotion-15[data-sentiment="primary"][data-disabled='true'] {
   background: #f6f5fd;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-17[data-size="small"] {
+.emotion-15[data-size="small"] {
   min-width: 1.25rem;
   height: 1.25rem;
 }
@@ -1183,7 +1113,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-9 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1196,7 +1126,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-size="large"
                 id="«rc»"
                 placeholder="Type something"
@@ -1204,13 +1134,13 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                 value=""
               />
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <div
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                 >
                   <kbd
-                    class="emotion-17 emotion-18"
+                    class="emotion-15 emotion-16"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1223,7 +1153,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-17 emotion-18"
+                    class="emotion-15 emotion-16"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1236,7 +1166,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-17 emotion-18"
+                    class="emotion-15 emotion-16"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1288,11 +1218,11 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border: none;
 }
 
-.emotion-1 .emotion-12 {
+.emotion-1 .emotion-10 {
   padding: 0;
 }
 
-.emotion-1 .emotion-14 {
+.emotion-1 .emotion-12 {
   border: none;
 }
 
@@ -1310,23 +1240,23 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-3>.emotion-12 {
+.emotion-3>.emotion-10 {
   color: #3f4250;
 }
 
-.emotion-3>.emotion-12::-webkit-input-placeholder {
+.emotion-3>.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::-moz-placeholder {
+.emotion-3>.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12:-ms-input-placeholder {
+.emotion-3>.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-3>.emotion-12::placeholder {
+.emotion-3>.emotion-10::placeholder {
   color: #727683;
 }
 
@@ -1348,23 +1278,23 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: #e9eaeb;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12 {
+.emotion-3[data-disabled='true']>.emotion-10 {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-webkit-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::-moz-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12:-ms-input-placeholder {
+.emotion-3[data-disabled='true']>.emotion-10:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-3[data-disabled='true']>.emotion-12::placeholder {
+.emotion-3[data-disabled='true']>.emotion-10::placeholder {
   color: #b5b7bd;
 }
 
@@ -1425,20 +1355,6 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
 }
 
 .emotion-9 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1451,15 +1367,15 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1484,7 +1400,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: inherit;
 }
 
-.emotion-15 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1508,7 +1424,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   cursor: text;
 }
 
-.emotion-17 {
+.emotion-15 {
   cursor: default;
   background: #f9f9fa;
   border-radius: 0.25rem;
@@ -1529,42 +1445,42 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   align-items: center;
 }
 
-.emotion-17[data-prominence='strong'] {
+.emotion-15[data-prominence='strong'] {
   background-color: #151a2d;
   border-color: #d9dadd;
 }
 
-.emotion-17[data-prominence='strong'][data-disabled="true"] {
+.emotion-15[data-prominence='strong'][data-disabled="true"] {
   background-color: #e9eaeb;
   border-color: #e9eaeb;
 }
 
-.emotion-17[data-disabled='true'] {
+.emotion-15[data-disabled='true'] {
   background-color: #f3f3f4;
   border-color: #d9dadd;
   cursor: not-allowed;
 }
 
-.emotion-17[data-sentiment="primary"] {
+.emotion-15[data-sentiment="primary"] {
   background-color: #f1eefc;
   border-color: #8c40ef;
 }
 
-.emotion-17[data-sentiment="primary"][data-prominence='strong'] {
+.emotion-15[data-sentiment="primary"][data-prominence='strong'] {
   background-color: #8c40ef;
 }
 
-.emotion-17[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
+.emotion-15[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
   background-color: #e5dbfd;
 }
 
-.emotion-17[data-sentiment="primary"][data-disabled='true'] {
+.emotion-15[data-sentiment="primary"][data-disabled='true'] {
   background: #f6f5fd;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-17[data-size="small"] {
+.emotion-15[data-size="small"] {
   min-width: 1.25rem;
   height: 1.25rem;
 }
@@ -1601,7 +1517,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-9 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1614,7 +1530,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-size="large"
                 id="«r7»"
                 placeholder="Type something"
@@ -1622,13 +1538,13 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                 value=""
               />
               <div
-                class="emotion-13 emotion-14"
+                class="emotion-11 emotion-12"
               >
                 <div
-                  class="emotion-15 emotion-16"
+                  class="emotion-13 emotion-14"
                 >
                   <kbd
-                    class="emotion-17 emotion-18"
+                    class="emotion-15 emotion-16"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
@@ -1641,7 +1557,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-17 emotion-18"
+                    class="emotion-15 emotion-16"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"

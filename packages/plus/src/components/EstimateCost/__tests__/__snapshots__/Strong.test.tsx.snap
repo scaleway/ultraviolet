@@ -207,20 +207,6 @@ exports[`EstimateCost - Strong Item > render basic props 1`] = `
 }
 
 .emotion-23 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-23 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-25 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -236,7 +222,7 @@ exports[`EstimateCost - Strong Item > render basic props 1`] = `
   justify-content: center;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -261,1158 +247,27 @@ exports[`EstimateCost - Strong Item > render basic props 1`] = `
   color: #222638;
   font-weight: 500;
   margin-right: 4px;
+}
+
+.emotion-30 {
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 4px 4px 0 4px;
+}
+
+.emotion-30>* {
+  margin-top: 0;
+}
+
+.emotion-30>*+* {
+  margin-top: 16px;
 }
 
 .emotion-32 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-32>* {
-  margin-top: 0;
-}
-
-.emotion-32>*+* {
-  margin-top: 16px;
+  background-color: #ffffff;
 }
 
 .emotion-34 {
-  background-color: #ffffff;
-}
-
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-39 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-  margin-right: 0.5rem;
-}
-
-.emotion-39 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-41 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-43 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-45 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-48 {
-  display: grid;
-  grid-template-columns: auto auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-51,
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-51 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-51 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-51,
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-51 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-48[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-48[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-48[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-48[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-48[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-48[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-48[data-success='true']>.emotion-51 {
-  border-right-color: #22674e;
-}
-
-.emotion-48[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-48[data-success='true']:active>.emotion-51 {
-  border-right-color: #22674e;
-}
-
-.emotion-48[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-48[data-error='true']>.emotion-51 {
-  border-right-color: #b3144d;
-}
-
-.emotion-48[data-error='true']>.emotion-51:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-48[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-48[data-error='true']:active>.emotion-51 {
-  border-right-color: #b3144d;
-}
-
-.emotion-48[data-error='true']:active>.emotion-51:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-48[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-48[data-disabled='true']>.emotion-51 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-50 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-52 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  color: #3f4250;
-}
-
-.emotion-52[data-size="small"] {
-  padding-left: 0.5rem;
-}
-
-.emotion-52[data-size="large"] {
-  font-size: 1rem;
-}
-
-.emotion-52::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-52::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-52:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-52::placeholder {
-  color: #727683;
-}
-
-.emotion-52:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-52:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-52:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-52:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-52:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-55 {
-  width: 100%;
-  width: 100%;
-}
-
-.emotion-55 #unit {
-  border: none;
-  background: transparent;
-}
-
-.emotion-55 #unit:focus,
-.emotion-55 #unit:active {
-  box-shadow: none;
-}
-
-.emotion-57 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-59 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-59[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-59[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-59[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-59[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-59[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-59[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-59[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-59[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-59[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-61 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-63 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-65 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-65 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-69 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-71 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-77 {
-  text-align: right;
-}
-
-.emotion-80 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-82 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-84 {
-  text-align: right;
-}
-
-.emotion-86 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-90 {
-  width: 70%;
-}
-
-.emotion-92 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-94 {
-  text-align: right;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-        data-testid="summary-overlay"
-      >
-        <ul
-          class="emotion-4 emotion-5"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              width="inherit"
-            >
-              <div>
-                <div
-                  class="emotion-10 emotion-1"
-                >
-                  <div
-                    class="emotion-12 emotion-1"
-                  >
-                    <p
-                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
-                    >
-                      Strong
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="emotion-14 emotion-15"
-                >
-                  <div
-                    class="emotion-16 emotion-17 emotion-18"
-                  >
-                    This is a strong Item
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="emotion-19 emotion-7"
-          >
-            <div
-              class="emotion-21 emotion-1"
-            >
-              <svg
-                class="emotion-23 emotion-24"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M10.0001 2C8.47441 2 6.97037 2.09378 5.49343 2.27596C4.49409 2.39923 3.77783 3.25665 3.77783 4.23699V16C3.77783 17.1046 4.67326 18 5.77783 18H14.2223C15.3268 18 16.2223 17.1046 16.2223 16V4.23699C16.2223 3.25666 15.506 2.39923 14.5067 2.27596C13.0297 2.09378 11.5257 2 10.0001 2ZM6.43582 8.88889C6.43582 8.5207 6.73429 8.22222 7.10248 8.22222H7.11137C7.47956 8.22222 7.77804 8.5207 7.77804 8.88889V8.89778C7.77804 9.26597 7.47956 9.56444 7.11137 9.56444H7.10248C6.73429 9.56444 6.43582 9.26597 6.43582 8.89778V8.88889ZM7.10248 10.1481C6.73429 10.1481 6.43582 10.4466 6.43582 10.8148V10.8237C6.43582 11.1919 6.73429 11.4903 7.10248 11.4903H7.11137C7.47956 11.4903 7.77804 11.1919 7.77804 10.8237V10.8148C7.77804 10.4466 7.47956 10.1481 7.11137 10.1481H7.10248ZM6.43582 12.7407C6.43582 12.3725 6.73429 12.074 7.10248 12.074H7.11137C7.47956 12.074 7.77804 12.3725 7.77804 12.7407V12.7496C7.77804 13.1177 7.47956 13.4162 7.11137 13.4162H7.10248C6.73429 13.4162 6.43582 13.1177 6.43582 12.7496V12.7407ZM7.10248 13.9999C6.73429 13.9999 6.43582 14.2984 6.43582 14.6666V14.6754C6.43582 15.0436 6.73429 15.3421 7.10248 15.3421H7.11137C7.47956 15.3421 7.77804 15.0436 7.77804 14.6754V14.6666C7.77804 14.2984 7.47956 13.9999 7.11137 13.9999H7.10248ZM8.36175 8.88889C8.36175 8.5207 8.66023 8.22222 9.02842 8.22222H9.0373C9.40549 8.22222 9.70397 8.5207 9.70397 8.88889V8.89778C9.70397 9.26597 9.40549 9.56444 9.0373 9.56444H9.02842C8.66023 9.56444 8.36175 9.26597 8.36175 8.89778V8.88889ZM9.02842 10.1481C8.66023 10.1481 8.36175 10.4466 8.36175 10.8148V10.8237C8.36175 11.1919 8.66023 11.4903 9.02842 11.4903H9.0373C9.40549 11.4903 9.70397 11.1919 9.70397 10.8237V10.8148C9.70397 10.4466 9.40549 10.1481 9.0373 10.1481H9.02842ZM8.36175 12.7407C8.36175 12.3725 8.66023 12.074 9.02842 12.074H9.0373C9.40549 12.074 9.70397 12.3725 9.70397 12.7407V12.7496C9.70397 13.1177 9.40549 13.4162 9.0373 13.4162H9.02842C8.66023 13.4162 8.36175 13.1177 8.36175 12.7496V12.7407ZM9.02842 13.9999C8.66023 13.9999 8.36175 14.2984 8.36175 14.6666V14.6754C8.36175 15.0436 8.66023 15.3421 9.02842 15.3421H9.0373C9.40549 15.3421 9.70397 15.0436 9.70397 14.6754V14.6666C9.70397 14.2984 9.40549 13.9999 9.0373 13.9999H9.02842ZM10.2906 8.88889C10.2906 8.5207 10.5891 8.22222 10.9573 8.22222H10.9662C11.3344 8.22222 11.6329 8.5207 11.6329 8.88889V8.89778C11.6329 9.26597 11.3344 9.56444 10.9662 9.56444H10.9573C10.5891 9.56444 10.2906 9.26597 10.2906 8.89778V8.88889ZM10.9573 10.1481C10.5891 10.1481 10.2906 10.4466 10.2906 10.8148V10.8237C10.2906 11.1919 10.5891 11.4903 10.9573 11.4903H10.9662C11.3344 11.4903 11.6329 11.1919 11.6329 10.8237V10.8148C11.6329 10.4466 11.3344 10.1481 10.9662 10.1481H10.9573ZM10.2906 12.7407C10.2906 12.3725 10.5891 12.074 10.9573 12.074H10.9662C11.3344 12.074 11.6329 12.3725 11.6329 12.7407V12.7496C11.6329 13.1177 11.3344 13.4162 10.9662 13.4162H10.9573C10.5891 13.4162 10.2906 13.1177 10.2906 12.7496V12.7407ZM10.9573 13.9999C10.5891 13.9999 10.2906 14.2984 10.2906 14.6666V14.6754C10.2906 15.0436 10.5891 15.3421 10.9573 15.3421H10.9662C11.3344 15.3421 11.6329 15.0436 11.6329 14.6754V14.6666C11.6329 14.2984 11.3344 13.9999 10.9662 13.9999H10.9573ZM12.2225 8.88889C12.2225 8.5207 12.521 8.22222 12.8892 8.22222H12.898C13.2662 8.22222 13.5647 8.5207 13.5647 8.88889V8.89778C13.5647 9.26597 13.2662 9.56444 12.898 9.56444H12.8892C12.521 9.56444 12.2225 9.26597 12.2225 8.89778V8.88889ZM12.8892 10.1481C12.521 10.1481 12.2225 10.4466 12.2225 10.8148V10.8237C12.2225 11.1919 12.521 11.4903 12.8892 11.4903H12.898C13.2662 11.4903 13.5647 11.1919 13.5647 10.8237V10.8148C13.5647 10.4466 13.2662 10.1481 12.898 10.1481H12.8892ZM12.8892 12.0741C13.2573 12.0741 13.5558 12.3726 13.5558 12.7408V14.6667C13.5558 15.0349 13.2573 15.3334 12.8892 15.3334C12.521 15.3334 12.2225 15.0349 12.2225 14.6667V12.7408C12.2225 12.3726 12.521 12.0741 12.8892 12.0741ZM7.11117 4.66667C6.74298 4.66667 6.4445 4.96514 6.4445 5.33333V5.77778C6.4445 6.14597 6.74298 6.44444 7.11117 6.44444H12.8889C13.2571 6.44444 13.5556 6.14597 13.5556 5.77778V5.33333C13.5556 4.96514 13.2571 4.66667 12.8889 4.66667H7.11117Z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-              Estimated cost
-            </div>
-            <div
-              class="emotion-25 emotion-26"
-            >
-              <div
-                class="emotion-16 emotion-28 emotion-18"
-              >
-                <span
-                  class="emotion-30 emotion-31"
-                >
-                  €0.00/Hour(s)
-                </span>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <span
-        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
-      >
-        This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
-      </span>
-      <div>
-        <table
-          cellpadding="0"
-          cellspacing="0"
-          class="emotion-32 emotion-264"
-          data-testid="summary"
-        >
-          <colgroup>
-            <col />
-            <col
-              class="emotion-34 emotion-262"
-            />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>
-                <h3
-                  class="emotion-36 emotion-37"
-                >
-                  <svg
-                    class="emotion-38 emotion-39 emotion-24"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M10.0001 2C8.47441 2 6.97037 2.09378 5.49343 2.27596C4.49409 2.39923 3.77783 3.25665 3.77783 4.23699V16C3.77783 17.1046 4.67326 18 5.77783 18H14.2223C15.3268 18 16.2223 17.1046 16.2223 16V4.23699C16.2223 3.25666 15.506 2.39923 14.5067 2.27596C13.0297 2.09378 11.5257 2 10.0001 2ZM6.43582 8.88889C6.43582 8.5207 6.73429 8.22222 7.10248 8.22222H7.11137C7.47956 8.22222 7.77804 8.5207 7.77804 8.88889V8.89778C7.77804 9.26597 7.47956 9.56444 7.11137 9.56444H7.10248C6.73429 9.56444 6.43582 9.26597 6.43582 8.89778V8.88889ZM7.10248 10.1481C6.73429 10.1481 6.43582 10.4466 6.43582 10.8148V10.8237C6.43582 11.1919 6.73429 11.4903 7.10248 11.4903H7.11137C7.47956 11.4903 7.77804 11.1919 7.77804 10.8237V10.8148C7.77804 10.4466 7.47956 10.1481 7.11137 10.1481H7.10248ZM6.43582 12.7407C6.43582 12.3725 6.73429 12.074 7.10248 12.074H7.11137C7.47956 12.074 7.77804 12.3725 7.77804 12.7407V12.7496C7.77804 13.1177 7.47956 13.4162 7.11137 13.4162H7.10248C6.73429 13.4162 6.43582 13.1177 6.43582 12.7496V12.7407ZM7.10248 13.9999C6.73429 13.9999 6.43582 14.2984 6.43582 14.6666V14.6754C6.43582 15.0436 6.73429 15.3421 7.10248 15.3421H7.11137C7.47956 15.3421 7.77804 15.0436 7.77804 14.6754V14.6666C7.77804 14.2984 7.47956 13.9999 7.11137 13.9999H7.10248ZM8.36175 8.88889C8.36175 8.5207 8.66023 8.22222 9.02842 8.22222H9.0373C9.40549 8.22222 9.70397 8.5207 9.70397 8.88889V8.89778C9.70397 9.26597 9.40549 9.56444 9.0373 9.56444H9.02842C8.66023 9.56444 8.36175 9.26597 8.36175 8.89778V8.88889ZM9.02842 10.1481C8.66023 10.1481 8.36175 10.4466 8.36175 10.8148V10.8237C8.36175 11.1919 8.66023 11.4903 9.02842 11.4903H9.0373C9.40549 11.4903 9.70397 11.1919 9.70397 10.8237V10.8148C9.70397 10.4466 9.40549 10.1481 9.0373 10.1481H9.02842ZM8.36175 12.7407C8.36175 12.3725 8.66023 12.074 9.02842 12.074H9.0373C9.40549 12.074 9.70397 12.3725 9.70397 12.7407V12.7496C9.70397 13.1177 9.40549 13.4162 9.0373 13.4162H9.02842C8.66023 13.4162 8.36175 13.1177 8.36175 12.7496V12.7407ZM9.02842 13.9999C8.66023 13.9999 8.36175 14.2984 8.36175 14.6666V14.6754C8.36175 15.0436 8.66023 15.3421 9.02842 15.3421H9.0373C9.40549 15.3421 9.70397 15.0436 9.70397 14.6754V14.6666C9.70397 14.2984 9.40549 13.9999 9.0373 13.9999H9.02842ZM10.2906 8.88889C10.2906 8.5207 10.5891 8.22222 10.9573 8.22222H10.9662C11.3344 8.22222 11.6329 8.5207 11.6329 8.88889V8.89778C11.6329 9.26597 11.3344 9.56444 10.9662 9.56444H10.9573C10.5891 9.56444 10.2906 9.26597 10.2906 8.89778V8.88889ZM10.9573 10.1481C10.5891 10.1481 10.2906 10.4466 10.2906 10.8148V10.8237C10.2906 11.1919 10.5891 11.4903 10.9573 11.4903H10.9662C11.3344 11.4903 11.6329 11.1919 11.6329 10.8237V10.8148C11.6329 10.4466 11.3344 10.1481 10.9662 10.1481H10.9573ZM10.2906 12.7407C10.2906 12.3725 10.5891 12.074 10.9573 12.074H10.9662C11.3344 12.074 11.6329 12.3725 11.6329 12.7407V12.7496C11.6329 13.1177 11.3344 13.4162 10.9662 13.4162H10.9573C10.5891 13.4162 10.2906 13.1177 10.2906 12.7496V12.7407ZM10.9573 13.9999C10.5891 13.9999 10.2906 14.2984 10.2906 14.6666V14.6754C10.2906 15.0436 10.5891 15.3421 10.9573 15.3421H10.9662C11.3344 15.3421 11.6329 15.0436 11.6329 14.6754V14.6666C11.6329 14.2984 11.3344 13.9999 10.9662 13.9999H10.9573ZM12.2225 8.88889C12.2225 8.5207 12.521 8.22222 12.8892 8.22222H12.898C13.2662 8.22222 13.5647 8.5207 13.5647 8.88889V8.89778C13.5647 9.26597 13.2662 9.56444 12.898 9.56444H12.8892C12.521 9.56444 12.2225 9.26597 12.2225 8.89778V8.88889ZM12.8892 10.1481C12.521 10.1481 12.2225 10.4466 12.2225 10.8148V10.8237C12.2225 11.1919 12.521 11.4903 12.8892 11.4903H12.898C13.2662 11.4903 13.5647 11.1919 13.5647 10.8237V10.8148C13.5647 10.4466 13.2662 10.1481 12.898 10.1481H12.8892ZM12.8892 12.0741C13.2573 12.0741 13.5558 12.3726 13.5558 12.7408V14.6667C13.5558 15.0349 13.2573 15.3334 12.8892 15.3334C12.521 15.3334 12.2225 15.0349 12.2225 14.6667V12.7408C12.2225 12.3726 12.521 12.0741 12.8892 12.0741ZM7.11117 4.66667C6.74298 4.66667 6.4445 4.96514 6.4445 5.33333V5.77778C6.4445 6.14597 6.74298 6.44444 7.11117 6.44444H12.8889C13.2571 6.44444 13.5556 6.14597 13.5556 5.77778V5.33333C13.5556 4.96514 13.2571 4.66667 12.8889 4.66667H7.11117Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  Estimated cost
-                </h3>
-              </th>
-              <th
-                class="emotion-41 emotion-42"
-              >
-                <div
-                  class="emotion-43 emotion-44"
-                >
-                  <div
-                    class="emotion-45 emotion-1"
-                  >
-                    <div
-                      class="emotion-47 emotion-48 emotion-49"
-                    >
-                      <div
-                        class="emotion-50 emotion-51"
-                        id="input-field"
-                      >
-                        <input
-                          aria-invalid="false"
-                          class="emotion-52 emotion-53"
-                          data-size="medium"
-                          data-testid="unit-input"
-                          id="«r3»"
-                          max="9007199254740991"
-                          min="1"
-                          name="iteration-value"
-                          placeholder="0"
-                          step="1"
-                          type="number"
-                          value="1"
-                        />
-                      </div>
-                      <div
-                        aria-label="iteration-unit"
-                        class="emotion-54 emotion-55 emotion-56"
-                      >
-                        <div
-                          aria-controls="«r5»"
-                          aria-describedby="«r5»"
-                          class="uv_w40vpo9 uv_w40vpob"
-                          tabindex="-1"
-                        >
-                          <div
-                            class="emotion-57 emotion-1"
-                          >
-                            <div
-                              aria-controls="«r5»"
-                              aria-expanded="false"
-                              class="emotion-59 emotion-60"
-                              data-disabled="false"
-                              data-dropdownvisible="false"
-                              data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
-                              data-testid="select-input-iteration-unit"
-                              id="unit"
-                              role="combobox"
-                              tabindex="0"
-                            >
-                              <div
-                                class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                              >
-                                Hour(s)
-                              </div>
-                              <div
-                                class="emotion-63 emotion-64"
-                              >
-                                <svg
-                                  aria-label="show dropdown"
-                                  class="emotion-65 emotion-24"
-                                  viewBox="0 0 16 16"
-                                >
-                                  <path
-                                    clip-rule="evenodd"
-                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                                    fill-rule="evenodd"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              class="emotion-67 emotion-68"
-            >
-              <td
-                class="emotion-69 emotion-261"
-                width="70%"
-              >
-                <div
-                  class="emotion-71 emotion-72"
-                >
-                  <div
-                    class="emotion-10 emotion-1"
-                  >
-                    <div
-                      class="emotion-12 emotion-1"
-                    >
-                      <p
-                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
-                      >
-                        Strong
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="emotion-77 emotion-15"
-                  >
-                    <div
-                      class="emotion-16 emotion-80 emotion-18"
-                    >
-                      This is a strong Item
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td
-                class="emotion-82 emotion-83"
-              >
-                <p
-                  class="emotion-84 emotion-85 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
-                >
-                  €0.00
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <table
-          cellpadding="0"
-          cellspacing="0"
-          class="emotion-86 emotion-87"
-        >
-          <colgroup>
-            <col />
-            <col
-              class="emotion-34 emotion-262"
-            />
-          </colgroup>
-          <tbody>
-            <tr>
-              <td
-                aria-label="control"
-                class="emotion-90 emotion-91"
-              />
-              <td
-                class="emotion-92 emotion-260"
-              >
-                <h3
-                  class="emotion-94 emotion-95 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
-                >
-                  <span
-                    class="emotion-30 emotion-31"
-                  >
-                    €0.00
-                  </span>
-                </h3>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-6 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-6:first-of-type,
-.emotion-6:last-child {
-  border: 0;
-}
-
-.emotion-8 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-14 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-16 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-16:first-of-type,
-.emotion-16:last-child {
-  border: 0;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-20 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-22 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-29 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-29>* {
-  margin-top: 0;
-}
-
-.emotion-29>*+* {
-  margin-top: 16px;
-}
-
-.emotion-31 {
-  background-color: #ffffff;
-}
-
-.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1430,18 +285,7 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
 }
 
 .emotion-36 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
   margin-right: 0.5rem;
-}
-
-.emotion-36 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
 }
 
 .emotion-38 {
@@ -1876,21 +720,7 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
   display: flex;
 }
 
-.emotion-62 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-62 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-66 {
+.emotion-64 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1898,7 +728,7 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-68 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1919,11 +749,11 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-74 {
+.emotion-72 {
   text-align: right;
 }
 
-.emotion-77 {
+.emotion-75 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1950,7 +780,7 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
   margin-right: 4px;
 }
 
-.emotion-79 {
+.emotion-77 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1962,22 +792,22 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-81 {
+.emotion-79 {
   text-align: right;
 }
 
-.emotion-83 {
+.emotion-81 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-87 {
+.emotion-85 {
   width: 70%;
 }
 
-.emotion-89 {
+.emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1994,7 +824,1099 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-91 {
+.emotion-89 {
+  text-align: right;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="summary-overlay"
+      >
+        <ul
+          class="emotion-4 emotion-5"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              width="inherit"
+            >
+              <div>
+                <div
+                  class="emotion-10 emotion-1"
+                >
+                  <div
+                    class="emotion-12 emotion-1"
+                  >
+                    <p
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                    >
+                      Strong
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <div
+                    class="emotion-16 emotion-17 emotion-18"
+                  >
+                    This is a strong Item
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="emotion-19 emotion-7"
+          >
+            <div
+              class="emotion-21 emotion-1"
+            >
+              <svg
+                class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_primary__1sbwqkz1 styles_size_medium__1sbwqkz9 styles_undefined_compound_0__1sbwqkzk"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M10.0001 2C8.47441 2 6.97037 2.09378 5.49343 2.27596C4.49409 2.39923 3.77783 3.25665 3.77783 4.23699V16C3.77783 17.1046 4.67326 18 5.77783 18H14.2223C15.3268 18 16.2223 17.1046 16.2223 16V4.23699C16.2223 3.25666 15.506 2.39923 14.5067 2.27596C13.0297 2.09378 11.5257 2 10.0001 2ZM6.43582 8.88889C6.43582 8.5207 6.73429 8.22222 7.10248 8.22222H7.11137C7.47956 8.22222 7.77804 8.5207 7.77804 8.88889V8.89778C7.77804 9.26597 7.47956 9.56444 7.11137 9.56444H7.10248C6.73429 9.56444 6.43582 9.26597 6.43582 8.89778V8.88889ZM7.10248 10.1481C6.73429 10.1481 6.43582 10.4466 6.43582 10.8148V10.8237C6.43582 11.1919 6.73429 11.4903 7.10248 11.4903H7.11137C7.47956 11.4903 7.77804 11.1919 7.77804 10.8237V10.8148C7.77804 10.4466 7.47956 10.1481 7.11137 10.1481H7.10248ZM6.43582 12.7407C6.43582 12.3725 6.73429 12.074 7.10248 12.074H7.11137C7.47956 12.074 7.77804 12.3725 7.77804 12.7407V12.7496C7.77804 13.1177 7.47956 13.4162 7.11137 13.4162H7.10248C6.73429 13.4162 6.43582 13.1177 6.43582 12.7496V12.7407ZM7.10248 13.9999C6.73429 13.9999 6.43582 14.2984 6.43582 14.6666V14.6754C6.43582 15.0436 6.73429 15.3421 7.10248 15.3421H7.11137C7.47956 15.3421 7.77804 15.0436 7.77804 14.6754V14.6666C7.77804 14.2984 7.47956 13.9999 7.11137 13.9999H7.10248ZM8.36175 8.88889C8.36175 8.5207 8.66023 8.22222 9.02842 8.22222H9.0373C9.40549 8.22222 9.70397 8.5207 9.70397 8.88889V8.89778C9.70397 9.26597 9.40549 9.56444 9.0373 9.56444H9.02842C8.66023 9.56444 8.36175 9.26597 8.36175 8.89778V8.88889ZM9.02842 10.1481C8.66023 10.1481 8.36175 10.4466 8.36175 10.8148V10.8237C8.36175 11.1919 8.66023 11.4903 9.02842 11.4903H9.0373C9.40549 11.4903 9.70397 11.1919 9.70397 10.8237V10.8148C9.70397 10.4466 9.40549 10.1481 9.0373 10.1481H9.02842ZM8.36175 12.7407C8.36175 12.3725 8.66023 12.074 9.02842 12.074H9.0373C9.40549 12.074 9.70397 12.3725 9.70397 12.7407V12.7496C9.70397 13.1177 9.40549 13.4162 9.0373 13.4162H9.02842C8.66023 13.4162 8.36175 13.1177 8.36175 12.7496V12.7407ZM9.02842 13.9999C8.66023 13.9999 8.36175 14.2984 8.36175 14.6666V14.6754C8.36175 15.0436 8.66023 15.3421 9.02842 15.3421H9.0373C9.40549 15.3421 9.70397 15.0436 9.70397 14.6754V14.6666C9.70397 14.2984 9.40549 13.9999 9.0373 13.9999H9.02842ZM10.2906 8.88889C10.2906 8.5207 10.5891 8.22222 10.9573 8.22222H10.9662C11.3344 8.22222 11.6329 8.5207 11.6329 8.88889V8.89778C11.6329 9.26597 11.3344 9.56444 10.9662 9.56444H10.9573C10.5891 9.56444 10.2906 9.26597 10.2906 8.89778V8.88889ZM10.9573 10.1481C10.5891 10.1481 10.2906 10.4466 10.2906 10.8148V10.8237C10.2906 11.1919 10.5891 11.4903 10.9573 11.4903H10.9662C11.3344 11.4903 11.6329 11.1919 11.6329 10.8237V10.8148C11.6329 10.4466 11.3344 10.1481 10.9662 10.1481H10.9573ZM10.2906 12.7407C10.2906 12.3725 10.5891 12.074 10.9573 12.074H10.9662C11.3344 12.074 11.6329 12.3725 11.6329 12.7407V12.7496C11.6329 13.1177 11.3344 13.4162 10.9662 13.4162H10.9573C10.5891 13.4162 10.2906 13.1177 10.2906 12.7496V12.7407ZM10.9573 13.9999C10.5891 13.9999 10.2906 14.2984 10.2906 14.6666V14.6754C10.2906 15.0436 10.5891 15.3421 10.9573 15.3421H10.9662C11.3344 15.3421 11.6329 15.0436 11.6329 14.6754V14.6666C11.6329 14.2984 11.3344 13.9999 10.9662 13.9999H10.9573ZM12.2225 8.88889C12.2225 8.5207 12.521 8.22222 12.8892 8.22222H12.898C13.2662 8.22222 13.5647 8.5207 13.5647 8.88889V8.89778C13.5647 9.26597 13.2662 9.56444 12.898 9.56444H12.8892C12.521 9.56444 12.2225 9.26597 12.2225 8.89778V8.88889ZM12.8892 10.1481C12.521 10.1481 12.2225 10.4466 12.2225 10.8148V10.8237C12.2225 11.1919 12.521 11.4903 12.8892 11.4903H12.898C13.2662 11.4903 13.5647 11.1919 13.5647 10.8237V10.8148C13.5647 10.4466 13.2662 10.1481 12.898 10.1481H12.8892ZM12.8892 12.0741C13.2573 12.0741 13.5558 12.3726 13.5558 12.7408V14.6667C13.5558 15.0349 13.2573 15.3334 12.8892 15.3334C12.521 15.3334 12.2225 15.0349 12.2225 14.6667V12.7408C12.2225 12.3726 12.521 12.0741 12.8892 12.0741ZM7.11117 4.66667C6.74298 4.66667 6.4445 4.96514 6.4445 5.33333V5.77778C6.4445 6.14597 6.74298 6.44444 7.11117 6.44444H12.8889C13.2571 6.44444 13.5556 6.14597 13.5556 5.77778V5.33333C13.5556 4.96514 13.2571 4.66667 12.8889 4.66667H7.11117Z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              Estimated cost
+            </div>
+            <div
+              class="emotion-23 emotion-24"
+            >
+              <div
+                class="emotion-16 emotion-26 emotion-18"
+              >
+                <span
+                  class="emotion-28 emotion-29"
+                >
+                  €0.00/Hour(s)
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span
+        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+      >
+        This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
+      </span>
+      <div>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-30 emotion-244"
+          data-testid="summary"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-32 emotion-242"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>
+                <h3
+                  class="emotion-34 emotion-35"
+                >
+                  <svg
+                    class="emotion-36 emotion-37 styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_primary__1sbwqkz1 styles_size_medium__1sbwqkz9 styles_undefined_compound_0__1sbwqkzk"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10.0001 2C8.47441 2 6.97037 2.09378 5.49343 2.27596C4.49409 2.39923 3.77783 3.25665 3.77783 4.23699V16C3.77783 17.1046 4.67326 18 5.77783 18H14.2223C15.3268 18 16.2223 17.1046 16.2223 16V4.23699C16.2223 3.25666 15.506 2.39923 14.5067 2.27596C13.0297 2.09378 11.5257 2 10.0001 2ZM6.43582 8.88889C6.43582 8.5207 6.73429 8.22222 7.10248 8.22222H7.11137C7.47956 8.22222 7.77804 8.5207 7.77804 8.88889V8.89778C7.77804 9.26597 7.47956 9.56444 7.11137 9.56444H7.10248C6.73429 9.56444 6.43582 9.26597 6.43582 8.89778V8.88889ZM7.10248 10.1481C6.73429 10.1481 6.43582 10.4466 6.43582 10.8148V10.8237C6.43582 11.1919 6.73429 11.4903 7.10248 11.4903H7.11137C7.47956 11.4903 7.77804 11.1919 7.77804 10.8237V10.8148C7.77804 10.4466 7.47956 10.1481 7.11137 10.1481H7.10248ZM6.43582 12.7407C6.43582 12.3725 6.73429 12.074 7.10248 12.074H7.11137C7.47956 12.074 7.77804 12.3725 7.77804 12.7407V12.7496C7.77804 13.1177 7.47956 13.4162 7.11137 13.4162H7.10248C6.73429 13.4162 6.43582 13.1177 6.43582 12.7496V12.7407ZM7.10248 13.9999C6.73429 13.9999 6.43582 14.2984 6.43582 14.6666V14.6754C6.43582 15.0436 6.73429 15.3421 7.10248 15.3421H7.11137C7.47956 15.3421 7.77804 15.0436 7.77804 14.6754V14.6666C7.77804 14.2984 7.47956 13.9999 7.11137 13.9999H7.10248ZM8.36175 8.88889C8.36175 8.5207 8.66023 8.22222 9.02842 8.22222H9.0373C9.40549 8.22222 9.70397 8.5207 9.70397 8.88889V8.89778C9.70397 9.26597 9.40549 9.56444 9.0373 9.56444H9.02842C8.66023 9.56444 8.36175 9.26597 8.36175 8.89778V8.88889ZM9.02842 10.1481C8.66023 10.1481 8.36175 10.4466 8.36175 10.8148V10.8237C8.36175 11.1919 8.66023 11.4903 9.02842 11.4903H9.0373C9.40549 11.4903 9.70397 11.1919 9.70397 10.8237V10.8148C9.70397 10.4466 9.40549 10.1481 9.0373 10.1481H9.02842ZM8.36175 12.7407C8.36175 12.3725 8.66023 12.074 9.02842 12.074H9.0373C9.40549 12.074 9.70397 12.3725 9.70397 12.7407V12.7496C9.70397 13.1177 9.40549 13.4162 9.0373 13.4162H9.02842C8.66023 13.4162 8.36175 13.1177 8.36175 12.7496V12.7407ZM9.02842 13.9999C8.66023 13.9999 8.36175 14.2984 8.36175 14.6666V14.6754C8.36175 15.0436 8.66023 15.3421 9.02842 15.3421H9.0373C9.40549 15.3421 9.70397 15.0436 9.70397 14.6754V14.6666C9.70397 14.2984 9.40549 13.9999 9.0373 13.9999H9.02842ZM10.2906 8.88889C10.2906 8.5207 10.5891 8.22222 10.9573 8.22222H10.9662C11.3344 8.22222 11.6329 8.5207 11.6329 8.88889V8.89778C11.6329 9.26597 11.3344 9.56444 10.9662 9.56444H10.9573C10.5891 9.56444 10.2906 9.26597 10.2906 8.89778V8.88889ZM10.9573 10.1481C10.5891 10.1481 10.2906 10.4466 10.2906 10.8148V10.8237C10.2906 11.1919 10.5891 11.4903 10.9573 11.4903H10.9662C11.3344 11.4903 11.6329 11.1919 11.6329 10.8237V10.8148C11.6329 10.4466 11.3344 10.1481 10.9662 10.1481H10.9573ZM10.2906 12.7407C10.2906 12.3725 10.5891 12.074 10.9573 12.074H10.9662C11.3344 12.074 11.6329 12.3725 11.6329 12.7407V12.7496C11.6329 13.1177 11.3344 13.4162 10.9662 13.4162H10.9573C10.5891 13.4162 10.2906 13.1177 10.2906 12.7496V12.7407ZM10.9573 13.9999C10.5891 13.9999 10.2906 14.2984 10.2906 14.6666V14.6754C10.2906 15.0436 10.5891 15.3421 10.9573 15.3421H10.9662C11.3344 15.3421 11.6329 15.0436 11.6329 14.6754V14.6666C11.6329 14.2984 11.3344 13.9999 10.9662 13.9999H10.9573ZM12.2225 8.88889C12.2225 8.5207 12.521 8.22222 12.8892 8.22222H12.898C13.2662 8.22222 13.5647 8.5207 13.5647 8.88889V8.89778C13.5647 9.26597 13.2662 9.56444 12.898 9.56444H12.8892C12.521 9.56444 12.2225 9.26597 12.2225 8.89778V8.88889ZM12.8892 10.1481C12.521 10.1481 12.2225 10.4466 12.2225 10.8148V10.8237C12.2225 11.1919 12.521 11.4903 12.8892 11.4903H12.898C13.2662 11.4903 13.5647 11.1919 13.5647 10.8237V10.8148C13.5647 10.4466 13.2662 10.1481 12.898 10.1481H12.8892ZM12.8892 12.0741C13.2573 12.0741 13.5558 12.3726 13.5558 12.7408V14.6667C13.5558 15.0349 13.2573 15.3334 12.8892 15.3334C12.521 15.3334 12.2225 15.0349 12.2225 14.6667V12.7408C12.2225 12.3726 12.521 12.0741 12.8892 12.0741ZM7.11117 4.66667C6.74298 4.66667 6.4445 4.96514 6.4445 5.33333V5.77778C6.4445 6.14597 6.74298 6.44444 7.11117 6.44444H12.8889C13.2571 6.44444 13.5556 6.14597 13.5556 5.77778V5.33333C13.5556 4.96514 13.2571 4.66667 12.8889 4.66667H7.11117Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  Estimated cost
+                </h3>
+              </th>
+              <th
+                class="emotion-38 emotion-39"
+              >
+                <div
+                  class="emotion-40 emotion-41"
+                >
+                  <div
+                    class="emotion-42 emotion-1"
+                  >
+                    <div
+                      class="emotion-44 emotion-45 emotion-46"
+                    >
+                      <div
+                        class="emotion-47 emotion-48"
+                        id="input-field"
+                      >
+                        <input
+                          aria-invalid="false"
+                          class="emotion-49 emotion-50"
+                          data-size="medium"
+                          data-testid="unit-input"
+                          id="«r3»"
+                          max="9007199254740991"
+                          min="1"
+                          name="iteration-value"
+                          placeholder="0"
+                          step="1"
+                          type="number"
+                          value="1"
+                        />
+                      </div>
+                      <div
+                        aria-label="iteration-unit"
+                        class="emotion-51 emotion-52 emotion-53"
+                      >
+                        <div
+                          aria-controls="«r5»"
+                          aria-describedby="«r5»"
+                          class="uv_w40vpo9 uv_w40vpob"
+                          tabindex="-1"
+                        >
+                          <div
+                            class="emotion-54 emotion-1"
+                          >
+                            <div
+                              aria-controls="«r5»"
+                              aria-expanded="false"
+                              class="emotion-56 emotion-57"
+                              data-disabled="false"
+                              data-dropdownvisible="false"
+                              data-readonly="false"
+                              data-size="medium"
+                              data-state="neutral"
+                              data-testid="select-input-iteration-unit"
+                              id="unit"
+                              role="combobox"
+                              tabindex="0"
+                            >
+                              <div
+                                class="emotion-58 emotion-59 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                              >
+                                Hour(s)
+                              </div>
+                              <div
+                                class="emotion-60 emotion-61"
+                              >
+                                <svg
+                                  aria-label="show dropdown"
+                                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="emotion-62 emotion-63"
+            >
+              <td
+                class="emotion-64 emotion-241"
+                width="70%"
+              >
+                <div
+                  class="emotion-66 emotion-67"
+                >
+                  <div
+                    class="emotion-10 emotion-1"
+                  >
+                    <div
+                      class="emotion-12 emotion-1"
+                    >
+                      <p
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                      >
+                        Strong
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-72 emotion-15"
+                  >
+                    <div
+                      class="emotion-16 emotion-75 emotion-18"
+                    >
+                      This is a strong Item
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="emotion-77 emotion-78"
+              >
+                <p
+                  class="emotion-79 emotion-80 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                >
+                  €0.00
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-81 emotion-82"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-32 emotion-242"
+            />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td
+                aria-label="control"
+                class="emotion-85 emotion-86"
+              />
+              <td
+                class="emotion-87 emotion-240"
+              >
+                <h3
+                  class="emotion-89 emotion-90 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                >
+                  <span
+                    class="emotion-28 emotion-29"
+                  >
+                    €0.00
+                  </span>
+                </h3>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emotion-2 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0px 0px 8px 2px #d9dadd66;
+  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
+  transition: bottom 0.3s,box-shadow 0.3s;
+  z-index: 1;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.emotion-6 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+  border: 0;
+}
+
+.emotion-6:first-of-type,
+.emotion-6:last-child {
+  border: 0;
+}
+
+.emotion-8 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-14 {
+  text-align: initial;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-16 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-16:first-of-type,
+.emotion-16:last-child {
+  border: 0;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.emotion-20 {
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-27 {
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 4px 4px 0 4px;
+}
+
+.emotion-27>* {
+  margin-top: 0;
+}
+
+.emotion-27>*+* {
+  margin-top: 16px;
+}
+
+.emotion-29 {
+  background-color: #ffffff;
+}
+
+.emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #3f4250;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.emotion-33 {
+  margin-right: 0.5rem;
+}
+
+.emotion-35 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
+  padding: 0;
+}
+
+.emotion-37 {
+  max-width: 200px;
+  padding: 16px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  float: right;
+}
+
+.emotion-39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-42 {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-42:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+.emotion-42:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.emotion-42:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus>.emotion-45,
+.emotion-42:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):active>.emotion-45 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-42:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-42:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus-within>.emotion-45 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-42:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+.emotion-42:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #8c40ef;
+}
+
+.emotion-42:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover>.emotion-45,
+.emotion-42:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus>.emotion-45 {
+  border-right-color: #8c40ef;
+}
+
+.emotion-42[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-42[data-readonly='true']:active {
+  border-color: #d9dadd;
+}
+
+.emotion-42[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-42[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-42[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-42[data-success='true'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-42[data-success='true']>.emotion-45 {
+  border-right-color: #22674e;
+}
+
+.emotion-42[data-success='true']:active {
+  border: 1px solid #22674e;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-42[data-success='true']:active>.emotion-45 {
+  border-right-color: #22674e;
+}
+
+.emotion-42[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-42[data-error='true']>.emotion-45 {
+  border-right-color: #b3144d;
+}
+
+.emotion-42[data-error='true']>.emotion-45:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-42[data-error='true']:active {
+  border: 1px solid #b3144d;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-42[data-error='true']:active>.emotion-45 {
+  border-right-color: #b3144d;
+}
+
+.emotion-42[data-error='true']:active>.emotion-45:hover {
+  border-right-color: #b3144d;
+}
+
+.emotion-42[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-42[data-disabled='true']>.emotion-45 {
+  border-right-color: #e9eaeb;
+}
+
+.emotion-44 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-right: 1rem;
+  border-right: 1px solid #d9dadd;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-46 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: #3f4250;
+}
+
+.emotion-46[data-size="small"] {
+  padding-left: 0.5rem;
+}
+
+.emotion-46[data-size="large"] {
+  font-size: 1rem;
+}
+
+.emotion-46::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-46::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-46:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-46::placeholder {
+  color: #727683;
+}
+
+.emotion-46:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-46:disabled::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-46:disabled::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-46:disabled:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-46:disabled::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-49 {
+  width: 100%;
+  width: 100%;
+}
+
+.emotion-49 #unit {
+  border: none;
+  background: transparent;
+}
+
+.emotion-49 #unit:focus,
+.emotion-49 #unit:active {
+  box-shadow: none;
+}
+
+.emotion-51 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.emotion-53 {
+  display: grid;
+  width: 100%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.emotion-53[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-53[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-53[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-53[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-53[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-53[data-state='neutral']:not([data-disabled='true']):hover {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-53[data-state='neutral']:not([data-disabled='true']):focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.emotion-53[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-53[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-53[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-53[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-53[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-53[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-53[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-53:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-53[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-53[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-55 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-57 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-61 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+}
+
+.emotion-63 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-69 {
+  text-align: right;
+}
+
+.emotion-72 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-74 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
+}
+
+.emotion-76 {
+  text-align: right;
+}
+
+.emotion-78 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-82 {
+  width: 70%;
+}
+
+.emotion-84 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  height: 56px;
+  background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
+}
+
+.emotion-86 {
   text-align: right;
 }
 
@@ -2045,7 +1967,7 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
               class="emotion-18 emotion-1"
             >
               <svg
-                class="emotion-20 emotion-21"
+                class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_primary__1sbwqkz1 styles_size_medium__1sbwqkz9 styles_undefined_compound_0__1sbwqkzk"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -2057,13 +1979,13 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               <div
-                class="emotion-24 emotion-25 emotion-26"
+                class="emotion-22 emotion-23 emotion-24"
               >
                 <span
-                  class="emotion-27 emotion-28"
+                  class="emotion-25 emotion-26"
                 >
                   €0.00/Hour(s)
                 </span>
@@ -2081,23 +2003,23 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-29 emotion-234"
+          class="emotion-27 emotion-214"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-31 emotion-232"
+              class="emotion-29 emotion-212"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-33 emotion-34"
+                  class="emotion-31 emotion-32"
                 >
                   <svg
-                    class="emotion-35 emotion-36 emotion-21"
+                    class="emotion-33 emotion-34 styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_primary__1sbwqkz1 styles_size_medium__1sbwqkz9 styles_undefined_compound_0__1sbwqkzk"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -2110,24 +2032,24 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-38 emotion-39"
+                class="emotion-35 emotion-36"
               >
                 <div
-                  class="emotion-40 emotion-41"
+                  class="emotion-37 emotion-38"
                 >
                   <div
-                    class="emotion-42 emotion-1"
+                    class="emotion-39 emotion-1"
                   >
                     <div
-                      class="emotion-44 emotion-45 emotion-46"
+                      class="emotion-41 emotion-42 emotion-43"
                     >
                       <div
-                        class="emotion-47 emotion-48"
+                        class="emotion-44 emotion-45"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-49 emotion-50"
+                          class="emotion-46 emotion-47"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«rt»"
@@ -2142,7 +2064,7 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-51 emotion-52 emotion-53"
+                        class="emotion-48 emotion-49 emotion-50"
                       >
                         <div
                           aria-controls="«rv»"
@@ -2151,12 +2073,12 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-54 emotion-1"
+                            class="emotion-51 emotion-1"
                           >
                             <div
                               aria-controls="«rv»"
                               aria-expanded="false"
-                              class="emotion-56 emotion-57"
+                              class="emotion-53 emotion-54"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -2168,16 +2090,16 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-58 emotion-59 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-60 emotion-61"
+                                class="emotion-57 emotion-58"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-62 emotion-21"
+                                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -2199,14 +2121,14 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-64 emotion-65"
+              class="emotion-59 emotion-60"
             >
               <td
-                class="emotion-66 emotion-231"
+                class="emotion-61 emotion-211"
                 width="70%"
               >
                 <div
-                  class="emotion-68 emotion-69"
+                  class="emotion-63 emotion-64"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -2222,10 +2144,10 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-74 emotion-15"
+                    class="emotion-69 emotion-15"
                   >
                     <div
-                      class="emotion-24 emotion-77 emotion-26"
+                      class="emotion-22 emotion-72 emotion-24"
                     >
                       This is a strong Item
                     </div>
@@ -2233,10 +2155,10 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-79 emotion-80"
+                class="emotion-74 emotion-75"
               >
                 <p
-                  class="emotion-81 emotion-82 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-76 emotion-77 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -2247,28 +2169,28 @@ exports[`EstimateCost - Strong Item > render with isDisabledOnOverlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-83 emotion-84"
+          class="emotion-78 emotion-79"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-31 emotion-232"
+              class="emotion-29 emotion-212"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-87 emotion-88"
+                class="emotion-82 emotion-83"
               />
               <td
-                class="emotion-89 emotion-230"
+                class="emotion-84 emotion-210"
               >
                 <h3
-                  class="emotion-91 emotion-92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-86 emotion-87 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-27 emotion-28"
+                    class="emotion-25 emotion-26"
                   >
                     €0.00
                   </span>
@@ -2490,20 +2412,6 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
 }
 
 .emotion-23 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-23 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-25 {
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2519,7 +2427,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   justify-content: center;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2546,25 +2454,25 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   margin-right: 4px;
 }
 
-.emotion-32 {
+.emotion-30 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 4px 4px 0 4px;
 }
 
-.emotion-32>* {
+.emotion-30>* {
   margin-top: 0;
 }
 
-.emotion-32>*+* {
+.emotion-30>*+* {
   margin-top: 16px;
 }
 
-.emotion-34 {
+.emotion-32 {
   background-color: #ffffff;
 }
 
-.emotion-36 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2581,22 +2489,11 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   padding: 1rem;
 }
 
-.emotion-39 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
+.emotion-36 {
   margin-right: 0.5rem;
 }
 
-.emotion-39 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-41 {
+.emotion-38 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2609,7 +2506,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   padding: 0;
 }
 
-.emotion-43 {
+.emotion-40 {
   max-width: 200px;
   padding: 16px;
   -webkit-align-items: start;
@@ -2620,7 +2517,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   float: right;
 }
 
-.emotion-45 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2644,7 +2541,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-48 {
+.emotion-45 {
   display: grid;
   grid-template-columns: auto auto;
   -webkit-align-items: normal;
@@ -2660,41 +2557,41 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-51,
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-48,
+.emotion-45:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-51 {
+    ):not([data-error='true']):active>.emotion-48 {
   border-right-color: #8c40ef;
 }
 
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-48:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-51 {
+    ):not([data-error='true']):focus-within>.emotion-48 {
   border-right-color: #8c40ef;
 }
 
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -2702,90 +2599,90 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-45:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-51,
-.emotion-48:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-48,
+.emotion-45:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-51 {
+    ):focus>.emotion-48 {
   border-right-color: #8c40ef;
 }
 
-.emotion-48[data-readonly='true'] {
+.emotion-45[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-48[data-readonly='true']:active {
+.emotion-45[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-48[data-size='small'] {
+.emotion-45[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-48[data-size='medium'] {
+.emotion-45[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-48[data-size='large'] {
+.emotion-45[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-48[data-success='true'] {
+.emotion-45[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-48[data-success='true']>.emotion-51 {
+.emotion-45[data-success='true']>.emotion-48 {
   border-right-color: #22674e;
 }
 
-.emotion-48[data-success='true']:active {
+.emotion-45[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-48[data-success='true']:active>.emotion-51 {
+.emotion-45[data-success='true']:active>.emotion-48 {
   border-right-color: #22674e;
 }
 
-.emotion-48[data-error='true'] {
+.emotion-45[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-48[data-error='true']>.emotion-51 {
+.emotion-45[data-error='true']>.emotion-48 {
   border-right-color: #b3144d;
 }
 
-.emotion-48[data-error='true']>.emotion-51:hover {
+.emotion-45[data-error='true']>.emotion-48:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-48[data-error='true']:active {
+.emotion-45[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-48[data-error='true']:active>.emotion-51 {
+.emotion-45[data-error='true']:active>.emotion-48 {
   border-right-color: #b3144d;
 }
 
-.emotion-48[data-error='true']:active>.emotion-51:hover {
+.emotion-45[data-error='true']:active>.emotion-48:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-48[data-disabled='true'] {
+.emotion-45[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-48[data-disabled='true']>.emotion-51 {
+.emotion-45[data-disabled='true']>.emotion-48 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-50 {
+.emotion-47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2803,7 +2700,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   height: 100%;
 }
 
-.emotion-52 {
+.emotion-49 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2816,66 +2713,66 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   color: #3f4250;
 }
 
-.emotion-52[data-size="small"] {
+.emotion-49[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-52[data-size="large"] {
+.emotion-49[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-52::-webkit-input-placeholder {
+.emotion-49::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-52::-moz-placeholder {
+.emotion-49::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-52:-ms-input-placeholder {
+.emotion-49:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-52::placeholder {
+.emotion-49::placeholder {
   color: #727683;
 }
 
-.emotion-52:disabled {
+.emotion-49:disabled {
   cursor: not-allowed;
 }
 
-.emotion-52:disabled::-webkit-input-placeholder {
+.emotion-49:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-52:disabled::-moz-placeholder {
+.emotion-49:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-52:disabled:-ms-input-placeholder {
+.emotion-49:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-52:disabled::placeholder {
+.emotion-49:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-55 {
+.emotion-52 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-55 #unit {
+.emotion-52 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-55 #unit:focus,
-.emotion-55 #unit:active {
+.emotion-52 #unit:focus,
+.emotion-52 #unit:active {
   box-shadow: none;
 }
 
-.emotion-57 {
+.emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2898,7 +2795,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   gap: 0.25rem;
 }
 
-.emotion-59 {
+.emotion-56 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -2913,85 +2810,85 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   width: 100%;
 }
 
-.emotion-59[data-size='small'] {
+.emotion-56[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-59[data-size='medium'] {
+.emotion-56[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-59[data-size='large'] {
+.emotion-56[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-59[data-state='neutral'] {
+.emotion-56[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-59[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-56[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-59[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-56[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-59[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-56[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-59[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-56[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-59[data-state='success'] {
+.emotion-56[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-59[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-56[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-59[data-state='success'][data-dropdownvisible='true'] {
+.emotion-56[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-59[data-state='danger'] {
+.emotion-56[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-59[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-56[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-59[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-56[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-59:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-56:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-59[data-readonly='true'] {
+.emotion-56[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-59[data-disabled='true'] {
+.emotion-56[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-61 {
+.emotion-58 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -3000,7 +2897,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   align-self: center;
 }
 
-.emotion-63 {
+.emotion-60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3028,21 +2925,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   display: flex;
 }
 
-.emotion-65 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-65 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-69 {
+.emotion-64 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3050,7 +2933,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   min-width: 230px;
 }
 
-.emotion-71 {
+.emotion-66 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3071,11 +2954,11 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-77 {
+.emotion-72 {
   text-align: right;
 }
 
-.emotion-80 {
+.emotion-75 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3102,7 +2985,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   margin-right: 4px;
 }
 
-.emotion-82 {
+.emotion-77 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3114,22 +2997,22 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   min-width: 126px;
 }
 
-.emotion-84 {
+.emotion-79 {
   text-align: right;
 }
 
-.emotion-86 {
+.emotion-81 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-90 {
+.emotion-85 {
   width: 70%;
 }
 
-.emotion-92 {
+.emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3146,7 +3029,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
   min-width: 126px;
 }
 
-.emotion-94 {
+.emotion-89 {
   text-align: right;
 }
 
@@ -3203,7 +3086,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
               class="emotion-21 emotion-1"
             >
               <svg
-                class="emotion-23 emotion-24"
+                class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_primary__1sbwqkz1 styles_size_medium__1sbwqkz9 styles_undefined_compound_0__1sbwqkzk"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -3215,13 +3098,13 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
             >
               <div
-                class="emotion-16 emotion-28 emotion-18"
+                class="emotion-16 emotion-26 emotion-18"
               >
                 <span
-                  class="emotion-30 emotion-31"
+                  class="emotion-28 emotion-29"
                 >
                   €0.00/Hour(s)
                 </span>
@@ -3239,23 +3122,23 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-32 emotion-264"
+          class="emotion-30 emotion-244"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-34 emotion-262"
+              class="emotion-32 emotion-242"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-36 emotion-37"
+                  class="emotion-34 emotion-35"
                 >
                   <svg
-                    class="emotion-38 emotion-39 emotion-24"
+                    class="emotion-36 emotion-37 styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_primary__1sbwqkz1 styles_size_medium__1sbwqkz9 styles_undefined_compound_0__1sbwqkzk"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -3268,24 +3151,24 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-41 emotion-42"
+                class="emotion-38 emotion-39"
               >
                 <div
-                  class="emotion-43 emotion-44"
+                  class="emotion-40 emotion-41"
                 >
                   <div
-                    class="emotion-45 emotion-1"
+                    class="emotion-42 emotion-1"
                   >
                     <div
-                      class="emotion-47 emotion-48 emotion-49"
+                      class="emotion-44 emotion-45 emotion-46"
                     >
                       <div
-                        class="emotion-50 emotion-51"
+                        class="emotion-47 emotion-48"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-52 emotion-53"
+                          class="emotion-49 emotion-50"
                           data-size="medium"
                           data-testid="unit-input"
                           id="«rg»"
@@ -3300,7 +3183,7 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-54 emotion-55 emotion-56"
+                        class="emotion-51 emotion-52 emotion-53"
                       >
                         <div
                           aria-controls="«ri»"
@@ -3309,12 +3192,12 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-57 emotion-1"
+                            class="emotion-54 emotion-1"
                           >
                             <div
                               aria-controls="«ri»"
                               aria-expanded="false"
-                              class="emotion-59 emotion-60"
+                              class="emotion-56 emotion-57"
                               data-disabled="false"
                               data-dropdownvisible="false"
                               data-readonly="false"
@@ -3326,16 +3209,16 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
                               tabindex="0"
                             >
                               <div
-                                class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="emotion-58 emotion-59 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </div>
                               <div
-                                class="emotion-63 emotion-64"
+                                class="emotion-60 emotion-61"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-65 emotion-24"
+                                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -3357,14 +3240,14 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-67 emotion-68"
+              class="emotion-62 emotion-63"
             >
               <td
-                class="emotion-69 emotion-261"
+                class="emotion-64 emotion-241"
                 width="70%"
               >
                 <div
-                  class="emotion-71 emotion-72"
+                  class="emotion-66 emotion-67"
                 >
                   <div
                     class="emotion-10 emotion-1"
@@ -3380,10 +3263,10 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-77 emotion-15"
+                    class="emotion-72 emotion-15"
                   >
                     <div
-                      class="emotion-16 emotion-80 emotion-18"
+                      class="emotion-16 emotion-75 emotion-18"
                     >
                       This is a strong Item
                     </div>
@@ -3391,10 +3274,10 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-82 emotion-83"
+                class="emotion-77 emotion-78"
               >
                 <p
-                  class="emotion-84 emotion-85 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-79 emotion-80 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -3405,28 +3288,28 @@ exports[`EstimateCost - Strong Item > render with small variant 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-86 emotion-87"
+          class="emotion-81 emotion-82"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-34 emotion-262"
+              class="emotion-32 emotion-242"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-90 emotion-91"
+                class="emotion-85 emotion-86"
               />
               <td
-                class="emotion-92 emotion-260"
+                class="emotion-87 emotion-240"
               >
                 <h3
-                  class="emotion-94 emotion-95 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-89 emotion-90 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-30 emotion-31"
+                    class="emotion-28 emotion-29"
                   >
                     €0.00
                   </span>

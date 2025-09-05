@@ -1167,20 +1167,6 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-12 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -1189,7 +1175,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   padding: 0.5rem;
 }
 
-.emotion-12[role*='button'] {
+.emotion-10[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1197,11 +1183,11 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   user-select: none;
 }
 
-.emotion-12:first-of-type[data-checkbox="true"] {
+.emotion-10:first-of-type[data-checkbox="true"] {
   padding-left: 1rem;
 }
 
-.emotion-12 {
+.emotion-10 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -1210,7 +1196,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   padding: 0.5rem;
 }
 
-.emotion-12[role*='button'] {
+.emotion-10[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1218,28 +1204,28 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   user-select: none;
 }
 
-.emotion-12:first-of-type[data-checkbox="true"] {
+.emotion-10:first-of-type[data-checkbox="true"] {
   padding-left: 1rem;
 }
 
-.emotion-20 {
+.emotion-18 {
   -webkit-animation: animation-0 3s linear;
   animation: animation-0 3s linear;
 }
 
-.emotion-20 td:nth-of-type(2) {
+.emotion-18 td:nth-of-type(2) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-20 td:nth-of-type(3) {
+.emotion-18 td:nth-of-type(3) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -1247,7 +1233,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   text-align: left;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -1285,7 +1271,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_23__vbm0wq17"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1298,7 +1284,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
               </div>
             </th>
             <th
-              class="emotion-12 emotion-7"
+              class="emotion-10 emotion-7"
               tabindex="-1"
             >
               <div
@@ -1308,7 +1294,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
               </div>
             </th>
             <th
-              class="emotion-12 emotion-7"
+              class="emotion-10 emotion-7"
               tabindex="-1"
             >
               <div
@@ -1321,301 +1307,301 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </thead>
         <tbody>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 5
             </td>
@@ -1719,20 +1705,6 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-12 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -1741,7 +1713,7 @@ exports[`Table > Should render correctly with info 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-12[role*='button'] {
+.emotion-10[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1749,11 +1721,11 @@ exports[`Table > Should render correctly with info 1`] = `
   user-select: none;
 }
 
-.emotion-12:first-of-type[data-checkbox="true"] {
+.emotion-10:first-of-type[data-checkbox="true"] {
   padding-left: 1rem;
 }
 
-.emotion-12 {
+.emotion-10 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
@@ -1762,7 +1734,7 @@ exports[`Table > Should render correctly with info 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-12[role*='button'] {
+.emotion-10[role*='button'] {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1770,28 +1742,28 @@ exports[`Table > Should render correctly with info 1`] = `
   user-select: none;
 }
 
-.emotion-12:first-of-type[data-checkbox="true"] {
+.emotion-10:first-of-type[data-checkbox="true"] {
   padding-left: 1rem;
 }
 
-.emotion-20 {
+.emotion-18 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-20 td:nth-of-type(2) {
+.emotion-18 td:nth-of-type(2) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-20 td:nth-of-type(3) {
+.emotion-18 td:nth-of-type(3) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -1799,7 +1771,7 @@ exports[`Table > Should render correctly with info 1`] = `
   text-align: left;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -1837,7 +1809,7 @@ exports[`Table > Should render correctly with info 1`] = `
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_23__vbm0wq17"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1850,7 +1822,7 @@ exports[`Table > Should render correctly with info 1`] = `
               </div>
             </th>
             <th
-              class="emotion-12 emotion-7"
+              class="emotion-10 emotion-7"
               tabindex="-1"
             >
               <div
@@ -1860,7 +1832,7 @@ exports[`Table > Should render correctly with info 1`] = `
               </div>
             </th>
             <th
-              class="emotion-12 emotion-7"
+              class="emotion-10 emotion-7"
               tabindex="-1"
             >
               <div
@@ -1873,301 +1845,301 @@ exports[`Table > Should render correctly with info 1`] = `
         </thead>
         <tbody>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-20 emotion-21"
+            class="emotion-18 emotion-19"
             role="row"
           >
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
             >
               Row 10 Column 5
             </td>
@@ -6561,27 +6533,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-17 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
+.emotion-14 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -6590,82 +6542,77 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-17 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-37 {
+.emotion-28 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-37 td:nth-of-type(1) {
+.emotion-28 td:nth-of-type(1) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(2) {
+.emotion-28 td:nth-of-type(2) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(3) {
+.emotion-28 td:nth-of-type(3) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(4) {
+.emotion-28 td:nth-of-type(4) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(5) {
+.emotion-28 td:nth-of-type(5) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 {
+.emotion-28 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-37 td:nth-of-type(1) {
+.emotion-28 td:nth-of-type(1) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(2) {
+.emotion-28 td:nth-of-type(2) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(3) {
+.emotion-28 td:nth-of-type(3) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(4) {
+.emotion-28 td:nth-of-type(4) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-37 td:nth-of-type(5) {
+.emotion-28 td:nth-of-type(5) {
   width: 100px;
   min-width: 100px;
   max-width: 200px;
 }
 
-.emotion-39 {
+.emotion-30 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -6673,7 +6620,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   text-align: left;
 }
 
-.emotion-39 {
+.emotion-30 {
   display: table-cell;
   vertical-align: middle;
   padding: 0.5rem;
@@ -6707,7 +6654,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 >
                   Column 1
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6728,7 +6675,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 >
                   Column 2
                   <svg
-                    class="emotion-16 emotion-17 emotion-11"
+                    class="emotion-14 emotion-15 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_primary__vbm0wq1 styles_size_small__vbm0wqa styles_undefined_compound_0__vbm0wqk"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6748,7 +6695,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 >
                   Column 3
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6768,7 +6715,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 >
                   Column 4
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6788,7 +6735,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 >
                   Column 5
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6802,301 +6749,301 @@ exports[`Table > Should render correctly with sort then click 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 1 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 1 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 1 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 1 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 1 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 2 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 2 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 2 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 2 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 2 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 3 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 3 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 3 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 3 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 3 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 4 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 4 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 4 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 4 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 4 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 5 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 5 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 5 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 5 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 5 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 6 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 6 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 6 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 6 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 6 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 7 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 7 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 7 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 7 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 7 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 8 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 8 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 8 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 8 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 8 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 9 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 9 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 9 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 9 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 9 Column 5
               </td>
             </tr>
             <tr
-              class="emotion-37 emotion-38"
+              class="emotion-28 emotion-29"
               role="row"
             >
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 10 Column 1
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 10 Column 2
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 10 Column 3
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 10 Column 4
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="emotion-30 emotion-31"
               >
                 Row 10 Column 5
               </td>
