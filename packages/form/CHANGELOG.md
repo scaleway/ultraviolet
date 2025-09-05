@@ -1,5 +1,13 @@
 # Change Log
 
+## 5.0.0-beta.7
+
+### Patch Changes
+
+- Updated dependencies [[`cb2527c`](https://github.com/scaleway/ultraviolet/commit/cb2527cc73893263d823f7fd0e5ccfaeb14e759b), [`2ad6dbb`](https://github.com/scaleway/ultraviolet/commit/2ad6dbb4110e1efa9d7e3e43694517555c22dcdb)]:
+  - @ultraviolet/icons@4.1.0-beta.3
+  - @ultraviolet/ui@3.0.0-beta.7
+
 ## 5.0.0-beta.6
 
 ### Patch Changes

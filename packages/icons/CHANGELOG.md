@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.0-beta.3
+
+### Minor Changes
+
+- [#5481](https://github.com/scaleway/ultraviolet/pull/5481) [`cb2527c`](https://github.com/scaleway/ultraviolet/commit/cb2527cc73893263d823f7fd0e5ccfaeb14e759b) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Icon`, `CategoryIcon`, `Logo` and `ProductIcon` to use vanilla-extract instead of Emotion
+
 ## 4.0.4-beta.2
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.0.0-beta.7
+
+### Minor Changes
+
+- [#5494](https://github.com/scaleway/ultraviolet/pull/5494) [`2ad6dbb`](https://github.com/scaleway/ultraviolet/commit/2ad6dbb4110e1efa9d7e3e43694517555c22dcdb) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `Meter` and `BarStack` to use vanilla-extract instead of Emotion
+  - Add prop `style` to `Text` to be able to use vanilla-extract variables with it
+
+### Patch Changes
+
+- Updated dependencies [[`cb2527c`](https://github.com/scaleway/ultraviolet/commit/cb2527cc73893263d823f7fd0e5ccfaeb14e759b)]:
+  - @ultraviolet/icons@4.1.0-beta.3
+
 ## 3.0.0-beta.6
 
 ### Major Changes
