@@ -773,34 +773,16 @@ exports[`UnitInput > renders click 1`] = `
 }
 
 .emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
+  width: 90%;
+  min-width: 320px;
+  background-color: #ffffff;
+  color: #3f4250;
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  padding: 0rem;
+  margin-bottom: 5rem;
 }
 
 .emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-22 {
   width: 90%;
   min-width: 320px;
   background-color: #ffffff;
@@ -811,16 +793,6 @@ exports[`UnitInput > renders click 1`] = `
 }
 
 .emotion-22 {
-  width: 90%;
-  min-width: 320px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0rem;
-  margin-bottom: 5rem;
-}
-
-.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -842,7 +814,7 @@ exports[`UnitInput > renders click 1`] = `
   flex-direction: column;
 }
 
-.emotion-26 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -870,11 +842,11 @@ exports[`UnitInput > renders click 1`] = `
   padding-top: 0.25rem;
 }
 
-.emotion-26[data-grouped="true"] {
+.emotion-24[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -897,7 +869,7 @@ exports[`UnitInput > renders click 1`] = `
   gap: 0.125rem;
 }
 
-.emotion-30 {
+.emotion-28 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -909,31 +881,31 @@ exports[`UnitInput > renders click 1`] = `
   border: 1px transparent solid;
 }
 
-.emotion-30:hover,
-.emotion-30:focus {
+.emotion-28:hover,
+.emotion-28:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-30[aria-selected='true'] {
+.emotion-28[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-30[aria-disabled="true"] {
+.emotion-28[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-30[aria-disabled="true"]:hover,
-.emotion-30 [aria-disabled="true"]:focus {
+.emotion-28[aria-disabled="true"]:hover,
+.emotion-28 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-34 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -956,7 +928,7 @@ exports[`UnitInput > renders click 1`] = `
   overflow: hidden;
 }
 
-.emotion-36 {
+.emotion-34 {
   overflow: auto;
   text-overflow: ellipsis;
   -webkit-flex-shrink: 0;
@@ -1033,7 +1005,7 @@ exports[`UnitInput > renders click 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1046,7 +1018,7 @@ exports[`UnitInput > renders click 1`] = `
               </div>
             </div>
             <div
-              class="emotion-22 emotion-23 styles__w40vpo4 null"
+              class="emotion-20 emotion-21 styles__w40vpo4 null"
               id="«rq»"
               role="dialog"
               style="--ozfz3c0: -5px; --ozfz3c1: 0px; --ozfz3c2:  rotate(180deg); --ozfz3c4: translate3d(0px, 4px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(0px, 4px, 0); --ozfz3c7: 100%; opacity: 1;"
@@ -1055,23 +1027,23 @@ exports[`UnitInput > renders click 1`] = `
                 class="styles__w40vpo2"
               >
                 <div
-                  class="emotion-24 emotion-1"
+                  class="emotion-22 emotion-1"
                 >
                   <div
-                    class="emotion-26 emotion-27"
+                    class="emotion-24 emotion-25"
                     data-grouped="false"
                     id="select-dropdown"
                     role="listbox"
                   >
                     <div
-                      class="emotion-28 emotion-1"
+                      class="emotion-26 emotion-1"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="kb"
                         aria-selected="false"
-                        class="emotion-30 emotion-31"
+                        class="emotion-28 emotion-29"
                         data-testid="option-kb"
                         id="option-0"
                         role="option"
@@ -1082,10 +1054,10 @@ exports[`UnitInput > renders click 1`] = `
                           data-testid="option-stack-kb"
                         >
                           <div
-                            class="emotion-34 emotion-35"
+                            class="emotion-32 emotion-33"
                           >
                             <span
-                              class="emotion-36 emotion-37 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              class="emotion-34 emotion-35 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                               style="--qabug40: left;"
                             >
                               KB
@@ -1097,7 +1069,7 @@ exports[`UnitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="mb"
                         aria-selected="false"
-                        class="emotion-30 emotion-31"
+                        class="emotion-28 emotion-29"
                         data-testid="option-mb"
                         id="option-1"
                         role="option"
@@ -1108,10 +1080,10 @@ exports[`UnitInput > renders click 1`] = `
                           data-testid="option-stack-mb"
                         >
                           <div
-                            class="emotion-34 emotion-35"
+                            class="emotion-32 emotion-33"
                           >
                             <span
-                              class="emotion-36 emotion-37 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              class="emotion-34 emotion-35 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                               style="--qabug40: left;"
                             >
                               MB
@@ -1123,7 +1095,7 @@ exports[`UnitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="gb"
                         aria-selected="false"
-                        class="emotion-30 emotion-31"
+                        class="emotion-28 emotion-29"
                         data-testid="option-gb"
                         id="option-2"
                         role="option"
@@ -1134,10 +1106,10 @@ exports[`UnitInput > renders click 1`] = `
                           data-testid="option-stack-gb"
                         >
                           <div
-                            class="emotion-34 emotion-35"
+                            class="emotion-32 emotion-33"
                           >
                             <span
-                              class="emotion-36 emotion-37 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              class="emotion-34 emotion-35 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                               style="--qabug40: left;"
                             >
                               GB
@@ -1545,20 +1517,6 @@ exports[`UnitInput > renders with default props 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -1623,7 +1581,7 @@ exports[`UnitInput > renders with default props 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -2440,20 +2398,6 @@ exports[`UnitInput > renders with default value 1`] = `
   display: flex;
 }
 
-.emotion-24 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-24 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -2533,7 +2477,7 @@ exports[`UnitInput > renders with default value 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-24 emotion-25"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3325,20 +3269,6 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -3404,7 +3334,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4196,34 +4126,6 @@ exports[`UnitInput > renders with dropdownAlign center 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -4288,7 +4190,7 @@ exports[`UnitInput > renders with dropdownAlign center 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4788,51 +4690,37 @@ exports[`UnitInput > renders with error  and success 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-9 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-12 #unit {
+.emotion-10 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-12 #unit:focus,
-.emotion-12 #unit:active {
+.emotion-10 #unit:focus,
+.emotion-10 #unit:active {
   box-shadow: none;
 }
 
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-12 #unit {
+.emotion-10 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-12 #unit:focus,
-.emotion-12 #unit:active {
+.emotion-10 #unit:focus,
+.emotion-10 #unit:active {
   box-shadow: none;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -4847,85 +4735,85 @@ exports[`UnitInput > renders with error  and success 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -4940,85 +4828,95 @@ exports[`UnitInput > renders with error  and success 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-18 {
+.emotion-16 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-16 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5029,16 +4927,6 @@ exports[`UnitInput > renders with error  and success 1`] = `
 }
 
 .emotion-18 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5066,7 +4954,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: flex;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5092,34 +4980,6 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
 }
 
 <div
@@ -5151,7 +5011,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
             type="number"
           />
           <svg
-            class="emotion-9 emotion-10"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_4__vbm0wqo"
             viewBox="0 0 16 16"
           >
             <path
@@ -5163,7 +5023,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="emotion-11 emotion-12 emotion-13"
+          class="emotion-9 emotion-10 emotion-11"
         >
           <div
             aria-controls="«r26»"
@@ -5177,7 +5037,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
               <div
                 aria-controls="«r26»"
                 aria-expanded="false"
-                class="emotion-16 emotion-17"
+                class="emotion-14 emotion-15"
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
@@ -5189,16 +5049,16 @@ exports[`UnitInput > renders with error  and success 1`] = `
                 tabindex="0"
               >
                 <p
-                  class="emotion-18 emotion-19 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </p>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-22 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5701,51 +5561,37 @@ exports[`UnitInput > renders with error 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-9 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-12 #unit {
+.emotion-10 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-12 #unit:focus,
-.emotion-12 #unit:active {
+.emotion-10 #unit:focus,
+.emotion-10 #unit:active {
   box-shadow: none;
 }
 
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-12 #unit {
+.emotion-10 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-12 #unit:focus,
-.emotion-12 #unit:active {
+.emotion-10 #unit:focus,
+.emotion-10 #unit:active {
   box-shadow: none;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -5760,85 +5606,85 @@ exports[`UnitInput > renders with error 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -5853,85 +5699,95 @@ exports[`UnitInput > renders with error 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-18 {
+.emotion-16 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-16 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5942,16 +5798,6 @@ exports[`UnitInput > renders with error 1`] = `
 }
 
 .emotion-18 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5979,7 +5825,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: flex;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6005,34 +5851,6 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
 }
 
 <div
@@ -6063,7 +5881,7 @@ exports[`UnitInput > renders with error 1`] = `
             type="number"
           />
           <svg
-            class="emotion-9 emotion-10"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_4__vbm0wqo"
             viewBox="0 0 16 16"
           >
             <path
@@ -6075,7 +5893,7 @@ exports[`UnitInput > renders with error 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="emotion-11 emotion-12 emotion-13"
+          class="emotion-9 emotion-10 emotion-11"
         >
           <div
             aria-controls="«r1v»"
@@ -6089,7 +5907,7 @@ exports[`UnitInput > renders with error 1`] = `
               <div
                 aria-controls="«r1v»"
                 aria-expanded="false"
-                class="emotion-16 emotion-17"
+                class="emotion-14 emotion-15"
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
@@ -6101,16 +5919,16 @@ exports[`UnitInput > renders with error 1`] = `
                 tabindex="0"
               >
                 <p
-                  class="emotion-18 emotion-19 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </p>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-22 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -6934,20 +6752,6 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: flex;
 }
 
-.emotion-24 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-24 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -7028,7 +6832,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-24 emotion-25"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -7824,20 +7628,6 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: flex;
 }
 
-.emotion-22 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -7909,7 +7699,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-22 emotion-23"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -8316,20 +8106,6 @@ exports[`UnitInput > renders with min max 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -8394,7 +8170,7 @@ exports[`UnitInput > renders with min max 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -9213,20 +8989,6 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: flex;
 }
 
-.emotion-24 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-24 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -9305,7 +9067,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-24 emotion-25"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -10097,34 +9859,6 @@ exports[`UnitInput > renders with size large 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -10189,7 +9923,7 @@ exports[`UnitInput > renders with size large 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -10596,20 +10330,6 @@ exports[`UnitInput > renders with size medioum 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -10674,7 +10394,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -11081,20 +10801,6 @@ exports[`UnitInput > renders with size small 1`] = `
   display: flex;
 }
 
-.emotion-20 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-20 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -11159,7 +10865,7 @@ exports[`UnitInput > renders with size small 1`] = `
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-20 emotion-21"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -11659,51 +11365,37 @@ exports[`UnitInput > renders with success 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-9 {
-  vertical-align: middle;
-  fill: #22674e;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-9 .fillStroke {
-  stroke: #22674e;
-  fill: none;
-}
-
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-12 #unit {
+.emotion-10 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-12 #unit:focus,
-.emotion-12 #unit:active {
+.emotion-10 #unit:focus,
+.emotion-10 #unit:active {
   box-shadow: none;
 }
 
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   width: 12.6rem;
 }
 
-.emotion-12 #unit {
+.emotion-10 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-12 #unit:focus,
-.emotion-12 #unit:active {
+.emotion-10 #unit:focus,
+.emotion-10 #unit:active {
   box-shadow: none;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -11718,85 +11410,85 @@ exports[`UnitInput > renders with success 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -11811,85 +11503,95 @@ exports[`UnitInput > renders with success 1`] = `
   width: 100%;
 }
 
-.emotion-16[data-size='small'] {
+.emotion-14[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-16[data-size='medium'] {
+.emotion-14[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-16[data-size='large'] {
+.emotion-14[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16[data-state='neutral'] {
+.emotion-14[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-16[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-14[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-16[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-14[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-16[data-state='success'] {
+.emotion-14[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-16[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-16[data-state='success'][data-dropdownvisible='true'] {
+.emotion-14[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-16[data-state='danger'] {
+.emotion-14[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-16[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-14[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-14[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-16:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-16[data-readonly='true'] {
+.emotion-14[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-14[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-18 {
+.emotion-16 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-16 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -11900,16 +11602,6 @@ exports[`UnitInput > renders with success 1`] = `
 }
 
 .emotion-18 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11937,7 +11629,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: flex;
 }
 
-.emotion-20 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11963,34 +11655,6 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-22 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-22 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
 }
 
 <div
@@ -12021,7 +11685,7 @@ exports[`UnitInput > renders with success 1`] = `
             type="number"
           />
           <svg
-            class="emotion-9 emotion-10"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_success__vbm0wq4 styles_size_small__vbm0wqa styles_undefined_compound_3__vbm0wqn"
             viewBox="0 0 16 16"
           >
             <path
@@ -12033,7 +11697,7 @@ exports[`UnitInput > renders with success 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="emotion-11 emotion-12 emotion-13"
+          class="emotion-9 emotion-10 emotion-11"
         >
           <div
             aria-controls="«r1o»"
@@ -12047,7 +11711,7 @@ exports[`UnitInput > renders with success 1`] = `
               <div
                 aria-controls="«r1o»"
                 aria-expanded="false"
-                class="emotion-16 emotion-17"
+                class="emotion-14 emotion-15"
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
@@ -12059,16 +11723,16 @@ exports[`UnitInput > renders with success 1`] = `
                 tabindex="0"
               >
                 <p
-                  class="emotion-18 emotion-19 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </p>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="emotion-18 emotion-19"
                 >
                   <svg
                     aria-label="show dropdown"
-                    class="emotion-22 emotion-10"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path

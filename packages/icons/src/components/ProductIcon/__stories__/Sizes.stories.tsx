@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
 import { ConsoleProductIcon } from '../__generated__'
-import { SIZES } from '../Icon'
+import { SIZES } from '../constants'
 
 export const Sizes: StoryFn<typeof ConsoleProductIcon> = props => (
   <Stack gap={1}>
