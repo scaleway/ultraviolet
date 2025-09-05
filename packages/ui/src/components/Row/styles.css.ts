@@ -1,52 +1,39 @@
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
-import {
-  paddingLarge,
-  paddingMedium,
-  paddingSmall,
-  paddingXlarge,
-  paddingXsmall,
-  paddingXxsmall,
-  templateColumnsLarge,
-  templateColumnsMedium,
-  templateColumnsSmall,
-  templateColumnsXlarge,
-  templateColumnsXsmall,
-  templateColumnsXxsmall,
-} from './variables.css'
+import { templateColumn, paddings } from './variables.css'
 
 export const row = style({
   display: 'grid',
   '@media': {
     [`screen and (min-width: ${consoleLightTheme.breakpoints.xlarge})`]: {
-      gridTemplateColumns: templateColumnsXlarge,
-      padding: paddingXlarge,
+      gridTemplateColumns: templateColumn.xlarge,
+      padding: paddings.xlarge,
     },
     [`screen and (min-width: ${consoleLightTheme.breakpoints.large}) and (max-width: ${consoleLightTheme.breakpoints.xlarge})`]:
       {
-        gridTemplateColumns: templateColumnsLarge,
-        padding: paddingLarge,
+        gridTemplateColumns: templateColumn.xlarge,
+        padding: paddings.large,
       },
     [`screen and (min-width: ${consoleLightTheme.breakpoints.medium}) and (max-width: ${consoleLightTheme.breakpoints.large})`]:
       {
-        gridTemplateColumns: templateColumnsMedium,
-        padding: paddingMedium,
+        gridTemplateColumns: templateColumn.medium,
+        padding: paddings.medium,
       },
     [`screen and (min-width: ${consoleLightTheme.breakpoints.small}) and (max-width: ${consoleLightTheme.breakpoints.medium})`]:
       {
-        gridTemplateColumns: templateColumnsSmall,
-        padding: paddingSmall,
+        gridTemplateColumns: templateColumn.small,
+        padding: paddings.small,
       },
     [`screen and (min-width: ${consoleLightTheme.breakpoints.xsmall}) and (max-width: ${consoleLightTheme.breakpoints.small})`]:
       {
-        gridTemplateColumns: templateColumnsXsmall,
-        padding: paddingXsmall,
+        gridTemplateColumns: templateColumn.xsmall,
+        padding: paddings.xsmall,
       },
     [`screen and (min-width: ${consoleLightTheme.breakpoints.xxsmall}) and (max-width: ${consoleLightTheme.breakpoints.xsmall})`]:
       {
-        gridTemplateColumns: templateColumnsXxsmall,
-        padding: paddingXxsmall,
+        gridTemplateColumns: templateColumn.xxsmall,
+        padding: paddings.xxsmall,
       },
   },
 })

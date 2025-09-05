@@ -6,20 +6,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
 import { row, sprinkles } from './styles.css'
-import {
-  paddingLarge,
-  paddingMedium,
-  paddingSmall,
-  paddingXlarge,
-  paddingXsmall,
-  paddingXxsmall,
-  templateColumnsLarge,
-  templateColumnsMedium,
-  templateColumnsSmall,
-  templateColumnsXlarge,
-  templateColumnsXsmall,
-  templateColumnsXxsmall,
-} from './variables.css'
+import { paddings, templateColumn } from './variables.css'
 
 type ResponsiveProp<T> =
   | T
@@ -98,54 +85,26 @@ export const Row = ({
     })}`}
     data-testid={dataTestId}
     style={assignInlineVars({
-      [templateColumnsLarge]:
-        typeof templateColumns === 'object'
-          ? templateColumns.large
-          : templateColumns,
-      [templateColumnsMedium]:
-        typeof templateColumns === 'object'
-          ? templateColumns.medium
-          : templateColumns,
-      [templateColumnsSmall]:
-        typeof templateColumns === 'object'
-          ? templateColumns.small
-          : templateColumns,
-      [templateColumnsXlarge]:
-        typeof templateColumns === 'object'
-          ? templateColumns.xlarge
-          : templateColumns,
-      [templateColumnsXsmall]:
-        typeof templateColumns === 'object'
-          ? templateColumns.xsmall
-          : templateColumns,
-      [templateColumnsXxsmall]:
-        typeof templateColumns === 'object'
-          ? templateColumns.xxsmall
-          : templateColumns,
-      [paddingLarge]:
-        typeof padding === 'object'
-          ? padding.large?.toString() || ''
-          : (padding?.toString() ?? ''),
-      [paddingXlarge]:
-        typeof padding === 'object'
-          ? padding.xlarge?.toString() || ''
-          : (padding?.toString() ?? ''),
-      [paddingMedium]:
-        typeof padding === 'object'
-          ? padding.medium?.toString() || ''
-          : (padding?.toString() ?? ''),
-      [paddingSmall]:
-        typeof padding === 'object'
-          ? padding.small?.toString() || ''
-          : (padding?.toString() ?? ''),
-      [paddingXsmall]:
-        typeof padding === 'object'
-          ? padding.xsmall?.toString() || ''
-          : (padding?.toString() ?? ''),
-      [paddingXxsmall]:
-        typeof padding === 'object'
-          ? padding.xxsmall?.toString() || ''
-          : (padding?.toString() ?? ''),
+      ...Object.keys(templateColumn).reduce(
+        (acc, column) => ({
+          ...acc,
+          [templateColumn[column as keyof typeof templateColumn]]:
+            typeof templateColumns === 'object'
+              ? templateColumns[column as keyof typeof templateColumns] || ''
+              : templateColumns,
+        }),
+        {},
+      ),
+      ...Object.keys(paddings).reduce(
+        (acc, localPadding) => ({
+          ...acc,
+          [paddings[localPadding as keyof typeof padding]]:
+            typeof padding === 'object'
+              ? padding[localPadding as keyof typeof templateColumns] || ''
+              : padding,
+        }),
+        {},
+      ),
     })}
   >
     {children}
