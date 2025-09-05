@@ -37,6 +37,7 @@ type TextProps = {
   'aria-hidden'?: boolean
   strikeThrough?: boolean
   whiteSpace?: WhiteSpaceProps
+  style?: CSSProperties
 }
 
 /**
@@ -61,6 +62,7 @@ export const Text = ({
   htmlFor,
   'data-testid': dataTestId,
   'aria-hidden': ariaHidden,
+  style,
 }: TextProps) => {
   const elementRef = useRef(null)
   const isOverflowing = useIsOverflowing(elementRef)
@@ -77,10 +79,13 @@ export const Text = ({
         htmlFor={htmlFor}
         id={id}
         ref={elementRef}
-        style={assignInlineVars({
-          [placementText]: placement,
-          [whiteSpaceText]: whiteSpace,
-        })}
+        style={{
+          ...assignInlineVars({
+            [placementText]: placement,
+            [whiteSpaceText]: whiteSpace,
+          }),
+          ...style,
+        }}
       >
         {children}
       </Component>

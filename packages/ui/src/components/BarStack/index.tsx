@@ -1,9 +1,24 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { MouseEventHandler, ReactNode } from 'react'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
+import { useTheme } from '../../theme'
 import { Tooltip } from '../Tooltip'
+import { barStack, containerBarStack, wrapperBarStack } from './styles.css'
+import {
+  neutralStrong33,
+  neutralStrongerB3,
+  neutralWeak1A,
+  neutralWeak33,
+  neutralWeak40,
+  primaryStrong4D,
+  primaryStrong12,
+  primaryStrongD9,
+  secondaryStrong40,
+  secondaryStrongBF,
+  wrapperWidth,
+} from './variables.css'
 
 type BarProps = {
   /**
@@ -20,6 +35,7 @@ type BarProps = {
   text?: string
   onClick?: MouseEventHandler<HTMLDivElement>
   onDoubleClick?: MouseEventHandler<HTMLDivElement>
+  onKeyDown?: KeyboardEventHandler<HTMLDivElement>
   onMouseDown?: MouseEventHandler<HTMLDivElement>
   onMouseUp?: MouseEventHandler<HTMLDivElement>
   onMouseEnter?: MouseEventHandler<HTMLDivElement>
@@ -37,128 +53,6 @@ type BarStackProps = {
   'data-testid'?: string
 }
 
-const StyledBarWrapper = styled.div`
-  width: 0;
-  transition: width 500ms;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-`
-
-const StyledBar = styled.div`
-  height: ${({ theme }) => theme.sizing['700']};
-  font-weight: ${({ theme }) => theme.typography.bodySmallStronger.weight};
-  color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  font-size: ${({ theme }) => theme.typography.bodySmallStronger.fontSize};
-  display: flex;
-  align-items: center;
-  padding: ${({ theme }) => theme.space[1]};
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-shadow: -1px 0
-      ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
-    0 1px ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
-    1px 0 ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
-    0 -1px ${({ theme }) => theme.colors.neutral.backgroundStronger}B3;
-`
-
-const StyledContainer = styled.div`
-  width: 100%;
-  display: flex;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: ${({ theme }) => theme.radii.default};
-  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
-  overflow: hidden;
-
-  ${StyledBarWrapper}:nth-child(5n+1) {
-    ${({
-      theme,
-    }) => `background: linear-gradient(-45deg, ${theme.colors.neutral.backgroundWeak}1A 25%,
-      ${theme.colors.primary.backgroundStrong} 25%, ${theme.colors.primary.backgroundStrong} 50%,
-      ${theme.colors.neutral.backgroundWeak}1A 50%, ${theme.colors.neutral.backgroundWeak}1A 75%, ${theme.colors.primary.backgroundStrong}
-       75%);`}
-    background-size: 30px 30px;
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-  }
-
-  ${StyledBarWrapper}:nth-child(5n+2) {
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong}D9;
-
-    background-image: linear-gradient(
-        135deg,
-        ${({ theme }) => theme.colors.neutral.backgroundStrong}33 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        225deg,
-        ${({ theme }) => theme.colors.neutral.backgroundStrong}33 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        45deg,
-        ${({ theme }) => theme.colors.neutral.backgroundStrong}33 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        315deg,
-        ${({ theme }) => theme.colors.neutral.backgroundStrong}33 25%,
-        ${({ theme }) => theme.colors.primary.backgroundStrong}12 25%
-      );
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
-    background-size: 10px 10px;
-    background-repeat: repeat;
-  }
-
-  ${StyledBarWrapper}:nth-child(5n+3) {
-    ${({
-      theme,
-    }) => `background: linear-gradient(-45deg, ${theme.colors.neutral.backgroundWeak}1A 25%,
-      ${theme.colors.primary.backgroundStrong}4D 25%, ${theme.colors.primary.backgroundStrong}4D 50%,
-      ${theme.colors.neutral.backgroundWeak}1A 50%, ${theme.colors.neutral.backgroundWeak}1A 75%, ${theme.colors.primary.backgroundStrong}4D
-       75%);`}
-    background-size: 30px 30px;
-    background-color: ${({ theme }) => theme.colors.secondary.backgroundStrong};
-  }
-
-  ${StyledBarWrapper}:nth-child(5n+4) {
-    background-color: ${({ theme }) => theme.colors.secondary.backgroundStrong};
-
-    background-image: linear-gradient(
-        135deg,
-        ${({ theme }) => theme.colors.neutral.backgroundWeak}33 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        225deg,
-        ${({ theme }) => theme.colors.neutral.backgroundWeak}33 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        45deg,
-        ${({ theme }) => theme.colors.neutral.backgroundWeak}33 25%,
-        transparent 25%
-      ),
-      linear-gradient(
-        315deg,
-        ${({ theme }) => theme.colors.neutral.backgroundWeak}33 25%,
-        ${({ theme }) => theme.colors.secondary.backgroundStrong} 25%
-      );
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
-    background-size: 10px 10px;
-    background-repeat: repeat;
-  }
-
-  ${StyledBarWrapper}:nth-child(5n+5) {
-    ${({
-      theme,
-    }) => `background: linear-gradient(-45deg, ${theme.colors.neutral.backgroundWeak}40 25%,
-      ${theme.colors.secondary.backgroundStrong}40 25%, ${theme.colors.secondary.backgroundStrong}40 50%,
-      ${theme.colors.neutral.backgroundWeak}40 50%, ${theme.colors.neutral.backgroundWeak}40 75%, ${theme.colors.secondary.backgroundStrong}40
-       75%);`}
-    background-size: 30px 30px;
-    background-color: ${({ theme }) => theme.colors.secondary.backgroundStrong}BF;
-  }
-`
-
 /**
  * BarStack is a graphic component that is used to show data in one dimension.
  */
@@ -172,9 +66,13 @@ export const BarStack = ({
     () => total ?? data.reduce((acc, { value }) => acc + value, 0),
     [total, data],
   )
+  const theme = useTheme()
 
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
+    <div
+      className={`${className ? `${className} ` : ''}${containerBarStack}`}
+      data-testid={dataTestId}
+    >
       {data.map(
         ({
           id,
@@ -182,44 +80,64 @@ export const BarStack = ({
           text,
           onClick,
           onDoubleClick,
+          onKeyDown,
           onMouseEnter,
           onMouseLeave,
           onMouseDown,
           onMouseUp,
           tooltip,
         }) => (
-          <StyledBarWrapper
+          <div
+            className={wrapperBarStack}
             key={id}
-            style={{ width: `${(value / computedTotal) * 100}%` }}
+            style={assignInlineVars({
+              [wrapperWidth]: `${(value / computedTotal) * 100}%`,
+              [neutralWeak1A]: `${theme.colors.neutral.backgroundWeak}1A`,
+              [neutralStrong33]: `${theme.colors.neutral.backgroundStrong}33`,
+              [primaryStrongD9]: `${theme.colors.primary.backgroundStrong}D9`,
+              [primaryStrong4D]: `${theme.colors.primary.backgroundStrong}4D`,
+              [neutralWeak33]: `${theme.colors.neutral.backgroundWeak}33`,
+              [neutralWeak40]: `${theme.colors.neutral.backgroundWeak}40`,
+              [secondaryStrong40]: `${theme.colors.secondary.borderStrong}40`,
+              [secondaryStrongBF]: `${theme.colors.secondary.borderStrong}BF`,
+              [primaryStrong12]: `${theme.colors.primary.backgroundStrong}12`,
+            })}
           >
             {tooltip ? (
               <Tooltip id={`tooltip-${id}`} text={tooltip}>
-                <StyledBar
+                <div
+                  className={barStack}
                   onClick={onClick}
                   onDoubleClick={onDoubleClick}
+                  onKeyDown={onKeyDown}
                   onMouseDown={onMouseDown}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
+                  style={assignInlineVars({
+                    [neutralStrongerB3]: `${theme.colors.neutral.backgroundStronger}B3`,
+                  })}
                 >
                   {text}
-                </StyledBar>
+                </div>
               </Tooltip>
             ) : (
-              <StyledBar
+              <div
+                className={barStack}
                 onClick={onClick}
                 onDoubleClick={onDoubleClick}
+                onKeyDown={onKeyDown}
                 onMouseDown={onMouseDown}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
                 onMouseUp={onMouseUp}
               >
                 {text}
-              </StyledBar>
+              </div>
             )}
-          </StyledBarWrapper>
+          </div>
         ),
       )}
-    </StyledContainer>
+    </div>
   )
 }
