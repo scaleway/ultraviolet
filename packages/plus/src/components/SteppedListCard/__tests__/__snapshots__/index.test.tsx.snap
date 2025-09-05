@@ -3,29 +3,6 @@
 exports[`SteppedListCard > should hide the toggle button 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
   display: grid;
   grid-template-columns: 9fr 1fr;
   -webkit-align-items: normal;
@@ -38,7 +15,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   justify-content: normal;
 }
 
-.emotion-5 {
+.emotion-3 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 1.5rem;
@@ -48,15 +25,15 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   padding: 0;
 }
 
-.emotion-5[data-is-active='true'] {
+.emotion-3[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   -webkit-align-items: normal;
@@ -69,32 +46,12 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   justify-content: normal;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
+.emotion-7 {
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
 
-.emotion-11 {
+.emotion-9 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -118,7 +75,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   weight: 400;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -139,7 +96,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   align-items: center;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,7 +118,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   border: 1px solid #8c40ef;
 }
 
-.emotion-18 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -171,7 +128,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   min-width: 0;
 }
 
-.emotion-20 {
+.emotion-18 {
   cursor: pointer;
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
@@ -182,17 +139,17 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-20:hover {
+.emotion-18:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.emotion-20:active {
+.emotion-18:active {
   text-decoration-thickness: 2px;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -214,36 +171,17 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-29 {
   min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
 
-.emotion-33 {
+.emotion-31 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-35 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,60 +196,62 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <h1>
           Header
         </h1>
       </div>
       <div
-        class="emotion-4 emotion-5 emotion-6"
+        class="emotion-2 emotion-3 emotion-4"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-7 emotion-3"
+          class="emotion-5 emotion-1"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <ul
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-25 emotion-17"
+                  class="emotion-23 emotion-15"
                 >
                   2
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -320,10 +260,11 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-31 emotion-32"
+            class="emotion-29 emotion-30 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
-              class="emotion-33 emotion-34"
+              class="emotion-31 emotion-32"
             >
               <h3
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -333,7 +274,7 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
             </div>
             Description
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-33 emotion-34"
             >
               <img
                 alt="blockStorage"
@@ -352,29 +293,6 @@ exports[`SteppedListCard > should hide the toggle button 1`] = `
 exports[`SteppedListCard > should work with custom hide action 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
   display: grid;
   grid-template-columns: 9fr 1fr;
   -webkit-align-items: normal;
@@ -387,7 +305,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   justify-content: normal;
 }
 
-.emotion-5 {
+.emotion-3 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 1.5rem;
@@ -397,15 +315,15 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   padding: 0;
 }
 
-.emotion-5[data-is-active='true'] {
+.emotion-3[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   -webkit-align-items: normal;
@@ -418,32 +336,12 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   justify-content: normal;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
+.emotion-7 {
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
 
-.emotion-11 {
+.emotion-9 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -467,7 +365,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   weight: 400;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -488,7 +386,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   align-items: center;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -510,7 +408,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   border: 1px solid #8c40ef;
 }
 
-.emotion-18 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -520,7 +418,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   min-width: 0;
 }
 
-.emotion-20 {
+.emotion-18 {
   cursor: pointer;
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
@@ -531,17 +429,17 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-20:hover {
+.emotion-18:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.emotion-20:active {
+.emotion-18:active {
   text-decoration-thickness: 2px;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -563,36 +461,17 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-29 {
   min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
 
-.emotion-33 {
+.emotion-31 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-35 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -607,10 +486,11 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <h3
           class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow3c"
@@ -625,50 +505,51 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
         </button>
       </div>
       <div
-        class="emotion-4 emotion-5 emotion-6"
+        class="emotion-2 emotion-3 emotion-4"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-7 emotion-3"
+          class="emotion-5 emotion-1"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <ul
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-25 emotion-17"
+                  class="emotion-23 emotion-15"
                 >
                   2
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -677,10 +558,11 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-31 emotion-32"
+            class="emotion-29 emotion-30 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
-              class="emotion-33 emotion-34"
+              class="emotion-31 emotion-32"
             >
               <h1>
                 First step
@@ -688,7 +570,7 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
             </div>
             Description
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-33 emotion-34"
             >
               <img
                 alt="blockStorage"
@@ -707,29 +589,6 @@ exports[`SteppedListCard > should work with custom hide action 1`] = `
 exports[`SteppedListCard > should work with default props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
   display: grid;
   grid-template-columns: 9fr 1fr;
   -webkit-align-items: normal;
@@ -742,7 +601,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   justify-content: normal;
 }
 
-.emotion-5 {
+.emotion-3 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 1.5rem;
@@ -752,15 +611,15 @@ exports[`SteppedListCard > should work with default props 1`] = `
   padding: 0;
 }
 
-.emotion-5[data-is-active='true'] {
+.emotion-3[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   -webkit-align-items: normal;
@@ -773,32 +632,12 @@ exports[`SteppedListCard > should work with default props 1`] = `
   justify-content: normal;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
+.emotion-7 {
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
 
-.emotion-11 {
+.emotion-9 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -822,7 +661,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   weight: 400;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -843,7 +682,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   align-items: center;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -865,7 +704,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   border: 1px solid #8c40ef;
 }
 
-.emotion-18 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -875,7 +714,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
   min-width: 0;
 }
 
-.emotion-20 {
+.emotion-18 {
   cursor: pointer;
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
@@ -886,17 +725,17 @@ exports[`SteppedListCard > should work with default props 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-20:hover {
+.emotion-18:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.emotion-20:active {
+.emotion-18:active {
   text-decoration-thickness: 2px;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -918,36 +757,17 @@ exports[`SteppedListCard > should work with default props 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-29 {
   min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
 
-.emotion-33 {
+.emotion-31 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-35 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -962,10 +782,11 @@ exports[`SteppedListCard > should work with default props 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <h1>
           Header
@@ -985,50 +806,51 @@ exports[`SteppedListCard > should work with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5 emotion-6"
+        class="emotion-2 emotion-3 emotion-4"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-7 emotion-3"
+          class="emotion-5 emotion-1"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <ul
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-25 emotion-17"
+                  class="emotion-23 emotion-15"
                 >
                   2
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -1037,10 +859,11 @@ exports[`SteppedListCard > should work with default props 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-31 emotion-32"
+            class="emotion-29 emotion-30 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
-              class="emotion-33 emotion-34"
+              class="emotion-31 emotion-32"
             >
               <h3
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -1050,7 +873,7 @@ exports[`SteppedListCard > should work with default props 1`] = `
             </div>
             Description
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-33 emotion-34"
             >
               <img
                 alt="blockStorage"
@@ -1069,14 +892,8 @@ exports[`SteppedListCard > should work with default props 1`] = `
 exports[`SteppedListCard > should work with pre-completed step 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1085,36 +902,9 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
   display: grid;
   grid-template-columns: 9fr 1fr;
   -webkit-align-items: normal;
@@ -1127,9 +917,45 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   justify-content: normal;
 }
 
-.emotion-2 {
+.emotion-3 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.emotion-3[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-3[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+.emotion-3 {
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.emotion-3[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-3[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+.emotion-5 {
   display: grid;
-  grid-template-columns: 9fr 1fr;
+  grid-template-columns: 1fr 3fr;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1141,42 +967,6 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 }
 
 .emotion-5 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-5[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-5[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-5 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-5[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-5[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-7 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   -webkit-align-items: normal;
@@ -1190,69 +980,16 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 }
 
 .emotion-7 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
+  padding: 1.5rem;
+  border-right: solid #d9dadd 1px;
 }
 
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
+.emotion-7 {
   padding: 1.5rem;
   border-right: solid #d9dadd 1px;
 }
 
 .emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-right: solid #d9dadd 1px;
-}
-
-.emotion-11 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -1276,7 +1013,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   weight: 400;
 }
 
-.emotion-11 {
+.emotion-9 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -1300,7 +1037,28 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   weight: 400;
 }
 
-.emotion-14 {
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #222638;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1326,23 +1084,24 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
+  border-radius: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #222638;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1365,6 +1124,68 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 }
 
 .emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: auto;
+  line-height: 32px;
+  font-size: 24px;
+  min-width: 0;
+}
+
+.emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: auto;
+  line-height: 32px;
+  font-size: 24px;
+  min-width: 0;
+}
+
+.emotion-18 {
+  cursor: pointer;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.emotion-18:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-18:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-18 {
+  cursor: pointer;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.emotion-18:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-18:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1381,74 +1202,12 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   width: 2rem;
   height: 2rem;
   font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+  color: #641cb3;
+  background: #f1eefc;
+  border: 1px solid #f1eefc;
 }
 
-.emotion-18 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-18 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-20 {
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-20:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-20:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-20 {
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-20:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-20:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1471,28 +1230,6 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #641cb3;
-  background: #f1eefc;
-  border: 1px solid #f1eefc;
-}
-
-.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1501,12 +1238,12 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-25 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-27 {
+.emotion-25 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -1515,70 +1252,32 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   min-height: 1rem;
 }
 
-.emotion-27 .fillStroke {
+.emotion-25 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-31 {
+  min-width: 0;
+  padding: 1.5rem;
+  padding-top: 2rem;
+}
+
+.emotion-31 {
   min-width: 0;
   padding: 1.5rem;
   padding-top: 2rem;
 }
 
 .emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.emotion-35 {
+.emotion-33 {
   margin-bottom: 1.5rem;
 }
 
 .emotion-35 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1589,7 +1288,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
   justify-content: right;
 }
 
-.emotion-37 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1604,10 +1303,11 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <h1>
           Header
@@ -1620,45 +1320,46 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
         </button>
       </div>
       <div
-        class="emotion-4 emotion-5 emotion-6"
+        class="emotion-2 emotion-3 emotion-4"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-7 emotion-3"
+          class="emotion-5 emotion-1"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <ul
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
             >
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="emotion-11 emotion-12 emotion-13"
               >
                 <div
-                  class="emotion-25 emotion-17"
+                  class="emotion-23 emotion-15"
                 >
                   <svg
-                    class="emotion-27 emotion-28"
+                    class="emotion-25 emotion-26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1668,10 +1369,10 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="emotion-16 emotion-17"
                 >
                   <h3
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                    class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -1680,10 +1381,11 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-31 emotion-32 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-33 emotion-34"
             >
               <h3
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -1693,7 +1395,7 @@ exports[`SteppedListCard > should work with pre-completed step 1`] = `
             </div>
             Description
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-35 emotion-36"
             >
               <img
                 alt="blockStorage"

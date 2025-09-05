@@ -11,29 +11,6 @@ exports[`DateInputField > should clear field 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -43,69 +20,69 @@ exports[`DateInputField > should clear field 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-2>.emotion-5 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-2>.emotion-5::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-2>.emotion-5::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-2>.emotion-5:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-2>.emotion-5::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-2[data-disabled='true']>.emotion-5 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -118,40 +95,21 @@ exports[`DateInputField > should clear field 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.emotion-6 {
   padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
 
-.emotion-10 {
+.emotion-8 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -160,12 +118,12 @@ exports[`DateInputField > should clear field 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-8 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-12 {
+.emotion-10 {
   width: 100%;
   color: #3f4250;
   padding: 1rem;
@@ -174,52 +132,7 @@ exports[`DateInputField > should clear field 1`] = `
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
 }
 
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-18 {
+.emotion-12 {
   vertical-align: middle;
   fill: currentColor;
   height: 1rem;
@@ -228,16 +141,16 @@ exports[`DateInputField > should clear field 1`] = `
   min-height: 1rem;
 }
 
-.emotion-18 .fillStroke {
+.emotion-12 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-20 {
+.emotion-14 {
   text-transform: capitalize;
 }
 
-.emotion-24 {
+.emotion-18 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
@@ -251,38 +164,38 @@ exports[`DateInputField > should clear field 1`] = `
   justify-content: normal;
 }
 
-.emotion-26 {
+.emotion-20 {
   display: inline-block;
   text-transform: lowercase;
 }
 
-.emotion-26::first-letter {
+.emotion-20::first-letter {
   text-transform: uppercase;
 }
 
-.emotion-40 {
+.emotion-34 {
   height: 1.5625rem;
   width: 100%;
   padding: 0;
   color: #727683;
 }
 
-.emotion-40[aria-label="in-range"] {
+.emotion-34[aria-label="in-range"] {
   color: #521094;
   background-color: #f1eefc;
 }
 
-.emotion-40[aria-label="in-range"]:hover {
+.emotion-34[aria-label="in-range"]:hover {
   color: #ffffff;
   background-color: #792dd4;
 }
 
-.emotion-40[aria-label="not-current"],
-.emotion-40:disabled {
+.emotion-34[aria-label="not-current"],
+.emotion-34:disabled {
   color: #b5b7bd;
 }
 
-.emotion-40[aria-label="selected"] {
+.emotion-34[aria-label="selected"] {
   color: #ffffff;
 }
 
@@ -303,11 +216,12 @@ exports[`DateInputField > should clear field 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div>
               <div
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -316,7 +230,7 @@ exports[`DateInputField > should clear field 1`] = `
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-size="large"
                   id="«r3l»"
                   name="test"
@@ -325,10 +239,11 @@ exports[`DateInputField > should clear field 1`] = `
                   value=""
                 />
                 <div
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="emotion-8 emotion-9"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -344,7 +259,7 @@ exports[`DateInputField > should clear field 1`] = `
             </div>
           </div>
           <div
-            class="emotion-12 emotion-13 uv_w40vpo4 null"
+            class="emotion-10 emotion-11 uv_w40vpo4 null"
             id="«r3k»"
             role="dialog"
             style="--uv_ozfz3c0: -5px; --uv_ozfz3c1: 0px; --uv_ozfz3c2:  rotate(180deg); --uv_ozfz3c4: translate3d(0px, 4px, 0); --uv_ozfz3c5: 0ms; --uv_ozfz3c6: translate3d(0px, 4px, 0); --uv_ozfz3c7: 16.5rem; opacity: 1;"
@@ -353,10 +268,13 @@ exports[`DateInputField > should clear field 1`] = `
               class="uv_w40vpo2"
             >
               <div
-                class="emotion-14 emotion-3"
+                class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <div
-                  class="emotion-16 emotion-3"
+                  class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                  width="100%"
                 >
                   <button
                     class="uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
@@ -364,7 +282,7 @@ exports[`DateInputField > should clear field 1`] = `
                     type="button"
                   >
                     <svg
-                      class="emotion-18 emotion-11"
+                      class="emotion-12 emotion-9"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -375,7 +293,7 @@ exports[`DateInputField > should clear field 1`] = `
                     </svg>
                   </button>
                   <span
-                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-14 emotion-15 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     September 2022
                   </span>
@@ -385,7 +303,7 @@ exports[`DateInputField > should clear field 1`] = `
                     type="button"
                   >
                     <svg
-                      class="emotion-18 emotion-11"
+                      class="emotion-12 emotion-9"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -397,46 +315,46 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                 </div>
                 <div
-                  class="emotion-24 emotion-25"
+                  class="emotion-18 emotion-19"
                 >
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     Mo
                   </p>
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     Tu
                   </p>
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     We
                   </p>
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     Th
                   </p>
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     Fr
                   </p>
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     Sa
                   </p>
                   <p
-                    class="emotion-26 emotion-27 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                    class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     Su
                   </p>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayLastMonth"
                     type="button"
                   >
@@ -444,7 +362,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayLastMonth"
                     type="button"
                   >
@@ -452,7 +370,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayLastMonth"
                     type="button"
                   >
@@ -460,217 +378,217 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="selected"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                     type="button"
                   >
                     1
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     2
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     3
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     4
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     5
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     6
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     7
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     8
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     9
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     10
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     11
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     12
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     13
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     14
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     15
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     16
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     17
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     18
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     19
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     20
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     21
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     22
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     23
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     24
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     25
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     26
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     27
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     28
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     29
                   </button>
                   <button
                     aria-label="neutral"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     type="button"
                   >
                     30
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -678,7 +596,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -686,7 +604,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -694,7 +612,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -702,7 +620,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -710,7 +628,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -718,7 +636,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -726,7 +644,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -734,7 +652,7 @@ exports[`DateInputField > should clear field 1`] = `
                   </button>
                   <button
                     aria-label="not-current"
-                    class="emotion-40 emotion-41 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                    class="emotion-34 emotion-35 uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                     data-testid="dayNextMonth"
                     type="button"
                   >
@@ -762,29 +680,6 @@ exports[`DateInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -794,69 +689,69 @@ exports[`DateInputField > should render correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-2>.emotion-5 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-2>.emotion-5::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-2>.emotion-5::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-2>.emotion-5:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-2>.emotion-5::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-2[data-disabled='true']>.emotion-5 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -869,40 +764,21 @@ exports[`DateInputField > should render correctly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.emotion-6 {
   padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
 
-.emotion-10 {
+.emotion-8 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -911,7 +787,7 @@ exports[`DateInputField > should render correctly 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-8 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -933,11 +809,12 @@ exports[`DateInputField > should render correctly 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div>
               <div
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -946,17 +823,18 @@ exports[`DateInputField > should render correctly 1`] = `
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-size="large"
                   id="«r1»"
                   name="test"
                   type="text"
                 />
                 <div
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="emotion-8 emotion-9"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -989,29 +867,6 @@ exports[`DateInputField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1021,69 +876,69 @@ exports[`DateInputField > should render correctly disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-2>.emotion-5 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-2>.emotion-5::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-2>.emotion-5::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-2>.emotion-5:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-2>.emotion-5::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-2[data-disabled='true']>.emotion-5 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1096,40 +951,21 @@ exports[`DateInputField > should render correctly disabled 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.emotion-6 {
   padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
 
-.emotion-10 {
+.emotion-8 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1.25rem;
@@ -1138,7 +974,7 @@ exports[`DateInputField > should render correctly disabled 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-8 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
@@ -1160,11 +996,12 @@ exports[`DateInputField > should render correctly disabled 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div>
               <div
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
                 data-disabled="true"
                 data-error="false"
                 data-readonly="false"
@@ -1173,7 +1010,7 @@ exports[`DateInputField > should render correctly disabled 1`] = `
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-size="large"
                   disabled=""
                   id="«r4»"
@@ -1181,10 +1018,11 @@ exports[`DateInputField > should render correctly disabled 1`] = `
                   type="text"
                 />
                 <div
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="emotion-8 emotion-9"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -1217,29 +1055,6 @@ exports[`DateInputField > should test range 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1249,69 +1064,69 @@ exports[`DateInputField > should test range 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-2>.emotion-5 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-2>.emotion-5::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-2>.emotion-5::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-2>.emotion-5:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-2>.emotion-5::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-2[data-disabled='true']>.emotion-5 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1324,40 +1139,21 @@ exports[`DateInputField > should test range 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.emotion-6 {
   padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
 
-.emotion-10 {
+.emotion-8 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -1366,7 +1162,7 @@ exports[`DateInputField > should test range 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-8 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1388,11 +1184,12 @@ exports[`DateInputField > should test range 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div>
               <div
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -1401,7 +1198,7 @@ exports[`DateInputField > should test range 1`] = `
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-size="large"
                   id="«r1u»"
                   name="test"
@@ -1410,10 +1207,11 @@ exports[`DateInputField > should test range 1`] = `
                   value="9/15/2022 - 9/18/2022"
                 />
                 <div
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="emotion-8 emotion-9"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -1446,29 +1244,6 @@ exports[`DateInputField > should trigger events 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1478,69 +1253,69 @@ exports[`DateInputField > should trigger events 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-2>.emotion-5 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-2>.emotion-5::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-2>.emotion-5::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-2>.emotion-5:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-2>.emotion-5::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-2[data-disabled='true']>.emotion-5 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1553,40 +1328,21 @@ exports[`DateInputField > should trigger events 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.emotion-6 {
   padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
 
-.emotion-10 {
+.emotion-8 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1.25rem;
@@ -1595,7 +1351,7 @@ exports[`DateInputField > should trigger events 1`] = `
   min-height: 1.25rem;
 }
 
-.emotion-10 .fillStroke {
+.emotion-8 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1617,11 +1373,12 @@ exports[`DateInputField > should trigger events 1`] = `
           tabindex="0"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div>
               <div
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -1630,7 +1387,7 @@ exports[`DateInputField > should trigger events 1`] = `
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-size="large"
                   id="«r7»"
                   name="test"
@@ -1639,10 +1396,11 @@ exports[`DateInputField > should trigger events 1`] = `
                   value="9/15/2022"
                 />
                 <div
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <svg
-                    class="emotion-10 emotion-11"
+                    class="emotion-8 emotion-9"
                     viewBox="0 0 20 20"
                   >
                     <path
