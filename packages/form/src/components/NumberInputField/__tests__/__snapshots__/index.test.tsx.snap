@@ -73,7 +73,7 @@ exports[`numberInputField > should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-8 {
+.emotion-2[data-controls='false']>.emotion-6 {
   border-width: 0;
 }
 
@@ -125,21 +125,7 @@ exports[`numberInputField > should render correctly 1`] = `
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-6 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
+.emotion-7 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -156,7 +142,7 @@ exports[`numberInputField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-9 {
   outline: none;
   border: none;
   padding: 0;
@@ -171,18 +157,18 @@ exports[`numberInputField > should render correctly 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-9[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-9::-webkit-outer-spin-button,
+.emotion-9::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-9 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -190,15 +176,15 @@ exports[`numberInputField > should render correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -206,34 +192,34 @@ exports[`numberInputField > should render correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-9:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-9:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.exvap482 {
+.emotion-9:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.exvap482 {
+.emotion-9:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-9:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.exvap482 {
+.emotion-9:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -242,12 +228,12 @@ exports[`numberInputField > should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.exvap482 {
+.emotion-9:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-9[data-controls='false'] {
   text-align: left;
 }
 
@@ -281,7 +267,7 @@ exports[`numberInputField > should render correctly 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-6 emotion-7"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -291,10 +277,10 @@ exports[`numberInputField > should render correctly 1`] = `
               </button>
             </div>
             <div
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-6 emotion-7 emotion-8"
             >
               <input
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-controls="true"
                 data-has-unit="false"
                 data-size="large"
@@ -316,7 +302,7 @@ exports[`numberInputField > should render correctly 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-6 emotion-7"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -406,7 +392,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-8 {
+.emotion-2[data-controls='false']>.emotion-6 {
   border-width: 0;
 }
 
@@ -458,21 +444,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-6 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
+.emotion-7 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -489,7 +461,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-9 {
   outline: none;
   border: none;
   padding: 0;
@@ -504,18 +476,18 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-9[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-9::-webkit-outer-spin-button,
+.emotion-9::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-9 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -523,15 +495,15 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -539,34 +511,34 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-9:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-9:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.exvap482 {
+.emotion-9:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.exvap482 {
+.emotion-9:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-9:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.exvap482 {
+.emotion-9:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -575,12 +547,12 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.exvap482 {
+.emotion-9:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-9[data-controls='false'] {
   text-align: left;
 }
 
@@ -615,7 +587,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-6 emotion-7"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -625,11 +597,11 @@ exports[`numberInputField > should render correctly disabled 1`] = `
               </button>
             </div>
             <div
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-6 emotion-7 emotion-8"
             >
               <input
                 aria-label="Number Input"
-                class="emotion-11 emotion-12"
+                class="emotion-9 emotion-10"
                 data-controls="true"
                 data-has-unit="false"
                 data-size="large"
@@ -653,7 +625,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
                 type="button"
               >
                 <svg
-                  class="emotion-6 emotion-7"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza"
                   viewBox="0 0 16 16"
                 >
                   <path

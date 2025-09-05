@@ -160,20 +160,6 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
 }
 
 .emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-12 {
   width: 90%;
   min-width: 320px;
   background-color: #ffffff;
@@ -183,7 +169,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 5rem;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -205,7 +191,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   flex-direction: column;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -232,11 +218,11 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   padding-top: 0.25rem;
 }
 
-.emotion-16[data-grouped="true"] {
+.emotion-14[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-18 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,13 +245,13 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   gap: 0.125rem;
 }
 
-.emotion-20 {
+.emotion-18 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.emotion-22 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -295,21 +281,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 0.125rem;
 }
 
-.emotion-22:focus {
+.emotion-20:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-22[data-selectgroup='true'] {
+.emotion-20[data-selectgroup='true'] {
   padding-left: 1rem;
   border-left: 0.25rem solid #f9f9fa;
 }
 
-.emotion-22[data-selectgroup='true']:focus {
+.emotion-20[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-26 {
+.emotion-24 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -321,31 +307,31 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   border: 1px transparent solid;
 }
 
-.emotion-26:hover,
-.emotion-26:focus {
+.emotion-24:hover,
+.emotion-24:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-26[aria-selected='true'] {
+.emotion-24[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-26[aria-disabled="true"] {
+.emotion-24[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-26[aria-disabled="true"]:hover,
-.emotion-26 [aria-disabled="true"]:focus {
+.emotion-24[aria-disabled="true"]:hover,
+.emotion-24 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-30 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,7 +354,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   overflow: hidden;
 }
 
-.emotion-32 {
+.emotion-30 {
   overflow: auto;
   text-overflow: ellipsis;
   -webkit-flex-shrink: 0;
@@ -426,7 +412,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-10 emotion-11"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -439,7 +425,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             </div>
           </div>
           <div
-            class="emotion-12 emotion-13 uv_w40vpo4 null"
+            class="emotion-10 emotion-11 uv_w40vpo4 null"
             id="«rl»"
             role="dialog"
             style="--uv_ozfz3c0: -5px; --uv_ozfz3c1: 0px; --uv_ozfz3c2:  rotate(180deg); --uv_ozfz3c4: translate3d(0px, 4px, 0); --uv_ozfz3c5: 0ms; --uv_ozfz3c6: translate3d(0px, 4px, 0); --uv_ozfz3c7: 100%; opacity: 1;"
@@ -448,22 +434,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
               class="uv_w40vpo2"
             >
               <div
-                class="emotion-14 emotion-3"
+                class="emotion-12 emotion-3"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="emotion-14 emotion-15"
                   data-grouped="true"
                   id="select-dropdown"
                   role="listbox"
                 >
                   <div
-                    class="emotion-18 emotion-3"
+                    class="emotion-16 emotion-3"
                   >
                     <div
-                      class="emotion-20 emotion-21"
+                      class="emotion-18 emotion-19"
                     >
                       <button
-                        class="emotion-22 emotion-23"
+                        class="emotion-20 emotion-21"
                         data-selectgroup="false"
                         data-testid="group-0"
                         role="group"
@@ -479,14 +465,14 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                       </button>
                     </div>
                     <div
-                      class="emotion-18 emotion-3"
+                      class="emotion-16 emotion-3"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="jupiter"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-jupiter"
                         id="option-0"
                         role="option"
@@ -497,10 +483,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-jupiter"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Jupiter
@@ -518,7 +504,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="saturn"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-saturn"
                         id="option-1"
                         role="option"
@@ -529,10 +515,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-saturn"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Saturn
@@ -544,7 +530,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="uranus"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-uranus"
                         id="option-2"
                         role="option"
@@ -555,10 +541,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-uranus"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Uranus
@@ -570,7 +556,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="neptune"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-neptune"
                         id="option-3"
                         role="option"
@@ -581,10 +567,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-neptune"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Neptune
@@ -595,13 +581,13 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                     </div>
                   </div>
                   <div
-                    class="emotion-18 emotion-3"
+                    class="emotion-16 emotion-3"
                   >
                     <div
-                      class="emotion-20 emotion-21"
+                      class="emotion-18 emotion-19"
                     >
                       <button
-                        class="emotion-22 emotion-23"
+                        class="emotion-20 emotion-21"
                         data-selectgroup="false"
                         data-testid="group-1"
                         role="group"
@@ -617,14 +603,14 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                       </button>
                     </div>
                     <div
-                      class="emotion-18 emotion-3"
+                      class="emotion-16 emotion-3"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="mercury"
                         aria-selected="true"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-mercury"
                         id="option-0"
                         role="option"
@@ -635,10 +621,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-mercury"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Mercury
@@ -650,7 +636,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="venus"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-venus"
                         id="option-1"
                         role="option"
@@ -661,10 +647,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-venus"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Venus
@@ -676,7 +662,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="earth"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-earth"
                         id="option-2"
                         role="option"
@@ -687,10 +673,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-earth"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Earth
@@ -708,7 +694,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="true"
                         aria-label="mars"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-mars"
                         id="option-3"
                         role="option"
@@ -719,10 +705,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-mars"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Mars
@@ -734,7 +720,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="pluto"
                         aria-selected="false"
-                        class="emotion-26 emotion-27"
+                        class="emotion-24 emotion-25"
                         data-testid="option-pluto"
                         id="option-4"
                         role="option"
@@ -745,10 +731,10 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                           data-testid="option-stack-pluto"
                         >
                           <div
-                            class="emotion-30 emotion-31"
+                            class="emotion-28 emotion-29"
                           >
                             <span
-                              class="emotion-32 emotion-33 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Pluto
@@ -935,20 +921,6 @@ exports[`selectInputField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -994,7 +966,7 @@ exports[`selectInputField > should render correctly 1`] = `
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-10 emotion-11"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1173,20 +1145,6 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   display: flex;
 }
 
-.emotion-10 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -1232,7 +1190,7 @@ exports[`selectInputField > should render correctly disabled 1`] = `
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-10 emotion-11"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_true__1sbwqkze styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_30__1sbwqkz1e"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1411,20 +1369,6 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   display: flex;
 }
 
-.emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -1470,7 +1414,7 @@ exports[`selectInputField > should render correctly grouped 1`] = `
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-10 emotion-11"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1649,20 +1593,6 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   display: flex;
 }
 
-.emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -1708,7 +1638,7 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-10 emotion-11"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1886,20 +1816,6 @@ exports[`selectInputField > should trigger events 1`] = `
   display: flex;
 }
 
-.emotion-10 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-10 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -1945,7 +1861,7 @@ exports[`selectInputField > should trigger events 1`] = `
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-10 emotion-11"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path

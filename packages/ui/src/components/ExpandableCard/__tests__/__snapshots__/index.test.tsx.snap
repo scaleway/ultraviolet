@@ -43,11 +43,11 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-2[open]>.emotion-10 {
+.emotion-2[open]>.emotion-9 {
   border-color: #8c40ef;
 }
 
-.emotion-2[open] .emotion-6 {
+.emotion-2[open] .emotion-7 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -83,21 +83,7 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-7 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-9 {
+.emotion-8 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
@@ -117,7 +103,7 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
           data-disabled="false"
         >
           <svg
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
             viewBox="0 0 16 16"
           >
             <path
@@ -140,7 +126,7 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
           </div>
         </summary>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           Content
         </div>
@@ -193,11 +179,11 @@ exports[`expandableCard > renders correctly with default values 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-2[open]>.emotion-10 {
+.emotion-2[open]>.emotion-9 {
   border-color: #8c40ef;
 }
 
-.emotion-2[open] .emotion-6 {
+.emotion-2[open] .emotion-7 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -233,21 +219,7 @@ exports[`expandableCard > renders correctly with default values 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-7 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-9 {
+.emotion-8 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
@@ -267,7 +239,7 @@ exports[`expandableCard > renders correctly with default values 1`] = `
           data-disabled="false"
         >
           <svg
-            class="emotion-6 emotion-7 emotion-8"
+            class="emotion-6 emotion-7 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
             viewBox="0 0 16 16"
           >
             <path
@@ -283,7 +255,7 @@ exports[`expandableCard > renders correctly with default values 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
         >
           Content
         </div>
@@ -320,7 +292,7 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: relative;
 }
 
-.emotion-0:hover>.emotion-7 {
+.emotion-0:hover>.emotion-5 {
   border-color: #8c40ef;
 }
 
@@ -368,20 +340,6 @@ exports[`expandableCard > works properly draggable 1`] = `
 }
 
 .emotion-4 {
-  vertical-align: middle;
-  fill: #222638;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: #222638;
-  fill: none;
-}
-
-.emotion-6 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   width: 100%;
@@ -389,27 +347,27 @@ exports[`expandableCard > works properly draggable 1`] = `
   transition: border-color 0.2s ease-in-out;
 }
 
-.emotion-6[open] {
+.emotion-4[open] {
   border-color: #8c40ef;
 }
 
-.emotion-6[open]>.emotion-14 {
+.emotion-4[open]>.emotion-11 {
   border-color: #8c40ef;
 }
 
-.emotion-6[open] .emotion-10 {
+.emotion-4[open] .emotion-9 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.emotion-6[data-clicking="true"] {
+.emotion-4[data-clicking="true"] {
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
   border-color: #8c40ef;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,32 +385,18 @@ exports[`expandableCard > works properly draggable 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[data-disabled="true"] {
+.emotion-6[data-disabled="true"] {
   background: #f9f9fa;
   border-radius: 0.25rem;
   cursor: not-allowed;
 }
 
-.emotion-11 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-13 {
+.emotion-10 {
   border-top: 1px solid #d9dadd;
   padding: 1.5rem;
 }
 
-.emotion-15 {
+.emotion-12 {
   height: 1.5rem;
   border-bottom: 2px solid;
   border-color: transparent;
@@ -462,11 +406,11 @@ exports[`expandableCard > works properly draggable 1`] = `
   position: absolute;
 }
 
-.emotion-15[data-first="true"] {
+.emotion-12[data-first="true"] {
   top: -1.5rem;
 }
 
-.emotion-15::after {
+.emotion-12::after {
   content: '';
   left: 0;
   bottom: -4px;
@@ -482,20 +426,6 @@ exports[`expandableCard > works properly draggable 1`] = `
   margin-top: -0.5rem;
   margin-left: -0.125rem;
   position: absolute;
-}
-
-.emotion-23 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-23 .fillStroke {
-  stroke: #727683;
-  fill: none;
 }
 
 <div
@@ -519,7 +449,7 @@ exports[`expandableCard > works properly draggable 1`] = `
           tabindex="0"
         >
           <svg
-            class="emotion-4 emotion-5"
+            class="styles__vbm0wq0 styles_prominence_strong__vbm0wqh styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_9__vbm0wqt"
             viewBox="0 0 16 16"
           >
             <path
@@ -529,15 +459,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-6 emotion-7"
+        class="emotion-4 emotion-5"
         data-clicking="true"
       >
         <summary
-          class="emotion-8 emotion-9"
+          class="emotion-6 emotion-7"
           data-disabled="false"
         >
           <svg
-            class="emotion-10 emotion-11 emotion-5"
+            class="emotion-8 emotion-9 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
             viewBox="0 0 16 16"
           >
             <path
@@ -553,17 +483,17 @@ exports[`expandableCard > works properly draggable 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-13 emotion-14"
+          class="emotion-10 emotion-11"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-12 emotion-13"
         data-first="true"
       />
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-12 emotion-13"
         data-testid="card-1-dropable-area"
         style="border-color: transparent;"
       />
@@ -586,7 +516,7 @@ exports[`expandableCard > works properly draggable 1`] = `
           tabindex="0"
         >
           <svg
-            class="emotion-23 emotion-5"
+            class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_23__vbm0wq17"
             viewBox="0 0 16 16"
           >
             <path
@@ -596,15 +526,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-6 emotion-7"
+        class="emotion-4 emotion-5"
         data-clicking="false"
       >
         <summary
-          class="emotion-8 emotion-9"
+          class="emotion-6 emotion-7"
           data-disabled="false"
         >
           <svg
-            class="emotion-10 emotion-11 emotion-5"
+            class="emotion-8 emotion-9 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
             viewBox="0 0 16 16"
           >
             <path
@@ -620,13 +550,13 @@ exports[`expandableCard > works properly draggable 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-13 emotion-14"
+          class="emotion-10 emotion-11"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-12 emotion-13"
         data-testid="card-2-dropable-area"
       />
     </div>
@@ -648,7 +578,7 @@ exports[`expandableCard > works properly draggable 1`] = `
           tabindex="0"
         >
           <svg
-            class="emotion-23 emotion-5"
+            class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_23__vbm0wq17"
             viewBox="0 0 16 16"
           >
             <path
@@ -658,15 +588,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-6 emotion-7"
+        class="emotion-4 emotion-5"
         data-clicking="false"
       >
         <summary
-          class="emotion-8 emotion-9"
+          class="emotion-6 emotion-7"
           data-disabled="false"
         >
           <svg
-            class="emotion-10 emotion-11 emotion-5"
+            class="emotion-8 emotion-9 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
             viewBox="0 0 16 16"
           >
             <path
@@ -682,13 +612,13 @@ exports[`expandableCard > works properly draggable 1`] = `
           </h2>
         </summary>
         <div
-          class="emotion-13 emotion-14"
+          class="emotion-10 emotion-11"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-12 emotion-13"
         data-testid="card-3-dropable-area"
       />
     </div>
