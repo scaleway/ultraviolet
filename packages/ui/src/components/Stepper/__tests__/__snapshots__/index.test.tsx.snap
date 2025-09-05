@@ -107,7 +107,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -118,7 +118,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -129,7 +129,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -149,7 +149,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -238,7 +238,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -249,7 +249,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -260,7 +260,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -280,7 +280,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -383,34 +383,14 @@ exports[`stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -418,15 +398,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-9 {
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -453,7 +425,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +452,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -505,7 +477,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   min-width: 2rem;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -551,7 +523,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -561,7 +533,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -579,12 +551,12 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -602,12 +574,12 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -715,7 +687,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -726,7 +698,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -737,7 +709,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -757,7 +729,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -846,7 +818,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -857,7 +829,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -868,7 +840,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -888,7 +860,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -991,34 +963,14 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -1026,15 +978,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-9 {
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1061,7 +1005,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1088,7 +1032,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1113,7 +1057,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   min-width: 1.5rem;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1159,7 +1103,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -1169,7 +1113,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -1187,12 +1131,12 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -1210,12 +1154,12 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -1323,7 +1267,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -1334,7 +1278,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -1345,7 +1289,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -1365,7 +1309,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -1454,7 +1398,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -1465,7 +1409,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -1476,7 +1420,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -1496,7 +1440,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -1599,34 +1543,14 @@ exports[`stepper > handles clicks when not interactive 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -1634,15 +1558,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-9 {
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1669,7 +1585,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1696,7 +1612,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1721,7 +1637,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   min-width: 1.5rem;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1767,7 +1683,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -1777,7 +1693,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -1795,12 +1711,12 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -1818,12 +1734,12 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -1902,7 +1818,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -1913,7 +1829,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -1924,7 +1840,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -1944,7 +1860,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -2022,20 +1938,6 @@ exports[`stepper > renders correctly with all selected 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -2043,7 +1945,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2070,7 +1972,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2116,7 +2018,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -2126,7 +2028,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -2144,12 +2046,12 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -2167,12 +2069,12 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -2251,7 +2153,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -2262,7 +2164,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2273,7 +2175,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -2293,7 +2195,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -2371,20 +2273,6 @@ exports[`stepper > renders correctly with animation 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -2392,7 +2280,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2419,7 +2307,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2465,7 +2353,7 @@ exports[`stepper > renders correctly with animation 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -2475,7 +2363,7 @@ exports[`stepper > renders correctly with animation 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -2493,12 +2381,12 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -2516,12 +2404,12 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -2600,7 +2488,7 @@ exports[`stepper > renders correctly with children 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -2611,7 +2499,7 @@ exports[`stepper > renders correctly with children 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2622,7 +2510,7 @@ exports[`stepper > renders correctly with children 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -2642,7 +2530,7 @@ exports[`stepper > renders correctly with children 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -2720,20 +2608,6 @@ exports[`stepper > renders correctly with children 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -2741,7 +2615,7 @@ exports[`stepper > renders correctly with children 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2768,7 +2642,7 @@ exports[`stepper > renders correctly with children 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2814,7 +2688,7 @@ exports[`stepper > renders correctly with children 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -2824,7 +2698,7 @@ exports[`stepper > renders correctly with children 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -2843,12 +2717,12 @@ exports[`stepper > renders correctly with children 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -2866,12 +2740,12 @@ exports[`stepper > renders correctly with children 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -2950,7 +2824,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -2961,7 +2835,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2972,7 +2846,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -2992,7 +2866,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -3070,20 +2944,6 @@ exports[`stepper > renders correctly with default props 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -3091,7 +2951,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3118,7 +2978,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3164,7 +3024,7 @@ exports[`stepper > renders correctly with default props 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -3174,7 +3034,7 @@ exports[`stepper > renders correctly with default props 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -3192,12 +3052,12 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -3215,12 +3075,12 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -3611,7 +3471,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -3622,7 +3482,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -3633,7 +3493,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -3653,7 +3513,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -3731,20 +3591,6 @@ exports[`stepper > renders correctly with selected prop 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -3752,7 +3598,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-23 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3800,7 +3646,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -3810,7 +3656,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -3831,7 +3677,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -3841,7 +3687,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -3859,12 +3705,12 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-23 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 3
@@ -3943,7 +3789,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -3954,7 +3800,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -3965,7 +3811,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -3985,7 +3831,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -4063,20 +3909,6 @@ exports[`stepper > renders correctly with small size 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -4084,7 +3916,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4111,7 +3943,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4157,7 +3989,7 @@ exports[`stepper > renders correctly with small size 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -4167,7 +3999,7 @@ exports[`stepper > renders correctly with small size 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -4185,12 +4017,12 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -4208,12 +4040,12 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -4303,7 +4135,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -4314,7 +4146,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -4325,7 +4157,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -4345,7 +4177,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -4423,20 +4255,6 @@ exports[`stepper > renders correctly with step number in row 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -4444,7 +4262,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-11 {
+.emotion-9 {
   border-radius: 0.25rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -4458,11 +4276,11 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2px;
 }
 
-.emotion-11::after {
+.emotion-9::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4473,7 +4291,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   width: 100%;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4500,7 +4318,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20 {
+.emotion-18 {
   border-radius: 0.25rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -4514,11 +4332,11 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-20[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2px;
 }
 
-.emotion-20::after {
+.emotion-18::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4528,7 +4346,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   background-color: #8c40ef;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4574,7 +4392,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -4584,14 +4402,14 @@ exports[`stepper > renders correctly with step number in row 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
         </span>
       </div>
       <div
-        class="emotion-11 emotion-12"
+        class="emotion-9 emotion-10"
         data-size="medium"
       />
       <div
@@ -4606,19 +4424,19 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-16 emotion-6"
+          class="emotion-4 emotion-14 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
         </span>
       </div>
       <div
-        class="emotion-20 emotion-12"
+        class="emotion-18 emotion-10"
         data-size="medium"
       />
       <div
@@ -4633,12 +4451,12 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-25 emotion-6"
+          class="emotion-4 emotion-23 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -5021,35 +4839,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   min-width: 1.5rem;
 }
 
-.emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5076,7 +4866,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5103,7 +4893,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5128,7 +4918,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   min-width: 1.5rem;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5174,7 +4964,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -5197,7 +4987,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-4 emotion-10 emotion-6"
         >
           2
         </div>
@@ -5215,7 +5005,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-17 emotion-6"
+          class="emotion-4 emotion-15 emotion-6"
         >
           3
         </div>
@@ -5304,7 +5094,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -5315,7 +5105,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -5326,7 +5116,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -5346,7 +5136,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -5424,20 +5214,6 @@ exports[`stepper > renders correctly without separator 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -5445,7 +5221,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5472,7 +5248,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5518,7 +5294,7 @@ exports[`stepper > renders correctly without separator 1`] = `
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -5528,7 +5304,7 @@ exports[`stepper > renders correctly without separator 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -5546,12 +5322,12 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -5569,12 +5345,12 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -5664,7 +5440,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
@@ -5675,7 +5451,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-10 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -5686,7 +5462,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-10 {
+.emotion-2[data-disabled="true"]>.emotion-8 {
   color: #b5b7bd;
 }
 
@@ -5706,7 +5482,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-10 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
   margin-top: 0.5rem;
 }
 
@@ -5784,20 +5560,6 @@ exports[`stepper > renders correctly without separator with label on the right 1
 }
 
 .emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-9 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -5805,7 +5567,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   text-decoration-color: transparent;
 }
 
-.emotion-14 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5832,7 +5594,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-21 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5878,7 +5640,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
           class="emotion-4 emotion-5 emotion-6"
         >
           <svg
-            class="emotion-7 emotion-8"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
             viewBox="0 0 16 16"
           >
             <path
@@ -5888,7 +5650,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
           </svg>
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -5906,12 +5668,12 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-4 emotion-12 emotion-6"
         >
           2
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -5929,12 +5691,12 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-21 emotion-6"
+          class="emotion-4 emotion-19 emotion-6"
         >
           3
         </div>
         <span
-          class="emotion-9 emotion-10 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
