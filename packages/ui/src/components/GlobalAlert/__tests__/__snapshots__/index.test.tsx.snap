@@ -885,112 +885,26 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
 }
 
 .emotion-4 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #ffffff;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-4 .e1afnb7a3,
-.emotion-4 .e1afnb7a2,
-.emotion-4 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-4>* {
-  pointer-events: none;
-}
-
-.emotion-4:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
+  background: none;
+  position: absolute;
+  right: 3rem;
 }
 
 .emotion-4:hover,
-.emotion-4:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #f9f9fa;
-  text-decoration-color: #f9f9fa;
-}
-
-.emotion-4:hover .e1afnb7a3,
-.emotion-4:focus .e1afnb7a3,
-.emotion-4:hover .e1afnb7a2,
-.emotion-4:focus .e1afnb7a2,
-.emotion-4:hover .e1afnb7a4,
-.emotion-4:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-4:hover:visited,
-.emotion-4:focus:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-4[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-4:hover::after,
-.emotion-4:focus::after {
-  background-color: #005da3;
-}
-
+.emotion-4:focus,
 .emotion-4:active {
-  text-decoration-thickness: 2px;
+  background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   background: none;
   position: absolute;
   right: 3rem;
 }
 
-.emotion-6:hover,
-.emotion-6:focus,
-.emotion-6:active {
-  background: none;
-}
-
-.emotion-6 {
-  background: none;
-  position: absolute;
-  right: 3rem;
-}
-
-.emotion-6:hover,
-.emotion-6:focus,
-.emotion-6:active {
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
   background: none;
 }
 
@@ -1009,11 +923,9 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
         >
           This is a 
           <a
-            class="emotion-4 emotion-5"
+            class="styles__1dtqm9e0 styles_prominence_strong__1dtqm9e4 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_inline__1dtqm9ec styles_undefined_compound_5__1dtqm9ej styles__1dtqm9en"
             data-variant="inline"
             href="scaleway.com"
-            prominence="strong"
-            variant="bodySmallStrong"
           >
             Global Alert
           </a>
@@ -1021,7 +933,7 @@ exports[`GlobalAlert > renders correctly with link 1`] = `
         </p>
       </div>
       <button
-        class="emotion-6 emotion-7 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+        class="emotion-4 emotion-5 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
         type="button"
       >
         <svg
