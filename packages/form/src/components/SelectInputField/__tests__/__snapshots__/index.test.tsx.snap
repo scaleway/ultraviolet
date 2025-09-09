@@ -7,29 +7,6 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -44,85 +21,85 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   width: 100%;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-4[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-4[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-4[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-4[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-4[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -131,27 +108,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   align-self: center;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -159,7 +116,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   display: flex;
 }
 
-.emotion-10 {
+.emotion-8 {
   width: 90%;
   min-width: 320px;
   background-color: #ffffff;
@@ -169,48 +126,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 5rem;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.emotion-10 {
   max-height: 256px;
   overflow-y: auto;
   padding: 0rem;
@@ -218,40 +134,17 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   padding-top: 0.25rem;
 }
 
-.emotion-14[data-grouped="true"] {
+.emotion-10[data-grouped="true"] {
   padding-top: 0rem;
 }
 
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-18 {
+.emotion-12 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.emotion-20 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,21 +174,21 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 0.125rem;
 }
 
-.emotion-20:focus {
+.emotion-14:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-20[data-selectgroup='true'] {
+.emotion-14[data-selectgroup='true'] {
   padding-left: 1rem;
   border-left: 0.25rem solid #f9f9fa;
 }
 
-.emotion-20[data-selectgroup='true']:focus {
+.emotion-14[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-24 {
+.emotion-16 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -307,54 +200,35 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
   border: 1px transparent solid;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-16:hover,
+.emotion-16:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
 }
 
-.emotion-24[aria-selected='true'] {
+.emotion-16[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-24[aria-disabled="true"] {
+.emotion-16[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-24[aria-disabled="true"]:hover,
-.emotion-24 [aria-disabled="true"]:focus {
+.emotion-16[aria-disabled="true"]:hover,
+.emotion-16 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
+.emotion-18 {
   overflow: hidden;
 }
 
-.emotion-30 {
+.emotion-20 {
   overflow: auto;
   text-overflow: ellipsis;
   -webkit-flex-shrink: 0;
@@ -385,13 +259,14 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
           tabindex="-1"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
               aria-controls="«rl»"
               aria-expanded="true"
               aria-label=""
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-disabled="false"
               data-dropdownvisible="true"
               data-readonly="false"
@@ -403,12 +278,13 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
               tabindex="0"
             >
               <div
-                class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 Mercury
               </div>
               <div
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <svg
                   aria-label="show dropdown"
@@ -425,7 +301,7 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             </div>
           </div>
           <div
-            class="emotion-10 emotion-11 uv_w40vpo4 null"
+            class="emotion-8 emotion-9 uv_w40vpo4 null"
             id="«rl»"
             role="dialog"
             style="--uv_ozfz3c0: -5px; --uv_ozfz3c1: 0px; --uv_ozfz3c2:  rotate(180deg); --uv_ozfz3c4: translate3d(0px, 4px, 0); --uv_ozfz3c5: 0ms; --uv_ozfz3c6: translate3d(0px, 4px, 0); --uv_ozfz3c7: 100%; opacity: 1;"
@@ -434,22 +310,25 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
               class="uv_w40vpo2"
             >
               <div
-                class="emotion-12 emotion-3"
+                class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <div
-                  class="emotion-14 emotion-15"
+                  class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-grouped="true"
                   id="select-dropdown"
                   role="listbox"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
-                    class="emotion-16 emotion-3"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-12 emotion-13"
                     >
                       <button
-                        class="emotion-20 emotion-21"
+                        class="emotion-14 emotion-15"
                         data-selectgroup="false"
                         data-testid="group-0"
                         role="group"
@@ -465,28 +344,31 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                       </button>
                     </div>
                     <div
-                      class="emotion-16 emotion-3"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
                       id="items"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="jupiter"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-jupiter"
                         id="option-0"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-jupiter"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Jupiter
@@ -504,21 +386,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="saturn"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-saturn"
                         id="option-1"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-saturn"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Saturn
@@ -530,21 +414,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="uranus"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-uranus"
                         id="option-2"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-uranus"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Uranus
@@ -556,21 +442,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="neptune"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-neptune"
                         id="option-3"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-neptune"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Neptune
@@ -581,13 +469,14 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                     </div>
                   </div>
                   <div
-                    class="emotion-16 emotion-3"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                   >
                     <div
-                      class="emotion-18 emotion-19"
+                      class="emotion-12 emotion-13"
                     >
                       <button
-                        class="emotion-20 emotion-21"
+                        class="emotion-14 emotion-15"
                         data-selectgroup="false"
                         data-testid="group-1"
                         role="group"
@@ -603,28 +492,31 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                       </button>
                     </div>
                     <div
-                      class="emotion-16 emotion-3"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
                       id="items"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="mercury"
                         aria-selected="true"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-mercury"
                         id="option-0"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-mercury"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Mercury
@@ -636,21 +528,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="venus"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-venus"
                         id="option-1"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-venus"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Venus
@@ -662,21 +556,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="earth"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-earth"
                         id="option-2"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-earth"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Earth
@@ -694,21 +590,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="true"
                         aria-label="mars"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-mars"
                         id="option-3"
                         role="option"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-mars"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Mars
@@ -720,21 +618,23 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="pluto"
                         aria-selected="false"
-                        class="emotion-24 emotion-25"
+                        class="emotion-16 emotion-17"
                         data-testid="option-pluto"
                         id="option-4"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-2 emotion-3"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-pluto"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
-                            class="emotion-28 emotion-29"
+                            class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
+                            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                           >
                             <span
-                              class="emotion-30 emotion-31 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                               style="--uv_qabug40: left;"
                             >
                               Pluto
@@ -768,29 +668,6 @@ exports[`selectInputField > should render correctly 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -805,85 +682,85 @@ exports[`selectInputField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-4[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-4[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-4[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-4[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-4[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -893,27 +770,7 @@ exports[`selectInputField > should render correctly 1`] = `
   align-self: center;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -939,13 +796,14 @@ exports[`selectInputField > should render correctly 1`] = `
           tabindex="-1"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
               aria-controls="«r1»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
@@ -957,12 +815,13 @@ exports[`selectInputField > should render correctly 1`] = `
               tabindex="0"
             >
               <p
-                class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
               >
                 Select item
               </p>
               <div
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <svg
                   aria-label="show dropdown"
@@ -992,29 +851,6 @@ exports[`selectInputField > should render correctly disabled 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1029,85 +865,85 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-4[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-4[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-4[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-4[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-4[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1117,27 +953,7 @@ exports[`selectInputField > should render correctly disabled 1`] = `
   align-self: center;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1163,13 +979,14 @@ exports[`selectInputField > should render correctly disabled 1`] = `
           tabindex="-1"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
               aria-controls="«r6»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-disabled="true"
               data-dropdownvisible="false"
               data-readonly="false"
@@ -1181,12 +998,13 @@ exports[`selectInputField > should render correctly disabled 1`] = `
               tabindex="0"
             >
               <p
-                class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1a uv_m4c9ow33"
+                class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1a uv_m4c9ow33"
               >
                 Select item
               </p>
               <div
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <svg
                   aria-label="show dropdown"
@@ -1216,29 +1034,6 @@ exports[`selectInputField > should render correctly grouped 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1253,85 +1048,85 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   width: 100%;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-4[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-4[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-4[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-4[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-4[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1341,27 +1136,7 @@ exports[`selectInputField > should render correctly grouped 1`] = `
   align-self: center;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1387,13 +1162,14 @@ exports[`selectInputField > should render correctly grouped 1`] = `
           tabindex="-1"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
               aria-controls="«rg»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
@@ -1405,12 +1181,13 @@ exports[`selectInputField > should render correctly grouped 1`] = `
               tabindex="0"
             >
               <p
-                class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
               >
                 Select item
               </p>
               <div
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <svg
                   aria-label="show dropdown"
@@ -1440,29 +1217,6 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1477,85 +1231,85 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   width: 100%;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-4[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-4[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-4[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-4[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-4[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1565,27 +1319,7 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
   align-self: center;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1611,13 +1345,14 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
           tabindex="-1"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
               aria-controls="«rb»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
@@ -1629,12 +1364,13 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
               tabindex="0"
             >
               <p
-                class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
               >
                 Select item
               </p>
               <div
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <svg
                   aria-label="show dropdown"
@@ -1664,29 +1400,6 @@ exports[`selectInputField > should trigger events 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -1701,85 +1414,85 @@ exports[`selectInputField > should trigger events 1`] = `
   width: 100%;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-4[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-4[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-4[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-4[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-4[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-4[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-4[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-4[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -1788,27 +1501,7 @@ exports[`selectInputField > should trigger events 1`] = `
   align-self: center;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1834,13 +1527,14 @@ exports[`selectInputField > should trigger events 1`] = `
           tabindex="-1"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <div
               aria-controls="«r29»"
               aria-expanded="false"
               aria-label=""
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-disabled="false"
               data-dropdownvisible="false"
               data-readonly="false"
@@ -1852,12 +1546,13 @@ exports[`selectInputField > should trigger events 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 Mercury
               </div>
               <div
-                class="emotion-8 emotion-9"
+                class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
               >
                 <svg
                   aria-label="show dropdown"
