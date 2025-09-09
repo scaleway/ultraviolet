@@ -80,7 +80,7 @@ const EditorContainer = styled.div`
 
     .cm-editor.cm-focused {
       box-shadow: none;
-      border: 1px solid transparent; 
+      border: 1px solid transparent;
     }
   }
 `
@@ -131,7 +131,7 @@ type CodeEditorProps = {
 export const CodeEditor = ({
   value,
   onChange,
-  extensions = 'javascript',
+  extensions = 'js',
   onBlur,
   height,
   readOnly,
