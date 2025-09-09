@@ -3,14 +3,76 @@
 exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-0:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,41 +85,41 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -67,69 +129,56 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-  padding: 0.5rem;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
-  border-color: #792dd4;
+  border: none;
   outline: none;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-2[data-size='large'] {
-  height: 3rem;
+  font-size: 1rem;
 }
 
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
+.emotion-2:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
+.emotion-2:read-only {
+  cursor: default;
+}
+
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -137,20 +186,23 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-2[data-period="true"] {
+  color: #727683;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+.emotion-2[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-  border-color: #92103f;
+.emotion-2::-moz-selection {
+  background: none;
 }
 
-.emotion-4 {
+.emotion-2::selection {
+  background: none;
+}
+
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -163,30 +215,30 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -194,87 +246,27 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
 .emotion-4 {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.875rem;
-  width: 1.5625rem;
-  height: 1.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #3f4250;
-  caret-color: transparent;
-}
-
-.emotion-4[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-4:not(:disabled):hover {
-  background-color: #e9eaeb;
-  color: #727683;
-}
-
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
-  background-color: #e9eaeb;
-  color: #3f4250;
-}
-
-.emotion-4:-moz-read-only {
-  cursor: default;
-}
-
-.emotion-4:read-only {
-  cursor: default;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4[data-period="true"] {
-  color: #727683;
-}
-
-.emotion-4[data-period="true"][data-size="large"] {
-  width: calc(1.5625rem + 0.125rem);
-}
-
-.emotion-4::-moz-selection {
-  background: none;
-}
-
-.emotion-4::selection {
-  background: none;
-}
-
-.emotion-6 {
   padding-inline: 0.125rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -288,7 +280,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r24»"
         >
           label
@@ -300,7 +292,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
         </span>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -317,7 +309,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               aria-valuemin="1"
               aria-valuenow="12"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -325,7 +317,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               value="12"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -338,7 +330,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="23"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -346,7 +338,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -359,7 +351,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="14"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -373,7 +365,7 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
             aria-valuenow="12"
             aria-valuetext="pm"
             autocomplete="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-period="true"
             data-size="large"
             data-testid="am-pm-input"
@@ -396,14 +388,76 @@ exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
 exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-0:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -416,41 +470,41 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -460,69 +514,56 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-  padding: 0.5rem;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
-  border-color: #792dd4;
+  border: none;
   outline: none;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-2[data-size='large'] {
-  height: 3rem;
+  font-size: 1rem;
 }
 
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
+.emotion-2:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
+.emotion-2:read-only {
+  cursor: default;
+}
+
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -530,20 +571,23 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-2[data-period="true"] {
+  color: #727683;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+.emotion-2[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-  border-color: #92103f;
+.emotion-2::-moz-selection {
+  background: none;
 }
 
-.emotion-4 {
+.emotion-2::selection {
+  background: none;
+}
+
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -556,30 +600,30 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -587,87 +631,27 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
 .emotion-4 {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.875rem;
-  width: 1.5625rem;
-  height: 1.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #3f4250;
-  caret-color: transparent;
-}
-
-.emotion-4[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-4:not(:disabled):hover {
-  background-color: #e9eaeb;
-  color: #727683;
-}
-
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
-  background-color: #e9eaeb;
-  color: #3f4250;
-}
-
-.emotion-4:-moz-read-only {
-  cursor: default;
-}
-
-.emotion-4:read-only {
-  cursor: default;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4[data-period="true"] {
-  color: #727683;
-}
-
-.emotion-4[data-period="true"][data-size="large"] {
-  width: calc(1.5625rem + 0.125rem);
-}
-
-.emotion-4::-moz-selection {
-  background: none;
-}
-
-.emotion-4::selection {
-  background: none;
-}
-
-.emotion-6 {
   padding-inline: 0.125rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -681,7 +665,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r2a»"
         >
           label
@@ -693,7 +677,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
         </span>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -710,7 +694,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="23"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -718,7 +702,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -731,7 +715,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="23"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -739,7 +723,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -752,7 +736,7 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="14"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -794,10 +778,6 @@ exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
 exports[`TimeInput > renders correctly clearable 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -810,41 +790,41 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -854,20 +834,20 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -880,30 +860,30 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -911,23 +891,23 @@ exports[`TimeInput > renders correctly clearable 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -938,13 +918,13 @@ exports[`TimeInput > renders correctly clearable 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«rg»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -960,7 +940,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -968,7 +948,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -980,7 +960,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -988,7 +968,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -1000,7 +980,7 @@ exports[`TimeInput > renders correctly clearable 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -1037,14 +1017,76 @@ exports[`TimeInput > renders correctly clearable 1`] = `
 exports[`TimeInput > renders correctly clearable 2`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-0:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1057,41 +1099,41 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -1101,69 +1143,56 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-  padding: 0.5rem;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
-  border-color: #792dd4;
+  border: none;
   outline: none;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-2[data-size='large'] {
-  height: 3rem;
+  font-size: 1rem;
 }
 
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
+.emotion-2:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
+.emotion-2:read-only {
+  cursor: default;
+}
+
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1171,20 +1200,23 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-2[data-period="true"] {
+  color: #727683;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+.emotion-2[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-  border-color: #92103f;
+.emotion-2::-moz-selection {
+  background: none;
 }
 
-.emotion-4 {
+.emotion-2::selection {
+  background: none;
+}
+
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -1197,30 +1229,30 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1228,87 +1260,27 @@ exports[`TimeInput > renders correctly clearable 2`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
 .emotion-4 {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.875rem;
-  width: 1.5625rem;
-  height: 1.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #3f4250;
-  caret-color: transparent;
-}
-
-.emotion-4[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-4:not(:disabled):hover {
-  background-color: #e9eaeb;
-  color: #727683;
-}
-
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
-  background-color: #e9eaeb;
-  color: #3f4250;
-}
-
-.emotion-4:-moz-read-only {
-  cursor: default;
-}
-
-.emotion-4:read-only {
-  cursor: default;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4[data-period="true"] {
-  color: #727683;
-}
-
-.emotion-4[data-period="true"][data-size="large"] {
-  width: calc(1.5625rem + 0.125rem);
-}
-
-.emotion-4::-moz-selection {
-  background: none;
-}
-
-.emotion-4::selection {
-  background: none;
-}
-
-.emotion-6 {
   padding-inline: 0.125rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -1322,7 +1294,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r1t»"
         >
           label
@@ -1334,7 +1306,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
         </span>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -1351,7 +1323,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               aria-valuemin="1"
               aria-valuenow="12"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -1359,7 +1331,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               value="12"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -1372,7 +1344,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               aria-valuemin="0"
               aria-valuenow="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -1380,7 +1352,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               value="00"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -1393,7 +1365,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
               aria-valuemin="0"
               aria-valuenow="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -1407,7 +1379,7 @@ exports[`TimeInput > renders correctly clearable 2`] = `
             aria-valuenow="0"
             aria-valuetext="am"
             autocomplete="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-period="true"
             data-size="large"
             data-testid="am-pm-input"
@@ -1449,14 +1421,76 @@ exports[`TimeInput > renders correctly clearable 2`] = `
 exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-0:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1469,41 +1503,41 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -1513,69 +1547,56 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-  padding: 0.5rem;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
-  border-color: #792dd4;
+  border: none;
   outline: none;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-2[data-size='large'] {
-  height: 3rem;
+  font-size: 1rem;
 }
 
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
+.emotion-2:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
+.emotion-2:read-only {
+  cursor: default;
+}
+
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1583,20 +1604,23 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-2[data-period="true"] {
+  color: #727683;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+.emotion-2[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-  border-color: #92103f;
+.emotion-2::-moz-selection {
+  background: none;
 }
 
-.emotion-4 {
+.emotion-2::selection {
+  background: none;
+}
+
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -1609,30 +1633,30 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1640,87 +1664,27 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
 .emotion-4 {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.875rem;
-  width: 1.5625rem;
-  height: 1.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #3f4250;
-  caret-color: transparent;
-}
-
-.emotion-4[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-4:not(:disabled):hover {
-  background-color: #e9eaeb;
-  color: #727683;
-}
-
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
-  background-color: #e9eaeb;
-  color: #3f4250;
-}
-
-.emotion-4:-moz-read-only {
-  cursor: default;
-}
-
-.emotion-4:read-only {
-  cursor: default;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4[data-period="true"] {
-  color: #727683;
-}
-
-.emotion-4[data-period="true"][data-size="large"] {
-  width: calc(1.5625rem + 0.125rem);
-}
-
-.emotion-4::-moz-selection {
-  background: none;
-}
-
-.emotion-4::selection {
-  background: none;
-}
-
-.emotion-6 {
   padding-inline: 0.125rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -1734,7 +1698,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r1h»"
         >
           label
@@ -1746,7 +1710,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
         </span>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -1763,7 +1727,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               aria-valuemin="1"
               aria-valuenow="12"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -1771,7 +1735,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               value="12"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -1784,7 +1748,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="23"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -1792,7 +1756,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               value="23"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -1805,7 +1769,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
               aria-valuemin="0"
               aria-valuenow="7"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -1819,7 +1783,7 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
             aria-valuenow="0"
             aria-valuetext="am"
             autocomplete="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-period="true"
             data-size="large"
             data-testid="am-pm-input"
@@ -1842,14 +1806,76 @@ exports[`TimeInput > renders correctly controlled - 12-hour format 1`] = `
 exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-0:focus-within {
+  border-color: #792dd4;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1862,41 +1888,41 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -1906,69 +1932,56 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-  padding: 0.5rem;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
-  border-color: #792dd4;
+  border: none;
   outline: none;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+  caret-color: transparent;
 }
 
 .emotion-2[data-size='large'] {
-  height: 3rem;
+  font-size: 1rem;
 }
 
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
+.emotion-2:not(:disabled):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
+.emotion-2:read-only {
+  cursor: default;
+}
+
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1976,20 +1989,23 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
+.emotion-2[data-period="true"] {
+  color: #727683;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
+.emotion-2[data-period="true"][data-size="large"] {
+  width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-  border-color: #92103f;
+.emotion-2::-moz-selection {
+  background: none;
 }
 
-.emotion-4 {
+.emotion-2::selection {
+  background: none;
+}
+
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -2002,30 +2018,30 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2033,87 +2049,27 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
 .emotion-4 {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.875rem;
-  width: 1.5625rem;
-  height: 1.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  color: #3f4250;
-  caret-color: transparent;
-}
-
-.emotion-4[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-4:not(:disabled):hover {
-  background-color: #e9eaeb;
-  color: #727683;
-}
-
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
-  background-color: #e9eaeb;
-  color: #3f4250;
-}
-
-.emotion-4:-moz-read-only {
-  cursor: default;
-}
-
-.emotion-4:read-only {
-  cursor: default;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4[data-period="true"] {
-  color: #727683;
-}
-
-.emotion-4[data-period="true"][data-size="large"] {
-  width: calc(1.5625rem + 0.125rem);
-}
-
-.emotion-4::-moz-selection {
-  background: none;
-}
-
-.emotion-4::selection {
-  background: none;
-}
-
-.emotion-6 {
   padding-inline: 0.125rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -2127,7 +2083,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r1n»"
         >
           label
@@ -2139,7 +2095,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
         </span>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -2156,7 +2112,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               aria-valuemin="0"
               aria-valuenow="23"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -2164,7 +2120,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               value="23"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2177,7 +2133,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               aria-valuemin="0"
               aria-valuenow="32"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -2185,7 +2141,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               value="32"
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2198,7 +2154,7 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
               aria-valuemin="0"
               aria-valuenow="31"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -2221,10 +2177,6 @@ exports[`TimeInput > renders correctly controlled - 24-hours format 1`] = `
 exports[`TimeInput > renders correctly disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2237,41 +2189,41 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2281,20 +2233,20 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -2307,30 +2259,30 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2338,23 +2290,23 @@ exports[`TimeInput > renders correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -2365,13 +2317,13 @@ exports[`TimeInput > renders correctly disabled 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«r3»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="true"
         data-error="false"
         data-readonly="false"
@@ -2387,7 +2339,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               disabled=""
@@ -2396,7 +2348,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2408,7 +2360,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               disabled=""
@@ -2417,7 +2369,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2429,7 +2381,7 @@ exports[`TimeInput > renders correctly disabled 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               disabled=""
@@ -2448,10 +2400,6 @@ exports[`TimeInput > renders correctly disabled 1`] = `
 exports[`TimeInput > renders correctly large 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2464,41 +2412,41 @@ exports[`TimeInput > renders correctly large 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2508,20 +2456,20 @@ exports[`TimeInput > renders correctly large 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -2534,30 +2482,30 @@ exports[`TimeInput > renders correctly large 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2565,23 +2513,23 @@ exports[`TimeInput > renders correctly large 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -2592,13 +2540,13 @@ exports[`TimeInput > renders correctly large 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«ru»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -2614,7 +2562,7 @@ exports[`TimeInput > renders correctly large 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -2622,7 +2570,7 @@ exports[`TimeInput > renders correctly large 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2634,7 +2582,7 @@ exports[`TimeInput > renders correctly large 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -2642,7 +2590,7 @@ exports[`TimeInput > renders correctly large 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2654,7 +2602,7 @@ exports[`TimeInput > renders correctly large 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -2672,10 +2620,6 @@ exports[`TimeInput > renders correctly large 1`] = `
 exports[`TimeInput > renders correctly readOnly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2688,41 +2632,41 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2732,20 +2676,20 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -2758,30 +2702,30 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2789,23 +2733,23 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -2816,13 +2760,13 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«r7»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="true"
@@ -2838,7 +2782,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -2847,7 +2791,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2859,7 +2803,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -2868,7 +2812,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -2880,7 +2824,7 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -2899,10 +2843,6 @@ exports[`TimeInput > renders correctly readOnly 1`] = `
 exports[`TimeInput > renders correctly required 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2915,41 +2855,41 @@ exports[`TimeInput > renders correctly required 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -2959,20 +2899,20 @@ exports[`TimeInput > renders correctly required 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -2985,30 +2925,30 @@ exports[`TimeInput > renders correctly required 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3016,23 +2956,23 @@ exports[`TimeInput > renders correctly required 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -3046,7 +2986,7 @@ exports[`TimeInput > renders correctly required 1`] = `
         class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«rl»"
         >
           test
@@ -3059,7 +2999,7 @@ exports[`TimeInput > renders correctly required 1`] = `
       </div>
       <div
         aria-required="true"
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -3075,7 +3015,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -3083,7 +3023,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3095,7 +3035,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -3103,7 +3043,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3115,7 +3055,7 @@ exports[`TimeInput > renders correctly required 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -3133,10 +3073,6 @@ exports[`TimeInput > renders correctly required 1`] = `
 exports[`TimeInput > renders correctly small 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3149,41 +3085,41 @@ exports[`TimeInput > renders correctly small 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -3193,20 +3129,20 @@ exports[`TimeInput > renders correctly small 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -3219,30 +3155,30 @@ exports[`TimeInput > renders correctly small 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3250,23 +3186,23 @@ exports[`TimeInput > renders correctly small 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -3277,13 +3213,13 @@ exports[`TimeInput > renders correctly small 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«rq»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -3299,7 +3235,7 @@ exports[`TimeInput > renders correctly small 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="small"
               data-testid="hours-input"
               placeholder="00"
@@ -3307,7 +3243,7 @@ exports[`TimeInput > renders correctly small 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3319,7 +3255,7 @@ exports[`TimeInput > renders correctly small 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="small"
               data-testid="minutes-input"
               placeholder="00"
@@ -3327,7 +3263,7 @@ exports[`TimeInput > renders correctly small 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3339,7 +3275,7 @@ exports[`TimeInput > renders correctly small 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="small"
               data-testid="seconds-input"
               placeholder="00"
@@ -3357,10 +3293,6 @@ exports[`TimeInput > renders correctly small 1`] = `
 exports[`TimeInput > renders correctly with 12-hour format 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3373,41 +3305,41 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -3417,20 +3349,20 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -3443,30 +3375,30 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3474,23 +3406,23 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -3501,13 +3433,13 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«r12»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -3523,7 +3455,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               aria-valuemax="12"
               aria-valuemin="1"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -3531,7 +3463,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3543,7 +3475,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -3551,7 +3483,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3563,7 +3495,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -3576,7 +3508,7 @@ exports[`TimeInput > renders correctly with 12-hour format 1`] = `
             aria-valuemin="0"
             aria-valuenow="12"
             autocomplete="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-period="true"
             data-size="large"
             data-testid="am-pm-input"
@@ -3807,10 +3739,6 @@ exports[`TimeInput > renders correctly with base props 1`] = `
 exports[`TimeInput > renders correctly with error 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3823,41 +3751,41 @@ exports[`TimeInput > renders correctly with error 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -3867,20 +3795,20 @@ exports[`TimeInput > renders correctly with error 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -3893,30 +3821,30 @@ exports[`TimeInput > renders correctly with error 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3924,23 +3852,23 @@ exports[`TimeInput > renders correctly with error 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -3951,13 +3879,13 @@ exports[`TimeInput > renders correctly with error 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«rb»"
       >
         test
       </label>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="true"
         data-readonly="false"
@@ -3973,7 +3901,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -3981,7 +3909,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -3993,7 +3921,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -4001,7 +3929,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -4013,7 +3941,7 @@ exports[`TimeInput > renders correctly with error 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -4050,10 +3978,6 @@ exports[`TimeInput > renders correctly with error 1`] = `
 exports[`TimeInput > renders correctly with helper and error 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4066,41 +3990,41 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -4110,20 +4034,20 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -4136,30 +4060,30 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4167,23 +4091,23 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -4197,7 +4121,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r1b»"
         >
           label
@@ -4209,7 +4133,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
         </span>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="true"
         data-readonly="false"
@@ -4225,7 +4149,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -4233,7 +4157,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -4245,7 +4169,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -4253,7 +4177,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -4265,7 +4189,7 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"
@@ -4300,10 +4224,6 @@ exports[`TimeInput > renders correctly with helper and error 1`] = `
 exports[`TimeInput > renders correctly with label description and helper 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4316,41 +4236,41 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.emotion-2:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-disabled="false"]:hover,
-.emotion-2 [data-disabled="false"]:focus {
+.emotion-0[data-disabled="false"]:hover,
+.emotion-0 [data-disabled="false"]:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
@@ -4360,20 +4280,20 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   user-select: none;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-2[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+.emotion-0[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
   border-color: #92103f;
 }
 
-.emotion-4 {
+.emotion-2 {
   border: none;
   outline: none;
   background: transparent;
@@ -4386,30 +4306,30 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   caret-color: transparent;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-2:not(:disabled):hover {
   background-color: #e9eaeb;
   color: #727683;
 }
 
-.emotion-4:not(:disabled):active,
-.emotion-4:not(:disabled):focus {
+.emotion-2:not(:disabled):active,
+.emotion-2:not(:disabled):focus {
   background-color: #e9eaeb;
   color: #3f4250;
 }
 
-.emotion-4:-moz-read-only {
+.emotion-2:-moz-read-only {
   cursor: default;
 }
 
-.emotion-4:read-only {
+.emotion-2:read-only {
   cursor: default;
 }
 
-.emotion-4:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4417,23 +4337,23 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
   user-select: none;
 }
 
-.emotion-4[data-period="true"] {
+.emotion-2[data-period="true"] {
   color: #727683;
 }
 
-.emotion-4[data-period="true"][data-size="large"] {
+.emotion-2[data-period="true"][data-size="large"] {
   width: calc(1.5625rem + 0.125rem);
 }
 
-.emotion-4::-moz-selection {
+.emotion-2::-moz-selection {
   background: none;
 }
 
-.emotion-4::selection {
+.emotion-2::selection {
   background: none;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding-inline: 0.125rem;
 }
 
@@ -4447,7 +4367,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r16»"
         >
           label
@@ -4457,7 +4377,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
         </h1>
       </div>
       <div
-        class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
         data-disabled="false"
         data-error="false"
         data-readonly="false"
@@ -4473,7 +4393,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               aria-valuemax="23"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="hours-input"
               placeholder="00"
@@ -4481,7 +4401,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -4493,7 +4413,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="minutes-input"
               placeholder="00"
@@ -4501,7 +4421,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               value=""
             />
             <span
-              class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               :
             </span>
@@ -4513,7 +4433,7 @@ exports[`TimeInput > renders correctly with label description and helper 1`] = `
               aria-valuemax="59"
               aria-valuemin="0"
               autocomplete="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               data-testid="seconds-input"
               placeholder="00"

@@ -9,7 +9,17 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .emotion-5 {
@@ -296,29 +306,25 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-28 {
-  cursor: pointer;
-}
-
-.emotion-31 {
+.emotion-29 {
   width: 100%;
 }
 
-.emotion-31 .emotion-34 {
+.emotion-29 .emotion-32 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-31 .emotion-34:hover,
-.emotion-31 .emotion-34:focus,
-.emotion-31 .emotion-34:active {
+.emotion-29 .emotion-32:hover,
+.emotion-29 .emotion-32:focus,
+.emotion-29 .emotion-32:active {
   border-color: #d9dadd!important;
   outline: none;
 }
 
-.emotion-33 {
+.emotion-31 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -333,85 +339,85 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-33[data-size='small'] {
+.emotion-31[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-33[data-size='medium'] {
+.emotion-31[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-33[data-size='large'] {
+.emotion-31[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-33[data-state='neutral'] {
+.emotion-31[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-33[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-31[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-33[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-31[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-33[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-31[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-33[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-31[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-33[data-state='success'] {
+.emotion-31[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-33[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-31[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-33[data-state='success'][data-dropdownvisible='true'] {
+.emotion-31[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-33[data-state='danger'] {
+.emotion-31[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-33[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-31[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-33[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-31[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-33:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-31:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-33[data-readonly='true'] {
+.emotion-31[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-33[data-disabled='true'] {
+.emotion-31[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-35 {
+.emotion-33 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -420,7 +426,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   align-self: center;
 }
 
-.emotion-37 {
+.emotion-35 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -428,7 +434,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-70 {
+.emotion-66 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -447,21 +453,22 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
     >
       <div
         class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
       >
         <fieldset
           class="emotion-0 emotion-1"
         >
           <div
             class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
           >
             <legend
-              class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               Select your OS
             </legend>
             <div
-              class="uv_x6hyh50 uv_x6hyh5d"
-              style="--uv_3mg8xe0: repeat(3, minmax(0, 1fr)); --uv_3mg8xe1: repeat(3, minmax(0, 1fr)); --uv_3mg8xe2: repeat(3, minmax(0, 1fr)); --uv_3mg8xe3: repeat(3, minmax(0, 1fr)); --uv_3mg8xe4: repeat(3, minmax(0, 1fr)); --uv_3mg8xe5: repeat(3, minmax(0, 1fr));"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="emotion-4 emotion-5 emotion-6 uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -472,12 +479,14 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 data-has-label="false"
                 data-image="none"
                 data-type="radio"
+                flex="1"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 tabindex="0"
               >
                 <div
                   class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
                     aria-disabled="false"
@@ -526,15 +535,19 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                   class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-has-default-cursor="false"
                   data-has-label="false"
-                  style="--uv_4k0ekn0: 100%;"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                  width="100%"
                 >
                   <div
                     class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
-                    style="--uv_4k0ekn0: 100%; --uv_4k0ekn3: 1 1 auto;"
+                    flex="1 1 auto"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
                       class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
-                      style="--uv_4k0ekn0: 100%;"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                      width="100%"
                     >
                       <img
                         alt="Ubuntu"
@@ -545,10 +558,11 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                       />
                       <div
                         class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5j"
-                        style="--uv_4k0ekn0: 100%;"
+                        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                        width="100%"
                       >
                         <label
-                          class="emotion-28 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                           for="«r1»"
                         >
                           Ubuntu
@@ -557,7 +571,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-30 emotion-31 emotion-32"
+                      class="emotion-28 emotion-29 emotion-30"
                     >
                       <div
                         aria-controls="«r7»"
@@ -568,11 +582,12 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                         <div
                           aria-label="Ubuntu option"
                           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
                             aria-controls="«r7»"
                             aria-expanded="false"
-                            class="emotion-33 emotion-34"
+                            class="emotion-31 emotion-32"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
@@ -584,12 +599,13 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                             tabindex="0"
                           >
                             <div
-                              class="emotion-35 emotion-36 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                              class="emotion-33 emotion-34 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                             >
                               Ubuntu 20.04 Focal Fossa
                             </div>
                             <div
-                              class="emotion-37 emotion-38 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              class="emotion-35 emotion-36 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                             >
                               <svg
                                 aria-label="show dropdown"
@@ -619,12 +635,14 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 data-has-label="false"
                 data-image="none"
                 data-type="radio"
+                flex="1"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 tabindex="0"
               >
                 <div
                   class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
                     aria-disabled="false"
@@ -672,15 +690,19 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                   class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-has-default-cursor="false"
                   data-has-label="false"
-                  style="--uv_4k0ekn0: 100%;"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                  width="100%"
                 >
                   <div
                     class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
-                    style="--uv_4k0ekn0: 100%; --uv_4k0ekn3: 1 1 auto;"
+                    flex="1 1 auto"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
                       class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
-                      style="--uv_4k0ekn0: 100%;"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                      width="100%"
                     >
                       <img
                         alt="Debian"
@@ -691,10 +713,11 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                       />
                       <div
                         class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5j"
-                        style="--uv_4k0ekn0: 100%;"
+                        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                        width="100%"
                       >
                         <label
-                          class="emotion-28 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                           for="«rb»"
                         >
                           Debian
@@ -703,7 +726,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-30 emotion-31 emotion-32"
+                      class="emotion-28 emotion-29 emotion-30"
                     >
                       <div
                         aria-controls="«rh»"
@@ -714,11 +737,12 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                         <div
                           aria-label="Debian option"
                           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
                             aria-controls="«rh»"
                             aria-expanded="false"
-                            class="emotion-33 emotion-34"
+                            class="emotion-31 emotion-32"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
@@ -730,12 +754,13 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                             tabindex="0"
                           >
                             <p
-                              class="emotion-70 emotion-71 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                              class="emotion-66 emotion-67 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                             >
                               Select item
                             </p>
                             <div
-                              class="emotion-37 emotion-38 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              class="emotion-35 emotion-36 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                             >
                               <svg
                                 aria-label="show dropdown"
@@ -765,12 +790,14 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                 data-has-label="false"
                 data-image="none"
                 data-type="radio"
+                flex="1"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 tabindex="0"
               >
                 <div
                   class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <div
                     aria-disabled="false"
@@ -818,15 +845,19 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                   class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-has-default-cursor="false"
                   data-has-label="false"
-                  style="--uv_4k0ekn0: 100%;"
+                  style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                  width="100%"
                 >
                   <div
                     class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
-                    style="--uv_4k0ekn0: 100%; --uv_4k0ekn3: 1 1 auto;"
+                    flex="1 1 auto"
+                    style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                    width="100%"
                   >
                     <div
                       class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
-                      style="--uv_4k0ekn0: 100%;"
+                      style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                      width="100%"
                     >
                       <img
                         alt="CentOS"
@@ -837,10 +868,11 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                       />
                       <div
                         class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5j"
-                        style="--uv_4k0ekn0: 100%;"
+                        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
+                        width="100%"
                       >
                         <label
-                          class="emotion-28 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                           for="«rl»"
                         >
                           CentOS
@@ -849,7 +881,7 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-30 emotion-31 emotion-32"
+                      class="emotion-28 emotion-29 emotion-30"
                     >
                       <div
                         aria-controls="«rr»"
@@ -860,11 +892,12 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                         <div
                           aria-label="CentOS option"
                           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                          style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                         >
                           <div
                             aria-controls="«rr»"
                             aria-expanded="false"
-                            class="emotion-33 emotion-34"
+                            class="emotion-31 emotion-32"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
@@ -876,12 +909,13 @@ exports[`SelectableCardOptionGroupField > should render correctly 1`] = `
                             tabindex="0"
                           >
                             <p
-                              class="emotion-70 emotion-71 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                              class="emotion-66 emotion-67 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                             >
                               Select item
                             </p>
                             <div
-                              class="emotion-37 emotion-38 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              class="emotion-35 emotion-36 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                             >
                               <svg
                                 aria-label="show dropdown"
