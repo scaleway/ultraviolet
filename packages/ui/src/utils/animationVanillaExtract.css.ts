@@ -6,6 +6,5 @@ export const fadeInVanillaExtract = keyframes({
 })
 
 export const pingVanillaExtract = keyframes({
-  '75%': { opacity: 0, transform: 'scale(2)' },
   '100%': { opacity: 0, transform: 'scale(2)' },
 })
