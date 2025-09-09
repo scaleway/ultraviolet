@@ -84,7 +84,7 @@ const AdvancedPopover = () => {
   )
 }
 
-describe('Tooltip', () => {
+describe('tooltip', () => {
   test('should render correctly with required props', () =>
     shouldMatchEmotionSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test">

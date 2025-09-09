@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Carousel } from '..'
 
-describe('Carousel', () => {
+describe('carousel', () => {
   test(`renders correctly with default props`, () =>
     shouldMatchEmotionSnapshot(
       <Carousel>

@@ -9,7 +9,7 @@ import { Button, buttonSizes, buttonVariants } from '..'
 const MockOnClick = () => {}
 const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const
 
-describe('Button', () => {
+describe('button', () => {
   describe('variant-sentiment-disabled combination', () => {
     buttonVariants.forEach(variant => {
       EXTENDED_SENTIMENTS.forEach(sentiment => {

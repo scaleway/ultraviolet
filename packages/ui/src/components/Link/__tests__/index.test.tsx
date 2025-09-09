@@ -3,7 +3,7 @@ import { describe, test } from 'vitest'
 import type { ProminenceProps } from '..'
 import { Link, PROMINENCES } from '..'
 
-describe('Link', () => {
+describe('link', () => {
   test(`render correctly with no sentiment`, () =>
     shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
 

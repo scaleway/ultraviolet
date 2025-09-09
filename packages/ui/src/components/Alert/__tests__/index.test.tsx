@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { ALERT_SENTIMENTS, Alert } from '..'
 
-describe('Alert', () => {
+describe('alert', () => {
   beforeAll(() => {
     vi.spyOn(console, 'error').mockImplementation(() => null)
   })

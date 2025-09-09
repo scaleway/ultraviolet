@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { PasswordCheck } from '..'
 
-describe('PasswordCheck', () => {
+describe('passwordCheck', () => {
   test('render with custom values', () =>
     shouldMatchEmotionSnapshot(
       <PasswordCheck

@@ -18,7 +18,7 @@ const date = new Date('20 November 2000')
 
 const format = (value?: Date) => (value ? String(value.getFullYear()) : '1999')
 
-describe('Helper functions dateInput', () => {
+describe('helper functions dateInput', () => {
   test('getMonthFirstDay should work', () => {
     expect(getMonthFirstDay(1, 2000)).toBe(5)
   })

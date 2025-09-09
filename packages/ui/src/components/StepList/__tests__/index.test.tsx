@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { StepList } from '..'
 
-describe('StepList', () => {
+describe('stepList', () => {
   test('renders correctly ', () =>
     shouldMatchEmotionSnapshot(
       <StepList>

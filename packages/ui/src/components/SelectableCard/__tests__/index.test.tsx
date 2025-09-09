@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { SelectableCard } from '..'
 import illustration from './illustrationTest.svg'
 
-describe('SelectableCard', () => {
+describe('selectableCard', () => {
   const types = ['radio', 'checkbox'] as const
 
   types.forEach(type => {

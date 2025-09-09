@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Separator } from '..'
 
-describe('Separator', () => {
+describe('separator', () => {
   test(`renders correctly with default props`, () =>
     shouldMatchEmotionSnapshot(<Separator />))
   test(`renders correctly with custom thickness`, () =>

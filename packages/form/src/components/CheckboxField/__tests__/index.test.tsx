@@ -6,7 +6,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { CheckboxField } from '../..'
 import { Form } from '../../Form'
 
-describe('CheckboxField', () => {
+describe('checkboxField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(<CheckboxField name="test" />)
     expect(asFragment()).toMatchSnapshot()

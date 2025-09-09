@@ -6,7 +6,7 @@ import { CodeEditor } from '../CodeEditor'
 // which is causing the snapshot to fail randomly. Also, CodeEditor component
 // doesn't implement anything more than a Text all the rest comes from an external
 // library.
-describe.skip('CodeEditor', () => {
+describe.skip('codeEditor', () => {
   it('should render correctly with content', () =>
     shouldMatchEmotionSnapshot(
       <CodeEditor

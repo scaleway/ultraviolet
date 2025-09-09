@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Status, statusSentiments } from '..'
 
-describe('Status', () => {
+describe('status', () => {
   test.each(statusSentiments)('renders correctly with type="%s"', sentiment =>
     shouldMatchEmotionSnapshot(<Status sentiment={sentiment} />),
   )

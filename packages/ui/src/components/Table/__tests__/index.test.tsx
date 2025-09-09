@@ -49,8 +49,8 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
-describe('Table', () => {
-  test.skip('Should throw an error', () => {
+describe('table', () => {
+  test.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')
       .mockImplementation(() => {})
@@ -72,7 +72,7 @@ describe('Table', () => {
     consoleErrMock.mockRestore()
   })
 
-  test('Should render correctly', () =>
+  test('should render correctly', () =>
     shouldMatchEmotionSnapshot(
       <Table columns={columns}>
         <Table.Body>
@@ -89,7 +89,7 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with loading', () =>
+  test('should render correctly with loading', () =>
     shouldMatchEmotionSnapshot(
       <Table columns={columns} loading>
         <Table.Body>
@@ -106,7 +106,7 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
+  test('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(
       <Table columns={columns} selectable>
         <Table.Body>
@@ -154,7 +154,7 @@ describe('Table', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with sort then click', async () => {
+  test('should render correctly with sort then click', async () => {
     const LocalControlValue = ({
       children,
     }: {
@@ -240,7 +240,7 @@ describe('Table', () => {
     }
   })
 
-  test('Should render correctly with bad sort value', () => {
+  test('should render correctly with bad sort value', () => {
     const { asFragment } = renderWithTheme(
       <Table
         // @ts-expect-error Wrong value used
@@ -265,7 +265,7 @@ describe('Table', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
+  test('should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <Table columns={columns} selectable>
@@ -302,7 +302,7 @@ describe('Table', () => {
     )
   })
 
-  test('Should render correctly with selectDisabled as a string', () =>
+  test('should render correctly with selectDisabled as a string', () =>
     shouldMatchEmotionSnapshot(
       <Table columns={columns}>
         <Table.Body>
@@ -319,7 +319,7 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with stipped', () =>
+  test('should render correctly with stipped', () =>
     shouldMatchEmotionSnapshot(
       <Table bordered columns={columns} stripped>
         <Table.Body>
@@ -336,7 +336,7 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with info', () =>
+  test('should render correctly with info', () =>
     shouldMatchEmotionSnapshot(
       <Table
         bordered
@@ -360,7 +360,7 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with highlight animation on Table.Row', () =>
+  test('should render correctly with highlight animation on Table.Row', () =>
     shouldMatchEmotionSnapshot(
       <Table
         columns={[
@@ -382,7 +382,7 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with selectable and shift click', async () => {
+  test('should render correctly with selectable and shift click', async () => {
     const { asFragment } = renderWithTheme(
       <Table columns={columns} selectable>
         <Table.Body>

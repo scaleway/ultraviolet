@@ -8,7 +8,7 @@ import {
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Drawer } from '..'
 
-describe('Drawer', () => {
+describe('drawer', () => {
   beforeEach(() => {
     vi.clearAllMocks()
   })

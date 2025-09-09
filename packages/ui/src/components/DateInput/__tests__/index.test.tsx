@@ -8,7 +8,7 @@ import { DateInput } from '..'
 
 tk.freeze(new Date(1609503120000))
 
-describe('DateInput', () => {
+describe('dateInput', () => {
   test('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(
       <DateInput

@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { FAQ } from '..'
 
-describe('FAQ', () => {
+describe('fAQ', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(<FAQ description="Description" title="Title" />))
   it('should work with notes', () =>

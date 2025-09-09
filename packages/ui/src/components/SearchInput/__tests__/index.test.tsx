@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { SearchInput } from '..'
 
-describe('SearchInput', () => {
+describe('searchInput', () => {
   test('renders correctly without children props', () =>
     shouldMatchEmotionSnapshot(
       <SearchInput

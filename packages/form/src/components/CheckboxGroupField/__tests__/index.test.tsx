@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { CheckboxGroupField } from '..'
 
-describe('CheckboxField', () => {
+describe('checkboxField', () => {
   test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <CheckboxGroupField legend="Label" name="Checkbox" onChange={() => {}}>

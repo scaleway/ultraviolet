@@ -3,7 +3,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { KEYS_MATCH, Key } from '../index'
 
-describe('Key', () => {
+describe('key', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Key>A</Key>))
   test('renders primary', () =>
     shouldMatchEmotionSnapshot(<Key sentiment="primary">A</Key>))

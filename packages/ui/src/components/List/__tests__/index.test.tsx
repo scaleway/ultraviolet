@@ -48,7 +48,7 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
-describe('List', () => {
+describe('list', () => {
   beforeEach(() => {
     vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
   })
@@ -56,7 +56,7 @@ describe('List', () => {
   afterEach(() => {
     vi.spyOn(global.Math, 'random').mockRestore()
   })
-  test.skip('Should throw an error', () => {
+  test.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')
       .mockImplementation(() => {})
@@ -79,7 +79,7 @@ describe('List', () => {
     consoleErrMock.mockRestore()
   })
 
-  test('Should render correctly', () =>
+  test('should render correctly', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -94,7 +94,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with sort', () =>
+  test('should render correctly with sort', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -109,7 +109,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with row expanded', () =>
+  test('should render correctly with row expanded', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -124,7 +124,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with selectable', () =>
+  test('should render correctly with selectable', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -139,7 +139,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with loading', () =>
+  test('should render correctly with loading', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns} loading>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -154,7 +154,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with loading with selectable', () =>
+  test('should render correctly with loading with selectable', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns} loading selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -169,7 +169,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with disabled rows', () =>
+  test('should render correctly with disabled rows', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -184,7 +184,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with expandable rows', () =>
+  test('should render correctly with expandable rows', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(
@@ -206,7 +206,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with sentiment rows', () =>
+  test('should render correctly with sentiment rows', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(
@@ -223,7 +223,7 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
+  test('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -265,7 +265,7 @@ describe('List', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with sort then click', async () => {
+  test('should render correctly with sort then click', async () => {
     const LocalControlValue = ({
       children,
     }: {
@@ -348,7 +348,7 @@ describe('List', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with selectable but then change theme', () => {
+  test('should render correctly with selectable but then change theme', () => {
     const { rerender } = render(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -406,7 +406,7 @@ describe('List', () => {
     )
   })
 
-  test('Should render correctly with isExpandable rows then click', async () => {
+  test('should render correctly with isExpandable rows then click', async () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns}>
         {data.map(
@@ -431,7 +431,7 @@ describe('List', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with isExpandable and autoClose rows then click', async () => {
+  test('should render correctly with isExpandable and autoClose rows then click', async () => {
     const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
         {data.map(
@@ -458,7 +458,7 @@ describe('List', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with bad sort value', () => {
+  test('should render correctly with bad sort value', () => {
     shouldMatchEmotionSnapshot(
       <List
         // @ts-expect-error Wrong value used
@@ -480,7 +480,7 @@ describe('List', () => {
     )
   })
 
-  test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
+  test('should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <List columns={columns} selectable>
@@ -539,7 +539,7 @@ describe('List', () => {
     )
   })
 
-  test('Should unregister expandable row if unmount', () => {
+  test('should unregister expandable row if unmount', () => {
     const { rerender } = render(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -573,7 +573,7 @@ describe('List', () => {
     )
   })
 
-  test('Should expand a row by pressing Space', () => {
+  test('should expand a row by pressing Space', () => {
     const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
         {data.map(
@@ -607,7 +607,7 @@ describe('List', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should not collapse a row by clicking on expandable content', () => {
+  test('should not collapse a row by clicking on expandable content', () => {
     const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
         {data.map(
@@ -634,7 +634,7 @@ describe('List', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with info', () => {
+  test('should render correctly with info', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, info: 'example' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -650,7 +650,7 @@ describe('List', () => {
     )
   })
 
-  test('Should render correctly with selectable with shift click for multiselect', async () => {
+  test('should render correctly with selectable with shift click for multiselect', async () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns} onSelectedChange={vi.fn()} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (

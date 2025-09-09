@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Radio } from '..'
 
-describe('Radio', () => {
+describe('radio', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <Radio label="Choice" name="radio" onChange={() => {}} value="choice" />,

@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { CheckboxGroup } from '..'
 
-describe('CheckboxGroup', () => {
+describe('checkboxGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}}>

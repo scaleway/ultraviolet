@@ -16,7 +16,7 @@ const HookWrapper = ({ children }: { children: ReactNode }) => {
   )
 }
 
-describe('ErrorProvider', () => {
+describe('errorProvider', () => {
   test('renders correctly ', () => {
     const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(

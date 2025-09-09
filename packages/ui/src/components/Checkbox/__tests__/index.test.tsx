@@ -12,7 +12,7 @@ type Props = {
   children: (options: ChildrenProps) => React.ReactNode
 }
 
-describe('Checkbox', () => {
+describe('checkbox', () => {
   const LocalControlValue = ({ defaultChecked = false, children }: Props) => {
     const [checked, setCheked] = useReducer(check => !check, defaultChecked)
 

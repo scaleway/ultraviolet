@@ -20,7 +20,7 @@ vi.spyOn(nivo, 'ResponsiveWrapper').mockImplementation(
   ),
 )
 
-describe('LineChart', () => {
+describe('lineChart', () => {
   test('renders correctly without data', () =>
     shouldMatchEmotionSnapshot(<LineChart xScale={{ type: 'linear' }} />)) // default xScale type (time) triggers test failure !?!
 

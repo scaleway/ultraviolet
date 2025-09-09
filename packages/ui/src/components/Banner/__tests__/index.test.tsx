@@ -7,7 +7,7 @@ import { Banner } from '..'
 
 // import image from '../__stories__/Image.png'
 
-describe('Banner', () => {
+describe('banner', () => {
   test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(<Banner title="Title">Description</Banner>))
 

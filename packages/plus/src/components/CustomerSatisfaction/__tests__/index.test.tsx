@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { CustomerSatisfaction } from '..'
 
-describe('CustomerSatisfaction', () => {
+describe('customerSatisfaction', () => {
   it('should work with parameters', () => {
     const { asFragment } = renderWithTheme(
       <CustomerSatisfaction onChange={vi.fn()} value={4} />,

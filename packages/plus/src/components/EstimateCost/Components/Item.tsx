@@ -18,7 +18,7 @@ import {
 } from 'react'
 import {
   OverlayRow,
-  PriceCell,
+  priceCell,
   Cell as StyledCell,
   StyledDiv,
   StyledLeftSide,
@@ -91,7 +91,7 @@ const StyledTooltip = styled(Tooltip)`
 `
 
 const StyledPriceCell = styled(StyledCell)`
-  ${({ theme }) => PriceCell(theme)}
+  ${({ theme }) => priceCell(theme)}
 `
 
 type ExtraProps = {

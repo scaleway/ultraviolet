@@ -2,7 +2,7 @@ import { renderWithTheme } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Expandable } from '..'
 
-describe('Expandable', () => {
+describe('expandable', () => {
   test('renders correctly with default values', () => {
     const { asFragment } = renderWithTheme(
       <Expandable>Sample Expandable</Expandable>,

@@ -22,7 +22,7 @@ const optionsSelect = [
   },
 ]
 
-describe('UnitInputField', () => {
+describe('unitInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <UnitInputField

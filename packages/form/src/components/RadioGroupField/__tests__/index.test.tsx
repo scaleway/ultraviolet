@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { RadioGroupField } from '..'
 
-describe('RadioField', () => {
+describe('radioField', () => {
   test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <RadioGroupField

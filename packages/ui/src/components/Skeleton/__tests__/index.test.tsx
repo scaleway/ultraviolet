@@ -2,7 +2,7 @@ import { renderWithTheme } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Skeleton, skeletonTypes } from '..'
 
-describe('Skeleton', () => {
+describe('skeleton', () => {
   test('renders default variant', () => {
     const { asFragment } = renderWithTheme(<Skeleton />)
     expect(asFragment()).toMatchSnapshot()

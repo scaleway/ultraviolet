@@ -14,7 +14,7 @@ const disclosure = (
   </button>
 )
 
-describe('Menu', () => {
+describe('menu', () => {
   beforeEach(() => {
     vi.clearAllMocks()
   })
@@ -331,7 +331,7 @@ describe('Menu', () => {
       ))
   })
 
-  describe('Menu.Item', () => {
+  describe('menu.Item', () => {
     test(`render with default props`, () =>
       shouldMatchEmotionSnapshot(
         <Menu disclosure={disclosure} visible>

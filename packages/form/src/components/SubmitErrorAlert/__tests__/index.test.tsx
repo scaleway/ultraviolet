@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Submit, SubmitErrorAlert } from '../..'
 
-describe('SubmitErrorAlert', () => {
+describe('submitErrorAlert', () => {
   test('should render nothing if no error', () => {
     const { asFragment } = renderWithForm(<SubmitErrorAlert />)
     expect(asFragment()).toMatchSnapshot()

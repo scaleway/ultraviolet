@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { SelectInputField } from '..'
 import { cities, planets } from './resources'
 
-describe('SelectInputField', () => {
+describe('selectInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectInputField name="test" options={cities} />,

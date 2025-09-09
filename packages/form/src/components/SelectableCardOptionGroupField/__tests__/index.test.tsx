@@ -10,7 +10,7 @@ import {
   ubuntuOptions,
 } from '../__stories__/constants'
 
-describe('SelectableCardOptionGroupField', () => {
+describe('selectableCardOptionGroupField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardOptionGroupField

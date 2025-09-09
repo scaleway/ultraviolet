@@ -10,7 +10,7 @@ import {
   dataWithLegendsDetailsAndDiscount,
 } from '../__stories__/mockData'
 
-describe('PieChart', () => {
+describe('pieChart', () => {
   beforeAll(() => {
     // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
     window.ResizeObserver = vi.fn().mockImplementation(() => ({

@@ -7,7 +7,7 @@ import { Submit } from '../..'
 import { Form } from '../../Form'
 import { TextInputField } from '..'
 
-describe('TextInputField', () => {
+describe('textInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TextInputField label="Test" name="test" />,
