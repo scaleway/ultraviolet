@@ -1,32 +1,11 @@
 # @ultraviolet/nextjs
 
-## 2.0.8
+## 2.0.0-beta.7
 
 ### Patch Changes
 
-- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
-  Updated dependency `@types/react-dom` to `19.2.1`.
-  Updated dependency `react` to `19.2.0`.
-  Updated dependency `react-dom` to `19.2.0`.
-
-- [#5711](https://github.com/scaleway/ultraviolet/pull/5711) [`a2117c3`](https://github.com/scaleway/ultraviolet/commit/a2117c316c806997af7ddcd8fef0701fa0142676) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.5.6`.
-  Updated dependency `eslint-config-next` to `15.5.6`.
-- Updated dependencies [[`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918), [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb)]:
-  - @ultraviolet/ui@2.1.6
-
-## 2.0.7
-
-### Patch Changes
-
-- Updated dependencies [[`e20eeab`](https://github.com/scaleway/ultraviolet/commit/e20eeab50d142fee1ef05260b01eb7eb75bd9976)]:
-  - @ultraviolet/ui@2.1.5
-
-## 2.0.6
-
-### Patch Changes
-
-- [#5604](https://github.com/scaleway/ultraviolet/pull/5604) [`e7604c1`](https://github.com/scaleway/ultraviolet/commit/e7604c1337608377007c818d60cdf2ea4c8fc5bc) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.5.4`.
-  Updated dependency `eslint-config-next` to `15.5.4`.
+- Updated dependencies [[`7de4324`](https://github.com/scaleway/ultraviolet/commit/7de43248e0591d95b510adcdb79d559862de9eb6)]:
+  - @ultraviolet/ui@3.0.0-beta.7
 
 ## 2.0.5
 

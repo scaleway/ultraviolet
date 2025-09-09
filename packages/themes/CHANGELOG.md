@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.0-beta.1
+
+### Minor Changes
+
+- [#5513](https://github.com/scaleway/ultraviolet/pull/5513) [`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2) Thanks [@iManu](https://github.com/iManu)! - add simple root selector for generated css
+
 ## 2.1.0-beta.0
 
 ### Minor Changes
