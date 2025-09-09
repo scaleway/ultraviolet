@@ -1658,7 +1658,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-6[data-controls='false']>.emotion-8 {
+.emotion-6[data-controls='false']>.emotion-9 {
   border-width: 0;
 }
 
@@ -1674,16 +1674,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   height: 3rem;
 }
 
-.emotion-9 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-8 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -1691,7 +1682,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-10 {
   outline: none;
   border: none;
   padding: 0;
@@ -1706,18 +1697,18 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: none;
 }
 
-.emotion-11[data-has-unit='true'] {
+.emotion-10[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-11::-webkit-outer-spin-button,
-.emotion-11::-webkit-inner-spin-button {
+.emotion-10::-webkit-outer-spin-button,
+.emotion-10::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-10 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -1725,15 +1716,15 @@ exports[`SliderField > should trigger events correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-11[data-size='small'] {
+.emotion-10[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-11[data-size='medium'] {
+.emotion-10[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-11[data-size='large'] {
+.emotion-10[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1741,34 +1732,34 @@ exports[`SliderField > should trigger events correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-11:-moz-read-only {
+.emotion-10:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:read-only {
+.emotion-10:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-11:-moz-read-only~.exvap482 {
+.emotion-10:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:read-only~.exvap482 {
+.emotion-10:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-11:disabled {
+.emotion-10:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-11:disabled~.exvap482 {
+.emotion-10:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1777,16 +1768,16 @@ exports[`SliderField > should trigger events correctly 1`] = `
   user-select: none;
 }
 
-.emotion-11:placeholder-shown~.exvap482 {
+.emotion-10:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-11[data-controls='false'] {
+.emotion-10[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-13 {
+.emotion-12 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1804,31 +1795,31 @@ exports[`SliderField > should trigger events correctly 1`] = `
   outline: none;
 }
 
-.emotion-13:focus::-moz-range-thumb {
+.emotion-12:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-13:focus::-webkit-slider-thumb {
+.emotion-12:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-13[data-error='true'] {
+.emotion-12[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-13[data-direction='column'] {
+.emotion-12[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-13[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-13::-moz-range-track {
+.emotion-12::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1839,7 +1830,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-13::-moz-range-thumb {
+.emotion-12::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1861,20 +1852,20 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-13::-moz-range-thumb:hover,
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
+.emotion-12::-moz-range-thumb:hover,
+.emotion-12::-moz-range-thumb:active,
+.emotion-12::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
+.emotion-12::-moz-range-thumb:active,
+.emotion-12::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-13::-webkit-slider-runnable-track {
+.emotion-12::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1885,7 +1876,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-13::-webkit-slider-thumb {
+.emotion-12::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1907,14 +1898,14 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-13::-webkit-slider-thumb:hover,
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
+.emotion-12::-webkit-slider-thumb:hover,
+.emotion-12::-webkit-slider-thumb:active,
+.emotion-12::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
+.emotion-12::-webkit-slider-thumb:active,
+.emotion-12::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -1971,11 +1962,12 @@ exports[`SliderField > should trigger events correctly 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-8 emotion-9 emotion-10"
+                    class="emotion-8 emotion-9 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+                    style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input"
-                      class="emotion-11 emotion-12"
+                      class="emotion-10 emotion-11"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -2004,7 +1996,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
           >
             <input
               aria-label="test"
-              class="emotion-13 emotion-14"
+              class="emotion-12 emotion-13"
               data-direction="column"
               data-error="false"
               id="«rt»"
