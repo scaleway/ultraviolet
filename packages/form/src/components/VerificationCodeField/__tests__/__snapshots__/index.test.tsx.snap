@@ -2,91 +2,7 @@
 
 exports[`verificationCodeField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -94,7 +10,7 @@ exports[`verificationCodeField > should render correctly 1`] = `
       style="display: contents;"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="uv_1k9synd5"
       >
         <div
           class="uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -117,7 +33,7 @@ exports[`verificationCodeField > should render correctly 1`] = `
             aria-invalid="false"
             aria-label="Verification code 0"
             autocomplete="off"
-            class="emotion-2 emotion-3"
+            class="uv_1k9synd2 uv_1k9synd4"
             data-success="false"
             data-testid="0"
             id="verification-code-input-0"
@@ -131,7 +47,7 @@ exports[`verificationCodeField > should render correctly 1`] = `
             aria-invalid="false"
             aria-label="Verification code 1"
             autocomplete="off"
-            class="emotion-2 emotion-3"
+            class="uv_1k9synd2 uv_1k9synd4"
             data-success="false"
             data-testid="1"
             id="verification-code-input-1"
@@ -145,7 +61,7 @@ exports[`verificationCodeField > should render correctly 1`] = `
             aria-invalid="false"
             aria-label="Verification code 2"
             autocomplete="off"
-            class="emotion-2 emotion-3"
+            class="uv_1k9synd2 uv_1k9synd4"
             data-success="false"
             data-testid="2"
             id="verification-code-input-2"
@@ -159,7 +75,7 @@ exports[`verificationCodeField > should render correctly 1`] = `
             aria-invalid="false"
             aria-label="Verification code 3"
             autocomplete="off"
-            class="emotion-2 emotion-3"
+            class="uv_1k9synd2 uv_1k9synd4"
             data-success="false"
             data-testid="3"
             id="verification-code-input-3"
