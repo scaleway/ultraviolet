@@ -2,114 +2,21 @@
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'danger' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -122,7 +29,9 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -139,114 +48,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'info' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_info__1b838gx2 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_info__1b838gx2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_info__vbm0wq7 styles_size_large__vbm0wq8 styles_undefined_compound_6__vbm0wqq"
@@ -258,7 +74,9 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -275,114 +93,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'neutral' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_neutral__1b838gx5 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_neutral__1b838gx5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_strong__vbm0wqh styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_large__vbm0wq8 styles_undefined_compound_9__vbm0wqt"
@@ -397,7 +122,9 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -414,114 +141,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'success' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_success__1b838gx3 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_success__1b838gx3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_success__vbm0wq4 styles_size_large__vbm0wq8 styles_undefined_compound_3__vbm0wqn"
@@ -533,7 +167,9 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -550,114 +186,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'warning' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_warning__1b838gx4 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_warning__1b838gx4 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_warning__vbm0wq6 styles_size_large__vbm0wq8 styles_undefined_compound_5__vbm0wqp"
@@ -670,7 +213,9 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -687,114 +232,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -807,7 +259,9 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -830,114 +284,21 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
 
 exports[`alert > renders correctly with children as component 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -950,7 +311,9 @@ exports[`alert > renders correctly with children as component 1`] = `
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p>
               Sample Alert
@@ -965,114 +328,21 @@ exports[`alert > renders correctly with children as component 1`] = `
 
 exports[`alert > renders correctly with closable and onClose 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -1085,7 +355,9 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -1116,114 +388,21 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
 
 exports[`alert > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -1236,7 +415,9 @@ exports[`alert > renders correctly with default values 1`] = `
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -1253,211 +434,21 @@ exports[`alert > renders correctly with default values 1`] = `
 
 exports[`alert > renders correctly with disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -1470,7 +461,9 @@ exports[`alert > renders correctly with disabled 1`] = `
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <p
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
@@ -1494,114 +487,21 @@ exports[`alert > renders correctly with disabled 1`] = `
 
 exports[`alert > renders correctly with title 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles__1b838gx6 emotion-2 emotion-1"
+        class="styles__1b838gx6 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          flex="1 1 auto"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_4__vbm0wqo"
@@ -1614,7 +514,9 @@ exports[`alert > renders correctly with title 1`] = `
             />
           </svg>
           <div
-            class="styles__1b838gx7 emotion-6 emotion-1"
+            class="styles__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            flex="1 1 auto"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_bodyStronger__m4c9owr style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"

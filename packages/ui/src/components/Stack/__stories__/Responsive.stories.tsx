@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../Stack'
-import { DivWithBackground } from './DivWithBackground'
+import { styledDiv } from './DivWithBackground.css'
 
 export const Responsive: StoryFn = props => (
   <Stack
@@ -8,9 +8,15 @@ export const Responsive: StoryFn = props => (
     direction={{ small: 'row', xsmall: 'row', xxsmall: 'column' }}
     gap={{ small: 3, xsmall: 2, xxsmall: 1 }}
   >
-    <DivWithBackground data-width-full>First child</DivWithBackground>
-    <DivWithBackground data-width-full>Second child</DivWithBackground>
-    <DivWithBackground data-width-full>Third child</DivWithBackground>
+    <div className={styledDiv} data-width-full>
+      First child
+    </div>
+    <div className={styledDiv} data-width-full>
+      Second child
+    </div>
+    <div className={styledDiv} data-width-full>
+      Third child
+    </div>
   </Stack>
 )
 

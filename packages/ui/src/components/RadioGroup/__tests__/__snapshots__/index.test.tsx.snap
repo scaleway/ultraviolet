@@ -3,131 +3,16 @@
 exports[`radioGroup > renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
+.emotion-2 {
   cursor: text;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-14 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -143,47 +28,47 @@ exports[`radioGroup > renders correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-14[aria-disabled='false'],
-.emotion-14[aria-disabled='false']>label {
+.emotion-6[aria-disabled='false'],
+.emotion-6[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 .emotion-13 {
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 .emotion-13 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true']>label,
-.emotion-14[aria-disabled='true'] .emotion-17 {
+.emotion-6[aria-disabled='true']>label,
+.emotion-6[aria-disabled='true'] .emotion-9 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-6[aria-disabled='true'] .emotion-11 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-6[aria-disabled='true'] .emotion-11 .emotion-13 {
   fill: #f3f3f4;
 }
 
-.emotion-16 {
+.emotion-8 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -193,7 +78,7 @@ exports[`radioGroup > renders correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-16+.emotion-19 .emotion-23 {
+.emotion-8+.emotion-11 .emotion-15 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -203,48 +88,48 @@ exports[`radioGroup > renders correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-16:checked+svg .emotion-23 {
+.emotion-8:checked+svg .emotion-15 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='false'][aria-invalid='false']+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='true'][aria-invalid='false']+.emotion-11 {
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+.emotion-8[aria-invalid='true']:not([aria-disabled='true'])+.emotion-11 {
   fill: #e51963;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 .emotion-13 {
   fill: #f1eefc;
 }
 
-.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+.emotion-8[aria-disabled='false']:focus-visible+.emotion-11 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 .emotion-13 {
   fill: #ffebf2;
 }
 
-.emotion-18 {
+.emotion-10 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -253,11 +138,11 @@ exports[`radioGroup > renders correctly 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-18 .emotion-21 {
+.emotion-10 .emotion-13 {
   fill: #ffffff;
 }
 
-.emotion-24 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -268,32 +153,37 @@ exports[`radioGroup > renders correctly 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <fieldset
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <legend
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="true"
                 data-error="false"
               >
@@ -301,14 +191,14 @@ exports[`radioGroup > renders correctly 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«r1»"
                   name="radio"
                   type="radio"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -319,13 +209,13 @@ exports[`radioGroup > renders correctly 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -333,7 +223,7 @@ exports[`radioGroup > renders correctly 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«r1»"
                 >
                   Radio 1
@@ -341,25 +231,26 @@ exports[`radioGroup > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«r4»"
                   name="radio"
                   type="radio"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -370,13 +261,13 @@ exports[`radioGroup > renders correctly 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -384,7 +275,7 @@ exports[`radioGroup > renders correctly 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«r4»"
                 >
                   Radio 2
@@ -402,131 +293,16 @@ exports[`radioGroup > renders correctly 1`] = `
 exports[`radioGroup > renders correctly with direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
+.emotion-2 {
   cursor: text;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-14 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -542,47 +318,47 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-14[aria-disabled='false'],
-.emotion-14[aria-disabled='false']>label {
+.emotion-6[aria-disabled='false'],
+.emotion-6[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 .emotion-13 {
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 .emotion-13 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true']>label,
-.emotion-14[aria-disabled='true'] .emotion-17 {
+.emotion-6[aria-disabled='true']>label,
+.emotion-6[aria-disabled='true'] .emotion-9 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-6[aria-disabled='true'] .emotion-11 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-6[aria-disabled='true'] .emotion-11 .emotion-13 {
   fill: #f3f3f4;
 }
 
-.emotion-16 {
+.emotion-8 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -592,7 +368,7 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
   border-width: 0;
 }
 
-.emotion-16+.emotion-19 .emotion-23 {
+.emotion-8+.emotion-11 .emotion-15 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -602,48 +378,48 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
   transform: scale(0);
 }
 
-.emotion-16:checked+svg .emotion-23 {
+.emotion-8:checked+svg .emotion-15 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='false'][aria-invalid='false']+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='true'][aria-invalid='false']+.emotion-11 {
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+.emotion-8[aria-invalid='true']:not([aria-disabled='true'])+.emotion-11 {
   fill: #e51963;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 .emotion-13 {
   fill: #f1eefc;
 }
 
-.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+.emotion-8[aria-disabled='false']:focus-visible+.emotion-11 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 .emotion-13 {
   fill: #ffebf2;
 }
 
-.emotion-18 {
+.emotion-10 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -652,11 +428,11 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-18 .emotion-21 {
+.emotion-10 .emotion-13 {
   fill: #ffffff;
 }
 
-.emotion-24 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -667,32 +443,37 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <fieldset
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <legend
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="true"
                 data-error="false"
               >
@@ -700,14 +481,14 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«r8»"
                   name="radio"
                   type="radio"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -718,13 +499,13 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -732,7 +513,7 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«r8»"
                 >
                   Radio 1
@@ -740,25 +521,26 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
               </div>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«rb»"
                   name="radio"
                   type="radio"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -769,13 +551,13 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -783,7 +565,7 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«rb»"
                 >
                   Radio 2
@@ -801,131 +583,16 @@ exports[`radioGroup > renders correctly with direction row 1`] = `
 exports[`radioGroup > renders correctly with error content 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
+.emotion-2 {
   cursor: text;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-14 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -941,47 +608,47 @@ exports[`radioGroup > renders correctly with error content 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-14[aria-disabled='false'],
-.emotion-14[aria-disabled='false']>label {
+.emotion-6[aria-disabled='false'],
+.emotion-6[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 .emotion-13 {
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 .emotion-13 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true']>label,
-.emotion-14[aria-disabled='true'] .emotion-17 {
+.emotion-6[aria-disabled='true']>label,
+.emotion-6[aria-disabled='true'] .emotion-9 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-6[aria-disabled='true'] .emotion-11 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-6[aria-disabled='true'] .emotion-11 .emotion-13 {
   fill: #f3f3f4;
 }
 
-.emotion-16 {
+.emotion-8 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -991,7 +658,7 @@ exports[`radioGroup > renders correctly with error content 1`] = `
   border-width: 0;
 }
 
-.emotion-16+.emotion-19 .emotion-23 {
+.emotion-8+.emotion-11 .emotion-15 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1001,48 +668,48 @@ exports[`radioGroup > renders correctly with error content 1`] = `
   transform: scale(0);
 }
 
-.emotion-16:checked+svg .emotion-23 {
+.emotion-8:checked+svg .emotion-15 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='false'][aria-invalid='false']+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='true'][aria-invalid='false']+.emotion-11 {
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+.emotion-8[aria-invalid='true']:not([aria-disabled='true'])+.emotion-11 {
   fill: #e51963;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 .emotion-13 {
   fill: #f1eefc;
 }
 
-.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+.emotion-8[aria-disabled='false']:focus-visible+.emotion-11 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 .emotion-13 {
   fill: #ffebf2;
 }
 
-.emotion-18 {
+.emotion-10 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1051,11 +718,11 @@ exports[`radioGroup > renders correctly with error content 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-18 .emotion-21 {
+.emotion-10 .emotion-13 {
   fill: #ffffff;
 }
 
-.emotion-24 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1066,32 +733,37 @@ exports[`radioGroup > renders correctly with error content 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <fieldset
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <legend
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="true"
                 data-error="true"
               >
@@ -1099,14 +771,14 @@ exports[`radioGroup > renders correctly with error content 1`] = `
                   aria-disabled="false"
                   aria-invalid="true"
                   checked=""
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«rn»"
                   name="radio"
                   type="radio"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -1117,13 +789,13 @@ exports[`radioGroup > renders correctly with error content 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -1131,7 +803,7 @@ exports[`radioGroup > renders correctly with error content 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«rn»"
                 >
                   Radio 1
@@ -1139,25 +811,26 @@ exports[`radioGroup > renders correctly with error content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="false"
                 data-error="true"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="true"
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«rq»"
                   name="radio"
                   type="radio"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -1168,13 +841,13 @@ exports[`radioGroup > renders correctly with error content 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -1182,7 +855,7 @@ exports[`radioGroup > renders correctly with error content 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«rq»"
                 >
                   Radio 2
@@ -1205,131 +878,16 @@ exports[`radioGroup > renders correctly with error content 1`] = `
 exports[`radioGroup > renders correctly with helper content 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
+.emotion-2 {
   cursor: text;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-14 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1345,47 +903,47 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-14[aria-disabled='false'],
-.emotion-14[aria-disabled='false']>label {
+.emotion-6[aria-disabled='false'],
+.emotion-6[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9+.emotion-11 .emotion-13 {
   fill: #e5dbfd;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 {
   fill: #b3144d;
 }
 
-.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true']+.emotion-19 .emotion-21 {
+.emotion-6:hover[aria-disabled='false'] .emotion-9[aria-invalid='true']+.emotion-11 .emotion-13 {
   fill: #ffd3e3;
 }
 
-.emotion-14[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-14[aria-disabled='true']>label,
-.emotion-14[aria-disabled='true'] .emotion-17 {
+.emotion-6[aria-disabled='true']>label,
+.emotion-6[aria-disabled='true'] .emotion-9 {
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 {
+.emotion-6[aria-disabled='true'] .emotion-11 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
+.emotion-6[aria-disabled='true'] .emotion-11 .emotion-13 {
   fill: #f3f3f4;
 }
 
-.emotion-16 {
+.emotion-8 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -1395,7 +953,7 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
   border-width: 0;
 }
 
-.emotion-16+.emotion-19 .emotion-23 {
+.emotion-8+.emotion-11 .emotion-15 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1405,48 +963,48 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
   transform: scale(0);
 }
 
-.emotion-16:checked+svg .emotion-23 {
+.emotion-8:checked+svg .emotion-15 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-16:checked[aria-disabled='false'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='false'][aria-invalid='false']+.emotion-11 {
   fill: #8c40ef;
 }
 
-.emotion-16:checked[aria-disabled='true'][aria-invalid='false']+.emotion-19 {
+.emotion-8:checked[aria-disabled='true'][aria-invalid='false']+.emotion-11 {
   fill: #d8c5fc;
 }
 
-.emotion-16[aria-invalid='true']:not([aria-disabled='true'])+.emotion-19 {
+.emotion-8[aria-invalid='true']:not([aria-disabled='true'])+.emotion-11 {
   fill: #e51963;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-16[aria-disabled='false']:active+.emotion-19 .emotion-21 {
+.emotion-8[aria-disabled='false']:active+.emotion-11 .emotion-13 {
   fill: #f1eefc;
 }
 
-.emotion-16[aria-disabled='false']:focus-visible+.emotion-19 {
+.emotion-8[aria-disabled='false']:focus-visible+.emotion-11 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
+.emotion-8[aria-invalid='true']:focus+.emotion-11 .emotion-13 {
   fill: #ffebf2;
 }
 
-.emotion-18 {
+.emotion-10 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -1455,11 +1013,11 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-18 .emotion-21 {
+.emotion-10 .emotion-13 {
   fill: #ffffff;
 }
 
-.emotion-24 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1470,32 +1028,37 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <fieldset
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <div
-            class="emotion-6 emotion-1"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <legend
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
           </div>
           <div
-            class="emotion-10 emotion-1"
+            class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="true"
                 data-error="false"
               >
@@ -1503,14 +1066,14 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
                   aria-disabled="false"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«rf»"
                   name="radio"
                   type="radio"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -1521,13 +1084,13 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -1535,7 +1098,7 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«rf»"
                 >
                   Radio 1
@@ -1543,25 +1106,26 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-14 emotion-15"
+                class="emotion-6 emotion-7"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-16 emotion-17"
+                  class="emotion-8 emotion-9"
                   id="«ri»"
                   name="radio"
                   type="radio"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-18 emotion-19"
+                  class="emotion-10 emotion-11"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -1572,13 +1136,13 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-20 emotion-21"
+                      class="emotion-12 emotion-13"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-22 emotion-23"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="5"
@@ -1586,7 +1150,7 @@ exports[`radioGroup > renders correctly with helper content 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-24 emotion-25 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                   for="«ri»"
                 >
                   Radio 2

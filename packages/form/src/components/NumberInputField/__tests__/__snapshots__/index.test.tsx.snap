@@ -7,29 +7,6 @@ exports[`numberInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -44,37 +21,53 @@ exports[`numberInputField > should render correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   border-color: #792dd4;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-6 {
+.emotion-0[data-controls='false']>.emotion-4 {
   border-width: 0;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-2 {
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-2[data-size='small'] {
@@ -87,45 +80,10 @@ exports[`numberInputField > should render correctly 1`] = `
 
 .emotion-2[data-size='large'] {
   height: 3rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-4[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-4[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-4[data-size='large'] {
-  height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -142,7 +100,7 @@ exports[`numberInputField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-7 {
   outline: none;
   border: none;
   padding: 0;
@@ -157,18 +115,18 @@ exports[`numberInputField > should render correctly 1`] = `
   background: none;
 }
 
-.emotion-9[data-has-unit='true'] {
+.emotion-7[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-9::-webkit-outer-spin-button,
-.emotion-9::-webkit-inner-spin-button {
+.emotion-7::-webkit-outer-spin-button,
+.emotion-7::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-9 {
+.emotion-7 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -176,15 +134,15 @@ exports[`numberInputField > should render correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-9[data-size='small'] {
+.emotion-7[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-9[data-size='medium'] {
+.emotion-7[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-9[data-size='large'] {
+.emotion-7[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -192,34 +150,34 @@ exports[`numberInputField > should render correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-9:-moz-read-only {
+.emotion-7:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-9:read-only {
+.emotion-7:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-9:-moz-read-only~.exvap482 {
+.emotion-7:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-9:read-only~.exvap482 {
+.emotion-7:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-9:disabled~.exvap482 {
+.emotion-7:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -228,12 +186,12 @@ exports[`numberInputField > should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-9:placeholder-shown~.exvap482 {
+.emotion-7:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-9[data-controls='false'] {
+.emotion-7[data-controls='false'] {
   text-align: left;
 }
 
@@ -245,11 +203,12 @@ exports[`numberInputField > should render correctly 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
       >
         <div>
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-0 emotion-1"
             data-controls="true"
             data-disabled="false"
             data-error="false"
@@ -258,8 +217,9 @@ exports[`numberInputField > should render correctly 1`] = `
             data-unit="false"
           >
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <button
                 aria-label="minus"
@@ -277,10 +237,10 @@ exports[`numberInputField > should render correctly 1`] = `
               </button>
             </div>
             <div
-              class="emotion-6 emotion-7 emotion-8"
+              class="emotion-4 emotion-5 emotion-6"
             >
               <input
-                class="emotion-9 emotion-10"
+                class="emotion-7 emotion-8"
                 data-controls="true"
                 data-has-unit="false"
                 data-size="large"
@@ -293,8 +253,9 @@ exports[`numberInputField > should render correctly 1`] = `
               />
             </div>
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <button
                 aria-label="plus"
@@ -326,29 +287,6 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -363,37 +301,53 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   border-color: #792dd4;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-6 {
+.emotion-0[data-controls='false']>.emotion-4 {
   border-width: 0;
+}
+
+.emotion-0[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-0[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-0[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-2 {
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-2[data-size='small'] {
@@ -406,45 +360,10 @@ exports[`numberInputField > should render correctly disabled 1`] = `
 
 .emotion-2[data-size='large'] {
   height: 3rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-4[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-4[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-4[data-size='large'] {
-  height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -461,7 +380,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-7 {
   outline: none;
   border: none;
   padding: 0;
@@ -476,18 +395,18 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   background: none;
 }
 
-.emotion-9[data-has-unit='true'] {
+.emotion-7[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-9::-webkit-outer-spin-button,
-.emotion-9::-webkit-inner-spin-button {
+.emotion-7::-webkit-outer-spin-button,
+.emotion-7::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-9 {
+.emotion-7 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -495,15 +414,15 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   appearance: textfield;
 }
 
-.emotion-9[data-size='small'] {
+.emotion-7[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-9[data-size='medium'] {
+.emotion-7[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-9[data-size='large'] {
+.emotion-7[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -511,34 +430,34 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-9:-moz-read-only {
+.emotion-7:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-9:read-only {
+.emotion-7:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-9:-moz-read-only~.exvap482 {
+.emotion-7:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-9:read-only~.exvap482 {
+.emotion-7:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-9:disabled~.exvap482 {
+.emotion-7:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -547,12 +466,12 @@ exports[`numberInputField > should render correctly disabled 1`] = `
   user-select: none;
 }
 
-.emotion-9:placeholder-shown~.exvap482 {
+.emotion-7:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-9[data-controls='false'] {
+.emotion-7[data-controls='false'] {
   text-align: left;
 }
 
@@ -564,11 +483,12 @@ exports[`numberInputField > should render correctly disabled 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
       >
         <div>
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-0 emotion-1"
             data-controls="true"
             data-disabled="true"
             data-error="false"
@@ -577,8 +497,9 @@ exports[`numberInputField > should render correctly disabled 1`] = `
             data-unit="false"
           >
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <button
                 aria-label="minus"
@@ -597,11 +518,11 @@ exports[`numberInputField > should render correctly disabled 1`] = `
               </button>
             </div>
             <div
-              class="emotion-6 emotion-7 emotion-8"
+              class="emotion-4 emotion-5 emotion-6"
             >
               <input
                 aria-label="Number Input"
-                class="emotion-9 emotion-10"
+                class="emotion-7 emotion-8"
                 data-controls="true"
                 data-has-unit="false"
                 data-size="large"
@@ -615,8 +536,9 @@ exports[`numberInputField > should render correctly disabled 1`] = `
               />
             </div>
             <div
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <button
                 aria-label="plus"

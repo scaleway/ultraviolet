@@ -2,126 +2,16 @@
 
 exports[`banner > renders correctly with a button 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -129,11 +19,11 @@ exports[`banner > renders correctly with a button 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -148,7 +38,8 @@ exports[`banner > renders correctly with a button 1`] = `
           </p>
         </div>
         <div
-          class="emotion-8 emotion-1"
+          class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <button
             class="styles__e1wcoe0 styles_size_medium__e1wcoe2 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
@@ -180,118 +71,6 @@ exports[`banner > renders correctly with a button 1`] = `
 exports[`banner > renders correctly with a link 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-10 {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -318,24 +97,24 @@ exports[`banner > renders correctly with a link 1`] = `
   text-case: none;
 }
 
-.emotion-10 .e1afnb7a3,
-.emotion-10 .e1afnb7a2,
-.emotion-10 .emotion-15 {
+.emotion-0 .e1afnb7a3,
+.emotion-0 .e1afnb7a2,
+.emotion-0 .emotion-5 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.emotion-10>* {
+.emotion-0>* {
   pointer-events: none;
 }
 
-.emotion-10:visited {
+.emotion-0:visited {
   text-decoration-color: transparent;
   color: #641cb3;
 }
 
-.emotion-10:hover,
-.emotion-10:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -344,40 +123,40 @@ exports[`banner > renders correctly with a link 1`] = `
   text-decoration-color: #521094;
 }
 
-.emotion-10:hover .e1afnb7a3,
-.emotion-10:focus .e1afnb7a3,
-.emotion-10:hover .e1afnb7a2,
-.emotion-10:focus .e1afnb7a2,
-.emotion-10:hover .emotion-15,
-.emotion-10:focus .emotion-15 {
+.emotion-0:hover .e1afnb7a3,
+.emotion-0:focus .e1afnb7a3,
+.emotion-0:hover .e1afnb7a2,
+.emotion-0:focus .e1afnb7a2,
+.emotion-0:hover .emotion-5,
+.emotion-0:focus .emotion-5 {
   -webkit-transform: translate(-0.125rem, 0);
   -moz-transform: translate(-0.125rem, 0);
   -ms-transform: translate(-0.125rem, 0);
   transform: translate(-0.125rem, 0);
 }
 
-.emotion-10:hover:visited,
-.emotion-10:focus:visited {
+.emotion-0:hover:visited,
+.emotion-0:focus:visited {
   text-decoration-color: transparent;
   color: #641cb3;
 }
 
-.emotion-10[data-variant='inline'] {
+.emotion-0[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.emotion-10:hover::after,
-.emotion-10:focus::after {
+.emotion-0:hover::after,
+.emotion-0:focus::after {
   background-color: #641cb3;
 }
 
-.emotion-10:active {
+.emotion-0:active {
   text-decoration-thickness: 2px;
 }
 
-.emotion-12 {
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -385,7 +164,7 @@ exports[`banner > renders correctly with a link 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.emotion-14 {
+.emotion-4 {
   margin-left: 0.25rem;
 }
 
@@ -393,10 +172,12 @@ exports[`banner > renders correctly with a link 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -404,11 +185,11 @@ exports[`banner > renders correctly with a link 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -423,10 +204,11 @@ exports[`banner > renders correctly with a link 1`] = `
           </p>
         </div>
         <div
-          class="emotion-8 emotion-1"
+          class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <a
-            class="emotion-10 emotion-11"
+            class="emotion-0 emotion-1"
             data-variant="standalone"
             href=""
             prominence="default"
@@ -436,10 +218,10 @@ exports[`banner > renders correctly with a link 1`] = `
           >
             Link
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-2 emotion-3"
             >
               <svg
-                class="emotion-14 emotion-15 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-4 emotion-5 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -474,103 +256,16 @@ exports[`banner > renders correctly with a link 1`] = `
 
 exports[`banner > renders correctly with closable to false 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -578,11 +273,11 @@ exports[`banner > renders correctly with closable to false 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -604,103 +299,16 @@ exports[`banner > renders correctly with closable to false 1`] = `
 
 exports[`banner > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -708,11 +316,11 @@ exports[`banner > renders correctly with default values 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -748,103 +356,16 @@ exports[`banner > renders correctly with default values 1`] = `
 
 exports[`banner > renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -852,11 +373,11 @@ exports[`banner > renders correctly with direction row 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -893,185 +414,6 @@ exports[`banner > renders correctly with direction row 1`] = `
 exports[`banner > should render correctly with dark theme 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-10 {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1098,24 +440,24 @@ exports[`banner > should render correctly with dark theme 1`] = `
   text-case: none;
 }
 
-.emotion-10 .e1afnb7a3,
-.emotion-10 .e1afnb7a2,
-.emotion-10 .emotion-15 {
+.emotion-0 .e1afnb7a3,
+.emotion-0 .e1afnb7a2,
+.emotion-0 .emotion-5 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.emotion-10>* {
+.emotion-0>* {
   pointer-events: none;
 }
 
-.emotion-10:visited {
+.emotion-0:visited {
   text-decoration-color: transparent;
   color: #bf96f8;
 }
 
-.emotion-10:hover,
-.emotion-10:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1124,40 +466,40 @@ exports[`banner > should render correctly with dark theme 1`] = `
   text-decoration-color: #ccaefc;
 }
 
-.emotion-10:hover .e1afnb7a3,
-.emotion-10:focus .e1afnb7a3,
-.emotion-10:hover .e1afnb7a2,
-.emotion-10:focus .e1afnb7a2,
-.emotion-10:hover .emotion-15,
-.emotion-10:focus .emotion-15 {
+.emotion-0:hover .e1afnb7a3,
+.emotion-0:focus .e1afnb7a3,
+.emotion-0:hover .e1afnb7a2,
+.emotion-0:focus .e1afnb7a2,
+.emotion-0:hover .emotion-5,
+.emotion-0:focus .emotion-5 {
   -webkit-transform: translate(-0.125rem, 0);
   -moz-transform: translate(-0.125rem, 0);
   -ms-transform: translate(-0.125rem, 0);
   transform: translate(-0.125rem, 0);
 }
 
-.emotion-10:hover:visited,
-.emotion-10:focus:visited {
+.emotion-0:hover:visited,
+.emotion-0:focus:visited {
   text-decoration-color: transparent;
   color: #bf96f8;
 }
 
-.emotion-10[data-variant='inline'] {
+.emotion-0[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.emotion-10:hover::after,
-.emotion-10:focus::after {
+.emotion-0:hover::after,
+.emotion-0:focus::after {
   background-color: #bf96f8;
 }
 
-.emotion-10:active {
+.emotion-0:active {
   text-decoration-thickness: 2px;
 }
 
-.emotion-12 {
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1165,7 +507,7 @@ exports[`banner > should render correctly with dark theme 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.emotion-14 {
+.emotion-4 {
   margin-left: 0.25rem;
 }
 
@@ -1173,10 +515,12 @@ exports[`banner > should render correctly with dark theme 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -1184,11 +528,11 @@ exports[`banner > should render correctly with dark theme 1`] = `
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -1203,10 +547,11 @@ exports[`banner > should render correctly with dark theme 1`] = `
           </p>
         </div>
         <div
-          class="emotion-8 emotion-1"
+          class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <a
-            class="emotion-10 emotion-11"
+            class="emotion-0 emotion-1"
             data-variant="standalone"
             href=""
             prominence="default"
@@ -1216,10 +561,10 @@ exports[`banner > should render correctly with dark theme 1`] = `
           >
             Learn more
             <span
-              class="emotion-12 emotion-13"
+              class="emotion-2 emotion-3"
             >
               <svg
-                class="emotion-14 emotion-15 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-4 emotion-5 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1254,103 +599,16 @@ exports[`banner > should render correctly with dark theme 1`] = `
 
 exports[`banner > sizes and variants > renders correctly with size medium and variant intro 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_medium__17sbfy2 styles_undefined_compound_1__17sbfy6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -1358,11 +616,11 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -1398,103 +656,16 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
 
 exports[`banner > sizes and variants > renders correctly with size medium and variant promotional 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_promotional__17sbfy4 styles_size_medium__17sbfy2 styles_undefined_compound_3__17sbfy8 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_promotional__17sbfy4 styles_size_medium__17sbfy2 styles_undefined_compound_3__17sbfy8 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_medium__17sbfya emotion-2 emotion-1"
+        class="styles_medium__17sbfya styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -1502,11 +673,11 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -1542,103 +713,16 @@ exports[`banner > sizes and variants > renders correctly with size medium and va
 
 exports[`banner > sizes and variants > renders correctly with size small and variant intro 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_small__17sbfy1 styles_undefined_compound_0__17sbfy5 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_intro__17sbfy3 styles_size_small__17sbfy1 styles_undefined_compound_0__17sbfy5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_small__17sbfy9 emotion-2 emotion-1"
+        class="styles_small__17sbfy9 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -1646,11 +730,11 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p
@@ -1686,103 +770,16 @@ exports[`banner > sizes and variants > renders correctly with size small and var
 
 exports[`banner > sizes and variants > renders correctly with size small and variant promotional 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="styles__17sbfy0 styles_variant_promotional__17sbfy4 styles_size_small__17sbfy1 styles_undefined_compound_2__17sbfy7 emotion-0 emotion-1"
+      class="styles__17sbfy0 styles_variant_promotional__17sbfy4 styles_size_small__17sbfy1 styles_undefined_compound_2__17sbfy7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
-        class="styles_small__17sbfy9 emotion-2 emotion-1"
+        class="styles_small__17sbfy9 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <img
           alt=""
@@ -1790,11 +787,11 @@ exports[`banner > sizes and variants > renders correctly with size small and var
         />
       </div>
       <div
-        class="emotion-4 emotion-1"
+        class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
         style="flex: 1;"
       >
         <div
-          class="emotion-6 emotion-1"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_center_xxsmall__toi52u5j"
           style="flex: 1;"
         >
           <p

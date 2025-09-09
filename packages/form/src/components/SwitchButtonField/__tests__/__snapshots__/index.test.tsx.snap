@@ -3,28 +3,6 @@
 exports[`switchButtonField > should render correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -36,38 +14,15 @@ exports[`switchButtonField > should render correctly 1`] = `
   position: relative;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+.emotion-3 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -99,106 +54,83 @@ exports[`switchButtonField > should render correctly 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-3[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-3[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-3[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-3[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-3[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-3[data-has-label='true'] .emotion-6,
+.emotion-3[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-3:hover,
+.emotion-3:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-3:hover:not([data-error='true'][data-disabled='true']),
+.emotion-3:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-3[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-3 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-3[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-3:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-10 {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -222,104 +154,104 @@ exports[`switchButtonField > should render correctly 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-8[aria-disabled='false'],
+.emotion-8[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-8[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-8[aria-disabled='true']>label,
+.emotion-8[aria-disabled='true'] .emotion-11 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-8[aria-disabled='true'] .emotion-13 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-8[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-8[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-8 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-10 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -329,7 +261,7 @@ exports[`switchButtonField > should render correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-10+.emotion-13 .emotion-17 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -339,48 +271,48 @@ exports[`switchButtonField > should render correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-10:checked+svg .emotion-17 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-10[aria-disabled='false']:active+.emotion-13 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-10[aria-invalid='true']:focus+.emotion-13 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-12 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -389,11 +321,11 @@ exports[`switchButtonField > should render correctly 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-12 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-20 {
+.emotion-18 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -408,14 +340,15 @@ exports[`switchButtonField > should render correctly 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-size="small"
         >
           <div
-            class="emotion-4 emotion-5 emotion-6"
+            class="emotion-2 emotion-3 emotion-4 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -423,21 +356,24 @@ exports[`switchButtonField > should render correctly 1`] = `
             data-image="none"
             data-testid="switch-button-left"
             data-type="radio"
+            flex="1"
             role="button"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             tabindex="0"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-9 emotion-10 emotion-11"
+                class="emotion-7 emotion-8 emotion-9"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-12 emotion-13"
+                  class="emotion-10 emotion-11"
                   id="«r2»"
                   name="test"
                   tabindex="-1"
@@ -445,7 +381,7 @@ exports[`switchButtonField > should render correctly 1`] = `
                   value="left"
                 />
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -456,13 +392,13 @@ exports[`switchButtonField > should render correctly 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-16 emotion-17"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-16 emotion-17"
                       cx="12"
                       cy="12"
                       r="5"
@@ -470,7 +406,7 @@ exports[`switchButtonField > should render correctly 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   for="«r2»"
                 >
                   Left
@@ -479,7 +415,7 @@ exports[`switchButtonField > should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-4 emotion-5 emotion-6"
+            class="emotion-2 emotion-3 emotion-4 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -487,21 +423,24 @@ exports[`switchButtonField > should render correctly 1`] = `
             data-image="none"
             data-testid="switch-button-right"
             data-type="radio"
+            flex="1"
             role="button"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             tabindex="0"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-9 emotion-10 emotion-11"
+                class="emotion-7 emotion-8 emotion-9"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-12 emotion-13"
+                  class="emotion-10 emotion-11"
                   id="«r6»"
                   name="test"
                   tabindex="-1"
@@ -509,7 +448,7 @@ exports[`switchButtonField > should render correctly 1`] = `
                   value="right"
                 />
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -520,13 +459,13 @@ exports[`switchButtonField > should render correctly 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-16 emotion-17"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-16 emotion-17"
                       cx="12"
                       cy="12"
                       r="5"
@@ -534,7 +473,7 @@ exports[`switchButtonField > should render correctly 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   for="«r6»"
                 >
                   Right
@@ -552,28 +491,6 @@ exports[`switchButtonField > should render correctly 1`] = `
 exports[`switchButtonField > should works with defaultValues 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
   padding: 0.25rem;
@@ -585,38 +502,15 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
   position: relative;
 }
 
-.emotion-2[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2.5rem;
 }
 
-.emotion-2[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 3rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+.emotion-3 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -648,106 +542,83 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
   user-select: none;
 }
 
-.emotion-5[data-has-label='false']>:first-child {
+.emotion-3[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-5[data-has-default-cursor='true'] {
+.emotion-3[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-3[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5[data-error='true'] {
+.emotion-3[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-5[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-5[data-image="illustration"] {
+.emotion-3[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-5[data-image="icon"] {
+.emotion-3[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-5[data-has-label='true'] .emotion-8,
-.emotion-5[data-has-label='true'] .eqr7bqq0 {
+.emotion-3[data-has-label='true'] .emotion-6,
+.emotion-3[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-5:hover,
-.emotion-5:active {
+.emotion-3:hover,
+.emotion-3:active {
   box-shadow: none;
   border: none;
 }
 
-.emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+.emotion-3:hover:not([data-error='true'][data-disabled='true']),
+.emotion-3:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.emotion-5[data-checked='true'] {
+.emotion-3[data-checked='true'] {
   border: none;
 }
 
-.emotion-5 label {
+.emotion-3 label {
   -webkit-transition: color 300ms;
   transition: color 300ms;
   color: #222638;
 }
 
-.emotion-5[data-checked='true'] label {
+.emotion-3[data-checked='true'] label {
   color: #ffffff;
 }
 
-.emotion-5:not([data-checked='true']) label:hover {
+.emotion-3:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-10 {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -771,104 +642,104 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
   align-items: start;
 }
 
-.emotion-10[aria-disabled='false'],
-.emotion-10[aria-disabled='false']>label {
+.emotion-8[aria-disabled='false'],
+.emotion-8[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
   fill: #e5dbfd;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffd3e3;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-8[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-10[aria-disabled='true']>label,
-.emotion-10[aria-disabled='true'] .emotion-13 {
+.emotion-8[aria-disabled='true']>label,
+.emotion-8[aria-disabled='true'] .emotion-11 {
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 {
+.emotion-8[aria-disabled='true'] .emotion-13 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
   fill: #f3f3f4;
 }
 
-.emotion-10[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-8[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-8[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-10 input+svg {
+.emotion-8 input+svg {
   display: none;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
   fill: #d9dadd;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false']:not([data-checked='true']) .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
   fill: #8c40ef;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 {
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-10 .emotion-13[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-12 {
+.emotion-10 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -878,7 +749,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
   border-width: 0;
 }
 
-.emotion-12+.emotion-15 .emotion-19 {
+.emotion-10+.emotion-13 .emotion-17 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -888,48 +759,48 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
   transform: scale(0);
 }
 
-.emotion-12:checked+svg .emotion-19 {
+.emotion-10:checked+svg .emotion-17 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
   fill: #8c40ef;
 }
 
-.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
   fill: #d8c5fc;
 }
 
-.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
   fill: #e51963;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 {
+.emotion-10[aria-disabled='false']:active+.emotion-13 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
   fill: #f1eefc;
 }
 
-.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+.emotion-10[aria-invalid='true']:focus+.emotion-13 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
   fill: #ffebf2;
 }
 
-.emotion-14 {
+.emotion-12 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -938,11 +809,11 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-14 .emotion-17 {
+.emotion-12 .emotion-15 {
   fill: #ffffff;
 }
 
-.emotion-20 {
+.emotion-18 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -957,14 +828,15 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-size="small"
         >
           <div
-            class="emotion-4 emotion-5 emotion-6"
+            class="emotion-2 emotion-3 emotion-4 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -972,21 +844,24 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
             data-image="none"
             data-testid="switch-button-left"
             data-type="radio"
+            flex="1"
             role="button"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             tabindex="0"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-9 emotion-10 emotion-11"
+                class="emotion-7 emotion-8 emotion-9"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-12 emotion-13"
+                  class="emotion-10 emotion-11"
                   id="«rb»"
                   name="test"
                   tabindex="-1"
@@ -994,7 +869,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
                   value="left"
                 />
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -1005,13 +880,13 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-16 emotion-17"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-16 emotion-17"
                       cx="12"
                       cy="12"
                       r="5"
@@ -1019,7 +894,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   for="«rb»"
                 >
                   Left
@@ -1028,7 +903,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
             </div>
           </div>
           <div
-            class="emotion-4 emotion-5 emotion-6"
+            class="emotion-2 emotion-3 emotion-4 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-has-default-cursor="false"
@@ -1036,21 +911,24 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
             data-image="none"
             data-testid="switch-button-right"
             data-type="radio"
+            flex="1"
             role="button"
+            style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             tabindex="0"
           >
             <div
-              class="emotion-7 emotion-8"
+              class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
             >
               <div
                 aria-disabled="false"
-                class="emotion-9 emotion-10 emotion-11"
+                class="emotion-7 emotion-8 emotion-9"
                 data-checked="false"
               >
                 <input
                   aria-disabled="false"
                   aria-invalid="false"
-                  class="emotion-12 emotion-13"
+                  class="emotion-10 emotion-11"
                   id="«rf»"
                   name="test"
                   tabindex="-1"
@@ -1058,7 +936,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
                   value="right"
                 />
                 <svg
-                  class="emotion-14 emotion-15"
+                  class="emotion-12 emotion-13"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -1069,13 +947,13 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
                       stroke-width="2"
                     />
                     <circle
-                      class="emotion-16 emotion-17"
+                      class="emotion-14 emotion-15"
                       cx="12"
                       cy="12"
                       r="8"
                     />
                     <circle
-                      class="emotion-18 emotion-19"
+                      class="emotion-16 emotion-17"
                       cx="12"
                       cy="12"
                       r="5"
@@ -1083,7 +961,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
                   </g>
                 </svg>
                 <label
-                  class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-18 emotion-19 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   for="«rf»"
                 >
                   Right
