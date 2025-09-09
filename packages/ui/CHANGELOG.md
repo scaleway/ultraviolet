@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.0-beta.7
+
+### Minor Changes
+
+- [#5505](https://github.com/scaleway/ultraviolet/pull/5505) [`7de4324`](https://github.com/scaleway/ultraviolet/commit/7de43248e0591d95b510adcdb79d559862de9eb6) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - - Refactor components `Meter` and `BarStack` to use vanilla-extract instead of Emotion
+  - Add prop `style` to `Text` to be able to use vanilla-extract variables with it
+
+### Patch Changes
+
+- Updated dependencies [[`a6ca909`](https://github.com/scaleway/ultraviolet/commit/a6ca90992bc60e052e53fbe9317ca6ede96ebe4d), [`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2)]:
+  - @ultraviolet/icons@4.1.0-beta.3
+  - @ultraviolet/themes@2.1.0-beta.1
+
 ## 3.0.0-beta.6
 
 ### Major Changes
@@ -103,7 +116,7 @@
   Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
   Updated dependency `@babel/preset-env` to `7.28.3`.
 - Updated dependencies [[`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542)]:
-    - @ultraviolet/icons@4.0.4
+  - @ultraviolet/icons@4.0.4
 
 ## 2.1.0
 
