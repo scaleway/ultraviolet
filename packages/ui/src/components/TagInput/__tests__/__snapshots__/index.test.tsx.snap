@@ -523,10 +523,6 @@ exports[`TagInput > should renders correctly with error 1`] = `
 exports[`TagInput > should renders correctly with label 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,35 +536,35 @@ exports[`TagInput > should renders correctly with label 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-success="true"] {
+.emotion-0[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error="true"] {
+.emotion-0[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   border-color: #792dd4;
 }
 
-.emotion-2[data-readonly="true"] {
+.emotion-0[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -588,7 +584,7 @@ exports[`TagInput > should renders correctly with label 1`] = `
   flex: 1;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -604,23 +600,23 @@ exports[`TagInput > should renders correctly with label 1`] = `
   height: 100%;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::placeholder {
+.emotion-4::placeholder {
   color: #727683;
 }
 
-.emotion-6[data-size="large"] {
+.emotion-4[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -632,24 +628,24 @@ exports[`TagInput > should renders correctly with label 1`] = `
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«r6»"
       >
         Label
       </label>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
           >
             <input
-              class="emotion-6 emotion-7"
+              class="emotion-4 emotion-5"
               data-size="large"
               id="«r6»"
               type="text"
@@ -666,10 +662,6 @@ exports[`TagInput > should renders correctly with label 1`] = `
 exports[`TagInput > should renders correctly with labelDescription 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -683,35 +675,35 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2:focus-within {
+.emotion-0:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-success="true"] {
+.emotion-0[data-success="true"] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error="true"] {
+.emotion-0[data-error="true"] {
   border-color: #b3144d;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   border-color: #792dd4;
 }
 
-.emotion-2[data-readonly="true"] {
+.emotion-0[data-readonly="true"] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.emotion-2[data-disabled="true"] {
+.emotion-0[data-disabled="true"] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -731,7 +723,7 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   flex: 1;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -747,23 +739,23 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
   height: 100%;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-6::placeholder {
+.emotion-4::placeholder {
   color: #727683;
 }
 
-.emotion-6[data-size="large"] {
+.emotion-4[data-size="large"] {
   font-size: 1rem;
 }
 
@@ -779,7 +771,7 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <label
-          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           for="«r9»"
         />
         <div>
@@ -788,17 +780,17 @@ exports[`TagInput > should renders correctly with labelDescription 1`] = `
       </div>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
           >
             <input
-              class="emotion-6 emotion-7"
+              class="emotion-4 emotion-5"
               data-size="large"
               id="«r9»"
               type="text"
