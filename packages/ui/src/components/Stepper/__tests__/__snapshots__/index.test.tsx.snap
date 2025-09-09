@@ -22,16 +22,6 @@ exports[`stepper > handles clicks when interactive 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: calc(100% - 32px - 8px);
-  }
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -71,25 +61,6 @@ exports[`stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -202,25 +173,6 @@ exports[`stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -509,7 +461,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -518,6 +470,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -540,7 +493,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -549,6 +502,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -563,7 +517,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -572,6 +526,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -655,25 +610,6 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -782,25 +718,6 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1089,7 +1006,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -1098,6 +1015,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -1120,7 +1038,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -1129,6 +1047,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -1143,7 +1062,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -1152,6 +1071,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -1235,25 +1155,6 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -1362,25 +1263,6 @@ exports[`stepper > handles clicks when not interactive 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1669,7 +1551,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -1678,6 +1560,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -1700,7 +1583,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -1709,6 +1592,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -1723,7 +1607,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -1732,6 +1616,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -1786,25 +1671,6 @@ exports[`stepper > renders correctly with all selected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -2004,7 +1870,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -2013,6 +1879,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -2035,7 +1902,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -2044,6 +1911,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -2058,7 +1926,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -2067,6 +1935,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -2121,25 +1990,6 @@ exports[`stepper > renders correctly with animation 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -2339,7 +2189,7 @@ exports[`stepper > renders correctly with animation 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="true"
         data-disabled="false"
         data-done="true"
@@ -2348,6 +2198,7 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -2370,7 +2221,7 @@ exports[`stepper > renders correctly with animation 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="true"
         data-disabled="false"
         data-done="false"
@@ -2379,6 +2230,7 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -2393,7 +2245,7 @@ exports[`stepper > renders correctly with animation 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="true"
         data-disabled="false"
         data-done="false"
@@ -2402,6 +2254,7 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -2456,25 +2309,6 @@ exports[`stepper > renders correctly with children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -2674,7 +2508,7 @@ exports[`stepper > renders correctly with children 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="true"
         data-disabled="false"
         data-done="true"
@@ -2683,6 +2517,7 @@ exports[`stepper > renders correctly with children 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -2706,7 +2541,7 @@ exports[`stepper > renders correctly with children 1`] = `
         Children
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="true"
         data-disabled="false"
         data-done="false"
@@ -2715,6 +2550,7 @@ exports[`stepper > renders correctly with children 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -2729,7 +2565,7 @@ exports[`stepper > renders correctly with children 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="true"
         data-disabled="false"
         data-done="false"
@@ -2738,6 +2574,7 @@ exports[`stepper > renders correctly with children 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -2792,25 +2629,6 @@ exports[`stepper > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -3010,7 +2828,7 @@ exports[`stepper > renders correctly with default props 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -3019,6 +2837,7 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -3041,7 +2860,7 @@ exports[`stepper > renders correctly with default props 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -3050,6 +2869,7 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -3064,7 +2884,7 @@ exports[`stepper > renders correctly with default props 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -3073,6 +2893,7 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -3103,16 +2924,6 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: calc(100% - 32px - 8px);
-  }
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3133,25 +2944,6 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3330,7 +3122,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="true"
         data-done="false"
@@ -3339,6 +3131,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -3353,7 +3146,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -3362,6 +3155,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -3376,7 +3170,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="true"
         data-done="false"
@@ -3385,6 +3179,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -3439,25 +3234,6 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -3632,7 +3408,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -3641,6 +3417,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -3663,7 +3440,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -3672,6 +3449,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -3694,7 +3472,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -3703,6 +3481,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -3753,25 +3532,6 @@ exports[`stepper > renders correctly with small size 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3975,7 +3735,7 @@ exports[`stepper > renders correctly with small size 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -3984,6 +3744,7 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -4006,7 +3767,7 @@ exports[`stepper > renders correctly with small size 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -4015,6 +3776,7 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -4029,7 +3791,7 @@ exports[`stepper > renders correctly with small size 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -4038,6 +3800,7 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -4068,16 +3831,6 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: calc(100% - 32px - 8px);
-  }
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4098,26 +3851,6 @@ exports[`stepper > renders correctly with step number in row 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4378,7 +4111,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -4387,6 +4120,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-label-position="right"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -4413,7 +4147,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-size="medium"
       />
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -4422,6 +4156,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-label-position="right"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-14 emotion-6"
@@ -4440,7 +4175,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-size="medium"
       />
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -4449,6 +4184,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-label-position="right"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-23 emotion-6"
@@ -4532,25 +4268,6 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   white-space: nowrap;
   -webkit-transition: text-decoration 300ms;
   transition: text-decoration 300ms;
@@ -4659,25 +4376,6 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4950,7 +4648,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -4959,6 +4657,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -4976,7 +4675,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         Step 1
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -4985,6 +4684,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-10 emotion-6"
@@ -4994,7 +4694,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         Step 2
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -5003,6 +4703,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-15 emotion-6"
@@ -5019,16 +4720,6 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
 exports[`stepper > renders correctly without separator 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: calc(100% - 32px - 8px);
-  }
-}
-
-@keyframes animation-0 {
   from {
     width: 0;
   }
@@ -5058,25 +4749,6 @@ exports[`stepper > renders correctly without separator 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5280,7 +4952,7 @@ exports[`stepper > renders correctly without separator 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -5289,6 +4961,7 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -5311,7 +4984,7 @@ exports[`stepper > renders correctly without separator 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -5320,6 +4993,7 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-label-position="bottom"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -5334,7 +5008,7 @@ exports[`stepper > renders correctly without separator 1`] = `
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -5343,6 +5017,7 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-label-position="bottom"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"
@@ -5373,16 +5048,6 @@ exports[`stepper > renders correctly without separator with label on the right 1
   }
 }
 
-@keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: calc(100% - 32px - 8px);
-  }
-}
-
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5403,26 +5068,6 @@ exports[`stepper > renders correctly without separator with label on the right 1
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5626,7 +5271,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
       class="emotion-0 emotion-1"
     >
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="true"
@@ -5635,6 +5280,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-label-position="right"
         data-selected="false"
         data-testid="stepper-step-0"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-5 emotion-6"
@@ -5657,7 +5303,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -5666,6 +5312,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-label-position="right"
         data-selected="true"
         data-testid="stepper-step-1"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-12 emotion-6"
@@ -5680,7 +5327,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
         </span>
       </div>
       <div
-        class="step emotion-2 emotion-3"
+        class="step emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_flex-start_xxsmall__toi52u61"
         data-animated="false"
         data-disabled="false"
         data-done="false"
@@ -5689,6 +5336,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-label-position="right"
         data-selected="false"
         data-testid="stepper-step-2"
+        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="emotion-4 emotion-19 emotion-6"

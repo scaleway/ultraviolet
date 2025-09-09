@@ -1073,7 +1073,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -1082,7 +1082,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -1211,7 +1211,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -1220,7 +1220,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -1505,55 +1505,13 @@ exports[`lineChart > renders correctly when data is async 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-27 {
@@ -1561,25 +1519,10 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -1587,95 +1530,48 @@ exports[`lineChart > renders correctly when data is async 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-33 {
+.emotion-29 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-61 {
+.emotion-53 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #0083e6;
 }
 
-.emotion-61 {
+.emotion-53 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #0083e6;
 }
 
-.emotion-89 {
+.emotion-77 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #3ebd8f;
 }
 
-.emotion-89 {
+.emotion-77 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -1775,17 +1671,21 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r1u»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -1793,7 +1693,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                         Serie 1
                       </span>
                       <div
-                        class="emotion-33"
+                        class="emotion-29"
                         data-testid="label-lineChartMultiple1"
                       />
                     </div>
@@ -1871,17 +1771,21 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r25»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -1889,7 +1793,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                         Serie 2
                       </span>
                       <div
-                        class="emotion-61"
+                        class="emotion-53"
                         data-testid="label-lineChartMultiple2"
                       />
                     </div>
@@ -1967,17 +1871,21 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r2c»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -1985,7 +1893,7 @@ exports[`lineChart > renders correctly when data is async 1`] = `
                         Serie 3
                       </span>
                       <div
-                        class="emotion-89"
+                        class="emotion-77"
                         data-testid="label-lineChartMultiple3"
                       />
                     </div>
@@ -2144,7 +2052,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -2153,7 +2061,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -2282,7 +2190,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -2291,7 +2199,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -2576,55 +2484,13 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-27 {
@@ -2632,25 +2498,10 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-27 {
@@ -2658,67 +2509,20 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-33 {
+.emotion-29 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -2819,17 +2623,21 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r1j»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -2837,7 +2645,7 @@ exports[`lineChart > renders correctly when legend is deselected 1`] = `
                         line chart values
                       </span>
                       <div
-                        class="emotion-33"
+                        class="emotion-29"
                         data-testid="label-lineChartSerie"
                       />
                     </div>
@@ -2974,7 +2782,7 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -2983,7 +2791,7 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -3184,29 +2992,8 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-27 {
@@ -3214,44 +3001,13 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -3352,17 +3108,21 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r4»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3370,7 +3130,7 @@ exports[`lineChart > renders correctly with detailed legend 1`] = `
                         line chart values
                       </span>
                       <div
-                        class="emotion-33"
+                        class="emotion-29"
                         data-testid="label-lineChartSerie"
                       />
                     </div>
@@ -3475,7 +3235,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -3484,7 +3244,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -3685,29 +3445,8 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-27 {
@@ -3715,58 +3454,27 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #5e47be;
 }
 
-.emotion-61 {
+.emotion-53 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
   background-color: #0083e6;
 }
 
-.emotion-89 {
+.emotion-77 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -3867,17 +3575,21 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«rq»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3885,7 +3597,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                         Serie 1
                       </span>
                       <div
-                        class="emotion-33"
+                        class="emotion-29"
                         data-testid="label-lineChartMultiple1"
                       />
                     </div>
@@ -3964,17 +3676,21 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r11»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3982,7 +3698,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                         Serie 2
                       </span>
                       <div
-                        class="emotion-61"
+                        class="emotion-53"
                         data-testid="label-lineChartMultiple2"
                       />
                     </div>
@@ -4061,17 +3777,21 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«r18»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -4079,7 +3799,7 @@ exports[`lineChart > renders correctly with multiple series 1`] = `
                         Serie 3
                       </span>
                       <div
-                        class="emotion-89"
+                        class="emotion-77"
                         data-testid="label-lineChartMultiple3"
                       />
                     </div>
@@ -4200,7 +3920,7 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-17 .emotion-30 {
+.emotion-17 .emotion-26 {
   cursor: pointer;
 }
 
@@ -4209,7 +3929,7 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-17[aria-disabled='true'] .emotion-30 {
+.emotion-17[aria-disabled='true'] .emotion-26 {
   cursor: not-allowed;
 }
 
@@ -4410,29 +4130,8 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
+  width: 100%;
+  cursor: pointer;
 }
 
 .emotion-27 {
@@ -4440,44 +4139,13 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
 }
 
 .emotion-29 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-33 {
   margin-left: 1rem;
   width: 2rem;
   height: 2px;
@@ -4578,17 +4246,21 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
                 </g>
               </svg>
               <div
-                class="emotion-25 emotion-26"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                flex="1"
+                style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
               >
                 <div
-                  class="emotion-27 emotion-26"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                  flex="1"
+                  style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
                 >
                   <label
-                    class="emotion-29 emotion-30"
+                    class="emotion-25 emotion-26"
                     for="«rf»"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-27 emotion-28"
                     >
                       <span
                         class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -4596,7 +4268,7 @@ exports[`lineChart > renders correctly with timeline data 1`] = `
                         line chart hours values
                       </span>
                       <div
-                        class="emotion-33"
+                        class="emotion-29"
                         data-testid="label-lineChartHours"
                       />
                     </div>

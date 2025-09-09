@@ -3,33 +3,10 @@
 exports[`submit > form is invalid 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
   cursor: pointer;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,69 +20,69 @@ exports[`submit > form is invalid 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-4>.emotion-7 {
+.emotion-2>.emotion-5 {
   color: #3f4250;
 }
 
-.emotion-4>.emotion-7::-webkit-input-placeholder {
+.emotion-2>.emotion-5::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::-moz-placeholder {
+.emotion-2>.emotion-5::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7:-ms-input-placeholder {
+.emotion-2>.emotion-5:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-4>.emotion-7::placeholder {
+.emotion-2>.emotion-5::placeholder {
   color: #727683;
 }
 
-.emotion-4[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-4[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7 {
+.emotion-2[data-disabled='true']>.emotion-5 {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
+.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4[data-disabled='true']>.emotion-7::placeholder {
+.emotion-2[data-disabled='true']>.emotion-5::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -118,11 +95,11 @@ exports[`submit > form is invalid 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -134,17 +111,18 @@ exports[`submit > form is invalid 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+        style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
       >
         <label
-          class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+          class="emotion-0 emotion-1 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
           for="«r1»"
         >
           test
         </label>
         <div>
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -152,7 +130,7 @@ exports[`submit > form is invalid 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-6 emotion-7"
+              class="emotion-4 emotion-5"
               data-size="large"
               id="«r1»"
               name="toto"
