@@ -10,7 +10,7 @@ import { EstimateCost } from '..'
 
 const OverlaySubmitButton = () => <div>Submit</div>
 
-describe('EstimateCost - Regular Item', () => {
+describe('estimateCost - Regular Item', () => {
   beforeEach(() => {
     setupIntersectionMocking(vi.fn)
   })

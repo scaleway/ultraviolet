@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { SelectableCardGroupField } from '../..'
 
-describe('SelectableCardField', () => {
+describe('selectableCardField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SelectableCardGroupField

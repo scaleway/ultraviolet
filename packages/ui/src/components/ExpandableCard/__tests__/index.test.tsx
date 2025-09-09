@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { Text } from '../../Text'
 import { ExpandableCard } from '..'
 
-describe('ExpandableCard', () => {
+describe('expandableCard', () => {
   test('renders correctly with default values', () => {
     const { asFragment } = renderWithTheme(
       <ExpandableCard header="Title">Content</ExpandableCard>,

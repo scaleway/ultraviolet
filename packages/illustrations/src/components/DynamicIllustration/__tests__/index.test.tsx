@@ -7,7 +7,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { DynamicIllustration } from '..'
 
-describe('DynamicIllustration', () => {
+describe('dynamicIllustration', () => {
   it('should work with consoleLightTheme', () =>
     shouldMatchEmotionSnapshot(
       <DynamicIllustration name="empty" />,

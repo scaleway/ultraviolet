@@ -31,7 +31,7 @@ const mockItems = [
   categoryStorage,
 ]
 
-describe('OrderSummary', () => {
+describe('orderSummary', () => {
   test('should work with default props', () =>
     shouldMatchEmotionSnapshot(<OrderSummary items={mockItems} />))
 

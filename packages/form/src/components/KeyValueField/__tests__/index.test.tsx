@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, it } from 'vitest'
 import { KeyValueField } from '..'
 
-describe('KeyValueField', () => {
+describe('keyValueField', () => {
   it('should render with default props', async () => {
     const { asFragment } = renderWithForm(
       <KeyValueField

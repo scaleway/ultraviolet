@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { ToggleGroup } from '..'
 
-describe('ToggleGroup', () => {
+describe('toggleGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <ToggleGroup legend="Label" name="Toggle" onChange={() => {}}>

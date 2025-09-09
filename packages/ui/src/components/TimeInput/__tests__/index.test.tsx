@@ -6,7 +6,7 @@ import { TimeInput } from '..'
 
 const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
 
-describe('TimeInput', () => {
+describe('timeInput', () => {
   test('renders correctly with base props', () =>
     shouldMatchEmotionSnapshot(<TimeInput />))
 

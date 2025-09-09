@@ -3,7 +3,7 @@ import { describe, test } from 'vitest'
 import { colors } from '../../../theme'
 import { Meter } from '..'
 
-describe('Meter', () => {
+describe('meter', () => {
   const strengthLevels = [
     { color: colors.danger.text, text: 'veryWeak' },
     { color: colors.warning.text, text: 'weak' },

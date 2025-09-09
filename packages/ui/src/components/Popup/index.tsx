@@ -273,7 +273,7 @@ export const Popup = forwardRef(
       }
 
       return null
-      // oxlint-disable-next-line react/exhaustive-deps
+      // oxlint-disable react/exhaustive-deps
     }, [portalTarget, role, childrenRef.current])
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
@@ -448,7 +448,7 @@ export const Popup = forwardRef(
       if (visibleInDom && innerPopupRef.current) {
         innerPopupRef.current.style.opacity = '1'
       }
-      // oxlint-disable-next-line react/exhaustive-deps
+      // oxlint-disable react/exhaustive-deps
     }, [positions])
 
     /**

@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import BarChartTooltip from '../Tooltip'
 
-describe('BarChartTooltip', () => {
+describe('barChartTooltip', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <BarChartTooltip

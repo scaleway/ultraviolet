@@ -3,7 +3,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { ToggleField } from '..'
 
-describe('ToggleField', () => {
+describe('toggleField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(<ToggleField name="test" />)
     expect(asFragment()).toMatchSnapshot()

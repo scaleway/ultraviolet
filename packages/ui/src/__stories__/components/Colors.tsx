@@ -222,7 +222,6 @@ const Colors = () => {
                       <StyledCard
                         color={
                           // @ts-expect-error can't infer properly
-                          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                           gradientBackgroundColors[type][background]
                         }
                         context="background"
@@ -279,7 +278,6 @@ const Colors = () => {
                               <StyledCard
                                 color={
                                   // @ts-expect-error can't infer properly
-                                  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                                   iconColors[type][sentiment][value]
                                 }
                                 context="background"

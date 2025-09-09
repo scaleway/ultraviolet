@@ -6,7 +6,7 @@ import { Submit, TextInputField } from '../..'
 
 const alpha = /^[a-zA-Z]*$/
 
-describe('Submit', () => {
+describe('submit', () => {
   test('renders correctly ', () => {
     const { asFragment } = renderWithForm(<Submit>Test</Submit>)
     expect(asFragment()).toMatchSnapshot()

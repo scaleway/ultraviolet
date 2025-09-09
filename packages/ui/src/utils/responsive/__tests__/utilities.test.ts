@@ -5,7 +5,7 @@ import type { ScreenSize } from '../../../theme'
 import { screens } from '../../../theme'
 import { down, up } from '../utilities'
 
-describe('Responsive utilities', () => {
+describe('responsive utilities', () => {
   describe('up', () => {
     ;(Object.keys(screens) as ScreenSize[]).forEach(brk => {
       test(`works with ${brk}`, () => {

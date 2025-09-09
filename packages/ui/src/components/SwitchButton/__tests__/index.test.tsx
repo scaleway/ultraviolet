@@ -7,7 +7,7 @@ import { SwitchButton } from '..'
 
 let resizeCallback: ResizeObserverCallback = () => {}
 
-describe('SwitchButton', () => {
+describe('switchButton', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,

@@ -6,7 +6,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { mockErrors } from '../../../mocks'
 import { Form, Submit, SwitchButtonField } from '../..'
 
-describe('SwitchButtonField', () => {
+describe('switchButtonField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <SwitchButtonField name="test" onChange={() => vi.fn()}>

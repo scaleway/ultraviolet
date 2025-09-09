@@ -14,7 +14,7 @@ export type OptionType = {
   optionalInfo?: ReactNode
 }
 
-describe('SelectInput', () => {
+describe('selectInput', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,

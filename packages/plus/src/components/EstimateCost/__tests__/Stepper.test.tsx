@@ -6,7 +6,7 @@ import {
 import { afterEach, beforeEach, describe, test, vi } from 'vitest'
 import { EstimateCost } from '..'
 
-describe('EstimateCost - NumberInput Item', () => {
+describe('estimateCost - NumberInput Item', () => {
   beforeEach(() => {
     setupIntersectionMocking(vi.fn)
   })

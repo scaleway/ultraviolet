@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { InfoTable } from '..'
 
-describe('InfoTable', () => {
+describe('infoTable', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(
       <InfoTable>

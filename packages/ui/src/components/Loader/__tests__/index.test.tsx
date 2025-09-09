@@ -4,7 +4,7 @@ import { describe, test } from 'vitest'
 import { SENTIMENTS } from '../../../theme'
 import { Loader, SIZES } from '..'
 
-describe('Loader', () => {
+describe('loader', () => {
   test(`renders default props`, () =>
     shouldMatchEmotionSnapshot(<Loader label="Loading test" />))
 

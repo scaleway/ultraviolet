@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Tag } from '..'
 
-describe('Tag', () => {
+describe('tag', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Tag>test</Tag>))
 
   test('renders correctly neutral', () =>

@@ -13,7 +13,7 @@ const StyledSnippet = styled(Snippet)`
   }
 `
 
-const ReactCode = (theme: string) => `
+const reactCode = (theme: string) => `
 import { Global, ThemeProvider, css } from '@emotion/react'
 import { Button, normalize } from '@ultraviolet/ui'
 
@@ -49,7 +49,7 @@ export const CodeIntegration = ({ theme }: CodeIntegrationProps) => {
           <Tabs.Tab value={2}>React</Tabs.Tab>
         </Tabs>
         <StyledSnippet prefix="lines">
-          {tabState === 1 ? formattedTheme : ReactCode(formattedTheme)}
+          {tabState === 1 ? formattedTheme : reactCode(formattedTheme)}
         </StyledSnippet>
       </Stack>
     </Stack>

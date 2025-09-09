@@ -3,7 +3,7 @@ import { describe, it } from 'vitest'
 import { EmptyState } from '..'
 import kapsuleLogo from '../__stories__/illustrations/kapsule.webp'
 
-describe('EmptySpace', () => {
+describe('emptySpace', () => {
   it('should work without parameters', () =>
     shouldMatchEmotionSnapshot(<EmptyState description="test" />))
 

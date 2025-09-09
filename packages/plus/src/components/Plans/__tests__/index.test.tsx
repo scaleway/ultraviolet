@@ -6,7 +6,7 @@ import { Plans } from '..'
 import { domain, fees, gb, group, pipeline, ssl } from './features'
 import { planAdvanced, planProfessional, planStarter } from './plans'
 
-describe('Plans', () => {
+describe('plans', () => {
   it('should work with default props', () =>
     shouldMatchEmotionSnapshot(
       <Plans

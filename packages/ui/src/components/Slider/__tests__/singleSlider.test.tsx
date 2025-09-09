@@ -11,7 +11,7 @@ const options = [
 
 const options2 = [{ value: 1 }, { value: 30 }]
 
-describe('Single slider', () => {
+describe('single slider', () => {
   beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,

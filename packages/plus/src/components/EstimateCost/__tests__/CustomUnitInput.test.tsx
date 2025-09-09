@@ -8,7 +8,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { CustomUnitInput } from '../Components/CustomUnitInput'
 
-describe('EstimateCost - CustomUnitInput', () => {
+describe('estimateCost - CustomUnitInput', () => {
   beforeEach(() => {
     setupIntersectionMocking(vi.fn)
   })

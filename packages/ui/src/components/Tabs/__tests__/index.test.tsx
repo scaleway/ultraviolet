@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { Link } from '../../Link'
 import { Tabs } from '..'
 
-describe('Tabs', () => {
+describe('tabs', () => {
   test('renders correctly', () => {
     const { asFragment } = renderWithTheme(<Tabs onChange={() => {}} />)
     expect(asFragment()).toMatchSnapshot()

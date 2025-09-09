@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { ToggleGroupField } from '..'
 
-describe('GroupField', () => {
+describe('groupField', () => {
   test('should render correctly checked', async () => {
     const { asFragment } = renderWithForm(
       <ToggleGroupField legend="Label" name="Group" onChange={() => {}}>

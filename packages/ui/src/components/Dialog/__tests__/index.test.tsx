@@ -8,7 +8,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { Button } from '../../Button'
 import { Dialog } from '..'
 
-describe('Dialog', () => {
+describe('dialog', () => {
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Dialog open sentiment="primary" title="Test">

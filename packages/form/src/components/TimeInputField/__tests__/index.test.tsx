@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TimeInputField } from '..'
 
-describe('TextInputField', () => {
+describe('textInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TimeInputField label="Test" name="test" />,

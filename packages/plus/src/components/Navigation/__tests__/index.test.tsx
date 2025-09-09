@@ -36,7 +36,7 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
   </NavigationProvider>
 )
 
-describe('Navigation', () => {
+describe('navigation', () => {
   test('render with basic content', () =>
     shouldMatchEmotionSnapshot(<BasicNavigation />))
 

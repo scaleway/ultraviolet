@@ -8,7 +8,7 @@ import { Form, Submit, TagInputField } from '../..'
 
 const alpha = /^[a-zA-Z]*$/
 
-describe('TagInputField', () => {
+describe('tagInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TagInputField name="test" placeholder="placeholder" />,

@@ -22,8 +22,8 @@ import {
   Cell,
   EmptyCell,
   EmptyTable,
-  PriceCell,
   PriceCol,
+  priceCell,
   StyledFeesTable,
   StyledTable,
   TimeCell,
@@ -65,7 +65,7 @@ const StyledCalculatorIcon = styled(CalculatorIcon)`
 `
 
 const StyledPriceCell = styled(Cell.withComponent('th'))`
-  ${({ theme }) => PriceCell(theme)}
+  ${({ theme }) => priceCell(theme)}
   padding: 0;
 `
 

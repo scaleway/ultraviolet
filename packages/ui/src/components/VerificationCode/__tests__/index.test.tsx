@@ -8,7 +8,7 @@ const pasteEventWithValue = (selector: HTMLElement, value: string) =>
     clipboardData: { getData: () => value },
   })
 
-describe('VerificationCode', () => {
+describe('verificationCode', () => {
   test('renders correctly with default values', () => {
     const { asFragment } = renderWithTheme(<VerificationCode />)
     expect(asFragment()).toMatchSnapshot()

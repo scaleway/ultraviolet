@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TagInput } from '..'
 
-describe('TagInput', () => {
+describe('tagInput', () => {
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(<TagInput onChange={() => {}} />))
 

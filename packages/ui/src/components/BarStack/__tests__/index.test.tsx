@@ -12,7 +12,7 @@ const fakeData = [
   { id: '5', text: 'Bye bye', value: 42 },
 ]
 
-describe('BarStack', () => {
+describe('barStack', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithTheme(<BarStack data={fakeData} />)
     expect(asFragment()).toMatchSnapshot()

@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Pagination } from '..'
 
-describe('Pagination', () => {
+describe('pagination', () => {
   test('should render correctly', async () => {
     const mockOnClick = vi.fn()
     const { asFragment } = renderWithTheme(

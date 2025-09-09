@@ -4,7 +4,7 @@ import { describe, test } from 'vitest'
 import { SENTIMENTS } from '../../../theme'
 import { Bullet } from '..'
 
-describe('Bullet', () => {
+describe('bullet', () => {
   test('renders correctly with a text', () =>
     shouldMatchEmotionSnapshot(<Bullet>1</Bullet>))
 

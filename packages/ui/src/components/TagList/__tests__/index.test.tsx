@@ -32,7 +32,7 @@ const mockOffsetWidth = (tags: TagType[], customContainerWidth?: number) => {
   mockOffsetWidthFunction.mockReturnValueOnce(containerWidth)
 }
 
-describe('TagList', () => {
+describe('tagList', () => {
   afterAll(() => {
     vi.resetAllMocks()
   })

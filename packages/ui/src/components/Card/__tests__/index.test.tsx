@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Card } from '..'
 
-describe('Card', () => {
+describe('card', () => {
   test('renders correctly with header', () =>
     shouldMatchEmotionSnapshot(<Card header="Title">Hello</Card>))
 

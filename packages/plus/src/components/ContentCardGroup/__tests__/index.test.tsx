@@ -2,7 +2,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { ContentCardGroup } from '..'
 
-describe('ContentCardGroup', () => {
+describe('contentCardGroup', () => {
   beforeEach(() => {
     vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
   })

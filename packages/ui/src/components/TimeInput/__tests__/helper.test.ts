@@ -10,7 +10,7 @@ import {
   setValueByType,
 } from '../helpers'
 
-describe('Helper functions dateInput', () => {
+describe('helper functions dateInput', () => {
   test('isNumber should work', () => {
     expect(isNumber('2')).toBeTruthy()
     expect(isNumber('a')).toBeFalsy()

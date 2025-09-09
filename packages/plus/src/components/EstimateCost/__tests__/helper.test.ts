@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { calculatePrice } from '../helper'
 
-describe('EstimateCost - helper', () => {
+describe('estimateCost - helper', () => {
   it('should calculate price of 0, amount 0, amountFree 0 for 24 hours', () => {
     expect(
       calculatePrice({

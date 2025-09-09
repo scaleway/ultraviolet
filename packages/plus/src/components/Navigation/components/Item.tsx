@@ -410,7 +410,7 @@ export const Item = memo(
       if (type !== 'pinnedGroup' && pinnedFeature) {
         registerItem({ [id]: { active, label, onClickPinUnpin, onToggle } })
       }
-      // oxlint-disable-next-line react/exhaustive-deps
+      // oxlint-disable react/exhaustive-deps
     }, [active, id, label, registerItem])
 
     const [internalExpanded, onToggleExpand] = useReducer(

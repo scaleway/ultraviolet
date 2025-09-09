@@ -20,6 +20,9 @@ const disableRules = {
   'import/no-unresolved': 'off',
   '@stylistic/no-extra-semi': 'off',
   '@stylistic/brace-style': 'off',
+  '@typescript-eslint/no-unsafe-return': 'off',
+  '@typescript-eslint/no-unsafe-assignment': 'off',
+  '@typescript-eslint/no-unsafe-member-access': 'off',
 
   // to check
   'react/no-unused-prop-types': 'off',
@@ -101,7 +104,7 @@ export default [
       ...config.rules,
       ...disableRules,
       'react/jsx-props-no-spreading': 'warn',
-      '@typescript-eslint/no-unnecessary-condition': 'off',
+      '@typescript-eslint/no-unnecessary-condition': 'off'
     },
   })),
   {
