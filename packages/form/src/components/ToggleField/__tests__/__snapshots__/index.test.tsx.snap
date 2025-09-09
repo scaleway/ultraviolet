@@ -554,7 +554,7 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-5[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -564,20 +564,6 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-2 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -599,11 +585,11 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
   height: 1.5rem;
 }
 
-.emotion-4:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -616,25 +602,25 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
   transition: all 300ms;
 }
 
-.emotion-4:focus-within,
-.emotion-4:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -642,41 +628,41 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4:has(:checked):focus-within,
-.emotion-4:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error="true"]:focus-within,
-.emotion-4[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -686,7 +672,7 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-6[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -706,7 +692,8 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
           style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
         >
           <div
-            class="emotion-2 emotion-3"
+            class="uv_x6hyh50 uv_x6hyh52p uv_x6hyh57"
+            style="--uv_3mg8xe0: auto 1fr; --uv_3mg8xe1: auto 1fr; --uv_3mg8xe2: auto 1fr; --uv_3mg8xe3: auto 1fr; --uv_3mg8xe4: auto 1fr; --uv_3mg8xe5: auto 1fr;"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -716,14 +703,14 @@ exports[`toggleField > should render correctly with label and checked 1`] = `
           </div>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
           data-disabled="false"
           data-error="false"
         >
           <input
             aria-invalid="false"
             checked=""
-            class="emotion-6 emotion-7"
+            class="emotion-4 emotion-5"
             id="«r6»"
             name="test"
             type="checkbox"

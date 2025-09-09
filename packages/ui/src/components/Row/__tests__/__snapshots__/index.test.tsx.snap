@@ -2,24 +2,32 @@
 
 exports[`row > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__x6hyh50 "
+      style="--_3mg8xe0: repeat(2, 1fr); --_3mg8xe1: repeat(2, 1fr); --_3mg8xe2: repeat(2, 1fr); --_3mg8xe3: repeat(2, 1fr); --_3mg8xe4: repeat(2, 1fr); --_3mg8xe5: repeat(2, 1fr);"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Row > renders correctly with responsive values 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__x6hyh50 styles_alignItems_end_large__x6hyh535 styles_alignItems_center_medium__x6hyh52s styles_alignItems_start_small__x6hyh52x styles_gap_1.5rem_large__x6hyh5n styles_gap_1rem_medium__x6hyh5g styles_gap_0.5rem_small__x6hyh59 styles_justifyContent_end_large__x6hyh55b styles_justifyContent_center_medium__x6hyh54y styles_justifyContent_start_small__x6hyh553"
+      style="--_3mg8xe0: 2fr 1fr; --_3mg8xe2: 1fr 1fr; --_3mg8xe3: 1fr 2fr; --_3mg8xe6: 2; --_3mg8xe8: 1;"
     >
       <div>
         First col
@@ -34,25 +42,12 @@ exports[`row > renders correctly with default props 1`] = `
 
 exports[`row > renders correctly with specific align 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+      style="--_3mg8xe0: repeat(2, 1fr); --_3mg8xe1: repeat(2, 1fr); --_3mg8xe2: repeat(2, 1fr); --_3mg8xe3: repeat(2, 1fr); --_3mg8xe4: repeat(2, 1fr); --_3mg8xe5: repeat(2, 1fr);"
     >
       <div>
         First col
@@ -67,25 +62,12 @@ exports[`row > renders correctly with specific align 1`] = `
 
 exports[`row > renders correctly with specific gap 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh57"
+      style="--_3mg8xe0: repeat(2, 1fr); --_3mg8xe1: repeat(2, 1fr); --_3mg8xe2: repeat(2, 1fr); --_3mg8xe3: repeat(2, 1fr); --_3mg8xe4: repeat(2, 1fr); --_3mg8xe5: repeat(2, 1fr);"
     >
       <div>
         First col
@@ -100,26 +82,12 @@ exports[`row > renders correctly with specific gap 1`] = `
 
 exports[`row > renders correctly with specific padding 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  padding: 10px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__x6hyh50 styles_gap_0.5rem_xxsmall__x6hyh57"
+      style="--_3mg8xe0: repeat(2, 1fr); --_3mg8xe1: repeat(2, 1fr); --_3mg8xe2: repeat(2, 1fr); --_3mg8xe3: repeat(2, 1fr); --_3mg8xe4: repeat(2, 1fr); --_3mg8xe5: repeat(2, 1fr); --_3mg8xe6: 10px; --_3mg8xe7: 10px; --_3mg8xe8: 10px; --_3mg8xe9: 10px; --_3mg8xea: 10px; --_3mg8xeb: 10px;"
     >
       <div>
         First col
