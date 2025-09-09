@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Breadcrumbs } from '..'
 
-describe('Breadcrumbs', () => {
+describe('breadcrumbs', () => {
   test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(
       <Breadcrumbs>

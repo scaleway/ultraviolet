@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { NumberInput } from '..'
 
-describe('NumberInput', () => {
+describe('numberInput', () => {
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <NumberInput max={100} min={0} onChange={() => {}} />,

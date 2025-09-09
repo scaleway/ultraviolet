@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Chip } from '..'
 
-describe('Checkbox', () => {
+describe('checkbox', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Chip>test</Chip>))
   test('renders correctly wiht icon', () =>
     shouldMatchEmotionSnapshot(

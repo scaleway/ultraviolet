@@ -55,7 +55,8 @@
         "import/no-anonymous-default-export": "off",
         "import/no-unassigned-import": "off",
         "jsx_a11y/label-has-associated-control": "off",
-        "vitest/prefer-lowercase-title": "error"
+        "vitest/prefer-lowercase-title": "error",
+        "no-console": "off"
       }
     }
   ],
@@ -107,7 +108,7 @@
     "@typescript-eslint/no-unsafe-declaration-merging": "error",
     "@typescript-eslint/no-var-requires": "error",
     "@typescript-eslint/prefer-as-const": "error",
-    "@typescript/no-unsafe-member-access": "error",
+    "@typescript-eslint/no-unsafe-member-access": "error",
     "@typescript-eslint/prefer-enum-initializers": "off",
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/prefer-function-type": "off",
@@ -357,7 +358,12 @@
     "unicorn/require-number-to-fixed-digits-argument": "error",
     "unicorn/switch-case-braces": "error",
     "unicorn/text-encoding-identifier-case": "error",
-    "unicorn/throw-new-error": "error"
+    "unicorn/throw-new-error": "error",
+    "arrow-body-style": "off",
+    "typescript/explicit-module-boundary-types": "off",
+    "prefer-destructuring": "off",
+    "import/no-anonymous-default-export": "off",
+    "react/jsx-handler-names": "off"
   },
   "settings": {
     "jsx-a11y": {

@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TextInput } from '..'
 
-describe('TextInput', () => {
+describe('textInput', () => {
   test('should render correctly with basic props', () =>
     shouldMatchEmotionSnapshot(
       <TextInput label="Test" onChange={() => {}} value="test" />,

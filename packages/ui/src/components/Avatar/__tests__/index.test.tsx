@@ -6,7 +6,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { Avatar } from '..'
 import support from '../__stories__/assets/avatar.svg'
 
-describe('Avatar', () => {
+describe('avatar', () => {
   describe.each(['circle', 'square'] as const)(
     `renders correctly with shape %s`,
     shape => {

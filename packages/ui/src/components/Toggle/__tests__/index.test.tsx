@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Toggle } from '..'
 
-describe('Toggle', () => {
+describe('toggle', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<Toggle name="test" onChange={() => {}} />))
 

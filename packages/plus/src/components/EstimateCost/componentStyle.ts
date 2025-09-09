@@ -40,7 +40,7 @@ export const PriceCol = styled.col`
   background-color: ${({ theme }) => theme.colors.neutral.background};
 `
 
-export const PriceCell = (theme: Theme) => css`
+export const priceCell = (theme: Theme) => css`
   border-left: 1px solid ${theme.colors.neutral.border};
   background-color: ${theme.colors.neutral.backgroundWeak};
   width: ${PRICE_MAX_CELL_WIDTH};

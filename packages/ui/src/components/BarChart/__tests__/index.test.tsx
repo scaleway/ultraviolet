@@ -10,7 +10,7 @@ import {
   barChartSimpleData,
 } from '../__stories__/mockData'
 
-describe('BarChart', () => {
+describe('barChart', () => {
   beforeAll(() => {
     vi.spyOn(nivo, 'ResponsiveWrapper').mockImplementation(
       ({ children }: ComponentProps<typeof nivo.ResponsiveWrapper>) => (

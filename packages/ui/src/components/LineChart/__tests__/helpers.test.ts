@@ -76,7 +76,7 @@ const valuesString = valuesFloatMix.map(x => x.toString())
 const emptyValues: never[] = []
 const errorValues = undefined
 
-describe('Line Chart', () => {
+describe('line Chart', () => {
   describe('getMinChartValue', () => {
     it('should return the smallest value of integer values', () => {
       expect(getMinChartValue(chartValues)).toBe(4)

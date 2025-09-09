@@ -746,7 +746,7 @@ export const Dropdown = ({
         }
       }
     }
-    // oxlint-disable-next-line react/exhaustive-deps
+    // oxlint-disable react/exhaustive-deps
   }, [isDropdownVisible, refSelect, size, ref.current])
 
   const resizeDropdown = useCallback(() => {

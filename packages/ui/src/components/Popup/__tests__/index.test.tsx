@@ -8,7 +8,7 @@ import type { ComponentProps } from 'react'
 import { describe, expect, test } from 'vitest'
 import { Popup } from '../../index'
 
-describe('Popup', () => {
+describe('popup', () => {
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Popup debounceDelay={0} text="test">

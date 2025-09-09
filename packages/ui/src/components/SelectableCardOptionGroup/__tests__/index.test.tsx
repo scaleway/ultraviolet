@@ -12,7 +12,7 @@ import {
   ubuntuOptions,
 } from '../__stories__/constants'
 
-describe('SelectableCardOptionGroup', () => {
+describe('selectableCardOptionGroup', () => {
   test('renders correctly', () => {
     const { asFragment } = renderWithTheme(
       <SelectableCardOptionGroup

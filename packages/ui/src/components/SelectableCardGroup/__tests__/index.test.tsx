@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { SelectableCardGroup } from '..'
 
-describe('SelectableCardGroup', () => {
+describe('selectableCardGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCardGroup

@@ -11,7 +11,7 @@ const options = [
   { label: '200Mb', value: 200 },
 ]
 
-describe('Double slider', () => {
+describe('double slider', () => {
   beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,

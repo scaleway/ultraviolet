@@ -16,7 +16,7 @@ const options = [
   { label: '500Mb', value: 500 },
 ]
 
-describe('SliderField', () => {
+describe('sliderField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(<SliderField name="test" value={0} />)
     expect(asFragment()).toMatchSnapshot()

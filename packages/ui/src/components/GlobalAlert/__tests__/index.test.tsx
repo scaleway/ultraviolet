@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { GlobalAlert } from '..'
 
-describe('GlobalAlert', () => {
+describe('globalAlert', () => {
   test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>))
 

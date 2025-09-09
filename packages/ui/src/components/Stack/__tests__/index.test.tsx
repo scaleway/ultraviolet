@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Stack } from '..'
 
-describe('Stack', () => {
+describe('stack', () => {
   test(`should render correctly with default props`, () =>
     shouldMatchEmotionSnapshot(
       <Stack>

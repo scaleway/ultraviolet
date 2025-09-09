@@ -4,7 +4,7 @@ import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { DateInputField } from '..'
 
-describe('DateInputField', () => {
+describe('dateInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(<DateInputField name="test" />)
     expect(asFragment()).toMatchSnapshot()

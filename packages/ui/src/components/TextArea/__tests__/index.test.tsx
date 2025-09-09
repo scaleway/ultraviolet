@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TextArea } from '..'
 
-describe('TextArea', () => {
+describe('textArea', () => {
   test('should render correctly with basic props', () =>
     shouldMatchEmotionSnapshot(
       <TextArea label="Test" onChange={() => {}} value="test" />,

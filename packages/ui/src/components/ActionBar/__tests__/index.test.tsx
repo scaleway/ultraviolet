@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { ActionBar } from '..'
 
-describe('ActionBar', () => {
+describe('actionBar', () => {
   test('renders correctly ', () =>
     shouldMatchEmotionSnapshot(<ActionBar>Hello</ActionBar>))
 

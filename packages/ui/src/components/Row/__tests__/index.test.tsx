@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Row } from '..'
 
-describe('Row', () => {
+describe('row', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
       <Row templateColumns="repeat(2, 1fr)">

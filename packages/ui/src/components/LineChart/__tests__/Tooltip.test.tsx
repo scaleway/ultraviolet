@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { LineChartTooltip } from '../Tooltip'
 
-describe('LineChart Tooltip', () => {
+describe('lineChart Tooltip', () => {
   test('renders correctly ', () =>
     shouldMatchEmotionSnapshot(
       <LineChartTooltip

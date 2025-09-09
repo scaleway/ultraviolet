@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { ProgressBar, progressBarSentiments } from '..'
 
-describe('ProgressBar', () => {
+describe('progressBar', () => {
   progressBarSentiments.forEach(sentiment => {
     it(`renders ${sentiment}`, () =>
       shouldMatchEmotionSnapshot(

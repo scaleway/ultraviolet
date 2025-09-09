@@ -20,7 +20,7 @@ const customDialogStyles = css`
 
 const mockOnClick = vi.fn()
 
-describe('Modal', () => {
+describe('modal', () => {
   beforeEach(() => {
     vi.clearAllMocks()
   })

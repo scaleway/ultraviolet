@@ -3,7 +3,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { RadioGroup } from '..'
 
-describe('RadioGroup', () => {
+describe('radioGroup', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <RadioGroup

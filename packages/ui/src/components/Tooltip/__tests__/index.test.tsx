@@ -6,7 +6,7 @@ import type { ComponentProps } from 'react'
 import { describe, expect, test } from 'vitest'
 import { Tooltip } from '..'
 
-describe('Tooltip', () => {
+describe('tooltip', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithTheme(
       <Tooltip debounceDelay={0} text="test">

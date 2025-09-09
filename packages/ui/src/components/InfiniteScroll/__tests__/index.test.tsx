@@ -3,7 +3,7 @@ import { renderWithTheme } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { InfiniteScroll } from '..'
 
-describe('InfiniteScroll', () => {
+describe('infiniteScroll', () => {
   test('renders correctly ', () => {
     const { asFragment } = renderWithTheme(
       <InfiniteScroll onLoadMore={() => {}} />,

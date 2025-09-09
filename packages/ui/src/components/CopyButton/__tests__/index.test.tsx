@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { beforeAll, describe, expect, it, test, vi } from 'vitest'
 import { CopyButton } from '../index'
 
-describe('CopyButton', () => {
+describe('copyButton', () => {
   beforeAll(() => {
     let data = ''
 

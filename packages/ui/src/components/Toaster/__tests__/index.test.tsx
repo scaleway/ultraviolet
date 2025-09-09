@@ -4,7 +4,7 @@ import { renderWithTheme } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Toast, ToastContainer, toast } from '..'
 
-describe('Toaster', () => {
+describe('toaster', () => {
   beforeEach(() => {
     vi.useFakeTimers()
   })

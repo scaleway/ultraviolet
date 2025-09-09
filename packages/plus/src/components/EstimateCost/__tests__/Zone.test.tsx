@@ -7,7 +7,7 @@ import { afterEach, beforeEach, describe, test, vi } from 'vitest'
 import { EstimateCost } from '..'
 import frFlag from './assets/fr.svg'
 
-describe('EstimateCost - Zone', () => {
+describe('estimateCost - Zone', () => {
   beforeEach(() => {
     setupIntersectionMocking(vi.fn)
   })

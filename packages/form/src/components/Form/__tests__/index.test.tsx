@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
 import { Form } from '..'
 
-describe('Form', () => {
+describe('form', () => {
   test('renders correctly with node children', () => {
     const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(

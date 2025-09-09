@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Tab } from '../Tab'
 
-describe('Tab', () => {
+describe('tab', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Tab />))
   test('renders correctly with subtitle', () =>
     shouldMatchEmotionSnapshot(<Tab subtitle="test" />))

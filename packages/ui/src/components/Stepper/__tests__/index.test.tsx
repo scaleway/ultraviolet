@@ -4,7 +4,7 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Stepper } from '..'
 
-describe('Stepper', () => {
+describe('stepper', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
       <Stepper>

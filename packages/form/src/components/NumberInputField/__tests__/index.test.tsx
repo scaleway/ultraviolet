@@ -6,7 +6,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { NumberInputField, Submit } from '../..'
 import { Form } from '../../Form'
 
-describe('NumberInputField', () => {
+describe('numberInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <NumberInputField name="test" value={0} />,

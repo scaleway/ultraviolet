@@ -7,7 +7,7 @@ import { mockErrors } from '../../../mocks'
 export default {
   component: UnitInputField,
   decorators: [
-    ChildStory => {
+    childStory => {
       const methods = useForm()
       const {
         errors,
@@ -26,7 +26,7 @@ export default {
       return (
         <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
-            {ChildStory()}
+            {childStory()}
             <Stack gap={1}>
               <Text variant="bodyStrong" as="p">
                 Form input values:

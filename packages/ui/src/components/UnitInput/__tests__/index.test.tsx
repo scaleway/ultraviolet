@@ -18,7 +18,7 @@ const options = [
     value: 'gb',
   },
 ]
-describe('UnitInput', () => {
+describe('unitInput', () => {
   test(`renders with default props`, () =>
     shouldMatchEmotionSnapshot(
       <UnitInput

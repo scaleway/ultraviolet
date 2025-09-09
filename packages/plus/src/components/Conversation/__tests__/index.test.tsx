@@ -2,7 +2,7 @@ import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Conversation } from '..'
 
-describe('Conversation', () => {
+describe('conversation', () => {
   it('should work with Default', () =>
     shouldMatchEmotionSnapshot(
       <Conversation>

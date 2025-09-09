@@ -4,7 +4,7 @@ import { describe, test } from 'vitest'
 import { SENTIMENTS } from '../../../theme'
 import { Badge, PROMINENCES, SIZES } from '..'
 
-describe('Badge', () => {
+describe('badge', () => {
   test('renders correctly with default values', () =>
     shouldMatchEmotionSnapshot(<Badge>Sample badge</Badge>))
 

@@ -15,7 +15,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 const TEST_VALUE_SINGLELINE =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
-describe('Snippet', () => {
+describe('snippet', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_SINGLELINE}</Snippet>))
 
