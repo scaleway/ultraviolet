@@ -1,7 +1,8 @@
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
-import { templateColumn, paddings } from './variables.css'
+import { paddings, templateColumn } from './variables.css'
+import type { CSSProperties } from 'react'
 
 export const row = style({
   display: 'grid',
@@ -38,36 +39,35 @@ export const row = style({
   },
 })
 
+const breakpoints = Object.keys(
+  consoleLightTheme.breakpoints,
+) as (keyof typeof consoleLightTheme.breakpoints)[]
+
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
-const orderedBreakpointKeys = Object.keys(consoleLightTheme.breakpoints).sort(
-  (a, b) =>
-    Number.parseInt(
-      consoleLightTheme.breakpoints[
-        a as keyof typeof consoleLightTheme.breakpoints
-      ],
-      10,
-    ) -
-    Number.parseInt(
-      consoleLightTheme.breakpoints[
-        b as keyof typeof consoleLightTheme.breakpoints
-      ],
-      10,
-    ),
-)
+const orderedBreakpointKeys = [
+  ...breakpoints.sort(
+    (a, b) =>
+      Number.parseInt(consoleLightTheme.breakpoints[a], 10) -
+      Number.parseInt(consoleLightTheme.breakpoints[b], 10),
+  ),
+] as const
 
 const themeBreakpoints = orderedBreakpointKeys.reduce(
   (acc, key) => ({
     ...acc,
     [key]: {
-      '@media': `screen and (min-width: ${consoleLightTheme.breakpoints[key as keyof typeof consoleLightTheme.breakpoints]})`,
+      '@media': `screen and (min-width: ${consoleLightTheme.breakpoints[key]})`,
     },
   }),
-  {},
-) as Record<keyof typeof consoleLightTheme.breakpoints, { '@media': string }>
+  {} as Record<
+    keyof typeof consoleLightTheme.breakpoints,
+    { '@media': string }
+  >,
+)
 
 const themeSpace = Object.values(consoleLightTheme.space)
 
-const alignItemsValues = [
+const alignItemsValues: CSSProperties['alignItems'][] = [
   'normal',
   'stretch',
   'center',
@@ -86,7 +86,7 @@ const alignItemsValues = [
 
 export type AlignItemsType = (typeof alignItemsValues)[number]
 
-const justifyContentValues = [
+const justifyContentValues: CSSProperties['justifyContent'][] = [
   'normal',
   'center',
   'start',
