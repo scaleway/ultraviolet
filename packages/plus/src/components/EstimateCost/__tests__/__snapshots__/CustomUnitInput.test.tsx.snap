@@ -2,57 +2,47 @@
 
 exports[`estimateCost - CustomUnitInput > render default values 1`] = `
 <DocumentFragment>
-  .emotion-1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
+  .emotion-0 {
   width: 100%;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
 }
 
-.emotion-1:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus,
-.emotion-1:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.emotion-1:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus>.emotion-4,
-.emotion-1:not([data-disabled='true']):not([data-readonly='true']):not(
+    ):not([data-error='true']):focus>.emotion-3,
+.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):active>.emotion-4 {
+    ):not([data-error='true']):active>.emotion-3 {
   border-right-color: #8c40ef;
 }
 
-.emotion-1:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
     ):not([data-error='true']):focus-within {
   border-color: #792dd4;
 }
 
-.emotion-1:not([data-disabled='true']):not([data-readonly='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
       [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-4 {
+    ):not([data-error='true']):focus-within>.emotion-3 {
   border-right-color: #8c40ef;
 }
 
-.emotion-1:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):not([data-readonly='true']):hover,
-.emotion-1:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
     ):focus {
   -webkit-text-decoration: none;
@@ -60,90 +50,90 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-1:not([data-disabled='true']):not([data-error='true']):not(
+.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-4,
-.emotion-1:not([data-disabled='true']):not([data-error='true']):not(
+    ):not([data-readonly='true']):hover>.emotion-3,
+.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
-    ):focus>.emotion-4 {
+    ):focus>.emotion-3 {
   border-right-color: #8c40ef;
 }
 
-.emotion-1[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-1[data-readonly='true']:active {
+.emotion-0[data-readonly='true']:active {
   border-color: #d9dadd;
 }
 
-.emotion-1[data-size='small'] {
+.emotion-0[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-1[data-size='medium'] {
+.emotion-0[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-1[data-size='large'] {
+.emotion-0[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-1[data-success='true'] {
+.emotion-0[data-success='true'] {
   border: 1px solid #22674e;
 }
 
-.emotion-1[data-success='true']>.emotion-4 {
+.emotion-0[data-success='true']>.emotion-3 {
   border-right-color: #22674e;
 }
 
-.emotion-1[data-success='true']:active {
+.emotion-0[data-success='true']:active {
   border: 1px solid #22674e;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-1[data-success='true']:active>.emotion-4 {
+.emotion-0[data-success='true']:active>.emotion-3 {
   border-right-color: #22674e;
 }
 
-.emotion-1[data-error='true'] {
+.emotion-0[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-1[data-error='true']>.emotion-4 {
+.emotion-0[data-error='true']>.emotion-3 {
   border-right-color: #b3144d;
 }
 
-.emotion-1[data-error='true']>.emotion-4:hover {
+.emotion-0[data-error='true']>.emotion-3:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-1[data-error='true']:active {
+.emotion-0[data-error='true']:active {
   border: 1px solid #b3144d;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-1[data-error='true']:active>.emotion-4 {
+.emotion-0[data-error='true']:active>.emotion-3 {
   border-right-color: #b3144d;
 }
 
-.emotion-1[data-error='true']:active>.emotion-4:hover {
+.emotion-0[data-error='true']:active>.emotion-3:hover {
   border-right-color: #b3144d;
 }
 
-.emotion-1[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true']>.emotion-4 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   border-right-color: #e9eaeb;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,7 +151,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -174,66 +164,66 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   color: #3f4250;
 }
 
-.emotion-5[data-size="small"] {
+.emotion-4[data-size="small"] {
   padding-left: 0.5rem;
 }
 
-.emotion-5[data-size="large"] {
+.emotion-4[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: #727683;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
-.emotion-5:disabled::-webkit-input-placeholder {
+.emotion-4:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:disabled::-moz-placeholder {
+.emotion-4:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:disabled:-ms-input-placeholder {
+.emotion-4:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-5:disabled::placeholder {
+.emotion-4:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-8 {
+.emotion-7 {
   width: 100%;
   width: 100%;
 }
 
-.emotion-8 #unit {
+.emotion-7 #unit {
   border: none;
   background: transparent;
 }
 
-.emotion-8 #unit:focus,
-.emotion-8 #unit:active {
+.emotion-7 #unit:focus,
+.emotion-7 #unit:active {
   box-shadow: none;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -248,85 +238,85 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   width: 100%;
 }
 
-.emotion-10[data-size='small'] {
+.emotion-9[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-10[data-size='medium'] {
+.emotion-9[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-9[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-10[data-state='neutral'] {
+.emotion-9[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-10[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-9[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-10[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-9[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-10[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-9[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-10[data-state='success'] {
+.emotion-9[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-10[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-10[data-state='success'][data-dropdownvisible='true'] {
+.emotion-9[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-10[data-state='danger'] {
+.emotion-9[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-10[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-9[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-10[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-9[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-10:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-9:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10[data-readonly='true'] {
+.emotion-9[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-9[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-12 {
+.emotion-11 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -335,7 +325,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   align-self: center;
 }
 
-.emotion-14 {
+.emotion-13 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -352,15 +342,16 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
       width="100%"
     >
       <div
-        class="emotion-0 emotion-1 emotion-2"
+        class="emotion-0 emotion-1 uv_x6hyh50 "
+        style="--uv_3mg8xe0: auto auto; --uv_3mg8xe1: auto auto; --uv_3mg8xe2: auto auto; --uv_3mg8xe3: auto auto; --uv_3mg8xe4: auto auto; --uv_3mg8xe5: auto auto;"
       >
         <div
-          class="emotion-3 emotion-4"
+          class="emotion-2 emotion-3"
           id="input-field"
         >
           <input
             aria-invalid="false"
-            class="emotion-5 emotion-6"
+            class="emotion-4 emotion-5"
             data-size="medium"
             data-testid="unit-input"
             id="«r0»"
@@ -375,7 +366,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
         </div>
         <div
           aria-label="iteration-unit"
-          class="emotion-7 emotion-8 emotion-9"
+          class="emotion-6 emotion-7 emotion-8"
         >
           <div
             aria-controls="«r2»"
@@ -390,7 +381,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
               <div
                 aria-controls="«r2»"
                 aria-expanded="false"
-                class="emotion-10 emotion-11"
+                class="emotion-9 emotion-10"
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
@@ -402,12 +393,12 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-12 emotion-13 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                  class="emotion-11 emotion-12 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   Hour(s)
                 </div>
                 <div
-                  class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                  class="emotion-13 emotion-14 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                   style="--uv_4k0ekn0: var(--uv_4k0ekn0); --uv_4k0ekn1: var(--uv_4k0ekn1); --uv_4k0ekn2: var(--uv_4k0ekn2); --uv_4k0ekn3: var(--uv_4k0ekn3);"
                 >
                   <svg
