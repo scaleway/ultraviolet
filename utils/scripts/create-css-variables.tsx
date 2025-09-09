@@ -69,7 +69,7 @@ export const generateThemeCss = ({
   uvTheme: UvThemeType
   filename: string
 }) =>
-  `:root.${filename}-theme {\n${
+  `:root,\n:root.${filename}-theme {\n${
     createCssVariables('color', uvTheme.colors) +
     createCssVariables('radius', uvTheme.radii) +
     createCssVariables('shadow', uvTheme.shadows) +
