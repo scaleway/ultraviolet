@@ -1,5 +1,12 @@
 # @ultraviolet/illustrations
 
+## 5.0.2-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2)]:
+  - @ultraviolet/themes@2.1.0-beta.1
+
 ## 5.0.2-beta.0
 
 ### Patch Changes
