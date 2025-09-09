@@ -13,19 +13,6 @@ const sentiments = [
   'neutral',
 ] as const
 
-const sentimentThemeMap: Record<
-  (typeof sentiments)[number],
-  typeof theme.colors.primary
-> = {
-  primary: theme.colors.primary,
-  secondary: theme.colors.secondary,
-  danger: theme.colors.danger,
-  info: theme.colors.info,
-  success: theme.colors.success,
-  warning: theme.colors.warning,
-  neutral: theme.colors.neutral,
-}
-
 function getDefaultStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'neutral') {
     return {
@@ -36,9 +23,9 @@ function getDefaultStyle(sentiment: (typeof sentiments)[number]) {
   }
 
   return {
-    background: sentimentThemeMap[sentiment].background,
-    color: sentimentThemeMap[sentiment].text,
-    borderColor: sentimentThemeMap[sentiment].background,
+    background: theme.colors[sentiment].background,
+    color: theme.colors[sentiment].text,
+    borderColor: theme.colors[sentiment].background,
   }
 }
 
@@ -52,9 +39,9 @@ function getStrongStyle(sentiment: (typeof sentiments)[number]) {
   }
 
   return {
-    background: sentimentThemeMap[sentiment].backgroundStrong,
-    color: sentimentThemeMap[sentiment].textStrong,
-    borderColor: sentimentThemeMap[sentiment].backgroundStrong,
+    background: theme.colors[sentiment].backgroundStrong,
+    color: theme.colors[sentiment].textStrong,
+    borderColor: theme.colors[sentiment].backgroundStrong,
   }
 }
 
