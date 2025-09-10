@@ -298,7 +298,7 @@ export const NumberInput = forwardRef(
       [localRef, min, onChange],
     )
 
-    const isMinusDisabled = useMemo(() => {
+    const isMinusDisabled = useCallback(() => {
       if (!localRef?.current?.value || localRef?.current?.value === '') {
         return false
       }
@@ -313,7 +313,7 @@ export const NumberInput = forwardRef(
       return Number.isNaN(numericValue) || numericValue <= minValue
     }, [localRef?.current?.value, min])
 
-    const isPlusDisabled = useMemo(() => {
+    const isPlusDisabled = useCallback(() => {
       if (!localRef?.current?.value || localRef?.current?.value === '') {
         return false
       }
@@ -344,6 +344,10 @@ export const NumberInput = forwardRef(
     if (value !== undefined) {
       inputValue =
         value !== null && typeof value === 'number' ? value.toString() : ''
+
+      if (localRef.current) {
+        localRef.current.value = inputValue
+      }
     }
 
     return (
@@ -377,7 +381,7 @@ export const NumberInput = forwardRef(
                 >
                   <Button
                     aria-label="minus"
-                    disabled={disabled || readOnly || isMinusDisabled}
+                    disabled={disabled || readOnly || isMinusDisabled()}
                     onClick={onClickSideButton('down')}
                     sentiment="neutral"
                     size={size === 'small' ? 'xsmall' : 'small'}
@@ -451,7 +455,7 @@ export const NumberInput = forwardRef(
                 >
                   <Button
                     aria-label="plus"
-                    disabled={disabled || readOnly || isPlusDisabled}
+                    disabled={disabled || readOnly || isPlusDisabled()}
                     onClick={onClickSideButton('up')}
                     sentiment="neutral"
                     size={size === 'small' ? 'xsmall' : 'small'}
