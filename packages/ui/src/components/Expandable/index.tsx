@@ -1,8 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { animationDurationVar, expandable } from './styles.css'
 
 const ANIMATION_DURATION = 300 // in ms
 
@@ -26,17 +27,6 @@ type ExpandableProps = {
    */
   animationDuration?: number
 }
-
-export const StyledExpandable = styled('div', {
-  shouldForwardProp: prop => !['animationDuration'].includes(prop),
-})<{ animationDuration: number }>`
-  &[data-is-animated="true"] {
-    transition:
-      max-height ${({ animationDuration }) => animationDuration}ms ease-out,
-      opacity ${({ animationDuration }) => animationDuration}ms ease-out;
-    }
-  height: auto;
-`
 
 const NoAnimationExpandable = ({
   children,
@@ -137,15 +127,17 @@ export const AnimatedExpandable = ({
   }, [animationDuration, height, minHeight, opened, shouldBeAnimated])
 
   return (
-    <StyledExpandable
-      animationDuration={animationDuration}
-      className={className}
+    <div
+      className={`${className ? `${className} ` : ''}${expandable}`}
       data-is-animated={shouldBeAnimated && !isFirstRender.current}
       data-testid={dataTestId}
       ref={ref}
+      style={assignInlineVars({
+        [animationDurationVar]: `${animationDuration}ms`,
+      })}
     >
       {children}
-    </StyledExpandable>
+    </div>
   )
 }
 
