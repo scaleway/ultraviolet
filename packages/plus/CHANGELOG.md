@@ -1,5 +1,13 @@
 # @ultraviolet/plus
 
+## 2.1.2
+
+### Patch Changes
+
+- [#5514](https://github.com/scaleway/ultraviolet/pull/5514) [`8d46d50`](https://github.com/scaleway/ultraviolet/commit/8d46d508b669fb93199806ff3defabd6210f12c7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.25.1`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.25.1`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.1`.
+
 ## 2.1.1
 
 ### Patch Changes
