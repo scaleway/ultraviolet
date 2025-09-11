@@ -119,7 +119,7 @@ export const Stack: React.FC<StackProps> = ({
       id={id}
       ref={ref}
       style={assignInlineVars({
-        [width]: width,
+        [width]: width ?? null,
         [maxWidth]: maxWidth,
         [minWidth]: minWidth,
         [flex]: flex,

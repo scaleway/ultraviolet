@@ -137,15 +137,6 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -155,21 +146,21 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   overflow-y: hidden;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -179,12 +170,12 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-24 {
+.emotion-22 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-26 {
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -193,7 +184,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   cursor: pointer;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,7 +199,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   align-items: center;
 }
 
-.emotion-30 {
+.emotion-28 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -229,57 +220,57 @@ exports[`Snippet > renders correctly in multiline  1`] = `
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="false"
-          style="max-height: 112px; overflow: hidden;"
+          style="--mlltm90: 300ms; max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«r3»"
@@ -311,19 +302,19 @@ exports[`Snippet > renders correctly in multiline  1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="false"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -364,15 +355,6 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -382,21 +364,21 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8:before {
+.emotion-6:before {
   color: #727683;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -411,7 +393,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   padding-right: 0.5rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -421,12 +403,12 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-24 {
+.emotion-22 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-26 {
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -435,7 +417,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   cursor: pointer;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -450,7 +432,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   align-items: center;
 }
 
-.emotion-30 {
+.emotion-28 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -471,57 +453,57 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="false"
-          style="max-height: 112px; overflow: hidden;"
+          style="--mlltm90: 300ms; max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«r9»"
@@ -553,19 +535,19 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="false"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -606,15 +588,6 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -624,21 +597,21 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   overflow-y: hidden;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8:before {
+.emotion-6:before {
   color: #727683;
   width: 35px;
   display: -webkit-inline-box;
@@ -654,7 +627,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   padding-right: 0.5rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -664,12 +637,12 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   border: 2px solid transparent;
 }
 
-.emotion-24 {
+.emotion-22 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-26 {
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -678,7 +651,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   cursor: pointer;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -693,7 +666,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   align-items: center;
 }
 
-.emotion-30 {
+.emotion-28 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -714,57 +687,57 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="false"
-          style="max-height: 112px; overflow: hidden;"
+          style="--mlltm90: 300ms; max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«r6»"
@@ -796,19 +769,19 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="false"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1279,15 +1252,6 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1297,21 +1261,21 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   overflow-y: hidden;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-22 {
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1321,12 +1285,12 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   border: 2px solid transparent;
 }
 
-.emotion-24 {
+.emotion-22 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-26 {
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -1335,7 +1299,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   cursor: pointer;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1350,7 +1314,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   align-items: center;
 }
 
-.emotion-30 {
+.emotion-28 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -1371,57 +1335,57 @@ exports[`Snippet > renders correctly with hideText 1`] = `
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="false"
-          style="max-height: 112px; overflow: hidden;"
+          style="--mlltm90: 300ms; max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«rk»"
@@ -1453,19 +1417,19 @@ exports[`Snippet > renders correctly with hideText 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="false"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Show 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -1526,24 +1490,16 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-4 {
+  margin: 0;
+  padding: 1rem;
+  padding-right: 4.5rem;
+  overflow-x: auto;
   height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -1554,44 +1510,44 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-6 {
-  margin: 0;
-  padding: 1rem;
-  padding-right: 4.5rem;
-  overflow-x: auto;
-  height: auto;
-  counter-reset: section;
-  overflow-y: hidden;
-}
-
-.emotion-8 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-22 {
+.emotion-20 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 1rem 0 0;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+}
+
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1602,21 +1558,20 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-22 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem 1rem 0 0;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 2px solid transparent;
-}
-
-.emotion-24 {
   width: 100%;
   box-shadow: none;
 }
 
-.emotion-26 {
+.emotion-24 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -1626,15 +1581,21 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-26 {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1650,21 +1611,6 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-30 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -1685,56 +1631,57 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="false"
+          style="--mlltm90: 300ms;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«rq»"
@@ -1766,19 +1713,19 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="true"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Hide 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2032,24 +1979,16 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-4 {
+  margin: 0;
+  padding: 1rem;
+  padding-right: 4.5rem;
+  overflow-x: auto;
   height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2060,44 +1999,44 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-6 {
-  margin: 0;
-  padding: 1rem;
-  padding-right: 4.5rem;
-  overflow-x: auto;
-  height: auto;
-  counter-reset: section;
-  overflow-y: hidden;
-}
-
-.emotion-8 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-22 {
+.emotion-20 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 1rem 0 0;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+}
+
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2108,26 +2047,25 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-22 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem 1rem 0 0;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 2px solid transparent;
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.emotion-24 {
+.emotion-22 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .emotion-24 {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f9f9fa;
+  background: none;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
 }
 
-.emotion-26 {
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -2137,15 +2075,21 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-26 {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2161,21 +2105,6 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-30 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -2185,7 +2114,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.emotion-30 {
+.emotion-28 {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -2206,57 +2135,57 @@ exports[`Snippet > renders correctly with showText 1`] = `
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="false"
-          style="max-height: 112px; overflow: hidden;"
+          style="--mlltm90: 300ms; max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«rn»"
@@ -2288,19 +2217,19 @@ exports[`Snippet > renders correctly with showText 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="false"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Test 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -2620,24 +2549,16 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-4 {
+  margin: 0;
+  padding: 1rem;
+  padding-right: 4.5rem;
+  overflow-x: auto;
   height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-4 {
-  height: auto;
-}
-
-.emotion-4[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-.emotion-6 {
   margin: 0;
   padding: 1rem;
   padding-right: 4.5rem;
@@ -2648,44 +2569,44 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-6 {
-  margin: 0;
-  padding: 1rem;
-  padding-right: 4.5rem;
-  overflow-x: auto;
-  height: auto;
-  counter-reset: section;
-  overflow-y: hidden;
-}
-
-.emotion-8 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: block;
 }
 
-.emotion-8:not([data-multiline]):after {
+.emotion-6:not([data-multiline]):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-8[data-multiline="true"]:nth-child(-n+2):after {
+.emotion-6[data-multiline="true"]:nth-child(-n+2):after {
   content: "";
   padding-right: 4rem;
 }
 
-.emotion-22 {
+.emotion-20 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 1rem 0 0;
+  background: #f9f9fa;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+}
+
+.emotion-20 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2696,21 +2617,20 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-22 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem 1rem 0 0;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 2px solid transparent;
-}
-
-.emotion-24 {
   width: 100%;
   box-shadow: none;
 }
 
-.emotion-26 {
+.emotion-24 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.emotion-24 {
   width: 100%;
   background: none;
   border: none;
@@ -2720,15 +2640,21 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-26 {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1rem;
-  padding-top: 0.5rem;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2744,21 +2670,6 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-30 {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -2779,57 +2690,57 @@ exports[`Snippet > should click on extend button to display full content on  1`]
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__mlltm91"
           data-is-animated="true"
-          style="max-height: 112px; overflow: hidden;"
+          style="--mlltm90: 300ms; max-height: 112px; overflow: hidden;"
         >
           <pre
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             >
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </span>
             <span
-              class="emotion-8 emotion-9"
+              class="emotion-6 emotion-7"
               data-multiline="true"
             />
           </pre>
         </div>
         <div
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <div
             aria-controls="«rt»"
@@ -2861,19 +2772,19 @@ exports[`Snippet > should click on extend button to display full content on  1`]
           </div>
         </div>
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-22 emotion-23"
         >
           <button
             aria-expanded="true"
-            class="emotion-26 emotion-27"
+            class="emotion-24 emotion-25"
             type="button"
           >
             <span
-              class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="emotion-26 emotion-27 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Hide 
               <svg
-                class="emotion-30 emotion-31 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+                class="emotion-28 emotion-29 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
                 viewBox="0 0 16 16"
               >
                 <path
