@@ -2,166 +2,29 @@
 
 exports[`Radio > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+      class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         aria-disabled="false"
-        class="emotion-2 emotion-3"
+        class="styles__17da2jl3"
         data-checked="false"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__17da2jl6"
           id="«r0»"
           name="radio"
           type="radio"
           value="choice"
         />
         <svg
-          class="emotion-6 emotion-7"
+          class="styles__17da2jl7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -172,13 +35,13 @@ exports[`Radio > renders correctly 1`] = `
               stroke-width="2"
             />
             <circle
-              class="emotion-8 emotion-9"
+              class="styles__17da2jl0"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="emotion-10 emotion-11"
+              class="styles__17da2jl8"
               cx="12"
               cy="12"
               r="5"
@@ -186,7 +49,7 @@ exports[`Radio > renders correctly 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           for="«r0»"
         >
           Choice
@@ -199,167 +62,30 @@ exports[`Radio > renders correctly 1`] = `
 
 exports[`Radio > renders correctly when checked 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+      class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         aria-disabled="false"
-        class="emotion-2 emotion-3"
+        class="styles__17da2jl3"
         data-checked="true"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
           checked=""
-          class="emotion-4 emotion-5"
+          class="styles__17da2jl6"
           id="«rc»"
           name="radio"
           type="radio"
           value="choice"
         />
         <svg
-          class="emotion-6 emotion-7"
+          class="styles__17da2jl7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -370,13 +96,13 @@ exports[`Radio > renders correctly when checked 1`] = `
               stroke-width="2"
             />
             <circle
-              class="emotion-8 emotion-9"
+              class="styles__17da2jl0"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="emotion-10 emotion-11"
+              class="styles__17da2jl8"
               cx="12"
               cy="12"
               r="5"
@@ -384,7 +110,7 @@ exports[`Radio > renders correctly when checked 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           for="«rc»"
         >
           Choice
@@ -397,159 +123,22 @@ exports[`Radio > renders correctly when checked 1`] = `
 
 exports[`Radio > renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+      class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         aria-disabled="true"
-        class="emotion-2 emotion-3"
+        class="styles__17da2jl3"
         data-checked="false"
       >
         <input
           aria-disabled="true"
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__17da2jl6"
           disabled=""
           id="«r3»"
           name="radio"
@@ -557,7 +146,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
           value="choice"
         />
         <svg
-          class="emotion-6 emotion-7"
+          class="styles__17da2jl7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -568,13 +157,13 @@ exports[`Radio > renders correctly when disabled 1`] = `
               stroke-width="2"
             />
             <circle
-              class="emotion-8 emotion-9"
+              class="styles__17da2jl0"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="emotion-10 emotion-11"
+              class="styles__17da2jl8"
               cx="12"
               cy="12"
               r="5"
@@ -582,7 +171,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           for="«r3»"
         >
           Choice
@@ -595,167 +184,30 @@ exports[`Radio > renders correctly when disabled 1`] = `
 
 exports[`Radio > renders correctly when error 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+      class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         aria-disabled="false"
-        class="emotion-2 emotion-3"
+        class="styles__17da2jl3"
         data-checked="false"
         data-error="Invalid value"
       >
         <input
           aria-disabled="false"
           aria-invalid="true"
-          class="emotion-4 emotion-5"
+          class="styles__17da2jl6"
           id="«rf»"
           name="radio"
           type="radio"
           value="choice"
         />
         <svg
-          class="emotion-6 emotion-7"
+          class="styles__17da2jl7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -766,13 +218,13 @@ exports[`Radio > renders correctly when error 1`] = `
               stroke-width="2"
             />
             <circle
-              class="emotion-8 emotion-9"
+              class="styles__17da2jl0"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="emotion-10 emotion-11"
+              class="styles__17da2jl8"
               cx="12"
               cy="12"
               r="5"
@@ -780,7 +232,7 @@ exports[`Radio > renders correctly when error 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           for="«rf»"
         >
           Choice
@@ -793,170 +245,29 @@ exports[`Radio > renders correctly when error 1`] = `
 
 exports[`Radio > renders correctly when helper 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-.emotion-14 {
-  margin-left: 2rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+      class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         aria-disabled="false"
-        class="emotion-2 emotion-3"
+        class="styles__17da2jl3"
         data-checked="false"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__17da2jl6"
           id="«ri»"
           name="radio"
           type="radio"
           value="choice"
         />
         <svg
-          class="emotion-6 emotion-7"
+          class="styles__17da2jl7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -967,13 +278,13 @@ exports[`Radio > renders correctly when helper 1`] = `
               stroke-width="2"
             />
             <circle
-              class="emotion-8 emotion-9"
+              class="styles__17da2jl0"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="emotion-10 emotion-11"
+              class="styles__17da2jl8"
               cx="12"
               cy="12"
               r="5"
@@ -981,14 +292,14 @@ exports[`Radio > renders correctly when helper 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           for="«ri»"
         >
           Choice
         </label>
       </div>
       <span
-        class="emotion-14 emotion-15 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+        class="styles__17da2jl2 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
       >
         Helper
       </span>
@@ -999,144 +310,7 @@ exports[`Radio > renders correctly when helper 1`] = `
 
 exports[`Radio > renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1146,25 +320,25 @@ exports[`Radio > renders correctly with tooltip 1`] = `
       tabindex="0"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+        class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__17da2jl3"
           data-checked="false"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
-            class="emotion-4 emotion-5"
+            class="styles__17da2jl6"
             id="«r6»"
             name="radio"
             type="radio"
             value="choice"
           />
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__17da2jl7"
             viewBox="0 0 24 24"
           >
             <g>
@@ -1175,13 +349,13 @@ exports[`Radio > renders correctly with tooltip 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="emotion-8 emotion-9"
+                class="styles__17da2jl0"
                 cx="12"
                 cy="12"
                 r="8"
               />
               <circle
-                class="emotion-10 emotion-11"
+                class="styles__17da2jl8"
                 cx="12"
                 cy="12"
                 r="5"
@@ -1189,7 +363,7 @@ exports[`Radio > renders correctly with tooltip 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             for="«r6»"
           >
             Choice
@@ -1203,166 +377,29 @@ exports[`Radio > renders correctly with tooltip 1`] = `
 
 exports[`Radio > renders without name 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-2[aria-disabled='false'],
-.emotion-2[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
-  fill: #e5dbfd;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
-  fill: #b3144d;
-}
-
-.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
-  fill: #ffd3e3;
-}
-
-.emotion-2[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2[aria-disabled='true']>label,
-.emotion-2[aria-disabled='true'] .emotion-5 {
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
-  fill: #f3f3f4;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-4+.emotion-7 .emotion-11 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-4:checked+svg .emotion-11 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
-  fill: #d8c5fc;
-}
-
-.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
-  fill: #e51963;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
-  fill: #f1eefc;
-}
-
-.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
-  fill: #ffebf2;
-}
-
-.emotion-6 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-6 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+      class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
       style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         aria-disabled="true"
-        class="emotion-2 emotion-3"
+        class="styles__17da2jl3"
         data-checked="false"
       >
         <input
           aria-disabled="true"
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__17da2jl6"
           disabled=""
           id="«r9»"
           type="radio"
           value="choice"
         />
         <svg
-          class="emotion-6 emotion-7"
+          class="styles__17da2jl7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -1373,13 +410,13 @@ exports[`Radio > renders without name 1`] = `
               stroke-width="2"
             />
             <circle
-              class="emotion-8 emotion-9"
+              class="styles__17da2jl0"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="emotion-10 emotion-11"
+              class="styles__17da2jl8"
               cx="12"
               cy="12"
               r="5"
@@ -1387,7 +424,7 @@ exports[`Radio > renders without name 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           for="«r9»"
         >
           Choice
