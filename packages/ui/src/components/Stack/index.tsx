@@ -7,7 +7,7 @@ import { useMemo } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
 import { sprinkles, stack } from './styles.css'
-import { flex, maxWidth, minWidth, width } from './variables.css'
+import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
 type ResponsiveProp<T> =
   | T
@@ -66,7 +66,7 @@ const mapRepsonsiveGap = (
       )
     : {}
 
-export const Stack: React.FC<StackProps> = ({
+export const Stack = ({
   gap,
   direction = 'column',
   alignItems = 'normal',
@@ -76,9 +76,13 @@ export const Stack: React.FC<StackProps> = ({
   children,
   id,
   'data-testid': dataTestId,
+  width,
+  maxWidth,
+  minWidth,
+  flex,
   ref,
   ...props
-}) => {
+}: StackProps) => {
   const wrapValue = useMemo(() => {
     if (typeof wrap === 'boolean') {
       return wrap ? 'wrap' : 'nowrap'
@@ -119,10 +123,10 @@ export const Stack: React.FC<StackProps> = ({
       id={id}
       ref={ref}
       style={assignInlineVars({
-        [width]: width,
-        [maxWidth]: maxWidth,
-        [minWidth]: minWidth,
-        [flex]: flex,
+        [widthVar]: width?.toString(),
+        [maxWidthVar]: maxWidth?.toString(),
+        [minWidthVar]: minWidth?.toString(),
+        [flexVar]: flex?.toString(),
       })}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
