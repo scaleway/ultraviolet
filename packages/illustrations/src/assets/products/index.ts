@@ -37,6 +37,7 @@ import * as ipfsPinning from './ipfsPinning'
 import * as jero from './jero'
 import * as k8sKapsule from './k8sKapsule'
 import * as k8sKosmos from './k8sKosmos'
+import * as kafka from './kafka'
 import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
 import * as localStorage from './localStorage'
@@ -101,6 +102,7 @@ export {
   jero,
   k8sKapsule,
   k8sKosmos,
+  kafka,
   kms,
   loadBalancers,
   localStorage,

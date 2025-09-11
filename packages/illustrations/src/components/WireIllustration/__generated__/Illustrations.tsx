@@ -99,6 +99,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/k8sKapsule/k8s-kapsule-wire.svg',
   k8sKosmos:
     'https://assets.scaleway.com/illustrations/products/k8sKosmos/k8s-kosmos-wire.svg',
+  kafka:
+    'https://assets.scaleway.com/illustrations/products/kafka/kafka-wire.svg',
   kms: 'https://assets.scaleway.com/illustrations/products/kms/kms-wire.svg',
   loadBalancers:
     'https://assets.scaleway.com/illustrations/products/loadBalancers/load-balancers-wire.svg',
