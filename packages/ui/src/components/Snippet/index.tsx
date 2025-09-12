@@ -46,7 +46,7 @@ const StyledSpan = styled('span', {
     !['linePrefix', 'multiline', 'prefix'].includes(prop),
 })<{ linePrefix?: string; multiline?: boolean; prefix?: Prefixes }>`
   display: block;
-
+  white-space: pre;
 
   &:not([data-multiline]):after {
     content: "";
