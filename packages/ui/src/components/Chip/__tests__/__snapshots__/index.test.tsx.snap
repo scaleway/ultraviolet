@@ -2,79 +2,14 @@
 
 exports[`checkbox > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  padding: 0.25rem 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #e9eaeb;
-  text-align: center;
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0[data-disabled="false"]:hover {
-  background-color: #e9eaeb;
-  border-color: #92959d;
-  color: #222638;
-}
-
-.emotion-0[data-disabled="true"] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-active="true"] {
-  background-color: #8c40ef;
-  border-color: #8c40ef;
-  color: #ffffff;
-}
-
-.emotion-0[data-active="true"][data-disabled="false"]:hover {
-  background-color: #792dd4;
-  border-color: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0[data-active="true"][data-disabled="true"] {
-  background-color: #e5dbfd;
-  border: none;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 1.5rem;
-  padding: 0.25rem 0.75rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 2rem;
-  padding: 0.25rem 1rem;
-}
-
-.emotion-0[data-trailing-icon="true"] {
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+        class="styles__1u4n71t1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
         data-active="false"
         data-disabled="false"
         data-prominence="default"
@@ -90,99 +25,14 @@ exports[`checkbox > renders correctly 1`] = `
 
 exports[`checkbox > renders correctly active 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  padding: 0.25rem 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #e9eaeb;
-  text-align: center;
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0[data-disabled="false"]:hover {
-  background-color: #e9eaeb;
-  border-color: #92959d;
-  color: #222638;
-}
-
-.emotion-0[data-disabled="true"] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-active="true"] {
-  background-color: #8c40ef;
-  border-color: #8c40ef;
-  color: #ffffff;
-}
-
-.emotion-0[data-active="true"][data-disabled="false"]:hover {
-  background-color: #792dd4;
-  border-color: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0[data-active="true"][data-disabled="true"] {
-  background-color: #e5dbfd;
-  border: none;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 1.5rem;
-  padding: 0.25rem 0.75rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 2rem;
-  padding: 0.25rem 1rem;
-}
-
-.emotion-0[data-trailing-icon="true"] {
-  padding-right: 0.5rem;
-}
-
-.emotion-2 {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0.25rem;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
-  background-color: #8c40ef;
-}
-
-.emotion-2[data-disabled="true"] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+        class="styles__1u4n71t1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
         data-active="true"
         data-disabled="false"
         data-prominence="stronger"
@@ -191,10 +41,9 @@ exports[`checkbox > renders correctly active 1`] = `
       >
         test 
         <div
-          class="emotion-2 emotion-3"
+          class="styles__1u4n71t0"
           data-active="true"
           data-disabled="false"
-          data-has-onclick="false"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_stronger__vbm0wqi styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_16__vbm0wq10"
@@ -215,99 +64,14 @@ exports[`checkbox > renders correctly active 1`] = `
 
 exports[`checkbox > renders correctly active disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  padding: 0.25rem 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #e9eaeb;
-  text-align: center;
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0[data-disabled="false"]:hover {
-  background-color: #e9eaeb;
-  border-color: #92959d;
-  color: #222638;
-}
-
-.emotion-0[data-disabled="true"] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-active="true"] {
-  background-color: #8c40ef;
-  border-color: #8c40ef;
-  color: #ffffff;
-}
-
-.emotion-0[data-active="true"][data-disabled="false"]:hover {
-  background-color: #792dd4;
-  border-color: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0[data-active="true"][data-disabled="true"] {
-  background-color: #e5dbfd;
-  border: none;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 1.5rem;
-  padding: 0.25rem 0.75rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 2rem;
-  padding: 0.25rem 1rem;
-}
-
-.emotion-0[data-trailing-icon="true"] {
-  padding-right: 0.5rem;
-}
-
-.emotion-2 {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0.25rem;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
-  background-color: #8c40ef;
-}
-
-.emotion-2[data-disabled="true"] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+        class="styles__1u4n71t1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
         data-active="true"
         data-disabled="true"
         data-prominence="stronger"
@@ -316,10 +80,9 @@ exports[`checkbox > renders correctly active disabled 1`] = `
       >
         test 
         <div
-          class="emotion-2 emotion-3"
+          class="styles__1u4n71t0"
           data-active="true"
           data-disabled="true"
-          data-has-onclick="false"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_stronger__vbm0wqi styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_44__vbm0wq1s"
@@ -340,99 +103,14 @@ exports[`checkbox > renders correctly active disabled 1`] = `
 
 exports[`checkbox > renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  padding: 0.25rem 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #e9eaeb;
-  text-align: center;
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0[data-disabled="false"]:hover {
-  background-color: #e9eaeb;
-  border-color: #92959d;
-  color: #222638;
-}
-
-.emotion-0[data-disabled="true"] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-active="true"] {
-  background-color: #8c40ef;
-  border-color: #8c40ef;
-  color: #ffffff;
-}
-
-.emotion-0[data-active="true"][data-disabled="false"]:hover {
-  background-color: #792dd4;
-  border-color: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0[data-active="true"][data-disabled="true"] {
-  background-color: #e5dbfd;
-  border: none;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 1.5rem;
-  padding: 0.25rem 0.75rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 2rem;
-  padding: 0.25rem 1rem;
-}
-
-.emotion-0[data-trailing-icon="true"] {
-  padding-right: 0.5rem;
-}
-
-.emotion-2 {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0.25rem;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
-  background-color: #8c40ef;
-}
-
-.emotion-2[data-disabled="true"] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+        class="styles__1u4n71t1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
         data-active="false"
         data-disabled="true"
         data-prominence="weak"
@@ -441,10 +119,9 @@ exports[`checkbox > renders correctly disabled 1`] = `
       >
         test 
         <div
-          class="emotion-2 emotion-3"
+          class="styles__1u4n71t0"
           data-active="false"
           data-disabled="true"
-          data-has-onclick="false"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_30__vbm0wq1e"
@@ -465,99 +142,14 @@ exports[`checkbox > renders correctly disabled 1`] = `
 
 exports[`checkbox > renders correctly large 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  padding: 0.25rem 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #e9eaeb;
-  text-align: center;
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0[data-disabled="false"]:hover {
-  background-color: #e9eaeb;
-  border-color: #92959d;
-  color: #222638;
-}
-
-.emotion-0[data-disabled="true"] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-active="true"] {
-  background-color: #8c40ef;
-  border-color: #8c40ef;
-  color: #ffffff;
-}
-
-.emotion-0[data-active="true"][data-disabled="false"]:hover {
-  background-color: #792dd4;
-  border-color: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0[data-active="true"][data-disabled="true"] {
-  background-color: #e5dbfd;
-  border: none;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 1.5rem;
-  padding: 0.25rem 0.75rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 2rem;
-  padding: 0.25rem 1rem;
-}
-
-.emotion-0[data-trailing-icon="true"] {
-  padding-right: 0.5rem;
-}
-
-.emotion-2 {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0.25rem;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
-  background-color: #8c40ef;
-}
-
-.emotion-2[data-disabled="true"] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+        class="styles__1u4n71t1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
         data-active="false"
         data-disabled="false"
         data-prominence="default"
@@ -566,10 +158,9 @@ exports[`checkbox > renders correctly large 1`] = `
       >
         test 
         <div
-          class="emotion-2 emotion-3"
+          class="styles__1u4n71t0"
           data-active="false"
           data-disabled="false"
-          data-has-onclick="false"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
@@ -590,99 +181,14 @@ exports[`checkbox > renders correctly large 1`] = `
 
 exports[`checkbox > renders correctly wiht icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  padding: 0.25rem 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 1rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #e9eaeb;
-  text-align: center;
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-0[data-disabled="false"]:hover {
-  background-color: #e9eaeb;
-  border-color: #92959d;
-  color: #222638;
-}
-
-.emotion-0[data-disabled="true"] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-active="true"] {
-  background-color: #8c40ef;
-  border-color: #8c40ef;
-  color: #ffffff;
-}
-
-.emotion-0[data-active="true"][data-disabled="false"]:hover {
-  background-color: #792dd4;
-  border-color: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0[data-active="true"][data-disabled="true"] {
-  background-color: #e5dbfd;
-  border: none;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 1.5rem;
-  padding: 0.25rem 0.75rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 2rem;
-  padding: 0.25rem 1rem;
-}
-
-.emotion-0[data-trailing-icon="true"] {
-  padding-right: 0.5rem;
-}
-
-.emotion-2 {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  border-radius: 0.25rem;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
-  background-color: #8c40ef;
-}
-
-.emotion-2[data-disabled="true"] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
     >
       <div
-        class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+        class="styles__1u4n71t1 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
         data-active="false"
         data-disabled="false"
         data-prominence="default"
@@ -690,7 +196,7 @@ exports[`checkbox > renders correctly wiht icon 1`] = `
         data-trailing-icon="false"
       >
         <button
-          class="emotion-2 emotion-3"
+          class="styles__1u4n71t0"
           data-active="false"
           data-disabled="false"
           data-has-onclick="true"
