@@ -91,12 +91,12 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
             data-testid={dataTestId}
           >
             <input
-              className={radio}
               aria-disabled={disabled}
-              aria-invalid={!!error}
+              aria-invalid={!!error} // oxlint-disable-line eslint-plugin-jsx-a11y(role-supports-aria-props)
               aria-label={ariaLabel}
               autoFocus={autoFocus}
               checked={checked}
+              className={radio}
               disabled={disabled}
               id={localId}
               name={name}
@@ -116,8 +116,8 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               <>
                 {typeof label === 'string' ? (
                   <Text
-                    className={textLabel}
                     as="label"
+                    className={textLabel}
                     htmlFor={localId}
                     prominence="default"
                     variant="body"
@@ -134,8 +134,8 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           </div>
           {helper ? (
             <Text
-              className={margedText}
               as="span"
+              className={margedText}
               prominence="weak"
               sentiment="neutral"
               variant="caption"
