@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.0-beta.4
+
+### Minor Changes
+
+- [#5528](https://github.com/scaleway/ultraviolet/pull/5528) [`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5) Thanks [@matthprost](https://github.com/matthprost)! - New product icon `<PasskeyProductIcon />`
+
 ## 4.1.0-beta.3
 
 ### Minor Changes
