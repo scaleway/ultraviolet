@@ -27,7 +27,13 @@ import {
   InnerCheckbox,
   StyledIcon,
 } from '../Checkbox'
-import { InnerCircleRing, Radio, RadioInput, RadioStack, Ring } from '../Radio'
+import { Radio } from '../Radio'
+import {
+  innerCircleRing,
+  radio as radioInput,
+  radioStack,
+  ring,
+} from '../Radio/styles.css'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
@@ -89,7 +95,7 @@ const Container = styled(Stack)`
   }
 
   &[data-has-label='true'] {
-    ${RadioStack}, ${CheckboxContainer} {
+    ${radioStack}, ${CheckboxContainer} {
       width: 100%;
     }
   }
@@ -170,42 +176,42 @@ const StyledElement = styled('div', {
 const OverloadedRadio = StyledElement.withComponent(Radio)
 const StyledRadio = styled(OverloadedRadio)`
   &:hover[aria-disabled='false']:not([data-checked='true']) {
-    ${RadioInput} + ${Ring} {
+    ${radioInput} + ${ring} {
       fill: ${({ theme }) => theme.colors.neutral.border};
-      ${InnerCircleRing} {
+      ${innerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.background};
       }
     }
 
-    ${RadioInput}[aria-invalid='true'] + ${Ring} {
+    ${radioInput}[aria-invalid='true'] + ${ring} {
       fill: ${({ theme }) => theme.colors.danger.border};
-      ${InnerCircleRing} {
+      ${innerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.background};
       }
     }
   }
 
   &:hover[aria-disabled='false'] {
-    ${RadioInput} + ${Ring} {
+    ${radioInput} + ${ring} {
       fill: ${({ theme }) => theme.colors.primary.border};
-      ${InnerCircleRing} {
+      ${innerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.background};
       }
     }
 
-    ${RadioInput}[aria-invalid='true'] + ${Ring} {
+    ${radioInput}[aria-invalid='true'] + ${ring} {
       fill: ${({ theme }) => theme.colors.danger.border};
-      ${InnerCircleRing} {
+      ${innerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.background};
       }
     }
   }
 
-  ${RadioInput} {
-    &[aria-disabled='false']:active + ${Ring} {
+  ${radioInput} {
+    &[aria-disabled='false']:active + ${ring} {
       background: none;
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
-      ${InnerCircleRing} {
+      ${innerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.background};
       }
     }
