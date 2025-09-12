@@ -62,7 +62,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] styles__17da2jl1,
 .emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
@@ -589,25 +589,12 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-2[data-has-label='true'] .emotion-5,
+.emotion-2[data-has-label='true'] styles__17da2jl1,
 .emotion-2[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-7 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -618,182 +605,61 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   align-items: start;
 }
 
-.emotion-7[aria-disabled='false'],
-.emotion-7[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 {
-  fill: #8c40ef;
-}
-
-.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 .emotion-14 {
-  fill: #e5dbfd;
-}
-
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 {
-  fill: #b3144d;
-}
-
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 .emotion-14 {
-  fill: #ffd3e3;
-}
-
-.emotion-7[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-7[aria-disabled='true']>label,
-.emotion-7[aria-disabled='true'] .emotion-10 {
-  cursor: not-allowed;
-}
-
-.emotion-7[aria-disabled='true'] .emotion-12 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
-  fill: #f3f3f4;
-}
-
-.emotion-7[data-checked='true'] {
+.emotion-4[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-4[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-7 input+svg {
+.emotion-4 input+svg {
   display: none;
 }
 
-.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10+.emotion-12 {
+.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6+styles__17da2jl7 {
   fill: #d9dadd;
 }
 
-.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10+.emotion-12 .emotion-14 {
+.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6+styles__17da2jl7 styles__17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10[aria-invalid='true']+.emotion-12 {
+.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 {
   fill: #b3144d;
 }
 
-.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10[aria-invalid='true']+.emotion-12 .emotion-14 {
+.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 styles__17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 {
+.emotion-4:hover[aria-disabled='false'] styles__17da2jl6+styles__17da2jl7 {
   fill: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 .emotion-14 {
+.emotion-4:hover[aria-disabled='false'] styles__17da2jl6+styles__17da2jl7 styles__17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 {
+.emotion-4:hover[aria-disabled='false'] styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 {
   fill: #b3144d;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 .emotion-14 {
+.emotion-4:hover[aria-disabled='false'] styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 styles__17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-disabled='false']:active+.emotion-12 {
+.emotion-4 styles__17da2jl6[aria-disabled='false']:active+styles__17da2jl7 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-7 .emotion-10[aria-disabled='false']:active+.emotion-12 .emotion-14 {
+.emotion-4 styles__17da2jl6[aria-disabled='false']:active+styles__17da2jl7 styles__17da2jl0 {
   fill: #ffffff;
-}
-
-.emotion-9 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-9+.emotion-12 .emotion-16 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-9:checked+svg .emotion-16 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-9:checked[aria-disabled='false'][aria-invalid='false']+.emotion-12 {
-  fill: #8c40ef;
-}
-
-.emotion-9:checked[aria-disabled='true'][aria-invalid='false']+.emotion-12 {
-  fill: #d8c5fc;
-}
-
-.emotion-9[aria-invalid='true']:not([aria-disabled='true'])+.emotion-12 {
-  fill: #e51963;
-}
-
-.emotion-9[aria-disabled='false']:active+.emotion-12 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-9[aria-disabled='false']:active+.emotion-12 .emotion-14 {
-  fill: #f1eefc;
-}
-
-.emotion-9[aria-disabled='false']:focus-visible+.emotion-12 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-9[aria-invalid='true']:focus+.emotion-12 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
-  fill: #ffebf2;
-}
-
-.emotion-11 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-11 .emotion-14 {
-  fill: #ffffff;
-}
-
-.emotion-17 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
 }
 
 <div
@@ -831,11 +697,11 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-6 emotion-7 emotion-8"
+                  class="emotion-4 emotion-5 styles__17da2jl3"
                   data-checked="true"
                   data-error="true"
                 >
@@ -843,7 +709,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     aria-disabled="false"
                     aria-invalid="true"
                     checked=""
-                    class="emotion-9 emotion-10"
+                    class="styles__17da2jl6"
                     id="«r1i»"
                     name="radio"
                     tabindex="-1"
@@ -851,7 +717,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     value="value-1"
                   />
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__17da2jl7"
                     viewBox="0 0 24 24"
                   >
                     <g>
@@ -862,13 +728,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                         stroke-width="2"
                       />
                       <circle
-                        class="emotion-13 emotion-14"
+                        class="styles__17da2jl0"
                         cx="12"
                         cy="12"
                         r="8"
                       />
                       <circle
-                        class="emotion-15 emotion-16"
+                        class="styles__17da2jl8"
                         cx="12"
                         cy="12"
                         r="5"
@@ -876,7 +742,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     </g>
                   </svg>
                   <label
-                    class="emotion-17 emotion-18 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     for="«r1i»"
                   >
                     Radio 1
@@ -898,18 +764,18 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__17da2jl1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-6 emotion-7 emotion-8"
+                  class="emotion-4 emotion-5 styles__17da2jl3"
                   data-checked="false"
                   data-error="true"
                 >
                   <input
                     aria-disabled="false"
                     aria-invalid="true"
-                    class="emotion-9 emotion-10"
+                    class="styles__17da2jl6"
                     id="«r1m»"
                     name="radio"
                     tabindex="-1"
@@ -917,7 +783,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     value="value-2"
                   />
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__17da2jl7"
                     viewBox="0 0 24 24"
                   >
                     <g>
@@ -928,13 +794,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                         stroke-width="2"
                       />
                       <circle
-                        class="emotion-13 emotion-14"
+                        class="styles__17da2jl0"
                         cx="12"
                         cy="12"
                         r="8"
                       />
                       <circle
-                        class="emotion-15 emotion-16"
+                        class="styles__17da2jl8"
                         cx="12"
                         cy="12"
                         r="5"
@@ -942,7 +808,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     </g>
                   </svg>
                   <label
-                    class="emotion-17 emotion-18 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="styles__17da2jl4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     for="«r1m»"
                   >
                     Radio 2
@@ -1025,7 +891,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] styles__17da2jl1,
 .emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
@@ -1557,7 +1423,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] styles__17da2jl1,
 .emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
@@ -2084,7 +1950,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] styles__17da2jl1,
 .emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
@@ -2618,7 +2484,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] styles__17da2jl1,
 .emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }

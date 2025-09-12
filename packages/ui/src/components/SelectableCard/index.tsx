@@ -27,6 +27,7 @@ import {
   InnerCheckbox,
   StyledIcon,
 } from '../Checkbox'
+import { Radio } from '../Radio'
 import {
   innerCircleRing,
   radio as radioInput,
@@ -35,7 +36,6 @@ import {
 } from '../Radio/styles.css'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-import { Radio } from '../Radio'
 
 const Container = styled(Stack)`
   position: relative;
