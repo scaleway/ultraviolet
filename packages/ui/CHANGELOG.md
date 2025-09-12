@@ -1,5 +1,28 @@
 # Change Log
 
+## 3.0.0-beta.8
+
+### Minor Changes
+
+- [#5503](https://github.com/scaleway/ultraviolet/pull/5503) [`81cb7b1`](https://github.com/scaleway/ultraviolet/commit/81cb7b1fcae70e255351ede447a3cb2977a4f168) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Row />` component to use vanilla extract
+
+- [#5492](https://github.com/scaleway/ultraviolet/pull/5492) [`be21b81`](https://github.com/scaleway/ultraviolet/commit/be21b81f1a776a7b7edcb0ef96eed3e58264c33d) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Stack />` using vanilla extract
+
+- [#5500](https://github.com/scaleway/ultraviolet/pull/5500) [`0c071df`](https://github.com/scaleway/ultraviolet/commit/0c071df7fb6c5a5d96319baa7660ce801439eb97) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Notice`, `StepList` and `Status` to use vanilla-extract instead of Emotion
+
+- [#5532](https://github.com/scaleway/ultraviolet/pull/5532) [`80bdfbd`](https://github.com/scaleway/ultraviolet/commit/80bdfbd9b00cc58f87779779bc3eba4fdbc48e77) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Chip />` to use vanilla extract
+
+### Patch Changes
+
+- [#5527](https://github.com/scaleway/ultraviolet/pull/5527) [`f2d6c57`](https://github.com/scaleway/ultraviolet/commit/f2d6c57addd55d577329d9931c11866b955fcc92) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<NumberInput />` disabled button not working on re-render
+
+- [#5531](https://github.com/scaleway/ultraviolet/pull/5531) [`694b0d5`](https://github.com/scaleway/ultraviolet/commit/694b0d5fca9b4ffec2f81e2570466569eab08565) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Stack />` useless style applied
+
+- [#5534](https://github.com/scaleway/ultraviolet/pull/5534) [`43f5891`](https://github.com/scaleway/ultraviolet/commit/43f589191ef2e51fcf7533826ded0be28698fbe7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Snippet />` to preserve indentation
+
+- Updated dependencies [[`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5)]:
+  - @ultraviolet/icons@4.1.0-beta.4
+
 ## 3.0.0-beta.7
 
 ### Minor Changes
