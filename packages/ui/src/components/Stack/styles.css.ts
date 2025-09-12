@@ -1,14 +1,14 @@
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
-import { flex, maxWidth, minWidth, width } from './variables.css'
+import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
 export const stack = style({
   display: 'flex',
-  width,
-  maxWidth,
-  minWidth,
-  flex,
+  width: widthVar,
+  maxWidth: maxWidthVar,
+  minWidth: minWidthVar,
+  flex: flexVar,
 })
 
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
