@@ -753,20 +753,16 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1.5rem_xxsmall__toi52uj styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="true"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -941,7 +937,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-4 {
+.emotion-2[data-controls='false']>.emotion-5 {
   border-width: 0;
 }
 
@@ -1005,7 +1001,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-4 {
+.emotion-2[data-controls='false']>.emotion-5 {
   border-width: 0;
 }
 
@@ -1021,16 +1017,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-4 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -1038,16 +1025,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   width: 100%;
 }
 
-.emotion-5 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-4 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -1055,7 +1033,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   outline: none;
   border: none;
   padding: 0;
@@ -1070,18 +1048,18 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   background: none;
 }
 
-.emotion-7[data-has-unit='true'] {
+.emotion-6[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-7::-webkit-outer-spin-button,
-.emotion-7::-webkit-inner-spin-button {
+.emotion-6::-webkit-outer-spin-button,
+.emotion-6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -1089,15 +1067,15 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   appearance: textfield;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1105,34 +1083,34 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-7:-moz-read-only {
+.emotion-6:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:read-only {
+.emotion-6:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:-moz-read-only~.exvap482 {
+.emotion-6:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:read-only~.exvap482 {
+.emotion-6:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-7:disabled~.exvap482 {
+.emotion-6:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1141,16 +1119,16 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   user-select: none;
 }
 
-.emotion-7:placeholder-shown~.exvap482 {
+.emotion-6:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-7[data-controls='false'] {
+.emotion-6[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-7 {
+.emotion-6 {
   outline: none;
   border: none;
   padding: 0;
@@ -1165,18 +1143,18 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   background: none;
 }
 
-.emotion-7[data-has-unit='true'] {
+.emotion-6[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-7::-webkit-outer-spin-button,
-.emotion-7::-webkit-inner-spin-button {
+.emotion-6::-webkit-outer-spin-button,
+.emotion-6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -1184,15 +1162,15 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   appearance: textfield;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1200,34 +1178,34 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-7:-moz-read-only {
+.emotion-6:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:read-only {
+.emotion-6:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:-moz-read-only~.exvap482 {
+.emotion-6:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:read-only~.exvap482 {
+.emotion-6:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-7:disabled~.exvap482 {
+.emotion-6:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1236,16 +1214,34 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   user-select: none;
 }
 
-.emotion-7:placeholder-shown~.exvap482 {
+.emotion-6:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-7[data-controls='false'] {
+.emotion-6[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-16 {
+.emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1264,24 +1260,20 @@ exports[`Double slider > handles correctly onChange double 1`] = `
 }
 
 .emotion-16 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  width: 100%;
+  min-width: 13.75rem;
+  border-radius: 0.25rem;
+  background: #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-16 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1297,46 +1289,158 @@ exports[`Double slider > handles correctly onChange double 1`] = `
 
 .emotion-18 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-18[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-18[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-18 {
+  position: absolute;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-18[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-18[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-20 {
+  position: absolute;
   width: 100%;
-  min-width: 13.75rem;
-  border-radius: 0.25rem;
-  background: #e9eaeb;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
 }
 
-.emotion-20 {
+.emotion-20:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(35% - 8px);
+  top: -8px;
 }
 
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
+.emotion-20::-moz-range-thumb:hover,
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
-.emotion-20 {
+.emotion-20::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(35% - 8px);
+  top: -8px;
 }
 
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
+.emotion-20::-webkit-slider-thumb:hover,
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-22 {
@@ -1391,7 +1495,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(35% - 8px);
+  left: calc(75% - 8px);
   top: -8px;
 }
 
@@ -1448,7 +1552,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(35% - 8px);
+  left: calc(75% - 8px);
   top: -8px;
 }
 
@@ -1465,132 +1569,6 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   cursor: grabbing;
 }
 
-.emotion-24 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-24:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(75% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(75% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
 <div
     data-testid="testing"
   >
@@ -1598,24 +1576,19 @@ exports[`Double slider > handles correctly onChange double 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
               class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div>
                 <div
@@ -1628,11 +1601,12 @@ exports[`Double slider > handles correctly onChange double 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 emotion-6"
+                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-left"
-                      class="emotion-7 emotion-8"
+                      class="emotion-6 emotion-7"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -1651,7 +1625,6 @@ exports[`Double slider > handles correctly onChange double 1`] = `
             </div>
             <div
               class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div>
                 <div
@@ -1664,11 +1637,12 @@ exports[`Double slider > handles correctly onChange double 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 emotion-6"
+                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-right"
-                      class="emotion-7 emotion-8"
+                      class="emotion-6 emotion-7"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -1687,21 +1661,21 @@ exports[`Double slider > handles correctly onChange double 1`] = `
             </div>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-14 emotion-15"
           >
             <div
-              class="emotion-18 emotion-19"
+              class="emotion-16 emotion-17"
             >
               <div
                 aria-disabled="false"
-                class="emotion-20 emotion-21"
+                class="emotion-18 emotion-19"
                 data-error="false"
                 style="left: 35%; right: 25%;"
               />
             </div>
             <input
               aria-label="slider"
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
               data-direction="column"
               data-testid="slider-left"
               id="«r43»"
@@ -1714,7 +1688,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
             />
             <input
               aria-label="slider"
-              class="emotion-24 emotion-23"
+              class="emotion-22 emotion-21"
               data-direction="column"
               data-testid="slider-right"
               id="«r43»"
@@ -1791,7 +1765,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-4 {
+.emotion-2[data-controls='false']>.emotion-5 {
   border-width: 0;
 }
 
@@ -1855,7 +1829,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-4 {
+.emotion-2[data-controls='false']>.emotion-5 {
   border-width: 0;
 }
 
@@ -1871,16 +1845,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   height: 3rem;
 }
 
-.emotion-5 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-4 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -1888,16 +1853,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   width: 100%;
 }
 
-.emotion-5 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-4 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -1905,7 +1861,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   outline: none;
   border: none;
   padding: 0;
@@ -1920,18 +1876,18 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   background: none;
 }
 
-.emotion-7[data-has-unit='true'] {
+.emotion-6[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-7::-webkit-outer-spin-button,
-.emotion-7::-webkit-inner-spin-button {
+.emotion-6::-webkit-outer-spin-button,
+.emotion-6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -1939,15 +1895,15 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   appearance: textfield;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1955,34 +1911,34 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   line-height: 1.5rem;
 }
 
-.emotion-7:-moz-read-only {
+.emotion-6:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:read-only {
+.emotion-6:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:-moz-read-only~.exvap482 {
+.emotion-6:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:read-only~.exvap482 {
+.emotion-6:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-7:disabled~.exvap482 {
+.emotion-6:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1991,16 +1947,16 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   user-select: none;
 }
 
-.emotion-7:placeholder-shown~.exvap482 {
+.emotion-6:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-7[data-controls='false'] {
+.emotion-6[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-7 {
+.emotion-6 {
   outline: none;
   border: none;
   padding: 0;
@@ -2015,18 +1971,18 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   background: none;
 }
 
-.emotion-7[data-has-unit='true'] {
+.emotion-6[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-7::-webkit-outer-spin-button,
-.emotion-7::-webkit-inner-spin-button {
+.emotion-6::-webkit-outer-spin-button,
+.emotion-6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -2034,15 +1990,15 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   appearance: textfield;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2050,34 +2006,34 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   line-height: 1.5rem;
 }
 
-.emotion-7:-moz-read-only {
+.emotion-6:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:read-only {
+.emotion-6:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:-moz-read-only~.exvap482 {
+.emotion-6:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:read-only~.exvap482 {
+.emotion-6:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-7:disabled~.exvap482 {
+.emotion-6:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2086,16 +2042,34 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   user-select: none;
 }
 
-.emotion-7:placeholder-shown~.exvap482 {
+.emotion-6:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-7[data-controls='false'] {
+.emotion-6[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-16 {
+.emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2114,24 +2088,20 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 }
 
 .emotion-16 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  width: 100%;
+  min-width: 13.75rem;
+  border-radius: 0.25rem;
+  background: #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-16 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2147,46 +2117,284 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 
 .emotion-18 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-18[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-18[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-18 {
+  position: absolute;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-18[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-18[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-20 {
+  position: absolute;
   width: 100%;
-  min-width: 13.75rem;
-  border-radius: 0.25rem;
-  background: #e9eaeb;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+}
+
+.emotion-20:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -8px;
+}
+
+.emotion-20::-moz-range-thumb:hover,
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-20::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -8px;
+}
+
+.emotion-20::-webkit-slider-thumb:hover,
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-20 {
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  width: 100%;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
 }
 
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
+.emotion-20:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-20:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20 {
+.emotion-20::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(0% - 8px);
+  top: -8px;
 }
 
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
+.emotion-20::-moz-range-thumb:hover,
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-20::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -8px;
+}
+
+.emotion-20::-webkit-slider-thumb:hover,
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-22 {
@@ -2241,7 +2449,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(0% - 8px);
+  left: calc(100% - 8px);
   top: -8px;
 }
 
@@ -2298,7 +2506,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(0% - 8px);
+  left: calc(100% - 8px);
   top: -8px;
 }
 
@@ -2367,7 +2575,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(0% - 8px);
+  left: calc(100% - 8px);
   top: -8px;
 }
 
@@ -2424,7 +2632,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(0% - 8px);
+  left: calc(100% - 8px);
   top: -8px;
 }
 
@@ -2436,258 +2644,6 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 
 .emotion-22::-webkit-slider-thumb:active,
 .emotion-22::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-24:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-24:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2700,24 +2656,19 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
               class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div>
                 <div
@@ -2730,11 +2681,12 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 emotion-6"
+                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-left"
-                      class="emotion-7 emotion-8"
+                      class="emotion-6 emotion-7"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -2753,7 +2705,6 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
             </div>
             <div
               class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div>
                 <div
@@ -2766,11 +2717,12 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 emotion-6"
+                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-right"
-                      class="emotion-7 emotion-8"
+                      class="emotion-6 emotion-7"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -2789,21 +2741,21 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
             </div>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-14 emotion-15"
           >
             <div
-              class="emotion-18 emotion-19"
+              class="emotion-16 emotion-17"
             >
               <div
                 aria-disabled="false"
-                class="emotion-20 emotion-21"
+                class="emotion-18 emotion-19"
                 data-error="false"
                 style="left: 0%; right: 0%;"
               />
             </div>
             <input
               aria-label="slider"
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
               data-direction="column"
               data-testid="slider-left"
               id="«r4b»"
@@ -2816,7 +2768,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
             />
             <input
               aria-label="slider"
-              class="emotion-24 emotion-23"
+              class="emotion-22 emotion-21"
               data-direction="column"
               data-testid="slider-right"
               id="«r4b»"
@@ -3154,15 +3106,12 @@ exports[`Double slider > renders correctly direction row double 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3173,8 +3122,7 @@ exports[`Double slider > renders correctly direction row double 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <span
             class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3291,7 +3239,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-4 {
+.emotion-2[data-controls='false']>.emotion-5 {
   border-width: 0;
 }
 
@@ -3307,16 +3255,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   height: 3rem;
 }
 
-.emotion-5 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-4 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -3324,7 +3263,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   outline: none;
   border: none;
   padding: 0;
@@ -3339,18 +3278,18 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: none;
 }
 
-.emotion-7[data-has-unit='true'] {
+.emotion-6[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-7::-webkit-outer-spin-button,
-.emotion-7::-webkit-inner-spin-button {
+.emotion-6::-webkit-outer-spin-button,
+.emotion-6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -3358,15 +3297,15 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   appearance: textfield;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -3374,34 +3313,34 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   line-height: 1.5rem;
 }
 
-.emotion-7:-moz-read-only {
+.emotion-6:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:read-only {
+.emotion-6:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:-moz-read-only~.exvap482 {
+.emotion-6:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:read-only~.exvap482 {
+.emotion-6:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-7:disabled~.exvap482 {
+.emotion-6:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -3410,16 +3349,16 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   user-select: none;
 }
 
-.emotion-7:placeholder-shown~.exvap482 {
+.emotion-6:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-7[data-controls='false'] {
+.emotion-6[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3437,7 +3376,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   align-self: center;
 }
 
-.emotion-11 {
+.emotion-10 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3451,22 +3390,22 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: #e9eaeb;
 }
 
-.emotion-13 {
+.emotion-12 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-13[data-error='true'] {
+.emotion-12[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-13[aria-disabled='true'] {
+.emotion-12[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-15 {
+.emotion-14 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -3479,17 +3418,17 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   outline: none;
 }
 
-.emotion-15:focus::-moz-range-thumb {
+.emotion-14:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15:focus::-webkit-slider-thumb {
+.emotion-14:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-15::-moz-range-track {
+.emotion-14::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3500,7 +3439,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-15::-moz-range-thumb {
+.emotion-14::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3522,20 +3461,20 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-15::-moz-range-thumb:hover,
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-14::-moz-range-thumb:hover,
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-moz-range-thumb:active,
-.emotion-15::-moz-range-thumb:focus {
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-15::-ms-track {
+.emotion-14::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3546,7 +3485,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-15:focus::-webkit-slider-runnable-track {
+.emotion-14:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3557,7 +3496,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-15::-webkit-slider-thumb {
+.emotion-14::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3579,20 +3518,20 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-15::-webkit-slider-thumb:hover,
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-14::-webkit-slider-thumb:hover,
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-15::-webkit-slider-thumb:active,
-.emotion-15::-webkit-slider-thumb:focus {
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17 {
+.emotion-16 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -3605,17 +3544,17 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   outline: none;
 }
 
-.emotion-17:focus::-moz-range-thumb {
+.emotion-16:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17:focus::-webkit-slider-thumb {
+.emotion-16:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-17::-moz-range-track {
+.emotion-16::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3626,7 +3565,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-17::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3648,20 +3587,20 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-17::-moz-range-thumb:hover,
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-moz-range-thumb:active,
-.emotion-17::-moz-range-thumb:focus {
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-17::-ms-track {
+.emotion-16::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3672,7 +3611,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-17:focus::-webkit-slider-runnable-track {
+.emotion-16:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3683,7 +3622,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-17::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3705,14 +3644,14 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-17::-webkit-slider-thumb:hover,
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-17::-webkit-slider-thumb:active,
-.emotion-17::-webkit-slider-thumb:focus {
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -3725,15 +3664,12 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3744,12 +3680,10 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div>
               <div
@@ -3762,11 +3696,12 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
                 data-unit="false"
               >
                 <div
-                  class="emotion-4 emotion-5 emotion-6"
+                  class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                  style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                 >
                   <input
                     aria-label="input-left"
-                    class="emotion-7 emotion-8"
+                    class="emotion-6 emotion-7"
                     data-controls="false"
                     data-has-unit="false"
                     data-size="small"
@@ -3784,21 +3719,21 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
             </div>
           </div>
           <div
-            class="emotion-9 emotion-10"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="emotion-11 emotion-12"
+              class="emotion-10 emotion-11"
             >
               <div
                 aria-disabled="false"
-                class="emotion-13 emotion-14"
+                class="emotion-12 emotion-13"
                 data-error="false"
                 style="left: 1%; right: 86%;"
               />
             </div>
             <input
               aria-label="Name"
-              class="emotion-15 emotion-16"
+              class="emotion-14 emotion-15"
               data-direction="row"
               data-testid="handle-left"
               id="«rs»"
@@ -3811,7 +3746,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
             />
             <input
               aria-label="Name"
-              class="emotion-17 emotion-16"
+              class="emotion-16 emotion-15"
               data-direction="row"
               data-testid="handle-right"
               id="«rs»"
@@ -3825,7 +3760,6 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
           </div>
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div>
               <div
@@ -3838,11 +3772,12 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
                 data-unit="false"
               >
                 <div
-                  class="emotion-4 emotion-5 emotion-6"
+                  class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                  style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                 >
                   <input
                     aria-label="input-right"
-                    class="emotion-7 emotion-8"
+                    class="emotion-6 emotion-7"
                     data-controls="false"
                     data-has-unit="false"
                     data-size="small"
@@ -4184,15 +4119,12 @@ exports[`Double slider > renders correctly double  1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -4203,12 +4135,10 @@ exports[`Double slider > renders correctly double  1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -4655,15 +4585,12 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -4674,12 +4601,10 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -5140,15 +5065,12 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -5159,12 +5081,10 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -5589,15 +5509,12 @@ exports[`Double slider > renders correctly double disabled 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -5608,12 +5525,10 @@ exports[`Double slider > renders correctly double disabled 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -5737,7 +5652,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-controls='false']>.emotion-4 {
+.emotion-2[data-controls='false']>.emotion-5 {
   border-width: 0;
 }
 
@@ -5753,16 +5668,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   height: 3rem;
 }
 
-.emotion-5 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-4 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -5770,7 +5676,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   outline: none;
   border: none;
   padding: 0;
@@ -5785,18 +5691,18 @@ exports[`Double slider > renders correctly double input 1`] = `
   background: none;
 }
 
-.emotion-7[data-has-unit='true'] {
+.emotion-6[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-7::-webkit-outer-spin-button,
-.emotion-7::-webkit-inner-spin-button {
+.emotion-6::-webkit-outer-spin-button,
+.emotion-6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -5804,15 +5710,15 @@ exports[`Double slider > renders correctly double input 1`] = `
   appearance: textfield;
 }
 
-.emotion-7[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-7[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-7[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -5820,34 +5726,34 @@ exports[`Double slider > renders correctly double input 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-7:-moz-read-only {
+.emotion-6:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:read-only {
+.emotion-6:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-7:-moz-read-only~.exvap482 {
+.emotion-6:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:read-only~.exvap482 {
+.emotion-6:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-7:disabled~.exvap482 {
+.emotion-6:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -5856,16 +5762,34 @@ exports[`Double slider > renders correctly double input 1`] = `
   user-select: none;
 }
 
-.emotion-7:placeholder-shown~.exvap482 {
+.emotion-6:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-7[data-controls='false'] {
+.emotion-6[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-16 {
+.emotion-14 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5884,24 +5808,20 @@ exports[`Double slider > renders correctly double input 1`] = `
 }
 
 .emotion-16 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  width: 100%;
+  min-width: 13.75rem;
+  border-radius: 0.25rem;
+  background: #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-16 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5917,46 +5837,158 @@ exports[`Double slider > renders correctly double input 1`] = `
 
 .emotion-18 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-18[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-18[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-18 {
+  position: absolute;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-18[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-18[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-20 {
+  position: absolute;
   width: 100%;
-  min-width: 13.75rem;
-  border-radius: 0.25rem;
-  background: #e9eaeb;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
 }
 
-.emotion-20 {
+.emotion-20:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(12% - 8px);
+  top: -8px;
 }
 
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
+.emotion-20::-moz-range-thumb:hover,
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-20::-moz-range-thumb:active,
+.emotion-20::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
-.emotion-20 {
+.emotion-20::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-20::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
+  left: calc(12% - 8px);
+  top: -8px;
 }
 
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
+.emotion-20::-webkit-slider-thumb:hover,
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
 }
 
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
+.emotion-20::-webkit-slider-thumb:active,
+.emotion-20::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-22 {
@@ -6011,7 +6043,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
 }
 
@@ -6068,7 +6100,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   position: absolute;
-  left: calc(12% - 8px);
+  left: calc(14% - 8px);
   top: -8px;
 }
 
@@ -6085,132 +6117,6 @@ exports[`Double slider > renders correctly double input 1`] = `
   cursor: grabbing;
 }
 
-.emotion-24 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-24:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(14% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
 <div
     data-testid="testing"
   >
@@ -6218,15 +6124,12 @@ exports[`Double slider > renders correctly double input 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -6237,16 +6140,13 @@ exports[`Double slider > renders correctly double input 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <div
               class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div>
                 <div
@@ -6259,11 +6159,12 @@ exports[`Double slider > renders correctly double input 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 emotion-6"
+                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-left"
-                      class="emotion-7 emotion-8"
+                      class="emotion-6 emotion-7"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -6282,7 +6183,6 @@ exports[`Double slider > renders correctly double input 1`] = `
             </div>
             <div
               class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
-              style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
             >
               <div>
                 <div
@@ -6295,11 +6195,12 @@ exports[`Double slider > renders correctly double input 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 emotion-6"
+                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-right"
-                      class="emotion-7 emotion-8"
+                      class="emotion-6 emotion-7"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -6318,21 +6219,21 @@ exports[`Double slider > renders correctly double input 1`] = `
             </div>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-14 emotion-15"
           >
             <div
-              class="emotion-18 emotion-19"
+              class="emotion-16 emotion-17"
             >
               <div
                 aria-disabled="false"
-                class="emotion-20 emotion-21"
+                class="emotion-18 emotion-19"
                 data-error="false"
                 style="left: 12%; right: 86%;"
               />
             </div>
             <input
               aria-label="Name"
-              class="emotion-22 emotion-23"
+              class="emotion-20 emotion-21"
               data-direction="column"
               data-testid="handle-left"
               id="«r1q»"
@@ -6345,7 +6246,7 @@ exports[`Double slider > renders correctly double input 1`] = `
             />
             <input
               aria-label="Name"
-              class="emotion-24 emotion-23"
+              class="emotion-22 emotion-21"
               data-direction="column"
               data-testid="handle-right"
               id="«r1q»"
@@ -6865,15 +6766,12 @@ exports[`Double slider > renders correctly double min max 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -6884,12 +6782,10 @@ exports[`Double slider > renders correctly double min max 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -7328,15 +7224,12 @@ exports[`Double slider > renders correctly double step 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -7347,12 +7240,10 @@ exports[`Double slider > renders correctly double step 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -8169,15 +8060,12 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1.5rem_xxsmall__toi52uj styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="true"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -8188,12 +8076,10 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -9063,15 +8949,12 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1.5rem_xxsmall__toi52uj styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="true"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -9082,12 +8965,10 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -9579,15 +9460,12 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -9598,12 +9476,10 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -10050,15 +9926,12 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -10069,12 +9942,10 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -10772,15 +10643,12 @@ exports[`Double slider > renders correctly double with value outside of min-max 
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -10791,12 +10659,10 @@ exports[`Double slider > renders correctly double with value outside of min-max 
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -11178,15 +11044,12 @@ exports[`Double slider > renders correctly with value empty 1`] = `
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -11197,12 +11060,10 @@ exports[`Double slider > renders correctly with value empty 1`] = `
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -11584,15 +11445,12 @@ exports[`Double slider > renders correctly with value empty array and no min max
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -11603,12 +11461,10 @@ exports[`Double slider > renders correctly with value empty array and no min max
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -11990,15 +11846,12 @@ exports[`Double slider > renders correctly with value empty array with min max 1
       class="emotion-0 emotion-1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-double="true"
       data-options="false"
-      style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
     >
       <div
         class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_left_xxsmall__toi52u6d"
-        style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
         >
           <label
             class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -12009,12 +11862,10 @@ exports[`Double slider > renders correctly with value empty array with min max 1
         </div>
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-          style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
-          width="100%"
+          style="--_4k0ekn0: 100%;"
         >
           <div
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
-            style="--_4k0ekn0: var(--_4k0ekn0); --_4k0ekn1: var(--_4k0ekn1); --_4k0ekn2: var(--_4k0ekn2); --_4k0ekn3: var(--_4k0ekn3);"
           >
             <span
               class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
