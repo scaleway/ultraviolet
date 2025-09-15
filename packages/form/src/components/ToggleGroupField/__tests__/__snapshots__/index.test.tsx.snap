@@ -9,10 +9,6 @@ exports[`groupField > should render correctly checked 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,16 +27,16 @@ exports[`groupField > should render correctly checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -62,11 +58,11 @@ exports[`groupField > should render correctly checked 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -79,25 +75,25 @@ exports[`groupField > should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -105,41 +101,41 @@ exports[`groupField > should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -149,7 +145,7 @@ exports[`groupField > should render correctly checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -173,7 +169,7 @@ exports[`groupField > should render correctly checked 1`] = `
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <legend
-                class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 Label
               </legend>
@@ -183,7 +179,7 @@ exports[`groupField > should render correctly checked 1`] = `
             >
               <label
                 aria-disabled="false"
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
               >
                 <div
                   class="uv_toi52u0 uv_toi52u4j uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
@@ -200,13 +196,13 @@ exports[`groupField > should render correctly checked 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-8 emotion-9"
+                    class="emotion-6 emotion-7"
                     id="«r1»"
                     name="Group.value-1"
                     type="checkbox"
@@ -216,7 +212,7 @@ exports[`groupField > should render correctly checked 1`] = `
               </label>
               <label
                 aria-disabled="false"
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
               >
                 <div
                   class="uv_toi52u0 uv_toi52u4j uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
@@ -233,13 +229,13 @@ exports[`groupField > should render correctly checked 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-disabled="false"
                   data-error="false"
                 >
                   <input
                     aria-invalid="false"
-                    class="emotion-8 emotion-9"
+                    class="emotion-6 emotion-7"
                     id="«r4»"
                     name="Group.value-2"
                     type="checkbox"
@@ -265,10 +261,6 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -287,16 +279,16 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -318,11 +310,11 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -335,25 +327,25 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -361,41 +353,41 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -405,7 +397,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -432,7 +424,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
                 class="uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <legend
-                  class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                  class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   ToggleGroupField events
                 </legend>
@@ -448,7 +440,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
             >
               <label
                 aria-disabled="false"
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
               >
                 <div
                   class="uv_toi52u0 uv_toi52u4j uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
@@ -465,13 +457,13 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
                     aria-invalid="true"
-                    class="emotion-8 emotion-9"
+                    class="emotion-6 emotion-7"
                     id="«r9»"
                     name="test.value-1"
                     type="checkbox"
@@ -481,7 +473,7 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
               </label>
               <label
                 aria-disabled="false"
-                class="emotion-4 emotion-5"
+                class="emotion-2 emotion-3"
               >
                 <div
                   class="uv_toi52u0 uv_toi52u4j uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
@@ -498,13 +490,13 @@ exports[`groupField > should trigger events correctly with required prop 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-disabled="false"
                   data-error="true"
                 >
                   <input
                     aria-invalid="true"
-                    class="emotion-8 emotion-9"
+                    class="emotion-6 emotion-7"
                     id="«rc»"
                     name="test.value-2"
                     type="checkbox"
