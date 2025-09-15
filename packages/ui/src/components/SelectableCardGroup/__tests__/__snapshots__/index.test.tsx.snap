@@ -9,10 +9,6 @@ exports[`selectableCardGroup > renders correctly 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -24,54 +20,54 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   color: #3f4250;
 }
 
-.emotion-4[data-has-label='false']>:first-child {
+.emotion-2[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-4[data-has-default-cursor='true'] {
+.emotion-2[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-image="illustration"] {
+.emotion-2[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-4[data-image="icon"] {
+.emotion-2[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-4[data-has-label='true'] .ehkrmld6,
-.emotion-4[data-has-label='true'] .emotion-8 {
+.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -92,65 +88,65 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   align-items: start;
 }
 
-.emotion-7 .eqr7bqq3 {
+.emotion-5 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-7[aria-disabled='true'] .eqr7bqq3 {
+.emotion-5[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-10 {
   fill: #e9eaeb;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-10 .emotion-12 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 {
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 .emotion-12 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 path {
+.emotion-5 .emotion-8:checked+.emotion-10 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -164,107 +160,107 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8:checked+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .eqr7bqq5 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-5[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-5[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-7 input+svg {
+.emotion-5 input+svg {
   display: none;
 }
 
-.emotion-7 label {
+.emotion-5 label {
   width: 100%;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7 .emotion-10:focus+.emotion-12,
-.emotion-7 .emotion-10:active+.emotion-12 {
+.emotion-5 .emotion-8:focus+.emotion-10,
+.emotion-5 .emotion-8:active+.emotion-10 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked='false'] .emotion-14 {
+.emotion-5 .emotion-8[aria-checked='false'] .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-9 {
+.emotion-7 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -273,57 +269,57 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   border-width: 0;
 }
 
-.emotion-9:not(:disabled) {
+.emotion-7:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 {
+.emotion-7:not(:disabled):checked+.emotion-10,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 {
   fill: #8c40ef;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled):checked+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 .emotion-12 {
   stroke: #b3144d;
 }
 
-.emotion-9:focus+.emotion-12 {
+.emotion-7:focus+.emotion-10 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus+.emotion-12 .emotion-14 {
+.emotion-7:focus+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-11 {
+.emotion-9 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -331,7 +327,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-11 path {
+.emotion-9 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -343,12 +339,12 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   transform: scale(0);
 }
 
-.emotion-13 {
+.emotion-11 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   cursor: pointer;
 }
@@ -366,7 +362,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <legend
-            class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
@@ -375,7 +371,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -389,7 +385,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="true"
                 data-error="false"
               >
@@ -397,7 +393,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«r2»"
                   name="checkbox"
                   tabindex="-1"
@@ -405,13 +401,13 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                   value="value-1"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -440,7 +436,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«r2»"
                     >
                       Checkbox 1
@@ -450,7 +446,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -464,14 +460,14 @@ exports[`selectableCardGroup > renders correctly 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«r6»"
                   name="checkbox"
                   tabindex="-1"
@@ -479,13 +475,13 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                   value="value-2"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -514,7 +510,7 @@ exports[`selectableCardGroup > renders correctly 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«r6»"
                     >
                       Checkbox 2
@@ -540,10 +536,6 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -555,54 +547,54 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   color: #3f4250;
 }
 
-.emotion-4[data-has-label='false']>:first-child {
+.emotion-2[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-4[data-has-default-cursor='true'] {
+.emotion-2[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-image="illustration"] {
+.emotion-2[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-4[data-image="icon"] {
+.emotion-2[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-4[data-has-label='true'] .emotion-7,
-.emotion-4[data-has-label='true'] .eqr7bqq0 {
+.emotion-2[data-has-label='true'] .emotion-5,
+.emotion-2[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-7 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -626,104 +618,104 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   align-items: start;
 }
 
-.emotion-9[aria-disabled='false'],
-.emotion-9[aria-disabled='false']>label {
+.emotion-7[aria-disabled='false'],
+.emotion-7[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 {
   fill: #8c40ef;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 .emotion-16 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 .emotion-14 {
   fill: #e5dbfd;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 {
   fill: #b3144d;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 .emotion-16 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 .emotion-14 {
   fill: #ffd3e3;
 }
 
-.emotion-9[aria-disabled='true'] {
+.emotion-7[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-9[aria-disabled='true']>label,
-.emotion-9[aria-disabled='true'] .emotion-12 {
+.emotion-7[aria-disabled='true']>label,
+.emotion-7[aria-disabled='true'] .emotion-10 {
   cursor: not-allowed;
 }
 
-.emotion-9[aria-disabled='true'] .emotion-14 {
+.emotion-7[aria-disabled='true'] .emotion-12 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-9[aria-disabled='true'] .emotion-14 .emotion-16 {
+.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
   fill: #f3f3f4;
 }
 
-.emotion-9[data-checked='true'] {
+.emotion-7[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-9[data-error='true'] {
+.emotion-7[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-9[aria-disabled='true'] {
+.emotion-7[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-9 input+svg {
+.emotion-7 input+svg {
   display: none;
 }
 
-.emotion-9:hover[aria-disabled='false']:not([data-checked='true']) .emotion-12+.emotion-14 {
+.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10+.emotion-12 {
   fill: #d9dadd;
 }
 
-.emotion-9:hover[aria-disabled='false']:not([data-checked='true']) .emotion-12+.emotion-14 .emotion-16 {
+.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10+.emotion-12 .emotion-14 {
   fill: #ffffff;
 }
 
-.emotion-9:hover[aria-disabled='false']:not([data-checked='true']) .emotion-12[aria-invalid='true']+.emotion-14 {
+.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10[aria-invalid='true']+.emotion-12 {
   fill: #b3144d;
 }
 
-.emotion-9:hover[aria-disabled='false']:not([data-checked='true']) .emotion-12[aria-invalid='true']+.emotion-14 .emotion-16 {
+.emotion-7:hover[aria-disabled='false']:not([data-checked='true']) .emotion-10[aria-invalid='true']+.emotion-12 .emotion-14 {
   fill: #ffffff;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 {
   fill: #8c40ef;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 .emotion-16 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10+.emotion-12 .emotion-14 {
   fill: #ffffff;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 {
   fill: #b3144d;
 }
 
-.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 .emotion-16 {
+.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true']+.emotion-12 .emotion-14 {
   fill: #ffffff;
 }
 
-.emotion-9 .emotion-12[aria-disabled='false']:active+.emotion-14 {
+.emotion-7 .emotion-10[aria-disabled='false']:active+.emotion-12 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-9 .emotion-12[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+.emotion-7 .emotion-10[aria-disabled='false']:active+.emotion-12 .emotion-14 {
   fill: #ffffff;
 }
 
-.emotion-11 {
+.emotion-9 {
   cursor: pointer;
   position: absolute;
   height: 1.5rem;
@@ -733,7 +725,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   border-width: 0;
 }
 
-.emotion-11+.emotion-14 .emotion-18 {
+.emotion-9+.emotion-12 .emotion-16 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -743,48 +735,48 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   transform: scale(0);
 }
 
-.emotion-11:checked+svg .emotion-18 {
+.emotion-9:checked+svg .emotion-16 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+.emotion-9:checked[aria-disabled='false'][aria-invalid='false']+.emotion-12 {
   fill: #8c40ef;
 }
 
-.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+.emotion-9:checked[aria-disabled='true'][aria-invalid='false']+.emotion-12 {
   fill: #d8c5fc;
 }
 
-.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+.emotion-9[aria-invalid='true']:not([aria-disabled='true'])+.emotion-12 {
   fill: #e51963;
 }
 
-.emotion-11[aria-disabled='false']:active+.emotion-14 {
+.emotion-9[aria-disabled='false']:active+.emotion-12 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+.emotion-9[aria-disabled='false']:active+.emotion-12 .emotion-14 {
   fill: #f1eefc;
 }
 
-.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+.emotion-9[aria-disabled='false']:focus-visible+.emotion-12 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+.emotion-9[aria-invalid='true']:focus+.emotion-12 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
   fill: #ffebf2;
 }
 
-.emotion-13 {
+.emotion-11 {
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -793,11 +785,11 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   fill: #d9dadd;
 }
 
-.emotion-13 .emotion-16 {
+.emotion-11 .emotion-14 {
   fill: #ffffff;
 }
 
-.emotion-19 {
+.emotion-17 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -817,7 +809,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <legend
-            class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
@@ -826,7 +818,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="true"
@@ -839,11 +831,11 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-8 emotion-9 emotion-10"
+                  class="emotion-6 emotion-7 emotion-8"
                   data-checked="true"
                   data-error="true"
                 >
@@ -851,7 +843,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     aria-disabled="false"
                     aria-invalid="true"
                     checked=""
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     id="«r1i»"
                     name="radio"
                     tabindex="-1"
@@ -859,7 +851,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     value="value-1"
                   />
                   <svg
-                    class="emotion-13 emotion-14"
+                    class="emotion-11 emotion-12"
                     viewBox="0 0 24 24"
                   >
                     <g>
@@ -870,13 +862,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                         stroke-width="2"
                       />
                       <circle
-                        class="emotion-15 emotion-16"
+                        class="emotion-13 emotion-14"
                         cx="12"
                         cy="12"
                         r="8"
                       />
                       <circle
-                        class="emotion-17 emotion-18"
+                        class="emotion-15 emotion-16"
                         cx="12"
                         cy="12"
                         r="5"
@@ -884,7 +876,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     </g>
                   </svg>
                   <label
-                    class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="emotion-17 emotion-18 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     for="«r1i»"
                   >
                     Radio 1
@@ -893,7 +885,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               </div>
             </div>
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -906,18 +898,18 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-8 emotion-9 emotion-10"
+                  class="emotion-6 emotion-7 emotion-8"
                   data-checked="false"
                   data-error="true"
                 >
                   <input
                     aria-disabled="false"
                     aria-invalid="true"
-                    class="emotion-11 emotion-12"
+                    class="emotion-9 emotion-10"
                     id="«r1m»"
                     name="radio"
                     tabindex="-1"
@@ -925,7 +917,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     value="value-2"
                   />
                   <svg
-                    class="emotion-13 emotion-14"
+                    class="emotion-11 emotion-12"
                     viewBox="0 0 24 24"
                   >
                     <g>
@@ -936,13 +928,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                         stroke-width="2"
                       />
                       <circle
-                        class="emotion-15 emotion-16"
+                        class="emotion-13 emotion-14"
                         cx="12"
                         cy="12"
                         r="8"
                       />
                       <circle
-                        class="emotion-17 emotion-18"
+                        class="emotion-15 emotion-16"
                         cx="12"
                         cy="12"
                         r="5"
@@ -950,7 +942,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
                     </g>
                   </svg>
                   <label
-                    class="emotion-19 emotion-20 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    class="emotion-17 emotion-18 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                     for="«r1m»"
                   >
                     Radio 2
@@ -980,10 +972,6 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -995,54 +983,54 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   color: #3f4250;
 }
 
-.emotion-4[data-has-label='false']>:first-child {
+.emotion-2[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-4[data-has-default-cursor='true'] {
+.emotion-2[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-image="illustration"] {
+.emotion-2[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-4[data-image="icon"] {
+.emotion-2[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-4[data-has-label='true'] .ehkrmld6,
-.emotion-4[data-has-label='true'] .emotion-8 {
+.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1063,65 +1051,65 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   align-items: start;
 }
 
-.emotion-7 .eqr7bqq3 {
+.emotion-5 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-7[aria-disabled='true'] .eqr7bqq3 {
+.emotion-5[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-10 {
   fill: #e9eaeb;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-10 .emotion-12 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 {
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 .emotion-12 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 path {
+.emotion-5 .emotion-8:checked+.emotion-10 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1135,103 +1123,103 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8:checked+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .eqr7bqq5 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-5[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-5[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-7 label {
+.emotion-5 label {
   width: 100%;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7 .emotion-10:focus+.emotion-12,
-.emotion-7 .emotion-10:active+.emotion-12 {
+.emotion-5 .emotion-8:focus+.emotion-10,
+.emotion-5 .emotion-8:active+.emotion-10 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked='false'] .emotion-14 {
+.emotion-5 .emotion-8[aria-checked='false'] .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-9 {
+.emotion-7 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -1240,57 +1228,57 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   border-width: 0;
 }
 
-.emotion-9:not(:disabled) {
+.emotion-7:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 {
+.emotion-7:not(:disabled):checked+.emotion-10,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 {
   fill: #8c40ef;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled):checked+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 .emotion-12 {
   stroke: #b3144d;
 }
 
-.emotion-9:focus+.emotion-12 {
+.emotion-7:focus+.emotion-10 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus+.emotion-12 .emotion-14 {
+.emotion-7:focus+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-11 {
+.emotion-9 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -1298,7 +1286,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-11 path {
+.emotion-9 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1310,12 +1298,12 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   transform: scale(0);
 }
 
-.emotion-13 {
+.emotion-11 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   cursor: pointer;
 }
@@ -1336,7 +1324,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <legend
-              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
@@ -1351,7 +1339,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -1365,7 +1353,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="true"
                 data-error="false"
               >
@@ -1373,7 +1361,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«rv»"
                   name="checkbox"
                   tabindex="-1"
@@ -1381,13 +1369,13 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                   value="value-1"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1416,7 +1404,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«rv»"
                     >
                       Checkbox 1
@@ -1426,7 +1414,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
               </div>
             </div>
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -1440,14 +1428,14 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«r13»"
                   name="checkbox"
                   tabindex="-1"
@@ -1455,13 +1443,13 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                   value="value-2"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1490,7 +1478,7 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«r13»"
                     >
                       Checkbox 2
@@ -1516,10 +1504,6 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -1531,54 +1515,54 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   color: #3f4250;
 }
 
-.emotion-4[data-has-label='false']>:first-child {
+.emotion-2[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-4[data-has-default-cursor='true'] {
+.emotion-2[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-image="illustration"] {
+.emotion-2[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-4[data-image="icon"] {
+.emotion-2[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-4[data-has-label='true'] .ehkrmld6,
-.emotion-4[data-has-label='true'] .emotion-8 {
+.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1599,65 +1583,65 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   align-items: start;
 }
 
-.emotion-7 .eqr7bqq3 {
+.emotion-5 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-7[aria-disabled='true'] .eqr7bqq3 {
+.emotion-5[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-10 {
   fill: #e9eaeb;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-10 .emotion-12 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 {
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 .emotion-12 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 path {
+.emotion-5 .emotion-8:checked+.emotion-10 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1671,107 +1655,107 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   transform: translate(2px, 2px);
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8:checked+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .eqr7bqq5 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-5[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-5[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-7 input+svg {
+.emotion-5 input+svg {
   display: none;
 }
 
-.emotion-7 label {
+.emotion-5 label {
   width: 100%;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7 .emotion-10:focus+.emotion-12,
-.emotion-7 .emotion-10:active+.emotion-12 {
+.emotion-5 .emotion-8:focus+.emotion-10,
+.emotion-5 .emotion-8:active+.emotion-10 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked='false'] .emotion-14 {
+.emotion-5 .emotion-8[aria-checked='false'] .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-9 {
+.emotion-7 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -1780,57 +1764,57 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   border-width: 0;
 }
 
-.emotion-9:not(:disabled) {
+.emotion-7:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 {
+.emotion-7:not(:disabled):checked+.emotion-10,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 {
   fill: #8c40ef;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled):checked+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 .emotion-12 {
   stroke: #b3144d;
 }
 
-.emotion-9:focus+.emotion-12 {
+.emotion-7:focus+.emotion-10 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus+.emotion-12 .emotion-14 {
+.emotion-7:focus+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-11 {
+.emotion-9 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -1838,7 +1822,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   min-height: 1.5rem;
 }
 
-.emotion-11 path {
+.emotion-9 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1850,12 +1834,12 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   transform: scale(0);
 }
 
-.emotion-13 {
+.emotion-11 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   cursor: pointer;
 }
@@ -1873,7 +1857,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <legend
-            class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
@@ -1882,7 +1866,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
             style="--_3mg8xe0: repeat(2, minmax(0, 1fr)); --_3mg8xe1: repeat(2, minmax(0, 1fr)); --_3mg8xe2: repeat(2, minmax(0, 1fr)); --_3mg8xe3: repeat(2, minmax(0, 1fr)); --_3mg8xe4: repeat(2, minmax(0, 1fr)); --_3mg8xe5: repeat(2, minmax(0, 1fr));"
           >
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -1896,7 +1880,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="true"
                 data-error="false"
               >
@@ -1904,7 +1888,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«rb»"
                   name="checkbox"
                   tabindex="-1"
@@ -1912,13 +1896,13 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                   value="value-1"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -1947,7 +1931,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«rb»"
                     >
                       Checkbox 1
@@ -1957,7 +1941,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
               </div>
             </div>
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -1971,14 +1955,14 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«rf»"
                   name="checkbox"
                   tabindex="-1"
@@ -1986,13 +1970,13 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                   value="value-2"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -2021,7 +2005,7 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«rf»"
                     >
                       Checkbox 2
@@ -2047,10 +2031,6 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -2062,54 +2042,54 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   color: #3f4250;
 }
 
-.emotion-4[data-has-label='false']>:first-child {
+.emotion-2[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-4[data-has-default-cursor='true'] {
+.emotion-2[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-image="illustration"] {
+.emotion-2[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-4[data-image="icon"] {
+.emotion-2[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-4[data-has-label='true'] .ehkrmld6,
-.emotion-4[data-has-label='true'] .emotion-8 {
+.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2130,65 +2110,65 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   align-items: start;
 }
 
-.emotion-7 .eqr7bqq3 {
+.emotion-5 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-7[aria-disabled='true'] .eqr7bqq3 {
+.emotion-5[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-10 {
   fill: #e9eaeb;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-10 .emotion-12 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 {
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 .emotion-12 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 path {
+.emotion-5 .emotion-8:checked+.emotion-10 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2202,107 +2182,107 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8:checked+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .eqr7bqq5 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-5[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-5[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-7 input+svg {
+.emotion-5 input+svg {
   display: none;
 }
 
-.emotion-7 label {
+.emotion-5 label {
   width: 100%;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7 .emotion-10:focus+.emotion-12,
-.emotion-7 .emotion-10:active+.emotion-12 {
+.emotion-5 .emotion-8:focus+.emotion-10,
+.emotion-5 .emotion-8:active+.emotion-10 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked='false'] .emotion-14 {
+.emotion-5 .emotion-8[aria-checked='false'] .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-9 {
+.emotion-7 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -2311,57 +2291,57 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   border-width: 0;
 }
 
-.emotion-9:not(:disabled) {
+.emotion-7:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 {
+.emotion-7:not(:disabled):checked+.emotion-10,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 {
   fill: #8c40ef;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled):checked+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 .emotion-12 {
   stroke: #b3144d;
 }
 
-.emotion-9:focus+.emotion-12 {
+.emotion-7:focus+.emotion-10 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus+.emotion-12 .emotion-14 {
+.emotion-7:focus+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-11 {
+.emotion-9 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -2369,7 +2349,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-11 path {
+.emotion-9 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2381,12 +2361,12 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   transform: scale(0);
 }
 
-.emotion-13 {
+.emotion-11 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   cursor: pointer;
 }
@@ -2404,7 +2384,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <legend
-            class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
@@ -2413,7 +2393,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="true"
@@ -2427,7 +2407,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="true"
                 data-error="true"
               >
@@ -2436,7 +2416,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                   aria-describedby="«r18»-hint"
                   aria-invalid="true"
                   checked=""
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«r18»"
                   name="checkbox"
                   tabindex="-1"
@@ -2444,13 +2424,13 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                   value="value-1"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -2479,7 +2459,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«r18»"
                     >
                       Checkbox 1
@@ -2489,7 +2469,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -2503,7 +2483,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="false"
                 data-error="true"
               >
@@ -2511,7 +2491,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                   aria-checked="false"
                   aria-describedby="«r1c»-hint"
                   aria-invalid="true"
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«r1c»"
                   name="checkbox"
                   tabindex="-1"
@@ -2519,13 +2499,13 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                   value="value-2"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -2554,7 +2534,7 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«r1c»"
                     >
                       Checkbox 2
@@ -2585,10 +2565,6 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   position: relative;
   padding: 1rem;
   border-radius: 0.25rem;
@@ -2600,54 +2576,54 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   color: #3f4250;
 }
 
-.emotion-4[data-has-label='false']>:first-child {
+.emotion-2[data-has-label='false']>:first-child {
   margin-bottom: -0.25rem;
 }
 
-.emotion-4[data-has-default-cursor='true'] {
+.emotion-2[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-4[data-image="illustration"] {
+.emotion-2[data-image="illustration"] {
   padding: 0rem;
 }
 
-.emotion-4[data-image="icon"] {
+.emotion-2[data-image="icon"] {
   padding: 0rem;
   padding-right: 1rem;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-4[data-has-label='true'] .ehkrmld6,
-.emotion-4[data-has-label='true'] .emotion-8 {
+.emotion-2[data-has-label='true'] .ehkrmld6,
+.emotion-2[data-has-label='true'] .emotion-6 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2668,65 +2644,65 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   align-items: start;
 }
 
-.emotion-7 .eqr7bqq3 {
+.emotion-5 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-7[aria-disabled='true'] .eqr7bqq3 {
+.emotion-5[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-10 {
   fill: #e9eaeb;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-10 .emotion-12 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 {
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8:checked+.emotion-10 .emotion-12 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 {
   fill: #e5dbfd;
 }
 
-.emotion-7[aria-disabled='true'] .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5[aria-disabled='true'] .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 path {
+.emotion-5 .emotion-8:checked+.emotion-10 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2740,107 +2716,107 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-7 .emotion-10:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8:checked+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]:checked+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]:checked+.emotion-10 .emotion-12 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .eqr7bqq5 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked="mixed"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-checked="mixed"]+.emotion-10 .emotion-12 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='false']+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='true'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='true'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 {
   fill: #e51963;
 }
 
-.emotion-7 .emotion-10[aria-invalid="true"]+.emotion-12 .emotion-14 {
+.emotion-5 .emotion-8[aria-invalid="true"]+.emotion-10 .emotion-12 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-7[data-checked='true'] {
+.emotion-5[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-7[data-error='true'] {
+.emotion-5[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-7[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-7 input+svg {
+.emotion-5 input+svg {
   display: none;
 }
 
-.emotion-7 label {
+.emotion-5 label {
   width: 100%;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='false']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='false']+.emotion-10 .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='true']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='true']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7:hover[aria-disabled='false'] .emotion-10[aria-invalid='false'][aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-5:hover[aria-disabled='false'] .emotion-8[aria-invalid='false'][aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
   fill: #8c40ef;
 }
 
-.emotion-7 .emotion-10:focus+.emotion-12,
-.emotion-7 .emotion-10:active+.emotion-12 {
+.emotion-5 .emotion-8:focus+.emotion-10,
+.emotion-5 .emotion-8:active+.emotion-10 {
   outline: none;
   background-color: #ffffff;
   fill: #ffffff;
 }
 
-.emotion-7 .emotion-10[aria-checked='false'] .emotion-14 {
+.emotion-5 .emotion-8[aria-checked='false'] .emotion-12 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-9 {
+.emotion-7 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -2849,57 +2825,57 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   border-width: 0;
 }
 
-.emotion-9:not(:disabled) {
+.emotion-7:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-9:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 {
+.emotion-7:not(:disabled):checked+.emotion-10,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 {
   fill: #8c40ef;
 }
 
-.emotion-9:not(:disabled):checked+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-checked='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled):checked+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-checked='mixed']+.emotion-10 .emotion-12 {
   stroke: #8c40ef;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 {
   fill: #ffebf2;
 }
 
-.emotion-9:not(:disabled)[aria-invalid='true']+.emotion-12 .emotion-14,
-.emotion-9:not(:disabled)[aria-invalid='mixed']+.emotion-12 .emotion-14 {
+.emotion-7:not(:disabled)[aria-invalid='true']+.emotion-10 .emotion-12,
+.emotion-7:not(:disabled)[aria-invalid='mixed']+.emotion-10 .emotion-12 {
   stroke: #b3144d;
 }
 
-.emotion-9:focus+.emotion-12 {
+.emotion-7:focus+.emotion-10 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9:focus+.emotion-12 .emotion-14 {
+.emotion-7:focus+.emotion-10 .emotion-12 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-9[aria-invalid='true']:focus+.emotion-12 .emotion-14 {
+.emotion-7[aria-invalid='true']:focus+.emotion-10 .emotion-12 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-11 {
+.emotion-9 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -2907,7 +2883,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-11 path {
+.emotion-9 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2919,12 +2895,12 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   transform: scale(0);
 }
 
-.emotion-13 {
+.emotion-11 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-15 {
+.emotion-13 {
   width: 100%;
   cursor: pointer;
 }
@@ -2942,7 +2918,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <legend
-            class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </legend>
@@ -2951,7 +2927,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -2965,7 +2941,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="true"
                 data-error="false"
               >
@@ -2973,7 +2949,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   checked=""
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«rk»"
                   name="checkbox"
                   tabindex="-1"
@@ -2981,13 +2957,13 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                   value="value-1"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -3016,7 +2992,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«rk»"
                     >
                       Checkbox 1
@@ -3026,7 +3002,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -3040,14 +3016,14 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-6 emotion-7 emotion-8"
+                class="emotion-4 emotion-5 emotion-6"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-9 emotion-10"
+                  class="emotion-7 emotion-8"
                   id="«ro»"
                   name="checkbox"
                   tabindex="-1"
@@ -3055,13 +3031,13 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                   value="value-2"
                 />
                 <svg
-                  class="emotion-11 emotion-12"
+                  class="emotion-9 emotion-10"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-13 emotion-14"
+                      class="emotion-11 emotion-12"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -3090,7 +3066,7 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
                     style="--_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                      class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                       for="«ro»"
                     >
                       Checkbox 2

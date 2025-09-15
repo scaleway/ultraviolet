@@ -9,10 +9,6 @@ exports[`toggleGroup > renders correctly 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,16 +27,16 @@ exports[`toggleGroup > renders correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -62,11 +58,11 @@ exports[`toggleGroup > renders correctly 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -79,25 +75,25 @@ exports[`toggleGroup > renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -105,41 +101,41 @@ exports[`toggleGroup > renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -149,7 +145,7 @@ exports[`toggleGroup > renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -169,7 +165,7 @@ exports[`toggleGroup > renders correctly 1`] = `
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <legend
-              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
@@ -179,7 +175,7 @@ exports[`toggleGroup > renders correctly 1`] = `
           >
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -196,13 +192,13 @@ exports[`toggleGroup > renders correctly 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«r1»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -212,7 +208,7 @@ exports[`toggleGroup > renders correctly 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -229,13 +225,13 @@ exports[`toggleGroup > renders correctly 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«r4»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -260,10 +256,6 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,16 +274,16 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -313,11 +305,11 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -330,25 +322,25 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -356,41 +348,41 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -400,7 +392,7 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -420,7 +412,7 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <legend
-              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
@@ -430,7 +422,7 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
           >
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -447,13 +439,13 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«r8»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -463,7 +455,7 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -480,13 +472,13 @@ exports[`toggleGroup > renders correctly with direction row 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«rb»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -511,10 +503,6 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -533,16 +521,16 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -564,11 +552,11 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -581,25 +569,25 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -607,41 +595,41 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -651,7 +639,7 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -671,7 +659,7 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <legend
-              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
@@ -681,7 +669,7 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
           >
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -698,13 +686,13 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="true"
               >
                 <input
                   aria-invalid="true"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«rn»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -714,7 +702,7 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -731,13 +719,13 @@ exports[`toggleGroup > renders correctly with error content 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="true"
               >
                 <input
                   aria-invalid="true"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«rq»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -767,10 +755,6 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -789,16 +773,16 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -820,11 +804,11 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -837,25 +821,25 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -863,41 +847,41 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -907,7 +891,7 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -927,7 +911,7 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
             class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <legend
-              class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Label
             </legend>
@@ -937,7 +921,7 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
           >
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -954,13 +938,13 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«rf»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -970,7 +954,7 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -987,13 +971,13 @@ exports[`toggleGroup > renders correctly with helper content 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«ri»"
                   name="Toggle.value-2"
                   type="checkbox"
@@ -1023,10 +1007,6 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
 }
 
 .emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1045,16 +1025,16 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-4:active .emotion-7[data-disabled='false']:after {
+.emotion-2:active .emotion-5[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4[aria-disabled="true"] {
+.emotion-2[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-6 {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1076,11 +1056,11 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-4:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1093,25 +1073,25 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-4:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-4:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-4:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1119,41 +1099,41 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-4:has(:checked):focus-within,
+.emotion-4:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-4[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-4[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1163,7 +1143,7 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
@@ -1186,7 +1166,7 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
               class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
             >
               <legend
-                class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
               >
                 Label
               </legend>
@@ -1202,7 +1182,7 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
           >
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1219,13 +1199,13 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«r10»"
                   name="Toggle.value-1"
                   type="checkbox"
@@ -1235,7 +1215,7 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
             </label>
             <label
               aria-disabled="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
             >
               <div
                 class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1252,13 +1232,13 @@ exports[`toggleGroup > renders correctly with required prop 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-6 emotion-7"
+                class="emotion-4 emotion-5"
                 data-disabled="false"
                 data-error="false"
               >
                 <input
                   aria-invalid="false"
-                  class="emotion-8 emotion-9"
+                  class="emotion-6 emotion-7"
                   id="«r13»"
                   name="Toggle.value-2"
                   type="checkbox"
