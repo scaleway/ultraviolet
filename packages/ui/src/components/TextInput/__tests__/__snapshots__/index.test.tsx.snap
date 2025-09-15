@@ -3,14 +3,82 @@
 exports[`textInput > should render correctly when input  has a error sentiment 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-0>.emotion-3 {
+  color: #3f4250;
+}
+
+.emotion-0>.emotion-3::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::placeholder {
+  color: #727683;
+}
+
+.emotion-0[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-0[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3 {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,145 +92,69 @@ exports[`textInput > should render correctly when input  has a error sentiment 1
   border-radius: 0.25rem;
 }
 
-.emotion-2>.emotion-5 {
+.emotion-0>.emotion-3 {
   color: #3f4250;
 }
 
-.emotion-2>.emotion-5::-webkit-input-placeholder {
+.emotion-0>.emotion-3::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::-moz-placeholder {
+.emotion-0>.emotion-3::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5:-ms-input-placeholder {
+.emotion-0>.emotion-3:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::placeholder {
+.emotion-0>.emotion-3::placeholder {
   color: #727683;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2>.emotion-5 {
-  color: #3f4250;
-}
-
-.emotion-2>.emotion-5::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5 {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -175,15 +167,15 @@ exports[`textInput > should render correctly when input  has a error sentiment 1
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -196,19 +188,19 @@ exports[`textInput > should render correctly when input  has a error sentiment 1
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
@@ -219,14 +211,14 @@ exports[`textInput > should render correctly when input  has a error sentiment 1
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«rk»"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="false"
           data-error="true"
           data-readonly="false"
@@ -234,14 +226,14 @@ exports[`textInput > should render correctly when input  has a error sentiment 1
         >
           <input
             aria-invalid="true"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-size="large"
             id="«rk»"
             type="text"
             value="test"
           />
           <div
-            class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+            class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <svg
               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_4__vbm0wqo"
@@ -269,14 +261,82 @@ exports[`textInput > should render correctly when input  has a error sentiment 1
 exports[`textInput > should render correctly when input has a success sentiment 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-0>.emotion-3 {
+  color: #3f4250;
+}
+
+.emotion-0>.emotion-3::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::placeholder {
+  color: #727683;
+}
+
+.emotion-0[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-0[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3 {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -290,145 +350,69 @@ exports[`textInput > should render correctly when input has a success sentiment 
   border-radius: 0.25rem;
 }
 
-.emotion-2>.emotion-5 {
+.emotion-0>.emotion-3 {
   color: #3f4250;
 }
 
-.emotion-2>.emotion-5::-webkit-input-placeholder {
+.emotion-0>.emotion-3::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::-moz-placeholder {
+.emotion-0>.emotion-3::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5:-ms-input-placeholder {
+.emotion-0>.emotion-3:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::placeholder {
+.emotion-0>.emotion-3::placeholder {
   color: #727683;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2>.emotion-5 {
-  color: #3f4250;
-}
-
-.emotion-2>.emotion-5::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5 {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -441,15 +425,15 @@ exports[`textInput > should render correctly when input has a success sentiment 
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -462,19 +446,19 @@ exports[`textInput > should render correctly when input has a success sentiment 
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
@@ -485,14 +469,14 @@ exports[`textInput > should render correctly when input has a success sentiment 
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«rg»"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
@@ -500,14 +484,14 @@ exports[`textInput > should render correctly when input has a success sentiment 
         >
           <input
             aria-invalid="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-size="large"
             id="«rg»"
             type="text"
             value="test"
           />
           <div
-            class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+            class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             <svg
               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_success__vbm0wq4 styles_size_small__vbm0wqa styles_undefined_compound_3__vbm0wqn"
@@ -535,14 +519,82 @@ exports[`textInput > should render correctly when input has a success sentiment 
 exports[`textInput > should render correctly when input is disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-0>.emotion-3 {
+  color: #3f4250;
+}
+
+.emotion-0>.emotion-3::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::placeholder {
+  color: #727683;
+}
+
+.emotion-0[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-0[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3 {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -556,145 +608,69 @@ exports[`textInput > should render correctly when input is disabled 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2>.emotion-5 {
+.emotion-0>.emotion-3 {
   color: #3f4250;
 }
 
-.emotion-2>.emotion-5::-webkit-input-placeholder {
+.emotion-0>.emotion-3::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::-moz-placeholder {
+.emotion-0>.emotion-3::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5:-ms-input-placeholder {
+.emotion-0>.emotion-3:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::placeholder {
+.emotion-0>.emotion-3::placeholder {
   color: #727683;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2>.emotion-5 {
-  color: #3f4250;
-}
-
-.emotion-2>.emotion-5::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5 {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -707,15 +683,15 @@ exports[`textInput > should render correctly when input is disabled 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -728,11 +704,11 @@ exports[`textInput > should render correctly when input is disabled 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -743,14 +719,14 @@ exports[`textInput > should render correctly when input is disabled 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«ra»"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="true"
           data-error="false"
           data-readonly="false"
@@ -758,7 +734,7 @@ exports[`textInput > should render correctly when input is disabled 1`] = `
         >
           <input
             aria-invalid="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-size="large"
             disabled=""
             id="«ra»"
@@ -775,14 +751,82 @@ exports[`textInput > should render correctly when input is disabled 1`] = `
 exports[`textInput > should render correctly when input is readOnly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 3rem;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 0.25rem;
+}
+
+.emotion-0>.emotion-3 {
+  color: #3f4250;
+}
+
+.emotion-0>.emotion-3::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-0>.emotion-3::placeholder {
+  color: #727683;
+}
+
+.emotion-0[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-0[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-0[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-0[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3 {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
 }
 
 .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -796,145 +840,69 @@ exports[`textInput > should render correctly when input is readOnly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2>.emotion-5 {
+.emotion-0>.emotion-3 {
   color: #3f4250;
 }
 
-.emotion-2>.emotion-5::-webkit-input-placeholder {
+.emotion-0>.emotion-3::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::-moz-placeholder {
+.emotion-0>.emotion-3::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5:-ms-input-placeholder {
+.emotion-0>.emotion-3:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::placeholder {
+.emotion-0>.emotion-3::placeholder {
   color: #727683;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2>.emotion-5 {
-  color: #3f4250;
-}
-
-.emotion-2>.emotion-5::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2>.emotion-5::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5 {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -947,15 +915,15 @@ exports[`textInput > should render correctly when input is readOnly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -968,11 +936,11 @@ exports[`textInput > should render correctly when input is readOnly 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -983,14 +951,14 @@ exports[`textInput > should render correctly when input is readOnly 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«rd»"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="false"
           data-error="false"
           data-readonly="true"
@@ -998,7 +966,7 @@ exports[`textInput > should render correctly when input is readOnly 1`] = `
         >
           <input
             aria-invalid="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-size="large"
             id="«rd»"
             readonly=""
@@ -1015,10 +983,6 @@ exports[`textInput > should render correctly when input is readOnly 1`] = `
 exports[`textInput > should render correctly with basic props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1032,69 +996,69 @@ exports[`textInput > should render correctly with basic props 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2>.emotion-5 {
+.emotion-0>.emotion-3 {
   color: #3f4250;
 }
 
-.emotion-2>.emotion-5::-webkit-input-placeholder {
+.emotion-0>.emotion-3::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::-moz-placeholder {
+.emotion-0>.emotion-3::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5:-ms-input-placeholder {
+.emotion-0>.emotion-3:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::placeholder {
+.emotion-0>.emotion-3::placeholder {
   color: #727683;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1107,11 +1071,11 @@ exports[`textInput > should render correctly with basic props 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -1122,14 +1086,14 @@ exports[`textInput > should render correctly with basic props 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_htmlFor__17td3g91 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         for="«r0»"
       >
         Test
       </label>
       <div>
         <div
-          class="emotion-2 emotion-3"
+          class="emotion-0 emotion-1"
           data-disabled="false"
           data-error="false"
           data-readonly="false"
@@ -1137,7 +1101,7 @@ exports[`textInput > should render correctly with basic props 1`] = `
         >
           <input
             aria-invalid="false"
-            class="emotion-4 emotion-5"
+            class="emotion-2 emotion-3"
             data-size="large"
             id="«r0»"
             type="text"
