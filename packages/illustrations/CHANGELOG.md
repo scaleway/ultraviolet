@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 5.1.0-beta.2
+
+### Minor Changes
+
+- [#5528](https://github.com/scaleway/ultraviolet/pull/5528) [`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5) Thanks [@matthprost](https://github.com/matthprost)! - New illustration kafka
+
 ## 5.0.2-beta.1
 
 ### Patch Changes
