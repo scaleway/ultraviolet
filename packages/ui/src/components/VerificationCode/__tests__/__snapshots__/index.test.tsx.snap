@@ -2,102 +2,18 @@
 
 exports[`VerificationCode > render correctly with error as boolean 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="true"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«ri»-0"
@@ -110,7 +26,7 @@ exports[`VerificationCode > render correctly with error as boolean 1`] = `
           aria-invalid="true"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«ri»-1"
@@ -123,7 +39,7 @@ exports[`VerificationCode > render correctly with error as boolean 1`] = `
           aria-invalid="true"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«ri»-2"
@@ -136,7 +52,7 @@ exports[`VerificationCode > render correctly with error as boolean 1`] = `
           aria-invalid="true"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«ri»-3"
@@ -156,102 +72,18 @@ exports[`VerificationCode > render correctly with error as boolean 1`] = `
 
 exports[`VerificationCode > render correctly with error as string 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="true"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«rg»-0"
@@ -264,7 +96,7 @@ exports[`VerificationCode > render correctly with error as string 1`] = `
           aria-invalid="true"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«rg»-1"
@@ -277,7 +109,7 @@ exports[`VerificationCode > render correctly with error as string 1`] = `
           aria-invalid="true"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«rg»-2"
@@ -290,7 +122,7 @@ exports[`VerificationCode > render correctly with error as string 1`] = `
           aria-invalid="true"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«rg»-3"
@@ -312,102 +144,18 @@ exports[`VerificationCode > render correctly with error as string 1`] = `
 
 exports[`VerificationCode > render correctly with helper 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«rc»-0"
@@ -420,7 +168,7 @@ exports[`VerificationCode > render correctly with helper 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«rc»-1"
@@ -433,7 +181,7 @@ exports[`VerificationCode > render correctly with helper 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«rc»-2"
@@ -446,7 +194,7 @@ exports[`VerificationCode > render correctly with helper 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«rc»-3"
@@ -469,101 +217,17 @@ exports[`VerificationCode > render correctly with helper 1`] = `
 exports[`VerificationCode > render correctly with label 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
   cursor: text;
-}
-
-.emotion-4 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-4[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-4[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-4:hover,
-.emotion-4:focus {
-  border-color: #792dd4;
-}
-
-.emotion-4:hover[aria-invalid='true'],
-.emotion-4:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-4:hover[data-success='true'],
-.emotion-4:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-4:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4:last-child {
-  margin-right: 0;
-}
-
-.emotion-4::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-4::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-4:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-4::placeholder {
-  color: #727683;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <label
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
       >
         test
       </label>
@@ -572,7 +236,7 @@ exports[`VerificationCode > render correctly with label 1`] = `
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«re»-0"
@@ -585,7 +249,7 @@ exports[`VerificationCode > render correctly with label 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«re»-1"
@@ -598,7 +262,7 @@ exports[`VerificationCode > render correctly with label 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«re»-2"
@@ -611,7 +275,7 @@ exports[`VerificationCode > render correctly with label 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«re»-3"
@@ -629,104 +293,20 @@ exports[`VerificationCode > render correctly with label 1`] = `
 exports[`VerificationCode > render correctly with labelDescription 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
   cursor: text;
-}
-
-.emotion-4 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-4[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-4[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-4:hover,
-.emotion-4:focus {
-  border-color: #792dd4;
-}
-
-.emotion-4:hover[aria-invalid='true'],
-.emotion-4:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-4:hover[data-success='true'],
-.emotion-4:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-4:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4:last-child {
-  margin-right: 0;
-}
-
-.emotion-4::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-4::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-4:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-4::placeholder {
-  color: #727683;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
 }
 
 <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div
         class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-0 emotion-1 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           test
         </label>
@@ -739,7 +319,7 @@ exports[`VerificationCode > render correctly with labelDescription 1`] = `
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«rn»-0"
@@ -752,7 +332,7 @@ exports[`VerificationCode > render correctly with labelDescription 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«rn»-1"
@@ -765,7 +345,7 @@ exports[`VerificationCode > render correctly with labelDescription 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«rn»-2"
@@ -778,7 +358,7 @@ exports[`VerificationCode > render correctly with labelDescription 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-4 emotion-5"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«rn»-3"
@@ -795,102 +375,18 @@ exports[`VerificationCode > render correctly with labelDescription 1`] = `
 
 exports[`VerificationCode > render correctly with small size 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 1.5rem;
-  height: 2rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_small__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«rb»-0"
@@ -903,7 +399,7 @@ exports[`VerificationCode > render correctly with small size 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_small__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«rb»-1"
@@ -916,7 +412,7 @@ exports[`VerificationCode > render correctly with small size 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_small__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«rb»-2"
@@ -929,7 +425,7 @@ exports[`VerificationCode > render correctly with small size 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_small__1k9synd0 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«rb»-3"
@@ -946,102 +442,18 @@ exports[`VerificationCode > render correctly with small size 1`] = `
 
 exports[`VerificationCode > render correctly with success as boolean 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="0"
           id="«rk»-0"
@@ -1054,7 +466,7 @@ exports[`VerificationCode > render correctly with success as boolean 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="1"
           id="«rk»-1"
@@ -1067,7 +479,7 @@ exports[`VerificationCode > render correctly with success as boolean 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="2"
           id="«rk»-2"
@@ -1080,7 +492,7 @@ exports[`VerificationCode > render correctly with success as boolean 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="3"
           id="«rk»-3"
@@ -1097,102 +509,18 @@ exports[`VerificationCode > render correctly with success as boolean 1`] = `
 
 exports[`VerificationCode > render correctly with success as string 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="0"
           id="«rl»-0"
@@ -1205,7 +533,7 @@ exports[`VerificationCode > render correctly with success as string 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="1"
           id="«rl»-1"
@@ -1218,7 +546,7 @@ exports[`VerificationCode > render correctly with success as string 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="2"
           id="«rl»-2"
@@ -1231,7 +559,7 @@ exports[`VerificationCode > render correctly with success as string 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="true"
           data-testid="3"
           id="«rl»-3"
@@ -1253,102 +581,18 @@ exports[`VerificationCode > render correctly with success as string 1`] = `
 
 exports[`VerificationCode > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r0»-0"
@@ -1361,7 +605,7 @@ exports[`VerificationCode > renders correctly with default values 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r0»-1"
@@ -1374,7 +618,7 @@ exports[`VerificationCode > renders correctly with default values 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r0»-2"
@@ -1387,7 +631,7 @@ exports[`VerificationCode > renders correctly with default values 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r0»-3"
@@ -1404,102 +648,18 @@ exports[`VerificationCode > renders correctly with default values 1`] = `
 
 exports[`VerificationCode > renders correctly with initial value and placeholder and 6 fields 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r1»-0"
@@ -1512,7 +672,7 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r1»-1"
@@ -1525,7 +685,7 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r1»-2"
@@ -1538,7 +698,7 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r1»-3"
@@ -1551,7 +711,7 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
           aria-invalid="false"
           aria-label="Verification code 4"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="4"
           id="«r1»-4"
@@ -1564,7 +724,7 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
           aria-invalid="false"
           aria-label="Verification code 5"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="5"
           id="«r1»-5"
@@ -1581,102 +741,18 @@ exports[`VerificationCode > renders correctly with initial value and placeholder
 
 exports[`VerificationCode > should handle and replace non number with "" when type is number 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r4»-0"
@@ -1689,7 +765,7 @@ exports[`VerificationCode > should handle and replace non number with "" when ty
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r4»-1"
@@ -1702,7 +778,7 @@ exports[`VerificationCode > should handle and replace non number with "" when ty
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r4»-2"
@@ -1715,7 +791,7 @@ exports[`VerificationCode > should handle and replace non number with "" when ty
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r4»-3"
@@ -1732,102 +808,18 @@ exports[`VerificationCode > should handle and replace non number with "" when ty
 
 exports[`VerificationCode > should handle error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="true"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r9»-0"
@@ -1840,7 +832,7 @@ exports[`VerificationCode > should handle error 1`] = `
           aria-invalid="true"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r9»-1"
@@ -1853,7 +845,7 @@ exports[`VerificationCode > should handle error 1`] = `
           aria-invalid="true"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r9»-2"
@@ -1866,7 +858,7 @@ exports[`VerificationCode > should handle error 1`] = `
           aria-invalid="true"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r9»-3"
@@ -1886,102 +878,18 @@ exports[`VerificationCode > should handle error 1`] = `
 
 exports[`VerificationCode > should handle keyDown and special key cases and focus/change events 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r2»-0"
@@ -1994,7 +902,7 @@ exports[`VerificationCode > should handle keyDown and special key cases and focu
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r2»-1"
@@ -2007,7 +915,7 @@ exports[`VerificationCode > should handle keyDown and special key cases and focu
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r2»-2"
@@ -2020,7 +928,7 @@ exports[`VerificationCode > should handle keyDown and special key cases and focu
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r2»-3"
@@ -2037,102 +945,18 @@ exports[`VerificationCode > should handle keyDown and special key cases and focu
 
 exports[`VerificationCode > should handle paste when type is not number 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r7»-0"
@@ -2144,7 +968,7 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r7»-1"
@@ -2156,7 +980,7 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r7»-2"
@@ -2168,7 +992,7 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r7»-3"
@@ -2180,7 +1004,7 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
           aria-invalid="false"
           aria-label="Verification code 4"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="4"
           id="«r7»-4"
@@ -2192,7 +1016,7 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
           aria-invalid="false"
           aria-label="Verification code 5"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="5"
           id="«r7»-5"
@@ -2208,102 +1032,18 @@ exports[`VerificationCode > should handle paste when type is not number 1`] = `
 
 exports[`VerificationCode > should handle paste with no overflowing values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r3»-0"
@@ -2316,7 +1056,7 @@ exports[`VerificationCode > should handle paste with no overflowing values 1`] =
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r3»-1"
@@ -2329,7 +1069,7 @@ exports[`VerificationCode > should handle paste with no overflowing values 1`] =
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r3»-2"
@@ -2342,7 +1082,7 @@ exports[`VerificationCode > should handle paste with no overflowing values 1`] =
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r3»-3"
@@ -2359,102 +1099,18 @@ exports[`VerificationCode > should handle paste with no overflowing values 1`] =
 
 exports[`VerificationCode > should handle paste with overflowing values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r5»-0"
@@ -2467,7 +1123,7 @@ exports[`VerificationCode > should handle paste with overflowing values 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r5»-1"
@@ -2480,7 +1136,7 @@ exports[`VerificationCode > should handle paste with overflowing values 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r5»-2"
@@ -2493,7 +1149,7 @@ exports[`VerificationCode > should handle paste with overflowing values 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r5»-3"
@@ -2510,102 +1166,18 @@ exports[`VerificationCode > should handle paste with overflowing values 1`] = `
 
 exports[`VerificationCode > should handle paste with overflowing values at different index than 0 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           id="«r6»-0"
@@ -2618,7 +1190,7 @@ exports[`VerificationCode > should handle paste with overflowing values at diffe
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           id="«r6»-1"
@@ -2631,7 +1203,7 @@ exports[`VerificationCode > should handle paste with overflowing values at diffe
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           id="«r6»-2"
@@ -2644,7 +1216,7 @@ exports[`VerificationCode > should handle paste with overflowing values at diffe
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           id="«r6»-3"
@@ -2661,102 +1233,18 @@ exports[`VerificationCode > should handle paste with overflowing values at diffe
 
 exports[`VerificationCode > should render correctly disabled true 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-2 {
-  background: #ffffff;
-  color: #3f4250;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  height: 3rem;
-  outline-style: none;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2[aria-invalid='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  border-color: #792dd4;
-}
-
-.emotion-2:hover[aria-invalid='true'],
-.emotion-2:focus[aria-invalid='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:hover[data-success='true'],
-.emotion-2:focus[data-success='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:last-child {
-  margin-right: 0;
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-  background: #f3f3f4;
-  color: #b5b7bd;
-  border: solid 1px #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <fieldset
-      class="emotion-0 emotion-1"
+      class="styles__1k9synd5"
     >
       <div>
         <input
           aria-invalid="false"
           aria-label="Verification code 0"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="0"
           disabled=""
@@ -2770,7 +1258,7 @@ exports[`VerificationCode > should render correctly disabled true 1`] = `
           aria-invalid="false"
           aria-label="Verification code 1"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="1"
           disabled=""
@@ -2784,7 +1272,7 @@ exports[`VerificationCode > should render correctly disabled true 1`] = `
           aria-invalid="false"
           aria-label="Verification code 2"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="2"
           disabled=""
@@ -2798,7 +1286,7 @@ exports[`VerificationCode > should render correctly disabled true 1`] = `
           aria-invalid="false"
           aria-label="Verification code 3"
           autocomplete="off"
-          class="emotion-2 emotion-3"
+          class="styles_large__1k9synd2 styles__1k9synd4"
           data-success="false"
           data-testid="3"
           disabled=""
