@@ -3,10 +3,6 @@
 exports[`submit > form is invalid 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  cursor: pointer;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,69 +16,69 @@ exports[`submit > form is invalid 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-2>.emotion-5 {
+.emotion-0>.emotion-3 {
   color: #3f4250;
 }
 
-.emotion-2>.emotion-5::-webkit-input-placeholder {
+.emotion-0>.emotion-3::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::-moz-placeholder {
+.emotion-0>.emotion-3::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5:-ms-input-placeholder {
+.emotion-0>.emotion-3:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-2>.emotion-5::placeholder {
+.emotion-0>.emotion-3::placeholder {
   color: #727683;
 }
 
-.emotion-2[data-success='true'] {
+.emotion-0[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-2[data-error='true'] {
+.emotion-0[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-2[data-readonly='true'] {
+.emotion-0[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.emotion-2[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5 {
+.emotion-0[data-disabled='true']>.emotion-3 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-webkit-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::-moz-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5:-ms-input-placeholder {
+.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled='true']>.emotion-5::placeholder {
+.emotion-0[data-disabled='true']>.emotion-3::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -95,11 +91,11 @@ exports[`submit > form is invalid 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-4[data-size='large'] {
+.emotion-2[data-size='large'] {
   font-size: 1rem;
 }
 
-.emotion-4[data-size='small'] {
+.emotion-2[data-size='small'] {
   padding-left: 0.5rem;
 }
 
@@ -114,14 +110,14 @@ exports[`submit > form is invalid 1`] = `
         class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <label
-          class="emotion-0 emotion-1 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
           for="«r1»"
         >
           test
         </label>
         <div>
           <div
-            class="emotion-2 emotion-3"
+            class="emotion-0 emotion-1"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
@@ -129,7 +125,7 @@ exports[`submit > form is invalid 1`] = `
           >
             <input
               aria-invalid="false"
-              class="emotion-4 emotion-5"
+              class="emotion-2 emotion-3"
               data-size="large"
               id="«r1»"
               name="toto"
