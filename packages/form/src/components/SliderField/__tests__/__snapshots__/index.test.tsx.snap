@@ -1587,14 +1587,10 @@ exports[`SliderField > should trigger events correctly 1`] = `
 }
 
 .emotion-2 {
-  cursor: pointer;
-}
-
-.emotion-4 {
   min-width: 2.5rem;
 }
 
-.emotion-6 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1613,52 +1609,52 @@ exports[`SliderField > should trigger events correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-6:focus-within {
+.emotion-4:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-success='true'] {
+.emotion-4[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-4[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-6:hover {
+.emotion-4:hover {
   border-color: #792dd4;
 }
 
-.emotion-6[data-readonly='true'] {
+.emotion-4[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-6[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-6[data-controls='false']>.emotion-9 {
+.emotion-4[data-controls='false']>.emotion-7 {
   border-width: 0;
 }
 
-.emotion-6[data-size='small'] {
+.emotion-4[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-6[data-size='medium'] {
+.emotion-4[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-6[data-size='large'] {
+.emotion-4[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-8 {
+.emotion-6 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -1666,7 +1662,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-8 {
   outline: none;
   border: none;
   padding: 0;
@@ -1681,18 +1677,18 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: none;
 }
 
-.emotion-10[data-has-unit='true'] {
+.emotion-8[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-10::-webkit-outer-spin-button,
-.emotion-10::-webkit-inner-spin-button {
+.emotion-8::-webkit-outer-spin-button,
+.emotion-8::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-8 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -1700,15 +1696,15 @@ exports[`SliderField > should trigger events correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-10[data-size='small'] {
+.emotion-8[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-10[data-size='medium'] {
+.emotion-8[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-10[data-size='large'] {
+.emotion-8[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -1716,34 +1712,34 @@ exports[`SliderField > should trigger events correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-10:-moz-read-only {
+.emotion-8:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-10:read-only {
+.emotion-8:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-10:-moz-read-only~.exvap482 {
+.emotion-8:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-10:read-only~.exvap482 {
+.emotion-8:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-10:disabled {
+.emotion-8:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-10:disabled~.exvap482 {
+.emotion-8:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -1752,16 +1748,16 @@ exports[`SliderField > should trigger events correctly 1`] = `
   user-select: none;
 }
 
-.emotion-10:placeholder-shown~.exvap482 {
+.emotion-8:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-10[data-controls='false'] {
+.emotion-8[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-12 {
+.emotion-10 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1779,31 +1775,31 @@ exports[`SliderField > should trigger events correctly 1`] = `
   outline: none;
 }
 
-.emotion-12:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-10[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-12[data-direction='column'] {
+.emotion-10[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-10[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-12::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1814,7 +1810,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-12::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1836,20 +1832,20 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-12::-moz-range-thumb:hover,
-.emotion-12::-moz-range-thumb:active,
-.emotion-12::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-12::-moz-range-thumb:active,
-.emotion-12::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-12::-webkit-slider-runnable-track {
+.emotion-10::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1860,7 +1856,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-12::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1882,14 +1878,14 @@ exports[`SliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-12::-webkit-slider-thumb:hover,
-.emotion-12::-webkit-slider-thumb:active,
-.emotion-12::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-12::-webkit-slider-thumb:active,
-.emotion-12::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -1916,7 +1912,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
               class="uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <label
-                class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 for="«rt»"
               >
                 Test
@@ -1928,11 +1924,11 @@ exports[`SliderField > should trigger events correctly 1`] = `
               </span>
             </div>
             <div
-              class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <div>
                 <div
-                  class="emotion-6 emotion-7"
+                  class="emotion-4 emotion-5"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -1941,12 +1937,12 @@ exports[`SliderField > should trigger events correctly 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-8 emotion-9 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+                    class="emotion-6 emotion-7 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
                     style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input"
-                      class="emotion-10 emotion-11"
+                      class="emotion-8 emotion-9"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -1973,7 +1969,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
           >
             <input
               aria-label="test"
-              class="emotion-12 emotion-13"
+              class="emotion-10 emotion-11"
               data-direction="column"
               data-error="false"
               id="«rt»"
