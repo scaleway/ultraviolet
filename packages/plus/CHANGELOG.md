@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 2.0.0-beta.9
+
+### Patch Changes
+
+- [#5546](https://github.com/scaleway/ultraviolet/pull/5546) [`72382ac`](https://github.com/scaleway/ultraviolet/commit/72382ac8b93c7c0b5b1451fe625e0971117e4a30) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Stack />` to provide `as` prop for polymorphic composition used in `<Navigation />` for example
+
+- Updated dependencies [[`29d2395`](https://github.com/scaleway/ultraviolet/commit/29d2395c652b3035c286e3e13da934a268153940), [`72382ac`](https://github.com/scaleway/ultraviolet/commit/72382ac8b93c7c0b5b1451fe625e0971117e4a30)]:
+  - @ultraviolet/ui@3.0.0-beta.9
+
 ## 2.0.0-beta.8
 
 ### Patch Changes
