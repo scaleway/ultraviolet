@@ -30,7 +30,7 @@ const DropableArea = styled.div`
   &[data-first="true"] {
     top: -${({ theme }) => theme.space['3']};
   }
-  
+
   &::after {
     content: '';
     left: 0;
@@ -263,7 +263,7 @@ const BaseExpandableCard = forwardRef(
             data-testid={`draggable-icon-${value}`}
             data-visible={isHovered}
             justifyContent="center"
-            onKeyDown={event => {
+            onKeyDown={(event: KeyboardEvent<HTMLDivElement>) => {
               if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault()
                 if (clicking && containerRef.current) {
