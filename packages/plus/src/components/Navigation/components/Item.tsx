@@ -11,6 +11,7 @@ import {
   UnpinIcon,
 } from '@ultraviolet/icons'
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
+import { theme as vanillaTheme } from '@ultraviolet/themes'
 import {
   Badge,
   Button,
@@ -24,7 +25,7 @@ import {
 import type {
   ComponentProps,
   DragEvent,
-  JSX,
+  ElementType,
   MouseEvent,
   ReactNode,
 } from 'react'
@@ -148,19 +149,18 @@ const StyledStack = styled(Stack)`
   padding-left: 28px; // This value needs to be hardcoded because of the category icon size
 `
 
-const StyledContainer = styled(Stack)`
+const StyledContainer = css`
   ${NeutralButtonLink};
-  border-radius: ${({ theme }) => theme.radii.default};
+  border-radius: ${vanillaTheme.radii.default};
 
   &[data-has-no-expand="false"] {
     cursor: pointer;
   }
-  margin-top: ${({ theme }) => theme.space['0.25']};
-  padding: ${({ theme }) =>
-    `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space['1']}`};
+  margin-top: ${vanillaTheme.space['0.25']};
+  padding: ${`calc(${vanillaTheme.space['0.25']} + ${vanillaTheme.space['0.5']}) ${vanillaTheme.space['1']}`};
 
   &[data-has-sub-label="true"] {
-    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
+    padding: ${`${vanillaTheme.space['0.5']} ${vanillaTheme.space['1']}`};
   }
 
   width: 100%;
@@ -171,14 +171,14 @@ const StyledContainer = styled(Stack)`
   &:focus[data-has-no-expand="false"]:not([disabled]):not(
       [data-is-active="true"]
     ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    background-color: ${vanillaTheme.colors.neutral.backgroundWeak};
   }
   &[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
     ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
+    background-color: ${vanillaTheme.colors.neutral.backgroundWeakHover};
     ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
+      color: ${vanillaTheme.colors.neutral.textWeakHover};
     }
 
     ${PinnedButton} {
@@ -208,22 +208,22 @@ const StyledContainer = styled(Stack)`
 
   &:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) {
     ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
+      color: ${vanillaTheme.colors.neutral.textWeakHover};
     }
   }
 
   &:active[data-has-no-expand="false"]:not([disabled]):not(
       [data-is-active="true"]
     ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+    background-color: ${vanillaTheme.colors.neutral.backgroundHover};
   }
 
   &[data-is-active="true"],
   &:hover[data-has-active="true"] {
-    background-color: ${({ theme }) => theme.colors.primary.background};
+    background-color: ${vanillaTheme.colors.primary.background};
 
     &:hover {
-      background-color: ${({ theme }) => theme.colors.primary.backgroundHover};
+      background-color: ${vanillaTheme.colors.primary.backgroundHover};
     }
   }
 
@@ -232,7 +232,7 @@ const StyledContainer = styled(Stack)`
     background-color: unset;
 
     ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+      color: ${vanillaTheme.colors.neutral.textWeakDisabled};
     }
   }
 
@@ -342,7 +342,7 @@ type ItemProps = {
    * a non focusable element. This option allows you to choose the tag of the
    * item.
    */
-  as?: keyof JSX.IntrinsicElements
+  as?: ElementType
   /**
    * Use this prop if you want to remove the expand behavior when the item
    * has sub items.
@@ -483,11 +483,6 @@ export const Item = memo(
       return 'button'
     }, [as, hasHrefAndNoChildren, noExpand])
 
-    const Container = useMemo(
-      () => StyledContainer.withComponent(containerTag),
-      [containerTag],
-    )
-
     const ArrowIcon = useMemo(
       () => (internalExpanded ? ArrowDownIcon : ArrowRightIcon),
       [internalExpanded],
@@ -549,9 +544,11 @@ export const Item = memo(
     if (expanded || (!expanded && animation === 'expand')) {
       return (
         <>
-          <Container
+          <Stack
             alignItems={categoryIcon ? 'flex-start' : 'center'}
             aria-expanded={ariaExpanded}
+            as={containerTag}
+            css={StyledContainer}
             data-animation={shouldAnimate ? animation : undefined}
             data-animation-type={animationType}
             data-has-active-children={hasActiveChildren}
@@ -563,7 +560,7 @@ export const Item = memo(
             data-pinned-feature={pinnedFeature}
             data-testid={dataTestId}
             direction="row"
-            disabled={disabled}
+            disabled={containerTag === 'button' ? disabled : undefined}
             draggable={type === 'pinned' && expanded}
             gap={1}
             href={href}
@@ -713,7 +710,7 @@ export const Item = memo(
                 </StackIcon>
               ) : null}
             </Stack>
-          </Container>
+          </Stack>
           {children ? (
             <>
               {!noExpand ? (
@@ -901,8 +898,10 @@ export const Item = memo(
       return (
         <Tooltip placement="right" text={label}>
           <MenuStack alignItems="start" gap={1} justifyContent="start">
-            <Container
+            <Stack
               alignItems="center"
+              as={containerTag}
+              css={StyledContainer}
               gap={1}
               href={href}
               justifyContent="center"
@@ -910,7 +909,7 @@ export const Item = memo(
               target={target}
             >
               <AnimatedIcon prominence="weak" sentiment="neutral" />
-            </Container>
+            </Stack>
           </MenuStack>
         </Tooltip>
       )
