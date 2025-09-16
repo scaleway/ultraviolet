@@ -2,11 +2,12 @@
 
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, HTMLAttributes, ReactNode, Ref } from 'react'
+import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useMemo } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
 import { sprinkles, stack } from './styles.css'
+import type { PolymorphicComponentProps } from './types'
 import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
 type ResponsiveProp<T> =
@@ -17,28 +18,6 @@ type ResponsiveProp<T> =
 type ToNumber<T extends string> = T extends `${infer N extends number}`
   ? N
   : never
-
-export type StackProps = {
-  gap?: ResponsiveProp<
-    | keyof UltravioletUITheme['space']
-    | ToNumber<keyof UltravioletUITheme['space']>
-  >
-  direction?: ResponsiveProp<
-    'row' | 'column' | 'row-reverse' | 'column-reverse'
-  >
-  alignItems?: ResponsiveProp<AlignItemsType>
-  justifyContent?: ResponsiveProp<JustifyContentType>
-  wrap?: ResponsiveProp<boolean | CSSProperties['flexWrap']>
-  width?: CSSProperties['width']
-  maxWidth?: CSSProperties['maxWidth']
-  minWidth?: CSSProperties['minWidth']
-  flex?: CSSProperties['flex']
-  className?: string
-  children: ReactNode
-  'data-testid'?: string
-  id?: string
-  ref?: Ref<HTMLDivElement>
-} & Omit<HTMLAttributes<HTMLDivElement>, 'children'>
 
 // It will give a rem value for each breakpoint key
 // Ex: gap={{ small: 2, xsmall: 1 }} => { small: '0.5rem', xsmall: '0.25rem' }
@@ -66,7 +45,31 @@ const mapRepsonsiveGap = (
       )
     : {}
 
-export const Stack = ({
+type OwnStackProps = {
+  gap?: ResponsiveProp<
+    | keyof UltravioletUITheme['space']
+    | ToNumber<keyof UltravioletUITheme['space']>
+  >
+  direction?: ResponsiveProp<
+    'row' | 'column' | 'row-reverse' | 'column-reverse'
+  >
+  alignItems?: ResponsiveProp<AlignItemsType>
+  justifyContent?: ResponsiveProp<JustifyContentType>
+  wrap?: ResponsiveProp<boolean | CSSProperties['flexWrap']>
+  width?: CSSProperties['width']
+  maxWidth?: CSSProperties['maxWidth']
+  minWidth?: CSSProperties['minWidth']
+  flex?: CSSProperties['flex']
+  className?: string
+  children: ReactNode
+  'data-testid'?: string
+  id?: string
+}
+
+export type StackProps<T extends ElementType = 'div'> =
+  PolymorphicComponentProps<T, OwnStackProps>
+
+export const Stack = <T extends ElementType = 'div'>({
   gap,
   direction = 'column',
   alignItems = 'normal',
@@ -80,9 +83,10 @@ export const Stack = ({
   maxWidth,
   minWidth,
   flex,
+  as,
   ref,
   ...props
-}: StackProps) => {
+}: StackProps<T>) => {
   const wrapValue = useMemo(() => {
     if (typeof wrap === 'boolean') {
       return wrap ? 'wrap' : 'nowrap'
@@ -101,24 +105,32 @@ export const Stack = ({
     return wrap
   }, [wrap])
 
+  const Component = as || 'div'
+
+  const sprinkleClassName = sprinkles({
+    alignItems:
+      typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
+    flexDirection:
+      typeof direction === 'object' ? direction : { xxsmall: direction },
+    flexWrap:
+      typeof wrapValue === 'object' ? wrapValue : { xxsmall: wrapValue },
+    gap:
+      typeof gap === 'object'
+        ? mapRepsonsiveGap(gap)
+        : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
+    justifyContent:
+      typeof justifyContent === 'object'
+        ? justifyContent
+        : { xxsmall: justifyContent },
+  })
+
+  const combinedClassName = [className, stack, sprinkleClassName]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <div
-      className={`${className ? `${className} ` : ''}${stack} ${sprinkles({
-        alignItems:
-          typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
-        flexDirection:
-          typeof direction === 'object' ? direction : { xxsmall: direction },
-        flexWrap:
-          typeof wrapValue === 'object' ? wrapValue : { xxsmall: wrapValue },
-        gap:
-          typeof gap === 'object'
-            ? mapRepsonsiveGap(gap)
-            : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
-        justifyContent:
-          typeof justifyContent === 'object'
-            ? justifyContent
-            : { xxsmall: justifyContent },
-      })}`}
+    <Component
+      className={combinedClassName}
       data-testid={dataTestId}
       id={id}
       ref={ref}
@@ -132,6 +144,6 @@ export const Stack = ({
       {...props}
     >
       {children}
-    </div>
+    </Component>
   )
 }
