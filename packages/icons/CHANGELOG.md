@@ -1,5 +1,15 @@
 # Change Log
 
+## 4.1.0
+
+### Minor Changes
+
+- [#5551](https://github.com/scaleway/ultraviolet/pull/5551) [`b1057f8`](https://github.com/scaleway/ultraviolet/commit/b1057f8ad18cf62e105f990d2ebad59842b6ec67) Thanks [@matthprost](https://github.com/matthprost)! - New category icon `<UseCasesCategoryIcon />`
+
+### Patch Changes
+
+- [#5543](https://github.com/scaleway/ultraviolet/pull/5543) [`8267b84`](https://github.com/scaleway/ultraviolet/commit/8267b849315ca4affd86b671c5e4cf4042389e95) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.13`.
+
 ## 4.0.5
 
 ### Patch Changes
