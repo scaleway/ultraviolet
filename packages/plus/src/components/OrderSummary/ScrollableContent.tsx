@@ -10,13 +10,14 @@ import { OrderSummaryContext } from './Provider'
 import type { ItemsType, SubCategoryType } from './types'
 
 const StyledNumberInputV2 = styled(NumberInput)`
-max-width: 12.5rem;
-background-color: ${({ theme }) => theme.colors.neutral.background};
+  max-width: 12.5rem;
+  background-color: ${({ theme }) => theme.colors.neutral.background};
 `
 const ContainerScrollable = styled(Stack)`
-overflow-y: scroll;
-padding: ${({ theme }) => theme.space[3]};
-height: 100%;
+  overflow-y: scroll;
+  padding: ${({ theme }) => theme.space[3]};
+  min-height: 10rem;
+  height: 100%;
 `
 
 const DetailsStack = styled(Stack)`
