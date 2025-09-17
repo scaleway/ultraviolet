@@ -21,7 +21,7 @@ exports[`toggle > renders correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-5[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -31,29 +31,6 @@ exports[`toggle > renders correctly 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -75,11 +52,11 @@ exports[`toggle > renders correctly 1`] = `
   height: 1.5rem;
 }
 
-.emotion-4:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -92,25 +69,25 @@ exports[`toggle > renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.emotion-4:focus-within,
-.emotion-4:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,41 +95,41 @@ exports[`toggle > renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4:has(:checked):focus-within,
-.emotion-4:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error="true"]:focus-within,
-.emotion-4[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -162,7 +139,7 @@ exports[`toggle > renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-6[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -174,16 +151,16 @@ exports[`toggle > renders correctly 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-6 emotion-7"
+          class="emotion-4 emotion-5"
           id="«r0»"
           name="test"
           type="checkbox"
@@ -215,7 +192,7 @@ exports[`toggle > renders correctly label 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -225,43 +202,6 @@ exports[`toggle > renders correctly label 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -283,11 +223,11 @@ exports[`toggle > renders correctly label 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -300,25 +240,25 @@ exports[`toggle > renders correctly label 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -326,41 +266,41 @@ exports[`toggle > renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -370,7 +310,7 @@ exports[`toggle > renders correctly label 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -382,10 +322,11 @@ exports[`toggle > renders correctly label 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -395,13 +336,13 @@ exports[`toggle > renders correctly label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«rg»"
           name="test"
           type="checkbox"
@@ -433,7 +374,7 @@ exports[`toggle > renders correctly when checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-5[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -443,29 +384,6 @@ exports[`toggle > renders correctly when checked 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -487,11 +405,11 @@ exports[`toggle > renders correctly when checked 1`] = `
   height: 1.5rem;
 }
 
-.emotion-4:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -504,25 +422,25 @@ exports[`toggle > renders correctly when checked 1`] = `
   transition: all 300ms;
 }
 
-.emotion-4:focus-within,
-.emotion-4:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -530,41 +448,41 @@ exports[`toggle > renders correctly when checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4:has(:checked):focus-within,
-.emotion-4:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error="true"]:focus-within,
-.emotion-4[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -574,7 +492,7 @@ exports[`toggle > renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-6[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -586,17 +504,17 @@ exports[`toggle > renders correctly when checked 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
           checked=""
-          class="emotion-6 emotion-7"
+          class="emotion-4 emotion-5"
           id="«r2»"
           name="test"
           type="checkbox"
@@ -628,7 +546,7 @@ exports[`toggle > renders correctly when disabled 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-5[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -638,29 +556,6 @@ exports[`toggle > renders correctly when disabled 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -682,11 +577,11 @@ exports[`toggle > renders correctly when disabled 1`] = `
   height: 1.5rem;
 }
 
-.emotion-4:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -699,25 +594,25 @@ exports[`toggle > renders correctly when disabled 1`] = `
   transition: all 300ms;
 }
 
-.emotion-4:focus-within,
-.emotion-4:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-4:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -725,41 +620,41 @@ exports[`toggle > renders correctly when disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4:has(:checked):focus-within,
-.emotion-4:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error="true"]:focus-within,
-.emotion-4[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -769,7 +664,7 @@ exports[`toggle > renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.emotion-6[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -781,16 +676,16 @@ exports[`toggle > renders correctly when disabled 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2 emotion-3"
         data-disabled="true"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-6 emotion-7"
+          class="emotion-4 emotion-5"
           disabled=""
           id="«r4»"
           name="test"
@@ -823,7 +718,7 @@ exports[`toggle > renders correctly when required with label 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -833,43 +728,6 @@ exports[`toggle > renders correctly when required with label 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -891,11 +749,11 @@ exports[`toggle > renders correctly when required with label 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -908,25 +766,25 @@ exports[`toggle > renders correctly when required with label 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -934,41 +792,41 @@ exports[`toggle > renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -978,7 +836,7 @@ exports[`toggle > renders correctly when required with label 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -990,10 +848,11 @@ exports[`toggle > renders correctly when required with label 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -1008,13 +867,13 @@ exports[`toggle > renders correctly when required with label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«r6»"
           name="test"
           required=""
@@ -1047,7 +906,7 @@ exports[`toggle > renders correctly when required with label left 1`] = `
   flex-direction: row;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -1057,43 +916,6 @@ exports[`toggle > renders correctly when required with label left 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1115,11 +937,11 @@ exports[`toggle > renders correctly when required with label left 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1132,25 +954,25 @@ exports[`toggle > renders correctly when required with label left 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1158,41 +980,41 @@ exports[`toggle > renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1202,7 +1024,7 @@ exports[`toggle > renders correctly when required with label left 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -1214,10 +1036,11 @@ exports[`toggle > renders correctly when required with label left 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -1232,13 +1055,13 @@ exports[`toggle > renders correctly when required with label left 1`] = `
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«ra»"
           name="test"
           required=""
@@ -1271,7 +1094,7 @@ exports[`toggle > renders correctly with complex label 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -1281,43 +1104,6 @@ exports[`toggle > renders correctly with complex label 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1339,11 +1125,11 @@ exports[`toggle > renders correctly with complex label 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1356,25 +1142,25 @@ exports[`toggle > renders correctly with complex label 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1382,41 +1168,41 @@ exports[`toggle > renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1426,7 +1212,7 @@ exports[`toggle > renders correctly with complex label 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -1438,10 +1224,11 @@ exports[`toggle > renders correctly with complex label 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span>
             Custom label rendered
@@ -1449,13 +1236,13 @@ exports[`toggle > renders correctly with complex label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«rs»"
           name="test"
           type="checkbox"
@@ -1487,7 +1274,7 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -1497,43 +1284,6 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1555,11 +1305,11 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1572,25 +1322,25 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1598,41 +1348,41 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1642,7 +1392,7 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -1654,10 +1404,11 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -1667,13 +1418,13 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«rp»"
           name="test"
           type="checkbox"
@@ -1705,7 +1456,7 @@ exports[`toggle > renders correctly with error 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -1733,7 +1484,7 @@ exports[`toggle > renders correctly with error 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -1743,80 +1494,105 @@ exports[`toggle > renders correctly with error 1`] = `
 }
 
 .emotion-2 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.emotion-2:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-2:after {
+  content: "";
+  position: absolute;
+  top: calc(1.5rem / 2 - 1rem / 2);
+  left: 5px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-2:focus-within,
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-2[data-disabled="false"]:active:after {
+  width: calc(1rem * 1.3775);
+}
+
+.emotion-2:has(:checked) {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-2:has(:checked):hover {
+  background-color: #792dd4;
+}
+
+.emotion-2:has(:checked):after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2[data-disabled="true"] {
+  background: #f3f3f4;
+}
+
+.emotion-2[data-disabled="true"]:has(:checked) {
+  background: #e5dbfd;
+}
+
+.emotion-2[data-error="true"] {
+  background-color: #ffebf2;
+}
+
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-2[data-error="true"]:has(:checked) {
+  background-color: #e51963;
+}
+
+.emotion-2[data-error="true"][data-disabled="true"] {
+  background-color: #fff3f7;
+}
+
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
+  background-color: #ffd3e3;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1838,11 +1614,11 @@ exports[`toggle > renders correctly with error 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -1855,25 +1631,25 @@ exports[`toggle > renders correctly with error 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1881,140 +1657,41 @@ exports[`toggle > renders correctly with error 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-6:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-6:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-6:focus-within,
-.emotion-6:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-6[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-6:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-6:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-6:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-6[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-6[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-6[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-6[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-6[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2024,11 +1701,11 @@ exports[`toggle > renders correctly with error 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2038,7 +1715,7 @@ exports[`toggle > renders correctly with error 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -2050,10 +1727,11 @@ exports[`toggle > renders correctly with error 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -2068,13 +1746,13 @@ exports[`toggle > renders correctly with error 1`] = `
         </p>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="true"
       >
         <input
           aria-invalid="true"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«r15»"
           name="test"
           type="checkbox"
@@ -2106,7 +1784,7 @@ exports[`toggle > renders correctly with helper 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -2134,7 +1812,7 @@ exports[`toggle > renders correctly with helper 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -2144,80 +1822,105 @@ exports[`toggle > renders correctly with helper 1`] = `
 }
 
 .emotion-2 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.emotion-2:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-2:after {
+  content: "";
+  position: absolute;
+  top: calc(1.5rem / 2 - 1rem / 2);
+  left: 5px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-2:focus-within,
+.emotion-2:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-2[data-disabled="false"]:active:after {
+  width: calc(1rem * 1.3775);
+}
+
+.emotion-2:has(:checked) {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-2:has(:checked):hover {
+  background-color: #792dd4;
+}
+
+.emotion-2:has(:checked):after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2[data-disabled="true"] {
+  background: #f3f3f4;
+}
+
+.emotion-2[data-disabled="true"]:has(:checked) {
+  background: #e5dbfd;
+}
+
+.emotion-2[data-error="true"] {
+  background-color: #ffebf2;
+}
+
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-2[data-error="true"]:has(:checked) {
+  background-color: #e51963;
+}
+
+.emotion-2[data-error="true"][data-disabled="true"] {
+  background-color: #fff3f7;
+}
+
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
+  background-color: #ffd3e3;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2239,11 +1942,11 @@ exports[`toggle > renders correctly with helper 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -2256,25 +1959,25 @@ exports[`toggle > renders correctly with helper 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2282,140 +1985,41 @@ exports[`toggle > renders correctly with helper 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-6:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-6:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-6:focus-within,
-.emotion-6:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-6[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-6:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-6:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-6:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-6[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-6[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-6[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-6[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-6[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2425,11 +2029,11 @@ exports[`toggle > renders correctly with helper 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2439,7 +2043,7 @@ exports[`toggle > renders correctly with helper 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -2451,10 +2055,11 @@ exports[`toggle > renders correctly with helper 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -2469,13 +2074,13 @@ exports[`toggle > renders correctly with helper 1`] = `
         </p>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«r11»"
           name="test"
           type="checkbox"
@@ -2507,7 +2112,7 @@ exports[`toggle > renders correctly with labels on left 1`] = `
   flex-direction: row;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -2517,43 +2122,6 @@ exports[`toggle > renders correctly with labels on left 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2575,11 +2143,11 @@ exports[`toggle > renders correctly with labels on left 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -2592,25 +2160,25 @@ exports[`toggle > renders correctly with labels on left 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2618,41 +2186,41 @@ exports[`toggle > renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2662,7 +2230,7 @@ exports[`toggle > renders correctly with labels on left 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -2674,10 +2242,11 @@ exports[`toggle > renders correctly with labels on left 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+          style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
         >
           <span
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -2687,13 +2256,13 @@ exports[`toggle > renders correctly with labels on left 1`] = `
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-8 emotion-9"
+          class="emotion-4 emotion-5"
           id="«rm»"
           name="test"
           type="checkbox"
@@ -2725,7 +2294,7 @@ exports[`toggle > renders correctly with non default size 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-5[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(0.75rem * 1.3775);
 }
 
@@ -2735,29 +2304,6 @@ exports[`toggle > renders correctly with non default size 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2779,11 +2325,11 @@ exports[`toggle > renders correctly with non default size 1`] = `
   height: 1.25rem;
 }
 
-.emotion-4:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-4:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.25rem / 2 - 0.75rem / 2);
@@ -2796,25 +2342,25 @@ exports[`toggle > renders correctly with non default size 1`] = `
   transition: all 300ms;
 }
 
-.emotion-4:focus-within,
-.emotion-4:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(0.75rem * 1.3775);
 }
 
-.emotion-4:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-4:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2822,41 +2368,41 @@ exports[`toggle > renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4:has(:checked):focus-within,
-.emotion-4:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error="true"]:focus-within,
-.emotion-4[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2866,7 +2412,7 @@ exports[`toggle > renders correctly with non default size 1`] = `
   cursor: pointer;
 }
 
-.emotion-6[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -2878,16 +2424,16 @@ exports[`toggle > renders correctly with non default size 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2 emotion-3"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-invalid="false"
-          class="emotion-6 emotion-7"
+          class="emotion-4 emotion-5"
           id="«re»"
           name="test"
           type="checkbox"
@@ -2919,7 +2465,7 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-3[data-disabled='false']:after {
   width: calc(1rem * 1.3775);
 }
 
@@ -2929,43 +2475,6 @@ exports[`toggle > renders correctly with tooltip 1`] = `
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2987,11 +2496,11 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   height: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-2:after {
   content: "";
   position: absolute;
   top: calc(1.5rem / 2 - 1rem / 2);
@@ -3004,25 +2513,25 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-2:focus-within,
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-2[data-disabled="false"]:active:after {
   width: calc(1rem * 1.3775);
 }
 
-.emotion-6:has(:checked) {
+.emotion-2:has(:checked) {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6:has(:checked):hover {
+.emotion-2:has(:checked):hover {
   background-color: #792dd4;
 }
 
-.emotion-6:has(:checked):after {
+.emotion-2:has(:checked):after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -3030,41 +2539,41 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6:has(:checked):focus-within,
-.emotion-6:has(:checked):focus {
+.emotion-2:has(:checked):focus-within,
+.emotion-2:has(:checked):focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-2[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"]:has(:checked) {
+.emotion-2[data-disabled="true"]:has(:checked) {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-2[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-2[data-error="true"]:focus-within,
+.emotion-2[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"]:has(:checked) {
+.emotion-2[data-error="true"]:has(:checked) {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-2[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"]:has(:checked) {
+.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-4 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -3074,7 +2583,7 @@ exports[`toggle > renders correctly with tooltip 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-4[disabled] {
   cursor: not-allowed;
 }
 
@@ -3092,10 +2601,11 @@ exports[`toggle > renders correctly with tooltip 1`] = `
         class="emotion-0 emotion-1"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_gap_0.5rem_xxsmall__x6hyh57"
+            style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
           >
             <span
               class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -3105,13 +2615,13 @@ exports[`toggle > renders correctly with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-2 emotion-3"
           data-disabled="false"
           data-error="false"
         >
           <input
             aria-invalid="false"
-            class="emotion-8 emotion-9"
+            class="emotion-4 emotion-5"
             id="«rj»"
             name="test"
             type="checkbox"
