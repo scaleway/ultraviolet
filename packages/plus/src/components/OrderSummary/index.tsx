@@ -12,10 +12,10 @@ import type { OrderSummaryProps, PriceType, TimeUnit } from './types'
 const Container = styled(Stack)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   height: 100%;
-  width: 20rem;
+  min-width: 20rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
-    width: 27.5rem;
+    min-width: 27.5rem;
   }
 `
 

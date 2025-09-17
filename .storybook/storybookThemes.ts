@@ -33,7 +33,6 @@ const generateStorybookTheme = ({
 
     // Toolbar default and active colors
     barTextColor: theme.colors.neutral.textWeak,
-
     buttonBg: theme.colors.neutral.background,
     buttonBorder: theme.colors.neutral.border,
 
