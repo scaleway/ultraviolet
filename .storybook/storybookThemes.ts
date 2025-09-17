@@ -23,6 +23,7 @@ const generateStorybookTheme = ({
   brandImage,
 }: GenerateStorybookThemeProps) =>
   create({
+    base,
     // UI
     appBg: theme.colors.neutral.background,
     appBorderColor: theme.colors.neutral.borderWeak,
@@ -32,8 +33,6 @@ const generateStorybookTheme = ({
 
     // Toolbar default and active colors
     barTextColor: theme.colors.neutral.textWeak,
-    barSelectedColor: theme.colors.primary.text,
-    barBg: theme.colors.neutral.backgroundWeak,
 
     buttonBg: theme.colors.neutral.background,
     buttonBorder: theme.colors.neutral.border,
@@ -45,9 +44,6 @@ const generateStorybookTheme = ({
     brandTitle: 'Ultraviolet UI',
 
     brandUrl,
-
-    buttonBg: theme.colors.neutral.background,
-    buttonBorder: theme.colors.neutral.border,
 
     colorPrimary: theme.colors.primary.backgroundStrong,
     colorSecondary: theme.colors.primary.backgroundStrong,

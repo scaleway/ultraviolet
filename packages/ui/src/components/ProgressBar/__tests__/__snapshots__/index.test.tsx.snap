@@ -3,29 +3,6 @@
 exports[`progressBar > renders correctly when value < 0 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -36,7 +13,7 @@ exports[`progressBar > renders correctly when value < 0 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -52,17 +29,17 @@ exports[`progressBar > renders correctly when value < 0 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="-250"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -73,29 +50,6 @@ exports[`progressBar > renders correctly when value < 0 1`] = `
 exports[`progressBar > renders correctly when value > 100 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -106,7 +60,7 @@ exports[`progressBar > renders correctly when value > 100 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -122,17 +76,17 @@ exports[`progressBar > renders correctly when value > 100 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="250"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -143,78 +97,6 @@ exports[`progressBar > renders correctly when value > 100 1`] = `
 exports[`progressBar > renders correctly with label, labelDescription and showProgress, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  cursor: text;
-}
-
-.emotion-8 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -225,7 +107,7 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -241,16 +123,17 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: 100%;"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <label
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </label>
@@ -271,11 +154,11 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-8 emotion-9"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -286,56 +169,6 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
 exports[`progressBar > renders correctly with label, labelDescription and showProgress, direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  cursor: text;
-}
-
-.emotion-6 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -346,7 +179,7 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -358,33 +191,13 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
   width: 40%;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-12 {
+.emotion-6 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -394,13 +207,13 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Label
         </label>
@@ -414,18 +227,18 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-6 emotion-7"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-2 emotion-3"
         />
       </div>
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-12 emotion-13 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           40%
         </label>
@@ -438,78 +251,6 @@ exports[`progressBar > renders correctly with label, labelDescription and showPr
 exports[`progressBar > renders correctly with label, labelDescription as ReactNode, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  cursor: text;
-}
-
-.emotion-8 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -520,7 +261,7 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -536,16 +277,17 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: 100%;"
       >
         <div
-          class="emotion-4 emotion-1"
+          class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <label
-            class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Label
           </label>
@@ -558,11 +300,11 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-8 emotion-9"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -573,56 +315,6 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
 exports[`progressBar > renders correctly with label, labelDescription as ReactNode, direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  cursor: text;
-}
-
-.emotion-6 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -633,7 +325,7 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -649,13 +341,13 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Label
         </label>
@@ -667,11 +359,11 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-6 emotion-7"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -682,33 +374,6 @@ exports[`progressBar > renders correctly with label, labelDescription as ReactNo
 exports[`progressBar > renders correctly with max 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -719,7 +384,7 @@ exports[`progressBar > renders correctly with max 1`] = `
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -735,10 +400,10 @@ exports[`progressBar > renders correctly with max 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
       >
         label
       </label>
@@ -746,11 +411,11 @@ exports[`progressBar > renders correctly with max 1`] = `
         aria-valuemax="10"
         aria-valuemin="0"
         aria-valuenow="4"
-        class="emotion-4 emotion-5"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -761,55 +426,6 @@ exports[`progressBar > renders correctly with max 1`] = `
 exports[`progressBar > renders correctly with only label, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
-  cursor: text;
-}
-
-.emotion-6 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -820,7 +436,7 @@ exports[`progressBar > renders correctly with only label, direction column 1`] =
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -836,13 +452,14 @@ exports[`progressBar > renders correctly with only label, direction column 1`] =
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: 100%;"
       >
         <label
-          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           label
         </label>
@@ -851,11 +468,11 @@ exports[`progressBar > renders correctly with only label, direction column 1`] =
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-6 emotion-7"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -866,56 +483,6 @@ exports[`progressBar > renders correctly with only label, direction column 1`] =
 exports[`progressBar > renders correctly with only showProgress, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
-  cursor: text;
-}
-
-.emotion-6 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -926,7 +493,7 @@ exports[`progressBar > renders correctly with only showProgress, direction colum
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -942,13 +509,14 @@ exports[`progressBar > renders correctly with only showProgress, direction colum
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_right_xxsmall__toi52u6j"
+        style="--_4k0ekn0: 100%;"
       >
         <label
-          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         />
         <label
           class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
@@ -961,11 +529,11 @@ exports[`progressBar > renders correctly with only showProgress, direction colum
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-6 emotion-7"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -976,29 +544,6 @@ exports[`progressBar > renders correctly with only showProgress, direction colum
 exports[`progressBar > renders correctly with only showProgress, direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1009,7 +554,7 @@ exports[`progressBar > renders correctly with only showProgress, direction row 1
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1021,33 +566,13 @@ exports[`progressBar > renders correctly with only showProgress, direction row 1
   width: 40%;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-8 {
+.emotion-6 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1057,24 +582,24 @@ exports[`progressBar > renders correctly with only showProgress, direction row 1
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           40%
         </label>
@@ -1087,55 +612,6 @@ exports[`progressBar > renders correctly with only showProgress, direction row 1
 exports[`progressBar > renders correctly with suffix and prefix, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-4 {
-  cursor: text;
-}
-
-.emotion-6 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1146,7 +622,7 @@ exports[`progressBar > renders correctly with suffix and prefix, direction colum
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1162,13 +638,14 @@ exports[`progressBar > renders correctly with suffix and prefix, direction colum
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-1"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_space-between_xxsmall__toi52u6p"
+        style="--_4k0ekn0: 100%;"
       >
         <label
-          class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           label
         </label>
@@ -1183,11 +660,11 @@ exports[`progressBar > renders correctly with suffix and prefix, direction colum
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-6 emotion-7"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -1198,33 +675,6 @@ exports[`progressBar > renders correctly with suffix and prefix, direction colum
 exports[`progressBar > renders correctly with suffix and prefix, direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  cursor: text;
-}
-
-.emotion-4 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1235,7 +685,7 @@ exports[`progressBar > renders correctly with suffix and prefix, direction row 1
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1247,33 +697,13 @@ exports[`progressBar > renders correctly with suffix and prefix, direction row 1
   width: 40%;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
+.emotion-4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-10 {
+.emotion-6 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1283,10 +713,10 @@ exports[`progressBar > renders correctly with suffix and prefix, direction row 1
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <label
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+        class="styles_default__17td3g92 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
       >
         label
       </label>
@@ -1294,18 +724,18 @@ exports[`progressBar > renders correctly with suffix and prefix, direction row 1
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-4 emotion-5"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-2 emotion-3"
         />
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <label
-          class="emotion-10 emotion-11 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           prefix40suffix
         </label>
@@ -1318,29 +748,6 @@ exports[`progressBar > renders correctly with suffix and prefix, direction row 1
 exports[`progressBar > renders danger 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1351,7 +758,7 @@ exports[`progressBar > renders danger 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1367,17 +774,17 @@ exports[`progressBar > renders danger 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -1388,29 +795,6 @@ exports[`progressBar > renders danger 1`] = `
 exports[`progressBar > renders info 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1421,7 +805,7 @@ exports[`progressBar > renders info 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1437,17 +821,17 @@ exports[`progressBar > renders info 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -1458,29 +842,6 @@ exports[`progressBar > renders info 1`] = `
 exports[`progressBar > renders primary 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1491,7 +852,7 @@ exports[`progressBar > renders primary 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1507,17 +868,17 @@ exports[`progressBar > renders primary 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -1538,29 +899,6 @@ exports[`progressBar > renders progression 1`] = `
 }
 
 .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1571,7 +909,7 @@ exports[`progressBar > renders progression 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1594,17 +932,17 @@ exports[`progressBar > renders progression 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="0"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -1615,29 +953,6 @@ exports[`progressBar > renders progression 1`] = `
 exports[`progressBar > renders success 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1648,7 +963,7 @@ exports[`progressBar > renders success 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1664,17 +979,17 @@ exports[`progressBar > renders success 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>
@@ -1685,29 +1000,6 @@ exports[`progressBar > renders success 1`] = `
 exports[`progressBar > renders warning 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2 {
   overflow: hidden;
   position: relative;
   height: 0.25rem;
@@ -1718,7 +1010,7 @@ exports[`progressBar > renders warning 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   border-radius: 0.25rem;
   position: absolute;
   top: 0;
@@ -1734,17 +1026,17 @@ exports[`progressBar > renders warning 1`] = `
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-2 emotion-3"
+        class="emotion-0 emotion-1"
         role="progressbar"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-2 emotion-3"
         />
       </div>
     </div>

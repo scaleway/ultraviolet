@@ -2,110 +2,18 @@
 
 exports[`sliderField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-options='true'][data-double='true'] {
+  .emotion-0[data-options='true'][data-double='true'] {
   margin-bottom: 1.5rem;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
   min-width: 2.5rem;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-10 {
+.emotion-4 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -123,31 +31,31 @@ exports[`sliderField > should render correctly 1`] = `
   outline: none;
 }
 
-.emotion-10:focus::-moz-range-thumb {
+.emotion-4:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10:focus::-webkit-slider-thumb {
+.emotion-4:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-10[data-direction='column'] {
+.emotion-4[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-10::-moz-range-track {
+.emotion-4::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -158,7 +66,7 @@ exports[`sliderField > should render correctly 1`] = `
   background: transparent;
 }
 
-.emotion-10::-moz-range-thumb {
+.emotion-4::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -180,20 +88,20 @@ exports[`sliderField > should render correctly 1`] = `
   top: -4px;
 }
 
-.emotion-10::-moz-range-thumb:hover,
-.emotion-10::-moz-range-thumb:active,
-.emotion-10::-moz-range-thumb:focus {
+.emotion-4::-moz-range-thumb:hover,
+.emotion-4::-moz-range-thumb:active,
+.emotion-4::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-10::-moz-range-thumb:active,
-.emotion-10::-moz-range-thumb:focus {
+.emotion-4::-moz-range-thumb:active,
+.emotion-4::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-10::-webkit-slider-runnable-track {
+.emotion-4::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -204,7 +112,7 @@ exports[`sliderField > should render correctly 1`] = `
   background: transparent;
 }
 
-.emotion-10::-webkit-slider-thumb {
+.emotion-4::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -226,14 +134,14 @@ exports[`sliderField > should render correctly 1`] = `
   top: -4px;
 }
 
-.emotion-10::-webkit-slider-thumb:hover,
-.emotion-10::-webkit-slider-thumb:active,
-.emotion-10::-webkit-slider-thumb:focus {
+.emotion-4::-webkit-slider-thumb:hover,
+.emotion-4::-webkit-slider-thumb:active,
+.emotion-4::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-10::-webkit-slider-thumb:active,
-.emotion-10::-webkit-slider-thumb:focus {
+.emotion-4::-webkit-slider-thumb:active,
+.emotion-4::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -247,17 +155,17 @@ exports[`sliderField > should render correctly 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
         data-options="false"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-4 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           >
             <span
-              class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               data-testid="slider-value"
               style="--uv_qabug40: right;"
             >
@@ -265,11 +173,12 @@ exports[`sliderField > should render correctly 1`] = `
             </span>
           </div>
           <div
-            class="emotion-8 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-label="test"
-              class="emotion-10 emotion-11"
+              class="emotion-4 emotion-5"
               data-direction="column"
               data-error="false"
               id="«r0»"
@@ -292,110 +201,18 @@ exports[`sliderField > should render correctly 1`] = `
 
 exports[`sliderField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-options='true'][data-double='true'] {
+  .emotion-0[data-options='true'][data-double='true'] {
   margin-bottom: 1.5rem;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
   min-width: 2.5rem;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-10 {
+.emotion-4 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -413,21 +230,21 @@ exports[`sliderField > should render correctly disabled 1`] = `
   outline: none;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-10[data-direction='column'] {
+.emotion-4[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-10::-moz-range-track {
+.emotion-4::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -438,7 +255,7 @@ exports[`sliderField > should render correctly disabled 1`] = `
   background: transparent;
 }
 
-.emotion-10::-moz-range-thumb {
+.emotion-4::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -459,19 +276,19 @@ exports[`sliderField > should render correctly disabled 1`] = `
   top: -4px;
 }
 
-.emotion-10::-moz-range-thumb:hover,
-.emotion-10::-moz-range-thumb:active,
-.emotion-10::-moz-range-thumb:focus {
+.emotion-4::-moz-range-thumb:hover,
+.emotion-4::-moz-range-thumb:active,
+.emotion-4::-moz-range-thumb:focus {
   border: null;
 }
 
-.emotion-10::-moz-range-thumb:active,
-.emotion-10::-moz-range-thumb:focus {
+.emotion-4::-moz-range-thumb:active,
+.emotion-4::-moz-range-thumb:focus {
   box-shadow: null;
   cursor: not-allowed;
 }
 
-.emotion-10::-webkit-slider-runnable-track {
+.emotion-4::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -482,7 +299,7 @@ exports[`sliderField > should render correctly disabled 1`] = `
   background: transparent;
 }
 
-.emotion-10::-webkit-slider-thumb {
+.emotion-4::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -503,14 +320,14 @@ exports[`sliderField > should render correctly disabled 1`] = `
   top: -4px;
 }
 
-.emotion-10::-webkit-slider-thumb:hover,
-.emotion-10::-webkit-slider-thumb:active,
-.emotion-10::-webkit-slider-thumb:focus {
+.emotion-4::-webkit-slider-thumb:hover,
+.emotion-4::-webkit-slider-thumb:active,
+.emotion-4::-webkit-slider-thumb:focus {
   border: null;
 }
 
-.emotion-10::-webkit-slider-thumb:active,
-.emotion-10::-webkit-slider-thumb:focus {
+.emotion-4::-webkit-slider-thumb:active,
+.emotion-4::-webkit-slider-thumb:focus {
   box-shadow: null;
   cursor: not-allowed;
 }
@@ -524,17 +341,17 @@ exports[`sliderField > should render correctly disabled 1`] = `
     >
       <div
         aria-label="Slider Input"
-        class="emotion-0 emotion-1"
+        class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
         data-options="false"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-4 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           >
             <span
-              class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               data-testid="slider-value"
               style="--uv_qabug40: right;"
             >
@@ -542,12 +359,13 @@ exports[`sliderField > should render correctly disabled 1`] = `
             </span>
           </div>
           <div
-            class="emotion-8 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-disabled="true"
               aria-label="Slider Input"
-              class="emotion-10 emotion-11"
+              class="emotion-4 emotion-5"
               data-direction="column"
               data-error="false"
               disabled=""
@@ -571,110 +389,18 @@ exports[`sliderField > should render correctly disabled 1`] = `
 
 exports[`sliderField > should render correctly with possible values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-0[data-options='true'][data-double='true'] {
+  .emotion-0[data-options='true'][data-double='true'] {
   margin-bottom: 1.5rem;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
   min-width: 2.5rem;
   -webkit-align-self: end;
   -ms-flex-item-align: end;
   align-self: end;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-10 {
+.emotion-4 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -692,31 +418,31 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   outline: none;
 }
 
-.emotion-10:focus::-moz-range-thumb {
+.emotion-4:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10:focus::-webkit-slider-thumb {
+.emotion-4:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-10[data-direction='column'] {
+.emotion-4[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-10::-moz-range-track {
+.emotion-4::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -727,7 +453,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   background: transparent;
 }
 
-.emotion-10::-moz-range-thumb {
+.emotion-4::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -749,20 +475,20 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   top: -4px;
 }
 
-.emotion-10::-moz-range-thumb:hover,
-.emotion-10::-moz-range-thumb:active,
-.emotion-10::-moz-range-thumb:focus {
+.emotion-4::-moz-range-thumb:hover,
+.emotion-4::-moz-range-thumb:active,
+.emotion-4::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-10::-moz-range-thumb:active,
-.emotion-10::-moz-range-thumb:focus {
+.emotion-4::-moz-range-thumb:active,
+.emotion-4::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-10::-webkit-slider-runnable-track {
+.emotion-4::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -773,7 +499,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   background: transparent;
 }
 
-.emotion-10::-webkit-slider-thumb {
+.emotion-4::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -795,20 +521,20 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   top: -4px;
 }
 
-.emotion-10::-webkit-slider-thumb:hover,
-.emotion-10::-webkit-slider-thumb:active,
-.emotion-10::-webkit-slider-thumb:focus {
+.emotion-4::-webkit-slider-thumb:hover,
+.emotion-4::-webkit-slider-thumb:active,
+.emotion-4::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-10::-webkit-slider-thumb:active,
-.emotion-10::-webkit-slider-thumb:focus {
+.emotion-4::-webkit-slider-thumb:active,
+.emotion-4::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-12 {
+.emotion-6 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -818,8 +544,92 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   height: 1rem;
 }
 
-.emotion-12[data-double='true'] {
+.emotion-6[data-double='true'] {
   margin-top: 2.5rem;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  left: 0%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-8[data-element-left='true'] {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-8[data-element-right='true'] {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  left: 16.666666666666668%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-10[data-element-left='true'] {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-10[data-element-right='true'] {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  left: 33.333333333333336%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-12[data-element-left='true'] {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-12[data-element-right='true'] {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .emotion-14 {
@@ -828,7 +638,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 0%;
+  left: 50%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -856,7 +666,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 16.666666666666668%;
+  left: 66.66666666666667%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -884,7 +694,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 33.333333333333336%;
+  left: 83.33333333333333%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -912,7 +722,529 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 50%;
+  left: 100%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-20[data-element-left='true'] {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-20[data-element-right='true'] {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+<div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <div
+        class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        data-options="true"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
+          >
+            <span
+              class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              data-testid="slider-value"
+              style="--uv_qabug40: right;"
+            >
+              1
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
+          >
+            <input
+              aria-label="test"
+              class="emotion-4 emotion-5"
+              data-direction="column"
+              data-error="false"
+              id="«r3»"
+              max="6"
+              min="0"
+              name="test"
+              step="1"
+              style="background-size: 0% 100%;"
+              tabindex="0"
+              type="range"
+              value="0"
+            />
+            <datalist
+              class="emotion-6 emotion-7"
+              data-double="false"
+            >
+              <span
+                class="emotion-8 emotion-9"
+                data-element-left="true"
+                data-element-right="false"
+                data-value="0"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  1Mb
+                </p>
+              </span>
+              <span
+                class="emotion-10 emotion-9"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="1"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  3Mb
+                </p>
+              </span>
+              <span
+                class="emotion-12 emotion-9"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="2"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  5Mb
+                </p>
+              </span>
+              <span
+                class="emotion-14 emotion-9"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="3"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  10Mb
+                </p>
+              </span>
+              <span
+                class="emotion-16 emotion-9"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="4"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  50Mb
+                </p>
+              </span>
+              <span
+                class="emotion-18 emotion-9"
+                data-element-left="false"
+                data-element-right="false"
+                data-value="5"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  100Mb
+                </p>
+              </span>
+              <span
+                class="emotion-20 emotion-9"
+                data-element-left="false"
+                data-element-right="true"
+                data-value="6"
+              >
+                <p
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  500Mb
+                </p>
+              </span>
+            </datalist>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`sliderField > should render correctly with possible values and double 1`] = `
+<DocumentFragment>
+  .emotion-0[data-options='true'][data-double='true'] {
+  margin-bottom: 1.5rem;
+}
+
+.emotion-2 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-8 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 100%;
+  min-width: 13.75rem;
+  border-radius: 0.25rem;
+  background: #e9eaeb;
+}
+
+.emotion-10 {
+  position: absolute;
+  height: 100%;
+  background-color: #8c40ef;
+  border-radius: 0.25rem;
+}
+
+.emotion-10[data-error='true'] {
+  background-color: #e51963;
+}
+
+.emotion-10[aria-disabled='true'] {
+  background-color: #d8c5fc;
+}
+
+.emotion-12 {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+}
+
+.emotion-12:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-12:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-12::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-12::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -8px;
+}
+
+.emotion-12::-moz-range-thumb:hover,
+.emotion-12::-moz-range-thumb:active,
+.emotion-12::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-12::-moz-range-thumb:active,
+.emotion-12::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-12::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-12:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-12::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -8px;
+}
+
+.emotion-12::-webkit-slider-thumb:hover,
+.emotion-12::-webkit-slider-thumb:active,
+.emotion-12::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-12::-webkit-slider-thumb:active,
+.emotion-12::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-14 {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  outline: none;
+}
+
+.emotion-14:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-14:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-14::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-14::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(100% - 8px);
+  top: -8px;
+}
+
+.emotion-14::-moz-range-thumb:hover,
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-14::-moz-range-thumb:active,
+.emotion-14::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-14::-ms-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-14:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-14::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(100% - 8px);
+  top: -8px;
+}
+
+.emotion-14::-webkit-slider-thumb:hover,
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-14::-webkit-slider-thumb:active,
+.emotion-14::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-16 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 1rem;
+}
+
+.emotion-16[data-double='true'] {
+  margin-top: 2.5rem;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  left: 0%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-18[data-element-left='true'] {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-18[data-element-right='true'] {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  left: 16.666666666666668%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -940,7 +1272,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 66.66666666666667%;
+  left: 33.333333333333336%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -968,7 +1300,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 83.33333333333333%;
+  left: 50%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -996,619 +1328,7 @@ exports[`sliderField > should render correctly with possible values 1`] = `
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 100%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-26[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-26[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-<div
-    data-testid="testing"
-  >
-    <form
-      novalidate=""
-      style="display: contents;"
-    >
-      <div
-        class="emotion-0 emotion-1"
-        data-options="true"
-      >
-        <div
-          class="emotion-2 emotion-3"
-        >
-          <div
-            class="emotion-4 emotion-3"
-          >
-            <span
-              class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-              data-testid="slider-value"
-              style="--uv_qabug40: right;"
-            >
-              1
-            </span>
-          </div>
-          <div
-            class="emotion-8 emotion-3"
-          >
-            <input
-              aria-label="test"
-              class="emotion-10 emotion-11"
-              data-direction="column"
-              data-error="false"
-              id="«r3»"
-              max="6"
-              min="0"
-              name="test"
-              step="1"
-              style="background-size: 0% 100%;"
-              tabindex="0"
-              type="range"
-              value="0"
-            />
-            <datalist
-              class="emotion-12 emotion-13"
-              data-double="false"
-            >
-              <span
-                class="emotion-14 emotion-15"
-                data-element-left="true"
-                data-element-right="false"
-                data-value="0"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  1Mb
-                </p>
-              </span>
-              <span
-                class="emotion-16 emotion-15"
-                data-element-left="false"
-                data-element-right="false"
-                data-value="1"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  3Mb
-                </p>
-              </span>
-              <span
-                class="emotion-18 emotion-15"
-                data-element-left="false"
-                data-element-right="false"
-                data-value="2"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  5Mb
-                </p>
-              </span>
-              <span
-                class="emotion-20 emotion-15"
-                data-element-left="false"
-                data-element-right="false"
-                data-value="3"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  10Mb
-                </p>
-              </span>
-              <span
-                class="emotion-22 emotion-15"
-                data-element-left="false"
-                data-element-right="false"
-                data-value="4"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  50Mb
-                </p>
-              </span>
-              <span
-                class="emotion-24 emotion-15"
-                data-element-left="false"
-                data-element-right="false"
-                data-value="5"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  100Mb
-                </p>
-              </span>
-              <span
-                class="emotion-26 emotion-15"
-                data-element-left="false"
-                data-element-right="true"
-                data-value="6"
-              >
-                <p
-                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
-                >
-                  500Mb
-                </p>
-              </span>
-            </datalist>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`sliderField > should render correctly with possible values and double 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-0[data-options='true'][data-double='true'] {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-8 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-14 {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
-  width: 100%;
-  min-width: 13.75rem;
-  border-radius: 0.25rem;
-  background: #e9eaeb;
-}
-
-.emotion-16 {
-  position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
-}
-
-.emotion-16[data-error='true'] {
-  background-color: #e51963;
-}
-
-.emotion-16[aria-disabled='true'] {
-  background-color: #d8c5fc;
-}
-
-.emotion-18 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-18:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-18:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-18::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-18::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -8px;
-}
-
-.emotion-18::-moz-range-thumb:hover,
-.emotion-18::-moz-range-thumb:active,
-.emotion-18::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-18::-moz-range-thumb:active,
-.emotion-18::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-18::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-18:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-18::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -8px;
-}
-
-.emotion-18::-webkit-slider-thumb:hover,
-.emotion-18::-webkit-slider-thumb:active,
-.emotion-18::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-18::-webkit-slider-thumb:active,
-.emotion-18::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-20 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-20:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-20:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-20::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-20::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-20::-moz-range-thumb:hover,
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-20::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-20:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-20::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-20::-webkit-slider-thumb:hover,
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-22 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 1rem;
-}
-
-.emotion-22[data-double='true'] {
-  margin-top: 2.5rem;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 0%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-24[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-24[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 16.666666666666668%;
+  left: 66.66666666666667%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -1636,7 +1356,7 @@ exports[`sliderField > should render correctly with possible values and double 1
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 33.333333333333336%;
+  left: 83.33333333333333%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -1664,7 +1384,7 @@ exports[`sliderField > should render correctly with possible values and double 1
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  left: 50%;
+  left: 100%;
   position: absolute;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -1686,90 +1406,6 @@ exports[`sliderField > should render correctly with possible values and double 1
   transform: translateX(-100%);
 }
 
-.emotion-32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 66.66666666666667%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-32[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-32[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-34 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 83.33333333333333%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-34[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-34[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 100%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-36[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-36[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
 <div
     data-testid="testing"
   >
@@ -1778,28 +1414,29 @@ exports[`sliderField > should render correctly with possible values and double 1
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
         data-double="true"
         data-options="true"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-4 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            style="--uv_4k0ekn0: 100%;"
           >
             <div
-              class="emotion-6 emotion-3"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u6p"
             >
               <span
-                class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 data-testid="value-left"
                 style="--uv_qabug40: right;"
               >
                 1
               </span>
               <span
-                class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="emotion-2 emotion-3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 data-testid="value-right"
                 style="--uv_qabug40: right;"
               >
@@ -1807,21 +1444,21 @@ exports[`sliderField > should render correctly with possible values and double 1
               </span>
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-6 emotion-7"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="emotion-8 emotion-9"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-16 emotion-17"
+                  class="emotion-10 emotion-11"
                   data-error="false"
                   style="left: 0%; right: 0%;"
                 />
               </div>
               <input
                 aria-label="test"
-                class="emotion-18 emotion-19"
+                class="emotion-12 emotion-13"
                 data-direction="column"
                 data-testid="handle-left"
                 id="«rd»"
@@ -1834,7 +1471,7 @@ exports[`sliderField > should render correctly with possible values and double 1
               />
               <input
                 aria-label="test"
-                class="emotion-20 emotion-19"
+                class="emotion-14 emotion-13"
                 data-direction="column"
                 data-testid="handle-right"
                 id="«rd»"
@@ -1846,11 +1483,11 @@ exports[`sliderField > should render correctly with possible values and double 1
                 value="6"
               />
               <datalist
-                class="emotion-22 emotion-23"
+                class="emotion-16 emotion-17"
                 data-double="true"
               >
                 <span
-                  class="emotion-24 emotion-25"
+                  class="emotion-18 emotion-19"
                   data-element-left="true"
                   data-element-right="false"
                   data-value="0"
@@ -1862,7 +1499,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   </p>
                 </span>
                 <span
-                  class="emotion-26 emotion-25"
+                  class="emotion-20 emotion-19"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="1"
@@ -1874,7 +1511,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   </p>
                 </span>
                 <span
-                  class="emotion-28 emotion-25"
+                  class="emotion-22 emotion-19"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="2"
@@ -1886,7 +1523,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   </p>
                 </span>
                 <span
-                  class="emotion-30 emotion-25"
+                  class="emotion-24 emotion-19"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="3"
@@ -1898,7 +1535,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   </p>
                 </span>
                 <span
-                  class="emotion-32 emotion-25"
+                  class="emotion-26 emotion-19"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="4"
@@ -1910,7 +1547,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   </p>
                 </span>
                 <span
-                  class="emotion-34 emotion-25"
+                  class="emotion-28 emotion-19"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="5"
@@ -1922,7 +1559,7 @@ exports[`sliderField > should render correctly with possible values and double 1
                   </p>
                 </span>
                 <span
-                  class="emotion-36 emotion-25"
+                  class="emotion-30 emotion-19"
                   data-element-left="false"
                   data-element-right="true"
                   data-value="6"
@@ -1945,129 +1582,15 @@ exports[`sliderField > should render correctly with possible values and double 1
 
 exports[`sliderField > should trigger events correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-options='true'][data-double='true'] {
+  .emotion-0[data-options='true'][data-double='true'] {
   margin-bottom: 1.5rem;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  cursor: pointer;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
   min-width: 2.5rem;
 }
 
-.emotion-13 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2086,61 +1609,52 @@ exports[`sliderField > should trigger events correctly 1`] = `
   border-radius: 0.25rem;
 }
 
-.emotion-13:focus-within {
+.emotion-4:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-13[data-success='true'] {
+.emotion-4[data-success='true'] {
   border-color: #22674e;
 }
 
-.emotion-13[data-error='true'] {
+.emotion-4[data-error='true'] {
   border-color: #b3144d;
 }
 
-.emotion-13:hover {
+.emotion-4:hover {
   border-color: #792dd4;
 }
 
-.emotion-13[data-readonly='true'] {
+.emotion-4[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.emotion-13[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.emotion-13[data-controls='false']>.emotion-15 {
+.emotion-4[data-controls='false']>.emotion-7 {
   border-width: 0;
 }
 
-.emotion-13[data-size='small'] {
+.emotion-4[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-13[data-size='medium'] {
+.emotion-4[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-13[data-size='large'] {
+.emotion-4[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-16 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+.emotion-6 {
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
@@ -2148,7 +1662,7 @@ exports[`sliderField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-18 {
+.emotion-8 {
   outline: none;
   border: none;
   padding: 0;
@@ -2163,18 +1677,18 @@ exports[`sliderField > should trigger events correctly 1`] = `
   background: none;
 }
 
-.emotion-18[data-has-unit='true'] {
+.emotion-8[data-has-unit='true'] {
   text-align: left;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-18::-webkit-outer-spin-button,
-.emotion-18::-webkit-inner-spin-button {
+.emotion-8::-webkit-outer-spin-button,
+.emotion-8::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-8 {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -2182,15 +1696,15 @@ exports[`sliderField > should trigger events correctly 1`] = `
   appearance: textfield;
 }
 
-.emotion-18[data-size='small'] {
+.emotion-8[data-size='small'] {
   height: 2rem;
 }
 
-.emotion-18[data-size='medium'] {
+.emotion-8[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-18[data-size='large'] {
+.emotion-8[data-size='large'] {
   height: 3rem;
   font-size: 1rem;
   font-family: Inter,sans-serif;
@@ -2198,34 +1712,34 @@ exports[`sliderField > should trigger events correctly 1`] = `
   line-height: 1.5rem;
 }
 
-.emotion-18:-moz-read-only {
+.emotion-8:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-18:read-only {
+.emotion-8:read-only {
   color: #3f4250;
   background: #f9f9fa;
   border-block: 1px solid #d9dadd;
 }
 
-.emotion-18:-moz-read-only~.exvap482 {
+.emotion-8:-moz-read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-18:read-only~.exvap482 {
+.emotion-8:read-only~.exvap482 {
   background: #f9f9fa;
 }
 
-.emotion-18:disabled {
+.emotion-8:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
   border-block: 1px solid #e9eaeb;
 }
 
-.emotion-18:disabled~.exvap482 {
+.emotion-8:disabled~.exvap482 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -2234,62 +1748,16 @@ exports[`sliderField > should trigger events correctly 1`] = `
   user-select: none;
 }
 
-.emotion-18:placeholder-shown~.exvap482 {
+.emotion-8:placeholder-shown~.exvap482 {
   color: #727683;
   font-size: 1rem;
 }
 
-.emotion-18[data-controls='false'] {
+.emotion-8[data-controls='false'] {
   text-align: left;
 }
 
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-24 {
+.emotion-10 {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2307,31 +1775,31 @@ exports[`sliderField > should trigger events correctly 1`] = `
   outline: none;
 }
 
-.emotion-24:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-24[data-error='true'] {
+.emotion-10[data-error='true'] {
   background-image: linear-gradient(#e51963, #e51963);
 }
 
-.emotion-24[data-direction='column'] {
+.emotion-10[data-direction='column'] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
 }
 
-.emotion-24[aria-disabled='true'] {
+.emotion-10[aria-disabled='true'] {
   background-image: linear-gradient(#d8c5fc, #d8c5fc);
 }
 
-.emotion-24::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2342,7 +1810,7 @@ exports[`sliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-24::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2364,20 +1832,20 @@ exports[`sliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-24::-webkit-slider-runnable-track {
+.emotion-10::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2388,7 +1856,7 @@ exports[`sliderField > should trigger events correctly 1`] = `
   background: transparent;
 }
 
-.emotion-24::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2410,14 +1878,14 @@ exports[`sliderField > should trigger events correctly 1`] = `
   top: -4px;
 }
 
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2431,20 +1899,20 @@ exports[`sliderField > should trigger events correctly 1`] = `
       style="display: contents;"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
         data-options="false"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-4 emotion-3"
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
           >
             <div
-              class="emotion-6 emotion-3"
+              class="uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <label
-                class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 for="«rt»"
               >
                 Test
@@ -2456,11 +1924,11 @@ exports[`sliderField > should trigger events correctly 1`] = `
               </span>
             </div>
             <div
-              class="emotion-10 emotion-11 emotion-3"
+              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <div>
                 <div
-                  class="emotion-13 emotion-14"
+                  class="emotion-4 emotion-5"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -2469,11 +1937,12 @@ exports[`sliderField > should trigger events correctly 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-15 emotion-16 emotion-17"
+                    class="emotion-6 emotion-7 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+                    style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input"
-                      class="emotion-18 emotion-19"
+                      class="emotion-8 emotion-9"
                       data-controls="false"
                       data-has-unit="false"
                       data-size="small"
@@ -2492,14 +1961,15 @@ exports[`sliderField > should trigger events correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-20 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           />
           <div
-            class="emotion-22 emotion-3"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-label="test"
-              class="emotion-24 emotion-25"
+              class="emotion-10 emotion-11"
               data-direction="column"
               data-error="false"
               id="«rt»"
