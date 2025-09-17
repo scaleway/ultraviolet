@@ -16,6 +16,7 @@ background-color: ${({ theme }) => theme.colors.neutral.background};
 const ContainerScrollable = styled(Stack)`
 overflow-y: scroll;
 padding: ${({ theme }) => theme.space[3]};
+min-height: 10rem;
 height: 100%;
 `
 
