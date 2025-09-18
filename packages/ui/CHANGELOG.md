@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-beta.11
+
+### Patch Changes
+
+- [#5557](https://github.com/scaleway/ultraviolet/pull/5557) [`3f54ff6`](https://github.com/scaleway/ultraviolet/commit/3f54ff6109b2d123ccb0f56f4dccab81d6c3d82a) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix `<Stack />` and `<Row />` variables to provide default values
+
 ## 3.0.0-beta.9
 
 ### Minor Changes

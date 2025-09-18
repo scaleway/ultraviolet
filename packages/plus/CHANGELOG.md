@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 2.0.0-beta.11
+
+### Patch Changes
+
+- [`2806dad`](https://github.com/scaleway/ultraviolet/commit/2806dadb95844176cc9d7c87eab5464c2742e7c8) Thanks [@philibea](https://github.com/philibea)! - Add min-width instead of fixed width on OrderSummary, Add min-height on scrollable item on OrderSummary
+
+- Updated dependencies [[`3f54ff6`](https://github.com/scaleway/ultraviolet/commit/3f54ff6109b2d123ccb0f56f4dccab81d6c3d82a)]:
+  - @ultraviolet/ui@3.0.0-beta.11
+
 ## 2.0.0-beta.9
 
 ### Patch Changes
