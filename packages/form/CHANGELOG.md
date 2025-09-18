@@ -1,5 +1,12 @@
 # Change Log
 
+## 5.0.0-beta.11
+
+### Patch Changes
+
+- Updated dependencies [[`3f54ff6`](https://github.com/scaleway/ultraviolet/commit/3f54ff6109b2d123ccb0f56f4dccab81d6c3d82a)]:
+  - @ultraviolet/ui@3.0.0-beta.11
+
 ## 5.0.0-beta.9
 
 ### Patch Changes
