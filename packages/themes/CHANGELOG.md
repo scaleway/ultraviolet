@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-beta.1
+
+### Major Changes
+
+- [`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238) Thanks [@matthprost](https://github.com/matthprost)! - Release new beta version to compensate major released by error
+
 ## 2.1.0-beta.1
 
 ### Minor Changes
