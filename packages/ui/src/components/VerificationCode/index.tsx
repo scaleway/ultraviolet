@@ -337,6 +337,8 @@ export const VerificationCode = ({
     <FieldSet className={className} data-testid={dataTestId}>
       {label || labelDescription ? (
         <Label
+          htmlFor={`${inputId}-0`}
+          id={`${inputId}-label`}
           labelDescription={labelDescription}
           required={required}
           size={size === 'xlarge' ? 'large' : size}
