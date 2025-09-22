@@ -128,6 +128,10 @@ describe('verificationCode', () => {
 
   test('render correctly with label', () => {
     const { asFragment } = renderWithTheme(<VerificationCode label="test" />)
+
+    const code = screen.getByLabelText('test')
+    expect(code).toBeInTheDocument()
+    expect(code).toBeEnabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
