@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: "3.13.7"
       - uses: pnpm/action-setup@v4.1.0
-      - uses: actions/setup-node@v4.4.0
+      - uses: actions/setup-node@v5.0.0
         with:
           node-version: 22.19.0
           cache: "pnpm"
