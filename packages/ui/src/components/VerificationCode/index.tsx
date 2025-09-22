@@ -179,6 +179,7 @@ export const VerificationCode = ({
   success,
 }: VerificationCodeProps) => {
   const uniqueId = useId()
+  const id = inputId || uniqueId
   const valuesArray = Object.assign(new Array(fields).fill(''), [
     ...initialValue.substring(0, fields),
   ])
@@ -337,6 +338,8 @@ export const VerificationCode = ({
     <FieldSet className={className} data-testid={dataTestId}>
       {label || labelDescription ? (
         <Label
+          htmlFor={`${id}-0`}
+          id={`${id}-label`}
           labelDescription={labelDescription}
           required={required}
           size={size === 'xlarge' ? 'large' : size}
@@ -354,7 +357,7 @@ export const VerificationCode = ({
             data-success={!!success}
             data-testid={index}
             disabled={disabled}
-            id={`${inputId || uniqueId}-${index}`}
+            id={`${id}-${index}`}
             inputSize={size}
             key={`field-${index}`}
             onChange={inputOnChange(index)}
