@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.0-beta.12
+
+### Patch Changes
+
+- Updated dependencies [[`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238)]:
+  - @ultraviolet/icons@5.0.0-beta.1
+  - @ultraviolet/themes@3.0.0-beta.1
+
 ## 3.0.0-beta.11
 
 ### Patch Changes
