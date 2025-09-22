@@ -1,5 +1,20 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.1
+
+### Major Changes
+
+- [`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238) Thanks [@matthprost](https://github.com/matthprost)! - Release new beta version to compensate major released by error
+
+### Patch Changes
+
+- [#5560](https://github.com/scaleway/ultraviolet/pull/5560) [`68d7561`](https://github.com/scaleway/ultraviolet/commit/68d7561d5199fc5ec4953ae8f42c3a745bf2c4d9) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CodeEditor />` to have fallback value
+
+- Updated dependencies [[`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238)]:
+  - @ultraviolet/icons@5.0.0-beta.1
+  - @ultraviolet/themes@3.0.0-beta.1
+  - @ultraviolet/ui@3.0.0-beta.12
+
 ## 2.0.0-beta.11
 
 ### Patch Changes
