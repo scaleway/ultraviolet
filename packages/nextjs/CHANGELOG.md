@@ -1,5 +1,12 @@
 # @ultraviolet/nextjs
 
+## 2.0.5
+
+### Patch Changes
+
+- [#5548](https://github.com/scaleway/ultraviolet/pull/5548) [`a7e5dd5`](https://github.com/scaleway/ultraviolet/commit/a7e5dd5668511b6774422850fdeaab99243ae884) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `15.5.3`.
+  Updated dependency `eslint-config-next` to `15.5.3`.
+
 ## 2.0.4
 
 ### Patch Changes
