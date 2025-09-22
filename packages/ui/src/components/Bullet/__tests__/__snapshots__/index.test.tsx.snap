@@ -1,12 +1,26 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Bullet > renders correctly disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1jy42m00 styles_disabled_true__1jy42m0e styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c"
+    >
+      1
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`bullet > renders correctly with a text 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -20,7 +34,7 @@ exports[`bullet > renders correctly with an icon 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       <svg
         class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -41,7 +55,7 @@ exports[`bullet > renders correctly with an icon and icon variant 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       <svg
         class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -79,6 +93,7 @@ exports[`bullet > sentiment > render disabled 1`] = `
   >
     <div
       class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_7__1jy42m0m"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_4__1jy42m0j"
     >
       1
     </div>
@@ -92,7 +107,7 @@ exports[`bullet > sentiment > render info 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_6__1jy42m0l"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_6__1jy42m0l"
     >
       1
     </div>
@@ -106,7 +121,7 @@ exports[`bullet > sentiment > render neutral 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -120,7 +135,7 @@ exports[`bullet > sentiment > render primary 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_0__1jy42m0f"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_0__1jy42m0f"
     >
       1
     </div>
@@ -134,7 +149,7 @@ exports[`bullet > sentiment > render secondary 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_1__1jy42m0g"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_1__1jy42m0g"
     >
       1
     </div>
@@ -148,7 +163,7 @@ exports[`bullet > sentiment > render success 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_3__1jy42m0i"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_3__1jy42m0i"
     >
       1
     </div>
@@ -162,7 +177,7 @@ exports[`bullet > sentiment > render warning 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_5__1jy42m0k"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_5__1jy42m0k"
     >
       1
     </div>
@@ -176,7 +191,7 @@ exports[`bullet > size > render medium 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_medium__1jy42m01 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -190,7 +205,7 @@ exports[`bullet > size > render small 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_small__1jy42m02 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -204,7 +219,7 @@ exports[`bullet > size > render xsmall 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_xsmall__1jy42m03 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_xsmall__1jy42m03 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -218,7 +233,7 @@ exports[`bullet > size > render xxsmall 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__1jy42m00 styles_prominence_default__1jy42m0d styles_size_xxsmall__1jy42m04 styles_undefined_compound_2__1jy42m0h"
+      class="styles__1jy42m00 styles_size_xxsmall__1jy42m04 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>

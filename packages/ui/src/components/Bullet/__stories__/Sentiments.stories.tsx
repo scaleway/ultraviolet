@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Bullet } from '..'
-import { BULLET_SENTIMENTS } from '../constants'
 
 export const Sentiments: StoryFn = props => (
   <Stack gap={1}>
@@ -10,7 +10,7 @@ export const Sentiments: StoryFn = props => (
       <Text as="span" variant="bodyStrong">
         Prominence default:
       </Text>
-      {BULLET_SENTIMENTS.map(sentiment => (
+      {SENTIMENTS.map(sentiment => (
         <Bullet key={sentiment} {...props} sentiment={sentiment}>
           1
         </Bullet>
@@ -20,7 +20,7 @@ export const Sentiments: StoryFn = props => (
       <Text as="span" variant="bodyStrong">
         Prominence strong:
       </Text>
-      {BULLET_SENTIMENTS.map(sentiment => (
+      {SENTIMENTS.map(sentiment => (
         <Bullet
           key={sentiment}
           {...props}

@@ -1,7 +1,3 @@
-import { SENTIMENTS } from '../../theme'
-
-export const BULLET_SENTIMENTS = [...SENTIMENTS, 'disabled'] as const
-
 // Values are then used as theme.sizing[X]
 export const SIZES = {
   medium: '400',

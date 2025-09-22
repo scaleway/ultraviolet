@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-import { BULLET_SENTIMENTS, PROMINENCES, SIZES } from './constants'
+import { SENTIMENTS } from '../../theme'
+import { PROMINENCES, SIZES } from './constants'
 
 const TEXT_VARIANT = {
   medium: 'body',
@@ -12,17 +13,9 @@ const TEXT_VARIANT = {
 type ProminenceType = keyof typeof PROMINENCES
 
 function getBulletStyle(
-  sentiment: (typeof BULLET_SENTIMENTS)[number],
+  sentiment: (typeof SENTIMENTS)[number],
   prominence: 'default' | 'strong',
 ) {
-  if (sentiment === 'disabled') {
-    return {
-      color: theme.colors.neutral.textWeak,
-      backgroundColor: theme.colors.neutral.backgroundStrong,
-      border: 'none',
-    }
-  }
-
   if (sentiment === 'neutral') {
     return {
       color:
@@ -63,17 +56,34 @@ export const bullet = recipe({
       ]),
     ),
     sentiment: Object.fromEntries(
-      Object.keys(BULLET_SENTIMENTS).map(sentiment => [sentiment, {}]),
+      Object.keys(SENTIMENTS).map(sentiment => [sentiment, {}]),
     ),
     prominence: {
       default: {},
       strong: {},
     },
+    disabled: {
+      true: {
+        color: theme.colors.neutral.textWeak,
+        backgroundColor: theme.colors.neutral.backgroundStrong,
+        border: 'none',
+      },
+    },
   },
   compoundVariants: Object.keys(PROMINENCES).flatMap(prominence =>
-    BULLET_SENTIMENTS.map(sentiment => ({
-      variants: { sentiment, prominence: prominence as ProminenceType },
+    SENTIMENTS.map(sentiment => ({
+      variants: {
+        sentiment,
+        prominence: prominence as ProminenceType,
+        disabled: false,
+      },
       style: getBulletStyle(sentiment, prominence as ProminenceType),
     })),
   ),
+  defaultVariants: {
+    disabled: false,
+    sentiment: 'neutral',
+    size: 'medium',
+    prominence: 'default',
+  },
 })

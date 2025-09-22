@@ -1,23 +1,23 @@
 'use client'
 
 import type { ReactNode } from 'react'
+import type { SENTIMENTS } from '../../theme'
 import { Tooltip } from '../Tooltip'
-import type { BULLET_SENTIMENTS, PROMINENCES, SIZES } from './constants'
+import type { PROMINENCES, SIZES } from './constants'
 import { bullet } from './styles.css'
 
 type ProminenceType = keyof typeof PROMINENCES
-
-type BulletSentiment = (typeof BULLET_SENTIMENTS)[number]
 
 type BulletProps = {
   className?: string
   size?: keyof typeof SIZES
   tooltip?: string
   tooltipBaseId?: string
-  sentiment?: BulletSentiment
+  sentiment?: (typeof SENTIMENTS)[number]
   'data-testid'?: string
   prominence?: ProminenceType
   children?: ReactNode
+  disabled?: boolean
 }
 
 /**
@@ -32,10 +32,11 @@ export const Bullet = ({
   'data-testid': dataTestId,
   prominence = 'default',
   children,
+  disabled,
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <div
-      className={`${className ? `${className} ` : ''}${bullet({ prominence, sentiment, size })}`}
+      className={`${className ? `${className} ` : ''}${bullet({ disabled, prominence, sentiment, size })}`}
       data-testid={dataTestId}
     >
       {children}

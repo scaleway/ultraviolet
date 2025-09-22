@@ -1,8 +1,8 @@
 import { MoonIcon, MoonOutlineIcon } from '@ultraviolet/icons'
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
+import { SENTIMENTS } from '../../../theme'
 import { Bullet } from '..'
-import { BULLET_SENTIMENTS } from '../constants'
 
 describe('bullet', () => {
   test('renders correctly with a text', () =>
@@ -22,8 +22,11 @@ describe('bullet', () => {
       </Bullet>,
     ))
 
+  test('renders correctly disabled', () =>
+    shouldMatchEmotionSnapshot(<Bullet disabled>1</Bullet>))
+
   describe('sentiment', () => {
-    BULLET_SENTIMENTS.forEach(sentiment => {
+    SENTIMENTS.forEach(sentiment => {
       test(`render ${sentiment}`, () =>
         shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment}>1</Bullet>))
     })
