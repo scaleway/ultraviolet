@@ -92,7 +92,12 @@
     }
   },
   "linter": {
-    "enabled": false
+    "enabled": false,
+    "rules": {
+      "complexity": {
+        "noImportantStyles": "off"
+      }
+    }
   },
   "overrides": [
     {
