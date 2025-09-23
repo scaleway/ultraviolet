@@ -124,7 +124,7 @@ globalStyle(`${container}[aria-disabled='true'] ${ring} ${innerCircleRing}`, {
 })
 
 globalStyle(
-  `${container} ${radio}[aria-invalid='true'] + ${ring} ${innerCircleRing}`,
+  `${container}:hover ${radio}[aria-invalid='true'] + ${ring} ${innerCircleRing}`,
   {
     fill: theme.colors.danger.backgroundHover,
   },
