@@ -16,7 +16,7 @@ type TooltipProps = {
   }
 }
 
-const Tooltip = ({ data }: TooltipProps) => (
+export const Tooltip = ({ data }: TooltipProps) => (
   <div role="tooltip" tabIndex={-1}>
     <ul className={listTooltipPie}>
       <li className={itemTooltipPie}>
@@ -40,5 +40,3 @@ const Tooltip = ({ data }: TooltipProps) => (
     </ul>
   </div>
 )
-
-export default Tooltip

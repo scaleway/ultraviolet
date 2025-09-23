@@ -27,7 +27,7 @@ export const useIsOverflowing = (
 
     // This will add the function into the browser event queue after the DOM is painted
     // which is needed to get the correct offsetWidth and scrollWidth
-    setTimeout(() => handleResize(), 0)
+    const timeout = setTimeout(() => handleResize(), 0)
 
     // Listen for resize events
     window.addEventListener('resize', handleResize)
@@ -35,6 +35,7 @@ export const useIsOverflowing = (
     // Cleanup the event listener
     return () => {
       window.removeEventListener('resize', handleResize)
+      clearTimeout(timeout)
     }
   }, [ref, callback])
 

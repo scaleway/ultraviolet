@@ -70,13 +70,12 @@ const createCSSFile = (theme: string, content: UvThemeType) => {
 }
 
 const alphaOrder = (obj: JsonType) => {
-  const orderedKeys = Object.keys(obj ?? {}).sort()
+  const orderedKeys = Object.keys(obj ?? {}).toSorted()
 
   return orderedKeys.reduce((newObj: Record<string, string | object>, key) => {
     const result =
       typeof obj[key] === 'string' ? obj[key] : alphaOrder(obj[key] as JsonType)
 
-    // eslint-disable-next-line no-param-reassign
     newObj[key] = result
 
     return newObj
@@ -171,7 +170,6 @@ const getValues = (
     )
 
     if (newValue !== null) {
-      // eslint-disable-next-line no-param-reassign
       values[key.replaceAll(/,/g, '.')] = newValue
     }
 
@@ -345,8 +343,11 @@ const writeFiles = async () => {
     }),
   )
 }
-;(async () => {
+
+try {
   if (typeof process !== 'undefined' && process.versions?.node) {
     await writeFiles()
   }
-})().catch(console.error)
+} catch (error) {
+  console.error(error)
+}

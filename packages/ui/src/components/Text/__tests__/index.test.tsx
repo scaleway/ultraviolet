@@ -1,6 +1,7 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
-import { Text, textVariants } from '..'
+import { Text } from '..'
+import { textVariants } from '../constants'
 
 describe('text', () => {
   test.each(textVariants)('renders correctly with type="%s"', variant =>

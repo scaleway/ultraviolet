@@ -9,7 +9,7 @@ import { useCallback, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
 import { Text } from '../Text'
-import Legends from './Legends'
+import { Legends } from './Legends'
 import {
   containerPie,
   contentPie,

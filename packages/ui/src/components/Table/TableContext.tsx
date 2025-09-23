@@ -61,6 +61,7 @@ export const TableProvider = ({
   </ListProvider>
 )
 
+// oxlint-disable-next-line react/only-export-components
 export const useTableContext = () => {
   const context = useContext(TableContext)
   if (!context) {

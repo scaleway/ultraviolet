@@ -34,5 +34,3 @@ export const Link = forwardRef<HTMLAnchorElement, LinkPropsType>(
     </NextLink>
   ),
 )
-
-export default Link
