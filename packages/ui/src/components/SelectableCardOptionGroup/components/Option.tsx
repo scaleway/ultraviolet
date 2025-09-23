@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useId } from 'react'
 import { Label } from '../../Label'
-import { RadioStack } from '../../Radio'
+import { radioStack } from '../../Radio/styles.css'
 import { SelectableCard } from '../../SelectableCard'
 import { SelectInput } from '../../SelectInput'
 import { StyledInputWrapper } from '../../SelectInput/SelectBar'
@@ -16,7 +16,7 @@ const StyledSelectableCard = styled(SelectableCard)`
   padding: 0;
   padding-top: ${({ theme }) => theme.space[2]};
 
-  ${RadioStack} {
+  ${radioStack} {
     position: absolute;
     padding: 8px;
     margin-top: -${({ theme }) => theme.space[2]};
