@@ -30,9 +30,6 @@ jobs:
           pnpm run build
 
   build_examples:
-    strategy:
-      matrix:
-        node: ["22"]
     runs-on: ubuntu-24.04
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
@@ -42,7 +39,7 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v5.0.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 22.19.0
       - name: build
         run: |
           pnpm install --frozen-lockfile
