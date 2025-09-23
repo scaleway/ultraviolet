@@ -1,5 +1,6 @@
 'use client'
 
+import styled from '@emotion/styled'
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -15,15 +16,25 @@ import type {
 } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
+import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
-import type { PROMINENCES } from './constants'
-import {
-  containerIconLink,
-  defaultLink,
-  iconLeftLink,
-  iconRightLink,
-  link,
-} from './styles.css'
+
+const StyledArrowLeftIcon = styled(ArrowLeftIcon)`
+  margin-right: ${({ theme }) => theme.space['0.5']};
+`
+
+const StyledArrowRightIcon = styled(ArrowRightIcon)`
+  margin-left: ${({ theme }) => theme.space['0.5']};
+`
+
+const StyledOpenInNewIcon = StyledArrowRightIcon.withComponent(OpenInNewIcon)
+
+export const PROMINENCES = {
+  default: '',
+  strong: 'strong',
+  stronger: 'stronger',
+  weak: 'weak',
+}
 
 export type ProminenceProps = keyof typeof PROMINENCES
 
@@ -51,6 +62,152 @@ type LinkProps = {
 
 const ICON_SIZE = 'small'
 const BLANK_TARGET_ICON_SIZE = 'small'
+const TRANSITION_DURATION = 250
+
+const StyledExternalIconContainer = styled.span`
+  display: inline-flex;
+  padding-bottom: ${({ theme }) => theme.space['0.5']};
+`
+
+const StyledLink = styled('a', {
+  shouldForwardProp: prop =>
+    ![
+      'sentiment',
+      'iconPosition',
+      'as',
+      'oneLine',
+      'prominence',
+      'variant',
+    ].includes(prop),
+})<{
+  sentiment: 'primary' | 'info'
+  prominence?: ProminenceProps
+  variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
+  iconPosition?: LinkIconPosition
+  oneLine?: boolean
+}>`
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: ${({ theme, sentiment, prominence }) => {
+    const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+    const themeColor = theme.colors[sentiment]
+    const text = `text${definedProminence}` as keyof typeof themeColor
+
+    return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
+  }};
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
+
+  ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
+    transition: transform ${TRANSITION_DURATION}ms ease-out;
+  }
+
+  gap: ${({ theme }) => theme.space['1']};
+  position: relative;
+  cursor: pointer;
+
+  > * {
+    // Safari issue when something is inside an anchor
+    pointer-events: none;
+  }
+
+  ${({ oneLine }) =>
+    oneLine
+      ? `white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;`
+      : 'width: fit-content;'}
+
+  ${({ variant, theme }) => `
+      font-size: ${theme.typography[variant].fontSize};
+      font-family: ${theme.typography[variant].fontFamily};
+      font-weight: ${theme.typography[variant].weight};
+      letter-spacing: ${theme.typography[variant].letterSpacing};
+      line-height: ${theme.typography[variant].lineHeight};
+      paragraph-spacing: ${theme.typography[variant].paragraphSpacing};
+      text-case: ${theme.typography[variant].textCase};
+    `}
+
+
+  &:visited {
+      text-decoration-color: transparent;
+
+      color: ${({ theme, prominence }) => {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+        const themeColor = theme.colors.primary
+        const text = `text${definedProminence}` as keyof typeof themeColor
+
+        return theme.colors.primary[text] ?? theme.colors.primary.text
+      }};
+  }
+
+
+  &:hover,
+  &:focus {
+    ${StyledArrowLeftIcon}, ${StyledArrowRightIcon}, ${StyledOpenInNewIcon} {
+      transform: ${({ theme, iconPosition }) =>
+        iconPosition === 'left'
+          ? `translate(${theme.space['0.25']}, 0)`
+          : `translate(-${theme.space['0.25']}, 0)`};
+    }
+
+    outline: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    ${({ theme, sentiment, prominence }) => {
+      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+
+      const themeColor = theme.colors[sentiment]
+
+      const text = `text${definedProminence}Hover` as keyof typeof themeColor
+
+      return `
+        color: ${
+          theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
+        };
+        text-decoration-color: ${
+          theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
+        };`
+    }}
+
+    &:visited {
+      text-decoration-color: transparent;
+
+      color: ${({ theme, prominence }) => {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+        const themeColor = theme.colors.primary
+        const text = `text${definedProminence}` as keyof typeof themeColor
+
+        return theme.colors.primary[text] ?? theme.colors.primary.text
+      }};
+  }
+
+  }
+
+  &[data-variant='inline'] {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: ${({ theme, sentiment }) =>
+      theme.colors[sentiment]?.text ?? theme.colors.neutral.text};
+  }
+
+  &:active {
+    text-decoration-thickness: 2px;
+  }
+`
 
 /**
  * Link is a component used to navigate between pages or to external websites.
@@ -104,37 +261,39 @@ export const Link = forwardRef(
 
     return (
       <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
-        <a
+        <StyledLink
           aria-current={ariaCurrent}
           aria-label={ariaLabel}
-          className={`${className ? `${className} ` : ''}${link({ oneLine, prominence, sentiment, type: variant, variant: textVariant })} ${defaultLink}`}
+          className={className}
           data-testid={dataTestId}
           data-variant={variant}
           download={download}
           href={href}
+          iconPosition={iconPosition}
           onClick={onClick}
+          oneLine={oneLine}
+          prominence={prominence}
           ref={usedRef}
           rel={computedRel}
+          sentiment={sentiment}
           target={target}
+          variant={textVariant}
         >
           {!isBlank && iconPosition === 'left' ? (
-            <ArrowLeftIcon className={iconLeftLink} size={ICON_SIZE} />
+            <StyledArrowLeftIcon size={ICON_SIZE} />
           ) : null}
           {children}
 
           {isBlank ? (
-            <span className={containerIconLink}>
-              <OpenInNewIcon
-                className={iconRightLink}
-                size={BLANK_TARGET_ICON_SIZE}
-              />
-            </span>
+            <StyledExternalIconContainer>
+              <StyledOpenInNewIcon size={BLANK_TARGET_ICON_SIZE} />
+            </StyledExternalIconContainer>
           ) : null}
 
           {!isBlank && iconPosition === 'right' ? (
-            <ArrowRightIcon className={iconRightLink} size={ICON_SIZE} />
+            <StyledArrowRightIcon size={ICON_SIZE} />
           ) : null}
-        </a>
+        </StyledLink>
       </Tooltip>
     )
   },

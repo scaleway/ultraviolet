@@ -98,15 +98,15 @@ exports[`breadcrumbs > click on middle item 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2:not(:first-child) .emotion-5 {
+.emotion-2:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-2:last-child .emotion-5 {
+.emotion-2:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-2:last-child .emotion-9 {
+.emotion-2:last-child .emotion-10 {
   pointer-events: none;
   cursor: default;
 }
@@ -131,34 +131,200 @@ exports[`breadcrumbs > click on middle item 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2:not(:first-child) .emotion-5 {
+.emotion-2:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-2:last-child .emotion-5 {
+.emotion-2:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-2:last-child .emotion-9 {
+.emotion-2:last-child .emotion-10 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
   padding-right: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-4 {
+.emotion-5 .e1afnb7a3,
+.emotion-5 .e1afnb7a2,
+.emotion-5 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-5>* {
+  pointer-events: none;
+}
+
+.emotion-5:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-5:hover .e1afnb7a3,
+.emotion-5:focus .e1afnb7a3,
+.emotion-5:hover .e1afnb7a2,
+.emotion-5:focus .e1afnb7a2,
+.emotion-5:hover .e1afnb7a4,
+.emotion-5:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-5:hover:visited,
+.emotion-5:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-5:hover::after,
+.emotion-5:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-5:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
   padding-right: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-6 {
+.emotion-5 .e1afnb7a3,
+.emotion-5 .e1afnb7a2,
+.emotion-5 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-5>* {
+  pointer-events: none;
+}
+
+.emotion-5:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-5:hover .e1afnb7a3,
+.emotion-5:focus .e1afnb7a3,
+.emotion-5:hover .e1afnb7a2,
+.emotion-5:focus .e1afnb7a2,
+.emotion-5:hover .e1afnb7a4,
+.emotion-5:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-5:hover:visited,
+.emotion-5:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-5:hover::after,
+.emotion-5:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-5:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-7 {
   display: inline;
   height: 38px;
   display: -webkit-box;
@@ -179,24 +345,24 @@ exports[`breadcrumbs > click on middle item 1`] = `
   cursor: pointer;
 }
 
-.emotion-6[aria-disabled="true"] {
+.emotion-7[aria-disabled="true"] {
   pointer-events: none;
 }
 
-.emotion-6:not(:first-child) .emotion-5 {
+.emotion-7:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-6:last-child .emotion-5 {
+.emotion-7:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-6:last-child .emotion-9 {
+.emotion-7:last-child .emotion-10 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-8 {
+.emotion-9 {
   min-width: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -207,7 +373,7 @@ exports[`breadcrumbs > click on middle item 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-8 {
+.emotion-9 {
   min-width: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -232,7 +398,7 @@ exports[`breadcrumbs > click on middle item 1`] = `
           class="emotion-2 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1"
           >
@@ -241,10 +407,10 @@ exports[`breadcrumbs > click on middle item 1`] = `
         </li>
         <li
           aria-disabled="false"
-          class="emotion-6 emotion-3"
+          class="emotion-7 emotion-3"
         >
           <button
-            class="emotion-8 emotion-9 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+            class="emotion-9 emotion-10 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 2
@@ -255,7 +421,7 @@ exports[`breadcrumbs > click on middle item 1`] = `
           class="emotion-2 emotion-3"
         >
           <button
-            class="emotion-8 emotion-9 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+            class="emotion-9 emotion-10 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
@@ -365,15 +531,15 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2:not(:first-child) .emotion-5 {
+.emotion-2:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-2:last-child .emotion-5 {
+.emotion-2:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-2:last-child .emotion-13 {
+.emotion-2:last-child .emotion-15 {
   pointer-events: none;
   cursor: default;
 }
@@ -398,34 +564,200 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2:not(:first-child) .emotion-5 {
+.emotion-2:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-2:last-child .emotion-5 {
+.emotion-2:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-2:last-child .emotion-13 {
+.emotion-2:last-child .emotion-15 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
   padding-right: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-4 {
+.emotion-5 .e1afnb7a3,
+.emotion-5 .e1afnb7a2,
+.emotion-5 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-5>* {
+  pointer-events: none;
+}
+
+.emotion-5:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-5:hover .e1afnb7a3,
+.emotion-5:focus .e1afnb7a3,
+.emotion-5:hover .e1afnb7a2,
+.emotion-5:focus .e1afnb7a2,
+.emotion-5:hover .e1afnb7a4,
+.emotion-5:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-5:hover:visited,
+.emotion-5:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-5:hover::after,
+.emotion-5:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-5:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
   padding-right: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-10 {
+.emotion-5 .e1afnb7a3,
+.emotion-5 .e1afnb7a2,
+.emotion-5 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-5>* {
+  pointer-events: none;
+}
+
+.emotion-5:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-5:hover .e1afnb7a3,
+.emotion-5:focus .e1afnb7a3,
+.emotion-5:hover .e1afnb7a2,
+.emotion-5:focus .e1afnb7a2,
+.emotion-5:hover .e1afnb7a4,
+.emotion-5:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-5:hover:visited,
+.emotion-5:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-5:hover::after,
+.emotion-5:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-5:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-12 {
   display: inline;
   height: 38px;
   display: -webkit-box;
@@ -446,24 +778,24 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[aria-disabled="true"] {
+.emotion-12[aria-disabled="true"] {
   pointer-events: none;
 }
 
-.emotion-10:not(:first-child) .emotion-5 {
+.emotion-12:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-10:last-child .emotion-5 {
+.emotion-12:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-10:last-child .emotion-13 {
+.emotion-12:last-child .emotion-15 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-12 {
+.emotion-14 {
   min-width: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -474,7 +806,7 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-14 {
   min-width: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -499,7 +831,7 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
           class="emotion-2 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1"
           >
@@ -511,7 +843,7 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
           class="emotion-2 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1/step2"
           >
@@ -520,10 +852,10 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
         </li>
         <li
           aria-disabled="false"
-          class="emotion-10 emotion-3"
+          class="emotion-12 emotion-3"
         >
           <button
-            class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+            class="emotion-14 emotion-15 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
@@ -595,27 +927,110 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2:not(:first-child) .emotion-5 {
+.emotion-2:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-2:last-child .emotion-5 {
+.emotion-2:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-2:last-child .emotion-13 {
+.emotion-2:last-child .emotion-15 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
   padding-right: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-12 {
+.emotion-5 .e1afnb7a3,
+.emotion-5 .e1afnb7a2,
+.emotion-5 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-5>* {
+  pointer-events: none;
+}
+
+.emotion-5:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-5:hover .e1afnb7a3,
+.emotion-5:focus .e1afnb7a3,
+.emotion-5:hover .e1afnb7a2,
+.emotion-5:focus .e1afnb7a2,
+.emotion-5:hover .e1afnb7a4,
+.emotion-5:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-5:hover:visited,
+.emotion-5:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-5:hover::after,
+.emotion-5:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-5:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-14 {
   min-width: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -640,7 +1055,7 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
           class="emotion-2 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1"
           >
@@ -652,7 +1067,7 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
           class="emotion-2 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1/step2"
           >
@@ -664,7 +1079,7 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
           class="emotion-2 emotion-3"
         >
           <button
-            class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+            class="emotion-14 emotion-15 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
@@ -830,27 +1245,110 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2:not(:first-child) .emotion-5 {
+.emotion-2:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-2:last-child .emotion-5 {
+.emotion-2:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-2:last-child .emotion-13 {
+.emotion-2:last-child .emotion-15 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-5 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
   padding-right: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.emotion-6 {
+.emotion-5 .e1afnb7a3,
+.emotion-5 .e1afnb7a2,
+.emotion-5 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-5>* {
+  pointer-events: none;
+}
+
+.emotion-5:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-5:hover .e1afnb7a3,
+.emotion-5:focus .e1afnb7a3,
+.emotion-5:hover .e1afnb7a2,
+.emotion-5:focus .e1afnb7a2,
+.emotion-5:hover .e1afnb7a4,
+.emotion-5:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-5:hover:visited,
+.emotion-5:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-5[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-5:hover::after,
+.emotion-5:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-5:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-7 {
   display: inline;
   height: 38px;
   display: -webkit-box;
@@ -868,20 +1366,20 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
   max-width: 200px;
 }
 
-.emotion-6:not(:first-child) .emotion-5 {
+.emotion-7:not(:first-child) .emotion-4 {
   padding: 0 0.5rem;
 }
 
-.emotion-6:last-child .emotion-5 {
+.emotion-7:last-child .emotion-4 {
   pointer-events: none;
 }
 
-.emotion-6:last-child .emotion-13 {
+.emotion-7:last-child .emotion-15 {
   pointer-events: none;
   cursor: default;
 }
 
-.emotion-12 {
+.emotion-14 {
   min-width: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -906,7 +1404,7 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
           class="emotion-2 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1"
           >
@@ -915,10 +1413,10 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
         </li>
         <li
           aria-disabled="false"
-          class="emotion-6 emotion-3"
+          class="emotion-7 emotion-3"
         >
           <a
-            class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
+            class="emotion-4 emotion-5 emotion-6"
             data-variant="standalone"
             href="/step1/step2"
           >
@@ -930,7 +1428,7 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
           class="emotion-2 emotion-3"
         >
           <button
-            class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+            class="emotion-14 emotion-15 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
