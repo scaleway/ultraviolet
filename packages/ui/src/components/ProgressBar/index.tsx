@@ -5,25 +5,17 @@ import type { ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import type { PROGRESS_BAR_SENTIMENTS } from './constants'
 import {
   customText,
-  filledBar,
   filledBarSentiments,
   progressBar,
   progressContainer,
 } from './styles.css'
 import { percentageValue } from './variables.css'
 
-export const progressBarSentiments = [
-  'primary',
-  'success',
-  'warning',
-  'info',
-  'danger',
-] as const
-
 type ProgressBarProps = {
-  sentiment?: (typeof progressBarSentiments)[number]
+  sentiment?: (typeof PROGRESS_BAR_SENTIMENTS)[number]
   value?: number
   showProgress?: boolean
   prefix?: ReactNode
@@ -108,7 +100,7 @@ export const ProgressBar = ({
         <div className={progressBar} />
       ) : (
         <div
-          className={`${filledBar} ${filledBarSentiments[sentiment]}`}
+          className={filledBarSentiments[sentiment]}
           style={assignInlineVars({
             [percentageValue]: `${(100 * Math.max(0, Math.min(max, value))) / max}%`,
           })}

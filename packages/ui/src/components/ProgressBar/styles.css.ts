@@ -1,7 +1,7 @@
 import { keyframes, style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
-import type { Color } from '../../theme'
-import { percentageValue, sentiment } from './variables.css'
+import { percentageValue } from './variables.css'
+import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 
 const shineAnimation = keyframes({
   from: { left: '-25%' },
@@ -35,24 +35,30 @@ export const progressBar = style({
   animation: `${shineAnimation} 1s linear infinite`,
 })
 
-export const filledBar = style({
+const base = style({
   borderRadius: theme.radii.default,
   position: 'absolute',
   top: 0,
   left: 0,
   bottom: 0,
   transition: '0.3s width',
-  backgroundColor:
-    theme.colors[sentiment as Color]?.backgroundStrong ?? 'inherit',
   width: percentageValue,
 })
 
 export const filledBarSentiments = styleVariants(
-  Object.keys(theme.colors).reduce(
+  SENTIMENTS_WITHOUT_NEUTRAL.reduce(
     (acc, sentimentKey) => ({
       ...acc,
-      [sentimentKey]: { backgroundColor: theme.colors.danger.backgroundStrong },
+      [sentimentKey]: [
+        base,
+        {
+          backgroundColor: theme.colors[sentimentKey]?.backgroundStrong,
+        },
+      ],
     }),
-    {} as Record<keyof typeof theme.colors, { backgroundColor: string }>,
+    {} as Record<
+      (typeof SENTIMENTS_WITHOUT_NEUTRAL)[number],
+      { backgroundColor: string }
+    >,
   ),
 )
