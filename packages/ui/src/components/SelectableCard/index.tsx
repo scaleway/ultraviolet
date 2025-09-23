@@ -20,13 +20,13 @@ import {
   useState,
 } from 'react'
 import type { LabelProp, PascalToCamelCaseWithoutSuffix } from '../../types'
+import { Checkbox } from '../Checkbox'
 import {
-  Checkbox,
-  CheckboxContainer,
-  CheckboxInput,
-  InnerCheckbox,
-  StyledIcon,
-} from '../Checkbox'
+  checkboxContainer,
+  icon as checkboxIcon,
+  checkboxInput,
+  innerCheckbox,
+} from '../Checkbox/styles.css'
 import { Radio } from '../Radio'
 import {
   innerCircleRing,
@@ -95,7 +95,7 @@ const Container = styled(Stack)`
   }
 
   &[data-has-label='true'] {
-    ${radioStack}, ${CheckboxContainer} {
+    ${radioStack}, ${checkboxContainer} {
       width: 100%;
     }
   }
@@ -225,33 +225,33 @@ const StyledCheckbox = styled(OverloadedCheckbox)`
   }
 
   &:hover[aria-disabled='false'] {
-    ${CheckboxInput}[aria-invalid='false'] {
-      &[aria-checked='false'] + ${StyledIcon} ${InnerCheckbox} {
+    ${checkboxInput}[aria-invalid='false'] {
+      &[aria-checked='false'] + ${checkboxIcon} ${innerCheckbox} {
         fill: ${({ theme }) => theme.colors.neutral.background};
         stroke: ${({ theme }) => theme.colors.neutral.border};
       }
 
-      &[aria-checked='true'] + ${StyledIcon} ${InnerCheckbox} {
+      &[aria-checked='true'] + ${checkboxIcon} ${innerCheckbox} {
         stroke: ${({ theme }) => theme.colors.primary.borderStrong};
         fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
       }
 
-      &[aria-checked='mixed'] + ${StyledIcon} ${InnerCheckbox} {
+      &[aria-checked='mixed'] + ${checkboxIcon} ${innerCheckbox} {
         stroke: ${({ theme }) => theme.colors.primary.borderStrong};
         fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
       }
     }
   }
 
-  ${CheckboxInput} {
-    &:focus + ${StyledIcon}, &:active + ${StyledIcon} {
+  ${checkboxInput} {
+    &:focus + ${checkboxIcon}, &:active + ${checkboxIcon} {
       outline: none;
       background-color: ${({ theme }) => theme.colors.neutral.background};
       fill: ${({ theme }) => theme.colors.neutral.background};
     }
 
     &[aria-checked='false'] {
-      ${InnerCheckbox} {
+      ${innerCheckbox} {
         fill: ${({ theme }) => theme.colors.neutral.background};
         stroke: ${({ theme }) => theme.colors.neutral.border};
       }

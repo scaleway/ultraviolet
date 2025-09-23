@@ -2,258 +2,31 @@
 
 exports[`checkbox > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="false"
     >
       <input
         aria-checked="false"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«r0»"
         name="testing"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -282,7 +55,7 @@ exports[`checkbox > renders correctly 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«r0»"
           >
             Checkbox Label
@@ -296,239 +69,12 @@ exports[`checkbox > renders correctly 1`] = `
 
 exports[`checkbox > renders correctly checked 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="true"
       data-error="false"
     >
@@ -536,18 +82,18 @@ exports[`checkbox > renders correctly checked 1`] = `
         aria-checked="true"
         aria-invalid="false"
         checked=""
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«rf»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -576,7 +122,7 @@ exports[`checkbox > renders correctly checked 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«rf»"
           >
             Checkbox Label
@@ -590,239 +136,12 @@ exports[`checkbox > renders correctly checked 1`] = `
 
 exports[`checkbox > renders correctly checked and disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="true"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="true"
       data-error="false"
     >
@@ -830,19 +149,19 @@ exports[`checkbox > renders correctly checked and disabled 1`] = `
         aria-checked="true"
         aria-invalid="false"
         checked=""
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         disabled=""
         id="«rp»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -871,7 +190,7 @@ exports[`checkbox > renders correctly checked and disabled 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«rp»"
           >
             Checkbox Label
@@ -885,239 +204,12 @@ exports[`checkbox > renders correctly checked and disabled 1`] = `
 
 exports[`checkbox > renders correctly checked with helper 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="true"
       data-error="false"
     >
@@ -1125,18 +217,18 @@ exports[`checkbox > renders correctly checked with helper 1`] = `
         aria-checked="true"
         aria-invalid="false"
         checked=""
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«ri»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -1165,7 +257,7 @@ exports[`checkbox > renders correctly checked with helper 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«ri»"
           >
             Checkbox Label
@@ -1184,258 +276,31 @@ exports[`checkbox > renders correctly checked with helper 1`] = `
 
 exports[`checkbox > renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="true"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="false"
     >
       <input
         aria-checked="false"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         disabled=""
         id="«r5»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -1464,7 +329,7 @@ exports[`checkbox > renders correctly disabled 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«r5»"
           >
             Checkbox Label
@@ -1478,257 +343,30 @@ exports[`checkbox > renders correctly disabled 1`] = `
 
 exports[`checkbox > renders correctly indeterminate 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-10 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="indeterminate"
       data-error="false"
     >
       <input
         aria-checked="mixed"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«rm»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -1737,7 +375,7 @@ exports[`checkbox > renders correctly indeterminate 1`] = `
             y="4"
           />
           <rect
-            class="emotion-8 emotion-9"
+            class="styles__9pjq8o2"
             height="2"
             rx="1"
             width="12"
@@ -1755,7 +393,7 @@ exports[`checkbox > renders correctly indeterminate 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-10 emotion-11 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«rm»"
           >
             Checkbox Label
@@ -1769,258 +407,31 @@ exports[`checkbox > renders correctly indeterminate 1`] = `
 
 exports[`checkbox > renders correctly indeterminate and disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-10 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="true"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="indeterminate"
       data-error="false"
     >
       <input
         aria-checked="mixed"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         disabled=""
         id="«rs»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -2029,7 +440,7 @@ exports[`checkbox > renders correctly indeterminate and disabled 1`] = `
             y="4"
           />
           <rect
-            class="emotion-8 emotion-9"
+            class="styles__9pjq8o2"
             height="2"
             rx="1"
             width="12"
@@ -2047,7 +458,7 @@ exports[`checkbox > renders correctly indeterminate and disabled 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-10 emotion-11 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«rs»"
           >
             Checkbox Label
@@ -2061,239 +472,12 @@ exports[`checkbox > renders correctly indeterminate and disabled 1`] = `
 
 exports[`checkbox > renders correctly invisible 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="false"
       data-visibility="true"
@@ -2301,18 +485,18 @@ exports[`checkbox > renders correctly invisible 1`] = `
       <input
         aria-checked="false"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«rv»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -2341,7 +525,7 @@ exports[`checkbox > renders correctly invisible 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«rv»"
           >
             Checkbox Label
@@ -2355,234 +539,12 @@ exports[`checkbox > renders correctly invisible 1`] = `
 
 exports[`checkbox > renders correctly no child 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="false"
     >
@@ -2590,18 +552,18 @@ exports[`checkbox > renders correctly no child 1`] = `
         aria-checked="false"
         aria-invalid="false"
         aria-label="check"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«r3»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -2628,258 +590,31 @@ exports[`checkbox > renders correctly no child 1`] = `
 
 exports[`checkbox > renders correctly required 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="false"
     >
       <input
         aria-checked="false"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«r8»"
         required=""
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -2908,7 +643,7 @@ exports[`checkbox > renders correctly required 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«r8»"
           >
             Checkbox Label
@@ -2927,258 +662,31 @@ exports[`checkbox > renders correctly required 1`] = `
 
 exports[`checkbox > renders correctly with a value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="false"
     >
       <input
         aria-checked="false"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«r16»"
         type="checkbox"
         value="test"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -3207,7 +715,7 @@ exports[`checkbox > renders correctly with a value 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«r16»"
           >
             Checkbox Label
@@ -3221,243 +729,12 @@ exports[`checkbox > renders correctly with a value 1`] = `
 
 exports[`checkbox > renders correctly with an error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-10 {
-  padding-top: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="false"
       data-error="true"
     >
@@ -3465,18 +742,18 @@ exports[`checkbox > renders correctly with an error 1`] = `
         aria-checked="false"
         aria-describedby="«r12»-hint"
         aria-invalid="true"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«r12»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -3505,14 +782,14 @@ exports[`checkbox > renders correctly with an error 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«r12»"
           >
             Checkbox Label
           </label>
         </div>
         <span
-          class="emotion-10 emotion-11 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
+          class="styles__9pjq8o0 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
         >
           test error
         </span>
@@ -3524,257 +801,30 @@ exports[`checkbox > renders correctly with an error 1`] = `
 
 exports[`checkbox > renders correctly with indeterminate state 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-9 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-10 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__9pjq8o6 undefined"
       data-checked="indeterminate"
       data-error="false"
     >
       <input
         aria-checked="mixed"
         aria-invalid="false"
-        class="emotion-2 emotion-3"
+        class="styles__9pjq8o5"
         id="«r19»"
         type="checkbox"
       />
       <svg
-        class="emotion-4 emotion-5"
+        class="styles__9pjq8o3"
         fill="none"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="emotion-6 emotion-7"
+            class="styles__9pjq8o1"
             height="16"
             rx="0.125rem"
             stroke-width="2"
@@ -3783,7 +833,7 @@ exports[`checkbox > renders correctly with indeterminate state 1`] = `
             y="4"
           />
           <rect
-            class="emotion-8 emotion-9"
+            class="styles__9pjq8o2"
             height="2"
             rx="1"
             width="12"
@@ -3801,7 +851,7 @@ exports[`checkbox > renders correctly with indeterminate state 1`] = `
           style="--_4k0ekn3: 1;"
         >
           <label
-            class="emotion-10 emotion-11 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             for="«r19»"
           >
             Checkbox Label
@@ -3815,234 +865,7 @@ exports[`checkbox > renders correctly with indeterminate state 1`] = `
 
 exports[`checkbox > renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-0 .eqr7bqq3 {
-  cursor: pointer;
-}
-
-.emotion-0[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
-  cursor: not-allowed;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 {
-  fill: #e9eaeb;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
-  stroke: #d9dadd;
-  fill: #f3f3f4;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  stroke: #ffd3e3;
-  fill: #ffd3e3;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #ffbbd3;
-  fill: #ffebf2;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
-  stroke: #d8c5fc;
-  fill: #d8c5fc;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
-  fill: #e5dbfd;
-}
-
-.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  stroke: #e5dbfd;
-  fill: #e5dbfd;
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 path {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-}
-
-.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
-  fill: #e51963;
-  stroke: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
-  fill: #ffffff;
-}
-
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
-  fill: #8c40ef;
-  stroke: #8c40ef;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #792dd4;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
-  stroke: #d6175c;
-  fill: #d6175c;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
-  fill: #e51963;
-}
-
-.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
-  stroke: #e51963;
-  fill: #ffebf2;
-}
-
-.emotion-2 {
-  position: absolute;
-  white-space: nowrap;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  border-width: 0;
-}
-
-.emotion-2:not(:disabled) {
-  cursor: pointer;
-}
-
-.emotion-2:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
-  fill: #8c40ef;
-}
-
-.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
-  stroke: #8c40ef;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
-  fill: #ffebf2;
-}
-
-.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
-.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
-  stroke: #b3144d;
-}
-
-.emotion-2:focus+.emotion-5 {
-  background-color: #f1eefc;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2:focus+.emotion-5 .emotion-7 {
-  stroke: #792dd4;
-  fill: #e5dbfd;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 {
-  background-color: #ffebf2;
-  fill: #ffebf2;
-  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
-  stroke: #92103f;
-  fill: #ffd3e3;
-}
-
-.emotion-4 {
-  border-radius: 0.25rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-4 path {
-  fill: #ffffff;
-  -webkit-transform: translate(2px, 2px);
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  transform: translate(2px, 2px);
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-8 {
-  width: 100%;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4053,25 +876,25 @@ exports[`checkbox > renders correctly with tooltip 1`] = `
     >
       <div
         aria-disabled="false"
-        class="emotion-0 emotion-1"
+        class="styles__9pjq8o6 undefined"
         data-checked="false"
         data-error="false"
       >
         <input
           aria-checked="false"
           aria-invalid="false"
-          class="emotion-2 emotion-3"
+          class="styles__9pjq8o5"
           id="«rc»"
           type="checkbox"
         />
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__9pjq8o3"
           fill="none"
           viewBox="0 0 24 24"
         >
           <g>
             <rect
-              class="emotion-6 emotion-7"
+              class="styles__9pjq8o1"
               height="16"
               rx="0.125rem"
               stroke-width="2"
@@ -4100,7 +923,7 @@ exports[`checkbox > renders correctly with tooltip 1`] = `
             style="--_4k0ekn3: 1;"
           >
             <label
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles__9pjq8o4 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
               for="«rc»"
             >
               Checkbox Label
