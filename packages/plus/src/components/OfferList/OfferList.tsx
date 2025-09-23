@@ -14,7 +14,7 @@ const StyledList = styled(List)`
     width: ${({ theme }) => theme.sizing[700]};
     min-width:  ${({ theme }) => theme.sizing[700]};
     max-width:  ${({ theme }) => theme.sizing[700]};
-  } 
+  }
 `
 
 type OfferListProps = Omit<
@@ -30,6 +30,8 @@ type OfferListProps = Omit<
    * Pre-selected rows (using their offerName). Must be an array when `type = "checkbox"`.
    */
   selected?: string | string[]
+  ['data-testid']?: string
+  className?: string
 }
 
 export const OfferList = ({
@@ -41,6 +43,8 @@ export const OfferList = ({
   autoCollapse,
   selected,
   onChangeSelect,
+  className,
+  'data-testid': dataTestId,
 }: OfferListProps) => {
   const [radioSelectedRow, setRadioSelectedRow] = useState<string | undefined>(
     typeof selected === 'string' ? selected : undefined,
@@ -82,7 +86,9 @@ export const OfferList = ({
     >
       <StyledList
         autoCollapse={autoCollapse}
+        className={className}
         columns={computedColumns}
+        data-testid={dataTestId}
         expandable={false}
         selectable={false}
       >
