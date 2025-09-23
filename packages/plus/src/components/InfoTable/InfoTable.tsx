@@ -24,14 +24,23 @@ const StyledDl = styled('dl', {
 type InfoTableProps = {
   children: ReactNode
   width?: string
+  className?: string
+  'data-testid'?: string
 }
 
 /**
  * Use this component to display offers.
  * Create rows with `InfoTable.Row` and place cells within each row using `InfoTable.Cell`.
  */
-export const InfoTable = ({ children, width }: InfoTableProps) => (
-  <StyledDl width={width}>{children}</StyledDl>
+export const InfoTable = ({
+  children,
+  width,
+  className,
+  'data-testid': dataTestId,
+}: InfoTableProps) => (
+  <StyledDl className={className} data-testid={dataTestId} width={width}>
+    {children}
+  </StyledDl>
 )
 
 InfoTable.Row = InfoTableRow

@@ -96,6 +96,7 @@ export const NavigationContent = ({
   logo,
   onWidthResize,
   className,
+  'data-testid': dataTestId,
   id,
   onToggleExpand,
 }: NavigationProps) => {
@@ -202,7 +203,7 @@ export const NavigationContent = ({
   ])
 
   return (
-    <StyledNav className={className} id={id}>
+    <StyledNav className={className} data-testid={dataTestId} id={id}>
       <Container
         data-animation={shouldAnimate ? animation : undefined}
         data-expanded={expanded}
