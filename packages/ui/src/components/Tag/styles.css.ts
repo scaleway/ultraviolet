@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
 
-const SENTIMENTS = [
+export const SENTIMENTS = [
   'danger',
   'info',
   'neutral',

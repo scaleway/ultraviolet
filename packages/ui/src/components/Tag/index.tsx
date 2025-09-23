@@ -4,11 +4,11 @@ import { CloseIcon } from '@ultraviolet/icons'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
-import type { Color } from '../../theme'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import type { SENTIMENTS } from './styles.css'
 import { closeButtonTag, containerTag, textTag } from './styles.css'
 
 const COPY_DURATION = 2500
@@ -16,7 +16,7 @@ const COPY_DURATION = 2500
 type TagProps = {
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
-  sentiment?: Color
+  sentiment?: (typeof SENTIMENTS)[number]
   disabled?: boolean
   copiable?: boolean
   copyText?: string
@@ -104,6 +104,7 @@ export const Tag = ({
         <button
           className={`${className ? `${className} ` : ''}${containerTag({ copiable, disabled, sentiment })}`}
           data-testid={dataTestId}
+          disabled={disabled}
           onClick={setCopied}
         >
           <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
