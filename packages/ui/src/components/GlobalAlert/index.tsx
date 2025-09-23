@@ -1,45 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { useReducer } from 'react'
 import { Button } from '../Button'
-import { SIZE_HEIGHT } from '../Button/constants'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { GlobalAlertLink } from './GlobalAlertLink'
-
-const CloseButton = styled(Button)`
-  background: none;
-  position: absolute;
-  right: ${({ theme }) => theme.sizing[SIZE_HEIGHT.large]};
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: none;
-  }
-`
-
-const Container = styled(Stack)`
-  width: 100%;
-  height: ${({ theme }) => theme.sizing['700']};
-  padding: 0 ${({ theme }) => theme.space['2']};
-
-  &[data-variant='info'] {
-    background-color: ${({ theme }) => theme.colors.info.backgroundStrong};
-  }
-
-  &[data-variant='danger'] {
-    background-color: ${({ theme }) => theme.colors.danger.backgroundStrong};
-  }
-
-  &[data-variant='promotional'] {
-    background: ${({ theme }) =>
-      theme.colors.other.gradients.background.linear.aqua};
-  }
-`
+import { closeButton, container } from './styles.css'
 
 type GlobalAlertProps = {
   children: ReactNode
@@ -73,9 +41,9 @@ export const GlobalAlert = ({
   }
 
   return (
-    <Container
+    <Stack
       alignItems="center"
-      className={className}
+      className={`${className ? `${className} ` : ''}${container[variant]}`}
       data-testid={dataTestId}
       data-variant={variant}
       direction="row"
@@ -102,7 +70,8 @@ export const GlobalAlert = ({
         ) : null}
       </Stack>
       {closable ? (
-        <CloseButton
+        <Button
+          className={closeButton}
           onClick={() => {
             toggleOpened()
             onClose?.()
@@ -112,9 +81,9 @@ export const GlobalAlert = ({
           variant="filled"
         >
           <CloseIcon />
-        </CloseButton>
+        </Button>
       ) : null}
-    </Container>
+    </Stack>
   )
 }
 
