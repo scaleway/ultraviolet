@@ -1,7 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
-import type { Color } from '../../theme'
 import { style } from '@vanilla-extract/css'
 
 const SENTIMENTS = [
@@ -12,15 +10,8 @@ const SENTIMENTS = [
   'secondary',
   'success',
   'warning',
-] as Color[]
+] as const
 
-function getSentimentStyle(sentiment: (typeof SENTIMENTS)[number]) {
-  return {
-    color: theme.colors[sentiment].text,
-    background: theme.colors[sentiment].background,
-    border: `solid 1px ${sentiment === 'neutral' ? theme.colors.neutral.border : theme.colors[sentiment].background}`,
-  }
-}
 export const containerTag = recipe({
   base: {
     display: 'inline-flex',
@@ -49,16 +40,16 @@ export const containerTag = recipe({
       },
     },
 
-    sentiment: {
-      danger: getSentimentStyle('danger'),
-      info: getSentimentStyle('info'),
-      neutral: getSentimentStyle('neutral'),
-      primary: getSentimentStyle('primary'),
-      secondary: getSentimentStyle('secondary'),
-      success: getSentimentStyle('success'),
-      warning: getSentimentStyle('warning'),
-    },
-
+    sentiment: Object.fromEntries(
+      SENTIMENTS.map(sentiment => [
+        sentiment,
+        {
+          color: theme.colors[sentiment].text,
+          background: theme.colors[sentiment].background,
+          border: `solid 1px ${sentiment === 'neutral' ? theme.colors.neutral.border : theme.colors[sentiment].background}`,
+        },
+      ]),
+    ),
     disabled: {
       true: {
         color: theme.colors.neutral.textDisabled,
@@ -84,5 +75,3 @@ export const closeButtonTag = style({
   height: 'fit-content',
   padding: theme.space['0.25'],
 })
-
-export type TagVariants = NonNullable<RecipeVariants<typeof containerTag>>
