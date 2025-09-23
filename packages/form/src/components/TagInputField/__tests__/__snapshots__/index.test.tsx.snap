@@ -204,46 +204,6 @@ exports[`tagInputField > should render correctly with regex 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-6 {
-  max-width: 14.5rem;
-}
-
-.emotion-8 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.125rem;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,27 +219,27 @@ exports[`tagInputField > should render correctly with regex 1`] = `
   height: 100%;
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::placeholder {
+.emotion-4::placeholder {
   color: #727683;
 }
 
-.emotion-10[data-size="large"] {
+.emotion-4[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,17 +278,17 @@ exports[`tagInputField > should render correctly with regex 1`] = `
             <div
               class="emotion-2 emotion-3"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uv_d6zknp0 uv_d6zknp4"
               >
                 <div
-                  class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
+                  class="uv_d6zknpa uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   4
                 </div>
                 <button
                   aria-label="Close tag"
-                  class="emotion-8 emotion-9 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                  class="uv_d6zknpb uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
@@ -341,9 +301,9 @@ exports[`tagInputField > should render correctly with regex 1`] = `
                     />
                   </svg>
                 </button>
-              </span>
+              </div>
               <input
-                class="emotion-10 emotion-11"
+                class="emotion-4 emotion-5"
                 data-size="large"
                 id="«r2»"
                 name="test"
@@ -353,7 +313,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
               />
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-6 emotion-7"
             >
               <button
                 aria-label="clear value"
@@ -450,46 +410,6 @@ exports[`tagInputField > should works with defaultValues 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-6 {
-  max-width: 14.5rem;
-}
-
-.emotion-8 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.125rem;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -505,27 +425,27 @@ exports[`tagInputField > should works with defaultValues 1`] = `
   height: 100%;
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #727683;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #727683;
 }
 
-.emotion-10::placeholder {
+.emotion-4::placeholder {
   color: #727683;
 }
 
-.emotion-10[data-size="large"] {
+.emotion-4[data-size="large"] {
   font-size: 1rem;
 }
 
-.emotion-12 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -564,17 +484,17 @@ exports[`tagInputField > should works with defaultValues 1`] = `
             <div
               class="emotion-2 emotion-3"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uv_d6zknp0 uv_d6zknp4"
               >
                 <div
-                  class="emotion-6 emotion-7 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
+                  class="uv_d6zknpa uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   First
                 </div>
                 <button
                   aria-label="Close tag"
-                  class="emotion-8 emotion-9 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
+                  class="uv_d6zknpb uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
@@ -587,9 +507,9 @@ exports[`tagInputField > should works with defaultValues 1`] = `
                     />
                   </svg>
                 </button>
-              </span>
+              </div>
               <input
-                class="emotion-10 emotion-11"
+                class="emotion-4 emotion-5"
                 data-size="large"
                 id="«r9»"
                 name="test"
@@ -599,7 +519,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
               />
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="emotion-6 emotion-7"
             >
               <button
                 aria-label="clear value"
