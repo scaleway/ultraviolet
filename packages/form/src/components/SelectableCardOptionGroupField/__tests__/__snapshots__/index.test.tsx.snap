@@ -65,31 +65,18 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-3[data-has-label='true'] .emotion-6,
+.emotion-3[data-has-label='true'] uv_17da2jl1,
 .emotion-3[data-has-label='true'] .eqr7bqq0 {
   width: 100%;
 }
 
-.emotion-3 .emotion-6 {
+.emotion-3 uv_17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-8 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -100,217 +87,103 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   align-items: start;
 }
 
-.emotion-8[aria-disabled='false'],
-.emotion-8[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
-  fill: #8c40ef;
-}
-
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
-  fill: #e5dbfd;
-}
-
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
-  fill: #b3144d;
-}
-
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
-  fill: #ffd3e3;
-}
-
-.emotion-8[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-8[aria-disabled='true']>label,
-.emotion-8[aria-disabled='true'] .emotion-11 {
-  cursor: not-allowed;
-}
-
-.emotion-8[aria-disabled='true'] .emotion-13 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
-  fill: #f3f3f4;
-}
-
-.emotion-8[data-checked='true'] {
+.emotion-5[data-checked='true'] {
   color: #641cb3;
 }
 
-.emotion-8[data-error='true'] {
+.emotion-5[data-error='true'] {
   color: #b3144d;
 }
 
-.emotion-8[aria-disabled='true'] {
+.emotion-5[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 {
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6+uv_17da2jl7 {
   fill: #d9dadd;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11+.emotion-13 .emotion-15 {
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6+uv_17da2jl7 uv_17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false']:not([data-checked='true']) .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-5:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 uv_17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+.emotion-5:hover[aria-disabled='false'] uv_17da2jl6+uv_17da2jl7 {
   fill: #8c40ef;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+.emotion-5:hover[aria-disabled='false'] uv_17da2jl6+uv_17da2jl7 uv_17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+.emotion-5:hover[aria-disabled='false'] uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 {
   fill: #b3144d;
 }
 
-.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+.emotion-5:hover[aria-disabled='false'] uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 uv_17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 {
+.emotion-5 uv_17da2jl6[aria-disabled='false']:active+uv_17da2jl7 {
   background: none;
   fill: #8c40ef;
 }
 
-.emotion-8 .emotion-11[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+.emotion-5 uv_17da2jl6[aria-disabled='false']:active+uv_17da2jl7 uv_17da2jl0 {
   fill: #ffffff;
 }
 
-.emotion-10 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-10+.emotion-13 .emotion-17 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-10:checked+svg .emotion-17 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
-  fill: #8c40ef;
-}
-
-.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
-  fill: #d8c5fc;
-}
-
-.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
-  fill: #e51963;
-}
-
-.emotion-10[aria-disabled='false']:active+.emotion-13 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
-  fill: #f1eefc;
-}
-
-.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-10[aria-invalid='true']:focus+.emotion-13 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
-  fill: #ffebf2;
-}
-
-.emotion-12 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-12 .emotion-15 {
-  fill: #ffffff;
-}
-
-.emotion-18[data-has-label='true'] {
+.emotion-7[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-7[data-has-label='false'] {
   display: contents;
 }
 
-.emotion-18[data-has-default-cursor='true'] {
+.emotion-7[data-has-default-cursor='true'] {
   cursor: default;
 }
 
-.emotion-20 {
+.emotion-9 {
   height: 100%;
 }
 
-.emotion-22 {
+.emotion-11 {
   padding: 0 1rem;
 }
 
-.emotion-24[data-disabled='true'] {
+.emotion-13[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-27 {
+.emotion-16 {
   width: 100%;
 }
 
-.emotion-27 .emotion-30 {
+.emotion-16 .emotion-19 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-27 .emotion-30:hover,
-.emotion-27 .emotion-30:focus,
-.emotion-27 .emotion-30:active {
+.emotion-16 .emotion-19:hover,
+.emotion-16 .emotion-19:focus,
+.emotion-16 .emotion-19:active {
   border-color: #d9dadd!important;
   outline: none;
 }
 
-.emotion-29 {
+.emotion-18 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -325,85 +198,85 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-29[data-size='small'] {
+.emotion-18[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-29[data-size='medium'] {
+.emotion-18[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-29[data-size='large'] {
+.emotion-18[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-29[data-state='neutral'] {
+.emotion-18[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-29[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-29[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-29[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-18[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-29[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-18[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-29[data-state='success'] {
+.emotion-18[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-29[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-29[data-state='success'][data-dropdownvisible='true'] {
+.emotion-18[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-29[data-state='danger'] {
+.emotion-18[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-29[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-18[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-29[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-18[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-29:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-18:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-29[data-readonly='true'] {
+.emotion-18[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-29[data-disabled='true'] {
+.emotion-18[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-31 {
+.emotion-20 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -412,7 +285,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   align-self: center;
 }
 
-.emotion-33 {
+.emotion-22 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -420,7 +293,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-64 {
+.emotion-42 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -469,11 +342,11 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-7 emotion-8 emotion-9"
+                    class="emotion-5 emotion-6 uv_17da2jl3"
                     data-checked="true"
                     data-error="false"
                   >
@@ -481,14 +354,14 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                       aria-disabled="false"
                       aria-invalid="false"
                       checked=""
-                      class="emotion-10 emotion-11"
+                      class="uv_17da2jl6"
                       id="«r1»"
                       tabindex="-1"
                       type="radio"
                       value="ubuntu"
                     />
                     <svg
-                      class="emotion-12 emotion-13"
+                      class="uv_17da2jl7"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -499,13 +372,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-14 emotion-15"
+                          class="uv_17da2jl0"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-16 emotion-17"
+                          class="uv_17da2jl8"
                           cx="12"
                           cy="12"
                           r="5"
@@ -515,22 +388,22 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-has-default-cursor="false"
                   data-has-label="false"
                   style="--uv_4k0ekn0: 100%;"
                 >
                   <div
-                    class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+                    class="emotion-9 emotion-10 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
                     style="--uv_4k0ekn0: 100%; --uv_4k0ekn3: 1 1 auto;"
                   >
                     <div
-                      class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+                      class="emotion-11 emotion-12 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
                       style="--uv_4k0ekn0: 100%;"
                     >
                       <img
                         alt="Ubuntu"
-                        class="emotion-24 emotion-25"
+                        class="emotion-13 emotion-14"
                         height="56"
                         src="/src/components/SelectableCardOptionGroupField/__stories__/assets/ubuntu.svg"
                         width="56"
@@ -549,7 +422,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-26 emotion-27 emotion-28"
+                      class="emotion-15 emotion-16 emotion-17"
                     >
                       <div
                         aria-controls="«r7»"
@@ -564,7 +437,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           <div
                             aria-controls="«r7»"
                             aria-expanded="false"
-                            class="emotion-29 emotion-30"
+                            class="emotion-18 emotion-19"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
@@ -576,12 +449,12 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                             tabindex="0"
                           >
                             <div
-                              class="emotion-31 emotion-32 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                              class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                             >
                               Ubuntu 20.04 Focal Fossa
                             </div>
                             <div
-                              class="emotion-33 emotion-34 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                             >
                               <svg
                                 aria-label="show dropdown"
@@ -616,25 +489,25 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-7 emotion-8 emotion-9"
+                    class="emotion-5 emotion-6 uv_17da2jl3"
                     data-checked="false"
                     data-error="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-10 emotion-11"
+                      class="uv_17da2jl6"
                       id="«rb»"
                       tabindex="-1"
                       type="radio"
                       value="debian"
                     />
                     <svg
-                      class="emotion-12 emotion-13"
+                      class="uv_17da2jl7"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -645,13 +518,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-14 emotion-15"
+                          class="uv_17da2jl0"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-16 emotion-17"
+                          class="uv_17da2jl8"
                           cx="12"
                           cy="12"
                           r="5"
@@ -661,22 +534,22 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-has-default-cursor="false"
                   data-has-label="false"
                   style="--uv_4k0ekn0: 100%;"
                 >
                   <div
-                    class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+                    class="emotion-9 emotion-10 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
                     style="--uv_4k0ekn0: 100%; --uv_4k0ekn3: 1 1 auto;"
                   >
                     <div
-                      class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+                      class="emotion-11 emotion-12 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
                       style="--uv_4k0ekn0: 100%;"
                     >
                       <img
                         alt="Debian"
-                        class="emotion-24 emotion-25"
+                        class="emotion-13 emotion-14"
                         height="56"
                         src="/src/components/SelectableCardOptionGroupField/__stories__/assets/debian.svg"
                         width="56"
@@ -695,7 +568,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-26 emotion-27 emotion-28"
+                      class="emotion-15 emotion-16 emotion-17"
                     >
                       <div
                         aria-controls="«rh»"
@@ -710,7 +583,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           <div
                             aria-controls="«rh»"
                             aria-expanded="false"
-                            class="emotion-29 emotion-30"
+                            class="emotion-18 emotion-19"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
@@ -722,12 +595,12 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                             tabindex="0"
                           >
                             <p
-                              class="emotion-64 emotion-65 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                              class="emotion-42 emotion-43 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                             >
                               Select item
                             </p>
                             <div
-                              class="emotion-33 emotion-34 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                             >
                               <svg
                                 aria-label="show dropdown"
@@ -762,25 +635,25 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                 tabindex="0"
               >
                 <div
-                  class="emotion-5 emotion-6 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-7 emotion-8 emotion-9"
+                    class="emotion-5 emotion-6 uv_17da2jl3"
                     data-checked="false"
                     data-error="false"
                   >
                     <input
                       aria-disabled="false"
                       aria-invalid="false"
-                      class="emotion-10 emotion-11"
+                      class="uv_17da2jl6"
                       id="«rl»"
                       tabindex="-1"
                       type="radio"
                       value="centos"
                     />
                     <svg
-                      class="emotion-12 emotion-13"
+                      class="uv_17da2jl7"
                       viewBox="0 0 24 24"
                     >
                       <g>
@@ -791,13 +664,13 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           stroke-width="2"
                         />
                         <circle
-                          class="emotion-14 emotion-15"
+                          class="uv_17da2jl0"
                           cx="12"
                           cy="12"
                           r="8"
                         />
                         <circle
-                          class="emotion-16 emotion-17"
+                          class="uv_17da2jl8"
                           cx="12"
                           cy="12"
                           r="5"
@@ -807,22 +680,22 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+                  class="emotion-7 emotion-8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-has-default-cursor="false"
                   data-has-label="false"
                   style="--uv_4k0ekn0: 100%;"
                 >
                   <div
-                    class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+                    class="emotion-9 emotion-10 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
                     style="--uv_4k0ekn0: 100%; --uv_4k0ekn3: 1 1 auto;"
                   >
                     <div
-                      class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+                      class="emotion-11 emotion-12 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
                       style="--uv_4k0ekn0: 100%;"
                     >
                       <img
                         alt="CentOS"
-                        class="emotion-24 emotion-25"
+                        class="emotion-13 emotion-14"
                         height="56"
                         src="/src/components/SelectableCardOptionGroupField/__stories__/assets/centos.svg"
                         width="56"
@@ -841,7 +714,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                     </div>
                     <div
                       aria-label="selectable-card-option"
-                      class="emotion-26 emotion-27 emotion-28"
+                      class="emotion-15 emotion-16 emotion-17"
                     >
                       <div
                         aria-controls="«rr»"
@@ -856,7 +729,7 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                           <div
                             aria-controls="«rr»"
                             aria-expanded="false"
-                            class="emotion-29 emotion-30"
+                            class="emotion-18 emotion-19"
                             data-disabled="false"
                             data-dropdownvisible="false"
                             data-readonly="false"
@@ -868,12 +741,12 @@ exports[`selectableCardOptionGroupField > should render correctly 1`] = `
                             tabindex="0"
                           >
                             <p
-                              class="emotion-64 emotion-65 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                              class="emotion-42 emotion-43 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                             >
                               Select item
                             </p>
                             <div
-                              class="emotion-33 emotion-34 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                              class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                             >
                               <svg
                                 aria-label="show dropdown"
