@@ -113,18 +113,18 @@ export const radioMark = style({
 })
 
 globalStyle(
-  `${container}:hover[aria-disabled='false'] ${ring}${innerCircleRing}`,
+  `${container}:hover[aria-disabled='false'] ${ring} ${innerCircleRing}`,
   {
     fill: theme.colors.primary.backgroundHover,
   },
 )
 
-globalStyle(`${container}[aria-disabled='true'] ${ring}${innerCircleRing}`, {
+globalStyle(`${container}[aria-disabled='true'] ${ring} ${innerCircleRing}`, {
   fill: theme.colors.neutral.backgroundDisabled,
 })
 
 globalStyle(
-  `${container} ${radio}[aria-invalid='true'] + ${ring}${innerCircleRing}`,
+  `${container} ${radio}[aria-invalid='true'] + ${ring} ${innerCircleRing}`,
   {
     fill: theme.colors.danger.backgroundHover,
   },
