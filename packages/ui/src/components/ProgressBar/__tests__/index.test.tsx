@@ -1,9 +1,10 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
-import { ProgressBar, progressBarSentiments } from '..'
+import { ProgressBar } from '..'
+import { PROGRESS_BAR_SENTIMENTS } from '../constants'
 
 describe('progressBar', () => {
-  progressBarSentiments.forEach(sentiment => {
+  PROGRESS_BAR_SENTIMENTS.forEach(sentiment => {
     it(`renders ${sentiment}`, () =>
       shouldMatchEmotionSnapshot(
         <ProgressBar sentiment={sentiment} value={40} />,
