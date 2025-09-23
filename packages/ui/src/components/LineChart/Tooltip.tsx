@@ -1,30 +1,21 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { Point } from '@nivo/line'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
+import { colorLine, lineColorSquare, lineTooltipContainer } from './styles.css'
 
-const LineTooltipContainer = styled.div`
-  display: flex;
-  background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
-  border-radius: ${({ theme }) => theme.radii.small};
-  box-shadow: ${({ theme }) => theme.shadows.tooltip};
-  padding: ${({ theme }) => theme.space['0.5']} ${({ theme }) => theme.space['1']};
-  align-items: center;
-`
-const LineColorSquare = styled.span`
-  display: block;
-  width: ${({ theme }) => theme.sizing['175']};
-  height: ${({ theme }) => theme.sizing['175']};
-  background: ${({ color }) => color};
-  margin-right: ${({ theme }) => theme.space['1.5']};
-`
 type LineChartTooltipProps = { point: Point }
 
 export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
-  <LineTooltipContainer>
+  <div className={lineTooltipContainer}>
     <div>
-      <LineColorSquare color={point.serieColor} />
+      <span
+        className={lineColorSquare}
+        style={assignInlineVars({
+          [colorLine]: point.serieColor,
+        })}
+      />
     </div>
     <div>
       <Text
@@ -44,5 +35,5 @@ export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
         {point.data.xFormatted}
       </Text>
     </div>
-  </LineTooltipContainer>
+  </div>
 )
