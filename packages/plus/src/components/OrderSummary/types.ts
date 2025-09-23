@@ -119,4 +119,6 @@ export type OrderSummaryProps = {
    */
   onChange?: (price: PriceType, totalPrice: PriceTypeSingle) => void
   hideDetails?: boolean
+  className?: string
+  ['data-testid']?: string
 } & PeriodProps

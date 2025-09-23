@@ -39,4 +39,5 @@ export type NavigationProps = {
    * This function will be called when the user toggle the expand/collapse button or with the slider.
    */
   onToggleExpand?: (expanded: boolean) => void
+  'data-testid'?: string
 }

@@ -52,6 +52,8 @@ export const OrderSummary = ({
   onChangeUnitInput,
   totalPriceDescription,
   additionalInfo,
+  className,
+  'data-testid': dataTestId,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -152,7 +154,11 @@ export const OrderSummary = ({
 
   return (
     <OrderSummaryContext.Provider value={valueContext}>
-      <Container justifyContent={hideDetails ? 'flex-start' : 'space-between'}>
+      <Container
+        className={className}
+        data-testId={dataTestId}
+        justifyContent={hideDetails ? 'flex-start' : 'space-between'}
+      >
         {header ? (
           <HeaderContainer
             data-hidedetails={hideDetails}
