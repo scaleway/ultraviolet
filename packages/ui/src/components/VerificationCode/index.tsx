@@ -11,12 +11,7 @@ import type {
 import { createRef, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
 import { Text } from '../Text'
-import { SIZE_HEIGHT } from './constants'
 import { filedSetClass, inputClass, inputSizes } from './styles.css'
-
-type Size = 'small' | 'medium' | 'large' | 'xlarge'
-
-export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
 
 const DEFAULT_ON_FUNCTION = () => {}
 
@@ -138,7 +133,7 @@ export const VerificationCode = ({
       const prevIndex = index - 1
       const nextIndex = index + 1
       const first = inputRefs[0]
-      const last = inputRefs[inputRefs.length - 1]
+      const last = inputRefs.at(-1)
       const prev = inputRefs[prevIndex]
       const next = inputRefs[nextIndex]
       const vals = [...values]
