@@ -1,7 +1,8 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import type { ProminenceProps } from '..'
-import { Link, PROMINENCES } from '..'
+import { Link } from '..'
+import { PROMINENCES } from '../constants'
 
 describe('link', () => {
   test(`render correctly with no sentiment`, () =>
