@@ -260,93 +260,7 @@ exports[`globalAlert > renders correctly with default values 1`] = `
 
 exports[`globalAlert > renders correctly with link 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #ffffff;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #f9f9fa;
-  text-decoration-color: #f9f9fa;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -361,11 +275,9 @@ exports[`globalAlert > renders correctly with link 1`] = `
         >
           This is a 
           <a
-            class="emotion-0 emotion-1"
+            class="styles__1dtqm9e0 styles_prominence_strong__1dtqm9e4 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_inline__1dtqm9ec styles_undefined_compound_5__1dtqm9ej styles__1dtqm9en"
             data-variant="inline"
             href="scaleway.com"
-            prominence="strong"
-            variant="bodySmallStrong"
           >
             Global Alert
           </a>

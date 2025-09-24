@@ -2,101 +2,13 @@
 
 exports[`link > prominence > render prominence default 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      prominence="default"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -106,101 +18,13 @@ exports[`link > prominence > render prominence default 1`] = `
 
 exports[`link > prominence > render prominence strong 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #ffffff;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #f9f9fa;
-  text-decoration-color: #f9f9fa;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_strong__1dtqm9e4 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_5__1dtqm9ej styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      prominence="strong"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -210,101 +34,13 @@ exports[`link > prominence > render prominence strong 1`] = `
 
 exports[`link > prominence > render prominence stronger 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      prominence="stronger"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -314,101 +50,13 @@ exports[`link > prominence > render prominence stronger 1`] = `
 
 exports[`link > prominence > render prominence weak 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_weak__1dtqm9e6 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_7__1dtqm9el styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      prominence="weak"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -418,100 +66,13 @@ exports[`link > prominence > render prominence weak 1`] = `
 
 exports[`link > render correctly prop primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #641cb3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #521094;
-  text-decoration-color: #521094;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #641cb3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_primary__1dtqm9e1 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_0__1dtqm9ee styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -521,100 +82,13 @@ exports[`link > render correctly prop primary 1`] = `
 
 exports[`link > render correctly with bad sentiment 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #3f4250;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -624,100 +98,13 @@ exports[`link > render correctly with bad sentiment 1`] = `
 
 exports[`link > render correctly with href props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -727,209 +114,16 @@ exports[`link > render correctly with href props 1`] = `
 
 exports[`link > render correctly with href props 2`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .emotion-3,
-.emotion-0 .emotion-7,
-.emotion-0 .emotion-13 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .emotion-3,
-.emotion-0:focus .emotion-3,
-.emotion-0:hover .emotion-7,
-.emotion-0:focus .emotion-7,
-.emotion-0:hover .emotion-13,
-.emotion-0:focus .emotion-13 {
-  -webkit-transform: translate(0.125rem, 0);
-  -moz-transform: translate(0.125rem, 0);
-  -ms-transform: translate(0.125rem, 0);
-  transform: translate(0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-2 {
-  margin-right: 0.25rem;
-}
-
-.emotion-4 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-4 .emotion-3,
-.emotion-4 .emotion-7,
-.emotion-4 .emotion-13 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-4>* {
-  pointer-events: none;
-}
-
-.emotion-4:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-4:hover,
-.emotion-4:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-4:hover .emotion-3,
-.emotion-4:focus .emotion-3,
-.emotion-4:hover .emotion-7,
-.emotion-4:focus .emotion-7,
-.emotion-4:hover .emotion-13,
-.emotion-4:focus .emotion-13 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-4:hover:visited,
-.emotion-4:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-4[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-4:hover::after,
-.emotion-4:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-4:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-6 {
-  margin-left: 0.25rem;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding-bottom: 0.25rem;
-}
-
-.emotion-12 {
-  margin-left: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       <svg
-        class="emotion-2 emotion-3 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+        class="styles__1dtqm9eo styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
         viewBox="0 0 16 16"
       >
         <path
@@ -941,14 +135,13 @@ exports[`link > render correctly with href props 2`] = `
       Hello
     </a>
     <a
-      class="emotion-4 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
       <svg
-        class="emotion-6 emotion-7 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+        class="styles__1dtqm9ep styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
         viewBox="0 0 16 16"
       >
         <path
@@ -959,19 +152,18 @@ exports[`link > render correctly with href props 2`] = `
       </svg>
     </a>
     <a
-      class="emotion-4 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
       rel="noopener noreferrer"
       target="_blank"
-      variant="bodyStrong"
     >
       Hello
       <span
-        class="emotion-10 emotion-11"
+        class="styles__1dtqm9em"
       >
         <svg
-          class="emotion-12 emotion-13 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+          class="styles__1dtqm9ep styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
           viewBox="0 0 16 16"
         >
           <path
@@ -984,19 +176,18 @@ exports[`link > render correctly with href props 2`] = `
       </span>
     </a>
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
       rel="noopener noreferrer"
       target="_blank"
-      variant="bodyStrong"
     >
       Hello
       <span
-        class="emotion-10 emotion-11"
+        class="styles__1dtqm9em"
       >
         <svg
-          class="emotion-12 emotion-13 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+          class="styles__1dtqm9ep styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
           viewBox="0 0 16 16"
         >
           <path
@@ -1014,100 +205,13 @@ exports[`link > render correctly with href props 2`] = `
 
 exports[`link > render correctly with no sentiment 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1117,104 +221,16 @@ exports[`link > render correctly with no sentiment 1`] = `
 
 exports[`link > render correctly with oneLine 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: block;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       style="margin-bottom: 16px; margin-top: 8px; width: 200px;"
     >
       <a
-        class="emotion-0 emotion-1"
+        class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_true__1dtqm9e7 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
         data-variant="standalone"
         href="/"
-        variant="bodyStrong"
       >
         Hello this is a very long text that should be truncated
       </a>
@@ -1225,290 +241,29 @@ exports[`link > render correctly with oneLine 1`] = `
 
 exports[`link > render correctly with sizes 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-2 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-2 .e1afnb7a3,
-.emotion-2 .e1afnb7a2,
-.emotion-2 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-2>* {
-  pointer-events: none;
-}
-
-.emotion-2:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-2:hover,
-.emotion-2:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-2:hover .e1afnb7a3,
-.emotion-2:focus .e1afnb7a3,
-.emotion-2:hover .e1afnb7a2,
-.emotion-2:focus .e1afnb7a2,
-.emotion-2:hover .e1afnb7a4,
-.emotion-2:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-2:hover:visited,
-.emotion-2:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-2[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-2:hover::after,
-.emotion-2:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-2:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-4 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-4 .e1afnb7a3,
-.emotion-4 .e1afnb7a2,
-.emotion-4 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-4>* {
-  pointer-events: none;
-}
-
-.emotion-4:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-4:hover,
-.emotion-4:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-4:hover .e1afnb7a3,
-.emotion-4:focus .e1afnb7a3,
-.emotion-4:hover .e1afnb7a2,
-.emotion-4:focus .e1afnb7a2,
-.emotion-4:hover .e1afnb7a4,
-.emotion-4:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-4:hover:visited,
-.emotion-4:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-4[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-4:hover::after,
-.emotion-4:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-4:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
     ,
     <a
-      class="emotion-2 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodySmallStrong"
     >
       Hello
     </a>
     ,
     <a
-      class="emotion-4 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_captionStrong__1dtqm9e9 styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="captionStrong"
     >
       Hello
     </a>
@@ -1518,121 +273,22 @@ exports[`link > render correctly with sizes 1`] = `
 
 exports[`link > render correctly with target blank 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .emotion-5 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .emotion-5,
-.emotion-0:focus .emotion-5 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding-bottom: 0.25rem;
-}
-
-.emotion-4 {
-  margin-left: 0.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
       rel="noopener noreferrer"
       target="_blank"
-      variant="bodyStrong"
     >
       Hello
       <span
-        class="emotion-2 emotion-3"
+        class="styles__1dtqm9em"
       >
         <svg
-          class="emotion-4 emotion-5 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
+          class="styles__1dtqm9ep styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
           viewBox="0 0 16 16"
         >
           <path
@@ -1650,108 +306,20 @@ exports[`link > render correctly with target blank 1`] = `
 
 exports[`link > render correctly with variants props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_inline__1dtqm9ec styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="inline"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1761,100 +329,13 @@ exports[`link > render correctly with variants props 1`] = `
 
 exports[`link > sentiment > render info 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1864,100 +345,13 @@ exports[`link > sentiment > render info 1`] = `
 
 exports[`link > sentiment > render primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #641cb3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #521094;
-  text-decoration-color: #521094;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #641cb3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_primary__1dtqm9e1 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_0__1dtqm9ee styles__1dtqm9en"
       data-variant="standalone"
       href="/"
-      variant="bodyStrong"
     >
       Hello
     </a>
