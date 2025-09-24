@@ -22,7 +22,7 @@ export const linkBreadcrumbs = style({
   textOverflow: 'ellipsis',
 })
 
-export const buttonBreadcrumbs = style({
+export const contentBreadcrumbs = style({
   minWidth: minWidthVar,
   maxWidth: maxWidthVar,
   overflow: 'hidden',
@@ -57,7 +57,7 @@ globalStyle(`.${breadcrumbsItem}:not(:first-child) .${linkBreadcrumbs}`, {
 globalStyle(`.${breadcrumbsItem}:last-child .${linkBreadcrumbs}`, {
   pointerEvents: 'none',
 })
-globalStyle(`.${breadcrumbsItem}:last-child .${buttonBreadcrumbs}`, {
+globalStyle(`.${breadcrumbsItem}:last-child .${contentBreadcrumbs}`, {
   pointerEvents: 'none',
   cursor: 'default',
 })

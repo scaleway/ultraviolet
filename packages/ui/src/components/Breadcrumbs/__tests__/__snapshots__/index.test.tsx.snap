@@ -225,11 +225,10 @@ exports[`breadcrumbs > click on middle item 1`] = `
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <a
             class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
@@ -251,8 +250,7 @@ exports[`breadcrumbs > click on middle item 1`] = `
           </button>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <button
             class="emotion-8 emotion-9 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
@@ -633,11 +631,10 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <a
             class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
@@ -648,8 +645,7 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <a
             class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
@@ -660,15 +656,14 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <button
             class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
-          </button>
+          </div>
         </li>
       </ol>
     </nav>
@@ -678,90 +673,14 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
 
 exports[`breadcrumbs > renders correctly with invalid child 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <nav
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         Invalid child
       </ol>
@@ -899,11 +818,10 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <a
             class="emotion-4 emotion-5 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
@@ -926,15 +844,14 @@ exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx46"
         >
           <button
             class="emotion-12 emotion-13 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
-          </button>
+          </div>
         </li>
       </ol>
     </nav>

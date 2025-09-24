@@ -6,11 +6,13 @@ import type {
   MouseEvent as ReactMouseEvent,
   ReactNode,
 } from 'react'
+import { useMemo } from 'react'
 import { Button } from '../../Button'
 import { Link } from '../../Link'
+import { Text } from '../../Text'
 import {
   breadcrumbsItem,
-  buttonBreadcrumbs,
+  contentBreadcrumbs,
   itemContainerBreadcrumbs,
   linkBreadcrumbs,
   maxWidthVar,
@@ -50,40 +52,58 @@ export const Item = ({
   className,
   maxWidth,
   minWidth,
-}: ItemProps) => (
-  <li
-    aria-current={ariaCurrent}
-    className={`${className ? `${className} ` : ''}${itemContainerBreadcrumbs({ clickable: !!onClick })} ${breadcrumbsItem}`}
-    onClick={onClick}
-    onKeyDown={onKeyDown}
-    style={assignInlineVars({
-      [minWidthVar]: minWidth?.toString(),
-      [maxWidthVar]: maxWidth?.toString(),
-    })}
-  >
-    {to ? (
-      <Link
-        className={linkBreadcrumbs}
-        href={to}
-        prominence="stronger"
-        size="small"
-      >
+}: ItemProps) => {
+  const renderedChildren = useMemo(() => {
+    if (to) {
+      return (
+        <Link
+          className={linkBreadcrumbs}
+          href={to}
+          prominence="stronger"
+          size="small"
+        >
+          {children}
+        </Link>
+      )
+    }
+
+    if (onClick) {
+      return (
+        <Button
+          className={contentBreadcrumbs}
+          disabled={disabled}
+          sentiment="neutral"
+          size="small"
+          style={assignInlineVars({
+            [minWidthVar]: minWidth?.toString(),
+            [maxWidthVar]: maxWidth?.toString(),
+          })}
+          variant="ghost"
+        >
+          {children}
+        </Button>
+      )
+    }
+
+    return (
+      <Text as="div" className={contentBreadcrumbs} variant="bodySmallStrong">
         {children}
-      </Link>
-    ) : (
-      <Button
-        className={buttonBreadcrumbs}
-        disabled={disabled}
-        sentiment="neutral"
-        size="small"
-        style={assignInlineVars({
-          [minWidthVar]: minWidth?.toString(),
-          [maxWidthVar]: maxWidth?.toString(),
-        })}
-        variant="ghost"
-      >
-        {children}
-      </Button>
-    )}
-  </li>
-)
+      </Text>
+    )
+  }, [children, disabled, maxWidth, minWidth, onClick, to])
+
+  return (
+    <li
+      aria-current={ariaCurrent}
+      className={`${className ? `${className} ` : ''}${itemContainerBreadcrumbs({ clickable: !!onClick })} ${breadcrumbsItem}`}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      style={assignInlineVars({
+        [minWidthVar]: minWidth?.toString(),
+        [maxWidthVar]: maxWidth?.toString(),
+      })}
+    >
+      {renderedChildren}
+    </li>
+  )
+}
