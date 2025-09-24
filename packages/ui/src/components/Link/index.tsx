@@ -44,9 +44,15 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
+  /**
+   * @deprecated Values other than 'primary' are deprecated and will be removed in the next major version
+   */
   sentiment?: 'primary' | 'info'
   prominence?: ProminenceProps
   size?: LinkSizes
+  /**
+   * @deprecated Use the imported icon directly in the children instead of this prop
+   */
   iconPosition?: LinkIconPosition
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   className?: string
