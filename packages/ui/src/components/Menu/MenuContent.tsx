@@ -1,6 +1,6 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { theme } from '@ultraviolet/themes'
 import type {
   ButtonHTMLAttributes,
   KeyboardEvent,
@@ -26,78 +26,16 @@ import { Stack } from '../Stack'
 import { SIZES } from './constants'
 import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'
+import {
+  content,
+  footer,
+  menuList,
+  styledPopup,
+  styledSearchInput,
+} from './styles.css'
 import type { MenuProps } from './types'
 
 const SPACE_DISCLOSURE_POPUP = 24 // in px
-
-const StyledPopup = styled(Popup, {
-  shouldForwardProp: prop => !['searchable'].includes(prop),
-})<{ searchable: boolean }>`
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) =>
-    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
-  padding: 0;
-
-  &[data-has-arrow='true'] {
-    &::after {
-      border-color: ${({ theme }) =>
-        theme.colors.other.elevation.background.raised}
-        transparent transparent transparent;
-    }
-  }
-
-  min-width: ${SIZES.small};
-  max-width: ${SIZES.large};
-
-  ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
-  padding: ${({ theme }) => `${theme.space['0.25']} 0`};
-
-`
-
-const Content = styled(Stack)`
-overflow: auto;
-`
-
-const Footer = styled(Stack)`
-  padding: ${({ theme }) => theme.space['1']};
-`
-
-const MenuList = styled(Stack, {
-  shouldForwardProp: prop => !['height', 'heightAvailableSpace'].includes(prop),
-})<{ height: string; heightAvailableSpace: string }>`
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: ${({ theme, height, heightAvailableSpace }) =>
-    `calc(min(${height}, ${heightAvailableSpace}) - ${theme.space['0.5']})`};
-
-  &:after,
-  &:before {
-    border: solid transparent;
-    border-width: 9px;
-    content: ' ';
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &:after {
-    border-color: transparent;
-  }
-  &:before {
-    border-color: transparent;
-  }
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.raised};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  border-radius: ${({ theme }) => theme.radii.default};
-  position: relative;
-`
-
-const StyledSearchInput = styled(SearchInput)`
-  padding: ${({ theme }) => theme.space['1']};
-`
 
 export const Menu = forwardRef(
   (
@@ -274,10 +212,10 @@ export const Menu = forwardRef(
     }, [isVisible, portalTarget, disclosureRef, placement, noShrink])
 
     return (
-      <StyledPopup
+      <Popup
         align={align}
         aria-label={ariaLabel}
-        className={className}
+        className={`${styledPopup({ searchable })} ${className || ''}`.trim()}
         data-has-arrow={hasArrow}
         debounceDelay={triggerMethod === 'hover' ? 250 : 0}
         dynamicDomRendering={dynamicDomRendering}
@@ -298,38 +236,40 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         ref={menuRef}
         role="dialog"
-        searchable={searchable}
         tabIndex={-1}
         text={
-          <MenuList
-            className={className}
+          <Stack
+            className={menuList()}
             data-testid={dataTestId}
-            height={maxHeight ?? '30rem'}
-            heightAvailableSpace={popupMaxHeight}
             onKeyDown={handleKeyDown}
             onMouseEnter={() => setShouldBeVisible(true)}
             onMouseLeave={() => setShouldBeVisible(false)}
             role="menu"
+            style={{
+              maxHeight: `calc(min(${maxHeight ?? '30rem'}, ${popupMaxHeight}) - ${theme.space['0.5']})`,
+              padding: `${theme.space['0.25']} 0`,
+            }}
           >
-            <Content ref={contentRef}>
+            <Stack className={content} ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
-                <StyledSearchInput
+                <SearchInput
+                  className={styledSearchInput}
                   onSearch={onSearch}
                   ref={searchInputRef}
                   size="small"
                 />
               ) : null}
               {finalChild}
-            </Content>
-            {footer ? <Footer>{footer}</Footer> : null}
-          </MenuList>
+            </Stack>
+            {footer ? <Stack className={footer}>{footer}</Stack> : null}
+          </Stack>
         }
         visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
       >
         <DisclosureContext.Provider value>
           {finalDisclosure}
         </DisclosureContext.Provider>
-      </StyledPopup>
+      </Popup>
     )
   },
 )
