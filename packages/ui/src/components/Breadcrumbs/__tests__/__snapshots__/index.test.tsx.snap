@@ -533,6 +533,231 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
 </DocumentFragment>
 `;
 
+exports[`breadcrumbs > last item should no be clickable 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.emotion-0 .e1afnb7a3,
+.emotion-0 .e1afnb7a2,
+.emotion-0 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-0>* {
+  pointer-events: none;
+}
+
+.emotion-0:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-0:hover .e1afnb7a3,
+.emotion-0:focus .e1afnb7a3,
+.emotion-0:hover .e1afnb7a2,
+.emotion-0:focus .e1afnb7a2,
+.emotion-0:hover .e1afnb7a4,
+.emotion-0:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-0:hover:visited,
+.emotion-0:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-0[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-0:hover::after,
+.emotion-0:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-0:active {
+  text-decoration-thickness: 2px;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.875rem;
+  font-family: Inter,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.emotion-0 .e1afnb7a3,
+.emotion-0 .e1afnb7a2,
+.emotion-0 .e1afnb7a4 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-0>* {
+  pointer-events: none;
+}
+
+.emotion-0:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #222638;
+  text-decoration-color: #222638;
+}
+
+.emotion-0:hover .e1afnb7a3,
+.emotion-0:focus .e1afnb7a3,
+.emotion-0:hover .e1afnb7a2,
+.emotion-0:focus .e1afnb7a2,
+.emotion-0:hover .e1afnb7a4,
+.emotion-0:focus .e1afnb7a4 {
+  -webkit-transform: translate(-0.125rem, 0);
+  -moz-transform: translate(-0.125rem, 0);
+  -ms-transform: translate(-0.125rem, 0);
+  transform: translate(-0.125rem, 0);
+}
+
+.emotion-0:hover:visited,
+.emotion-0:focus:visited {
+  text-decoration-color: transparent;
+  color: #641cb3;
+}
+
+.emotion-0[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-0:hover::after,
+.emotion-0:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-0:active {
+  text-decoration-thickness: 2px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <ol
+        class="styles__qxa0fl0"
+      >
+        <li
+          class="styles__1yxbbx44 styles__1yxbbx46"
+        >
+          <a
+            class="styles__1yxbbx42 emotion-0 emotion-1"
+            data-variant="standalone"
+            href="/step1"
+            prominence="stronger"
+            variant="bodySmallStrong"
+          >
+            Step 1
+          </a>
+        </li>
+        <li
+          class="styles__1yxbbx44 styles__1yxbbx46"
+        >
+          <a
+            class="styles__1yxbbx42 emotion-0 emotion-1"
+            data-variant="standalone"
+            href="/step1/step2"
+            prominence="stronger"
+            variant="bodySmallStrong"
+          >
+            I'm a very long long long long long long long long long long long long step
+          </a>
+        </li>
+        <li
+          class="styles__1yxbbx44 styles_clickable_true__1yxbbx45 styles__1yxbbx46"
+        >
+          <button
+            class="styles__1yxbbx43 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+            type="button"
+          >
+            Step 3
+          </button>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`breadcrumbs > renders correctly with default values 1`] = `
 <DocumentFragment>
   .emotion-0 {
