@@ -99,6 +99,7 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
         '&:disabled': {
           color: monochrome.black.textDisabled,
           border: `1px solid ${monochrome.black.borderDisabled}`,
+          background: 'none',
         },
       },
     }
@@ -117,6 +118,7 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
         '&:disabled': {
           color: monochrome.white.textDisabled,
           border: `1px solid ${monochrome.white.borderDisabled}`,
+          background: 'none',
         },
       },
     }
@@ -137,6 +139,7 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
         '&:disabled': {
           color: selectedSentiment.textDisabled,
           border: `1px solid ${selectedSentiment.borderStrongDisabled}`,
+          background: 'none',
         },
       },
     }
@@ -156,6 +159,7 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
       '&:disabled': {
         color: selectedSentiment.textDisabled,
         border: `1px solid ${selectedSentiment.borderDisabled}`,
+        background: 'none',
       },
     },
   }
@@ -174,6 +178,7 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
         },
         '&:disabled': {
           color: monochrome.black.textDisabled,
+          background: 'none',
         },
       },
     }
@@ -190,6 +195,7 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
         },
         '&:disabled': {
           color: monochrome.white.textDisabled,
+          background: 'none',
         },
       },
     }
@@ -207,6 +213,7 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
       },
       '&:disabled': {
         color: selectedSentiment.textDisabled,
+        background: 'none',
       },
     },
   }
