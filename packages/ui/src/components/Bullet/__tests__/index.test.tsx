@@ -22,8 +22,11 @@ describe('bullet', () => {
       </Bullet>,
     ))
 
+  test('renders correctly disabled', () =>
+    shouldMatchEmotionSnapshot(<Bullet disabled>1</Bullet>))
+
   describe('sentiment', () => {
-    ;['disabled', ...SENTIMENTS].forEach(sentiment => {
+    SENTIMENTS.forEach(sentiment => {
       test(`render ${sentiment}`, () =>
         shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment}>1</Bullet>))
     })

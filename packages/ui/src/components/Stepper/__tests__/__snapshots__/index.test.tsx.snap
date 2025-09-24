@@ -74,22 +74,22 @@ exports[`stepper > handles clicks when interactive 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -100,11 +100,11 @@ exports[`stepper > handles clicks when interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -120,7 +120,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -186,22 +186,22 @@ exports[`stepper > handles clicks when interactive 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -212,11 +212,11 @@ exports[`stepper > handles clicks when interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -232,7 +232,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -284,57 +284,19 @@ exports[`stepper > handles clicks when interactive 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -342,7 +304,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -350,26 +312,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -377,81 +320,12 @@ exports[`stepper > handles clicks when interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -472,7 +346,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -485,7 +359,7 @@ exports[`stepper > handles clicks when interactive 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -503,12 +377,12 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -526,12 +400,12 @@ exports[`stepper > handles clicks when interactive 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -616,22 +490,22 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -642,11 +516,11 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -662,7 +536,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -728,22 +602,22 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -754,11 +628,11 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -774,7 +648,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -826,57 +700,19 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -884,7 +720,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -892,26 +728,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -919,81 +736,12 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
 }
 
 <div
@@ -1014,7 +762,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -1027,7 +775,7 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -1045,12 +793,12 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -1068,12 +816,12 @@ exports[`stepper > handles clicks when interactive and small 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -1158,22 +906,22 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -1184,11 +932,11 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -1204,7 +952,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -1270,22 +1018,22 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -1296,11 +1044,11 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -1316,7 +1064,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -1368,57 +1116,19 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -1426,7 +1136,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -1434,26 +1144,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -1461,81 +1152,12 @@ exports[`stepper > handles clicks when not interactive 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
 }
 
 <div
@@ -1556,7 +1178,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -1569,7 +1191,7 @@ exports[`stepper > handles clicks when not interactive 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -1587,12 +1209,12 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -1610,12 +1232,12 @@ exports[`stepper > handles clicks when not interactive 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -1671,22 +1293,22 @@ exports[`stepper > renders correctly with all selected 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -1697,11 +1319,11 @@ exports[`stepper > renders correctly with all selected 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -1717,7 +1339,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -1769,32 +1391,13 @@ exports[`stepper > renders correctly with all selected 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -1802,56 +1405,12 @@ exports[`stepper > renders correctly with all selected 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -1872,7 +1431,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -1885,7 +1444,7 @@ exports[`stepper > renders correctly with all selected 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -1903,12 +1462,12 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -1926,12 +1485,12 @@ exports[`stepper > renders correctly with all selected 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -1987,22 +1546,22 @@ exports[`stepper > renders correctly with animation 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2013,11 +1572,11 @@ exports[`stepper > renders correctly with animation 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -2033,7 +1592,7 @@ exports[`stepper > renders correctly with animation 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -2085,32 +1644,13 @@ exports[`stepper > renders correctly with animation 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -2118,56 +1658,12 @@ exports[`stepper > renders correctly with animation 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -2188,7 +1684,7 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -2201,7 +1697,7 @@ exports[`stepper > renders correctly with animation 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -2219,12 +1715,12 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -2242,12 +1738,12 @@ exports[`stepper > renders correctly with animation 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -2303,22 +1799,22 @@ exports[`stepper > renders correctly with children 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2329,11 +1825,11 @@ exports[`stepper > renders correctly with children 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -2349,7 +1845,7 @@ exports[`stepper > renders correctly with children 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -2401,32 +1897,13 @@ exports[`stepper > renders correctly with children 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -2434,56 +1911,12 @@ exports[`stepper > renders correctly with children 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -2504,7 +1937,7 @@ exports[`stepper > renders correctly with children 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -2517,7 +1950,7 @@ exports[`stepper > renders correctly with children 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -2536,12 +1969,12 @@ exports[`stepper > renders correctly with children 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -2559,12 +1992,12 @@ exports[`stepper > renders correctly with children 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -2620,22 +2053,22 @@ exports[`stepper > renders correctly with default props 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2646,11 +2079,11 @@ exports[`stepper > renders correctly with default props 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -2666,7 +2099,7 @@ exports[`stepper > renders correctly with default props 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -2718,32 +2151,13 @@ exports[`stepper > renders correctly with default props 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -2751,56 +2165,12 @@ exports[`stepper > renders correctly with default props 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -2821,7 +2191,7 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -2834,7 +2204,7 @@ exports[`stepper > renders correctly with default props 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -2852,12 +2222,12 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -2875,12 +2245,12 @@ exports[`stepper > renders correctly with default props 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -2936,22 +2306,22 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -2962,11 +2332,11 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -2982,7 +2352,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -3034,26 +2404,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3061,7 +2412,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -3069,26 +2420,7 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3112,12 +2444,12 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           1
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -3135,12 +2467,12 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 2
@@ -3158,12 +2490,12 @@ exports[`stepper > renders correctly with disabled steps 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -3219,22 +2551,22 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -3245,11 +2577,11 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -3265,7 +2597,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -3317,32 +2649,13 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -3350,26 +2663,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-16 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -3395,7 +2689,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -3408,7 +2702,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -3426,7 +2720,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -3439,7 +2733,7 @@ exports[`stepper > renders correctly with selected prop 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -3457,12 +2751,12 @@ exports[`stepper > renders correctly with selected prop 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-16 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 3
@@ -3518,22 +2812,22 @@ exports[`stepper > renders correctly with small size 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -3544,11 +2838,11 @@ exports[`stepper > renders correctly with small size 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -3564,7 +2858,7 @@ exports[`stepper > renders correctly with small size 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -3616,32 +2910,13 @@ exports[`stepper > renders correctly with small size 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -3649,56 +2924,12 @@ exports[`stepper > renders correctly with small size 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
 }
 
 <div
@@ -3719,7 +2950,7 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -3732,7 +2963,7 @@ exports[`stepper > renders correctly with small size 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -3750,12 +2981,12 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -3773,12 +3004,12 @@ exports[`stepper > renders correctly with small size 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -3834,22 +3065,22 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -3860,11 +3091,11 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -3880,7 +3111,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -3932,32 +3163,13 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -3965,7 +3177,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-9 {
+.emotion-8 {
   border-radius: 0.25rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -3979,11 +3191,11 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-9[data-size='small'] {
+.emotion-8[data-size='small'] {
   height: 2px;
 }
 
-.emotion-9::after {
+.emotion-8::after {
   content: '';
   position: absolute;
   left: 0;
@@ -3994,26 +3206,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   width: 100%;
 }
 
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-12 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
@@ -4021,7 +3214,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-18 {
+.emotion-16 {
   border-radius: 0.25rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -4035,11 +3228,11 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   margin-bottom: 1rem;
 }
 
-.emotion-18[data-size='small'] {
+.emotion-16[data-size='small'] {
   height: 2px;
 }
 
-.emotion-18::after {
+.emotion-16::after {
   content: '';
   position: absolute;
   left: 0;
@@ -4047,31 +3240,6 @@ exports[`stepper > renders correctly with step number in row 1`] = `
   height: 100%;
   border-radius: 0.25rem;
   background-color: #8c40ef;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -4092,7 +3260,7 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -4105,14 +3273,14 @@ exports[`stepper > renders correctly with step number in row 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
         </span>
       </div>
       <div
-        class="emotion-9 emotion-10"
+        class="emotion-8 emotion-9"
         data-size="medium"
       />
       <div
@@ -4127,19 +3295,19 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-14 emotion-6"
+          class="emotion-12 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
         </span>
       </div>
       <div
-        class="emotion-18 emotion-10"
+        class="emotion-16 emotion-9"
         data-size="medium"
       />
       <div
@@ -4154,12 +3322,12 @@ exports[`stepper > renders correctly with step number in row 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-23 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -4244,18 +3412,18 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.ewvv9211 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.ewvv9211 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -4274,7 +3442,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -4356,18 +3524,18 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.ewvv9211 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.ewvv9211 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
@@ -4386,7 +3554,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -4454,76 +3622,19 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-8 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
@@ -4531,81 +3642,12 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-8 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 1.5rem;
 }
 
 <div
@@ -4626,7 +3668,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -4652,7 +3694,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-10 emotion-6"
+          class="emotion-8 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
@@ -4670,7 +3712,7 @@ exports[`stepper > renders correctly without Stepper.Step 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-15 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
@@ -4726,22 +3768,22 @@ exports[`stepper > renders correctly without separator 1`] = `
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -4752,11 +3794,11 @@ exports[`stepper > renders correctly without separator 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -4772,7 +3814,7 @@ exports[`stepper > renders correctly without separator 1`] = `
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -4824,32 +3866,13 @@ exports[`stepper > renders correctly without separator 1`] = `
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -4857,56 +3880,12 @@ exports[`stepper > renders correctly without separator 1`] = `
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -4927,7 +3906,7 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -4940,7 +3919,7 @@ exports[`stepper > renders correctly without separator 1`] = `
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -4958,12 +3937,12 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -4981,12 +3960,12 @@ exports[`stepper > renders correctly without separator 1`] = `
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
@@ -5042,22 +4021,22 @@ exports[`stepper > renders correctly without separator with label on the right 1
   cursor: pointer;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-4>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-selected="true"]:hover>.emotion-5>.emotion-7 {
   color: #521094;
   -webkit-text-decoration: underline #521094;
   text-decoration: underline #521094;
   text-decoration-thickness: 1px;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-4 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-5 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-8 {
+.emotion-2[data-interactive="true"]:not([data-disabled="true"])[data-done="true"]:hover>.emotion-7 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
@@ -5068,11 +4047,11 @@ exports[`stepper > renders correctly without separator with label on the right 1
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-8 {
+.emotion-2[data-disabled="true"]>.emotion-7 {
   color: #b5b7bd;
 }
 
-.emotion-2[data-disabled="true"]>.emotion-4 {
+.emotion-2[data-disabled="true"]>.emotion-5 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
@@ -5088,7 +4067,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
   flex: 1;
 }
 
-.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-8 {
+.emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
   margin-top: 0.5rem;
 }
 
@@ -5140,32 +4119,13 @@ exports[`stepper > renders correctly without separator with label on the right 1
   margin-top: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-4 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -5173,56 +4133,12 @@ exports[`stepper > renders correctly without separator with label on the right 1
   text-decoration-color: transparent;
 }
 
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
+.emotion-10 {
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
   min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  -webkit-transition: box-shadow 300ms;
-  transition: box-shadow 300ms;
-  min-width: 2rem;
 }
 
 <div
@@ -5243,7 +4159,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-testid="stepper-step-0"
       >
         <div
-          class="emotion-4 emotion-5 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -5256,7 +4172,7 @@ exports[`stepper > renders correctly without separator with label on the right 1
           </svg>
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 1
@@ -5274,12 +4190,12 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-testid="stepper-step-1"
       >
         <div
-          class="emotion-4 emotion-12 emotion-6"
+          class="emotion-10 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_7__1jy42m0m"
         >
           2
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_primary__m4c9ow9 style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_0__m4c9ow1c style_undefined_compound_72__m4c9ow3c"
           style="--qabug41: normal;"
         >
           step 2
@@ -5297,12 +4213,12 @@ exports[`stepper > renders correctly without separator with label on the right 1
         data-testid="stepper-step-2"
       >
         <div
-          class="emotion-4 emotion-19 emotion-6"
+          class="emotion-4 emotion-5 styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_strong__1jy42m0d styles_undefined_compound_9__1jy42m0o"
         >
           3
         </div>
         <span
-          class="emotion-7 emotion-8 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+          class="emotion-6 emotion-7 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
           style="--qabug41: normal;"
         >
           step 3
