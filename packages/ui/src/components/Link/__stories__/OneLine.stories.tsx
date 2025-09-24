@@ -1,29 +1,21 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { Link } from '../index'
-
-const Container = styled.div`
-  margin-bottom: ${({ theme }) => theme.space['2']};
-  margin-top: ${({ theme }) => theme.space['1']};
-  width: 200px;
-  background: ${({ theme }) => theme.colors.info.background};
-  padding: ${({ theme }) => theme.space['1']};
-`
+import { containerStoryLink } from './styles.css'
 
 export const OneLine: StoryFn<typeof Link> = args => (
   <>
     <strong>Without ellipsis</strong>
-    <Container>
+    <div className={containerStoryLink}>
       <Link {...args} href="https://scaleway.com">
         This link is quite long and is displayed on two lines.
       </Link>
-    </Container>
+    </div>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
-    <Container>
+    <div className={containerStoryLink}>
       <Link {...args} href="https://scaleway.com" oneLine>
         This link is quite long and is cut in order to avoid two lines.
       </Link>
-    </Container>
+    </div>
   </>
 )
 

@@ -36,8 +36,9 @@ const Item = ({
   >
     {bulletContent ? (
       <Bullet
+        disabled={disabled}
         prominence={prominence}
-        sentiment={disabled ? 'disabled' : sentiment}
+        sentiment={sentiment}
         size={size}
       >
         {bulletContent}
