@@ -1,5 +1,28 @@
 # Change Log
 
+## 3.0.0-beta.13
+
+### Major Changes
+
+- [#5504](https://github.com/scaleway/ultraviolet/pull/5504) [`4a20bf5`](https://github.com/scaleway/ultraviolet/commit/4a20bf5ebc5b298cc5ed7e0842214701a2c1efc7) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `Link` and `Bullet` to use vanilla-extract instead of Emotion
+  - `Bullet`: **BREAKING CHANGE** "disabled" is now a prop instead of a value of prop "sentiment"
+
+### Minor Changes
+
+- [#5533](https://github.com/scaleway/ultraviolet/pull/5533) [`47257af`](https://github.com/scaleway/ultraviolet/commit/47257afab643364777bf0f98a292bb87808242c7) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Radio />` component to use vanilla extract
+
+- [#5530](https://github.com/scaleway/ultraviolet/pull/5530) [`02ca583`](https://github.com/scaleway/ultraviolet/commit/02ca5830154c172c8d4e3cb92b8cff67ff14a976) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<GlobalAlert />` and `<Expandable />` to use vanilla extract
+
+- [#5520](https://github.com/scaleway/ultraviolet/pull/5520) [`1b41251`](https://github.com/scaleway/ultraviolet/commit/1b412515e05d1de803e65d7d57ef6dee02c55c8b) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<VerificationCode /> to use vanilla extract`
+
+- [#5518](https://github.com/scaleway/ultraviolet/pull/5518) [`647bf54`](https://github.com/scaleway/ultraviolet/commit/647bf545eb3496fee1503c8e18e68f1b4812fc25) Thanks [@matthprost](https://github.com/matthprost)! - Refactor component `<ProgressBar />` and fix component `<Badge />` useless variable in css generation
+
+### Patch Changes
+
+- [#5573](https://github.com/scaleway/ultraviolet/pull/5573) [`c79b4fb`](https://github.com/scaleway/ultraviolet/commit/c79b4fb72779a31b1b9b5f9ee3228fbc56630022) Thanks [@philibea](https://github.com/philibea)! - Add htmlFor on label for VerificationCode
+
+- [#5570](https://github.com/scaleway/ultraviolet/pull/5570) [`dce2961`](https://github.com/scaleway/ultraviolet/commit/dce2961df8780b3f11ac6527de93911c0ac6d560) Thanks [@lisalupi](https://github.com/lisalupi)! - `Button`: remove background color when hovering a disabled outlined/ghost button
+
 ## 3.0.0-beta.12
 
 ### Patch Changes
