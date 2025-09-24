@@ -12,14 +12,13 @@ function getLinkStyle(
   sentiment: 'primary' | 'info',
   prominence: ProminenceType,
 ) {
-  const definedProminence = prominence === 'stronger' ? 'strong' : prominence
-  const text =
-    `text${capitalize(PROMINENCES[definedProminence])}` as keyof typeof theme.colors.primary
+  const definedProminence = capitalize(PROMINENCES[prominence])
+  const text = `text${definedProminence}` as keyof typeof theme.colors.primary
   const textHover =
-    `text${capitalize(PROMINENCES[definedProminence])}Hover` as keyof typeof theme.colors.primary
+    `text${definedProminence}Hover` as keyof typeof theme.colors.primary
 
   return {
-    color: theme.colors[sentiment][text],
+    color: theme.colors[sentiment][text] ?? theme.colors.neutral.text,
     selectors: {
       '&:hover': {
         textDecorationColor: theme.colors[sentiment][textHover],

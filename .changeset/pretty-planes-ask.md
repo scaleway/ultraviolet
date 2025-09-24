@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/ui": minor
+"@ultraviolet/ui": major
 ---
 
 - Refactor components `Link` and `Bullet` to use vanilla-extract instead of Emotion
