@@ -1,12 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Toggle } from '../Toggle'
+import { fieldset } from './styles.css'
 
 type ToggleGroupContextType = {
   groupName: string
@@ -66,12 +66,6 @@ export const ToggleGroupToggle = ({
   )
 }
 
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-`
-
 type ToggleGroupProps = {
   legend?: string
   legendDescription?: ReactNode
@@ -113,7 +107,7 @@ export const ToggleGroup = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <fieldset className={`${className ? `${className} ` : ''}${fieldset}`}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -142,7 +136,7 @@ export const ToggleGroup = ({
               {children}
             </Stack>
           </Stack>
-        </FieldSet>
+        </fieldset>
         {helper ? (
           <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
             {helper}
