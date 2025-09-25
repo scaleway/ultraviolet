@@ -1,7 +1,6 @@
 'use client'
 
 import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
 import type {
   DetailsHTMLAttributes,
@@ -15,110 +14,15 @@ import type { XOR } from '../../types'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { ExpandableCardTitle } from './components/Title'
-
-const StyledArrowIcon = styled(ArrowDownIcon)``
-
-const DropableArea = styled.div`
-  height: ${({ theme }) => theme.space['3']};
-  border-bottom: 2px solid;
-  border-color: transparent;
-  padding: ${({ theme }) => theme.space['0.5']} 0;
-  width: 100%;
-  bottom: -5px;
-  position: absolute;
-
-  &[data-first="true"] {
-    top: -${({ theme }) => theme.space['3']};
-  }
-
-  &::after {
-    content: '';
-    left: 0;
-    bottom: -4px;
-    height: 0px;
-    width: 0px;
-    border: 3px solid;
-    border-color: inherit;
-    border-radius: ${({ theme }) => theme.radii.circle};
-    display: flex;
-    margin-top:  -${({ theme }) => theme.space['1']};
-    margin-left: -${({ theme }) => theme.space['0.25']};
-    position: absolute;
-  }
-`
-
-const StyledSummary = styled.summary`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap:  ${({ theme }) => theme.space['2']};
-  padding: ${({ theme }) => theme.space['3']};
-  list-style-type: none;
-
-  cursor: pointer;
-  &[data-disabled="true"] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-radius: ${({ theme }) => theme.radii.default};
-    cursor: not-allowed;
-  }
-`
-
-const StyledContent = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  padding: ${({ theme }) => theme.space['3']};
-
-`
-
-const StyledDetails = styled.details`
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  width: 100%;
-  transition: border-color 0.2s ease-in-out;
-
-  &[open] {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-
-    & > ${StyledContent} {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-   ${StyledArrowIcon} {
-      transform: rotate(180deg);
-    }
-  }
-
-  &[data-clicking="true"] {
-    box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
-    border-color: ${({ theme }) => theme.colors.primary.border};
-
-  }
-`
-const StyledStack = styled(Stack)`
-  position: relative;
-    &:hover > ${StyledDetails} {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-  `
-
-const DragIconContainer = styled(Stack)`
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  cursor: grab;
-  padding-top: calc(${({ theme }) => theme.space['3']} + 2px);
-
-  &[data-visible="true"] {
-    opacity: 1;
-  }
-  &:focus-within {
-    opacity: 1;
-  }
-
-  &:active {
-    cursor: grabbing;
-    opacity: 1;
-  }
-`
+import {
+  arrowIcon,
+  content,
+  detailsClass,
+  dragIconContainer,
+  dropableArea,
+  stackClass,
+  summaryClass,
+} from './styles.css'
 
 export const EXPANDABLE_CARD_SIZE = ['medium', 'large'] as const
 
@@ -244,7 +148,8 @@ const BaseExpandableCard = forwardRef(
     )
 
     return (
-      <StyledStack
+      <Stack
+        className={stackClass}
         data-draggable={draggable}
         data-name={name}
         data-value={value}
@@ -259,7 +164,8 @@ const BaseExpandableCard = forwardRef(
         width="100%"
       >
         {draggable ? (
-          <DragIconContainer
+          <Stack
+            className={dragIconContainer}
             data-testid={`draggable-icon-${value}`}
             data-visible={isHovered}
             justifyContent="center"
@@ -292,10 +198,10 @@ const BaseExpandableCard = forwardRef(
                 size="small"
               />
             </Tooltip>
-          </DragIconContainer>
+          </Stack>
         ) : null}
-        <StyledDetails
-          className={className}
+        <details
+          className={`${className ? `${className} ` : ''}${detailsClass}`}
           data-clicking={clicking}
           data-testid={dataTestId}
           key={clicking ? 'closed' : 'open'}
@@ -304,7 +210,8 @@ const BaseExpandableCard = forwardRef(
           ref={ref}
           tabIndex={disabled ? -1 : undefined}
         >
-          <StyledSummary
+          <summary
+            className={summaryClass}
             data-disabled={!!disabled}
             data-testid={dataTestId ? `${dataTestId}-summary` : undefined}
             onClick={event => {
@@ -328,7 +235,11 @@ const BaseExpandableCard = forwardRef(
             }
             ref={headerRef}
           >
-            <StyledArrowIcon disabled={disabled} sentiment="neutral" />
+            <ArrowDownIcon
+              className={arrowIcon}
+              disabled={disabled}
+              sentiment="neutral"
+            />
             {typeof header === 'string' ? (
               <ExpandableCardTitle disabled={disabled} size={size}>
                 {header}
@@ -336,11 +247,12 @@ const BaseExpandableCard = forwardRef(
             ) : (
               header
             )}
-          </StyledSummary>
-          <StyledContent>{children}</StyledContent>
-        </StyledDetails>
+          </summary>
+          <div className={content}>{children}</div>
+        </details>
         {draggable && index === 0 ? (
-          <DropableArea
+          <div
+            className={dropableArea}
             data-first
             onDragLeave={event => onDrag(event, 'transparent', true)}
             onDragOver={event =>
@@ -351,7 +263,8 @@ const BaseExpandableCard = forwardRef(
           />
         ) : null}
         {draggable ? (
-          <DropableArea
+          <div
+            className={dropableArea}
             data-testid={`${value}-dropable-area`}
             onDragLeave={event => onDrag(event, 'transparent')}
             onDragOver={event => onDrag(event, theme.colors.primary.border)}
@@ -359,7 +272,7 @@ const BaseExpandableCard = forwardRef(
             ref={draggableRef}
           />
         ) : null}
-      </StyledStack>
+      </Stack>
     )
   },
 )
