@@ -67,7 +67,7 @@ for (const file of filesToAnalyze) {
             'components/',
           ].some(string => normalizedFile.endsWith(string))
         ) {
-          const importedComponent = normalizedFile.split('/').reverse()[0]
+          const importedComponent = normalizedFile.split('/').toReversed()[0]
 
           if (!graph[componentName]) {
             graph[componentName] = { dependsOn: [] }

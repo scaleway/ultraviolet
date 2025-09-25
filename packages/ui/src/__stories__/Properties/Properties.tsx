@@ -168,10 +168,10 @@ const Properties = () => {
                       }
 
                       const reversedLocalProperty = [...lowerCaseLocalProperty]
-                        .reverse()
+                        .toReversed()
                         .join('')
                       const reversedLowerCaseProperty = [...lowerCaseProperty]
-                        .reverse()
+                        .toReversed()
                         .join('')
 
                       for (
