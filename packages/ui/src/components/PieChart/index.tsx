@@ -85,7 +85,7 @@ export const PieChart = ({
     <div
       className={containerPie}
       style={assignInlineVars({
-        [heightContainerPie]: `${height}px`,
+        [heightContainerPie]: height ? `${height}px` : '',
       })}
     >
       <div style={{ position: 'relative' }}>
