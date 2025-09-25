@@ -3,12 +3,6 @@
 exports[`checkboxField > should render correctly checked 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -21,65 +15,65 @@ exports[`checkboxField > should render correctly checked 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-3 .eqr7bqq3 {
+.emotion-0 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-3[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-3[aria-disabled='true'] .eqr7bqq3 {
+.emotion-0[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-5 {
   fill: #e9eaeb;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]:checked+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
   fill: #ffd3e3;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]:checked+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
   fill: #ffebf2;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6:checked+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
   fill: #e5dbfd;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6:checked+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-checked="mixed"]+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
   fill: #e5dbfd;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-checked="mixed"]+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-3 .emotion-6:checked+.emotion-8 path {
+.emotion-0 .emotion-3:checked+.emotion-5 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -93,66 +87,60 @@ exports[`checkboxField > should render correctly checked 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-3 .emotion-6:checked+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-3 .emotion-6[aria-invalid="true"]:checked+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-3 .emotion-6[aria-checked="mixed"]+.emotion-8 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-3 .emotion-6[aria-checked="mixed"]+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='false'][aria-checked='false']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='false'][aria-checked='true']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='false'][aria-checked='mixed']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='true'][aria-checked='false']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='true'][aria-checked='true']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-3 .emotion-6[aria-invalid="true"]+.emotion-8 {
+.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
   fill: #e51963;
 }
 
-.emotion-3 .emotion-6[aria-invalid="true"]+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-3 label {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -161,57 +149,57 @@ exports[`checkboxField > should render correctly checked 1`] = `
   border-width: 0;
 }
 
-.emotion-5:not(:disabled) {
+.emotion-2:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-5:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
 }
 
-.emotion-5:not(:disabled):checked+.emotion-8,
-.emotion-5:not(:disabled)[aria-checked='mixed']+.emotion-8 {
+.emotion-2:not(:disabled):checked+.emotion-5,
+.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
   fill: #8c40ef;
 }
 
-.emotion-5:not(:disabled):checked+.emotion-8 .emotion-10,
-.emotion-5:not(:disabled)[aria-checked='mixed']+.emotion-8 .emotion-10 {
+.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
+.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
   stroke: #8c40ef;
 }
 
-.emotion-5:not(:disabled)[aria-invalid='true']+.emotion-8,
-.emotion-5:not(:disabled)[aria-invalid='mixed']+.emotion-8 {
+.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
+.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
   fill: #ffebf2;
 }
 
-.emotion-5:not(:disabled)[aria-invalid='true']+.emotion-8 .emotion-10,
-.emotion-5:not(:disabled)[aria-invalid='mixed']+.emotion-8 .emotion-10 {
+.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
+.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
   stroke: #b3144d;
 }
 
-.emotion-5:focus+.emotion-8 {
+.emotion-2:focus+.emotion-5 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-5:focus+.emotion-8 .emotion-10 {
+.emotion-2:focus+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-5[aria-invalid='true']:focus+.emotion-8 {
+.emotion-2[aria-invalid='true']:focus+.emotion-5 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-5[aria-invalid='true']:focus+.emotion-8 .emotion-10 {
+.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7 {
+.emotion-4 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -219,7 +207,7 @@ exports[`checkboxField > should render correctly checked 1`] = `
   min-height: 1.5rem;
 }
 
-.emotion-7 path {
+.emotion-4 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -231,12 +219,12 @@ exports[`checkboxField > should render correctly checked 1`] = `
   transform: scale(0);
 }
 
-.emotion-9 {
+.emotion-6 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-11 {
+.emotion-8 {
   width: 100%;
   cursor: pointer;
 }
@@ -252,7 +240,7 @@ exports[`checkboxField > should render correctly checked 1`] = `
         class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
       >
         <fieldset
-          class="emotion-0 emotion-1"
+          class="uv_19cjf6j0"
         >
           <div
             class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
@@ -271,27 +259,27 @@ exports[`checkboxField > should render correctly checked 1`] = `
             >
               <div
                 aria-disabled="false"
-                class="emotion-2 emotion-3 emotion-4"
+                class="uv_19cjf6j1 emotion-0 emotion-1"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-5 emotion-6"
+                  class="emotion-2 emotion-3"
                   id="«r1»"
                   name="Checkbox.value-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-7 emotion-8"
+                  class="emotion-4 emotion-5"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-9 emotion-10"
+                      class="emotion-6 emotion-7"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -320,7 +308,7 @@ exports[`checkboxField > should render correctly checked 1`] = `
                     style="--uv_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-11 emotion-12 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       for="«r1»"
                     >
                       Checkbox 1
@@ -330,27 +318,27 @@ exports[`checkboxField > should render correctly checked 1`] = `
               </div>
               <div
                 aria-disabled="false"
-                class="emotion-2 emotion-3 emotion-4"
+                class="uv_19cjf6j1 emotion-0 emotion-1"
                 data-checked="true"
                 data-error="false"
               >
                 <input
                   aria-checked="true"
                   aria-invalid="false"
-                  class="emotion-5 emotion-6"
+                  class="emotion-2 emotion-3"
                   id="«r4»"
                   name="Checkbox.value-2"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-7 emotion-8"
+                  class="emotion-4 emotion-5"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-9 emotion-10"
+                      class="emotion-6 emotion-7"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -379,7 +367,7 @@ exports[`checkboxField > should render correctly checked 1`] = `
                     style="--uv_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-11 emotion-12 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       for="«r4»"
                     >
                       Checkbox 2
@@ -399,12 +387,6 @@ exports[`checkboxField > should render correctly checked 1`] = `
 exports[`checkboxField > should trigger events correctly with required prop 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -417,65 +399,65 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
   gap: 0.5rem;
 }
 
-.emotion-3 .eqr7bqq3 {
+.emotion-0 .eqr7bqq3 {
   cursor: pointer;
 }
 
-.emotion-3[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-3[aria-disabled='true'] .eqr7bqq3 {
+.emotion-0[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-5 {
   fill: #e9eaeb;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-5 .emotion-7 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]:checked+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 {
   fill: #ffd3e3;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]:checked+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 {
   fill: #ffebf2;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-invalid="true"]+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6:checked+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 {
   fill: #e5dbfd;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6:checked+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3:checked+.emotion-5 .emotion-7 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-checked="mixed"]+.emotion-8 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 {
   fill: #e5dbfd;
 }
 
-.emotion-3[aria-disabled='true'] .emotion-6[aria-checked="mixed"]+.emotion-8 .emotion-10 {
+.emotion-0[aria-disabled='true'] .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-3 .emotion-6:checked+.emotion-8 path {
+.emotion-0 .emotion-3:checked+.emotion-5 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -489,66 +471,60 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
   transform: translate(2px, 2px);
 }
 
-.emotion-3 .emotion-6:checked+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3:checked+.emotion-5 .emotion-7 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-3 .emotion-6[aria-invalid="true"]:checked+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3[aria-invalid="true"]:checked+.emotion-5 .emotion-7 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-3 .emotion-6[aria-checked="mixed"]+.emotion-8 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.emotion-3 .emotion-6[aria-checked="mixed"]+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .emotion-7 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='false'][aria-checked='false']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='false']+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='false'][aria-checked='true']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='true']+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='false'][aria-checked='mixed']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='false'][aria-checked='mixed']+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='true'][aria-checked='false']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='false']+.emotion-5 .emotion-7 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-3:hover[aria-disabled='false'] .emotion-6[aria-invalid='true'][aria-checked='true']+.emotion-8 .emotion-10 {
+.emotion-0:hover[aria-disabled='false'] .emotion-3[aria-invalid='true'][aria-checked='true']+.emotion-5 .emotion-7 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-3 .emotion-6[aria-invalid="true"]+.emotion-8 {
+.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 {
   fill: #e51963;
 }
 
-.emotion-3 .emotion-6[aria-invalid="true"]+.emotion-8 .emotion-10 {
+.emotion-0 .emotion-3[aria-invalid="true"]+.emotion-5 .emotion-7 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.emotion-3 label {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-5 {
+.emotion-2 {
   position: absolute;
   white-space: nowrap;
   height: 1.5rem;
@@ -557,57 +533,57 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
   border-width: 0;
 }
 
-.emotion-5:not(:disabled) {
+.emotion-2:not(:disabled) {
   cursor: pointer;
 }
 
-.emotion-5:disabled {
+.emotion-2:disabled {
   cursor: not-allowed;
 }
 
-.emotion-5:not(:disabled):checked+.emotion-8,
-.emotion-5:not(:disabled)[aria-checked='mixed']+.emotion-8 {
+.emotion-2:not(:disabled):checked+.emotion-5,
+.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 {
   fill: #8c40ef;
 }
 
-.emotion-5:not(:disabled):checked+.emotion-8 .emotion-10,
-.emotion-5:not(:disabled)[aria-checked='mixed']+.emotion-8 .emotion-10 {
+.emotion-2:not(:disabled):checked+.emotion-5 .emotion-7,
+.emotion-2:not(:disabled)[aria-checked='mixed']+.emotion-5 .emotion-7 {
   stroke: #8c40ef;
 }
 
-.emotion-5:not(:disabled)[aria-invalid='true']+.emotion-8,
-.emotion-5:not(:disabled)[aria-invalid='mixed']+.emotion-8 {
+.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5,
+.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 {
   fill: #ffebf2;
 }
 
-.emotion-5:not(:disabled)[aria-invalid='true']+.emotion-8 .emotion-10,
-.emotion-5:not(:disabled)[aria-invalid='mixed']+.emotion-8 .emotion-10 {
+.emotion-2:not(:disabled)[aria-invalid='true']+.emotion-5 .emotion-7,
+.emotion-2:not(:disabled)[aria-invalid='mixed']+.emotion-5 .emotion-7 {
   stroke: #b3144d;
 }
 
-.emotion-5:focus+.emotion-8 {
+.emotion-2:focus+.emotion-5 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-5:focus+.emotion-8 .emotion-10 {
+.emotion-2:focus+.emotion-5 .emotion-7 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-5[aria-invalid='true']:focus+.emotion-8 {
+.emotion-2[aria-invalid='true']:focus+.emotion-5 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-5[aria-invalid='true']:focus+.emotion-8 .emotion-10 {
+.emotion-2[aria-invalid='true']:focus+.emotion-5 .emotion-7 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-7 {
+.emotion-4 {
   border-radius: 0.25rem;
   height: 1.5rem;
   width: 1.5rem;
@@ -615,7 +591,7 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
   min-height: 1.5rem;
 }
 
-.emotion-7 path {
+.emotion-4 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -627,12 +603,12 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
   transform: scale(0);
 }
 
-.emotion-9 {
+.emotion-6 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.emotion-11 {
+.emotion-8 {
   width: 100%;
   cursor: pointer;
 }
@@ -648,7 +624,7 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
         class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
       >
         <fieldset
-          class="emotion-0 emotion-1"
+          class="uv_19cjf6j0"
         >
           <div
             class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
@@ -676,27 +652,27 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
             >
               <div
                 aria-disabled="false"
-                class="emotion-2 emotion-3 emotion-4"
+                class="uv_19cjf6j1 emotion-0 emotion-1"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-5 emotion-6"
+                  class="emotion-2 emotion-3"
                   id="«r9»"
                   name="test.value-1"
                   type="checkbox"
                   value="value-1"
                 />
                 <svg
-                  class="emotion-7 emotion-8"
+                  class="emotion-4 emotion-5"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-9 emotion-10"
+                      class="emotion-6 emotion-7"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -725,7 +701,7 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
                     style="--uv_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-11 emotion-12 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       for="«r9»"
                     >
                       Checkbox 1
@@ -735,27 +711,27 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
               </div>
               <div
                 aria-disabled="false"
-                class="emotion-2 emotion-3 emotion-4"
+                class="uv_19cjf6j1 emotion-0 emotion-1"
                 data-checked="false"
                 data-error="false"
               >
                 <input
                   aria-checked="false"
                   aria-invalid="false"
-                  class="emotion-5 emotion-6"
+                  class="emotion-2 emotion-3"
                   id="«rc»"
                   name="test.value-2"
                   type="checkbox"
                   value="value-2"
                 />
                 <svg
-                  class="emotion-7 emotion-8"
+                  class="emotion-4 emotion-5"
                   fill="none"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
-                      class="emotion-9 emotion-10"
+                      class="emotion-6 emotion-7"
                       height="16"
                       rx="0.125rem"
                       stroke-width="2"
@@ -784,7 +760,7 @@ exports[`checkboxField > should trigger events correctly with required prop 1`] 
                     style="--uv_4k0ekn3: 1;"
                   >
                     <label
-                      class="emotion-11 emotion-12 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       for="«rc»"
                     >
                       Checkbox 2
