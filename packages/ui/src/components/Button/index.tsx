@@ -3,6 +3,7 @@
 import type {
   AriaRole,
   ButtonHTMLAttributes,
+  CSSProperties,
   MouseEventHandler,
   ReactNode,
   Ref,
@@ -47,6 +48,7 @@ type CommonProps = {
   onMouseLeave?: MouseEventHandler<HTMLElement>
   onPointerDown?: ButtonHTMLAttributes<HTMLButtonElement>['onPointerDown']
   onKeyDown?: ButtonHTMLAttributes<HTMLButtonElement>['onKeyDown']
+  style?: CSSProperties
 } & ButtonVariants
 
 type FinalProps = CommonProps & {
@@ -101,6 +103,7 @@ export const Button = forwardRef<Element, FinalProps>(
       tooltip,
       tabIndex,
       autoFocus,
+      style,
     },
     ref,
   ) => {
@@ -190,6 +193,7 @@ export const Button = forwardRef<Element, FinalProps>(
           onPointerDown={onPointerDown}
           ref={ref as Ref<HTMLButtonElement>}
           role={role}
+          style={style}
           tabIndex={tabIndex}
           type={type}
         >
