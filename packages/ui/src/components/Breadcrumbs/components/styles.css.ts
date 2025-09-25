@@ -1,7 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { HEIGHT } from '../constants'
 
 export const maxWidthVar = createVar({
   syntax: '*',
@@ -33,7 +32,6 @@ export const contentBreadcrumbs = style({
 
 export const itemContainerBreadcrumbs = recipe({
   base: {
-    height: HEIGHT,
     display: 'flex',
     alignItems: 'center',
     flex: '1',
