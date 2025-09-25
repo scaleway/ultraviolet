@@ -2,241 +2,79 @@
 
 exports[`tag > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </div>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`tag > renders correctly colored 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #641cb3;
-  background: #f1eefc;
-  border: solid 1px #f1eefc;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_sentiment_primary__d6zknp5"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </div>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`tag > renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  border: solid 1px #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_disabled_true__d6zknp9 styles_sentiment_neutral__d6zknp4"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </div>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`tag > renders correctly neutral 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </div>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`tag > renders correctly with copiable 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  cursor: pointer;
-  background: #e9eaeb;
-  border-color: #92959d;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -246,10 +84,10 @@ exports[`tag > renders correctly with copiable 1`] = `
       tabindex="0"
     >
       <button
-        class="emotion-0 emotion-1"
+        class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp4"
       >
         <div
-          class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
         >
           test
         </div>
@@ -261,44 +99,14 @@ exports[`tag > renders correctly with copiable 1`] = `
 
 exports[`tag > renders correctly with icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         <svg
           class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa"
@@ -312,7 +120,7 @@ exports[`tag > renders correctly with icon 1`] = `
         </svg>
         test
       </div>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -320,36 +128,6 @@ exports[`tag > renders correctly with icon 1`] = `
 exports[`tag > renders correctly with isLoading 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -357,11 +135,11 @@ exports[`tag > renders correctly with isLoading 1`] = `
 <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </div>
@@ -385,7 +163,7 @@ exports[`tag > renders correctly with isLoading 1`] = `
           stroke-width="16"
         />
         <circle
-          class="emotion-4"
+          class="emotion-0"
           cx="50"
           cy="50"
           fill="none"
@@ -397,67 +175,27 @@ exports[`tag > renders correctly with isLoading 1`] = `
           stroke-width="16"
         />
       </svg>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`tag > renders correctly with onClose 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-2 {
-  max-width: 14.5rem;
-}
-
-.emotion-4 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.125rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
-    <span
-      class="emotion-0 emotion-1"
+    <div
+      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
-        class="emotion-2 emotion-3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </div>
       <button
         aria-label="Close tag"
-        class="emotion-4 emotion-5 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__d6zknpb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         data-testid="close-tag"
         type="button"
       >
@@ -470,7 +208,7 @@ exports[`tag > renders correctly with onClose 1`] = `
           />
         </svg>
       </button>
-    </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
