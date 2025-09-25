@@ -757,6 +757,9 @@ exports[`pagination > should render correctly with perPage - default values 1`] 
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 .emotion-3[data-size='small'] {
@@ -1066,6 +1069,9 @@ exports[`pagination > should render correctly with perPage 1`] = `
   background: #ffffff;
   border-radius: 0.25rem;
   width: 100%;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 .emotion-3[data-size='small'] {
