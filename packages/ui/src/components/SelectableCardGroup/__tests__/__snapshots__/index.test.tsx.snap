@@ -8,123 +8,6 @@ exports[`selectableCardGroup > renders correctly 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] styles__17da2jl1,
-.emotion-2[data-has-label='true'] styles__9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='false']+styles__9pjq8o3 styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='true']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='mixed']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 styles__9pjq8o5:focus+styles__9pjq8o3,
-.emotion-4 styles__9pjq8o5:active+styles__9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 styles__9pjq8o5[aria-checked='false'] styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -147,21 +30,18 @@ exports[`selectableCardGroup > renders correctly 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="true"
                 data-error="false"
               >
@@ -222,21 +102,18 @@ exports[`selectableCardGroup > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="false"
                 data-error="false"
               >
@@ -311,133 +188,6 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] styles__17da2jl1,
-.emotion-2[data-has-label='true'] styles__9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6+styles__17da2jl7 {
-  fill: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6+styles__17da2jl7 styles__17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 styles__17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__17da2jl6+styles__17da2jl7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__17da2jl6+styles__17da2jl7 styles__17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__17da2jl6[aria-invalid='true']+styles__17da2jl7 styles__17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4 styles__17da2jl6[aria-disabled='false']:active+styles__17da2jl7 {
-  background: none;
-  fill: #8c40ef;
-}
-
-.emotion-4 styles__17da2jl6[aria-disabled='false']:active+styles__17da2jl7 styles__17da2jl0 {
-  fill: #ffffff;
-}
-
 <div
     data-testid="testing"
   >
@@ -460,16 +210,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="true"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="radio"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
@@ -477,7 +224,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-4 emotion-5 styles__17da2jl3"
+                  class="styles__475tndc styles__17da2jl3"
                   data-checked="true"
                   data-error="true"
                 >
@@ -527,16 +274,13 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="radio"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
@@ -544,7 +288,7 @@ exports[`selectableCardGroup > renders correctly as a radio 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-4 emotion-5 styles__17da2jl3"
+                  class="styles__475tndc styles__17da2jl3"
                   data-checked="false"
                   data-error="true"
                 >
@@ -613,119 +357,6 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] styles__17da2jl1,
-.emotion-2[data-has-label='true'] styles__9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='false']+styles__9pjq8o3 styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='true']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='mixed']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 styles__9pjq8o5:focus+styles__9pjq8o3,
-.emotion-4 styles__9pjq8o5:active+styles__9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 styles__9pjq8o5[aria-checked='false'] styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -757,21 +388,18 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: inline; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="true"
                 data-error="false"
               >
@@ -832,21 +460,18 @@ exports[`selectableCardGroup > renders correctly required and showTick 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: inline; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="false"
                 data-error="false"
               >
@@ -921,123 +546,6 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] styles__17da2jl1,
-.emotion-2[data-has-label='true'] styles__9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='false']+styles__9pjq8o3 styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='true']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='mixed']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 styles__9pjq8o5:focus+styles__9pjq8o3,
-.emotion-4 styles__9pjq8o5:active+styles__9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 styles__9pjq8o5[aria-checked='false'] styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -1060,21 +568,18 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
             style="--_3mg8xe0: repeat(2, minmax(0, 1fr)); --_3mg8xe1: repeat(2, minmax(0, 1fr)); --_3mg8xe2: repeat(2, minmax(0, 1fr)); --_3mg8xe3: repeat(2, minmax(0, 1fr)); --_3mg8xe4: repeat(2, minmax(0, 1fr)); --_3mg8xe5: repeat(2, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="true"
                 data-error="false"
               >
@@ -1135,21 +640,18 @@ exports[`selectableCardGroup > renders correctly with direction multiple columns
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="false"
                 data-error="false"
               >
@@ -1224,123 +726,6 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] styles__17da2jl1,
-.emotion-2[data-has-label='true'] styles__9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='false']+styles__9pjq8o3 styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='true']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='mixed']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 styles__9pjq8o5:focus+styles__9pjq8o3,
-.emotion-4 styles__9pjq8o5:active+styles__9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 styles__9pjq8o5[aria-checked='false'] styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -1363,21 +748,18 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="true"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="true"
                 data-error="true"
               >
@@ -1439,21 +821,18 @@ exports[`selectableCardGroup > renders correctly with error content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="false"
                 data-error="true"
               >
@@ -1534,123 +913,6 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] styles__17da2jl1,
-.emotion-2[data-has-label='true'] styles__9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='false']+styles__9pjq8o3 styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='true']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] styles__9pjq8o5[aria-invalid='false'][aria-checked='mixed']+styles__9pjq8o3 styles__9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 styles__9pjq8o5:focus+styles__9pjq8o3,
-.emotion-4 styles__9pjq8o5:active+styles__9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 styles__9pjq8o5[aria-checked='false'] styles__9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -1673,21 +935,18 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
             style="--_3mg8xe0: repeat(1, minmax(0, 1fr)); --_3mg8xe1: repeat(1, minmax(0, 1fr)); --_3mg8xe2: repeat(1, minmax(0, 1fr)); --_3mg8xe3: repeat(1, minmax(0, 1fr)); --_3mg8xe4: repeat(1, minmax(0, 1fr)); --_3mg8xe5: repeat(1, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="true"
                 data-error="false"
               >
@@ -1748,21 +1007,18 @@ exports[`selectableCardGroup > renders correctly with helper content 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_label__475tnd6 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
-              data-has-default-cursor="false"
-              data-has-label="true"
-              data-image="none"
               data-type="checkbox"
               role="button"
-              style="--_4k0ekn3: 1;"
+              style="--_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
               tabindex="0"
             >
               <div
                 aria-disabled="false"
-                class="styles__9pjq8o6 emotion-4 emotion-5"
+                class="styles__9pjq8o6 styles__475tndc"
                 data-checked="false"
                 data-error="false"
               >
