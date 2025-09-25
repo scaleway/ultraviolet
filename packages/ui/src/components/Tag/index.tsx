@@ -1,78 +1,22 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
-import type { Color } from '../../theme'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import type { SENTIMENTS } from './styles.css'
+import { closeButtonTag, containerTag, textTag } from './styles.css'
 
 const COPY_DURATION = 2500
-
-const StyledContainer = styled('span', {
-  shouldForwardProp: prop => !['sentiment', 'copiable'].includes(prop),
-})<{ sentiment: Color | 'disabled'; copiable?: boolean }>`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: 0 ${({ theme }) => theme.space['1']};
-  gap: ${({ theme }) => theme.space['1']};
-  width: fit-content;
-  height: ${({ theme }) => theme.sizing['300']};
-  ${({ copiable, theme }) =>
-    copiable &&
-    `
-    &:hover, &:active {
-      cursor: pointer;
-      background: ${theme.colors.neutral.backgroundWeakHover};
-      border-color: ${theme.colors.neutral.borderStrongHover};
-    }
-
-    &:active {
-      box-shadow: ${theme.shadows.focusNeutral};
-    }
-  `}
-
-  ${({ sentiment, theme }) => {
-    if (sentiment === 'disabled') {
-      return `
-      color: ${theme.colors.neutral.textDisabled};
-      background: ${theme.colors.neutral.backgroundDisabled};
-      border: solid 1px ${theme.colors.neutral.borderDisabled};
-      cursor: not-allowed
-
-    `
-    }
-    if (sentiment === 'neutral') {
-      return `
-      color: ${theme.colors.neutral.text};
-      background: ${theme.colors.neutral.background};
-      border: solid 1px ${theme.colors.neutral.border};
-    `
-    }
-
-    return `
-      color: ${theme.colors[sentiment].text};
-      background: ${theme.colors[sentiment].background};
-      border: solid 1px ${theme.colors[sentiment].background};
-    `
-  }}
-`
-
-const StyledText = styled(Text)`
-  max-width: 14.5rem;
-`
 
 type TagProps = {
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
-  sentiment?: Color
+  sentiment?: (typeof SENTIMENTS)[number]
   disabled?: boolean
   copiable?: boolean
   copyText?: string
@@ -87,12 +31,6 @@ type TagInnerProps = Omit<
   'copiable' | 'copyText' | 'copiedText' | 'className' | 'data-testid'
 >
 
-const StyledCloseButton = styled(Button)`
-  width: fit-content;
-  height: fit-content;
-  padding: ${({ theme }) => theme.space['0.25']};
-`
-
 const TagInner = ({
   children,
   isLoading = false,
@@ -100,13 +38,20 @@ const TagInner = ({
   disabled = false,
 }: TagInnerProps) => (
   <>
-    <StyledText aria-disabled={disabled} as="div" oneLine variant="caption">
+    <Text
+      aria-disabled={disabled}
+      as="div"
+      className={textTag}
+      oneLine
+      variant="caption"
+    >
       {children}
-    </StyledText>
+    </Text>
 
     {onClose && !isLoading ? (
-      <StyledCloseButton
+      <Button
         aria-label="Close tag"
+        className={closeButtonTag}
         data-testid="close-tag"
         disabled={disabled}
         onClick={onClose}
@@ -115,7 +60,7 @@ const TagInner = ({
         variant="ghost"
       >
         <CloseIcon size="small" />
-      </StyledCloseButton>
+      </Button>
     ) : null}
     {isLoading ? <Loader active size="small" /> : null}
   </>
@@ -154,35 +99,30 @@ export const Tag = ({
   })
 
   if (copiable && !disabled) {
-    const Container = StyledContainer.withComponent('button')
-
     return (
       <Tooltip text={isCopied ? copiedText : copyText}>
-        <Container
-          // @note: sending disabled as a special sentiment is a bit weird
-          className={className}
-          copiable
+        <button
+          className={`${className ? `${className} ` : ''}${containerTag({ copiable, disabled, sentiment })}`}
           data-testid={dataTestId}
+          disabled={disabled}
           onClick={setCopied}
-          sentiment={disabled ? 'disabled' : sentiment}
         >
           <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
             {children}
           </TagInner>
-        </Container>
+        </button>
       </Tooltip>
     )
   }
 
   return (
-    <StyledContainer
-      className={className}
+    <div
+      className={`${className ? `${className} ` : ''}${containerTag({ disabled, sentiment })}`}
       data-testid={dataTestId}
-      sentiment={disabled ? 'disabled' : sentiment}
     >
       <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
         {children}
       </TagInner>
-    </StyledContainer>
+    </div>
   )
 }

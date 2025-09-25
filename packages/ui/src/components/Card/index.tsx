@@ -1,10 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { borderedBox, stackCard } from './styles.css'
 
 type CardProps = {
   children: ReactNode
@@ -21,28 +21,6 @@ type CardProps = {
   className?: string
   'data-testid'?: string
 }
-
-const StyledStack = styled(Stack)`
-  &[data-disabled='true'] {
-    cursor: not-allowed;
-  }
-`
-
-const BorderedBox = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => theme.space['3']};
-
-  &[data-is-active='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.primary.border};
-  }
-
-  &[data-disabled='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
-  }
-
-  flex: 1 1 auto;
-`
 
 /**
  * Card component is a simple component to display content in a box with a border.
@@ -61,8 +39,8 @@ export const Card = forwardRef(
     ref: Ref<HTMLDivElement>,
   ) =>
     header ? (
-      <StyledStack
-        className={className}
+      <Stack
+        className={`${className ? `${className} ` : ''}${stackCard}`}
         data-disabled={disabled}
         data-testid={dataTestId}
         gap={1}
@@ -81,7 +59,11 @@ export const Card = forwardRef(
         ) : (
           header
         )}
-        <BorderedBox data-disabled={disabled} data-is-active={active}>
+        <div
+          className={borderedBox}
+          data-disabled={disabled}
+          data-is-active={active}
+        >
           {subHeader ? (
             <Stack gap={2}>
               {typeof subHeader === 'string' ? (
@@ -101,11 +83,11 @@ export const Card = forwardRef(
           ) : (
             children
           )}
-        </BorderedBox>
-      </StyledStack>
+        </div>
+      </Stack>
     ) : (
-      <BorderedBox
-        className={className}
+      <div
+        className={`${className ? `${className} ` : ''}${borderedBox}`}
         data-disabled={disabled}
         data-is-active={active}
         data-testid={dataTestId}
@@ -130,6 +112,6 @@ export const Card = forwardRef(
         ) : (
           children
         )}
-      </BorderedBox>
+      </div>
     ),
 )
