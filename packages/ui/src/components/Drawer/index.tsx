@@ -18,6 +18,7 @@ export const SIZES = {
   // 1 rem = 16 px
   small: 22.25,
 }
+
 const slideIn = (translation: number) => keyframes`
   from {
     transform: translateX(${translation}rem);
@@ -28,14 +29,20 @@ const slideIn = (translation: number) => keyframes`
  `
 
 const slideAnimation = (size: 'small' | 'medium' | 'large') => {
-  if (size === 'small') {
-    return css`animation: ${slideIn(22)} linear 150ms;`
-  }
-  if (size === 'medium') {
-    return css`animation: ${slideIn(48)} linear 250ms;`
-  }
+  const translations = {
+    large: 70,
+    medium: 48,
+    small: 21,
+  } as const
 
-  return css`animation: ${slideIn(70)} linear 300ms;`
+  const animationDuration = {
+    large: 300,
+    medium: 250,
+    small: 150,
+  }
+  const animation = slideIn(translations[size])
+
+  return css`animation: ${animation} linear ${animationDuration[size]}ms;`
 }
 
 const StyledModal = styled(Modal)`
