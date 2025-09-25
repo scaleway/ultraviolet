@@ -54,7 +54,6 @@ const Legends = ({ focused, data, onFocusChange, colors }: LegendsProps) => (
               style={assignInlineVars({
                 [colorBullet]: colors[index],
               })}
-              // needPattern={item.needPattern}
             />
             <div className={labelPie}>
               <span className={textPie({ isFocused: isSegmentFocused })}>
