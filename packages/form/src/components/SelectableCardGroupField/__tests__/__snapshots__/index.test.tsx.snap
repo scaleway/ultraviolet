@@ -8,133 +8,6 @@ exports[`selectableCardField > should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] uv_17da2jl1,
-.emotion-2[data-has-label='true'] uv_9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6+uv_17da2jl7 {
-  fill: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6+uv_17da2jl7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4 uv_17da2jl6[aria-disabled='false']:active+uv_17da2jl7 {
-  background: none;
-  fill: #8c40ef;
-}
-
-.emotion-4 uv_17da2jl6[aria-disabled='false']:active+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
 <div
     data-testid="testing"
   >
@@ -161,16 +34,13 @@ exports[`selectableCardField > should render correctly 1`] = `
               style="--uv_3mg8xe0: repeat(1, minmax(0, 1fr)); --uv_3mg8xe1: repeat(1, minmax(0, 1fr)); --uv_3mg8xe2: repeat(1, minmax(0, 1fr)); --uv_3mg8xe3: repeat(1, minmax(0, 1fr)); --uv_3mg8xe4: repeat(1, minmax(0, 1fr)); --uv_3mg8xe5: repeat(1, minmax(0, 1fr));"
             >
               <div
-                class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
                 data-type="radio"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_18vc4d30: none; --uv_18vc4d31: inline; --uv_18vc4d32: 100%;"
                 tabindex="0"
               >
                 <div
@@ -178,7 +48,7 @@ exports[`selectableCardField > should render correctly 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-4 emotion-5 uv_17da2jl3"
+                    class="uv_475tndc uv_17da2jl3"
                     data-checked="false"
                     data-error="false"
                   >
@@ -227,16 +97,13 @@ exports[`selectableCardField > should render correctly 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
                 data-type="radio"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_18vc4d30: none; --uv_18vc4d31: inline; --uv_18vc4d32: 100%;"
                 tabindex="0"
               >
                 <div
@@ -244,7 +111,7 @@ exports[`selectableCardField > should render correctly 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-4 emotion-5 uv_17da2jl3"
+                    class="uv_475tndc uv_17da2jl3"
                     data-checked="false"
                     data-error="false"
                   >
@@ -309,123 +176,6 @@ exports[`selectableCardField > should render correctly checked as a checkbox 1`]
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] uv_17da2jl1,
-.emotion-2[data-has-label='true'] uv_9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_9pjq8o5[aria-invalid='false'][aria-checked='false']+uv_9pjq8o3 uv_9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_9pjq8o5[aria-invalid='false'][aria-checked='true']+uv_9pjq8o3 uv_9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_9pjq8o5[aria-invalid='false'][aria-checked='mixed']+uv_9pjq8o3 uv_9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 uv_9pjq8o5:focus+uv_9pjq8o3,
-.emotion-4 uv_9pjq8o5:active+uv_9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 uv_9pjq8o5[aria-checked='false'] uv_9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -452,22 +202,19 @@ exports[`selectableCardField > should render correctly checked as a checkbox 1`]
               style="--uv_3mg8xe0: repeat(1, minmax(0, 1fr)); --uv_3mg8xe1: repeat(1, minmax(0, 1fr)); --uv_3mg8xe2: repeat(1, minmax(0, 1fr)); --uv_3mg8xe3: repeat(1, minmax(0, 1fr)); --uv_3mg8xe4: repeat(1, minmax(0, 1fr)); --uv_3mg8xe5: repeat(1, minmax(0, 1fr));"
             >
               <div
-                class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 data-checked="true"
                 data-disabled="false"
                 data-error="false"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
                 data-testid="checked"
                 data-type="checkbox"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_18vc4d30: none; --uv_18vc4d31: inline; --uv_18vc4d32: 100%;"
                 tabindex="0"
               >
                 <div
                   aria-disabled="false"
-                  class="uv_9pjq8o6 emotion-4 emotion-5"
+                  class="uv_9pjq8o6 uv_475tndc"
                   data-checked="true"
                   data-error="false"
                 >
@@ -544,133 +291,6 @@ exports[`selectableCardField > should render correctly checked as radiofield 1`]
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] uv_17da2jl1,
-.emotion-2[data-has-label='true'] uv_9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6+uv_17da2jl7 {
-  fill: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false']:not([data-checked='true']) uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6+uv_17da2jl7 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_17da2jl6[aria-invalid='true']+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
-.emotion-4 uv_17da2jl6[aria-disabled='false']:active+uv_17da2jl7 {
-  background: none;
-  fill: #8c40ef;
-}
-
-.emotion-4 uv_17da2jl6[aria-disabled='false']:active+uv_17da2jl7 uv_17da2jl0 {
-  fill: #ffffff;
-}
-
 <div
     data-testid="testing"
   >
@@ -697,17 +317,14 @@ exports[`selectableCardField > should render correctly checked as radiofield 1`]
               style="--uv_3mg8xe0: repeat(1, minmax(0, 1fr)); --uv_3mg8xe1: repeat(1, minmax(0, 1fr)); --uv_3mg8xe2: repeat(1, minmax(0, 1fr)); --uv_3mg8xe3: repeat(1, minmax(0, 1fr)); --uv_3mg8xe4: repeat(1, minmax(0, 1fr)); --uv_3mg8xe5: repeat(1, minmax(0, 1fr));"
             >
               <div
-                class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 data-checked="true"
                 data-disabled="false"
                 data-error="false"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
                 data-testid="checked"
                 data-type="radio"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_18vc4d30: none; --uv_18vc4d31: inline; --uv_18vc4d32: 100%;"
                 tabindex="0"
               >
                 <div
@@ -715,7 +332,7 @@ exports[`selectableCardField > should render correctly checked as radiofield 1`]
                 >
                   <div
                     aria-disabled="false"
-                    class="emotion-4 emotion-5 uv_17da2jl3"
+                    class="uv_475tndc uv_17da2jl3"
                     data-checked="true"
                     data-error="false"
                   >
@@ -781,123 +398,6 @@ exports[`selectableCardField > should trigger events correctly 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
-  position: relative;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-}
-
-.emotion-2[data-has-label='false']>:first-child {
-  margin-bottom: -0.25rem;
-}
-
-.emotion-2[data-has-default-cursor='true'] {
-  cursor: default;
-}
-
-.emotion-2[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-image="illustration"] {
-  padding: 0rem;
-}
-
-.emotion-2[data-image="icon"] {
-  padding: 0rem;
-  padding-right: 1rem;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-2:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.emotion-2[data-has-label='true'] uv_17da2jl1,
-.emotion-2[data-has-label='true'] uv_9pjq8o6 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.emotion-4[data-checked='true'] {
-  color: #641cb3;
-}
-
-.emotion-4[data-error='true'] {
-  color: #b3144d;
-}
-
-.emotion-4[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.emotion-4 input+svg {
-  display: none;
-}
-
-.emotion-4 label {
-  width: 100%;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_9pjq8o5[aria-invalid='false'][aria-checked='false']+uv_9pjq8o3 uv_9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_9pjq8o5[aria-invalid='false'][aria-checked='true']+uv_9pjq8o3 uv_9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] uv_9pjq8o5[aria-invalid='false'][aria-checked='mixed']+uv_9pjq8o3 uv_9pjq8o1 {
-  stroke: #8c40ef;
-  fill: #8c40ef;
-}
-
-.emotion-4 uv_9pjq8o5:focus+uv_9pjq8o3,
-.emotion-4 uv_9pjq8o5:active+uv_9pjq8o3 {
-  outline: none;
-  background-color: #ffffff;
-  fill: #ffffff;
-}
-
-.emotion-4 uv_9pjq8o5[aria-checked='false'] uv_9pjq8o1 {
-  fill: #ffffff;
-  stroke: #d9dadd;
-}
-
 <div
     data-testid="testing"
   >
@@ -924,21 +424,18 @@ exports[`selectableCardField > should trigger events correctly 1`] = `
               style="--uv_3mg8xe0: repeat(1, minmax(0, 1fr)); --uv_3mg8xe1: repeat(1, minmax(0, 1fr)); --uv_3mg8xe2: repeat(1, minmax(0, 1fr)); --uv_3mg8xe3: repeat(1, minmax(0, 1fr)); --uv_3mg8xe4: repeat(1, minmax(0, 1fr)); --uv_3mg8xe5: repeat(1, minmax(0, 1fr));"
             >
               <div
-                class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
                 data-type="checkbox"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_18vc4d30: none; --uv_18vc4d31: inline; --uv_18vc4d32: 100%;"
                 tabindex="0"
               >
                 <div
                   aria-disabled="false"
-                  class="uv_9pjq8o6 emotion-4 emotion-5"
+                  class="uv_9pjq8o6 uv_475tndc"
                   data-checked="false"
                   data-error="false"
                 >
@@ -998,21 +495,18 @@ exports[`selectableCardField > should trigger events correctly 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 data-checked="false"
                 data-disabled="false"
                 data-error="false"
-                data-has-default-cursor="false"
-                data-has-label="true"
-                data-image="none"
                 data-type="checkbox"
                 role="button"
-                style="--uv_4k0ekn3: 1;"
+                style="--uv_18vc4d30: none; --uv_18vc4d31: inline; --uv_18vc4d32: 100%;"
                 tabindex="0"
               >
                 <div
                   aria-disabled="false"
-                  class="uv_9pjq8o6 emotion-4 emotion-5"
+                  class="uv_9pjq8o6 uv_475tndc"
                   data-checked="false"
                   data-error="false"
                 >
