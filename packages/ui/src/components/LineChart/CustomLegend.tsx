@@ -2,7 +2,6 @@
 
 import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import type { DatumValue } from '@nivo/core'
 import type { Serie } from '@nivo/line'
 import type { ComponentProps } from 'react'
@@ -10,6 +9,12 @@ import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
+import {
+  cellValueContainer,
+  container,
+  longContainer,
+  textLegend,
+} from './styles.css'
 
 const styles = {
   body: (theme: Theme) => css`
@@ -47,28 +52,11 @@ type CellProps = {
   variant: ComponentProps<typeof Text>['variant']
 }
 
-const StyledText = styled(Text)`
-  text-align: right;
-  flex: 1;
-  min-width: 72px;
-  align-self: center;
-`
-
 const Cell = ({ value, variant }: CellProps) => (
-  <StyledText as="span" sentiment="neutral" variant={variant}>
+  <Text as="span" className={textLegend} sentiment="neutral" variant={variant}>
     {value as string | number}
-  </StyledText>
+  </Text>
 )
-
-const CellValueContainer = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const LongContainer = styled.div`
-  display: flex;
-  flex: 6;
-`
 
 type Transformer = (value: DatumValue) => string
 
@@ -83,10 +71,6 @@ type CustomLegendProps = {
   'data-testid'?: string
 }
 
-const StyledContainer = styled.div`
-  margin-top: ${({ theme }) => theme.space[2]};
-`
-
 export const CustomLegend = ({
   axisTransformer = noop,
   data,
@@ -95,12 +79,15 @@ export const CustomLegend = ({
   className,
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
-  <StyledContainer className={className} data-testid={dataTestId}>
+  <div
+    className={`${className ? `${className} ` : ''}${container}`}
+    data-testid={dataTestId}
+  >
     <div
       // oxlint-disable-next-line no-unknown-property
       css={styles.head}
     >
-      <LongContainer>Legend</LongContainer>
+      <div className={longContainer}>Legend</div>
       <Cell value="Minimum" variant="body" />
       <Cell value="Maximum" variant="body" />
       <Cell value="Average" variant="body" />
@@ -122,7 +109,7 @@ export const CustomLegend = ({
             // oxlint-disable-next-line no-unknown-property
             key={labelIndexed}
           >
-            <LongContainer>
+            <div className={longContainer}>
               <Checkbox
                 checked={selected.includes(labelIndexed)}
                 name={id}
@@ -130,7 +117,7 @@ export const CustomLegend = ({
                   setSelected([...getSelected(id, index, selected)])
                 }
               >
-                <CellValueContainer>
+                <div className={cellValueContainer}>
                   <Text as="span" sentiment="neutral" variant="bodySmall">
                     {row?.['label']}
                   </Text>
@@ -140,9 +127,9 @@ export const CustomLegend = ({
                     // oxlint-disable-next-line no-unknown-property
                     data-testid={`label-${id}`}
                   />
-                </CellValueContainer>
+                </div>
               </Checkbox>
-            </LongContainer>
+            </div>
             <Cell value={axisTransformer(getMin(values))} variant="bodySmall" />
             <Cell value={axisTransformer(getMax(values))} variant="bodySmall" />
             <Cell
@@ -157,5 +144,5 @@ export const CustomLegend = ({
         )
       })}
     </div>
-  </StyledContainer>
+  </div>
 )
