@@ -1,44 +1,25 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Line } from './Line'
-
-const CIRCLE_SIZE = 12.875 // in rem
-
-const StyledContainer = styled.div`
-  display: flex;
-`
-
-const StyledSVG = styled.svg`
-  height: ${CIRCLE_SIZE}rem;
-  width: ${CIRCLE_SIZE}rem;
-  transform: rotate(-90deg);
-`
-
-const StyledCircle = styled.circle`
-  transform-origin: 50% 50%;
-  stroke: ${({ theme }) => theme.colors.neutral.borderWeak};
-  stroke-width: 18;
-  stroke-linecap: butt;
-  fill: none;
-`
-
-const LineList = styled.ul`
-  display: grid;
-  list-style: none;
-  gap: ${({ theme }) => theme.space['2']};
-`
+import {
+  CIRCLE_SIZE,
+  donutSkeletonCircle,
+  donutSkeletonContainer,
+  donutSkeletonLineList,
+  donutSkeletonSvg,
+} from './stylesVariants.css'
 
 export const Donut = () => (
-  <StyledContainer>
-    <StyledSVG>
-      <StyledCircle
+  <div className={donutSkeletonContainer}>
+    <svg className={donutSkeletonSvg}>
+      <circle
+        className={donutSkeletonCircle}
         cx={`${CIRCLE_SIZE / 2}rem`}
         cy={`${CIRCLE_SIZE / 2}rem`}
         r="90"
       />
-    </StyledSVG>
-    <LineList>
+    </svg>
+    <ul className={donutSkeletonLineList}>
       <li>
         <Line />
       </li>
@@ -51,6 +32,6 @@ export const Donut = () => (
       <li>
         <Line />
       </li>
-    </LineList>
-  </StyledContainer>
+    </ul>
+  </div>
 )
