@@ -1,7 +1,7 @@
 'use client'
 
-import { keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import { useTheme } from '../../theme'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
 import { BoxWithIcon } from './BoxWithIcon'
@@ -10,47 +10,13 @@ import { Line } from './Line'
 import { List } from './List'
 import { Slider } from './Slider'
 import { Square } from './Square'
-
-const shineAnimation = keyframes`
-  from {
-    left: -25%;
-  }
-  to {
-    left: 100%;
-  }
-`
-
-const StyledContainer = styled.div`
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-`
-
-const StyledDiv = styled.div`
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-    90deg,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}00,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}4D,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}66,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}4D,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}00
-  );
-  animation: ${shineAnimation} 1s linear infinite;
-  animation-direction: alternate;
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: unset;
-  }
-`
+import {
+  colorGradient4D,
+  colorGradient00,
+  colorGradient66,
+  skeletonContainer,
+  skeletonHighlight,
+} from './styles.css'
 
 const variants = {
   block: Block,
@@ -88,19 +54,28 @@ export const Skeleton = ({
   'data-testid': dataTestId,
 }: SkeletonProps) => {
   const Component = variants[variant]
+  const theme = useTheme()
+  const baseColor = theme.colors.neutral.backgroundWeak
 
   return (
-    <StyledContainer
+    <div
       aria-busy
       aria-label={ariaLabel}
       aria-live="polite"
-      className={className}
+      className={`${className ? `${className} ` : ''}${skeletonContainer}`}
       data-testid={dataTestId}
     >
       <Component col={col} length={length} />
 
-      <StyledDiv />
-    </StyledContainer>
+      <div
+        className={skeletonHighlight}
+        style={assignInlineVars({
+          [colorGradient00]: `${baseColor}00`,
+          [colorGradient4D]: `${baseColor}4D`,
+          [colorGradient66]: `${baseColor}66`,
+        })}
+      />
+    </div>
   )
 }
 

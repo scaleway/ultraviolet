@@ -1,25 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
-
-const StyledContainer = styled.div<{ col: number }>`
-  display: grid;
-  grid-template-columns: repeat(${({ col }) => col}, 1fr);
-  gap: ${({ theme }) => theme.space['2']};
-`
-
-const Block = styled.div`
-  height: 8.125rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-radius: ${({ theme }) => theme.radii.default};
-  overflow: hidden;
-`
+import {
+  blocksContainer,
+  boxWithIconSkeleton,
+  columns,
+} from './stylesVariants.css'
 
 export const BoxWithIcon = ({
   col = 4,
@@ -28,12 +16,17 @@ export const BoxWithIcon = ({
   col?: number
   length?: number
 }) => (
-  <StyledContainer col={col}>
+  <div
+    className={blocksContainer}
+    style={assignInlineVars({
+      [columns]: col.toString(),
+    })}
+  >
     {Array.from({ length }, (_, i) => (
-      <Block key={`skeleton-box-${i}`}>
+      <div className={boxWithIconSkeleton} key={`skeleton-box-${i}`}>
         <IconSkeleton />
         <Line />
-      </Block>
+      </div>
     ))}
-  </StyledContainer>
+  </div>
 )
