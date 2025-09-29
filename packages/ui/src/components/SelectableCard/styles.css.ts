@@ -3,6 +3,7 @@ import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { radioStack } from '../Radio/styles.css'
 import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
+import { checkboxContainer } from '../Checkbox/styles.css'
 
 export const containerSelectableCard = recipe({
   base: {
@@ -79,6 +80,10 @@ export const labelContainerSelectableCard = styleVariants({
 })
 
 globalStyle(`${labelContainerSelectableCard.label} ${radioStack}`, {
+  width: '100%',
+})
+
+globalStyle(`${labelContainerSelectableCard.label} ${checkboxContainer}`, {
   width: '100%',
 })
 
