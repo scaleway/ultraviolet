@@ -1,6 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-import { SIZES, PROMINENCES, SENTIMENTS } from './constants'
+import { PROMINENCES, SENTIMENTS, SIZES } from './constants'
 import capitalize from '../../utils/capitalize'
 import { globalStyle } from '@vanilla-extract/css'
 
@@ -15,21 +15,22 @@ function generateSizeStyle(size: keyof typeof SIZES) {
 
 function getIconColor(
   prominence: keyof typeof PROMINENCES,
-  sentiment: (typeof SENTIMENTS)[number],
+  sentiment?: (typeof SENTIMENTS)[number],
   disabled?: boolean,
 ) {
+  if (!sentiment) {
+    return 'currentColor'
+  }
+
   const definedProminence =
-    (sentiment !== 'neutral' && prominence === 'stronger') ||
-    prominence === 'weak'
-      ? capitalize(PROMINENCES.default)
-      : capitalize(PROMINENCES[prominence])
+    sentiment === 'neutral' ? capitalize(PROMINENCES[prominence]) : ''
 
   const themeColor = theme.colors[sentiment]
   const iconToken = `icon${definedProminence}${
     disabled ? 'Disabled' : ''
   }` as keyof typeof themeColor
 
-  return theme.colors?.[sentiment]?.[iconToken] || sentiment
+  return themeColor[iconToken]
 }
 
 export const icon = recipe({
@@ -38,7 +39,9 @@ export const icon = recipe({
     fill: 'currentcolor',
   },
   variants: {
-    sentiment: Object.fromEntries(SENTIMENTS.map(sentiment => [sentiment, {}])),
+    sentiment: Object.fromEntries(
+      SENTIMENTS.map(sentiment => [sentiment, {}]),
+    ) as Record<(typeof SENTIMENTS)[number], object>,
     size: Object.fromEntries(
       Object.keys(SIZES).map(size => [
         size,
@@ -51,35 +54,27 @@ export const icon = recipe({
     },
     prominence: Object.fromEntries(
       Object.keys(PROMINENCES).map(prominence => [prominence, {}]),
-    ),
+    ) as Record<keyof typeof PROMINENCES, object>,
   },
-  compoundVariants: [
-    ...Object.keys(PROMINENCES).flatMap(prominence =>
-      SENTIMENTS.map(sentiment => ({
+  compoundVariants: [true, false].flatMap(disabled =>
+    Object.keys(PROMINENCES).flatMap(prominence =>
+      [...SENTIMENTS, undefined].map(sentiment => ({
+        // We need to add undefined to have the variant where sentiment is undefined
         variants: {
           sentiment,
           prominence: prominence as keyof typeof PROMINENCES,
-          disabled: false,
+          disabled,
         },
         style: {
-          fill: getIconColor(prominence as keyof typeof PROMINENCES, sentiment),
+          fill: getIconColor(
+            prominence as keyof typeof PROMINENCES,
+            sentiment,
+            disabled,
+          ),
         },
       })),
     ),
-
-    ...Object.keys(PROMINENCES).flatMap(prominence =>
-      SENTIMENTS.map(sentiment => ({
-        variants: {
-          sentiment,
-          prominence: prominence as keyof typeof PROMINENCES,
-          disabled: true,
-        },
-        style: {
-          fill: getIconColor(prominence as keyof typeof PROMINENCES, sentiment),
-        },
-      })),
-    ),
-  ],
+  ),
   defaultVariants: {
     prominence: 'default',
     disabled: false,
