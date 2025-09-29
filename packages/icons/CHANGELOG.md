@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-beta.2
+
+### Patch Changes
+
+- [#5595](https://github.com/scaleway/ultraviolet/pull/5595) [`568797d`](https://github.com/scaleway/ultraviolet/commit/568797dde5a4ca3cee9e56014d1e45dfff171b2c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Icon />` component to set correct compound variant for neutral
+
 ## 5.0.0-beta.1
 
 ### Major Changes
