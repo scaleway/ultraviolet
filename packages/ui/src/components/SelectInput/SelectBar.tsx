@@ -303,7 +303,7 @@ const DisplayValues = ({
     </MultiselectStack>
   ) : (
     <SelectedValues
-      as="div"
+      as="span"
       disabled={disabled}
       prominence="default"
       sentiment="neutral"
@@ -605,7 +605,7 @@ const SelectBar = ({
           />
         ) : (
           <Placeholder
-            as="p"
+            as="span"
             disabled={disabled}
             prominence="weak"
             sentiment="neutral"
