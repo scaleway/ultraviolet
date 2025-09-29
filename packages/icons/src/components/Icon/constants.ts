@@ -12,7 +12,7 @@ export const PROMINENCES = {
   strong: 'strong',
   stronger: 'stronger',
   weak: 'weak',
-}
+} as const
 
 export const SENTIMENTS = [
   'primary',
