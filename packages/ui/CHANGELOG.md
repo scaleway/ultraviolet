@@ -1,5 +1,29 @@
 # Change Log
 
+## 3.0.0-beta.14
+
+### Minor Changes
+
+- [#5580](https://github.com/scaleway/ultraviolet/pull/5580) [`d73ead7`](https://github.com/scaleway/ultraviolet/commit/d73ead73008c7798c3085724e1966d9e55503a24) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<RadioGroup />`, `<CheckboxGroup />` and `<ToggleGroup />` to use vanilla extract
+
+- [#5583](https://github.com/scaleway/ultraviolet/pull/5583) [`93d75dd`](https://github.com/scaleway/ultraviolet/commit/93d75dd371c3c7740e669b1567a2580d0e17afd8) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<ExpandableCard />` to use vanilla extract
+
+- [#5577](https://github.com/scaleway/ultraviolet/pull/5577) [`660d30e`](https://github.com/scaleway/ultraviolet/commit/660d30e5d85dac2be4f10f28f486c31ad922b60a) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Checkbox />` to use vanilla extract
+
+- [#5576](https://github.com/scaleway/ultraviolet/pull/5576) [`9ad2c9a`](https://github.com/scaleway/ultraviolet/commit/9ad2c9af20cc15669fdcd959f4e5c1b0971e99c6) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Tag` and `Card` to use vanilla-extract instead of Emotion
+
+- [#5578](https://github.com/scaleway/ultraviolet/pull/5578) [`aaa2c52`](https://github.com/scaleway/ultraviolet/commit/aaa2c521f9c2a924c50ecaf5aa49f92791e734c9) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Breadcrumbs` to use vanilla-extract instead of emotion
+  - `Button`: Add prop "style"
+
+### Patch Changes
+
+- [#5593](https://github.com/scaleway/ultraviolet/pull/5593) [`245d454`](https://github.com/scaleway/ultraviolet/commit/245d4542c11d636973aaaef86ae53a57ab16f236) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: fix animation on small
+
+- [#5586](https://github.com/scaleway/ultraviolet/pull/5586) [`943b05a`](https://github.com/scaleway/ultraviolet/commit/943b05adef22d7e03976cd67a5d97f56c18c2482) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: placeholder shoul be a `span` instead of a `p`
+
+- Updated dependencies [[`568797d`](https://github.com/scaleway/ultraviolet/commit/568797dde5a4ca3cee9e56014d1e45dfff171b2c)]:
+  - @ultraviolet/icons@5.0.0-beta.2
+
 ## 3.0.0-beta.13
 
 ### Major Changes
