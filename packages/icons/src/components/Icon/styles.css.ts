@@ -78,7 +78,6 @@ export const icon = recipe({
   defaultVariants: {
     prominence: 'default',
     disabled: false,
-    sentiment: 'neutral',
   },
 })
 
