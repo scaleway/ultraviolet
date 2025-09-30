@@ -1,7 +1,5 @@
 'use client'
 
-import { assignInlineVars } from '@vanilla-extract/dynamic'
-import { useTheme } from '../../theme'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
 import { BoxWithIcon } from './BoxWithIcon'
@@ -10,13 +8,7 @@ import { Line } from './Line'
 import { List } from './List'
 import { Slider } from './Slider'
 import { Square } from './Square'
-import {
-  colorGradient4D,
-  colorGradient00,
-  colorGradient66,
-  skeletonContainer,
-  skeletonHighlight,
-} from './styles.css'
+import { skeletonContainer, skeletonHighlight } from './styles.css'
 
 const variants = {
   block: Block,
@@ -54,8 +46,6 @@ export const Skeleton = ({
   'data-testid': dataTestId,
 }: SkeletonProps) => {
   const Component = variants[variant]
-  const theme = useTheme()
-  const baseColor = theme.colors.neutral.backgroundWeak
 
   return (
     <div
@@ -67,14 +57,7 @@ export const Skeleton = ({
     >
       <Component col={col} length={length} />
 
-      <div
-        className={skeletonHighlight}
-        style={assignInlineVars({
-          [colorGradient00]: `${baseColor}00`,
-          [colorGradient4D]: `${baseColor}4D`,
-          [colorGradient66]: `${baseColor}66`,
-        })}
-      />
+      <div className={skeletonHighlight} />
     </div>
   )
 }

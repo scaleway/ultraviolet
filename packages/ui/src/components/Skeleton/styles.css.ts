@@ -1,4 +1,5 @@
-import { createVar, keyframes, style } from '@vanilla-extract/css'
+import { theme } from '@ultraviolet/themes'
+import { keyframes, style } from '@vanilla-extract/css'
 
 const shineAnimation = keyframes({
   '0%': {
@@ -9,9 +10,9 @@ const shineAnimation = keyframes({
   },
 })
 
-export const colorGradient00 = createVar()
-export const colorGradient4D = createVar()
-export const colorGradient66 = createVar()
+function createColor(opacity: number) {
+  return `rgb(from ${theme.colors.neutral.backgroundWeak} r g b / ${opacity})`
+}
 
 export const skeletonContainer = style({
   position: 'relative',
@@ -31,11 +32,11 @@ export const skeletonHighlight = style({
   opacity: 0.8,
   background: `linear-gradient(
     90deg,
-    ${colorGradient00},
-    ${colorGradient4D},
-    ${colorGradient66},
-    ${colorGradient4D},
-    ${colorGradient00}
+    ${createColor(0)},
+    ${createColor(0.3)},
+    ${createColor(0.4)},
+    ${createColor(0.3)},
+    ${createColor(0)}
   )`,
   animation: `${shineAnimation} 1s linear infinite`,
   animationDirection: 'alternate',
