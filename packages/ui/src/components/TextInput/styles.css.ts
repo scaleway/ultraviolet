@@ -64,22 +64,20 @@ export const inputClass = style({
   },
 })
 
-export const inputWrapperSizes = styleVariants(Object.fromEntries(
-    Object.keys(TEXTINPUT_SIZE_HEIGHT).map(size => [
-      size,
-      {
+export const inputWrapperSizes = styleVariants(
+  Object.keys(TEXTINPUT_SIZE_HEIGHT).reduce(
+    (acc, size) => ({
+      ...acc,
+      [size]: {
         height:
           theme.sizing[
             TEXTINPUT_SIZE_HEIGHT[size as keyof typeof TEXTINPUT_SIZE_HEIGHT]
           ],
       },
-    ]),
-  ))
-
-export const inputWrapperHasFocus = style({
-  boxShadow: theme.shadows.focusPrimary,
-  border: `1px solid ${theme.colors.primary.border}`,
-})
+    }),
+    {} as Record<keyof typeof TEXTINPUT_SIZE_HEIGHT, { height: string }>,
+  ),
+)
 
 export const inputWrapper = style({
   display: 'flex',
@@ -104,6 +102,10 @@ export const inputWrapper = style({
     "&[data-disabled='true']": {
       background: theme.colors.neutral.backgroundDisabled,
       borderColor: theme.colors.neutral.borderDisabled,
+    },
+    "&[data-has-focus='true']": {
+      boxShadow: theme.shadows.focusPrimary,
+      border: `1px solid ${theme.colors.primary.border}`,
     },
     '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
       borderColor: theme.colors.primary.border,
