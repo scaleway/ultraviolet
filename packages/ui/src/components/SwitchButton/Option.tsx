@@ -20,6 +20,12 @@ const StyledSelectableCard = styled(SelectableCard, {
   height: 100%;
   user-select: none;
 
+  &[data-checked="false"]:active,  &[data-checked="false"]:hover {
+    &:not([data-error="true"]):not([data-disabled="true"]) { 
+      box-shadow: none;
+    }
+  }
+
   &:hover,
   &:active {
     box-shadow: none;
