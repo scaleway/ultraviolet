@@ -16,7 +16,7 @@ const StyledSelectableCard = styled(SelectableCard)`
   padding: 0;
   padding-top: ${({ theme }) => theme.space[2]};
 
-  ${radioStack} {
+  .${radioStack} {
     position: absolute;
     padding: 8px;
     margin-top: -${({ theme }) => theme.space[2]};
