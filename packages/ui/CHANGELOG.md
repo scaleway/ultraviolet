@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.0-beta.15
+
+### Minor Changes
+
+- [#5596](https://github.com/scaleway/ultraviolet/pull/5596) [`d85d9f5`](https://github.com/scaleway/ultraviolet/commit/d85d9f5c782a16eacaf5f7f95956e121bb1daa32) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor `SelectableCard` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [#5609](https://github.com/scaleway/ultraviolet/pull/5609) [`4ade022`](https://github.com/scaleway/ultraviolet/commit/4ade022e8d80eaa44de37559c04f53e87f7f3d6a) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCardOptionGroup`: fix issue with radio style
+
 ## 3.0.0-beta.14
 
 ### Minor Changes
