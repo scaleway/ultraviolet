@@ -34,7 +34,6 @@ import {
   basicPrefix,
   basicSuffix,
   ctaSuffix,
-  hasFocusVar,
   inputClass,
   inputWrapper,
   inputWrapperSizes,
@@ -192,14 +191,12 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <div>
           <Tooltip text={tooltip}>
             <div
-              className={`${inputWrapper} ${inputWrapperSizes[size]}}`}
+              className={`${inputWrapper} ${inputWrapperSizes[size]}`}
               data-disabled={disabled}
               data-error={!!error}
+              data-has-focus={hasFocus}
               data-readonly={readOnly}
               data-success={!!success}
-              style={{
-                [hasFocusVar]: hasFocus,
-              }}
             >
               {prefix ? (
                 <Stack
