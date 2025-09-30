@@ -1,26 +1,8 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
-
-const BarToolTipContainer = styled.div`
-  display: flex;
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
-  border-radius: ${({ theme }) => theme.radii.small};
-  box-shadow: ${({ theme }) => theme.shadows.tooltip};
-  padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
-  align-items: center;
-`
-
-const BarColorSquare = styled('span', {
-  shouldForwardProp: prop => !['color'].includes(prop),
-})<{ color: string }>`
-  display: block;
-  width: ${({ theme }) => theme.sizing['150']};
-  height: ${({ theme }) => theme.sizing['150']};
-  background: ${({ color }) => color};
-  margin-right: ${({ theme }) => theme.space['1.5']};
-`
+import { barColorSquare, barTooltipContainer, colorBar } from './styles.css'
 
 type BarChartToolTipProps = {
   color: string
@@ -37,9 +19,17 @@ const BarChartToolTip = ({
   className,
   'data-testid': dataTestId,
 }: BarChartToolTipProps) => (
-  <BarToolTipContainer className={className} data-testid={dataTestId}>
+  <div
+    className={`${className ? `${className} ` : ''}${barTooltipContainer}`}
+    data-testid={dataTestId}
+  >
     <div>
-      <BarColorSquare color={color} />
+      <span
+        className={barColorSquare}
+        style={assignInlineVars({
+          [colorBar]: color,
+        })}
+      />
     </div>
     <div>
       <Text as="p" sentiment="primary" variant="bodyStronger">
@@ -49,7 +39,7 @@ const BarChartToolTip = ({
         {indexValue}
       </Text>
     </div>
-  </BarToolTipContainer>
+  </div>
 )
 
 export default BarChartToolTip
