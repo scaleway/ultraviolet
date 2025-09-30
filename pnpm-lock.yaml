@@ -61,10 +61,10 @@ importers:
         version: 11.13.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@eslint/compat':
         specifier: 1.3.2
         version: 1.3.2(eslint@9.36.0(jiti@2.4.2))
@@ -94,7 +94,7 @@ importers:
         version: 9.1.8(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))
       '@storybook/addon-docs':
         specifier: 9.1.8
-        version: 9.1.8(@types/react@19.1.13)(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))
+        version: 9.1.8(@types/react@19.1.15)(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))
       '@storybook/addon-links':
         specifier: 9.1.8
         version: 9.1.8(react@19.1.1)(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))
@@ -121,7 +121,7 @@ importers:
         version: 6.8.0
       '@testing-library/react':
         specifier: 16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.15))(@types/react@19.1.15)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@testing-library/user-event':
         specifier: 14.6.1
         version: 14.6.1(@testing-library/dom@10.4.1)
@@ -129,11 +129,11 @@ importers:
         specifier: 22.18.6
         version: 22.18.6
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@types/zxcvbn':
         specifier: 4.4.5
         version: 4.4.5
@@ -241,7 +241,7 @@ importers:
         version: 19.1.1(react@19.1.1)
       react-scan:
         specifier: 0.4.3
-        version: 0.4.3(@types/react@19.1.13)(next@15.5.3(@babel/core@7.28.4)(@playwright/test@1.55.1)(babel-plugin-macros@3.1.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react-router-dom@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-router@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(rollup@4.50.1)
+        version: 0.4.3(@types/react@19.1.15)(next@15.5.3(@babel/core@7.28.4)(@playwright/test@1.55.1)(babel-plugin-macros@3.1.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react-router-dom@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-router@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(rollup@4.50.1)
       read-pkg:
         specifier: 9.0.1
         version: 9.0.1
@@ -304,10 +304,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@ultraviolet/fonts':
         specifier: workspace:*
         version: link:../packages/fonts
@@ -343,11 +343,11 @@ importers:
         specifier: 1.55.1
         version: 1.55.1
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@vitejs/plugin-react':
         specifier: 5.0.3
         version: 5.0.3(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1))
@@ -377,10 +377,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@scaleway/regex':
         specifier: 5.6.0
         version: 5.6.0
@@ -425,8 +425,8 @@ importers:
         specifier: 22.18.6
         version: 22.18.6
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-syntax-highlighter':
         specifier: 15.5.13
         version: 15.5.13
@@ -438,10 +438,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@scaleway/regex':
         specifier: 5.6.0
         version: 5.6.0
@@ -477,11 +477,11 @@ importers:
         specifier: 22.18.6
         version: 22.18.6
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       eslint:
         specifier: 9.36.0
         version: 9.36.0(jiti@2.4.2)
@@ -496,10 +496,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../../packages/icons
@@ -520,11 +520,11 @@ importers:
         specifier: 11.13.5
         version: 11.13.5
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@vitejs/plugin-react':
         specifier: 5.0.3
         version: 5.0.3(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1))
@@ -557,19 +557,19 @@ importers:
         version: 7.28.4
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@types/final-form-focus':
         specifier: 1.1.7
         version: 1.1.7
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
@@ -594,16 +594,16 @@ importers:
         version: 7.28.4
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -622,10 +622,10 @@ importers:
     devDependencies:
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../icons
@@ -649,10 +649,10 @@ importers:
         version: 11.14.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
@@ -692,16 +692,16 @@ importers:
         version: 7.28.4
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@ultraviolet/illustrations':
         specifier: workspace:*
         version: link:../illustrations
@@ -767,16 +767,16 @@ importers:
         version: 7.28.4
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@types/react-dom':
         specifier: 19.1.9
-        version: 19.1.9(@types/react@19.1.13)
+        version: 19.1.9(@types/react@19.1.15)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -797,19 +797,19 @@ importers:
         version: 11.13.0
       '@emotion/react':
         specifier: 11.14.0
-        version: 11.14.0(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/styled':
         specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)
+        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)
       '@testing-library/jest-dom':
         specifier: 6.8.0
         version: 6.8.0
       '@testing-library/react':
         specifier: 16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.15))(@types/react@19.1.15)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@types/react':
-        specifier: 19.1.13
-        version: 19.1.13
+        specifier: 19.1.15
+        version: 19.1.15
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../../packages/themes
@@ -3187,8 +3187,8 @@ packages:
   '@types/react-syntax-highlighter@15.5.13':
     resolution: {integrity: sha512-uLGJ87j6Sz8UaBAooU0T6lWJ0dBmjZgN1PZTrj05TNql2/XpC6+4HhMT5syIdFUUt+FASfCeLLv4kBygNU+8qA==}
 
-  '@types/react@19.1.13':
-    resolution: {integrity: sha512-hHkbU/eoO3EG5/MZkuFSKmYqPbSVk5byPFa3e7y/8TybHiLMACgI8seVYlicwk7H5K/rI2px9xrQp/C+AUDTiQ==}
+  '@types/react@19.1.15':
+    resolution: {integrity: sha512-+kLxJpaJzXybyDyFXYADyP1cznTO8HSuBpenGlnKOAkH4hyNINiywvXS/tGJhsrGGP/gM185RA3xpjY0Yg4erA==}
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -9780,7 +9780,7 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1)':
+  '@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1)':
     dependencies:
       '@babel/runtime': 7.27.6
       '@emotion/babel-plugin': 11.13.5
@@ -9792,7 +9792,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 19.1.1
     optionalDependencies:
-      '@types/react': 19.1.13
+      '@types/react': 19.1.15
     transitivePeerDependencies:
       - supports-color
 
@@ -9806,18 +9806,18 @@ snapshots:
 
   '@emotion/sheet@1.4.0': {}
 
-  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.13)(react@19.1.1))(@types/react@19.1.13)(react@19.1.1)':
+  '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.15)(react@19.1.1))(@types/react@19.1.15)(react@19.1.1)':
     dependencies:
       '@babel/runtime': 7.27.6
       '@emotion/babel-plugin': 11.13.5
       '@emotion/is-prop-valid': 1.3.1
-      '@emotion/react': 11.14.0(@types/react@19.1.13)(react@19.1.1)
+      '@emotion/react': 11.14.0(@types/react@19.1.15)(react@19.1.1)
       '@emotion/serialize': 1.3.3
       '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.1.1)
       '@emotion/utils': 1.4.2
       react: 19.1.1
     optionalDependencies:
-      '@types/react': 19.1.13
+      '@types/react': 19.1.15
     transitivePeerDependencies:
       - supports-color
 
@@ -10286,10 +10286,10 @@ snapshots:
 
   '@marijn/find-cluster-break@1.0.2': {}
 
-  '@mdx-js/react@3.1.0(@types/react@19.1.13)(react@19.1.1)':
+  '@mdx-js/react@3.1.0(@types/react@19.1.15)(react@19.1.1)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.1.13
+      '@types/react': 19.1.15
       react: 19.1.1
 
   '@napi-rs/wasm-runtime@0.2.11':
@@ -10814,9 +10814,9 @@ snapshots:
       axe-core: 4.10.2
       storybook: 9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1))
 
-  '@storybook/addon-docs@9.1.8(@types/react@19.1.13)(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))':
+  '@storybook/addon-docs@9.1.8(@types/react@19.1.15)(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))':
     dependencies:
-      '@mdx-js/react': 3.1.0(@types/react@19.1.13)(react@19.1.1)
+      '@mdx-js/react': 3.1.0(@types/react@19.1.15)(react@19.1.1)
       '@storybook/csf-plugin': 9.1.8(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))
       '@storybook/icons': 1.4.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@storybook/react-dom-shim': 9.1.8(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(storybook@9.1.8(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.6)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.5)(yaml@2.8.1)))
@@ -11027,15 +11027,15 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
 
-  '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.13))(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@testing-library/react@16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.9(@types/react@19.1.15))(@types/react@19.1.15)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@babel/runtime': 7.28.4
       '@testing-library/dom': 10.4.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
     optionalDependencies:
-      '@types/react': 19.1.13
-      '@types/react-dom': 19.1.9(@types/react@19.1.13)
+      '@types/react': 19.1.15
+      '@types/react-dom': 19.1.9(@types/react@19.1.15)
 
   '@testing-library/user-event@14.6.1(@testing-library/dom@10.4.1)':
     dependencies:
@@ -11171,19 +11171,19 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
-  '@types/react-dom@19.1.9(@types/react@19.1.13)':
+  '@types/react-dom@19.1.9(@types/react@19.1.15)':
     dependencies:
-      '@types/react': 19.1.13
+      '@types/react': 19.1.15
 
-  '@types/react-reconciler@0.28.9(@types/react@19.1.13)':
+  '@types/react-reconciler@0.28.9(@types/react@19.1.15)':
     dependencies:
-      '@types/react': 19.1.13
+      '@types/react': 19.1.15
 
   '@types/react-syntax-highlighter@15.5.13':
     dependencies:
-      '@types/react': 19.1.13
+      '@types/react': 19.1.15
 
-  '@types/react@19.1.13':
+  '@types/react@19.1.15':
     dependencies:
       csstype: 3.1.3
 
@@ -12238,9 +12238,9 @@ snapshots:
 
   big.js@5.2.2: {}
 
-  bippy@0.3.8(@types/react@19.1.13)(react@19.1.1):
+  bippy@0.3.8(@types/react@19.1.15)(react@19.1.1):
     dependencies:
-      '@types/react-reconciler': 0.28.9(@types/react@19.1.13)
+      '@types/react-reconciler': 0.28.9(@types/react@19.1.15)
       react: 19.1.1
     transitivePeerDependencies:
       - '@types/react'
@@ -15714,7 +15714,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.1.1(react@19.1.1)
 
-  react-scan@0.4.3(@types/react@19.1.13)(next@15.5.3(@babel/core@7.28.4)(@playwright/test@1.55.1)(babel-plugin-macros@3.1.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react-router-dom@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-router@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(rollup@4.50.1):
+  react-scan@0.4.3(@types/react@19.1.15)(next@15.5.3(@babel/core@7.28.4)(@playwright/test@1.55.1)(babel-plugin-macros@3.1.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react-router-dom@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-router@7.9.3(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(rollup@4.50.1):
     dependencies:
       '@babel/core': 7.28.4
       '@babel/generator': 7.28.0
@@ -15725,7 +15725,7 @@ snapshots:
       '@preact/signals': 1.3.2(preact@10.26.5)
       '@rollup/pluginutils': 5.1.4(rollup@4.50.1)
       '@types/node': 20.17.30
-      bippy: 0.3.8(@types/react@19.1.13)(react@19.1.1)
+      bippy: 0.3.8(@types/react@19.1.15)(react@19.1.1)
       esbuild: 0.25.0
       estree-walker: 3.0.3
       kleur: 4.1.5
