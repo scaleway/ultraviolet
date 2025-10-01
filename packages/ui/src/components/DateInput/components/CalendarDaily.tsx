@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
 import { Button } from '../../Button'
@@ -15,42 +14,7 @@ import {
   getPreviousMonth,
   isSameDay,
 } from '../helpers'
-
-const Day = styled(Button)`
-  height: ${({ theme }) => theme.sizing['312']};
-  width: 100%;
-  padding: 0;
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
-
-  &[aria-label="in-range"] {
-    color:  ${({ theme }) => theme.colors.primary.textHover};
-    background-color: ${({ theme }) => theme.colors.primary.background};
-  }
-
-  &[aria-label="in-range"]:hover {
-    color: ${({ theme }) => theme.colors.neutral.textStronger};
-    background-color: ${({ theme }) =>
-      theme.colors.primary.backgroundStrongHover};
-  }
-
-  &[aria-label="not-current"], :disabled {
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-  }
-
-  &[aria-label="selected"] {
-    color: ${({ theme }) => theme.colors.neutral.textStronger};
-  }
-
-`
-
-const CapitalizedText = styled(Text)`
-  display: inline-block;
-  text-transform: lowercase;
-
-  &::first-letter {
-    text-transform: uppercase;
-  }
-`
+import { capitalizedTextDay, dayMonth as dayStyle } from './styles.css'
 
 export const Daily = () => {
   const {
@@ -126,15 +90,16 @@ export const Daily = () => {
   return (
     <Row gap={1} templateColumns="repeat(7, 1fr)">
       {Object.entries(DAYS).map(day => (
-        <CapitalizedText
+        <Text
           as="p"
+          className={capitalizedTextDay}
           disabled={disabled}
           key={day[0]}
           sentiment="neutral"
           variant="bodyStrong"
         >
           {day[1]}
-        </CapitalizedText>
+        </Text>
       ))}
       {allDaysToShow.map(data => {
         const constructedDate = new Date(
@@ -287,8 +252,9 @@ export const Daily = () => {
         }
 
         return (
-          <Day
+          <Button
             aria-label={dayState()}
+            className={dayStyle}
             data-testid={createTestId()}
             disabled={disabled || isExcluded || isOutsideRange}
             key={`${data.month}-${data.day}`}
@@ -317,7 +283,7 @@ export const Daily = () => {
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
           >
             {data.day}
-          </Day>
+          </Button>
         )
       })}
     </Row>
