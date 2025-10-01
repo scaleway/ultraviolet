@@ -5,7 +5,7 @@ exports[`tag > renders correctly 1`] = `
   <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
@@ -13,7 +13,7 @@ exports[`tag > renders correctly 1`] = `
       >
         test
       </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -23,7 +23,7 @@ exports[`tag > renders correctly colored 1`] = `
   <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_sentiment_primary__d6zknp5"
     >
       <div
@@ -31,7 +31,7 @@ exports[`tag > renders correctly colored 1`] = `
       >
         test
       </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -41,7 +41,7 @@ exports[`tag > renders correctly disabled 1`] = `
   <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_disabled_true__d6zknp9 styles_sentiment_neutral__d6zknp4"
     >
       <div
@@ -49,7 +49,7 @@ exports[`tag > renders correctly disabled 1`] = `
       >
         test
       </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -59,7 +59,7 @@ exports[`tag > renders correctly neutral 1`] = `
   <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
@@ -67,7 +67,7 @@ exports[`tag > renders correctly neutral 1`] = `
       >
         test
       </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -102,7 +102,7 @@ exports[`tag > renders correctly with icon 1`] = `
   <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
@@ -120,7 +120,7 @@ exports[`tag > renders correctly with icon 1`] = `
         </svg>
         test
       </div>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -135,7 +135,7 @@ exports[`tag > renders correctly with isLoading 1`] = `
 <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
@@ -175,7 +175,7 @@ exports[`tag > renders correctly with isLoading 1`] = `
           stroke-width="16"
         />
       </svg>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
@@ -185,7 +185,7 @@ exports[`tag > renders correctly with onClose 1`] = `
   <div
     data-testid="testing"
   >
-    <div
+    <span
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <div
@@ -208,7 +208,7 @@ exports[`tag > renders correctly with onClose 1`] = `
           />
         </svg>
       </button>
-    </div>
+    </span>
   </div>
 </DocumentFragment>
 `;
