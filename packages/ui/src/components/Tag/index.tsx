@@ -40,7 +40,7 @@ const TagInner = ({
   <>
     <Text
       aria-disabled={disabled}
-      as="div"
+      as="span"
       className={textTag}
       oneLine
       variant="caption"
