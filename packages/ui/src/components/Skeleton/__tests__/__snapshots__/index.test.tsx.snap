@@ -2,146 +2,53 @@
 
 exports[`skeleton > renders correctly with type="block" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  min-height: 12.5rem;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  margin: 0;
-}
-
-.emotion-2>.emotion-5:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1.5rem 1rem;
-}
-
-.emotion-6 {
-  margin-right: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-8 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-22 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-22 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <ul
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0t4"
       >
         <li
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t3"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t3"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t3"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </li>
       </ul>
       <div
-        class="emotion-22 emotion-23"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -150,192 +57,109 @@ exports[`skeleton > renders correctly with type="block" 1`] = `
 
 exports[`skeleton > renders correctly with type="blocks" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.emotion-4 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-.emotion-6 {
-  margin-right: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-8 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-52 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-52 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0t5"
+        style="--fr4c0t0: 4;"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
       </div>
       <div
-        class="emotion-52 emotion-53"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -344,198 +168,109 @@ exports[`skeleton > renders correctly with type="blocks" 1`] = `
 
 exports[`skeleton > renders correctly with type="box" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.emotion-4 {
-  height: 8.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  justify-content: space-evenly;
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-.emotion-6 {
-  margin-right: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-8 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-52 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-52 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0t5"
+        style="--fr4c0t0: 4;"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t7"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
       </div>
       <div
-        class="emotion-52 emotion-53"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -544,145 +279,58 @@ exports[`skeleton > renders correctly with type="box" 1`] = `
 
 exports[`skeleton > renders correctly with type="donut" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  height: 12.875rem;
-  width: 12.875rem;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
-.emotion-6 {
-  transform-origin: 50% 50%;
-  stroke: #e9eaeb;
-  stroke-width: 18;
-  stroke-linecap: butt;
-  fill: none;
-}
-
-.emotion-8 {
-  display: grid;
-  list-style: none;
-  gap: 1rem;
-}
-
-.emotion-10 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-18 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-18 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0t8"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t9"
         >
           <circle
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0ta"
             cx="6.4375rem"
             cy="6.4375rem"
             r="90"
           />
         </svg>
         <ul
-          class="emotion-8 emotion-9"
+          class="stylesVariants__fr4c0tb"
         >
           <li>
             <div
-              class="emotion-10 emotion-11"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </li>
           <li>
             <div
-              class="emotion-10 emotion-11"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </li>
           <li>
             <div
-              class="emotion-10 emotion-11"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </li>
           <li>
             <div
-              class="emotion-10 emotion-11"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </li>
         </ul>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -691,80 +339,20 @@ exports[`skeleton > renders correctly with type="donut" 1`] = `
 
 exports[`skeleton > renders correctly with type="line" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-4 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0td"
+        style="--fr4c0t1: 7.5rem;"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -773,185 +361,104 @@ exports[`skeleton > renders correctly with type="line" 1`] = `
 
 exports[`skeleton > renders correctly with type="list" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2>.emotion-5:nth-of-type(even) {
-  background-color: #f3f3f4;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-6 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-8 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-46 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-46 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <ul
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0tg"
       >
         <li
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0te"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0te"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
         </li>
         <li
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0te"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tf"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="stylesVariants__fr4c0td"
+              style="--fr4c0t1: 7.5rem;"
             />
           </div>
         </li>
       </ul>
       <div
-        class="emotion-46 emotion-47"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -960,124 +467,49 @@ exports[`skeleton > renders correctly with type="list" 1`] = `
 
 exports[`skeleton > renders correctly with type="slider" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  height: 17.375rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  overflow: auto;
-}
-
-.emotion-4 {
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  width: 14.875rem;
-  height: 16.375ren;
-  overflow: hidden;
-}
-
-.emotion-6 {
-  border: 1px solid #e9eaeb;
-  background-color: #e9eaeb;
-  width: 100%;
-  height: 33%;
-}
-
-.emotion-20 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-20 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0th"
+        style="--fr4c0t2: 4;"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0ti"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tj"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0ti"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tj"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0ti"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tj"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0ti"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tj"
           />
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -1086,79 +518,19 @@ exports[`skeleton > renders correctly with type="slider" 1`] = `
 
 exports[`skeleton > renders correctly with type="square" 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  background-color: #e9eaeb;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-4 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0tk"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="styles__c2hb452"
       />
     </div>
   </div>
@@ -1167,192 +539,109 @@ exports[`skeleton > renders correctly with type="square" 1`] = `
 
 exports[`skeleton > renders default variant 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.emotion-4 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-.emotion-6 {
-  margin-right: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-8 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-52 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-52 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-busy="true"
       aria-live="polite"
-      class="emotion-0 emotion-1"
+      class="styles__c2hb451"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="stylesVariants__fr4c0t5"
+        style="--fr4c0t0: 4;"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="stylesVariants__fr4c0t6"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="stylesVariants__fr4c0tc"
           />
           <div
-            class="emotion-8 emotion-9"
+            class="stylesVariants__fr4c0td"
+            style="--fr4c0t1: 7.5rem;"
           />
         </div>
       </div>
       <div
-        class="emotion-52 emotion-53"
+        class="styles__c2hb452"
       />
     </div>
   </div>
