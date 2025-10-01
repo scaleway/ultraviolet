@@ -327,6 +327,7 @@ export const TagList = ({
               }
             }}
             ref={popoverTriggerRef}
+            tabIndex={0}
           >
             +{hiddenTags.length}
           </span>
