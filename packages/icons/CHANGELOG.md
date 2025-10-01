@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.0.0-beta.3
+
+### Major Changes
+
+- [#5597](https://github.com/scaleway/ultraviolet/pull/5597) [`b19c4e5`](https://github.com/scaleway/ultraviolet/commit/b19c4e5c142fcbfd21b822c07baea90d34d8eee2) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE**
+  - `ClockOutlineIcon` has been renamed to `ClockIcon`
+  - `ClockOutlineOutlineIcon` has been renamed to `ClockOutlineIcon`
+
+### Patch Changes
+
+- [#5607](https://github.com/scaleway/ultraviolet/pull/5607) [`1f78aa4`](https://github.com/scaleway/ultraviolet/commit/1f78aa437fe0d449f5a68f94291a4a1bb6387290) Thanks [@lisalupi](https://github.com/lisalupi)! - New logos
+
 ## 5.0.0-beta.2
 
 ### Patch Changes
