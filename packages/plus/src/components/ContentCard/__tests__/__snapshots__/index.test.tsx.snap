@@ -178,17 +178,7 @@ exports[`contentCard > renders correctly with all directions > renders correctly
 
 exports[`contentCard > renders correctly with all directions > renders correctly direction column and loading 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -210,84 +200,13 @@ exports[`contentCard > renders correctly with all directions > renders correctly
   box-shadow: none;
 }
 
-.emotion-3 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
+.emotion-2 {
   border-radius: 0.25rem 0.25rem 0 0;
   height: 120px;
 }
 
-.emotion-5 {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  background-color: #e9eaeb;
-}
-
-.emotion-7 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-7 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-.emotion-9 {
+.emotion-4 {
   padding: 1.5rem;
-}
-
-.emotion-11 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-13 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
 }
 
 <div
@@ -303,76 +222,81 @@ exports[`contentCard > renders correctly with all directions > renders correctly
         <div
           aria-busy="true"
           aria-live="polite"
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-2 emotion-3 uv_c2hb451"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="uv_fr4c0tk"
           />
           <div
-            class="emotion-7 emotion-8"
+            class="uv_c2hb452"
           />
         </div>
         <div
-          class="emotion-9 emotion-10 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+          class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
         >
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
         </div>
@@ -560,17 +484,7 @@ max-height:0px .emotion-4[data-disabled] {
 
 exports[`contentCard > renders correctly with all directions > renders correctly direction row and loading 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -592,85 +506,14 @@ exports[`contentCard > renders correctly with all directions > renders correctly
   box-shadow: none;
 }
 
-.emotion-3 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
+.emotion-2 {
   border-radius: 0.25rem 0 0 0.25rem;
   width: 220px;
   height: unset;
 }
 
-.emotion-5 {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  background-color: #e9eaeb;
-}
-
-.emotion-7 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-7 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-.emotion-9 {
+.emotion-4 {
   padding: 1.5rem;
-}
-
-.emotion-11 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-13 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
 }
 
 <div
@@ -686,76 +529,81 @@ exports[`contentCard > renders correctly with all directions > renders correctly
         <div
           aria-busy="true"
           aria-live="polite"
-          class="emotion-2 emotion-3 emotion-4"
+          class="emotion-2 emotion-3 uv_c2hb451"
         >
           <div
-            class="emotion-5 emotion-6"
+            class="uv_fr4c0tk"
           />
           <div
-            class="emotion-7 emotion-8"
+            class="uv_c2hb452"
           />
         </div>
         <div
-          class="emotion-9 emotion-10 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+          class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
         >
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-11 emotion-4"
+            class="uv_c2hb451"
           >
             <div
-              class="emotion-13 emotion-14"
+              class="uv_fr4c0td"
+              style="--uv_fr4c0t1: 7.5rem;"
             />
             <div
-              class="emotion-7 emotion-8"
+              class="uv_c2hb452"
             />
           </div>
         </div>

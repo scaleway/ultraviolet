@@ -457,17 +457,7 @@ exports[`contentCardGroup > renders correctly with link target _parent 1`] = `
 
 exports[`contentCardGroup > renders correctly with loading prop 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
@@ -490,80 +480,9 @@ exports[`contentCardGroup > renders correctly with loading prop 1`] = `
 }
 
 .emotion-4 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-6 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-8 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-8 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-.emotion-23 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
   height: 32px;
   width: 32px;
   border-radius: 0.25rem;
-}
-
-.emotion-25 {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  background-color: #e9eaeb;
 }
 
 <div
@@ -584,50 +503,53 @@ exports[`contentCardGroup > renders correctly with loading prop 1`] = `
             <div
               aria-busy="true"
               aria-live="polite"
-              class="emotion-4 emotion-5"
+              class="uv_c2hb451"
             >
               <div
-                class="emotion-6 emotion-7"
+                class="uv_fr4c0td"
+                style="--uv_fr4c0t1: 7.5rem;"
               />
               <div
-                class="emotion-8 emotion-9"
+                class="uv_c2hb452"
               />
             </div>
             <div
               aria-busy="true"
               aria-live="polite"
-              class="emotion-4 emotion-5"
+              class="uv_c2hb451"
             >
               <div
-                class="emotion-6 emotion-7"
+                class="uv_fr4c0td"
+                style="--uv_fr4c0t1: 7.5rem;"
               />
               <div
-                class="emotion-8 emotion-9"
+                class="uv_c2hb452"
               />
             </div>
             <div
               aria-busy="true"
               aria-live="polite"
-              class="emotion-4 emotion-5"
+              class="uv_c2hb451"
             >
               <div
-                class="emotion-6 emotion-7"
+                class="uv_fr4c0td"
+                style="--uv_fr4c0t1: 7.5rem;"
               />
               <div
-                class="emotion-8 emotion-9"
+                class="uv_c2hb452"
               />
             </div>
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="emotion-22 emotion-23 emotion-5"
+            class="emotion-4 emotion-5 uv_c2hb451"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="uv_fr4c0tk"
             />
             <div
-              class="emotion-8 emotion-9"
+              class="uv_c2hb452"
             />
           </div>
         </div>
