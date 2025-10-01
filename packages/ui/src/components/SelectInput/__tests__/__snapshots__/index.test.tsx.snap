@@ -6092,17 +6092,7 @@ exports[`selectInput > renders correctly loadMore 1`] = `
 
 exports[`selectInput > renders correctly loading - grouped data 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   width: 100%;
 }
 
@@ -6237,92 +6227,6 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
 
 .emotion-10[data-grouped="true"] {
   padding-top: 0rem;
-}
-
-.emotion-12 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-14 {
-  min-height: 12.5rem;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  margin: 0;
-}
-
-.emotion-14>.emotion-17:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1.5rem 1rem;
-}
-
-.emotion-18 {
-  margin-right: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-20 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-34 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-34 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
 }
 
 <div
@@ -6398,44 +6302,47 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
                 <div
                   aria-busy="true"
                   aria-live="polite"
-                  class="emotion-12 emotion-13"
+                  class="styles__c2hb451"
                 >
                   <ul
-                    class="emotion-14 emotion-15"
+                    class="stylesVariants__fr4c0t4"
                   >
                     <li
-                      class="emotion-16 emotion-17"
+                      class="stylesVariants__fr4c0t3"
                     >
                       <div
-                        class="emotion-18 emotion-19"
+                        class="stylesVariants__fr4c0tc"
                       />
                       <div
-                        class="emotion-20 emotion-21"
+                        class="stylesVariants__fr4c0td"
+                        style="--fr4c0t1: 7.5rem;"
                       />
                     </li>
                     <li
-                      class="emotion-16 emotion-17"
+                      class="stylesVariants__fr4c0t3"
                     >
                       <div
-                        class="emotion-18 emotion-19"
+                        class="stylesVariants__fr4c0tc"
                       />
                       <div
-                        class="emotion-20 emotion-21"
+                        class="stylesVariants__fr4c0td"
+                        style="--fr4c0t1: 7.5rem;"
                       />
                     </li>
                     <li
-                      class="emotion-16 emotion-17"
+                      class="stylesVariants__fr4c0t3"
                     >
                       <div
-                        class="emotion-18 emotion-19"
+                        class="stylesVariants__fr4c0tc"
                       />
                       <div
-                        class="emotion-20 emotion-21"
+                        class="stylesVariants__fr4c0td"
+                        style="--fr4c0t1: 7.5rem;"
                       />
                     </li>
                   </ul>
                   <div
-                    class="emotion-34 emotion-35"
+                    class="styles__c2hb452"
                   />
                 </div>
               </div>
@@ -6450,17 +6357,7 @@ exports[`selectInput > renders correctly loading - grouped data 1`] = `
 
 exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.emotion-0 {
+  .emotion-0 {
   width: 100%;
 }
 
@@ -6595,92 +6492,6 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
 
 .emotion-10[data-grouped="true"] {
   padding-top: 0rem;
-}
-
-.emotion-12 {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: column;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  height: 100%;
-}
-
-.emotion-14 {
-  min-height: 12.5rem;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  border: 1px solid #e9eaeb;
-  border-radius: 0.25rem;
-  margin: 0;
-}
-
-.emotion-14>.emotion-17:not(:last-child) {
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1.5rem 1rem;
-}
-
-.emotion-18 {
-  margin-right: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  min-width: 2rem;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-20 {
-  height: 0.75rem;
-  width: 7.5rem;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  background-color: #e9eaeb;
-}
-
-.emotion-34 {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #f9f9fa00,
-      #f9f9fa4D,
-      #f9f9fa66,
-      #f9f9fa4D,
-      #f9f9fa00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .emotion-34 {
-    -webkit-animation: unset;
-    animation: unset;
-  }
 }
 
 <div
@@ -6760,44 +6571,47 @@ exports[`selectInput > renders correctly loading - ungrouped data 1`] = `
                   <div
                     aria-busy="true"
                     aria-live="polite"
-                    class="emotion-12 emotion-13"
+                    class="styles__c2hb451"
                   >
                     <ul
-                      class="emotion-14 emotion-15"
+                      class="stylesVariants__fr4c0t4"
                     >
                       <li
-                        class="emotion-16 emotion-17"
+                        class="stylesVariants__fr4c0t3"
                       >
                         <div
-                          class="emotion-18 emotion-19"
+                          class="stylesVariants__fr4c0tc"
                         />
                         <div
-                          class="emotion-20 emotion-21"
+                          class="stylesVariants__fr4c0td"
+                          style="--fr4c0t1: 7.5rem;"
                         />
                       </li>
                       <li
-                        class="emotion-16 emotion-17"
+                        class="stylesVariants__fr4c0t3"
                       >
                         <div
-                          class="emotion-18 emotion-19"
+                          class="stylesVariants__fr4c0tc"
                         />
                         <div
-                          class="emotion-20 emotion-21"
+                          class="stylesVariants__fr4c0td"
+                          style="--fr4c0t1: 7.5rem;"
                         />
                       </li>
                       <li
-                        class="emotion-16 emotion-17"
+                        class="stylesVariants__fr4c0t3"
                       >
                         <div
-                          class="emotion-18 emotion-19"
+                          class="stylesVariants__fr4c0tc"
                         />
                         <div
-                          class="emotion-20 emotion-21"
+                          class="stylesVariants__fr4c0td"
+                          style="--fr4c0t1: 7.5rem;"
                         />
                       </li>
                     </ul>
                     <div
-                      class="emotion-34 emotion-35"
+                      class="styles__c2hb452"
                     />
                   </div>
                 </div>
