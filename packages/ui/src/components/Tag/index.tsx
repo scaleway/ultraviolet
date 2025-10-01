@@ -40,7 +40,7 @@ const TagInner = ({
   <>
     <Text
       aria-disabled={disabled}
-      as="div"
+      as="span"
       className={textTag}
       oneLine
       variant="caption"
@@ -116,13 +116,13 @@ export const Tag = ({
   }
 
   return (
-    <div
+    <span
       className={`${className ? `${className} ` : ''}${containerTag({ disabled, sentiment })}`}
       data-testid={dataTestId}
     >
       <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
         {children}
       </TagInner>
-    </div>
+    </span>
   )
 }
