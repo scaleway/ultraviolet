@@ -31,15 +31,15 @@ const StyledPopup = styled(Popup)`
 `
 
 const StyledTextInput = styled(TextInput)`
-  ${basicPrefix} {
+  .${basicPrefix} {
     border: none;
   }
 
-  ${inputClass} {
+  .${inputClass} {
     padding: 0;
   }
 
-  ${basicSuffix} {
+  .${basicSuffix} {
     border: none;
   }
 `
