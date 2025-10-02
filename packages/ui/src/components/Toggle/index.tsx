@@ -13,19 +13,6 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { checkbox, label as labelReceipe, toggle } from './styles.css'
 
-export const SIZES = {
-  large: {
-    ball: '200',
-    height: '300',
-    width: '600',
-  },
-  small: {
-    ball: '150',
-    height: '250',
-    width: '500',
-  },
-} as const
-
 type ToggleProps = {
   id?: string
   checked?: boolean

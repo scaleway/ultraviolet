@@ -53,10 +53,24 @@ export const toggle = recipe({
       large: {
         width: sizes.large.width,
         height: sizes.large.height,
+        selectors: {
+          '&:after': {
+            width: sizes.large.ball,
+            height: sizes.large.ball,
+            top: `calc(50% - ${sizes.large.ball} / 2)`,
+          },
+        },
       },
       small: {
         width: sizes.small.width,
         height: sizes.small.height,
+        selectors: {
+          '&:after': {
+            width: sizes.small.ball,
+            height: sizes.small.ball,
+            top: `calc(50% - ${sizes.small.ball} / 2)`,
+          },
+        },
       },
     },
     disabled: {
