@@ -27,7 +27,7 @@ export const timeinputWrapper = recipe({
       true: {
         selectors: {
           '&:active': {
-            borderColor: theme.colors.neutral.border,
+            borderColor: theme.colors.neutral.borderDisabled,
             boxShadow: 'none',
           },
         },
@@ -52,6 +52,9 @@ export const timeinputWrapper = recipe({
             borderColor: theme.colors.neutral.border,
             boxShadow: 'none',
           },
+          '&:focus-within': {
+            borderColor: theme.colors.neutral.border,
+          },
         },
         background: theme.colors.neutral.backgroundWeak,
         borderColor: theme.colors.neutral.border,
@@ -67,6 +70,9 @@ export const timeinputWrapper = recipe({
             boxShadow: theme.shadows.focusDanger,
           },
           '&:hover': {
+            borderColor: theme.colors.danger.borderHover,
+          },
+          '&:focus-within': {
             borderColor: theme.colors.danger.borderHover,
           },
         },
