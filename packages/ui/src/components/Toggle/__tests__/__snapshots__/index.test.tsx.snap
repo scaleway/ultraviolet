@@ -2,165 +2,22 @@
 
 exports[`toggle > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«r0»"
           name="test"
           type="checkbox"
@@ -173,153 +30,12 @@ exports[`toggle > renders correctly 1`] = `
 
 exports[`toggle > renders correctly label 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -336,13 +52,11 @@ exports[`toggle > renders correctly label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«rg»"
           name="test"
           type="checkbox"
@@ -355,166 +69,23 @@ exports[`toggle > renders correctly label 1`] = `
 
 exports[`toggle > renders correctly when checked 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
           checked=""
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«r2»"
           name="test"
           type="checkbox"
@@ -527,165 +98,22 @@ exports[`toggle > renders correctly when checked 1`] = `
 
 exports[`toggle > renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="true"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_true__adn1w2c"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="true"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_true__adn1w23 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           disabled=""
           id="«r4»"
           name="test"
@@ -699,153 +127,12 @@ exports[`toggle > renders correctly when disabled 1`] = `
 
 exports[`toggle > renders correctly when required with label 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -867,13 +154,11 @@ exports[`toggle > renders correctly when required with label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«r6»"
           name="test"
           required=""
@@ -887,153 +172,12 @@ exports[`toggle > renders correctly when required with label 1`] = `
 
 exports[`toggle > renders correctly when required with label left 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_left__adn1w2a styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1055,13 +199,11 @@ exports[`toggle > renders correctly when required with label left 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«ra»"
           name="test"
           required=""
@@ -1075,153 +217,12 @@ exports[`toggle > renders correctly when required with label left 1`] = `
 
 exports[`toggle > renders correctly with complex label 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1236,13 +237,11 @@ exports[`toggle > renders correctly with complex label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«rs»"
           name="test"
           type="checkbox"
@@ -1255,153 +254,12 @@ exports[`toggle > renders correctly with complex label 1`] = `
 
 exports[`toggle > renders correctly with custom labels on right 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1418,13 +276,11 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«rp»"
           name="test"
           type="checkbox"
@@ -1437,294 +293,12 @@ exports[`toggle > renders correctly with custom labels on right 1`] = `
 
 exports[`toggle > renders correctly with error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1746,13 +320,11 @@ exports[`toggle > renders correctly with error 1`] = `
         </p>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="true"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_true__adn1w25"
       >
         <input
           aria-invalid="true"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«r15»"
           name="test"
           type="checkbox"
@@ -1765,294 +337,12 @@ exports[`toggle > renders correctly with error 1`] = `
 
 exports[`toggle > renders correctly with helper 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -2074,13 +364,11 @@ exports[`toggle > renders correctly with helper 1`] = `
         </p>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«r11»"
           name="test"
           type="checkbox"
@@ -2093,153 +381,12 @@ exports[`toggle > renders correctly with helper 1`] = `
 
 exports[`toggle > renders correctly with labels on left 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_left__adn1w2a styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -2256,13 +403,11 @@ exports[`toggle > renders correctly with labels on left 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«rm»"
           name="test"
           type="checkbox"
@@ -2275,165 +420,22 @@ exports[`toggle > renders correctly with labels on left 1`] = `
 
 exports[`toggle > renders correctly with non default size 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(0.75rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 2.5rem;
-  height: 1.25rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.25rem / 2 - 0.75rem / 2);
-  left: 5px;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(0.75rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <label
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
     >
       <div
         class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
       />
       <div
-        class="emotion-2 emotion-3"
-        data-disabled="false"
-        data-error="false"
+        class="styles__adn1w20 styles_size_small__adn1w22 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
       >
         <input
           aria-invalid="false"
-          class="emotion-4 emotion-5"
+          class="styles__adn1w28"
           id="«re»"
           name="test"
           type="checkbox"
@@ -2446,148 +448,7 @@ exports[`toggle > renders correctly with non default size 1`] = `
 
 exports[`toggle > renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.emotion-0:active .emotion-3[data-disabled='false']:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 1rem;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 3rem;
-  height: 1.5rem;
-}
-
-.emotion-2:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-2:after {
-  content: "";
-  position: absolute;
-  top: calc(1.5rem / 2 - 1rem / 2);
-  left: 5px;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-2:focus-within,
-.emotion-2:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2[data-disabled="false"]:active:after {
-  width: calc(1rem * 1.3775);
-}
-
-.emotion-2:has(:checked) {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-2:has(:checked):hover {
-  background-color: #792dd4;
-}
-
-.emotion-2:has(:checked):after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-2:has(:checked):focus-within,
-.emotion-2:has(:checked):focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-2[data-disabled="true"]:has(:checked) {
-  background: #e5dbfd;
-}
-
-.emotion-2[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-2[data-error="true"]:focus-within,
-.emotion-2[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-error="true"]:has(:checked) {
-  background-color: #e51963;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-2[data-error="true"][data-disabled="true"]:has(:checked) {
-  background-color: #ffd3e3;
-}
-
-.emotion-4 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-4[disabled] {
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2598,7 +459,7 @@ exports[`toggle > renders correctly with tooltip 1`] = `
     >
       <label
         aria-disabled="false"
-        class="emotion-0 emotion-1"
+        class="styles__adn1w29 styles_labelPosition_right__adn1w2b styles_disabled_false__adn1w2d"
       >
         <div
           class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u4j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -2615,13 +476,11 @@ exports[`toggle > renders correctly with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="emotion-2 emotion-3"
-          data-disabled="false"
-          data-error="false"
+          class="styles__adn1w20 styles_size_large__adn1w21 styles_disabled_false__adn1w24 styles_error_false__adn1w26"
         >
           <input
             aria-invalid="false"
-            class="emotion-4 emotion-5"
+            class="styles__adn1w28"
             id="«rj»"
             name="test"
             type="checkbox"
