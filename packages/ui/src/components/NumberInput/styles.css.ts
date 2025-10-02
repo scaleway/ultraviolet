@@ -183,11 +183,24 @@ export const numberinputContainer = recipe({
         borderColor: theme.colors.neutral.border,
         background: theme.colors.neutral.backgroundWeak,
         cursor: 'not-allowed',
+        selectors: {
+          '&:hover': {
+            borderColor: theme.colors.neutral.border,
+          },
+          '&:focus-within': {
+            borderColor: theme.colors.neutral.border,
+          },
+        },
       },
       disabled: {
         borderColor: theme.colors.neutral.borderDisabled,
         background: theme.colors.neutral.backgroundDisabled,
         cursor: 'not-allowed',
+        selectors: {
+          '&:hover': {
+            borderColor: theme.colors.neutral.borderDisabled,
+          },
+        },
       },
     },
     size: {
