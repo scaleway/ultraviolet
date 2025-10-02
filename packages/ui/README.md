@@ -7,7 +7,7 @@ Ultraviolet UI is a set of React components and utilities to build fast applicat
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @ultraviolet/themes
 ```
 
 You will also need to import fonts in your project by adding:
@@ -27,24 +27,36 @@ You will also need to import fonts in your project by adding:
 />
 ```
 
+Or if you prefer to install the package for it you can add:
+```sh
+$ pnpm add @ultraviolet/fonts
+```
+
+and import it in your project:
+
+```ts
+import '@ultraviolet/fonts'
+```
+
 ### Usage
 
+For the library to work properly, you need to wrap your application with the `ThemeProvider` component. `ThemeProvider` will provide the theme to all components in your application and allow you to do `const theme = useTheme()` to have access to the theme object in your TSX files.
+
+You will also need to import styles of components for them to have the correct styles.
+
 ```tsx
-import { Global, ThemeProvider, css } from '@emotion/react'
-import { ThemeProvider as ThemeProviderUV } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/ui'
 import { Button, normalize, theme } from '@ultraviolet/ui'
 import '@ultraviolet/ui/styles'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <ThemeProviderUV>
-      <Global
-        styles={css`
-          ${normalize()}
-        `}
-      />
-      <Button onClick={() => console.log('clicked')}>Click Me</Button>
-    </ThemeProviderUV>
+    <Global
+    styles={css`
+        ${normalize()}
+      `}
+    />
+    <Button onClick={() => console.log('clicked')}>Click Me</Button>
   </ThemeProvider>
 )
 ```

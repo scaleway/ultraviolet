@@ -1,28 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
-import { Stack, Skeleton as UltravioletSkeleton } from '@ultraviolet/ui'
-
-const SkeletonImage = styled(UltravioletSkeleton, {
-  shouldForwardProp: prop => !['height', 'width', 'direction'].includes(prop),
-})<{
-  width?: string
-  height?: string
-  direction: 'row' | 'column'
-}>`
-  border-radius: ${({ theme, direction }) =>
-    `${
-      direction === 'column'
-        ? `${theme.radii.default} ${theme.radii.default} 0 0`
-        : `${theme.radii.default} 0 0 ${theme.radii.default}`
-    }`};
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
-`
-
-const StyledStack = styled(Stack)`
-  padding: ${({ theme }) => theme.space['3']};
-`
+import { Stack, Skeleton as UVSkeleton } from '@ultraviolet/ui'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import {
+  paddedStack,
+  skeletonHeightVar,
+  skeletonImage,
+  skeletonWidthVar,
+} from './styles.css'
 
 type SkeletonProps = {
   direction: 'row' | 'column'
@@ -30,18 +15,20 @@ type SkeletonProps = {
 
 export const Skeleton = ({ direction }: SkeletonProps) => (
   <Stack direction={direction}>
-    <SkeletonImage
-      direction={direction}
-      height={direction === 'column' ? '120px' : 'unset'}
+    <UVSkeleton
+      className={skeletonImage[direction]}
+      style={assignInlineVars({
+        [skeletonHeightVar]: direction === 'column' ? '120px' : 'unset',
+        [skeletonWidthVar]: direction === 'row' ? '220px' : '100%',
+      })}
       variant="square"
-      width={direction === 'row' ? '220px' : undefined}
     />
-    <StyledStack gap={2}>
-      <UltravioletSkeleton variant="line" />
-      <UltravioletSkeleton variant="line" />
-      <UltravioletSkeleton variant="line" />
-      <UltravioletSkeleton variant="line" />
-      <UltravioletSkeleton variant="line" />
-    </StyledStack>
+    <Stack className={paddedStack} gap={2}>
+      <UVSkeleton variant="line" />
+      <UVSkeleton variant="line" />
+      <UVSkeleton variant="line" />
+      <UVSkeleton variant="line" />
+      <UVSkeleton variant="line" />
+    </Stack>
   </Stack>
 )
