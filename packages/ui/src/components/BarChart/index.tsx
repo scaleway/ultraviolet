@@ -1,9 +1,9 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import { ResponsiveBar } from '@nivo/bar'
 import type { Box, DatumValue, ValueFormat } from '@nivo/core'
+import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'

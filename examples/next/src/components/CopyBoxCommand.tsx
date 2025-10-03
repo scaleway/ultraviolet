@@ -1,5 +1,5 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { useTheme } from '@ultraviolet/themes'
 import { Stack, Tabs } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
 import { Children, isValidElement, useState } from 'react'

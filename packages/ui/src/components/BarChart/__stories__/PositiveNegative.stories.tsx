@@ -1,5 +1,5 @@
-import { useTheme } from '@emotion/react'
 import type { StoryFn } from '@storybook/react-vite'
+import { useTheme } from '@ultraviolet/themes'
 import { format } from 'date-fns'
 import { BarChart } from '..'
 import { barChartPositiveNegativeData } from './mockData'

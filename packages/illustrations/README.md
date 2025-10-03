@@ -25,6 +25,27 @@ import { DynamicIllustration } from '@ultraviolet/illustrations'
 const App = () => <DynamicIllustration name="success">
 ```
 
+## Usage of component `DynamicIllustration`
+
+`DynamicIllustration` is a React component and so it requires you to have a `ThemeProvider` in order to be able to switch between light and dark. To use it you will need to install `@ultraviolet/themes`:
+
+```sh
+$ pnpm add @ultraviolet/themes
+```
+
+Then you can use it like this:
+
+```tsx
+import { ThemeProvider, theme } from '@ultraviolet/themes'
+import { DynamicIllustration } from '@ultraviolet/illustrations'
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <DynamicIllustration name="success" />
+  </ThemeProvider>
+)
+```
+
 ## Making changes
 The entire process of adding, deleting or editing an asset is automated. The imports and exports are handled automatically by `@utils/scripts/illustrations/upload-illustrations.tsx` and `@utils/scripts/illustrations/upload-components.tsx` using the command **`pnpm run illustrations:update`**.
 

@@ -5,8 +5,6 @@ export {
   darkTheme,
   default as theme,
   extendTheme,
-  ThemeProvider,
-  useTheme,
 } from './theme'
 export {
   Breakpoint,

@@ -1,9 +1,10 @@
 'use client'
 
-import { consoleLightTheme, theme as themeContract } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { createContext, useContext, useEffect } from 'react'
+import { consoleLightTheme } from './themes'
+import { theme as themeContract } from './vanilla/themes.css'
 
 const ThemeContext = createContext(consoleLightTheme)
 
