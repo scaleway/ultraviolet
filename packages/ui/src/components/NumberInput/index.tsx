@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {
@@ -17,192 +16,16 @@ import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
-const SIZES = {
-  large: '600',
-  medium: '500',
-  small: '400', // sizing theme tokens key
-} as const
+import type { SIZES } from './constant'
+import {
+  inputContainer,
+  numberinput,
+  numberinputContainer,
+  numberinputSideContainer,
+  unit as unitStyle,
+} from './styles.css'
 
 type Sizes = keyof typeof SIZES
-
-const SideContainer = styled(Stack)`
-  padding: ${({ theme }) => `${theme.space['0.25']} ${theme.space['1']}`};
-
-  &[data-size='small'] {
-    height: ${({ theme }) => theme.sizing[SIZES.small]};
-  }
-
-  &[data-size='medium'] {
-    height: ${({ theme }) => theme.sizing[SIZES.medium]};
-  }
-
-  &[data-size='large'] {
-    height: ${({ theme }) => theme.sizing[SIZES.large]};
-    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  }
-`
-
-const InputContainer = styled(Row)`
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-`
-
-const Unit = styled(Text, {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: Sizes }>`
-  display: flex;
-  align-items: center;
-  padding: ${({ theme }) => theme.space['1']};
-  height: ${({ size }) =>
-    ({ theme }) =>
-      theme.sizing[SIZES[size]]};
-  font-size: ${({ theme, size }) =>
-    size === 'large'
-      ? theme.typography.body.fontSize
-      : theme.typography.bodySmall.fontSize};
-`
-
-const Input = styled.input`
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
-  font-weight: ${({ theme }) => theme.typography.bodySmall.fontWeight};
-  line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
-  text-align: center;
-  padding: ${({ theme }) => theme.space['1']};
-  background: none;
-
-  &[data-has-unit='true'] {
-    text-align: left;
-    padding: ${({ theme }) =>
-      `${theme.space['1']} 0 ${theme.space['1']} ${theme.space['1']}`};
-  }
-
-  // Remove native arrows from input[type=number]
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  & {
-    -moz-appearance: textfield;
-    appearance: textfield;
-  }
-
-  &[data-size='small'] {
-    height: ${({ theme }) => theme.sizing[SIZES.small]};
-  }
-
-  &[data-size='medium'] {
-    height: ${({ theme }) => theme.sizing[SIZES.medium]};
-  }
-
-  &[data-size='large'] {
-    height: ${({ theme }) => theme.sizing[SIZES.large]};
-    font-size: ${({ theme }) => theme.typography.body.fontSize};
-  font-family: ${({ theme }) => theme.typography.body.fontFamily};
-  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
-  line-height: ${({ theme }) => theme.typography.body.lineHeight};
-
-  }
-
-  &:read-only {
-    color: ${({ theme }) => theme.colors.neutral.text};
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-block: 1px solid ${({ theme }) => theme.colors.neutral.border};
-
-    & ~ ${Unit} {
-      background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    }
-  }
-
-  &:disabled {
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    cursor: not-allowed;
-    border-block: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
-
-    & ~ ${Unit} {
-      background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-      cursor: not-allowed;
-      user-select: none;
-    }
-  }
-
-  &:placeholder-shown ~ ${Unit} {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-    font-size: ${({ theme }) => theme.typography.body.fontSize}
-  }
-
-  &[data-controls='false'] {
-  text-align: left;
-}
-`
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  &:focus-within {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-  }
-
-  &[data-success='true'] {
-    border-color: ${({ theme }) => theme.colors.success.border};
-  }
-
-  &[data-error='true'] {
-    border-color: ${({ theme }) => theme.colors.danger.border};
-  }
-
-  &:hover {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-  }
-
-  &[data-readonly='true'] {
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    cursor: not-allowed;
-  }
-
-  &[data-disabled='true'] {
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    cursor: not-allowed;
-  }
-
-  &[data-controls='false'] {
-    & > ${InputContainer} {
-          border-width: 0;
-    };
-  }
-
-  &[data-size='small'] {
-    height: ${({ theme }) => theme.sizing[SIZES.small]};
-  }
-
-  &[data-size='medium'] {
-    height: ${({ theme }) => theme.sizing[SIZES.medium]};
-  }
-
-  &[data-size='large'] {
-    height: ${({ theme }) => theme.sizing[SIZES.large]};
-  }
-`
 
 type NumberInputProps = {
   size?: Sizes
@@ -286,6 +109,22 @@ export const NumberInput = forwardRef(
     const uniqueId = useId()
     const localId = id ?? uniqueId
 
+    const computedState = useMemo(() => {
+      if (disabled) {
+        return 'disabled'
+      }
+      if (readOnly) {
+        return 'readOnly'
+      }
+      if (error) {
+        return 'error'
+      }
+      if (success) {
+        return 'success'
+      }
+
+      return 'default'
+    }, [error, success, disabled, readOnly])
     const onClickSideButton = useCallback(
       (direction: 'up' | 'down') => () => {
         if (direction === 'up') {
@@ -364,7 +203,8 @@ export const NumberInput = forwardRef(
         ) : null}
         <div>
           <Tooltip text={tooltip}>
-            <Container
+            <div
+              className={numberinputContainer({ size, state: computedState })}
               data-controls={controls}
               data-disabled={disabled}
               data-error={!!error}
@@ -374,8 +214,9 @@ export const NumberInput = forwardRef(
               data-unit={!!unit}
             >
               {controls ? (
-                <SideContainer
+                <Stack
                   alignItems="center"
+                  className={numberinputSideContainer[size]}
                   data-size={size}
                   justifyContent="center"
                 >
@@ -389,19 +230,18 @@ export const NumberInput = forwardRef(
                   >
                     <MinusIcon size={size === 'large' ? 'small' : 'small'} />
                   </Button>
-                </SideContainer>
+                </Stack>
               ) : null}
-              <InputContainer
+              <Row
                 alignItems="center"
+                className={inputContainer({ controls })}
                 justifyContent="space-between"
                 templateColumns="1fr auto"
               >
-                <Input
+                <input
                   aria-label={ariaLabel}
                   autoFocus={autoFocus}
-                  data-controls={controls}
-                  data-has-unit={!!unit}
-                  data-size={size}
+                  className={numberinput({ controls, hasUnit: !!unit, size })}
                   data-testid={dataTestId}
                   disabled={disabled}
                   id={localId}
@@ -436,20 +276,21 @@ export const NumberInput = forwardRef(
                   value={inputValue}
                 />
                 {unit ? (
-                  <Unit
+                  <Text
                     as="span"
+                    className={unitStyle({ disabled, readOnly, size })}
                     disabled={disabled}
                     sentiment="neutral"
-                    size={size}
                     variant="body"
                   >
                     {unit}
-                  </Unit>
+                  </Text>
                 ) : null}
-              </InputContainer>
+              </Row>
               {controls ? (
-                <SideContainer
+                <Stack
                   alignItems="center"
+                  className={numberinputSideContainer[size]}
                   data-size={size}
                   justifyContent="center"
                 >
@@ -463,9 +304,9 @@ export const NumberInput = forwardRef(
                   >
                     <PlusIcon size={size === 'large' ? 'small' : 'small'} />
                   </Button>
-                </SideContainer>
+                </Stack>
               ) : null}
-            </Container>
+            </div>
           </Tooltip>
         </div>
         {error || typeof success === 'string' || typeof helper === 'string' ? (
