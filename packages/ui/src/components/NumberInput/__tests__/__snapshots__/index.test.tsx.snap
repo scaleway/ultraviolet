@@ -2,375 +2,7 @@
 
 exports[`numberInput > should click on min button 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -378,7 +10,7 @@ exports[`numberInput > should click on min button 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -387,7 +19,7 @@ exports[`numberInput > should click on min button 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -406,14 +38,11 @@ exports[`numberInput > should click on min button 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r25»"
               max="100"
               min="0"
@@ -424,7 +53,7 @@ exports[`numberInput > should click on min button 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -451,375 +80,7 @@ exports[`numberInput > should click on min button 1`] = `
 
 exports[`numberInput > should click on plus button with a step value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -827,7 +88,7 @@ exports[`numberInput > should click on plus button with a step value 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -836,7 +97,7 @@ exports[`numberInput > should click on plus button with a step value 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -855,14 +116,11 @@ exports[`numberInput > should click on plus button with a step value 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r29»"
               max="100"
               min="0"
@@ -872,7 +130,7 @@ exports[`numberInput > should click on plus button with a step value 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -899,375 +157,7 @@ exports[`numberInput > should click on plus button with a step value 1`] = `
 
 exports[`numberInput > should click on plus button with a step value and an in-between value set 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1275,7 +165,7 @@ exports[`numberInput > should click on plus button with a step value and an in-b
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -1284,7 +174,7 @@ exports[`numberInput > should click on plus button with a step value and an in-b
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -1303,14 +193,11 @@ exports[`numberInput > should click on plus button with a step value and an in-b
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r2l»"
               max="100"
               min="0"
@@ -1320,7 +207,7 @@ exports[`numberInput > should click on plus button with a step value and an in-b
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -1347,375 +234,7 @@ exports[`numberInput > should click on plus button with a step value and an in-b
 
 exports[`numberInput > should focus input and modify value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1723,7 +242,7 @@ exports[`numberInput > should focus input and modify value 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -1732,7 +251,7 @@ exports[`numberInput > should focus input and modify value 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -1751,14 +270,11 @@ exports[`numberInput > should focus input and modify value 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r2d»"
               max="100"
               min="10"
@@ -1769,7 +285,7 @@ exports[`numberInput > should focus input and modify value 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -1796,375 +312,7 @@ exports[`numberInput > should focus input and modify value 1`] = `
 
 exports[`numberInput > should focus input and modify value when value > max 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2172,7 +320,7 @@ exports[`numberInput > should focus input and modify value when value > max 1`] 
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -2181,7 +329,7 @@ exports[`numberInput > should focus input and modify value when value > max 1`] 
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -2200,14 +348,11 @@ exports[`numberInput > should focus input and modify value when value > max 1`] 
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r2h»"
               max="5"
               min="1"
@@ -2218,7 +363,7 @@ exports[`numberInput > should focus input and modify value when value > max 1`] 
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -2245,191 +390,7 @@ exports[`numberInput > should focus input and modify value when value > max 1`] 
 
 exports[`numberInput > should renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2437,7 +398,7 @@ exports[`numberInput > should renders correctly 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -2446,7 +407,7 @@ exports[`numberInput > should renders correctly 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -2465,14 +426,11 @@ exports[`numberInput > should renders correctly 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r0»"
               max="100"
               min="0"
@@ -2481,7 +439,7 @@ exports[`numberInput > should renders correctly 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -2508,191 +466,7 @@ exports[`numberInput > should renders correctly 1`] = `
 
 exports[`numberInput > should renders correctly all sizes > with size large 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2700,7 +474,7 @@ exports[`numberInput > should renders correctly all sizes > with size large 1`] 
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -2709,7 +483,7 @@ exports[`numberInput > should renders correctly all sizes > with size large 1`] 
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -2728,14 +502,11 @@ exports[`numberInput > should renders correctly all sizes > with size large 1`] 
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r1a»"
               max="100"
               min="0"
@@ -2744,7 +515,7 @@ exports[`numberInput > should renders correctly all sizes > with size large 1`] 
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -2771,205 +542,7 @@ exports[`numberInput > should renders correctly all sizes > with size large 1`] 
 
 exports[`numberInput > should renders correctly all sizes > with size large and unit 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.emotion-9 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.emotion-9 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.emotion-9 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.emotion-9 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-  height: 3rem;
-  font-size: 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2977,7 +550,7 @@ exports[`numberInput > should renders correctly all sizes > with size large and 
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -2986,7 +559,7 @@ exports[`numberInput > should renders correctly all sizes > with size large and 
           data-unit="true"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -3005,14 +578,11 @@ exports[`numberInput > should renders correctly all sizes > with size large and 
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="true"
-              data-size="large"
+              class="styles__1ce7gb6b styles_hasUnit_true__1ce7gb6c styles_size_large__1ce7gb6f"
               id="«r1e»"
               max="100"
               min="0"
@@ -3020,13 +590,13 @@ exports[`numberInput > should renders correctly all sizes > with size large and 
               type="number"
             />
             <span
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles__1ce7gb65 styles_size_large__1ce7gb68 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               GB
             </span>
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -3053,191 +623,7 @@ exports[`numberInput > should renders correctly all sizes > with size large and 
 
 exports[`numberInput > should renders correctly all sizes > with size medium 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3245,7 +631,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium 1`]
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_medium__1ce7gb6o styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -3254,7 +640,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium 1`]
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_medium__1ce7gb61 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="medium"
           >
             <button
@@ -3273,14 +659,11 @@ exports[`numberInput > should renders correctly all sizes > with size medium 1`]
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="medium"
+              class="styles__1ce7gb6b styles_size_medium__1ce7gb6e"
               id="«r1j»"
               max="100"
               min="0"
@@ -3289,7 +672,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium 1`]
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_medium__1ce7gb61 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="medium"
           >
             <button
@@ -3316,205 +699,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium 1`]
 
 exports[`numberInput > should renders correctly all sizes > with size medium and unit 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.emotion-9 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.emotion-9 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.emotion-9 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.emotion-9 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-  height: 2.5rem;
-  font-size: 0.875rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3522,7 +707,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium and
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_medium__1ce7gb6o styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -3531,7 +716,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium and
           data-unit="true"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_medium__1ce7gb61 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="medium"
           >
             <button
@@ -3550,14 +735,11 @@ exports[`numberInput > should renders correctly all sizes > with size medium and
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="true"
-              data-size="medium"
+              class="styles__1ce7gb6b styles_hasUnit_true__1ce7gb6c styles_size_medium__1ce7gb6e"
               id="«r1n»"
               max="100"
               min="0"
@@ -3565,13 +747,13 @@ exports[`numberInput > should renders correctly all sizes > with size medium and
               type="number"
             />
             <span
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles__1ce7gb65 styles_size_medium__1ce7gb67 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               GB
             </span>
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_medium__1ce7gb61 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="medium"
           >
             <button
@@ -3598,191 +780,7 @@ exports[`numberInput > should renders correctly all sizes > with size medium and
 
 exports[`numberInput > should renders correctly all sizes > with size small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3790,7 +788,7 @@ exports[`numberInput > should renders correctly all sizes > with size small 1`] 
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -3799,7 +797,7 @@ exports[`numberInput > should renders correctly all sizes > with size small 1`] 
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_small__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="small"
           >
             <button
@@ -3818,14 +816,11 @@ exports[`numberInput > should renders correctly all sizes > with size small 1`] 
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="small"
+              class="styles__1ce7gb6b styles_size_small__1ce7gb6d"
               id="«r1s»"
               max="100"
               min="0"
@@ -3834,7 +829,7 @@ exports[`numberInput > should renders correctly all sizes > with size small 1`] 
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_small__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="small"
           >
             <button
@@ -3861,205 +856,7 @@ exports[`numberInput > should renders correctly all sizes > with size small 1`] 
 
 exports[`numberInput > should renders correctly all sizes > with size small and unit 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.emotion-9 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.emotion-9 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.emotion-9 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.emotion-9 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-  height: 2rem;
-  font-size: 0.875rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4067,7 +864,7 @@ exports[`numberInput > should renders correctly all sizes > with size small and 
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -4076,7 +873,7 @@ exports[`numberInput > should renders correctly all sizes > with size small and 
           data-unit="true"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_small__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="small"
           >
             <button
@@ -4095,14 +892,11 @@ exports[`numberInput > should renders correctly all sizes > with size small and 
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="true"
-              data-size="small"
+              class="styles__1ce7gb6b styles_hasUnit_true__1ce7gb6c styles_size_small__1ce7gb6d"
               id="«r20»"
               max="100"
               min="0"
@@ -4110,13 +904,13 @@ exports[`numberInput > should renders correctly all sizes > with size small and 
               type="number"
             />
             <span
-              class="emotion-8 emotion-9 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+              class="styles__1ce7gb65 styles_size_small__1ce7gb66 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               GB
             </span>
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_small__1ce7gb60 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="small"
           >
             <button
@@ -4143,191 +937,7 @@ exports[`numberInput > should renders correctly all sizes > with size small and 
 
 exports[`numberInput > should renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4335,7 +945,7 @@ exports[`numberInput > should renders correctly disabled 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_disabled__1ce7gb6m"
           data-controls="true"
           data-disabled="true"
           data-error="false"
@@ -4344,7 +954,7 @@ exports[`numberInput > should renders correctly disabled 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -4364,14 +974,11 @@ exports[`numberInput > should renders correctly disabled 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               disabled=""
               id="«r4»"
               max="9007199254740991"
@@ -4381,7 +988,7 @@ exports[`numberInput > should renders correctly disabled 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -4409,191 +1016,7 @@ exports[`numberInput > should renders correctly disabled 1`] = `
 
 exports[`numberInput > should renders correctly max value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4601,7 +1024,7 @@ exports[`numberInput > should renders correctly max value 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -4610,7 +1033,7 @@ exports[`numberInput > should renders correctly max value 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -4629,14 +1052,11 @@ exports[`numberInput > should renders correctly max value 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r16»"
               max="100"
               min="0"
@@ -4645,7 +1065,7 @@ exports[`numberInput > should renders correctly max value 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -4672,191 +1092,7 @@ exports[`numberInput > should renders correctly max value 1`] = `
 
 exports[`numberInput > should renders correctly min value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4864,7 +1100,7 @@ exports[`numberInput > should renders correctly min value 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -4873,7 +1109,7 @@ exports[`numberInput > should renders correctly min value 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -4892,14 +1128,11 @@ exports[`numberInput > should renders correctly min value 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«r12»"
               max="100"
               min="0"
@@ -4908,7 +1141,7 @@ exports[`numberInput > should renders correctly min value 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -4935,191 +1168,7 @@ exports[`numberInput > should renders correctly min value 1`] = `
 
 exports[`numberInput > should renders correctly with error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -5127,7 +1176,7 @@ exports[`numberInput > should renders correctly with error 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_error__1ce7gb6k"
           data-controls="true"
           data-disabled="false"
           data-error="true"
@@ -5136,7 +1185,7 @@ exports[`numberInput > should renders correctly with error 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5155,14 +1204,11 @@ exports[`numberInput > should renders correctly with error 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«rk»"
               max="9007199254740991"
               min="0"
@@ -5171,7 +1217,7 @@ exports[`numberInput > should renders correctly with error 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5203,191 +1249,7 @@ exports[`numberInput > should renders correctly with error 1`] = `
 
 exports[`numberInput > should renders correctly with label 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -5401,7 +1263,7 @@ exports[`numberInput > should renders correctly with label 1`] = `
       </label>
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -5410,7 +1272,7 @@ exports[`numberInput > should renders correctly with label 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5429,14 +1291,11 @@ exports[`numberInput > should renders correctly with label 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«ra»"
               max="9007199254740991"
               min="0"
@@ -5445,7 +1304,7 @@ exports[`numberInput > should renders correctly with label 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5472,191 +1331,7 @@ exports[`numberInput > should renders correctly with label 1`] = `
 
 exports[`numberInput > should renders correctly with label description 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -5675,7 +1350,7 @@ exports[`numberInput > should renders correctly with label description 1`] = `
       </div>
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -5684,7 +1359,7 @@ exports[`numberInput > should renders correctly with label description 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5703,14 +1378,11 @@ exports[`numberInput > should renders correctly with label description 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«rf»"
               max="9007199254740991"
               min="0"
@@ -5719,7 +1391,7 @@ exports[`numberInput > should renders correctly with label description 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5746,191 +1418,7 @@ exports[`numberInput > should renders correctly with label description 1`] = `
 
 exports[`numberInput > should renders correctly with placeholder 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -5938,7 +1426,7 @@ exports[`numberInput > should renders correctly with placeholder 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -5947,7 +1435,7 @@ exports[`numberInput > should renders correctly with placeholder 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -5966,14 +1454,11 @@ exports[`numberInput > should renders correctly with placeholder 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«ru»"
               max="9007199254740991"
               min="0"
@@ -5982,7 +1467,7 @@ exports[`numberInput > should renders correctly with placeholder 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -6009,191 +1494,7 @@ exports[`numberInput > should renders correctly with placeholder 1`] = `
 
 exports[`numberInput > should renders correctly with success 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -6201,7 +1502,7 @@ exports[`numberInput > should renders correctly with success 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_success__1ce7gb6j"
           data-controls="true"
           data-disabled="false"
           data-error="false"
@@ -6210,7 +1511,7 @@ exports[`numberInput > should renders correctly with success 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -6229,14 +1530,11 @@ exports[`numberInput > should renders correctly with success 1`] = `
             </button>
           </div>
           <div
-            class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-6 emotion-7"
-              data-controls="true"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f"
               id="«rp»"
               max="9007199254740991"
               min="0"
@@ -6245,7 +1543,7 @@ exports[`numberInput > should renders correctly with success 1`] = `
             />
           </div>
           <div
-            class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
+            class="styles_large__1ce7gb62 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
             data-size="large"
           >
             <button
@@ -6277,174 +1575,7 @@ exports[`numberInput > should renders correctly with success 1`] = `
 
 exports[`numberInput > should renders correctly without controls 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-3 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-4[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-4::-webkit-outer-spin-button,
-.emotion-4::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-4 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-4[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-4[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-4[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-4:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-4:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-4:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-4:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-4:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-4:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-4:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-4[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -6452,7 +1583,7 @@ exports[`numberInput > should renders correctly without controls 1`] = `
     >
       <div>
         <div
-          class="emotion-0 emotion-1"
+          class="styles__1ce7gb6h styles_size_large__1ce7gb6p styles_state_default__1ce7gb6i"
           data-controls="false"
           data-disabled="false"
           data-error="false"
@@ -6461,14 +1592,11 @@ exports[`numberInput > should renders correctly without controls 1`] = `
           data-unit="false"
         >
           <div
-            class="emotion-2 emotion-3 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+            class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
             style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
           >
             <input
-              class="emotion-4 emotion-5"
-              data-controls="false"
-              data-has-unit="false"
-              data-size="large"
+              class="styles__1ce7gb6b styles_size_large__1ce7gb6f styles_controls_false__1ce7gb6g"
               id="«r8»"
               max="9007199254740991"
               min="0"
