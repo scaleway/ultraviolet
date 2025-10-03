@@ -2,67 +2,16 @@
 
 exports[`tagList > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 50px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 50px;"
       >
         <span
           class="ellipsed styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -81,8 +30,9 @@ exports[`tagList > renders correctly 1`] = `
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +1
         </span>
@@ -94,67 +44,16 @@ exports[`tagList > renders correctly 1`] = `
 
 exports[`tagList > renders correctly a scrollable popover with non default popoverMaxHeight 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 100px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 100px;"
       >
         <span
           class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -194,14 +93,15 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
         </span>
       </div>
       <div
-        aria-controls="«r1v»"
-        aria-describedby="«r1v»"
+        aria-controls="«r27»"
+        aria-describedby="«r27»"
         class="styles__w40vpo9"
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +51
         </span>
@@ -213,50 +113,16 @@ exports[`tagList > renders correctly a scrollable popover with non default popov
 
 exports[`tagList > renders correctly and add ellipsis to the first tag as it too long 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 0px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 0px;"
       >
         <span
           class="ellipsed styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -275,67 +141,16 @@ exports[`tagList > renders correctly and add ellipsis to the first tag as it too
 
 exports[`tagList > renders correctly and ignore custom threshold as it does not fit the parent 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 50px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 50px;"
       >
         <span
           class="ellipsed styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -354,8 +169,9 @@ exports[`tagList > renders correctly and ignore custom threshold as it does not 
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +2
         </span>
@@ -367,35 +183,16 @@ exports[`tagList > renders correctly and ignore custom threshold as it does not 
 
 exports[`tagList > renders correctly with copiable 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 "
+        style="--_1f9zr5y0: 0px;"
       >
         <div
           aria-controls="«r11»"
@@ -437,35 +234,16 @@ exports[`tagList > renders correctly with copiable 1`] = `
 
 exports[`tagList > renders correctly with custom threshold 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 "
+        style="--_1f9zr5y0: 0px;"
       >
         <span
           class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -493,67 +271,16 @@ exports[`tagList > renders correctly with custom threshold 1`] = `
 
 exports[`tagList > renders correctly with custom threshold and extra tags 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 50px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 50px;"
       >
         <span
           class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -581,8 +308,9 @@ exports[`tagList > renders correctly with custom threshold and extra tags 1`] = 
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +1
         </span>
@@ -594,67 +322,16 @@ exports[`tagList > renders correctly with custom threshold and extra tags 1`] = 
 
 exports[`tagList > renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 100px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 100px;"
       >
         <span
           class="ellipsed styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -673,8 +350,9 @@ exports[`tagList > renders correctly with custom threshold and extra tags and ma
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +2
         </span>
@@ -686,35 +364,16 @@ exports[`tagList > renders correctly with custom threshold and extra tags and ma
 
 exports[`tagList > renders correctly with icons 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 "
+        style="--_1f9zr5y0: 0px;"
       >
         <div
           aria-controls="«r19»"
@@ -756,56 +415,16 @@ exports[`tagList > renders correctly with icons 1`] = `
 
 exports[`tagList > renders correctly with multiline 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles_multiline_true__1f9zr5y3 "
+        style="--_1f9zr5y0: 0px;"
       >
         <span
           class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -833,8 +452,9 @@ exports[`tagList > renders correctly with multiline 1`] = `
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +1
         </span>
@@ -854,67 +474,16 @@ exports[`tagList > renders correctly with no tags 1`] = `
 
 exports[`tagList > renders correctly with placement 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 0.5rem;
-}
-
-.emotion-2:has(.ellipsed) {
-  width: calc(100% - 50px);
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2 span,
-.emotion-2 div {
-  width: 100%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  color: #641cb3;
-  border: none;
-  font-size: 0.875rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1f9zr5y1"
       style="visibility: visible;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1f9zr5y2 styles__1f9zr5y4"
+        style="--_1f9zr5y0: 50px;"
       >
         <span
           class="ellipsed styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
@@ -933,8 +502,9 @@ exports[`tagList > renders correctly with placement 1`] = `
         tabindex="-1"
       >
         <span
-          class="emotion-4 emotion-5"
+          class="styles__1f9zr5y5"
           data-testid="taglist-open"
+          tabindex="0"
         >
           +1
         </span>
