@@ -6,4 +6,4 @@
 "@ultraviolet/ui": major
 ---
 
-Replace `import { ThemeProvider } from '@ultraviolet/ui'` to `import { ThemeProvider } from '@ultraviolet/themes'`
+Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
