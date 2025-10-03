@@ -2,191 +2,7 @@
 
 exports[`numberInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -198,7 +14,7 @@ exports[`numberInputField > should render correctly 1`] = `
       >
         <div>
           <div
-            class="emotion-0 emotion-1"
+            class="uv_1ce7gb6h uv_1ce7gb6p uv_1ce7gb6i"
             data-controls="true"
             data-disabled="false"
             data-error="false"
@@ -207,7 +23,7 @@ exports[`numberInputField > should render correctly 1`] = `
             data-unit="false"
           >
             <div
-              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
+              class="uv_1ce7gb62 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
             >
               <button
@@ -226,15 +42,12 @@ exports[`numberInputField > should render correctly 1`] = `
               </button>
             </div>
             <div
-              class="emotion-4 emotion-5 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+              class="uv_1ce7gb63 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
               style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
             >
               <input
-                class="emotion-6 emotion-7"
-                data-controls="true"
-                data-has-unit="false"
-                data-size="large"
-                id="_r_0_"
+                class="uv_1ce7gb6b uv_1ce7gb6f"
+                id="«r0»"
                 max="9007199254740991"
                 min="0"
                 name="test"
@@ -243,7 +56,7 @@ exports[`numberInputField > should render correctly 1`] = `
               />
             </div>
             <div
-              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
+              class="uv_1ce7gb62 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
             >
               <button
@@ -271,191 +84,7 @@ exports[`numberInputField > should render correctly 1`] = `
 
 exports[`numberInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0:hover {
-  border-color: #792dd4;
-}
-
-.emotion-0[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  padding: 0.125rem 0.5rem;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -467,7 +96,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
       >
         <div>
           <div
-            class="emotion-0 emotion-1"
+            class="uv_1ce7gb6h uv_1ce7gb6p uv_1ce7gb6m"
             data-controls="true"
             data-disabled="true"
             data-error="false"
@@ -476,7 +105,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
             data-unit="false"
           >
             <div
-              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
+              class="uv_1ce7gb62 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
             >
               <button
@@ -496,17 +125,14 @@ exports[`numberInputField > should render correctly disabled 1`] = `
               </button>
             </div>
             <div
-              class="emotion-4 emotion-5 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+              class="uv_1ce7gb63 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
               style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
             >
               <input
                 aria-label="Number Input"
-                class="emotion-6 emotion-7"
-                data-controls="true"
-                data-has-unit="false"
-                data-size="large"
+                class="uv_1ce7gb6b uv_1ce7gb6f"
                 disabled=""
-                id="_r_4_"
+                id="«r4»"
                 max="9007199254740991"
                 min="0"
                 name="test"
@@ -515,7 +141,7 @@ exports[`numberInputField > should render correctly disabled 1`] = `
               />
             </div>
             <div
-              class="emotion-2 emotion-3 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
+              class="uv_1ce7gb62 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5j"
               data-size="large"
             >
               <button
