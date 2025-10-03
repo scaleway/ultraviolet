@@ -16,7 +16,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import { useTheme } from '../../../theme'
+import { useTheme } from '@ultraviolet/themes'
 import { Checkbox } from '../../Checkbox'
 import { ModalContext } from '../../Modal/ModalProvider'
 import { Popup } from '../../Popup'

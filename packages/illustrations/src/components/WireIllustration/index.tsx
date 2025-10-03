@@ -1,27 +1,10 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
+import { heightVar, illustrationVariants, url, widthVar } from './styles.css'
 
-const StyledIllustration = styled('svg', {
-  shouldForwardProp: prop =>
-    !['height', 'width', 'sentiment', 'url', 'theme'].includes(prop),
-})<{
-  height?: string | number
-  width?: string | number
-  sentiment: Color
-  url?: string
-}>`
-  background-color: ${({ theme, sentiment }) => theme.colors[sentiment].icon};
-  -webkit-mask: url("${({ url }) => url}") no-repeat center;
-  mask: url("${({ url }) => url}") no-repeat center;
-  mask-size: contain;
-  width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
-  height: ${({ height }) => (typeof height === 'number' ? `${height}px` : height)};
-
-`
 type Color = Extract<
   keyof typeof theme.colors,
   | 'primary'
@@ -58,18 +41,15 @@ export const WireIllustration = ({
   className,
   sentiment = 'neutral',
   name,
-}: IllustrationWireProp) => {
-  const theme = useTheme()
-
-  return (
-    <StyledIllustration
-      className={className}
-      data-testid={dataTestId}
-      height={height}
-      sentiment={sentiment}
-      theme={theme}
-      url={ILLUSTRATIONS[name]}
-      width={width}
-    />
-  )
-}
+}: IllustrationWireProp) => (
+  <svg
+    className={`${illustrationVariants[sentiment]}${className ? ` ${className}` : ''}`}
+    data-testid={dataTestId}
+    style={assignInlineVars({
+      [url]: `url(${ILLUSTRATIONS[name]}) center center / contain no-repeat`,
+      [widthVar]: typeof width === 'number' ? `${width.toString()}px` : width,
+      [heightVar]:
+        typeof height === 'number' ? `${height.toString()}px` : height,
+    })}
+  />
+)
