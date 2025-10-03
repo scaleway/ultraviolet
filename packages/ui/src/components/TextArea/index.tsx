@@ -1,8 +1,8 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
+import { useTheme } from '@ultraviolet/themes'
 import type { DOMAttributes, ReactNode } from 'react'
 import {
   forwardRef,

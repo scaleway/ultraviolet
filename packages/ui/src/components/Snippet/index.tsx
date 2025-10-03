@@ -1,8 +1,8 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon } from '@ultraviolet/icons'
+import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { Children, useReducer } from 'react'
 import { CopyButton } from '../CopyButton'

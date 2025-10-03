@@ -5,12 +5,12 @@ import {
   DocsContainer as BaseContainer,
   Unstyled,
 } from '@storybook/addon-docs/blocks'
-import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
+import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { cloneElement, isValidElement, useState } from 'react'
 import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
-import { GlobalAlert, ThemeProvider as ThemeProviderUV } from '@ultraviolet/ui'
+import { GlobalAlert } from '@ultraviolet/ui'
 
 type ExtraProps = {
   /**

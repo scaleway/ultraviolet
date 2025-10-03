@@ -1,4 +1,5 @@
 import { PlusIcon } from '@ultraviolet/icons'
+import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import {
   Alert,
   Button,
@@ -10,7 +11,6 @@ import {
 } from '@ultraviolet/ui'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
-import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 
 export const App = () => {
   const [count, setCount] = useState(0)

@@ -1,7 +1,7 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { useTheme } from '@ultraviolet/themes'
 import type {
   ComponentProps,
   Dispatch,
