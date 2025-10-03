@@ -2,84 +2,7 @@
 
 exports[`switchButtonField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  position: relative;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-  height: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-2[data-checked="false"]:active:not([data-error="true"]):not([data-disabled="true"]),
-.emotion-2[data-checked="false"]:hover:not([data-error="true"]):not([data-disabled="true"]) {
-  box-shadow: none;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-2:hover:not([data-error='true'][data-disabled='true']),
-.emotion-2:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.emotion-2[data-checked='true'] {
-  border: none;
-}
-
-.emotion-2 label {
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  color: #222638;
-}
-
-.emotion-2[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.emotion-2:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -90,11 +13,10 @@ exports[`switchButtonField > should render correctly 1`] = `
         class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
       >
         <div
-          class="emotion-0 emotion-1"
-          data-size="small"
+          class="uv_m5izgx1 uv_m5izgx0"
         >
           <div
-            class="emotion-2 emotion-3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            class="uv_m5izgx4 uv_m5izgx3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-testid="switch-button-left"
@@ -156,7 +78,7 @@ exports[`switchButtonField > should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-2 emotion-3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            class="uv_m5izgx4 uv_m5izgx3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-testid="switch-button-right"
@@ -226,84 +148,7 @@ exports[`switchButtonField > should render correctly 1`] = `
 
 exports[`switchButtonField > should works with defaultValues 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  position: relative;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 3rem;
-}
-
-.emotion-2 {
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-  background: transparent;
-  height: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-2[data-checked="false"]:active:not([data-error="true"]):not([data-disabled="true"]),
-.emotion-2[data-checked="false"]:hover:not([data-error="true"]):not([data-disabled="true"]) {
-  box-shadow: none;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-2:hover:not([data-error='true'][data-disabled='true']),
-.emotion-2:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.emotion-2[data-checked='true'] {
-  border: none;
-}
-
-.emotion-2 label {
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  color: #222638;
-}
-
-.emotion-2[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.emotion-2:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -314,11 +159,10 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
         class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
       >
         <div
-          class="emotion-0 emotion-1"
-          data-size="small"
+          class="uv_m5izgx1 uv_m5izgx0"
         >
           <div
-            class="emotion-2 emotion-3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            class="uv_m5izgx4 uv_m5izgx3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-testid="switch-button-left"
@@ -380,7 +224,7 @@ exports[`switchButtonField > should works with defaultValues 1`] = `
             </div>
           </div>
           <div
-            class="emotion-2 emotion-3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            class="uv_m5izgx4 uv_m5izgx3 uv_475tnd0 uv_475tnd1 uv_475tnd5 uv_475tnd6 uv_toi52u0 uv_toi52u3j uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             data-checked="false"
             data-disabled="false"
             data-testid="switch-button-right"
