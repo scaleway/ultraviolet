@@ -1,5 +1,3 @@
-import type { Theme } from '@emotion/react'
-
 // First day of the month for a given year
 export const getMonthFirstDay = (month: number, year: number) => {
   const firstDay = new Date(year, month - 1, 1).getDay()
@@ -85,14 +83,6 @@ export const formatValue = (
 
   return undefined
 }
-
-export const styleCalendarContainer = (theme: Theme) => ` 
-  width: 100%;
-  color: ${theme.colors.neutral.text};
-  padding: ${theme.space[2]};
-  border-radius: ${theme.radii.default};
-  background-color: ${theme.colors.other.elevation.background.raised};
-`
 
 export const createDate = (value: string, showMonthYearPicker: boolean) => {
   if (showMonthYearPicker) {
