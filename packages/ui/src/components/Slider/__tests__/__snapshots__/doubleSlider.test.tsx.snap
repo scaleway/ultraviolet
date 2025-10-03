@@ -890,6 +890,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
 }
 
 .emotion-2 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -898,332 +899,15 @@ exports[`double slider > handles correctly onChange double 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2:hover {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2:hover {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1241,25 +925,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   align-self: center;
 }
 
-.emotion-14 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-16 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1273,7 +939,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: #e9eaeb;
 }
 
-.emotion-16 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1287,37 +953,37 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-18 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-20 {
+.emotion-8 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -1330,17 +996,17 @@ exports[`double slider > handles correctly onChange double 1`] = `
   outline: none;
 }
 
-.emotion-20:focus::-moz-range-thumb {
+.emotion-8:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20:focus::-webkit-slider-thumb {
+.emotion-8:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20::-moz-range-track {
+.emotion-8::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1351,7 +1017,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: transparent;
 }
 
-.emotion-20::-moz-range-thumb {
+.emotion-8::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1373,20 +1039,20 @@ exports[`double slider > handles correctly onChange double 1`] = `
   top: -8px;
 }
 
-.emotion-20::-moz-range-thumb:hover,
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:hover,
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-20::-ms-track {
+.emotion-8::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1397,7 +1063,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: transparent;
 }
 
-.emotion-20:focus::-webkit-slider-runnable-track {
+.emotion-8:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1408,7 +1074,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: transparent;
 }
 
-.emotion-20::-webkit-slider-thumb {
+.emotion-8::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1430,20 +1096,20 @@ exports[`double slider > handles correctly onChange double 1`] = `
   top: -8px;
 }
 
-.emotion-20::-webkit-slider-thumb:hover,
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:hover,
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22 {
+.emotion-10 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -1456,17 +1122,17 @@ exports[`double slider > handles correctly onChange double 1`] = `
   outline: none;
 }
 
-.emotion-22:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1477,7 +1143,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: transparent;
 }
 
-.emotion-22::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1499,20 +1165,20 @@ exports[`double slider > handles correctly onChange double 1`] = `
   top: -8px;
 }
 
-.emotion-22::-moz-range-thumb:hover,
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22::-ms-track {
+.emotion-10::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1523,7 +1189,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: transparent;
 }
 
-.emotion-22:focus::-webkit-slider-runnable-track {
+.emotion-10:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1534,7 +1200,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
   background: transparent;
 }
 
-.emotion-22::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1556,14 +1222,14 @@ exports[`double slider > handles correctly onChange double 1`] = `
   top: -8px;
 }
 
-.emotion-22::-webkit-slider-thumb:hover,
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -1592,7 +1258,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
             >
               <div>
                 <div
-                  class="emotion-2 emotion-3"
+                  class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -1601,15 +1267,12 @@ exports[`double slider > handles correctly onChange double 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                     style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-left"
-                      class="emotion-6 emotion-7"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                       data-testid="slider-input-left"
                       id="«r44»"
                       max="100"
@@ -1628,7 +1291,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
             >
               <div>
                 <div
-                  class="emotion-2 emotion-3"
+                  class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -1637,15 +1300,12 @@ exports[`double slider > handles correctly onChange double 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                     style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-right"
-                      class="emotion-6 emotion-7"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                       data-testid="slider-input-right"
                       id="«r46»"
                       max="100"
@@ -1661,21 +1321,21 @@ exports[`double slider > handles correctly onChange double 1`] = `
             </div>
           </div>
           <div
-            class="emotion-14 emotion-15"
+            class="emotion-2 emotion-3"
           >
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-4 emotion-5"
             >
               <div
                 aria-disabled="false"
-                class="emotion-18 emotion-19"
+                class="emotion-6 emotion-7"
                 data-error="false"
                 style="left: 35%; right: 25%;"
               />
             </div>
             <input
               aria-label="slider"
-              class="emotion-20 emotion-21"
+              class="emotion-8 emotion-9"
               data-direction="column"
               data-testid="slider-left"
               id="«r43»"
@@ -1688,7 +1348,7 @@ exports[`double slider > handles correctly onChange double 1`] = `
             />
             <input
               aria-label="slider"
-              class="emotion-22 emotion-21"
+              class="emotion-10 emotion-9"
               data-direction="column"
               data-testid="slider-right"
               id="«r43»"
@@ -1718,6 +1378,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
 }
 
 .emotion-2 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1726,332 +1387,15 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2:hover {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2:hover {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2069,25 +1413,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   align-self: center;
 }
 
-.emotion-14 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-16 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2101,7 +1427,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: #e9eaeb;
 }
 
-.emotion-16 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2115,37 +1441,37 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-18 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-20 {
+.emotion-8 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -2158,17 +1484,17 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   outline: none;
 }
 
-.emotion-20:focus::-moz-range-thumb {
+.emotion-8:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20:focus::-webkit-slider-thumb {
+.emotion-8:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20::-moz-range-track {
+.emotion-8::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2179,7 +1505,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-20::-moz-range-thumb {
+.emotion-8::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2201,20 +1527,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-20::-moz-range-thumb:hover,
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:hover,
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-20::-ms-track {
+.emotion-8::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2225,7 +1551,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-20:focus::-webkit-slider-runnable-track {
+.emotion-8:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2236,7 +1562,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-20::-webkit-slider-thumb {
+.emotion-8::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2258,20 +1584,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-20::-webkit-slider-thumb:hover,
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:hover,
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-20 {
+.emotion-8 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -2284,17 +1610,17 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   outline: none;
 }
 
-.emotion-20:focus::-moz-range-thumb {
+.emotion-8:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20:focus::-webkit-slider-thumb {
+.emotion-8:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20::-moz-range-track {
+.emotion-8::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2305,7 +1631,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-20::-moz-range-thumb {
+.emotion-8::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2327,20 +1653,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-20::-moz-range-thumb:hover,
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:hover,
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-20::-ms-track {
+.emotion-8::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2351,7 +1677,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-20:focus::-webkit-slider-runnable-track {
+.emotion-8:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2362,7 +1688,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-20::-webkit-slider-thumb {
+.emotion-8::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2384,20 +1710,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-20::-webkit-slider-thumb:hover,
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:hover,
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22 {
+.emotion-10 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -2410,17 +1736,17 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   outline: none;
 }
 
-.emotion-22:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2431,7 +1757,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-22::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2453,20 +1779,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-22::-moz-range-thumb:hover,
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22::-ms-track {
+.emotion-10::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2477,7 +1803,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-22:focus::-webkit-slider-runnable-track {
+.emotion-10:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2488,7 +1814,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-22::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2510,20 +1836,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-22::-webkit-slider-thumb:hover,
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22 {
+.emotion-10 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -2536,17 +1862,17 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   outline: none;
 }
 
-.emotion-22:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2557,7 +1883,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-22::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2579,20 +1905,20 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-22::-moz-range-thumb:hover,
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22::-ms-track {
+.emotion-10::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2603,7 +1929,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-22:focus::-webkit-slider-runnable-track {
+.emotion-10:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -2614,7 +1940,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   background: transparent;
 }
 
-.emotion-22::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2636,14 +1962,14 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
   top: -8px;
 }
 
-.emotion-22::-webkit-slider-thumb:hover,
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -2672,7 +1998,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
             >
               <div>
                 <div
-                  class="emotion-2 emotion-3"
+                  class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -2681,15 +2007,12 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                     style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-left"
-                      class="emotion-6 emotion-7"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                       data-testid="slider-input-left"
                       id="«r4c»"
                       max="10"
@@ -2708,7 +2031,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
             >
               <div>
                 <div
-                  class="emotion-2 emotion-3"
+                  class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -2717,15 +2040,12 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                     style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-right"
-                      class="emotion-6 emotion-7"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                       data-testid="slider-input-right"
                       id="«r4e»"
                       max="10"
@@ -2741,21 +2061,21 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
             </div>
           </div>
           <div
-            class="emotion-14 emotion-15"
+            class="emotion-2 emotion-3"
           >
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-4 emotion-5"
             >
               <div
                 aria-disabled="false"
-                class="emotion-18 emotion-19"
+                class="emotion-6 emotion-7"
                 data-error="false"
                 style="left: 0%; right: 0%;"
               />
             </div>
             <input
               aria-label="slider"
-              class="emotion-20 emotion-21"
+              class="emotion-8 emotion-9"
               data-direction="column"
               data-testid="slider-left"
               id="«r4b»"
@@ -2768,7 +2088,7 @@ exports[`double slider > handles correctly onChange with min and max double 1`] 
             />
             <input
               aria-label="slider"
-              class="emotion-22 emotion-21"
+              class="emotion-10 emotion-9"
               data-direction="column"
               data-testid="slider-right"
               id="«r4b»"
@@ -3192,173 +2512,6 @@ exports[`double slider > renders correctly direction row double with input 1`] =
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-2:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2:hover {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3376,7 +2529,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   align-self: center;
 }
 
-.emotion-10 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3390,22 +2543,22 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: #e9eaeb;
 }
 
-.emotion-12 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-12[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-12[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-14 {
+.emotion-8 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -3418,17 +2571,17 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   outline: none;
 }
 
-.emotion-14:focus::-moz-range-thumb {
+.emotion-8:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-14:focus::-webkit-slider-thumb {
+.emotion-8:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-14::-moz-range-track {
+.emotion-8::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3439,7 +2592,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-14::-moz-range-thumb {
+.emotion-8::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3461,20 +2614,20 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-14::-moz-range-thumb:hover,
-.emotion-14::-moz-range-thumb:active,
-.emotion-14::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:hover,
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-14::-moz-range-thumb:active,
-.emotion-14::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-14::-ms-track {
+.emotion-8::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3485,7 +2638,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-14:focus::-webkit-slider-runnable-track {
+.emotion-8:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3496,7 +2649,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-14::-webkit-slider-thumb {
+.emotion-8::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3518,20 +2671,20 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-14::-webkit-slider-thumb:hover,
-.emotion-14::-webkit-slider-thumb:active,
-.emotion-14::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:hover,
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-14::-webkit-slider-thumb:active,
-.emotion-14::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-16 {
+.emotion-10 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -3544,17 +2697,17 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   outline: none;
 }
 
-.emotion-16:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3565,7 +2718,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-16::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3587,20 +2740,20 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-16::-moz-range-thumb:hover,
-.emotion-16::-moz-range-thumb:active,
-.emotion-16::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-16::-moz-range-thumb:active,
-.emotion-16::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-16::-ms-track {
+.emotion-10::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3611,7 +2764,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-16:focus::-webkit-slider-runnable-track {
+.emotion-10:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -3622,7 +2775,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   background: transparent;
 }
 
-.emotion-16::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3644,14 +2797,14 @@ exports[`double slider > renders correctly direction row double with input 1`] =
   top: -8px;
 }
 
-.emotion-16::-webkit-slider-thumb:hover,
-.emotion-16::-webkit-slider-thumb:active,
-.emotion-16::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-16::-webkit-slider-thumb:active,
-.emotion-16::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -3687,7 +2840,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
           >
             <div>
               <div
-                class="emotion-2 emotion-3"
+                class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
@@ -3696,15 +2849,12 @@ exports[`double slider > renders correctly direction row double with input 1`] =
                 data-unit="false"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                  class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                   style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                 >
                   <input
                     aria-label="input-left"
-                    class="emotion-6 emotion-7"
-                    data-controls="false"
-                    data-has-unit="false"
-                    data-size="small"
+                    class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                     data-testid="slider-input-left"
                     id="«ru»"
                     max="100"
@@ -3719,21 +2869,21 @@ exports[`double slider > renders correctly direction row double with input 1`] =
             </div>
           </div>
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-2 emotion-3"
           >
             <div
-              class="emotion-10 emotion-11"
+              class="emotion-4 emotion-5"
             >
               <div
                 aria-disabled="false"
-                class="emotion-12 emotion-13"
+                class="emotion-6 emotion-7"
                 data-error="false"
                 style="left: 1%; right: 86%;"
               />
             </div>
             <input
               aria-label="Name"
-              class="emotion-14 emotion-15"
+              class="emotion-8 emotion-9"
               data-direction="row"
               data-testid="handle-left"
               id="«rs»"
@@ -3746,7 +2896,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
             />
             <input
               aria-label="Name"
-              class="emotion-16 emotion-15"
+              class="emotion-10 emotion-9"
               data-direction="row"
               data-testid="handle-right"
               id="«rs»"
@@ -3763,7 +2913,7 @@ exports[`double slider > renders correctly direction row double with input 1`] =
           >
             <div>
               <div
-                class="emotion-2 emotion-3"
+                class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
@@ -3772,15 +2922,12 @@ exports[`double slider > renders correctly direction row double with input 1`] =
                 data-unit="false"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                  class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                   style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                 >
                   <input
                     aria-label="input-right"
-                    class="emotion-6 emotion-7"
-                    data-controls="false"
-                    data-has-unit="false"
-                    data-size="small"
+                    class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                     data-testid="slider-input-right"
                     id="«r13»"
                     max="100"
@@ -5605,6 +4752,7 @@ exports[`double slider > renders correctly double input 1`] = `
 }
 
 .emotion-2 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5613,201 +4761,33 @@ exports[`double slider > renders correctly double input 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
-.emotion-2:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2:hover {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-2[data-controls='false']>.emotion-5 {
-  border-width: 0;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  height: 0.5rem;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .emotion-4 {
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-6 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-6[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-6::-webkit-outer-spin-button,
-.emotion-6::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-6 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-6[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-6[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-6[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-6:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-6:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-6:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-6:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-6:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-6[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-14 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-14 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-16 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5821,7 +4801,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: #e9eaeb;
 }
 
-.emotion-16 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -5835,37 +4815,37 @@ exports[`double slider > renders correctly double input 1`] = `
   background: #e9eaeb;
 }
 
-.emotion-18 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-18 {
+.emotion-6 {
   position: absolute;
   height: 100%;
   background-color: #8c40ef;
   border-radius: 0.25rem;
 }
 
-.emotion-18[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #e51963;
 }
 
-.emotion-18[aria-disabled='true'] {
+.emotion-6[aria-disabled='true'] {
   background-color: #d8c5fc;
 }
 
-.emotion-20 {
+.emotion-8 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -5878,17 +4858,17 @@ exports[`double slider > renders correctly double input 1`] = `
   outline: none;
 }
 
-.emotion-20:focus::-moz-range-thumb {
+.emotion-8:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20:focus::-webkit-slider-thumb {
+.emotion-8:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-20::-moz-range-track {
+.emotion-8::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5899,7 +4879,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: transparent;
 }
 
-.emotion-20::-moz-range-thumb {
+.emotion-8::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5921,20 +4901,20 @@ exports[`double slider > renders correctly double input 1`] = `
   top: -8px;
 }
 
-.emotion-20::-moz-range-thumb:hover,
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:hover,
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-moz-range-thumb:active,
-.emotion-20::-moz-range-thumb:focus {
+.emotion-8::-moz-range-thumb:active,
+.emotion-8::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-20::-ms-track {
+.emotion-8::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5945,7 +4925,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: transparent;
 }
 
-.emotion-20:focus::-webkit-slider-runnable-track {
+.emotion-8:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -5956,7 +4936,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: transparent;
 }
 
-.emotion-20::-webkit-slider-thumb {
+.emotion-8::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -5978,20 +4958,20 @@ exports[`double slider > renders correctly double input 1`] = `
   top: -8px;
 }
 
-.emotion-20::-webkit-slider-thumb:hover,
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:hover,
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-20::-webkit-slider-thumb:active,
-.emotion-20::-webkit-slider-thumb:focus {
+.emotion-8::-webkit-slider-thumb:active,
+.emotion-8::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22 {
+.emotion-10 {
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -6004,17 +4984,17 @@ exports[`double slider > renders correctly double input 1`] = `
   outline: none;
 }
 
-.emotion-22:focus::-moz-range-thumb {
+.emotion-10:focus::-moz-range-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22:focus::-webkit-slider-thumb {
+.emotion-10:focus::-webkit-slider-thumb {
   border: 1.5px solid #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-22::-moz-range-track {
+.emotion-10::-moz-range-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6025,7 +5005,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: transparent;
 }
 
-.emotion-22::-moz-range-thumb {
+.emotion-10::-moz-range-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6047,20 +5027,20 @@ exports[`double slider > renders correctly double input 1`] = `
   top: -8px;
 }
 
-.emotion-22::-moz-range-thumb:hover,
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:hover,
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
+.emotion-10::-moz-range-thumb:active,
+.emotion-10::-moz-range-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
-.emotion-22::-ms-track {
+.emotion-10::-ms-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6071,7 +5051,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: transparent;
 }
 
-.emotion-22:focus::-webkit-slider-runnable-track {
+.emotion-10:focus::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -6082,7 +5062,7 @@ exports[`double slider > renders correctly double input 1`] = `
   background: transparent;
 }
 
-.emotion-22::-webkit-slider-thumb {
+.emotion-10::-webkit-slider-thumb {
   -webkit-appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6104,14 +5084,14 @@ exports[`double slider > renders correctly double input 1`] = `
   top: -8px;
 }
 
-.emotion-22::-webkit-slider-thumb:hover,
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:hover,
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   border: 1.5px solid #8c40ef;
 }
 
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
+.emotion-10::-webkit-slider-thumb:active,
+.emotion-10::-webkit-slider-thumb:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -6150,7 +5130,7 @@ exports[`double slider > renders correctly double input 1`] = `
             >
               <div>
                 <div
-                  class="emotion-2 emotion-3"
+                  class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -6159,15 +5139,12 @@ exports[`double slider > renders correctly double input 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                     style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-left"
-                      class="emotion-6 emotion-7"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                       data-testid="slider-input-left"
                       id="«r1s»"
                       max="100"
@@ -6186,7 +5163,7 @@ exports[`double slider > renders correctly double input 1`] = `
             >
               <div>
                 <div
-                  class="emotion-2 emotion-3"
+                  class="styles__1ce7gb6h styles_size_small__1ce7gb6n styles_state_default__1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -6195,15 +5172,12 @@ exports[`double slider > renders correctly double input 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-4 emotion-5 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
+                    class="styles__1ce7gb63 styles_controls_false__1ce7gb64 styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh52p styles_justifyContent_space-between_xxsmall__x6hyh561"
                     style="--_3mg8xe0: 1fr auto; --_3mg8xe1: 1fr auto; --_3mg8xe2: 1fr auto; --_3mg8xe3: 1fr auto; --_3mg8xe4: 1fr auto; --_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input-right"
-                      class="emotion-6 emotion-7"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="styles__1ce7gb6b styles_size_small__1ce7gb6d styles_controls_false__1ce7gb6g"
                       data-testid="slider-input-right"
                       id="«r1u»"
                       max="100"
@@ -6219,21 +5193,21 @@ exports[`double slider > renders correctly double input 1`] = `
             </div>
           </div>
           <div
-            class="emotion-14 emotion-15"
+            class="emotion-2 emotion-3"
           >
             <div
-              class="emotion-16 emotion-17"
+              class="emotion-4 emotion-5"
             >
               <div
                 aria-disabled="false"
-                class="emotion-18 emotion-19"
+                class="emotion-6 emotion-7"
                 data-error="false"
                 style="left: 12%; right: 86%;"
               />
             </div>
             <input
               aria-label="Name"
-              class="emotion-20 emotion-21"
+              class="emotion-8 emotion-9"
               data-direction="column"
               data-testid="handle-left"
               id="«r1q»"
@@ -6246,7 +5220,7 @@ exports[`double slider > renders correctly double input 1`] = `
             />
             <input
               aria-label="Name"
-              class="emotion-22 emotion-21"
+              class="emotion-10 emotion-9"
               data-direction="column"
               data-testid="handle-right"
               id="«r1q»"
