@@ -25,16 +25,17 @@ Welcome to the Ultraviolet Core repository! This is the main repository for the 
 ### Quick start
 
 ```sh
-pnpm add @ultraviolet/ui @ultraviolet/fonts @emotion/react @emotion/styled
+pnpm add @ultraviolet/ui @ultraviolet/fonts
 ```
 
 ```tsx
-import { Global, ThemeProvider, css } from '@emotion/react'
+import { ThemeProvider } from '@ultraviolet/ui'
 import { Button, normalize, theme } from '@ultraviolet/ui'
+import '@ultraviolet/ui/styles'
 import '@ultraviolet/fonts/fonts.css'
 
 const App = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     <Global
       styles={css`
         ${normalize()}
