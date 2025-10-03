@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.0.0-beta.17
+
+### Minor Changes
+
+- [#5627](https://github.com/scaleway/ultraviolet/pull/5627) [`3bca6bb`](https://github.com/scaleway/ultraviolet/commit/3bca6bb32cbab6b9359542b112568d84a11dcab9) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `NumberInput` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- Updated dependencies [[`776c6df`](https://github.com/scaleway/ultraviolet/commit/776c6df268e796d6ee741fce25d70e0991085f5e)]:
+  - @ultraviolet/icons@5.0.0-beta.4
+
 ## 3.0.0-beta.16
 
 ### Minor Changes
