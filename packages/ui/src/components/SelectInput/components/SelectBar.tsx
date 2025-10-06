@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import {
   AlertCircleIcon,
   ArrowDownIcon,
@@ -8,6 +7,7 @@ import {
   CloseIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode, RefObject } from 'react'
 import {
   useCallback,
@@ -17,15 +17,25 @@ import {
   useRef,
   useState,
 } from 'react'
-import { Button } from '../Button'
-import { Stack } from '../Stack'
-import { Tag } from '../Tag'
-import { Text } from '../Text'
-import { Tooltip } from '../Tooltip'
-import { findOptionInOptions } from './findOptionInOptions'
-import { useSelectInput } from './SelectInputProvider'
-import type { OptionType } from './types'
-import { INPUT_SIZE_HEIGHT } from './types'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
+import { Tag } from '../../Tag'
+import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
+import { findOptionInOptions } from '../findOptionInOptions'
+import { useSelectInput } from '../SelectInputProvider'
+import type { OptionType } from '../types'
+import {
+  maxWidthTag,
+  minWidthTag,
+  multiselectStack,
+  plusTag,
+  selectBar,
+  selectBarTags,
+  selectbarState,
+  selectedValues,
+  selectinputPlaceholder,
+} from './selectBar.css'
 
 const SIZES_TAG = {
   gap: 8,
@@ -66,149 +76,6 @@ type DisplayValuesProps = {
   displayShadowCopy?: boolean
 }
 
-const StateStack = styled(Stack)`
-  padding-right: ${({ theme }) => theme.space['2']};
-  display: flex;
-`
-const Placeholder = styled(Text)`
-user-select: none;
-align-self: center;
-`
-
-const StyledInputWrapper = styled.div<{
-  'data-readonly': boolean
-  'data-disabled': boolean
-  'data-size': 'small' | 'medium' | 'large'
-  'data-state': 'neutral' | 'success' | 'danger'
-  'data-dropdownvisible': boolean
-  'aria-label'?: string
-}>`
-  display: grid;
-  width: 100%;
-  gap: ${({ theme }) => theme.space[1]};
-  grid-template-columns: 1fr auto ;
-  padding: ${({ theme }) => theme.space[1]};
-  padding-right: 0;
-  padding-left: ${({ theme }) => theme.space[2]};
-  cursor: pointer;
-  box-shadow: none;
-  background: ${({ theme }) => theme.colors.neutral.background};
-  border-radius: ${({ theme }) => theme.radii.default};
-  width: 100%;
-
-  &[data-size='small'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
-    padding-left: ${({ theme }) => theme.space[1]};
-  }
-  &[data-size='medium'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.medium]};
-  }
-  &[data-size='large'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.large]};
-  }
-  &[data-state='neutral'] {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-
-    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
-      border-color: ${({ theme }) => theme.colors.primary.borderHover};
-      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    }
-    &:not([data-disabled='true']):hover {
-      border-color: ${({ theme }) => theme.colors.primary.borderHover};
-      outline: none;
-    }
-
-    &:not([data-disabled='true']):focus-visible {
-      outline: 5px auto Highlight;
-      outline: 5px auto -webkit-focus-ring-color;
-    }
-
-    &[data-dropdownvisible='true'] {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-  }
-  }
-
-  &[data-state='success'] {
-    border: 1px solid ${({ theme }) => theme.colors.success.border};
-    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
-      border-color: ${({ theme }) => theme.colors.success.borderHover};
-      box-shadow: ${({ theme }) => theme.shadows.focusSuccess};
-    }
-
-    &[data-dropdownvisible='true'] {
-      border-color: ${({ theme }) => theme.colors.success.borderHover};
-    }
-  }
-
-  &[data-state='danger'] {
-    border: 1px solid ${({ theme }) => theme.colors.danger.border};
-
-    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
-      border-color: ${({ theme }) => theme.colors.danger.borderHover};
-      box-shadow: ${({ theme }) => theme.shadows.focusDanger};
-    }
-
-    &[data-dropdownvisible='true'] {
-      border-color: ${({ theme }) => theme.colors.danger.borderHover};
-    }
-  }
-
-  &:not([data-disabled='true']):not([data-readonly]):hover {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-
-  &[data-readonly='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-    cursor: default;
-  }
-
-  &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    cursor: not-allowed;
-  }
-`
-
-const CustomTag = styled(Tag, {
-  shouldForwardProp: prop => !['lastElementMaxWidth', 'hidden'].includes(prop),
-})<{
-  lastElementMaxWidth?: number
-  hidden?: boolean
-}>`
-  height: max-content;
-  width: fit-content;
-  min-width: ${({ lastElementMaxWidth }) =>
-    lastElementMaxWidth ? 'auto' : 'fit-content'};
-
-  max-width: ${({ lastElementMaxWidth, hidden }) =>
-    lastElementMaxWidth && !hidden ? `${lastElementMaxWidth}px` : '100%'};
-
-  ${({ hidden }) =>
-    hidden
-      ? 'visibility: hidden;'
-      : `
-  text-overflow: ellipsis;
-  overflow: hidden;`}
-`
-
-const SelectedValues = styled(Text)`
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  align-self: center;
-`
-const PlusTag = styled(Tag)`
-width: ${({ theme }) => theme.sizing[500]};
-;
-`
-
-const MultiselectStack = styled(Stack)`
-overflow: hidden;
-max-width: 100%;
-height: 100%;
-`
-
 const DisplayValues = ({
   refTag,
   nonOverflowedValues,
@@ -228,8 +95,9 @@ const DisplayValues = ({
     useSelectInput()
 
   return multiselect ? (
-    <MultiselectStack
+    <Stack
       alignItems="center"
+      className={multiselectStack}
       direction="row"
       gap="1"
       ref={refTag}
@@ -244,27 +112,22 @@ const DisplayValues = ({
           }}
         >
           {potentiallyNonOverflowedValues.map(option => (
-            <CustomTag
-              className={option.value}
-              hidden
+            <Tag
+              className={`${option.value} ${selectBarTags.hidden}`}
               key={option.value}
               onClose={() => {}}
             >
               {option?.label}
-            </CustomTag>
+            </Tag>
           ))}
         </div>
       ) : null}
       {nonOverflowedValues.map((option, index) => (
-        <CustomTag
+        <Tag
+          className={selectBarTags.visible}
           data-testid="selected-options-tags"
           disabled={disabled}
           key={option?.value}
-          lastElementMaxWidth={
-            index === nonOverflowedValues.length - 1 && overflow
-              ? lastElementMaxWidth
-              : 0
-          }
           onClose={
             !readOnly
               ? event => {
@@ -281,15 +144,24 @@ const DisplayValues = ({
               : undefined
           }
           sentiment="neutral"
+          style={
+            index === nonOverflowedValues.length - 1 && overflow
+              ? assignInlineVars({
+                  [minWidthTag]: 'auto',
+                  [maxWidthTag]: `${lastElementMaxWidth}px`,
+                })
+              : undefined
+          }
         >
           {option?.label}
-        </CustomTag>
+        </Tag>
       ))}
 
       {overflowed ? (
         <Stack justifyContent="center" ref={refPlusTag}>
-          <PlusTag
+          <Tag
             aria-label="Plus tag"
+            className={plusTag}
             data-testid="plus-tag"
             disabled={disabled}
             key="+"
@@ -297,13 +169,14 @@ const DisplayValues = ({
           >
             <PlusIcon size="xsmall" />
             {overflowAmount}
-          </PlusTag>
+          </Tag>
         </Stack>
       ) : null}
-    </MultiselectStack>
+    </Stack>
   ) : (
-    <SelectedValues
+    <Text
       as="span"
+      className={selectedValues}
       disabled={disabled}
       prominence="default"
       sentiment="neutral"
@@ -312,7 +185,7 @@ const DisplayValues = ({
       {selectedData.selectedValues[0]
         ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
         : null}
-    </SelectedValues>
+    </Text>
   )
 }
 
@@ -552,16 +425,20 @@ const SelectBar = ({
 
   return (
     <Tooltip text={tooltip}>
-      <StyledInputWrapper
+      <div
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}
         autoFocus={autoFocus}
+        className={selectBar({
+          disabled,
+          dropdownVisible: isDropdownVisible,
+          readOnly,
+          size,
+          state,
+        })}
         data-disabled={disabled}
-        data-dropdownvisible={isDropdownVisible}
         data-readonly={readOnly}
-        data-size={size}
-        data-state={state}
         data-testid={dataTestId}
         id={id}
         onClick={
@@ -604,17 +481,24 @@ const SelectBar = ({
             size={size}
           />
         ) : (
-          <Placeholder
+          <Text
             as="span"
+            className={selectinputPlaceholder}
             disabled={disabled}
             prominence="weak"
             sentiment="neutral"
             variant={size === 'large' ? 'body' : 'bodySmall'}
           >
             {placeholder}
-          </Placeholder>
+          </Text>
         )}
-        <StateStack alignItems="center" direction="row" gap={1} ref={arrowRef}>
+        <Stack
+          alignItems="center"
+          className={selectbarState}
+          direction="row"
+          gap={1}
+          ref={arrowRef}
+        >
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
           {clearable && selectedData.selectedValues.length > 0 ? (
@@ -644,10 +528,10 @@ const SelectBar = ({
             sentiment="neutral"
             size="small"
           />
-        </StateStack>
-      </StyledInputWrapper>
+        </Stack>
+      </div>
     </Tooltip>
   )
 }
 
-export { SelectBar, StyledInputWrapper }
+export { SelectBar }

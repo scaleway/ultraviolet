@@ -210,121 +210,7 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -332,7 +218,7 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -353,21 +239,21 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -379,22 +265,22 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -411,7 +297,7 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
   min-width: 126px;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
@@ -570,7 +456,7 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -585,24 +471,21 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
                             <div
                               aria-controls="«r5»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -628,14 +511,14 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -651,13 +534,13 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-49 emotion-9"
+                    class="emotion-41 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-43 emotion-44 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -697,10 +580,10 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-53 emotion-54"
+                class="emotion-45 emotion-46"
               >
                 <p
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -711,7 +594,7 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-57 emotion-58"
+          class="emotion-49 emotion-50"
         >
           <colgroup>
             <col />
@@ -723,13 +606,13 @@ exports[`estimateCost - Unit Item > render basic props 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-61 emotion-62"
+                class="emotion-53 emotion-54"
               />
               <td
-                class="emotion-63 emotion-110"
+                class="emotion-55 emotion-110"
               >
                 <h3
-                  class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -1165,235 +1048,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1401,7 +1056,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1409,7 +1064,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1430,7 +1085,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1451,35 +1106,35 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1491,7 +1146,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   min-width: 126px;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1503,37 +1158,37 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1550,7 +1205,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   min-width: 126px;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -1567,11 +1222,11 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
   min-width: 126px;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
@@ -1730,7 +1385,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -1745,24 +1400,21 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
                             <div
                               aria-controls="«rm»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -1788,14 +1440,14 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1811,13 +1463,13 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
                     </div>
                   </div>
                   <div
-                    class="emotion-49 emotion-9"
+                    class="emotion-41 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-43 emotion-44 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -1857,10 +1509,10 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
                 </div>
               </td>
               <td
-                class="emotion-53 emotion-54"
+                class="emotion-45 emotion-46"
               >
                 <p
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.13699
                 </p>
@@ -1871,7 +1523,7 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-57 emotion-58"
+          class="emotion-49 emotion-50"
         >
           <colgroup>
             <col />
@@ -1883,13 +1535,13 @@ exports[`estimateCost - Unit Item > render basic props with monthly price 1`] = 
             <tr>
               <td
                 aria-label="control"
-                class="emotion-61 emotion-62"
+                class="emotion-53 emotion-54"
               />
               <td
-                class="emotion-63 emotion-110"
+                class="emotion-55 emotion-110"
               >
                 <h3
-                  class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -2325,235 +1977,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2561,7 +1985,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2569,7 +1993,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2590,7 +2014,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2611,35 +2035,35 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2651,7 +2075,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2663,37 +2087,37 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2710,7 +2134,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -2727,11 +2151,11 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
   min-width: 126px;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
@@ -2890,7 +2314,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -2905,24 +2329,21 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
                             <div
                               aria-controls="«r3b»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -2948,14 +2369,14 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2971,13 +2392,13 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-49 emotion-9"
+                    class="emotion-41 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-43 emotion-44 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -3017,10 +2438,10 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-53 emotion-54"
+                class="emotion-45 emotion-46"
               >
                 <p
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.13699
                 </p>
@@ -3031,7 +2452,7 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-57 emotion-58"
+          class="emotion-49 emotion-50"
         >
           <colgroup>
             <col />
@@ -3043,13 +2464,13 @@ exports[`estimateCost - Unit Item > render basic props with overlay 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-61 emotion-62"
+                class="emotion-53 emotion-54"
               />
               <td
-                class="emotion-63 emotion-110"
+                class="emotion-55 emotion-110"
               >
                 <h3
-                  class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -3485,235 +2906,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3721,7 +2914,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3729,7 +2922,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3750,7 +2943,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3771,39 +2964,39 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   margin-left: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-43 {
   text-align: right;
 }
 
-.emotion-51 {
+.emotion-43 {
   text-align: right;
 }
 
-.emotion-53 input[type='number']::-webkit-inner-spin-button,
-.emotion-53 input[type='number']::-webkit-outer-spin-button {
+.emotion-45 input[type='number']::-webkit-inner-spin-button,
+.emotion-45 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-53 input[type='number'] {
+.emotion-45 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 input[type='number']::-webkit-inner-spin-button,
-.emotion-53 input[type='number']::-webkit-outer-spin-button {
+.emotion-45 input[type='number']::-webkit-inner-spin-button,
+.emotion-45 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-53 input[type='number'] {
+.emotion-45 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-55 {
+.emotion-47 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3815,7 +3008,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3827,41 +3020,41 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-57 {
+.emotion-49 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   text-align: right;
+}
+
+.emotion-51 {
+  text-align: right;
+}
+
+.emotion-53 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-53 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-57 {
+  width: 70%;
+}
+
+.emotion-57 {
+  width: 70%;
 }
 
 .emotion-59 {
-  text-align: right;
-}
-
-.emotion-61 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-61 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-65 {
-  width: 70%;
-}
-
-.emotion-65 {
-  width: 70%;
-}
-
-.emotion-67 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3878,7 +3071,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-67 {
+.emotion-59 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -3895,11 +3088,11 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
   min-width: 126px;
 }
 
-.emotion-69 {
+.emotion-61 {
   text-align: right;
 }
 
-.emotion-69 {
+.emotion-61 {
   text-align: right;
 }
 
@@ -4058,7 +3251,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -4073,24 +3266,21 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
                             <div
                               aria-controls="«r17»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -4116,14 +3306,14 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -4137,20 +3327,20 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
                         Storage
                       </p>
                       <p
-                        class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                        class="emotion-41 emotion-42 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                       >
                         50 GB Free
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-51 emotion-9"
+                    class="emotion-43 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-53 emotion-54 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-45 emotion-46 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -4190,15 +3380,15 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-55 emotion-56"
+                class="emotion-47 emotion-48"
               >
                 <p
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.05
                 </p>
                 <p
-                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-51 emotion-52 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   €0.001/GB/hour(s)
                 </p>
@@ -4209,7 +3399,7 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-61 emotion-62"
+          class="emotion-53 emotion-54"
         >
           <colgroup>
             <col />
@@ -4221,13 +3411,13 @@ exports[`estimateCost - Unit Item > render basic props with values 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-65 emotion-66"
+                class="emotion-57 emotion-58"
               />
               <td
-                class="emotion-67 emotion-110"
+                class="emotion-59 emotion-110"
               >
                 <h3
-                  class="emotion-69 emotion-70 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -4663,235 +3853,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4899,7 +3861,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4907,7 +3869,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4928,7 +3890,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4949,39 +3911,39 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   margin-left: 0.5rem;
 }
 
-.emotion-51 {
+.emotion-43 {
   text-align: right;
 }
 
-.emotion-51 {
+.emotion-43 {
   text-align: right;
 }
 
-.emotion-53 input[type='number']::-webkit-inner-spin-button,
-.emotion-53 input[type='number']::-webkit-outer-spin-button {
+.emotion-45 input[type='number']::-webkit-inner-spin-button,
+.emotion-45 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-53 input[type='number'] {
+.emotion-45 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 input[type='number']::-webkit-inner-spin-button,
-.emotion-53 input[type='number']::-webkit-outer-spin-button {
+.emotion-45 input[type='number']::-webkit-inner-spin-button,
+.emotion-45 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-53 input[type='number'] {
+.emotion-45 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-55 {
+.emotion-47 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -4993,7 +3955,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5005,41 +3967,41 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   min-width: 126px;
 }
 
-.emotion-57 {
+.emotion-49 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   text-align: right;
+}
+
+.emotion-51 {
+  text-align: right;
+}
+
+.emotion-53 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-53 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-57 {
+  width: 70%;
+}
+
+.emotion-57 {
+  width: 70%;
 }
 
 .emotion-59 {
-  text-align: right;
-}
-
-.emotion-61 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-61 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-65 {
-  width: 70%;
-}
-
-.emotion-65 {
-  width: 70%;
-}
-
-.emotion-67 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5056,7 +4018,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   min-width: 126px;
 }
 
-.emotion-67 {
+.emotion-59 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -5073,11 +4035,11 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
   min-width: 126px;
 }
 
-.emotion-69 {
+.emotion-61 {
   text-align: right;
 }
 
-.emotion-69 {
+.emotion-61 {
   text-align: right;
 }
 
@@ -5236,7 +4198,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -5251,24 +4213,21 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
                             <div
                               aria-controls="«r1q»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -5294,14 +4253,14 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -5315,20 +4274,20 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
                         Storage
                       </p>
                       <p
-                        class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                        class="emotion-41 emotion-42 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                       >
                         50 GB Free
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-51 emotion-9"
+                    class="emotion-43 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-53 emotion-54 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-45 emotion-46 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -5368,15 +4327,15 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
                 </div>
               </td>
               <td
-                class="emotion-55 emotion-56"
+                class="emotion-47 emotion-48"
               >
                 <p
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.05 - €0.05
                 </p>
                 <p
-                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-51 emotion-52 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   €0.001/GB
                 </p>
@@ -5387,7 +4346,7 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-61 emotion-62"
+          class="emotion-53 emotion-54"
         >
           <colgroup>
             <col />
@@ -5399,13 +4358,13 @@ exports[`estimateCost - Unit Item > render basic props with values and no iterat
             <tr>
               <td
                 aria-label="control"
-                class="emotion-65 emotion-66"
+                class="emotion-57 emotion-58"
               />
               <td
-                class="emotion-67 emotion-110"
+                class="emotion-59 emotion-110"
               >
                 <h3
-                  class="emotion-69 emotion-70 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -5842,235 +4801,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   float: right;
 }
 
-.emotion-45 {
-  width: 100%;
-}
-
-.emotion-45 {
-  width: 100%;
-}
-
 .emotion-47 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-47[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-47[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-47[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-47[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-47[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-47[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-47[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-47[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-47[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-47[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-47[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-47[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-47[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-47[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-47:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-47[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-47[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-47 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-47[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-47[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-47[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-47[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-47[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-47[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-47[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-47[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-47[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-47[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-47[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-47[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-47[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-47[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-47:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-47[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-47[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-49 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-49 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-51 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-51 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6078,7 +4809,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   min-width: 230px;
 }
 
-.emotion-55:before {
+.emotion-47:before {
   content: '';
   position: absolute;
   left: 0;
@@ -6089,7 +4820,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   border-bottom: 1px solid #d9dadd;
 }
 
-.emotion-57 {
+.emotion-49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6110,7 +4841,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-57 {
+.emotion-49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6131,36 +4862,71 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-59 {
+.emotion-51 {
   margin-left: 0.5rem;
 }
 
-.emotion-61 {
+.emotion-53 {
+  text-align: right;
+}
+
+.emotion-53 {
+  text-align: right;
+}
+
+.emotion-55 input[type='number']::-webkit-inner-spin-button,
+.emotion-55 input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-55 input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-55 input[type='number']::-webkit-inner-spin-button,
+.emotion-55 input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-55 input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-57 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
+}
+
+.emotion-57:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  border-bottom: 1px solid #d9dadd;
+}
+
+.emotion-59 {
+  text-align: right;
+}
+
+.emotion-59 {
   text-align: right;
 }
 
 .emotion-61 {
   text-align: right;
-}
-
-.emotion-63 input[type='number']::-webkit-inner-spin-button,
-.emotion-63 input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-63 input[type='number'] {
-  -moz-appearance: textfield;
-}
-
-.emotion-63 input[type='number']::-webkit-inner-spin-button,
-.emotion-63 input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-63 input[type='number'] {
-  -moz-appearance: textfield;
 }
 
 .emotion-65 {
@@ -6169,36 +4935,9 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   position: relative;
   width: 70%;
   min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
 }
 
-.emotion-65:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: calc(100% - 32px);
-  margin-left: 16px;
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-67 {
-  text-align: right;
-}
-
-.emotion-67 {
-  text-align: right;
-}
-
-.emotion-69 {
-  text-align: right;
-}
-
-.emotion-73 {
+.emotion-65 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6206,15 +4945,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   min-width: 230px;
 }
 
-.emotion-73 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-83 {
+.emotion-75 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6226,7 +4957,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   min-width: 126px;
 }
 
-.emotion-83 {
+.emotion-75 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6238,29 +4969,29 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   min-width: 126px;
 }
 
-.emotion-89 {
+.emotion-81 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-89 {
+.emotion-81 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-93 {
+.emotion-85 {
   width: 70%;
 }
 
-.emotion-93 {
+.emotion-85 {
   width: 70%;
 }
 
-.emotion-95 {
+.emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6277,7 +5008,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   min-width: 126px;
 }
 
-.emotion-95 {
+.emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -6294,11 +5025,11 @@ exports[`estimateCost - Unit Item > render test 1`] = `
   min-width: 126px;
 }
 
-.emotion-97 {
+.emotion-89 {
   text-align: right;
 }
 
-.emotion-97 {
+.emotion-89 {
   text-align: right;
 }
 
@@ -6494,7 +5225,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-45 emotion-46"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -6509,24 +5240,21 @@ exports[`estimateCost - Unit Item > render test 1`] = `
                             <div
                               aria-controls="«r2f»"
                               aria-expanded="false"
-                              class="emotion-47 emotion-48"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -6552,14 +5280,14 @@ exports[`estimateCost - Unit Item > render test 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-53 emotion-54"
+              class="emotion-45 emotion-46"
             >
               <td
-                class="emotion-55 emotion-111"
+                class="emotion-47 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-57 emotion-58"
+                  class="emotion-49 emotion-50"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -6573,20 +5301,20 @@ exports[`estimateCost - Unit Item > render test 1`] = `
                         value
                       </p>
                       <p
-                        class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                        class="emotion-51 emotion-52 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                       >
                         value
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-61 emotion-9"
+                    class="emotion-53 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-63 emotion-64 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-55 emotion-56 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -6626,29 +5354,29 @@ exports[`estimateCost - Unit Item > render test 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-65 emotion-66"
+                class="emotion-57 emotion-58"
               >
                 <p
-                  class="emotion-67 emotion-68 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.025
                 </p>
                 <p
-                  class="emotion-69 emotion-70 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   €0.001/value/hour(s)
                 </p>
               </td>
             </tr>
             <tr
-              class="emotion-53 emotion-54"
+              class="emotion-45 emotion-46"
             >
               <td
-                class="emotion-73 emotion-111"
+                class="emotion-65 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-57 emotion-58"
+                  class="emotion-49 emotion-50"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -6662,20 +5390,20 @@ exports[`estimateCost - Unit Item > render test 1`] = `
                         value
                       </p>
                       <p
-                        class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                        class="emotion-51 emotion-52 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                       >
                         value
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-61 emotion-9"
+                    class="emotion-53 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-63 emotion-64 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-55 emotion-56 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -6715,15 +5443,15 @@ exports[`estimateCost - Unit Item > render test 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-83 emotion-66"
+                class="emotion-75 emotion-58"
               >
                 <p
-                  class="emotion-67 emotion-68 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.0075 - €0.0225
                 </p>
                 <p
-                  class="emotion-69 emotion-70 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   €0.0003/value
                 </p>
@@ -6734,7 +5462,7 @@ exports[`estimateCost - Unit Item > render test 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-89 emotion-90"
+          class="emotion-81 emotion-82"
         >
           <colgroup>
             <col />
@@ -6746,13 +5474,13 @@ exports[`estimateCost - Unit Item > render test 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-93 emotion-94"
+                class="emotion-85 emotion-86"
               />
               <td
-                class="emotion-95 emotion-110"
+                class="emotion-87 emotion-110"
               >
                 <h3
-                  class="emotion-97 emotion-98 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-89 emotion-90 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-31 emotion-32"
@@ -7188,235 +5916,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7424,7 +5924,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7432,7 +5932,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7453,7 +5953,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7474,35 +5974,35 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7514,7 +6014,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7526,37 +6026,37 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7573,7 +6073,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -7590,11 +6090,11 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
@@ -7753,7 +6253,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -7768,24 +6268,21 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
                             <div
                               aria-controls="«r3s»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -7811,14 +6308,14 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -7834,13 +6331,13 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-49 emotion-9"
+                    class="emotion-41 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-43 emotion-44 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -7880,10 +6377,10 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-53 emotion-54"
+                class="emotion-45 emotion-46"
               >
                 <p
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
                 >
                   €0.00
                 </p>
@@ -7894,7 +6391,7 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-57 emotion-58"
+          class="emotion-49 emotion-50"
         >
           <colgroup>
             <col />
@@ -7906,13 +6403,13 @@ exports[`estimateCost - Unit Item > render with 0 amount 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-61 emotion-62"
+                class="emotion-53 emotion-54"
               />
               <td
-                class="emotion-63 emotion-110"
+                class="emotion-55 emotion-110"
               >
                 <h3
-                  class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -8348,235 +6845,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8584,7 +6853,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8592,7 +6861,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8613,7 +6882,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8634,35 +6903,35 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8674,7 +6943,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8686,41 +6955,41 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
+}
+
+.emotion-49 {
+  text-align: right;
+}
+
+.emotion-51 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-51 {
+  margin: 0;
+  width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.emotion-55 {
+  width: 70%;
+}
+
+.emotion-55 {
+  width: 70%;
 }
 
 .emotion-57 {
-  text-align: right;
-}
-
-.emotion-59 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-59 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-63 {
-  width: 70%;
-}
-
-.emotion-63 {
-  width: 70%;
-}
-
-.emotion-65 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8737,7 +7006,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-65 {
+.emotion-57 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -8754,11 +7023,11 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
   min-width: 126px;
 }
 
-.emotion-67 {
+.emotion-59 {
   text-align: right;
 }
 
-.emotion-67 {
+.emotion-59 {
   text-align: right;
 }
 
@@ -8917,7 +7186,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -8932,24 +7201,21 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
                             <div
                               aria-controls="«r4d»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -8975,14 +7241,14 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -8998,13 +7264,13 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-49 emotion-9"
+                    class="emotion-41 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-43 emotion-44 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -9044,15 +7310,15 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-53 emotion-54"
+                class="emotion-45 emotion-46"
               >
                 <p
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €100.00
                 </p>
                 <p
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   €10.00/GB/hour(s)
                 </p>
@@ -9063,7 +7329,7 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-59 emotion-60"
+          class="emotion-51 emotion-52"
         >
           <colgroup>
             <col />
@@ -9075,13 +7341,13 @@ exports[`estimateCost - Unit Item > render with 10 amount 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-63 emotion-64"
+                class="emotion-55 emotion-56"
               />
               <td
-                class="emotion-65 emotion-110"
+                class="emotion-57 emotion-110"
               >
                 <h3
-                  class="emotion-67 emotion-68 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
@@ -9517,235 +7783,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   float: right;
 }
 
-.emotion-35 {
-  width: 100%;
-}
-
-.emotion-35 {
-  width: 100%;
-}
-
 .emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-37 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-37[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-37[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-37[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-37[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-37[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-37[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-37[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-37[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-37[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-37[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-37[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-37[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-37:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-37[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-37[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-39 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-41 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9753,7 +7791,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   min-width: 230px;
 }
 
-.emotion-45 {
+.emotion-37 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9761,7 +7799,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   min-width: 230px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9782,7 +7820,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-47 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9803,35 +7841,35 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-bottom: 8px;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-49 {
+.emotion-41 {
   text-align: right;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-51 input[type='number']::-webkit-inner-spin-button,
-.emotion-51 input[type='number']::-webkit-outer-spin-button {
+.emotion-43 input[type='number']::-webkit-inner-spin-button,
+.emotion-43 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.emotion-51 input[type='number'] {
+.emotion-43 input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9843,7 +7881,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-53 {
+.emotion-45 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9855,37 +7893,37 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-55 {
+.emotion-47 {
   text-align: right;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-57 {
+.emotion-49 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-61 {
+.emotion-53 {
   width: 70%;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9902,7 +7940,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-63 {
+.emotion-55 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -9919,11 +7957,11 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
   min-width: 126px;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
-.emotion-65 {
+.emotion-57 {
   text-align: right;
 }
 
@@ -10082,7 +8120,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="uv_gwf0flg uv_gwf0flf emotion-35 emotion-36"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                         style="--uv_gwf0fl0: 100%;"
                       >
                         <div
@@ -10097,24 +8135,21 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
                             <div
                               aria-controls="«r61»"
                               aria-expanded="false"
-                              class="emotion-37 emotion-38"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
                               <span
-                                class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
                               </span>
                               <div
-                                class="emotion-41 emotion-42 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
@@ -10140,14 +8175,14 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-43 emotion-44"
+              class="emotion-35 emotion-36"
             >
               <td
-                class="emotion-45 emotion-111"
+                class="emotion-37 emotion-111"
                 width="70%"
               >
                 <div
-                  class="emotion-47 emotion-48"
+                  class="emotion-39 emotion-40"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -10163,13 +8198,13 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-49 emotion-9"
+                    class="emotion-41 emotion-9"
                   >
                     <div
                       style="width: 150px;"
                     >
                       <div
-                        class="emotion-51 emotion-52 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                        class="emotion-43 emotion-44 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                       >
                         <div>
                           <div
@@ -10209,10 +8244,10 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-53 emotion-54"
+                class="emotion-45 emotion-46"
               >
                 <p
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   €0.13699
                 </p>
@@ -10223,7 +8258,7 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-57 emotion-58"
+          class="emotion-49 emotion-50"
         >
           <colgroup>
             <col />
@@ -10235,13 +8270,13 @@ exports[`estimateCost - Unit Item > render with getAmountValue 1`] = `
             <tr>
               <td
                 aria-label="control"
-                class="emotion-61 emotion-62"
+                class="emotion-53 emotion-54"
               />
               <td
-                class="emotion-63 emotion-110"
+                class="emotion-55 emotion-110"
               >
                 <h3
-                  class="emotion-65 emotion-66 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
                     class="emotion-21 emotion-22"
