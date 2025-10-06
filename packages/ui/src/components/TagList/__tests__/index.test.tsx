@@ -201,6 +201,36 @@ describe('tagList', () => {
     })
   })
 
+  test('renders correctly when clicking on popover via keyboard event', async () => {
+    const tags: TagType[] = [
+      { icon: 'id', label: 'smooth' },
+      'code',
+      { icon: 'lock', label: 'hello' },
+      { icon: 'plus', label: 'world' },
+    ]
+
+    mockOffsetWidth(tags)
+
+    renderWithTheme(
+      <TagList popoverTitle="Additional" tags={tags} threshold={1} />,
+    )
+
+    expect(screen.queryByText('Additional')).not.toBeInTheDocument()
+
+    const plus = screen.getByTestId('taglist-open')
+    plus.focus()
+    await userEvent.keyboard(' ')
+
+    expect(screen.getByText('Additional')).toBeInTheDocument()
+
+    const closeButton = screen.getByLabelText('close')
+    await userEvent.click(closeButton)
+
+    await waitFor(() => {
+      expect(screen.queryByText('Additional')).not.toBeInTheDocument()
+    })
+  })
+
   test('renders correctly a scrollable popover with non default popoverMaxHeight', async () => {
     const tags: TagType[] = [
       'very',
