@@ -1,5 +1,20 @@
 # Change Log
 
+## 3.0.0-beta.17
+
+### Minor Changes
+
+- [#5631](https://github.com/scaleway/ultraviolet/pull/5631) [`6fdf91d`](https://github.com/scaleway/ultraviolet/commit/6fdf91da1cca7c74f843dbb338960ef9d1b686bb) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `TextArea` to use vanilla extract instead of Emotion
+
+- [#5627](https://github.com/scaleway/ultraviolet/pull/5627) [`3bca6bb`](https://github.com/scaleway/ultraviolet/commit/3bca6bb32cbab6b9359542b112568d84a11dcab9) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `NumberInput` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5639](https://github.com/scaleway/ultraviolet/pull/5639) [`c80b7c3`](https://github.com/scaleway/ultraviolet/commit/c80b7c30d1692a6f07e5a90fa73d03cba3627fa3) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Checkbox />` input size being wrong
+
+- Updated dependencies [[`776c6df`](https://github.com/scaleway/ultraviolet/commit/776c6df268e796d6ee741fce25d70e0991085f5e)]:
+  - @ultraviolet/icons@5.0.0-beta.4
+
 ## 3.0.0-beta.16
 
 ### Minor Changes
