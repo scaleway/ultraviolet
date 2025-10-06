@@ -2,109 +2,7 @@
 
 exports[`textArea > should render correctly when input  has a error sentiment 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + smallpx);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -117,21 +15,19 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="true"
-          class="emotion-2 emotion-3"
-          data-error="true"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3 styles_error_true__hlf4vn5"
           id="«rs»"
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -164,109 +60,7 @@ exports[`textArea > should render correctly when input  has a error sentiment 1`
 
 exports[`textArea > should render correctly when input has a success sentiment 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + smallpx);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -279,21 +73,19 @@ exports[`textArea > should render correctly when input has a success sentiment 1
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="false"
-          class="emotion-2 emotion-3"
-          data-error="false"
-          data-readonly="false"
-          data-success="true"
+          class="styles__hlf4vn3 styles_success_true__hlf4vn4"
           id="«ro»"
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_success__vbm0wq4 styles_size_small__vbm0wqa styles_undefined_compound_35__vbm0wq1j"
@@ -326,181 +118,7 @@ exports[`textArea > should render correctly when input has a success sentiment 1
 
 exports[`textArea > should render correctly when input is disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -513,22 +131,20 @@ exports[`textArea > should render correctly when input is disabled 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="false"
-          class="emotion-2 emotion-3"
-          data-error="false"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3"
           disabled=""
           id="«ra»"
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         />
       </div>
     </div>
@@ -538,181 +154,7 @@ exports[`textArea > should render correctly when input is disabled 1`] = `
 
 exports[`textArea > should render correctly when input is readOnly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -725,21 +167,20 @@ exports[`textArea > should render correctly when input is readOnly 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="false"
-          class="emotion-2 emotion-3"
-          data-error="false"
-          data-readonly="true"
-          data-success="false"
+          class="styles__hlf4vn3"
           id="«rd»"
+          readonly=""
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         />
       </div>
     </div>
@@ -749,181 +190,7 @@ exports[`textArea > should render correctly when input is readOnly 1`] = `
 
 exports[`textArea > should render correctly when it is required 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -945,21 +212,19 @@ exports[`textArea > should render correctly when it is required 1`] = `
         </span>
       </div>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="false"
-          class="emotion-2 emotion-3"
-          data-error="false"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3"
           id="«rg»"
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         />
       </div>
     </div>
@@ -969,94 +234,7 @@ exports[`textArea > should render correctly when it is required 1`] = `
 
 exports[`textArea > should render correctly with basic props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1069,21 +247,19 @@ exports[`textArea > should render correctly with basic props 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="false"
-          class="emotion-2 emotion-3"
-          data-error="false"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3"
           id="«r0»"
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         />
       </div>
     </div>
@@ -1093,181 +269,7 @@ exports[`textArea > should render correctly with basic props 1`] = `
 
 exports[`textArea > should render correctly with maxlength 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + 0px);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1280,22 +282,20 @@ exports[`textArea > should render correctly with maxlength 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="false"
-          class="emotion-2 emotion-3"
-          data-error="false"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3"
           id="«rk»"
           maxlength="3"
           rows="3"
+          style="--hlf4vn0: calc(1.5rem + 0px + 0px);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         />
       </div>
       <div
@@ -1316,109 +316,7 @@ exports[`textArea > should render correctly with maxlength 1`] = `
 
 exports[`textArea > should render with AutoExpandMax 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + smallpx);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1431,22 +329,19 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="true"
-          class="emotion-2 emotion-3"
-          data-error="true"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3 styles_error_true__hlf4vn5"
           id="«r14»"
           rows="3"
-          style="height: 2px; max-height: calc(NaNpx + 2*0.75rem); min-height: calc(NaNpx + 2*0.75rem);"
+          style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -1479,109 +374,7 @@ exports[`textArea > should render with AutoExpandMax 1`] = `
 
 exports[`textArea > should render with AutoExpandMax and rows 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + smallpx);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1594,22 +387,19 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="true"
-          class="emotion-2 emotion-3"
-          data-error="true"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3 styles_error_true__hlf4vn5"
           id="«r18»"
           rows="2"
-          style="height: 2px; max-height: calc(NaNpx + 2*0.75rem); min-height: calc(NaNpx + 2*0.75rem);"
+          style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -1642,109 +432,7 @@ exports[`textArea > should render with AutoExpandMax and rows 1`] = `
 
 exports[`textArea > should render with auto rows 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-0 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.emotion-2 {
-  width: 100%;
-  resize: vertical;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  padding: 0.75rem 0.5rem 0.75rem 1rem;
-  padding-right: calc(1.5rem + 0px + smallpx);
-}
-
-.emotion-2::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-2:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-2::placeholder {
-  color: #727683;
-}
-
-.emotion-2[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-2[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-2:disabled {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-2:not(:disabled):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2:not(:disabled):focus {
-  outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1757,22 +445,19 @@ exports[`textArea > should render with auto rows 1`] = `
         Test
       </label>
       <div
-        class="emotion-0 emotion-1"
+        class="styles__hlf4vn1"
       >
         <textarea
           aria-invalid="true"
-          class="emotion-2 emotion-3"
-          data-error="true"
-          data-readonly="false"
-          data-success="false"
+          class="styles__hlf4vn3 styles_error_true__hlf4vn5"
           id="«r10»"
           rows="1"
-          style="height: 2px; resize: none;"
+          style="--hlf4vn0: calc(1.5rem + 0px + smallpx);"
         >
           test
         </textarea>
         <div
-          class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          class="styles__hlf4vn2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <svg
             class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
