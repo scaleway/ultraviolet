@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { ArrowLeftIcon, ArrowRightIcon } from '@ultraviolet/icons'
 import { useContext } from 'react'
 import { Button } from '../../Button'
@@ -10,10 +9,8 @@ import { DateInputContext } from '../Context'
 import { getNextMonth, getPreviousMonth } from '../helpers'
 import { Daily } from './CalendarDaily'
 import { Monthly } from './CalendarMonthly'
+import { capitalizedText } from './styles.css'
 
-const CapitalizedText = styled(Text)`
-  text-transform: capitalize;
-`
 export const CalendarContent = () => {
   const {
     showMonthYearPicker,
@@ -61,15 +58,16 @@ export const CalendarContent = () => {
         >
           <ArrowLeftIcon />
         </Button>
-        <CapitalizedText
+        <Text
           as="span"
+          className={capitalizedText}
           disabled={disabled}
           sentiment="neutral"
           variant="bodyStrong"
         >
           {!showMonthYearPicker ? MONTHS_ARR[monthToShow - 1] : null}&nbsp;
           {yearToShow}
-        </CapitalizedText>
+        </Text>
         <Button
           data-testid="next-month"
           disabled={
