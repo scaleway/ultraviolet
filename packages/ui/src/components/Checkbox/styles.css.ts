@@ -35,6 +35,8 @@ export const checkboxInput = style({
   whiteSpace: 'nowrap',
   opacity: 0,
   borderWidth: 0,
+  height: theme.sizing['300'],
+  width: theme.sizing['300'],
 })
 
 export const checkboxContainer = style({
