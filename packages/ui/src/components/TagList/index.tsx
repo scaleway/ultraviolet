@@ -1,62 +1,20 @@
 'use client'
 
-import styled from '@emotion/styled'
-import { consoleLightTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
+import { TAGS_GAP } from './constant'
+import {
+  ellipsisContainer,
+  popoverTriggerWidthVar,
+  tagContainer,
+  tagListContainer,
+  tagsWrapper,
+} from './styles.css'
 
 const DEFAULT_POPOVER_MAX_HEIGHT = '16rem'
-
-const TAGS_GAP = consoleLightTheme.space['1']
-
-const StyledContainer = styled.div`
-  display: flex;
-`
-
-const TagsWrapper = styled.span`
-  cursor: pointer;
-  color: ${({ theme }) => theme.colors.primary.text};
-  border: none;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  align-self: center;
-  max-width: 21.875rem;
-  overflow: hidden;
-  white-space: pre;
-  text-overflow: ellipsis;
-  background-color: transparent;
-  padding-left: ${({ theme }) => theme.space['1']};
-  padding-right: ${({ theme }) => theme.space['1']};
-`
-
-const StyledTagContainer = styled.div<{
-  gap: string
-  multiline?: boolean
-  popoverTriggerWidth?: number
-  haveOnlySingleLongTag?: boolean
-}>`
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  gap: ${({ gap }) => gap};
-  ${({ multiline }) => multiline && `flex-wrap: wrap;`};
-
-  // Handle the case where we have one tag and we need to ellipsis it
-  ${({ popoverTriggerWidth, haveOnlySingleLongTag }) =>
-    (popoverTriggerWidth || haveOnlySingleLongTag) &&
-    `
-      &:has(.ellipsed) {
-        width: calc(100% - ${popoverTriggerWidth || 0}px); // to let space for the +X button
-        max-width: fit-content;
-      }
-
-      & span, div {
-        width: 100%;
-        max-width: fit-content;
-      }
-  `};
-`
 
 export type TagType = string | { label: string; icon: ReactNode }
 
@@ -307,21 +265,21 @@ export const TagList = ({
     )
 
   return (
-    <StyledContainer
-      className={className}
+    <div
+      className={`${className ? `${className} ` : ''}${tagListContainer}`}
       data-testid={dataTestId}
       style={{
         visibility: isReady ? 'visible' : 'hidden',
       }}
     >
-      <StyledTagContainer
-        gap={TAGS_GAP}
-        haveOnlySingleLongTag={
-          visibleTags.length === 1 && hiddenTags.length === 0
-        }
-        multiline={multiline}
-        popoverTriggerWidth={popoverTriggerWidth}
+      <div
+        className={`${tagContainer({
+          multiline,
+        })} ${(visibleTags.length === 1 && hiddenTags.length === 0) || popoverTriggerWidth ? ellipsisContainer : ''}`}
         ref={containerRef}
+        style={assignInlineVars({
+          [popoverTriggerWidthVar]: `${popoverTriggerWidth || 0}px`,
+        })}
       >
         {visibleTags.map((tag, index) =>
           renderTag(
@@ -331,7 +289,7 @@ export const TagList = ({
             index === visibleTags.length - 1,
           ),
         )}
-      </StyledTagContainer>
+      </div>
       {/* A hidden div which renders the tags so we can measure them */}
       <div
         ref={measureRef}
@@ -341,16 +299,16 @@ export const TagList = ({
           whiteSpace: 'nowrap',
         }}
       >
-        <StyledTagContainer gap={TAGS_GAP}>
+        <div className={tagContainer({ multiline })}>
           {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
-        </StyledTagContainer>
+        </div>
       </div>
       {hiddenTags.length > 0 && (
         <Popover
           content={
-            <StyledTagContainer gap={TAGS_GAP} multiline>
+            <div className={tagContainer({ multiline: true })}>
               {hiddenTags.map((tag, index) => renderTag(tag, index))}
-            </StyledTagContainer>
+            </div>
           }
           maxHeight={popoverMaxHeight}
           onClose={() => setIsPopoverVisible(false)}
@@ -359,15 +317,22 @@ export const TagList = ({
           title={popoverTitle}
           visible={isPopoverVisible}
         >
-          <TagsWrapper
+          <span
+            className={tagsWrapper}
             data-testid={`${dataTestId ?? 'taglist'}-open`}
             onClick={() => setIsPopoverVisible(true)}
+            onKeyDown={event => {
+              if ([' ', 'Enter'].includes(event.key)) {
+                setIsPopoverVisible(true)
+              }
+            }}
             ref={popoverTriggerRef}
+            tabIndex={0}
           >
             +{hiddenTags.length}
-          </TagsWrapper>
+          </span>
         </Popover>
       )}
-    </StyledContainer>
+    </div>
   )
 }
