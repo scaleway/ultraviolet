@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-beta.4
+
+### Patch Changes
+
+- [#5617](https://github.com/scaleway/ultraviolet/pull/5617) [`776c6df`](https://github.com/scaleway/ultraviolet/commit/776c6df268e796d6ee741fce25d70e0991085f5e) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icon : `MailboxProductIcon`
+
 ## 5.0.0-beta.3
 
 ### Major Changes
