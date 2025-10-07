@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
 import { BoxWithIcon } from './BoxWithIcon'
@@ -30,6 +31,7 @@ type SkeletonProps = {
   className?: string
   'aria-label'?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -44,6 +46,7 @@ export const Skeleton = ({
   className,
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
+  style,
 }: SkeletonProps) => {
   const Component = variants[variant]
 
@@ -54,6 +57,7 @@ export const Skeleton = ({
       aria-live="polite"
       className={`${className ? `${className} ` : ''}${skeletonContainer}`}
       data-testid={dataTestId}
+      style={style}
     >
       <Component col={col} length={length} />
 

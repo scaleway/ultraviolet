@@ -8,7 +8,7 @@ It is using [React Hook Form](https://react-hook-form.com/) under the hood.
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/ui @ultraviolet/form @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @ultraviolet/form
 ```
 
 ### Usage
@@ -16,10 +16,11 @@ $ pnpm add @ultraviolet/ui @ultraviolet/form @emotion/react @emotion/styled
 To use the library you need to put a `ThemeProvider` from `@emotion/react` with the theme that comes from `@ultraviolet/ui` then wrap all your fields inside a `Form`:
 
 ```tsx
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider } from '@ultraviolet/ui'
 import { Form, TextInputField } from '@ultraviolet/form'
 import { theme } from '@ultraviolet/ui'
 import { useForm } from '@ultraviolet/form'
+import '@ultraviolet/ui/styles'
 
 // Here are the input types of your form
 type FormValues = {
