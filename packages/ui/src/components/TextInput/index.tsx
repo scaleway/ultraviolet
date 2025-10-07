@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import {
   AlertCircleIcon,
   AutoFixIcon,
@@ -30,123 +29,16 @@ import { Loader } from '../Loader'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
-// SIZE
-export const TEXTINPUT_SIZE_HEIGHT = {
-  large: '600',
-  medium: '500',
-  small: '400', // sizing theme tokens key
-} as const
-type TextInputSize = keyof typeof TEXTINPUT_SIZE_HEIGHT
-
-export const BasicPrefixStack = styled(Stack)`
-  padding: ${({ theme }) => theme.space['2']};
-
-  &[data-size="small"] {
-    padding: ${({ theme }) => theme.space['1']};
-  }
-  border-right: 1px solid;
-  border-color: inherit;
-`
-
-const StateStack = styled(Stack)`
-  padding: ${({ theme }) => `0 ${theme.space['2']}`};
-`
-
-export const BasicSuffixStack = styled(Stack)`
-  padding: ${({ theme }) => `0 ${theme.space['2']}`};
-  border-left: 1px solid;
-  border-color: inherit;
-`
-
-const CTASuffixStack = styled(Stack)`
-  padding: ${({ theme }) => `0 ${theme.space['1']}`};
-  border-left: 1px solid;
-  border-color: inherit;
-`
-
-export const StyledInput = styled.input<{
-  'data-size': TextInputSize
-}>`
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: ${({ theme }) => theme.space['2']};
-  background: transparent;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-
-  &[data-size='large'] {
-    font-size: ${({ theme }) => theme.typography.body.fontSize};
-  }
-
-  &[data-size='small'] {
-    padding-left: ${({ theme }) => theme.space['1']};
-  }
-`
-
-type StyledInputWrapperProps = {
-  hasFocus: boolean
-  size: TextInputSize
-}
-const StyledInputWrapper = styled('div', {
-  shouldForwardProp: prop => !['hasFocus', 'size'].includes(prop),
-})<StyledInputWrapperProps>`
-  display: flex;
-  flex-direction: row;
-  height: ${({ size, theme }) => theme.sizing[TEXTINPUT_SIZE_HEIGHT[size]]};
-
-  background: ${({ theme }) => theme.colors.neutral.background};
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  & > ${StyledInput} {
-    color: ${({ theme }) => theme.colors.neutral.text};
-
-    &::placeholder {
-      color: ${({ theme }) => theme.colors.neutral.textWeak};
-    }
-  }
-
-  &[data-success='true'] {
-    border-color: ${({ theme }) => theme.colors.success.border};
-  }
-
-  &[data-error='true'] {
-    border-color: ${({ theme }) => theme.colors.danger.border};
-  }
-
-  &[data-readonly='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-  }
-
-  &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-
-    & > ${StyledInput} {
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
-
-      &::placeholder {
-        color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
-      }
-    }
-  }
-
-  &:not([data-disabled='true']):not([data-readonly]):hover {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-
-  ${({ theme, hasFocus }) =>
-    hasFocus
-      ? `
-  box-shadow: ${theme.shadows.focusPrimary};
-  border: 1px solid ${theme.colors.primary.border};
-`
-      : null};
-`
+import type { TEXTINPUT_SIZE_HEIGHT } from './constants'
+import {
+  basicPrefix,
+  basicSuffix,
+  ctaSuffix,
+  inputClass,
+  inputWrapper,
+  inputWrapperSizes,
+  stateStack,
+} from './styles.css'
 
 type TextInputProps = {
   className?: string
@@ -161,7 +53,7 @@ type TextInputProps = {
   maxLength?: number
   onRandomize?: () => void
   prefix?: ReactNode
-  size?: TextInputSize
+  size?: keyof typeof TEXTINPUT_SIZE_HEIGHT
   success?: string | boolean
   suffix?: ReactNode
   tooltip?: string
@@ -298,17 +190,18 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         ) : null}
         <div>
           <Tooltip text={tooltip}>
-            <StyledInputWrapper
+            <div
+              className={`${inputWrapper} ${inputWrapperSizes[size]}`}
               data-disabled={disabled}
               data-error={!!error}
+              data-has-focus={hasFocus}
               data-readonly={readOnly}
               data-success={!!success}
-              hasFocus={hasFocus}
-              size={size}
             >
               {prefix ? (
-                <BasicPrefixStack
+                <Stack
                   alignItems="center"
+                  className={basicPrefix}
                   data-size={size}
                   direction="row"
                 >
@@ -324,14 +217,15 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   ) : (
                     prefix
                   )}
-                </BasicPrefixStack>
+                </Stack>
               ) : null}
-              <StyledInput
+              <input
                 aria-invalid={!!error}
                 aria-label={ariaLabel}
                 aria-labelledby={ariaLabelledBy}
                 autoComplete={autoComplete}
                 autoFocus={autoFocus}
+                className={inputClass}
                 data-size={size}
                 data-testid={dataTestId}
                 defaultValue={defaultValue}
@@ -360,7 +254,12 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 value={value}
               />
               {success || error || loading || computedClearable ? (
-                <StateStack alignItems="center" direction="row" gap={1}>
+                <Stack
+                  alignItems="center"
+                  className={stateStack}
+                  direction="row"
+                  gap={1}
+                >
                   {computedClearable ? (
                     <Button
                       aria-label="clear value"
@@ -397,10 +296,14 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                     />
                   ) : null}
                   {loading && !disabled ? <Loader active size="small" /> : null}
-                </StateStack>
+                </Stack>
               ) : null}
               {suffix ? (
-                <BasicSuffixStack alignItems="center" direction="row">
+                <Stack
+                  alignItems="center"
+                  className={basicSuffix}
+                  direction="row"
+                >
                   {typeof suffix === 'string' ? (
                     <Text
                       as="span"
@@ -413,10 +316,14 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   ) : (
                     suffix
                   )}
-                </BasicSuffixStack>
+                </Stack>
               ) : null}
               {type === 'password' ? (
-                <CTASuffixStack alignItems="center" direction="row">
+                <Stack
+                  alignItems="center"
+                  className={ctaSuffix}
+                  direction="row"
+                >
                   <Button
                     aria-label={isPasswordVisible ? 'hide' : 'show'}
                     data-testid={
@@ -432,10 +339,14 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   >
                     {isPasswordVisible ? <EyeOffIcon /> : <EyeIcon />}
                   </Button>
-                </CTASuffixStack>
+                </Stack>
               ) : null}
               {onRandomize ? (
-                <CTASuffixStack alignItems="center" direction="row">
+                <Stack
+                  alignItems="center"
+                  className={ctaSuffix}
+                  direction="row"
+                >
                   <Button
                     disabled={disabled}
                     onClick={onRandomize}
@@ -445,9 +356,9 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                   >
                     <AutoFixIcon />
                   </Button>
-                </CTASuffixStack>
+                </Stack>
               ) : null}
-            </StyledInputWrapper>
+            </div>
           </Tooltip>
         </div>
         {error || typeof success === 'string' || typeof helper === 'string' ? (

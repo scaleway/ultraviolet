@@ -2,110 +2,7 @@
 
 exports[`dateInput > render correctly with showMonthYearPicker 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -128,22 +25,23 @@ exports[`dateInput > render correctly with showMonthYearPicker 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r6a»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -169,112 +67,7 @@ exports[`dateInput > render correctly with showMonthYearPicker 1`] = `
 
 exports[`dateInput > render correctly with showMonthYearPicker with default date 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -297,16 +90,17 @@ exports[`dateInput > render correctly with showMonthYearPicker with default date
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="true"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r6e»"
                 placeholder="YYYY-MM-DD"
@@ -314,7 +108,7 @@ exports[`dateInput > render correctly with showMonthYearPicker with default date
                 value="02/1995"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -486,112 +280,7 @@ exports[`dateInput > render correctly with showMonthYearPicker with default date
 
 exports[`dateInput > render correctly with showMonthYearPicker with excluded months 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -614,16 +303,17 @@ exports[`dateInput > render correctly with showMonthYearPicker with excluded mon
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="true"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«rpd»"
                 placeholder="YYYY-MM-DD"
@@ -631,7 +321,7 @@ exports[`dateInput > render correctly with showMonthYearPicker with excluded mon
                 value="02/1995"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -805,110 +495,7 @@ exports[`dateInput > render correctly with showMonthYearPicker with excluded mon
 
 exports[`dateInput > renders correctly custom format with range 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -931,16 +518,17 @@ exports[`dateInput > renders correctly custom format with range 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«rrl»"
                 name="test"
@@ -948,7 +536,7 @@ exports[`dateInput > renders correctly custom format with range 1`] = `
                 value="1995-12-11T03:24:00.000Z - 1995-12-11T03:24:00.000Z"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -974,110 +562,7 @@ exports[`dateInput > renders correctly custom format with range 1`] = `
 
 exports[`dateInput > renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1100,23 +585,24 @@ exports[`dateInput > renders correctly disabled 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="true"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 disabled=""
                 id="«r5»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_2__vbm0wqm"
@@ -1142,110 +628,7 @@ exports[`dateInput > renders correctly disabled 1`] = `
 
 exports[`dateInput > renders correctly disabled 2`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1268,23 +651,24 @@ exports[`dateInput > renders correctly disabled 2`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="true"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 disabled=""
                 id="«r71»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_2__vbm0wqm"
@@ -1310,114 +694,7 @@ exports[`dateInput > renders correctly disabled 2`] = `
 
 exports[`dateInput > renders correctly error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-}
-
-.emotion-6 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1440,22 +717,23 @@ exports[`dateInput > renders correctly error 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="true"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="true"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«re»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8042 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -1469,7 +747,7 @@ exports[`dateInput > renders correctly error 1`] = `
                 </svg>
               </div>
               <div
-                class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -1500,114 +778,7 @@ exports[`dateInput > renders correctly error 1`] = `
 
 exports[`dateInput > renders correctly error disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-}
-
-.emotion-6 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1630,23 +801,24 @@ exports[`dateInput > renders correctly error disabled 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="true"
               data-error="true"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="true"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 disabled=""
                 id="«rj»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8042 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_4__vbm0wqo"
@@ -1660,7 +832,7 @@ exports[`dateInput > renders correctly error disabled 1`] = `
                 </svg>
               </div>
               <div
-                class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_2__vbm0wqm"
@@ -1691,114 +863,7 @@ exports[`dateInput > renders correctly error disabled 1`] = `
 
 exports[`dateInput > renders correctly error disabled required 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-}
-
-.emotion-6 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1830,16 +895,17 @@ exports[`dateInput > renders correctly error disabled required 1`] = `
           </div>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="true"
               data-error="true"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="true"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 disabled=""
                 id="«ro»"
@@ -1847,7 +913,7 @@ exports[`dateInput > renders correctly error disabled required 1`] = `
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8042 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_4__vbm0wqo"
@@ -1861,7 +927,7 @@ exports[`dateInput > renders correctly error disabled required 1`] = `
                 </svg>
               </div>
               <div
-                class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_2__vbm0wqm"
@@ -1892,110 +958,7 @@ exports[`dateInput > renders correctly error disabled required 1`] = `
 
 exports[`dateInput > renders correctly min-max 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2018,22 +981,23 @@ exports[`dateInput > renders correctly min-max 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«ru»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -2059,110 +1023,7 @@ exports[`dateInput > renders correctly min-max 1`] = `
 
 exports[`dateInput > renders correctly required 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2194,23 +1055,24 @@ exports[`dateInput > renders correctly required 1`] = `
           </div>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r9»"
                 required=""
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -2236,112 +1098,7 @@ exports[`dateInput > renders correctly required 1`] = `
 
 exports[`dateInput > renders correctly with a array of dates to exclude 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2364,16 +1121,17 @@ exports[`dateInput > renders correctly with a array of dates to exclude 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="true"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«raf»"
                 placeholder="YYYY-MM-DD"
@@ -2381,7 +1139,7 @@ exports[`dateInput > renders correctly with a array of dates to exclude 1`] = `
                 value="12/11/1995"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -2812,112 +1570,7 @@ exports[`dateInput > renders correctly with a array of dates to exclude 1`] = `
 
 exports[`dateInput > renders correctly with date-fns locale es 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2940,22 +1593,23 @@ exports[`dateInput > renders correctly with date-fns locale es 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="true"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r2q»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -3383,112 +2037,7 @@ exports[`dateInput > renders correctly with date-fns locale es 1`] = `
 
 exports[`dateInput > renders correctly with date-fns locale fr 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3511,22 +2060,23 @@ exports[`dateInput > renders correctly with date-fns locale fr 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="true"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r12»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -3954,112 +2504,7 @@ exports[`dateInput > renders correctly with date-fns locale fr 1`] = `
 
 exports[`dateInput > renders correctly with date-fns locale ru 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4082,22 +2527,23 @@ exports[`dateInput > renders correctly with date-fns locale ru 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="true"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r4i»"
                 type="text"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"
@@ -4525,110 +2971,7 @@ exports[`dateInput > renders correctly with date-fns locale ru 1`] = `
 
 exports[`dateInput > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4651,16 +2994,17 @@ exports[`dateInput > renders correctly with default props 1`] = `
           </label>
           <div>
             <div
-              class="emotion-0 emotion-1"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <input
                 aria-invalid="false"
                 autocomplete="false"
-                class="emotion-2 emotion-3"
+                class="styles__q3q8045"
                 data-size="large"
                 id="«r1»"
                 name="test"
@@ -4668,7 +3012,7 @@ exports[`dateInput > renders correctly with default props 1`] = `
                 value="1995-12-17T03:24:00.000Z"
               />
               <div
-                class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
                   class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_medium__vbm0wq9 styles_undefined_compound_34__vbm0wq1i"

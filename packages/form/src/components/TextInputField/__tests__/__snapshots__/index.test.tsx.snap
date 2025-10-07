@@ -2,104 +2,7 @@
 
 exports[`textInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -117,15 +20,16 @@ exports[`textInputField > should render correctly 1`] = `
         </label>
         <div>
           <div
-            class="emotion-0 emotion-1"
+            class="uv_q3q8049 uv_q3q8046"
             data-disabled="false"
             data-error="false"
+            data-has-focus="false"
             data-readonly="false"
             data-success="false"
           >
             <input
               aria-invalid="false"
-              class="emotion-2 emotion-3"
+              class="uv_q3q8045"
               data-size="large"
               id="«r0»"
               name="test"
@@ -142,108 +46,7 @@ exports[`textInputField > should render correctly 1`] = `
 
 exports[`textInputField > should render correctly generated 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -270,15 +73,16 @@ exports[`textInputField > should render correctly generated 1`] = `
         </div>
         <div>
           <div
-            class="emotion-0 emotion-1"
+            class="uv_q3q8049 uv_q3q8046"
             data-disabled="false"
             data-error="false"
+            data-has-focus="false"
             data-readonly="false"
             data-success="false"
           >
             <input
               aria-invalid="false"
-              class="emotion-2 emotion-3"
+              class="uv_q3q8045"
               data-size="large"
               id="«r3»"
               name="test"
@@ -287,7 +91,7 @@ exports[`textInputField > should render correctly generated 1`] = `
               value="This is an example"
             />
             <div
-              class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              class="uv_q3q8042 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
               <button
                 aria-label="clear value"

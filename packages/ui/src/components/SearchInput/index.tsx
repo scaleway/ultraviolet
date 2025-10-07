@@ -16,12 +16,8 @@ import {
 import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
-import {
-  BasicPrefixStack,
-  BasicSuffixStack,
-  StyledInput,
-  TextInput,
-} from '../TextInput'
+import { TextInput } from '../TextInput'
+import { basicPrefix, basicSuffix, inputClass } from '../TextInput/styles.css'
 import { KeyGroup } from './KeyGroup'
 import type { SearchInputProps } from './types'
 
@@ -35,15 +31,15 @@ const StyledPopup = styled(Popup)`
 `
 
 const StyledTextInput = styled(TextInput)`
-  ${BasicPrefixStack} {
+  .${basicPrefix} {
     border: none;
   }
 
-  ${StyledInput} {
+  .${inputClass} {
     padding: 0;
   }
 
-  ${BasicSuffixStack} {
+  .${basicSuffix} {
     border: none;
   }
 `
