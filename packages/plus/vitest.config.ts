@@ -4,8 +4,11 @@ import { defaultConfig } from '../../vite.config'
 
 export default mergeConfig(defineConfig(defaultConfig), {
   plugins: [
-    vanillaExtractPlugin({ identifiers: ({ hash }) => `uv_plus_${hash}` }),
-  ],
+    vanillaExtractPlugin({
+      identifiers: ({ hash }) => `uv_plus_${hash}`,
+      unstable_mode: 'transform',
+    }),
+  ], // Enable unstable mode for better compatibility with Vitest
   test: {
     setupFiles: ['./vitest.setup.ts'],
   },

@@ -1,103 +1,21 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
-
-const activeStyle = (theme: Theme) => css`
-  &:hover {
-    border: 1px solid ${theme.colors.primary.borderHover};
-    box-shadow: ${theme.shadows.defaultShadow};
-    cursor: pointer;
-  }
-`
-
-const Card = styled.div<{
-  onClick?: ContentCardProps['onClick']
-  href?: ContentCardProps['href']
-  disabled?: ContentCardProps['disabled']
-}>`
-  display: block;
-  text-align: left;
-  padding: 0;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  text-decoration: none;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  background: ${({ theme }) => theme.colors.neutral.background};
-  ${({ onClick, href, theme }) => (onClick || href ? activeStyle(theme) : null)};
-  overflow-wrap: break-word;
-
-  &[disabled] {
-    cursor: not-allowed;
-    &:hover {
-      border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-      box-shadow: none;
-    }
-  }
-`
-
-const IconContainer = styled.div`
-  display: flex;
-  width: fit-content;
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  padding: ${({ theme }) => theme.space['1']};
-  border-radius: ${({ theme }) => theme.radii.default};
-`
-
-const StyledIconStack = styled(Stack, {
-  shouldForwardProp: prop => prop !== 'direction',
-})<{ direction: ContentCardProps['direction'] }>`
-  padding: ${({ theme, direction }) =>
-    direction === 'column'
-      ? `0 ${theme.space['3']} ${theme.space['3']} ${theme.space['3']}`
-      : `${theme.space['3']} ${theme.space['3']} ${theme.space['3']} 0`};
-`
-
-const SubContainer = styled(Stack, {
-  shouldForwardProp: prop => !['direction', 'href'].includes(prop),
-})<{
-  direction: ContentCardProps['direction']
-  href: ContentCardProps['href']
-}>`
-  padding: ${({ theme, direction }) =>
-    direction === 'column'
-      ? `${theme.space['3']} ${theme.space['3']} 0 ${theme.space['3']}`
-      : `${theme.space['3']} 0 ${theme.space['3']} ${theme.space['3']}`};
-  padding: ${({ theme, href }) => (!href ? `${theme.space['3']}` : null)};
-  height: fit-content;
-`
-
-const Image = styled('img', {
-  shouldForwardProp: prop =>
-    !['direction', 'subContainerHeight'].includes(prop),
-})<{
-  direction: ContentCardProps['direction']
-  subContainerHeight?: number
-}>`
-  object-fit: cover;
-  border-radius: ${({ theme, direction }) =>
-    `${
-      direction === 'column'
-        ? `${theme.radii.default} ${theme.radii.default} 0 0`
-        : `${theme.radii.default} 0 0 ${theme.radii.default}`
-    }`};
-  ${({ direction, subContainerHeight }) =>
-    direction === 'row' ? `max-height: ${subContainerHeight}px` : null}
-
-  &[data-disabled] {
-    filter: grayscale(1);
-  }
-`
-
-const FullHeightStack = styled(Stack)`
-  height: 100%;
-`
+import {
+  activeClass,
+  cardClass,
+  fullHeight,
+  iconContainer,
+  iconStack,
+  imageClass,
+  subContainer,
+  subContainerHeightVar,
+} from './styles.css'
 
 type ContentCardProps = {
   direction?: 'row' | 'column'
@@ -165,14 +83,14 @@ export const ContentCard = forwardRef<
     )
     const Container = useMemo(() => {
       if (href) {
-        return Card.withComponent('a')
+        return 'a'
       }
 
       if (onClick) {
-        return Card.withComponent('button')
+        return 'button'
       }
 
-      return Card
+      return 'div'
     }, [href, onClick])
 
     useEffect(
@@ -182,7 +100,7 @@ export const ContentCard = forwardRef<
 
     return (
       <Container
-        className={className}
+        className={`${className ? `${className} ` : ''}${cardClass}${onClick || href ? ` ${activeClass}` : ''}`}
         disabled={disabled}
         href={!disabled ? href : undefined}
         onClick={!disabled ? onClick : undefined}
@@ -193,27 +111,31 @@ export const ContentCard = forwardRef<
         {loading ? (
           <Skeleton direction={direction} />
         ) : (
-          <FullHeightStack direction={direction}>
+          <Stack className={fullHeight} direction={direction}>
             {image ? (
-              <Image
+              <img
                 alt=""
+                className={imageClass[direction]}
                 data-disabled={disabled}
-                direction={direction}
                 height={direction === 'column' ? 120 : undefined}
                 src={image}
-                subContainerHeight={subContainerHeight}
+                style={assignInlineVars({
+                  [subContainerHeightVar]: subContainerHeight
+                    ? `${subContainerHeight.toString()}px`
+                    : undefined,
+                })}
                 width={direction === 'row' ? 220 : undefined}
               />
             ) : null}
             <Stack direction={direction} flex={1} gap={2}>
-              <SubContainer
+              <Stack
                 alignItems={
                   !subtitle && !description && !children ? 'center' : undefined
                 }
+                className={subContainer[!href ? 'noHref' : direction]}
                 direction={direction}
                 flex="1 1 auto"
                 gap={2}
-                href={href}
                 ref={subContainerRef}
               >
                 {icon ?? null}
@@ -253,21 +175,22 @@ export const ContentCard = forwardRef<
                   </Stack>
                   {children ? <Stack>{children}</Stack> : null}
                 </Stack>
-              </SubContainer>
+              </Stack>
               {href ? (
-                <StyledIconStack
+                <Stack
                   alignItems={direction === 'column' ? 'flex-end' : 'center'}
+                  className={iconStack[direction]}
                   direction={direction}
                   flex={1}
                   justifyContent={direction === 'column' ? 'center' : 'end'}
                 >
-                  <IconContainer>
+                  <div className={iconContainer}>
                     <OpenInNewIcon disabled={disabled} sentiment="neutral" />
-                  </IconContainer>
-                </StyledIconStack>
+                  </div>
+                </Stack>
               ) : null}
             </Stack>
-          </FullHeightStack>
+          </Stack>
         )}
       </Container>
     )
