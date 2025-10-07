@@ -1,5 +1,31 @@
 # Change Log
 
+## 3.0.0-beta.18
+
+### Minor Changes
+
+- [#5640](https://github.com/scaleway/ultraviolet/pull/5640) [`945ce38`](https://github.com/scaleway/ultraviolet/commit/945ce3842e11407e4bdda076c27f41465ec73284) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `UnitInput` to use vanilla extract instead of Emotion
+
+  - Add prop `style` to `SelectInput`
+
+- [#5622](https://github.com/scaleway/ultraviolet/pull/5622) [`12fc99d`](https://github.com/scaleway/ultraviolet/commit/12fc99dde57e3e97543bc26402a99ad0ea359cd8) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `TimeInput` to use vanilla-extract instead of Emotion
+
+- [#5614](https://github.com/scaleway/ultraviolet/pull/5614) [`a8b9b62`](https://github.com/scaleway/ultraviolet/commit/a8b9b6237173d72b9c74af2ac4d57b4b81949982) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `TagInput` and `TagList` to use vanilla-extract instead of emotion
+
+  - `TagList` : popover should be openable using keyboard keys (space or enter)
+
+- [#5608](https://github.com/scaleway/ultraviolet/pull/5608) [`d1b44ff`](https://github.com/scaleway/ultraviolet/commit/d1b44ffd1bf0a8ded5b13d3b51a3e8ed0077a46d) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<TextInput />` using vanilla extract
+
+- [#5634](https://github.com/scaleway/ultraviolet/pull/5634) [`4e03810`](https://github.com/scaleway/ultraviolet/commit/4e038106bf90dc1a44db45b19417d3ad04955c5c) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `SwitchButton` to use vanilla extract instead of Emotion
+
+- [#5615](https://github.com/scaleway/ultraviolet/pull/5615) [`e4d6b23`](https://github.com/scaleway/ultraviolet/commit/e4d6b23e719e64e48ec6fc4e8b18b863bd5dc471) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Toggle />` component to use vanilla extract
+
+- [#5624](https://github.com/scaleway/ultraviolet/pull/5624) [`6fb2304`](https://github.com/scaleway/ultraviolet/commit/6fb230499200457163122799f7bdfdc633407492) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `DateInput` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [#5628](https://github.com/scaleway/ultraviolet/pull/5628) [`4520138`](https://github.com/scaleway/ultraviolet/commit/452013864b764f77ab3f8024fc830a9a1170b618) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `style` on `<Skeleton />` component
+
 ## 3.0.0-beta.17
 
 ### Minor Changes
