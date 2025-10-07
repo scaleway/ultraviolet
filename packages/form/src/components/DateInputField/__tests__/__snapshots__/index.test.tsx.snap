@@ -2,110 +2,7 @@
 
 exports[`dateInputField > should clear field 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -126,16 +23,17 @@ exports[`dateInputField > should clear field 1`] = `
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="uv_q3q8049 uv_q3q8046"
                 data-disabled="false"
                 data-error="false"
+                data-has-focus="false"
                 data-readonly="false"
                 data-success="false"
               >
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-2 emotion-3"
+                  class="uv_q3q8045"
                   data-size="large"
                   id="«r3l»"
                   name="test"
@@ -144,7 +42,7 @@ exports[`dateInputField > should clear field 1`] = `
                   value=""
                 />
                 <div
-                  class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  class="uv_q3q8043 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                 >
                   <svg
                     class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_medium__1sbwqkz9 styles_undefined_compound_34__1sbwqkz1i"
@@ -574,110 +472,7 @@ exports[`dateInputField > should clear field 1`] = `
 
 exports[`dateInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -698,23 +493,24 @@ exports[`dateInputField > should render correctly 1`] = `
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="uv_q3q8049 uv_q3q8046"
                 data-disabled="false"
                 data-error="false"
+                data-has-focus="false"
                 data-readonly="false"
                 data-success="false"
               >
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-2 emotion-3"
+                  class="uv_q3q8045"
                   data-size="large"
                   id="«r1»"
                   name="test"
                   type="text"
                 />
                 <div
-                  class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  class="uv_q3q8043 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                 >
                   <svg
                     class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_medium__1sbwqkz9 styles_undefined_compound_34__1sbwqkz1i"
@@ -741,110 +537,7 @@ exports[`dateInputField > should render correctly 1`] = `
 
 exports[`dateInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -865,16 +558,17 @@ exports[`dateInputField > should render correctly disabled 1`] = `
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="uv_q3q8049 uv_q3q8046"
                 data-disabled="true"
                 data-error="false"
+                data-has-focus="false"
                 data-readonly="false"
                 data-success="false"
               >
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-2 emotion-3"
+                  class="uv_q3q8045"
                   data-size="large"
                   disabled=""
                   id="«r4»"
@@ -882,7 +576,7 @@ exports[`dateInputField > should render correctly disabled 1`] = `
                   type="text"
                 />
                 <div
-                  class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  class="uv_q3q8043 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                 >
                   <svg
                     class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_true__1sbwqkze styles_sentiment_neutral__1sbwqkz3 styles_size_medium__1sbwqkz9 styles_undefined_compound_2__1sbwqkzm"
@@ -909,110 +603,7 @@ exports[`dateInputField > should render correctly disabled 1`] = `
 
 exports[`dateInputField > should test range 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -1033,16 +624,17 @@ exports[`dateInputField > should test range 1`] = `
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="uv_q3q8049 uv_q3q8046"
                 data-disabled="false"
                 data-error="false"
+                data-has-focus="false"
                 data-readonly="false"
                 data-success="false"
               >
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-2 emotion-3"
+                  class="uv_q3q8045"
                   data-size="large"
                   id="«r1u»"
                   name="test"
@@ -1051,7 +643,7 @@ exports[`dateInputField > should test range 1`] = `
                   value="9/15/2022 - 9/18/2022"
                 />
                 <div
-                  class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  class="uv_q3q8043 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                 >
                   <svg
                     class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_medium__1sbwqkz9 styles_undefined_compound_34__1sbwqkz1i"
@@ -1078,110 +670,7 @@ exports[`dateInputField > should test range 1`] = `
 
 exports[`dateInputField > should trigger events 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0>.emotion-3 {
-  color: #3f4250;
-}
-
-.emotion-0>.emotion-3::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-0>.emotion-3::placeholder {
-  color: #727683;
-}
-
-.emotion-0[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-2[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-2[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4 {
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -1202,16 +691,17 @@ exports[`dateInputField > should trigger events 1`] = `
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="uv_q3q8049 uv_q3q8046"
                 data-disabled="false"
                 data-error="false"
+                data-has-focus="false"
                 data-readonly="false"
                 data-success="false"
               >
                 <input
                   aria-invalid="false"
                   autocomplete="false"
-                  class="emotion-2 emotion-3"
+                  class="uv_q3q8045"
                   data-size="large"
                   id="«r7»"
                   name="test"
@@ -1220,7 +710,7 @@ exports[`dateInputField > should trigger events 1`] = `
                   value="9/15/2022"
                 />
                 <div
-                  class="emotion-4 emotion-5 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
+                  class="uv_q3q8043 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                 >
                   <svg
                     class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_medium__1sbwqkz9 styles_undefined_compound_34__1sbwqkz1i"
