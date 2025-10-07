@@ -4,226 +4,9 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
 <DocumentFragment>
   .emotion-0 {
   width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-3,
-.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-3 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-3 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-3,
-.emotion-0:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-3 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-0[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-0[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-0[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-0[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-0[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-0[data-success='true']>.emotion-3 {
-  border-right-color: #22674e;
-}
-
-.emotion-0[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-0[data-success='true']:active>.emotion-3 {
-  border-right-color: #22674e;
-}
-
-.emotion-0[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-0[data-error='true']>.emotion-3 {
-  border-right-color: #b3144d;
-}
-
-.emotion-0[data-error='true']>.emotion-3:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-0[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-0[data-error='true']:active>.emotion-3 {
-  border-right-color: #b3144d;
-}
-
-.emotion-0[data-error='true']:active>.emotion-3:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-0[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true']>.emotion-3 {
-  border-right-color: #e9eaeb;
 }
 
 .emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-4 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  color: #3f4250;
-}
-
-.emotion-4[data-size="small"] {
-  padding-left: 0.5rem;
-}
-
-.emotion-4[data-size="large"] {
-  font-size: 1rem;
-}
-
-.emotion-4::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-4::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-4:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-4::placeholder {
-  color: #727683;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-4:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-4:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-4:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-4:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-7 {
-  width: 100%;
-  width: 100%;
-}
-
-.emotion-7 #unit {
-  border: none;
-  background: transparent;
-}
-
-.emotion-7 #unit:focus,
-.emotion-7 #unit:active {
-  box-shadow: none;
-}
-
-.emotion-9 {
   display: grid;
   width: 100%;
   gap: 0.5rem;
@@ -238,85 +21,85 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   width: 100%;
 }
 
-.emotion-9[data-size='small'] {
+.emotion-2[data-size='small'] {
   height: 2rem;
   padding-left: 0.5rem;
 }
 
-.emotion-9[data-size='medium'] {
+.emotion-2[data-size='medium'] {
   height: 2.5rem;
 }
 
-.emotion-9[data-size='large'] {
+.emotion-2[data-size='large'] {
   height: 3rem;
 }
 
-.emotion-9[data-state='neutral'] {
+.emotion-2[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.emotion-9[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-9[data-state='neutral']:not([data-disabled='true']):hover {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
   border-color: #792dd4;
   outline: none;
 }
 
-.emotion-9[data-state='neutral']:not([data-disabled='true']):focus-visible {
+.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
   outline: 5px auto Highlight;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.emotion-9[data-state='neutral'][data-dropdownvisible='true'] {
+.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.emotion-9[data-state='success'] {
+.emotion-2[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.emotion-9[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #1b533f;
   box-shadow: 0px 0px 0px 3px #45d19f40;
 }
 
-.emotion-9[data-state='success'][data-dropdownvisible='true'] {
+.emotion-2[data-state='success'][data-dropdownvisible='true'] {
   border-color: #1b533f;
 }
 
-.emotion-9[data-state='danger'] {
+.emotion-2[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.emotion-9[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
   border-color: #92103f;
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-9[data-state='danger'][data-dropdownvisible='true'] {
+.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
   border-color: #92103f;
 }
 
-.emotion-9:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-9[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.emotion-9[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -325,7 +108,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
   align-self: center;
 }
 
-.emotion-13 {
+.emotion-6 {
   padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -341,17 +124,16 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
       style="--uv_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-0 emotion-1 uv_x6hyh50 "
+        class="uv_gwf0fld uv_gwf0fla uv_gwf0fl5 uv_x6hyh50 "
         style="--uv_3mg8xe0: auto auto; --uv_3mg8xe1: auto auto; --uv_3mg8xe2: auto auto; --uv_3mg8xe3: auto auto; --uv_3mg8xe4: auto auto; --uv_3mg8xe5: auto auto;"
       >
         <div
-          class="emotion-2 emotion-3"
+          class="uv_gwf0flb"
           id="input-field"
         >
           <input
             aria-invalid="false"
-            class="emotion-4 emotion-5"
-            data-size="medium"
+            class="uv_gwf0fl3 uv_gwf0fl1"
             data-testid="unit-input"
             id="«r0»"
             max="9007199254740991"
@@ -365,7 +147,8 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
         </div>
         <div
           aria-label="iteration-unit"
-          class="emotion-6 emotion-7 emotion-8"
+          class="uv_gwf0flg uv_gwf0flf emotion-0 emotion-1"
+          style="--uv_gwf0fl0: 100%;"
         >
           <div
             aria-controls="«r2»"
@@ -379,7 +162,7 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
               <div
                 aria-controls="«r2»"
                 aria-expanded="false"
-                class="emotion-9 emotion-10"
+                class="emotion-2 emotion-3"
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
@@ -391,12 +174,12 @@ exports[`estimateCost - CustomUnitInput > render default values 1`] = `
                 tabindex="0"
               >
                 <span
-                  class="emotion-11 emotion-12 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                  class="emotion-4 emotion-5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   Hour(s)
                 </span>
                 <div
-                  class="emotion-13 emotion-14 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                  class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
