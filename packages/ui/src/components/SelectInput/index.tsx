@@ -135,7 +135,7 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   onOpen?: () => void
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
-  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
+  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
 >
 
 const SelectInputContainer = styled.div`
@@ -186,6 +186,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   dropdownAlign,
   portalTarget,
   onOpen,
+  style,
 }: SelectInputProps<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
@@ -217,6 +218,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
         className={className}
         onBlur={onBlur}
         onFocus={onFocus}
+        style={style}
       >
         <Dropdown
           descriptionDirection={descriptionDirection}
