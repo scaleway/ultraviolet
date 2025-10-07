@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { SearchIcon } from '@ultraviolet/icons'
 import type { Ref } from 'react'
 import {
@@ -17,36 +16,9 @@ import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { TextInput } from '../TextInput'
-import { basicPrefix, basicSuffix, inputClass } from '../TextInput/styles.css'
 import { KeyGroup } from './KeyGroup'
+import { clickableStack, searchInput, searchInputPopup } from './styles.css'
 import type { SearchInputProps } from './types'
-
-const StyledPopup = styled(Popup)`
-  width: 100%;
-  text-align: initial;
-  min-width: 38.125rem;
-  padding: ${({ theme }) => `${theme.space['2']} ${theme.space['1']}`};
-  background: ${({ theme }) => theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
-`
-
-const StyledTextInput = styled(TextInput)`
-  .${basicPrefix} {
-    border: none;
-  }
-
-  .${inputClass} {
-    padding: 0;
-  }
-
-  .${basicSuffix} {
-    border: none;
-  }
-`
-
-const ClickableStack = styled(Stack)`
-  cursor: text;
-`
 
 /**
  * SearchInput is a component that allows users to search for items. It is a combination of a TextInput and a Popup. The Popup is used to display search results.
@@ -271,7 +243,8 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
 
     return (
       <div style={{ width: '100%' }}>
-        <StyledPopup
+        <Popup
+          className={searchInputPopup}
           data-testid={`popup-${dataTestId}`}
           debounceDelay={0}
           hasArrow={false}
@@ -285,13 +258,13 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           text={content}
           visible={isOpen}
         >
-          <StyledTextInput
+          <TextInput
             aria-atomic={ariaAtomic}
             aria-labelledby={ariaLabelledby}
             aria-live={ariaLive}
             autoComplete={autoComplete}
             autoFocus={autoFocus}
-            className={className}
+            className={`${className ? `${className} ` : ''}${searchInput}`}
             clearable
             data-testid={dataTestId}
             disabled={disabled}
@@ -309,12 +282,13 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             onKeyDown={onKeyDown}
             placeholder={placeholder}
             prefix={
-              <ClickableStack
+              <Stack
+                className={clickableStack}
                 data-testid={`search-icon${dataTestId ? `-${dataTestId}` : ''}`}
                 onClick={() => innerSearchInputRef.current?.focus()}
               >
                 <SearchIcon disabled={disabled} sentiment="neutral" />
-              </ClickableStack>
+              </Stack>
             }
             readOnly={readOnly}
             ref={innerSearchInputRef}
@@ -333,7 +307,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             tooltip={tooltip}
             value={searchTerms}
           />
-        </StyledPopup>
+        </Popup>
       </div>
     )
   },
