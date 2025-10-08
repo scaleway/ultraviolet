@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.1.5
+
+### Patch Changes
+
+- [#5657](https://github.com/scaleway/ultraviolet/pull/5657) [`e20eeab`](https://github.com/scaleway/ultraviolet/commit/e20eeab50d142fee1ef05260b01eb7eb75bd9976) Thanks [@iManu](https://github.com/iManu)! - Add `aria-keyshortcuts` attribute to Link & Button
+
 ## 2.1.4
 
 ### Patch Changes
