@@ -1,31 +1,17 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Skeleton, Stack } from '@ultraviolet/ui'
-
-const StyledWrapper = styled.div`
-  padding: ${({ theme }) => theme.space['3']};
-
-  &:not(:first-child) {
-    border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  }
-`
-
-const StyledSquareSkeleton = styled(Skeleton)`
-  height: 32px;
-  width: 32px;
-  border-radius: ${({ theme }) => theme.radii.default};
-`
+import { skeletonWrapper, squareSkeleton } from './styles.css'
 
 export const SkeletonCard = () => (
-  <StyledWrapper>
+  <div className={skeletonWrapper}>
     <Stack alignItems="center" direction="row" justifyContent="space-between">
       <Stack gap={2}>
         <Skeleton variant="line" />
         <Skeleton variant="line" />
         <Skeleton variant="line" />
       </Stack>
-      <StyledSquareSkeleton variant="square" />
+      <Skeleton className={squareSkeleton} variant="square" />
     </Stack>
-  </StyledWrapper>
+  </div>
 )
