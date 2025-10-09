@@ -106,7 +106,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       <Tooltip text={tooltip}>
         <div
           aria-disabled={disabled}
-          className={`${checkboxContainer ? `${checkboxContainer} ` : ''}${className}`}
+          className={`${className ? `${className} ` : ''}${checkboxContainer}`}
           data-checked={checked}
           data-error={!!error}
           data-testid={dataTestId}
