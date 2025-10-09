@@ -7,7 +7,7 @@ import { Label } from '../../Label'
 import { radioStack } from '../../Radio/styles.css'
 import { SelectableCard } from '../../SelectableCard'
 import { SelectInput } from '../../SelectInput'
-import { StyledInputWrapper } from '../../SelectInput/SelectBar'
+import { selectBarBase } from '../../SelectInput/components/selectBar.css'
 import { Stack } from '../../Stack'
 import { useSelectableCardOptionGroup } from '../Provider'
 import { Image } from './Image'
@@ -32,27 +32,30 @@ const FullHeightStack = styled(Stack)`
 const StyledSelectInput = styled(SelectInput, {
   shouldForwardProp: prop => !['checked'].includes(prop),
 })<{ checked: boolean }>`
-  ${StyledInputWrapper} {
+  .${selectBarBase} {
     border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
     border-bottom: 0 !important;
     border-right: 0 !important;
     border-left: 0 !important;
   }
 
-  ${StyledInputWrapper}:hover, ${StyledInputWrapper}:focus, ${StyledInputWrapper}:active {
-    border-color: ${({ theme, disabled, error }) => {
-      if (disabled) {
-        return theme.colors.neutral.borderDisabled
-      }
+  .${selectBarBase} {
+    &:hover, &:focus, &:active {
+        border-color: ${({ theme, disabled, error }) => {
+          if (disabled) {
+            return theme.colors.neutral.borderDisabled
+          }
 
-      if (error) {
-        return theme.colors.danger.border
-      }
+          if (error) {
+            return theme.colors.danger.border
+          }
 
-      return theme.colors.neutral.border
-    }} !important;
-    outline: none;
+          return theme.colors.neutral.border
+        }} !important;
+        outline: none;
+    }
   }
+  
 `
 
 const StyledPaddedStack = styled(Stack)`
