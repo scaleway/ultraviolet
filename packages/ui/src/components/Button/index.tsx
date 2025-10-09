@@ -259,6 +259,7 @@ type CommonProps = {
   'aria-disabled'?: boolean
   'aria-pressed'?: boolean
   'aria-roledescription'?: string
+  'aria-keyshortcuts'?: string
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
@@ -314,6 +315,7 @@ export const Button = forwardRef<Element, FinalProps>(
       'aria-disabled': ariaDisabled,
       'aria-pressed': ariaPressed,
       'aria-roledescription': ariaRoledescription,
+      'aria-keyshortcuts': ariaKeyshortcuts,
       href,
       download,
       target,
@@ -360,6 +362,7 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-disabled={ariaDisabled ?? disabled}
             aria-expanded={ariaExpanded}
             aria-haspopup={ariaHaspopup}
+            aria-keyshortcuts={ariaKeyshortcuts}
             aria-label={ariaLabel}
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}

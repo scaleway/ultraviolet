@@ -55,6 +55,7 @@ type LinkProps = {
   onClick?: MouseEventHandler<HTMLAnchorElement>
   'aria-label'?: string
   'aria-current'?: AnchorHTMLAttributes<HTMLAnchorElement>['aria-current']
+  'aria-keyshortcuts'?: string
   oneLine?: boolean
   'data-testid'?: string
   variant?: 'inline' | 'standalone'
@@ -221,6 +222,7 @@ export const Link = forwardRef(
       onClick,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
+      'aria-keyshortcuts': ariaKeyshortcuts,
       oneLine = false,
       'data-testid': dataTestId,
       variant = 'standalone',
@@ -256,6 +258,7 @@ export const Link = forwardRef(
       <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
         <StyledLink
           aria-current={ariaCurrent}
+          aria-keyshortcuts={ariaKeyshortcuts}
           aria-label={ariaLabel}
           className={className}
           data-testid={dataTestId}
