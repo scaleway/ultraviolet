@@ -161,8 +161,10 @@ export const OrderSummary = ({
       >
         {header ? (
           <HeaderContainer
+            alignItems="center"
             data-hidedetails={hideDetails}
             direction="row"
+            gap={2}
             justifyContent="space-between"
           >
             <Text
@@ -177,6 +179,7 @@ export const OrderSummary = ({
               <StyledStack>
                 <UnitInput
                   dropdownAlign="center"
+                  maxWidth="200px"
                   onChange={value => {
                     setTimePeriodAmount(value)
                   }}
@@ -190,7 +193,6 @@ export const OrderSummary = ({
                   templateColumns="2fr 3fr"
                   unitValue={unitUnitInput}
                   value={valueUnitInput}
-                  width="155px"
                 />
               </StyledStack>
             ) : null}

@@ -42,6 +42,7 @@ type UnitInputProps = {
   helper?: string
   unitError?: string
   width?: CSSProperties['width']
+  maxWidth?: CSSProperties['maxWidth']
   placeholderUnit?: string
   error?: boolean | string
   success?: boolean | string
@@ -90,6 +91,7 @@ export const UnitInput = ({
   success,
   'data-testid': dataTestId,
   width,
+  maxWidth,
   labelInformation,
   readOnly,
   onFocus,
@@ -136,6 +138,7 @@ export const UnitInput = ({
   return (
     <Stack
       gap={0.5}
+      maxWidth={maxWidth}
       onBlur={onBlur}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
