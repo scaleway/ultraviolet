@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import type { MouseEventHandler, ReactNode } from 'react'
+import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
 import { Button } from '../Button'
@@ -24,6 +24,7 @@ type TagProps = {
   className?: string
   children: ReactNode
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 type TagInnerProps = Omit<
@@ -80,6 +81,7 @@ export const Tag = ({
   disabled,
   sentiment = 'neutral',
   className,
+  style,
   'data-testid': dataTestId,
 }: TagProps) => {
   const stringChildren = useMemo(() => {
@@ -119,6 +121,7 @@ export const Tag = ({
     <span
       className={`${className ? `${className} ` : ''}${containerTag({ disabled, sentiment })}`}
       data-testid={dataTestId}
+      style={style}
     >
       <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
         {children}

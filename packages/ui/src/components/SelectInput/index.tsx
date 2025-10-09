@@ -1,15 +1,15 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { useId, useRef } from 'react'
 import { Label } from '../Label'
 import type { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { Dropdown } from './Dropdown'
-import { SelectBar } from './SelectBar'
+import { Dropdown } from './components/Dropdown'
+import { SelectBar } from './components/SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
+import { selectinputContainer, selectinputHelper } from './styles.css'
 import type { DataType } from './types'
 
 type SelectInputProps<IsMulti extends undefined | boolean = false> = {
@@ -138,13 +138,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
 >
 
-const SelectInputContainer = styled.div`
-  width: 100%;
-`
-const HelperText = styled(Text)`
-  padding-top: ${({ theme }) => theme.space['0.5']};
-`
-
 /**
  * SelectInput component is used to select one or many elements from a selection.
  */
@@ -213,9 +206,9 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       selectAllGroup={selectAllGroup}
       value={value}
     >
-      <SelectInputContainer
+      <div
         aria-label={name}
-        className={className}
+        className={`${className ? `${className} ` : ''}${selectinputContainer}`}
         onBlur={onBlur}
         onFocus={onFocus}
         style={style}
@@ -265,26 +258,28 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
           </Stack>
         </Dropdown>
         {!error && !success && helper ? (
-          <HelperText
+          <Text
             as="p"
+            className={selectinputHelper}
             prominence="weak"
             sentiment="neutral"
             variant="caption"
           >
             {helper}
-          </HelperText>
+          </Text>
         ) : null}
         {(error && typeof error === 'string') || success ? (
-          <HelperText
+          <Text
             as="p"
+            className={selectinputHelper}
             prominence="default"
             sentiment={error ? 'danger' : 'success'}
             variant="caption"
           >
             {error || success}
-          </HelperText>
+          </Text>
         ) : null}
-      </SelectInputContainer>
+      </div>
     </SelectInputProvider>
   )
 }

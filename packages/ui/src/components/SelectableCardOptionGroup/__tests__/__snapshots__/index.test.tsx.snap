@@ -33,142 +33,18 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -278,7 +154,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«rag»"
@@ -293,24 +169,21 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                         <div
                           aria-controls="«rag»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«raf»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -421,7 +294,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«raq»"
@@ -436,24 +309,21 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                         <div
                           aria-controls="«raq»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«rap»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -564,7 +434,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«rb4»"
@@ -579,24 +449,21 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                         <div
                           aria-controls="«rb4»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«rb3»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -658,142 +525,18 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -908,7 +651,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r7»"
@@ -923,24 +666,21 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                         <div
                           aria-controls="«r7»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r6»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -1051,7 +791,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«rh»"
@@ -1066,24 +806,21 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                         <div
                           aria-controls="«rh»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«rg»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -1194,7 +931,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«rr»"
@@ -1209,24 +946,21 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                         <div
                           aria-controls="«rr»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«rq»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -1288,142 +1022,18 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -1533,7 +1143,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r8j»"
@@ -1548,24 +1158,21 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                         <div
                           aria-controls="«r8j»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r8i»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -1676,7 +1283,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r8t»"
@@ -1691,24 +1298,21 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                         <div
                           aria-controls="«r8t»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r8s»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -1819,7 +1423,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r97»"
@@ -1834,24 +1438,21 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                         <div
                           aria-controls="«r97»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r96»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -1913,142 +1514,18 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #e9eaeb!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -2159,7 +1636,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r3s»"
@@ -2174,24 +1651,21 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                         <div
                           aria-controls="«r3s»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7 selectBar_disabled_true__1ba7knde"
                           data-disabled="true"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r3r»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_60__m4c9ow30"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_60__m4c9ow30"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -2303,7 +1777,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r46»"
@@ -2318,24 +1792,21 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                         <div
                           aria-controls="«r46»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7 selectBar_disabled_true__1ba7knde"
                           data-disabled="true"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r45»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -2447,7 +1918,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r4g»"
@@ -2462,24 +1933,21 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                         <div
                           aria-controls="«r4g»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7 selectBar_disabled_true__1ba7knde"
                           data-disabled="true"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r4f»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -2541,142 +2009,18 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -2780,7 +2124,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r22»"
@@ -2795,24 +2139,21 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                         <div
                           aria-controls="«r22»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r21»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -2917,7 +2258,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r2b»"
@@ -2932,24 +2273,21 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                         <div
                           aria-controls="«r2b»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r2a»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -3054,7 +2392,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r2k»"
@@ -3069,24 +2407,21 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                         <div
                           aria-controls="«r2k»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r2j»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -3148,142 +2483,18 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #b3144d!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -3393,7 +2604,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r6n»"
@@ -3408,24 +2619,21 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                         <div
                           aria-controls="«r6n»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_danger__1ba7kndb selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="danger"
                           data-testid="select-input-selectable-card-option"
                           id="«r6m»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -3546,7 +2754,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r71»"
@@ -3561,24 +2769,21 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                         <div
                           aria-controls="«r71»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_danger__1ba7kndb selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="danger"
                           data-testid="select-input-selectable-card-option"
                           id="«r70»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -3699,7 +2904,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r7b»"
@@ -3714,24 +2919,21 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                         <div
                           aria-controls="«r7b»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_danger__1ba7kndb selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="danger"
                           data-testid="select-input-selectable-card-option"
                           id="«r7a»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -3803,142 +3005,18 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #b3144d!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -4048,7 +3126,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r5o»"
@@ -4063,24 +3141,21 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                         <div
                           aria-controls="«r5o»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_danger__1ba7kndb selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="danger"
                           data-testid="select-input-selectable-card-option"
                           id="«r5n»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -4201,7 +3276,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r62»"
@@ -4216,24 +3291,21 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                         <div
                           aria-controls="«r62»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_danger__1ba7kndb selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="danger"
                           data-testid="select-input-selectable-card-option"
                           id="«r61»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -4354,7 +3426,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r6c»"
@@ -4369,24 +3441,21 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                         <div
                           aria-controls="«r6c»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_danger__1ba7kndb selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="danger"
                           data-testid="select-input-selectable-card-option"
                           id="«r6b»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
@@ -4463,142 +3532,18 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -4708,7 +3653,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r9h»"
@@ -4723,24 +3668,21 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                         <div
                           aria-controls="«r9h»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r9g»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -4851,7 +3793,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r9r»"
@@ -4866,24 +3808,21 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                         <div
                           aria-controls="«r9r»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r9q»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -4994,7 +3933,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«ra5»"
@@ -5009,24 +3948,21 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                         <div
                           aria-controls="«ra5»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«ra4»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -5093,142 +4029,18 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -5338,7 +4150,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r2u»"
@@ -5353,24 +4165,21 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                         <div
                           aria-controls="«r2u»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r2t»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -5481,7 +4290,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r38»"
@@ -5496,24 +4305,21 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                         <div
                           aria-controls="«r38»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r37»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -5624,7 +4430,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r3i»"
@@ -5639,24 +4445,21 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                         <div
                           aria-controls="«r3i»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r3h»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -5713,142 +4516,18 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
   padding: 0 1rem;
 }
 
-.emotion-9 {
-  width: 100%;
-}
-
-.emotion-9 .emotion-12 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-9 .emotion-12:hover,
-.emotion-9 .emotion-12:focus,
-.emotion-9 .emotion-12:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-11 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-11[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-11[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-11[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-11[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-11[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-11[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-11[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-11[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-11[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-11[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-11[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-11[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-11[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-11[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-11:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-11[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-11[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-13 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-15 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-28 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -5955,7 +4634,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-8 emotion-9 emotion-10"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r7l»"
@@ -5970,24 +4649,21 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                         <div
                           aria-controls="«r7l»"
                           aria-expanded="false"
-                          class="emotion-11 emotion-12"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r7k»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-13 emotion-14 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-15 emotion-16 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -6095,7 +4771,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-8 emotion-9 emotion-10"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r7v»"
@@ -6110,24 +4786,21 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                         <div
                           aria-controls="«r7v»"
                           aria-expanded="false"
-                          class="emotion-11 emotion-12"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r7u»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-15 emotion-16 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -6235,7 +4908,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-8 emotion-9 emotion-10"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r89»"
@@ -6250,24 +4923,21 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                         <div
                           aria-controls="«r89»"
                           aria-expanded="false"
-                          class="emotion-11 emotion-12"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r88»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-28 emotion-29 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-15 emotion-16 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -6329,142 +4999,18 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
-}
-
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -6574,7 +5120,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r15»"
@@ -6589,24 +5135,21 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                         <div
                           aria-controls="«r15»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r14»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -6717,7 +5260,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r1f»"
@@ -6732,24 +5275,21 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                         <div
                           aria-controls="«r1f»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r1e»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -6860,7 +5400,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r1p»"
@@ -6875,24 +5415,21 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                         <div
                           aria-controls="«r1p»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r1o»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -6954,160 +5491,32 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-11 {
-  width: 100%;
-}
-
-.emotion-11 .emotion-14 {
+.emotion-10 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-11 .emotion-14:hover,
-.emotion-11 .emotion-14:focus,
-.emotion-11 .emotion-14:active {
+.emotion-10 .selectBar__1ba7knd4:hover,
+.emotion-10 .selectBar__1ba7knd4:focus,
+.emotion-10 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
 
-.emotion-13 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-13[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-13[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-13[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-13[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-13[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-13[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-13[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-13[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-13[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-15 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-17 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-28 {
-  width: 100%;
-}
-
-.emotion-28 .emotion-14 {
+.emotion-20 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-28 .emotion-14:hover,
-.emotion-28 .emotion-14:focus,
-.emotion-28 .emotion-14:active {
+.emotion-20 .selectBar__1ba7knd4:hover,
+.emotion-20 .selectBar__1ba7knd4:focus,
+.emotion-20 .selectBar__1ba7knd4:active {
   border-color: #e9eaeb!important;
   outline: none;
-}
-
-.emotion-32 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
@@ -7217,7 +5626,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r4q»"
@@ -7232,24 +5641,21 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                         <div
                           aria-controls="«r4q»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r4p»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-15 emotion-16 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                            class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                           >
                             Ubuntu 20.04 Focal Fossa
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -7361,7 +5767,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-28 emotion-12"
+                    class="emotion-20 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r54»"
@@ -7376,24 +5782,21 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                         <div
                           aria-controls="«r54»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7 selectBar_disabled_true__1ba7knde"
                           data-disabled="true"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r53»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"
@@ -7504,7 +5907,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="emotion-10 emotion-11 styles__uf6pag0"
                   >
                     <div
                       aria-controls="«r5e»"
@@ -7519,24 +5922,21 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                         <div
                           aria-controls="«r5e»"
                           aria-expanded="false"
-                          class="emotion-13 emotion-14"
+                          class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                           data-disabled="false"
-                          data-dropdownvisible="false"
                           data-readonly="false"
-                          data-size="medium"
-                          data-state="neutral"
                           data-testid="select-input-selectable-card-option"
                           id="«r5d»"
                           role="combobox"
                           tabindex="0"
                         >
                           <span
-                            class="emotion-32 emotion-33 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                            class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                           >
                             Select item
                           </span>
                           <div
-                            class="emotion-17 emotion-18 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                            class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                           >
                             <svg
                               aria-label="show dropdown"

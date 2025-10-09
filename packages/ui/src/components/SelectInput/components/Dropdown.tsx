@@ -1,7 +1,5 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import type {
   ComponentProps,
   Dispatch,
@@ -18,17 +16,31 @@ import {
   useRef,
   useState,
 } from 'react'
-import { Checkbox } from '../Checkbox'
-import { ModalContext } from '../Modal/ModalProvider'
-import { Popup } from '../Popup'
-import { Skeleton } from '../Skeleton'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { useTheme } from '../../../theme'
+import { Checkbox } from '../../Checkbox'
+import { ModalContext } from '../../Modal/ModalProvider'
+import { Popup } from '../../Popup'
+import { Skeleton } from '../../Skeleton'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { useSelectInput } from '../SelectInputProvider'
+import type { DataType, OptionType } from '../types'
+import { INPUT_SIZE_HEIGHT } from '../types'
 import { DisplayOption } from './DropdownOption'
+import {
+  dropdown,
+  dropdownCheckbox,
+  dropdownContainer,
+  dropdownContainerUnGrouped,
+  dropdownEmptyState,
+  dropdownGroup,
+  dropdownGroupSelectable,
+  dropdownGroupWrapper,
+  dropdownItem,
+  dropdownLoadMore,
+  footer as footerStyle,
+} from './dropdown.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
-import { useSelectInput } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
-import { INPUT_SIZE_HEIGHT } from './types'
 
 const DROPDOWN_MAX_HEIGHT = 256
 
@@ -71,128 +83,6 @@ const NON_SEARCHABLE_KEYS = [
   'ArrowRight',
   'Escape',
 ]
-
-const StyledPopup = styled(Popup)`
-  width: 90%;
-  min-width: 320px;
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.raised};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  box-shadow: ${({ theme }) =>
-    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
-  padding: ${({ theme }) => theme.space[0]};
-  margin-bottom: ${({ theme }) => theme.space[10]};
-`
-
-const DropdownContainer = styled(Stack)<{ 'data-grouped': boolean }>`
-  max-height: ${DROPDOWN_MAX_HEIGHT}px;
-  overflow-y: auto;
-  padding: ${({ theme }) => theme.space[0]};
-  padding-bottom: ${({ theme }) => theme.space[0.5]};
-  padding-top: ${({ theme }) => theme.space[0.5]};
-
-  &[data-grouped="true"] {
-    padding-top: ${({ theme }) => theme.space[0]};
-  }
-`
-const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
-  display: flex;
-  width: 100%;
-  justify-content: left;
-  align-items: center;
-  border: none;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  position: sticky;
-  top: 0;
-  padding-right: ${({ theme }) => theme.space[2]};
-  padding-left: ${({ theme }) => theme.space[2]};
-  height: ${({ theme }) => theme.space[4]};
-  display: flex;
-  text-align: left;
-  margin-bottom: ${({ theme }) => theme.space['0.25']};
-
-  &:focus {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    outline: none;
-  }
-
-  &[data-selectgroup='true'] {
-    padding-left: ${({ theme }) => theme.space[2]};
-    border-left: ${({ theme }) => theme.space[0.5]} solid ${({ theme }) =>
-      theme.colors.neutral.backgroundWeak};
-  }
-
-  &[data-selectgroup='true']:focus {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
-  }
-`
-const DropdownGroupWrapper = styled.div`
-  position: sticky;
-  top: 0;
-`
-const DropdownItem = styled.div<{
-  'aria-selected': boolean
-  'aria-disabled': boolean
-}>`
-  text-align:left;
-  border: none;
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.raised};
-
-  padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
-    theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
-    theme.space['2']};
-  margin-left: ${({ theme }) => theme.space['0.5']};
-  margin-right: ${({ theme }) => theme.space['0.5']};
-
-  color:  ${({ theme }) => theme.colors.neutral.text};
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 1px transparent solid;
-
-  &:hover, :focus {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-    color: ${({ theme }) => theme.colors.primary.text};
-    cursor: pointer;
-  }
-
-  &[aria-selected='true'] {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-  }
-
-  &[aria-disabled="true"] {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-  }
-
-  &[aria-disabled="true"]:hover, [aria-disabled="true"]:focus {
-    background-color: ${({ theme }) =>
-      theme.colors.neutral.backgroundStrongDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textStrongDisabled};
-    cursor: not-allowed;
-    outline: none;
-  }
-`
-
-const PopupFooter = styled.div`
-  width: 100%;
-  padding: ${({ theme }) => theme.space[1.5]} ${({ theme }) => theme.space[2]}
-    ${({ theme }) => theme.space[1.5]} ${({ theme }) => theme.space[2]};
-  box-shadow: ${({ theme }) => theme.shadows.dropdown};
-`
-const StyledCheckbox = styled(Checkbox)`
-  width: 100%;
-  position: static;
-  text-align: left;
-  align-items: center;
-  pointer-events: none;
-` // pointer-events: none prevents any error when using the checkbox in a form since it is an unnamed input
-
-const EmptyState = styled(Stack)`
-  padding: ${({ theme }) => theme.space[2]};
-`
-const LoadMore = styled(Stack)`
-  padding: ${({ theme }) => theme.space[0.5]};
-`
 
 const moveFocusDown = () => {
   const options = document.querySelectorAll(
@@ -319,13 +209,13 @@ const CreateDropdown = ({
 
   if (isEmpty) {
     return (
-      <EmptyState alignItems="center" gap={2}>
+      <Stack alignItems="center" className={dropdownEmptyState} gap={2}>
         {emptyState ?? (
           <Text as="p" variant="bodyStrong">
             No options
           </Text>
         )}
-      </EmptyState>
+      </Stack>
     )
   }
 
@@ -397,7 +287,8 @@ const CreateDropdown = ({
   }
 
   return !Array.isArray(displayedOptions) ? (
-    <DropdownContainer
+    <Stack
+      className={dropdownContainer}
       data-grouped
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
@@ -409,10 +300,11 @@ const CreateDropdown = ({
         <>
           {selectAll && multiselect ? (
             <Stack id="items">
-              <DropdownItem
+              <div
                 aria-disabled={false}
                 aria-label="select-all"
                 aria-selected={selectedData.allSelected}
+                className={dropdownItem({ selected: selectedData.allSelected })}
                 data-testid="select-all"
                 id="select-all"
                 onClick={selectAllOptions}
@@ -422,8 +314,9 @@ const CreateDropdown = ({
                 role="option"
                 tabIndex={0}
               >
-                <StyledCheckbox
+                <Checkbox
                   checked={selectedData.allSelected}
+                  className={dropdownCheckbox}
                   data-testid="select-all-checkbox"
                   disabled={false}
                   onChange={selectAllOptions}
@@ -444,16 +337,20 @@ const CreateDropdown = ({
                       {selectAll.description}
                     </Text>
                   </Stack>
-                </StyledCheckbox>
-              </DropdownItem>
+                </Checkbox>
+              </div>
             </Stack>
           ) : null}
           {Object.keys(displayedOptions).map((group, index) => (
             <Stack gap={0.25} key={group}>
               {displayedOptions[group].length > 0 ? (
-                <DropdownGroupWrapper id={selectAllGroup ? 'items' : undefined}>
+                <div
+                  className={dropdownGroupWrapper}
+                  id={selectAllGroup ? 'items' : undefined}
+                >
                   {group ? (
-                    <DropdownGroup
+                    <button
+                      className={`${selectAllGroup ? dropdownGroupSelectable : ''} ${dropdownGroup}`}
                       data-selectgroup={selectAllGroup}
                       data-testid={`group-${index}`}
                       key={group}
@@ -471,8 +368,9 @@ const CreateDropdown = ({
                       type="button"
                     >
                       {selectAllGroup ? (
-                        <StyledCheckbox
+                        <Checkbox
                           checked={selectedData.selectedGroups.includes(group)}
+                          className={dropdownCheckbox}
                           data-testid="select-group"
                           disabled={false}
                           onChange={() =>
@@ -489,7 +387,7 @@ const CreateDropdown = ({
                           >
                             {group.toUpperCase()}
                           </Text>
-                        </StyledCheckbox>
+                        </Checkbox>
                       ) : (
                         <Text
                           as="span"
@@ -500,19 +398,25 @@ const CreateDropdown = ({
                           {group.toUpperCase()}
                         </Text>
                       )}
-                    </DropdownGroup>
+                    </button>
                   ) : null}
-                </DropdownGroupWrapper>
+                </div>
               ) : null}
               <Stack gap="0.25" id="items">
                 {displayedOptions[group].map((option, indexOption) => (
-                  <DropdownItem
+                  <div
                     aria-disabled={!!option.disabled}
                     aria-label={option.value}
                     aria-selected={
                       selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
                     }
+                    className={dropdownItem({
+                      disabled: !!option.disabled,
+                      selected:
+                        selectedData.selectedValues.includes(option.value) &&
+                        !option.disabled,
+                    })}
                     data-testid={`option-${option.value}`}
                     id={`option-${indexOption}`}
                     key={option.value}
@@ -536,11 +440,12 @@ const CreateDropdown = ({
                     tabIndex={!option.disabled ? 0 : -1}
                   >
                     {multiselect ? (
-                      <StyledCheckbox
+                      <Checkbox
                         checked={
                           selectedData.selectedValues.includes(option.value) &&
                           !option.disabled
                         }
+                        className={dropdownCheckbox}
                         disabled={option.disabled}
                         onChange={() => {
                           if (!option.disabled) {
@@ -555,7 +460,7 @@ const CreateDropdown = ({
                           option={option}
                           optionalInfoPlacement={optionalInfoPlacement}
                         />
-                      </StyledCheckbox>
+                      </Checkbox>
                     ) : (
                       <DisplayOption
                         descriptionDirection={descriptionDirection}
@@ -563,18 +468,18 @@ const CreateDropdown = ({
                         optionalInfoPlacement={optionalInfoPlacement}
                       />
                     )}
-                  </DropdownItem>
+                  </div>
                 ))}
               </Stack>
             </Stack>
           ))}
         </>
       )}
-      {loadMore ? <LoadMore>{loadMore}</LoadMore> : null}
-    </DropdownContainer>
+      {loadMore ? <Stack className={dropdownLoadMore}>{loadMore}</Stack> : null}
+    </Stack>
   ) : (
-    <DropdownContainer
-      data-grouped={false}
+    <Stack
+      className={`${dropdownContainer} ${dropdownContainerUnGrouped}`}
       gap={0.25}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}
@@ -582,10 +487,11 @@ const CreateDropdown = ({
     >
       {selectAll && multiselect ? (
         <Stack gap={0.25} id="items" tabIndex={-1}>
-          <DropdownItem
+          <div
             aria-disabled={false}
             aria-label="select-all"
             aria-selected={selectedData.allSelected}
+            className={dropdownItem({ selected: selectedData.allSelected })}
             data-testid="select-all"
             onClick={selectAllOptions}
             onKeyDown={event =>
@@ -594,8 +500,9 @@ const CreateDropdown = ({
             role="option"
             tabIndex={0}
           >
-            <StyledCheckbox
+            <Checkbox
               checked={selectedData.allSelected}
+              className={dropdownCheckbox}
               data-testid="select-all-checkbox"
               disabled={false}
               onChange={selectAllOptions}
@@ -616,8 +523,8 @@ const CreateDropdown = ({
                   {selectAll.description}
                 </Text>
               </Stack>
-            </StyledCheckbox>
-          </DropdownItem>
+            </Checkbox>
+          </div>
         </Stack>
       ) : null}
       <Stack gap={0.25} id="items">
@@ -625,13 +532,19 @@ const CreateDropdown = ({
           <Skeleton variant="block" />
         ) : (
           displayedOptions.map((option, index) => (
-            <DropdownItem
+            <div
               aria-disabled={!!option.disabled}
               aria-label={option.value}
               aria-selected={
                 selectedData.selectedValues.includes(option.value) &&
                 !option.disabled
               }
+              className={dropdownItem({
+                disabled: !!option.disabled,
+                selected:
+                  selectedData.selectedValues.includes(option.value) &&
+                  !option.disabled,
+              })}
               data-testid={`option-${option.value}`}
               id={`option-${index}`}
               key={option.value}
@@ -653,11 +566,12 @@ const CreateDropdown = ({
               tabIndex={!option.disabled ? 0 : -1}
             >
               {multiselect ? (
-                <StyledCheckbox
+                <Checkbox
                   checked={
                     selectedData.selectedValues.includes(option.value) &&
                     !option.disabled
                   }
+                  className={dropdownCheckbox}
                   disabled={option.disabled}
                   onChange={() => {
                     if (!option.disabled) {
@@ -672,7 +586,7 @@ const CreateDropdown = ({
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
                   />
-                </StyledCheckbox>
+                </Checkbox>
               ) : (
                 <DisplayOption
                   descriptionDirection={descriptionDirection}
@@ -680,12 +594,14 @@ const CreateDropdown = ({
                   optionalInfoPlacement={optionalInfoPlacement}
                 />
               )}
-            </DropdownItem>
+            </div>
           ))
         )}
-        {loadMore ? <LoadMore>{loadMore}</LoadMore> : null}
+        {loadMore ? (
+          <Stack className={dropdownLoadMore}>{loadMore}</Stack>
+        ) : null}
       </Stack>
-    </DropdownContainer>
+    </Stack>
   )
 }
 export const Dropdown = ({
@@ -844,19 +760,22 @@ export const Dropdown = ({
     if (footer && !isEmpty) {
       if (typeof footer === 'function') {
         return (
-          <PopupFooter>{footer(() => setIsDropdownVisible(false))}</PopupFooter>
+          <div className={footerStyle}>
+            {footer(() => setIsDropdownVisible(false))}
+          </div>
         )
       }
 
-      return <PopupFooter>{footer}</PopupFooter>
+      return <div className={footerStyle}>{footer}</div>
     }
 
     return null
   }, [isEmpty, footer, setIsDropdownVisible])
 
   return (
-    <StyledPopup
+    <Popup
       align={dropdownAlign ?? 'start'}
+      className={dropdown}
       containerFullWidth
       debounceDelay={0}
       disableAnimation
@@ -894,6 +813,6 @@ export const Dropdown = ({
       visible={isDropdownVisible}
     >
       {children}
-    </StyledPopup>
+    </Popup>
   )
 }
