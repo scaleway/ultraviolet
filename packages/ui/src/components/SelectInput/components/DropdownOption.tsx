@@ -1,24 +1,14 @@
 'use client'
 
-import styled from '@emotion/styled'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
-import { Tooltip } from '../Tooltip'
-import type { OptionType } from './types'
-
-const StyledInfo = styled.div`
-  align-content: center;
-`
-const TextItem = styled(Text)`
-  overflow: auto;
-  text-overflow: ellipsis;
-  flex-shrink: 0;
-  flex-wrap: wrap;
-  max-width: 100%;
-`
-const CustomStack = styled(Stack)`
-overflow: hidden;
-`
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
+import type { OptionType } from '../types'
+import {
+  dropdownInfo,
+  dropdownInfoContainer,
+  dropdownInfoTextItem,
+} from './dropdown.css'
 
 type DisplayOptionProps = {
   option: OptionType
@@ -40,11 +30,21 @@ export const DisplayOption = ({
           gap={0.5}
           justifyContent="left"
         >
-          <CustomStack alignItems="center" direction="row" gap={0.5}>
+          <Stack
+            alignItems="center"
+            className={dropdownInfoContainer}
+            direction="row"
+            gap={0.5}
+          >
             {option.optionalInfo ?? null}
-            <TextItem as="span" placement="left" variant="body">
+            <Text
+              as="span"
+              className={dropdownInfoTextItem}
+              placement="left"
+              variant="body"
+            >
               {option.label}
-            </TextItem>
+            </Text>
             {option.description ? (
               <Text
                 as="span"
@@ -56,7 +56,7 @@ export const DisplayOption = ({
                 {option.description}
               </Text>
             ) : null}
-          </CustomStack>
+          </Stack>
         </Stack>
       </Tooltip>
     )
@@ -72,10 +72,20 @@ export const DisplayOption = ({
           gap={0.5}
           justifyContent="space-between"
         >
-          <CustomStack alignItems="baseline" direction="row" gap={0.5}>
-            <TextItem as="span" placement="left" variant="body">
+          <Stack
+            alignItems="baseline"
+            className={dropdownInfoContainer}
+            direction="row"
+            gap={0.5}
+          >
+            <Text
+              as="span"
+              className={dropdownInfoTextItem}
+              placement="left"
+              variant="body"
+            >
               {option.label}
-            </TextItem>
+            </Text>
             {option.description ? (
               <Text
                 as="span"
@@ -87,9 +97,9 @@ export const DisplayOption = ({
                 {option.description}
               </Text>
             ) : null}
-          </CustomStack>
+          </Stack>
           {option.optionalInfo ? (
-            <StyledInfo>{option.optionalInfo}</StyledInfo>
+            <div className={dropdownInfo}>{option.optionalInfo}</div>
           ) : null}
         </Stack>
       </Tooltip>
@@ -107,14 +117,20 @@ export const DisplayOption = ({
         >
           {option.optionalInfo ?? null}
 
-          <CustomStack
+          <Stack
+            className={dropdownInfoContainer}
             data-testid={`option-stack-${option.value}`}
             direction="column"
             gap={0.5}
           >
-            <TextItem as="span" placement="left" variant="body">
+            <Text
+              as="span"
+              className={dropdownInfoTextItem}
+              placement="left"
+              variant="body"
+            >
               {option.label}
-            </TextItem>
+            </Text>
             {option.description ? (
               <Text
                 as="span"
@@ -126,7 +142,7 @@ export const DisplayOption = ({
                 {option.description}
               </Text>
             ) : null}
-          </CustomStack>
+          </Stack>
         </Stack>
       </Tooltip>
     )
@@ -140,14 +156,24 @@ export const DisplayOption = ({
         direction="column"
         gap={0.5}
       >
-        <CustomStack direction="row" gap={0.5} justifyContent="space-between">
-          <TextItem as="span" placement="left" variant="body">
+        <Stack
+          className={dropdownInfoContainer}
+          direction="row"
+          gap={0.5}
+          justifyContent="space-between"
+        >
+          <Text
+            as="span"
+            className={dropdownInfoTextItem}
+            placement="left"
+            variant="body"
+          >
             {option.label}
-          </TextItem>
+          </Text>
           {option.optionalInfo ? (
-            <StyledInfo>{option.optionalInfo}</StyledInfo>
+            <div className={dropdownInfo}>{option.optionalInfo}</div>
           ) : null}
-        </CustomStack>
+        </Stack>
         {option.description ? (
           <Text
             as="span"

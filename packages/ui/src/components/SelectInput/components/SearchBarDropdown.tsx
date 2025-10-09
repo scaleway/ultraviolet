@@ -1,13 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { SearchIcon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
-import { isFuzzyMatch, normalizeString } from '../../utils/searchAlgorithm'
-import { TextInput } from '../TextInput'
-import { useSelectInput } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
+import { isFuzzyMatch, normalizeString } from '../../../utils/searchAlgorithm'
+import { TextInput } from '../../TextInput'
+import { useSelectInput } from '../SelectInputProvider'
+import type { DataType, OptionType } from '../types'
+import { searchBar } from './dropdown.css'
 
 type SearchBarProps = {
   placeholder: string
@@ -15,12 +15,6 @@ type SearchBarProps = {
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
 }
 
-const StyledInput = styled(TextInput)`
-  padding-top: ${({ theme }) => theme.space[1.5]};
-  padding-bottom: ${({ theme }) => theme.space[1.5]};
-  padding-left: ${({ theme }) => theme.space[2]};
-  padding-right: ${({ theme }) => theme.space[2]};
-`
 export const getReferenceText = (option: OptionType) => {
   if (option.searchText) {
     return normalizeString(option.searchText)
@@ -172,8 +166,9 @@ export const SearchBarDropdown = ({
   }, [])
 
   return (
-    <StyledInput
+    <TextInput
       aria-label="search-bar"
+      className={searchBar}
       data-testid="search-bar"
       onBlur={() => setSearchBarActive(false)}
       onChange={event => handleChange(event.target.value)}

@@ -2,322 +2,7 @@
 
 exports[`unitInput > renders click 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-8 {
-  width: 90%;
-  min-width: 320px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0rem;
-  margin-bottom: 5rem;
-}
-
-.emotion-8 {
-  width: 90%;
-  min-width: 320px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0rem;
-  margin-bottom: 5rem;
-}
-
-.emotion-10 {
-  max-height: 256px;
-  overflow-y: auto;
-  padding: 0rem;
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
-}
-
-.emotion-10[data-grouped="true"] {
-  padding-top: 0rem;
-}
-
-.emotion-12 {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 0.75rem 1rem 0.75rem 1rem;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  border: 1px transparent solid;
-}
-
-.emotion-12:hover,
-.emotion-12:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-}
-
-.emotion-12[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.emotion-12[aria-disabled="true"] {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-}
-
-.emotion-12[aria-disabled="true"]:hover,
-.emotion-12 [aria-disabled="true"]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.emotion-14 {
-  overflow: hidden;
-}
-
-.emotion-16 {
-  overflow: auto;
-  text-overflow: ellipsis;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -346,7 +31,7 @@ exports[`unitInput > renders click 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -361,24 +46,21 @@ exports[`unitInput > renders click 1`] = `
               <div
                 aria-controls="«rq»"
                 aria-expanded="true"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7 selectBar_dropdownVisible_true__1ba7kndc selectBar_undefined_compound_0__1ba7kndf"
                 data-disabled="false"
-                data-dropdownvisible="true"
                 data-readonly="false"
-                data-size="medium"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -395,7 +77,7 @@ exports[`unitInput > renders click 1`] = `
               </div>
             </div>
             <div
-              class="emotion-8 emotion-9 styles__w40vpo4 null"
+              class="dropdown__5kpm8k0 styles__w40vpo4 null"
               id="«rq»"
               role="dialog"
               style="--ozfz3c0: -5px; --ozfz3c1: 0px; --ozfz3c2:  rotate(180deg); --ozfz3c4: translate3d(0px, 4px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(0px, 4px, 0); --ozfz3c7: 100%; opacity: 1;"
@@ -407,8 +89,7 @@ exports[`unitInput > renders click 1`] = `
                   class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <div
-                    class="emotion-10 emotion-11 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
-                    data-grouped="false"
+                    class="dropdown__5kpm8k1 dropdown__5kpm8k2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.125rem_xxsmall__toi52u21 styles_justifyContent_normal_xxsmall__toi52u5d"
                     id="select-dropdown"
                     role="listbox"
                   >
@@ -420,7 +101,7 @@ exports[`unitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="kb"
                         aria-selected="false"
-                        class="emotion-12 emotion-13"
+                        class="dropdown__5kpm8k6"
                         data-testid="option-kb"
                         id="option-0"
                         role="option"
@@ -431,10 +112,10 @@ exports[`unitInput > renders click 1`] = `
                           data-testid="option-stack-kb"
                         >
                           <div
-                            class="emotion-14 emotion-15 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_space-between_xxsmall__toi52u6p"
+                            class="dropdown__5kpm8kf styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_space-between_xxsmall__toi52u6p"
                           >
                             <span
-                              class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              class="dropdown__5kpm8ke style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                               style="--qabug40: left;"
                             >
                               KB
@@ -446,7 +127,7 @@ exports[`unitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="mb"
                         aria-selected="false"
-                        class="emotion-12 emotion-13"
+                        class="dropdown__5kpm8k6"
                         data-testid="option-mb"
                         id="option-1"
                         role="option"
@@ -457,10 +138,10 @@ exports[`unitInput > renders click 1`] = `
                           data-testid="option-stack-mb"
                         >
                           <div
-                            class="emotion-14 emotion-15 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_space-between_xxsmall__toi52u6p"
+                            class="dropdown__5kpm8kf styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_space-between_xxsmall__toi52u6p"
                           >
                             <span
-                              class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              class="dropdown__5kpm8ke style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                               style="--qabug40: left;"
                             >
                               MB
@@ -472,7 +153,7 @@ exports[`unitInput > renders click 1`] = `
                         aria-disabled="false"
                         aria-label="gb"
                         aria-selected="false"
-                        class="emotion-12 emotion-13"
+                        class="dropdown__5kpm8k6"
                         data-testid="option-gb"
                         id="option-2"
                         role="option"
@@ -483,10 +164,10 @@ exports[`unitInput > renders click 1`] = `
                           data-testid="option-stack-gb"
                         >
                           <div
-                            class="emotion-14 emotion-15 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_space-between_xxsmall__toi52u6p"
+                            class="dropdown__5kpm8kf styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_space-between_xxsmall__toi52u6p"
                           >
                             <span
-                              class="emotion-16 emotion-17 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                              class="dropdown__5kpm8ke style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
                               style="--qabug40: left;"
                             >
                               GB
@@ -509,122 +190,7 @@ exports[`unitInput > renders click 1`] = `
 
 exports[`unitInput > renders with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -653,7 +219,7 @@ exports[`unitInput > renders with default props 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -668,24 +234,21 @@ exports[`unitInput > renders with default props 1`] = `
               <div
                 aria-controls="«r2»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -711,235 +274,7 @@ exports[`unitInput > renders with default props 1`] = `
 
 exports[`unitInput > renders with default value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -983,7 +318,7 @@ exports[`unitInput > renders with default value 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -998,24 +333,21 @@ exports[`unitInput > renders with default value 1`] = `
               <div
                 aria-controls="«r3r»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8 selectBar_disabled_true__1ba7knde"
                 data-disabled="true"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_60__m4c9ow30"
+                  class="selectBar__1ba7kndl style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_60__m4c9ow30"
                 >
                   KB
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -1041,237 +373,7 @@ exports[`unitInput > renders with default value 1`] = `
 
 exports[`unitInput > renders with disabled and placeHolder 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1301,7 +403,7 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -1316,24 +418,21 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
               <div
                 aria-controls="«r1c»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8 selectBar_disabled_true__1ba7knde"
                 data-disabled="true"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -1359,237 +458,7 @@ exports[`unitInput > renders with disabled and placeHolder 1`] = `
 
 exports[`unitInput > renders with dropdownAlign center 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1618,7 +487,7 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -1633,24 +502,21 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
               <div
                 aria-controls="«r1i»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -1676,237 +542,7 @@ exports[`unitInput > renders with dropdownAlign center 1`] = `
 
 exports[`unitInput > renders with error  and success 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1945,7 +581,7 @@ exports[`unitInput > renders with error  and success 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -1960,24 +596,21 @@ exports[`unitInput > renders with error  and success 1`] = `
               <div
                 aria-controls="«r26»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -2006,237 +639,7 @@ exports[`unitInput > renders with error  and success 1`] = `
 
 exports[`unitInput > renders with error 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2275,7 +678,7 @@ exports[`unitInput > renders with error 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -2290,24 +693,21 @@ exports[`unitInput > renders with error 1`] = `
               <div
                 aria-controls="«r1v»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -2338,237 +738,7 @@ exports[`unitInput > renders with error 1`] = `
 
 exports[`unitInput > renders with label and label information 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2613,7 +783,7 @@ exports[`unitInput > renders with label and label information 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -2628,24 +798,21 @@ exports[`unitInput > renders with label and label information 1`] = `
               <div
                 aria-controls="«r3b»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8 selectBar_disabled_true__1ba7knde"
                 data-disabled="true"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -2671,237 +838,7 @@ exports[`unitInput > renders with label and label information 1`] = `
 
 exports[`unitInput > renders with label and no label information 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -2937,7 +874,7 @@ exports[`unitInput > renders with label and no label information 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -2952,24 +889,21 @@ exports[`unitInput > renders with label and no label information 1`] = `
               <div
                 aria-controls="«r33»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8 selectBar_disabled_true__1ba7knde"
                 data-disabled="true"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -2995,122 +929,7 @@ exports[`unitInput > renders with label and no label information 1`] = `
 
 exports[`unitInput > renders with min max 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3139,7 +958,7 @@ exports[`unitInput > renders with min max 1`] = `
         </div>
         <div
           aria-label="-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -3154,24 +973,21 @@ exports[`unitInput > renders with min max 1`] = `
               <div
                 aria-controls="«r8»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input--unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -3197,237 +1013,7 @@ exports[`unitInput > renders with min max 1`] = `
 
 exports[`unitInput > renders with no label and label information 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3470,7 +1056,7 @@ exports[`unitInput > renders with no label and label information 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -3485,24 +1071,21 @@ exports[`unitInput > renders with no label and label information 1`] = `
               <div
                 aria-controls="«r3j»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8 selectBar_disabled_true__1ba7knde"
                 data-disabled="true"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_true__m4c9ow1a style_undefined_compound_63__m4c9ow33"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -3528,237 +1111,7 @@ exports[`unitInput > renders with no label and label information 1`] = `
 
 exports[`unitInput > renders with size large 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3787,7 +1140,7 @@ exports[`unitInput > renders with size large 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -3802,24 +1155,21 @@ exports[`unitInput > renders with size large 1`] = `
               <div
                 aria-controls="«r16»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -3845,122 +1195,7 @@ exports[`unitInput > renders with size large 1`] = `
 
 exports[`unitInput > renders with size medioum 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -3989,7 +1224,7 @@ exports[`unitInput > renders with size medioum 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -4004,24 +1239,21 @@ exports[`unitInput > renders with size medioum 1`] = `
               <div
                 aria-controls="«rk»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_medium__1ba7knd7"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="medium"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -4047,122 +1279,7 @@ exports[`unitInput > renders with size medioum 1`] = `
 
 exports[`unitInput > renders with size small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4191,7 +1308,7 @@ exports[`unitInput > renders with size small 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -4206,24 +1323,21 @@ exports[`unitInput > renders with size small 1`] = `
               <div
                 aria-controls="«re»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_small__1ba7knd6"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="small"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
@@ -4249,237 +1363,7 @@ exports[`unitInput > renders with size small 1`] = `
 
 exports[`unitInput > renders with success 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  width: 100%;
-}
-
-.emotion-0 {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-2[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-2[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-2[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-2[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-2[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-2[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-2[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-2[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-2[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-2[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-2[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-2[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-2:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-2[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-2[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-6 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -4518,7 +1402,7 @@ exports[`unitInput > renders with success 1`] = `
         </div>
         <div
           aria-label="test-unit"
-          class="styles__gwf0flg styles__gwf0flf emotion-0 emotion-1"
+          class="styles__gwf0flg styles__gwf0flf styles__uf6pag0"
           style="--gwf0fl0: 12.6rem;"
         >
           <div
@@ -4533,24 +1417,21 @@ exports[`unitInput > renders with success 1`] = `
               <div
                 aria-controls="«r1o»"
                 aria-expanded="false"
-                class="emotion-2 emotion-3"
+                class="selectBar__1ba7knd5 selectBar__1ba7knd4 selectBar_state_neutral__1ba7knd9 selectBar_size_large__1ba7knd8"
                 data-disabled="false"
-                data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
-                data-state="neutral"
                 data-testid="select-input-test-unit"
                 id="unit"
                 role="combobox"
                 tabindex="0"
               >
                 <span
-                  class="emotion-4 emotion-5 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
+                  class="selectBar__1ba7knd3 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_weak__m4c9owl style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_27__m4c9ow23 style_undefined_compound_75__m4c9ow3f"
                 >
                   Select item
                 </span>
                 <div
-                  class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+                  class="selectBar__1ba7knd2 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <svg
                     aria-label="show dropdown"
