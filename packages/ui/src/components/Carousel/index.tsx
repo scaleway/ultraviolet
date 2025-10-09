@@ -1,67 +1,16 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
-
-const StyledWrapper = styled.div`
-  position: relative;
-  margin-left: -100px;
-  margin-right: -100px;
-`
-
-const StyledBeforeScroll = styled.span`
-  position: absolute;
-  width: 100px;
-  height: 100%;
-  content: '';
-  background: linear-gradient(
-    -90deg,
-    ${({ theme }) => theme.colors.neutral.background}ff,
-    ${({ theme }) => theme.colors.neutral.background}
-  );
-  cursor: w-resize;
-  z-index: auto;
-`
-
-const StyledScrollableWrapper = styled.div`
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  display: flex;
-  padding: 0 100px;
-  gap: ${({ theme }) => theme.space['2']};
-`
-
-const StyledAfterScroll = styled.span`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  height: 100%;
-  content: '';
-  cursor: e-resize;
-  z-index: auto;
-  background: linear-gradient(
-    -90deg,
-    ${({ theme }) => theme.colors.neutral.background},
-    ${({ theme }) => theme.colors.neutral.background}ff
-  );
-`
-
-const StyledBorderWrapper = styled('div', {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{ width: string }>`
-  display: flex;
-  align-items: stretch;
-  width: ${({ width }) => width};
-  max-width: ${({ width }) => width};
-  overflow-wrap: break-word;
-  white-space: normal;
-  height: auto;
-  cursor: grab;
-  flex-shrink: 0;
-`
+import {
+  afterScroll,
+  beforeScroll,
+  borderWrapper,
+  scrollableWrapper,
+  widthVar,
+  wrapper,
+} from './styles.css'
 
 type CarouselItemProps = {
   children: ReactNode
@@ -71,9 +20,15 @@ export const CarouselItem = ({
   children,
   width = '240px',
 }: CarouselItemProps) => (
-  <StyledBorderWrapper draggable="true" width={width}>
+  <div
+    className={borderWrapper}
+    draggable="true"
+    style={assignInlineVars({
+      [widthVar]: width,
+    })}
+  >
     {children}
-  </StyledBorderWrapper>
+  </div>
 )
 
 type CarouselProps = {
@@ -125,14 +80,19 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <StyledWrapper className={className} data-testid={dataTestId}>
-      <StyledBeforeScroll
+    <div
+      className={`${className ? `${className} ` : ''}${wrapper}`}
+      data-testid={dataTestId}
+    >
+      <span
+        className={beforeScroll}
         data-testid={`${dataTestId}-before`}
+        onFocus={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
         onMouseOver={handleScrollRight}
       />
-      <StyledScrollableWrapper
-        className={className}
+      <div
+        className={`${className ? `${className} ` : ''}${scrollableWrapper}`}
         data-testid={`${dataTestId}-wrapper`}
         onDrag={() => handleScrollX(deltaX)}
         onDragEnd={() => {
@@ -158,14 +118,16 @@ export const Carousel = ({
         ref={scrollRef}
       >
         {children}
-      </StyledScrollableWrapper>
+      </div>
 
-      <StyledAfterScroll
+      <span
+        className={afterScroll}
         data-testid={`${dataTestId}-after`}
+        onFocus={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}
         onMouseOver={handleScrollLeft}
       />
-    </StyledWrapper>
+    </div>
   )
 }
 
