@@ -1,7 +1,7 @@
 import { consoleDarkTheme, theme } from '@ultraviolet/themes'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 
-export const disabledStack = style({ cursor: 'not-allowed ' })
+export const disabledStack = style({ cursor: 'not-allowed' })
 
 export const copyButton = style({
   position: 'absolute',
