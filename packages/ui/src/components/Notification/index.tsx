@@ -1,7 +1,5 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { ClassNames, css, Global, useTheme } from '@emotion/react'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type {
@@ -17,48 +15,13 @@ import {
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-const PREFIX = '.Toastify'
-
-type StylesProps = {
-  theme: Theme
-}
+import { notification as notificationStyle } from './styles.css'
 
 type CloseButtonProps = {
   closeToast: (event: React.MouseEvent<HTMLElement>) => void
   type: TypeOptions
   ariaLabel?: string
   theme: ThemeToastify
-}
-
-const toaster = css`
-  ${PREFIX} {
-    z-index: 1;
-    position: fixed;
-  }
-`
-
-const styles = {
-  toast: ({ theme }: StylesProps) => css`
-    border-radius: ${theme.radii.default};
-
-    &${PREFIX}__toast {
-      background-color: ${theme.colors.other.elevation.background.raised};
-      color: ${theme.colors.neutral.text};
-      padding: ${theme.space['2']};
-      box-shadow: ${theme.shadows.raised[0]}, ${theme.shadows.raised[1]};
-    }
-
-    &${PREFIX}__toast-container {
-      width: 19.5rem;
-    }
-
-    ${PREFIX}__toast-body {
-      margin: 0;
-      padding: 0;
-      display: none;
-    }
-  `,
 }
 
 const closeButton = (props: CloseButtonProps) => (
@@ -132,31 +95,18 @@ export const NotificationContainer = ({
   'data-testid': dataTestId,
   className,
   containerId = 'notification',
-}: NotificationContainerProps) => {
-  const theme = useTheme()
-
-  return (
-    <ClassNames>
-      {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
-      {({ css: localCss }) => (
-        <>
-          <Global styles={[toaster]} />
-          <BaseToastContainer
-            autoClose={autoClose}
-            className={className}
-            containerId={containerId}
-            data-testid={dataTestId}
-            draggable={false}
-            hideProgressBar
-            icon={false}
-            limit={limit}
-            newestOnTop={newestOnTop}
-            position={position}
-            toastClassName={localCss(styles.toast({ theme }))}
-            transition={Slide}
-          />
-        </>
-      )}
-    </ClassNames>
-  )
-}
+}: NotificationContainerProps) => (
+  <BaseToastContainer
+    autoClose={autoClose}
+    className={`${className ? `${className} ` : ''}${notificationStyle}`}
+    containerId={containerId}
+    data-testid={dataTestId}
+    draggable={false}
+    hideProgressBar
+    icon={false}
+    limit={limit}
+    newestOnTop={newestOnTop}
+    position={position}
+    transition={Slide}
+  />
+)

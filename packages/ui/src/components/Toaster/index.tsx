@@ -1,8 +1,5 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { ClassNames, css, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
@@ -17,74 +14,28 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { ToastButton } from './components/Button'
 import { ToastLink } from './components/Link'
+import { closeButtonToaster, toaster } from './styles.css'
 
-const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
 type SENTIMENT = (typeof SENTIMENTS)[number]
-
-const styles = {
-  toast: (theme: Theme) => css`
-    border-radius: ${theme.radii.default};
-    min-height: ${theme.sizing['700']};
-
-    ${PREFIX}__toast-container {
-      width: 21.5rem;
-    }
-
-    ${PREFIX}__toast-body {
-      margin: 0;
-      padding: 0;
-    }
-
-    &${PREFIX}__toast--success {
-      background-color: ${theme.colors.neutral.backgroundStronger};
-      color: ${theme.colors.neutral.textStronger};
-      padding: ${theme.space['2']};
-    }
-
-    &${PREFIX}__toast--error {
-      background-color: ${theme.colors.danger.backgroundStrong};
-      color: ${theme.colors.neutral.textStronger};
-      padding: ${theme.space['2']};
-    }
-
-    &${PREFIX}__toast--warning {
-      background-color: ${theme.colors.warning.backgroundStrong};
-      color: ${theme.colors.warning.textStrong};
-      padding: ${theme.space['2']};
-    }
-  `,
-}
 
 type CloseButtonProps = {
   closeToast?: () => void
   sentiment: SENTIMENT
 }
-
-const StyledButton = styled(Button)`
-  background: none;
-  margin: auto;
-  margin-left: ${({ theme }) => theme.space['1']};
-  &:hover,
-  &:active {
-    background: none;
-    box-shadow: none;
-    border: none;
-  }
-`
-
 const CloseButton = ({
   closeToast,
   sentiment = 'success',
 }: CloseButtonProps) => (
-  <StyledButton
+  <Button
     aria-label="close"
+    className={closeButtonToaster}
     onClick={closeToast}
     sentiment={sentiment}
     size="xsmall"
   >
     <CloseIcon />
-  </StyledButton>
+  </Button>
 )
 
 type ContentProps = {
@@ -181,34 +132,24 @@ export const ToastContainer = ({
   className,
   autoClose,
   containerId = 'toaster',
-}: ToastContainerProps) => {
-  const theme = useTheme()
-
-  return (
-    <ClassNames>
-      {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
-      {({ css: localCss }) => (
-        <BaseToastContainer
-          autoClose={autoClose ?? AUTOCLOSE_DELAY}
-          className={className}
-          containerId={containerId}
-          data-testid={dataTestId}
-          draggable={false}
-          hideProgressBar
-          icon={false}
-          limit={limit}
-          newestOnTop={newestOnTop}
-          pauseOnFocusLoss={false}
-          pauseOnHover={false}
-          position={position}
-          stacked
-          toastClassName={localCss(styles.toast(theme))}
-          transition={Slide}
-        />
-      )}
-    </ClassNames>
-  )
-}
+}: ToastContainerProps) => (
+  <BaseToastContainer
+    autoClose={autoClose ?? AUTOCLOSE_DELAY}
+    className={`${className ? `${className} ` : ''}${toaster}`}
+    containerId={containerId}
+    data-testid={dataTestId}
+    draggable={false}
+    hideProgressBar
+    icon={false}
+    limit={limit}
+    newestOnTop={newestOnTop}
+    pauseOnFocusLoss={false}
+    pauseOnHover={false}
+    position={position}
+    stacked
+    transition={Slide}
+  />
+)
 
 export const Toast = {
   Button: ToastButton,
