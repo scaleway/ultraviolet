@@ -61,6 +61,9 @@ export const inputClass = style({
       cursor: 'not-allowed',
       userSelect: 'none',
     },
+    '&:focus': {
+      outline: 'none',
+    },
   },
 })
 
