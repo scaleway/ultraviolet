@@ -1,31 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { ArrowLeftIcon, ArrowRightIcon } from '@ultraviolet/icons'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { getPageNumbers } from './getPageNumbers'
-
-const PageNumbersContainer = styled(Stack)`
-  margin: 0 ${({ theme }) => theme.space['1']};
-`
-
-const PageButton = styled(Button, {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{ width: string }>`
-  width: ${({ theme, width }) => (width === 'small' ? theme.sizing[400] : theme.sizing[500])};
-`
-
-const Ellipsis = styled(Text, {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{ size: string }>`
-  align-content: center;
-  padding: ${({ theme }) => theme.space[1]};
-  height: ${({ theme, size }) => (size === 'small' ? theme.sizing[400] : theme.sizing[500])};
-  width: ${({ theme, size }) => (size === 'small' ? theme.sizing[400] : theme.sizing[500])};
-`
+import { ellipsisClass, pageButton, pageNumbersContainer } from './styles.css'
 
 type PaginationButtonsProps = {
   page: number
@@ -56,31 +37,31 @@ const MakeButton = ({
 }: MakeButtonProps) => (
   <>
     {hasEllipsisBefore ? (
-      <Ellipsis
+      <Text
         aria-label="ellipsis"
         as="span"
+        className={ellipsisClass[perPage ? 'small' : 'medium']}
         disabled={disabled}
         placement="center"
         prominence="default"
         sentiment="neutral"
-        size={perPage ? 'small' : 'medium'}
         variant="body"
       >
         ...
-      </Ellipsis>
+      </Text>
     ) : null}
-    <PageButton
+    <Button
       aria-current={pageNumber === page}
+      className={pageButton[perPage ? 'small' : 'medium']}
       disabled={disabled}
       onClick={handlePageClick(pageNumber)}
       sentiment={pageNumber === page ? 'primary' : 'neutral'}
       size={perPage ? 'small' : 'medium'}
       type="button"
       variant={pageNumber === page ? 'filled' : 'outlined'}
-      width={perPage ? 'small' : 'medium'}
     >
       {pageNumber}
-    </PageButton>
+    </Button>
   </>
 )
 
@@ -128,7 +109,7 @@ export const PaginationButtons = ({
           <ArrowLeftIcon />
         </Button>
       </Stack>
-      <PageNumbersContainer direction="row" gap={1}>
+      <Stack className={pageNumbersContainer} direction="row" gap={1}>
         {pageNumbersToDisplay.map((pageNumber, index) => (
           <MakeButton
             disabled={disabled}
@@ -145,7 +126,7 @@ export const PaginationButtons = ({
             perPage={perPage}
           />
         ))}
-      </PageNumbersContainer>
+      </Stack>
       <Stack gap={1}>
         <Button
           aria-label="Next"
