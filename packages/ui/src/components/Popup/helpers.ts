@@ -309,6 +309,15 @@ export const computePositions = ({
         arrowWidth +
         SPACE
 
+      const computedPositionX = !isAligned
+        ? positionX + popupOverflow
+        : positionX
+
+      // To make sure the popup does not overflow (negative X position)
+      const finalPositionX = isPopupPortalTargetBody
+        ? Math.max(computedPositionX, 0)
+        : computedPositionX
+
       return {
         arrowLeft: isAligned
           ? childrenWidth / 2 - arrowWidth
@@ -317,11 +326,9 @@ export const computePositions = ({
         arrowTransform: '',
         placement: 'bottom',
         popupInitialPosition: `translate3d(${
-          !isAligned ? positionX + popupOverflow : positionX
+          finalPositionX
         }px, ${positionY - TOTAL_USED_SPACE}px, 0)`,
-        popupPosition: `translate3d(${
-          !isAligned ? positionX + popupOverflow : positionX
-        }px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
         rotate: 180,
       }
     }
@@ -448,6 +455,15 @@ export const computePositions = ({
         arrowWidth -
         SPACE
 
+      const computedPositionX = !isAligned
+        ? positionX + popupOverflow
+        : positionX
+
+      // To make sure the popup does not overflow (negative X position)
+      const finalPositionX = isPopupPortalTargetBody
+        ? Math.max(computedPositionX, 0)
+        : computedPositionX
+
       return {
         arrowLeft: isAligned
           ? childrenWidth / 2 - arrowWidth
@@ -456,11 +472,9 @@ export const computePositions = ({
         arrowTransform: '',
         placement: 'top',
         popupInitialPosition: `translate3d(${
-          !isAligned ? positionX + popupOverflow : positionX
+          finalPositionX
         }px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
-        popupPosition: `translate3d(${
-          !isAligned ? positionX + popupOverflow : positionX
-        }px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
         rotate: 0,
       }
     }
