@@ -12,28 +12,7 @@ exports[`toaster > renders correctly with close button 1`] = `
 
 exports[`toaster > renders correctly with close button 2`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border-radius: 0.25rem;
-}
-
-.emotion-0.Toastify__toast {
-  background-color: #ffffff;
-  color: #3f4250;
-  padding: 1rem;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-}
-
-.emotion-0.Toastify__toast-container {
-  width: 19.5rem;
-}
-
-.emotion-0 .Toastify__toast-body {
-  margin: 0;
-  padding: 0;
-  display: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <section
@@ -45,11 +24,11 @@ exports[`toaster > renders correctly with close button 2`] = `
       id="notification"
     >
       <div
-        class="Toastify__toast-container Toastify__toast-container--top-right"
+        class="Toastify__toast-container Toastify__toast-container--top-right styles__1h24h1e0"
         tabindex="-1"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default emotion-0 Toastify--animate Toastify__slide-enter--top-right"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default Toastify--animate Toastify__slide-enter--top-right"
           data-in="true"
           id="1"
           role="alert"
@@ -120,28 +99,7 @@ exports[`toaster > renders correctly with custom close button 1`] = `
 
 exports[`toaster > renders correctly with custom close button 2`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border-radius: 0.25rem;
-}
-
-.emotion-0.Toastify__toast {
-  background-color: #ffffff;
-  color: #3f4250;
-  padding: 1rem;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-}
-
-.emotion-0.Toastify__toast-container {
-  width: 19.5rem;
-}
-
-.emotion-0 .Toastify__toast-body {
-  margin: 0;
-  padding: 0;
-  display: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <section
@@ -153,11 +111,11 @@ exports[`toaster > renders correctly with custom close button 2`] = `
       id="notification"
     >
       <div
-        class="Toastify__toast-container Toastify__toast-container--top-right"
+        class="Toastify__toast-container Toastify__toast-container--top-right styles__1h24h1e0"
         tabindex="-1"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default emotion-0 Toastify--animate Toastify__slide-enter--top-right"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default Toastify--animate Toastify__slide-enter--top-right"
           data-in="true"
           id="2"
           role="alert"
