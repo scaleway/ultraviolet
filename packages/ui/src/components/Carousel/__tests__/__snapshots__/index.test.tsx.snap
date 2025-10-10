@@ -2,129 +2,66 @@
 
 exports[`carousel > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: relative;
-  margin-left: -100px;
-  margin-right: -100px;
-}
-
-.emotion-2 {
-  position: absolute;
-  width: 100px;
-  height: 100%;
-  content: '';
-  background: linear-gradient(
-      -90deg,
-      #ffffffff,
-      #ffffff
-    );
-  cursor: w-resize;
-  z-index: auto;
-}
-
-.emotion-4 {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 100px;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 240px;
-  max-width: 240px;
-  overflow-wrap: break-word;
-  white-space: normal;
-  height: auto;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.emotion-18 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100px;
-  height: 100%;
-  content: '';
-  cursor: e-resize;
-  z-index: auto;
-  background: linear-gradient(
-      -90deg,
-      #ffffff,
-      #ffffffff
-    );
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__ztme1b1"
       data-testid="scrollbar"
     >
       <span
-        class="emotion-2 emotion-3"
+        class="styles__ztme1b2"
         data-testid="scrollbar-before"
       />
       <div
-        class="emotion-4 emotion-5"
+        class="styles__ztme1b3"
         data-testid="scrollbar-wrapper"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="styles__ztme1b5"
           draggable="true"
+          style="--ztme1b0: 240px;"
         >
           Item 1
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="styles__ztme1b5"
           draggable="true"
+          style="--ztme1b0: 240px;"
         >
           Item 2
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="styles__ztme1b5"
           draggable="true"
+          style="--ztme1b0: 240px;"
         >
           Item 3
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="styles__ztme1b5"
           draggable="true"
+          style="--ztme1b0: 240px;"
         >
           Item 4
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="styles__ztme1b5"
           draggable="true"
+          style="--ztme1b0: 240px;"
         >
           Item 5
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="styles__ztme1b5"
           draggable="true"
+          style="--ztme1b0: 240px;"
         >
           Item 6
         </div>
       </div>
       <span
-        class="emotion-18 emotion-19"
+        class="styles__ztme1b4"
         data-testid="scrollbar-after"
       />
     </div>
