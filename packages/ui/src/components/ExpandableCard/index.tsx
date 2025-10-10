@@ -1,7 +1,7 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
+import { useTheme } from '@ultraviolet/themes'
 import type {
   DetailsHTMLAttributes,
   DragEvent,
