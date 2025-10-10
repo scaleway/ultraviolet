@@ -1,7 +1,5 @@
 'use client'
 
-import { css, keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
 import { CheckIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
@@ -9,11 +7,13 @@ import { Bullet } from '../Bullet'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { useStepper } from './StepperProvider'
-
-const LINE_HEIGHT_SIZES = {
-  medium: 4,
-  small: 2,
-} as const
+import {
+  stepBullet,
+  stepContainer,
+  stepperContainerDone,
+  stepperContainerRecipe,
+  stepText,
+} from './styles.css'
 
 type StepProps = {
   onClick?: (index: number) => void
@@ -37,157 +37,6 @@ type StepProps = {
   className?: string
   'data-testid'?: string
 }
-const loadingAnimation = (size: 'small' | 'medium') => keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: calc(100% - ${size === 'small' ? '24px' : '32px'} - 8px)};
-`
-
-const loadingStyle = (size: 'small' | 'medium') => css`
-  animation: ${loadingAnimation(size)} 1s linear infinite;
-`
-
-const StyledBullet = styled(Bullet)<{
-  size: 'small' | 'medium'
-  isActive: boolean
-}>`
-  transition: box-shadow 300ms;
-  min-width: ${({ theme, size }) =>
-    size === 'small' ? theme.space[3] : theme.space[4]};
-  ${({ theme, isActive }) =>
-    isActive
-      ? `background-color: ${theme.colors.primary.backgroundStrongHover};
-          box-shadow: ${theme.shadows.focusPrimary};`
-      : null};
-`
-
-const StyledText = styled(Text)`
-  transition: text-decoration-color 250ms ease-out;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-`
-
-const StyledStepContainer = styled(Stack)<{
-  'data-disabled': boolean
-  'data-interactive': boolean
-  'data-hide-separator': boolean
-  'data-label-position': 'bottom' | 'right'
-  size: 'small' | 'medium'
-  'data-selected': boolean
-  'data-done': boolean
-  'data-animated': boolean
-}>`
-  display: flex;
-  white-space: nowrap;
-  transition: text-decoration 300ms;
-
-  &[data-interactive="true"]:not([data-disabled="true"]) {
-    cursor: pointer;
-
-    &[data-selected="true"]:hover {
-      & > ${StyledBullet} {
-        box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-        & > ${StyledText} {
-          color: ${({ theme }) => theme.colors.primary.textHover};
-          text-decoration: underline
-            ${({ theme }) => theme.colors.primary.textHover};
-          text-decoration-thickness: 1px;
-        }
-      }
-    }
-
-    &[data-done="true"]:hover {
-      & > ${StyledBullet} {
-        box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-      }
-      & > ${StyledText} {
-        color: ${({ theme }) => theme.colors.neutral.textHover};
-        text-decoration: underline
-          ${({ theme }) => theme.colors.neutral.textHover};
-        text-decoration-thickness: 1px;
-      }
-    }
-  }
-
-  &[data-disabled="true"] {
-    cursor: not-allowed;
-
-    & > ${StyledText} {
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    }
-
-    & > ${StyledBullet} {
-      background-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundDisabled};
-      box-shadow: none;
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
-      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    }
-  }
-
-  &:not([data-hide-separator="true"]):not([data-label-position="right"]) {
-    flex-direction: column;
-    flex: 1;
-
-    & > ${StyledText} {
-      margin-top: ${({ theme }) => theme.space[1]};
-    }
-
-    &:not(:last-child){
-      &:after {
-        content: "";
-        position: relative;
-        align-self: baseline;
-        border-radius: ${({ theme }) => theme.radii.default};
-        top: ${({ theme }) => theme.space[2]};
-        width: calc(100% - ${({ theme, size }) => (size === 'small' ? theme.space[5] : theme.space[6])});
-        left: calc(50% + 25px);
-        order: -1;
-        height: ${({ size }) =>
-          size === 'small'
-            ? LINE_HEIGHT_SIZES.small
-            : LINE_HEIGHT_SIZES.medium}px;
-      }
-
-      &[data-done="true"]:after {
-        background-color: ${({ theme }) =>
-          theme.colors.primary.backgroundStrong};
-      }
-      &[data-selected="true"][data-animated="true"]:after {
-        ${({ size }) => loadingStyle(size)}
-        background-color: ${({ theme }) =>
-          theme.colors.primary.backgroundStrong};
-
-      }
-    }
-      &:not(:last-child){
-      &::before {
-        content: "";
-        position: relative;
-        align-self: baseline;
-        border-radius: ${({ theme }) => theme.radii.default};
-        background-color: ${({ theme }) =>
-          theme.colors.neutral.backgroundStrong};
-        top: 20px;
-        width: calc(
-          100% - ${({ theme, size }) => (size === 'small' ? theme.space[5] : theme.space[6])});
-        left: calc(50% + 25px);
-        order: -1;
-        height: ${({ size }) =>
-          size === 'small'
-            ? LINE_HEIGHT_SIZES.small
-            : LINE_HEIGHT_SIZES.medium}px;
-      }
-    }
-
-    &:last-child {
-      margin-top: ${({ theme }) => theme.space[1]};
-    }
-  }
-`
 
 export const Step = ({
   index = 0,
@@ -211,12 +60,9 @@ export const Step = ({
   }, [currentState.size, isActive])
 
   return (
-    <StyledStepContainer
+    <Stack
       alignItems="center"
-      className={className ?? 'step'}
-      data-animated={currentState.animated}
-      data-disabled={disabled}
-      data-done={isDone}
+      className={`${className ? `${className} ` : 'step '}${stepContainer} ${stepperContainerRecipe({ animated: currentState.animated, disabled, size: currentState.size })} ${isDone ? stepperContainerDone : ''}`}
       data-hide-separator={!currentState.separator}
       data-interactive={currentState.interactive && isDone}
       data-label-position={currentState.labelPosition}
@@ -233,39 +79,47 @@ export const Step = ({
           onClick?.(index)
         }
       }}
-      size={currentState.size}
     >
       {isDone && !disabled ? (
-        <StyledBullet
-          isActive={isActive}
+        <Bullet
+          className={stepBullet({
+            disabled,
+            isActive,
+            size: currentState.size,
+          })}
           prominence="strong"
           sentiment="primary"
           size={currentState.size}
         >
           <CheckIcon />
-        </StyledBullet>
+        </Bullet>
       ) : (
-        <StyledBullet
-          isActive={isActive}
+        <Bullet
+          className={stepBullet({
+            disabled,
+            isActive,
+            size: currentState.size,
+          })}
           prominence="strong"
           sentiment={isDone || isActive ? 'primary' : 'neutral'}
           size={currentState.size}
         >
           {(index + 1).toString()}
-        </StyledBullet>
+        </Bullet>
       )}
       {title ? (
-        <StyledText
+        <Text
           as="span"
+          className={stepText({ disabled })}
           prominence={isDone || isActive ? 'default' : 'weak'}
           sentiment={isActive ? 'primary' : 'neutral'}
           variant={textVariant}
           whiteSpace="normal"
         >
           {title}
-        </StyledText>
+        </Text>
       ) : null}
       {children ?? null}
-    </StyledStepContainer>
+    </Stack>
   )
 }
