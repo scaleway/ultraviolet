@@ -8,10 +8,11 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { useStepper } from './StepperProvider'
 import {
+  animationStepperContainer,
   stepBullet,
   stepContainer,
-  stepperContainerDone,
   stepperContainerRecipe,
+  stepperInteractive,
   stepText,
 } from './styles.css'
 
@@ -47,34 +48,40 @@ export const Step = ({
   className,
   'data-testid': dataTestId,
 }: StepProps) => {
-  const currentState = useStepper()
-  const isActive = index === currentState.step
-  const isDone = index < currentState.step
+  const {
+    separator,
+    labelPosition,
+    animated,
+    size,
+    interactive,
+    step,
+    setStep,
+  } = useStepper()
+  const isActive = index === step
+  const isDone = index < step
+  const separatorBottom = separator && labelPosition === 'bottom'
+  const interactiveDone = isDone && interactive
 
   const textVariant = useMemo(() => {
-    if (currentState.size === 'medium') {
+    if (size === 'medium') {
       return isActive ? 'bodyStrong' : 'body'
     }
 
     return isActive ? 'bodySmallStrong' : 'bodySmall'
-  }, [currentState.size, isActive])
+  }, [size, isActive])
 
   return (
     <Stack
       alignItems="center"
-      className={`${className ? `${className} ` : 'step '}${stepContainer} ${stepperContainerRecipe({ animated: currentState.animated, disabled, size: currentState.size })} ${isDone ? stepperContainerDone : ''}`}
-      data-hide-separator={!currentState.separator}
-      data-interactive={currentState.interactive && isDone}
-      data-label-position={currentState.labelPosition}
-      data-selected={isActive}
+      className={`${className ? `${className} ` : 'step '}${stepContainer} ${separatorBottom ? stepperContainerRecipe({ animated, disabled, done: isDone, labelPosition, separator, size }) : ''} ${isActive && separator && animated ? animationStepperContainer[size] : ''} ${interactiveDone && !disabled ? stepperInteractive[isActive ? 'active' : 'inactive'] : ''}`}
       data-testid={dataTestId ?? `stepper-step-${index}`}
-      direction={currentState.labelPosition === 'right' ? 'row' : 'column'}
-      gap={currentState.labelPosition === 'right' ? 1 : 0}
+      direction={labelPosition === 'right' ? 'row' : 'column'}
+      gap={labelPosition === 'right' ? 1 : 0}
       justifyContent="flex-start"
       onClick={() => {
-        if (currentState.interactive && !disabled) {
-          if (index < currentState.step) {
-            currentState.setStep(index)
+        if (interactive && !disabled) {
+          if (index < step) {
+            setStep(index)
           }
           onClick?.(index)
         }
@@ -85,11 +92,11 @@ export const Step = ({
           className={stepBullet({
             disabled,
             isActive,
-            size: currentState.size,
+            size,
           })}
           prominence="strong"
           sentiment="primary"
-          size={currentState.size}
+          size={size}
         >
           <CheckIcon />
         </Bullet>
@@ -98,11 +105,11 @@ export const Step = ({
           className={stepBullet({
             disabled,
             isActive,
-            size: currentState.size,
+            size,
           })}
           prominence="strong"
           sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          size={currentState.size}
+          size={size}
         >
           {(index + 1).toString()}
         </Bullet>
@@ -110,7 +117,10 @@ export const Step = ({
       {title ? (
         <Text
           as="span"
-          className={stepText({ disabled })}
+          className={stepText({
+            addMarginTop: separator && labelPosition !== 'right',
+            disabled,
+          })}
           prominence={isDone || isActive ? 'default' : 'weak'}
           sentiment={isActive ? 'primary' : 'neutral'}
           variant={textVariant}
