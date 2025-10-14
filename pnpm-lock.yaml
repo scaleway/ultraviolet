@@ -775,6 +775,9 @@ importers:
       '@nivo/scales':
         specifier: 0.89.0
         version: 0.89.0
+      '@scaleway/fuzzy-search':
+        specifier: 1.0.0
+        version: 1.0.0
       '@scaleway/random-name':
         specifier: 5.1.2
         version: 5.1.2
@@ -2857,6 +2860,10 @@ packages:
     resolution: {integrity: sha512-Zj2pE1PD6b7HZlfGUE5/4xm2PGJjTVEzzgh1soWmlbIcZI27xycw1kyZwzfyQzjsQZPzcxa6INzarejJLu424g==}
     peerDependencies:
       eslint: '>= 9.x'
+
+  '@scaleway/fuzzy-search@1.0.0':
+    resolution: {integrity: sha512-MCGcmckO2O3NgnNeytK7XzduIK32Mj3Df5beI6ZH0HBNN14oweJS6FX0pWMs8orSM2yKZE5O0qdFfHz/FiN3jQ==}
+    engines: {node: '>=20.x'}
 
   '@scaleway/random-name@5.1.2':
     resolution: {integrity: sha512-WBiqKPnJdncl2mcA7t89rZrxaSIRF/eiyo69sbIiVsOj413+zg3Royzv4ddkRdNTnNg0l21GZpA6O8pfZyPAQQ==}
@@ -10814,6 +10821,8 @@ snapshots:
       - eslint-plugin-import-x
       - supports-color
       - typescript
+
+  '@scaleway/fuzzy-search@1.0.0': {}
 
   '@scaleway/random-name@5.1.2': {}
 

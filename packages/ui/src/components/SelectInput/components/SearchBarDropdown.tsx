@@ -1,9 +1,9 @@
 'use client'
 
+import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
-import { isFuzzyMatch, normalizeString } from '../../../utils/searchAlgorithm'
 import { TextInput } from '../../TextInput'
 import { useSelectInput } from '../SelectInputProvider'
 import type { DataType, OptionType } from '../types'
