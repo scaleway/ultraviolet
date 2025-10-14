@@ -1,5 +1,22 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.9
+
+### Major Changes
+
+- [#5632](https://github.com/scaleway/ultraviolet/pull/5632) [`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089) Thanks [@matthprost](https://github.com/matthprost)! - Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
+
+### Minor Changes
+
+- [#5683](https://github.com/scaleway/ultraviolet/pull/5683) [`26738ef`](https://github.com/scaleway/ultraviolet/commit/26738ef8ee643a1b9f5e39c298ae2b9bd9df5613) Thanks [@matthprost](https://github.com/matthprost)! - Add parameter `additionalInfo` on `subCategories` in `<OrderSummary />`
+
+### Patch Changes
+
+- Updated dependencies [[`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089)]:
+  - @ultraviolet/themes@3.0.0-beta.2
+  - @ultraviolet/icons@5.0.0-beta.6
+  - @ultraviolet/ui@3.0.0-beta.20
+
 ## 3.0.0-beta.8
 
 ### Minor Changes
