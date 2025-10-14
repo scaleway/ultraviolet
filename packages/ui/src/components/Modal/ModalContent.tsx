@@ -1,18 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Button } from '../Button'
 import type { Modal } from '.'
 import { Dialog } from './components/Dialog'
+import { modalContainer } from './styles.css'
 import type { ModalPlacement, ModalSize } from './types'
-
-const StyledContainer = styled.div`
-  position: absolute;
-  top: ${({ theme }) => theme.space['2']};
-  right: ${({ theme }) => theme.space['2']};
-`
 
 type ModalContentProps = ComponentProps<typeof Modal> & {
   visible: boolean
@@ -73,7 +67,7 @@ export const ModalContent = ({
               visible,
             })
           : children}
-        <StyledContainer>
+        <div className={modalContainer}>
           {isClosable ? (
             <Button
               aria-label="close"
@@ -88,7 +82,7 @@ export const ModalContent = ({
               <CloseIcon />
             </Button>
           ) : null}
-        </StyledContainer>
+        </div>
       </>
     </Dialog>
   ) : null
