@@ -135,7 +135,21 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
   return (
     <Stack direction="column" gap={1}>
       <Stack alignItems="center" direction="row" justifyContent="space-between">
-        {subCategory.title ? (
+        {subCategory.additionalInfo ? (
+          <Stack alignItems="center" direction="row" gap={1}>
+            <Text
+              as="span"
+              prominence="strong"
+              sentiment="neutral"
+              variant="bodyStrong"
+            >
+              {subCategory.title}
+            </Text>
+            <Text as="span" italic sentiment="primary" variant="bodySmall">
+              {subCategory.additionalInfo}
+            </Text>
+          </Stack>
+        ) : (
           <Text
             as="span"
             prominence="strong"
@@ -144,7 +158,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
           >
             {subCategory.title}
           </Text>
-        ) : null}
+        )}
         {subCategory.customContent ? (
           <Text
             as="span"
