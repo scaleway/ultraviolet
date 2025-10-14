@@ -46,6 +46,7 @@ export type PriceType = Record<string, PriceTypeSingle>
 
 export type SubCategoryType = {
   title?: string
+  additionalInfo?: ReactNode
   price?: number
   /**
    * List of elements to be displayed in the subcategory
