@@ -76,52 +76,7 @@ exports[`toaster > renders correctly with all kind of toast 3`] = `
 
 exports[`toaster > renders correctly with all kind of toast 4`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border-radius: 0.25rem;
-  min-height: 3.5rem;
-}
-
-.emotion-0 .Toastify__toast-container {
-  width: 21.5rem;
-}
-
-.emotion-0 .Toastify__toast-body {
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-0.Toastify__toast--success {
-  background-color: #151a2d;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.emotion-0.Toastify__toast--error {
-  background-color: #e51963;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.emotion-0.Toastify__toast--warning {
-  background-color: #fbc600;
-  color: #222638;
-  padding: 1rem;
-}
-
-.emotion-1 {
-  background: none;
-  margin: auto;
-  margin-left: 0.5rem;
-}
-
-.emotion-1:hover,
-.emotion-1:active {
-  background: none;
-  box-shadow: none;
-  border: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <section
@@ -133,12 +88,12 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
       id="toaster"
     >
       <div
-        class="Toastify__toast-container Toastify__toast-container--top-right"
+        class="Toastify__toast-container Toastify__toast-container--top-right styles__11f0u3o0"
         data-stacked="true"
         tabindex="-1"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-collapsed="true"
           data-in="true"
           data-pos="top"
@@ -159,7 +114,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-1 emotion-2 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_success__e1wcoeb styles_undefined_compound_4__e1wcoep"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_success__e1wcoeb styles_undefined_compound_4__e1wcoep"
             type="button"
           >
             <svg
@@ -188,7 +143,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
         </div>
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-collapsed="true"
           data-in="true"
           data-pos="top"
@@ -209,7 +164,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-1 emotion-2 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
             type="button"
           >
             <svg
@@ -238,7 +193,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
         </div>
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-in="true"
           data-pos="top"
           id="warning"
@@ -258,7 +213,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
           <button
             aria-label="close"
-            class="emotion-1 emotion-2 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_warning__e1wcoec styles_undefined_compound_5__e1wcoeq"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_warning__e1wcoec styles_undefined_compound_5__e1wcoeq"
             type="button"
           >
             <svg
