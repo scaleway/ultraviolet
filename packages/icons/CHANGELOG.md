@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-beta.5
+
+### Minor Changes
+
+- [#5633](https://github.com/scaleway/ultraviolet/pull/5633) [`4fb8e97`](https://github.com/scaleway/ultraviolet/commit/4fb8e97474b1d8a33fa98f22cdddfdeed753e3f1) Thanks [@matthprost](https://github.com/matthprost)! - New system icons: `<AudioIcon />`, `<ImageIcon />`, `<ImageOutlineIcon />`, `<MusicIcon />`, `<MusicOutlineIcon />`, `<PaperclipIcon />`, `<VideoIcon />`, `<VideoOutlineIcon />
+
 ## 5.0.0-beta.4
 
 ### Patch Changes
