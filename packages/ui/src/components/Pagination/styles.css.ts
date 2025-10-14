@@ -1,5 +1,6 @@
 import { style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+
 export const pageNumbersContainer = style({
   margin: `0 ${theme.space['1']}`,
 })

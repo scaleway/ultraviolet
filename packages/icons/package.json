@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/icons",
-  "version": "5.0.0-beta.4",
+  "version": "5.0.0-beta.5",
   "description": "Ultraviolet Icons",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -35,16 +35,18 @@
     "darwin",
     "linux"
   ],
-  "sideEffects": false,
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.css.ts"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./*": {

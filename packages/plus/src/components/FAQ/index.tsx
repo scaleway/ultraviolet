@@ -1,14 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
 import * as ProductIcon from '@ultraviolet/icons/product'
 import { Bullet, Card, Stack, Text } from '@ultraviolet/ui'
 import type { PascalToCamelCaseWithoutSuffix } from '../../types'
-
-const StyledCard = styled(Card)`
-  padding: ${({ theme }) => theme.space['2']};
-  text-align: left;
-`
+import { faq } from './styles.css'
 
 type FAQProps = {
   description: string
@@ -37,7 +32,7 @@ export const FAQ = ({
     : null
 
   return (
-    <StyledCard>
+    <Card className={faq}>
       <Stack direction="row" gap={2}>
         <div>
           {!productIconName && illustrationText ? (
@@ -59,6 +54,6 @@ export const FAQ = ({
           </Text>
         </div>
       </Stack>
-    </StyledCard>
+    </Card>
   )
 }

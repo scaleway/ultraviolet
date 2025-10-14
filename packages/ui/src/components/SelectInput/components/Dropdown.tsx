@@ -1,5 +1,6 @@
 'use client'
 
+import { useTheme } from '@ultraviolet/themes'
 import type {
   ComponentProps,
   Dispatch,
@@ -16,7 +17,6 @@ import {
   useRef,
   useState,
 } from 'react'
-import { useTheme } from '../../../theme'
 import { Checkbox } from '../../Checkbox'
 import { ModalContext } from '../../Modal/ModalProvider'
 import { Popup } from '../../Popup'

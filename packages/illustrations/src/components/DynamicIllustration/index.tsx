@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
+import { useTheme } from '@ultraviolet/themes'
 import type { IllustrationsKeys } from './__generated__/Illustrations'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
 

@@ -1,10 +1,10 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import type { LineSvgProps, Serie } from '@nivo/line'
 import { ResponsiveLine } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
+import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
