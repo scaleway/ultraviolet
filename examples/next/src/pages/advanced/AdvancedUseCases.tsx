@@ -2,8 +2,8 @@ import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
 import CopyBox from '../../components/CopyBoxCommand'
 
-const useCase1 = `import { ThemeProvider } from '@emotion/react'
-import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
+const useCase1 = `import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/themes'
 import React, { useCallback, useState } from 'react'
 
 const App = () => {

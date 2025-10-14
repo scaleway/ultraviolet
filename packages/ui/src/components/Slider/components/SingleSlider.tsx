@@ -1,7 +1,7 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { useTheme } from '@ultraviolet/themes'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
 import { NumberInput } from '../../NumberInput'

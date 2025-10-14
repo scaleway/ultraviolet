@@ -6,6 +6,7 @@ import {
   consoleDarkTheme as darkTheme,
   consoleDarkerTheme as darkerTheme,
   consoleLightTheme as lightTheme,
+  ThemeProvider as ThemeProviderUI
 } from '@ultraviolet/themes'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
@@ -13,7 +14,6 @@ import { globalStyles } from './components/globalStyle'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 import { scan } from "react-scan"
-import { ThemeProvider as ThemeProviderUI } from '@ultraviolet/ui'
 
 const BREAKPOINT_ORDER = [
   'xlarge',
@@ -155,7 +155,7 @@ const decorators = [
 
       return darkerTheme
     }
-    
+
     return (
       <>
         <ThemeProviderUI theme={finalTheme()}>

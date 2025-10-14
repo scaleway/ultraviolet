@@ -1,7 +1,7 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import * as ProductIcon from '@ultraviolet/icons/product'
+import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEventHandler,

@@ -1,5 +1,6 @@
 'use client'
 
+import { useTheme } from '@ultraviolet/themes'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -9,7 +10,6 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef, useMemo } from 'react'
-import { useTheme } from '../../theme/ThemeProvider'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import { SIZE_HEIGHT } from './constants'

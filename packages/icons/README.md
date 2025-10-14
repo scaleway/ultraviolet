@@ -6,10 +6,8 @@ Ultraviolet Icons is a set of components based on SVG icons. It provides a set o
 
 ## Get Started
 
-For icons to work you will need to install some extra dependencies, such as `@ultraviolet/themes` and `@emotion/react`.
-
 ```sh
-$ pnpm add @ultraviolet/icons @ultraviolet/themes @emotion/react
+$ pnpm add @ultraviolet/icons @ultraviolet/themes
 ```
 
 You can then add `ThemeProvider` to your applications and use the provided theme from `@ultraviolet/themes` or use your own.
@@ -17,10 +15,10 @@ You can then add `ThemeProvider` to your applications and use the provided theme
 ```tsx
 import { ThemeProvider } from '@emotion/react'
 import { SdkGoProductIcon } from '@ultraviolet/icons/product'
-import { consoleLightTheme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 
 const App = () => (
-  <ThemeProvider theme={consoleLightTheme}>
+  <ThemeProvider theme={theme}>
     <SdkGoProductIcon size="medium" variant="primary"/>
   </ThemeProvider>
 )

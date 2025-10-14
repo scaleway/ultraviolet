@@ -1,6 +1,6 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { MoonIcon, SunIcon } from '@ultraviolet/icons'
+import { useTheme } from '@ultraviolet/themes'
 import { Breakpoint, Toggle } from '@ultraviolet/ui'
 import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
@@ -37,7 +37,7 @@ const HeaderRow = styled.div`
 `
 
 const TopBar = () => {
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
 
   return (
     <Header>
@@ -48,11 +48,7 @@ const TopBar = () => {
             <GithubAndDocumentationButtons />
           </Breakpoint>
           <SunIcon size="small" />
-          <Toggle
-            checked={theme === 'dark'}
-            name="darkMode"
-            onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-          />
+          <Toggle checked={theme === 'dark'} name="darkMode" />
           <MoonIcon size="small" />
         </HorizontalStack>
       </HeaderRow>
