@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
 
-      - uses: pnpm/action-setup@v4.1.0
+      - uses: pnpm/action-setup@v4.2.0
       - name: Use Node.js
         uses: actions/setup-node@v5.0.0
         with:
