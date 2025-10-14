@@ -55,271 +55,43 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -370,7 +142,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -385,24 +157,21 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                     <div
                       aria-controls="«r9o»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -425,10 +194,10 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -474,13 +243,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -494,7 +263,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -557,7 +326,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -574,7 +343,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -611,7 +380,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -658,13 +427,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -701,13 +470,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -744,13 +513,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -787,7 +556,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
             <div
@@ -808,13 +577,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -851,13 +620,13 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -913,14 +682,14 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-54 emotion-55 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-46 emotion-47 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         children
         <div
@@ -1066,271 +835,43 @@ exports[`orderSummary > should work with children 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -1381,7 +922,7 @@ exports[`orderSummary > should work with children 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -1396,24 +937,21 @@ exports[`orderSummary > should work with children 1`] = `
                     <div
                       aria-controls="«r40»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -1436,10 +974,10 @@ exports[`orderSummary > should work with children 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1485,13 +1023,13 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1505,7 +1043,7 @@ exports[`orderSummary > should work with children 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1568,7 +1106,7 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -1585,7 +1123,7 @@ exports[`orderSummary > should work with children 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1622,7 +1160,7 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -1669,13 +1207,13 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1712,13 +1250,13 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1755,13 +1293,13 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1798,7 +1336,7 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
             <div
@@ -1819,13 +1357,13 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1862,13 +1400,13 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -1924,14 +1462,14 @@ exports[`orderSummary > should work with children 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-54 emotion-55 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-46 emotion-47 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         children
         <div
@@ -2578,271 +2116,43 @@ exports[`orderSummary > should work with discount 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -2893,7 +2203,7 @@ exports[`orderSummary > should work with discount 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -2908,24 +2218,21 @@ exports[`orderSummary > should work with discount 1`] = `
                     <div
                       aria-controls="«rcl»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -2948,10 +2255,10 @@ exports[`orderSummary > should work with discount 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -2988,14 +2295,14 @@ exports[`orderSummary > should work with discount 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -3086,271 +2393,43 @@ exports[`orderSummary > should work with discount in  % 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -3401,7 +2480,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -3416,24 +2495,21 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                     <div
                       aria-controls="«rc7»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -3456,10 +2532,10 @@ exports[`orderSummary > should work with discount in  % 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -3496,14 +2572,14 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -3594,271 +2670,43 @@ exports[`orderSummary > should work with footer 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -3909,7 +2757,7 @@ exports[`orderSummary > should work with footer 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -3924,24 +2772,21 @@ exports[`orderSummary > should work with footer 1`] = `
                     <div
                       aria-controls="«r5p»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -3964,10 +2809,10 @@ exports[`orderSummary > should work with footer 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4013,13 +2858,13 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4033,7 +2878,7 @@ exports[`orderSummary > should work with footer 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4096,7 +2941,7 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -4113,7 +2958,7 @@ exports[`orderSummary > should work with footer 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4150,7 +2995,7 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -4197,13 +3042,13 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4240,13 +3085,13 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4283,13 +3128,13 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4326,7 +3171,7 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
             <div
@@ -4347,13 +3192,13 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4390,13 +3235,13 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4452,14 +3297,14 @@ exports[`orderSummary > should work with footer 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-54 emotion-55 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-46 emotion-47 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4542,271 +3387,43 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -4857,7 +3474,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -4872,24 +3489,21 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                     <div
                       aria-controls="«rd3»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -4912,10 +3526,10 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -4952,14 +3566,14 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -5050,276 +3664,48 @@ exports[`orderSummary > should work with numberInputs 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   max-width: 12.5rem;
   background-color: #ffffff;
 }
 
-.emotion-24 {
+.emotion-16 {
   padding-left: 0.5rem;
 }
 
-.emotion-24 {
+.emotion-16 {
   padding-left: 0.5rem;
 }
 
-.emotion-30 {
+.emotion-22 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-30 {
+.emotion-22 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -5370,7 +3756,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -5385,24 +3771,21 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                     <div
                       aria-controls="«rbh»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -5425,10 +3808,10 @@ exports[`orderSummary > should work with numberInputs 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -5439,7 +3822,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
               Numers of requests
             </span>
             <div
-              class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <div>
                 <div
@@ -5509,7 +3892,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -5540,7 +3923,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   Choose a duration
                 </span>
                 <div
-                  class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                 >
                   <div>
                     <div
@@ -5576,7 +3959,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
             <div
@@ -5592,7 +3975,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
             <div
@@ -5608,14 +3991,14 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-30 emotion-31 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-22 emotion-23 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -5702,271 +4085,43 @@ exports[`orderSummary > should work with price as a range 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-20 {
+.emotion-12 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -6017,7 +4172,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -6032,24 +4187,21 @@ exports[`orderSummary > should work with price as a range 1`] = `
                     <div
                       aria-controls="«r7i»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -6072,10 +4224,10 @@ exports[`orderSummary > should work with price as a range 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6112,14 +4264,14 @@ exports[`orderSummary > should work with price as a range 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6202,271 +4354,43 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-54 {
+.emotion-46 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -6517,7 +4441,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -6532,24 +4456,21 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                     <div
                       aria-controls="«r7v»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -6572,10 +4493,10 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6621,13 +4542,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6641,7 +4562,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6704,7 +4625,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -6721,7 +4642,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6758,7 +4679,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               >
                 <span
                   class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
@@ -6805,13 +4726,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6848,13 +4769,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6891,13 +4812,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6934,7 +4855,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
             <div
@@ -6955,13 +4876,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -6998,13 +4919,13 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -7060,14 +4981,14 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-54 emotion-55 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-46 emotion-47 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -7884,271 +5805,43 @@ exports[`orderSummary > works with negative category price 1`] = `
 }
 
 .emotion-6 {
-  width: 100%;
+  overflow-y: scroll;
+  padding: 1.5rem;
+  min-height: 10rem;
+  height: 100%;
 }
 
 .emotion-6 {
-  width: 100%;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-10 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-12 {
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-14 {
   overflow-y: scroll;
   padding: 1.5rem;
   min-height: 10rem;
   height: 100%;
 }
 
-.emotion-14 {
-  overflow-y: scroll;
-  padding: 1.5rem;
-  min-height: 10rem;
-  height: 100%;
-}
-
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-16:not(:last-child) {
+.emotion-8:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
   padding-bottom: 1.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-10 {
   padding-left: 0.5rem;
 }
 
-.emotion-24 {
+.emotion-16 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
 
-.emotion-24 {
+.emotion-16 {
   padding: 1.5rem;
   border-top: 1px solid #d9dadd;
 }
@@ -8199,7 +5892,7 @@ exports[`orderSummary > works with negative category price 1`] = `
               </div>
               <div
                 aria-label="-unit"
-                class="uv_gwf0flg uv_gwf0flf emotion-6 emotion-7"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
@@ -8214,24 +5907,21 @@ exports[`orderSummary > works with negative category price 1`] = `
                     <div
                       aria-controls="«rdo»"
                       aria-expanded="false"
-                      class="emotion-8 emotion-9"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
-                      data-dropdownvisible="false"
                       data-readonly="false"
-                      data-size="small"
-                      data-state="neutral"
                       data-testid="select-input--unit"
                       id="unit"
                       role="combobox"
                       tabindex="0"
                     >
                       <span
-                        class="emotion-10 emotion-11 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                       >
                         Hour(s)
                       </span>
                       <div
-                        class="emotion-12 emotion-13 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                       >
                         <svg
                           aria-label="show dropdown"
@@ -8254,10 +5944,10 @@ exports[`orderSummary > works with negative category price 1`] = `
         </div>
       </div>
       <div
-        class="emotion-14 emotion-15 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-6 emotion-7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -8303,13 +5993,13 @@ exports[`orderSummary > works with negative category price 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
         <div
-          class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+          class="emotion-8 emotion-9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
         >
           <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
@@ -8346,14 +6036,14 @@ exports[`orderSummary > works with negative category price 1`] = `
                 </span>
               </div>
               <div
-                class="emotion-18 emotion-19 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
               />
             </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-24 emotion-25 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+        class="emotion-16 emotion-17 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
       >
         <div
           class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
