@@ -1,5 +1,27 @@
 # Change Log
 
+## 3.0.0-beta.19
+
+### Minor Changes
+
+- [#5644](https://github.com/scaleway/ultraviolet/pull/5644) [`5c10948`](https://github.com/scaleway/ultraviolet/commit/5c10948eceb6a4e257bd6f752273dc7fee85d08e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `SelectInput` to use vanilla extract instead of Emotion
+
+  - `Tag`: add prop `style`
+
+- [#5645](https://github.com/scaleway/ultraviolet/pull/5645) [`8ec50bb`](https://github.com/scaleway/ultraviolet/commit/8ec50bbb6b49f71ca574adeeaa1905d27511d0a8) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `EmptyState` to use vanilla extract instead of Emotion
+
+- [#5646](https://github.com/scaleway/ultraviolet/pull/5646) [`29bfec5`](https://github.com/scaleway/ultraviolet/commit/29bfec55c9519756f62f61aabcb775b0db1bc968) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `SearchInput` to use vanilla extract instead of Emotion
+  - `TextInput`: remove default outline when the input is focused (Firefox)
+
+### Patch Changes
+
+- [#5656](https://github.com/scaleway/ultraviolet/pull/5656) [`4d97647`](https://github.com/scaleway/ultraviolet/commit/4d97647adcc1fb2282ca1a7294c46310fc9ea695) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu` & `Popup`: when `placement='bottom'` or `placement='top'`, avoid negative values for "translate3d" to prevent negative positioning/x-overflow
+
+- [#5660](https://github.com/scaleway/ultraviolet/pull/5660) [`aa20c75`](https://github.com/scaleway/ultraviolet/commit/aa20c755e8f1bfa0f0ed927edfe53f8bda642102) Thanks [@lisalupi](https://github.com/lisalupi)! - `Checkbox`: fix classname
+
+- Updated dependencies [[`4fb8e97`](https://github.com/scaleway/ultraviolet/commit/4fb8e97474b1d8a33fa98f22cdddfdeed753e3f1)]:
+  - @ultraviolet/icons@5.0.0-beta.5
+
 ## 3.0.0-beta.18
 
 ### Minor Changes
