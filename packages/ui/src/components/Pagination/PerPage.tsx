@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { Dispatch, SetStateAction } from 'react'
 import { SelectInput } from '../SelectInput'
 import { Stack } from '../Stack'
@@ -24,11 +23,6 @@ const optionsItemsPerPage = [
     value: '100',
   },
 ]
-
-const StyledSelectInput = styled(SelectInput)`
-  width: fit-content;
-  min-width: none;
-`
 
 type PerPageProps = {
   perPage: number
@@ -60,11 +54,14 @@ export const PerPage = ({
       <Text as="span" prominence="weak" sentiment="neutral" variant="body">
         {perPageText ?? 'Items per page'}
       </Text>
-      <StyledSelectInput
+      <SelectInput
         name="select-items-per-page"
         onChange={handleChange}
         options={optionsItemsPerPage}
         size="small"
+        style={{
+          width: 'fit-content',
+        }}
         value={perPage.toString()}
       />
       <Text as="span" prominence="weak" sentiment="neutral" variant="body">
