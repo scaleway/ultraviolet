@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
+import { useTheme } from '@ultraviolet/themes'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'

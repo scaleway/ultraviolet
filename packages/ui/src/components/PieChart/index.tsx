@@ -1,8 +1,8 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
+import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { useCallback, useState } from 'react'
