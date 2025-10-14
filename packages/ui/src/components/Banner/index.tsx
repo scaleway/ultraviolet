@@ -1,9 +1,9 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
+import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
-import { useTheme } from '../../theme'
 import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'

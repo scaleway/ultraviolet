@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
+import { useTheme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'

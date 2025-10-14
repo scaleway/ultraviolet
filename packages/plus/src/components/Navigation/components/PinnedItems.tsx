@@ -1,8 +1,8 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
+import { useTheme } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
 import type { DragEvent, ReactElement } from 'react'
 import { useCallback } from 'react'

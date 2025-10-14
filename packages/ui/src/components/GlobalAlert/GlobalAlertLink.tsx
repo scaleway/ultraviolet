@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
+import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { Link } from '../Link'
 

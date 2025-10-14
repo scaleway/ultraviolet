@@ -1,6 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
+import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { DOMAttributes, ReactNode } from 'react'
 import {
@@ -11,7 +12,6 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import { useTheme } from '../../theme/ThemeProvider'
 import { Button } from '../Button'
 import { SIZE_HEIGHT as ButtonSizeHeight } from '../Button/constants'
 import { Label } from '../Label'
