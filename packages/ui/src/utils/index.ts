@@ -30,6 +30,7 @@ export {
 export {
   fadeInVanillaExtract,
   pingVanillaExtract,
+  slideFromBottomVanillaExtract,
 } from './animationVanillaExtract.css'
 export { getUUID } from './ids'
 export { default as normalize } from './normalize'

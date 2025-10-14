@@ -8,3 +8,12 @@ export const fadeInVanillaExtract = keyframes({
 export const pingVanillaExtract = keyframes({
   '100%': { opacity: 0, transform: 'scale(2)' },
 })
+
+export const slideFromBottomVanillaExtract = keyframes({
+  '0%': {
+    transform: 'translateY(100%)',
+  },
+  '100% ': {
+    transform: 'translateY(0%)',
+  },
+})
