@@ -14,7 +14,7 @@ export const beforeScroll = style({
   width: '100px',
   height: '100%',
   content: "''",
-  background: `linear-gradient(-90deg, ${theme.colors.neutral.background}ff, ${theme.colors.neutral.background})`,
+  background: `linear-gradient(-90deg, transparent, ${theme.colors.neutral.background})`,
   cursor: 'w-resize',
   zIndex: 'auto',
 })
@@ -37,7 +37,7 @@ export const afterScroll = style({
   content: "''",
   cursor: 'e-resize',
   zIndex: 'auto',
-  background: `linear-gradient(-90deg, ${theme.colors.neutral.background}, ${theme.colors.neutral.background}ff)`,
+  background: `linear-gradient(-90deg, ${theme.colors.neutral.background}, transparent)`,
 })
 
 export const borderWrapper = style({
