@@ -205,7 +205,7 @@ export const Row = ({
                 <StyledCheckbox
                   aria-label="select"
                   checked={selectedRowIds[id]}
-                  disabled={selectDisabled !== undefined}
+                  disabled={!!selectDisabled}
                   inRange={inRange?.includes(id)}
                   name="table-select-checkbox"
                   onChange={() => handleOnChange(id, selectedRowIds[id])}
