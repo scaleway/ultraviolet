@@ -1,5 +1,29 @@
 # Change Log
 
+## 3.0.0-beta.21
+
+### Minor Changes
+
+- [#5651](https://github.com/scaleway/ultraviolet/pull/5651) [`f6948b0`](https://github.com/scaleway/ultraviolet/commit/f6948b0aefe91750203bdbcd1b5173b872819004) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Snippet` to use vanilla extract instead of Emotion
+
+- [#5666](https://github.com/scaleway/ultraviolet/pull/5666) [`b348f99`](https://github.com/scaleway/ultraviolet/commit/b348f99ea11415508b618d52df29d1b7dcc4b302) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Stepper` to use vanilla extract instead of Emotion
+
+- [#5665](https://github.com/scaleway/ultraviolet/pull/5665) [`c186192`](https://github.com/scaleway/ultraviolet/commit/c186192ad5e8e8e7e03f5e547602e34c04d8bac3) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Pagination />` to use vanilla extract
+
+- [#5675](https://github.com/scaleway/ultraviolet/pull/5675) [`fb3f4ca`](https://github.com/scaleway/ultraviolet/commit/fb3f4ca7a883c5f733afd01904eb4900769f1548) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Modal` and `Drawer` to use vanilla-extract instead of Emotion
+
+- [#5664](https://github.com/scaleway/ultraviolet/pull/5664) [`1893b2b`](https://github.com/scaleway/ultraviolet/commit/1893b2b6f104eb5843145c8cb69c46ac0ead6bbe) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Carousel />` to use vanilla extract
+
+- [#5662](https://github.com/scaleway/ultraviolet/pull/5662) [`fdb5be1`](https://github.com/scaleway/ultraviolet/commit/fdb5be1171509eaa17278264eae53e23be234925) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Toaster` and `Notification` to use vanilla extract instead of Emotion
+
+- [#5653](https://github.com/scaleway/ultraviolet/pull/5653) [`13350bc`](https://github.com/scaleway/ultraviolet/commit/13350bca640b8db2152219a7efbae1c922128558) Thanks [@matthprost](https://github.com/matthprost)! - Refactor search input to use fuzzy search from scaleway lib
+
+### Patch Changes
+
+- [#5699](https://github.com/scaleway/ultraviolet/pull/5699) [`634ced8`](https://github.com/scaleway/ultraviolet/commit/634ced8b45f33a7f192f2e8e3f862e83ad5c72b4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Table.Row />` prop `selectDisabled` to be disabled when set to false
+
+- [#5661](https://github.com/scaleway/ultraviolet/pull/5661) [`3e9f9ad`](https://github.com/scaleway/ultraviolet/commit/3e9f9ad699a2415264a7b8f9c78d439b32ecef45) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `maxWidth` on `<UnitInput />` component
+
 ## 3.0.0-beta.20
 
 ### Major Changes
