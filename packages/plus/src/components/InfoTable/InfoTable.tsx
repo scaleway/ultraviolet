@@ -1,25 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { InfoTableCell } from './components/Cell'
-import { InfoTableRow, StyledRow } from './components/Row'
-
-const StyledDl = styled('dl', {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{ width?: string }>`
-  display: flex;
-  font-size: ${({ theme }) => theme.typography.body.fontSize};
-  line-height: ${({ theme }) => theme.typography.body.lineHeight};
-  flex-direction: column;
-  align-items: start;
-  margin: 0;
-  width: 100%;
-
-  ${StyledRow} {
-    width: ${({ width }) => width ?? '100%'};
-  }
-`
+import { InfoTableRow } from './components/Row'
+import { InfoTableContext } from './context'
+import { dl } from './styles.css'
 
 type InfoTableProps = {
   children: ReactNode
@@ -38,9 +23,14 @@ export const InfoTable = ({
   className,
   'data-testid': dataTestId,
 }: InfoTableProps) => (
-  <StyledDl className={className} data-testid={dataTestId} width={width}>
-    {children}
-  </StyledDl>
+  <InfoTableContext.Provider value={{ width }}>
+    <dl
+      className={`${className ? `${className} ` : ''}${dl}`}
+      data-testid={dataTestId}
+    >
+      {children}
+    </dl>
+  </InfoTableContext.Provider>
 )
 
 InfoTable.Row = InfoTableRow
