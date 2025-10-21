@@ -1,15 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Children } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-const Container = styled.span`
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1.5']}`};
-  text-align: left;
-`
+import { menuGroup } from '../styles.css'
 
 type GroupProps = {
   label: string
@@ -31,7 +26,7 @@ export const Group = ({
 
   return (
     <>
-      <Container>
+      <span className={menuGroup}>
         <Stack alignItems="center" direction="row" gap={1}>
           <Text
             as="span"
@@ -43,7 +38,7 @@ export const Group = ({
           </Text>
           {labelDescription || null}
         </Stack>
-      </Container>
+      </span>
       {isChildrenEmpty && emptyState ? emptyState : children}
     </>
   )
