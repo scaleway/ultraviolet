@@ -7,6 +7,7 @@ export const copyButton = style({
   position: 'absolute',
   top: theme.space[1],
   right: theme.space[1],
+  backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
   selectors: {
     '&:hover': {
       backgroundColor: consoleDarkTheme.colors.neutral.backgroundHover,
