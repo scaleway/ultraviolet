@@ -5,6 +5,7 @@ import {
   style,
   styleVariants,
 } from '@vanilla-extract/css'
+import { selectBarBase } from '../SelectInput/components/selectBar.css'
 
 export const widthSelectInput = createVar()
 
@@ -173,21 +174,19 @@ export const unitInputSize = styleVariants({
 })
 
 export const unitInputUnitWidth = style({
-  /** TODO remove selector when selectInput uses vanilla extract */
-  selectors: {
-    '&&': {
-      width: widthSelectInput,
-    },
-  },
+  width: widthSelectInput,
 })
 
 export const unitInputUnit = style({})
 
-globalStyle(`${unitInputUnit} #unit`, {
+globalStyle(`${unitInputUnit} ${selectBarBase}`, {
   border: 'none',
   background: 'transparent',
 })
 
-globalStyle(`${unitInputUnit} #unit:focus, ${unitInputUnit} #unit:active, `, {
-  boxShadow: 'none',
-})
+globalStyle(
+  `${unitInputUnit} ${selectBarBase}:focus, ${unitInputUnit} ${selectBarBase}:active, `,
+  {
+    boxShadow: 'none',
+  },
+)
