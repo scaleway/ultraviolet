@@ -1,7 +1,5 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ArrowRightIcon } from '@ultraviolet/icons'
 import type {
   KeyboardEvent,
@@ -15,104 +13,9 @@ import { Stack } from '../../Stack'
 import { Tooltip } from '../../Tooltip'
 import { getListItem } from '../helpers'
 import { useDisclosureContext, useMenu } from '../MenuProvider'
+import { menuItem, menuItemContainer } from '../styles.css'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
-
-const ANIMATION_DURATION = 200 // in ms
-
-const itemCoreStyle = ({
-  theme,
-  sentiment,
-  disabled,
-}: {
-  theme: Theme
-  borderless: boolean
-  sentiment: MenuItemSentiment
-  disabled: boolean
-}) => `
-  display: flex;
-  justify-content: start;
-  text-align: left;
-  align-items: center;
-  min-height: ${theme.sizing['400']};
-  max-height: ${theme.sizing['500']};
-  font-size: ${theme.typography.bodySmall.fontSize};
-  line-height: ${theme.typography.bodySmall.lineHeight};
-  font-weight: inherit;
-  padding: ${`${theme.space['0.5']} ${theme.space['1']}`};
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: ${theme.radii.default};
-  transition: background-color ${ANIMATION_DURATION}ms, color ${ANIMATION_DURATION}ms;
-
-  color: ${theme.colors[sentiment][disabled ? 'textDisabled' : 'text']};
-  svg {
-    fill: ${theme.colors[sentiment][disabled ? 'textDisabled' : 'text']};
-  }
-
-  ${
-    disabled
-      ? `
-        cursor: not-allowed;
-      `
-      : `
-          &:hover,
-          &:focus-visible, &[data-active='true'] {
-            background-color: ${theme.colors[sentiment].backgroundHover};
-            color: ${theme.colors[sentiment].textHover};
-            svg {
-              fill: ${theme.colors[sentiment].textHover};
-            }
-          }`
-  }
-`
-
-const Container = styled('div', {
-  shouldForwardProp: prop => !['borderless'].includes(prop),
-})<{ borderless: boolean }>`
-  ${({ theme, borderless }) =>
-    borderless
-      ? ''
-      : `border-bottom: 1px solid ${theme.colors.neutral.border};`}
-  padding: ${({ theme, borderless }) =>
-    `${borderless ? theme.space['0.25'] : theme.space['0.5']} ${
-      theme.space['0.5']
-    }`};
-  &:last-child {
-    border: none;
-  }
-  width: 100%;
-`
-
-const StyledItem = styled('button', {
-  shouldForwardProp: prop => !['borderless', 'sentiment'].includes(prop),
-})<{
-  borderless: boolean
-  disabled: boolean
-  sentiment: MenuItemSentiment
-}>`
-  ${({ theme, borderless, sentiment, disabled }) =>
-    itemCoreStyle({ borderless, disabled, sentiment, theme })}
-  background: none;
-`
-
-const StyledLinkItem = styled('a', {
-  shouldForwardProp: prop => !['borderless', 'sentiment'].includes(prop),
-})<{
-  borderless: boolean
-  disabled: boolean
-  sentiment: MenuItemSentiment
-}>`
-  ${({ theme, borderless, sentiment, disabled }) =>
-    itemCoreStyle({ borderless, disabled, sentiment, theme })}
-  text-decoration: none;
-
-  &:focus {
-    text-decoration: none;
-  }
-`
 
 type ItemProps = {
   href?: HTMLAnchorElement['href']
@@ -221,23 +124,23 @@ const Item = forwardRef<HTMLElement, ItemProps>(
 
     if (href && !disabled) {
       return (
-        <Container borderless={borderless} data-search-text={searchText}>
+        <div
+          className={menuItemContainer({ borderless })}
+          data-search-text={searchText}
+        >
           <Tooltip text={tooltip}>
-            <StyledLinkItem
-              borderless
-              className={className}
+            <a
+              className={`${className ? `${className} ` : ''}${menuItem({ borderless: true, disabled, sentiment })}`}
               data-active={active}
               data-is-disclosure={isDisclosure}
               data-is-menu-item
               data-testid={dataTestId}
-              disabled={disabled}
               href={href}
               onClick={onClickHandle}
               onKeyDown={handleKeyDown}
               ref={ref as Ref<HTMLAnchorElement>}
               rel={rel}
               role="menuitem"
-              sentiment={sentiment}
               target={target}
             >
               {isDisclosure ? (
@@ -252,18 +155,20 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               ) : (
                 children
               )}
-            </StyledLinkItem>
+            </a>
           </Tooltip>
-        </Container>
+        </div>
       )
     }
 
     return (
-      <Container borderless={borderless} data-search-text={searchText}>
+      <div
+        className={menuItemContainer({ borderless })}
+        data-search-text={searchText}
+      >
         <Tooltip text={tooltip}>
-          <StyledItem
-            borderless={borderless}
-            className={className}
+          <button
+            className={`${className ? `${className} ` : ''}${menuItem({ borderless, disabled, sentiment })}`}
             data-active={active || (isVisible && isDisclosure)}
             data-is-disclosure={isDisclosure}
             data-is-menu-item
@@ -278,7 +183,6 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             onKeyDown={handleKeyDown}
             ref={ref as Ref<HTMLButtonElement>}
             role="menuitem"
-            sentiment={sentiment}
             type="button"
           >
             {isDisclosure ? (
@@ -293,9 +197,9 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             ) : (
               children
             )}
-          </StyledItem>
+          </button>
         </Tooltip>
-      </Container>
+      </div>
     )
   },
 )
