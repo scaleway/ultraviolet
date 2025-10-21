@@ -14,8 +14,7 @@ export const minWidthVar = createVar({
 })
 
 export const linkBreadcrumbs = style({
-  /** TODO :Remove "!important" once Link uses vanilla extract */
-  paddingRight: `${theme.space[1]} !important`,
+  paddingRight: theme.space[1],
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
@@ -47,15 +46,21 @@ export const itemContainerBreadcrumbs = recipe({
   },
 })
 
+export const contentBreadcrumbsText = style({})
 export const breadcrumbsItem = style({})
-globalStyle(`.${breadcrumbsItem}:not(:first-child) .${linkBreadcrumbs}`, {
-  padding: `0 ${theme.space[1]}`,
-})
 
-globalStyle(`.${breadcrumbsItem}:last-child .${linkBreadcrumbs}`, {
+globalStyle(
+  `${breadcrumbsItem}:not(:first-child) ${linkBreadcrumbs}, ${breadcrumbsItem}:not(:first-child) ${contentBreadcrumbsText}`,
+  {
+    padding: `0 ${theme.space[1]}`,
+  },
+)
+
+globalStyle(`${breadcrumbsItem}:last-child ${linkBreadcrumbs}`, {
   pointerEvents: 'none',
 })
-globalStyle(`.${breadcrumbsItem}:last-child .${contentBreadcrumbs}`, {
+
+globalStyle(`${breadcrumbsItem}:last-child ${contentBreadcrumbs}`, {
   pointerEvents: 'none',
   cursor: 'default',
 })
