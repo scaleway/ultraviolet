@@ -2,101 +2,22 @@
 
 exports[`infoTable > should work with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  margin: 0;
-  width: 100%;
-}
-
-.emotion-0 .emotion-3 {
-  width: 100%;
-}
-
-.emotion-2 {
-  border-bottom: 1px #d9dadd solid;
-  padding-block: 1rem;
-}
-
-.emotion-2:first-of-type {
-  padding-top: 0;
-}
-
-.emotion-2:last-of-type {
-  padding-bottom: 0;
-  border-bottom-color: transparent;
-}
-
-.emotion-2>*:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.emotion-4 {
-  font-weight: 500;
-  color: #222638;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-}
-
-.emotion-6 {
-  color: #3f4250;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-}
-
-.emotion-8 {
-  display: block;
-  min-width: 0;
-  width: 100%;
-}
-
-.emotion-8>* {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <dl
-      class="emotion-0 emotion-1"
+      class="styles__h6pvpm1"
     >
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr);"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr); --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -105,10 +26,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -119,7 +40,7 @@ exports[`infoTable > should work with default props 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -128,10 +49,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -142,7 +63,7 @@ exports[`infoTable > should work with default props 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -151,10 +72,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -162,15 +83,15 @@ exports[`infoTable > should work with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: 2fr 1fr; --uv_3mg8xe1: 2fr 1fr; --uv_3mg8xe2: 2fr 1fr; --uv_3mg8xe3: 2fr 1fr; --uv_3mg8xe4: 2fr 1fr; --uv_3mg8xe5: 2fr 1fr;"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: 2fr 1fr; --uv_3mg8xe1: 2fr 1fr; --uv_3mg8xe2: 2fr 1fr; --uv_3mg8xe3: 2fr 1fr; --uv_3mg8xe4: 2fr 1fr; --uv_3mg8xe5: 2fr 1fr; --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -179,10 +100,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell with more text
             </div>
@@ -193,7 +114,7 @@ exports[`infoTable > should work with default props 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -202,10 +123,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -213,15 +134,15 @@ exports[`infoTable > should work with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: 1fr; --uv_3mg8xe1: 1fr; --uv_3mg8xe2: 1fr; --uv_3mg8xe3: 1fr; --uv_3mg8xe4: 1fr; --uv_3mg8xe5: 1fr;"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: 1fr; --uv_3mg8xe1: 1fr; --uv_3mg8xe2: 1fr; --uv_3mg8xe3: 1fr; --uv_3mg8xe4: 1fr; --uv_3mg8xe5: 1fr; --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -230,10 +151,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -241,15 +162,15 @@ exports[`infoTable > should work with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr);"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr); --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -258,10 +179,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
             </div>
@@ -272,7 +193,7 @@ exports[`infoTable > should work with default props 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -281,10 +202,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -295,7 +216,7 @@ exports[`infoTable > should work with default props 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -304,10 +225,10 @@ exports[`infoTable > should work with default props 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -321,101 +242,22 @@ exports[`infoTable > should work with default props 1`] = `
 
 exports[`infoTable > should work with multiLine 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  margin: 0;
-  width: 100%;
-}
-
-.emotion-0 .emotion-3 {
-  width: 100%;
-}
-
-.emotion-2 {
-  border-bottom: 1px #d9dadd solid;
-  padding-block: 1rem;
-}
-
-.emotion-2:first-of-type {
-  padding-top: 0;
-}
-
-.emotion-2:last-of-type {
-  padding-bottom: 0;
-  border-bottom-color: transparent;
-}
-
-.emotion-2>*:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.emotion-4 {
-  font-weight: 500;
-  color: #222638;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-}
-
-.emotion-6 {
-  color: #3f4250;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-}
-
-.emotion-8 {
-  display: block;
-  min-width: 0;
-  width: 100%;
-}
-
-.emotion-8>* {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <dl
-      class="emotion-0 emotion-1"
+      class="styles__h6pvpm1"
     >
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr);"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr); --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -424,10 +266,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -438,7 +280,7 @@ exports[`infoTable > should work with multiLine 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -447,10 +289,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -461,7 +303,7 @@ exports[`infoTable > should work with multiLine 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -470,10 +312,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -481,15 +323,15 @@ exports[`infoTable > should work with multiLine 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: 2fr 1fr; --uv_3mg8xe1: 2fr 1fr; --uv_3mg8xe2: 2fr 1fr; --uv_3mg8xe3: 2fr 1fr; --uv_3mg8xe4: 2fr 1fr; --uv_3mg8xe5: 2fr 1fr;"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: 2fr 1fr; --uv_3mg8xe1: 2fr 1fr; --uv_3mg8xe2: 2fr 1fr; --uv_3mg8xe3: 2fr 1fr; --uv_3mg8xe4: 2fr 1fr; --uv_3mg8xe5: 2fr 1fr; --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -498,10 +340,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell with more text
             </div>
@@ -512,7 +354,7 @@ exports[`infoTable > should work with multiLine 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -521,10 +363,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -532,15 +374,15 @@ exports[`infoTable > should work with multiLine 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: 1fr; --uv_3mg8xe1: 1fr; --uv_3mg8xe2: 1fr; --uv_3mg8xe3: 1fr; --uv_3mg8xe4: 1fr; --uv_3mg8xe5: 1fr;"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: 1fr; --uv_3mg8xe1: 1fr; --uv_3mg8xe2: 1fr; --uv_3mg8xe3: 1fr; --uv_3mg8xe4: 1fr; --uv_3mg8xe5: 1fr; --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -549,10 +391,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -560,15 +402,15 @@ exports[`infoTable > should work with multiLine 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr);"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr); --h6pvpm0: 100%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -577,10 +419,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
             </div>
@@ -591,7 +433,7 @@ exports[`infoTable > should work with multiLine 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -600,10 +442,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -614,7 +456,7 @@ exports[`infoTable > should work with multiLine 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -623,10 +465,10 @@ exports[`infoTable > should work with multiLine 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -640,101 +482,22 @@ exports[`infoTable > should work with multiLine 1`] = `
 
 exports[`infoTable > should work with width 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  margin: 0;
-  width: 100%;
-}
-
-.emotion-0 .emotion-3 {
-  width: 30%;
-}
-
-.emotion-2 {
-  border-bottom: 1px #d9dadd solid;
-  padding-block: 1rem;
-}
-
-.emotion-2:first-of-type {
-  padding-top: 0;
-}
-
-.emotion-2:last-of-type {
-  padding-bottom: 0;
-  border-bottom-color: transparent;
-}
-
-.emotion-2>*:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.emotion-4 {
-  font-weight: 500;
-  color: #222638;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-}
-
-.emotion-6 {
-  color: #3f4250;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-}
-
-.emotion-8 {
-  display: block;
-  min-width: 0;
-  width: 100%;
-}
-
-.emotion-8>* {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <dl
-      class="emotion-0 emotion-1"
+      class="styles__h6pvpm1"
     >
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr);"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr); --h6pvpm0: 30%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -743,10 +506,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -757,7 +520,7 @@ exports[`infoTable > should work with width 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -766,10 +529,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -780,7 +543,7 @@ exports[`infoTable > should work with width 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -789,10 +552,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -800,15 +563,15 @@ exports[`infoTable > should work with width 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: 2fr 1fr; --uv_3mg8xe1: 2fr 1fr; --uv_3mg8xe2: 2fr 1fr; --uv_3mg8xe3: 2fr 1fr; --uv_3mg8xe4: 2fr 1fr; --uv_3mg8xe5: 2fr 1fr;"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: 2fr 1fr; --uv_3mg8xe1: 2fr 1fr; --uv_3mg8xe2: 2fr 1fr; --uv_3mg8xe3: 2fr 1fr; --uv_3mg8xe4: 2fr 1fr; --uv_3mg8xe5: 2fr 1fr; --h6pvpm0: 30%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -817,10 +580,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell with more text
             </div>
@@ -831,7 +594,7 @@ exports[`infoTable > should work with width 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -840,10 +603,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -851,15 +614,15 @@ exports[`infoTable > should work with width 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: 1fr; --uv_3mg8xe1: 1fr; --uv_3mg8xe2: 1fr; --uv_3mg8xe3: 1fr; --uv_3mg8xe4: 1fr; --uv_3mg8xe5: 1fr;"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: 1fr; --uv_3mg8xe1: 1fr; --uv_3mg8xe2: 1fr; --uv_3mg8xe3: 1fr; --uv_3mg8xe4: 1fr; --uv_3mg8xe5: 1fr; --h6pvpm0: 30%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -868,10 +631,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -879,15 +642,15 @@ exports[`infoTable > should work with width 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3 uv_x6hyh50 "
-        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr);"
+        class="styles__h6pvpm2 uv_x6hyh50 "
+        style="--uv_3mg8xe0: repeat(3, 1fr); --uv_3mg8xe1: repeat(3, 1fr); --uv_3mg8xe2: repeat(3, 1fr); --uv_3mg8xe3: repeat(3, 1fr); --uv_3mg8xe4: repeat(3, 1fr); --uv_3mg8xe5: repeat(3, 1fr); --h6pvpm0: 30%;"
       >
         <div
           class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -896,10 +659,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell cell
             </div>
@@ -910,7 +673,7 @@ exports[`infoTable > should work with width 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -919,10 +682,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>
@@ -933,7 +696,7 @@ exports[`infoTable > should work with width 1`] = `
           style="--uv_4k0ekn0: 100%; --uv_4k0ekn2: 0;"
         >
           <dt
-            class="emotion-4 emotion-5"
+            class="styles__h6pvpm3"
           >
             <div
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
@@ -942,10 +705,10 @@ exports[`infoTable > should work with width 1`] = `
             </div>
           </dt>
           <dd
-            class="emotion-6 emotion-7"
+            class="styles__h6pvpm4"
           >
             <div
-              class="emotion-8 emotion-9 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              class="styles__h6pvpm5 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             >
               cell
             </div>

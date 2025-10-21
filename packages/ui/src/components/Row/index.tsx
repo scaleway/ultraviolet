@@ -29,6 +29,7 @@ type RowProps = {
   alignItems?: ResponsiveProp<AlignItemsType>
   justifyContent?: ResponsiveProp<JustifyContentType>
   padding?: ResponsiveProp<CSSProperties['padding']>
+  style?: CSSProperties
 }
 
 // It will give a rem value for each breakpoint key
@@ -69,6 +70,7 @@ export const Row = ({
   justifyContent,
   gap,
   padding,
+  style,
 }: RowProps) => (
   <div
     className={`${className ? `${className} ` : ''}${row} ${sprinkles({
@@ -84,28 +86,31 @@ export const Row = ({
           : { xxsmall: justifyContent },
     })}`}
     data-testid={dataTestId}
-    style={assignInlineVars({
-      ...Object.keys(templateColumn).reduce(
-        (acc, column) => ({
-          ...acc,
-          [templateColumn[column as keyof typeof templateColumn]]:
-            typeof templateColumns === 'object'
-              ? templateColumns[column as keyof typeof templateColumns] || ''
-              : templateColumns,
-        }),
-        {},
-      ),
-      ...Object.keys(paddings).reduce(
-        (acc, localPadding) => ({
-          ...acc,
-          [paddings[localPadding as keyof typeof padding]]:
-            typeof padding === 'object'
-              ? padding[localPadding as keyof typeof templateColumns] || ''
-              : padding,
-        }),
-        {},
-      ),
-    })}
+    style={{
+      ...assignInlineVars({
+        ...Object.keys(templateColumn).reduce(
+          (acc, column) => ({
+            ...acc,
+            [templateColumn[column as keyof typeof templateColumn]]:
+              typeof templateColumns === 'object'
+                ? templateColumns[column as keyof typeof templateColumns] || ''
+                : templateColumns,
+          }),
+          {},
+        ),
+        ...Object.keys(paddings).reduce(
+          (acc, localPadding) => ({
+            ...acc,
+            [paddings[localPadding as keyof typeof padding]]:
+              typeof padding === 'object'
+                ? padding[localPadding as keyof typeof templateColumns] || ''
+                : padding,
+          }),
+          {},
+        ),
+      }),
+      ...style,
+    }}
   >
     {children}
   </div>
