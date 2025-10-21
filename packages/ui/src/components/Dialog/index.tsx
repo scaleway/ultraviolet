@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
@@ -15,19 +14,9 @@ import { DialogCancelButton } from './components/CancelButton'
 import { DialogStack } from './components/Stack'
 import { DialogText } from './components/Text'
 import type { DialogSentiment } from './constants'
+import { dialogTitle, dialogXsmall } from './styles.css'
 
 const DIALOG_SIZE = 'xsmall'
-
-const StyledTextTitle = styled(Text)`
-  margin-top: ${({ theme }) => theme.space['2']};
-  margin-bottom: ${({ theme }) => theme.space['1']};
-`
-
-const StyledModal = styled(Modal)`
-    &[data-size="${DIALOG_SIZE}"] {
-      width: 32.5rem; // size is on purpose different than a modal
-    }
-`
 
 type DialogProps = Pick<
   ComponentProps<typeof Modal>,
@@ -75,13 +64,14 @@ export const BaseDialog = ({
           <CheckIcon />
         )}
       </Bullet>
-      <StyledTextTitle
+      <Text
         as="h2"
+        className={dialogTitle}
         sentiment="neutral"
         variant="headingSmallStronger"
       >
         {title}
-      </StyledTextTitle>
+      </Text>
     </>
   )
 
@@ -93,9 +83,9 @@ export const BaseDialog = ({
   )
 
   return (
-    <StyledModal
+    <Modal
       ariaLabel={ariaLabel}
-      className={className}
+      className={`${className ? `${className} ` : ''}${dialogXsmall}`}
       data-testid={dataTestId}
       disclosure={disclosure}
       hideOnClickOutside={hideOnClickOutside}
@@ -121,7 +111,7 @@ export const BaseDialog = ({
           </DialogContext.Provider>
         )
       }
-    </StyledModal>
+    </Modal>
   )
 }
 
