@@ -1,20 +1,14 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { Menu } from '../Menu'
+import { tabsTextSelected } from './styles.css'
 import { useTabsContext } from './TabsContext'
-
-const StyledMenuItem = styled(Menu.Item)`
-  &[aria-selected='true'] {
-    color: ${({ theme }) => theme.colors.primary.text};
-  }
-`
 
 type TabMenuItemProps = {
   value?: string | number
-} & ComponentProps<typeof StyledMenuItem>
+} & ComponentProps<typeof Menu.Item>
 
 export const TabMenuItem = ({
   value,
@@ -30,8 +24,9 @@ export const TabMenuItem = ({
   )
 
   return (
-    <StyledMenuItem
+    <Menu.Item
       aria-selected={isSelected}
+      className={tabsTextSelected[isSelected ? 'selected' : 'default']}
       onClick={event => {
         if (value !== undefined) {
           onChange(value)
@@ -41,6 +36,6 @@ export const TabMenuItem = ({
       {...props}
     >
       {children}
-    </StyledMenuItem>
+    </Menu.Item>
   )
 }
