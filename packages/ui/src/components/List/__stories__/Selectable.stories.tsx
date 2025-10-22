@@ -19,7 +19,6 @@ export const Selectable: StoryFn<typeof List> = args => {
               id={planet.id}
               key={planet.id}
             >
-              <List.Cell>{planet.id}</List.Cell>
               <List.Cell>{planet.name}</List.Cell>
               <List.Cell>{planet.perihelion}AU</List.Cell>
               <List.Cell>{planet.aphelion}AU</List.Cell>

@@ -1,21 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { List } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'
-
-const StyledList = styled(List)`
-   td:first-child,
-   th:first-child {
-    width: ${({ theme }) => theme.sizing[700]};
-    min-width:  ${({ theme }) => theme.sizing[700]};
-    max-width:  ${({ theme }) => theme.sizing[700]};
-  }
-`
+import { offerList } from './styles.css'
 
 type OfferListProps = Omit<
   ComponentProps<typeof List>,
@@ -84,16 +75,16 @@ export const OfferList = ({
       setCheckboxSelectedRows={setCheckboxSelectedRows}
       setRadioSelectedRow={setRadioSelectedRow}
     >
-      <StyledList
+      <List
         autoCollapse={autoCollapse}
-        className={className}
+        className={`${className ? `${className} ` : ''}${offerList}`}
         columns={computedColumns}
         data-testid={dataTestId}
         expandable={false}
         selectable={false}
       >
         {children}
-      </StyledList>
+      </List>
     </OfferListProvider>
   )
 }

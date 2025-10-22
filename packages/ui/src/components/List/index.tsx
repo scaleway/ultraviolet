@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { Cell } from './Cell'
@@ -10,21 +9,8 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
+import { list, listContainer } from './styles.css'
 import type { ColumnProps } from './types'
-
-const TableContainerStyle = styled.div`
-  min-width: 100%;
-  width: 100%;
-  overflow-x: auto;
-`
-
-const StyledTable = styled.table`
-  width: 100%;
-  box-sizing: content-box;
-  gap: ${({ theme }) => theme.space['1']};
-  border-spacing: 0 ${({ theme }) => theme.space['2']};
-  position: relative;
-`
 
 // TODO: Get type optional type from omit values of ListContext
 type ListProps = {
@@ -63,7 +49,7 @@ const TableContainer = ({ children }: { children: ReactNode }) => {
     // oxlint-disable react/exhaustive-deps
   }, [children, setRefList])
 
-  return <TableContainerStyle>{children}</TableContainerStyle>
+  return <div className={listContainer}>{children}</div>
 }
 
 const BaseList = forwardRef<HTMLTableElement, ListProps>(
@@ -88,7 +74,10 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       selectable={selectable}
     >
       <TableContainer>
-        <StyledTable className={className} ref={ref}>
+        <table
+          className={`${className ? `${className} ` : ''}${list}`}
+          ref={ref}
+        >
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
@@ -96,7 +85,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
                 isOrdered={column.isOrdered}
                 key={`header-column-${index}`}
                 maxWidth={column.maxWidth}
-                minWith={column.minWidth}
+                minWidth={column.minWidth}
                 onOrder={column.onOrder}
                 orderDirection={column.orderDirection}
                 width={column.width}
@@ -116,7 +105,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
               children
             )}
           </tbody>
-        </StyledTable>
+        </table>
       </TableContainer>
     </ListProvider>
   ),

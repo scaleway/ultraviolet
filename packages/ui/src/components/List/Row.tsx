@@ -1,9 +1,8 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { keyframes, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
+import { theme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   CSSProperties,
   MouseEventHandler,
@@ -23,211 +22,17 @@ import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
-import type { ColumnProps } from './types'
-
-export const ExpandableWrapper = styled.tr`
-  width: 100%;
-  display: table-row;
-  vertical-align: middle;
-  cursor: auto;
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
-    theme.radii.default};
-  transform: translate3d(0, -${({ theme }) => theme.space['2']}, 0);
-  position: relative;
-
-  td, td:first-child, td:last-child {
-    transition:
-      box-shadow 200ms ease,
-      border-color 200ms ease;
-  }
-
-  td {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-top: none;
-    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
-      theme.radii.default};
-  }
-
-  &[data-highlight="true"] td {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-`
-
-const StyledCheckbox = styled(Checkbox, {
-  shouldForwardProp: prop => !['inRange'].includes(prop),
-})<{ inRange: boolean }>`
-  ${({ theme, inRange }) =>
-    inRange
-      ? `
-        rect {
-          fill: ${theme.colors.neutral.backgroundHover};
-          stroke: ${theme.colors.neutral.borderHover};
-        }
-  `
-      : ''}
-
-`
-
-const colorChange = (theme: Theme) => keyframes`
-  5% {
-    background-color: ${theme.colors.primary.background};
-  }
-  80% {
-    background-color: ${theme.colors.primary.background};
-  }
-`
-
-export const StyledRow = styled('tr', {
-  shouldForwardProp: prop =>
-    ![
-      'highlightAnimation',
-      'sentiment',
-      'columns',
-      'columnsStartAt',
-      'data-dragging',
-      'pointerEvent',
-    ].includes(prop),
-})<{
-  sentiment: (typeof SENTIMENTS)[number]
-  columns: ColumnProps[]
-  columnsStartAt?: number
-  highlightAnimation?: boolean
-  'data-dragging'?: boolean
-}>`
-  /* List itself also apply style about common templating between HeaderRow and other Rows */
-
-  display: table-row;
-  vertical-align: middle;
-  position: relative;
-  box-shadow: none;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  column-gap: ${({ theme }) => theme.space['2']};
-
-  &[role='button row'] {
-    cursor: pointer;
-  }
-
-  position: relative;
-
-  td, td:first-child, td:last-child {
-    transition:
-      box-shadow 200ms ease,
-      border-color 200ms ease;
-  }
-
-  td {
-    border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  }
-  td:first-child {
-    border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: ${({ theme }) => theme.radii.default} 0 0 ${({ theme }) =>
-      theme.radii.default};
-  }
-  td:last-child {
-    border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: 0 ${({ theme }) => theme.radii.default} ${({ theme }) =>
-      theme.radii.default} 0;
-  }
-
-  &:not([aria-disabled='true']):hover td, &:not([aria-disabled='true']):hover td:first-child, &:not([aria-disabled='true']):hover td:last-child {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-
-  &:not([aria-disabled='true']):hover + ${ExpandableWrapper} td {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-
-  &[aria-expanded='true'] td {
-    &:first-child {
-      border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
-      border-radius: ${({ theme }) => theme.radii.default} 0 0 0;
-    }
-    &:last-child {
-      border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
-      border-radius: 0 ${({ theme }) => theme.radii.default} 0 0;
-    }
-    border-bottom-color: ${({ theme }) => theme.colors.neutral.border};
-  }
-
-  ${({ theme, sentiment }) =>
-    `
-    color: ${theme.colors[sentiment].text};
-    border-color: ${theme.colors[sentiment].border};
-    background-color: ${theme.colors[sentiment].background};
-    & [data-expandable-content] {
-      border-color: ${theme.colors[sentiment].border};
-    }
-
-    ${
-      sentiment === 'neutral'
-        ? `&:not([aria-disabled='true']):hover {
-          border-color: ${theme.colors.primary.border};
-          box-shadow: ${theme.shadows.hoverPrimary};
-        }
-        `
-        : ''
-    }
-  `}
-
-  &[data-highlight='true'] {
-    td, td:first-child, td:last-child {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
-  }
-
-  &[aria-disabled='true'] {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    cursor: not-allowed;
-  }
-
-  ${({ columns, columnsStartAt }) =>
-    columns.map(
-      (column, index) => `
-    td:nth-of-type(${index + 1 + (columnsStartAt ?? 0)}) {
-      ${column.width ? `width: ${column.width};` : ''}
-      ${column.minWidth ? `min-width: ${column.minWidth};` : ''}
-      ${column.maxWidth ? `max-width: ${column.maxWidth};` : ''}
-    }
-  `,
-    )}
-
-  animation: ${({ highlightAnimation, theme }) =>
-    highlightAnimation ? colorChange(theme) : undefined}
-    3s linear;
-`
-
-const StyledCheckboxContainer = styled.div`
-  display: flex;
-`
-
-const NoPaddingCell = styled(Cell, {
-  shouldForwardProp: prop => !['maxWidth'].includes(prop),
-})<{
-  maxWidth: string
-}>`
-  padding: 0;
-
-  &:first-of-type {
-    padding-left: ${({ theme }) => theme.space['2']};
-  }
-
-  max-width: ${({ maxWidth }) => maxWidth};
-`
-
-const ExpandableCell = styled(Cell, {
-  shouldForwardProp: prop => !['padding'].includes(prop),
-})<{ padding?: keyof typeof space }>`
-  padding: ${({ theme, padding }) =>
-    padding ? theme.space[padding] : theme.space['2']};
-`
+import {
+  listCheckboxContainer,
+  listCheckboxInRange,
+  listExpandableCell,
+  listExpandableWrapper,
+  listNoPaddingCell,
+  listRow,
+} from './styles.css'
+import { paddingExpandableCell } from './variables.css'
 
 type RowProps = {
   children: ReactNode
@@ -283,14 +88,12 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       registerSelectableRow,
       selectedRowIds,
       expandButton,
-      inRange,
       columns,
+      inRange,
       refList,
       setRefList,
       handleOnChange,
     } = useListContext()
-
-    const theme = useTheme()
 
     const expandedRowId = useId()
 
@@ -344,19 +147,16 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
 
     return (
       <>
-        <StyledRow
+        <tr
           aria-controls={
             expandable && expandedRowIds[id] ? expandedRowId : undefined
           }
           aria-disabled={disabled}
           aria-expanded={expandable ? expandedRowIds[id] : undefined}
-          className={className}
-          columns={columns}
-          columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
+          className={`${className ? `${className} ` : ''}${listRow({ highlightAnimation, sentiment })}`}
           data-dragging={dataDragging}
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}
-          highlightAnimation={highlightAnimation}
           onClick={canClickRowToExpand ? toggleRowExpand : undefined}
           onKeyDown={
             canClickRowToExpand
@@ -372,53 +172,71 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           onMouseLeave={onMouseLeave}
           ref={forwardedRef}
           role={canClickRowToExpand ? 'button row' : undefined}
-          sentiment={sentiment}
           style={style}
           tabIndex={canClickRowToExpand ? 0 : -1}
         >
           {selectable ? (
-            <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
-              <StyledCheckboxContainer>
-                <Tooltip
-                  text={
-                    typeof selectDisabled === 'string'
-                      ? selectDisabled
-                      : undefined
-                  }
-                >
-                  <StyledCheckbox
-                    aria-label="select"
-                    checked={selectedRowIds[id]}
-                    disabled={isSelectDisabled}
-                    inRange={inRange?.includes(id)}
-                    name="list-select-checkbox"
-                    onChange={() => handleOnChange(id, selectedRowIds[id])}
-                    ref={checkboxRef}
-                    value={id}
-                  />
-                </Tooltip>
-              </StyledCheckboxContainer>
-            </NoPaddingCell>
+            <ColumnProvider width={theme.sizing[300]}>
+              <Cell className={listNoPaddingCell}>
+                <div className={listCheckboxContainer}>
+                  <Tooltip
+                    text={
+                      typeof selectDisabled === 'string'
+                        ? selectDisabled
+                        : undefined
+                    }
+                  >
+                    <Checkbox
+                      aria-label="select"
+                      checked={selectedRowIds[id]}
+                      className={
+                        inRange?.includes(id) ? listCheckboxInRange : ''
+                      }
+                      disabled={isSelectDisabled}
+                      name="list-select-checkbox"
+                      onChange={() => handleOnChange(id, selectedRowIds[id])}
+                      ref={checkboxRef}
+                      value={id}
+                    />
+                  </Tooltip>
+                </div>
+              </Cell>
+            </ColumnProvider>
           ) : null}
           {expandButton ? (
-            <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
-              <Button
-                aria-label="expand"
-                data-testid="list-expand-button"
-                disabled={disabled || !expandable}
-                onClick={toggleRowExpand}
-                sentiment={sentiment}
-                size="small"
-                variant="ghost"
-              >
-                {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
-              </Button>
-            </NoPaddingCell>
+            <ColumnProvider width={theme.sizing[300]}>
+              <Cell className={listNoPaddingCell}>
+                <Button
+                  aria-label="expand"
+                  data-testid="list-expand-button"
+                  disabled={disabled || !expandable}
+                  onClick={toggleRowExpand}
+                  sentiment={sentiment}
+                  size="small"
+                  variant="ghost"
+                >
+                  {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
+                </Button>
+              </Cell>
+            </ColumnProvider>
           ) : null}
-          {children}
-        </StyledRow>
+          {Children.map(children, (child, index) => {
+            const column = columns[index]
+
+            return (
+              <ColumnProvider
+                maxWidth={column?.maxWidth}
+                minWidth={column?.minWidth}
+                width={column?.width}
+              >
+                {child}
+              </ColumnProvider>
+            )
+          })}
+        </tr>
         {expandable && expandedRowIds[id] ? (
-          <ExpandableWrapper
+          <tr
+            className={listExpandableWrapper}
             data-expandable-content
             data-highlight={selectable && !!selectedRowIds[id]}
             id={expandedRowId}
@@ -437,13 +255,16 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                 : undefined
             }
           >
-            <ExpandableCell
+            <Cell
+              className={listExpandableCell}
               colSpan={childrenLength}
-              padding={expandablePadding}
+              style={assignInlineVars({
+                [paddingExpandableCell]: theme.space[expandablePadding ?? '2'],
+              })}
             >
               {expandable}
-            </ExpandableCell>
-          </ExpandableWrapper>
+            </Cell>
+          </tr>
         ) : null}
       </>
     )
