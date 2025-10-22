@@ -1,21 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Skeleton } from '../Skeleton'
 import { Cell } from './Cell'
+import { ColumnProvider } from './ColumnProvider'
 import { useListContext } from './ListContext'
-import { StyledRow } from './Row'
-
-const StyledLoadingRow = styled(StyledRow)`
-  cursor: progress;
-`
-
-const StyledSkeleton = styled(Skeleton)`
-  width: 80%;
-  max-width: 100%;
-  align-items: start;
-  justify-content: center;
-`
+import { listLoadingRow, listRow, listSkeleton } from './styles.css'
 
 type ListLoadingSkeletonProps = {
   selectable: boolean
@@ -35,20 +24,26 @@ export const SkeletonRows = ({
   return (
     <>
       {rowArray.map(index => (
-        <StyledLoadingRow
-          columns={columns}
+        <tr
+          className={`${listRow({ sentiment: 'neutral' })} ${listLoadingRow}`}
           id={`skeleton-${index}`}
           key={index}
           role="row"
-          sentiment="neutral"
         >
           {selectable ? <td /> : null}
           {colArray.map(columnIndex => (
-            <Cell key={columnIndex}>
-              <StyledSkeleton variant="line" />
-            </Cell>
+            <ColumnProvider
+              key={columnIndex}
+              maxWidth={columns[columnIndex].maxWidth}
+              minWidth={columns[columnIndex].minWidth}
+              width={columns[columnIndex].width}
+            >
+              <Cell>
+                <Skeleton className={listSkeleton} variant="line" />
+              </Cell>
+            </ColumnProvider>
           ))}
-        </StyledLoadingRow>
+        </tr>
       ))}
     </>
   )

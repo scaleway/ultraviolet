@@ -1,56 +1,27 @@
 'use client'
 
-import styled from '@emotion/styled'
 import {
   InformationOutlineIcon,
   SortIcon as SortIconUV,
   SouthShortIcon,
 } from '@ultraviolet/icons'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
-const StyledSortIcon = styled(SouthShortIcon, {
-  shouldForwardProp: prop => !['order'].includes(prop),
-})<{ order: 'ascending' | 'descending' }>`
-  transform: ${({ order }) =>
-    order === 'ascending' ? 'rotate(-180deg)' : 'none'};
-  transition: transform 0.2s ease-in-out;
-`
+import { listHeaderCell, listSortIcon } from './styles.css'
+import {
+  maxWidthHeaderCell,
+  minWidthHeaderCell,
+  widthHeaderCell,
+} from './variables.css'
 
 const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
   order ? (
-    <StyledSortIcon order={order} sentiment="primary" />
+    <SouthShortIcon className={listSortIcon[order]} sentiment="primary" />
   ) : (
     <SortIconUV sentiment="neutral" />
   )
-
-const StyledHeaderCell = styled('th', {
-  shouldForwardProp: prop => !['width', 'minWidth', 'maxWidth'].includes(prop),
-})<{ width?: string; minWidth?: string; maxWidth?: string }>`
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  font-weight: ${({ theme }) => theme.typography.bodySmall.weight};
-  font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  gap: ${({ theme }) => theme.space['1']};
-  padding: 0 ${({ theme }) => theme.space['2']};
-
-  &[role*='button'] {
-    cursor: pointer;
-    user-select: none;
-  }
-
-  &[aria-sort] {
-    color: ${({ theme }) => theme.colors.primary.text};
-  }
-
-  width: ${({ width }) => width};
-  min-width: ${({ minWidth }) => minWidth};
-  max-width: ${({ maxWidth }) => maxWidth};
-`
 
 type HeaderCellProps = {
   children: ReactNode
@@ -60,7 +31,7 @@ type HeaderCellProps = {
   onOrder?: (newOrder: 'asc' | 'desc') => void
   info?: string
   width?: string
-  minWith?: string
+  minWidth?: string
   maxWidth?: string
 }
 
@@ -72,7 +43,7 @@ export const HeaderCell = ({
   className,
   info,
   width,
-  minWith,
+  minWidth,
   maxWidth,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
@@ -87,11 +58,9 @@ export const HeaderCell = ({
     : undefined
 
   return (
-    <StyledHeaderCell
+    <th
       aria-sort={order}
-      className={className}
-      maxWidth={maxWidth}
-      minWidth={minWith}
+      className={`${className ? `${className} ` : ''}${listHeaderCell}`}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
@@ -107,8 +76,12 @@ export const HeaderCell = ({
           : undefined
       }
       role={onOrder ? 'button columnheader' : undefined}
+      style={assignInlineVars({
+        [widthHeaderCell]: width,
+        [minWidthHeaderCell]: minWidth,
+        [maxWidthHeaderCell]: maxWidth,
+      })}
       tabIndex={handleOrder ? 0 : -1}
-      width={width}
     >
       <Stack alignItems="center" direction="row" gap={1}>
         {children}
@@ -125,6 +98,6 @@ export const HeaderCell = ({
           <SortIcon order={order} />
         ) : null}
       </Stack>
-    </StyledHeaderCell>
+    </th>
   )
 }
