@@ -1,69 +1,28 @@
 'use client'
 
-import styled from '@emotion/styled'
 import {
   InformationOutlineIcon,
   SortIcon as SortIconUV,
   SouthShortIcon,
 } from '@ultraviolet/icons'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
+import { listSortIcon } from '../List/styles.css'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
-const StyledSortIcon = styled(SouthShortIcon, {
-  shouldForwardProp: prop => !['order'].includes(prop),
-})<{ order: 'ascending' | 'descending' }>`
-    transform: ${({ order }) =>
-      order === 'ascending' ? 'rotate(-180deg)' : 'none'};
-    transition: transform 0.2s;
-`
+import { headerCellText, tableHeaderCell } from './styles.css'
+import {
+  headerCellMaxWidth,
+  headerCellMinWidth,
+  headerCellWidth,
+} from './variables.css'
 
 const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
   order ? (
-    <StyledSortIcon order={order} sentiment="primary" />
+    <SouthShortIcon className={listSortIcon[order]} sentiment="primary" />
   ) : (
     <SortIconUV sentiment="neutral" />
   )
-
-type StyledHeaderCellProps = Pick<
-  HeaderCellProps,
-  'width' | 'maxWidth' | 'minWidth'
-> & {
-  align?: 'left' | 'center' | 'right'
-}
-
-const StyledHeaderCell = styled('th', {
-  shouldForwardProp: prop =>
-    !['align', 'width', 'maxWidth', 'minWidth'].includes(prop),
-})<StyledHeaderCellProps>`
-${({ width, maxWidth, minWidth }) => `
-    ${width ? `width: ${width};` : ''}
-    ${maxWidth ? `max-width: ${maxWidth};` : ''}
-    ${minWidth ? `min-width: ${minWidth};` : ''}
-  `}
-  display: table-cell;
-  vertical-align: middle;
-  text-align: ${({ align }) => align};
-  padding: ${({ theme }) => theme.space['1']};
-
-  &[role*='button'] {
-    cursor: pointer;
-    user-select: none;
-  }
-
-  &:first-of-type {
-    &[data-checkbox="true"] {
-      padding-left: ${({ theme }) => theme.space['2']};
-    } 
-  }
-`
-
-const StyledText = styled(Text)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: ${({ theme }) => theme.space['1']};
-`
 
 type HeaderCellProps = {
   children: ReactNode
@@ -104,13 +63,10 @@ export const HeaderCell = ({
     : undefined
 
   return (
-    <StyledHeaderCell
+    <th
       align={align}
       aria-sort={order}
-      className={className}
-      data-checkbox={isCheckbox}
-      maxWidth={maxWidth}
-      minWidth={minWidth}
+      className={`${className ? `${className} ` : ''}${tableHeaderCell({ align, checked: isCheckbox })}`}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
@@ -126,11 +82,16 @@ export const HeaderCell = ({
           : undefined
       }
       role={onOrder ? 'button columnheader' : undefined}
+      style={assignInlineVars({
+        [headerCellWidth]: width ?? 'auto',
+        [headerCellMaxWidth]: maxWidth ?? 'none',
+        [headerCellMinWidth]: minWidth ?? 'auto',
+      })}
       tabIndex={handleOrder ? 0 : -1}
-      width={width}
     >
-      <StyledText
+      <Text
         as="div"
+        className={headerCellText}
         sentiment={order !== undefined ? 'primary' : 'neutral'}
         variant="bodySmall"
       >
@@ -147,7 +108,7 @@ export const HeaderCell = ({
         {orderDirection !== undefined && isOrdered !== undefined ? (
           <SortIcon aria-disabled={!onOrder} order={order} />
         ) : null}
-      </StyledText>
-    </StyledHeaderCell>
+      </Text>
+    </th>
   )
 }

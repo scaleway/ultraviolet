@@ -1,17 +1,8 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Skeleton } from '../Skeleton'
 import { Cell } from './Cell'
-
-const StyledLoadingRow = styled('tr')`
-  cursor: progress;
-`
-
-const StyledSkeleton = styled(Skeleton)`
-  width: 80%;
-  max-width: 100%;
-`
+import { tableSkeleton, tableSkeletonRow } from './styles.css'
 
 type SkeletonRowsProps = {
   selectable: boolean
@@ -26,14 +17,19 @@ export const SkeletonRows = ({ selectable, rows, cols }: SkeletonRowsProps) => {
   return (
     <>
       {rowArray.map(index => (
-        <StyledLoadingRow id={`skeleton-${index}`} key={index} role="row">
+        <tr
+          className={tableSkeletonRow}
+          id={`skeleton-${index}`}
+          key={index}
+          role="row"
+        >
           {selectable ? <Cell /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>
-              <StyledSkeleton variant="line" />
+              <Skeleton className={tableSkeleton} variant="line" />
             </Cell>
           ))}
-        </StyledLoadingRow>
+        </tr>
       ))}
     </>
   )
