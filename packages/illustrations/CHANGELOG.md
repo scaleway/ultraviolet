@@ -1,5 +1,14 @@
 # @ultraviolet/illustrations
 
+## 5.0.3
+
+### Patch Changes
+
+- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
+  Updated dependency `@types/react-dom` to `19.2.1`.
+  Updated dependency `react` to `19.2.0`.
+  Updated dependency `react-dom` to `19.2.0`.
+
 ## 5.0.2
 
 ### Patch Changes
