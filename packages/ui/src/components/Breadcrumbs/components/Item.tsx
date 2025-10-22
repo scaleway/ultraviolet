@@ -13,6 +13,7 @@ import { Text } from '../../Text'
 import {
   breadcrumbsItem,
   contentBreadcrumbs,
+  contentBreadcrumbsText,
   itemContainerBreadcrumbs,
   linkBreadcrumbs,
   maxWidthVar,
@@ -86,7 +87,11 @@ export const Item = ({
     }
 
     return (
-      <Text as="div" className={contentBreadcrumbs} variant="bodySmallStrong">
+      <Text
+        as="div"
+        className={`${contentBreadcrumbs} ${contentBreadcrumbsText}`}
+        variant="bodySmallStrong"
+      >
         {children}
       </Text>
     )
