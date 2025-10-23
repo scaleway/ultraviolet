@@ -452,35 +452,39 @@ export const Popup = forwardRef(
       }
       event.stopPropagation()
 
-      const focusableEls =
-        innerPopupRef.current?.querySelectorAll(
-          'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
-        ) ?? []
+      const focusableEls = innerPopupRef.current?.querySelectorAll(
+        'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+      )
 
       // Handle case when no interactive element are within the modal (including close icon)
-      if (focusableEls.length === 0) {
+      if (focusableEls?.length === 0) {
         event.preventDefault()
       }
 
-      const firstFocusableEl = focusableEls[0] as HTMLElement
-      const lastFocusableEl = focusableEls[
-        focusableEls.length - 1
-      ] as HTMLElement
+      if (focusableEls) {
+        const elems = [...focusableEls]
+        const firstFocusableEl = elems[0]
+        const lastFocusableEl = elems.at(-1)
 
-      if (event.shiftKey) {
-        if (
-          document.activeElement === firstFocusableEl ||
+        if (event.shiftKey) {
+          if (
+            document.activeElement === firstFocusableEl ||
+            document.activeElement === innerPopupRef.current
+          ) {
+            if (lastFocusableEl instanceof HTMLElement) {
+              lastFocusableEl.focus()
+            }
+            event.preventDefault()
+          }
+        } else if (
+          document.activeElement === lastFocusableEl ||
           document.activeElement === innerPopupRef.current
         ) {
-          lastFocusableEl.focus()
+          if (firstFocusableEl instanceof HTMLElement) {
+            firstFocusableEl.focus()
+          }
           event.preventDefault()
         }
-      } else if (
-        document.activeElement === lastFocusableEl ||
-        document.activeElement === innerPopupRef.current
-      ) {
-        firstFocusableEl.focus()
-        event.preventDefault()
       }
     }, [])
 

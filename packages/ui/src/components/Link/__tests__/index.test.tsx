@@ -16,8 +16,7 @@ describe('link', () => {
         <Link href="/" sentiment={sentiment as 'primary' | 'info'}>
           Hello
         </Link>,
-      ),
-    )
+      ))
   })
 
   describe('prominence', () => {
@@ -31,8 +30,7 @@ describe('link', () => {
         <Link href="/" prominence={prominence as ProminenceProps}>
           Hello
         </Link>,
-      ),
-    )
+      ))
   })
 
   test(`render correctly with target blank`, () =>
