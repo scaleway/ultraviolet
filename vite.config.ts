@@ -39,6 +39,7 @@ const targets = resolveToEsbuildTarget(
 
 export const defaultConfig: ViteUserConfig = {
   build: {
+    emitAssets: true,
     emptyOutDir: true,
     lib: {
       entry: 'src/index.ts',
