@@ -2,6 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabledManagers": ["dockerfile", "github-actions", "npm"],
   "extends": ["config:base", ":combinePatchMinorReleases"],
+  "baseBranches": ["beta"],
+  "targetBranches": ["beta"],
   "assignees": ["team:console"],
   "assigneesSampleSize": 1,
   "reviewers": ["team:console"],
