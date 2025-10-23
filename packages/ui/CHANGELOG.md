@@ -1,5 +1,30 @@
 # Change Log
 
+## 3.0.0-beta.22
+
+### Minor Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `InfoTable` to use vanilla extract instead of Emotion
+
+  - Add prop "style" to `Row`
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`7091562`](https://github.com/scaleway/ultraviolet/commit/709156284a91877ccbe72feba79b4ae44797319f) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `List` and `OfferList` to use vanilla-extract instead of Emotion
+
+  - HeaderCell: Rename prop `minWith`-> `minWidth`
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`203174a`](https://github.com/scaleway/ultraviolet/commit/203174a4d8a5e74bdff04b9d961b478423a8da1e) Thanks [@lisalupi](https://github.com/lisalupi)! - `UnitInput`: remove `&&` in style, since it is not needed anymore and replace id use with vanilla-extract class
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`0e47e5c`](https://github.com/scaleway/ultraviolet/commit/0e47e5c2288171ce4a3b3b613dbb4da4165428c7) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Menu` to usa vanilla extract instead of Emotion
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`a67faa2`](https://github.com/scaleway/ultraviolet/commit/a67faa2467ff6624b7a8c552c8e0b9d26c5b3063) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Dialog` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`97f362c`](https://github.com/scaleway/ultraviolet/commit/97f362ca8f84a654bd0174b719c5e660991fd866) Thanks [@lisalupi](https://github.com/lisalupi)! - `Breadcrumbs`: add padding on item without prop "to"
+
+- Updated dependencies [[`bf7256b`](https://github.com/scaleway/ultraviolet/commit/bf7256b5d2ef4b3b1346037bff5d86c2f47e4785)]:
+  - @ultraviolet/icons@5.0.0-beta.7
+
 ## 3.0.0-beta.21
 
 ### Minor Changes

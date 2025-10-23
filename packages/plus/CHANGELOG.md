@@ -1,5 +1,23 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.11
+
+### Minor Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `InfoTable` to use vanilla extract instead of Emotion
+
+  - Add prop "style" to `Row`
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`de4cc1c`](https://github.com/scaleway/ultraviolet/commit/de4cc1c180e36fbe991da9268871b21868bd7112) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Conversation` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`f0df145`](https://github.com/scaleway/ultraviolet/commit/f0df145add1796ded05c854d9e7c21fe40802c62) Thanks [@lisalupi](https://github.com/lisalupi)! - `CodeEditor`: add backgroundc color on copy button for readability
+
+- Updated dependencies [[`bf7256b`](https://github.com/scaleway/ultraviolet/commit/bf7256b5d2ef4b3b1346037bff5d86c2f47e4785), [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5), [`7091562`](https://github.com/scaleway/ultraviolet/commit/709156284a91877ccbe72feba79b4ae44797319f), [`203174a`](https://github.com/scaleway/ultraviolet/commit/203174a4d8a5e74bdff04b9d961b478423a8da1e), [`0e47e5c`](https://github.com/scaleway/ultraviolet/commit/0e47e5c2288171ce4a3b3b613dbb4da4165428c7), [`a67faa2`](https://github.com/scaleway/ultraviolet/commit/a67faa2467ff6624b7a8c552c8e0b9d26c5b3063), [`97f362c`](https://github.com/scaleway/ultraviolet/commit/97f362ca8f84a654bd0174b719c5e660991fd866)]:
+  - @ultraviolet/icons@5.0.0-beta.7
+  - @ultraviolet/ui@3.0.0-beta.22
+
 ## 3.0.0-beta.10
 
 ### Minor Changes

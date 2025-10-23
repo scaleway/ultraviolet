@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-beta.7
+
+### Patch Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`bf7256b`](https://github.com/scaleway/ultraviolet/commit/bf7256b5d2ef4b3b1346037bff5d86c2f47e4785) Thanks [@lisalupi](https://github.com/lisalupi)! - `Logo`: new logo `ToucanTocoLogo`
+
 ## 5.0.0-beta.6
 
 ### Major Changes
