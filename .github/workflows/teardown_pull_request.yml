@@ -28,9 +28,9 @@ jobs:
         with:
           type: "teardown"
           scw_dns: ${{ env.SCW_DNS }}
-          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_access_key: ${{ vars.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_containers_namespace_id: ${{ vars.SCW_CONTAINERS_NAMESPACE_ID }}
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
 
       - name: Remove storybook deployment
