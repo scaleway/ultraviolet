@@ -2,8 +2,8 @@
 
 import { NumberInput as NumberInputUV } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
-import { ItemResourceName } from '../componentStyle'
 import { useOverlay } from '../OverlayContext'
+import { estimateCostItemResourceName } from './components.css'
 import { Regular } from './Regular'
 
 type NumberInputProps = {
@@ -31,9 +31,9 @@ export const NumberInput = ({
   }, [getAmountValue, amount])
 
   return isOverlay ? (
-    <ItemResourceName animated={false}>
+    <div className={estimateCostItemResourceName()}>
       <Regular>{amount}</Regular>
-    </ItemResourceName>
+    </div>
   ) : (
     <NumberInputUV
       controls={controls}

@@ -2,331 +2,30 @@
 
 exports[`estimateCost - Regular Item > render basic props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  text-align: right;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-45 {
-  text-align: right;
-}
-
-.emotion-47 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-51 {
-  width: 70%;
-}
-
-.emotion-53 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-55 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -341,10 +40,10 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -353,7 +52,7 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -371,13 +70,13 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -395,23 +94,23 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -424,10 +123,10 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -512,14 +211,14 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -535,10 +234,10 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-39 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-41 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -546,10 +245,12 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-43 emotion-44"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-45 emotion-46 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -560,28 +261,29 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-47 emotion-48"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-51 emotion-52"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-53 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -598,301 +300,30 @@ exports[`estimateCost - Regular Item > render basic props 1`] = `
 
 exports[`estimateCost - Regular Item > render basic props with is not defined 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-10:first-of-type,
-.emotion-10:last-child {
-  border: 0;
-}
-
-.emotion-12 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-19 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-19>* {
-  margin-top: 0;
-}
-
-.emotion-19>*+* {
-  margin-top: 16px;
-}
-
-.emotion-21 {
-  background-color: #ffffff;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-25 {
-  margin-right: 0.5rem;
-}
-
-.emotion-27 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-29 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-33 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-37 {
-  text-align: right;
-}
-
-.emotion-39 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-41 {
-  text-align: right;
-}
-
-.emotion-43 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-47 {
-  width: 70%;
-}
-
-.emotion-49 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-51 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -907,7 +338,7 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   Not defined
                 </div>
@@ -915,7 +346,7 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
             </div>
           </li>
           <li
-            class="emotion-10 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -933,13 +364,13 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
               Estimated cost
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-14 emotion-15 emotion-16"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-17 emotion-18"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -957,23 +388,23 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-19 emotion-134"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-21 emotion-132"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-23 emotion-24"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-25 emotion-26 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -986,10 +417,10 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
                 </h3>
               </th>
               <th
-                class="emotion-27 emotion-28"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -1074,14 +505,14 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
           </thead>
           <tbody>
             <tr
-              class="emotion-31 emotion-32"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-33 emotion-131"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-35 emotion-36"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1097,17 +528,19 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
                     </div>
                   </div>
                   <div
-                    class="emotion-37 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     Not defined
                   </div>
                 </div>
               </td>
               <td
-                class="emotion-39 emotion-40"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-41 emotion-42 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -1118,28 +551,29 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-43 emotion-44"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-21 emotion-132"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-47 emotion-48"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-49 emotion-130"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-51 emotion-52 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-17 emotion-18"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -1156,331 +590,30 @@ exports[`estimateCost - Regular Item > render basic props with is not defined 1`
 
 exports[`estimateCost - Regular Item > render basic props with long fractions digits 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  text-align: right;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-45 {
-  text-align: right;
-}
-
-.emotion-47 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-51 {
-  width: 70%;
-}
-
-.emotion-53 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-55 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -1495,10 +628,10 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -1507,7 +640,7 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -1525,13 +658,13 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -1549,23 +682,23 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -1578,10 +711,10 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -1666,14 +799,14 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1689,10 +822,10 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
                     </div>
                   </div>
                   <div
-                    class="emotion-39 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-41 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -1700,10 +833,12 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
                 </div>
               </td>
               <td
-                class="emotion-43 emotion-44"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-45 emotion-46 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.000001
                 </p>
@@ -1714,28 +849,29 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-47 emotion-48"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-51 emotion-52"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-53 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.000001
                   </span>
@@ -1752,335 +888,30 @@ exports[`estimateCost - Regular Item > render basic props with long fractions di
 
 exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  text-align: right;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-45 {
-  text-align: right;
-}
-
-.emotion-47 {
-  text-align: right;
-}
-
-.emotion-49 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-53 {
-  width: 70%;
-}
-
-.emotion-55 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-57 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -2095,10 +926,10 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -2107,7 +938,7 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -2125,13 +956,13 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00 - €0.0001/Hour(s)
                 </span>
@@ -2149,23 +980,23 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -2178,10 +1009,10 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -2266,14 +1097,14 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2289,10 +1120,10 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-39 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-41 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -2300,15 +1131,18 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-43 emotion-44"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-45 emotion-46 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00 - €0.0001
                 </p>
                 <p
-                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00/Node/hour(s)
                 </p>
@@ -2319,28 +1153,29 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-49 emotion-50"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-53 emotion-54"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-55 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.00 - €0.0001
                   </span>
@@ -2357,335 +1192,30 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice 1`] = `
 
 exports[`estimateCost - Regular Item > render basic props with maxPrice and longFractionDigits 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  text-align: right;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-45 {
-  text-align: right;
-}
-
-.emotion-47 {
-  text-align: right;
-}
-
-.emotion-49 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-53 {
-  width: 70%;
-}
-
-.emotion-55 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-57 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -2700,10 +1230,10 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -2712,7 +1242,7 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -2730,13 +1260,13 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00001 - €0.0001/Hour(s)
                 </span>
@@ -2754,23 +1284,23 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -2783,10 +1313,10 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -2871,14 +1401,14 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2894,10 +1424,10 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
                     </div>
                   </div>
                   <div
-                    class="emotion-39 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-41 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -2905,15 +1435,18 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
                 </div>
               </td>
               <td
-                class="emotion-43 emotion-44"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-45 emotion-46 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00001 - €0.0001
                 </p>
                 <p
-                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.000001/GB/hour(s)
                 </p>
@@ -2924,28 +1457,29 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-49 emotion-50"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-53 emotion-54"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-55 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.00001 - €0.0001
                   </span>
@@ -2962,415 +1496,37 @@ exports[`estimateCost - Regular Item > render basic props with maxPrice and long
 
 exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 12px 0;
-  min-width: 158px;
-}
-
-.emotion-6 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-6:first-of-type,
-.emotion-6:last-child {
-  border: 0;
-}
-
-.emotion-8 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-10 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-14 {
-  max-width: 200px;
-}
-
-.emotion-16 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  display: none;
-}
-
-.emotion-16:first-of-type,
-.emotion-16:last-child {
-  border: 0;
-}
-
-@media (max-width: 1800px) {
-  .emotion-16 {
-    display: none;
-  }
-}
-
-.emotion-24 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-24:first-of-type,
-.emotion-24:last-child {
-  border: 0;
-}
-
-.emotion-26 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-35 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-35>* {
-  margin-top: 0;
-}
-
-.emotion-35>*+* {
-  margin-top: 16px;
-}
-
-.emotion-37 {
-  background-color: #ffffff;
-}
-
-.emotion-39 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-41 {
-  margin-right: 0.5rem;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-45 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-49 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-49:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: calc(100% - 32px);
-  margin-left: 16px;
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-51 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-53 {
-  text-align: right;
-}
-
-.emotion-55 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-57 {
-  max-width: 350px;
-}
-
-.emotion-59 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-59:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: calc(100% - 32px);
-  margin-left: 16px;
-  border-bottom: 1px solid #d9dadd;
-}
-
-.emotion-61 {
-  text-align: right;
-}
-
-.emotion-65 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-73 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-77 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-81 {
-  width: 70%;
-}
-
-.emotion-83 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-85 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgay"
           >
             <div>
               Submit
             </div>
           </li>
           <li
-            class="emotion-6 emotion-7"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-8 emotion-9"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -3385,14 +1541,15 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-10 emotion-11"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-12 emotion-13"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     <div>
                       <p
-                        class="emotion-14 emotion-15 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                        class="components__1ko5kn21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                        style="--_1ko5kn20: 200px;"
                       >
                         This is a regular Item
                       </p>
@@ -3403,13 +1560,15 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
             </div>
           </li>
           <li
-            class="emotion-16 emotion-7"
+            class="styles__sk5tgak styles_hideFromOverlay_true__sk5tgan styles_shouldBeHidden_true__sk5tgam"
           >
             <div
-              class="emotion-8 emotion-9"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -3424,10 +1583,10 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-10 emotion-11"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-12 emotion-13"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     Hidden element in overlay
                   </div>
@@ -3436,7 +1595,7 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
             </div>
           </li>
           <li
-            class="emotion-24 emotion-7"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -3454,13 +1613,13 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-26 emotion-27"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-28 emotion-29 emotion-13"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-31 emotion-32"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -3468,7 +1627,7 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
             </div>
           </li>
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgay"
           >
             <div>
               Submit
@@ -3485,23 +1644,23 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-35 emotion-274"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-37 emotion-272"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-39 emotion-40"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-41 emotion-42 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -3514,10 +1673,10 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-43 emotion-44"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-45 emotion-46"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -3602,14 +1761,14 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-47 emotion-48"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-49 emotion-271"
-                width="70%"
+                class="styles__sk5tga9 styles_hasBorder_true__sk5tgaa"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-51 emotion-52"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -3625,16 +1784,17 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-53 emotion-11"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-55 emotion-13"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       <div
                         style="display: inline-flex;"
                       >
                         <p
-                          class="emotion-57 emotion-15 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                          class="components__1ko5kn21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                          style="--_1ko5kn20: 350px;"
                         >
                           This is a regular Item
                         </p>
@@ -3644,24 +1804,26 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-59 emotion-60"
+                class="styles__sk5tga9 styles_hasBorder_true__sk5tgaa styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
               </td>
             </tr>
             <tr
-              class="emotion-47 emotion-48"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-65 emotion-271"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-51 emotion-52"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -3677,10 +1839,10 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-53 emotion-11"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-55 emotion-13"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       Hidden element in overlay
                     </div>
@@ -3688,10 +1850,12 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-73 emotion-60"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -3702,28 +1866,29 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-77 emotion-78"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-37 emotion-272"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-81 emotion-82"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-83 emotion-270"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-85 emotion-86 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-31 emotion-32"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -3740,372 +1905,30 @@ exports[`estimateCost - Regular Item > render basic props with overlay 1`] = `
 
 exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  max-width: 200px;
-}
-
-.emotion-16 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-16:first-of-type,
-.emotion-16:last-child {
-  border: 0;
-}
-
-.emotion-18 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-23 {
-  text-decoration-line: line-through;
-  text-decoration-color: #7c5400;
-}
-
-.emotion-25 {
-  display: inline-block;
-  height: 24px;
-  line-height: 18px;
-  font-size: 12px;
-  margin-right: 8px;
-}
-
-.emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 12px 0;
-  min-width: 158px;
-}
-
-.emotion-29 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-29>* {
-  margin-top: 0;
-}
-
-.emotion-29>*+* {
-  margin-top: 16px;
-}
-
-.emotion-31 {
-  background-color: #ffffff;
-}
-
-.emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-35 {
-  margin-right: 0.5rem;
-}
-
-.emotion-37 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-39 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-45 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-47 {
-  text-align: right;
-}
-
-.emotion-49 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-51 {
-  max-width: 350px;
-}
-
-.emotion-55 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-57 {
-  text-align: right;
-}
-
-.emotion-59 {
-  text-align: right;
-}
-
-.emotion-61 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-65 {
-  width: 70%;
-}
-
-.emotion-67 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-69 {
-  margin-left: -115px;
-  position: absolute;
-  top: calc(50% - 16px);
-}
-
-.emotion-71 {
-  text-align: right;
-  margin-left: 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -4120,21 +1943,22 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     <div>
                       <p
-                        class="emotion-12 emotion-13 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                        class="components__1ko5kn21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                        style="--_1ko5kn20: 200px;"
                       >
                         This is a regular Item 1
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item 2
                   </div>
@@ -4143,7 +1967,7 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
             </div>
           </li>
           <li
-            class="emotion-16 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -4161,19 +1985,19 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
               Estimated cost
             </div>
             <div
-              class="emotion-18 emotion-19"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-20 emotion-21 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-23 emotion-24"
+                  class=" components__1ko5kn2g"
                 >
                   €0.00 - €0.10/Hour(s)
                 </span>
               </div>
               <span
-                class="emotion-25 emotion-26 uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jye uv_1yf71jy9 uv_1yf71jys uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
+                class="styles__sk5tgao uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jye uv_1yf71jy9 uv_1yf71jys uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
                 style="--uv_qabug41: nowrap;"
               >
                 Free During Beta
@@ -4181,7 +2005,7 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
             </div>
           </li>
           <li
-            class="emotion-27 emotion-28"
+            class="styles__sk5tgay"
           >
             <div>
               Submit
@@ -4198,23 +2022,23 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-29 emotion-194"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-31 emotion-192"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-33 emotion-34"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-35 emotion-36 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -4227,10 +2051,10 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
                 </h3>
               </th>
               <th
-                class="emotion-37 emotion-38"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-39 emotion-40"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -4315,14 +2139,14 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
           </thead>
           <tbody>
             <tr
-              class="emotion-41 emotion-42"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-43 emotion-191"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-45 emotion-46"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -4338,23 +2162,24 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
                     </div>
                   </div>
                   <div
-                    class="emotion-47 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-49 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       <div
                         style="display: inline-flex;"
                       >
                         <p
-                          class="emotion-51 emotion-13 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                          class="components__1ko5kn21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                          style="--_1ko5kn20: 350px;"
                         >
                           This is a regular Item 1
                         </p>
                       </div>
                     </div>
                     <div
-                      class="emotion-49 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item 2
                     </div>
@@ -4362,15 +2187,18 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
                 </div>
               </td>
               <td
-                class="emotion-55 emotion-56"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00 - €0.10
                 </p>
                 <p
-                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  style="--uv_qabug40: right;"
                 >
                   €0.001/GB/hour(s)
                 </p>
@@ -4381,35 +2209,36 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-61 emotion-62"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-31 emotion-192"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-65 emotion-66"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-67 emotion-190"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <span
-                  class="emotion-69 emotion-70 uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jye uv_1yf71jy9 uv_1yf71jys uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
+                  class="styles_short__sk5tgaj styles__sk5tgah uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jye uv_1yf71jy9 uv_1yf71jys uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
                   style="--uv_qabug41: nowrap;"
                 >
                   
                           Free During Beta
                 </span>
                 <h3
-                  class="emotion-71 emotion-72 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_beta__sk5tgaq uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-23 emotion-24"
+                    class=" components__1ko5kn2g"
                   >
                     €0.00 - €0.10
                   </span>
@@ -4426,335 +2255,30 @@ exports[`estimateCost - Regular Item > render basic props with overlay beta 1`] 
 
 exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  margin-left: 0.5rem;
-}
-
-.emotion-41 {
-  text-align: right;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-45 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-47 {
-  text-align: right;
-}
-
-.emotion-49 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-53 {
-  width: 70%;
-}
-
-.emotion-55 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-57 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -4769,10 +2293,10 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -4781,7 +2305,7 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -4799,13 +2323,13 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -4823,23 +2347,23 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -4852,10 +2376,10 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -4940,14 +2464,14 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -4961,17 +2485,17 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
                         Regular
                       </p>
                       <p
-                        class="emotion-39 emotion-40 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                        class="components__1ko5kn2d uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                       >
                         Excellent
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-41 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-43 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -4979,10 +2503,12 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-45 emotion-46"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-47 emotion-48 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -4993,28 +2519,29 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-49 emotion-50"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-53 emotion-54"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-55 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-57 emotion-58 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -5031,331 +2558,30 @@ exports[`estimateCost - Regular Item > render basic props with sublabel 1`] = `
 
 exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  text-align: right;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-45 {
-  text-align: right;
-}
-
-.emotion-47 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-51 {
-  width: 70%;
-}
-
-.emotion-53 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-55 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -5370,10 +2596,10 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -5382,7 +2608,7 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -5400,13 +2626,13 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -5424,23 +2650,23 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -5453,10 +2679,10 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -5541,14 +2767,14 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -5564,10 +2790,10 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
                     </div>
                   </div>
                   <div
-                    class="emotion-39 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-41 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -5575,10 +2801,12 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
                 </div>
               </td>
               <td
-                class="emotion-43 emotion-44"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-45 emotion-46 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -5589,28 +2817,29 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-47 emotion-48"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-51 emotion-52"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-53 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -5627,339 +2856,30 @@ exports[`estimateCost - Regular Item > render basic props with textNotDefined 1`
 
 exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  max-width: 200px;
-}
-
-.emotion-14 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-14:first-of-type,
-.emotion-14:last-child {
-  border: 0;
-}
-
-.emotion-16 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-23 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-23>* {
-  margin-top: 0;
-}
-
-.emotion-23>*+* {
-  margin-top: 16px;
-}
-
-.emotion-25 {
-  background-color: #ffffff;
-}
-
-.emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-29 {
-  margin-right: 0.5rem;
-}
-
-.emotion-31 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-33 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-37 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-39 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-41 {
-  text-align: right;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-45 {
-  max-width: 350px;
-}
-
-.emotion-47 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-49 {
-  text-align: right;
-}
-
-.emotion-51 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-55 {
-  width: 70%;
-}
-
-.emotion-57 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-59 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -5974,14 +2894,15 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     <div>
                       <p
-                        class="emotion-12 emotion-13 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                        class="components__1ko5kn21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                        style="--_1ko5kn20: 200px;"
                       >
                         This is a regular Item
                       </p>
@@ -5992,7 +2913,7 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
             </div>
           </li>
           <li
-            class="emotion-14 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -6010,13 +2931,13 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-18 emotion-19 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-21 emotion-22"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -6034,23 +2955,23 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-23 emotion-174"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-25 emotion-172"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-27 emotion-28"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-29 emotion-30 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -6063,10 +2984,10 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-31 emotion-32"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-33 emotion-34"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -6151,14 +3072,14 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-35 emotion-36"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-37 emotion-171"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-39 emotion-40"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -6174,16 +3095,17 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-41 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-43 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       <div
                         style="display: inline-flex;"
                       >
                         <p
-                          class="emotion-45 emotion-13 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                          class="components__1ko5kn21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                          style="--_1ko5kn20: 350px;"
                         >
                           This is a regular Item
                         </p>
@@ -6193,10 +3115,12 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-47 emotion-48"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-49 emotion-50 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -6207,28 +3131,29 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-51 emotion-52"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-25 emotion-172"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-55 emotion-56"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-57 emotion-170"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-59 emotion-60 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-21 emotion-22"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -6245,331 +3170,30 @@ exports[`estimateCost - Regular Item > render basic with ellipsis 1`] = `
 
 exports[`estimateCost - Regular Item > render with alert 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-12 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-12:first-of-type,
-.emotion-12:last-child {
-  border: 0;
-}
-
-.emotion-14 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-21>* {
-  margin-top: 0;
-}
-
-.emotion-21>*+* {
-  margin-top: 16px;
-}
-
-.emotion-23 {
-  background-color: #ffffff;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-27 {
-  margin-right: 0.5rem;
-}
-
-.emotion-29 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-31 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-35 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-39 {
-  text-align: right;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-43 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-45 {
-  text-align: right;
-}
-
-.emotion-47 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-51 {
-  width: 70%;
-}
-
-.emotion-53 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-55 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -6584,10 +3208,10 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11"
+                    class="components__1ko5kn2h components_isOverlay_true__1ko5kn2i components_variant_normal__1ko5kn2k"
                   >
                     This is a regular Item
                   </div>
@@ -6596,7 +3220,7 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
             </div>
           </li>
           <li
-            class="emotion-12 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -6614,13 +3238,13 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-14 emotion-15"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-16 emotion-17 emotion-11"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-19 emotion-20"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -6676,23 +3300,23 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-21 emotion-154"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-25 emotion-26"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-27 emotion-28 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -6705,10 +3329,10 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-29 emotion-30"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -6793,14 +3417,14 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-33 emotion-34"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-35 emotion-151"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-37 emotion-38"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -6816,10 +3440,10 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-39 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-41 emotion-11"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -6827,10 +3451,12 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-43 emotion-44"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-45 emotion-46 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -6841,28 +3467,29 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-47 emotion-48"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-23 emotion-152"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-51 emotion-52"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-53 emotion-150"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-55 emotion-56 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class=" "
                   >
                     €0.00
                   </span>
@@ -6879,316 +3506,30 @@ exports[`estimateCost - Regular Item > render with alert 1`] = `
 
 exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-10:first-of-type,
-.emotion-10:last-child {
-  border: 0;
-}
-
-.emotion-12 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-19 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-19>* {
-  margin-top: 0;
-}
-
-.emotion-19>*+* {
-  margin-top: 16px;
-}
-
-.emotion-21 {
-  background-color: #ffffff;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-25 {
-  margin-right: 0.5rem;
-}
-
-.emotion-27 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-29 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-33 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-37 {
-  text-align: right;
-}
-
-.emotion-39 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-}
-
-.emotion-41 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-43 {
-  text-align: right;
-}
-
-.emotion-45 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-49 {
-  width: 70%;
-}
-
-.emotion-51 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-53 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -7203,13 +3544,13 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 />
               </div>
             </div>
           </li>
           <li
-            class="emotion-10 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -7227,13 +3568,13 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-12 emotion-13"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-14 emotion-15 emotion-16"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-17 emotion-18"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -7251,23 +3592,23 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-19 emotion-134"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-21 emotion-132"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-23 emotion-24"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-25 emotion-26 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -7280,10 +3621,10 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-27 emotion-28"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -7368,14 +3709,14 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-31 emotion-32"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-33 emotion-131"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-35 emotion-36"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -7391,10 +3732,10 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-37 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-39 emotion-16"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k"
                     >
                       This is a regular Item
                     </div>
@@ -7402,10 +3743,12 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-41 emotion-42"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-43 emotion-44 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -7416,28 +3759,29 @@ exports[`estimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-45 emotion-46"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-21 emotion-132"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-49 emotion-50"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-51 emotion-130"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-53 emotion-54 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-17 emotion-18"
+                    class=" "
                   >
                     €0.00
                   </span>

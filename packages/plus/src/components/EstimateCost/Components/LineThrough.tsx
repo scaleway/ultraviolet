@@ -1,20 +1,15 @@
 'use client'
 
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
+import type { ComponentProps } from 'react'
+import { estimateCostLineThrough } from './components.css'
 
-type LineThroughProps = {
+type LineThroughProps = ComponentProps<'span'> & {
   isActive?: boolean
 }
 
-export const LineThrough = styled('span', {
-  shouldForwardProp: prop => !['isActive'].includes(prop),
-})<LineThroughProps>`
-  ${({ isActive, theme }) =>
-    isActive
-      ? css`
-          text-decoration-line: line-through;
-          text-decoration-color: ${theme.colors.warning.border};
-        `
-      : null}
-`
+export const LineThrough = ({ isActive, ...props }: LineThroughProps) => (
+  <span
+    className={`${props.className ? `${props.className} ` : ''} ${isActive ? estimateCostLineThrough : ''}`}
+    {...props}
+  />
+)
