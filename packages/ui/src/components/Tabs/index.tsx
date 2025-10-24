@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import {
   Children,
@@ -11,67 +10,11 @@ import {
   useRef,
   useState,
 } from 'react'
-import { StyledTabButton, Tab } from './Tab'
+import { tabsContainer, tabsMenu, tabsMenuContainer } from './styles.css'
+import { Tab } from './Tab'
 import { TabMenu } from './TabMenu'
 import { TabMenuItem } from './TabMenuItem'
 import { TabsContext } from './TabsContext'
-
-const MenuContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  ${StyledTabButton} {
-    font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-    line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
-    font-weight: inherit;
-    padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
-    border-bottom-width: 1.5px;
-    width: 100%;
-    cursor: pointer;
-    min-width: 6.875rem;
-    background-color: transparent;
-    &[aria-disabled='true'],
-    &:disabled {
-      cursor: not-allowed;
-      filter: grayscale(1) opacity(50%);
-    }
-  }
-`
-
-// Migration to Menu will not work as expected here.
-const StyledTabMenu = styled(TabMenu)`
-  position: sticky;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: ${({ theme }) => theme.colors.neutral.background};
-  box-shadow: ${({ theme }) => theme.shadows.menu};
-`
-
-const TabsContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-
-  &::after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: ${({ theme }) => theme.colors.neutral.border};
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`
 
 type TabsProps = {
   selected?: string | number
@@ -159,8 +102,8 @@ export const Tabs = ({
 
   return (
     <TabsContext.Provider value={value}>
-      <TabsContainer
-        className={className}
+      <div
+        className={`${className ? `${className} ` : ''}${tabsContainer}`}
         data-testid={dataTestId}
         ref={tabsRef}
         role="tablist"
@@ -168,11 +111,15 @@ export const Tabs = ({
       >
         {children}
         {displayMore ? (
-          <StyledTabMenu disclosure={moreDisclosure} ref={moreStaticRef}>
-            <MenuContainer>{menuItemChildren}</MenuContainer>
-          </StyledTabMenu>
+          <TabMenu
+            className={tabsMenu}
+            disclosure={moreDisclosure}
+            ref={moreStaticRef}
+          >
+            <div className={tabsMenuContainer}>{menuItemChildren}</div>
+          </TabMenu>
         ) : null}
-      </TabsContainer>
+      </div>
     </TabsContext.Provider>
   )
 }
