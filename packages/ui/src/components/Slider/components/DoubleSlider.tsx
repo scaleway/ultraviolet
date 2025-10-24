@@ -1,116 +1,28 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { useTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
 import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
 import { THUMB_SIZE } from '../constant'
-import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
+import {
+  leftVar,
+  sliderCustomRail,
+  sliderDouble,
+  sliderDoubleText,
+  sliderDoubleWrapper,
+  sliderInnerRail,
+  sliderThumbStyle,
+  sliderTooltip,
+  thumbColor,
+  tooltipLeft,
+} from '../styles.css'
 import type { DoubleSliderProps } from '../types'
 import { Options } from './Options'
-
-const StyledTextValue = styled(Text, {
-  shouldForwardProp: prop => !['double', 'isColumn'].includes(prop),
-})<{ double: boolean; isColumn: boolean }>`
-  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space['5'])};
-  align-self: ${({ double }) => (double ? 'center' : 'end')};
-`
-
-const SliderElement = styled('input', {
-  shouldForwardProp: prop =>
-    !['themeSlider', 'suffix', 'left', 'hasTooltip'].includes(prop),
-})<{
-  themeSlider: string
-  disabled: boolean
-  suffix: boolean
-  left: number
-  hasTooltip: boolean
-}>`
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-
-
-  &:focus {
-    &::-moz-range-thumb {
-      border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
-      box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
-      }
-
-    &::-webkit-slider-thumb {
-      border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
-      box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
-
-    }
-  }
-
-  /* Mozilla */
-  &::-moz-range-track {
-    ${trackStyle}
-  }
-  &::-moz-range-thumb {
-    ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, true)}
-    ${({ hasTooltip }) =>
-      hasTooltip &&
-      `transform: translate(0, -10px);
-`}
-    }
-
-  /* Other browsers */
-  &::-ms-track {
-    ${trackStyle}
-  }
-
-  &:focus::-webkit-slider-runnable-track {
-    ${trackStyle}
-  }
-
-  &::-webkit-slider-thumb {
-    ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, true)}
-  }
-`
-const DoubleSliderWrapper = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: ${({ theme }) => theme.sizing['100']};
-  align-self: center;
-  `
-
-const CustomRail = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: ${({ theme }) => theme.sizing['100']};
-  width: 100%;
-  min-width: 13.75rem;
-  border-radius: ${({ theme }) => theme.radii.default};
-  background: ${({ theme }) => theme.colors.neutral.borderWeak};
-`
-
-const InnerRail = styled.div`
-  position: absolute;
-  height: 100%;
-  background-color: ${({ theme }) => theme.colors.primary.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  &[data-error='true']{
-    background-color: ${({ theme }) => theme.colors.danger.backgroundStrong};
-  }
-
-  &[aria-disabled='true'] {
-    background-color: ${({ theme }) => theme.colors.primary.borderDisabled};
-  }
-`
 
 export const DoubleSlider = ({
   name,
@@ -138,7 +50,7 @@ export const DoubleSlider = ({
   tooltipPosition,
   'aria-label': ariaLabel,
 }: DoubleSliderProps) => {
-  const { theme } = useTheme()
+  const theme = useTheme()
   const localId = useId()
   const finalId = id ?? localId
   const refSlider = useRef<HTMLInputElement>(null)
@@ -293,13 +205,15 @@ export const DoubleSlider = ({
         value={side === 'left' ? inputValue?.[0] : inputValue?.[1]}
       />
     ) : (
-      <StyledTextValue
+      <Text
         as="span"
+        className={sliderDoubleText({
+          isDouble: true,
+          isPadded: direction !== 'column',
+        })}
         data-testid={
           dataTestId ? `${dataTestId}-value-${side}` : `value-${side}`
         }
-        double
-        isColumn={direction === 'column'}
         placement={direction !== 'row' ? 'right' : 'center'}
         sentiment="neutral"
         variant="bodySmall"
@@ -307,7 +221,7 @@ export const DoubleSlider = ({
         {prefix}
         {valueNumber}
         {suffix ? suffix[side === 'left' ? 0 : 1] : unit}
-      </StyledTextValue>
+      </Text>
     )
 
   // Position of the sliders to look like one range slider
@@ -373,35 +287,43 @@ export const DoubleSlider = ({
           </Stack>
         ) : null}
         {direction === 'row' ? styledValue(leftToShow, 'left') : null}
-        <DoubleSliderWrapper>
-          <StyledTooltip
-            left={(placementTooltip[0] + placementTooltip[1]) / 2}
+        <div className={sliderDoubleWrapper}>
+          <Tooltip
+            className={sliderTooltip}
             placement={tooltipPosition}
+            style={assignInlineVars({
+              [tooltipLeft]: `${(placementTooltip[0] + placementTooltip[1]) / 2}px`,
+            })}
             text={typeof tooltipText === 'string' ? tooltipText : undefined}
           >
-            <CustomRail>
-              <InnerRail
+            <div className={sliderCustomRail}>
+              <div
                 aria-disabled={!!disabled}
+                className={sliderInnerRail({
+                  disabled: !!disabled,
+                  error: !!error,
+                })}
                 data-error={!!error}
                 style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
               />
-            </CustomRail>
+            </div>
 
-            <StyledTooltip
-              left={placementTooltip[0]}
+            <Tooltip
+              className={sliderTooltip}
               placement={tooltipPosition}
+              style={assignInlineVars({
+                [tooltipLeft]: `${placementTooltip[0]}px`,
+              })}
               text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
             >
-              <SliderElement
+              <input
                 aria-label={ariaLabel ?? name}
-                className={className}
+                className={`${className ? `${className} ` : ''}${sliderDouble({ disabled, hasTooltip: !!tooltip })} ${sliderThumbStyle({ disabled: !!disabled, hasTooltipDouble: !!tooltip, isDouble: true })}`}
                 data-direction={direction}
                 data-error={error}
                 data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
                 disabled={!!disabled}
-                hasTooltip={!!tooltip}
                 id={finalId}
-                left={((selectedIndexes[0] - min) * 100) / (max - min)}
                 max={max}
                 min={min}
                 name={name}
@@ -413,29 +335,35 @@ export const DoubleSlider = ({
                 onFocus={onFocus}
                 ref={refSlider}
                 step={step}
-                suffix={!!(suffix || unit)}
-                themeSlider={theme}
+                style={assignInlineVars({
+                  [leftVar]: `calc(${((selectedIndexes[0] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [thumbColor]:
+                    theme.theme === 'light'
+                      ? theme.colors.neutral.background
+                      : theme.colors.neutral.backgroundStronger,
+                })}
                 type="range"
                 value={selectedIndexes[0]}
               />
-            </StyledTooltip>
-            <StyledTooltip
-              left={placementTooltip[1]}
+            </Tooltip>
+            <Tooltip
+              className={sliderTooltip}
               placement={tooltipPosition}
+              style={assignInlineVars({
+                [tooltipLeft]: `${placementTooltip[1]}px`,
+              })}
               text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
             >
-              <SliderElement
+              <input
                 aria-label={ariaLabel ?? name}
-                className={className}
+                className={`${className ? `${className} ` : ''}${sliderDouble({ disabled, hasTooltip: !!tooltip })} ${sliderThumbStyle({ disabled, hasTooltipDouble: !!tooltip, isDouble: true })}`}
                 data-direction={direction}
                 data-error={error}
                 data-testid={
                   dataTestId ? `${dataTestId}-right` : 'handle-right'
                 }
                 disabled={!!disabled}
-                hasTooltip={!!tooltip}
                 id={finalId}
-                left={((selectedIndexes[1] - min) * 100) / (max - min)}
                 max={max}
                 min={min}
                 name={name}
@@ -446,24 +374,28 @@ export const DoubleSlider = ({
                 }}
                 onFocus={onFocus}
                 step={step}
-                suffix={!!(suffix || unit)}
-                themeSlider={theme}
+                style={assignInlineVars({
+                  [leftVar]: `calc(${((selectedIndexes[1] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [thumbColor]:
+                    theme.theme === 'light'
+                      ? theme.colors.neutral.background
+                      : theme.colors.neutral.backgroundStronger,
+                })}
                 type="range"
                 value={selectedIndexes[1]}
               />
-            </StyledTooltip>
-          </StyledTooltip>
+            </Tooltip>
+          </Tooltip>
           {options ? (
             <Options
               max={max}
               min={min}
-              sliderWidth={sliderWidth}
               step={step}
               ticks={ticks}
               value={selectedIndexes}
             />
           ) : null}
-        </DoubleSliderWrapper>
+        </div>
         {direction === 'row' ? styledValue(rightToShow, 'right') : null}
       </Stack>
     </Stack>

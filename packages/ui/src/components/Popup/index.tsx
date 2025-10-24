@@ -2,6 +2,7 @@
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
+  CSSProperties,
   HTMLAttributes,
   KeyboardEventHandler,
   MouseEventHandler,
@@ -137,6 +138,7 @@ type PopupProps = {
    * reason you need to disable it, you can set it to `false`.
    */
   dynamicDomRendering?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -169,6 +171,7 @@ export const Popup = forwardRef(
       disableAnimation = false,
       portalTarget,
       dynamicDomRendering = true,
+      style,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -567,19 +570,22 @@ export const Popup = forwardRef(
                 onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
                 ref={innerPopupRef}
                 role={role}
-                style={assignInlineVars({
-                  [arrowTop]: `${positions.arrowTop}px`,
-                  [arrowLeft]: `${positions.arrowLeft}px`,
-                  [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
-                  [popupPosition]: positions.popupPosition,
-                  [animationDurationPopup]: `${animationDuration}ms`,
-                  [popupInitialPosition]: positions.popupInitialPosition,
-                  [maxWidthPopup]: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
-                  [maxHeightPopup]:
-                    typeof maxHeight === 'number'
-                      ? `${maxHeight}px`
-                      : maxHeight,
-                })}
+                style={{
+                  ...assignInlineVars({
+                    [arrowTop]: `${positions.arrowTop}px`,
+                    [arrowLeft]: `${positions.arrowLeft}px`,
+                    [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
+                    [popupPosition]: positions.popupPosition,
+                    [animationDurationPopup]: `${animationDuration}ms`,
+                    [popupInitialPosition]: positions.popupInitialPosition,
+                    [maxWidthPopup]: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
+                    [maxHeightPopup]:
+                      typeof maxHeight === 'number'
+                        ? `${maxHeight}px`
+                        : maxHeight,
+                  }),
+                  ...style,
+                }}
               >
                 <div
                   className={containerPopup({ hasMaxHeight: !!maxHeight })}

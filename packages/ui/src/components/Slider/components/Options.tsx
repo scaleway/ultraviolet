@@ -1,37 +1,8 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../../Text'
-import { THUMB_SIZE } from '../constant'
-
-export const DataList = styled.datalist`
-  width: 100%;
-  display: flex;
-  position: relative;
-  height: ${({ theme }) => theme.typography.caption.lineHeight};
-
-  &[data-double='true'] {
-    margin-top: ${({ theme }) => theme.space['5']};
-  }
-`
-
-export const Option = styled('span', {
-  shouldForwardProp: prop => !['left', 'width'].includes(prop),
-})<{ left: number; width: number }>`
-  display: flex;
-  white-space: nowrap;
-  left: ${({ left }) => left}%;
-  position: absolute;
-  transform: translateX(-50%);
-
-  &[data-element-left='true'] {
-    transform: none;
-  }
-
-  &[data-element-right='true'] {
-    transform: translateX(-100%);
-  }
-`
+import { leftOption, sliderDatalist, sliderOption } from '../styles.css'
 
 export type OptionsProps = {
   ticks: {
@@ -40,59 +11,55 @@ export type OptionsProps = {
   }[]
   min: number
   max: number
-  sliderWidth: number
   value?: number | number[]
   step: number
 }
 
-export const Options = ({
-  ticks,
-  min,
-  max,
-  sliderWidth,
-  value,
-  step,
-}: OptionsProps) => {
-  const optionWidth = ((sliderWidth - THUMB_SIZE / 2) * step) / (max - min)
+export const Options = ({ ticks, min, max, value, step }: OptionsProps) => (
+  <datalist
+    className={sliderDatalist({ double: Array.isArray(value) })}
+    data-double={Array.isArray(value)}
+  >
+    {ticks.map((element, index, { length }) => {
+      const left = ((index * step - min) * 100) / (max - min)
 
-  return (
-    <DataList data-double={Array.isArray(value)}>
-      {ticks.map((element, index, { length }) => {
-        const left = ((index * step - min) * 100) / (max - min)
+      const formatedElement = element.label ?? String(element.value)
 
-        const formatedElement = element.label ?? String(element.value)
-
-        const getIsSelected = () => {
-          if (!value) {
-            return false
-          }
-
-          return typeof value === 'number'
-            ? element.value === value
-            : value.includes(element.value)
+      const getIsSelected = () => {
+        if (!value) {
+          return false
         }
 
-        const isSelected = getIsSelected()
+        return typeof value === 'number'
+          ? element.value === value
+          : value.includes(element.value)
+      }
 
-        return (
-          <Option
-            data-element-left={index === 0}
-            data-element-right={index === length - 1}
-            data-value={element.value}
-            key={element.value}
-            left={left}
-            width={optionWidth}
+      const isSelected = getIsSelected()
+
+      return (
+        <span
+          className={sliderOption({
+            left: index === 0,
+            right: index === length - 1,
+          })}
+          data-element-left={index === 0}
+          data-element-right={index === length - 1}
+          data-value={element.value}
+          key={element.value}
+          style={assignInlineVars({
+            [leftOption]: `${left}%`,
+          })}
+        >
+          <Text
+            as="p"
+            sentiment={isSelected ? 'primary' : 'neutral'}
+            variant={isSelected ? 'captionStrong' : 'caption'}
           >
-            <Text
-              as="p"
-              sentiment={isSelected ? 'primary' : 'neutral'}
-              variant={isSelected ? 'captionStrong' : 'caption'}
-            >
-              {formatedElement}
-            </Text>
-          </Option>
-        )
-      })}
-    </DataList>
-  )
-}
+            {formatedElement}
+          </Text>
+        </span>
+      )
+    })}
+  </datalist>
+)
