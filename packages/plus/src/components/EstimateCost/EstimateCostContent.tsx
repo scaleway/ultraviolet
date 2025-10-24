@@ -1,8 +1,8 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CalculatorIcon } from '@ultraviolet/icons'
-import { Alert, Stack, Text } from '@ultraviolet/ui'
+import { Alert, Badge, Stack, Text } from '@ultraviolet/ui'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, ReactNode } from 'react'
 import {
   Children,
@@ -17,25 +17,30 @@ import { useInView } from 'react-intersection-observer'
 import { CustomUnitInput } from './Components/CustomUnitInput'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
-import {
-  BadgeBeta,
-  Cell,
-  EmptyCell,
-  EmptyTable,
-  PriceCol,
-  priceCell,
-  StyledFeesTable,
-  StyledTable,
-  TimeCell,
-  Title,
-  TotalPriceCell,
-} from './componentStyle'
 import { maximumFractionDigits, maximumFractionDigitsLong } from './constants'
 import { useEstimateCost } from './EstimateCostProvider'
 import { calculatePrice } from './helper'
 import EstimateCostLocales from './locales/en'
 import { OverlayComponent } from './OverlayComponent'
 import { OverlayContextProvider } from './OverlayContext'
+import {
+  estimateCostBadgeBeta,
+  estimateCostCalculatorIcon,
+  estimateCostCell,
+  estimateCostEmptyCell,
+  estimateCostEmptyTable,
+  estimateCostFeesTable,
+  estimateCostPriceCell,
+  estimateCostPriceCellContent,
+  estimateCostPriceColumn,
+  estimateCostTable,
+  estimateCostText,
+  estimateCostTimeCell,
+  estimateCostTitle,
+  estimateCostTotalPriceCell,
+  estimatecostFeesText,
+  paddingLeftCell,
+} from './styles.css'
 import type {
   BareEstimateProduct,
   EstimateCostProps,
@@ -43,31 +48,6 @@ import type {
   Iteration,
   Units,
 } from './types'
-
-const FeesText = styled(Text)`
-  margin-top: ${({ theme }) => theme.space['3']};
-`
-
-const StyledText = styled(Text)<{
-  isBeta?: boolean
-}>`
-  text-align: right;
-  ${({ isBeta, theme }) =>
-    isBeta ? `margin-left: ${theme.space['2']};` : null}
-`
-
-const RightAlignedText = styled(Text)`
-  text-align: right;
-`
-
-const StyledCalculatorIcon = styled(CalculatorIcon)`
-  margin-right: ${({ theme }) => theme.space['1']};
-`
-
-const StyledPriceCell = styled(Cell.withComponent('th'))`
-  ${({ theme }) => priceCell(theme)}
-  padding: 0;
-`
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 
@@ -104,10 +84,14 @@ const TitleComponent = memo(
   }: {
     locales: Required<ComponentProps<typeof EstimateCostContent>['locales']>
   }) => (
-    <Title>
-      <StyledCalculatorIcon sentiment="primary" size="medium" />
+    <h3 className={estimateCostTitle}>
+      <CalculatorIcon
+        className={estimateCostCalculatorIcon}
+        sentiment="primary"
+        size="medium"
+      />
       {locales?.['estimate.cost.label']}
-    </Title>
+    </h3>
   ),
 )
 
@@ -332,16 +316,16 @@ export const EstimateCostContent = ({
       <OverlayContextProvider value={providerValue}>
         <div>
           {children ? (
-            <StyledTable
+            <table
               cellPadding="0"
               cellSpacing="0"
+              className={estimateCostTable[hideTotal ? 'noTotal' : 'total']}
               data-testid="summary"
-              noTotal={hideTotal}
               ref={ref}
             >
               <colgroup>
                 <col />
-                <PriceCol />
+                <col className={estimateCostPriceColumn} />
               </colgroup>
               {!hideTimeUnit ? (
                 <thead>
@@ -349,16 +333,18 @@ export const EstimateCostContent = ({
                     <th>
                       <TitleComponent locales={locales} />
                     </th>
-                    <StyledPriceCell>
-                      <TimeCell>
+                    <th
+                      className={`${estimateCostPriceCellContent} ${estimateCostPriceCell}`}
+                    >
+                      <div className={estimateCostTimeCell}>
                         <CustomUnitInput
                           defaultTimeUnit={defaultTimeUnit}
                           iteration={iteration}
                           setIteration={setIteration}
                           timeUnits={timeUnits}
                         />
-                      </TimeCell>
-                    </StyledPriceCell>
+                      </div>
+                    </th>
                   </tr>
                 </thead>
               ) : null}
@@ -394,26 +380,39 @@ export const EstimateCostContent = ({
                     : child,
                 )}
               </tbody>
-            </StyledTable>
+            </table>
           ) : null}
           {!hideTotal ? (
-            <EmptyTable cellPadding="0" cellSpacing="0">
+            <table
+              cellPadding="0"
+              cellSpacing="0"
+              className={estimateCostEmptyTable}
+            >
               <colgroup>
                 <col />
-                <PriceCol />
+                <col className={estimateCostPriceColumn} />
               </colgroup>
               <tbody>
                 <tr>
-                  <EmptyCell aria-label="control" />
-                  <TotalPriceCell hasBorder={false}>
+                  <td aria-label="control" className={estimateCostEmptyCell} />
+                  <td
+                    className={`${estimateCostCell({ hasBorder: false, primary: false })} ${estimateCostTotalPriceCell}`}
+                    style={assignInlineVars({
+                      [paddingLeftCell]: `16px`,
+                    })}
+                  >
                     {isBeta ? (
-                      <BadgeBeta
-                        long={
-                          locales[
-                            `estimate.cost.beta.${
-                              discount > 0 ? 'discount' : 'free'
-                            }`
-                          ].length > 25
+                      <Badge
+                        className={
+                          estimateCostBadgeBeta[
+                            locales[
+                              `estimate.cost.beta.${
+                                discount > 0 ? 'discount' : 'free'
+                              }`
+                            ].length > 25
+                              ? 'long'
+                              : 'short'
+                          ]
                         }
                         prominence="strong"
                         sentiment="warning"
@@ -426,11 +425,11 @@ export const EstimateCostContent = ({
                               }`
                             ]
                           }`}
-                      </BadgeBeta>
+                      </Badge>
                     ) : null}
-                    <StyledText
+                    <Text
                       as="h3"
-                      isBeta={isBeta}
+                      className={estimateCostText[isBeta ? 'beta' : 'notBeta']}
                       sentiment="primary"
                       variant="heading"
                     >
@@ -440,12 +439,12 @@ export const EstimateCostContent = ({
                         {totalValue}
                         {totalPrice.maxTotal > 0 ? ` - ${totalMaxValue}` : null}
                       </LineThrough>
-                    </StyledText>
+                    </Text>
                     {hideHourlyPriceOnTotal &&
                     totalPrice.hourly > 0 &&
                     totalPrice.hourly !== totalPrice.total &&
                     totalPrice.total > 0 ? (
-                      <RightAlignedText as="p" variant="body">
+                      <Text as="p" placement="right" variant="body">
                         <LineThrough
                           isActive={isBeta && (discount === 0 || discount >= 1)}
                         >
@@ -466,16 +465,20 @@ export const EstimateCostContent = ({
                             `estimate.cost.units.hours.label`
                           ].toLowerCase()}
                         </LineThrough>
-                      </RightAlignedText>
+                      </Text>
                     ) : null}
-                  </TotalPriceCell>
+                  </td>
                 </tr>
               </tbody>
-            </EmptyTable>
+            </table>
           ) : null}
           {commitmentFees !== undefined || monthlyFees !== undefined ? (
             <>
-              <FeesText as="h3" variant="headingSmall">
+              <Text
+                as="h3"
+                className={estimatecostFeesText}
+                variant="headingSmall"
+              >
                 {
                   locales[
                     `estimate.cost.fees.${
@@ -483,8 +486,8 @@ export const EstimateCostContent = ({
                     }.title`
                   ]
                 }
-              </FeesText>
-              <StyledFeesTable>
+              </Text>
+              <table className={estimateCostFeesTable}>
                 <tbody>
                   <Item
                     isLastElement
@@ -505,7 +508,7 @@ export const EstimateCostContent = ({
                       : monthlyFeesContent}
                   </Item>
                 </tbody>
-              </StyledFeesTable>
+              </table>
             </>
           ) : null}
         </div>
