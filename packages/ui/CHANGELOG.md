@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.0.0-beta.23
+
+### Minor Changes
+
+- [#5713](https://github.com/scaleway/ultraviolet/pull/5713) [`0523069`](https://github.com/scaleway/ultraviolet/commit/0523069fd9a4455c375315ea7a47b4292ebc978e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Slider` to use vanilla extract instead of Emotion
+  - Add prop "style" to `Popup` and `Tooltip`
+
 ## 3.0.0-beta.22
 
 ### Minor Changes
