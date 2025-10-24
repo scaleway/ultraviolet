@@ -1,82 +1,26 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { useTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
 import { NumberInput } from '../../NumberInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
 import { THUMB_SIZE } from '../constant'
-import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
+import {
+  leftVar,
+  sliderDoubleText,
+  sliderNumberInput,
+  sliderSingle,
+  sliderThumbStyle,
+  sliderTooltip,
+  thumbColor,
+  tooltipLeft,
+} from '../styles.css'
 import type { SingleSliderProps } from '../types'
 import { Options } from './Options'
-
-const StyledTextValue = styled(Text, {
-  shouldForwardProp: prop => !['double', 'isColumn'].includes(prop),
-})<{ double: boolean; isColumn: boolean }>`
-  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space['5'])};
-  align-self: ${({ double, isColumn }) => (double || !isColumn ? 'center' : 'end')};
-`
-
-const SliderElement = styled('input', {
-  shouldForwardProp: prop => !['themeSlider', 'left'].includes(prop),
-})<{ themeSlider: string; disabled: boolean; left: number }>`
-    appearance: none;
-    height: ${({ theme }) => theme.space['1']};
-    width: 100%;
-    position: relative;
-    background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
-
-    border-radius: ${({ theme }) => theme.radii.default};
-    background-image:linear-gradient(${({ theme }) => theme.colors.primary.border}, ${({ theme }) => theme.colors.primary.border});
-    background-repeat: no-repeat;
-    align-self: center;
-    outline: none;
-
-    &:focus {
-        &::-moz-range-thumb {
-          border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
-          box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
-        }
-
-        &::-webkit-slider-thumb {
-          border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
-          box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
-        }
-  }
-    &[data-error='true']{
-        background-image:linear-gradient(${({ theme }) => theme.colors.danger.backgroundStrong}, ${({ theme }) => theme.colors.danger.backgroundStrong});
-    }
-
-    &[data-direction='column'] {
-      align-self: baseline;
-    }
-
-    &[aria-disabled='true']{
-      background-image:linear-gradient(${({ theme }) => theme.colors.primary.borderDisabled}, ${({ theme }) => theme.colors.primary.borderDisabled});
-    }
-
-    /* Mozilla */
-    ::-moz-range-track {
-        ${trackStyle}
-    }
-    ::-moz-range-thumb {
-        ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, false)}
-    }
-
-    /* Other browsers */
-    ::-webkit-slider-runnable-track {
-        ${trackStyle}
-    }
-    ::-webkit-slider-thumb {
-        ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, false)}
-    }
-`
-
-const StyledNumberInput = styled(NumberInput)`
-  min-width: ${({ theme }) => theme.space['5']};
-`
 
 export const SingleSlider = ({
   name,
@@ -105,7 +49,7 @@ export const SingleSlider = ({
   tooltipPosition,
 }: SingleSliderProps) => {
   const localId = useId()
-  const { theme } = useTheme()
+  const theme = useTheme()
   const finalId = id ?? localId
   const safeValue = value ?? min
   const [selectedIndex, setSelectedIndex] = useState(safeValue)
@@ -188,8 +132,9 @@ export const SingleSlider = ({
 
   const styledValue = (valueNumber: string | number | null) =>
     input && !options ? (
-      <StyledNumberInput
+      <NumberInput
         aria-label="input"
+        className={sliderNumberInput}
         controls={false}
         data-testid={dataTestId ? `${dataTestId}-input` : 'slider-input'}
         disabled={disabled}
@@ -205,11 +150,13 @@ export const SingleSlider = ({
         value={inputValue}
       />
     ) : (
-      <StyledTextValue
+      <Text
         as="span"
+        className={sliderDoubleText({
+          isDouble: direction !== 'column',
+          isPadded: direction === 'column',
+        })}
         data-testid={dataTestId ? `${dataTestId}-value` : 'slider-value'}
-        double={false}
-        isColumn={direction === 'column'}
         placement={direction === 'column' ? 'right' : 'center'}
         sentiment="neutral"
         variant="bodySmall"
@@ -217,7 +164,7 @@ export const SingleSlider = ({
         {prefix}
         {valueNumber}
         {suffix ?? unit}
-      </StyledTextValue>
+      </Text>
     )
 
   const tooltipText = useMemo(() => {
@@ -257,21 +204,23 @@ export const SingleSlider = ({
         {direction === 'column' && !label ? styledValue(valueToShow) : null}
       </Stack>
       <Stack direction="column" gap={1} justifyContent="center" width="100%">
-        <StyledTooltip
-          left={placementTooltip}
+        <Tooltip
+          className={sliderTooltip}
           placement={tooltipPosition}
+          style={assignInlineVars({
+            [tooltipLeft]: `${placementTooltip}px`,
+          })}
           text={tooltipText}
         >
-          <SliderElement
+          <input
             aria-disabled={disabled}
             aria-label={ariaLabel ?? name}
-            className={className}
+            className={`${className ? `${className} ` : ''}${sliderSingle({ direction, disabled, error: !!error })} ${sliderThumbStyle({ disabled, isDouble: false })}`}
             data-direction={direction}
             data-error={!!error}
             data-testid={dataTestId}
             disabled={!!disabled}
             id={finalId}
-            left={leftPosition}
             max={max}
             min={min}
             name={name}
@@ -282,18 +231,25 @@ export const SingleSlider = ({
             onFocus={onFocus}
             ref={refSlider}
             step={step}
-            style={getBackgroundSize}
+            style={{
+              ...assignInlineVars({
+                [leftVar]: `calc(${leftPosition}% - ${THUMB_SIZE / 2}px)`,
+                [thumbColor]:
+                  theme.theme === 'light'
+                    ? theme.colors.neutral.background
+                    : theme.colors.neutral.backgroundStronger,
+              }),
+              ...getBackgroundSize,
+            }}
             tabIndex={0}
-            themeSlider={theme}
             type="range"
             value={selectedIndex}
           />
-        </StyledTooltip>
+        </Tooltip>
         {options ? (
           <Options
             max={max}
             min={min}
-            sliderWidth={sliderWidth}
             step={step}
             ticks={ticks}
             value={selectedIndex}

@@ -21,6 +21,7 @@ type TooltipProps = Pick<
   | 'portalTarget'
   | 'tabIndex'
   | 'debounceDelay'
+  | 'style'
 > & {
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
 }
@@ -47,6 +48,7 @@ export const Tooltip = forwardRef(
       portalTarget,
       debounceDelay,
       tabIndex,
+      style,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
@@ -63,6 +65,7 @@ export const Tooltip = forwardRef(
       portalTarget={portalTarget}
       ref={tooltipRef}
       role={role}
+      style={style}
       tabIndex={tabIndex}
       text={text}
       visible={visible}
