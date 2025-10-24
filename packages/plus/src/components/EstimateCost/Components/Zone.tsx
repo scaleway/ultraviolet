@@ -1,16 +1,11 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
+import { estimateCostImage } from '../styles.css'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
-
-const StyledImage = styled.img`
-  width: 15px;
-  margin-right: ${({ theme }) => theme.space['1']};
-`
 
 type RegionProps = {
   shouldBeHidden?: boolean
@@ -62,7 +57,7 @@ export const Zone = memo(
         shouldBeHidden={shouldBeHidden}
       >
         <Strong>
-          <StyledImage alt={label} src={image} />
+          <img alt={label} className={estimateCostImage} src={image} />
           {label}
         </Strong>
       </Item>
