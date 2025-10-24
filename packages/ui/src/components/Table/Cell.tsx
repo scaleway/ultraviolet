@@ -1,21 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import type { Color } from '../../theme'
+import { useColumnProvider } from '../List/ColumnProvider'
+import { tableCell } from './styles.css'
+import { maxWidthCell, minWidthCell, widthCell } from './variables.css'
 
 type Align = 'left' | 'center' | 'right'
-
-const StyledCell = styled('td', {
-  shouldForwardProp: prop => !['sentiment', 'align'].includes(prop),
-})<{ sentiment?: Color; align: Align }>`
-  display: table-cell;
-  vertical-align: middle;
-  padding: ${({ theme }) => theme.space['1']};
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  background-color: ${({ sentiment, theme }) => (sentiment ? theme.colors[sentiment].background : null)};
-  text-align: ${({ align }) => align};
-`
 
 type CellProps = {
   children?: ReactNode
@@ -33,14 +25,22 @@ export const Cell = ({
   rowSpan,
   sentiment,
   align = 'left',
-}: CellProps) => (
-  <StyledCell
-    align={align}
-    className={className}
-    colSpan={colSpan}
-    rowSpan={rowSpan}
-    sentiment={sentiment}
-  >
-    {children}
-  </StyledCell>
-)
+}: CellProps) => {
+  const { maxWidth, minWidth, width } = useColumnProvider()
+
+  return (
+    <td
+      align={align}
+      className={`${className ? `${className} ` : ''}${tableCell({ align, sentiment })}`}
+      colSpan={colSpan}
+      rowSpan={rowSpan}
+      style={assignInlineVars({
+        [widthCell]: width,
+        [minWidthCell]: minWidth,
+        [maxWidthCell]: maxWidth,
+      })}
+    >
+      {children}
+    </td>
+  )
+}
