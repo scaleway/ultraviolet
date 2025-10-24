@@ -1,7 +1,5 @@
 'use client'
 
-import { css, keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
 import { Stack } from '@ultraviolet/ui'
 import { useMemo, useState } from 'react'
 import rating1 from './assets/1-5.svg'
@@ -14,6 +12,7 @@ import rating4 from './assets/4-5.svg'
 import rating4NS from './assets/4-5NB.svg'
 import rating5 from './assets/5-5.svg'
 import rating5NS from './assets/5-5NB.svg'
+import { customerStatisfaction } from './styles.css'
 
 const ratings = [
   {
@@ -45,72 +44,6 @@ const ratings = [
 
 type Value = (typeof ratings)[number]['value']
 
-const angryAnim = keyframes`
-  from, 10%, 40%, 80%, to {
-    transform: translate3d(0, 0, 0);
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: translate3d(-5px, 0, 0);
-    transform: rotate(5deg);
-  }
-
-  60% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  90% {
-    transform: translate3d(-1px, 0, 0);
-    transform: rotate(-5deg);
-  }
-`
-
-const happyAnim = keyframes`
-  from, 10%, 40%, 80%, to {
-    transform: translate3d(0, 0, 0);
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: translate3d(0, 5px, 0);
-    transform: rotate(5deg);
-  }
-
-  60% {
-    transform: translate3d(0, -6px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, -2px, 0);
-  }
-`
-
-const scaled = css`
-  transform: scale(1.2);
-`
-
-const Image = styled.img<{
-  isSelected: boolean
-  isHovered: boolean
-  isHappy: boolean
-}>`
-  height: 88px;
-  width: 88px;
-  cursor: pointer;
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
-
-  &:hover,
-  &:focus {
-    ${scaled};
-  }
-
-  ${({ isHovered, isSelected }) => isHovered && isSelected && scaled}
-  ${({ isSelected, isHappy }) =>
-    isSelected &&
-    css`
-      animation: ${isHappy ? happyAnim : angryAnim} 1s ease infinite;
-    `}
-`
-
 type CustomerSatisfactionProps = {
   value: Value
   onChange: (rating: Value) => void
@@ -136,19 +69,23 @@ export const CustomerSatisfaction = ({
     >
       {ratings.map(rating => {
         const isSelected = rating.value === value
-        const isHovered = rating.value === hoveredValue
         const isOverfly = rating.value <= hoveredValue
+        const isScaled = rating.value === hoveredValue && isSelected
+        const animated = isHappy ? 'happy' : 'angry'
 
         return (
-          <Image
+          <img
+            alt="rating"
+            className={customerStatisfaction({
+              animated: isSelected ? animated : undefined,
+              isScaled,
+            })}
             data-testid={`${dataTestId}-${rating.value}`}
-            isHappy={isHappy}
-            isHovered={isHovered}
-            isSelected={isSelected}
             key={rating.value}
             onClick={() => {
               onChange(rating.value)
             }}
+            onKeyDown={() => {}}
             onMouseEnter={() => {
               setHoveredValue(rating.value)
             }}
