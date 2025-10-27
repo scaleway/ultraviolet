@@ -290,9 +290,9 @@ jobs:
           type: "deploy"
           scw_dns: "storybook.ultraviolet.scaleway.com"
           root_zone: ${{ env.STORYBOOK_BRANCH_SLUG == 'main' }}
-          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_access_key: ${{ vars.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_containers_namespace_id: ${{ vars.SCW_CONTAINERS_NAMESPACE_ID }}
           scw_environment_variables: "GITHUB=DEPLOY"
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
           scw_min_scale: ${{ env.SCW_MIN_SCALE }}
