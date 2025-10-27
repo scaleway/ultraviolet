@@ -106,6 +106,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/loadBalancers/load-balancers-wire.svg',
   localStorage:
     'https://assets.scaleway.com/illustrations/products/localStorage/local-storage-wire.svg',
+  mailbox:
+    'https://assets.scaleway.com/illustrations/products/mailbox/mailbox-wire.svg',
   managedDatabase:
     'https://assets.scaleway.com/illustrations/products/managedDatabase/managed-database-wire.svg',
   managedSearchDatabase:
