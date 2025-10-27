@@ -1,6 +1,7 @@
 name: Upload Illustrations
 
 on:
+  pull_request:
   push:
     branches:
       - main
