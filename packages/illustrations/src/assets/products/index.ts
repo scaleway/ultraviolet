@@ -41,6 +41,7 @@ import * as kafka from './kafka'
 import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
 import * as localStorage from './localStorage'
+import * as mailbox from './mailbox'
 import * as managedDatabase from './managedDatabase'
 import * as managedSearchDatabase from './managedSearchDatabase'
 import * as mongoDB from './mongoDB'
@@ -106,6 +107,7 @@ export {
   kms,
   loadBalancers,
   localStorage,
+  mailbox,
   managedDatabase,
   managedSearchDatabase,
   mongoDB,
