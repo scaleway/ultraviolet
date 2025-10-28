@@ -1,95 +1,22 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Stack } from '@ultraviolet/ui'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
-import {
-  ANIMATION_DURATION,
-  NAVIGATION_COLLASPED_WIDTH,
-  NAVIGATION_MAX_WIDTH,
-  NAVIGATION_MIN_WIDTH,
-} from './constants'
+import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
+import {
+  navigation,
+  navigationContainer,
+  navigationContent,
+  navigationContentContainer,
+  navigationContentContainerCollapsed,
+  navigationSlider,
+} from './styles.css'
 import type { NavigationProps } from './types'
-
-const StyledNav = styled.nav`
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  border-right: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-`
-
-const Container = styled('div', {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{
-  width: number
-}>`
-  background: ${({ theme }) => theme.colors.neutral.background};
-  display: flex;
-  flex-direction: column;
-
-  width: ${({ width }) => width}px;
-
-  &[data-expanded="true"][data-animation="false"] {
-    max-width: ${NAVIGATION_MAX_WIDTH}px;
-    min-width: ${NAVIGATION_MIN_WIDTH}px;
-  }
-
-  &[data-expanded="false"] {
-    width: ${NAVIGATION_COLLASPED_WIDTH}px;
-  }
-
-  &[data-animation="expand"] {
-    transition: width ${ANIMATION_DURATION}ms ease-in-out;
-    width: ${({ width }) => width}px;
-  }
-
-  &[data-animation="collapse"] {
-    transition: width ${ANIMATION_DURATION}ms ease-in-out;
-    width: ${NAVIGATION_COLLASPED_WIDTH}px;
-  }
-`
-
-const ContentContainer = styled.div`
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-`
-
-const Content = styled(Stack)`
-  overflow-y: auto;
-  overflow-x: hidden;
-  flex-grow: 1;
-
-  &[data-is-expanded="false"] {
-    align-items: center;
-    padding: ${({ theme }) => theme.space['2']};
-  }
-
-  &[data-is-expanded="true"],
-  &[data-animation="expand"] {
-    padding: ${({ theme }) => theme.space['2']};
-  }
-`
-
-const Slider = styled.div`
-  background: transparent;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 6px;
-  cursor: col-resize;
-  border-right: 2px solid transparent;
-  display: flex;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-`
+import { widthNavigationContainer } from './variables.css'
 
 export const NavigationContent = ({
   children,
@@ -203,31 +130,40 @@ export const NavigationContent = ({
   ])
 
   return (
-    <StyledNav className={className} data-testid={dataTestId} id={id}>
-      <Container
-        data-animation={shouldAnimate ? animation : undefined}
-        data-expanded={expanded}
+    <nav
+      className={`${className ? `${className} ` : ''}${navigation}`}
+      data-testid={dataTestId}
+      id={id}
+    >
+      <div
+        className={navigationContainer({
+          animation: shouldAnimate ? animation : undefined,
+          expanded,
+        })}
         ref={navigationRef}
-        width={width}
+        style={assignInlineVars({
+          [widthNavigationContainer]: `${width}px`,
+        })}
       >
         {logo ? <Header logo={logo} /> : null}
-        <ContentContainer>
-          <Content
-            data-animation={shouldAnimate ? animation : undefined}
-            data-is-expanded={expanded}
-            gap={0.25}
-            ref={contentRef}
-          >
+        <div
+          className={`${navigationContentContainer}${expanded ? '' : ` ${navigationContentContainerCollapsed}`}`}
+        >
+          <Stack className={navigationContent} gap={0.25} ref={contentRef}>
             {children}
-          </Content>
+          </Stack>
           {allowNavigationResize ? (
             <Footer contentRef={contentRef} onToggleExpand={onToggleExpand} />
           ) : null}
-        </ContentContainer>
-      </Container>
+        </div>
+      </div>
       {allowNavigationResize ? (
-        <Slider data-testid="slider" ref={sliderRef} />
+        <div
+          className={navigationSlider}
+          data-testid="slider"
+          ref={sliderRef}
+        />
       ) : null}
-    </StyledNav>
+    </nav>
   )
 }

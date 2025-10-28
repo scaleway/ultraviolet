@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
 import { useTheme } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
@@ -9,42 +8,11 @@ import { useCallback } from 'react'
 import { useNavigation } from '../NavigationProvider'
 import type { DragNDropData } from '../types'
 import { Item } from './Item'
-
-const DropableArea = styled.div`
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 0;
-  height: 2px;
-  border-top: 2px solid;
-  border-color: transparent;
-  padding: ${({ theme }) => theme.space['0.5']} 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -4px;
-    height: 0px;
-    width: 0px;
-    border: 3px solid;
-    border-color: inherit;
-    border-radius: ${({ theme }) => theme.radii.circle};
-  }
-`
-
-const RelativeDiv = styled.div`
-  position: relative;
-`
-
-const TextContainer = styled.div`
-  padding: ${({ theme }) => theme.space['1']} 0;
-
-  &[data-expanded='true'] {
-    padding-left: ${({ theme }) => theme.space['4']};
-    margin-left: ${({ theme }) => theme.space['0.5']};
-  }
-`
+import {
+  navigationPinnedItemContainer,
+  navigationPinnedItemDropableArea,
+  navigationPinnedItemRelativeDiv,
+} from './styles.css'
 
 type PinnedItemsProps = {
   /**
@@ -163,8 +131,9 @@ export const PinnedItems = ({
                 )
 
                 return (
-                  <RelativeDiv key={itemId}>
-                    <DropableArea
+                  <div className={navigationPinnedItemRelativeDiv} key={itemId}>
+                    <div
+                      className={navigationPinnedItemDropableArea}
                       onDragLeave={onDragLeave}
                       onDragOver={onDragOver}
                       onDrop={event => onDrop(event, index)}
@@ -172,14 +141,14 @@ export const PinnedItems = ({
                     {itemWrapper
                       ? itemWrapper(itemElement, itemId)
                       : itemElement}
-                  </RelativeDiv>
+                  </div>
                 )
               }
 
               return null
             })
           ) : (
-            <TextContainer data-expanded={expanded}>
+            <div className={navigationPinnedItemContainer({ expanded })}>
               <Text
                 as="p"
                 prominence="weak"
@@ -188,16 +157,17 @@ export const PinnedItems = ({
               >
                 {locales['navigation.pinned.item.group.empty']}
               </Text>
-            </TextContainer>
+            </div>
           )}
 
-          <RelativeDiv>
-            <DropableArea
+          <div className={navigationPinnedItemRelativeDiv}>
+            <div
+              className={navigationPinnedItemDropableArea}
               onDragLeave={onDragLeave}
               onDragOver={onDragOver}
               onDrop={event => onDrop(event, pinnedItems.length)}
             />
-          </RelativeDiv>
+          </div>
         </Item>
       </div>
     )
