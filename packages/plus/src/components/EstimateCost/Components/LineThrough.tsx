@@ -7,9 +7,13 @@ type LineThroughProps = ComponentProps<'span'> & {
   isActive?: boolean
 }
 
-export const LineThrough = ({ isActive, ...props }: LineThroughProps) => (
+export const LineThrough = ({
+  isActive,
+  className,
+  ...props
+}: LineThroughProps) => (
   <span
-    className={`${props.className ? `${props.className} ` : ''} ${isActive ? estimateCostLineThrough : ''}`}
+    className={`${className ? `${className} ` : ''} ${isActive ? estimateCostLineThrough : ''}`}
     {...props}
   />
 )
