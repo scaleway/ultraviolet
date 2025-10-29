@@ -313,6 +313,7 @@ export const SelectableCard = forwardRef(
                   type === 'checkbox' && isComplexChildren
                 }
                 data-has-label={!!label && showTick}
+                onKeyDown={event => event.stopPropagation()}
                 ref={childrenRef}
                 width="100%"
               >
