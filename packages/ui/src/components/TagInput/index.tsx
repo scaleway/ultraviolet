@@ -5,12 +5,7 @@ import {
   CheckCircleOutlineIcon,
   CloseIcon,
 } from '@ultraviolet/icons'
-import type {
-  ChangeEvent,
-  ClipboardEventHandler,
-  KeyboardEventHandler,
-  ReactNode,
-} from 'react'
+import type { ChangeEvent, KeyboardEventHandler, ReactNode } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { getUUID } from '../../utils'
 import { Button } from '../Button'
@@ -124,8 +119,9 @@ export const TagInput = ({
     }
   }
 
-  const onInputChange = (e: ChangeEvent<HTMLInputElement>) =>
+  const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value)
+  }
 
   const addTag = () => {
     const newTagInput = input
@@ -176,22 +172,6 @@ export const TagInput = ({
       if (tagInputState) {
         deleteTag(tagInputState[tagInputState.length - 1].index)
       }
-    }
-  }
-
-  const handlePaste: ClipboardEventHandler<HTMLInputElement> = e => {
-    e.preventDefault()
-    const newTagInput = [
-      ...tagInputState,
-      { index: getUUID('tag'), label: e?.clipboardData?.getData('Text') },
-    ]
-    setTagInput(newTagInput)
-    setStatus({ [newTagInput.length - 1]: STATUS.LOADING })
-    try {
-      dispatchOnChange(newTagInput)
-      setStatus({ [newTagInput.length - 1]: STATUS.IDLE })
-    } catch {
-      setTagInput(tagInputState)
     }
   }
 
@@ -272,7 +252,6 @@ export const TagInput = ({
                   onBlur={addTag}
                   onChange={onInputChange}
                   onKeyDown={handleInputKeydown}
-                  onPaste={handlePaste}
                   placeholder={tagInputState.length === 0 ? placeholder : ''}
                   readOnly={readOnly}
                   ref={inputRef}
