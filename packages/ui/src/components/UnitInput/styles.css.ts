@@ -185,7 +185,7 @@ globalStyle(`${unitInputUnit} ${selectBarBase}`, {
 })
 
 globalStyle(
-  `${unitInputUnit} ${selectBarBase}:focus, ${unitInputUnit} ${selectBarBase}:active, `,
+  `${unitInputUnit} ${selectBarBase}:focus, ${unitInputUnit} ${selectBarBase}:active`,
   {
     boxShadow: 'none',
   },

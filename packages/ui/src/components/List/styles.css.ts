@@ -42,7 +42,7 @@ function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
           borderColor: color.border,
         },
         '&:not([aria-disabled="true"]):hover': {
-          bordercolor: theme.colors.primary.border,
+          borderColor: theme.colors.primary.border,
           boxShadow: theme.shadows.hoverPrimary,
         },
       },
