@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.0-beta.3
+
+### Patch Changes
+
+- [#5738](https://github.com/scaleway/ultraviolet/pull/5738) [`186370b`](https://github.com/scaleway/ultraviolet/commit/186370bc783037fc100dfa074238a8e2238c451e) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustration `mailbox`
+
 ## 6.0.0-beta.2
 
 ### Major Changes

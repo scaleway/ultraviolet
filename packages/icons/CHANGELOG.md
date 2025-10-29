@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.0-beta.8
+
+### Patch Changes
+
+- [#5724](https://github.com/scaleway/ultraviolet/pull/5724) [`e2088f2`](https://github.com/scaleway/ultraviolet/commit/e2088f2f29499ba4c6737f638be657bb2b038d6b) Thanks [@lisalupi](https://github.com/lisalupi)! - ProductIcon: new icons `ComputeOptimizedInstances`, `DevelopmentInstances`, `GeneralPurposeInstances` and `MemoryOptimizedInstances`
+
 ## 5.0.0-beta.7
 
 ### Patch Changes
