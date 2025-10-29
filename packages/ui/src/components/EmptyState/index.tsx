@@ -80,6 +80,7 @@ export const EmptyState = ({
           <Text
             as="p"
             placement="center"
+            sentiment="neutral"
             variant={size === 'small' ? 'bodySmall' : 'body'}
           >
             {description}
