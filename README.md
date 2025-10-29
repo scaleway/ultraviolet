@@ -33,14 +33,10 @@ import { ThemeProvider } from '@ultraviolet/ui'
 import { Button, normalize, theme } from '@ultraviolet/ui'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/fonts/fonts.css'
+import '@ultraviolet/themes/global' // for normalized css
 
 const App = () => (
   <ThemeProvider>
-    <Global
-      styles={css`
-        ${normalize()}
-      `}
-    />
     <Button onClick={() => console.log('clicked')}>Click Me</Button>
   </ThemeProvider>
 )

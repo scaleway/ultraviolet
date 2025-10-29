@@ -49,7 +49,11 @@ export const App = () => (
   </ThemeProvider>
 )
 ```
-
+#### Normalized css
+Add this import for normalized css:
+```tsx
+import '@ultraviolet/themes/global'
+```
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).

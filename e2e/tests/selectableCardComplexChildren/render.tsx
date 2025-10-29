@@ -1,8 +1,19 @@
-import { SelectableCard, SelectInput, Stack, Text } from '@ultraviolet/ui'
+import {
+  SelectableCard,
+  SelectInput,
+  Slider,
+  Stack,
+  Text,
+  TextArea,
+} from '@ultraviolet/ui'
 import { useState } from 'react'
 
 const CheckboxSelectableCard = () => {
-  const [value, setValue] = useState({ option1: false, option2: false })
+  const [value, setValue] = useState({
+    option1: false,
+    option2: false,
+    option3: false,
+  })
   const [selectInputValue, setSelectInputValue] = useState('')
 
   return (
@@ -65,6 +76,33 @@ const CheckboxSelectableCard = () => {
       >
         This option will cost you 2.99€ and provide you with a lot more of
         happiness checkbox
+      </SelectableCard>
+      <SelectableCard
+        checked={value.option3}
+        label={
+          <Stack direction="row" flex={1} justifyContent="space-between">
+            <Text as="span" variant="bodyStrong">
+              Optional option 3
+            </Text>
+            <Text as="span" variant="bodyStronger">
+              9.99€
+            </Text>
+          </Stack>
+        }
+        name="option3"
+        onChange={event =>
+          setValue({ ...value, option3: event.currentTarget.checked })
+        }
+        showTick
+        type="checkbox"
+        value="option3"
+      >
+        <Stack gap={1}>
+          When clicking on the slider and typing in the input, the event does
+          not bubble up the the SelectableCard
+          <TextArea label="TextArea" onChange={() => {}} />
+          <Slider input label="Slider" value={32} />
+        </Stack>
       </SelectableCard>
     </Stack>
   )
