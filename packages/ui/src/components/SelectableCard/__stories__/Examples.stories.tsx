@@ -5,6 +5,7 @@ import { Row } from '../../Row'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { TextArea } from '../../TextArea'
 import { SelectableCard } from '..'
 import fr from './assets/fr.svg'
 import nl from './assets/nl.svg'
@@ -23,6 +24,9 @@ export const Examples: StoryFn = args => {
     'label-26': true,
     'label-27': false,
     'label-28': false,
+  })
+  const [value5, onChange5] = useState({
+    'label-29': false,
   })
 
   return (
@@ -312,6 +316,21 @@ export const Examples: StoryFn = args => {
           value="label-28"
         />
       </Row>
+      <SelectableCard
+        {...args}
+        checked={value5['label-29']}
+        label="With an input in the children"
+        name="label-29" // fixed: match the state key
+        onChange={
+          event =>
+            onChange5({ ...value5, 'label-29': event.currentTarget.checked }) // fixed: spread value5
+        }
+        showTick
+        type="checkbox"
+        value="label-29" // fixed: match the state key
+      >
+        <TextArea label="" onChange={() => {}} />
+      </SelectableCard>
     </Stack>
   )
 }
