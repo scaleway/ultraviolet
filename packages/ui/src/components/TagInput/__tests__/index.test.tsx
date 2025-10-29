@@ -1,4 +1,4 @@
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
@@ -106,7 +106,7 @@ describe('tagInput', () => {
     expect(mockOnChange).toHaveBeenCalledWith(['hello'])
   })
 
-  it('should add tag on paste', async () => {
+  it('should not add tag on paste', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
       <TagInput
@@ -117,10 +117,11 @@ describe('tagInput', () => {
       />,
     )
     const input = screen.getByRole<HTMLInputElement>('textbox')
-    fireEvent.paste(input, {
-      clipboardData: { getData: () => 'test' },
-    })
-    await waitFor(() => expect(input.value).toBe(''))
-    expect(mockOnChange).toHaveBeenCalledWith(['hello', 'world', 'test'])
+
+    await userEvent.click(input)
+    await userEvent.paste('test=')
+    await userEvent.type(input, 'new ')
+
+    expect(mockOnChange).toHaveBeenCalledWith(['hello', 'world', 'test=new'])
   })
 })
