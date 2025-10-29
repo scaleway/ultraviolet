@@ -1,5 +1,32 @@
 # Change Log
 
+## 3.0.0-beta.23
+
+### Minor Changes
+
+- [#5713](https://github.com/scaleway/ultraviolet/pull/5713) [`0523069`](https://github.com/scaleway/ultraviolet/commit/0523069fd9a4455c375315ea7a47b4292ebc978e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Slider` to use vanilla extract instead of Emotion
+
+  - Add prop "style" to `Popup` and `Tooltip`
+
+- [#5723](https://github.com/scaleway/ultraviolet/pull/5723) [`eb6127e`](https://github.com/scaleway/ultraviolet/commit/eb6127e80e64644b0e2a4237a3cea291172acade) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Tabs` to use vanilla extract instead of Emotion
+
+- [#5745](https://github.com/scaleway/ultraviolet/pull/5745) [`0dcf373`](https://github.com/scaleway/ultraviolet/commit/0dcf37393506dc01609e803e11743b013296dfa0) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCard`: add "stopPropagation" in the children for keyboard events
+
+- [#5726](https://github.com/scaleway/ultraviolet/pull/5726) [`e23a69c`](https://github.com/scaleway/ultraviolet/commit/e23a69c30e95bec45b0a79e315682b330c0fbcef) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Table` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5746](https://github.com/scaleway/ultraviolet/pull/5746) [`317dbf6`](https://github.com/scaleway/ultraviolet/commit/317dbf6ee868f1e35dc1eeda47c3f169f3d1f391) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagInput`: "paste" shoud not automatically create a new tag
+
+- [#5750](https://github.com/scaleway/ultraviolet/pull/5750) [`3e9b92b`](https://github.com/scaleway/ultraviolet/commit/3e9b92bc1fe287d10f7806536fbb9256048d97af) Thanks [@lisalupi](https://github.com/lisalupi)! - `EmptyState`: content text should be neutral
+
+- [#5749](https://github.com/scaleway/ultraviolet/pull/5749) [`56915f1`](https://github.com/scaleway/ultraviolet/commit/56915f180a3da3289ebc5f6527e5a4427e441e1d) Thanks [@lisalupi](https://github.com/lisalupi)! - `List` and `UnitInput`: Fix vanilla-extract typos
+
+- [#5744](https://github.com/scaleway/ultraviolet/pull/5744) [`065f4e2`](https://github.com/scaleway/ultraviolet/commit/065f4e279b76b6953c6d9b4778cb6ed1b78f5e9b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Carousel`: fix container width
+
+- Updated dependencies [[`e2088f2`](https://github.com/scaleway/ultraviolet/commit/e2088f2f29499ba4c6737f638be657bb2b038d6b)]:
+  - @ultraviolet/icons@5.0.0-beta.8
+
 ## 3.0.0-beta.22
 
 ### Minor Changes

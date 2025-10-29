@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.12
+
+### Minor Changes
+
+- [#5718](https://github.com/scaleway/ultraviolet/pull/5718) [`4020830`](https://github.com/scaleway/ultraviolet/commit/4020830505e8fc3adaf976dea214e2e225b64ac9) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `CustomerSatisfaction` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- Updated dependencies [[`317dbf6`](https://github.com/scaleway/ultraviolet/commit/317dbf6ee868f1e35dc1eeda47c3f169f3d1f391), [`e2088f2`](https://github.com/scaleway/ultraviolet/commit/e2088f2f29499ba4c6737f638be657bb2b038d6b), [`3e9b92b`](https://github.com/scaleway/ultraviolet/commit/3e9b92bc1fe287d10f7806536fbb9256048d97af), [`56915f1`](https://github.com/scaleway/ultraviolet/commit/56915f180a3da3289ebc5f6527e5a4427e441e1d), [`0523069`](https://github.com/scaleway/ultraviolet/commit/0523069fd9a4455c375315ea7a47b4292ebc978e), [`eb6127e`](https://github.com/scaleway/ultraviolet/commit/eb6127e80e64644b0e2a4237a3cea291172acade), [`0dcf373`](https://github.com/scaleway/ultraviolet/commit/0dcf37393506dc01609e803e11743b013296dfa0), [`065f4e2`](https://github.com/scaleway/ultraviolet/commit/065f4e279b76b6953c6d9b4778cb6ed1b78f5e9b), [`e23a69c`](https://github.com/scaleway/ultraviolet/commit/e23a69c30e95bec45b0a79e315682b330c0fbcef)]:
+  - @ultraviolet/ui@3.0.0-beta.23
+  - @ultraviolet/icons@5.0.0-beta.8
+
 ## 3.0.0-beta.11
 
 ### Minor Changes
