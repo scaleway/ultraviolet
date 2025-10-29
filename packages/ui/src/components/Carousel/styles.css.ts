@@ -7,6 +7,7 @@ export const wrapper = style({
   position: 'relative',
   marginLeft: '-100px',
   marginRight: '-100px',
+  width: '100%',
 })
 
 export const beforeScroll = style({
