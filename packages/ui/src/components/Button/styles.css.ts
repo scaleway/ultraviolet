@@ -17,6 +17,19 @@ const sentiments = [
   'white',
 ] as const
 
+const FOCUS_RING_KEY = {
+  black: 'focusNeutral',
+  danger: 'focusDanger',
+  info: 'focusInfo',
+  neutral: 'focusNeutral',
+  primary: 'focusPrimary',
+  // @note: no focusSecondary so far, it will be added later, so far focusPrimary sounds fine
+  secondary: 'focusPrimary',
+  success: 'focusSuccess',
+  warning: 'focusWarning',
+  white: 'focusNeutral',
+} as const
+
 const sentimentThemeMap: Record<
   Exclude<(typeof sentiments)[number], 'black' | 'white'>,
   typeof theme.colors.primary
@@ -45,6 +58,9 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
           background: monochrome.black.backgroundDisabled,
           color: monochrome.black.textDisabled,
         },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
       },
     }
   }
@@ -61,6 +77,9 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
         '&:disabled': {
           background: monochrome.white.backgroundDisabled,
           color: monochrome.white.textDisabled,
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -79,6 +98,9 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
       '&:disabled': {
         background: selectedSentiment.backgroundStrongDisabled,
         color: selectedSentiment.textStrongDisabled,
+      },
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
     },
   }
@@ -101,6 +123,9 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
           border: `1px solid ${monochrome.black.borderDisabled}`,
           background: 'none',
         },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
       },
     }
   }
@@ -119,6 +144,9 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
           color: monochrome.white.textDisabled,
           border: `1px solid ${monochrome.white.borderDisabled}`,
           background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -141,6 +169,9 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
           border: `1px solid ${selectedSentiment.borderStrongDisabled}`,
           background: 'none',
         },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
       },
     }
   }
@@ -161,6 +192,9 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
         border: `1px solid ${selectedSentiment.borderDisabled}`,
         background: 'none',
       },
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+      },
     },
   }
 }
@@ -180,6 +214,9 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
           color: monochrome.black.textDisabled,
           background: 'none',
         },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
       },
     }
   }
@@ -196,6 +233,9 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
         '&:disabled': {
           color: monochrome.white.textDisabled,
           background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -214,6 +254,9 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
       '&:disabled': {
         color: selectedSentiment.textDisabled,
         background: 'none',
+      },
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
     },
   }
