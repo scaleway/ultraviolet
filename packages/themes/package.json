@@ -52,7 +52,8 @@
       "types": "./dist/themes/console/*/index.d.ts",
       "require": "./dist/themes/console/*/index.cjs",
       "import": "./dist/themes/console/*/index.js"
-    }
+    },
+    "./global": "./dist/themes.css"
   },
   "peerDependencies": {
     "react": "18.x || 19.x",

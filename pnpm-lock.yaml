@@ -302,12 +302,6 @@ importers:
 
   e2e:
     dependencies:
-      '@emotion/react':
-        specifier: 11.14.0
-        version: 11.14.0(@types/react@19.2.2)(react@19.2.0)
-      '@emotion/styled':
-        specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@ultraviolet/fonts':
         specifier: workspace:*
         version: link:../packages/fonts
@@ -333,9 +327,6 @@ importers:
         specifier: 7.9.4
         version: 7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
-      '@emotion/babel-plugin':
-        specifier: 11.13.5
-        version: 11.13.5
       '@eslint/js':
         specifier: 9.37.0
         version: 9.37.0
