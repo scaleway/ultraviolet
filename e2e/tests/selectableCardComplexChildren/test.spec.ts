@@ -62,6 +62,34 @@ test.describe('SelectableCard type checkbox', () => {
     await expect(option2Checkbox).toBeChecked()
     await expect(option1Checkbox).not.toBeChecked()
   })
+  test('with input children', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}/selectableCardComplexChildren`)
+
+    const option1Checkbox = page.getByRole('checkbox', {
+      name: 'Optional option 1',
+    })
+    const option3Checkbox = page.getByRole('checkbox', {
+      name: 'Optional option 3',
+    })
+
+    // We check the 2nd selectable card when the children is simple
+    await option3Checkbox.click()
+    await expect(option1Checkbox).not.toBeChecked()
+    await expect(option3Checkbox).toBeChecked()
+
+    // Reset to initial state
+    await option3Checkbox.click()
+    await expect(option3Checkbox).not.toBeChecked()
+    await expect(option1Checkbox).not.toBeChecked()
+
+    // We click and type in the input of the children to verify it will not check the checkbox
+    const input = page.getByLabel('TextArea')
+
+    await input.click()
+    await page.keyboard.press(' ')
+    await expect(option3Checkbox).not.toBeChecked()
+    await expect(option1Checkbox).not.toBeChecked()
+  })
 })
 
 test.describe('SelectableCard type radio', () => {

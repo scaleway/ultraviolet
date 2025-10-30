@@ -46,16 +46,11 @@ You will also need to import styles of components for them to have the correct s
 
 ```tsx
 import { ThemeProvider } from '@ultraviolet/ui'
-import { Button, normalize, theme } from '@ultraviolet/ui'
+import { Button, theme } from '@ultraviolet/ui'
 import '@ultraviolet/ui/styles'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Global
-    styles={css`
-        ${normalize()}
-      `}
-    />
     <Button onClick={() => console.log('clicked')}>Click Me</Button>
   </ThemeProvider>
 )
