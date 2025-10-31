@@ -1,7 +1,8 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, style } from '@vanilla-extract/css'
+import { createVar, globalStyle, style } from '@vanilla-extract/css'
 
 export const colorLine = createVar()
+export const backgroundColorLegend = createVar()
 
 export const textLegend = style({
   textAlign: 'right',
@@ -39,4 +40,36 @@ export const lineColorSquare = style({
   height: theme.sizing[175],
   background: colorLine,
   marginRight: theme.space['1.5'],
+})
+
+export const lineChartBody = style({})
+
+globalStyle(`${lineChartBody} > :not(:last-child)`, {
+  borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
+})
+
+export const lineChartHead = style({
+  display: 'flex',
+  paddingBottom: theme.space[1],
+  borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
+})
+
+globalStyle(`${lineChartHead} > :not(:last-child)`, {
+  marginRight: theme.space[1],
+})
+
+export const lineChartLegend = style({
+  marginLeft: theme.space[2],
+  width: theme.sizing[400],
+  height: 2,
+  backgroundColor: backgroundColorLegend,
+})
+
+export const lineChartRow = style({
+  display: 'flex',
+  padding: `${theme.space['0.5']} 0`,
+})
+
+globalStyle(`${lineChartRow} > :not(:last-child)`, {
+  marginRight: theme.space[1],
 })
