@@ -1,25 +1,15 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useContext, useEffect } from 'react'
 import { Data, nextStep } from './helper'
+import {
+  steppedListCardContent,
+  steppedListCardImage,
+  steppedListCardSubHeader,
+} from './styles.css'
 
-const StyledContent = styled(Stack)`
-  min-width: 0;
-  padding: ${({ theme }) => theme.space['3']};
-  padding-top: ${({ theme }) => theme.space['4']};
-`
-
-const StyledImage = styled.div`
-  display: flex;
-  justify-content: right;
-`
-
-const StyledSubHeader = styled.div`
-  margin-bottom: ${({ theme }) => theme.space['3']};
-`
 type SteppedListContentProps = {
   subHeader?: ReactNode
   children: ((nextStep: (completed: boolean) => void) => ReactNode) | ReactNode
@@ -55,8 +45,8 @@ export const SteppedListContent = ({
 
   if (stepNumber === currentStep) {
     return (
-      <StyledContent>
-        <StyledSubHeader>
+      <Stack className={steppedListCardContent}>
+        <div className={steppedListCardSubHeader}>
           {typeof subHeader === 'string' ? (
             <Text as="h3" variant="headingSmallStrong">
               {subHeader}
@@ -64,7 +54,7 @@ export const SteppedListContent = ({
           ) : (
             subHeader
           )}
-        </StyledSubHeader>
+        </div>
         {typeof children === 'function'
           ? children((completedArg: boolean) =>
               nextStep({
@@ -79,8 +69,8 @@ export const SteppedListContent = ({
               }),
             )
           : children}
-        <StyledImage>{image}</StyledImage>
-      </StyledContent>
+        <div className={steppedListCardImage}>{image}</div>
+      </Stack>
     )
   }
 

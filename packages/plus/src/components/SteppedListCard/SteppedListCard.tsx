@@ -1,20 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Button, Card, Row, Stack, StepList, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { Children, useMemo, useState } from 'react'
 import { Data } from './helper'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
-
-const StyledCard = styled(Card)`
-  padding: 0;
-`
-const ContentStack = styled(Stack)`
-  padding: ${({ theme }) => theme.space['3']};
-  border-right: solid ${({ theme }) => theme.colors.neutral.border} 1px;
-`
+import { steppedListCard, steppedListCardWrapper } from './styles.css'
 
 type SteppedListContainerProps = {
   /**
@@ -141,9 +133,13 @@ const SteppedListCard = ({
           ) : null}
         </Row>
         {hidden ? null : (
-          <StyledCard>
+          <Card className={steppedListCard}>
             <Row templateColumns="1fr 3fr">
-              <ContentStack direction="column" gap={4}>
+              <Stack
+                className={steppedListCardWrapper}
+                direction="column"
+                gap={4}
+              >
                 <StepList>
                   {steps.map((step, index) => (
                     <SteppedList
@@ -154,10 +150,10 @@ const SteppedListCard = ({
                     />
                   ))}
                 </StepList>
-              </ContentStack>
+              </Stack>
               {children}
             </Row>
-          </StyledCard>
+          </Card>
         )}
       </Stack>
     </Data.Provider>
