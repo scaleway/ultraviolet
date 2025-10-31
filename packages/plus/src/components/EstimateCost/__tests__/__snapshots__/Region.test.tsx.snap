@@ -2,360 +2,30 @@
 
 exports[`estimateCost - Region > render region component 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-4 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-4:first-of-type,
-.emotion-4:last-child {
-  border: 0;
-}
-
-.emotion-6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-8 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-13 {
-  width: 15px;
-  margin-right: 0.5rem;
-}
-
-.emotion-15 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-15:first-of-type,
-.emotion-15:last-child {
-  border: 0;
-}
-
-.emotion-17 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-24 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-24>* {
-  margin-top: 0;
-}
-
-.emotion-24>*+* {
-  margin-top: 16px;
-}
-
-.emotion-26 {
-  background-color: #ffffff;
-}
-
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-30 {
-  margin-right: 0.5rem;
-}
-
-.emotion-32 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-34 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-38 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-42 {
-  text-align: right;
-}
-
-.emotion-45 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-49 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-51 {
-  text-align: right;
-}
-
-.emotion-53 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-57 {
-  width: 70%;
-}
-
-.emotion-59 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-61 {
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-2 emotion-3"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-4 emotion-5"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-6 emotion-7"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
                   class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
@@ -370,14 +40,14 @@ exports[`estimateCost - Region > render region component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-8 emotion-9"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-10 emotion-11 emotion-12"
+                    class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k components__1ko5kn2o components_variant_normal__1ko5kn2p"
                   >
                     <img
                       alt="nl-ams"
-                      class="emotion-13 emotion-14"
+                      class="styles__sk5tga2"
                       src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23F0F0F0'%20d='M12%2024c6.627%200%2012-5.373%2012-12S18.627%200%2012%200%200%205.373%200%2012s5.373%2012%2012%2012'/%3e%3cpath%20fill='%23D80027'%20d='M24%2012c0-5.16-3.256-9.558-7.826-11.254v22.508C20.744%2021.558%2024%2017.16%2024%2012'/%3e%3cpath%20fill='%230052B4'%20d='M0%2012c0%205.16%203.257%209.558%207.826%2011.254V.746C3.256%202.442%200%206.84%200%2012'/%3e%3c/svg%3e"
                     />
                     nl-ams
@@ -387,7 +57,7 @@ exports[`estimateCost - Region > render region component 1`] = `
             </div>
           </li>
           <li
-            class="emotion-15 emotion-5"
+            class="styles__sk5tgak"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
@@ -405,13 +75,13 @@ exports[`estimateCost - Region > render region component 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-17 emotion-18"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-10 emotion-20 emotion-12"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-22 emotion-23"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -429,23 +99,23 @@ exports[`estimateCost - Region > render region component 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-24 emotion-184"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-26 emotion-182"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-28 emotion-29"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-30 emotion-31 styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -458,10 +128,10 @@ exports[`estimateCost - Region > render region component 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-32 emotion-33"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-34 emotion-35"
+                  class="styles__sk5tgag"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
@@ -546,14 +216,14 @@ exports[`estimateCost - Region > render region component 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-36 emotion-37"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-38 emotion-181"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-40 emotion-41"
+                  class="components__1ko5kn25"
                 >
                   <div
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -569,14 +239,14 @@ exports[`estimateCost - Region > render region component 1`] = `
                     </div>
                   </div>
                   <div
-                    class="emotion-42 emotion-9"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-10 emotion-45 emotion-12"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k components__1ko5kn2o components_variant_normal__1ko5kn2p"
                     >
                       <img
                         alt="nl-ams"
-                        class="emotion-13 emotion-14"
+                        class="styles__sk5tga2"
                         src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23F0F0F0'%20d='M12%2024c6.627%200%2012-5.373%2012-12S18.627%200%2012%200%200%205.373%200%2012s5.373%2012%2012%2012'/%3e%3cpath%20fill='%23D80027'%20d='M24%2012c0-5.16-3.256-9.558-7.826-11.254v22.508C20.744%2021.558%2024%2017.16%2024%2012'/%3e%3cpath%20fill='%230052B4'%20d='M0%2012c0%205.16%203.257%209.558%207.826%2011.254V.746C3.256%202.442%200%206.84%200%2012'/%3e%3c/svg%3e"
                       />
                       nl-ams
@@ -585,10 +255,12 @@ exports[`estimateCost - Region > render region component 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-49 emotion-50"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-51 emotion-52 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -599,28 +271,29 @@ exports[`estimateCost - Region > render region component 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-53 emotion-54"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-26 emotion-182"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-57 emotion-58"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-59 emotion-180"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-61 emotion-62 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-22 emotion-23"
+                    class=" "
                   >
                     €0.00
                   </span>
