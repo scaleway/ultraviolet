@@ -1,16 +1,12 @@
-import styled from '@emotion/styled'
 import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { Popover, Tooltip } from '@ultraviolet/ui'
 import { useState } from 'react'
+import { plansIconWrapper } from './styles.css'
 import type { Hint } from './types'
 
 type FeatureHintProps = {
   hint?: Hint
 }
-
-const IconWrapper = styled.div`
-  cursor: pointer;
-`
 
 export const FeatureHint = ({ hint }: FeatureHintProps) => {
   const [visible, setVisible] = useState(false)
@@ -34,7 +30,8 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
       title={hint.title}
       visible={visible}
     >
-      <IconWrapper
+      <div
+        className={plansIconWrapper}
         data-testid="hint-popover"
         onClick={() => setVisible(true)}
         onKeyDown={event => {
@@ -46,7 +43,7 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
         tabIndex={0}
       >
         <InformationOutlineIcon prominence="weak" sentiment="neutral" />
-      </IconWrapper>
+      </div>
     </Popover>
   )
 }
