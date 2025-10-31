@@ -1,52 +1,25 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CalculatorIcon } from '@ultraviolet/icons'
-import { Stack } from '@ultraviolet/ui'
+import { Badge, Stack } from '@ultraviolet/ui'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { JSX, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
+import { estimateCostResourceName } from './Components/components.css'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
-import { ItemResourceName, OverlayRow, StyledBadge } from './componentStyle'
 import { maximumFractionDigits, multiplier } from './constants'
 import { useEstimateCost } from './EstimateCostProvider'
 import { OverlayContextProvider } from './OverlayContext'
+import {
+  estimateCostBadge,
+  estimateCostList,
+  estimateCostOverlayContainer,
+  estimateCostOverlayRow,
+  estimateCostSideItem,
+  overlayMarginVar,
+} from './styles.css'
 import type { Units } from './types'
-
-const OverlayContainer = styled('div', {
-  shouldForwardProp: prop => !['inView', 'overlayMargin'].includes(prop),
-})<{ inView?: boolean; overlayMargin?: string }>`
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: ${({ inView }) => (inView ? -120 : 0)}px;
-  height: 120px;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  margin: ${({ overlayMargin }) => overlayMargin || '0'};
-  display: flex;
-  justify-content: center;
-  box-shadow: ${({ inView, theme }) =>
-    inView ? '0' : theme.shadows.defaultShadow};
-  transition:
-    bottom 0.3s,
-    box-shadow 0.3s;
-  z-index: 1;
-`
-
-const List = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: ${({ theme }) => theme.space['3']} 0;
-`
-
-const SideItem = styled.li`
-  display: flex;
-  padding: 12px 0;
-  min-width: 158px;
-`
 
 type ExtraProps = {
   isFirstElement?: boolean
@@ -111,18 +84,20 @@ export const OverlayComponent = ({
 
   return (
     <OverlayContextProvider value={value}>
-      <OverlayContainer
+      <div
+        className={estimateCostOverlayContainer({ inView })}
         data-testid="summary-overlay"
-        inView={inView}
-        overlayMargin={overlayMargin}
+        style={assignInlineVars({
+          [overlayMarginVar]: overlayMargin ?? '0',
+        })}
       >
-        <List>
+        <ul className={estimateCostList}>
           {OverlayLeft ? (
-            <SideItem>
+            <li className={estimateCostSideItem}>
               <OverlayLeft disabled={disableOverlayLeft}>
                 {locales['estimate.cost.submit.label']}
               </OverlayLeft>
-            </SideItem>
+            </li>
           ) : null}
           {Children.map(children, (child, index) =>
             isValidElement<ExtraProps>(child)
@@ -132,12 +107,12 @@ export const OverlayComponent = ({
                 })
               : null,
           )}
-          <OverlayRow>
+          <li className={estimateCostOverlayRow()}>
             <Stack alignItems="center" direction="row" gap={1}>
               <CalculatorIcon sentiment="primary" size="medium" />
               {locales['estimate.cost.label']}
             </Stack>
-            <ItemResourceName animated={false}>
+            <div className={estimateCostResourceName()}>
               <Strong variant="big">
                 <LineThrough isActive={isBeta && discount === 0}>
                   {formatNumber(overlayPrice, {
@@ -152,26 +127,30 @@ export const OverlayComponent = ({
                 </LineThrough>
               </Strong>
               {isBeta ? (
-                <StyledBadge prominence="strong" sentiment="warning">
+                <Badge
+                  className={estimateCostBadge}
+                  prominence="strong"
+                  sentiment="warning"
+                >
                   {discount > 0 ? discount * 100 : ''}
                   {
                     locales[
                       `estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`
                     ]
                   }
-                </StyledBadge>
+                </Badge>
               ) : null}
-            </ItemResourceName>
-          </OverlayRow>
+            </div>
+          </li>
           {OverlayRight ? (
-            <SideItem>
+            <li className={estimateCostSideItem}>
               <OverlayRight disabled={disableOverlayRight}>
                 {locales['estimate.cost.submit.label']}
               </OverlayRight>
-            </SideItem>
+            </li>
           ) : null}
-        </List>
-      </OverlayContainer>
+        </ul>
+      </div>
     </OverlayContextProvider>
   )
 }

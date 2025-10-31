@@ -1,9 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { ComponentProps, ReactNode } from 'react'
 import { Children } from 'react'
+import { maxWidthText, maxWidthTextVar } from './Components/components.css'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
 import { NumberInput } from './Components/NumberInput'
@@ -16,13 +17,19 @@ import { EstimateCostContent } from './EstimateCostContent'
 import { EstimateCostProvider } from './EstimateCostProvider'
 import EstimateCostLocales from './locales/en'
 import { useOverlay } from './OverlayContext'
+import { estimateCostImage } from './styles.css'
 import type { EstimateCostProps, Units } from './types'
 
-const MaxWidthText = styled(Text)<{ maxWidth?: number }>`
-  max-width: ${({ maxWidth }) => maxWidth}px;
-`
-
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
+
+const Image = (props: ComponentProps<'img'>) => (
+  <img
+    // Explicit alt otherwise there is an oxc error
+    alt={props.alt}
+    {...props}
+    className={`${props.className ? `${props.className} ` : ''}${estimateCostImage}`}
+  />
+)
 
 const EstimateCost = ({
   description,
@@ -101,10 +108,7 @@ EstimateCost.Strong = Strong
 
 EstimateCost.Regular = Regular
 
-EstimateCost.Image = styled.img`
-  width: 15px;
-  margin-right: ${({ theme }) => theme.space['1']};
-`
+EstimateCost.Image = Image
 
 EstimateCost.Region = Region
 EstimateCost.Zone = Zone
@@ -127,14 +131,17 @@ const Ellipsis = ({
       data-testid={dataTestId}
       style={{ display: !isOverlay ? 'inline-flex' : undefined }}
     >
-      <MaxWidthText
+      <Text
         as="p"
-        maxWidth={isOverlay ? 200 : maxWidth}
+        className={maxWidthText}
         oneLine
+        style={assignInlineVars({
+          [maxWidthTextVar]: isOverlay ? '200px' : `${maxWidth}px`,
+        })}
         variant="bodyStrong"
       >
         {text}
-      </MaxWidthText>
+      </Text>
     </div>
   )
 }
