@@ -2,6 +2,7 @@
 
 import * as ProductIcon from '@ultraviolet/icons/product'
 import { Bullet, Card, Stack, Text } from '@ultraviolet/ui'
+import type { CSSProperties } from 'react'
 import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 import { faq } from './styles.css'
 
@@ -14,6 +15,7 @@ type FAQProps = {
   illustrationText?: number | string
   notes?: string
   title: string
+  style?: CSSProperties
 }
 
 export const FAQ = ({
@@ -22,6 +24,7 @@ export const FAQ = ({
   title,
   description,
   notes,
+  style,
 }: FAQProps) => {
   const ProductIconUsed = productIconName
     ? ProductIcon[
@@ -32,7 +35,7 @@ export const FAQ = ({
     : null
 
   return (
-    <Card className={faq}>
+    <Card className={faq} style={style}>
       <Stack direction="row" gap={2}>
         <div>
           {!productIconName && illustrationText ? (

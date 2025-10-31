@@ -2,6 +2,7 @@
 
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties } from 'react'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
 import { heightVar, illustrationVariants, url, widthVar } from './styles.css'
 
@@ -29,6 +30,7 @@ export type IllustrationWireProp = {
   className?: string
   sentiment?: Color
   name: keyof typeof ILLUSTRATIONS
+  style?: CSSProperties
 }
 
 /**
@@ -41,15 +43,19 @@ export const WireIllustration = ({
   className,
   sentiment = 'neutral',
   name,
+  style,
 }: IllustrationWireProp) => (
   <svg
     className={`${illustrationVariants[sentiment]}${className ? ` ${className}` : ''}`}
     data-testid={dataTestId}
-    style={assignInlineVars({
-      [url]: `url(${ILLUSTRATIONS[name]}) center center / contain no-repeat`,
-      [widthVar]: typeof width === 'number' ? `${width.toString()}px` : width,
-      [heightVar]:
-        typeof height === 'number' ? `${height.toString()}px` : height,
-    })}
+    style={{
+      ...style,
+      ...assignInlineVars({
+        [url]: `url(${ILLUSTRATIONS[name]}) center center / contain no-repeat`,
+        [widthVar]: typeof width === 'number' ? `${width.toString()}px` : width,
+        [heightVar]:
+          typeof height === 'number' ? `${height.toString()}px` : height,
+      }),
+    }}
   />
 )

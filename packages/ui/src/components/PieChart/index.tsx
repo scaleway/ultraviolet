@@ -4,7 +4,7 @@ import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useCallback, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
@@ -27,6 +27,7 @@ type PieChartProps = {
   content?: ReactNode
   withLegend?: boolean
   margin?: Box
+  style?: CSSProperties
 }
 
 const DEFAULT_CHARTPROPS = {}
@@ -46,6 +47,7 @@ export const PieChart = ({
   withLegend = false,
   margin = DEFAULT_MARGIN,
   chartProps = DEFAULT_CHARTPROPS,
+  style,
 }: PieChartProps) => {
   const theme = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
@@ -84,9 +86,12 @@ export const PieChart = ({
   return (
     <div
       className={containerPie}
-      style={assignInlineVars({
-        [heightContainerPie]: height ? `${height}px` : '',
-      })}
+      style={{
+        ...style,
+        ...assignInlineVars({
+          [heightContainerPie]: height ? `${height}px` : '',
+        }),
+      }}
     >
       <div style={{ position: 'relative' }}>
         <Pie

@@ -3,6 +3,7 @@
 import type {
   ChangeEvent,
   ClipboardEventHandler,
+  CSSProperties,
   FocusEventHandler,
   KeyboardEventHandler,
   ReactNode,
@@ -54,6 +55,7 @@ type VerificationCodeProps = {
   labelDescription?: ReactNode
   helper?: ReactNode
   success?: boolean | string
+  style?: CSSProperties
 }
 
 /**
@@ -78,6 +80,7 @@ export const VerificationCode = ({
   labelDescription,
   helper,
   success,
+  style,
 }: VerificationCodeProps) => {
   const uniqueId = useId()
   const id = inputId || uniqueId
@@ -239,6 +242,7 @@ export const VerificationCode = ({
     <fieldset
       className={`${className ? `${className} ` : ''}${filedSetClass}`}
       data-testid={dataTestId}
+      style={style}
     >
       {label || labelDescription ? (
         <Label

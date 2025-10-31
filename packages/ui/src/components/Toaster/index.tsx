@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
@@ -114,6 +114,7 @@ type ToastContainerProps = {
    * Set a custom containerId to be able to define multiple ToastContainers
    */
   containerId?: string
+  style?: CSSProperties
 }
 
 /**
@@ -132,6 +133,7 @@ export const ToastContainer = ({
   className,
   autoClose,
   containerId = 'toaster',
+  style,
 }: ToastContainerProps) => (
   <BaseToastContainer
     autoClose={autoClose ?? AUTOCLOSE_DELAY}
@@ -147,6 +149,7 @@ export const ToastContainer = ({
     pauseOnHover={false}
     position={position}
     stacked
+    style={style}
     transition={Slide}
   />
 )

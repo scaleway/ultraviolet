@@ -1,5 +1,5 @@
 import type { UnitInput } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import type orderSummaryLocales from './locales/en'
 
 export type TimeUnit = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'
@@ -122,4 +122,5 @@ export type OrderSummaryProps = {
   hideDetails?: boolean
   className?: string
   ['data-testid']?: string
+  style?: CSSProperties
 } & PeriodProps

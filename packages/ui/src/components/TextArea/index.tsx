@@ -3,7 +3,7 @@
 import { AlertCircleIcon, CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { DOMAttributes, ReactNode } from 'react'
+import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 import {
   forwardRef,
   useEffect,
@@ -88,6 +88,7 @@ type TextAreaProps = {
   onKeyDown?: DOMAttributes<HTMLTextAreaElement>['onKeyDown']
   clearable?: boolean
   labelDescription?: ReactNode
+  style?: CSSProperties
 } & LabelProps
 
 /**
@@ -123,6 +124,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       clearable = false,
       labelDescription,
       'aria-label': ariaLabel,
+      style,
     },
     ref,
   ) => {
@@ -212,11 +214,14 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               readOnly={!!readOnly}
               ref={textAreaRef}
               rows={rows !== 'auto' ? rows : 1}
-              style={assignInlineVars({
-                [paddingRightVar]: `calc(${theme.space[computedClearable && (!!success || !!error) ? '4' : '3']} + ${
-                  computedClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
-                } + ${!!success || !!error ? `${STATE_ICON_SIZE}px` : '0px'})`,
-              })}
+              style={{
+                ...style,
+                ...assignInlineVars({
+                  [paddingRightVar]: `calc(${theme.space[computedClearable && (!!success || !!error) ? '4' : '3']} + ${
+                    computedClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
+                  } + ${!!success || !!error ? `${STATE_ICON_SIZE}px` : '0px'})`,
+                }),
+              }}
               tabIndex={tabIndex}
               value={value}
             />

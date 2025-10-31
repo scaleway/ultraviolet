@@ -2,7 +2,7 @@
 
 import { CalendarRangeIcon } from '@ultraviolet/icons'
 import type { Locale } from 'date-fns'
-import type { ChangeEvent, FocusEvent } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Card } from '../Card'
 import { Stack } from '../Stack'
@@ -35,6 +35,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   value?: Date | null
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
   excludeDates?: Date[]
   id?: string
   labelDescription?: string
@@ -96,6 +97,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   showMonthYearPicker = false,
   input = 'text',
   'data-testid': dataTestId,
+  style,
 }: DateInputProps<IsRange>) => {
   const defaultMonthToShow = useMemo(() => {
     if (value) {
@@ -308,6 +310,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
           }
         }}
         ref={popupRef}
+        style={style}
       >
         {input === 'text' ? (
           <CalendarPopup

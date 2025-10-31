@@ -1,5 +1,6 @@
 import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
+import type { CSSProperties } from 'react';
 import { useState } from 'react'
 import { FeatureHint } from './FeatureHint'
 import PlansLocales from './locales/en'
@@ -22,6 +23,7 @@ type PlansProps<T extends string> = {
   hideFeatureText?: boolean
   hideLabels?: boolean
   locales?: Record<keyof typeof PlansLocales, string>
+  style?: CSSProperties
 }
 
 export const Plans = <T extends string>({
@@ -33,13 +35,14 @@ export const Plans = <T extends string>({
   hideFeatureText = false,
   hideLabels = false,
   locales = PlansLocales,
+  style,
 }: PlansProps<T>) => {
   const hasCardBehavior = !!(fieldName && onChange)
   const [focusedPlan, setFocusedPlan] = useState<string>()
   const [hoveredPlan, setHoveredPlan] = useState<string>()
 
   return (
-    <table className={plansStyle}>
+    <table className={plansStyle} style={style}>
       <thead>
         <tr>
           <td className={plansCell({ hide: hideLabels })}>

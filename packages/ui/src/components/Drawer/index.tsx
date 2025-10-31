@@ -30,6 +30,7 @@ type DrawerProps = Pick<
   | 'onClose'
   | 'open'
   | 'isClosable'
+  | 'style'
 > & {
   header?: ModalProps['children']
   size?: SizeProp
@@ -62,6 +63,7 @@ export const BaseDrawer = ({
   isClosable,
   separator = true,
   noPadding = false,
+  style,
 }: DrawerProps) => {
   const computeHeader = (modalProps: ModalState) => {
     if (typeof header === 'string') {
@@ -110,6 +112,7 @@ export const BaseDrawer = ({
       open={open}
       placement="top-right"
       size={size}
+      style={style}
     >
       {modalProps => {
         const content =

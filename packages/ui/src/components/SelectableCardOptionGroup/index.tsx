@@ -32,7 +32,7 @@ type SelectableCardOptionGroupProps = {
   disabled?: boolean
   size?: Sizes
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'name'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'name' | 'style'>
 
 /**
  * SelectableCardOptionGroup gives you a group of SelectInput within a SelectableCard component.
@@ -56,6 +56,7 @@ export const SelectableCardOptionGroup = ({
   name,
   disabled,
   size = 'large',
+  style,
 }: SelectableCardOptionGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -84,7 +85,7 @@ export const SelectableCardOptionGroup = ({
 
   return (
     <SelectableCardOptionGroupContext.Provider value={contextValue}>
-      <Stack gap={1}>
+      <Stack gap={1} style={style}>
         <fieldset
           className={`${className ? `${className} ` : ''}${selectableCardOptionFieldSet}`}
         >

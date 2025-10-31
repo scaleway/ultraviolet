@@ -58,6 +58,7 @@ const EstimateCost = ({
   locales = EstimateCostLocales,
   numberLocales = 'en-EN',
   currency = 'EUR',
+  style,
   onTotalPriceChange,
 }: EstimateCostProps) => (
   <EstimateCostProvider
@@ -89,6 +90,7 @@ const EstimateCost = ({
       onTotalPriceChange={onTotalPriceChange}
       overlayMargin={overlayMargin}
       overlayUnit={overlayUnit}
+      style={style}
       timeUnits={timeUnits}
     >
       {children}

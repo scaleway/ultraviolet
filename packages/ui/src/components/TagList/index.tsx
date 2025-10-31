@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
@@ -48,6 +48,7 @@ type TagListProps = {
   popoverMaxHeight?: ComponentProps<typeof Popover>['maxHeight']
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 } & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
@@ -71,6 +72,7 @@ export const TagList = ({
   copiedText,
   className,
   'data-testid': dataTestId,
+  style,
 }: TagListProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const measureRef = useRef<HTMLDivElement>(null)
@@ -268,9 +270,7 @@ export const TagList = ({
     <div
       className={`${className ? `${className} ` : ''}${tagListContainer}`}
       data-testid={dataTestId}
-      style={{
-        visibility: isReady ? 'visible' : 'hidden',
-      }}
+      style={{ ...style, visibility: isReady ? 'visible' : 'hidden' }}
     >
       <div
         className={`${tagContainer({

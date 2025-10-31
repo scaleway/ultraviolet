@@ -38,6 +38,7 @@ export const ToggleGroupToggle = ({
   error,
   className,
   'data-testid': dataTestId,
+  style,
 }: ToggleGroupToggleProps) => {
   const context = useContext(ToggleGroupContext)
 
@@ -61,6 +62,7 @@ export const ToggleGroupToggle = ({
       label={label}
       name={ToggleName}
       onChange={onChange}
+      style={style}
       value={ToggleValue}
     />
   )
@@ -78,7 +80,7 @@ type ToggleGroupProps = {
   required?: boolean
   description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
 export const ToggleGroup = ({
   legend,
@@ -93,6 +95,7 @@ export const ToggleGroup = ({
   name,
   description,
   required = false,
+  style,
 }: ToggleGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -107,7 +110,10 @@ export const ToggleGroup = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={`${className ? `${className} ` : ''}${fieldset}`}>
+        <fieldset
+          className={`${className ? `${className} ` : ''}${fieldset}`}
+          style={style}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>

@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode, RefObject } from 'react'
+import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react'
 
 export type ModalSize = 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
 
@@ -46,4 +46,5 @@ export type DialogProps = {
   'data-testid'?: string
   children: ReactNode
   image?: string
+  style?: CSSProperties
 }

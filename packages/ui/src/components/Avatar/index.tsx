@@ -37,6 +37,7 @@ export const Avatar = ({
   className,
   children,
   'data-testid': dataTestId,
+  style,
 }: AvatarProps) => {
   const isHalved = colors.length > 1
   const finalColors = colors?.map(
@@ -57,6 +58,7 @@ export const Avatar = ({
       }
       role={onClick ? 'button' : undefined}
       style={{
+        ...style,
         backgroundImage: image ? `url(${image})` : undefined,
         backgroundSize: image ? 'cover' : undefined,
       }}

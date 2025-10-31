@@ -1,7 +1,7 @@
 'use client'
 
 import { List } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
@@ -23,6 +23,7 @@ type OfferListProps = Omit<
   selected?: string | string[]
   ['data-testid']?: string
   className?: string
+  style?: CSSProperties
 }
 
 export const OfferList = ({
@@ -35,6 +36,7 @@ export const OfferList = ({
   selected,
   onChangeSelect,
   className,
+  style,
   'data-testid': dataTestId,
 }: OfferListProps) => {
   const [radioSelectedRow, setRadioSelectedRow] = useState<string | undefined>(
@@ -82,6 +84,7 @@ export const OfferList = ({
         data-testid={dataTestId}
         expandable={false}
         selectable={false}
+        style={style}
       >
         {children}
       </List>

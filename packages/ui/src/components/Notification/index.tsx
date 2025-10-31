@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type {
   Theme as ThemeToastify,
   ToastOptions,
@@ -85,6 +85,7 @@ type NotificationContainerProps = {
    * Give a personalized containerId in case there are multiple notifications with different styled to display
    */
   containerId?: string
+  style?: CSSProperties
 }
 
 export const NotificationContainer = ({
@@ -94,6 +95,7 @@ export const NotificationContainer = ({
   position = 'top-right',
   'data-testid': dataTestId,
   className,
+  style,
   containerId = 'notification',
 }: NotificationContainerProps) => (
   <BaseToastContainer
@@ -107,6 +109,7 @@ export const NotificationContainer = ({
     limit={limit}
     newestOnTop={newestOnTop}
     position={position}
+    style={style}
     transition={Slide}
   />
 )

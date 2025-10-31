@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactElement, ReactNode } from 'react'
+import type { CSSProperties, ReactElement, ReactNode } from 'react'
 import { useCallback, useContext, useId, useRef, useState } from 'react'
 import { Disclosure } from './components/Disclosure'
 import { ModalContent } from './ModalContent'
@@ -28,6 +28,7 @@ export type ModalProps = {
    * Add an image a the top of the modal.
    */
   image?: string
+  style?: CSSProperties
 }
 /**
  * Modal is a component that allows you to display content on top of other content.
@@ -51,6 +52,7 @@ export const Modal = ({
   'data-testid': dataTestId,
   backdropClassName,
   image,
+  style,
 }: ModalProps) => {
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
@@ -117,6 +119,7 @@ export const Modal = ({
             open={open}
             placement={placement}
             preventBodyScroll={preventBodyScroll}
+            style={style}
             visible={visible}
           >
             {children}
@@ -140,6 +143,7 @@ export const Modal = ({
           open={open}
           placement={placement}
           preventBodyScroll={preventBodyScroll}
+          style={style}
           visible={visible}
         >
           {children}

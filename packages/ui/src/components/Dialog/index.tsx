@@ -33,6 +33,7 @@ type DialogProps = Pick<
   | 'onClose'
   | 'open'
   | 'placement'
+  | 'style'
 > & {
   title: string
   sentiment: DialogSentiment
@@ -54,6 +55,7 @@ export const BaseDialog = ({
   placement,
   sentiment,
   title,
+  style,
 }: DialogProps) => {
   const headerContent = (
     <>
@@ -97,6 +99,7 @@ export const BaseDialog = ({
       open={open}
       placement={placement}
       size={DIALOG_SIZE}
+      style={style}
     >
       {modalProps =>
         typeof children === 'function' ? (

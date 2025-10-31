@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type { Color } from '../../theme'
 import { useColumnProvider } from '../List/ColumnProvider'
 import { tableCell } from './styles.css'
@@ -16,6 +16,7 @@ type CellProps = {
   rowSpan?: number
   sentiment?: Color
   align?: Align
+  style?: CSSProperties
 }
 
 export const Cell = ({
@@ -25,6 +26,7 @@ export const Cell = ({
   rowSpan,
   sentiment,
   align = 'left',
+  style,
 }: CellProps) => {
   const { maxWidth, minWidth, width } = useColumnProvider()
 
@@ -34,11 +36,14 @@ export const Cell = ({
       className={`${className ? `${className} ` : ''}${tableCell({ align, sentiment })}`}
       colSpan={colSpan}
       rowSpan={rowSpan}
-      style={assignInlineVars({
-        [widthCell]: width,
-        [minWidthCell]: minWidth,
-        [maxWidthCell]: maxWidth,
-      })}
+      style={{
+        ...style,
+        ...assignInlineVars({
+          [widthCell]: width,
+          [minWidthCell]: minWidth,
+          [maxWidthCell]: maxWidth,
+        }),
+      }}
     >
       {children}
     </td>

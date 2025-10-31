@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { Stack } from '../Stack'
 import { actionBar, rankActionBar, stackActionBar } from './styles.css'
@@ -15,6 +15,7 @@ type ActionBarProps = {
   role?: string
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -29,6 +30,7 @@ export const ActionBar = ({
   role = 'dialog',
   rank = 0,
   className,
+  style,
   'data-testid': dataTestId,
 }: ActionBarProps) =>
   createPortal(
@@ -36,9 +38,12 @@ export const ActionBar = ({
       className={`${className ? `${className} ` : ''}${actionBar}`}
       data-testid={dataTestId}
       role={role}
-      style={assignInlineVars({
-        [rankActionBar]: `${rank}`,
-      })}
+      style={{
+        ...style,
+        ...assignInlineVars({
+          [rankActionBar]: `${rank}`,
+        }),
+      }}
     >
       <Stack alignItems="center" className={stackActionBar}>
         {children}

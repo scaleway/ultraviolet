@@ -47,6 +47,7 @@ type RadioProps = {
     | 'tabIndex'
     | 'checked'
     | 'onClick'
+    | 'style'
   > &
   LabelProp
 
@@ -74,6 +75,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       'data-testid': dataTestId,
       tabIndex,
       id,
+      style,
     },
     forwadedRef,
   ) => {
@@ -105,6 +107,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               ref={forwadedRef}
+              style={style}
               tabIndex={tabIndex}
               type="radio"
               value={value}

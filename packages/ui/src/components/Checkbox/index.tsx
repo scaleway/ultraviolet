@@ -66,6 +66,7 @@ type CheckboxProps = {
   | 'onFocus'
   | 'tabIndex'
   | 'value'
+  | 'style'
 > &
   LabelProp
 
@@ -94,6 +95,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       'data-testid': dataTestId,
       tooltip,
       tabIndex,
+      style,
     },
     ref,
   ) => {
@@ -128,6 +130,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             onFocus={onFocus}
             ref={ref}
             required={required}
+            style={style}
             tabIndex={tabIndex}
             type="checkbox"
             value={value}

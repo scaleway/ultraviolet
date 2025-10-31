@@ -1,7 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CloseIcon } from '@ultraviolet/icons'
-import type { FocusEvent, ReactNode } from 'react'
+import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Label } from '../Label'
@@ -49,6 +49,7 @@ type TimeInputProps = {
    * Automatically focus on the element on render. Autofocus is applied to the hour input
    */
   autoFocus?: boolean
+  style?: CSSProperties
 } & (
   | {
       label?: string
@@ -82,6 +83,7 @@ export const TimeInput = ({
   className,
   id,
   autoFocus,
+  style,
   'data-testid': dataTestId,
   placeholder = DEFAULT_PLACEHOLDER,
   'aria-label': ariaLabel,
@@ -235,7 +237,7 @@ export const TimeInput = ({
   }
 
   return (
-    <Stack className={className} gap={0.5}>
+    <Stack className={className} gap={0.5} style={style}>
       {label || labelDescription ? (
         <Label
           htmlFor={id ?? localId}

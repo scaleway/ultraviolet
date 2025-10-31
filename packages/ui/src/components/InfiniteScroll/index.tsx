@@ -1,6 +1,6 @@
 'use client'
 
-import type { ElementType, ReactNode, RefObject } from 'react'
+import type { CSSProperties, ElementType, ReactNode, RefObject } from 'react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Loader } from '../Loader'
 
@@ -37,6 +37,7 @@ type InfiniteScrollProps = {
    * The distance from the bottom of the scrollable container where the `onLoadMore` function will be called.
    */
   heightThreshold?: number
+  style?: CSSProperties
 }
 
 /**
@@ -55,6 +56,7 @@ export const InfiniteScroll = ({
   as: Component = 'div',
   hasMore = true,
   heightThreshold = HEIGHT_THRESHOLD,
+  style,
 }: InfiniteScrollProps) => {
   const [isLoading, setIsLoading] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -146,7 +148,7 @@ export const InfiniteScroll = ({
       id={id}
       ref={containerRef}
       role="feed"
-      style={{ height }}
+      style={{ ...style, height }}
     />
   )
 }
