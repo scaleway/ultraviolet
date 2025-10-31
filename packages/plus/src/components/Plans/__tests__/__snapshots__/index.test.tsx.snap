@@ -3,155 +3,24 @@
 exports[`plans > should work with default props 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
   height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
 }
 
 .emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-10 {
-  height: 100%;
-}
-
-.emotion-12 {
   padding: 0.5rem;
   width: 100%;
-}
-
-.emotion-20 {
-  cursor: pointer;
 }
 
 <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -160,27 +29,22 @@ exports[`plans > should work with default props 1`] = `
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+              class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
                 class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
@@ -220,7 +84,7 @@ exports[`plans > should work with default props 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-12 emotion-13"
+                  class="emotion-2 emotion-3"
                 >
                   <div
                     class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
@@ -267,8 +131,7 @@ exports[`plans > should work with default props 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -308,12 +171,7 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
@@ -325,8 +183,7 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -346,7 +203,7 @@ exports[`plans > should work with default props 1`] = `
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-20 emotion-21"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
@@ -373,12 +230,7 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
@@ -390,8 +242,7 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -409,12 +260,7 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
@@ -429,8 +275,7 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -464,12 +309,7 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
@@ -486,8 +326,7 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -505,12 +344,7 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
@@ -534,297 +368,33 @@ exports[`plans > should work with default props 1`] = `
 exports[`plans > should work with group 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
   height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
 }
 
 .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
   height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
 }
 
 .emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-10 {
-  height: 100%;
-}
-
-.emotion-10 {
-  height: 100%;
-}
-
-.emotion-12 {
   padding: 0.5rem;
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-2 {
   padding: 0.5rem;
   width: 100%;
-}
-
-.emotion-20 {
-  text-transform: uppercase;
-}
-
-.emotion-26 {
-  cursor: pointer;
-}
-
-.emotion-26 {
-  cursor: pointer;
 }
 
 <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -833,27 +403,22 @@ exports[`plans > should work with group 1`] = `
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+              class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
                 class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
@@ -893,7 +458,7 @@ exports[`plans > should work with group 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-12 emotion-13"
+                  class="emotion-2 emotion-3"
                 >
                   <div
                     class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
@@ -940,8 +505,7 @@ exports[`plans > should work with group 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -981,12 +545,7 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
@@ -997,33 +556,28 @@ exports[`plans > should work with group 1`] = `
           </td>
         </tr>
         <tr
-          data-hide="false"
+          class=""
         >
           <td
-            class="emotion-2 emotion-3"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
               <p
-                class="emotion-20 emotion-21 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owp uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                class="styles__11wud80c uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owp uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 group
               </p>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           />
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1043,7 +597,7 @@ exports[`plans > should work with group 1`] = `
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-26 emotion-27"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
@@ -1070,12 +624,7 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
@@ -1087,8 +636,7 @@ exports[`plans > should work with group 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1106,12 +654,7 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
@@ -1126,8 +669,7 @@ exports[`plans > should work with group 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1161,12 +703,7 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
@@ -1183,8 +720,7 @@ exports[`plans > should work with group 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1202,12 +738,7 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
@@ -1231,178 +762,42 @@ exports[`plans > should work with group 1`] = `
 exports[`plans > should work with hideFeatureText 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
   height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
 }
 
 .emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-10 {
-  height: 100%;
-}
-
-.emotion-12 {
   padding: 0.5rem;
   width: 100%;
-}
-
-.emotion-20 {
-  cursor: pointer;
 }
 
 <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           />
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+              class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
                 class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
@@ -1442,7 +837,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-12 emotion-13"
+                  class="emotion-2 emotion-3"
                 >
                   <div
                     class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
@@ -1489,8 +884,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1530,12 +924,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
@@ -1547,8 +936,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1568,7 +956,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-20 emotion-21"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
@@ -1595,12 +983,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
@@ -1612,8 +995,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1631,12 +1013,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
@@ -1651,8 +1028,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1686,12 +1062,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
@@ -1708,8 +1079,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -1727,12 +1097,7 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
@@ -1756,155 +1121,24 @@ exports[`plans > should work with hideFeatureText 1`] = `
 exports[`plans > should work with hideLabels 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
   height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
 }
 
 .emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-10 {
-  height: 100%;
-}
-
-.emotion-12 {
   padding: 0.5rem;
   width: 100%;
-}
-
-.emotion-20 {
-  cursor: pointer;
 }
 
 <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="true"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -1913,27 +1147,22 @@ exports[`plans > should work with hideLabels 1`] = `
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
           >
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+              class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
                 class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
@@ -1973,7 +1202,7 @@ exports[`plans > should work with hideLabels 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-12 emotion-13"
+                  class="emotion-2 emotion-3"
                 >
                   <div
                     class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
@@ -2020,8 +1249,7 @@ exports[`plans > should work with hideLabels 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2061,12 +1289,7 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-gb"
           >
             <span
@@ -2078,8 +1301,7 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2099,7 +1321,7 @@ exports[`plans > should work with hideLabels 1`] = `
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-20 emotion-21"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
@@ -2126,12 +1348,7 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-pipeline"
           >
             <span
@@ -2143,8 +1360,7 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2162,12 +1378,7 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-domain"
           >
             <svg
@@ -2182,8 +1393,7 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2217,12 +1427,7 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-ssl"
           >
             <svg
@@ -2239,8 +1444,7 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2258,12 +1462,7 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-fees"
           >
             <svg
@@ -2289,155 +1488,24 @@ exports[`plans > should work with popover as hint 1`] = `[Function]`;
 exports[`plans > should work with value 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
   height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
 }
 
 .emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-6 {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-10 {
-  height: 100%;
-}
-
-.emotion-12 {
   padding: 0.5rem;
   width: 100%;
-}
-
-.emotion-20 {
-  cursor: pointer;
 }
 
 <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
@@ -2446,27 +1514,22 @@ exports[`plans > should work with value 1`] = `
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-6 emotion-7 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
               style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-10 emotion-11 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
+              class="emotion-0 emotion-1 uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
                 class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
@@ -2506,7 +1569,7 @@ exports[`plans > should work with value 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-12 emotion-13"
+                  class="emotion-2 emotion-3"
                 >
                   <div
                     class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
@@ -2553,8 +1616,7 @@ exports[`plans > should work with value 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2594,12 +1656,7 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
@@ -2611,8 +1668,7 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2632,7 +1688,7 @@ exports[`plans > should work with value 1`] = `
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-20 emotion-21"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
@@ -2659,12 +1715,7 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
@@ -2676,8 +1727,7 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2695,12 +1745,7 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
@@ -2715,8 +1760,7 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2750,12 +1794,7 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
@@ -2772,8 +1811,7 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
               class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
@@ -2791,12 +1829,7 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
