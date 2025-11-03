@@ -2,4 +2,4 @@
 "@ultraviolet/ui": minor
 ---
 
-`SelectableCardOptionGroup`: migrate sub-components to vanilla extract
+`SelectableCardOptionGroup` and `Toaster` migrate missing sub-components to vanilla extract
