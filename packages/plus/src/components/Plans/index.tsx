@@ -1,6 +1,6 @@
 import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
-import type { CSSProperties } from 'react';
+import type { CSSProperties } from 'react'
 import { useState } from 'react'
 import { FeatureHint } from './FeatureHint'
 import PlansLocales from './locales/en'

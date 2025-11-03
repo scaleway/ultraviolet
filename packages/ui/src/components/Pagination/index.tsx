@@ -1,6 +1,6 @@
 'use client'
 
-import type { CSSProperties } from 'react';
+import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { Stack } from '../Stack'
 import { PaginationButtons } from './PaginationButtons'
