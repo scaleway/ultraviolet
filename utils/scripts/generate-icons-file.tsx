@@ -33,6 +33,13 @@ const COMPONENTS = [
     suffix: 'Logo',
     typeName: 'LogoIconNames',
   },
+  {
+    input: 'packages/icons/src/components/Flags/assets',
+    name: 'Flags',
+    output: 'packages/icons/src/components/Flags/__generated__',
+    suffix: 'Flag',
+    typeName: 'FlagIconNames',
+  },
 ]
 
 const wrapSvg = (svgContent: string) => {
