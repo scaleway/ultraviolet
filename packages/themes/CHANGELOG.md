@@ -1,5 +1,40 @@
 # Change Log
 
+## 3.0.0-beta.3
+
+### Minor Changes
+
+- [#5747](https://github.com/scaleway/ultraviolet/pull/5747) [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6) Thanks [@lisalupi](https://github.com/lisalupi)! - To replace `Global` from Emotion and `normalize` from `@ultraviolet/ui`, you can now directly import the style as CSS to use in your app:
+
+  Before:
+
+  ```tsx
+  import { Global } from '@emotion/react'
+  import { normalize } from '@ultraviolet/ui'
+  import { ThemeProvider } from '@ultraviolet/themes'
+
+  const App = () => (
+      <ThemeProvider theme={theme}>
+          <Global styles={css`${normalize()}`}>
+          <MyApp />
+      </ThemeProvider>
+  )
+
+  ```
+
+  After :
+
+  ```tsx
+  import { ThemeProvider } from "@ultraviolet/themes";
+  import "@ultraviolet/themes/global";
+
+  const App = () => (
+    <ThemeProvider theme={theme}>
+      <MyApp />
+    </ThemeProvider>
+  );
+  ```
+
 ## 3.0.0-beta.2
 
 ### Major Changes
