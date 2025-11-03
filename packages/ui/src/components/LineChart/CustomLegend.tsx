@@ -1,51 +1,25 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
 import type { DatumValue } from '@nivo/core'
 import type { Serie } from '@nivo/line'
+import { theme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { Checkbox } from '../Checkbox'
 import { Text } from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 import {
+  backgroundColorLegend,
   cellValueContainer,
   container,
+  lineChartBody,
+  lineChartHead,
+  lineChartLegend,
+  lineChartRow,
   longContainer,
   textLegend,
 } from './styles.css'
-
-const styles = {
-  body: (theme: Theme) => css`
-    > :not(:last-child) {
-      border-bottom: 1px solid ${theme.colors.neutral.backgroundStrong};
-    }
-  `,
-  head: (theme: Theme) => css`
-    display: flex;
-    padding-bottom: ${theme.space['1']};
-    border-bottom: 1px solid ${theme.colors.neutral.backgroundStrong};
-
-    > :not(:last-child) {
-      margin-right: ${theme.space['1']};
-    }
-  `,
-  legend: (index: number) => (theme: Theme) =>
-    css`
-      margin-left: ${theme.space['2']};
-      width: ${theme.sizing['400']};
-      height: 2px;
-      background-color: ${getLegendColor(theme)[index]};
-    `,
-  row: (theme: Theme) => css`
-    display: flex;
-    padding: ${theme.space['0.5']} 0;
-    > :not(:last-child) {
-      margin-right: ${theme.space['1']};
-    }
-  `,
-}
 
 type CellProps = {
   value?: DatumValue
@@ -83,20 +57,14 @@ export const CustomLegend = ({
     className={`${className ? `${className} ` : ''}${container}`}
     data-testid={dataTestId}
   >
-    <div
-      // oxlint-disable-next-line no-unknown-property
-      css={styles.head}
-    >
+    <div className={lineChartHead}>
       <div className={longContainer}>Legend</div>
       <Cell value="Minimum" variant="body" />
       <Cell value="Maximum" variant="body" />
       <Cell value="Average" variant="body" />
       <Cell value="Current" variant="body" />
     </div>
-    <div
-      // oxlint-disable-next-line no-unknown-property
-      css={styles.body}
-    >
+    <div className={lineChartBody}>
       {data?.map((row, index) => {
         const values = row.data.map(val => val.y as number)
         const labelIndexed = `${row.id}${index}`
@@ -104,8 +72,7 @@ export const CustomLegend = ({
 
         return (
           <div
-            // oxlint-disable-next-line no-unknown-property
-            css={styles.row}
+            className={lineChartRow}
             // oxlint-disable-next-line no-unknown-property
             key={labelIndexed}
           >
@@ -122,10 +89,12 @@ export const CustomLegend = ({
                     {row?.['label']}
                   </Text>
                   <div
-                    // oxlint-disable-next-line no-unknown-property
-                    css={styles.legend(index)}
+                    className={lineChartLegend}
                     // oxlint-disable-next-line no-unknown-property
                     data-testid={`label-${id}`}
+                    style={assignInlineVars({
+                      [backgroundColorLegend]: getLegendColor(theme)[index],
+                    })}
                   />
                 </div>
               </Checkbox>
