@@ -26,10 +26,10 @@ export const CarouselItem = ({
     className={borderWrapper}
     draggable="true"
     style={{
-      ...style,
       ...assignInlineVars({
         [widthVar]: width,
       }),
+      ...style,
     }}
   >
     {children}

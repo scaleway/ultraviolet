@@ -215,12 +215,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               ref={textAreaRef}
               rows={rows !== 'auto' ? rows : 1}
               style={{
-                ...style,
                 ...assignInlineVars({
                   [paddingRightVar]: `calc(${theme.space[computedClearable && (!!success || !!error) ? '4' : '3']} + ${
                     computedClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
                   } + ${!!success || !!error ? `${STATE_ICON_SIZE}px` : '0px'})`,
                 }),
+                ...style,
               }}
               tabIndex={tabIndex}
               value={value}

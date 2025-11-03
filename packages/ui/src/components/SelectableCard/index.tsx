@@ -265,12 +265,12 @@ export const SelectableCard = forwardRef(
           ref={ref}
           role="button"
           style={{
-            ...style,
             ...assignInlineVars({
               [inputDisplay]: !showTick ? 'none' : 'inline',
               [labelDisplay]: !showTick && !label ? 'none' : 'inline',
               [widthSelectable]: label ? '100%' : 'auto',
             }),
+            ...style,
           }}
           tabIndex={disabled ? undefined : 0}
         >

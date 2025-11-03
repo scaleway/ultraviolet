@@ -37,12 +37,12 @@ export const Cell = ({
       colSpan={colSpan}
       rowSpan={rowSpan}
       style={{
-        ...style,
         ...assignInlineVars({
           [widthCell]: width,
           [minWidthCell]: minWidth,
           [maxWidthCell]: maxWidth,
         }),
+        ...style,
       }}
     >
       {children}

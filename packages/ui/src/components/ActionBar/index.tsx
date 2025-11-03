@@ -39,10 +39,10 @@ export const ActionBar = ({
       data-testid={dataTestId}
       role={role}
       style={{
-        ...style,
         ...assignInlineVars({
           [rankActionBar]: `${rank}`,
         }),
+        ...style,
       }}
     >
       <Stack alignItems="center" className={stackActionBar}>

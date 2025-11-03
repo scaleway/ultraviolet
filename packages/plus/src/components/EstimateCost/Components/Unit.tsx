@@ -39,7 +39,7 @@ export const Unit = ({
       <Regular>{capacity}</Regular>
     </div>
   ) : (
-    <div style={{ ...style, width: '150px' }}>
+    <div style={{ width: '150px', ...style }}>
       <NumberInput
         className={estimateCostNumberInput}
         controls={false}

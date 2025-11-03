@@ -92,7 +92,7 @@ export const LineChart = ({
 
   return (
     <>
-      <div style={{ ...style, height }}>
+      <div style={{ height, ...style }}>
         <ResponsiveLine
           axisBottom={{
             format: axisFormatters?.bottom,

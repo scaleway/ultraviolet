@@ -58,9 +58,9 @@ export const Loader = ({
       className={active ? loader : undefined}
       role="progressbar"
       style={{
-        ...style,
         height: theme.sizing[SIZES[size]],
         width: theme.sizing[SIZES[size]],
+        ...style,
       }}
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
     >

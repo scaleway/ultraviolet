@@ -148,7 +148,7 @@ export const InfiniteScroll = ({
       id={id}
       ref={containerRef}
       role="feed"
-      style={{ ...style, height }}
+      style={{ height, ...style }}
     />
   )
 }

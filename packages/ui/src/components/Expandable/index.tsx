@@ -40,7 +40,7 @@ const NoAnimationExpandable = ({
   <div
     className={className}
     data-testid={dataTestId}
-    style={{ ...style, display: !opened ? 'none' : undefined, minHeight }}
+    style={{ display: !opened ? 'none' : undefined, minHeight, ...style }}
   >
     {children}
   </div>
@@ -136,10 +136,10 @@ export const AnimatedExpandable = ({
       data-testid={dataTestId}
       ref={ref}
       style={{
-        ...style,
         ...assignInlineVars({
           [animationDurationVar]: `${animationDuration}ms`,
         }),
+        ...style,
       }}
     >
       {children}

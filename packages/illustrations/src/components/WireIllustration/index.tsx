@@ -49,13 +49,13 @@ export const WireIllustration = ({
     className={`${illustrationVariants[sentiment]}${className ? ` ${className}` : ''}`}
     data-testid={dataTestId}
     style={{
-      ...style,
       ...assignInlineVars({
         [url]: `url(${ILLUSTRATIONS[name]}) center center / contain no-repeat`,
         [widthVar]: typeof width === 'number' ? `${width.toString()}px` : width,
         [heightVar]:
           typeof height === 'number' ? `${height.toString()}px` : height,
       }),
+      ...style,
     }}
   />
 )

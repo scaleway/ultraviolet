@@ -104,7 +104,7 @@ export const PinnedItems = ({
 
   if (pinnedFeature) {
     return (
-      <div style={{ ...style, width: animation ? '100%' : undefined }}>
+      <div style={{ width: animation ? '100%' : undefined, ...style }}>
         <Item
           categoryIcon={<PinCategoryIcon variant="neutral" />}
           data-testid="pinned-group"

@@ -58,9 +58,9 @@ export const Avatar = ({
       }
       role={onClick ? 'button' : undefined}
       style={{
-        ...style,
         backgroundImage: image ? `url(${image})` : undefined,
         backgroundSize: image ? 'cover' : undefined,
+        ...style,
       }}
     >
       {upload ? (

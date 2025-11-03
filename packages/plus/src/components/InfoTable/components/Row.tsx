@@ -24,10 +24,10 @@ export const InfoTableRow = ({
     <Row
       className={infoTableRow}
       style={{
-        ...style,
         ...assignInlineVars({
           [rowWidth]: width ?? '100%',
         }),
+        ...style,
       }}
       templateColumns={templateColumns}
     >

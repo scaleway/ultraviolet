@@ -81,7 +81,7 @@ export const BarChart = ({
     <div
       className={className}
       data-testid={dataTestId}
-      style={{ ...style, height }}
+      style={{ height, ...style }}
     >
       <ResponsiveBar
         axisBottom={{

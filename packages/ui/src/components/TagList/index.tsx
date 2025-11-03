@@ -270,7 +270,7 @@ export const TagList = ({
     <div
       className={`${className ? `${className} ` : ''}${tagListContainer}`}
       data-testid={dataTestId}
-      style={{ ...style, visibility: isReady ? 'visible' : 'hidden' }}
+      style={{ visibility: isReady ? 'visible' : 'hidden', ...style }}
     >
       <div
         className={`${tagContainer({

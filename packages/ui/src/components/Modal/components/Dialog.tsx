@@ -230,11 +230,11 @@ export const Dialog = ({
         open
         ref={dialogRef}
         style={{
-          ...style,
           ...assignInlineVars({
             [topModal]: `-${top}px`,
             [positionModal]: `${position * 50}px`,
           }),
+          ...style,
         }}
         tabIndex={0}
       >

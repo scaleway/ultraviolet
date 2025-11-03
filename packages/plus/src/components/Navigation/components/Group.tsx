@@ -27,7 +27,7 @@ export const Group = ({ children, label, style }: GroupProps) => {
 
   if (Children.count(children) > 0) {
     return (
-      <div style={{ ...style, width: animation ? '100%' : undefined }}>
+      <div style={{ width: animation ? '100%' : undefined, ...style }}>
         <Stack className={navigationGroupStack} direction="column">
           {isDiplay ? (
             <Text

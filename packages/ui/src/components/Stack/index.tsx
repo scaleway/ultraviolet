@@ -136,13 +136,13 @@ export const Stack = <T extends ElementType = 'div'>({
       id={id}
       ref={ref}
       style={{
-        ...style,
         ...assignInlineVars({
           [widthVar]: width?.toString(),
           [maxWidthVar]: maxWidth?.toString(),
           [minWidthVar]: minWidth?.toString(),
           [flexVar]: flex?.toString(),
         }),
+        ...style,
       }}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
