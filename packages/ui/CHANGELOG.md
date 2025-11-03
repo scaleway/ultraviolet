@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.0.0-beta.24
+
+### Minor Changes
+
+- [#5756](https://github.com/scaleway/ultraviolet/pull/5756) [`4386617`](https://github.com/scaleway/ultraviolet/commit/4386617bee7563bb9f8fee177c936038f11dd47d) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Key`, `SelectableCardGroup` and `SelectableCardOptionGroup` to use vanilla-extract instead of Emotion and finish `LineChart` migration
+
+### Patch Changes
+
+- [#5747](https://github.com/scaleway/ultraviolet/pull/5747) [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6) Thanks [@lisalupi](https://github.com/lisalupi)! - Add e2e test of `SelectableCard` with `TextArea`
+
+- [#5753](https://github.com/scaleway/ultraviolet/pull/5753) [`5ac319e`](https://github.com/scaleway/ultraviolet/commit/5ac319e45abb27c624f2f33dd897be4cf1638312) Thanks [@lisalupi](https://github.com/lisalupi)! - `Button`: add box-shadow when button is active (accidentaly removed while migrating to vanilla extract)
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+  - @ultraviolet/icons@5.0.0-beta.9
+
 ## 3.0.0-beta.23
 
 ### Minor Changes

@@ -1,5 +1,26 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.13
+
+### Minor Changes
+
+- [#5743](https://github.com/scaleway/ultraviolet/pull/5743) [`6683a8d`](https://github.com/scaleway/ultraviolet/commit/6683a8dad5f4c47eff0d7d5deeef6be5b0dfae71) Thanks [@lisalupi](https://github.com/lisalupi)! - Refaactor component `Navigation` to use vanilla-extract instead of Emotion
+
+- [#5755](https://github.com/scaleway/ultraviolet/pull/5755) [`eecead1`](https://github.com/scaleway/ultraviolet/commit/eecead1342d5381766aabd806e38eb89f5373af4) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `SteppedListCard` to use vanilla-extract instead of Emotion
+
+- [#5751](https://github.com/scaleway/ultraviolet/pull/5751) [`4c52634`](https://github.com/scaleway/ultraviolet/commit/4c526348c5982e4e004c949c74320e5dd3d57881) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `OrderSummary` to use vanilla-extract instead of Emotion
+
+- [#5752](https://github.com/scaleway/ultraviolet/pull/5752) [`137020b`](https://github.com/scaleway/ultraviolet/commit/137020b8430d777910fc8c23eed9dea3e379c49a) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Plans` to use vanilla-extract instead of Emotion
+
+- [#5737](https://github.com/scaleway/ultraviolet/pull/5737) [`62e6d7c`](https://github.com/scaleway/ultraviolet/commit/62e6d7cbc06decf5fe036649ae832613c789b066) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `EstimateCost` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6), [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6), [`4386617`](https://github.com/scaleway/ultraviolet/commit/4386617bee7563bb9f8fee177c936038f11dd47d), [`5ac319e`](https://github.com/scaleway/ultraviolet/commit/5ac319e45abb27c624f2f33dd897be4cf1638312)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+  - @ultraviolet/ui@3.0.0-beta.24
+  - @ultraviolet/icons@5.0.0-beta.9
+
 ## 3.0.0-beta.12
 
 ### Minor Changes
