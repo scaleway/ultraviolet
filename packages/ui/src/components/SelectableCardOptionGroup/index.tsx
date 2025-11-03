@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Label } from '../Label'
@@ -9,13 +8,8 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Option } from './components/Option'
 import { SelectableCardOptionGroupContext } from './Provider'
+import { selectableCardOptionFieldSet } from './styles.css'
 import type { Sizes } from './types'
-
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-`
 
 type SelectableCardOptionGroupProps = {
   legend?: string
@@ -91,7 +85,9 @@ export const SelectableCardOptionGroup = ({
   return (
     <SelectableCardOptionGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <fieldset
+          className={`${className ? `${className} ` : ''}${selectableCardOptionFieldSet}`}
+        >
           <Stack gap={1.5}>
             {legend ? (
               <Label
@@ -106,7 +102,7 @@ export const SelectableCardOptionGroup = ({
               {children}
             </Row>
           </Stack>
-        </FieldSet>
+        </fieldset>
         {(error && typeof error === 'string') || helper ? (
           <Text
             as="span"

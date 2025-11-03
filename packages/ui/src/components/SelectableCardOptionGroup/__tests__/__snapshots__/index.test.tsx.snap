@@ -3,46 +3,40 @@
 exports[`selectableCardOptionGroup > onChange and onChangeOption are being called 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -54,7 +48,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -64,7 +58,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -126,16 +120,16 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -154,7 +148,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_ag_"
@@ -205,7 +199,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -266,16 +260,16 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="56"
@@ -294,7 +288,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_aq_"
@@ -345,7 +339,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -406,16 +400,16 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -434,7 +428,7 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_b4_"
@@ -495,46 +489,40 @@ exports[`selectableCardOptionGroup > onChange and onChangeOption are being calle
 exports[`selectableCardOptionGroup > renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -546,7 +534,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -561,7 +549,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -623,16 +611,16 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -651,7 +639,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_7_"
@@ -702,7 +690,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -763,16 +751,16 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="56"
@@ -791,7 +779,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_h_"
@@ -842,7 +830,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -903,16 +891,16 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -931,7 +919,7 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_r_"
@@ -992,46 +980,40 @@ exports[`selectableCardOptionGroup > renders correctly 1`] = `
 exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -1043,7 +1025,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1053,7 +1035,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
             style="--_3mg8xe0: repeat(4, minmax(0, 1fr)); --_3mg8xe1: repeat(4, minmax(0, 1fr)); --_3mg8xe2: repeat(4, minmax(0, 1fr)); --_3mg8xe3: repeat(4, minmax(0, 1fr)); --_3mg8xe4: repeat(4, minmax(0, 1fr)); --_3mg8xe5: repeat(4, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -1115,16 +1097,16 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -1143,7 +1125,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_8j_"
@@ -1194,7 +1176,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -1255,16 +1237,16 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="56"
@@ -1283,7 +1265,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_8t_"
@@ -1334,7 +1316,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -1395,16 +1377,16 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -1423,7 +1405,7 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_97_"
@@ -1484,46 +1466,40 @@ exports[`selectableCardOptionGroup > renders correctly 4 columns 1`] = `
 exports[`selectableCardOptionGroup > renders correctly with all options disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #e9eaeb!important;
   outline: none;
 }
@@ -1535,7 +1511,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -1545,7 +1521,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="true"
               data-error="false"
@@ -1607,16 +1583,16 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       data-disabled="true"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
@@ -1636,7 +1612,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_3s_"
@@ -1687,7 +1663,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="true"
               data-error="false"
@@ -1748,16 +1724,16 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       data-disabled="true"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
@@ -1777,7 +1753,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_46_"
@@ -1828,7 +1804,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="true"
               data-error="false"
@@ -1889,16 +1865,16 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       data-disabled="true"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
@@ -1918,7 +1894,7 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_4g_"
@@ -1979,46 +1955,40 @@ exports[`selectableCardOptionGroup > renders correctly with all options disabled
 exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -2030,7 +2000,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -2040,7 +2010,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -2103,16 +2073,16 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="40"
@@ -2124,7 +2094,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_22_"
@@ -2175,7 +2145,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -2237,16 +2207,16 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="40"
@@ -2258,7 +2228,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_2b_"
@@ -2309,7 +2279,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -2371,16 +2341,16 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="centos"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="40"
@@ -2392,7 +2362,7 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_2k_"
@@ -2453,46 +2423,40 @@ exports[`selectableCardOptionGroup > renders correctly with aria-label 1`] = `
 exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #b3144d!important;
   outline: none;
 }
@@ -2504,7 +2468,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -2514,7 +2478,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="true"
@@ -2576,16 +2540,16 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -2604,7 +2568,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_6n_"
@@ -2665,7 +2629,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -2726,16 +2690,16 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="56"
@@ -2754,7 +2718,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_71_"
@@ -2815,7 +2779,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -2876,16 +2840,16 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -2904,7 +2868,7 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_7b_"
@@ -2975,46 +2939,40 @@ exports[`selectableCardOptionGroup > renders correctly with error as boolean 1`]
 exports[`selectableCardOptionGroup > renders correctly with error message 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #b3144d!important;
   outline: none;
 }
@@ -3026,7 +2984,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -3036,7 +2994,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="true"
@@ -3098,16 +3056,16 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -3126,7 +3084,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_5o_"
@@ -3187,7 +3145,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -3248,16 +3206,16 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="56"
@@ -3276,7 +3234,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_62_"
@@ -3337,7 +3295,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="true"
@@ -3398,16 +3356,16 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -3426,7 +3384,7 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_6c_"
@@ -3502,46 +3460,40 @@ exports[`selectableCardOptionGroup > renders correctly with error message 1`] = 
 exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -3553,7 +3505,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -3563,7 +3515,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -3625,16 +3577,16 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -3653,7 +3605,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_9h_"
@@ -3704,7 +3656,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -3765,16 +3717,16 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="56"
@@ -3793,7 +3745,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_9r_"
@@ -3844,7 +3796,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -3905,16 +3857,16 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -3933,7 +3885,7 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_a5_"
@@ -3999,46 +3951,40 @@ exports[`selectableCardOptionGroup > renders correctly with helper 1`] = `
 exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -4050,7 +3996,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -4060,7 +4006,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -4122,16 +4068,16 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="40"
@@ -4150,7 +4096,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_2u_"
@@ -4201,7 +4147,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -4262,16 +4208,16 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="40"
@@ -4290,7 +4236,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_38_"
@@ -4341,7 +4287,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -4402,16 +4348,16 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="40"
@@ -4430,7 +4376,7 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_3i_"
@@ -4491,41 +4437,35 @@ exports[`selectableCardOptionGroup > renders correctly with id 1`] = `
 exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8 .selectBar__1ba7knd4 {
+.emotion-6 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-8 .selectBar__1ba7knd4:hover,
-.emotion-8 .selectBar__1ba7knd4:focus,
-.emotion-8 .selectBar__1ba7knd4:active {
+.emotion-6 .selectBar__1ba7knd4:hover,
+.emotion-6 .selectBar__1ba7knd4:focus,
+.emotion-6 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -4537,7 +4477,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -4547,7 +4487,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -4609,11 +4549,11 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
@@ -4634,7 +4574,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-8 emotion-9 styles__uf6pag0"
+                    class="emotion-6 emotion-7 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_7l_"
@@ -4685,7 +4625,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -4746,11 +4686,11 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
@@ -4771,7 +4711,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-8 emotion-9 styles__uf6pag0"
+                    class="emotion-6 emotion-7 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_7v_"
@@ -4822,7 +4762,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -4883,11 +4823,11 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
@@ -4908,7 +4848,7 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-8 emotion-9 styles__uf6pag0"
+                    class="emotion-6 emotion-7 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_89_"
@@ -4969,46 +4909,40 @@ exports[`selectableCardOptionGroup > renders correctly with image as ReactNode 1
 exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
@@ -5020,7 +4954,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -5030,7 +4964,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -5092,16 +5026,16 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="40"
@@ -5120,7 +5054,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_15_"
@@ -5171,7 +5105,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -5232,16 +5166,16 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
                       width="40"
@@ -5260,7 +5194,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_1f_"
@@ -5311,7 +5245,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -5372,16 +5306,16 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="40"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="40"
@@ -5400,7 +5334,7 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_1p_"
@@ -5461,60 +5395,54 @@ exports[`selectableCardOptionGroup > renders correctly with medium size 1`] = `
 exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2 {
   padding: 0;
   padding-top: 1rem;
   cursor: pointer;
 }
 
-.emotion-2 .styles__17da2jl1 {
+.emotion-0 .styles__17da2jl1 {
   position: absolute;
   padding: 8px;
   margin-top: -1rem;
 }
 
-.emotion-4 {
+.emotion-2 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-4 {
   padding: 0 1rem;
 }
 
-.emotion-8[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   -webkit-filter: grayscale(1) opacity(25%);
   filter: grayscale(1) opacity(25%);
 }
 
-.emotion-10 .selectBar__1ba7knd4 {
+.emotion-8 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-10 .selectBar__1ba7knd4:hover,
-.emotion-10 .selectBar__1ba7knd4:focus,
-.emotion-10 .selectBar__1ba7knd4:active {
+.emotion-8 .selectBar__1ba7knd4:hover,
+.emotion-8 .selectBar__1ba7knd4:focus,
+.emotion-8 .selectBar__1ba7knd4:active {
   border-color: #d9dadd!important;
   outline: none;
 }
 
-.emotion-20 .selectBar__1ba7knd4 {
+.emotion-18 .selectBar__1ba7knd4 {
   border-radius: 0 0 0.25rem 0.25rem;
   border-bottom: 0!important;
   border-right: 0!important;
   border-left: 0!important;
 }
 
-.emotion-20 .selectBar__1ba7knd4:hover,
-.emotion-20 .selectBar__1ba7knd4:focus,
-.emotion-20 .selectBar__1ba7knd4:active {
+.emotion-18 .selectBar__1ba7knd4:hover,
+.emotion-18 .selectBar__1ba7knd4:focus,
+.emotion-18 .selectBar__1ba7knd4:active {
   border-color: #e9eaeb!important;
   outline: none;
 }
@@ -5526,7 +5454,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
       class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <fieldset
-        class="emotion-0 emotion-1"
+        class="styles__12n1yvr0"
       >
         <div
           class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
@@ -5536,7 +5464,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
             style="--_3mg8xe0: repeat(3, minmax(0, 1fr)); --_3mg8xe1: repeat(3, minmax(0, 1fr)); --_3mg8xe2: repeat(3, minmax(0, 1fr)); --_3mg8xe3: repeat(3, minmax(0, 1fr)); --_3mg8xe4: repeat(3, minmax(0, 1fr)); --_3mg8xe5: repeat(3, minmax(0, 1fr));"
           >
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="true"
               data-disabled="false"
               data-error="false"
@@ -5598,16 +5526,16 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Ubuntu"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/ubuntu.svg"
                       width="56"
@@ -5626,7 +5554,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_4q_"
@@ -5677,7 +5605,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="true"
               data-error="false"
@@ -5738,16 +5666,16 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="Debian"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       data-disabled="true"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/debian.svg"
@@ -5767,7 +5695,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-20 emotion-11 styles__uf6pag0"
+                    class="emotion-18 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_54_"
@@ -5818,7 +5746,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
               </div>
             </div>
             <div
-              class="emotion-2 emotion-3 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+              class="emotion-0 emotion-1 styles__475tnd0 styles_image_none__475tnd1 styles_cursor_custom__475tnd5 styles_noLabel__475tnd7 styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               data-checked="false"
               data-disabled="false"
               data-error="false"
@@ -5879,16 +5807,16 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                 style="--_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+                  class="emotion-2 emotion-3 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
                   style="--_4k0ekn0: 100%; --_4k0ekn3: 1 1 auto;"
                 >
                   <div
-                    class="emotion-6 emotion-7 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
+                    class="emotion-4 emotion-5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_center_xxsmall__toi52u5j"
                     style="--_4k0ekn0: 100%;"
                   >
                     <img
                       alt="CentOS"
-                      class="emotion-8 emotion-9"
+                      class="emotion-6 emotion-7"
                       height="56"
                       src="/src/components/SelectableCardOptionGroup/__stories__/assets/centos.svg"
                       width="56"
@@ -5907,7 +5835,7 @@ exports[`selectableCardOptionGroup > renders correctly with partial disabled 1`]
                   </div>
                   <div
                     aria-label="selectable-card-option"
-                    class="emotion-10 emotion-11 styles__uf6pag0"
+                    class="emotion-8 emotion-9 styles__uf6pag0"
                   >
                     <div
                       aria-controls="_r_5e_"

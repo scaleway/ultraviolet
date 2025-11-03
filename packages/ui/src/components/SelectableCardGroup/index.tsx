@@ -1,6 +1,5 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
@@ -8,6 +7,7 @@ import { Row } from '../Row'
 import { SelectableCard } from '../SelectableCard'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { selectableCardGroupFieldSet } from './styles.css'
 
 type SelectableCardGroupContextType = {
   groupName?: string
@@ -77,12 +77,6 @@ const CardSelectableCard = ({
   )
 }
 
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-`
-
 type SelectableCardGroupProps = {
   legend?: string
   legendDescription?: ReactNode
@@ -132,7 +126,9 @@ export const SelectableCardGroup = ({
   return (
     <SelectableCardGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <fieldset
+          className={`${className ? `${className} ` : ''}${selectableCardGroupFieldSet}`}
+        >
           <Stack gap={1.5}>
             {legend ? (
               <Label
@@ -147,7 +143,7 @@ export const SelectableCardGroup = ({
               {children}
             </Row>
           </Stack>
-        </FieldSet>
+        </fieldset>
         {helper ? (
           <Text
             as="span"
