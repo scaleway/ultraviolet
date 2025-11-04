@@ -3,6 +3,7 @@
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
 import type {
+  CSSProperties,
   DetailsHTMLAttributes,
   DragEvent,
   ForwardedRef,
@@ -62,6 +63,7 @@ type CommonProps = {
   className?: string
   /** Uncontrolled but open by default */
   open?: DetailsHTMLAttributes<HTMLDetailsElement>['open']
+  style?: CSSProperties
 } & DraggableProps
 
 type ExpandableCardProps = XOR<
@@ -86,6 +88,7 @@ const BaseExpandableCard = forwardRef(
       onKeyDown,
       'data-testid': dataTestId,
       open,
+      style,
     }: ExpandableCardProps,
     ref: ForwardedRef<HTMLDetailsElement>,
   ) => {
@@ -161,6 +164,7 @@ const BaseExpandableCard = forwardRef(
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         ref={containerRef}
+        style={style}
         width="100%"
       >
         {draggable ? (

@@ -2,7 +2,7 @@
 
 import { CloseIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
 import { Button } from '../Button'
 import { Link } from '../Link'
@@ -30,6 +30,7 @@ type BannerProps = {
   closable?: boolean
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 } & BannerVariants
 
 /**
@@ -50,6 +51,7 @@ export const Banner = ({
   className,
   closable = true,
   'data-testid': dataTestId,
+  style,
 }: BannerProps) => {
   const { theme } = useTheme()
   const defaultImage =
@@ -80,6 +82,7 @@ export const Banner = ({
       direction="row"
       gap={2}
       justifyContent="space-between"
+      style={style}
     >
       {image ? (
         <Stack className={imageStackBanner[size]} justifyContent="center">

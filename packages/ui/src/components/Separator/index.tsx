@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type { SeparatorVariants } from './styles.css'
 import { hr, iconWraperSeparator, thicknessSeparator } from './styles.css'
 
@@ -10,6 +10,7 @@ type SeparatorProps = {
   className?: string
   'data-testid'?: string
   children?: ReactNode
+  style?: CSSProperties
 } & SeparatorVariants
 
 /**
@@ -22,6 +23,7 @@ export const Separator = ({
   className,
   'data-testid': dataTestId,
   children,
+  style,
 }: SeparatorProps) =>
   children ? (
     <div
@@ -29,6 +31,7 @@ export const Separator = ({
       className={`${className ? `${className} ` : ''}${iconWraperSeparator({ direction, sentiment })}`}
       data-testid={dataTestId}
       role="separator"
+      style={style}
     >
       <hr
         className={hr({ direction, hasIcon: true, sentiment })}

@@ -13,7 +13,7 @@ type RadioGroupContextType = {
   groupValue: string | number
   error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
 const RadioGroupContext = createContext<RadioGroupContextType | undefined>(
   undefined,
@@ -36,6 +36,7 @@ const RadioGroupRadio = ({
   onKeyDown,
   tooltip,
   'data-testid': dataTestId,
+  style,
 }: RadioGroupRadioProps) => {
   const context = useContext(RadioGroupContext)
 
@@ -60,6 +61,7 @@ const RadioGroupRadio = ({
       onChange={onChange}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
+      style={style}
       tooltip={tooltip}
       value={value}
     />

@@ -159,6 +159,7 @@ export const Button = forwardRef<Element, FinalProps>(
             onMouseUp={onMouseUp}
             ref={ref as Ref<HTMLAnchorElement>}
             role={role}
+            style={style}
             tabIndex={tabIndex}
             target={target}
             type={type}

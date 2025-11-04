@@ -1,7 +1,7 @@
 'use client'
 
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useContext, useEffect } from 'react'
 import { Data, nextStep } from './helper'
 import {
@@ -16,6 +16,7 @@ type SteppedListContentProps = {
   image?: ReactNode
   stepNumber: number
   completed?: boolean
+  style?: CSSProperties
 }
 export const SteppedListContent = ({
   subHeader,
@@ -23,6 +24,7 @@ export const SteppedListContent = ({
   image,
   stepNumber,
   completed = false,
+  style,
 }: SteppedListContentProps) => {
   const {
     setDone,
@@ -45,7 +47,7 @@ export const SteppedListContent = ({
 
   if (stepNumber === currentStep) {
     return (
-      <Stack className={steppedListCardContent}>
+      <Stack className={steppedListCardContent} style={style}>
         <div className={steppedListCardSubHeader}>
           {typeof subHeader === 'string' ? (
             <Text as="h3" variant="headingSmallStrong">

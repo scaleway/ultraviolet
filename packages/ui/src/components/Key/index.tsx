@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
 import { key as keyStyle } from './styles.css'
@@ -22,6 +23,7 @@ type KeyProps = {
   id?: string
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -36,6 +38,7 @@ export const Key = ({
   id,
   className,
   'data-testid': dataTestId,
+  style,
 }: KeyProps) => {
   const specialKey = useMemo(
     () => Object.keys(KEYS_MATCH).find(key => key === children.toLowerCase()),
@@ -62,6 +65,7 @@ export const Key = ({
       data-size={size}
       data-testid={dataTestId}
       id={id}
+      style={style}
     >
       <Text
         as="span"

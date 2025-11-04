@@ -1,6 +1,7 @@
 'use client'
 
 import { NumberInput } from '@ultraviolet/ui'
+import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { useOverlay } from '../OverlayContext'
 import {
@@ -14,6 +15,7 @@ type UnitProps = {
   itemCallback?: (amount?: number, isVariant?: boolean) => void
   getAmountValue?: (amount?: number) => void
   unit?: string
+  style?: CSSProperties
 }
 
 export const Unit = ({
@@ -21,6 +23,7 @@ export const Unit = ({
   itemCallback,
   getAmountValue,
   unit,
+  style,
 }: UnitProps) => {
   const { isOverlay } = useOverlay()
   const [capacity, setCapacity] = useState(amount === 0 ? undefined : amount)
@@ -32,11 +35,11 @@ export const Unit = ({
   }, [getAmountValue, itemCallback, capacity, amount])
 
   return isOverlay ? (
-    <div className={estimateCostItemResourceName()}>
+    <div className={estimateCostItemResourceName()} style={style}>
       <Regular>{capacity}</Regular>
     </div>
   ) : (
-    <div style={{ width: '150px' }}>
+    <div style={{ width: '150px', ...style }}>
       <NumberInput
         className={estimateCostNumberInput}
         controls={false}

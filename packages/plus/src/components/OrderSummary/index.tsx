@@ -35,6 +35,7 @@ export const OrderSummary = ({
   additionalInfo,
   className,
   'data-testid': dataTestId,
+  style,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -139,6 +140,7 @@ export const OrderSummary = ({
         className={`${className ? `${className} ` : ''}${orderSummaryContainer}`}
         data-testId={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}
+        style={style}
       >
         {header ? (
           <Stack

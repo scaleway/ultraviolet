@@ -122,6 +122,7 @@ export const EstimateCostContent = ({
   locales = EstimateCostLocales,
   overlayMargin,
   onTotalPriceChange,
+  style,
 }: EstimateCostProps) => {
   const { formatNumber } = useEstimateCost()
   const [ref, inView] = useInView()
@@ -288,7 +289,7 @@ export const EstimateCostContent = ({
   }, [hideTimeUnit, iteration, defaultTimeUnit])
 
   return (
-    <Stack gap={2}>
+    <Stack gap={2} style={style}>
       {!hideOverlay ? (
         <OverlayComponent
           disableOverlayLeft={disableOverlayLeft}

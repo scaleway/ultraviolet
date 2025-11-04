@@ -20,7 +20,7 @@ export type IconProps = {
   children: ReactNode
 } & Pick<
   SVGProps<SVGSVGElement>,
-  'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label'
+  'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label' | 'style'
 >
 
 /**
@@ -41,6 +41,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       disabled,
       'aria-label': ariaLabel,
       children,
+      style,
     },
     ref,
   ) => (
@@ -52,6 +53,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       ref={ref}
       stroke={stroke}
       strokeWidth={strokeWidth}
+      style={style}
       viewBox={
         typeof size === 'string' && ['xsmall', 'small'].includes(size)
           ? '0 0 16 16'

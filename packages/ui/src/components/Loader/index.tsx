@@ -1,6 +1,7 @@
 'use client'
 
 import { css, useTheme } from '@emotion/react'
+import type { CSSProperties } from 'react'
 import type { ExtendedColor } from '../../theme'
 import { circle, loader } from './styles.css'
 
@@ -27,6 +28,7 @@ type LoaderProps = {
    * Label should be defined for accessibility, to indicate what is loading
    */
   label?: string
+  style?: CSSProperties
 }
 
 /**
@@ -38,6 +40,7 @@ export const Loader = ({
   sentiment = 'primary',
   active = false,
   label = 'Loading',
+  style,
 }: LoaderProps) => {
   const theme = useTheme()
 
@@ -57,6 +60,7 @@ export const Loader = ({
       style={{
         height: theme.sizing[SIZES[size]],
         width: theme.sizing[SIZES[size]],
+        ...style,
       }}
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
     >

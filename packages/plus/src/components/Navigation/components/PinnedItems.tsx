@@ -3,7 +3,7 @@
 import { PinCategoryIcon } from '@ultraviolet/icons/category'
 import { useTheme } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
-import type { DragEvent, ReactElement } from 'react'
+import type { CSSProperties, DragEvent, ReactElement } from 'react'
 import { useCallback } from 'react'
 import { useNavigation } from '../NavigationProvider'
 import type { DragNDropData } from '../types'
@@ -32,6 +32,7 @@ type PinnedItemsProps = {
    * Use this prop if it is needed to wrap each PinnedItem component into another component (eg NavLink)
    */
   itemWrapper?: (item: ReactElement, itemId: string) => ReactElement
+  style?: CSSProperties
 }
 
 export const PinnedItems = ({
@@ -39,6 +40,7 @@ export const PinnedItems = ({
   onReorder,
   onToggle,
   itemWrapper,
+  style,
 }: PinnedItemsProps) => {
   const context = useNavigation()
 
@@ -102,7 +104,7 @@ export const PinnedItems = ({
 
   if (pinnedFeature) {
     return (
-      <div style={{ width: animation ? '100%' : undefined }}>
+      <div style={{ width: animation ? '100%' : undefined, ...style }}>
         <Item
           categoryIcon={<PinCategoryIcon variant="neutral" />}
           data-testid="pinned-group"

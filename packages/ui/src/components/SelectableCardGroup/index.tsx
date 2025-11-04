@@ -38,6 +38,7 @@ const CardSelectableCard = ({
   tooltip,
   id,
   label,
+  style,
   'data-testid': dataTestId,
 }: CardSelectableCardProps) => {
   const context = useContext(SelectableCardGroupContext)
@@ -68,6 +69,7 @@ const CardSelectableCard = ({
       onChange={onChange}
       onFocus={onFocus}
       showTick={showTick}
+      style={style}
       tooltip={tooltip}
       type={type}
       value={value}

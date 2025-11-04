@@ -63,6 +63,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       onKeyDown,
       role,
       value,
+      style,
     }: SearchInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -295,6 +296,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             required={required}
             role={role}
             size={size}
+            style={style}
             suffix={
               shortcut && searchTerms.length === 0 ? (
                 <KeyGroup

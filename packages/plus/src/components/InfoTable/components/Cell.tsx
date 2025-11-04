@@ -1,21 +1,23 @@
 'use client'
 
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { cellText, desc, term } from '../styles.css'
 
 type CellProps = {
   children: ReactNode
   title: ReactNode
   multiline?: boolean
+  style?: CSSProperties
 }
 
 export const InfoTableCell = ({
   children,
   title,
   multiline = false,
+  style,
 }: CellProps) => (
-  <Stack gap="0.5" minWidth="0" width="100%">
+  <Stack gap="0.5" minWidth="0" style={style} width="100%">
     <dt className={term}>
       <Text
         as="div"

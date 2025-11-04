@@ -20,6 +20,7 @@ import {
 } from '@ultraviolet/ui'
 import type {
   ComponentProps,
+  CSSProperties,
   DragEvent,
   ElementType,
   MouseEvent,
@@ -143,6 +144,7 @@ type ItemProps = {
   noExpand?: boolean
   disabled?: boolean
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
@@ -174,6 +176,7 @@ export const Item = memo(
     index,
     id,
     'data-testid': dataTestId,
+    style,
   }: ItemProps) => {
     const context = useNavigation()
     if (!context) {
@@ -360,6 +363,7 @@ export const Item = memo(
             onDragEnd={onDragEnd}
             onDragStart={onDragStart}
             rel={rel}
+            style={style}
             target={target}
           >
             <Stack
@@ -579,6 +583,7 @@ export const Item = memo(
           className={navigationItemMenuStack}
           gap={1}
           justifyContent="start"
+          style={style}
         >
           {Children.count(children) > 0 ? (
             <Menu
@@ -648,6 +653,7 @@ export const Item = memo(
           // pinnedFeature={pinnedFeature}
           rel={rel}
           sentiment={active ? 'primary' : 'neutral'}
+          style={style}
           target={target}
         >
           <Stack

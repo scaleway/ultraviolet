@@ -1,6 +1,6 @@
 'use client'
 
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -15,6 +15,7 @@ const LabelRequiredOrNot = ({
   as,
   sentiment,
   disabled,
+  style,
 }: LabelProps) => {
   const textPointerValue = useMemo(() => {
     if (disabled) {
@@ -30,7 +31,7 @@ const LabelRequiredOrNot = ({
 
   if (required) {
     return (
-      <Stack alignItems="start" direction="row" gap="0.5">
+      <Stack alignItems="start" direction="row" gap="0.5" style={style}>
         <Text
           as={as === 'label' ? 'label' : 'legend'}
           className={textPointer[textPointerValue]}
@@ -63,6 +64,7 @@ const LabelRequiredOrNot = ({
       htmlFor={htmlFor}
       id={id}
       sentiment={sentiment}
+      style={style}
       variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
     >
       {children}
@@ -83,6 +85,7 @@ type LabelProps = {
   id?: string
   sentiment?: ComponentProps<typeof Text>['sentiment']
   disabled?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -98,6 +101,7 @@ export const Label = ({
   id,
   sentiment = 'neutral',
   disabled,
+  style,
 }: LabelProps) =>
   labelDescription ? (
     <Stack alignItems="center" direction="row" gap="1">
@@ -109,6 +113,7 @@ export const Label = ({
         required={required}
         sentiment={sentiment}
         size={size}
+        style={style}
       >
         {children}
       </LabelRequiredOrNot>
@@ -129,6 +134,7 @@ export const Label = ({
       required={required}
       sentiment={sentiment}
       size={size}
+      style={style}
     >
       {children}
     </LabelRequiredOrNot>

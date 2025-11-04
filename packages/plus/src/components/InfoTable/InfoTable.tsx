@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { InfoTableCell } from './components/Cell'
 import { InfoTableRow } from './components/Row'
 import { InfoTableContext } from './context'
@@ -11,6 +11,7 @@ type InfoTableProps = {
   width?: string
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -21,12 +22,14 @@ export const InfoTable = ({
   children,
   width,
   className,
+  style,
   'data-testid': dataTestId,
 }: InfoTableProps) => (
   <InfoTableContext.Provider value={{ width }}>
     <dl
       className={`${className ? `${className} ` : ''}${dl}`}
       data-testid={dataTestId}
+      style={style}
     >
       {children}
     </dl>

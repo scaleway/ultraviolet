@@ -63,6 +63,7 @@ type UnitInputProps = {
   | 'required'
   | 'autoFocus'
   | 'onKeyDown'
+  | 'style'
 >
 
 export const UnitInput = ({
@@ -99,6 +100,7 @@ export const UnitInput = ({
   onKeyDown,
   dropdownAlign,
   templateColumns,
+  style,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
   const localId = useId()
@@ -188,6 +190,7 @@ export const UnitInput = ({
             readOnly={readOnly}
             required={required}
             step={step}
+            style={style}
             type="number"
             value={val}
           />

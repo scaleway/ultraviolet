@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES, SIZES } from './constants'
@@ -18,6 +18,7 @@ type BulletProps = {
   prominence?: ProminenceType
   children?: ReactNode
   disabled?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -33,11 +34,13 @@ export const Bullet = ({
   prominence = 'default',
   children,
   disabled,
+  style,
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <div
       className={`${className ? `${className} ` : ''}${bullet({ disabled, prominence, sentiment, size })}`}
       data-testid={dataTestId}
+      style={style}
     >
       {children}
     </div>

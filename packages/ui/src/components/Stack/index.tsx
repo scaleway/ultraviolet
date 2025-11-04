@@ -85,6 +85,7 @@ export const Stack = <T extends ElementType = 'div'>({
   flex,
   as,
   ref,
+  style,
   ...props
 }: StackProps<T>) => {
   const wrapValue = useMemo(() => {
@@ -134,12 +135,15 @@ export const Stack = <T extends ElementType = 'div'>({
       data-testid={dataTestId}
       id={id}
       ref={ref}
-      style={assignInlineVars({
-        [widthVar]: width?.toString(),
-        [maxWidthVar]: maxWidth?.toString(),
-        [minWidthVar]: minWidth?.toString(),
-        [flexVar]: flex?.toString(),
-      })}
+      style={{
+        ...assignInlineVars({
+          [widthVar]: width?.toString(),
+          [maxWidthVar]: maxWidth?.toString(),
+          [minWidthVar]: minWidth?.toString(),
+          [flexVar]: flex?.toString(),
+        }),
+        ...style,
+      }}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >

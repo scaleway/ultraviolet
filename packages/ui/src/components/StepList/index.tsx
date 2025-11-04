@@ -1,6 +1,6 @@
 'use client'
 
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Bullet } from '../Bullet'
 import { step, stepDiv, steps } from './styles.css'
 
@@ -52,6 +52,7 @@ type StepListProps = {
   children: ReactNode
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -61,11 +62,13 @@ type StepListProps = {
 export const StepList = ({
   children,
   className,
+  style,
   'data-testid': dataTestId,
 }: StepListProps) => (
   <ul
     className={`${className ? `${className} ` : ''}${steps}`}
     data-testid={dataTestId}
+    style={style}
   >
     {children}
   </ul>
