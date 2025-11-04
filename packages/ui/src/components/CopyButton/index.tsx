@@ -1,6 +1,7 @@
 'use client'
 
 import { CheckIcon, CopyContentIcon } from '@ultraviolet/icons'
+import type { CSSProperties } from 'react'
 import useClipboard from 'react-use-clipboard'
 import { Button } from '../Button'
 
@@ -17,6 +18,7 @@ type CopyButtonProps = {
   'data-testid'?: string
   children?: string
   onCopy?: () => void
+  style?: CSSProperties
 }
 
 /**
@@ -33,6 +35,7 @@ export const CopyButton = ({
   children,
   'data-testid': dataTestId,
   onCopy,
+  style,
 }: CopyButtonProps) => {
   const [isCopied, setCopied] = useClipboard(value, {
     successDuration: COPY_DURATION,
@@ -49,6 +52,7 @@ export const CopyButton = ({
       }}
       sentiment={sentiment}
       size={size}
+      style={style}
       tooltip={isCopied ? copiedText : copyText}
       type="button"
       variant={!bordered ? 'ghost' : 'outlined'}

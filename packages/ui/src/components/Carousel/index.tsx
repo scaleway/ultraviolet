@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import {
   afterScroll,
@@ -15,17 +15,22 @@ import {
 type CarouselItemProps = {
   children: ReactNode
   width?: string
+  style?: CSSProperties
 }
 export const CarouselItem = ({
   children,
   width = '240px',
+  style,
 }: CarouselItemProps) => (
   <div
     className={borderWrapper}
     draggable="true"
-    style={assignInlineVars({
-      [widthVar]: width,
-    })}
+    style={{
+      ...assignInlineVars({
+        [widthVar]: width,
+      }),
+      ...style,
+    }}
   >
     {children}
   </div>

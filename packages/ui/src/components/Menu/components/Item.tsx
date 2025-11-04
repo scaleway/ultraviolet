@@ -2,6 +2,7 @@
 
 import { ArrowRightIcon } from '@ultraviolet/icons'
 import type {
+  CSSProperties,
   KeyboardEvent,
   MouseEvent,
   MouseEventHandler,
@@ -34,6 +35,7 @@ type ItemProps = {
    * If you children is complex and you want to specify the search text use this prop.
    */
   searchText?: string
+  style?: CSSProperties
 }
 
 const Item = forwardRef<HTMLElement, ItemProps>(
@@ -52,6 +54,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       className,
       searchText,
       'data-testid': dataTestId,
+      style,
     },
     ref,
   ) => {
@@ -127,6 +130,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
         <div
           className={menuItemContainer({ borderless })}
           data-search-text={searchText}
+          style={style}
         >
           <Tooltip text={tooltip}>
             <a
@@ -165,6 +169,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       <div
         className={menuItemContainer({ borderless })}
         data-search-text={searchText}
+        style={style}
       >
         <Tooltip text={tooltip}>
           <button

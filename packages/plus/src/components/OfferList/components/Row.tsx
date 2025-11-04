@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useCallback, useMemo, useState } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import {
@@ -37,7 +37,9 @@ type RowProps = ComponentProps<typeof List.Row> & {
     text: string
     sentiment?: ComponentProps<typeof BadgeUV>['sentiment']
   }
+  style?: CSSProperties
 }
+
 export const Row = ({
   children,
   disabled,
@@ -89,7 +91,10 @@ export const Row = ({
           <div
             className={offerListRowExpandable}
             style={assignInlineVars({
-              [expandablePaddingVar]: theme.space[expandablePadding ?? 2],
+              [expandablePaddingVar]:
+                theme.space[
+                  (expandablePadding ?? 2) as keyof typeof theme.space
+                ],
             })}
           >
             {expandableContent}

@@ -6,13 +6,17 @@ import { useDialogContext } from '../Context'
 
 type DialogButtonProps = {
   children: ReactNode
-} & Pick<ComponentProps<typeof Button>, 'onClick' | 'disabled' | 'tooltip'>
+} & Pick<
+  ComponentProps<typeof Button>,
+  'onClick' | 'disabled' | 'tooltip' | 'style'
+>
 
 export const DialogButton = ({
   children,
   onClick,
   disabled,
   tooltip,
+  style,
 }: DialogButtonProps) => {
   const context = useDialogContext()
 
@@ -21,6 +25,7 @@ export const DialogButton = ({
       disabled={disabled}
       onClick={onClick}
       sentiment={context.sentiment}
+      style={style}
       tooltip={tooltip}
     >
       {children}

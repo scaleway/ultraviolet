@@ -1,4 +1,4 @@
-import type { MouseEvent, ReactNode } from 'react'
+import type { CSSProperties, MouseEvent, ReactNode } from 'react'
 import type { SENTIMENTS, sizes } from './constants'
 
 // This type defines an array of string that should have a length of 0, 1, or 2
@@ -27,6 +27,7 @@ type CommonProps = {
   onClick?: (event?: MouseEvent<HTMLDivElement>) => void
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 type VariantUser = {

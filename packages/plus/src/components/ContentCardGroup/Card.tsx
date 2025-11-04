@@ -2,7 +2,12 @@
 
 import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { AnchorHTMLAttributes, ElementType, ReactNode } from 'react'
+import type {
+  AnchorHTMLAttributes,
+  CSSProperties,
+  ElementType,
+  ReactNode,
+} from 'react'
 import { forwardRef } from 'react'
 import {
   customStack,
@@ -20,6 +25,7 @@ type CardProps = {
   children?: ReactNode
   href: string
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target']
+  style?: CSSProperties
 }
 
 export const Card = forwardRef<HTMLAnchorElement, CardProps>(
@@ -33,10 +39,17 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
       children,
       href,
       target = '_blank',
+      style,
     },
     ref,
   ) => (
-    <a className={styledWrapper} href={href} ref={ref} target={target}>
+    <a
+      className={styledWrapper}
+      href={href}
+      ref={ref}
+      style={style}
+      target={target}
+    >
       <Stack
         alignItems="center"
         className={fullHeightStack}

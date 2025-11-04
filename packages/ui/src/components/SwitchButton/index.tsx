@@ -3,6 +3,7 @@
 import type {
   ChangeEvent,
   ChangeEventHandler,
+  CSSProperties,
   FocusEventHandler,
   ReactNode,
 } from 'react'
@@ -28,6 +29,7 @@ type SwitchButtonProps = {
   'data-testid'?: string
   size?: 'small' | 'medium'
   sentiment?: 'primary' | 'neutral'
+  style?: CSSProperties
 }
 
 /**
@@ -45,6 +47,7 @@ export const SwitchButton = ({
   className,
   children,
   'data-testid': dataTestId,
+  style,
 }: SwitchButtonProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -184,6 +187,7 @@ export const SwitchButton = ({
               }
             }}
             ref={containerRef}
+            style={style}
           >
             {width ? (
               <FocusOverlay

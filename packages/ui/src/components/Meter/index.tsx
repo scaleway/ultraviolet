@@ -1,6 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties } from 'react'
 import { Text } from '../Text'
 import { colorMeter, meter, strengthMeter, wrapperMeter } from './styles.css'
 
@@ -25,6 +26,7 @@ type PasswordStrengthMeterProps = {
   className?: string
   'data-testid'?: string
   id?: string
+  style?: CSSProperties
 }
 
 /**
@@ -36,6 +38,7 @@ export const Meter = ({
   value,
   className,
   'data-testid': dataTestId,
+  style,
   id,
 }: PasswordStrengthMeterProps) => {
   const toValue = ((value + 1) / strength.length) * 100
@@ -55,6 +58,7 @@ export const Meter = ({
       data-testid={dataTestId}
       id={id}
       role="meter"
+      style={style}
       title={title}
     >
       <Text as="p" id="meter-label" variant="bodySmallStrong">

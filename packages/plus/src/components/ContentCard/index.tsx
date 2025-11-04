@@ -3,7 +3,7 @@
 import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { MouseEventHandler, ReactNode } from 'react'
+import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
 import {
@@ -47,6 +47,7 @@ type ContentCardProps = {
   disabled?: boolean
   loading?: boolean
   className?: string
+  style?: CSSProperties
 }
 
 /**
@@ -74,6 +75,7 @@ export const ContentCard = forwardRef<
       disabled,
       loading,
       className,
+      style,
     },
     ref,
   ) => {
@@ -106,6 +108,7 @@ export const ContentCard = forwardRef<
         onClick={!disabled ? onClick : undefined}
         ref={ref}
         role={onClick && !href ? 'button' : undefined}
+        style={style}
         target={target}
       >
         {loading ? (

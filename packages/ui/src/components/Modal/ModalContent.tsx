@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { Button } from '../Button'
 import type { Modal } from '.'
 import { Dialog } from './components/Dialog'
@@ -19,6 +19,7 @@ type ModalContentProps = ComponentProps<typeof Modal> & {
   handleClose: () => void
   dataTestId?: string
   image?: string
+  style?: CSSProperties
 }
 
 export const ModalContent = ({
@@ -40,6 +41,7 @@ export const ModalContent = ({
   handleToggle,
   finalId,
   image,
+  style,
 }: ModalContentProps) =>
   visible || open ? (
     <Dialog
@@ -56,6 +58,7 @@ export const ModalContent = ({
       placement={placement}
       preventBodyScroll={preventBodyScroll}
       size={finalSize}
+      style={style}
     >
       <>
         {typeof children === 'function'

@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -16,6 +16,7 @@ type ChipType = {
   className?: string
   'data-testid'?: string
   onClick?: (active: boolean) => void
+  style?: CSSProperties
 }
 
 /**
@@ -29,6 +30,7 @@ export const Chip = ({
   className,
   'data-testid': dataTestId,
   onClick,
+  style,
 }: ChipType) => {
   const [isActive, setIsActive] = useState(active)
   const [hasTrailingIcon, setTrailingIcon] = useState(false)
@@ -68,7 +70,11 @@ export const Chip = ({
 
   return (
     <ChipContext.Provider value={value}>
-      <Text as="div" variant={size === 'large' ? 'bodySmall' : 'caption'}>
+      <Text
+        as="div"
+        style={style}
+        variant={size === 'large' ? 'bodySmall' : 'caption'}
+      >
         <Stack
           alignItems="center"
           className={`${className ? `${className} ` : ''}${container}`}

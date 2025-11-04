@@ -1,7 +1,7 @@
 'use client'
 
 import { CheckIcon } from '@ultraviolet/icons'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
 import { Stack } from '../Stack'
@@ -37,6 +37,7 @@ type StepProps = {
   children?: ReactNode
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 export const Step = ({
@@ -46,6 +47,7 @@ export const Step = ({
   title,
   children,
   className,
+  style,
   'data-testid': dataTestId,
 }: StepProps) => {
   const {
@@ -86,6 +88,7 @@ export const Step = ({
           onClick?.(index)
         }
       }}
+      style={style}
     >
       {isDone && !disabled ? (
         <Bullet

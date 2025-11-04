@@ -1,6 +1,7 @@
 'use client'
 
 import { Stack } from '@ultraviolet/ui'
+import type { CSSProperties } from 'react'
 import { useMemo, useState } from 'react'
 import rating1 from './assets/1-5.svg'
 import rating1NS from './assets/1-5NB.svg'
@@ -49,6 +50,7 @@ type CustomerSatisfactionProps = {
   onChange: (rating: Value) => void
   'data-testid'?: string
   className?: string
+  style?: CSSProperties
 }
 
 export const CustomerSatisfaction = ({
@@ -56,6 +58,7 @@ export const CustomerSatisfaction = ({
   onChange,
   'data-testid': dataTestId,
   className,
+  style,
 }: CustomerSatisfactionProps) => {
   const [hoveredValue, setHoveredValue] = useState(0)
   const isHappy = useMemo(() => value > ratings.length / 2, [value])
@@ -66,6 +69,7 @@ export const CustomerSatisfaction = ({
       data-testid={dataTestId}
       direction="row"
       justifyContent="space-between"
+      style={style}
     >
       {ratings.map(rating => {
         const isSelected = rating.value === value

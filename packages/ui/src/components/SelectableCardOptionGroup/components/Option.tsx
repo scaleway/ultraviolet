@@ -90,6 +90,7 @@ export const Option = ({
   id,
   'data-testid': dataTestId,
   tooltip,
+  style,
 }: OptionProps) => {
   const {
     onChange,
@@ -118,6 +119,7 @@ export const Option = ({
         }
       }}
       showTick
+      style={style}
       tooltip={tooltip}
       type="radio"
       value={value}

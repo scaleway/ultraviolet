@@ -1,6 +1,6 @@
 'use client'
 
-import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import type { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
@@ -31,6 +31,7 @@ type ListProps = {
    */
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
   className?: string
+  style?: CSSProperties
 }
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
@@ -63,6 +64,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       autoCollapse = false,
       onSelectedChange,
       className,
+      style,
     },
     ref,
   ) => (
@@ -77,6 +79,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
         <table
           className={`${className ? `${className} ` : ''}${list}`}
           ref={ref}
+          style={style}
         >
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (

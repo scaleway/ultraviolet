@@ -29,7 +29,7 @@ type ToggleProps = {
   required?: boolean
   error?: boolean | string
   'data-testid'?: string
-} & Pick<InputHTMLAttributes<HTMLInputElement>, 'value'>
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'value' | 'style'>
 
 export const Toggle = forwardRef(
   (
@@ -50,6 +50,7 @@ export const Toggle = forwardRef(
       value,
       error,
       'aria-label': ariaLabel,
+      style,
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -127,6 +128,7 @@ export const Toggle = forwardRef(
               onChange={onChange}
               ref={ref}
               required={required}
+              style={style}
               type="checkbox"
               value={value}
             />

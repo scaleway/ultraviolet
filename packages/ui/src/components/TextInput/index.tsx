@@ -82,6 +82,7 @@ type TextInputProps = {
   | 'aria-live'
   | 'aria-atomic'
   | 'onChange'
+  | 'style'
 >
 
 /**
@@ -131,6 +132,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       'aria-live': ariaLive,
       'aria-atomic': ariaAtomic,
       defaultValue,
+      style,
     },
     ref,
   ) => {
@@ -249,6 +251,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 readOnly={readOnly}
                 ref={inputRef}
                 required={required}
+                style={style}
                 tabIndex={tabIndex}
                 type={computedType}
                 value={value}

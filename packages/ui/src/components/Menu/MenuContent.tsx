@@ -57,6 +57,7 @@ export const Menu = forwardRef(
       searchable = false,
       footer,
       noShrink = false,
+      style,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -236,6 +237,7 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         ref={menuRef}
         role="dialog"
+        style={style}
         tabIndex={-1}
         text={
           <Stack

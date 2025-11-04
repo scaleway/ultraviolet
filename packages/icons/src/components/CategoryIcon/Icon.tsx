@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type { VARIANTS } from './style.css'
 import { categoryIcon } from './style.css'
 
@@ -9,6 +9,7 @@ export type IconProps = {
   disabled?: boolean
   children: ReactNode
   className?: string
+  style?: CSSProperties
 }
 
 /**
@@ -20,6 +21,7 @@ export const Icon = ({
   disabled,
   children,
   className,
+  style,
 }: IconProps) => {
   const computedVariant = `${variant}${disabled ? 'Disabled' : ''}` as const
 
@@ -27,6 +29,7 @@ export const Icon = ({
     <svg
       className={`${className ? `${className} ` : ''}${categoryIcon[computedVariant]}`}
       height="20"
+      style={style}
       viewBox="0 0 20 20"
       width="20"
     >

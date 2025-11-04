@@ -2,7 +2,7 @@
 
 import { ArrowDownIcon } from '@ultraviolet/icons'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { Children, useReducer } from 'react'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
@@ -93,6 +93,7 @@ type SnippetProps = {
   rows?: number
   noExpandable?: boolean
   onCopy?: () => void
+  style?: CSSProperties
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -112,6 +113,7 @@ export const Snippet = ({
   rows = 4,
   noExpandable = false,
   onCopy,
+  style,
 }: SnippetProps) => {
   const theme = useTheme()
   const [showMore, setShowMore] = useReducer(
@@ -132,6 +134,7 @@ export const Snippet = ({
     <div
       className={`${className ? `${className} ` : ''}${snippetContainer[multiline ? 'multiline' : 'oneLine']}`}
       data-testid={dataTestId}
+      style={style}
     >
       <Stack className={stackStyle}>
         {hasShowMoreButton ? (

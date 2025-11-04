@@ -7,6 +7,7 @@ import {
 } from '@ultraviolet/icons'
 import type {
   AnchorHTMLAttributes,
+  CSSProperties,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
   MouseEventHandler,
@@ -48,6 +49,7 @@ type LinkProps = {
   oneLine?: boolean
   'data-testid'?: string
   variant?: 'inline' | 'standalone'
+  style?: CSSProperties
 }
 
 const ICON_SIZE = 'small'
@@ -76,6 +78,7 @@ export const Link = forwardRef(
       oneLine = false,
       'data-testid': dataTestId,
       variant = 'standalone',
+      style,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -118,6 +121,7 @@ export const Link = forwardRef(
           onClick={onClick}
           ref={usedRef}
           rel={computedRel}
+          style={style}
           target={target}
         >
           {!isBlank && iconPosition === 'left' ? (

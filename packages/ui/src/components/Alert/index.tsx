@@ -7,7 +7,7 @@ import {
   InformationOutlineIcon,
   LightBulbIcon,
 } from '@ultraviolet/icons'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useState } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
@@ -46,6 +46,7 @@ type AlertProps = {
    * Disabled the alert button.
    */
   disabled?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -62,6 +63,7 @@ export const Alert = ({
   className,
   disabled,
   'data-testid': dataTestId,
+  style,
 }: AlertProps) => {
   const [opened, setOpened] = useState(true)
   const Icon = sentimentIcons[sentiment]
@@ -76,6 +78,7 @@ export const Alert = ({
       data-testid={dataTestId}
       direction="row"
       gap={1}
+      style={style}
     >
       <Stack
         alignItems="center"

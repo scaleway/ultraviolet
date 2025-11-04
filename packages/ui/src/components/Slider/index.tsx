@@ -40,6 +40,7 @@ export const Slider = ({
   onFocus,
   className,
   tooltipPosition = 'top',
+  style,
   'aria-label': ariaLabel,
 }: SliderProps) => {
   // we check if options exists if so we set the bounds to the length of the options
@@ -64,6 +65,7 @@ export const Slider = ({
       data-double={double}
       data-options={!!options}
       gap={gap}
+      style={style}
     >
       {double ? (
         <DoubleSlider

@@ -1,7 +1,7 @@
 'use client'
 
 import { Stack, Tag, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import {
   conversationAvatar,
   conversationBubble,
@@ -12,20 +12,42 @@ import {
   styledText,
 } from './styles.css'
 
-const Conversation = ({ children }: { children: ReactNode }) => (
-  <Stack>{children}</Stack>
-)
+const Conversation = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => <Stack style={style}>{children}</Stack>
 
 export const MessageInfos = ({
   children,
   align,
+  style,
 }: {
   children: ReactNode
   align: 'left' | 'right'
-}) => <div className={conversationInfos[align]}>{children}</div>
+  style?: CSSProperties
+}) => (
+  <div className={conversationInfos[align]} style={style}>
+    {children}
+  </div>
+)
 
-export const Date = ({ children }: { children: ReactNode }) => (
-  <Text as="p" className={styledText} prominence="weak" variant="bodySmall">
+export const Date = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => (
+  <Text
+    as="p"
+    className={styledText}
+    prominence="weak"
+    style={style}
+    variant="bodySmall"
+  >
     {children}
   </Text>
 )
@@ -35,6 +57,7 @@ type MessageProps = {
   children: ReactNode
   avatar: ReactNode
   align?: 'left' | 'right'
+  style?: CSSProperties
 }
 
 export const Message = ({
@@ -42,9 +65,11 @@ export const Message = ({
   children,
   avatar,
   align = 'right',
+  style,
 }: MessageProps) => (
   <div
     className={`${className ? `${className} ` : ''}${conversationContainer[align]}`}
+    style={style}
   >
     <div className={conversationBubble}>
       <div className={conversationRawMessage[align]}>{children}</div>
@@ -53,8 +78,16 @@ export const Message = ({
   </div>
 )
 
-export const MessageTag = ({ children }: { children: ReactNode }) => (
-  <Tag className={conversationTag}>{children}</Tag>
+export const MessageTag = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => (
+  <Tag className={conversationTag} style={style}>
+    {children}
+  </Tag>
 )
 
 Conversation.Date = Date

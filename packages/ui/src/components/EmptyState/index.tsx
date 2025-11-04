@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -32,6 +32,7 @@ type EmptyStateProps = {
   className?: string
   children?: ReactNode
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -49,10 +50,12 @@ export const EmptyState = ({
   bordered,
   children,
   'data-testid': dataTestId,
+  style,
 }: EmptyStateProps) => (
   <Stack
     className={`${className ? `${className} ` : ''}${emptyStateContainer({ bordered, size })}`}
     data-testid={dataTestId}
+    style={style}
   >
     <Stack
       alignItems="center"

@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import type { SIZES, VARIANTS } from './constants'
 import { productIconSizes, productIconVariants } from './styles.css'
 
@@ -12,6 +12,7 @@ export type IconProps = {
   size?: keyof typeof SIZES
   className?: string
   children: ReactNode
+  style?: CSSProperties
 }
 
 /**
@@ -24,9 +25,11 @@ export const Icon = ({
   size = 'small',
   className,
   children,
+  style,
 }: IconProps) => (
   <svg
     className={`${className ? `${className} ` : ''}${productIconSizes[size]} ${productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`]}`}
+    style={style}
     viewBox="0 0 64 64"
   >
     {children}
