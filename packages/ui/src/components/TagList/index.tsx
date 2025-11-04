@@ -92,7 +92,8 @@ export const TagList = ({
   // Compute tmpThreshold, potentially visible tags and surely hidden tags
   const memoizedResult = useMemo(() => {
     let tmpThreshold = threshold
-    if (
+    while (
+      tmpThreshold > 1 &&
       tags.length > 0 &&
       tags
         .slice(0, tmpThreshold)
@@ -102,8 +103,10 @@ export const TagList = ({
       tmpThreshold -= 1
     }
 
-    const potentiallyVisibleTagsLength =
-      tags.length > tmpThreshold || false ? tmpThreshold : tags.length
+    const potentiallyVisibleTagsLength = Math.max(
+      1,
+      tags.length > tmpThreshold || false ? tmpThreshold : tags.length,
+    )
     const potentiallyVisibleTags = tags.slice(0, potentiallyVisibleTagsLength)
     const surelyHiddenTags = tags.slice(potentiallyVisibleTagsLength)
 
@@ -276,6 +279,7 @@ export const TagList = ({
         className={`${tagContainer({
           multiline,
         })} ${(visibleTags.length === 1 && hiddenTags.length === 0) || popoverTriggerWidth ? ellipsisContainer : ''}`}
+        data-testid={`${dataTestId ?? 'taglist'}-container`}
         ref={containerRef}
         style={assignInlineVars({
           [popoverTriggerWidthVar]: `${popoverTriggerWidth || 0}px`,
@@ -299,7 +303,10 @@ export const TagList = ({
           whiteSpace: 'nowrap',
         }}
       >
-        <div className={tagContainer({ multiline })}>
+        <div
+          className={tagContainer({ multiline })}
+          data-testid={`${dataTestId ?? 'taglist'}-measure-container`}
+        >
           {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
         </div>
       </div>
