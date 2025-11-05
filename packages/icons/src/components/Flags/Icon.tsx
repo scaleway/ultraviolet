@@ -1,0 +1,23 @@
+'use client'
+
+import type { ReactNode } from 'react'
+import type { SIZES } from './constant'
+import { flag } from './style.css'
+
+export type IconProps = {
+  size?: keyof typeof SIZES
+  className?: string
+  children: ReactNode
+}
+
+/**
+ * Logo component is used to render a set of flags. Their style cannot be changed
+ */
+export const Icon = ({ size = 'medium', className, children }: IconProps) => (
+  <svg
+    className={`${className ? `${className} ` : ''}${flag[size]}`}
+    viewBox="0 0 24 24"
+  >
+    {children}
+  </svg>
+)
