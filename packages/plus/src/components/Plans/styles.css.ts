@@ -130,3 +130,26 @@ export const plansCell = recipe({
 export const plansRowHidden = style({ display: 'none' })
 
 export const plansUppercaseText = style({ textTransform: 'uppercase' })
+
+export const plansHeaderInput = style({
+  position: 'absolute',
+  opacity: 0,
+  top: 0,
+  left: 0,
+})
+
+export const plansHeaderFullHeight = style({ height: '100%' })
+
+export const plansDescription = style({
+  padding: theme.space[1],
+  width: '100%',
+})
+
+export const plansFullSizeSeparator = style({ width: '100%' })
+
+export const plansCurrentWrapper = style({
+  /* Same as button */
+  height: theme.sizing[600],
+  display: 'flex',
+  alignItems: 'center',
+})

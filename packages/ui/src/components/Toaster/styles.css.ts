@@ -47,3 +47,7 @@ export const closeButtonToaster = style({
     },
   },
 })
+
+export const toasterButton = style({
+  color: theme.colors.neutral.textStronger,
+})

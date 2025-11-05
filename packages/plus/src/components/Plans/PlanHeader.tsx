@@ -1,34 +1,13 @@
-import styled from '@emotion/styled'
 import { Badge, Separator, Stack, Text } from '@ultraviolet/ui'
 import PlansLocales from './locales/en'
+import {
+  plansCurrentWrapper,
+  plansDescription,
+  plansFullSizeSeparator,
+  plansHeaderFullHeight,
+  plansHeaderInput,
+} from './styles.css'
 import type { PlanType } from './types'
-
-const StyledInput = styled.input`
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-`
-
-const FullHeightStack = styled(Stack)`
-  height: 100%;
-`
-
-const PlanDescription = styled.div`
-  padding: ${({ theme }) => theme.space['1']};
-  width: 100%;
-`
-
-const FullSizeSeparator = styled(Separator)`
-  width: 100%;
-`
-
-const CurrentPlanWrapper = styled.div`
-  /* Same as button */
-  height: ${({ theme }) => theme.sizing['600']};
-  display: flex;
-  align-items: center;
-`
 
 type PlanHeaderProps = {
   fieldName?: string
@@ -51,7 +30,8 @@ export const PlanHeader = ({
 }: PlanHeaderProps) => (
   <>
     {fieldName && onChange && !disabled ? (
-      <StyledInput
+      <input
+        className={plansHeaderInput}
         data-testid={plan.value}
         id={plan.value}
         name={fieldName}
@@ -66,7 +46,12 @@ export const PlanHeader = ({
         value={plan.value}
       />
     ) : null}
-    <FullHeightStack alignItems="center" gap={2} justifyContent="space-between">
+    <Stack
+      alignItems="center"
+      className={plansHeaderFullHeight}
+      gap={2}
+      justifyContent="space-between"
+    >
       <Stack alignItems="center" gap={3} width="100%">
         <Stack alignItems="center" gap={1}>
           <Badge
@@ -106,11 +91,11 @@ export const PlanHeader = ({
           </Stack>
         </Stack>
         {plan.header.description ? (
-          <PlanDescription>
+          <div className={plansDescription}>
             <Text as="div" disabled={disabled} variant="caption">
               {plan.header.description}
             </Text>
-          </PlanDescription>
+          </div>
         ) : null}
       </Stack>
       <Stack alignItems="center" gap={3} width="100%">
@@ -118,7 +103,7 @@ export const PlanHeader = ({
           ? plan.header.cta
           : null}
         {plan.header.cta && currentPlanValue === plan.value ? (
-          <CurrentPlanWrapper>
+          <div className={plansCurrentWrapper}>
             <Text
               as="span"
               disabled={disabled}
@@ -127,10 +112,12 @@ export const PlanHeader = ({
             >
               {locales['plans.currentPlan']}
             </Text>
-          </CurrentPlanWrapper>
+          </div>
         ) : null}
-        {plan.header.separator ? <FullSizeSeparator /> : null}
+        {plan.header.separator ? (
+          <Separator className={plansFullSizeSeparator} />
+        ) : null}
       </Stack>
-    </FullHeightStack>
+    </Stack>
   </>
 )
