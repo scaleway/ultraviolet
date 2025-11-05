@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
-import { slideFromBottomVanillaExtract } from '../../utils'
+import { slideFromBottom } from '../../utils'
 
 export const topModal = createVar()
 export const positionModal = createVar()
@@ -96,7 +96,7 @@ export const modal = recipe({
     },
     animation: {
       true: {
-        animation: `${slideFromBottomVanillaExtract} 0.3s ease-in-out forwards`,
+        animation: `${slideFromBottom} 0.3s ease-in-out forwards`,
       },
     },
     positivePosition: {

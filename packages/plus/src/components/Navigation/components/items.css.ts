@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 import { ANIMATION_DURATION } from '../constants'
 import { shrinkHeight } from '../animations.css'
-import { fadeInVanillaExtract } from '@ultraviolet/ui'
+import { fadeIn } from '@ultraviolet/ui'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const navigationItemMenuContainer = style({ width: 180 })
@@ -236,10 +236,10 @@ export const navigationItemPinnedButton = style({
 
 export const navigationItemAnimatedIcon = styleVariants({
   expand: {
-    animation: `${fadeInVanillaExtract} ${ANIMATION_DURATION}ms ease-in-out`,
+    animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out`,
   },
   collapse: {
-    animation: `${fadeInVanillaExtract} ${ANIMATION_DURATION}ms ease-in-out reverse`,
+    animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse`,
   },
 })
 

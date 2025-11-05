@@ -1,4 +1,33 @@
 export {
+  bounce as bounceEmotion,
+  fadeIn as fadeInEmotion,
+  fadeOut as fadeOutEmotion,
+  flash as flashEmotion,
+  ping as pingEmotion,
+  pulse as pulseEmotion,
+  quickScaleDown as quickScaleDownEmotion,
+  scaleBack as scaleBackEmotion,
+  scaleDown as scaleDownEmotion,
+  scaleForward as scaleForwardEmotion,
+  scaleUp as scaleUpEmotion,
+  sketchIn as sketchInEmotion,
+  sketchOut as sketchOutEmotion,
+  slideDownLarge as slideDownLargeEmotion,
+  slideFromBottom as slideFromBottomEmotion,
+  slideFromLeft as slideFromLeftEmotion,
+  slideFromRight as slideFromRightEmotion,
+  slideFromTop as slideFromTopEmotion,
+  slideToBottom as slideToBottomEmotion,
+  slideToLeft as slideToLeftEmotion,
+  slideToRight as slideToRightEmotion,
+  slideToTop as slideToTopEmotion,
+  slideUpLarge as slideUpLargeEmotion,
+  unfoldIn as unfoldInEmotion,
+  unfoldOut as unfoldOutEmotion,
+  zoomIn as zoomInEmotion,
+  zoomOut as zoomOutEmotion,
+} from './animations'
+export {
   bounce,
   fadeIn,
   fadeOut,
@@ -26,13 +55,7 @@ export {
   unfoldOut,
   zoomIn,
   zoomOut,
-} from './animations'
-export {
-  fadeInVanillaExtract,
-  pingVanillaExtract,
-  slideFromBottomVanillaExtract,
-  zoomInVanillaExtract,
-} from './animationVanillaExtract.css'
+} from './animations.css'
 export { getUUID } from './ids'
 export { default as normalize } from './normalize'
 export type { ComparableType } from './orderBy'
