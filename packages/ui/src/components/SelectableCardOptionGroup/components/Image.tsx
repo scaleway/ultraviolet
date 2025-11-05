@@ -1,13 +1,7 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { disabledImage } from '../styles.css'
 import type { Sizes } from '../types'
-
-const StyledImage = styled.img`
-  &[data-disabled='true'] {
-    filter: grayscale(1) opacity(25%);
-  }
-`
 
 const IMAGE_SIZES = {
   large: 56,
@@ -23,9 +17,9 @@ type ImageType = {
 }
 
 export const Image = ({ src, alt, size, disabled, className }: ImageType) => (
-  <StyledImage
+  <img
     alt={alt}
-    className={className}
+    className={`${className ? `${className} ` : ''}${disabled ? disabledImage : ''}`}
     data-disabled={disabled}
     height={IMAGE_SIZES[size]}
     src={src}
