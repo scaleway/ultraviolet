@@ -363,12 +363,6 @@ importers:
 
   examples/next:
     dependencies:
-      '@emotion/react':
-        specifier: 11.14.0
-        version: 11.14.0(@types/react@19.2.2)(react@19.2.0)
-      '@emotion/styled':
-        specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@scaleway/regex':
         specifier: 5.6.0
         version: 5.6.0
@@ -384,6 +378,9 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@vanilla-extract/css':
+        specifier: 1.17.4
+        version: 1.17.4(babel-plugin-macros@3.1.0)
       next:
         specifier: 15.5.6
         version: 15.5.6(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -418,18 +415,15 @@ importers:
       '@types/react-syntax-highlighter':
         specifier: 15.5.13
         version: 15.5.13
+      '@vanilla-extract/next-plugin':
+        specifier: 2.4.14
+        version: 2.4.14(babel-plugin-macros@3.1.0)(next@15.5.6(@babel/core@7.28.4)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.98.0(esbuild@0.25.0))
       next-transpile-modules:
         specifier: 10.0.1
         version: 10.0.1
 
   examples/next-app-router:
     dependencies:
-      '@emotion/react':
-        specifier: 11.14.0
-        version: 11.14.0(@types/react@19.2.2)(react@19.2.0)
-      '@emotion/styled':
-        specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@scaleway/regex':
         specifier: 5.6.0
         version: 5.6.0
@@ -482,12 +476,6 @@ importers:
 
   examples/vite:
     dependencies:
-      '@emotion/react':
-        specifier: 11.14.0
-        version: 11.14.0(@types/react@19.2.2)(react@19.2.0)
-      '@emotion/styled':
-        specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../../packages/icons
@@ -504,9 +492,6 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@emotion/babel-plugin':
-        specifier: 11.13.5
-        version: 11.13.5
       '@types/react':
         specifier: 19.2.2
         version: 19.2.2
@@ -3632,6 +3617,11 @@ packages:
   '@vanilla-extract/integration@8.0.4':
     resolution: {integrity: sha512-cmOb7tR+g3ulKvFtSbmdw3YUyIS1d7MQqN+FcbwNhdieyno5xzUyfDCMjeWJhmCSMvZ6WlinkrOkgs6SHB+FRg==}
 
+  '@vanilla-extract/next-plugin@2.4.14':
+    resolution: {integrity: sha512-5GRgVZayLNvXJVHwVWNZp7rDAgXmF5DAyVtp9O5ZxPoOuokLWwTaIw1bYALXs/uCaeAUwilK5p14peagzFbe2w==}
+    peerDependencies:
+      next: '>=12.1.7'
+
   '@vanilla-extract/private@1.0.9':
     resolution: {integrity: sha512-gT2jbfZuaaCLrAxwXbRgIhGhcXbRZCG3v4TTUnjw0EJ7ArdBRxkq4msNJkbuRkCgfIK5ATmprB5t9ljvLeFDEA==}
 
@@ -3649,6 +3639,11 @@ packages:
     resolution: {integrity: sha512-Nd1worqkHrd8XED4ZAA7Wmkd3pCqCwpmzCBVF8v6T1BSLHGXQE5HYflVgygw0CsIAbFRMS6zQBIk4F4/r/YKIw==}
     peerDependencies:
       vite: 7.1.10
+
+  '@vanilla-extract/webpack-plugin@2.3.22':
+    resolution: {integrity: sha512-3Cx8DkbX3EeLHGbD049jjj6/bWB0VK4YFfWWsf8VXBI8dgf5SvEef1VfET22IOcT9GzLl8MqfsLr/XSo9iv67Q==}
+    peerDependencies:
+      webpack: ^4.30.0 || ^5.20.2
 
   '@vitejs/plugin-react@5.0.4':
     resolution: {integrity: sha512-La0KD0vGkVkSk6K+piWDKRUyg8Rl5iAIKRMH0vMJI0Eg47bq1eOxmoObAaQG37WMW9MSyk7Cs8EIWwJC1PtzKA==}
@@ -11871,6 +11866,15 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
+  '@vanilla-extract/next-plugin@2.4.14(babel-plugin-macros@3.1.0)(next@15.5.6(@babel/core@7.28.4)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(webpack@5.98.0(esbuild@0.25.0))':
+    dependencies:
+      '@vanilla-extract/webpack-plugin': 2.3.22(babel-plugin-macros@3.1.0)(webpack@5.98.0(esbuild@0.25.0))
+      next: 15.5.6(@babel/core@7.28.4)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - webpack
+
   '@vanilla-extract/private@1.0.9': {}
 
   '@vanilla-extract/recipes@0.5.7(@vanilla-extract/css@1.17.4(babel-plugin-macros@3.1.0))':
@@ -11900,6 +11904,17 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  '@vanilla-extract/webpack-plugin@2.3.22(babel-plugin-macros@3.1.0)(webpack@5.98.0(esbuild@0.25.0))':
+    dependencies:
+      '@vanilla-extract/integration': 8.0.4(babel-plugin-macros@3.1.0)
+      debug: 4.4.3
+      loader-utils: 2.0.4
+      picocolors: 1.1.1
+      webpack: 5.98.0(esbuild@0.25.0)
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
 
   '@vitejs/plugin-react@5.0.4(vite@7.1.10(@types/node@22.18.11)(jiti@2.4.2)(terser@5.39.0)(tsx@4.20.6)(yaml@2.8.1))':
     dependencies:

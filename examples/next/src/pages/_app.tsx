@@ -1,13 +1,19 @@
-import { ThemeProvider } from '@emotion/react'
-import { darkTheme as dark, extendTheme, Stack } from '@ultraviolet/ui'
+import { extendTheme, Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useCallback, useEffect, useState } from 'react'
 import Footer from '../components/Footer'
-import GlobalStyle from '../components/GlobalStyle'
 import Head from '../components/Head'
 import Header from '../components/Header'
 // oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
+import '@ultraviolet/ui/styles'
+import '@ultraviolet/themes/global'
+import {
+  consoleDarkTheme,
+  consoleLightTheme,
+  ThemeProvider,
+} from '@ultraviolet/themes'
+import '../components/globalStyle.css'
 
 type Themes = 'light' | 'dark'
 
@@ -37,6 +43,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const localLightTheme = {
     ...extendTheme({
       ...COMMON_THEME_PROPS,
+      ...consoleLightTheme,
       colors: {
         primary: {
           text: '#4F0599',
@@ -49,7 +56,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const localDarkTheme = {
     ...extendTheme({
-      ...dark,
+      ...consoleDarkTheme,
       ...COMMON_THEME_PROPS,
     }),
     setTheme: setThemeCallBack,
@@ -77,7 +84,6 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
-      <GlobalStyle />
       <Head />
       <Stack alignItems="center" gap={4}>
         <Header />

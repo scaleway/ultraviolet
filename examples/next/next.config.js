@@ -1,3 +1,7 @@
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+
+const withVanillaExtract = createVanillaExtractPlugin();
+
 const nextConfig = () => {
   /** @type {import('next/dist/server/config').NextConfig} */
   const config = {
@@ -9,9 +13,6 @@ const nextConfig = () => {
     },
     poweredByHeader: false,
     reactStrictMode: true,
-    compiler: {
-      emotion: true,
-    },
     eslint: {
       ignoreDuringBuilds: true,
     },
@@ -22,7 +23,7 @@ const nextConfig = () => {
     },
   }
 
-  return config
+  return withVanillaExtract(config)
 }
 
 export default nextConfig()

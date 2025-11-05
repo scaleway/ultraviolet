@@ -1,45 +1,40 @@
-import styled from '@emotion/styled'
 import { GithubIcon } from '@ultraviolet/icons'
-import { down, Link, Stack, Text } from '@ultraviolet/ui'
+import { Link, Stack, Text } from '@ultraviolet/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
-
-const StyledDescription = styled.div`
-  margin-bottom: 12px;
-`
-
-const StyledTitle = styled(Text)`
-  align-self: center;
-`
-
-const StyledCard = styled(Card)`
-  flex: 1;
-`
-
-const StyledStack = styled(Stack)`
-  ${down('medium', 'flex-direction: column;')}
-`
+import {
+  openSourceCard,
+  openSourceDescription,
+  openSourceStack,
+  openSourceTitle,
+} from './styles.css'
 
 const OpenSource = () => (
   <section>
     <Stack gap={5}>
       <Stack gap={2}>
-        <StyledTitle as="h3" id="open-source" variant="heading">
+        <Text
+          as="h3"
+          className={openSourceTitle}
+          id="open-source"
+          variant="heading"
+        >
           Open Source
-        </StyledTitle>
-        <Text as="p" variant="body">
+        </Text>
+        <Text as="p" sentiment="neutral" variant="body">
           Discover our other open source projects:
         </Text>
       </Stack>
 
-      <StyledStack direction="row" gap={2}>
-        <StyledCard
+      <Stack className={openSourceStack} direction="row" gap={2}>
+        <Card
+          className={openSourceCard}
           description={
             <>
-              <StyledDescription>
+              <div className={openSourceDescription}>
                 Build amazing forms with Ultraviolet UI and React Final Form 🚀
-              </StyledDescription>
+              </div>
               <Stack direction="row" gap={1}>
                 <GithubIcon size="small" />
                 <Link
@@ -54,12 +49,13 @@ const OpenSource = () => (
           icon={swForm}
           title="Ultraviolet Form"
         />
-        <StyledCard
+        <Card
+          className={openSourceCard}
           description={
             <>
-              <StyledDescription>
+              <div className={openSourceDescription}>
                 Scaleway Lib is a set of NPM packages used at Scaleway
-              </StyledDescription>
+              </div>
               <Stack direction="row" gap={1}>
                 <GithubIcon size="small" />
                 <Link
@@ -74,7 +70,7 @@ const OpenSource = () => (
           icon={swLib}
           title="Scaleway Lib"
         />
-      </StyledStack>
+      </Stack>
     </Stack>
   </section>
 )

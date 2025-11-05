@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import { email as emailRegex } from '@scaleway/regex'
 import {
   CheckboxField,
@@ -12,24 +11,13 @@ import { IdIcon } from '@ultraviolet/icons'
 import { Link, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { mockErrors } from '../../constants'
+import { loginContainer, loginInput } from './styles.css'
 
 type FormValues = {
   email: string
   password: string
   remember: boolean
 }
-
-const StyledLoginContainer = styled(Stack)`
-  margin: 5vh 30vw;
-  background: ${({ theme }) => theme.colors.primary.background};
-  padding: ${({ theme }) => theme.space['4']};
-`
-
-const StyledInput = styled(TextInputField)`
-  padding: ${({ theme }) => theme.space['1.5']}
-    ${({ theme }) => theme.space['5']};
-  width: 100%;
-`
 
 const LogIn = () => {
   const methods = useForm({
@@ -56,21 +44,23 @@ const LogIn = () => {
   }
 
   return (
-    <StyledLoginContainer>
+    <Stack className={loginContainer}>
       <Form errors={mockErrors} methods={methods} onSubmit={handleSubmit}>
         <Stack alignItems="center" gap={1}>
           <IdIcon size="small" />
           <Text as="h1" variant="heading">
             Login form
           </Text>
-          <StyledInput
+          <TextInputField
+            className={loginInput}
             label="Email"
             name="email"
             placeholder="example@email.com"
             regex={[emailRegex]}
             required
           />
-          <StyledInput
+          <TextInputField
+            className={loginInput}
             helper="Min 8 characters"
             label="Password"
             minLength={8}
@@ -86,7 +76,7 @@ const LogIn = () => {
         </Stack>
       </Form>
       {loginText}
-    </StyledLoginContainer>
+    </Stack>
   )
 }
 

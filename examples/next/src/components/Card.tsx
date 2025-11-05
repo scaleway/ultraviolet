@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
 import { Card as ScwUICard, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
+import { borderedBox } from './componentsStyles.css'
 
 type CardProps = {
   title: string
@@ -10,16 +10,8 @@ type CardProps = {
   className?: string
 }
 
-const StyledBorderedBox = styled(ScwUICard)`
-  display: grid;
-  grid-template-columns: fit-content(20%) 3fr;
-  gap: ${({ theme }) => theme.space['2']};
-  height: auto;
-  min-width: 350px;
-`
-
 const Card = ({ title, description, icon, className }: CardProps) => (
-  <StyledBorderedBox className={className}>
+  <ScwUICard className={`${className ? `${className} ` : ''}${borderedBox}`}>
     <div>
       <Image alt="icon" height={64} src={icon} width={64} />
     </div>
@@ -35,7 +27,7 @@ const Card = ({ title, description, icon, className }: CardProps) => (
         description
       )}
     </div>
-  </StyledBorderedBox>
+  </ScwUICard>
 )
 
 export default Card
