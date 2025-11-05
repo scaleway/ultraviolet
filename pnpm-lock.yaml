@@ -616,16 +616,11 @@ importers:
         version: 19.2.0(react@19.2.0)
 
   packages/nextjs:
+    dependencies:
+      '@ultraviolet/themes':
+        specifier: workspace:*
+        version: link:../themes
     devDependencies:
-      '@emotion/cache':
-        specifier: 11.14.0
-        version: 11.14.0
-      '@emotion/react':
-        specifier: 11.14.0
-        version: 11.14.0(@types/react@19.2.2)(react@19.2.0)
-      '@emotion/styled':
-        specifier: 11.14.1
-        version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.2)(react@19.2.0))(@types/react@19.2.2)(react@19.2.0)
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui

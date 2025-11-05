@@ -1,10 +1,7 @@
 'use client'
 
-import createCache from '@emotion/cache'
-import { CacheProvider, ThemeProvider } from '@emotion/react'
-import { useServerInsertedHTML } from 'next/navigation'
+import { ThemeProvider } from '@ultraviolet/themes'
 import type { ComponentProps, ReactNode } from 'react'
-import { useState } from 'react'
 
 type ThemeRegistryProps = {
   children: ReactNode
@@ -15,54 +12,6 @@ type ThemeRegistryProps = {
  * ThemeRegistry is a component that provides a theme to its children.
  * This solution is provided to work with Next.js app router.
  */
-export const ThemeRegistry = ({ children, theme }: ThemeRegistryProps) => {
-  const [{ cache, flush }] = useState(() => {
-    const localCache = createCache({ key: 'uv' })
-    localCache.compat = true
-    const prevInsert = localCache.insert
-    let inserted: string[] = []
-    localCache.insert = (...args) => {
-      const serialized = args[1]
-      if (localCache.inserted[serialized.name] === undefined) {
-        inserted.push(serialized.name)
-      }
-
-      return prevInsert(...args)
-    }
-    const localFlush = () => {
-      const prevInserted = inserted
-      inserted = []
-
-      return prevInserted
-    }
-
-    return { cache: localCache, flush: localFlush }
-  })
-
-  useServerInsertedHTML(() => {
-    const names = flush()
-    if (names.length === 0) {
-      return null
-    }
-    let styles = ''
-    for (const name of names) {
-      styles += cache.inserted[name]
-    }
-
-    return (
-      <style
-        dangerouslySetInnerHTML={{
-          __html: styles,
-        }}
-        data-emotion={`${cache.key} ${names.join(' ')}`}
-        key={cache.key}
-      />
-    )
-  })
-
-  return (
-    <CacheProvider value={cache}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </CacheProvider>
-  )
-}
+export const ThemeRegistry = ({ children, theme }: ThemeRegistryProps) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+)
