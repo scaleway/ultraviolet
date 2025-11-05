@@ -8,17 +8,17 @@ It is using [React Hook Form](https://react-hook-form.com/) under the hood.
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/ui @ultraviolet/form
+$ pnpm add @ultraviolet/ui @ultraviolet/form @ultraviolet/themes
 ```
 
 ### Usage
 
-To use the library you need to put a `ThemeProvider` from `@emotion/react` with the theme that comes from `@ultraviolet/ui` then wrap all your fields inside a `Form`:
+To use the library you need to put a `ThemeProvider` from `@ultraviolet/themes` with the theme that comes from the same package or from `@ultraviolet/ui` then wrap all your fields inside a `Form`:
 
 ```tsx
-import { ThemeProvider } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/themes'
 import { Form, TextInputField } from '@ultraviolet/form'
-import { theme } from '@ultraviolet/ui'
+import { theme } from '@ultraviolet/ui' // or import { theme } from "@ultraviolet/themes
 import { useForm } from '@ultraviolet/form'
 import '@ultraviolet/ui/styles'
 
@@ -167,9 +167,8 @@ pnpm add zod @hookform/resolvers
 Here's how you can do it:
 
 ```tsx
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider, theme  } from '@ultraviolet/themes'
 import { Form, TextInputField } from '@ultraviolet/form'
-import { theme } from '@ultraviolet/ui'
 import { useForm } from '@ultraviolet/form'
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
