@@ -197,7 +197,7 @@ globalStyle(
 )
 
 globalStyle(
-  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, {offerListRowSelected}[aria-expanded="true"] + tr td`,
+  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, ${offerListRowSelected}[aria-expanded="true"] + tr td`,
   {
     borderColor: theme.colors.primary.border,
   },
