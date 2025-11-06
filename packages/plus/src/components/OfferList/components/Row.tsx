@@ -24,6 +24,8 @@ import {
   offerListRowExpandable,
   offerListRowSelectableContainer,
   offerListRowSelected,
+  offerListRowSelectedExpandable,
+  offerListRowSelectedNotExpandable,
 } from '../styles.css'
 import { Banner } from './Banner'
 
@@ -137,7 +139,7 @@ export const Row = ({
   return (
     <>
       <List.Row
-        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''}`}
+        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''} ${expandable ? offerListRowSelectedExpandable : offerListRowSelectedNotExpandable}`}
         data-dragging={dataDragging}
         data-testid={dataTestId}
         disabled={disabled}
