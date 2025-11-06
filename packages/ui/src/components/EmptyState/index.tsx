@@ -75,6 +75,7 @@ export const EmptyState = ({
               as="h2"
               placement="center"
               prominence="strong"
+              sentiment="neutral"
               variant={size === 'small' ? 'bodyStrong' : 'headingSmall'}
             >
               {title}
