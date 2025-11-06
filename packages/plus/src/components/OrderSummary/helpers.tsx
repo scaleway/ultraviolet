@@ -55,8 +55,8 @@ export const calculatePrice = ({
     Math.max(amount - amountFree, 0)
 
   const finalValue =
-    valueBeforeDiscount * (1 - (discount < 1 ? discount : 0)) -
-    (discount >= 1 ? Math.abs(discount) : 0)
+    valueBeforeDiscount * (1 - (discount <= 1 ? discount : 0)) -
+    (discount > 1 ? Math.abs(discount) : 0)
 
   return finalValue
 }
@@ -126,12 +126,12 @@ export const calculateCategoryPrice = (
   ) || [0, 0]
 
   const discountedPriceMin =
-    category.discount && category.discount < 1
+    category.discount && category.discount <= 1
       ? categoryPrice[0] * category.discount
       : categoryPrice[0] - (category.discount ?? 0)
 
   const discountedPriceMax =
-    category.discount && category.discount < 1
+    category.discount && category.discount <= 1
       ? categoryPrice[1] * category.discount
       : categoryPrice[1] - (category.discount ?? 0)
 
@@ -141,7 +141,7 @@ export const calculateCategoryPrice = (
 
   categoryPrice.map(price =>
     Math.max(
-      category.discount && category.discount < 1
+      category.discount && category.discount <= 1
         ? price * category.discount
         : price - (category.discount ?? 0),
       0,
