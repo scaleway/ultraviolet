@@ -38,6 +38,7 @@ type RowProps = ComponentProps<typeof List.Row> & {
   badge?: {
     text: string
     sentiment?: ComponentProps<typeof BadgeUV>['sentiment']
+    prominence?: ComponentProps<typeof BadgeUV>['prominence']
   }
   style?: CSSProperties
 }
@@ -158,8 +159,8 @@ export const Row = ({
               <BadgeUV
                 className={offerListBadge}
                 disabled={disabled}
-                sentiment={badge.sentiment}
                 prominence={badge.prominence}
+                sentiment={badge.sentiment}
                 size="small"
               >
                 {badge.text}
