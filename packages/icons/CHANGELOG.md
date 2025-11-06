@@ -1,5 +1,15 @@
 # Change Log
 
+## 5.0.0-beta.10
+
+### Minor Changes
+
+- [#5761](https://github.com/scaleway/ultraviolet/pull/5761) [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `Flags`
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
 ## 5.0.0-beta.9
 
 ### Patch Changes

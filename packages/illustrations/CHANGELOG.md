@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.0-beta.5
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
 ## 6.0.0-beta.4
 
 ### Patch Changes
