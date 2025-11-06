@@ -1,7 +1,7 @@
 // oxlint-disable react/only-export-components
 import type { RenderOptions } from '@testing-library/react'
 import { render, renderHook } from '@testing-library/react'
-import { ThemeProvider, theme as UVTheme } from '@ultraviolet/themes'
+import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
 import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
 import { Form, useForm } from '../../../../../packages/form/src/index'
@@ -10,10 +10,10 @@ import { makeShouldMatchSnapshotWithPortal } from './shouldMatchSnapshotWithPort
 
 export const ComponentWrapper = ({
   children,
-  theme = UVTheme,
+  theme = consoleLightTheme,
 }: {
   children?: ReactNode
-  theme?: typeof UVTheme
+  theme?: typeof consoleLightTheme
 }) => (
   <ThemeProvider theme={theme}>
     <div data-testid="testing">{children}</div>
@@ -67,7 +67,7 @@ export const mockFormErrors: FormErrors = {
 
 export const shouldMatchSnapshotWithPortal = (
   component: ReactElement,
-  theme?: typeof UVTheme,
+  theme?: typeof consoleLightTheme,
 ) =>
   makeShouldMatchSnapshotWithPortal(component, {
     wrapper: ({ children }) => (
@@ -88,7 +88,7 @@ export const shouldMatchSnapshotWithPortal = (
  */
 export const shouldMatchSnapshot = (
   component: ReactNode,
-  theme?: typeof UVTheme,
+  theme?: typeof consoleLightTheme,
 ) =>
   makeShouldMatchSnapshot(component, {
     wrapper: ({ children }) => (
@@ -98,7 +98,7 @@ export const shouldMatchSnapshot = (
 
 export const renderWithTheme = (
   compoment: ReactNode,
-  theme?: typeof UVTheme,
+  theme?: typeof consoleLightTheme,
   options?: RenderOptions,
 ) =>
   render(compoment, {
@@ -112,7 +112,7 @@ export const renderWithForm = (
   compoment: ReactElement,
   useFormProps?: UseFormProps,
   formProps?: Partial<ComponentProps<typeof Form>>,
-  theme?: typeof UVTheme,
+  theme?: typeof consoleLightTheme,
 ) => {
   const { result } = renderHook(() =>
     useForm({ mode: 'onChange', ...useFormProps }),
