@@ -53,12 +53,7 @@ exports[`submit > form is invalid 1`] = `
 
 exports[`submit > form is submitting 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
@@ -78,7 +73,7 @@ exports[`submit > form is submitting 1`] = `
           aria-valuetext="20%"
           class="uv_tkulld2"
           role="progressbar"
-          style="height: 1rem; width: 1rem;"
+          style="height: var(--rwwhsl9c); width: var(--rwwhsl9c);"
           viewBox="0 0 100 100"
         >
           <circle
@@ -90,12 +85,12 @@ exports[`submit > form is submitting 1`] = `
             stroke-width="16"
           />
           <circle
-            class="emotion-0"
+            class="uv_tkulld3"
             cx="50"
             cy="50"
             fill="none"
             r="42"
-            stroke="#ffffff"
+            stroke="var(--rwwhsl4r)"
             stroke-dasharray="263.89378290154264"
             stroke-dashoffset="211.11502632123413"
             stroke-linecap="round"

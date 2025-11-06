@@ -53,11 +53,6 @@ export const summaryClass = style({
   },
 })
 
-export const content = style({
-  borderTop: `1px solid ${theme.colors.neutral.border}`,
-  padding: theme.space['3'],
-})
-
 export const detailsClass = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
@@ -67,10 +62,6 @@ export const detailsClass = style({
   selectors: {
     '&[open]': {
       borderColor: theme.colors.primary.border,
-
-      [`& > ${content}`]: {
-        borderColor: theme.colors.primary.border,
-      },
     },
 
     '&[data-clicking="true"]': {
@@ -80,6 +71,15 @@ export const detailsClass = style({
   },
 })
 
+export const content = style({
+  borderTop: `1px solid ${theme.colors.neutral.border}`,
+  padding: theme.space['3'],
+  selectors: {
+    [`${detailsClass}[open] > &`]: {
+      borderColor: theme.colors.primary.border,
+    },
+  },
+})
 globalStyle(`${detailsClass}[open] ${arrowIcon}`, {
   transform: 'rotate(180deg)',
 })

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MoonIcon, SunIcon } from '@ultraviolet/icons'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SwitchButton } from '..'
 
@@ -20,14 +20,14 @@ describe('switchButton', () => {
   })
 
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
       </SwitchButton>,
     ))
   test('renders correctly medium', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} size="medium" value="left">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
@@ -35,7 +35,7 @@ describe('switchButton', () => {
     ))
 
   test('renders correctly with right value', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton name="test" onChange={() => {}} value="right">
         <SwitchButton.Option value="left">Left</SwitchButton.Option>
         <SwitchButton.Option value="right">Right</SwitchButton.Option>
@@ -75,7 +75,7 @@ describe('switchButton', () => {
   })
 
   test('renders with tooltip', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton
         name="test"
         onChange={() => {}}
@@ -88,7 +88,7 @@ describe('switchButton', () => {
     ))
 
   test('renders with disabled and tooltip on SwitchButton.Option', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton
         name="test"
         onChange={() => {}}
@@ -103,7 +103,7 @@ describe('switchButton', () => {
     ))
 
   test('renders neutral', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton
         name="test"
         onChange={() => {}}
@@ -116,7 +116,7 @@ describe('switchButton', () => {
     ))
 
   test('renders with icons', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SwitchButton
         name="test"
         onChange={() => {}}

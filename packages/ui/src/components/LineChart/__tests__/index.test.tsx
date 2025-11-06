@@ -3,7 +3,7 @@
 import * as nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
@@ -22,15 +22,15 @@ vi.spyOn(nivo, 'ResponsiveWrapper').mockImplementation(
 
 describe('lineChart', () => {
   test('renders correctly without data', () =>
-    shouldMatchEmotionSnapshot(<LineChart xScale={{ type: 'linear' }} />)) // default xScale type (time) triggers test failure !?!
+    shouldMatchSnapshot(<LineChart xScale={{ type: 'linear' }} />)) // default xScale type (time) triggers test failure !?!
 
   test('renders correctly with data', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <LineChart data={lineChartData} xScale={{ type: 'linear' }} />,
     ))
 
   test('renders correctly with data transformer', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <LineChart
         axisFormatters={{
           bottom: value => value.toString(),
@@ -41,7 +41,7 @@ describe('lineChart', () => {
     ))
 
   test('renders correctly with point formatter', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <LineChart
         data={lineChartData}
         pointFormatters={{
@@ -53,12 +53,12 @@ describe('lineChart', () => {
     ))
 
   test('renders correctly with detailed legend', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     ))
 
   test('renders correctly with timeline data', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <LineChart
         data={lineChartHoursData}
         withLegend
@@ -67,7 +67,7 @@ describe('lineChart', () => {
     ))
 
   test('renders correctly with multiple series', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <LineChart
         data={lineChartMultipleData}
         withLegend

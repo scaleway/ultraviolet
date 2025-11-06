@@ -6,6 +6,6 @@ export {
   renderWithForm,
   renderWithTheme,
   setup,
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotWithPortal,
+  shouldMatchSnapshot,
+  shouldMatchSnapshotWithPortal,
 } from './vitest'

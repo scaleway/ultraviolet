@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { CodeEditor } from '../CodeEditor'
 
@@ -8,7 +8,7 @@ import { CodeEditor } from '../CodeEditor'
 // library.
 describe.skip('codeEditor', () => {
   it('should render correctly with content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CodeEditor
         extensions="yaml"
         height="600px"
@@ -21,7 +21,7 @@ describe.skip('codeEditor', () => {
     ))
 
   it('should render correctly with label', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CodeEditor
         extensions="yaml"
         height="600px"
@@ -33,7 +33,7 @@ describe.skip('codeEditor', () => {
     ))
 
   it('should render correctly disbled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CodeEditor
         disabled
         extensions="yaml"
@@ -44,7 +44,7 @@ describe.skip('codeEditor', () => {
     ))
 
   it('should render correctly with copyButton as boolean', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CodeEditor
         copyButton
         extensions="yaml"
@@ -55,7 +55,7 @@ describe.skip('codeEditor', () => {
     ))
 
   it('should render correctly with copyButton as string', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CodeEditor
         copyButton="Copy"
         extensions="yaml"

@@ -15,3 +15,7 @@ export const loader = style({
   animationName: spin,
   animationTimingFunction: 'linear',
 })
+
+export const loaderCircleAnimation = style({
+  transition: 'stroke-dashoffset 0.5s ease 0s',
+})

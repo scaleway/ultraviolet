@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { CheckboxGroup } from '..'
 
 describe('checkboxGroup', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox name="value-1" value="value-1">
           Checkbox 1
@@ -17,7 +17,7 @@ describe('checkboxGroup', () => {
     ))
 
   test('renders correctly with no CheckboxGroup.Checkbox name', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CheckboxGroup legend="Label" name="Checkbox" onChange={() => {}}>
         <CheckboxGroup.Checkbox value="value-1">
           Checkbox 1
@@ -29,7 +29,7 @@ describe('checkboxGroup', () => {
     ))
 
   test('renders correctly with direction row', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CheckboxGroup
         direction="row"
         legend="Label"
@@ -46,7 +46,7 @@ describe('checkboxGroup', () => {
     ))
 
   test('renders correctly with helper content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CheckboxGroup
         helper="Helper content"
         legend="Label"
@@ -63,7 +63,7 @@ describe('checkboxGroup', () => {
     ))
 
   test('renders correctly with error content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CheckboxGroup
         error="Eror content"
         legend="Label"
@@ -80,7 +80,7 @@ describe('checkboxGroup', () => {
     ))
 
   test('renders correctly with required prop', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CheckboxGroup
         legend="Label"
         name="Checkbox"

@@ -1,10 +1,10 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { BarChartTooltip } from '../Tooltip'
 
 describe('barChartTooltip', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <BarChartTooltip
         color="#ff0000"
         formattedValue="10 kb"

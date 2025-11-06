@@ -1,1174 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PieChart > renders correctly when legend is focused 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #641cb3;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-  -webkit-animation: animation-0 linear 1500ms infinite;
-  animation: animation-0 linear 1500ms infinite;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 100%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-32 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-36 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-38 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
-                  data-testid="arc.compute"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-                <path
-                  d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
-                  data-testid="arc.gpu"
-                  fill="#0083e6"
-                  opacity="1"
-                  stroke="rgb(0, 92, 161)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <ul
-        class="emotion-2 emotion-3"
-      >
-        <div
-          aria-controls="chart-legend-compute"
-          aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-compute"
-            />
-            <div
-              class="emotion-10 emotion-11"
-              color="#5e47be"
-              id="chart-legend-compute"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-14 emotion-15"
-              >
-                Compute
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-18 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-20 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-        <div
-          aria-controls="chart-legend-gpu"
-          aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-24 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-gpu"
-            />
-            <div
-              class="emotion-28 emotion-11"
-              color="#0083e6"
-              id="chart-legend-gpu"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-32 emotion-15"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-36 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-38 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly when legend is hovered 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #641cb3;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-  -webkit-animation: animation-0 linear 1500ms infinite;
-  animation: animation-0 linear 1500ms infinite;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 100%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-32 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-36 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-38 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
-                  data-testid="arc.compute"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-                <path
-                  d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
-                  data-testid="arc.gpu"
-                  fill="#0083e6"
-                  opacity="1"
-                  stroke="rgb(0, 92, 161)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <ul
-        class="emotion-2 emotion-3"
-      >
-        <div
-          aria-controls="chart-legend-compute"
-          aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-compute"
-            />
-            <div
-              class="emotion-10 emotion-11"
-              color="#5e47be"
-              id="chart-legend-compute"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-14 emotion-15"
-              >
-                Compute
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-18 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-20 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-        <div
-          aria-controls="chart-legend-gpu"
-          aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-24 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-gpu"
-            />
-            <div
-              class="emotion-28 emotion-11"
-              color="#0083e6"
-              id="chart-legend-gpu"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-32 emotion-15"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-36 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-38 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly with data and content 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  font-size:font-family: Space Grotesk,sans-serif;
-  font-size: 1.5625rem;
-  font-weight: Medium;
-  letter-spacing: 0;
-  line-height: 2rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 500;
-  line-height: 100px;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  text-align: center;
-  vertical-align: middle;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
-                  data-testid="arc.compute"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-                <path
-                  d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
-                  data-testid="arc.gpu"
-                  fill="#0083e6"
-                  opacity="1"
-                  stroke="rgb(0, 92, 161)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div
-          class="emotion-2 emotion-3"
-        >
-          Test
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
-                  data-testid="arc.discount"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <ul
-        class="emotion-2 emotion-3"
-      >
-        <div
-          aria-controls="chart-legend-discount"
-          aria-describedby="chart-legend-discount"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-discount"
-            />
-            <div
-              class="emotion-10 emotion-11"
-              color="#5e47be"
-              id="chart-legend-discount"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-14 emotion-15"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-18 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-20 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly with empty legend placeholder 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 2.5rem;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
-                  data-testid="arc.empty"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <p
-          class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-        >
-          I am a legend
-        </p>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`pieChart > renders correctly when legend is focused 1`] = `
 <DocumentFragment>
   <div
@@ -1211,7 +42,7 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1231,17 +62,17 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--rwwhsl2x)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -1267,9 +98,9 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
             />
             <div
               class="styles__6tpqrja styles_isFocused_true__6tpqrjb"
-              color="#5e47be"
+              color="var(--rwwhsl2w)"
               id="chart-legend-compute"
-              style="--_6tpqrj1: #5e47be;"
+              style="--_6tpqrj1: var(--rwwhsl2w);"
             />
             <div
               class="styles__6tpqrjc"
@@ -1309,9 +140,9 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#0083e6"
+              color="var(--rwwhsl2x)"
               id="chart-legend-gpu"
-              style="--_6tpqrj1: #0083e6;"
+              style="--_6tpqrj1: var(--rwwhsl2x);"
             />
             <div
               class="styles__6tpqrjc"
@@ -1384,7 +215,7 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1404,17 +235,17 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--rwwhsl2x)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -1440,9 +271,9 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
             />
             <div
               class="styles__6tpqrja styles_isFocused_true__6tpqrjb"
-              color="#5e47be"
+              color="var(--rwwhsl2w)"
               id="chart-legend-compute"
-              style="--_6tpqrj1: #5e47be;"
+              style="--_6tpqrj1: var(--rwwhsl2w);"
             />
             <div
               class="styles__6tpqrjc"
@@ -1482,9 +313,9 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#0083e6"
+              color="var(--rwwhsl2x)"
               id="chart-legend-gpu"
-              style="--_6tpqrj1: #0083e6;"
+              style="--_6tpqrj1: var(--rwwhsl2x);"
             />
             <div
               class="styles__6tpqrjc"
@@ -1557,7 +388,7 @@ exports[`pieChart > renders correctly with data 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1577,17 +408,17 @@ exports[`pieChart > renders correctly with data 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--rwwhsl2x)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -1642,7 +473,7 @@ exports[`pieChart > renders correctly with data and content 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1662,17 +493,17 @@ exports[`pieChart > renders correctly with data and content 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--rwwhsl2x)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -1732,7 +563,7 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1752,17 +583,17 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--rwwhsl2x)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -1788,9 +619,9 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#5e47be"
+              color="var(--rwwhsl2w)"
               id="chart-legend-compute"
-              style="--_6tpqrj1: #5e47be;"
+              style="--_6tpqrj1: var(--rwwhsl2w);"
             />
             <div
               class="styles__6tpqrjc"
@@ -1830,9 +661,9 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#0083e6"
+              color="var(--rwwhsl2x)"
               id="chart-legend-gpu"
-              style="--_6tpqrj1: #0083e6;"
+              style="--_6tpqrj1: var(--rwwhsl2x);"
             />
             <div
               class="styles__6tpqrjc"
@@ -1905,7 +736,7 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -1925,9 +756,9 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
                   data-testid="arc.discount"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -1953,9 +784,9 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#5e47be"
+              color="var(--rwwhsl2w)"
               id="chart-legend-discount"
-              style="--_6tpqrj1: #5e47be;"
+              style="--_6tpqrj1: var(--rwwhsl2w);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2028,7 +859,7 @@ exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -2048,9 +879,9 @@ exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
                   data-testid="arc.empty"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -2114,7 +945,7 @@ exports[`pieChart > renders correctly with legend 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -2134,81 +965,81 @@ exports[`pieChart > renders correctly with legend 1`] = `
                 <path
                   d="M1.039,-92.994A93,93,0,0,1,53.82,-75.845L42.886,-60.796A74.4,74.4,0,0,0,1.039,-74.393Z"
                   data-testid="arc.compute"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M55.501,-74.623A93,93,0,0,1,88.122,-29.725L70.431,-23.977A74.4,74.4,0,0,0,44.568,-59.574Z"
                   data-testid="arc.gpu"
-                  fill="#0083e6"
+                  fill="var(--rwwhsl2x)"
                   opacity="1"
-                  stroke="rgb(0, 92, 161)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M88.764,-27.748A93,93,0,0,1,88.764,27.748L71.073,22A74.4,74.4,0,0,0,71.073,-22Z"
                   data-testid="arc.functions"
-                  fill="#3ebd8f"
+                  fill="var(--rwwhsl2y)"
                   opacity="1"
-                  stroke="rgb(43, 132, 100)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M88.122,29.725A93,93,0,0,1,55.501,74.623L44.568,59.574A74.4,74.4,0,0,0,70.431,23.977Z"
                   data-testid="arc.containers"
-                  fill="#ac2740"
+                  fill="var(--rwwhsl2z)"
                   opacity="1"
-                  stroke="rgb(120, 27, 45)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M53.82,75.845A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,42.886,60.796Z"
                   data-testid="arc.s3"
-                  fill="#9a85ec"
+                  fill="var(--rwwhsl30)"
                   opacity="1"
-                  stroke="rgb(108, 93, 165)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-1.039,92.994A93,93,0,0,1,-53.82,75.845L-42.886,60.796A74.4,74.4,0,0,0,-1.039,74.393Z"
                   data-testid="arc.dns"
-                  fill="#ff602e"
+                  fill="var(--rwwhsl31)"
                   opacity="1"
-                  stroke="rgb(179, 67, 32)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-55.501,74.623A93,93,0,0,1,-88.122,29.725L-70.431,23.977A74.4,74.4,0,0,0,-44.568,59.574Z"
                   data-testid="arc.appleSilicon"
-                  fill="#483800"
+                  fill="var(--rwwhsl32)"
                   opacity="1"
-                  stroke="rgb(50, 39, 0)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-88.764,27.748A93,93,0,0,1,-88.764,-27.748L-71.073,-22A74.4,74.4,0,0,0,-71.073,22Z"
                   data-testid="arc.baremetal"
-                  fill="#02a5ad"
+                  fill="var(--rwwhsl33)"
                   opacity="1"
-                  stroke="rgb(1, 115, 121)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-88.122,-29.725A93,93,0,0,1,-55.501,-74.623L-44.568,-59.574A74.4,74.4,0,0,0,-70.431,-23.977Z"
                   data-testid="arc.database"
-                  fill="#ffa488"
+                  fill="var(--rwwhsl34)"
                   opacity="1"
-                  stroke="rgb(179, 115, 95)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
                 <path
                   d="M-53.82,-75.845A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-42.886,-60.796Z"
                   data-testid="arc.lb"
-                  fill="#96edf2"
+                  fill="var(--rwwhsl35)"
                   opacity="1"
-                  stroke="rgb(105, 166, 169)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>
@@ -2234,9 +1065,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#5e47be"
+              color="var(--rwwhsl2w)"
               id="chart-legend-compute"
-              style="--_6tpqrj1: #5e47be;"
+              style="--_6tpqrj1: var(--rwwhsl2w);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2276,9 +1107,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#0083e6"
+              color="var(--rwwhsl2x)"
               id="chart-legend-gpu"
-              style="--_6tpqrj1: #0083e6;"
+              style="--_6tpqrj1: var(--rwwhsl2x);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2318,9 +1149,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#3ebd8f"
+              color="var(--rwwhsl2y)"
               id="chart-legend-functions"
-              style="--_6tpqrj1: #3ebd8f;"
+              style="--_6tpqrj1: var(--rwwhsl2y);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2360,9 +1191,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#ac2740"
+              color="var(--rwwhsl2z)"
               id="chart-legend-containers"
-              style="--_6tpqrj1: #ac2740;"
+              style="--_6tpqrj1: var(--rwwhsl2z);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2402,9 +1233,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#9a85ec"
+              color="var(--rwwhsl30)"
               id="chart-legend-s3"
-              style="--_6tpqrj1: #9a85ec;"
+              style="--_6tpqrj1: var(--rwwhsl30);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2444,9 +1275,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#ff602e"
+              color="var(--rwwhsl31)"
               id="chart-legend-dns"
-              style="--_6tpqrj1: #ff602e;"
+              style="--_6tpqrj1: var(--rwwhsl31);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2486,9 +1317,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#483800"
+              color="var(--rwwhsl32)"
               id="chart-legend-appleSilicon"
-              style="--_6tpqrj1: #483800;"
+              style="--_6tpqrj1: var(--rwwhsl32);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2528,9 +1359,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#02a5ad"
+              color="var(--rwwhsl33)"
               id="chart-legend-baremetal"
-              style="--_6tpqrj1: #02a5ad;"
+              style="--_6tpqrj1: var(--rwwhsl33);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2570,9 +1401,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#ffa488"
+              color="var(--rwwhsl34)"
               id="chart-legend-database"
-              style="--_6tpqrj1: #ffa488;"
+              style="--_6tpqrj1: var(--rwwhsl34);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2612,9 +1443,9 @@ exports[`pieChart > renders correctly with legend 1`] = `
             />
             <div
               class="styles__6tpqrja"
-              color="#96edf2"
+              color="var(--rwwhsl35)"
               id="chart-legend-lb"
-              style="--_6tpqrj1: #96edf2;"
+              style="--_6tpqrj1: var(--rwwhsl35);"
             />
             <div
               class="styles__6tpqrjc"
@@ -2687,7 +1518,7 @@ exports[`pieChart > renders correctly with no props 1`] = `
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                  stroke="#222638"
+                  stroke="var(--rwwhsl2m)"
                   stroke-linecap="square"
                   stroke-width="2"
                 />
@@ -2707,9 +1538,9 @@ exports[`pieChart > renders correctly with no props 1`] = `
                 <path
                   d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
                   data-testid="arc.empty"
-                  fill="#5e47be"
+                  fill="var(--rwwhsl2w)"
                   opacity="1"
-                  stroke="rgb(66, 50, 133)"
+                  stroke="rgb(0, 0, 0)"
                   stroke-width="0"
                 />
               </g>

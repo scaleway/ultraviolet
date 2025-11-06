@@ -1,7 +1,7 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, test } from 'vitest'
 import { Navigation, NavigationProvider } from '..'
@@ -38,10 +38,10 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
 
 describe('navigation', () => {
   test('render with basic content', () =>
-    shouldMatchEmotionSnapshot(<BasicNavigation />))
+    shouldMatchSnapshot(<BasicNavigation />))
 
   test('render without pinnedFeature', () =>
-    shouldMatchEmotionSnapshot(<BasicNavigation pinnedFeature={false} />))
+    shouldMatchSnapshot(<BasicNavigation pinnedFeature={false} />))
 
   test('click on expand / collapse button', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)

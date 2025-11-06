@@ -1,6 +1,6 @@
-import type { Theme } from '@emotion/react'
+import type { theme as UVTheme } from '@ultraviolet/themes'
 
-export const getLegendColor = (theme: Theme): string[] => {
+export const getLegendColor = (theme: typeof UVTheme): string[] => {
   const { colors } = theme
 
   return Object.keys(colors.other.data.charts)

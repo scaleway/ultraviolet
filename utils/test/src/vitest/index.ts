@@ -4,8 +4,8 @@ export {
   mockFormErrors,
   renderWithForm,
   renderWithTheme,
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotWithPortal,
+  shouldMatchSnapshot,
+  shouldMatchSnapshotWithPortal,
 } from './helpers'
 export { mockMatchMedia } from './mockMatchMedia'
 export { resetUserEvent } from './resetUserEvent'

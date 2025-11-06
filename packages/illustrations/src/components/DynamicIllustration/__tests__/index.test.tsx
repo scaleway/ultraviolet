@@ -1,27 +1,28 @@
+import type { theme as UVTheme } from '@ultraviolet/themes'
 import {
   consoleDarkerTheme,
   consoleDarkTheme,
   consoleLightTheme,
 } from '@ultraviolet/themes'
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { DynamicIllustration } from '..'
 
 describe('dynamicIllustration', () => {
   it('should work with consoleLightTheme', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <DynamicIllustration name="empty" />,
-      consoleLightTheme,
+      consoleLightTheme as typeof UVTheme,
     ))
   it('should work with consoleDarkTheme', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <DynamicIllustration name="empty" />,
-      consoleDarkTheme,
+      consoleDarkTheme as typeof UVTheme,
     ))
 
   it('should work with consoleDarkerTheme', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <DynamicIllustration name="empty" />,
-      consoleDarkerTheme,
+      consoleDarkerTheme as typeof UVTheme,
     ))
 })

@@ -2,21 +2,11 @@
 
 exports[`breakpoint > renders correctly down prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: none;
-}
-
-@media (max-width: calc(1280px - 1px)) {
-  .emotion-0 {
-    display: block;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="css-1118jpq-Breakpoint e1ehbeci0"
     >
       Hello
     </div>
@@ -26,21 +16,11 @@ exports[`breakpoint > renders correctly down prop 1`] = `
 
 exports[`breakpoint > renders correctly up prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: none;
-}
-
-@media (min-width: 1280pxpx) {
-  .emotion-0 {
-    display: block;
-  }
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="css-1f5mmcq-Breakpoint e1ehbeci0"
     >
       Hello
     </div>

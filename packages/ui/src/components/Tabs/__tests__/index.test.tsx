@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Link } from '../../Link'
 import { Tabs } from '..'
@@ -93,7 +93,7 @@ describe('tabs', () => {
   })
 
   test('renders correctly with Tabs and last disabled', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Tabs onChange={() => {}} selected={2}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
@@ -105,7 +105,7 @@ describe('tabs', () => {
   })
 
   test('renders correctly with Tabs name', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Tabs onChange={() => {}} selected="second">
         <Tabs.Tab value="first">First</Tabs.Tab>
         <Tabs.Tab value="second">Second</Tabs.Tab>
@@ -117,7 +117,7 @@ describe('tabs', () => {
   })
 
   test('renders correctly with custom Tabs component', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Tabs onChange={() => {}}>
         <Tabs.Tab as="div">First</Tabs.Tab>
         <Tabs.Tab as="a">Second</Tabs.Tab>

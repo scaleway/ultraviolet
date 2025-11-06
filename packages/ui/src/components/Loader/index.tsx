@@ -1,10 +1,10 @@
 'use client'
 
-import { css, useTheme } from '@emotion/react'
+import { useTheme } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import type { ExtendedColor } from '../../theme'
 import { SIZES } from './constants'
-import { circle, loader } from './styles.css'
+import { circle, loader, loaderCircleAnimation } from './styles.css'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
@@ -65,10 +65,8 @@ export const Loader = ({
         strokeWidth={16}
       />
       <circle
+        className={loaderCircleAnimation}
         // oxlint-disable-next-line no-unknown-property
-        css={css`
-          transition: stroke-dashoffset 0.5s ease 0s;
-        `}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"

@@ -1,10 +1,10 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Stack } from '..'
 
 describe('stack', () => {
   test(`should render correctly with default props`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack>
         <div>first child</div>
         <div>second child</div>
@@ -13,7 +13,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly with row direction`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack direction="row">
         <div>first child</div>
         <div>second child</div>
@@ -22,7 +22,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly with alignCenter`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack alignItems="center" direction="row">
         <div>first child</div>
         <div>second child</div>
@@ -30,7 +30,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly with wrap as boolean`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack direction="row" wrap>
         <div>first child</div>
         <div>second child</div>
@@ -38,7 +38,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly with wrap as string`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack direction="row" wrap="wrap-reverse">
         <div>first child</div>
         <div>second child</div>
@@ -46,7 +46,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly with width 100%`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack width="100%">
         <div>first child</div>
         <div>second child</div>
@@ -54,7 +54,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly max width 100%`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack maxWidth="100%">
         <div>first child</div>
         <div>second child</div>
@@ -62,7 +62,7 @@ describe('stack', () => {
     ))
 
   test(`should render correctly min width 100%`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack minWidth="100%">
         <div>first child</div>
         <div>second child</div>
@@ -70,7 +70,7 @@ describe('stack', () => {
     ))
 
   test(`should render different direction and gap on different viewport sizes`, () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stack
         direction={{
           large: 'row',

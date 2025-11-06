@@ -180,12 +180,7 @@ exports[`button > render with icon only 1`] = `
 
 exports[`button > render with isLoading with icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
@@ -201,7 +196,7 @@ exports[`button > render with isLoading with icon 1`] = `
         aria-valuetext="20%"
         class="styles__tkulld2"
         role="progressbar"
-        style="height: 1rem; width: 1rem;"
+        style="height: var(--rwwhsl9c); width: var(--rwwhsl9c);"
         viewBox="0 0 100 100"
       >
         <circle
@@ -213,12 +208,12 @@ exports[`button > render with isLoading with icon 1`] = `
           stroke-width="16"
         />
         <circle
-          class="emotion-0"
+          class="styles__tkulld3"
           cx="50"
           cy="50"
           fill="none"
           r="42"
-          stroke="#ffffff"
+          stroke="var(--rwwhsl4r)"
           stroke-dasharray="263.89378290154264"
           stroke-dashoffset="211.11502632123413"
           stroke-linecap="round"
@@ -269,12 +264,7 @@ exports[`button > render with isLoading with icon variant 1`] = `
 
 exports[`button > render with isLoading without icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
@@ -290,7 +280,7 @@ exports[`button > render with isLoading without icon 1`] = `
         aria-valuetext="20%"
         class="styles__tkulld2"
         role="progressbar"
-        style="height: 1rem; width: 1rem;"
+        style="height: var(--rwwhsl9c); width: var(--rwwhsl9c);"
         viewBox="0 0 100 100"
       >
         <circle
@@ -302,12 +292,12 @@ exports[`button > render with isLoading without icon 1`] = `
           stroke-width="16"
         />
         <circle
-          class="emotion-0"
+          class="styles__tkulld3"
           cx="50"
           cy="50"
           fill="none"
           r="42"
-          stroke="#ffffff"
+          stroke="var(--rwwhsl4r)"
           stroke-dasharray="263.89378290154264"
           stroke-dashoffset="211.11502632123413"
           stroke-linecap="round"

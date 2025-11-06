@@ -1,4 +1,3 @@
-import { createSerializer } from '@emotion/jest'
 import * as matchers from '@testing-library/jest-dom/matchers'
 // eslint-disable-next-line testing-library/no-manual-cleanup
 import { cleanup } from '@testing-library/react'
@@ -17,8 +16,6 @@ const MockResize = vi.fn(() => ({
 export const setup = () => {
   process.env.TZ = 'UTC'
   expect.extend(matchers)
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  expect.addSnapshotSerializer(createSerializer())
 
   // oxlint-disable-next-line no-hooks
   beforeEach(() => {

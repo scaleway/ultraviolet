@@ -1,6 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -16,7 +16,7 @@ describe('estimateCost - CustomUnitInput', () => {
     resetIntersectionMocking()
   })
   test('render default values', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <CustomUnitInput
         iteration={{ unit: 'hours', value: 1 }}
         setIteration={() => {}}

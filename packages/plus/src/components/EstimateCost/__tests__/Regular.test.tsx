@@ -1,6 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -20,7 +20,7 @@ describe('estimateCost - Regular Item', () => {
   })
 
   test('render basic props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost description="Custom Description">
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -29,7 +29,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with overlay', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost
         OverlayLeft={OverlaySubmitButton}
         OverlayRight={OverlaySubmitButton}
@@ -48,7 +48,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with overlay beta', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost isBeta OverlayRight={OverlaySubmitButton}>
         <EstimateCost.Item
           amount={0}
@@ -67,7 +67,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with long fractions digits', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" longFractionDigits price={0.000001}>
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -76,7 +76,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with maxPrice and longFractionDigits', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           amount={10}
@@ -91,7 +91,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with maxPrice', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           amount={0}
@@ -106,7 +106,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with is not defined', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item isDefined={false} label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -115,7 +115,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with sublabel', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" subLabel="Excellent">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -124,7 +124,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic props with textNotDefined', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" textNotDefined="Not defined">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -133,7 +133,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render basic with ellipsis', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular" textNotDefined="Not defined">
           <EstimateCost.Regular>
@@ -146,7 +146,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render with isDisabledOnOverlay', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular isDisabledOnOverlay>
@@ -157,7 +157,7 @@ describe('estimateCost - Regular Item', () => {
     ))
 
   test('render with alert', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost
         alert="this is an alert"
         alertTitle="this is an alert title"

@@ -2,6 +2,7 @@
 
 import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
+import type { theme as UVTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
@@ -66,7 +67,7 @@ export const PieChart = ({
     [emptyLegend],
   )
 
-  const localColors = getLegendColor(theme)
+  const localColors = getLegendColor(theme as typeof UVTheme)
 
   const LegendDisplayer = useCallback(
     () =>
