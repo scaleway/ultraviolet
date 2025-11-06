@@ -159,6 +159,7 @@ export const Row = ({
                 className={offerListBadge}
                 disabled={disabled}
                 sentiment={badge.sentiment}
+                prominence={badge.prominence}
                 size="small"
               >
                 {badge.text}
