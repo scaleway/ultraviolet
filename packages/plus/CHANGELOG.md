@@ -1,5 +1,23 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.14
+
+### Patch Changes
+
+- [#5767](https://github.com/scaleway/ultraviolet/pull/5767) [`91c824a`](https://github.com/scaleway/ultraviolet/commit/91c824a1c9e90124e99df8e132a148e1b3ac996a) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: first column should be strong and selected row text should be primary
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+- [#5763](https://github.com/scaleway/ultraviolet/pull/5763) [`396c248`](https://github.com/scaleway/ultraviolet/commit/396c248989905a975b532f1eeb9e23e4ee182529) Thanks [@lisalupi](https://github.com/lisalupi)! - `ContentCard`: image should not be disabled when `disabled=false`
+
+- [#5762](https://github.com/scaleway/ultraviolet/pull/5762) [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa) Thanks [@lisalupi](https://github.com/lisalupi)! - `Plans` migrate missing sub-component to vanilla extract
+
+- [#5770](https://github.com/scaleway/ultraviolet/pull/5770) [`6e8d4e1`](https://github.com/scaleway/ultraviolet/commit/6e8d4e1dfd17606b09994e6eda5c001e27f9f4d1) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: `discount=1` should be interpreted as "100%", not "1€"
+
+- Updated dependencies [[`bc629aa`](https://github.com/scaleway/ultraviolet/commit/bc629aa7771057a7ca7a9e59bff983a0df73d2fa), [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3), [`deba7e9`](https://github.com/scaleway/ultraviolet/commit/deba7e941ade8a796666c18f64bf7c2959709e19), [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa), [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983)]:
+  - @ultraviolet/ui@3.0.0-beta.25
+  - @ultraviolet/icons@5.0.0-beta.10
+
 ## 3.0.0-beta.13
 
 ### Minor Changes

@@ -1,5 +1,12 @@
 # @ultraviolet/nextjs
 
+## 3.0.0-beta.14
+
+### Patch Changes
+
+- Updated dependencies [[`bc629aa`](https://github.com/scaleway/ultraviolet/commit/bc629aa7771057a7ca7a9e59bff983a0df73d2fa), [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3), [`deba7e9`](https://github.com/scaleway/ultraviolet/commit/deba7e941ade8a796666c18f64bf7c2959709e19), [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa)]:
+  - @ultraviolet/ui@3.0.0-beta.25
+
 ## 3.0.0-beta.13
 
 ### Patch Changes

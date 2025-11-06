@@ -1,5 +1,26 @@
 # Change Log
 
+## 3.0.0-beta.25
+
+### Major Changes
+
+- [#5758](https://github.com/scaleway/ultraviolet/pull/5758) [`bc629aa`](https://github.com/scaleway/ultraviolet/commit/bc629aa7771057a7ca7a9e59bff983a0df73d2fa) Thanks [@etienne-scaleway](https://github.com/etienne-scaleway)! - ! POTENTIAL BREAKING CHANGES !
+  Fixed the `maxLength` prop on TagList. This prop was previously implemented incorrectly and would only reduce the threshold by one when the total length exceeded `maxLength`.
+  This change might affect the number of visible tags, particularly if you have many long tags (the default `maxLength` is set to `600` characters) or if you have specified a custom `maxLength`.
+
+### Minor Changes
+
+- [#5762](https://github.com/scaleway/ultraviolet/pull/5762) [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCardOptionGroup` and `Toaster` migrate missing sub-components to vanilla extract
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+- [#5772](https://github.com/scaleway/ultraviolet/pull/5772) [`deba7e9`](https://github.com/scaleway/ultraviolet/commit/deba7e941ade8a796666c18f64bf7c2959709e19) Thanks [@lisalupi](https://github.com/lisalupi)! - `EmptyState`: fix sentiment on title
+
+- Updated dependencies [[`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3), [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983)]:
+  - @ultraviolet/icons@5.0.0-beta.10
+
 ## 3.0.0-beta.24
 
 ### Minor Changes
