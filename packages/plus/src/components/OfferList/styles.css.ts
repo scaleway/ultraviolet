@@ -174,7 +174,12 @@ export const offerListNoPaddingCell = style({
   },
 })
 
-export const offerListRowSelected = style({})
+export const offerListRowSelected = style({
+  color: theme.colors.primary.text,
+})
+export const offerListRowSelectedNotExpandable = style({})
+export const offerListRowSelectedExpandable = style({})
+
 export const offerListRowBanner = style({})
 
 globalStyle(
@@ -185,7 +190,14 @@ globalStyle(
 )
 
 globalStyle(
-  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, {offerListRowSelected}[aria-expanded="true"] + tr td`,
+  `${offerListRowSelectedNotExpandable} td:nth-child(2), ${offerListRowSelectedExpandable} td:nth-child(3)`,
+  {
+    fontWeight: theme.typography.bodySmallStrong.weight,
+  },
+)
+
+globalStyle(
+  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, ${offerListRowSelected}[aria-expanded="true"] + tr td`,
   {
     borderColor: theme.colors.primary.border,
   },
