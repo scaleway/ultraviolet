@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.15
+
+### Patch Changes
+
+- [#5773](https://github.com/scaleway/ultraviolet/pull/5773) [`75d6213`](https://github.com/scaleway/ultraviolet/commit/75d6213d3b5a9f006bf0202371a6c3c1c882caf7) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - `OfferList`: add prop "prominence" for badge
+
+- Updated dependencies [[`abfbe9e`](https://github.com/scaleway/ultraviolet/commit/abfbe9e150f8e7880b03ea3ce69ede86f6c46420)]:
+  - @ultraviolet/ui@3.0.0-beta.26
+
 ## 3.0.0-beta.14
 
 ### Patch Changes
