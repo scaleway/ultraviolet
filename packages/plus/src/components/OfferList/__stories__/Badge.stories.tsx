@@ -3,14 +3,28 @@ import type { ComponentProps } from 'react'
 import { OfferList } from '../OfferList'
 import { columns, data } from './resources'
 
+const getTextBadge = (index: number) => {
+  if (index === 1) {
+    return 'I am a primary badge'
+  }
+  if (index === 2) {
+    return 'I am a disabled badge'
+  }
+  if (index === 3) {
+    return 'I am a strong badge '
+  }
+
+  return 'I am a badge'
+}
 export const Badge: StoryFn<ComponentProps<typeof OfferList>> = props => (
   <OfferList {...props} expandable>
     {data.map((planet, index) =>
-      index < 3 ? (
+      index < 4 ? (
         <OfferList.Row
           badge={{
+            prominence: index === 3 ? 'strong' : 'default',
             sentiment: index === 1 ? 'primary' : 'neutral',
-            text: 'I am a badge',
+            text: getTextBadge(index),
           }}
           disabled={index === 2}
           expandable="Some text"
