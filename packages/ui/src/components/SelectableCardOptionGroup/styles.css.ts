@@ -39,7 +39,7 @@ globalStyle(`${optionSelectInput} ${selectBarBase}`, {
 })
 
 globalStyle(
-  `${optionSelectInput} ${selectBarBase}:hover, ${optionSelectInput} ${selectBarBase}:focus, ${optionSelectInput} ${selectBarBase}:active, `,
+  `${optionSelectInput} ${selectBarBase}:hover, ${optionSelectInput} ${selectBarBase}:focus, ${optionSelectInput} ${selectBarBase}:active`,
   {
     borderColor: theme.colors.neutral.border,
     outline: 'none',
@@ -47,14 +47,14 @@ globalStyle(
 )
 
 globalStyle(
-  `${optionSelectInputDisabled} ${selectBarBase}:hover, ${optionSelectInputDisabled} ${selectBarBase}:focus, ${optionSelectInputDisabled} ${selectBarBase}:active, `,
+  `${optionSelectInputDisabled} ${selectBarBase}:hover, ${optionSelectInputDisabled} ${selectBarBase}:focus, ${optionSelectInputDisabled} ${selectBarBase}:active`,
   {
     borderColor: theme.colors.neutral.borderDisabled,
   },
 )
 
 globalStyle(
-  `${optionSelectInputError} ${selectBarBase}:hover, ${optionSelectInputError} ${selectBarBase}:focus, ${optionSelectInputError} ${selectBarBase}:active, `,
+  `${optionSelectInputError} ${selectBarBase}:hover, ${optionSelectInputError} ${selectBarBase}:focus, ${optionSelectInputError} ${selectBarBase}:active`,
   {
     borderColor: theme.colors.danger.border,
   },
