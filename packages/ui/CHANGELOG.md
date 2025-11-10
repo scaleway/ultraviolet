@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-beta.26
+
+### Patch Changes
+
+- [#5771](https://github.com/scaleway/ultraviolet/pull/5771) [`abfbe9e`](https://github.com/scaleway/ultraviolet/commit/abfbe9e150f8e7880b03ea3ce69ede86f6c46420) Thanks [@etienne-scaleway](https://github.com/etienne-scaleway)! - `Popup`: Make sure to clear all timers when unmount
+
 ## 3.0.0-beta.25
 
 ### Major Changes
