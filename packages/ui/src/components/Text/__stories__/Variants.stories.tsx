@@ -1,6 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Text } from '..'
-import { textVariants } from '../constants'
+import { Text, textVariants } from '../index'
 
 export const Variants: StoryFn<typeof Text> = props => (
   <>

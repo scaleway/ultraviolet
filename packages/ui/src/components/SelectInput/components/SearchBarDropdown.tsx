@@ -15,7 +15,7 @@ type SearchBarProps = {
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
 }
 
-const getReferenceText = (option: OptionType) => {
+export const getReferenceText = (option: OptionType) => {
   if (option.searchText) {
     return normalizeString(option.searchText)
   }
@@ -27,7 +27,7 @@ const getReferenceText = (option: OptionType) => {
 }
 
 // It uses Levenshtein distance so that the search is typo-tolerant for a simple fuzzy-search
-const searchRegex = (data: OptionType[], query: string) =>
+export const searchRegex = (data: OptionType[], query: string) =>
   data.filter(option => {
     const referenceText = getReferenceText(option)
     const regex = new RegExp(query, 'i')
@@ -158,17 +158,11 @@ export const SearchBarDropdown = ({
   }
 
   useEffect(() => {
-    // note: Remove me and use autoFocus when popup is fixed
+    // TODO: Remove me and use autoFocus when popup is fixed
     // Autofocus on the search bar create some scroll issues
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       searchInputRef.current?.focus()
     }, 50)
-
-    return () => {
-      if (timeout) {
-        clearTimeout(timeout)
-      }
-    }
   }, [])
 
   return (

@@ -9,7 +9,6 @@ const EstimateCostContext = createContext<{
   formatNumber: (number: number, options: FormatNumberOption) => string
 }>({ formatNumber: () => '', locales: EstimateCostLocales })
 
-// oxlint-disable-next-line react/only-export-components
 export const useEstimateCost = () => useContext(EstimateCostContext)
 
 type EstimateCostProviderProps = {

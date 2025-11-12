@@ -113,7 +113,7 @@ export const Dialog = ({
   // while the first opened modal should shrink
   const realPosition = [...openedModals].findIndex(object => object.id === id)
   const position = [...openedModals]
-    .toReversed()
+    .reverse()
     .findIndex(object => object.id === id) // reverse method mutate array so we need to create a new array
   const modalAbove = openedModals[realPosition + 1]
   const currentModalHeight = dialogRef.current?.offsetHeight
@@ -169,27 +169,24 @@ export const Dialog = ({
     if (focusableEls.length === 0) {
       event.preventDefault()
     }
-    if (focusableEls.length > 0) {
-      const elem = focusableEls as HTMLElement[]
 
-      const firstFocusableEl = elem[0]
-      const lastFocusableEl = elem.at(-1)
+    const firstFocusableEl = focusableEls[0] as HTMLElement
+    const lastFocusableEl = focusableEls[focusableEls.length - 1] as HTMLElement
 
-      if (event.shiftKey && lastFocusableEl) {
-        if (
-          document.activeElement === firstFocusableEl ||
-          document.activeElement === dialogRef.current
-        ) {
-          lastFocusableEl.focus()
-          event.preventDefault()
-        }
-      } else if (
-        document.activeElement === lastFocusableEl ||
+    if (event.shiftKey) {
+      if (
+        document.activeElement === firstFocusableEl ||
         document.activeElement === dialogRef.current
       ) {
-        firstFocusableEl.focus()
+        lastFocusableEl.focus()
         event.preventDefault()
       }
+    } else if (
+      document.activeElement === lastFocusableEl ||
+      document.activeElement === dialogRef.current
+    ) {
+      firstFocusableEl.focus()
+      event.preventDefault()
     }
   }, [])
 

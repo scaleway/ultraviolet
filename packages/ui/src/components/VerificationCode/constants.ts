@@ -1,5 +1,3 @@
-const sizes = ['small', 'medium', 'large', 'xlarge'] as const
-
 export const SIZE_HEIGHT = {
   large: '600',
   medium: '500',
@@ -13,5 +11,3 @@ export const SIZE_WIDTH = {
   small: '300',
   xlarge: '700',
 } as const
-
-export const verificationCodeSizes = sizes

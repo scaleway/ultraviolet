@@ -3,8 +3,16 @@
 import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
-import { KEYS_MATCH } from './constants'
 import { key as keyStyle } from './styles.css'
+
+export const KEYS_MATCH = {
+  backspace: '⌫',
+  command: '⌘',
+  control: '⌃',
+  enter: '↵',
+  option: '⌥',
+  shift: '⇧',
+} as const
 
 type KeyProps = {
   children: string

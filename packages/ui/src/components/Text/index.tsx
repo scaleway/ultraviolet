@@ -6,14 +6,17 @@ import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../theme'
+import { typography } from '../../theme'
 import { Tooltip } from '../Tooltip'
-import type { PROMINENCES, TextVariant } from './constants'
+import type { PROMINENCES } from './constant'
 import { text } from './style.css'
 import { placementText, whiteSpaceText } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = CSSProperties['textAlign']
 type WhiteSpaceProps = CSSProperties['whiteSpace']
+type TextVariant = keyof typeof typography
+export const textVariants = Object.keys(typography) as TextVariant[]
 
 type TextProps = {
   className?: string

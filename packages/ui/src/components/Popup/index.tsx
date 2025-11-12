@@ -204,7 +204,8 @@ export const Popup = forwardRef(
       }
 
       return null
-    }, [portalTarget, role])
+      // oxlint-disable react/exhaustive-deps
+    }, [portalTarget, role, childrenRef.current])
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
@@ -383,7 +384,7 @@ export const Popup = forwardRef(
         innerPopupRef.current.style.opacity = '1'
       }
       // oxlint-disable react/exhaustive-deps
-    }, [positions, visibleInDom])
+    }, [positions])
 
     /**
      * If popup has `visible` prop it means the popup is manually controlled through this prop.
@@ -461,27 +462,25 @@ export const Popup = forwardRef(
         event.preventDefault()
       }
 
-      if (focusableEls.length > 0) {
-        const elem = focusableEls as HTMLElement[]
+      const firstFocusableEl = focusableEls[0] as HTMLElement
+      const lastFocusableEl = focusableEls[
+        focusableEls.length - 1
+      ] as HTMLElement
 
-        const firstFocusableEl = elem[0]
-        const lastFocusableEl = elem.at(-1)
-
-        if (event.shiftKey && lastFocusableEl) {
-          if (
-            document.activeElement === firstFocusableEl ||
-            document.activeElement === innerPopupRef.current
-          ) {
-            lastFocusableEl.focus()
-            event.preventDefault()
-          }
-        } else if (
-          document.activeElement === lastFocusableEl ||
+      if (event.shiftKey) {
+        if (
+          document.activeElement === firstFocusableEl ||
           document.activeElement === innerPopupRef.current
         ) {
-          firstFocusableEl.focus()
+          lastFocusableEl.focus()
           event.preventDefault()
         }
+      } else if (
+        document.activeElement === lastFocusableEl ||
+        document.activeElement === innerPopupRef.current
+      ) {
+        firstFocusableEl.focus()
+        event.preventDefault()
       }
     }, [])
 
