@@ -2,7 +2,7 @@
 
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
 import { theme } from '@ultraviolet/themes'
-import type { ReactNode, RefObject } from 'react'
+import type { CSSProperties, ReactNode, RefObject } from 'react'
 import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -29,6 +29,7 @@ type RowProps = {
   selectDisabled?: boolean | string
   highlightAnimation?: boolean
   expanded?: boolean
+  style?: CSSProperties
 }
 
 export const Row = ({
@@ -39,6 +40,7 @@ export const Row = ({
   highlightAnimation,
   expandable,
   expanded,
+  style,
   'data-testid': dataTestid,
 }: RowProps) => {
   const {
@@ -109,6 +111,7 @@ export const Row = ({
         className={`${className ? `${className}` : ''}${highlightAnimation ? ` ${tableTrAnimation}` : ''}`}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
+        style={style}
       >
         {selectable ? (
           <ColumnProvider width={theme.sizing[300]}>

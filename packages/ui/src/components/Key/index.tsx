@@ -1,8 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
+import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
+import { key as keyStyle } from './styles.css'
 
 export const KEYS_MATCH = {
   backspace: '⌫',
@@ -13,61 +14,6 @@ export const KEYS_MATCH = {
   shift: '⇧',
 } as const
 
-const KeyContainer = styled.kbd`
-  cursor: default;
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 0.5px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  min-width: ${({ theme }) => theme.sizing['300']};
-  height: ${({ theme }) => theme.sizing['300']};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /** Neutral style */
-  &[data-prominence='strong'] {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundStronger};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-
-    &[data-disabled="true"] {
-      background-color: ${({ theme }) => theme.colors.neutral.backgroundStrongerDisabled};
-      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    }
-  }
-
-  &[data-disabled='true'] {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeakDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
-    cursor: not-allowed;
-  }
-
-  /** Primary style */
-  &[data-sentiment="primary"] {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-    border-color: ${({ theme }) => theme.colors.primary.border};
-
-    &[data-prominence='strong'] {
-      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-
-      &[data-disabled="true"] {
-        background-color: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
-      }
-    }
-
-    &[data-disabled='true'] {
-      background: ${({ theme }) => theme.colors.primary.backgroundDisabled};
-      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-      cursor: not-allowed;
-    }
-  }
-
-  /** Size */
-  &[data-size="small"] {
-    min-width: ${({ theme }) => theme.sizing['250']};
-    height: ${({ theme }) => theme.sizing['250']};
-  }
-`
-
 type KeyProps = {
   children: string
   prominence?: 'strong' | 'default'
@@ -77,6 +23,7 @@ type KeyProps = {
   id?: string
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -91,6 +38,7 @@ export const Key = ({
   id,
   className,
   'data-testid': dataTestId,
+  style,
 }: KeyProps) => {
   const specialKey = useMemo(
     () => Object.keys(KEYS_MATCH).find(key => key === children.toLowerCase()),
@@ -109,14 +57,15 @@ export const Key = ({
   }, [sentiment, prominence])
 
   return (
-    <KeyContainer
-      className={className}
+    <kbd
+      className={`${className ? `${className} ` : ''}${keyStyle({ disabled, prominence, sentiment, size })}`}
       data-disabled={disabled}
       data-prominence={prominence}
       data-sentiment={sentiment}
       data-size={size}
       data-testid={dataTestId}
       id={id}
+      style={style}
     >
       <Text
         as="span"
@@ -129,6 +78,6 @@ export const Key = ({
           ? KEYS_MATCH[specialKey as keyof typeof KEYS_MATCH]
           : children}
       </Text>
-    </KeyContainer>
+    </kbd>
   )
 }

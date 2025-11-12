@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
 import { TEXT_VARIANT } from './constant'
@@ -11,6 +11,7 @@ type BadgeProps = {
   className?: string
   children: ReactNode
   'data-testid'?: string
+  style?: CSSProperties
 } & BadgeVariants
 
 /**
@@ -24,6 +25,7 @@ export const Badge = ({
   className,
   children,
   'data-testid': dataTestId,
+  style,
 }: BadgeProps) => {
   /**
    * Badge should display an aria-label if the status is not neutral or primary
@@ -43,6 +45,7 @@ export const Badge = ({
       className={`${className ? `${className} ` : ''}${badge({ disabled, prominence, sentiment, size })}`}
       data-testid={dataTestId}
       prominence={disabled ? 'weak' : 'default'}
+      style={style}
       variant={TEXT_VARIANT[size]}
       whiteSpace="nowrap"
     >

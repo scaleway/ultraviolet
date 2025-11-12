@@ -15,6 +15,7 @@ export const GlobalAlertLink = ({
   'aria-label': ariaLabel,
   oneLine = false,
   'data-testid': dataTestId,
+  style,
 }: Omit<ComponentProps<typeof Link>, 'sentiment' | 'prominence' | 'size'>) => {
   const { theme } = useTheme()
 
@@ -30,6 +31,7 @@ export const GlobalAlertLink = ({
       prominence={theme === 'light' ? 'strong' : 'stronger'}
       rel={rel}
       size="small"
+      style={style}
       target={target}
       variant="inline"
     >

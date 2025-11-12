@@ -3,7 +3,7 @@
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
@@ -185,6 +185,7 @@ type ItemProps = {
    * To strike through the price
    */
   strikeThrough?: boolean
+  style?: CSSProperties
 }
 
 export const Item = memo(
@@ -223,6 +224,7 @@ export const Item = memo(
     labelTextProminence, // To change left cell typography prominence
     notice, // To display a gray text below the label
     strikeThrough, // To strike through the price
+    style,
   }: ItemProps) => {
     const { locales, formatNumber } = useEstimateCost()
 
@@ -355,6 +357,7 @@ export const Item = memo(
               })
             : estimateCostTr
         }
+        style={style}
       >
         <Cell
           className={estimateCostCell({

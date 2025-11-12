@@ -5,6 +5,7 @@ import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEventHandler,
+  CSSProperties,
   FocusEventHandler,
   ForwardedRef,
   KeyboardEventHandler,
@@ -56,6 +57,7 @@ export type SelectableCardProps = {
   id?: string
   tooltip?: string
   'data-testid'?: string
+  style?: CSSProperties
 } & (
   | {
       illustration?: string
@@ -97,6 +99,7 @@ export const SelectableCard = forwardRef(
       productIcon,
       illustration,
       'aria-label': ariaLabel,
+      style,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -261,11 +264,14 @@ export const SelectableCard = forwardRef(
           onKeyDown={onKeyDown}
           ref={ref}
           role="button"
-          style={assignInlineVars({
-            [inputDisplay]: !showTick ? 'none' : 'inline',
-            [labelDisplay]: !showTick && !label ? 'none' : 'inline',
-            [widthSelectable]: label ? '100%' : 'auto',
-          })}
+          style={{
+            ...assignInlineVars({
+              [inputDisplay]: !showTick ? 'none' : 'inline',
+              [labelDisplay]: !showTick && !label ? 'none' : 'inline',
+              [widthSelectable]: label ? '100%' : 'auto',
+            }),
+            ...style,
+          }}
           tabIndex={disabled ? undefined : 0}
         >
           <IllustrationContainer>

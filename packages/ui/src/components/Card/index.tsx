@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode, Ref } from 'react'
+import type { CSSProperties, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -20,6 +20,7 @@ type CardProps = {
   disabled?: boolean
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -35,6 +36,7 @@ export const Card = forwardRef(
       children,
       className,
       'data-testid': dataTestId,
+      style,
     }: CardProps,
     ref: Ref<HTMLDivElement>,
   ) =>
@@ -45,6 +47,7 @@ export const Card = forwardRef(
         data-testid={dataTestId}
         gap={1}
         ref={ref}
+        style={style}
       >
         {typeof header === 'string' ? (
           <Text
@@ -92,6 +95,7 @@ export const Card = forwardRef(
         data-is-active={active}
         data-testid={dataTestId}
         ref={ref}
+        style={style}
       >
         {subHeader ? (
           <Stack gap={2}>

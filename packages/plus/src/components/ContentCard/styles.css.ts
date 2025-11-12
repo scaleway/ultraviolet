@@ -89,7 +89,7 @@ export const subContainer = styleVariants({
 const imageBase = style({
   objectFit: 'cover',
   selectors: {
-    '&[data-disabled]': {
+    '&[data-disabled="true"]': {
       filter: 'grayscale(1)',
     },
   },

@@ -485,6 +485,21 @@ export const Popup = forwardRef(
     }, [])
 
     /**
+     * On unmount, clear all timers
+     */
+    useEffect(
+      () => () => {
+        if (timer.current) {
+          clearTimeout(timer.current)
+        }
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current)
+        }
+      },
+      [],
+    )
+
+    /**
      * Will render children conditionally if children is a function or not.
      */
     const renderChildren = useCallback(() => {

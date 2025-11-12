@@ -2,72 +2,11 @@
 
 exports[`key > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5"
       data-prominence="default"
       data-sentiment="neutral"
       data-size="medium"
@@ -84,72 +23,11 @@ exports[`key > renders correctly 1`] = `
 
 exports[`key > renders disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_disabled_true__1g4bp0q3 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5 styles_undefined_compound_2__1g4bp0qa"
       data-disabled="true"
       data-prominence="default"
       data-sentiment="neutral"
@@ -167,72 +45,11 @@ exports[`key > renders disabled 1`] = `
 
 exports[`key > renders disabled primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_disabled_true__1g4bp0q3 styles_size_medium__1g4bp0q7 styles_sentiment_primary__1g4bp0q4 styles_undefined_compound_5__1g4bp0qd"
       data-disabled="true"
       data-prominence="default"
       data-sentiment="primary"
@@ -250,72 +67,11 @@ exports[`key > renders disabled primary 1`] = `
 
 exports[`key > renders disabled strong 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_strong__1g4bp0q1 styles_disabled_true__1g4bp0q3 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5 styles_undefined_compound_0__1g4bp0q8 styles_undefined_compound_1__1g4bp0q9 styles_undefined_compound_2__1g4bp0qa"
       data-disabled="true"
       data-prominence="strong"
       data-sentiment="neutral"
@@ -333,72 +89,11 @@ exports[`key > renders disabled strong 1`] = `
 
 exports[`key > renders disabled strong primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_strong__1g4bp0q1 styles_disabled_true__1g4bp0q3 styles_size_medium__1g4bp0q7 styles_sentiment_primary__1g4bp0q4 styles_undefined_compound_3__1g4bp0qb styles_undefined_compound_4__1g4bp0qc styles_undefined_compound_5__1g4bp0qd"
       data-disabled="true"
       data-prominence="strong"
       data-sentiment="primary"
@@ -416,72 +111,11 @@ exports[`key > renders disabled strong primary 1`] = `
 
 exports[`key > renders primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_primary__1g4bp0q4"
       data-prominence="default"
       data-sentiment="primary"
       data-size="medium"
@@ -498,72 +132,11 @@ exports[`key > renders primary 1`] = `
 
 exports[`key > renders small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_small__1g4bp0q6 styles_sentiment_neutral__1g4bp0q5"
       data-prominence="default"
       data-sentiment="neutral"
       data-size="small"
@@ -580,72 +153,11 @@ exports[`key > renders small 1`] = `
 
 exports[`key > renders strong 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_strong__1g4bp0q1 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5 styles_undefined_compound_0__1g4bp0q8"
       data-prominence="strong"
       data-sentiment="neutral"
       data-size="medium"
@@ -662,72 +174,11 @@ exports[`key > renders strong 1`] = `
 
 exports[`key > renders strong primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-0[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-0[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-0[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-0[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-0[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <kbd
-      class="emotion-0 emotion-1"
+      class="styles__1g4bp0q0 styles_prominence_strong__1g4bp0q1 styles_size_medium__1g4bp0q7 styles_sentiment_primary__1g4bp0q4 styles_undefined_compound_3__1g4bp0qb"
       data-prominence="strong"
       data-sentiment="primary"
       data-size="medium"

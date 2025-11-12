@@ -26,12 +26,12 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
         data-testid={dataTestid}
         ref={ref}
         style={{
-          ...style,
           ...assignInlineVars({
             [widthCell]: width,
             [minWidthCell]: minWidth,
             [maxWidthCell]: maxWidth,
           }),
+          ...style,
         }}
       >
         {children}

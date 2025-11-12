@@ -56,4 +56,7 @@ export type MenuProps = {
    * When set to true, the menu does not shrink (height) to avoid overflow on the page
    */
   noShrink?: boolean
-} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align'>
+} & Pick<
+  ComponentProps<typeof Popup>,
+  'dynamicDomRendering' | 'align' | 'style'
+>

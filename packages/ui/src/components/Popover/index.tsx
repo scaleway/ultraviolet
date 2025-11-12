@@ -85,7 +85,10 @@ type PopoverProps = {
    */
   portalTarget?: HTMLElement
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
-} & Pick<ComponentProps<typeof Popup>, 'dynamicDomRendering' | 'align'>
+} & Pick<
+  ComponentProps<typeof Popup>,
+  'dynamicDomRendering' | 'align' | 'style'
+>
 
 /**
  * Popover component is used to display additional information or actions on top of the main content of the page.
@@ -109,6 +112,7 @@ export const Popover = forwardRef(
       portalTarget,
       dynamicDomRendering,
       align,
+      style,
     }: PopoverProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -154,6 +158,7 @@ export const Popover = forwardRef(
         portalTarget={smartPortalTarget}
         ref={ref}
         role="dialog"
+        style={style}
         tabIndex={-1}
         text={
           <ContentWrapper

@@ -65,6 +65,7 @@ type NumberInputProps = {
   | 'readOnly'
   | 'required'
   | 'autoFocus'
+  | 'style'
 >
 
 /**
@@ -100,6 +101,7 @@ export const NumberInput = forwardRef(
       required,
       autoFocus,
       readOnly,
+      style,
     }: NumberInputProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -272,6 +274,7 @@ export const NumberInput = forwardRef(
                   ref={localRef}
                   required={required}
                   step={step}
+                  style={style}
                   type="number"
                   value={inputValue}
                 />

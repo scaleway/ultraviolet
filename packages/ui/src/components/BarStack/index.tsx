@@ -1,7 +1,12 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { KeyboardEventHandler, MouseEventHandler, ReactNode } from 'react'
+import type {
+  CSSProperties,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactNode,
+} from 'react'
 import { useMemo } from 'react'
 import { Tooltip } from '../Tooltip'
 import {
@@ -42,6 +47,7 @@ type BarStackProps = {
   total?: number
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -52,6 +58,7 @@ export const BarStack = ({
   total,
   className,
   'data-testid': dataTestId,
+  style,
 }: BarStackProps) => {
   const computedTotal = useMemo(
     () => total ?? data.reduce((acc, { value }) => acc + value, 0),
@@ -62,6 +69,7 @@ export const BarStack = ({
     <div
       className={`${className ? `${className} ` : ''}${containerBarStack}`}
       data-testid={dataTestId}
+      style={style}
     >
       {data.map(
         ({

@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import { memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { estimateCostImage } from '../styles.css'
@@ -23,6 +24,7 @@ type RegionProps = {
   image: string
   noBorder?: boolean
   noPrice?: boolean
+  style?: CSSProperties
 }
 
 export const Zone = memo(
@@ -39,6 +41,7 @@ export const Zone = memo(
     discount,
     noBorder,
     noPrice,
+    style,
   }: RegionProps) => {
     const { locales } = useEstimateCost()
 
@@ -55,6 +58,7 @@ export const Zone = memo(
         priceText={priceText}
         productsCallback={productsCallback}
         shouldBeHidden={shouldBeHidden}
+        style={style}
       >
         <Strong>
           <img alt={label} className={estimateCostImage} src={image} />

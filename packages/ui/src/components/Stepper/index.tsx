@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'
 import { StepperProvider } from './StepperProvider'
@@ -22,6 +22,7 @@ type StepperProps = {
   size?: 'small' | 'medium'
   'data-testid'?: string
   separator?: boolean
+  style?: CSSProperties
 }
 
 export const Stepper = ({
@@ -34,6 +35,7 @@ export const Stepper = ({
   size = 'medium',
   'data-testid': dataTestId,
   separator = true,
+  style,
 }: StepperProps) => {
   const cleanChildren = Children.toArray(children).filter(isValidElement)
   const lastStep = Children.count(cleanChildren) - 1
@@ -50,6 +52,7 @@ export const Stepper = ({
       <div
         className={`${className ? `${className} ` : ''}${stepperContainer({ labelPosition, separator })}`}
         data-testid={dataTestId}
+        style={style}
       >
         {Children.map(cleanChildren, (child, index) => {
           const getTemporal = () => {

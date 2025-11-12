@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { useListContext } from '../List/ListContext'
 import { listContainer } from '../List/styles.css'
@@ -48,6 +48,7 @@ type TableProps = Omit<
   autoCollapse?: boolean
   expandButton?: boolean
   columns: ColumnProps[]
+  style?: CSSProperties
 }
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
@@ -81,6 +82,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
       stripped = false,
       autoCollapse = false,
       onSelectedChange,
+      style,
     },
     ref,
   ) => (
@@ -97,6 +99,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
         <table
           className={`${table}${stripped ? ` ${tableStripped}` : ''}${bordered ? ` ${tableBordered}` : ''}`}
           ref={ref}
+          style={style}
         >
           <Header>
             <HeaderRow hasSelectAllColumn={selectable}>

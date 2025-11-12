@@ -1,30 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { ArrowLeftDoubleIcon, ArrowRightDoubleIcon } from '@ultraviolet/icons'
 import { Button, Tooltip } from '@ultraviolet/ui'
 import type { RefObject } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { ANIMATION_DURATION } from './constants'
 import { useNavigation } from './NavigationProvider'
+import { navigationStickyFooter } from './styles.css'
 import type { NavigationProps } from './types'
-
-const StickyFooter = styled.div`
-  display: flex;
-  width: 100%;
-  background: ${({ theme }) => theme.colors.neutral.background};
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
-  transition: justify-content ${ANIMATION_DURATION}ms ease-in-out;
-  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
-  transition: box-shadow 230ms ease-in-out;
-  justify-content: flex-end;
-
-  &[data-has-overflow-style="false"] {
-    box-shadow: none;
-    border: none;
-  }
-`
 
 type FooterProps = {
   onToggleExpand: NavigationProps['onToggleExpand']
@@ -93,7 +75,9 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
   )
 
   return (
-    <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
+    <div
+      className={navigationStickyFooter({ overflow: footerHasOverflowStyle })}
+    >
       <Tooltip placement="right" text={label}>
         <Button
           aria-label={label}
@@ -108,6 +92,6 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
           <Icon />
         </Button>
       </Tooltip>
-    </StickyFooter>
+    </div>
   )
 }

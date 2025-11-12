@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Children } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -14,6 +14,7 @@ type GroupProps = {
    * Empty state will be shown when there are no children
    */
   emptyState?: ReactNode
+  style?: CSSProperties
 }
 
 export const Group = ({
@@ -21,12 +22,13 @@ export const Group = ({
   children,
   labelDescription,
   emptyState,
+  style,
 }: GroupProps) => {
   const isChildrenEmpty = Children.count(children) === 0
 
   return (
     <>
-      <span className={menuGroup}>
+      <span className={menuGroup} style={style}>
         <Stack alignItems="center" direction="row" gap={1}>
           <Text
             as="span"

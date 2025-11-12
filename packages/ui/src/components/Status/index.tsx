@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import { Tooltip } from '../Tooltip'
 import type { SENTIMENTS } from './constant'
 import { animatedCircleStatus, circleStatus, status } from './styles.css'
@@ -16,6 +17,7 @@ type StatusProps = {
    * This prop will set status as a notification and make it absolute to its parent displayed on top right.
    */
   notification?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -28,11 +30,13 @@ export const Status = ({
   sentiment,
   'data-testid': dataTestId,
   notification,
+  style,
 }: StatusProps) => (
   <Tooltip text={tooltip}>
     <span
       className={`${className ? `${className} ` : ''}${status({ notification })}`}
       data-testid={dataTestId}
+      style={style}
     >
       {animated ? (
         <span className={animatedCircleStatus({ sentiment })} />

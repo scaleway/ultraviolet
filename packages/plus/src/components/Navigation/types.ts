@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
 export type DragNDropData = {
   index: number
@@ -40,4 +40,5 @@ export type NavigationProps = {
    */
   onToggleExpand?: (expanded: boolean) => void
   'data-testid'?: string
+  style?: CSSProperties
 }

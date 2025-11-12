@@ -5,7 +5,12 @@ import {
   CheckCircleOutlineIcon,
   CloseIcon,
 } from '@ultraviolet/icons'
-import type { ChangeEvent, KeyboardEventHandler, ReactNode } from 'react'
+import type {
+  ChangeEvent,
+  CSSProperties,
+  KeyboardEventHandler,
+  ReactNode,
+} from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { getUUID } from '../../utils'
 import { Button } from '../Button'
@@ -64,6 +69,7 @@ type TagInputProps = {
   readOnly?: boolean
   tooltip?: string
   clearable?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -89,6 +95,7 @@ export const TagInput = ({
   readOnly = false,
   tooltip,
   clearable = false,
+  style,
 }: TagInputProps) => {
   const [tagInputState, setTagInput] = useState(
     convertTagArrayToTagStateArray(value),
@@ -255,6 +262,7 @@ export const TagInput = ({
                   placeholder={tagInputState.length === 0 ? placeholder : ''}
                   readOnly={readOnly}
                   ref={inputRef}
+                  style={style}
                   type="text"
                   value={input}
                 />

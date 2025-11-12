@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/icons",
-  "version": "5.0.0-beta.8",
+  "version": "5.0.0-beta.10",
   "description": "Ultraviolet Icons",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -90,6 +90,18 @@
       "require": "./dist/components/Logo/__generated__/*.cjs",
       "import": "./dist/components/Logo/__generated__/*.js",
       "default": "./dist/components/Logo/__generated__/*.js"
+    },
+    "./flags": {
+      "types": "./dist/components/Flags/index.d.ts",
+      "require": "./dist/components/Flags/index.cjs",
+      "import": "./dist/components/Flags/index.js",
+      "default": "./dist/components/Flags/index.js"
+    },
+    "./flags/*": {
+      "types": "./dist/components/Flags/__generated__/*.d.ts",
+      "require": "./dist/components/Flags/__generated__/*.cjs",
+      "import": "./dist/components/Flags/__generated__/*.js",
+      "default": "./dist/components/Flags/__generated__/*.js"
     }
   },
   "size-limit": [

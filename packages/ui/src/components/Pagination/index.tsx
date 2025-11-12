@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { Stack } from '../Stack'
 import { PaginationButtons } from './PaginationButtons'
@@ -27,6 +28,7 @@ type PaginationProps = {
   */
   disabled?: boolean
   className?: string
+  style?: CSSProperties
   'data-testid'?: string
 } & (
   | {
@@ -77,6 +79,7 @@ export const Pagination = ({
   numberOfItemsText,
   numberOfItems,
   'data-testid': dataTestId,
+  style,
 }: PaginationProps) => {
   const [perPageComputed, setPerPage] = useState(perPage ?? 10)
 
@@ -96,7 +99,7 @@ export const Pagination = ({
   }, [perPage])
 
   return (
-    <Stack direction="row" justifyContent="space-between">
+    <Stack direction="row" justifyContent="space-between" style={style}>
       {perPage ? (
         <PerPage
           numberOfItems={numberOfItems}

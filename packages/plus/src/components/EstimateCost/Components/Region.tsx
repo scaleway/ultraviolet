@@ -24,7 +24,7 @@ type RegionProps = {
   image: string
   noBorder?: boolean
   noPrice?: boolean
-} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay'>
+} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay' | 'style'>
 
 export const Region = memo(
   ({
@@ -41,6 +41,7 @@ export const Region = memo(
     noBorder,
     noPrice,
     hideFromOverlay,
+    style,
   }: RegionProps) => {
     const { locales } = useEstimateCost()
 
@@ -58,6 +59,7 @@ export const Region = memo(
         priceText={priceText}
         productsCallback={productsCallback}
         shouldBeHidden={shouldBeHidden}
+        style={style}
       >
         <Strong>
           <img alt={label} className={estimateCostImage} src={image} />

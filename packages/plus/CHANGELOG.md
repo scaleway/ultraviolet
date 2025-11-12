@@ -1,5 +1,53 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.15
+
+### Patch Changes
+
+- [#5773](https://github.com/scaleway/ultraviolet/pull/5773) [`75d6213`](https://github.com/scaleway/ultraviolet/commit/75d6213d3b5a9f006bf0202371a6c3c1c882caf7) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - `OfferList`: add prop "prominence" for badge
+
+- Updated dependencies [[`abfbe9e`](https://github.com/scaleway/ultraviolet/commit/abfbe9e150f8e7880b03ea3ce69ede86f6c46420)]:
+  - @ultraviolet/ui@3.0.0-beta.26
+
+## 3.0.0-beta.14
+
+### Patch Changes
+
+- [#5767](https://github.com/scaleway/ultraviolet/pull/5767) [`91c824a`](https://github.com/scaleway/ultraviolet/commit/91c824a1c9e90124e99df8e132a148e1b3ac996a) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: first column should be strong and selected row text should be primary
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+- [#5763](https://github.com/scaleway/ultraviolet/pull/5763) [`396c248`](https://github.com/scaleway/ultraviolet/commit/396c248989905a975b532f1eeb9e23e4ee182529) Thanks [@lisalupi](https://github.com/lisalupi)! - `ContentCard`: image should not be disabled when `disabled=false`
+
+- [#5762](https://github.com/scaleway/ultraviolet/pull/5762) [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa) Thanks [@lisalupi](https://github.com/lisalupi)! - `Plans` migrate missing sub-component to vanilla extract
+
+- [#5770](https://github.com/scaleway/ultraviolet/pull/5770) [`6e8d4e1`](https://github.com/scaleway/ultraviolet/commit/6e8d4e1dfd17606b09994e6eda5c001e27f9f4d1) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: `discount=1` should be interpreted as "100%", not "1€"
+
+- Updated dependencies [[`bc629aa`](https://github.com/scaleway/ultraviolet/commit/bc629aa7771057a7ca7a9e59bff983a0df73d2fa), [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3), [`deba7e9`](https://github.com/scaleway/ultraviolet/commit/deba7e941ade8a796666c18f64bf7c2959709e19), [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa), [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983)]:
+  - @ultraviolet/ui@3.0.0-beta.25
+  - @ultraviolet/icons@5.0.0-beta.10
+
+## 3.0.0-beta.13
+
+### Minor Changes
+
+- [#5743](https://github.com/scaleway/ultraviolet/pull/5743) [`6683a8d`](https://github.com/scaleway/ultraviolet/commit/6683a8dad5f4c47eff0d7d5deeef6be5b0dfae71) Thanks [@lisalupi](https://github.com/lisalupi)! - Refaactor component `Navigation` to use vanilla-extract instead of Emotion
+
+- [#5755](https://github.com/scaleway/ultraviolet/pull/5755) [`eecead1`](https://github.com/scaleway/ultraviolet/commit/eecead1342d5381766aabd806e38eb89f5373af4) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `SteppedListCard` to use vanilla-extract instead of Emotion
+
+- [#5751](https://github.com/scaleway/ultraviolet/pull/5751) [`4c52634`](https://github.com/scaleway/ultraviolet/commit/4c526348c5982e4e004c949c74320e5dd3d57881) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `OrderSummary` to use vanilla-extract instead of Emotion
+
+- [#5752](https://github.com/scaleway/ultraviolet/pull/5752) [`137020b`](https://github.com/scaleway/ultraviolet/commit/137020b8430d777910fc8c23eed9dea3e379c49a) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Plans` to use vanilla-extract instead of Emotion
+
+- [#5737](https://github.com/scaleway/ultraviolet/pull/5737) [`62e6d7c`](https://github.com/scaleway/ultraviolet/commit/62e6d7cbc06decf5fe036649ae832613c789b066) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `EstimateCost` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6), [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6), [`4386617`](https://github.com/scaleway/ultraviolet/commit/4386617bee7563bb9f8fee177c936038f11dd47d), [`5ac319e`](https://github.com/scaleway/ultraviolet/commit/5ac319e45abb27c624f2f33dd897be4cf1638312)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+  - @ultraviolet/ui@3.0.0-beta.24
+  - @ultraviolet/icons@5.0.0-beta.9
+
 ## 3.0.0-beta.12
 
 ### Minor Changes

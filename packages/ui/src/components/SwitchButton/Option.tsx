@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
@@ -12,6 +12,7 @@ type OptionProps = {
   'data-testid'?: string
   disabled?: boolean
   tooltip?: string
+  style?: CSSProperties
 }
 export const Option = ({
   value,
@@ -19,6 +20,7 @@ export const Option = ({
   'data-testid': dataTestId,
   disabled,
   tooltip,
+  style,
 }: OptionProps) => {
   const context = useSwitchButton()
   const ref = useRef<HTMLInputElement>(null)
@@ -59,6 +61,7 @@ export const Option = ({
       onChange={handleOnChange}
       onFocus={onFocus}
       ref={ref}
+      style={style}
       tooltip={tooltip}
       value={value}
     />

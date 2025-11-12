@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useReducer } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
@@ -18,6 +18,7 @@ type GlobalAlertProps = {
   'data-testid'?: string
   buttonText?: string
   onClickButton?: () => void
+  style?: CSSProperties
 }
 
 /**
@@ -33,6 +34,7 @@ export const GlobalAlert = ({
   onClickButton,
   className,
   'data-testid': dataTestId,
+  style,
 }: GlobalAlertProps) => {
   const [opened, toggleOpened] = useReducer(value => !value, true)
 
@@ -48,6 +50,7 @@ export const GlobalAlert = ({
       data-variant={variant}
       direction="row"
       justifyContent="center"
+      style={style}
     >
       <Stack
         alignItems="center"

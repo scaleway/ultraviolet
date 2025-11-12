@@ -1,47 +1,18 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Children } from 'react'
-import { ANIMATION_DURATION, groupAnimation } from '../constants'
 import { useNavigation } from '../NavigationProvider'
+import { navigationGroupStack, navigationGroupText } from './styles.css'
 
 type GroupProps = {
   children: ReactNode
   label: string
+  style?: CSSProperties
 }
 
-const StyledText = styled(Text)`
-  padding-bottom: ${({ theme }) => theme.space['1']};
-  padding-left: ${({ theme }) => theme.space['1']};
-
-  transition:
-    opacity ${ANIMATION_DURATION}ms ease-in-out,
-    height ${ANIMATION_DURATION}ms ease-in-out;
-  height: ${({ theme }) =>
-    `calc(${theme.typography.bodySmallStrong.lineHeight} + ${theme.space['1']})`}; // This is only for animation
-`
-
-const StyledStack = styled(Stack)`
-  padding-top: ${({ theme }) => theme.space['1']};
-`
-
-const Container = styled.div`
-  &[data-animation='expand'][data-animation-type="complex"] {
-    ${StyledText} {
-      animation: ${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out;
-    }
-  }
-
-  &[data-animation='collapse'][data-animation-type="complex"] {
-    ${StyledText} {
-      animation: ${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out reverse;
-    }
-  }
-`
-
-export const Group = ({ children, label }: GroupProps) => {
+export const Group = ({ children, label, style }: GroupProps) => {
   const context = useNavigation()
 
   if (!context) {
@@ -56,25 +27,24 @@ export const Group = ({ children, label }: GroupProps) => {
 
   if (Children.count(children) > 0) {
     return (
-      <Container
-        data-animation={animation}
-        data-animation-type={animationType}
-        style={{ width: animation ? '100%' : undefined }}
-      >
-        <StyledStack direction="column">
+      <div style={{ width: animation ? '100%' : undefined, ...style }}>
+        <Stack className={navigationGroupStack} direction="column">
           {isDiplay ? (
-            <StyledText
+            <Text
               as="span"
+              className={navigationGroupText({
+                animation: animationType === 'complex' ? animation : false,
+              })}
               prominence="weak"
               sentiment="neutral"
               variant="bodySmallStrong"
             >
               {label}
-            </StyledText>
+            </Text>
           ) : null}
           {children}
-        </StyledStack>
-      </Container>
+        </Stack>
+      </div>
     )
   }
 

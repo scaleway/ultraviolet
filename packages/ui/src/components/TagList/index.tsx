@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
@@ -48,6 +48,7 @@ type TagListProps = {
   popoverMaxHeight?: ComponentProps<typeof Popover>['maxHeight']
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 } & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
@@ -71,6 +72,7 @@ export const TagList = ({
   copiedText,
   className,
   'data-testid': dataTestId,
+  style,
 }: TagListProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const measureRef = useRef<HTMLDivElement>(null)
@@ -90,7 +92,8 @@ export const TagList = ({
   // Compute tmpThreshold, potentially visible tags and surely hidden tags
   const memoizedResult = useMemo(() => {
     let tmpThreshold = threshold
-    if (
+    while (
+      tmpThreshold > 1 &&
       tags.length > 0 &&
       tags
         .slice(0, tmpThreshold)
@@ -100,8 +103,10 @@ export const TagList = ({
       tmpThreshold -= 1
     }
 
-    const potentiallyVisibleTagsLength =
-      tags.length > tmpThreshold || false ? tmpThreshold : tags.length
+    const potentiallyVisibleTagsLength = Math.max(
+      1,
+      tags.length > tmpThreshold || false ? tmpThreshold : tags.length,
+    )
     const potentiallyVisibleTags = tags.slice(0, potentiallyVisibleTagsLength)
     const surelyHiddenTags = tags.slice(potentiallyVisibleTagsLength)
 
@@ -268,14 +273,13 @@ export const TagList = ({
     <div
       className={`${className ? `${className} ` : ''}${tagListContainer}`}
       data-testid={dataTestId}
-      style={{
-        visibility: isReady ? 'visible' : 'hidden',
-      }}
+      style={{ visibility: isReady ? 'visible' : 'hidden', ...style }}
     >
       <div
         className={`${tagContainer({
           multiline,
         })} ${(visibleTags.length === 1 && hiddenTags.length === 0) || popoverTriggerWidth ? ellipsisContainer : ''}`}
+        data-testid={`${dataTestId ?? 'taglist'}-container`}
         ref={containerRef}
         style={assignInlineVars({
           [popoverTriggerWidthVar]: `${popoverTriggerWidth || 0}px`,
@@ -299,7 +303,10 @@ export const TagList = ({
           whiteSpace: 'nowrap',
         }}
       >
-        <div className={tagContainer({ multiline })}>
+        <div
+          className={tagContainer({ multiline })}
+          data-testid={`${dataTestId ?? 'taglist'}-measure-container`}
+        >
           {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
         </div>
       </div>

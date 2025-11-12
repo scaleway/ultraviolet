@@ -1,66 +1,21 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useId } from 'react'
 import { Label } from '../../Label'
-import { radioStack } from '../../Radio/styles.css'
 import { SelectableCard } from '../../SelectableCard'
 import { SelectInput } from '../../SelectInput'
-import { selectBarBase } from '../../SelectInput/components/selectBar.css'
 import { Stack } from '../../Stack'
 import { useSelectableCardOptionGroup } from '../Provider'
+import {
+  optionFullHeight,
+  optionPadded,
+  optionSelectInput,
+  optionSelectInputDisabled,
+  optionSelectInputError,
+  selectableCard,
+} from '../styles.css'
 import { Image } from './Image'
-
-const StyledSelectableCard = styled(SelectableCard)`
-  padding: 0;
-  padding-top: ${({ theme }) => theme.space[2]};
-
-  .${radioStack} {
-    position: absolute;
-    padding: 8px;
-    margin-top: -${({ theme }) => theme.space[2]};
-  }
-
-  cursor: pointer;
-`
-
-const FullHeightStack = styled(Stack)`
-  height: 100%;
-`
-
-const StyledSelectInput = styled(SelectInput, {
-  shouldForwardProp: prop => !['checked'].includes(prop),
-})<{ checked: boolean }>`
-  .${selectBarBase} {
-    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
-    border-bottom: 0 !important;
-    border-right: 0 !important;
-    border-left: 0 !important;
-  }
-
-  .${selectBarBase} {
-    &:hover, &:focus, &:active {
-        border-color: ${({ theme, disabled, error }) => {
-          if (disabled) {
-            return theme.colors.neutral.borderDisabled
-          }
-
-          if (error) {
-            return theme.colors.danger.border
-          }
-
-          return theme.colors.neutral.border
-        }} !important;
-        outline: none;
-    }
-  }
-  
-`
-
-const StyledPaddedStack = styled(Stack)`
-  padding: 0 ${({ theme }) => theme.space[2]};
-`
 
 type OptionProps = Omit<ComponentProps<typeof SelectableCard>, 'onChange'> & {
   value: string
@@ -90,6 +45,7 @@ export const Option = ({
   id,
   'data-testid': dataTestId,
   tooltip,
+  style,
 }: OptionProps) => {
   const {
     onChange,
@@ -105,9 +61,9 @@ export const Option = ({
   const inputId = id || generatedId
 
   return (
-    <StyledSelectableCard
+    <SelectableCard
       checked={groupValue === value}
-      className={className}
+      className={`${className ? `${className} ` : ''}${selectableCard}`}
       data-testid={dataTestId}
       disabled={disabled || groupDisabled}
       isError={error}
@@ -118,20 +74,23 @@ export const Option = ({
         }
       }}
       showTick
+      style={style}
       tooltip={tooltip}
       type="radio"
       value={value}
       {...(label ? { id: inputId } : { 'aria-label': ariaLabel as string })}
     >
-      <FullHeightStack
+      <Stack
+        className={optionFullHeight}
         direction="column"
         flex="1 1 auto"
         gap={2}
         justifyContent="space-between"
         width="100%"
       >
-        <StyledPaddedStack
+        <Stack
           alignItems="center"
+          className={optionPadded}
           direction="column"
           gap={1}
           justifyContent="center"
@@ -168,12 +127,12 @@ export const Option = ({
             )}
             {children}
           </Stack>
-        </StyledPaddedStack>
-        <StyledSelectInput
+        </Stack>
+        <SelectInput
           aria-label={
             typeof label === 'string' ? `${label} option` : `${value} option`
           }
-          checked={groupValue === value}
+          className={`${optionSelectInput} ${disabled || groupDisabled ? optionSelectInputDisabled : ''} ${error ? optionSelectInputError : ''}`}
           data-testid={dataTestId ? `${dataTestId}-select` : undefined}
           disabled={disabled || groupDisabled}
           error={error}
@@ -184,7 +143,7 @@ export const Option = ({
           size="medium"
           value={optionValue}
         />
-      </FullHeightStack>
-    </StyledSelectableCard>
+      </Stack>
+    </SelectableCard>
   )
 }

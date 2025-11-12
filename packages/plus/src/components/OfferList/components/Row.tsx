@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useCallback, useMemo, useState } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import {
@@ -24,6 +24,8 @@ import {
   offerListRowExpandable,
   offerListRowSelectableContainer,
   offerListRowSelected,
+  offerListRowSelectedExpandable,
+  offerListRowSelectedNotExpandable,
 } from '../styles.css'
 import { Banner } from './Banner'
 
@@ -36,8 +38,11 @@ type RowProps = ComponentProps<typeof List.Row> & {
   badge?: {
     text: string
     sentiment?: ComponentProps<typeof BadgeUV>['sentiment']
+    prominence?: ComponentProps<typeof BadgeUV>['prominence']
   }
+  style?: CSSProperties
 }
+
 export const Row = ({
   children,
   disabled,
@@ -89,7 +94,10 @@ export const Row = ({
           <div
             className={offerListRowExpandable}
             style={assignInlineVars({
-              [expandablePaddingVar]: theme.space[expandablePadding ?? 2],
+              [expandablePaddingVar]:
+                theme.space[
+                  (expandablePadding ?? 2) as keyof typeof theme.space
+                ],
             })}
           >
             {expandableContent}
@@ -132,7 +140,7 @@ export const Row = ({
   return (
     <>
       <List.Row
-        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''}`}
+        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''} ${expandable ? offerListRowSelectedExpandable : offerListRowSelectedNotExpandable}`}
         data-dragging={dataDragging}
         data-testid={dataTestId}
         disabled={disabled}
@@ -151,6 +159,7 @@ export const Row = ({
               <BadgeUV
                 className={offerListBadge}
                 disabled={disabled}
+                prominence={badge.prominence}
                 sentiment={badge.sentiment}
                 size="small"
               >

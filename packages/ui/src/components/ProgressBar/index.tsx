@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -30,6 +30,7 @@ type ProgressBarProps = {
   'data-testid'?: string
   'aria-labelledby'?: string
   'aria-label'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -50,6 +51,7 @@ export const ProgressBar = ({
   direction = 'column',
   'aria-labelledby': ariaLabelledBy,
   'aria-label': ariaLabel,
+  style,
 }: ProgressBarProps) => (
   <Stack
     alignItems="center"
@@ -95,6 +97,7 @@ export const ProgressBar = ({
       className={`${className ? `${className} ` : ''}${progressContainer}`}
       data-testid={dataTestId}
       role="progressbar"
+      style={style}
     >
       {progress ? (
         <div className={progressBar} />

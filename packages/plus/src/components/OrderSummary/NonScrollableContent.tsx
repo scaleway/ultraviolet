@@ -1,15 +1,10 @@
-import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useContext } from 'react'
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
+import { orderSummaryNonScrollableContainer } from './styles.css'
 import type { PriceTypeSingle, TimeUnit } from './types'
-
-const NonScrollableContainer = styled(Stack)`
-padding: ${({ theme }) => theme.space[3]};
-border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
-`
 
 type NonScrollableContentProps = {
   discount: number
@@ -36,7 +31,7 @@ export const NonScrollableContent = ({
   const { locales } = useContext(OrderSummaryContext)
 
   return (
-    <NonScrollableContainer gap={3}>
+    <Stack className={orderSummaryNonScrollableContainer} gap={3}>
       {children}
       <Stack alignItems="center" direction="row" justifyContent="space-between">
         {totalPriceInfo ? (
@@ -104,6 +99,6 @@ export const NonScrollableContent = ({
         )}
       </Stack>
       {footer}
-    </NonScrollableContainer>
+    </Stack>
   )
 }

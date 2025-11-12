@@ -10,11 +10,12 @@ export const Cell = ({
   className,
   'data-testid': dataTestId,
   colSpan,
+  style,
 }: ComponentProps<typeof List.Cell>) => {
   const { loading } = useOfferListContext()
 
   return loading ? (
-    <List.Cell className={offerListLoadingCell}>
+    <List.Cell className={offerListLoadingCell} style={style}>
       <Skeleton data-state={loading} variant="line" />
     </List.Cell>
   ) : (
@@ -22,6 +23,7 @@ export const Cell = ({
       className={`${className ? `${className} ` : ''}${offerListCell}`}
       colSpan={colSpan}
       data-testid={dataTestId}
+      style={style}
     >
       {children}
     </List.Cell>

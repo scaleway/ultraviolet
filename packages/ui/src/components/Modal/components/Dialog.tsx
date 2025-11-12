@@ -42,6 +42,7 @@ export const Dialog = ({
   hideOnEsc,
   backdropClassName,
   image,
+  style,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -228,10 +229,13 @@ export const Dialog = ({
         onKeyUp={handleKeyUp}
         open
         ref={dialogRef}
-        style={assignInlineVars({
-          [topModal]: `-${top}px`,
-          [positionModal]: `${position * 50}px`,
-        })}
+        style={{
+          ...assignInlineVars({
+            [topModal]: `-${top}px`,
+            [positionModal]: `${position * 50}px`,
+          }),
+          ...style,
+        }}
         tabIndex={0}
       >
         {image ? (

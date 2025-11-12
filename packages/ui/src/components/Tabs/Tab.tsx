@@ -2,6 +2,7 @@
 
 import type {
   ComponentProps,
+  CSSProperties,
   ElementType,
   ForwardedRef,
   KeyboardEventHandler,
@@ -34,6 +35,7 @@ type TabProps<T extends ElementType = 'button'> = {
   subtitle?: string
   tooltip?: string
   value?: string | number
+  style?: CSSProperties
 } & Omit<
   ComponentProps<T>,
   | 'as'
