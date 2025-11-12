@@ -198,7 +198,7 @@ export const Menu = forwardRef(
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
               } else {
-                listItem.at(-1)!.focus()
+                listItem[listItem.length - 1].focus()
               }
             } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
               disclosureRef.current?.focus()

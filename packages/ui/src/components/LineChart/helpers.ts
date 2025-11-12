@@ -54,7 +54,7 @@ export const getMinChartValue = (preppedData?: Serie[]): number => {
 }
 
 export const getCurrent = (values: number[] = []): number =>
-  values.length > 0 ? values.at(-1)! : 0
+  values.length > 0 ? values[values.length - 1] : 0
 
 export const getSelected = (
   label: string,
