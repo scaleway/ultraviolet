@@ -138,13 +138,13 @@ export const TagInput = ({
     setTagInput(newTagInput)
     if (newTagInput.length !== tagInputState.length && newTagInput) {
       setStatus({
-        [newTagInput[newTagInput.length - 1].index]: STATUS.LOADING,
+        [newTagInput?.at(-1)!.index]: STATUS.LOADING,
       })
     }
     try {
       dispatchOnChange(newTagInput)
       if (newTagInput) {
-        setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.IDLE })
+        setStatus({ [newTagInput.at(-1)!.index]: STATUS.IDLE })
       }
     } catch {
       setTagInput(tagInputState)
@@ -177,7 +177,7 @@ export const TagInput = ({
     ) {
       event.preventDefault()
       if (tagInputState) {
-        deleteTag(tagInputState[tagInputState.length - 1].index)
+        deleteTag(tagInputState.at(-1)!.index)
       }
     }
   }

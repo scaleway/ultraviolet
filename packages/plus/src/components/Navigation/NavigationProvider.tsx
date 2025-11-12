@@ -62,6 +62,7 @@ type ContextProps = {
   animationType?: AnimationType
 }
 
+// oxlint-disable-next-line react/only-export-components
 export const NavigationContext = createContext<ContextProps>({
   allowNavigationResize: true,
   animation: false,
@@ -88,6 +89,7 @@ export const NavigationContext = createContext<ContextProps>({
   width: NAVIGATION_WIDTH,
 })
 
+// oxlint-disable-next-line react/only-export-components
 export const useNavigation = () => useContext(NavigationContext)
 
 type NavigationProviderProps = {

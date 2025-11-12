@@ -14,7 +14,7 @@ import {
   toggleBoxPie,
   valuePie,
 } from './styles.css'
-import TooltipContainer from './Tooltip'
+import { Tooltip as TooltipContainer } from './Tooltip'
 import type { Data } from './types'
 
 type LegendsProps = {
@@ -24,7 +24,12 @@ type LegendsProps = {
   colors: string[]
 }
 
-const Legends = ({ focused, data, onFocusChange, colors }: LegendsProps) => (
+export const Legends = ({
+  focused,
+  data,
+  onFocusChange,
+  colors,
+}: LegendsProps) => (
   <ul className={listPie}>
     {data?.map((item, index) => {
       const isSegmentFocused = focused !== undefined && item.id === focused
@@ -78,5 +83,3 @@ const Legends = ({ focused, data, onFocusChange, colors }: LegendsProps) => (
     })}
   </ul>
 )
-
-export default Legends

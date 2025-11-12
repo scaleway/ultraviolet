@@ -3,21 +3,13 @@
 import { css, useTheme } from '@emotion/react'
 import type { CSSProperties } from 'react'
 import type { ExtendedColor } from '../../theme'
+import { SIZES } from './constants'
 import { circle, loader } from './styles.css'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
 const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
 const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
-
-export const SIZES = {
-  large: '300',
-  medium: '250',
-  small: '200',
-  xlarge: '400',
-  xsmall: '150',
-  xxlarge: '700',
-} as const
 
 type LoaderProps = {
   active?: boolean

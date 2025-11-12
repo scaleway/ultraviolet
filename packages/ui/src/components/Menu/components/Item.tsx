@@ -38,7 +38,7 @@ type ItemProps = {
   style?: CSSProperties
 }
 
-const Item = forwardRef<HTMLElement, ItemProps>(
+export const Item = forwardRef<HTMLElement, ItemProps>(
   (
     {
       borderless = false,
@@ -208,5 +208,3 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     )
   },
 )
-
-export default Item

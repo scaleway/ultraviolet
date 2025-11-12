@@ -17,6 +17,7 @@ type MenuContextProps = {
 
 const MenuContext = createContext<MenuContextProps | undefined>(undefined)
 
+// oxlint-disable-next-line react/only-export-components
 export const useMenu = () => {
   const context = useContext(MenuContext)
   if (!context) {
@@ -74,6 +75,7 @@ export const MenuProvider = ({
 
   return <MenuContext.Provider value={values}>{children}</MenuContext.Provider>
 }
-
+// oxlint-disable-next-line react/only-export-components
 export const DisclosureContext = createContext(false)
+// oxlint-disable-next-line react/only-export-components
 export const useDisclosureContext = () => useContext(DisclosureContext)
