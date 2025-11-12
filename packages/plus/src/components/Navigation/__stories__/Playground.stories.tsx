@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons'
 import {
@@ -11,20 +10,14 @@ import {
   SecurityCategoryIcon,
   UseCaseCategoryIcon,
 } from '@ultraviolet/icons/category'
-import { fadeIn, fadeOut, Stack, Tooltip } from '@ultraviolet/ui'
+import { Stack, Tooltip } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import logo from './assets/logo.svg'
 import logoSmall from './assets/logo-small.svg'
+import { animation } from './styles.css'
 
-const Image = styled.img`
-  animation: ${fadeIn} 300ms ease-in-out;
-
-  &[data-expanded='false'] {
-    animation: ${fadeOut} 250ms linear forwards;
-  }
-`
 const onClickPinUnpin: ComponentProps<
   typeof Navigation.Item
 >['onClickPinUnpin'] = ({ totalPinned }) => {
@@ -71,7 +64,13 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         >
           <Stack direction="row" gap={1}>
             <img alt="" height="22px" src={logoSmall} />
-            <Image alt="" data-expanded={expanded} height="22px" src={logo} />
+            <img
+              alt=""
+              className={animation}
+              data-expanded={expanded}
+              height="22px"
+              src={logo}
+            />
           </Stack>
         </a>
       }
