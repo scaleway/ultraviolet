@@ -12,13 +12,8 @@ import type {
 import { forwardRef, useMemo } from 'react'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
-import { SIZE_HEIGHT } from './constants'
 import type { ButtonVariants } from './styles.css'
 import { button } from './styles.css'
-
-type ButtonSize = keyof typeof SIZE_HEIGHT
-
-export const buttonSizes = Object.keys(SIZE_HEIGHT) as ButtonSize[]
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']

@@ -62,6 +62,7 @@ export const OfferListProvider = ({
   </OfferListContext.Provider>
 )
 
+// oxlint-disable-next-line react/only-export-components
 export const useOfferListContext = () => {
   const context = useContext(OfferListContext)
 

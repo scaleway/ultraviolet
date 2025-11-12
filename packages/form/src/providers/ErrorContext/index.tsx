@@ -45,6 +45,7 @@ export const ErrorProvider = ({ children, errors }: ErrorProviderProps) => {
   return <ErrorContext.Provider value={value}>{children}</ErrorContext.Provider>
 }
 
+// oxlint-disable-next-line react/only-export-components
 export const useErrors = () => {
   const context = useContext(ErrorContext)
 
