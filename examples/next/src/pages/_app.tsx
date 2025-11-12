@@ -13,7 +13,10 @@ import {
   consoleLightTheme,
   ThemeProvider,
 } from '@ultraviolet/themes'
-import '../components/globalStyle.css'
+import '@ultraviolet/themes/dark.css'
+import '@ultraviolet/themes/light.css'
+import '@ultraviolet/themes/darker.css'
+import '../../styles/global.css'
 
 type Themes = 'light' | 'dark'
 
@@ -35,6 +38,12 @@ const COMMON_THEME_PROPS = {
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<Themes>('light')
+
+  const setThemes = (theme: Themes) => {
+    setTheme(theme)
+    document.documentElement.classList.remove('light-theme', 'dark-theme')
+    document.documentElement.classList.add(`${theme}-theme`)
+  }
   const setThemeCallBack = useCallback((localTheme: Themes) => {
     localStorage.setItem('theme', localTheme)
     setTheme(localTheme)
@@ -86,7 +95,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
       <Head />
       <Stack alignItems="center" gap={4}>
-        <Header />
+        <Header setTheme={setThemes} />
         <Component
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...pageProps}

@@ -7,7 +7,7 @@ import {
   dracula,
   oneLight,
 } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import { copyBoxBase } from './componentsStyles.css'
+import styles from '../../styles/component.module.scss'
 
 type CopyBoxProps = {
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
@@ -22,7 +22,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
   const [tab, setTab] = useState(0)
 
   return (
-    <Stack className={copyBoxBase} gap={2}>
+    <Stack className={styles.copyBox} gap={2}>
       {flatChild.length > 1 ? (
         <Tabs
           onChange={value => {

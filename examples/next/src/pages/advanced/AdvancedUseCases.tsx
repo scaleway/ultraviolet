@@ -1,6 +1,6 @@
 import { Stack, Text } from '@ultraviolet/ui'
+import styles from '../../../styles/advanced.module.scss'
 import CopyBox from '../../components/CopyBoxCommand'
-import { title } from './styles.css'
 
 const useCase1 = `import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
 import { ThemeProvider } from '@ultraviolet/themes'
@@ -90,7 +90,12 @@ export default App
 const AdvancedUseCases = () => (
   <section>
     <Stack gap={5}>
-      <Text as="h3" className={title} id="advanced-use-cases" variant="heading">
+      <Text
+        as="h3"
+        className={styles.title}
+        id="advanced-use-cases"
+        variant="heading"
+      >
         Advanced Use Cases
       </Text>
       <Text as="p" sentiment="neutral" variant="body">

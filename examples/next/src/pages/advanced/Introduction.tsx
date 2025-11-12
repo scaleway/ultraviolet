@@ -1,18 +1,18 @@
 import { Breakpoint, Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
+import styles from '../../../styles/advanced.module.scss'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
 import swCustom from '../../assets/icons/icon-scaleway-custom.svg'
 import swDx from '../../assets/icons/icon-scaleway-dx.svg'
 import introductionIllustration from '../../assets/illustrations/introduction.svg'
 import Card from '../../components/Card'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
-import { headingContainer } from './styles.css'
 
 const Introduction = () => (
   <Stack gap={6}>
     <Stack
       alignItems="center"
-      className={headingContainer}
+      className={styles.heaingContainer}
       direction="row"
       gap={2}
       justifyContent="space-between"
@@ -37,12 +37,7 @@ const Introduction = () => (
       />
     </Stack>
 
-    <Stack
-      className={headingContainer}
-      direction="row"
-      gap={2}
-      justifyContent="space-between"
-    >
+    <Stack direction="row" gap={2} justifyContent="space-between">
       <Card
         description="We follow WAI-ARIA standards for each component."
         icon={swA11y}

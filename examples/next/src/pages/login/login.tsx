@@ -10,8 +10,8 @@ import {
 import { IdIcon } from '@ultraviolet/icons'
 import { Link, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
+import styles from '../../../styles/login.module.scss'
 import { mockErrors } from '../../constants'
-import { loginContainer, loginInput } from './styles.css'
 
 type FormValues = {
   email: string
@@ -44,7 +44,7 @@ const LogIn = () => {
   }
 
   return (
-    <Stack className={loginContainer}>
+    <Stack className={styles.loginContainer}>
       <Form errors={mockErrors} methods={methods} onSubmit={handleSubmit}>
         <Stack alignItems="center" gap={1}>
           <IdIcon size="small" />
@@ -52,7 +52,7 @@ const LogIn = () => {
             Login form
           </Text>
           <TextInputField
-            className={loginInput}
+            className={styles.loginInput}
             label="Email"
             name="email"
             placeholder="example@email.com"
@@ -60,7 +60,7 @@ const LogIn = () => {
             required
           />
           <TextInputField
-            className={loginInput}
+            className={styles.loginInput}
             helper="Min 8 characters"
             label="Password"
             minLength={8}

@@ -10,8 +10,8 @@ import {
 import { ProfileIcon } from '@ultraviolet/icons'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
+import styles from '../../../styles/login.module.scss'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
-import { signupContainer, signupInput } from './styles.css'
 
 type FormValues = {
   email: string
@@ -76,7 +76,7 @@ const SignUp = () => {
     setAlertSubmit(computedAge < 1 ? 'too young' : 'success')
   }
   return (
-    <Stack className={signupContainer}>
+    <Stack className={styles.signupContainer}>
       <Form<FormValues>
         errors={mockErrors}
         methods={methods}
@@ -94,14 +94,14 @@ const SignUp = () => {
             </RadioGroupField>
             <Stack direction="row" gap={3}>
               <TextInputField
-                className={`inputs ${signupInput}`}
+                className={`inputs ${styles.signupInput}`}
                 label="First Name"
                 name="firstname"
                 placeholder="John"
                 required
               />
               <TextInputField
-                className={`inputs ${signupInput}`}
+                className={`inputs ${styles.signupInput}`}
                 label="Last Name"
                 name="lastname"
                 placeholder="Smith"
@@ -115,7 +115,7 @@ const SignUp = () => {
               required
             />
             <TextInputField
-              className={`inputs ${signupInput}`}
+              className={`inputs ${styles.signupInput}`}
               label="Email"
               name="email"
               placeholder="example@email.com"
@@ -123,7 +123,7 @@ const SignUp = () => {
               required
             />
             <TextInputField
-              className={`inputs ${signupInput}`}
+              className={`inputs ${styles.signupInput}`}
               helper="Min 8 characters"
               label="Password"
               minLength={8}

@@ -1,11 +1,11 @@
 import { Text } from '@ultraviolet/ui'
-import { disclaimerContainer, footer, footerRow } from './componentsStyles.css'
+import styles from '../../styles/component.module.scss'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 
 const Footer = () => (
-  <footer className={footer}>
-    <div className={footerRow}>
+  <footer className={styles.footer}>
+    <div className={styles.footerRow}>
       <div>
         <Text as="p" variant="body">
           Hosted in green datacenters in France
@@ -17,7 +17,7 @@ const Footer = () => (
           technologies that reduce our environmental impact.
         </Text>
       </div>
-      <div className={disclaimerContainer}>
+      <div className={styles.disclaimerContainer}>
         <Logo />
         <GithubAndDocumentationButtons />
       </div>

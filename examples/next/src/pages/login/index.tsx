@@ -1,8 +1,8 @@
 import { Stack, SwitchButton } from '@ultraviolet/ui'
 import { useState } from 'react'
+import styles from '../../../styles/login.module.scss'
 import LogIn from './login'
 import SignUp from './signup'
-import { page, switchButton } from './styles.css'
 
 const Content = (props: { tab: string }) => {
   let tabLoaded = undefined
@@ -23,9 +23,9 @@ const Home = () => {
   const [tab, setTab] = useState('login')
 
   return (
-    <Stack className={page}>
+    <Stack className={styles.page}>
       <SwitchButton
-        className={switchButton}
+        className={styles.switchButton}
         name="switch button"
         onChange={event => setTab((event.target as HTMLInputElement).value)}
         value="login"

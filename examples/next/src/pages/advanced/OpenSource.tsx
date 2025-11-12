@@ -1,14 +1,9 @@
 import { GithubIcon } from '@ultraviolet/icons'
 import { Link, Stack, Text } from '@ultraviolet/ui'
+import styles from '../../../styles/advanced.module.scss'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
-import {
-  openSourceCard,
-  openSourceDescription,
-  openSourceStack,
-  openSourceTitle,
-} from './styles.css'
 
 const OpenSource = () => (
   <section>
@@ -16,7 +11,7 @@ const OpenSource = () => (
       <Stack gap={2}>
         <Text
           as="h3"
-          className={openSourceTitle}
+          className={styles.openSourceTitle}
           id="open-source"
           variant="heading"
         >
@@ -27,12 +22,12 @@ const OpenSource = () => (
         </Text>
       </Stack>
 
-      <Stack className={openSourceStack} direction="row" gap={2}>
+      <Stack className={styles.openSourceStack} direction="row" gap={2}>
         <Card
-          className={openSourceCard}
+          className={styles.openSourceCard}
           description={
             <>
-              <div className={openSourceDescription}>
+              <div className={styles.openSourceStack}>
                 Build amazing forms with Ultraviolet UI and React Final Form 🚀
               </div>
               <Stack direction="row" gap={1}>
@@ -50,10 +45,9 @@ const OpenSource = () => (
           title="Ultraviolet Form"
         />
         <Card
-          className={openSourceCard}
           description={
             <>
-              <div className={openSourceDescription}>
+              <div className={styles.openSourceDescription}>
                 Scaleway Lib is a set of NPM packages used at Scaleway
               </div>
               <Stack direction="row" gap={1}>
