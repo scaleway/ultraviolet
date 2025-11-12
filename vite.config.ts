@@ -50,7 +50,7 @@ export const defaultConfig: ViteUserConfig = {
 
         return `${filename}.${format}`
       },
-      formats: ['es', 'cjs'],
+      formats: ['es'],
       name: pkg.name,
     },
     minify: false,

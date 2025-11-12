@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/ui",
-  "version": "3.0.0-beta.25",
+  "version": "3.0.0-beta.26",
   "description": "Ultraviolet UI",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -17,6 +17,7 @@
     "typecheck": "tsc --noEmit",
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vitest.config.ts",
+    "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "lintpublish": "publint"
   },
