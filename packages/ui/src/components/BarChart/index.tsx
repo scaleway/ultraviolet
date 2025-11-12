@@ -9,7 +9,7 @@ import type { ComponentProps, CSSProperties } from 'react'
 import { useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
-import { BarChartTooltip } from './Tooltip'
+import BarChartTooltip from './Tooltip'
 
 type Formatter = ValueFormat<DatumValue>
 

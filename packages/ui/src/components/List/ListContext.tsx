@@ -376,7 +376,6 @@ export const ListProvider = ({
   return <ListContext.Provider value={value}>{children}</ListContext.Provider>
 }
 
-// oxlint-disable-next-line react/only-export-components
 export const useListContext = () => {
   const context = useContext(ListContext)
   if (!context) {

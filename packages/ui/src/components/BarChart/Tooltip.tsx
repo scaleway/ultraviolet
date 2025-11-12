@@ -4,7 +4,7 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
 import { barColorSquare, barTooltipContainer, colorBar } from './styles.css'
 
-type BarChartTooltipProps = {
+type BarChartToolTipProps = {
   color: string
   indexValue: string
   formattedValue: string
@@ -12,13 +12,13 @@ type BarChartTooltipProps = {
   'data-testid'?: string
 }
 
-export const BarChartTooltip = ({
+const BarChartToolTip = ({
   formattedValue,
   indexValue,
   color,
   className,
   'data-testid': dataTestId,
-}: BarChartTooltipProps) => (
+}: BarChartToolTipProps) => (
   <div
     className={`${className ? `${className} ` : ''}${barTooltipContainer}`}
     data-testid={dataTestId}
@@ -41,3 +41,5 @@ export const BarChartTooltip = ({
     </div>
   </div>
 )
+
+export default BarChartToolTip

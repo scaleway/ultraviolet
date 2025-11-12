@@ -33,7 +33,6 @@ type StepperProviderProps = {
   separator: boolean
 }
 
-// oxlint-disable-next-line react/only-export-components
 export const useStepper = () => useContext(StepperContext)
 /**
  * Stepper component to show the progress of a process in a linear way.

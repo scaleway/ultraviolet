@@ -15,7 +15,7 @@ export const SHADES_KEYS = [
   '1200',
   '1300',
   '1400',
-].toReversed()
+].reverse()
 
 /**
  * This is the mapping between shades name and sentiments names.

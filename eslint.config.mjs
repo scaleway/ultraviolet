@@ -16,7 +16,6 @@ const dirname = path.dirname(filename)
 const disableRules = {
   // ---- biome rules ----
   'import/order': 'off',
-  "sort-imports": "off",
   'import/no-unresolved': 'off',
   '@stylistic/no-extra-semi': 'off',
   '@stylistic/brace-style': 'off',

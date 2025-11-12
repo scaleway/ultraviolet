@@ -1,6 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SIZES } from '../constants'
-import { Loader } from '../index'
+import { Loader, SIZES } from '../index'
 
 export const Sizes: StoryFn = props => (
   <>

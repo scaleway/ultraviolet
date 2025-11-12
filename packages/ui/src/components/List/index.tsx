@@ -12,7 +12,7 @@ import { SkeletonRows } from './SkeletonRows'
 import { list, listContainer } from './styles.css'
 import type { ColumnProps } from './types'
 
-// Note: Get type optional type from omit values of ListContext
+// TODO: Get type optional type from omit values of ListContext
 type ListProps = {
   expandable?: boolean
   selectable?: boolean
