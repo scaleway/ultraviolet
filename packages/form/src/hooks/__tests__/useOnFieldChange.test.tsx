@@ -1,5 +1,5 @@
-import { ThemeProvider } from '@emotion/react'
 import { renderHook } from '@testing-library/react'
+import { ThemeProvider } from '@ultraviolet/themes'
 import { theme as lightTheme } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
