@@ -3,7 +3,7 @@ import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 import type { ExtendedColor } from 'src/theme'
 import { typography } from '../../theme'
-import { PROMINENCES } from './constants'
+import { PROMINENCES } from './constant'
 import capitalize from '../../utils/capitalize'
 import { placementText, whiteSpaceText } from './variables.css'
 

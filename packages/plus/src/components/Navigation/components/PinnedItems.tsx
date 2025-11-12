@@ -65,6 +65,7 @@ export const PinnedItems = ({
     (event: DragEvent<HTMLDivElement>, index: number) => {
       event.preventDefault()
       if (event?.dataTransfer) {
+        // eslint-disable-next-line no-param-reassign
         event.currentTarget.style.borderColor = 'transparent'
         const data = JSON.parse(
           event.dataTransfer.getData('text'),
@@ -85,7 +86,7 @@ export const PinnedItems = ({
   const onDragOver = useCallback(
     (event: DragEvent<HTMLDivElement>) => {
       event.preventDefault()
-
+      // eslint-disable-next-line no-param-reassign
       event.currentTarget.style.borderColor = theme.colors.primary.border
     },
     [theme.colors.primary.border],
@@ -93,7 +94,7 @@ export const PinnedItems = ({
 
   const onDragLeave = useCallback((event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()
-
+    // eslint-disable-next-line no-param-reassign
     event.currentTarget.style.borderColor = 'transparent'
   }, [])
 

@@ -5,7 +5,7 @@ export const getLegendColor = (theme: Theme): string[] => {
 
   return Object.keys(colors.other.data.charts)
     .filter(key => !['success', 'danger'].includes(key))
-    .toSorted((a, b) => {
+    .sort((a, b) => {
       if (Number(a.replace('data', '')) < Number(b.replace('data', ''))) {
         return -1
       }

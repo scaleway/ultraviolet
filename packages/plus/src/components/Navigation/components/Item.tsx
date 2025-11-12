@@ -148,6 +148,7 @@ type ItemProps = {
 }
 
 const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
+  // eslint-disable-next-line no-param-reassign
   event.currentTarget.style.opacity = '1'
 }
 
@@ -317,7 +318,7 @@ export const Item = memo(
             'text/plain',
             JSON.stringify({ index, label }),
           )
-
+          // eslint-disable-next-line no-param-reassign
           event.currentTarget.style.opacity = '0.5'
         }
 

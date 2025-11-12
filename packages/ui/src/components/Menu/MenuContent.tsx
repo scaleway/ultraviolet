@@ -108,17 +108,10 @@ export const Menu = forwardRef(
     )
 
     useEffect(() => {
-      let timeout: ReturnType<typeof setTimeout> | undefined
       if (isVisible && searchable) {
-        timeout = setTimeout(() => {
+        setTimeout(() => {
           searchInputRef.current?.focus()
         }, 50)
-      }
-
-      return () => {
-        if (timeout) {
-          clearTimeout(timeout)
-        }
       }
     }, [isVisible, searchable])
 
@@ -198,7 +191,7 @@ export const Menu = forwardRef(
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
               } else {
-                listItem.at(-1)!.focus()
+                listItem[listItem.length - 1].focus()
               }
             } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
               disclosureRef.current?.focus()

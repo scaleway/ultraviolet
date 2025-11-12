@@ -44,11 +44,13 @@ const breakpoints = Object.keys(
 ) as (keyof typeof consoleLightTheme.breakpoints)[]
 
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
-const orderedBreakpointKeys = breakpoints.toSorted(
-  (a, b) =>
-    Number.parseInt(consoleLightTheme.breakpoints[a], 10) -
-    Number.parseInt(consoleLightTheme.breakpoints[b], 10),
-)
+const orderedBreakpointKeys = [
+  ...breakpoints.sort(
+    (a, b) =>
+      Number.parseInt(consoleLightTheme.breakpoints[a], 10) -
+      Number.parseInt(consoleLightTheme.breakpoints[b], 10),
+  ),
+] as const
 
 const themeBreakpoints = orderedBreakpointKeys.reduce(
   (acc, key) => ({

@@ -62,7 +62,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
   const sortedData = useMemo(() => {
     const orderMultiplicator = currentOrder.order === 'asc' ? 1 : -1
 
-    return [...data].toSorted((a, b) => {
+    return [...data].sort((a, b) => {
       if (a[currentOrder.columnId] < b[currentOrder.columnId]) {
         return -1 * orderMultiplicator
       }

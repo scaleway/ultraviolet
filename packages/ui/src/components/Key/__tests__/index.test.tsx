@@ -1,8 +1,7 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
-import { KEYS_MATCH } from '../constants'
-import { Key } from '../index'
+import { KEYS_MATCH, Key } from '../index'
 
 describe('key', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Key>A</Key>))
