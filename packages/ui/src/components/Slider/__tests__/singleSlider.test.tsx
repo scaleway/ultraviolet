@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Slider } from '..'
 
@@ -24,25 +24,23 @@ describe('single slider', () => {
   })
 
   test('renders correctly', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider helper="helper" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly required', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider label="Label" name="Name" required value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" required value={1} />)
   })
 
   test('renders correctly suffix string', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" name="Name" suffix="%" value={1} />,
     )
   })
 
   test('renders correctly suffix complex', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         label="Label"
         name="Name"
@@ -53,66 +51,64 @@ describe('single slider', () => {
   })
 
   test('renders correctly suffix string input', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider input label="Label" name="Name" suffix="%" value={1} />,
     )
   })
 
   test('renders correctly prefix', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" name="Name" prefix="%" value={1} />,
     )
   })
 
   test('renders correctly direction row', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider direction="row" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly direction row with input', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider direction="row" input label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly with value < min', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" min={10} name="Name" value={-1} />,
     )
   })
 
   test('renders correctly with value > max', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" max={10} name="Name" value={90} />,
     )
   })
 
   test('renders correctly disabled', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider disabled label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider disabled label="Label" name="Name" value={1} />)
   })
 
   test('renders correctly error boolean', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider error helper="helper" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly error boolean and helper', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider error helper="helper" label="Label" name="Name" value={1} />,
     )
   })
 
   test('renders correctly error string', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider error="error" label="Label" name="Name" value={1} />,
     )
   })
   test('renders correctly error string and helper', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         error="error"
         helper="helper"
@@ -124,31 +120,27 @@ describe('single slider', () => {
   })
 
   test('renders correctly input', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider input label="Label" name="Name" value={1} />,
-    )
+    shouldMatchSnapshot(<Slider input label="Label" name="Name" value={1} />)
   })
 
   test('renders correctly custom tooltip', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" name="Name" tooltip="tooltip" value={1} />,
     )
   })
 
   test('renders correctly default tooltip', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider label="Label" name="Name" tooltip value={1} />,
-    )
+    shouldMatchSnapshot(<Slider label="Label" name="Name" tooltip value={1} />)
   })
 
   test('renders correctly with custom ticks', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" name="Name" options={options} unit="%" value={1} />,
     )
   })
 
   test('renders correctly with default ticks without label', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         label="Label"
         name="Name"
@@ -160,13 +152,13 @@ describe('single slider', () => {
   })
 
   test('renders correctly min max', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" max={10} min={1} name="Name" value={1} />,
     )
   })
 
   test('renders correctly step', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider label="Label" name="Name" step={0.5} value={1} />,
     )
   })

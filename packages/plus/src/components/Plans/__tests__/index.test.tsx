@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Plans } from '..'
 import { domain, fees, gb, group, pipeline, ssl } from './features'
@@ -8,7 +8,7 @@ import { planAdvanced, planProfessional, planStarter } from './plans'
 
 describe('plans', () => {
   it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Plans
         features={[gb, pipeline, domain, ssl, fees]}
         plans={[planStarter]}
@@ -16,7 +16,7 @@ describe('plans', () => {
     ))
 
   it('should work with hideLabels', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Plans
         features={[gb, pipeline, domain, ssl, fees]}
         hideLabels
@@ -25,7 +25,7 @@ describe('plans', () => {
     ))
 
   it('should work with hideFeatureText', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Plans
         features={[gb, pipeline, domain, ssl, fees]}
         hideFeatureText
@@ -34,7 +34,7 @@ describe('plans', () => {
     ))
 
   it('should work with value', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Plans
         features={[gb, pipeline, domain, ssl, fees]}
         plans={[planStarter]}
@@ -89,7 +89,7 @@ describe('plans', () => {
   })
 
   it('should work with group', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Plans
         features={[gb, group, pipeline, domain, ssl, fees]}
         plans={[planStarter]}

@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -16,14 +16,14 @@ describe('estimateCost - Zone', () => {
   })
 
   test('render zone component', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone image={frFlag} label="fr-par-1" />
       </EstimateCost>,
     ))
 
   test('render region component, with animation', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="hours">
         <EstimateCost.Zone animated image={frFlag} label="nl-ams-1" />
       </EstimateCost>,

@@ -1,15 +1,15 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Radio } from '..'
 
 describe('radio', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio label="Choice" name="radio" onChange={() => {}} value="choice" />,
     ))
 
   test('renders correctly when disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio
         disabled
         label="Choice"
@@ -20,7 +20,7 @@ describe('radio', () => {
     ))
 
   test('renders correctly with tooltip', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio
         label="Choice"
         name="radio"
@@ -31,12 +31,12 @@ describe('radio', () => {
     ))
 
   test('renders without name', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio disabled label="Choice" onChange={() => {}} value="choice" />,
     ))
 
   test('renders correctly when checked', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio
         checked
         label="Choice"
@@ -47,7 +47,7 @@ describe('radio', () => {
     ))
 
   test('renders correctly when error', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio
         error="Invalid value"
         label="Choice"
@@ -58,7 +58,7 @@ describe('radio', () => {
     ))
 
   test('renders correctly when helper', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Radio
         helper="Helper"
         label="Choice"

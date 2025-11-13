@@ -3,6 +3,7 @@
 import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import { ResponsiveBar } from '@nivo/bar'
 import type { Box, DatumValue, ValueFormat } from '@nivo/core'
+import type { theme as UVTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps, CSSProperties } from 'react'
 import { useCallback } from 'react'
@@ -98,7 +99,7 @@ export const BarChart = ({
           tickSize: 5,
           tickValues: tickValues?.left,
         }}
-        colors={getLegendColor(theme)}
+        colors={getLegendColor(theme as typeof UVTheme)}
         data={data}
         enableLabel={false}
         keys={keys}

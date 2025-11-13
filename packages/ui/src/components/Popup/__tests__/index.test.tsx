@@ -1,25 +1,20 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { describe, expect, test, vi } from 'vitest'
 import { Popup } from '../../index'
 
 describe('popup', () => {
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Popup debounceDelay={0} text="test">
         Hover me
       </Popup>,
     ))
 
   test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Popup debounceDelay={0}>Hover me</Popup>,
-    ))
+    shouldMatchSnapshotWithPortal(<Popup debounceDelay={0}>Hover me</Popup>))
 
   test(`should display Popup on hover`, async () => {
     renderWithTheme(

@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { ToggleGroup } from '..'
 
 describe('toggleGroup', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ToggleGroup legend="Label" name="Toggle" onChange={() => {}}>
         <ToggleGroup.Toggle label="Toggle 1" name="value-1" value="value-1" />
         <ToggleGroup.Toggle label="Toggle 2" name="value-2" value="value-2" />
@@ -13,7 +13,7 @@ describe('toggleGroup', () => {
     ))
 
   test('renders correctly with direction row', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ToggleGroup
         direction="row"
         legend="Label"
@@ -26,7 +26,7 @@ describe('toggleGroup', () => {
     ))
 
   test('renders correctly with helper content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ToggleGroup
         helper="Helper content"
         legend="Label"
@@ -39,7 +39,7 @@ describe('toggleGroup', () => {
     ))
 
   test('renders correctly with error content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ToggleGroup
         error="Eror content"
         legend="Label"
@@ -52,7 +52,7 @@ describe('toggleGroup', () => {
     ))
 
   test('renders correctly with required prop', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ToggleGroup legend="Label" name="Toggle" onChange={() => {}} required>
         <ToggleGroup.Toggle label="Toggle 1" name="value-1" value="value-1" />
         <ToggleGroup.Toggle label="Toggle 2" name="value-2" value="value-2" />

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { MosaicIcon } from '@ultraviolet/icons'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Avatar } from '..'
 import support from '../__stories__/assets/avatar.svg'
@@ -14,12 +14,12 @@ describe('avatar', () => {
         `renders correctly with shape ${shape} and size %s`,
         size => {
           it('renders correctly with variant user', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar shape={shape} size={size} variant="user" />,
             ))
 
           it('renders correctly with variant image', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar
                 image={support}
                 shape={shape}
@@ -29,12 +29,12 @@ describe('avatar', () => {
             ))
 
           it('renders correctly with variant text', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar shape={shape} size={size} text="UV" variant="text" />,
             ))
 
           it('renders correctly with variant text and sentiment neutral', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar
                 sentiment="neutral"
                 shape={shape}
@@ -45,14 +45,14 @@ describe('avatar', () => {
             ))
 
           it('renders correctly with variant icon', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar shape={shape} size={size} variant="icon">
                 <MosaicIcon />
               </Avatar>,
             ))
 
           it('renders correctly with variant icon and sentiment neutral', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar
                 sentiment="neutral"
                 shape={shape}
@@ -64,7 +64,7 @@ describe('avatar', () => {
             ))
 
           it('renders correctly with variant colors', () =>
-            shouldMatchEmotionSnapshot(
+            shouldMatchSnapshot(
               <Avatar shape={shape} size={size} variant="colors" />,
             ))
 

@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Slider } from '..'
 
@@ -24,7 +24,7 @@ describe('double slider', () => {
   })
 
   test('renders correctly direction row double', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         direction="row"
         double
@@ -36,26 +36,24 @@ describe('double slider', () => {
   })
 
   test('renders correctly with value empty', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       /* @ts-expect-error testing purpose */
       <Slider double label="Label" name="Name" />,
     )
   })
 
   test('renders correctly with value empty array and no min max', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider double label="Label" name="Name" value={[]} />,
-    )
+    shouldMatchSnapshot(<Slider double label="Label" name="Name" value={[]} />)
   })
 
   test('renders correctly with value empty array with min max', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider double label="Label" max={10} min={0} name="Name" value={[]} />,
     )
   })
 
   test('renders correctly direction row double with input', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         direction="row"
         double
@@ -68,7 +66,7 @@ describe('double slider', () => {
   })
 
   test('renders correctly double ', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider double label="Label" name="Name" value={[12, 14]} />,
     )
   })
@@ -93,19 +91,19 @@ describe('double slider', () => {
   })
 
   test('renders correctly double disabled', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider disabled double label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double input', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider double input label="Label" name="Name" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double custom tooltip', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         double
         label="Label"
@@ -117,12 +115,12 @@ describe('double slider', () => {
   })
 
   test('renders correctly double default toolipt ', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider double label="Label" name="Name" tooltip value={[12, 14]} />,
     )
   })
   test('renders correctly double with single tooltip', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         double
         label="Label"
@@ -134,13 +132,13 @@ describe('double slider', () => {
   })
 
   test('renders correctly double with default ticks', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider double label="Label" name="Name" unit="%" value={[12, 14]} />,
     )
   })
 
   test('renders correctly double with custom ticks', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         double
         label="Label"
@@ -152,7 +150,7 @@ describe('double slider', () => {
   })
 
   test('renders correctly double with custom scale', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         double
         label="Label"
@@ -164,7 +162,7 @@ describe('double slider', () => {
   })
 
   test('renders correctly double min max', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider
         double
         label="Label"
@@ -177,7 +175,7 @@ describe('double slider', () => {
   })
 
   test('renders correctly double step', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Slider double label="Label" name="Name" step={0.5} value={[12, 14]} />,
     )
   })

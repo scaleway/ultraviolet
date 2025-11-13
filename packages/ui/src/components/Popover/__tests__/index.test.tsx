@@ -1,7 +1,6 @@
-import styled from '@emotion/styled'
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
@@ -10,10 +9,7 @@ import { Modal } from '../../Modal'
 import { SelectInput } from '../../SelectInput'
 import { TextInput } from '../../TextInput'
 import { Popover } from '..'
-
-const StyledPopover = styled(Popover)`
-  height: 600px;
-`
+import { customPopover } from './style.css'
 
 const options: ComponentProps<typeof SelectInput>['options'] = [
   {
@@ -33,7 +29,8 @@ const AdvancedPopover = () => {
   }, [])
 
   return (
-    <StyledPopover
+    <Popover
+      className={customPopover}
       content={
         <>
           <Modal
@@ -80,27 +77,27 @@ const AdvancedPopover = () => {
       >
         Open Popover
       </Button>
-    </StyledPopover>
+    </Popover>
   )
 }
 
 describe('tooltip', () => {
   test('should render correctly with required props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test">
         Children
       </Popover>,
     ))
 
   test('should render correctly with required props and visible', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Popover content="Test" onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
     ))
 
   test('should render correctly with component in content prop', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Popover content={<p>Test</p>} onClose={() => {}} title="Test" visible>
         Children
       </Popover>,
@@ -109,7 +106,7 @@ describe('tooltip', () => {
   describe(`should render correctly with placement`, () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
       test(`should renders tooltip with placement ${placement}`, () => {
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <Popover
             content="Test"
             onClose={() => {}}
@@ -127,7 +124,7 @@ describe('tooltip', () => {
   describe(`should render correctly with sentiment`, () => {
     ;(['neutral', 'primary'] as const).forEach(sentiment => {
       test(`should renders tooltip with placement ${sentiment}`, () => {
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <Popover
             content="Test"
             onClose={() => {}}

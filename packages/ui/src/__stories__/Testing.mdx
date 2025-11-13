@@ -32,7 +32,7 @@ As stated in [`@testing-library/react`](https://testing-library.com/docs/dom-tes
 
 ### `renderWithTheme(component, options, theme = defaultTheme)`
 
-This will wrap the provided node with an emotion ThemeProvider and render it
+This will wrap the provided node with a ThemeProvider and render it
 
 This is useful when you need to dig through a rendered node
 
@@ -50,15 +50,15 @@ test(`click checkbox`, async () => {
 * `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
 * `theme`: A theme available as an object, you can find an example in `src/theme`
 
-### `shouldMatchEmotionSnapshot(component, options = {})`
+### `shouldMatchSnapshot(component, options = {})`
 
-This will wrap the provided node with an emotion ThemeProvider, render it and snapshot it at the end of the execution
+This will wrap the provided node with a ThemeProvider, render it and snapshot it at the end of the execution
 
 > ⚠ This is an async function and need to be either in an async function or directly returned to jest
 
 ```jsx
 test(`click and snapshot checkbox`, async () =>
-  shouldMatchEmotionSnapshot(<input role="checkbox" />, {
+  shouldMatchSnapshot(<input role="checkbox" />, {
     transform: async ({ getByRole }) => {
       const input = getByRole('checkbox')
       await userEvent.click(input)
@@ -72,13 +72,13 @@ test(`click and snapshot checkbox`, async () =>
   * `theme`: A theme available as an object, you can find an example in `src/theme`
   * `transform`: an async function receiving in parameters the rendered node. This can be used to apply transformation to the component before snapshotting
 
-### `shouldMatchEmotionSnapshotWithPortal(component, options = {})`
+### `shouldMatchSnapshotWithPortal(component, options = {})`
 
-This is a variation of `shouldMatchEmotionSnapshot` which bind the node to `document.body` in order to be able to test components with Portals
+This is a variation of `shouldMatchSnapshot` which bind the node to `document.body` in order to be able to test components with Portals
 
 ```jsx
 test(`renders with Modal`, () =>
-  shouldMatchEmotionSnapshotWithPortal(
+  shouldMatchSnapshotWithPortal(
     <Modal>
       <div>test</div>
     </Modal>,

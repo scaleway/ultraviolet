@@ -1,12 +1,12 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TextArea } from '..'
 
 describe('textArea', () => {
   test('should render correctly with basic props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea label="Test" onChange={() => {}} value="test" />,
     ))
 
@@ -37,27 +37,27 @@ describe('textArea', () => {
   })
 
   test('should render correctly when input is disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea disabled label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should render correctly when input is readOnly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea label="Test" onChange={() => {}} readOnly value="test" />,
     ))
 
   test('should render correctly when it is required', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea label="Test" onChange={() => {}} required value="test" />,
     ))
 
   test('should render correctly with maxlength', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea label="Test" maxLength={3} onChange={() => {}} value="test" />,
     ))
 
   test('should render correctly when input has a success sentiment', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea
         label="Test"
         onChange={() => {}}
@@ -67,7 +67,7 @@ describe('textArea', () => {
     ))
 
   test('should render correctly when input  has a error sentiment', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea
         error="success"
         label="Test"
@@ -77,7 +77,7 @@ describe('textArea', () => {
     ))
 
   test('should render with auto rows', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea
         error="success"
         label="Test"
@@ -88,7 +88,7 @@ describe('textArea', () => {
     ))
 
   test('should render with AutoExpandMax', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea
         error="success"
         label="Test"
@@ -98,7 +98,7 @@ describe('textArea', () => {
       />,
     ))
   test('should render with AutoExpandMax and rows', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextArea
         error="success"
         label="Test"

@@ -4,6 +4,7 @@ import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import type { LineSvgProps, Serie } from '@nivo/line'
 import { ResponsiveLine } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
+import type { theme as UVTheme } from '@ultraviolet/themes'
 import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
@@ -88,7 +89,7 @@ export const LineChart = ({
     setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
   }, [dataset.datasets, selected])
 
-  const localColors = getLegendColor(theme)
+  const localColors = getLegendColor(theme as typeof UVTheme)
 
   return (
     <>

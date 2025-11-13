@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { SelectableCardGroup } from '..'
 
 describe('selectableCardGroup', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SelectableCardGroup
         legend="Label"
         name="checkbox"
@@ -19,7 +19,7 @@ describe('selectableCardGroup', () => {
     ))
 
   test('renders correctly with direction multiple columns', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SelectableCardGroup
         columns={2}
         legend="Label"
@@ -34,7 +34,7 @@ describe('selectableCardGroup', () => {
     ))
 
   test('renders correctly with helper content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SelectableCardGroup
         helper="Helper content"
         legend="Label"
@@ -48,7 +48,7 @@ describe('selectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
   test('renders correctly required and showTick', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SelectableCardGroup
         legend="Label"
         name="checkbox"
@@ -63,7 +63,7 @@ describe('selectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
   test('renders correctly with error content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SelectableCardGroup
         error="Error content"
         legend="Label"
@@ -77,7 +77,7 @@ describe('selectableCardGroup', () => {
       </SelectableCardGroup>,
     ))
   test('renders correctly as a radio', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SelectableCardGroup
         error="Error content"
         legend="Label"

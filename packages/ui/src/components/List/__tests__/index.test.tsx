@@ -1,7 +1,7 @@
-import { ThemeProvider } from '@emotion/react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { ThemeProvider } from '@ultraviolet/themes'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
@@ -80,7 +80,7 @@ describe('list', () => {
   })
 
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row id={id} key={id}>
@@ -95,7 +95,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with sort', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row id={id} key={id}>
@@ -110,7 +110,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with row expanded', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row expanded id={id} key={id}>
@@ -125,7 +125,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with selectable', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row id={id} key={id}>
@@ -140,7 +140,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with loading', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns} loading>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row id={id} key={id}>
@@ -155,7 +155,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with loading with selectable', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns} loading selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row id={id} key={id}>
@@ -170,7 +170,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with disabled rows', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row disabled id={id} key={id}>
@@ -185,7 +185,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with expandable rows', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -207,7 +207,7 @@ describe('list', () => {
     ))
 
   test('should render correctly with sentiment rows', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -459,7 +459,7 @@ describe('list', () => {
   })
 
   test('should render correctly with bad sort value', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List
         // @ts-expect-error Wrong value used
         columns={columns.map(column => ({
@@ -635,7 +635,7 @@ describe('list', () => {
   })
 
   test('should render correctly with info', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <List columns={columns.map(column => ({ ...column, info: 'example' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row id={id} key={id}>

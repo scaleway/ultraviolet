@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { OrderSummary } from '..'
 import {
@@ -33,13 +33,13 @@ const mockItems = [
 
 describe('orderSummary', () => {
   test('should work with default props', () =>
-    shouldMatchEmotionSnapshot(<OrderSummary items={mockItems} />))
+    shouldMatchSnapshot(<OrderSummary items={mockItems} />))
 
   test('should work with an empty list of item', () =>
-    shouldMatchEmotionSnapshot(<OrderSummary items={[]} />))
+    shouldMatchSnapshot(<OrderSummary items={[]} />))
 
   test('should work without unitInput', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -76,7 +76,7 @@ describe('orderSummary', () => {
   })
 
   test('should work with children', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -88,7 +88,7 @@ describe('orderSummary', () => {
     ))
 
   test('should work with footer', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         currency="EUR"
         footer="footer"
@@ -99,7 +99,7 @@ describe('orderSummary', () => {
     ))
 
   test('should work with price as a range', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         currency="EUR"
         footer="footer"
@@ -110,7 +110,7 @@ describe('orderSummary', () => {
     ))
 
   test('should work with totalPriceInfo', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -121,7 +121,7 @@ describe('orderSummary', () => {
     ))
 
   test('should work with additionalInfo', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         additionalInfo="additional info"
         currency="EUR"
@@ -133,7 +133,7 @@ describe('orderSummary', () => {
       </OrderSummary>,
     ))
   test('should work with numberInputs', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OrderSummary
         currency="EUR"
         header="summary"
@@ -196,7 +196,7 @@ describe('orderSummary', () => {
   })
 
   test('works with hideDetails', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <>
         <OrderSummary header="summary" hideDetails items={[categoryAZ]} />
         <OrderSummary

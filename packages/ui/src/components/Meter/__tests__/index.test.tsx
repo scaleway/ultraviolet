@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { colors } from '../../../theme'
 import { Meter } from '..'
@@ -13,27 +13,27 @@ describe('meter', () => {
   ]
 
   test('render with ', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Meter strength={strengthLevels} title="MyTitle" value={0} />,
     ))
 
   test('render with weak value', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Meter strength={strengthLevels} title="MyTitle" value={1} />,
     ))
 
   test('render with medium password', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Meter strength={strengthLevels} title="MyTitle" value={2} />,
     ))
 
   test('render with strong value', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Meter strength={strengthLevels} title="MyTitle" value={3} />,
     ))
 
   test('render with very strong value', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Meter strength={strengthLevels} title="MyTitle" value={4} />,
     ))
 })

@@ -1,6 +1,6 @@
 import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { SelectableCard } from '..'
 import illustration from './illustrationTest.svg'
@@ -11,7 +11,7 @@ describe('selectableCard', () => {
   types.forEach(type => {
     describe(`${type}`, () => {
       test('renders correctly with default props', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             label="test"
             name="test"
@@ -23,7 +23,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with aria label', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
             name="test"
@@ -35,7 +35,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with showTick', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
             name="test"
@@ -49,7 +49,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with checked prop', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
             checked
@@ -63,7 +63,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with disabled prop', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             aria-label="test"
             disabled
@@ -77,7 +77,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with isError prop', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             isError
             label="test"
@@ -91,7 +91,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with tooltip prop', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             label="test"
             name="test"
@@ -105,7 +105,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with complex children', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             disabled
             label="test"
@@ -128,7 +128,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with illustration', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             illustration={illustration}
             label="label"
@@ -144,7 +144,7 @@ describe('selectableCard', () => {
         ))
 
       test('renders correctly with productIcon', () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <SelectableCard
             label="label"
             name="label-14"

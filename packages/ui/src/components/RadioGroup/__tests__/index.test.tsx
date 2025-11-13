@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { RadioGroup } from '..'
 
 describe('radioGroup', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <RadioGroup
         legend="Label"
         name="radio"
@@ -18,7 +18,7 @@ describe('radioGroup', () => {
     ))
 
   test('renders correctly with direction row', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <RadioGroup
         direction="row"
         legend="Label"
@@ -32,7 +32,7 @@ describe('radioGroup', () => {
     ))
 
   test('renders correctly with helper content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <RadioGroup
         helper="Helper content"
         legend="Label"
@@ -46,7 +46,7 @@ describe('radioGroup', () => {
     ))
 
   test('renders correctly with error content', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <RadioGroup
         error="Eror content"
         legend="Label"

@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Breadcrumbs } from '..'
 
 describe('breadcrumbs', () => {
   test('renders correctly with default values', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item to="/step1/step2">
@@ -18,7 +18,7 @@ describe('breadcrumbs', () => {
     ))
 
   test('renders correctly with minWidth and maxWidth', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item maxWidth="200px" minWidth="100px" to="/step1/step2">

@@ -1,16 +1,13 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { Button } from '../../Button'
 import { Dialog } from '..'
 
 describe('dialog', () => {
   it('should renders correctly', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Dialog open sentiment="primary" title="Test">
         <Dialog.Stack>
           <Dialog.Text>text example</Dialog.Text>

@@ -1,26 +1,13 @@
 // oxlint-disable react/only-export-components
-
-import createCache from '@emotion/cache'
-import { CacheProvider, ThemeProvider } from '@emotion/react'
 import type { RenderOptions } from '@testing-library/react'
 import { render, renderHook } from '@testing-library/react'
-import {
-  consoleLightTheme,
-  ThemeProvider as ThemeProviderUV,
-} from '@ultraviolet/themes'
+import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
 import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
 import { Form, useForm } from '../../../../../packages/form/src/index'
-import { makeShouldMatchEmotionSnapshot } from './shouldMatchEmotionSnapshot'
-import { makeShouldMatchEmotionSnapshotWithPortal } from './shouldMatchEmotionSnapshotWithPortal'
+import { makeShouldMatchSnapshot } from './shouldMatchSnapshot'
+import { makeShouldMatchSnapshotWithPortal } from './shouldMatchSnapshotWithPortal'
 
-const emotionCache = createCache({
-  key: 'cache',
-})
-
-emotionCache.compat = true
-
-// note: remove emotion theme provider once fully removed
 export const ComponentWrapper = ({
   children,
   theme = consoleLightTheme,
@@ -28,11 +15,9 @@ export const ComponentWrapper = ({
   children?: ReactNode
   theme?: typeof consoleLightTheme
 }) => (
-  <ThemeProviderUV theme={theme}>
-    <ThemeProvider theme={theme}>
-      <div data-testid="testing">{children}</div>
-    </ThemeProvider>
-  </ThemeProviderUV>
+  <ThemeProvider theme={theme}>
+    <div data-testid="testing">{children}</div>
+  </ThemeProvider>
 )
 
 export const mockFormErrors: FormErrors = {
@@ -80,11 +65,11 @@ export const mockFormErrors: FormErrors = {
  *
  */
 
-export const shouldMatchEmotionSnapshotWithPortal = (
+export const shouldMatchSnapshotWithPortal = (
   component: ReactElement,
   theme?: typeof consoleLightTheme,
 ) =>
-  makeShouldMatchEmotionSnapshotWithPortal(component, {
+  makeShouldMatchSnapshotWithPortal(component, {
     wrapper: ({ children }) => (
       <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
     ),
@@ -101,11 +86,11 @@ export const shouldMatchEmotionSnapshotWithPortal = (
  * ```
  *
  */
-export const shouldMatchEmotionSnapshot = (
+export const shouldMatchSnapshot = (
   component: ReactNode,
   theme?: typeof consoleLightTheme,
 ) =>
-  makeShouldMatchEmotionSnapshot(component, {
+  makeShouldMatchSnapshot(component, {
     wrapper: ({ children }) => (
       <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
     ),
@@ -119,9 +104,7 @@ export const renderWithTheme = (
   render(compoment, {
     ...options,
     wrapper: ({ children }) => (
-      <CacheProvider value={emotionCache}>
-        <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
-      </CacheProvider>
+      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
     ),
   })
 

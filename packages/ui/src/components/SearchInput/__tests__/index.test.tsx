@@ -1,12 +1,12 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { SearchInput } from '..'
 
 describe('searchInput', () => {
   test('renders correctly without children props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SearchInput
         onClose={() => {}}
         onSearch={() => {}}
@@ -18,7 +18,7 @@ describe('searchInput', () => {
     ))
 
   test('renders with disabled prop', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SearchInput
         disabled
         onClose={() => {}}
@@ -32,7 +32,7 @@ describe('searchInput', () => {
 
   describe('renders with shortcut prop', () => {
     test('as boolean', () =>
-      shouldMatchEmotionSnapshot(
+      shouldMatchSnapshot(
         <SearchInput
           onClose={() => {}}
           onSearch={() => {}}
@@ -44,7 +44,7 @@ describe('searchInput', () => {
         </SearchInput>,
       ))
     test('as array of string', () =>
-      shouldMatchEmotionSnapshot(
+      shouldMatchSnapshot(
         <SearchInput
           onClose={() => {}}
           onSearch={() => {}}
@@ -58,7 +58,7 @@ describe('searchInput', () => {
   })
 
   test('renders with error prop', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SearchInput
         error="there is an error"
         onClose={() => {}}
