@@ -16,7 +16,7 @@ type SteppedListContainerProps = {
   /**
    * List of steps
    */
-  steps: string[]
+  steps: (string | { title: string; icon: ReactNode })[]
   /**
    * Define here the content of each step
    */
@@ -141,14 +141,22 @@ const SteppedListCard = ({
                 gap={4}
               >
                 <StepList>
-                  {steps.map((step, index) => (
-                    <SteppedList
-                      completed={done[index]}
-                      key={step}
-                      stepNumber={index + 1}
-                      stepTitle={step}
-                    />
-                  ))}
+                  {steps.map((step, index) => {
+                    const stepTitle =
+                      typeof step === 'string' ? step : step.title
+                    const stepIcon =
+                      typeof step === 'string' ? undefined : step.icon
+
+                    return (
+                      <SteppedList
+                        completed={done[index]}
+                        key={stepTitle}
+                        stepIcon={stepIcon}
+                        stepNumber={index + 1}
+                        stepTitle={stepTitle}
+                      />
+                    )
+                  })}
                 </StepList>
               </Stack>
               {children}

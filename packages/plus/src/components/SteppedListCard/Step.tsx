@@ -2,6 +2,7 @@
 
 import { CheckIcon } from '@ultraviolet/icons'
 import { StepList, Text } from '@ultraviolet/ui'
+import type { ReactNode } from 'react'
 import { useContext } from 'react'
 import { Data } from './helper'
 import { steppedListCardStep, steppedListCardStepTitle } from './styles.css'
@@ -11,6 +12,10 @@ type StepProps = {
    * The number of the step, max 5 steps.
    */
   stepNumber: number
+  /**
+   * An icon to replace the step number in the bullet
+   */
+  stepIcon?: ReactNode
   /**
    * Title of the step
    */
@@ -26,6 +31,7 @@ export const SteppedList = ({
   stepNumber,
   stepTitle,
   completed,
+  stepIcon,
   'data-testid': dataTestId,
 }: StepProps) => {
   const containerData = useContext(Data)
@@ -39,6 +45,7 @@ export const SteppedList = ({
       onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : 'default'}
       sentiment="primary"
+      size="small"
     >
       <Text
         as="h3"
@@ -50,12 +57,13 @@ export const SteppedList = ({
     </StepList.Item>
   ) : (
     <StepList.Item
-      bulletContent={String(stepNumber)}
+      bulletContent={stepIcon ?? String(stepNumber)}
       className={steppedListCardStep}
       data-testid={dataTestId}
       onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : undefined}
       sentiment={active ? 'primary' : undefined}
+      size="small"
     >
       <Text
         as="h3"
