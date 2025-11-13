@@ -1,0 +1,240 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`treeMapChart > renders complex content with React components 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="height: 537px;"
+    >
+      <svg
+        data-testid="treemap-mock"
+        height="500"
+        width="1000"
+      >
+        <g
+          data-testid="node-compute"
+        >
+          <g
+            transform="translate(0, 0)"
+          >
+            <rect
+              class="styles__1pnrimq2"
+              fill="#641cb3FC"
+              height="100"
+              rx="0.5rem"
+              ry="0.5rem"
+              width="100"
+            />
+            <foreignobject
+              class="styles__1pnrimq3"
+              height="100"
+              width="100"
+            >
+              <div
+                class="styles__1pnrimq1"
+              >
+                <div
+                  class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                >
+                  <p
+                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  >
+                    Compute
+                  </p>
+                  <p
+                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  >
+                    10 kgco2
+                  </p>
+                </div>
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+        <g
+          data-testid="node-network"
+        >
+          <g
+            transform="translate(100, 0)"
+          >
+            <rect
+              class="styles__1pnrimq2"
+              fill="#641cb3E3"
+              height="100"
+              rx="0.5rem"
+              ry="0.5rem"
+              width="100"
+            />
+            <foreignobject
+              class="styles__1pnrimq3"
+              height="100"
+              width="100"
+            >
+              <div
+                class="styles__1pnrimq1"
+              >
+                <div
+                  class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                >
+                  <p
+                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  >
+                    Network
+                  </p>
+                  <p
+                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  >
+                    10 kgco2
+                  </p>
+                </div>
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+        <g
+          data-testid="node-ai"
+        >
+          <g
+            transform="translate(200, 0)"
+          >
+            <rect
+              class="styles__1pnrimq2"
+              fill="#641cb3C9"
+              height="100"
+              rx="0.5rem"
+              ry="0.5rem"
+              width="100"
+            />
+            <foreignobject
+              class="styles__1pnrimq3"
+              height="100"
+              width="100"
+            >
+              <div
+                class="styles__1pnrimq1"
+              >
+                <div
+                  class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+                >
+                  <p
+                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  >
+                    AI
+                  </p>
+                  <p
+                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                  >
+                    10 kgco2
+                  </p>
+                </div>
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`treeMapChart > renders correctly with data 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      style="height: 537px;"
+    >
+      <svg
+        data-testid="treemap-mock"
+        height="500"
+        width="1000"
+      >
+        <g
+          data-testid="node-compute"
+        >
+          <g
+            transform="translate(0, 0)"
+          >
+            <rect
+              class="styles__1pnrimq2"
+              fill="#641cb3FC"
+              height="100"
+              rx="0.5rem"
+              ry="0.5rem"
+              width="100"
+            />
+            <foreignobject
+              class="styles__1pnrimq3"
+              height="100"
+              width="100"
+            >
+              <div
+                class="styles__1pnrimq1"
+              >
+                Compute
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+        <g
+          data-testid="node-network"
+        >
+          <g
+            transform="translate(100, 0)"
+          >
+            <rect
+              class="styles__1pnrimq2"
+              fill="#641cb3E3"
+              height="100"
+              rx="0.5rem"
+              ry="0.5rem"
+              width="100"
+            />
+            <foreignobject
+              class="styles__1pnrimq3"
+              height="100"
+              width="100"
+            >
+              <div
+                class="styles__1pnrimq1"
+              >
+                Network
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+        <g
+          data-testid="node-ai"
+        >
+          <g
+            transform="translate(200, 0)"
+          >
+            <rect
+              class="styles__1pnrimq2"
+              fill="#641cb3C9"
+              height="100"
+              rx="0.5rem"
+              ry="0.5rem"
+              width="100"
+            />
+            <foreignobject
+              class="styles__1pnrimq3"
+              height="100"
+              width="100"
+            >
+              <div
+                class="styles__1pnrimq1"
+              >
+                AI
+              </div>
+            </foreignobject>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;
