@@ -37,7 +37,9 @@ export const Stepper = ({
   separator = true,
   style,
 }: StepperProps) => {
-  const cleanChildren = Children.toArray(children).filter(isValidElement)
+  const cleanChildren = Children.toArray(children).filter(child =>
+    isValidElement(child),
+  )
   const lastStep = Children.count(cleanChildren) - 1
 
   return (

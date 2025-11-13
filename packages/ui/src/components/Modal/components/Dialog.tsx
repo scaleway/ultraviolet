@@ -113,6 +113,7 @@ export const Dialog = ({
   // while the first opened modal should shrink
   const realPosition = [...openedModals].findIndex(object => object.id === id)
   const position = [...openedModals]
+    // oxlint-disable-next-line unicorn/no-array-reverse
     .reverse()
     .findIndex(object => object.id === id) // reverse method mutate array so we need to create a new array
   const modalAbove = openedModals[realPosition + 1]

@@ -1,3 +1,5 @@
+// oxlint-disable react/only-export-components
+
 import createCache from '@emotion/cache'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
 import type { RenderOptions } from '@testing-library/react'
@@ -18,7 +20,7 @@ const emotionCache = createCache({
 
 emotionCache.compat = true
 
-// TODO: remove emotion theme provider once fully removed
+// note: remove emotion theme provider once fully removed
 export const ComponentWrapper = ({
   children,
   theme = consoleLightTheme,

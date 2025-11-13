@@ -6,6 +6,7 @@ import { consoleLightTheme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { GlobalStyles } from './GlobalStyles'
 
+// oxlint-disable-next-line react/only-export-components
 export const metadata: Metadata = {
   description: 'Design System',
   title: 'Ultraviolet',

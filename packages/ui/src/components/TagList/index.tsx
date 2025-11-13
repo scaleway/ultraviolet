@@ -223,7 +223,7 @@ export const TagList = ({
         const visibleTagsCopy = visibleTags.filter(
           (_, index) => index < visibleTags.length - 1,
         )
-        const tagToMove = visibleTags[visibleTags.length - 1]
+        const tagToMove = visibleTags[visibleTags.length - 1] ?? ''
 
         setVisibleTags(visibleTagsCopy)
         setHiddenTags([tagToMove, ...hiddenTags])

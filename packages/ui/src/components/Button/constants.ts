@@ -1,4 +1,7 @@
 // SIZE
+
+export const SIZE_KEY = ['large', 'medium', 'small', 'xsmall'] as const
+
 export const SIZE_HEIGHT = {
   large: '600', // sizing key value from tokens
   medium: '500',
