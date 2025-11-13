@@ -8,6 +8,7 @@ import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/themes/global'
 
+// oxlint-disable-next-line react/only-export-components
 export const metadata: Metadata = {
   description: 'Design System',
   title: 'Ultraviolet',

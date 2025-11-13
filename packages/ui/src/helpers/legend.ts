@@ -5,7 +5,7 @@ export const getLegendColor = (theme: typeof UVTheme): string[] => {
 
   return Object.keys(colors.other.data.charts)
     .filter(key => !['success', 'danger'].includes(key))
-    .sort((a, b) => {
+    .toSorted((a, b) => {
       if (Number(a.replace('data', '')) < Number(b.replace('data', ''))) {
         return -1
       }

@@ -66,4 +66,5 @@ export const Skeleton = ({
   )
 }
 
+// oxlint-disable-next-line react/only-export-components
 export const skeletonTypes = Object.keys(variants) as SkeletonVariant[]

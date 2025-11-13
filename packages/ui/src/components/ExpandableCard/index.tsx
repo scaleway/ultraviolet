@@ -15,6 +15,7 @@ import type { XOR } from '../../types'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { ExpandableCardTitle } from './components/Title'
+import type { EXPANDABLE_CARD_SIZE } from './constants'
 import {
   arrowIcon,
   content,
@@ -24,8 +25,6 @@ import {
   stackClass,
   summaryClass,
 } from './styles.css'
-
-export const EXPANDABLE_CARD_SIZE = ['medium', 'large'] as const
 
 type DraggableListType = { value?: string }
 type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]
