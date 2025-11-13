@@ -21,10 +21,12 @@ type ModalContextValues = {
   previsousOpenedModales: ModalObject[] // This will be usefull for animation, we will trigger when the modal appear but not when it's closing
 }
 
+// oxlint-disable-next-line react/only-export-components
 export const ModalContext = createContext<ModalContextValues | undefined>(
   undefined,
 )
 
+// oxlint-disable-next-line react/only-export-components
 export const useModal = () => {
   const context = useContext(ModalContext)
   if (!context) {

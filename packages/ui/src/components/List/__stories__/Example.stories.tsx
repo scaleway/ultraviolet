@@ -19,7 +19,7 @@ export const Example: StoryFn = args => {
   const sortedData = useMemo(() => {
     const orderMultiplicator = currentOrder.order === 'asc' ? 1 : -1
 
-    return [...sourceData].sort((a, b) => {
+    return [...sourceData].toSorted((a, b) => {
       if (a[currentOrder.columnId] < b[currentOrder.columnId]) {
         return -1 * orderMultiplicator
       }

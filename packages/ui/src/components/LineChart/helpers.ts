@@ -15,10 +15,10 @@ const parse = (data?: DatumValue | null): number => {
 }
 
 export const getMin = (values: DatumValue[] = []): number =>
-  values.length > 0 ? Math.min(...values.map(parse)) : 0
+  values.length > 0 ? Math.min(...values.map(data => parse(data))) : 0
 
 export const getMax = (values: DatumValue[] = []): number =>
-  values.length > 0 ? Math.max(...values.map(parse)) : 0
+  values.length > 0 ? Math.max(...values.map(data => parse(data))) : 0
 
 export const getAverage = (values: DatumValue[] = []): number =>
   values.length > 0

@@ -100,7 +100,7 @@ const Properties = () => {
   const sortedPropertiesUsagesCountAndComponentsName = Object.entries(
     propertiesUsagesCountAndComponentsName,
   )
-    .sort(([, { count: countA }], [, { count: countB }]) => countB - countA)
+    .toSorted(([, { count: countA }], [, { count: countB }]) => countB - countA)
     .reduce<Record<string, { count: number; components: string[] }>>(
       (acc, [property, value]) => ({
         ...acc,
@@ -168,10 +168,10 @@ const Properties = () => {
                       }
 
                       const reversedLocalProperty = [...lowerCaseLocalProperty]
-                        .reverse()
+                        .toReversed()
                         .join('')
                       const reversedLowerCaseProperty = [...lowerCaseProperty]
-                        .reverse()
+                        .toReversed()
                         .join('')
 
                       for (

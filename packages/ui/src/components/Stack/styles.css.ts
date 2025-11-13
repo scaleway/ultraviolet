@@ -12,7 +12,9 @@ export const stack = style({
 })
 
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
-const orderedBreakpointKeys = Object.keys(consoleLightTheme.breakpoints).sort(
+const orderedBreakpointKeys = Object.keys(
+  consoleLightTheme.breakpoints,
+).toSorted(
   (a, b) =>
     Number.parseInt(
       consoleLightTheme.breakpoints[

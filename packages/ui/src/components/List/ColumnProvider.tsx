@@ -34,6 +34,7 @@ export const ColumnProvider = ({
   </ColumnContext.Provider>
 )
 
+// oxlint-disable-next-line react/only-export-components
 export const useColumnProvider = () => {
   const context = useContext(ColumnContext)
 

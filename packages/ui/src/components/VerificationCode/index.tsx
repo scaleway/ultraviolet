@@ -11,12 +11,7 @@ import type {
 import { createRef, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
 import { Text } from '../Text'
-import { SIZE_HEIGHT } from './constants'
 import { filedSetClass, inputClass, inputSizes } from './styles.css'
-
-type Size = 'small' | 'medium' | 'large' | 'xlarge'
-
-export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
 
 const DEFAULT_ON_FUNCTION = () => {}
 

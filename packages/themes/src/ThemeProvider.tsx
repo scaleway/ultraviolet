@@ -11,6 +11,7 @@ const ThemeContext = createContext(consoleLightTheme)
 /**
  * Provide an object of the theme variables.
  */
+// oxlint-disable-next-line react/only-export-components
 export const useTheme = () => {
   const context = useContext(ThemeContext)
   if (!context) {

@@ -23,7 +23,7 @@ import type { ColumnProps } from './types'
 
 // type OptionalOnly<T> = Pick<T, OptionalKeys<T>>
 
-// TODO: Get type optional from omit values
+// Note: Get type optional from omit values
 type TableProps = Omit<
   TableProviderProps,
   | 'selectable'
