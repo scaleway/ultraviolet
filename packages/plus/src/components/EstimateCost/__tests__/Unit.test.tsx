@@ -1,6 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -28,7 +28,7 @@ describe('estimateCost - Unit Item', () => {
   })
 
   test('render basic props with monthly price', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
           <EstimateCost.Unit />
@@ -38,7 +38,7 @@ describe('estimateCost - Unit Item', () => {
   })
 
   test('render basic props with values', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           amount={100}
@@ -54,7 +54,7 @@ describe('estimateCost - Unit Item', () => {
     ))
 
   test('render basic props with values and no iteration', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           amount={100}
@@ -72,7 +72,7 @@ describe('estimateCost - Unit Item', () => {
     ))
 
   test('render test', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           amount={100}
@@ -102,7 +102,7 @@ describe('estimateCost - Unit Item', () => {
     ))
 
   test('render basic props with overlay', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
           <EstimateCost.Unit />
@@ -111,7 +111,7 @@ describe('estimateCost - Unit Item', () => {
     ))
 
   test('render with 0 amount', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={0} label="Unit" price={10}>
           <EstimateCost.Unit />
@@ -120,7 +120,7 @@ describe('estimateCost - Unit Item', () => {
     ))
 
   test('render with 10 amount', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item amount={10} label="Unit" price={10}>
           <EstimateCost.Unit />
@@ -161,7 +161,7 @@ describe('estimateCost - Unit Item', () => {
   })
 
   test('render with getAmountValue', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
           <EstimateCost.Unit getAmountValue={value => value} />

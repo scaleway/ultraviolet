@@ -1,22 +1,12 @@
-import { css } from '@emotion/react'
 import { renderHook, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
 import illustration from '../__stories__/assets/illustration.webp'
 import { useModal } from '../ModalProvider'
-
-const customDialogBackdropStyles = css`
-  background-color: aliceblue;
-`
-const customDialogStyles = css`
-  background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
-`
+import { customDialogBackdropStyles, customDialogStyles } from './testStyle.css'
 
 const mockOnClick = vi.fn()
 
@@ -36,55 +26,51 @@ describe('modal', () => {
   })
 
   test(`renders with default Props`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal disclosure={<button type="button">Test</button>}>
         <div>test</div>
       </Modal>,
     ))
 
   test(`renders without disclosure`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal disclosure={undefined}>
         <div>test</div>
       </Modal>,
     ))
 
   test(`renders with default Props and function children`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Modal>{() => <div>test</div>}</Modal>,
-    ))
+    shouldMatchSnapshotWithPortal(<Modal>{() => <div>test</div>}</Modal>))
 
   test(`renders with default Props and function children open`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Modal open>{() => <div>test</div>}</Modal>,
-    ))
+    shouldMatchSnapshotWithPortal(<Modal open>{() => <div>test</div>}</Modal>))
 
   test(`renders with open={true}`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal open>
         <div>test</div>
       </Modal>,
     ))
 
   test(`renders with open={true} and no close icon`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
 
   test(`renders open custom size`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal open size="medium">
         <div>test</div>
       </Modal>,
     ))
 
   test(`renders with custom classNames`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal
-        backdropClassName={customDialogBackdropStyles.name}
-        className={customDialogStyles.name}
+        backdropClassName={customDialogBackdropStyles}
+        className={customDialogStyles}
         open
       >
         <div>test</div>
@@ -92,14 +78,14 @@ describe('modal', () => {
     ))
 
   test(`renders with image`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal image={illustration} isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
 
   test(`renders with disclosure`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
         disclosure={<button type="button">Test</button>}

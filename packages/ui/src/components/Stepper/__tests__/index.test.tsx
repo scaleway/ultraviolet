@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Stepper } from '..'
 
 describe('stepper', () => {
   test('renders correctly with default props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -15,7 +15,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly with selected prop', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper selected={2}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -23,7 +23,7 @@ describe('stepper', () => {
       </Stepper>,
     ))
   test('renders correctly with children', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper animated selected={1}>
         <Stepper.Step title="step 1">Children</Stepper.Step>
         <Stepper.Step title="step 2" />
@@ -31,7 +31,7 @@ describe('stepper', () => {
       </Stepper>,
     ))
   test('renders correctly with animation', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper animated selected={1}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -40,7 +40,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly with all selected', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper selected={1}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -49,7 +49,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly with step number in row', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper labelPosition="right">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -58,7 +58,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly with small size', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper size="small">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -67,7 +67,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly without separator', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper separator={false}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -76,7 +76,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly without separator with label on the right', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper labelPosition="right" separator={false}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
@@ -85,7 +85,7 @@ describe('stepper', () => {
     ))
 
   test('renders correctly with disabled steps', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper selected={0}>
         <Stepper.Step disabled title="step 1" />
         <Stepper.Step title="step 2" />
@@ -132,7 +132,7 @@ describe('stepper', () => {
   })
 
   test('renders correctly without Stepper.Step', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Stepper selected={1} size="small">
         <span>Step 1</span>
         <span>Step 2</span>

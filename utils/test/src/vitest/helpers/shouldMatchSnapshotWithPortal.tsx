@@ -1,16 +1,8 @@
-import createCache from '@emotion/cache'
-import { CacheProvider } from '@emotion/react'
 import { render } from '@testing-library/react'
 import type { ReactElement } from 'react'
 import { expect, vi } from 'vitest'
 
-const emotionCache = createCache({
-  key: 'cache',
-})
-
-emotionCache.compat = true
-
-export const makeShouldMatchEmotionSnapshotWithPortal = (
+export const makeShouldMatchSnapshotWithPortal = (
   children: ReactElement,
   {
     wrapper,
@@ -22,10 +14,7 @@ export const makeShouldMatchEmotionSnapshotWithPortal = (
   const { console } = globalThis
   globalThis.console = { ...console, error: vi.fn() }
 
-  const { asFragment, unmount } = render(
-    <CacheProvider value={emotionCache}>{children}</CacheProvider>,
-    { wrapper },
-  )
+  const { asFragment, unmount } = render(children, { wrapper })
   expect(asFragment()).toMatchSnapshot()
 
   // Unmounting to don't see the warning message described above

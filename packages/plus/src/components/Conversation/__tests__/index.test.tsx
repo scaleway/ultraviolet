@@ -1,10 +1,10 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { Conversation } from '..'
 
 describe('conversation', () => {
   it('should work with Default', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Conversation>
         <Conversation.Date>2022-03-02</Conversation.Date>
         <Conversation.Message align="left" avatar={<div>Hello</div>}>

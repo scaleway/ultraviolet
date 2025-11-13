@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { UnitInput } from '..'
 
@@ -20,7 +20,7 @@ const options = [
 ]
 describe('unitInput', () => {
   test(`renders with default props`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         name="test"
         onChange={() => {}}
@@ -30,7 +30,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with min max`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         max={100}
         min={10}
@@ -40,7 +40,7 @@ describe('unitInput', () => {
       />,
     ))
   test(`renders with size small`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         name="test"
         onChange={() => {}}
@@ -51,7 +51,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with size medioum`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         name="test"
         onChange={() => {}}
@@ -78,7 +78,7 @@ describe('unitInput', () => {
   })
 
   test(`renders with size large`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         name="test"
         onChange={() => {}}
@@ -89,7 +89,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with disabled and placeHolder`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         disabled
         name="test"
@@ -101,7 +101,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with dropdownAlign center`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         dropdownAlign="center"
         name="test"
@@ -113,7 +113,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with success`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         helper="text"
         name="test"
@@ -126,7 +126,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with error`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         error="error"
         helper="test"
@@ -138,7 +138,7 @@ describe('unitInput', () => {
       />,
     ))
   test(`renders with error  and success`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         error
         helper="helper"
@@ -207,7 +207,7 @@ describe('unitInput', () => {
   })
 
   test(`renders with label and no label information`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         disabled
         label="label"
@@ -219,7 +219,7 @@ describe('unitInput', () => {
       />,
     ))
   test(`renders with label and label information`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         disabled
         label="label"
@@ -232,7 +232,7 @@ describe('unitInput', () => {
       />,
     ))
   test(`renders with no label and label information`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         disabled
         labelInformation="label information"
@@ -245,7 +245,7 @@ describe('unitInput', () => {
     ))
 
   test(`renders with default value`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <UnitInput
         disabled
         labelInformation="label information"

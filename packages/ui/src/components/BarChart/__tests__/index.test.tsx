@@ -1,6 +1,6 @@
 import * as nivo from '@nivo/core'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { beforeAll, describe, test, vi } from 'vitest'
 import { BarChart } from '..'
@@ -20,13 +20,13 @@ describe('barChart', () => {
   })
 
   test('renders correctly without data', () =>
-    shouldMatchEmotionSnapshot(<BarChart />))
+    shouldMatchSnapshot(<BarChart />))
 
   test('renders correctly with data', () =>
-    shouldMatchEmotionSnapshot(<BarChart data={barChartSimpleData} />))
+    shouldMatchSnapshot(<BarChart data={barChartSimpleData} />))
 
   test('renders correctly with data transformer', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <BarChart
         axisFormatters={{
           bottom: value => value.toString(),
@@ -36,12 +36,10 @@ describe('barChart', () => {
     ))
 
   test('renders correctly with multiple series', () =>
-    shouldMatchEmotionSnapshot(<BarChart data={barChartMultiData} />))
+    shouldMatchSnapshot(<BarChart data={barChartMultiData} />))
 
   test('renders correctly with negative values', () =>
-    shouldMatchEmotionSnapshot(
-      <BarChart data={barChartPositiveNegativeData} />,
-    ))
+    shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
 
   test.skip('renders correctly with custom tooltip format', async () => {
     const { container } = renderWithTheme(

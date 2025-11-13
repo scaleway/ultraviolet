@@ -1,13 +1,13 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
 import { SteppedListCard } from '..'
 
 describe('steppedListCard', () => {
   it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
         hideText="hide button"
@@ -34,7 +34,7 @@ describe('steppedListCard', () => {
     ))
 
   it('should hide the toggle button', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
         showToggleOption={false}
@@ -58,7 +58,7 @@ describe('steppedListCard', () => {
     ))
 
   it('should work with custom hide action', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard
         header="Header"
         onClickHide={() => console.log('test')}
@@ -260,7 +260,7 @@ describe('steppedListCard', () => {
   })
 
   it('should work with pre-completed step', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard header={<h1>Header</h1>} steps={['step1', 'step2']}>
         <SteppedListCard.Step
           image={<img alt="blockStorage" src={blockStorageWire} width={200} />}

@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleDarkTheme } from '@ultraviolet/themes'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Banner } from '..'
 
@@ -9,24 +9,24 @@ import { Banner } from '..'
 
 describe('banner', () => {
   test('renders correctly with default values', () =>
-    shouldMatchEmotionSnapshot(<Banner title="Title">Description</Banner>))
+    shouldMatchSnapshot(<Banner title="Title">Description</Banner>))
 
   // test.skip('renders correctly with an image', () =>
-  //   shouldMatchEmotionSnapshot(
+  //   shouldMatchSnapshot(
   //     <Banner title="Title" image={<img src={image} alt="" />}>
   //       Description
   //     </Banner>,
   //   ))
 
   test('renders correctly with a button', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Banner buttonText="Button" title="Title">
         Description
       </Banner>,
     ))
 
   test('renders correctly with a link', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Banner linkText="Link" title="Title">
         Description
       </Banner>,
@@ -36,7 +36,7 @@ describe('banner', () => {
     ;(['medium', 'small'] as const).map(size =>
       (['intro', 'promotional'] as const).forEach(variant => {
         test(`renders correctly with size ${size} and variant ${variant}`, () =>
-          shouldMatchEmotionSnapshot(
+          shouldMatchSnapshot(
             <Banner size={size} title="Title" variant={variant}>
               Description
             </Banner>,
@@ -46,14 +46,14 @@ describe('banner', () => {
   })
 
   test('renders correctly with direction row', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Banner direction="row" title="Title">
         Description
       </Banner>,
     ))
 
   test('renders correctly with closable to false', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Banner closable={false} direction="row" title="Title">
         Description
       </Banner>,
@@ -78,7 +78,7 @@ describe('banner', () => {
   })
 
   test(`should render correctly with dark theme`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Banner linkText="Learn more" title="Title">
         Descritpion
       </Banner>,

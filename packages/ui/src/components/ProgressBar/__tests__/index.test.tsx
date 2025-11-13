@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { ProgressBar } from '..'
 import { PROGRESS_BAR_SENTIMENTS } from '../constants'
@@ -6,22 +6,19 @@ import { PROGRESS_BAR_SENTIMENTS } from '../constants'
 describe('progressBar', () => {
   PROGRESS_BAR_SENTIMENTS.forEach(sentiment => {
     it(`renders ${sentiment}`, () =>
-      shouldMatchEmotionSnapshot(
-        <ProgressBar sentiment={sentiment} value={40} />,
-      ))
+      shouldMatchSnapshot(<ProgressBar sentiment={sentiment} value={40} />))
   })
 
-  it(`renders progression`, () =>
-    shouldMatchEmotionSnapshot(<ProgressBar progress />))
+  it(`renders progression`, () => shouldMatchSnapshot(<ProgressBar progress />))
 
   it(`renders correctly when value > 100`, () =>
-    shouldMatchEmotionSnapshot(<ProgressBar value={250} />))
+    shouldMatchSnapshot(<ProgressBar value={250} />))
 
   it(`renders correctly when value < 0`, () =>
-    shouldMatchEmotionSnapshot(<ProgressBar value={-250} />))
+    shouldMatchSnapshot(<ProgressBar value={-250} />))
 
   it(`renders correctly with label, labelDescription and showProgress, direction column`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar
         label="Label"
         labelDescription="Label"
@@ -31,7 +28,7 @@ describe('progressBar', () => {
     ))
 
   it(`renders correctly with label, labelDescription and showProgress, direction row`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar
         direction="row"
         label="Label"
@@ -42,7 +39,7 @@ describe('progressBar', () => {
     ))
 
   it(`renders correctly with label, labelDescription as ReactNode, direction row`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar
         direction="row"
         label="Label"
@@ -52,7 +49,7 @@ describe('progressBar', () => {
     ))
 
   it(`renders correctly with label, labelDescription as ReactNode, direction column`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar
         direction="column"
         label="Label"
@@ -62,22 +59,22 @@ describe('progressBar', () => {
     ))
 
   it(`renders correctly with only showProgress, direction row`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar direction="row" showProgress value={40} />,
     ))
 
   it(`renders correctly with only showProgress, direction column`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar direction="column" showProgress value={40} />,
     ))
 
   it(`renders correctly with only label, direction column`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar direction="column" label="label" value={40} />,
     ))
 
   it(`renders correctly with suffix and prefix, direction column`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar
         direction="column"
         label="label"
@@ -89,7 +86,7 @@ describe('progressBar', () => {
     ))
 
   it(`renders correctly with suffix and prefix, direction row`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar
         direction="row"
         label="label"
@@ -101,7 +98,7 @@ describe('progressBar', () => {
     ))
 
   it(`renders correctly with max`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ProgressBar direction="row" label="label" max={10} value={4} />,
     ))
 })

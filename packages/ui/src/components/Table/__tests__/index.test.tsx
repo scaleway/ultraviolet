@@ -1,7 +1,7 @@
-import { ThemeProvider } from '@emotion/react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { ThemeProvider } from '@ultraviolet/themes'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
@@ -73,7 +73,7 @@ describe('table', () => {
   })
 
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Table columns={columns}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -90,7 +90,7 @@ describe('table', () => {
     ))
 
   test('should render correctly with loading', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Table columns={columns} loading>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -303,7 +303,7 @@ describe('table', () => {
   })
 
   test('should render correctly with selectDisabled as a string', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Table columns={columns}>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -320,7 +320,7 @@ describe('table', () => {
     ))
 
   test('should render correctly with stipped', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Table bordered columns={columns} stripped>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -337,7 +337,7 @@ describe('table', () => {
     ))
 
   test('should render correctly with info', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Table
         bordered
         columns={[
@@ -361,7 +361,7 @@ describe('table', () => {
     ))
 
   test('should render correctly with highlight animation on Table.Row', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Table
         columns={[
           { info: 'This column is important', label: 'Name' },

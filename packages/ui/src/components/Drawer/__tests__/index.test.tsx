@@ -1,10 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Drawer } from '..'
 
@@ -18,21 +15,21 @@ describe('drawer', () => {
   })
 
   test(`renders with default Props`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer disclosure={<button type="button">Test</button>} header="header">
         <div>test</div>
       </Drawer>,
     ))
 
   test(`renders without disclosure`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer disclosure={undefined} header="header">
         <div>test</div>
       </Drawer>,
     ))
 
   test(`renders without separator`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer disclosure={undefined} header="header" separator={false}>
         <div>test</div>
       </Drawer>,
@@ -56,14 +53,14 @@ describe('drawer', () => {
   })
 
   test(`renders with default Props and function children open`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer header="header" open>
         {() => <div>test</div>}
       </Drawer>,
     ))
 
   test(`renders with open={true}`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer header="header" open>
         <div>test</div>
       </Drawer>,
@@ -117,14 +114,14 @@ describe('drawer', () => {
   })
 
   test(`renders with custom classNames`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer className="test" header="header" open>
         <div>test</div>
       </Drawer>,
     ))
 
   test(`renders with disclosure`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
         disclosure={<button type="button">Test</button>}
@@ -312,7 +309,7 @@ describe('drawer', () => {
   })
 
   test(`with footer`, () => {
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}
@@ -330,7 +327,7 @@ describe('drawer', () => {
   })
 
   test(`custom header`, () => {
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
         disclosure={<button type="button">Open</button>}

@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
 import { Snippet } from '../index'
 
@@ -17,44 +17,44 @@ const TEST_VALUE_SINGLELINE =
 
 describe('snippet', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_SINGLELINE}</Snippet>))
+    shouldMatchSnapshot(<Snippet>{TEST_VALUE_SINGLELINE}</Snippet>))
 
   test('renders correctly in multiline ', () =>
-    shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>))
+    shouldMatchSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>))
 
   test('renders correctly in multiline with prefix lines number', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet prefix="lines">{TEST_VALUE_MULTILINE}</Snippet>,
     ))
 
   test('renders correctly in multiline with prefix command', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet prefix="command">{TEST_VALUE_MULTILINE}</Snippet>,
     ))
 
   test('renders correctly with single line with prefix command', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet prefix="command">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
   test('renders correctly with single line with prefix lines number', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet prefix="lines">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
   test('renders correctly with copyText', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet copyText="Test">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
   test('renders correctly with copiedText', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet copiedText="Test">{TEST_VALUE_SINGLELINE}</Snippet>,
     )
   })
 
   test('renders correctly with hideText', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Snippet hideText="Test">{TEST_VALUE_MULTILINE}</Snippet>,
     )
   })

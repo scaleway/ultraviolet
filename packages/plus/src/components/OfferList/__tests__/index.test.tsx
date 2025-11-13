@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { OfferList } from '..'
 import { columns, data } from './resources'
 
 describe('offerList', () => {
   it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OfferList columns={columns}>
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
@@ -20,7 +20,7 @@ describe('offerList', () => {
     ))
 
   it('should work with sentiment', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OfferList columns={columns}>
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
@@ -33,7 +33,7 @@ describe('offerList', () => {
     ))
 
   it('should work with banner', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
@@ -55,7 +55,7 @@ describe('offerList', () => {
     ))
 
   it('should work with banner open', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
@@ -76,7 +76,7 @@ describe('offerList', () => {
     ))
 
   it('should work with badge', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OfferList columns={columns} expandable>
         {data.map(planet => (
           <OfferList.Row
@@ -95,7 +95,7 @@ describe('offerList', () => {
     ))
 
   it('should work loading', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <OfferList columns={columns} loading>
         {data.map(planet => (
           <OfferList.Row id={planet.id} key={planet.id} offerName={planet.id}>
@@ -200,7 +200,7 @@ describe('offerList', () => {
 
   it('should throw an error when using OfferList.Row outside OfferList', () => {
     expect(() =>
-      shouldMatchEmotionSnapshot(
+      shouldMatchSnapshot(
         <OfferList.Row id="cell" offerName="cell">
           <OfferList.Cell>a cell</OfferList.Cell>
         </OfferList.Row>,

@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Carousel } from '..'
 
 describe('carousel', () => {
   test(`renders correctly with default props`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Carousel>
         <Carousel.Item>Item 1</Carousel.Item>
         <Carousel.Item>Item 2</Carousel.Item>

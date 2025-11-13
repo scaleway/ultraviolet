@@ -1,12 +1,12 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TextInput } from '..'
 
 describe('textInput', () => {
   test('should render correctly with basic props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextInput label="Test" onChange={() => {}} value="test" />,
     ))
 
@@ -48,17 +48,17 @@ describe('textInput', () => {
   })
 
   test('should render correctly when input is disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextInput disabled label="Test" onChange={() => {}} value="test" />,
     ))
 
   test('should render correctly when input is readOnly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextInput label="Test" onChange={() => {}} readOnly value="test" />,
     ))
 
   test('should render correctly when input has a success sentiment', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextInput
         label="Test"
         onChange={() => {}}
@@ -68,7 +68,7 @@ describe('textInput', () => {
     ))
 
   test('should render correctly when input  has a error sentiment', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TextInput
         error="success"
         label="Test"

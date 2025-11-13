@@ -1,5 +1,5 @@
-import type { useTheme } from '@emotion/react'
 import type { Theme as NivoTheme } from '@nivo/core'
+import type { useTheme } from '@ultraviolet/themes'
 
 // be aware that this theme is applied on all chart using nivo library, please check any changes you make here on all charts
 export const getNivoTheme = (theme: ReturnType<typeof useTheme>) =>
