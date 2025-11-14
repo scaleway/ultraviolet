@@ -46,7 +46,7 @@ export const Menu = forwardRef(
       children,
       disclosure,
       hasArrow = false,
-      placement = 'bottom',
+      placement = 'auto-bottom',
       className,
       'data-testid': dataTestId,
       maxHeight,
@@ -56,7 +56,7 @@ export const Menu = forwardRef(
       align,
       searchable = false,
       footer,
-      noShrink = false,
+      shrink,
       style,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
@@ -198,7 +198,7 @@ export const Menu = forwardRef(
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
               } else {
-                listItem[listItem.length - 1].focus()
+                listItem.at(-1)?.focus()
               }
             } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
               disclosureRef.current?.focus()
@@ -210,7 +210,7 @@ export const Menu = forwardRef(
     }
 
     useEffect(() => {
-      if (disclosureRef.current && placement === 'bottom' && !noShrink) {
+      if (disclosureRef.current && placement === 'bottom' && shrink) {
         const disclosureRect = disclosureRef.current.getBoundingClientRect()
         const disclosureBottom = disclosureRect.bottom
         const targetSize = portalTarget.getBoundingClientRect().bottom
@@ -218,7 +218,7 @@ export const Menu = forwardRef(
           targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
         setPopupMaxHeight(`${availableSpace}px`)
       }
-    }, [isVisible, portalTarget, disclosureRef, placement, noShrink])
+    }, [isVisible, portalTarget, disclosureRef, placement, shrink])
 
     return (
       <Popup

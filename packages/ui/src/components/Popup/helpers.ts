@@ -1,12 +1,16 @@
 import type { RefObject } from 'react'
 
-export type PopupPlacement =
-  | 'top'
-  | 'right'
-  | 'bottom'
-  | 'left'
+type AutoPlacements =
   | 'auto'
-  | 'nested-menu'
+  | 'auto-bottom'
+  | 'auto-left'
+  | 'auto-right'
+  | 'auto-top'
+
+type NonAutoPlacements = 'top' | 'right' | 'bottom' | 'left' | 'nested-menu'
+
+export type PopupPlacement = AutoPlacements | NonAutoPlacements
+
 export type PopupAlign = 'start' | 'center'
 export const DEFAULT_ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
@@ -28,6 +32,23 @@ type ComputePlacementTypes = {
   offsetParentRect: DOMRect
   offsetParent: Element
   isNestedMenu?: boolean
+  autoPlacement?: AutoPlacements
+}
+// Depending on the auto-placement preferences, change the placements hierarchy
+
+const getOrderOfPlacement = (autoPlacement: AutoPlacements) => {
+  if (autoPlacement === 'auto-bottom') {
+    return ['bottom', 'top', 'left', 'right'] as const
+  }
+  if (autoPlacement === 'auto-left') {
+    return ['left', 'right', 'top', 'bottom'] as const
+  }
+
+  if (autoPlacement === 'auto-right') {
+    return ['right', 'left', 'top', 'bottom'] as const
+  }
+
+  return ['top', 'bottom', 'left', 'right'] as const
 }
 
 /**
@@ -40,6 +61,7 @@ const computePlacement = ({
   offsetParent,
   popupPortalTarget,
   isNestedMenu,
+  autoPlacement,
 }: ComputePlacementTypes) => {
   const {
     top: childrenTop,
@@ -47,6 +69,8 @@ const computePlacement = ({
     right: childrenRight,
     width: childrenWidth,
   } = childrenStructuredRef
+
+  const orderOfPlacement = getOrderOfPlacement(autoPlacement ?? 'auto')
 
   const { top: parentTop, left: parentLeft } = offsetParentRect
 
@@ -76,24 +100,31 @@ const computePlacement = ({
     return 'right'
   }
 
-  if (overloadedChildrenTop - popupHeight - TOTAL_USED_SPACE < 0) {
-    return 'bottom'
+  const conditionsOfPlacement = {
+    bottom:
+      window.innerHeight - overloadedChildrenTop - TOTAL_USED_SPACE >=
+      popupHeight,
+    left: overloadedChildrenLeft - TOTAL_USED_SPACE >= popupWidth,
+    right:
+      window.innerWidth - overloadedChildrenLeft - TOTAL_USED_SPACE >=
+      popupWidth,
+    top: overloadedChildrenTop - popupHeight - TOTAL_USED_SPACE >= 0,
   }
 
-  if (overloadedChildrenLeft - popupWidth - TOTAL_USED_SPACE < 0) {
-    return 'right'
+  if (conditionsOfPlacement[orderOfPlacement[0]]) {
+    return orderOfPlacement[0]
   }
 
-  if (
-    overloadedChildrenRight + popupWidth + TOTAL_USED_SPACE >
-    window.innerWidth
-  ) {
-    return 'left'
+  if (conditionsOfPlacement[orderOfPlacement[1]]) {
+    return orderOfPlacement[1]
   }
 
-  return 'top'
+  if (conditionsOfPlacement[orderOfPlacement[2]]) {
+    return orderOfPlacement[2]
+  }
+
+  return orderOfPlacement[3]
 }
-
 /**
  * This function will check if the offset parent is usable for popup positioning
  * If not it will loop and search for a compatible parent until document.body is reached
@@ -135,7 +166,7 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
  * @param popupStructuredRef the rect of the popup, the popup itself
  */
 const getPopupOverflowFromParent = (
-  position: 'top' | 'right' | 'bottom' | 'left' | 'nested-menu',
+  position: NonAutoPlacements,
   offsetParentRect: { top: number; left: number; right: number },
   childrenRect: DOMRect,
   popupStructuredRef: DOMRect,
@@ -244,16 +275,16 @@ export const computePositions = ({
     popupRef.current as HTMLDivElement
   ).getBoundingClientRect()
 
-  const placementBasedOnWindowSize =
-    placement === 'auto'
-      ? computePlacement({
-          childrenStructuredRef: childrenRect,
-          offsetParent,
-          offsetParentRect,
-          popupPortalTarget,
-          popupStructuredRef,
-        })
-      : placement
+  const placementBasedOnWindowSize = placement.startsWith('auto')
+    ? computePlacement({
+        autoPlacement: placement as AutoPlacements,
+        childrenStructuredRef: childrenRect,
+        offsetParent,
+        offsetParentRect,
+        popupPortalTarget,
+        popupStructuredRef,
+      })
+    : placement
 
   const {
     top: childrenTop,
@@ -288,7 +319,7 @@ export const computePositions = ({
     : childrenLeft - parentLeft + childrenWidth
 
   const popupOverflow = getPopupOverflowFromParent(
-    placementBasedOnWindowSize,
+    placementBasedOnWindowSize as NonAutoPlacements,
     offsetParentRect,
     childrenRect,
     popupStructuredRef,
