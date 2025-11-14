@@ -6,6 +6,7 @@ import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { useCallback, useMemo } from 'react'
 import { getDataColors } from '../../helpers/treeMap'
+import { Text } from '../Text'
 import { treeMapContentWrapper } from './styles.css'
 import { Tooltip } from './Tooltip'
 import type { DataType } from './types'
@@ -74,7 +75,9 @@ export const TreeMapChart = ({
             width: node.width - spacing,
           }}
         >
-          {node.data.content}
+          <Text as="div" oneLine variant="captionStrong">
+            {node.data.content}
+          </Text>
         </div>
       )
     },

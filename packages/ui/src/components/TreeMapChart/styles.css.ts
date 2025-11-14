@@ -12,16 +12,7 @@ export const treeMapTooltipContainer = style({
 
 export const treeMapContentWrapper = style({
   color: theme.colors.neutral.background,
-  fontFamily: theme.typography.captionStronger.fontFamily,
-  fontSize: theme.typography.captionStronger.fontSize,
-  fontWeight: theme.typography.captionStronger.fontWeight,
-  letterSpacing: theme.typography.captionStronger.letterSpacing,
-  lineHeight: theme.typography.captionStronger.lineHeight,
-  overflow: 'hidden',
   padding: theme.space[1],
-  textDecoration: theme.typography.captionStronger.textDecoration,
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
   borderRadius: theme.space[1],
   position: 'absolute',
 })
