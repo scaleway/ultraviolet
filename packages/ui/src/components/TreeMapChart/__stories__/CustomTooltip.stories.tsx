@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react-vite'
 import { TreeMapChart } from '..'
 import { treeMapChartSimpleData } from './mockData'
 
-export const Tooltip: StoryFn<typeof TreeMapChart> = props => (
+export const CustomTooltip: StoryFn<typeof TreeMapChart> = props => (
   <TreeMapChart
     {...props}
     data={treeMapChartSimpleData}
@@ -14,7 +14,7 @@ export const Tooltip: StoryFn<typeof TreeMapChart> = props => (
   />
 )
 
-Tooltip.parameters = {
+CustomTooltip.parameters = {
   docs: {
     description: {
       story: 'Use `tooltipFunction` to customize the tooltip.',

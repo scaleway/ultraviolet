@@ -11,6 +11,6 @@ export default {
 } as Meta<typeof TreeMapChart>
 
 export { Playground } from './Playground.stories'
-export { Tooltip } from './Tooltip.stories'
+export { CustomTooltip } from './CustomTooltip.stories'
 export { ColorsGenerator } from './ColorsGenerator.stories'
 export { CustomContent } from './CustomContent.stories'
