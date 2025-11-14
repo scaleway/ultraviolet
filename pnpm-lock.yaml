@@ -748,6 +748,9 @@ importers:
       '@nivo/scales':
         specifier: 0.89.0
         version: 0.89.0
+      '@nivo/treemap':
+        specifier: 0.89.1
+        version: 0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@scaleway/fuzzy-search':
         specifier: 1.0.0
         version: 1.0.0
@@ -2551,6 +2554,11 @@ packages:
     peerDependencies:
       react: '>= 16.14.0 < 20.0.0'
 
+  '@nivo/treemap@0.89.1':
+    resolution: {integrity: sha512-uwHMHDmYwpMoiNhXTj+e3iJgoAQ2ywz9THRZ6XFjkOvEG3TgNFAmfVtkebedu1dD4bNa0RQc4f76o92pUxUTAw==}
+    peerDependencies:
+      react: '>= 16.14.0 < 20.0.0'
+
   '@nivo/voronoi@0.89.1':
     resolution: {integrity: sha512-y2FuGh4Dk9WFbzK5eMaoYR/MORxJlLVu+DAFQ9RGTv23hO5y3jc6mXJEKUF7kG4BtaaU/cb7s8G34eh1iI/CbA==}
     peerDependencies:
@@ -3135,6 +3143,9 @@ packages:
 
   '@types/d3-format@1.4.5':
     resolution: {integrity: sha512-mLxrC1MSWupOSncXN/HOlWUAAIffAEBaI4+PKy2uMPsKe4FNZlk7qrbTjmzJXITQQqBHivaks4Td18azgqnotA==}
+
+  '@types/d3-hierarchy@1.1.11':
+    resolution: {integrity: sha512-lnQiU7jV+Gyk9oQYk0GGYccuexmQPTp08E0+4BidgFdiJivjEvf+esPSdZqCZ2C7UwTWejWpqetVaU8A+eX3FA==}
 
   '@types/d3-path@3.1.1':
     resolution: {integrity: sha512-VMZBYyQvbGmWyWVea0EHs/BwLgxc+MKi1zLDCONksozI4YJMcTt8ZEuIR4Sb1MMTE8MMW49v0IwI5+b7RmfWlg==}
@@ -4448,6 +4459,9 @@ packages:
   d3-format@3.1.0:
     resolution: {integrity: sha512-YyUI6AEuY/Wpt8KWLgZHsIU86atmikuoOmCfommt0LYHiQSPjvX2AcFc38PX0CBpr2RCyZhjex+NS/LPOv6YqA==}
     engines: {node: '>=12'}
+
+  d3-hierarchy@1.1.9:
+    resolution: {integrity: sha512-j8tPxlqh1srJHAtxfvOUwKNYJkQuBFdM1+JAUfq6xqH5eAqf93L7oG1NVqDa4CpFZNvnNKtCYEUC8KY9yEn9lQ==}
 
   d3-interpolate@3.0.1:
     resolution: {integrity: sha512-3bYs1rOD33uo8aqJfKP3JWPAibgw8Zm2+L9vBKEHJ2Rg+viTR7o5Mmv5mZcieN+FRYaAOWX5SJATX6k1PWz72g==}
@@ -10599,6 +10613,19 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
+  '@nivo/treemap@0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@nivo/colors': 0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@nivo/core': 0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@nivo/tooltip': 0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@react-spring/web': 9.7.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@types/d3-hierarchy': 1.1.11
+      d3-hierarchy: 1.1.9
+      lodash: 4.17.21
+      react: 19.2.0
+    transitivePeerDependencies:
+      - react-dom
+
   '@nivo/voronoi@0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@nivo/core': 0.89.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -11213,6 +11240,8 @@ snapshots:
   '@types/d3-delaunay@6.0.4': {}
 
   '@types/d3-format@1.4.5': {}
+
+  '@types/d3-hierarchy@1.1.11': {}
 
   '@types/d3-path@3.1.1': {}
 
@@ -12811,6 +12840,8 @@ snapshots:
   d3-format@1.4.5: {}
 
   d3-format@3.1.0: {}
+
+  d3-hierarchy@1.1.9: {}
 
   d3-interpolate@3.0.1:
     dependencies:
