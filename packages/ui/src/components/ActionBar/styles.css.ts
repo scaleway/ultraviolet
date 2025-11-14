@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { fadeInVanillaExtract } from '../../utils'
+import { fadeIn } from '../../utils'
 import { createVar, style } from '@vanilla-extract/css'
 
 export const rankActionBar = createVar()
@@ -10,7 +10,7 @@ export const stackActionBar = style({
 })
 
 export const actionBar = style({
-  animation: `${fadeInVanillaExtract} 0.2s ease-in-out`,
+  animation: `${fadeIn} 0.2s ease-in-out`,
   backgroundColor: theme.colors.other.elevation.background.fixed,
   borderRadius: theme.radii.default,
   boxShadow: `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`,
