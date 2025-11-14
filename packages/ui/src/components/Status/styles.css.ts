@@ -1,6 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
-import { pingVanillaExtract } from '../../utils'
+import { ping } from '../../utils'
 import { SENTIMENTS } from './constant'
 
 const HEIGHT = '10px'
@@ -39,7 +39,7 @@ export const animatedCircleStatus = recipe({
     ...baseCircle,
     position: 'absolute',
     opacity: 0.75,
-    animation: `${pingVanillaExtract} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite`,
+    animation: `${ping} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite`,
   },
   variants: {
     sentiment: sentimentsCircleStatus,

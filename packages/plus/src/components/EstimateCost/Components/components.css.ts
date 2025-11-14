@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { zoomInVanillaExtract } from '@ultraviolet/ui'
+import { zoomIn } from '@ultraviolet/ui'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
@@ -40,7 +40,7 @@ export const estimateCostItemResourceName = recipe({
   variants: {
     animated: {
       true: {
-        animation: `800ms ${zoomInVanillaExtract}`,
+        animation: `800ms ${zoomIn}`,
       },
     },
   },
@@ -66,7 +66,7 @@ export const estimateCostResourceName = recipe({
     },
     isAnimated: {
       true: {
-        animation: `${zoomInVanillaExtract} 800ms`,
+        animation: `${zoomIn} 800ms`,
       },
     },
   },
