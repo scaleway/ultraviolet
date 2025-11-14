@@ -8,132 +8,80 @@ exports[`treeMapChart > renders complex content with React components 1`] = `
     <div
       style="height: 537px;"
     >
-      <svg
+      <div
         data-testid="treemap-mock"
-        height="500"
-        width="1000"
+        style="position: relative; height: 500px; width: 1000px;"
       >
-        <g
+        <div
           data-testid="node-compute"
         >
-          <g
-            transform="translate(0, 0)"
+          <div
+            class="styles__1pnrimq1"
+            style="background-color: rgba(100, 28, 179, 0.99); height: 96px; left: 2px; top: 2px; width: 96px;"
           >
-            <rect
-              class="styles__1pnrimq2"
-              fill="#641cb3FC"
-              height="100"
-              rx="0.5rem"
-              ry="0.5rem"
-              width="100"
-            />
-            <foreignobject
-              class="styles__1pnrimq3"
-              height="100"
-              width="100"
+            <div
+              class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
             >
-              <div
-                class="styles__1pnrimq1"
+              <p
+                class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
-                <div
-                  class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
-                >
-                  <p
-                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  >
-                    Compute
-                  </p>
-                  <p
-                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  >
-                    10 kgco2
-                  </p>
-                </div>
-              </div>
-            </foreignobject>
-          </g>
-        </g>
-        <g
+                Compute
+              </p>
+              <p
+                class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              >
+                10 kgco2
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
           data-testid="node-network"
         >
-          <g
-            transform="translate(100, 0)"
+          <div
+            class="styles__1pnrimq1"
+            style="background-color: rgba(100, 28, 179, 0.89); height: 96px; left: 102px; top: 2px; width: 96px;"
           >
-            <rect
-              class="styles__1pnrimq2"
-              fill="#641cb3E3"
-              height="100"
-              rx="0.5rem"
-              ry="0.5rem"
-              width="100"
-            />
-            <foreignobject
-              class="styles__1pnrimq3"
-              height="100"
-              width="100"
+            <div
+              class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
             >
-              <div
-                class="styles__1pnrimq1"
+              <p
+                class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
-                <div
-                  class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
-                >
-                  <p
-                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  >
-                    Network
-                  </p>
-                  <p
-                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  >
-                    10 kgco2
-                  </p>
-                </div>
-              </div>
-            </foreignobject>
-          </g>
-        </g>
-        <g
+                Network
+              </p>
+              <p
+                class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              >
+                10 kgco2
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
           data-testid="node-ai"
         >
-          <g
-            transform="translate(200, 0)"
+          <div
+            class="styles__1pnrimq1"
+            style="background-color: rgba(100, 28, 179, 0.79); height: 96px; left: 202px; top: 2px; width: 96px;"
           >
-            <rect
-              class="styles__1pnrimq2"
-              fill="#641cb3C9"
-              height="100"
-              rx="0.5rem"
-              ry="0.5rem"
-              width="100"
-            />
-            <foreignobject
-              class="styles__1pnrimq3"
-              height="100"
-              width="100"
+            <div
+              class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
             >
-              <div
-                class="styles__1pnrimq1"
+              <p
+                class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
               >
-                <div
-                  class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
-                >
-                  <p
-                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  >
-                    AI
-                  </p>
-                  <p
-                    class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
-                  >
-                    10 kgco2
-                  </p>
-                </div>
-              </div>
-            </foreignobject>
-          </g>
-        </g>
-      </svg>
+                AI
+              </p>
+              <p
+                class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              >
+                10 kgco2
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -147,93 +95,41 @@ exports[`treeMapChart > renders correctly with data 1`] = `
     <div
       style="height: 537px;"
     >
-      <svg
+      <div
         data-testid="treemap-mock"
-        height="500"
-        width="1000"
+        style="position: relative; height: 500px; width: 1000px;"
       >
-        <g
+        <div
           data-testid="node-compute"
         >
-          <g
-            transform="translate(0, 0)"
+          <div
+            class="styles__1pnrimq1"
+            style="background-color: rgba(100, 28, 179, 0.99); height: 96px; left: 2px; top: 2px; width: 96px;"
           >
-            <rect
-              class="styles__1pnrimq2"
-              fill="#641cb3FC"
-              height="100"
-              rx="0.5rem"
-              ry="0.5rem"
-              width="100"
-            />
-            <foreignobject
-              class="styles__1pnrimq3"
-              height="100"
-              width="100"
-            >
-              <div
-                class="styles__1pnrimq1"
-              >
-                Compute
-              </div>
-            </foreignobject>
-          </g>
-        </g>
-        <g
+            Compute
+          </div>
+        </div>
+        <div
           data-testid="node-network"
         >
-          <g
-            transform="translate(100, 0)"
+          <div
+            class="styles__1pnrimq1"
+            style="background-color: rgba(100, 28, 179, 0.89); height: 96px; left: 102px; top: 2px; width: 96px;"
           >
-            <rect
-              class="styles__1pnrimq2"
-              fill="#641cb3E3"
-              height="100"
-              rx="0.5rem"
-              ry="0.5rem"
-              width="100"
-            />
-            <foreignobject
-              class="styles__1pnrimq3"
-              height="100"
-              width="100"
-            >
-              <div
-                class="styles__1pnrimq1"
-              >
-                Network
-              </div>
-            </foreignobject>
-          </g>
-        </g>
-        <g
+            Network
+          </div>
+        </div>
+        <div
           data-testid="node-ai"
         >
-          <g
-            transform="translate(200, 0)"
+          <div
+            class="styles__1pnrimq1"
+            style="background-color: rgba(100, 28, 179, 0.79); height: 96px; left: 202px; top: 2px; width: 96px;"
           >
-            <rect
-              class="styles__1pnrimq2"
-              fill="#641cb3C9"
-              height="100"
-              rx="0.5rem"
-              ry="0.5rem"
-              width="100"
-            />
-            <foreignobject
-              class="styles__1pnrimq3"
-              height="100"
-              width="100"
-            >
-              <div
-                class="styles__1pnrimq1"
-              >
-                AI
-              </div>
-            </foreignobject>
-          </g>
-        </g>
-      </svg>
+            AI
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>

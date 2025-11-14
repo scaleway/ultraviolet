@@ -23,38 +23,35 @@ type MockedNodeType = {
   y: number
 }
 
-type MockedResponsiveTreeMapType = {
+type MockedResponsiveTreeMapHtmlType = {
   data: DataType
-  colors: Record<string, string> | ((props: { data: DataType }) => string)
   nodeComponent?: (props: { node: unknown }) => ReactNode
   tooltip?: (props: { node: unknown }) => ReactNode
 }
 
-// ResponsiveTreeMap is mocked because Nivo's SVG rendering doesn't produce an output
-// in jsdom. The actual component relies on DOM measurements and complex SVG calculations
+// ResponsiveTreeMapHtml is mocked because Nivo's HTML rendering doesn't produce an output
+// in jsdom. The actual component relies on DOM measurements and complex calculations
 // that don't work properly in tests.
 // This mock renders a simplified but predictable structure that represents the data
 // accurately for snapshot testing
 vi.mock('@nivo/treemap', () => ({
-  ResponsiveTreeMap: ({
+  ResponsiveTreeMapHtml: ({
     data,
-    colors,
     nodeComponent,
     tooltip,
-  }: MockedResponsiveTreeMapType) => {
+  }: MockedResponsiveTreeMapHtmlType) => {
     const [hoveredNode, setHoveredNode] = useState<MockedNodeType | null>(null)
 
     return (
       <>
-        <svg data-testid="treemap-mock" height="500" width="1000">
+        <div
+          data-testid="treemap-mock"
+          style={{ height: '500px', position: 'relative', width: '1000px' }}
+        >
           {/* eslint-disable-next-line testing-library/no-node-access */}
           {data.children?.map((child: DataType, index: number) => {
-            const color =
-              typeof colors === 'function'
-                ? colors({ data: child })
-                : colors[child.id]
             const mockNode = {
-              color,
+              color: '#641cb3',
               data: child,
               height: 100,
               onMouseEnter: () => setHoveredNode(mockNode),
@@ -66,16 +63,12 @@ vi.mock('@nivo/treemap', () => ({
             }
 
             return (
-              <g data-testid={`node-${child.id}`} key={child.id}>
-                {nodeComponent ? (
-                  nodeComponent({ node: mockNode })
-                ) : (
-                  <rect fill={color} height="100" width="100" />
-                )}
-              </g>
+              <div data-testid={`node-${child.id}`} key={child.id}>
+                {nodeComponent?.({ node: mockNode })}
+              </div>
             )
           })}
-        </svg>
+        </div>
         {/* Render tooltip when a node is hovered */}
         {hoveredNode && tooltip?.({ node: hoveredNode })}
       </>
@@ -127,13 +120,13 @@ describe('treeMapChart', () => {
       consoleLightTheme,
     )
 
-    // Find the first rect element (treemap node)
+    // Find the first node element (treemap node)
     // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
-    const rect = container.querySelector('rect')
-    expect(rect).toBeInTheDocument()
+    const node = container.querySelector('[data-testid^="node-"] > div')
+    expect(node).toBeInTheDocument()
 
     // Hover over the node to trigger tooltip
-    await userEvent.hover(rect!)
+    await userEvent.hover(node!)
 
     // Verify tooltip function was called
     expect(tooltipFunction).toHaveBeenCalled()

@@ -1,16 +1,12 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import type { NodeProps, TooltipProps, TreeMapSvgProps } from '@nivo/treemap'
-import { ResponsiveTreeMap } from '@nivo/treemap'
+import { ResponsiveTreeMapHtml } from '@nivo/treemap'
+import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { useCallback, useMemo } from 'react'
 import { getDataColors } from '../../helpers/treeMap'
-import {
-  treeMapContentWrapper,
-  treeMapForeignObject,
-  treeMapRect,
-} from './styles.css'
+import { treeMapContentWrapper } from './styles.css'
 import { Tooltip } from './Tooltip'
 import type { DataType } from './types'
 
@@ -58,40 +54,37 @@ export const TreeMapChart = ({
     [tooltipFunction],
   )
 
-  // Custom node renderer to have rounded corners
+  // Custom node renderer
   const nodeComponent = useCallback(
-    ({ node }: NodeComponentProps) => (
-      <g transform={`translate(${node.x}, ${node.y})`}>
-        {/* Rounded rectangle for the node background */}
-        <rect
-          className={treeMapRect}
-          fill={node.color}
-          height={node.height}
+    ({ node }: NodeComponentProps) => {
+      const backgroundColor = colors[node.data.id] || DEFAULT_COLOR
+      const spacing = 4 // spacing in pixels between boxes
+
+      return (
+        <div
+          className={treeMapContentWrapper}
           onMouseEnter={node.onMouseEnter}
           onMouseLeave={node.onMouseLeave}
           onMouseMove={node.onMouseMove}
-          rx={theme.space[1]}
-          ry={theme.space[1]}
-          width={node.width}
-        />
-        {/* foreignObject allows rendering HTML/React content inside SVG */}
-        <foreignObject
-          className={treeMapForeignObject}
-          height={node.height}
-          width={node.width}
+          style={{
+            backgroundColor,
+            height: node.height - spacing,
+            left: node.x + spacing / 2,
+            top: node.y + spacing / 2,
+            width: node.width - spacing,
+          }}
         >
-          <div className={treeMapContentWrapper}>{node.data.content}</div>
-        </foreignObject>
-      </g>
-    ),
-    [theme.space],
+          {node.data.content}
+        </div>
+      )
+    },
+    [colors, DEFAULT_COLOR],
   )
 
   return (
     <div className={className} data-testid={dataTestId} style={{ height }}>
-      <ResponsiveTreeMap
+      <ResponsiveTreeMapHtml
         animate={false}
-        colors={node => colors[node.data.id] || DEFAULT_COLOR}
         data={data}
         enableParentLabel={false}
         identity="id"

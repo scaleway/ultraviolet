@@ -3,11 +3,11 @@ import { style } from '@vanilla-extract/css'
 
 export const treeMapTooltipContainer = style({
   display: 'flex',
+  flexDirection: 'column',
   background: theme.colors.neutral.backgroundWeakElevated,
   borderRadius: theme.radii.small,
   boxShadow: theme.shadows.tooltip,
   padding: `${theme.space[1]} ${theme.space[2]}`,
-  alignItems: 'center',
 })
 
 export const treeMapContentWrapper = style({
@@ -22,13 +22,6 @@ export const treeMapContentWrapper = style({
   textDecoration: theme.typography.captionStronger.textDecoration,
   textOverflow: 'ellipsis',
   whiteSpace: 'nowrap',
-})
-
-export const treeMapRect = style({
-  stroke: theme.colors.neutral.background,
-  strokeWidth: 3,
-})
-
-export const treeMapForeignObject = style({
-  pointerEvents: 'none', // prevents blocking mouse events on the rect
+  borderRadius: theme.space[1],
+  position: 'absolute',
 })

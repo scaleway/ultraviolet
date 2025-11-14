@@ -15,7 +15,12 @@ export const Tooltip = ({
 }: TooltipProps) => (
   <div className={treeMapTooltipContainer} data-testid={dataTestId}>
     <Text as="p" sentiment="primary" variant="bodyStronger">
-      {content} {value || null}
+      {content}
     </Text>
+    {value ? (
+      <Text as="p" sentiment="primary" variant="bodyStronger">
+        {value}
+      </Text>
+    ) : null}
   </div>
 )
