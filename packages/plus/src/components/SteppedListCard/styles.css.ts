@@ -44,3 +44,7 @@ export const steppedListCardStepTitle = style({
 export const steppedListCardStep = style({
   alignItems: 'center',
 })
+
+export const hideButton = style({
+  width: 'fit-content',
+})

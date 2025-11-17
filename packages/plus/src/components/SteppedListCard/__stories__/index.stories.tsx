@@ -8,4 +8,6 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { OnClickHide } from './OnClickHide.stories'
+export { IconStep } from './IconStep.stories'
+export { NextStep } from './NextStep.stories'
 export { WithoutToggleButton } from './WithoutToggleButton.stories'

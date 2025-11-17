@@ -12,7 +12,7 @@ import {
 
 type SteppedListContentProps = {
   subHeader?: ReactNode
-  children: ((nextStep: (completed: boolean) => void) => ReactNode) | ReactNode
+  children: ((nextStep: (completed?: boolean) => void) => ReactNode) | ReactNode
   image?: ReactNode
   stepNumber: number
   completed?: boolean
@@ -58,7 +58,7 @@ export const SteppedListContent = ({
           )}
         </div>
         {typeof children === 'function'
-          ? children((completedArg: boolean) =>
+          ? children((completedArg?: boolean) =>
               nextStep({
                 completed: completedArg,
                 done,
