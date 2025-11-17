@@ -1,7 +1,7 @@
 'use client'
 
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { Popup } from '../../Popup'
 import { POPUP_WIDTH } from '../constants'
 import { dateinputPopup } from './styles.css'
@@ -38,7 +38,7 @@ export const CalendarPopup = ({
 }: PopupProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.addEventListener('mousedown', event =>
       handleClickOutside(event, ref, setVisible, refInput),
     )

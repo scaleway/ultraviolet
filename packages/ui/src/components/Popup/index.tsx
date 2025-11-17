@@ -17,6 +17,7 @@ import {
   useEffect,
   useId,
   useImperativeHandle,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -64,6 +65,8 @@ const stopClickPropagation: MouseEventHandler = event => {
   event.nativeEvent.stopImmediatePropagation()
 }
 
+type PopupRole = 'dialog' | 'tooltip' | 'popup' | string
+
 type PopupProps = {
   /**
    * Id is automatically generated if not set. It is used for associating popup wrapper with popup portal.
@@ -106,7 +109,7 @@ type PopupProps = {
    */
   visible?: boolean
   innerRef?: Ref<HTMLDivElement | null>
-  role?: string
+  role?: PopupRole
   'data-testid'?: string
   hasArrow?: boolean
   onClose?: () => void
@@ -139,6 +142,38 @@ type PopupProps = {
    */
   dynamicDomRendering?: boolean
   style?: CSSProperties
+}
+
+const getPopupPortalTarget = ({
+  node,
+  role,
+  portalTarget,
+}: {
+  node: HTMLElement | null
+  role: PopupRole
+  portalTarget?: HTMLElement
+}) => {
+  if (portalTarget) {
+    return portalTarget
+  }
+
+  if (role === 'dialog') {
+    if (node) {
+      return node
+    }
+    if (isClientSide) {
+      return document.body
+    }
+
+    return null
+  }
+
+  // We check if window exists for SSR
+  if (typeof window !== 'undefined') {
+    return document.body
+  }
+
+  return null
 }
 
 /**
@@ -182,30 +217,11 @@ export const Popup = forwardRef(
     useImperativeHandle(ref, () => innerPopupRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
-    const popupPortalTarget = useMemo(() => {
-      if (portalTarget) {
-        return portalTarget
-      }
-
-      if (role === 'dialog') {
-        if (childrenRef.current) {
-          return childrenRef.current
-        }
-        if (isClientSide) {
-          return document.body
-        }
-
-        return null
-      }
-
-      // We check if window exists for SSR
-      if (typeof window !== 'undefined') {
-        return document.body
-      }
-
-      return null
-      // oxlint-disable react/exhaustive-deps
-    }, [portalTarget, role, childrenRef.current])
+    const popupPortalTarget = getPopupPortalTarget({
+      node: childrenRef.current,
+      portalTarget,
+      role,
+    })
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
@@ -227,19 +243,19 @@ export const Popup = forwardRef(
     )
 
     const generatePopupPositions = useCallback(() => {
-      if (childrenRef.current && innerPopupRef.current) {
+      if (childrenRef.current && innerPopupRef.current && popupPortalTarget) {
         setPositions(
           computePositions({
             align,
             childrenRef,
             hasArrow,
             placement,
-            popupPortalTarget: popupPortalTarget as HTMLElement,
+            popupPortalTarget,
             popupRef: innerPopupRef,
           }),
         )
       }
-    }, [hasArrow, placement, popupPortalTarget, align, children])
+    }, [hasArrow, placement, align, popupPortalTarget])
 
     /**
      * This function is called when we need to recompute positions of popup due to window scroll or resize.
@@ -346,11 +362,33 @@ export const Popup = forwardRef(
       [closePopup, debounceDelay, visible],
     )
 
+    useLayoutEffect(() => {
+      const currentRef = childrenRef.current
+      const mutationObserver = new MutationObserver(() => {
+        generatePopupPositions()
+      })
+      const resizeObserver = new ResizeObserver(() => {
+        generatePopupPositions()
+      })
+
+      if (currentRef) {
+        resizeObserver.observe(currentRef)
+        mutationObserver.observe(currentRef, { characterData: true })
+      }
+
+      return () => {
+        if (currentRef) {
+          resizeObserver.unobserve(currentRef)
+          mutationObserver.disconnect()
+        }
+      }
+    }, [visibleInDom, generatePopupPositions])
+
     /**
      * Once popup is visible in the dom we can compute positions, then set it visible on screen and add event to
      * recompute positions on scroll or screen resize.
      */
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (visibleInDom) {
         generatePopupPositions()
 
@@ -379,12 +417,11 @@ export const Popup = forwardRef(
     ])
 
     // This will be triggered when positions are computed and popup is visible in the dom.
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (visibleInDom && innerPopupRef.current) {
         innerPopupRef.current.style.opacity = '1'
       }
-      // oxlint-disable react/exhaustive-deps
-    }, [positions])
+    }, [visibleInDom, positions])
 
     /**
      * If popup has `visible` prop it means the popup is manually controlled through this prop.

@@ -2,17 +2,20 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import type {
+  ChangeEvent,
   ComponentProps,
   Dispatch,
   KeyboardEvent,
+  MouseEvent,
   ReactNode,
   RefObject,
   SetStateAction,
 } from 'react'
 import {
+  use,
   useCallback,
-  useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -219,13 +222,26 @@ const CreateDropdown = ({
     )
   }
 
-  const handleClick = (clickedOption: OptionType, group?: string) => {
+  const handleClick = ({
+    clickedOption,
+    group,
+    event,
+  }: {
+    clickedOption: OptionType
+    group?: string
+    event:
+      | MouseEvent<HTMLDivElement>
+      | KeyboardEvent<HTMLDivElement>
+      | ChangeEvent<HTMLDivElement>
+  }) => {
+    event.stopPropagation()
+
     setSelectedData({ clickedOption, group, type: 'selectOption' })
     if (multiselect) {
       if (selectedData.selectedValues.includes(clickedOption.value)) {
         onChange?.(
           selectedData.selectedValues.filter(
-            val => val !== clickedOption.value,
+            value => value !== clickedOption.value,
           ),
         )
       } else {
@@ -420,16 +436,25 @@ const CreateDropdown = ({
                     data-testid={`option-${option.value}`}
                     id={`option-${indexOption}`}
                     key={option.value}
-                    onClick={() => {
+                    onClick={event => {
                       if (!option.disabled) {
-                        handleClick(option, group)
+                        handleClick({
+                          clickedOption: option,
+                          event,
+                          group,
+                        })
                       }
                     }}
-                    onKeyDown={event =>
-                      [' ', 'Enter'].includes(event.key)
-                        ? handleClick(option, group)
-                        : null
-                    }
+                    onKeyDown={event => {
+                      const shouldClick = [' ', 'Enter'].includes(event.key)
+                      if (shouldClick) {
+                        handleClick({
+                          clickedOption: option,
+                          event,
+                          group,
+                        })
+                      }
+                    }}
                     ref={
                       option.value === defaultSearchValue ||
                       option.searchText === defaultSearchValue
@@ -447,9 +472,13 @@ const CreateDropdown = ({
                         }
                         className={dropdownCheckbox}
                         disabled={option.disabled}
-                        onChange={() => {
+                        onChange={event => {
                           if (!option.disabled) {
-                            handleClick(option, group)
+                            handleClick({
+                              clickedOption: option,
+                              event,
+                              group,
+                            })
                           }
                         }}
                         tabIndex={-1}
@@ -548,14 +577,23 @@ const CreateDropdown = ({
               data-testid={`option-${option.value}`}
               id={`option-${index}`}
               key={option.value}
-              onClick={() => {
+              onClick={event => {
                 if (!option.disabled) {
-                  handleClick(option)
+                  handleClick({
+                    clickedOption: option,
+                    event,
+                  })
                 }
               }}
-              onKeyDown={event =>
-                [' ', 'Enter'].includes(event.key) ? handleClick(option) : null
-              }
+              onKeyDown={event => {
+                const shouldClick = [' ', 'Enter'].includes(event.key)
+                if (shouldClick) {
+                  handleClick({
+                    clickedOption: option,
+                    event,
+                  })
+                }
+              }}
               ref={
                 option.value === defaultSearchValue ||
                 option.searchText === defaultSearchValue
@@ -573,9 +611,12 @@ const CreateDropdown = ({
                   }
                   className={dropdownCheckbox}
                   disabled={option.disabled}
-                  onChange={() => {
+                  onChange={event => {
                     if (!option.disabled) {
-                      handleClick(option)
+                      handleClick({
+                        clickedOption: option,
+                        event,
+                      })
                     }
                   }}
                   tabIndex={-1}
@@ -637,9 +678,9 @@ export const Dropdown = ({
   const [maxWidth, setWidth] = useState<string | number>(
     refSelect.current?.offsetWidth ?? '100%',
   )
-  const modalContext = useContext(ModalContext)
+  const modalContext = use(ModalContext)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (refSelect.current && isDropdownVisible) {
       const position =
         refSelect.current.getBoundingClientRect().bottom +
@@ -647,14 +688,21 @@ export const Dropdown = ({
         Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
         Number.parseInt(theme.space['5'], 10)
       const overflow = position - window.innerHeight + 32
+
       if (overflow > 0 && modalContext) {
         const currentModal = modalContext.openedModals[0]
         const modalElement = currentModal?.ref.current
 
         if (modalElement) {
-          const parentElement = modalElement.parentNode as HTMLElement
-          if (parentElement) {
+          const parentElement = modalElement.parentNode
+
+          if (parentElement instanceof HTMLElement) {
             parentElement.scrollBy({
+              behavior: 'smooth',
+              top: overflow,
+            })
+          } else {
+            modalElement.scrollBy({
               behavior: 'smooth',
               top: overflow,
             })
@@ -664,8 +712,7 @@ export const Dropdown = ({
         }
       }
     }
-    // oxlint-disable react/exhaustive-deps
-  }, [isDropdownVisible, refSelect, size, ref.current])
+  }, [isDropdownVisible, refSelect, size, modalContext, theme])
 
   const resizeDropdown = useCallback(() => {
     if (
@@ -696,33 +743,24 @@ export const Dropdown = ({
       setSearch('')
     }
 
-    if (!searchable) {
-      document.addEventListener('keydown', event =>
-        handleKeyDown(
-          event,
-          ref,
-          options,
-          searchBarActive,
-          setSearch,
-          setDefaultSearch,
-          search,
-        ),
+    const eventKeydown = (event: globalThis.KeyboardEvent) =>
+      handleKeyDown(
+        event,
+        ref,
+        options,
+        searchBarActive,
+        setSearch,
+        setDefaultSearch,
+        search,
       )
+
+    if (!searchable) {
+      document.addEventListener('keydown', eventKeydown)
     }
 
     return () => {
       if (!searchable) {
-        document.removeEventListener('keydown', event =>
-          handleKeyDown(
-            event,
-            ref,
-            options,
-            searchBarActive,
-            setSearch,
-            setDefaultSearch,
-            search,
-          ),
-        )
+        document.removeEventListener('keydown', eventKeydown)
       }
     }
   }, [
