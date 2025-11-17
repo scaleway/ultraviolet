@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import { useTheme } from '@ultraviolet/themes'
 import { Stack, Tabs } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
@@ -8,21 +7,7 @@ import {
   dracula,
   oneLight,
 } from 'react-syntax-highlighter/dist/esm/styles/prism'
-
-const StyledStack = styled(Stack)`
-  background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-
-  span {
-    background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  }
-
-  .react-syntax-highlighter-line-number {
-    font-style: normal !important;
-  }
-
-  padding: ${({ theme }) => `${theme.space['2']} ${theme.space['3']}`};
-  border-radius: ${({ theme }) => theme.radii.default};
-`
+import styles from '../../styles/component.module.scss'
 
 type CopyBoxProps = {
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
@@ -37,7 +22,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
   const [tab, setTab] = useState(0)
 
   return (
-    <StyledStack gap={2}>
+    <Stack className={styles.copyBox} gap={2}>
       {flatChild.length > 1 ? (
         <Tabs
           onChange={value => {
@@ -55,7 +40,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
         </Tabs>
       ) : null}
       {flatChild[tab]}
-    </StyledStack>
+    </Stack>
   )
 }
 

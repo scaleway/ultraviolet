@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
-import { Breakpoint, down, Stack, Text } from '@ultraviolet/ui'
+import { Breakpoint, Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
+import styles from '../../../styles/advanced.module.scss'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
 import swCustom from '../../assets/icons/icon-scaleway-custom.svg'
 import swDx from '../../assets/icons/icon-scaleway-dx.svg'
@@ -8,14 +8,11 @@ import introductionIllustration from '../../assets/illustrations/introduction.sv
 import Card from '../../components/Card'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
 
-const HeadingContainer = styled(Stack)`
-  ${down('medium', 'flex-direction: column;')}
-`
-
 const Introduction = () => (
   <Stack gap={6}>
-    <HeadingContainer
+    <Stack
       alignItems="center"
+      className={styles.heaingContainer}
       direction="row"
       gap={2}
       justifyContent="space-between"
@@ -38,9 +35,9 @@ const Introduction = () => (
         src={introductionIllustration}
         width={500}
       />
-    </HeadingContainer>
+    </Stack>
 
-    <HeadingContainer direction="row" gap={2} justifyContent="space-between">
+    <Stack direction="row" gap={2} justifyContent="space-between">
       <Card
         description="We follow WAI-ARIA standards for each component."
         icon={swA11y}
@@ -56,7 +53,7 @@ const Introduction = () => (
         icon={swDx}
         title="Developer XP"
       />
-    </HeadingContainer>
+    </Stack>
   </Stack>
 )
 

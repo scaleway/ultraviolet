@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--color-neutral-background-weak);
+    color: var(--color-neutral-text);
+    font-family: var(--typography-body-font-family);
+}
+
+a {
+    color: var(--color-info-text);
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: var(--color-info-text-hover);
+    text-decoration: underline;
+}
+
+* {
+    transition: all 500ms ease;
+}
+
