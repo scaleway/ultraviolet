@@ -48,7 +48,7 @@ export const desc = style({
 })
 
 export const cellText = style({
-  display: 'block',
+  display: 'inline-block',
   minWidth: 0,
   width: '100%',
 })
@@ -57,4 +57,13 @@ globalStyle(`${cellText} > *`, {
   display: 'inline-flex',
   alignItems: 'center',
   marginRight: theme.space[1],
+})
+
+export const cellTextOneLine = style({})
+
+globalStyle(`${cellTextOneLine} > *`, {
+  overflow: 'hidden',
+  display: 'inline-block',
+  textOverflow: 'ellipsis',
+  width: '100%',
 })
