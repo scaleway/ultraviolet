@@ -127,7 +127,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
               as="span"
               prominence="strong"
               sentiment="neutral"
-              variant="bodyStrong"
+              variant="bodySmallStrong"
             >
               {subCategory.title}
             </Text>
