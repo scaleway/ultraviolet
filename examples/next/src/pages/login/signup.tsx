@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import {
   DateInputField,
   Form,
@@ -11,6 +10,7 @@ import {
 import { ProfileIcon } from '@ultraviolet/icons'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
+import styles from '../../../styles/login.module.scss'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
 
 type FormValues = {
@@ -22,17 +22,6 @@ type FormValues = {
   birthdate: Date
 }
 
-const StyledSignUpContainer = styled(Stack)`
-  margin: 5vh 25vw;
-  background: ${({ theme }) => theme.colors.secondary.background};
-  padding: ${({ theme }) => theme.space['4']};
-`
-
-const StyledInput = styled(TextInputField)`
-  padding: ${({ theme }) => theme.space['1.5']}
-    ${({ theme }) => theme.space['0']};
-  width: 100%;
-`
 type AlertProps = {
   alert: string
   values: {
@@ -87,7 +76,7 @@ const SignUp = () => {
     setAlertSubmit(computedAge < 1 ? 'too young' : 'success')
   }
   return (
-    <StyledSignUpContainer>
+    <Stack className={styles.signupContainer}>
       <Form<FormValues>
         errors={mockErrors}
         methods={methods}
@@ -104,15 +93,15 @@ const SignUp = () => {
               <RadioGroupField.Radio label="Mrs" value="mrs" />
             </RadioGroupField>
             <Stack direction="row" gap={3}>
-              <StyledInput
-                className="inputs"
+              <TextInputField
+                className={`inputs ${styles.signupInput}`}
                 label="First Name"
                 name="firstname"
                 placeholder="John"
                 required
               />
-              <StyledInput
-                className="inputs"
+              <TextInputField
+                className={`inputs ${styles.signupInput}`}
                 label="Last Name"
                 name="lastname"
                 placeholder="Smith"
@@ -125,15 +114,16 @@ const SignUp = () => {
               name="birthdate"
               required
             />
-            <StyledInput
-              className="inputs"
+            <TextInputField
+              className={`inputs ${styles.signupInput}`}
               label="Email"
               name="email"
               placeholder="example@email.com"
               regex={[EMAIL_REGEX]}
               required
             />
-            <StyledInput
+            <TextInputField
+              className={`inputs ${styles.signupInput}`}
               helper="Min 8 characters"
               label="Password"
               minLength={8}
@@ -146,7 +136,7 @@ const SignUp = () => {
         </Stack>
       </Form>
       <SignUpAlert age={age} alert={alertSubmit} values={values} />
-    </StyledSignUpContainer>
+    </Stack>
   )
 }
 

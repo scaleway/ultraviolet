@@ -1,36 +1,11 @@
-import styled from '@emotion/styled'
-import { down, Text } from '@ultraviolet/ui'
-import { APP_MAX_WIDTH } from '../constants'
+import { Text } from '@ultraviolet/ui'
+import styles from '../../styles/component.module.scss'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 
-const StyledFooter = styled.footer`
-  box-shadow: 0 0 8px 2px rgba(178, 182, 195, 0.37);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: ${({ theme }) => theme.space['4']};
-`
-
-const FooterRow = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: ${({ theme }) => theme.space['4']};
-  flex: 1;
-  max-width: ${APP_MAX_WIDTH}px;
-`
-
-const DisclaimerContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.space['2']};
-  ${down('medium', 'flex-direction: row-reverse;')}
-`
-
 const Footer = () => (
-  <StyledFooter>
-    <FooterRow>
+  <footer className={styles.footer}>
+    <div className={styles.footerRow}>
       <div>
         <Text as="p" variant="body">
           Hosted in green datacenters in France
@@ -42,12 +17,12 @@ const Footer = () => (
           technologies that reduce our environmental impact.
         </Text>
       </div>
-      <DisclaimerContainer>
+      <div className={styles.disclaimerContainer}>
         <Logo />
         <GithubAndDocumentationButtons />
-      </DisclaimerContainer>
-    </FooterRow>
-  </StyledFooter>
+      </div>
+    </div>
+  </footer>
 )
 
 export default Footer

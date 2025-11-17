@@ -1,13 +1,22 @@
-import { ThemeProvider } from '@emotion/react'
-import { darkTheme as dark, extendTheme, Stack } from '@ultraviolet/ui'
+import { extendTheme, Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useCallback, useEffect, useState } from 'react'
 import Footer from '../components/Footer'
-import GlobalStyle from '../components/GlobalStyle'
 import Head from '../components/Head'
 import Header from '../components/Header'
 // oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
+import '@ultraviolet/ui/styles'
+import '@ultraviolet/themes/global'
+import {
+  consoleDarkTheme,
+  consoleLightTheme,
+  ThemeProvider,
+} from '@ultraviolet/themes'
+import '@ultraviolet/themes/dark.css'
+import '@ultraviolet/themes/light.css'
+import '@ultraviolet/themes/darker.css'
+import '../../styles/global.css'
 
 type Themes = 'light' | 'dark'
 
@@ -29,6 +38,12 @@ const COMMON_THEME_PROPS = {
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<Themes>('light')
+
+  const setThemes = (theme: Themes) => {
+    setTheme(theme)
+    document.documentElement.classList.remove('light-theme', 'dark-theme')
+    document.documentElement.classList.add(`${theme}-theme`)
+  }
   const setThemeCallBack = useCallback((localTheme: Themes) => {
     localStorage.setItem('theme', localTheme)
     setTheme(localTheme)
@@ -37,6 +52,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const localLightTheme = {
     ...extendTheme({
       ...COMMON_THEME_PROPS,
+      ...consoleLightTheme,
       colors: {
         primary: {
           text: '#4F0599',
@@ -49,7 +65,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const localDarkTheme = {
     ...extendTheme({
-      ...dark,
+      ...consoleDarkTheme,
       ...COMMON_THEME_PROPS,
     }),
     setTheme: setThemeCallBack,
@@ -77,10 +93,9 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeProvider theme={theme === 'light' ? localLightTheme : localDarkTheme}>
-      <GlobalStyle />
       <Head />
       <Stack alignItems="center" gap={4}>
-        <Header />
+        <Header setTheme={setThemes} />
         <Component
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...pageProps}

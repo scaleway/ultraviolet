@@ -4,7 +4,9 @@ import './globals.css'
 import { ThemeRegistry } from '@ultraviolet/nextjs'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
-import { GlobalStyles } from './GlobalStyles'
+import '@ultraviolet/fonts/fonts.css'
+import '@ultraviolet/ui/styles'
+import '@ultraviolet/themes/global'
 
 // oxlint-disable-next-line react/only-export-components
 export const metadata: Metadata = {
@@ -20,10 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeRegistry theme={consoleLightTheme}>
-          <GlobalStyles />
-          {children}
-        </ThemeRegistry>
+        <ThemeRegistry theme={consoleLightTheme}>{children}</ThemeRegistry>
       </body>
     </html>
   )

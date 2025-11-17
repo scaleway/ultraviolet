@@ -9,9 +9,6 @@ const nextConfig = () => {
     },
     poweredByHeader: false,
     reactStrictMode: true,
-    compiler: {
-      emotion: true,
-    },
     eslint: {
       ignoreDuringBuilds: true,
     },
