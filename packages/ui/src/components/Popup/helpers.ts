@@ -1,17 +1,18 @@
 import type { RefObject } from 'react'
 
+type Placements = 'top' | 'right' | 'bottom' | 'left' | 'nested-menu'
+
+type AddPrefixToUnion<T extends string, P extends string> = T extends string
+  ? `${P}${T}`
+  : never
+
 type AutoPlacements =
+  | AddPrefixToUnion<Exclude<Placements, 'nested-menu'>, 'auto-'>
   | 'auto'
-  | 'auto-bottom'
-  | 'auto-left'
-  | 'auto-right'
-  | 'auto-top'
 
-type NonAutoPlacements = 'top' | 'right' | 'bottom' | 'left' | 'nested-menu'
-
-export type PopupPlacement = AutoPlacements | NonAutoPlacements
-
+export type PopupPlacement = AutoPlacements | Placements
 export type PopupAlign = 'start' | 'center'
+
 export const DEFAULT_ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
 const TOTAL_USED_SPACE = 0 // in px
@@ -166,7 +167,7 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
  * @param popupStructuredRef the rect of the popup, the popup itself
  */
 const getPopupOverflowFromParent = (
-  position: NonAutoPlacements,
+  position: Placements,
   offsetParentRect: { top: number; left: number; right: number },
   childrenRect: DOMRect,
   popupStructuredRef: DOMRect,
@@ -319,7 +320,7 @@ export const computePositions = ({
     : childrenLeft - parentLeft + childrenWidth
 
   const popupOverflow = getPopupOverflowFromParent(
-    placementBasedOnWindowSize as NonAutoPlacements,
+    placementBasedOnWindowSize as Placements,
     offsetParentRect,
     childrenRect,
     popupStructuredRef,
