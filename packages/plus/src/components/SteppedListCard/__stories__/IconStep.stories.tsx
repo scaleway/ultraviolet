@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { CheckIcon } from '@ultraviolet/icons'
+import { CheckIcon, EastIcon } from '@ultraviolet/icons'
 import { WireIllustration } from '@ultraviolet/illustrations'
 import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { SteppedListCard } from '../SteppedListCard'
 
-export const Template: StoryFn<
+export const IconStep: StoryFn<
   ComponentProps<typeof SteppedListCard>
 > = props => (
   <SteppedListCard {...props}>
@@ -90,11 +90,24 @@ export const Template: StoryFn<
   </SteppedListCard>
 )
 
-Template.args = {
+IconStep.args = {
   header: 'Header',
   hideText: 'Hide',
   hideTooltipText: 'To hide the content, click on the "hide" button',
   showText: 'Show',
   showTooltipText: 'To show, click on this button',
-  steps: ['Start', 'First step', 'Second step'],
+  steps: [
+    { icon: <EastIcon />, title: 'Start' },
+    { icon: <EastIcon />, title: 'First step' },
+    { icon: <EastIcon />, title: 'Second step' },
+  ],
+}
+
+IconStep.parameters = {
+  docs: {
+    description: {
+      story:
+        'You can replace the step number with a custom icon in the bullet by passing an object of the form { title: string, icon: ReactNode } to the steps array.',
+    },
+  },
 }

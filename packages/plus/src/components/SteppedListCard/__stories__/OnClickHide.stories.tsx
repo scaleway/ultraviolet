@@ -71,7 +71,9 @@ export const OnClickHide: StoryFn<
 
 OnClickHide.args = {
   header: 'Header',
+  hideText: 'custom hide text',
   hideTooltipText: 'It will trigger "onClickHide"',
+  showText: 'custom show text',
   steps: ['Start', 'First step'],
 }
 

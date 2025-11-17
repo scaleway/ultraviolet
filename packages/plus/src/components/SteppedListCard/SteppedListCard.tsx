@@ -6,7 +6,11 @@ import { Children, useMemo, useState } from 'react'
 import { Data } from './helper'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
-import { steppedListCard, steppedListCardWrapper } from './styles.css'
+import {
+  hideButton,
+  steppedListCard,
+  steppedListCardWrapper,
+} from './styles.css'
 
 type SteppedListContainerProps = {
   /**
@@ -16,7 +20,7 @@ type SteppedListContainerProps = {
   /**
    * List of steps
    */
-  steps: string[]
+  steps: (string | { title: string; icon: ReactNode })[]
   /**
    * Define here the content of each step
    */
@@ -111,8 +115,12 @@ const SteppedListCard = ({
 
   return (
     <Data.Provider value={values}>
-      <Stack gap={3}>
-        <Row templateColumns="9fr 1fr">
+      <Stack gap={2} width="100%">
+        <Stack
+          alignItems="center"
+          direction="row"
+          justifyContent="space-between"
+        >
           {typeof header === 'string' ? (
             <Text as="h3" variant="heading">
               {header}
@@ -122,6 +130,7 @@ const SteppedListCard = ({
           )}
           {showToggleOption ? (
             <Button
+              className={hideButton}
               onClick={onClickHideButton}
               sentiment="neutral"
               size="small"
@@ -131,7 +140,7 @@ const SteppedListCard = ({
               {hidden ? showText : hideText}
             </Button>
           ) : null}
-        </Row>
+        </Stack>
         {hidden ? null : (
           <Card className={steppedListCard}>
             <Row templateColumns="1fr 3fr">
@@ -141,14 +150,22 @@ const SteppedListCard = ({
                 gap={4}
               >
                 <StepList>
-                  {steps.map((step, index) => (
-                    <SteppedList
-                      completed={done[index]}
-                      key={step}
-                      stepNumber={index + 1}
-                      stepTitle={step}
-                    />
-                  ))}
+                  {steps.map((step, index) => {
+                    const stepTitle =
+                      typeof step === 'string' ? step : step.title
+                    const stepIcon =
+                      typeof step === 'string' ? undefined : step.icon
+
+                    return (
+                      <SteppedList
+                        completed={done[index]}
+                        key={stepTitle}
+                        stepIcon={stepIcon}
+                        stepNumber={index + 1}
+                        stepTitle={stepTitle}
+                      />
+                    )
+                  })}
                 </StepList>
               </Stack>
               {children}
