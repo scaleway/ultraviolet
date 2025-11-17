@@ -1,6 +1,6 @@
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import '@ultraviolet/fonts/fonts.css'
-import '../../../packages/ui/dist/ui.css'
+import '@ultraviolet/ui/styles'
 import '@ultraviolet/themes/global'
 
 export default function Home() {
