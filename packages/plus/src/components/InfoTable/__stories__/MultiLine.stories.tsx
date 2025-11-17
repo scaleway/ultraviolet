@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
+import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { InfoTable } from '../InfoTable'
 
@@ -6,10 +7,12 @@ export const MultiLine: StoryFn<ComponentProps<typeof InfoTable>> = props => (
   <InfoTable {...props}>
     <InfoTable.Row templateColumns="repeat(2, 1fr)">
       <InfoTable.Cell title="without multiLine">
-        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
-        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
-        cell cell cell cell cell cell cell cell cell cell cell cell cell cell
-        cell cell
+        <Stack>
+          cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+          cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+          cell cell cell cell cell cell cell cell cell cell cell cell cell cell
+          cell cell
+        </Stack>
       </InfoTable.Cell>
       <InfoTable.Cell multiline title="with multiLine">
         cell cell cell cell cell cell cell cell cell cell cell cell cell cell
