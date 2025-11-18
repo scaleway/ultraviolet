@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0-beta.4
+
+### Patch Changes
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
 ## 3.0.0-beta.3
 
 ### Minor Changes

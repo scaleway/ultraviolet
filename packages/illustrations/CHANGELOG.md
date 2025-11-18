@@ -1,5 +1,18 @@
 # @ultraviolet/illustrations
 
+## 6.0.0-beta.6
+
+### Major Changes
+
+- [#5768](https://github.com/scaleway/ultraviolet/pull/5768) [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5) Thanks [@lisalupi](https://github.com/lisalupi)! - Remove `Emotion` and update READMEs.
+
+### Patch Changes
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- Updated dependencies [[`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd)]:
+  - @ultraviolet/themes@3.0.0-beta.4
+
 ## 6.0.0-beta.5
 
 ### Patch Changes
