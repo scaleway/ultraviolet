@@ -16,6 +16,7 @@ import {
   alert,
   buttonAlert,
   buttonCloseAlert,
+  smallIcon,
   textAlert,
   wrapAlert,
 } from './styles.css'
@@ -98,9 +99,10 @@ export const Alert = ({
         >
           <Icon
             aria-hidden="true"
+            className={size === 'small' ? smallIcon : ''}
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
-            size="large"
+            size={size === 'small' ? 'small' : 'large'}
           />
           <Stack
             alignItems="center"

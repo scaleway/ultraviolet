@@ -50,7 +50,6 @@ export const wrapAlert = style({
 
 export const textAlert = style({
   color: theme.colors.neutral.text,
-  paddingTop: theme.space['0.25'],
 })
 
 export const buttonAlert = styleVariants({
@@ -67,3 +66,7 @@ export const buttonCloseAlert = style({
 })
 
 export type AlertVariants = NonNullable<RecipeVariants<typeof alert>>
+
+export const smallIcon = style({
+  marginTop: theme.space['0.25'],
+})
