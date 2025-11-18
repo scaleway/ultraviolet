@@ -204,7 +204,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
             </ColumnProvider>
           ) : null}
           {expandButton ? (
-            <ColumnProvider width={theme.sizing[300]}>
+            <ColumnProvider width={theme.sizing[400]}>
               <Cell className={listNoPaddingCell}>
                 <Button
                   aria-label="expand"
