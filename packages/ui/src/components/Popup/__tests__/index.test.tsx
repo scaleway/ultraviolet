@@ -141,7 +141,17 @@ describe('popup', () => {
   })
 
   describe(`defined placement`, () => {
-    ;['top', 'left', 'right', 'bottom'].forEach(placement => {
+    ;[
+      'top',
+      'left',
+      'right',
+      'bottom',
+      'auto',
+      'auto-top',
+      'auto-bottom',
+      'auto-left',
+      'auto-right',
+    ].forEach(placement => {
       test(`should renders Popup with placement ${placement}`, async () => {
         renderWithTheme(
           <Popup
