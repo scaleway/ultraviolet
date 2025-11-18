@@ -1,5 +1,65 @@
 # Change Log
 
+## 3.0.0-beta.27
+
+### Major Changes
+
+- [#5766](https://github.com/scaleway/ultraviolet/pull/5766) [`2974892`](https://github.com/scaleway/ultraviolet/commit/2974892ab614235acdf141f1a83c9a867237cb9b) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE** Remove all emotion animation, replace with vanilla-extract animation by default.
+
+  ```js
+  import { fadeIn } from "@ultraviolet/ui"; // vanilla-extract animation
+  ```
+
+  To use animation in another context, add `Default` at the end of the animation name:
+
+  ```js
+  import { fadeInDefault } from "@ultraviolet/ui";
+  ```
+
+  This returns a string that can be used in many different places.
+
+  1. **Emotion**: create the keyframe then use it:
+
+  ```js
+  import { fadeInDefault } from "@ultraviolet/ui";
+  import { keyframes } from "@emotion/react";
+
+  const fadeInEmotion = keyframes`${fadeInDefault}`;
+  const StyledDiv = styled.div`
+    animation: ${fadeInEmotion} 1s ease infinite;
+  `;
+  ```
+
+  2. Vanilla CSS: simply add the name of the animation you want to use as a className.
+
+  ```js
+  const MyComponent = () => <div className="fadeIn">Hello World!</div>;
+  ```
+
+  To customize the animation, you must overrule the default settings:
+
+  ```js
+  const MyComponent = () => (
+    <div className="fadeIn" style={{ animationDuration: "300ms" }}>
+      Hello World!
+    </div>
+  );
+  ```
+
+### Minor Changes
+
+- [#5781](https://github.com/scaleway/ultraviolet/pull/5781) [`5747647`](https://github.com/scaleway/ultraviolet/commit/57476477b2e7888e644ac44fe31ba6f270913248) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat(ui): add TreeMap chart
+
+### Patch Changes
+
+- [#5779](https://github.com/scaleway/ultraviolet/pull/5779) [`ad4a930`](https://github.com/scaleway/ultraviolet/commit/ad4a930595722ef9e7764f1f2e2ba67948efaa06) Thanks [@lisalupi](https://github.com/lisalupi)! - `List`: update column width
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- Updated dependencies [[`c6eb5c7`](https://github.com/scaleway/ultraviolet/commit/c6eb5c7acd5b32f647306c35f9755c51e60ab33a), [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5), [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd)]:
+  - @ultraviolet/icons@5.0.0-beta.11
+  - @ultraviolet/themes@3.0.0-beta.4
+
 ## 3.0.0-beta.26
 
 ### Patch Changes
