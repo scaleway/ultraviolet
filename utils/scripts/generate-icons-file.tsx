@@ -58,7 +58,12 @@ const COMMENT_HEADER = `
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (iconName: string, svg: string, svgSmall?: string) => {
+const templateIcon = (
+  iconName: string,
+  svg: string,
+  svgSmall?: string,
+  svgDisabled?: string,
+) => {
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
@@ -85,7 +90,7 @@ const templateIcon = (iconName: string, svg: string, svgSmall?: string) => {
     ...props
   }: Omit<IconProps, 'children'>) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <Icon {...props}>${svg}</Icon>
+      <Icon {...props}>${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
   )`
   }
 
@@ -211,12 +216,17 @@ const main = async () => {
     try {
       const files = await readDirectoryRecursive(component.input)
       for (const file of files) {
-        if (file.includes('small')) {
+        if (file.includes('small') || file.includes('disabled')) {
           break
         }
 
         const smallFileName = file.replace('default', 'small')
         const smallFile = existsSync(smallFileName) ? smallFileName : file
+
+        const disabledFileName = file.replace('default', 'disabled')
+        const disabledFile = existsSync(disabledFileName)
+          ? disabledFileName
+          : file
 
         const svgContent = await readSvg(file, component.suffix)
         const generatedName = `${generateVariableName(file)}${component.suffix}`
@@ -228,10 +238,16 @@ const main = async () => {
             ? undefined
             : await readSvg(smallFile, component.suffix)
 
+        const svgContentDisabled =
+          component.name === 'Flags' && disabledFile !== file
+            ? await readSvg(disabledFile, component.suffix)
+            : undefined
+
         const generatedComponent = templateIcon(
           generatedName,
           svgContent,
           svgContentSmall,
+          svgContentDisabled,
         )
         const filePath = `${component.output}/${generatedName}.tsx`
 

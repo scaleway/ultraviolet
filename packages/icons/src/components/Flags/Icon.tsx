@@ -8,6 +8,7 @@ export type IconProps = {
   size?: keyof typeof SIZES
   className?: string
   children: ReactNode
+  disabled?: boolean
 }
 
 /**

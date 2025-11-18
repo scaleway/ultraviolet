@@ -16,4 +16,5 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Sizes } from './Sizes.stories'
+export { Disabled } from './Disabled.stories'
 export { List } from './List.stories'

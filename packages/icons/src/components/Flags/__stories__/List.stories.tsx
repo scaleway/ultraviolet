@@ -27,5 +27,6 @@ export const List: StoryFn = props => (
 )
 
 List.args = {
+  disabled: false,
   size: 'large',
 }
