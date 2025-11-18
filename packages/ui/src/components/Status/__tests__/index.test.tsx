@@ -5,8 +5,7 @@ import { SENTIMENTS } from '../constant'
 
 describe('status', () => {
   test.each(SENTIMENTS)('renders correctly with type="%s"', sentiment =>
-    shouldMatchSnapshot(<Status sentiment={sentiment} />),
-  )
+    shouldMatchSnapshot(<Status sentiment={sentiment} />))
 
   test(`render animated`, () =>
     shouldMatchSnapshot(<Status animated sentiment="success" />))
