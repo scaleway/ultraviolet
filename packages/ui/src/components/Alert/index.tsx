@@ -47,6 +47,7 @@ type AlertProps = {
    */
   disabled?: boolean
   style?: CSSProperties
+  size?: 'medium' | 'small'
 }
 
 /**
@@ -63,6 +64,7 @@ export const Alert = ({
   className,
   disabled,
   'data-testid': dataTestId,
+  size = 'medium',
   style,
 }: AlertProps) => {
   const [opened, setOpened] = useState(true)
@@ -74,7 +76,7 @@ export const Alert = ({
 
   return (
     <Stack
-      className={`${className ? `${className} ` : ''}${alert({ sentiment })}`}
+      className={`${className ? `${className} ` : ''}${alert({ sentiment, size })}`}
       data-testid={dataTestId}
       direction="row"
       gap={1}
@@ -88,7 +90,12 @@ export const Alert = ({
         justifyContent="space-between"
         wrap
       >
-        <Stack alignItems="start" direction="row" flex="1 1 auto" gap={2}>
+        <Stack
+          alignItems="start"
+          direction="row"
+          flex="1 1 auto"
+          gap={size === 'small' ? 1 : 2}
+        >
           <Icon
             aria-hidden="true"
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
@@ -96,6 +103,7 @@ export const Alert = ({
             size="large"
           />
           <Stack
+            alignItems="center"
             className={textAlert}
             direction="row"
             flex="1 1 auto"
@@ -103,12 +111,18 @@ export const Alert = ({
             wrap
           >
             {title ? (
-              <Text as="span" sentiment={sentiment} variant="bodyStronger">
+              <Text
+                as="span"
+                sentiment={sentiment}
+                variant={
+                  size === 'small' ? 'bodySmallStronger' : 'bodyStronger'
+                }
+              >
                 {title}
               </Text>
             ) : null}
             {typeof children === 'string' ? (
-              <Text as="p" variant="body">
+              <Text as="p" variant={size === 'small' ? 'bodySmall' : 'body'}>
                 {children}
               </Text>
             ) : (
@@ -118,7 +132,7 @@ export const Alert = ({
         </Stack>
         {buttonText ? (
           <Button
-            className={buttonAlert}
+            className={buttonAlert[size]}
             disabled={disabled}
             onClick={onClickButton}
             sentiment={sentiment}

@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 import type { AlertSentiment } from './type'
@@ -16,7 +16,6 @@ function createStyleAlert(sentiment: AlertSentiment) {
 export const alert = recipe({
   base: {
     borderRadius: theme.radii.default,
-    padding: theme.space[2],
   },
   variants: {
     sentiment: {
@@ -30,9 +29,18 @@ export const alert = recipe({
         borderLeft: `4px solid ${theme.colors.neutral.borderStronger}`,
       },
     },
+    size: {
+      medium: {
+        padding: theme.space[2],
+      },
+      small: {
+        padding: theme.space['1.5'],
+      },
+    },
   },
   defaultVariants: {
     sentiment: 'danger',
+    size: 'medium',
   },
 })
 
@@ -42,10 +50,16 @@ export const wrapAlert = style({
 
 export const textAlert = style({
   color: theme.colors.neutral.text,
+  paddingTop: theme.space['0.25'],
 })
 
-export const buttonAlert = style({
-  marginLeft: theme.space[5],
+export const buttonAlert = styleVariants({
+  medium: {
+    marginLeft: theme.space[5],
+  },
+  small: {
+    marginLeft: theme.space[3],
+  },
 })
 
 export const buttonCloseAlert = style({
