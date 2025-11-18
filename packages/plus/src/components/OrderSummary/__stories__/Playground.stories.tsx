@@ -28,6 +28,7 @@ Playground.parameters = {
         - \`numberInputUnit\`: unit of the number input (*string*)
         - \`numberInputControls\`: set to \`true\` to display controls for the number input (*boolean*)
         - \`onChangeInput\`: function to call when the number input changes (*function*)
+        - \`additionalInfo\`: data to add right next to the subcategory title (*ReactNode*)
 
 
 The price of the category is computed automatically. For a category without sub-category, set the price like so: \`{ category: "categoryName", subCategories: {[ price: 10, hidePrice: true ]}}\`
