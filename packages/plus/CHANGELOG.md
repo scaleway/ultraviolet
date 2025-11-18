@@ -1,5 +1,27 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.16
+
+### Major Changes
+
+- [#5768](https://github.com/scaleway/ultraviolet/pull/5768) [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5) Thanks [@lisalupi](https://github.com/lisalupi)! - Remove `Emotion` and update READMEs.
+
+### Patch Changes
+
+- [#5783](https://github.com/scaleway/ultraviolet/pull/5783) [`fa0a526`](https://github.com/scaleway/ultraviolet/commit/fa0a526367c4e6acaf6e1b327c7e0a55d82a1d12) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable`: oneLine should work correctly with Stack and Row
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- [#5780](https://github.com/scaleway/ultraviolet/pull/5780) [`dad6df1`](https://github.com/scaleway/ultraviolet/commit/dad6df17eaf56756b5d0e4bf72ceba4767a32072) Thanks [@lisalupi](https://github.com/lisalupi)! - `SteppedListCard`:
+  - possibility to have an icon instead of a step number
+  - `nextStep` will not change the step state (completed or not) if it does not receive a prop
+  - smaller bullets
+  - Update stories
+- Updated dependencies [[`c6eb5c7`](https://github.com/scaleway/ultraviolet/commit/c6eb5c7acd5b32f647306c35f9755c51e60ab33a), [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5), [`ad4a930`](https://github.com/scaleway/ultraviolet/commit/ad4a930595722ef9e7764f1f2e2ba67948efaa06), [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd), [`2974892`](https://github.com/scaleway/ultraviolet/commit/2974892ab614235acdf141f1a83c9a867237cb9b), [`5747647`](https://github.com/scaleway/ultraviolet/commit/57476477b2e7888e644ac44fe31ba6f270913248)]:
+  - @ultraviolet/icons@5.0.0-beta.11
+  - @ultraviolet/ui@3.0.0-beta.27
+  - @ultraviolet/themes@3.0.0-beta.4
+
 ## 3.0.0-beta.15
 
 ### Patch Changes
