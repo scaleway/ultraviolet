@@ -41,11 +41,14 @@ describe('alert', () => {
     ))
 
   describe(`renders correctly with all sentiments`, () => {
-    test.each(['danger', 'info', 'success', 'warning', 'neutral'] as const)(
-      `renders correctly sentiment %o`,
-      sentiment =>
-        shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>),
-    )
+    test.each([
+      'danger',
+      'info',
+      'success',
+      'warning',
+      'neutral',
+    ] as const)(`renders correctly sentiment %o`, sentiment =>
+      shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>))
   })
 
   test(`should render alert and then close it`, async () => {

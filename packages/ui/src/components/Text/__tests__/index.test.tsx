@@ -9,8 +9,7 @@ describe('text', () => {
       <Text as="div" variant={variant}>
         {variant}
       </Text>,
-    ),
-  )
+    ))
 
   test(`renders correctly with tooltip`, () =>
     shouldMatchSnapshot(
