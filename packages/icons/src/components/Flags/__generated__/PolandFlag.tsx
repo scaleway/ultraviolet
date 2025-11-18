@@ -11,20 +11,42 @@ import { Icon } from '../Icon'
 export const PolandFlag = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
-    <g>
-      <path
-        d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-        fill="#F0F0F0"
-      />
-      <path
-        d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12"
-        fill="#D80027"
-      />
-    </g>
-    <defs>
-      <clipPath>
-        <rect fill="white" />
-      </clipPath>
-    </defs>
+    {props.disabled ? (
+      <>
+        <g>
+          <path
+            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+            fill="#F0F0F0"
+          />
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12"
+            fill="#454545"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_15_2239">
+            <rect fill="white" />
+          </clipPath>
+        </defs>
+      </>
+    ) : (
+      <>
+        <g>
+          <path
+            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+            fill="#F0F0F0"
+          />
+          <path
+            d="M24 12C24 18.6274 18.6274 24 12 24C5.37262 24 0 18.6274 0 12"
+            fill="#D80027"
+          />
+        </g>
+        <defs>
+          <clipPath>
+            <rect fill="white" />
+          </clipPath>
+        </defs>
+      </>
+    )}
   </Icon>
 )
