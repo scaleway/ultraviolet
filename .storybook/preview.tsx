@@ -1,5 +1,3 @@
-import { Global, ThemeProvider } from '@emotion/react'
-import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import type { Preview, StoryFn } from '@storybook/react-vite'
 import { themes } from 'storybook/theming'
 import {
@@ -10,9 +8,9 @@ import {
 } from '@ultraviolet/themes'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import { globalStyles } from './components/globalStyle'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
+
 import { scan } from "react-scan"
 
 const BREAKPOINT_ORDER = [
@@ -166,16 +164,7 @@ const decorators = [
         </ThemeProviderUI>
       </>
     )}, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
-  withThemeFromJSXProvider({
-    themes: {
-      light: lightTheme,
-      dark: darkTheme,
-      darker: darkerTheme,
-    },
-    defaultTheme: 'light',
-    Provider: ThemeProvider,
-    GlobalStyles: () => <Global styles={[globalStyles]} />,
-  }),
+
   withThemeProvider,
 ]
 

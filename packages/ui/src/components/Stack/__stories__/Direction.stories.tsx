@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { styledDiv } from './DivWithBackground.css'
+import { child } from './styles.css'
 
 export const Direction: StoryFn = props => (
   <Stack gap={3}>
@@ -10,13 +10,13 @@ export const Direction: StoryFn = props => (
         Direction Row:
       </Text>
       <Stack {...props} direction="row" gap={1}>
-        <div className={styledDiv} data-width-full>
+        <div className={child} data-width-full>
           First child
         </div>
-        <div className={styledDiv} data-width-full>
+        <div className={child} data-width-full>
           Second child
         </div>
-        <div className={styledDiv} data-width-full>
+        <div className={child} data-width-full>
           Third child
         </div>
       </Stack>
@@ -26,9 +26,9 @@ export const Direction: StoryFn = props => (
         Direction Column:
       </Text>
       <Stack {...props} direction="column" gap={1}>
-        <div className={styledDiv}>First child</div>
-        <div className={styledDiv}>Second child</div>
-        <div className={styledDiv}>Third child</div>
+        <div className={child}>First child</div>
+        <div className={child}>Second child</div>
+        <div className={child}>Third child</div>
       </Stack>
     </Stack>
   </Stack>

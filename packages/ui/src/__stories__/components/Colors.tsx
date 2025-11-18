@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import { useTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Row } from '../../components'
 import { Card } from '../../components/Card'
 import { Separator } from '../../components/Separator'
@@ -7,37 +7,15 @@ import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
 import type lightTheme from '../../theme'
 import type { Color } from '../../theme'
+import {
+  capitalizedText,
+  card,
+  computedBackground,
+  noMarginText,
+  paddingCard,
+  separator,
+} from './styles.css'
 import ThemeWrapper from './ThemeWrapper'
-
-const StyledSeparator = styled(Separator)`
-  margin: ${({ theme }) => `${theme.space['3']} 0`};
-`
-
-const CapitalizedText = styled(Text)`
-  text-transform: capitalize;
-`
-
-const NoMarginText = styled(Text)`
-  margin: 0;
-`
-
-const StyledCard = styled(Card, {
-  shouldForwardProp: prop =>
-    !['sentiment', 'context', 'color', 'padding'].includes(prop),
-})<{
-  sentiment?: Color
-  color?: string
-  context: keyof (typeof lightTheme)['colors'][Color]
-  padding?: string
-}>`
-  align-items: center;
-  background: ${({ sentiment, context, theme, color }) =>
-    sentiment ? theme.colors[sentiment][context] : color};
-  display: flex;
-  justify-content: space-between;
-  padding: ${({ padding }) => padding ?? '8px'};
-  width: 100%;
-`
 
 type AvailableContexts = keyof (typeof lightTheme)['colors'][Color]
 
@@ -64,9 +42,13 @@ const Colors = () => {
 
         return (
           <Stack gap={1} key={sentiment}>
-            <CapitalizedText as="h3" variant="headingSmallStrong">
+            <Text
+              as="h3"
+              className={capitalizedText}
+              variant="headingSmallStrong"
+            >
               {sentiment}
-            </CapitalizedText>
+            </Text>
             <Row gap={2} templateColumns="repeat(3, 1fr)">
               <Stack direction="column" gap={2}>
                 {colorContextKeys
@@ -86,13 +68,16 @@ const Colors = () => {
                         </Text>
                       </Stack>
 
-                      <StyledCard
-                        context={context}
+                      <Card
+                        className={`${card} ${paddingCard.default}`}
                         key={context}
-                        sentiment={sentiment}
+                        style={assignInlineVars({
+                          [computedBackground]:
+                            theme.colors[sentiment][context],
+                        })}
                       >
                         {' '}
-                      </StyledCard>
+                      </Card>
                     </Stack>
                   ))}
               </Stack>
@@ -113,9 +98,15 @@ const Colors = () => {
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
-                      <StyledCard context={context} sentiment={sentiment}>
+                      <Card
+                        className={`${card} ${paddingCard.default}`}
+                        style={assignInlineVars({
+                          [computedBackground]:
+                            theme.colors[sentiment][context],
+                        })}
+                      >
                         {' '}
-                      </StyledCard>
+                      </Card>
                     </Stack>
                   ))}
               </Stack>
@@ -136,14 +127,20 @@ const Colors = () => {
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
-                      <StyledCard context={context} sentiment={sentiment}>
+                      <Card
+                        className={`${card} ${paddingCard.default}`}
+                        style={assignInlineVars({
+                          [computedBackground]:
+                            theme.colors[sentiment][context],
+                        })}
+                      >
                         {' '}
-                      </StyledCard>
+                      </Card>
                     </Stack>
                   ))}
               </Stack>
             </Row>
-            <StyledSeparator />
+            <Separator className={separator} />
           </Stack>
         )
       })}
@@ -171,9 +168,14 @@ const Colors = () => {
                     {dataColors[data]}
                   </Text>
                 </Stack>
-                <StyledCard color={dataColors[data]} context="background">
+                <Card
+                  className={`${card} ${paddingCard.default}`}
+                  style={assignInlineVars({
+                    [computedBackground]: dataColors[data],
+                  })}
+                >
                   {' '}
-                </StyledCard>
+                </Card>
               </Stack>
             ),
           )}
@@ -208,29 +210,36 @@ const Colors = () => {
                     gradientBackgroundColors[
                       type as keyof typeof gradientBackgroundColors
                     ],
-                  ).map(background => (
-                    <Stack key={background}>
-                      <Stack
-                        alignItems="center"
-                        direction="row"
-                        justifyContent="space-between"
-                      >
-                        <Text as="p" variant="body">
-                          {background}
-                        </Text>
+                  ).map(background => {
+                    // @ts-expect-error can't infer properly
+                    const gradient = gradientBackgroundColors[type][
+                      background
+                    ].replace(/;$/, '')
+
+                    return (
+                      <Stack key={background}>
+                        <Stack
+                          alignItems="center"
+                          direction="row"
+                          justifyContent="space-between"
+                        >
+                          <Text as="p" variant="body">
+                            {background}
+                          </Text>
+                        </Stack>
+                        <Card
+                          className={`${card} ${paddingCard.large}`}
+                          style={{
+                            ...assignInlineVars({
+                              [computedBackground]: gradient as string,
+                            }),
+                          }}
+                        >
+                          {' '}
+                        </Card>
                       </Stack>
-                      <StyledCard
-                        color={
-                          // @ts-expect-error can't infer properly
-                          gradientBackgroundColors[type][background]
-                        }
-                        context="background"
-                        padding="32px"
-                      >
-                        {' '}
-                      </StyledCard>
-                    </Stack>
-                  ))}
+                    )
+                  })}
                 </Row>
               </Stack>
             ))}
@@ -249,9 +258,13 @@ const Colors = () => {
                   {Object.keys(iconColors[type as keyof typeof iconColors]).map(
                     sentiment => (
                       <Stack direction="column" key={sentiment}>
-                        <NoMarginText as="h4" variant="bodyStrong">
+                        <Text
+                          as="h4"
+                          className={noMarginText}
+                          variant="bodyStrong"
+                        >
                           {sentiment}
-                        </NoMarginText>
+                        </Text>
                         <Row gap={2} templateColumns="repeat(3, 1fr)">
                           {Object.keys(
                             // @ts-expect-error can't infer properly
@@ -264,26 +277,30 @@ const Colors = () => {
                                 direction="row"
                                 justifyContent="space-between"
                               >
-                                <NoMarginText as="p" variant="body">
+                                <Text
+                                  as="p"
+                                  className={noMarginText}
+                                  variant="body"
+                                >
                                   {value}
-                                </NoMarginText>
+                                </Text>
                                 <Text as="small" variant="caption">
                                   {
                                     // @ts-expect-error can't infer properly
-
                                     iconColors[type][sentiment][value]
                                   }
                                 </Text>
                               </Stack>
-                              <StyledCard
-                                color={
-                                  // @ts-expect-error can't infer properly
-                                  iconColors[type][sentiment][value]
-                                }
-                                context="background"
+                              <Card
+                                className={`${card} ${paddingCard.default}`}
+                                style={assignInlineVars({
+                                  [computedBackground]:
+                                    // @ts-expect-error can't infer properly
+                                    iconColors[type][sentiment][value],
+                                })}
                               >
                                 {' '}
-                              </StyledCard>
+                              </Card>
                             </Stack>
                           ))}
                         </Row>

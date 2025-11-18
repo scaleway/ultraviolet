@@ -1,27 +1,21 @@
-import styled from '@emotion/styled'
 import { useState } from 'react'
 import { Snippet, Stack, Tabs, Text } from '../../../../components'
 import type { UltravioletUITheme } from '../../../../theme'
+import { snippetResult } from './styles.css'
 
 type CodeIntegrationProps = {
   theme: UltravioletUITheme
 }
 
-const StyledSnippet = styled(Snippet)`
-  pre {
-    padding: ${({ theme }) => theme.space['2']};
-  }
-`
-
 const reactCode = (theme: string) => `
-import { Global, ThemeProvider, css } from '@emotion/react'
 import { Button, normalize } from '@ultraviolet/ui'
+import { ThemeProvider } from "@ultraviolet/themes"
+import "@ultraviolet/themes/global"
 
 const THEME = ${theme}
 
 const App = () => (
   <ThemeProvider theme={THEME}>
-    <Global styles={css\`\${normalize()}\`} />
     <Button onClick={() => console.log('clicked')}>
       Click Me
     </Button>
@@ -48,9 +42,9 @@ export const CodeIntegration = ({ theme }: CodeIntegrationProps) => {
           <Tabs.Tab value={1}>JSON</Tabs.Tab>
           <Tabs.Tab value={2}>React</Tabs.Tab>
         </Tabs>
-        <StyledSnippet prefix="lines">
+        <Snippet className={snippetResult} prefix="lines">
           {tabState === 1 ? formattedTheme : reactCode(formattedTheme)}
-        </StyledSnippet>
+        </Snippet>
       </Stack>
     </Stack>
   )

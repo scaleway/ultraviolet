@@ -3,7 +3,7 @@ import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useState } from 'react'
 import { Stack } from '../../Stack'
 import { Row } from '..'
-import { DivWithBackground } from './DivWithBackground'
+import { divWithBackground } from './DivWithBackground.css'
 
 export const Responsive: StoryFn = props => {
   const [breakpoint, setBreakpoint] = useState<'xxsmall' | 'xsmall' | 'small'>(
@@ -70,9 +70,13 @@ export const Responsive: StoryFn = props => {
           const sentiments = ['primary', 'success', 'danger']
 
           return (
-            <DivWithBackground data-sentiment={sentiments[idx]} key={idx}>
+            <div
+              className={divWithBackground}
+              data-sentiment={sentiments[idx]}
+              key={idx}
+            >
               {col}
-            </DivWithBackground>
+            </div>
           )
         })}
       </Row>
@@ -93,9 +97,13 @@ export const Responsive: StoryFn = props => {
           const sentiments = ['primary', 'success', 'danger']
 
           return (
-            <DivWithBackground data-sentiment={sentiments[idx]} key={idx}>
+            <div
+              className={divWithBackground}
+              data-sentiment={sentiments[idx]}
+              key={idx}
+            >
               {col}
-            </DivWithBackground>
+            </div>
           )
         })}
       </Row>

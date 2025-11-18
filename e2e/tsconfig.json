@@ -5,7 +5,6 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
     "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": false,
@@ -14,6 +13,6 @@
     "skipLibCheck": true,
     "types": ["vite/client"]
   },
-  "include": ["global.d.ts", "emotion.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["global.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "coverage", "dist"]
 }
