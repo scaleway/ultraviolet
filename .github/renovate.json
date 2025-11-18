@@ -1,15 +1,30 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["dockerfile", "github-actions", "npm"],
-  "extends": ["config:base", ":combinePatchMinorReleases"],
-  "baseBranchPatterns": ["beta"],
-  "assignees": ["team:console"],
+  "enabledManagers": [
+    "dockerfile",
+    "github-actions",
+    "npm"
+  ],
+  "extends": [
+    "config:recommended",
+    ":combinePatchMinorReleases"
+  ],
+  "baseBranchPatterns": [
+    "beta"
+  ],
+  "assignees": [
+    "team:console"
+  ],
   "assigneesSampleSize": 1,
-  "reviewers": ["team:console"],
+  "reviewers": [
+    "team:console"
+  ],
   "reviewersSampleSize": 2,
   "prHourlyLimit": 5,
   "prConcurrentLimit": 10,
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
   "rangeStrategy": "pin",
   "semanticCommitType": "chore",
   "semanticCommitScope": "deps",
@@ -22,72 +37,124 @@
   ],
   "packageRules": [
     {
-      "matchDepTypes": ["engines", "peerDependencies"],
-      "versionStrategy": "widen"
+      "matchDepTypes": [
+        "engines",
+        "peerDependencies"
+      ],
+      "rangeStrategy": "widen"
     },
     {
-      "matchManagers": ["dockerfile", "github-actions"],
+      "matchManagers": [
+        "dockerfile",
+        "github-actions"
+      ],
       "semanticCommitScope": "devDeps"
     },
     {
       "semanticCommitScope": "devDeps",
-      "matchDepTypes": ["packageManager", "devDependencies"],
-      "matchUpdateTypes": ["major"]
+      "matchDepTypes": [
+        "packageManager",
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
       "automerge": true,
       "automergeType": "branch",
       "semanticCommitScope": "devDeps",
-      "matchDepTypes": ["packageManager", "devDependencies"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchDepTypes": [
+        "packageManager",
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     },
     {
       "automerge": false,
-      "matchPackagePatterns": ["^@scaleway/"],
-      "stabilityDays": 0,
-      "matchUpdateTypes": ["major", "minor", "patch"]
+      "minimumReleaseAge": null,
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchPackageNames": [
+        "/^@scaleway//"
+      ]
     },
     {
       "automerge": true,
-      "matchPackagePatterns": ["^@uiw/"],
       "groupName": "Code Editor",
       "groupSlug": "uiw-code-editor-react",
-      "stabilityDays": 5,
-      "matchUpdateTypes": ["minor", "patch"]
+      "minimumReleaseAge": "5 days",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchPackageNames": [
+        "/^@uiw//"
+      ]
     },
     {
       "automerge": false,
-      "matchPackagePatterns": ["^@uiw/"],
       "groupName": "Code Editor",
       "groupSlug": "uiw-code-editor-react",
-      "stabilityDays": 5,
-      "matchUpdateTypes": ["major"]
+      "minimumReleaseAge": "5 days",
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchPackageNames": [
+        "/^@uiw//"
+      ]
     },
     {
-      "matchPackagePatterns": ["^@testing-library"],
       "groupName": "Testing library",
       "groupSlug": "testing-library",
-      "matchUpdateTypes": ["major", "minor", "patch"]
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchPackageNames": [
+        "/^@testing-library/"
+      ]
     },
     {
-      "labels": ["UPDATE-MAJOR"],
-      "stabilityDays": 14,
-      "matchUpdateTypes": ["major"]
+      "labels": [
+        "UPDATE-MAJOR"
+      ],
+      "minimumReleaseAge": "14 days",
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
-      "labels": ["UPDATE-MINOR"],
-      "stabilityDays": 5,
-      "matchUpdateTypes": ["minor"],
+      "labels": [
+        "UPDATE-MINOR"
+      ],
+      "minimumReleaseAge": "5 days",
+      "matchUpdateTypes": [
+        "minor"
+      ],
       "automerge": true
     },
     {
-      "labels": ["UPDATE-PATCH"],
-      "stabilityDays": 1,
-      "matchUpdateTypes": ["patch"],
+      "labels": [
+        "UPDATE-PATCH"
+      ],
+      "minimumReleaseAge": "1 day",
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true
     },
     {
-      "matchDepTypes": ["engines"],
+      "matchDepTypes": [
+        "engines"
+      ],
       "rangeStrategy": "widen"
     }
   ]
