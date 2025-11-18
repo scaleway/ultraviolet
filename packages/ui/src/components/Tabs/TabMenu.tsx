@@ -50,8 +50,9 @@ export const TabMenu = forwardRef(
           </button>
         }
         id={id}
-        portalTarget={document.body}
-        ref={ref} // We need to attach it to the body to avoid overflow issues
+        placement="bottom"
+        portalTarget={document.body} // We need to attach it to the body to avoid overflow issues
+        ref={ref}
         visible={visible}
       >
         {children}
