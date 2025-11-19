@@ -328,8 +328,8 @@ importers:
         specifier: 9.39.1
         version: 9.39.1(jiti@2.4.2)
       eslint-plugin-react-hooks:
-        specifier: 6.1.1
-        version: 6.1.1(eslint@9.39.1(jiti@2.4.2))
+        specifier: 7.0.1
+        version: 7.0.1(eslint@9.39.1(jiti@2.4.2))
       eslint-plugin-react-refresh:
         specifier: 0.4.24
         version: 0.4.24(eslint@9.39.1(jiti@2.4.2))
@@ -4947,12 +4947,6 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react-hooks@6.1.1:
-    resolution: {integrity: sha512-St9EKZzOAQF704nt2oJvAKZHjhrpg25ClQoaAlHmPZuajFldVLqRDW4VBNAS01NzeiQF0m0qhG1ZA807K6aVaQ==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
-
   eslint-plugin-react-hooks@7.0.1:
     resolution: {integrity: sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==}
     engines: {node: '>=18'}
@@ -8287,9 +8281,6 @@ packages:
 
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
-
-  zod@3.25.28:
-    resolution: {integrity: sha512-/nt/67WYKnr5by3YS7LroZJbtcCBurDKKPBPWWzaxvVCGuG/NOsiKkrjoOhI8mJ+SQUXEbUzeB3S+6XDUEEj7Q==}
 
   zod@4.1.12:
     resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
@@ -13447,16 +13438,6 @@ snapshots:
     dependencies:
       eslint: 9.39.1(jiti@2.4.2)
 
-  eslint-plugin-react-hooks@6.1.1(eslint@9.39.1(jiti@2.4.2)):
-    dependencies:
-      '@babel/core': 7.28.4
-      '@babel/parser': 7.28.4
-      eslint: 9.39.1(jiti@2.4.2)
-      zod: 3.25.28
-      zod-validation-error: 4.0.2(zod@3.25.28)
-    transitivePeerDependencies:
-      - supports-color
-
   eslint-plugin-react-hooks@7.0.1(eslint@9.39.1(jiti@2.4.2)):
     dependencies:
       '@babel/core': 7.28.5
@@ -17295,17 +17276,11 @@ snapshots:
 
   yocto-queue@1.1.1: {}
 
-  zod-validation-error@4.0.2(zod@3.25.28):
-    dependencies:
-      zod: 3.25.28
-
   zod-validation-error@4.0.2(zod@4.1.12):
     dependencies:
       zod: 4.1.12
 
   zod@3.22.4: {}
-
-  zod@3.25.28: {}
 
   zod@4.1.12: {}
 
