@@ -7,14 +7,7 @@ export default defineConfig({
       external: ['fsevents'],
     },
   },
-  plugins: [
-    react({
-      babel: {
-        plugins: ['@emotion/babel-plugin'],
-      },
-      jsxImportSource: '@emotion/react',
-    }),
-  ],
+  plugins: [react()],
   server: {
     // Sends all requests to index.html if file not found
     fs: {

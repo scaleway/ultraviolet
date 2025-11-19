@@ -1,13 +1,8 @@
-import styled from '@emotion/styled'
 import type { ComponentType } from 'react'
 import * as components from '../../components'
 import { Stack } from '../../components/Stack'
 import { Table } from '../../components/Table'
 import { Text } from '../../components/Text'
-
-const StyledTableRow = styled(Table.Row)`
-  vertical-align: top;
-`
 
 type PropertyType = {
   defaultValue: {
@@ -233,7 +228,11 @@ const Properties = () => {
               ]
 
               return (
-                <StyledTableRow id={property} key={property}>
+                <Table.Row
+                  id={property}
+                  key={property}
+                  style={{ verticalAlign: 'top' }}
+                >
                   <Table.Cell>
                     <Text as="span" variant="bodyStrong">
                       {property}
@@ -264,7 +263,7 @@ const Properties = () => {
                       ].components.join(', ')}
                     </Text>
                   </Table.Cell>
-                </StyledTableRow>
+                </Table.Row>
               )
             },
           )}

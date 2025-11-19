@@ -1,6 +1,7 @@
-import type { Theme } from '@emotion/react'
 import type { DefaultTreeMapDatum } from '@nivo/treemap'
+import type { consoleLightTheme } from '@ultraviolet/themes'
 
+type Theme = typeof consoleLightTheme
 type ReturnType = Record<string, string>
 
 /**

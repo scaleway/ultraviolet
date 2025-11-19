@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { SelectInput as SelectInputUV } from '../../SelectInput'
@@ -6,17 +5,14 @@ import { Skeleton } from '../../Skeleton'
 import { Stack } from '../../Stack'
 import { InfiniteScroll } from '..'
 import { generateRandomNamesArray, SELECT_INPUT_DATA } from './data'
-
-const StyledStack = styled(Stack)`
-  padding: 0 ${({ theme }) => theme.space[3]};
-`
+import { infiniteScrollSelectInput } from './style.css'
 
 const InfiniteScrollLoader = (
-  <StyledStack direction="column" gap="3">
+  <Stack className={infiniteScrollSelectInput} direction="column" gap="3">
     <Skeleton variant="line" />
     <Skeleton variant="line" />
     <Skeleton variant="line" />
-  </StyledStack>
+  </Stack>
 )
 
 export const SelectInput: StoryFn<typeof InfiniteScroll> = args => {

@@ -58,14 +58,9 @@ for (const file of filesToAnalyze) {
           .replace(/\.tsx?$/, '')
 
         if (
-          ![
-            'react',
-            'react-vite',
-            'vitest',
-            'styled',
-            '@emotion/styled',
-            'components/',
-          ].some(string => normalizedFile.endsWith(string))
+          !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(
+            string => normalizedFile.endsWith(string),
+          )
         ) {
           const importedComponent = normalizedFile.split('/').toReversed()[0]
 

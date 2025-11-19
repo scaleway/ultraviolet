@@ -1,5 +1,3 @@
-/// <reference types="@emotion/react/types/css-prop" />
-
 declare module '*.svg' {
   import type { FunctionComponent, SVGProps } from 'react'
 

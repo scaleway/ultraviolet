@@ -1,6 +1,6 @@
 import { MoonIcon, SunIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
-import { Breakpoint, Toggle } from '@ultraviolet/ui'
+import { Toggle } from '@ultraviolet/ui'
 import styles from '../../styles/component.module.scss'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
@@ -15,9 +15,7 @@ const TopBar = ({ setTheme }: { setTheme: (theme: Themes) => void }) => {
       <div className={styles.headerRow}>
         <Logo />
         <div className={styles.horizontalStack}>
-          <Breakpoint up="medium">
-            <GithubAndDocumentationButtons />
-          </Breakpoint>
+          <GithubAndDocumentationButtons />
           <SunIcon size="small" />
           <Toggle
             checked={theme === 'dark'}

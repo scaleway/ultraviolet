@@ -1,4 +1,3 @@
-import { Global, ThemeProvider } from '@emotion/react'
 import type {
   DocsContainerProps as BaseContainerProps} from '@storybook/addon-docs/blocks';
 import {
@@ -8,9 +7,10 @@ import {
 import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { cloneElement, isValidElement, useState } from 'react'
-import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
 import { GlobalAlert } from '@ultraviolet/ui'
+import "../../packages/themes/dist/themes.css"
+import { globalStyleStoryBook } from './globalStyle.css';
 
 type ExtraProps = {
   /**
@@ -66,8 +66,8 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
 
   return (
     <Unstyled>
-      <ThemeProviderUV>
-        <ThemeProvider theme={lightTheme}>
+      <div className={globalStyleStoryBook}>
+        <ThemeProviderUV theme={lightTheme}>
           {isBeta ?
           <GlobalAlert
             buttonText="Access to Beta"
@@ -76,7 +76,6 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
           >
             A Beta version is available. Please use this version if your dependencies include the Beta release.
           </GlobalAlert> : null}
-          <Global styles={[globalStyles]} />
           <BaseContainer context={context}>
             {isValidElement<ExtraProps>(children)
               ? cloneElement(children, {
@@ -88,8 +87,8 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
                 })
               : children}
           </BaseContainer>
-        </ThemeProvider>
-      </ThemeProviderUV>
+        </ThemeProviderUV>
+      </div>
     </Unstyled>
   )
 }

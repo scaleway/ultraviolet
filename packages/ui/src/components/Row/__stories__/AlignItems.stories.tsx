@@ -3,7 +3,7 @@ import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Row } from '..'
-import { DivWithBackground } from './DivWithBackground'
+import { divWithBackground } from './DivWithBackground.css'
 
 export const AlignItems: StoryFn = args => (
   <Stack gap={2}>
@@ -11,27 +11,37 @@ export const AlignItems: StoryFn = args => (
       alignItems=&ldquo;start&ldquo;
     </Text>
     <Row {...args} alignItems="start" gap={1} templateColumns="repeat(3, 1fr)">
-      <DivWithBackground style={{ height: '100px' }}>1fr</DivWithBackground>
-      <DivWithBackground style={{ height: '50px' }}>1fr</DivWithBackground>
-      <DivWithBackground>1fr</DivWithBackground>
+      <div style={{ height: '100px' }}>1fr</div>
+      <div className={divWithBackground} style={{ height: '50px' }}>
+        1fr
+      </div>
+      <div className={divWithBackground}>1fr</div>
     </Row>
     <Separator />
     <Text as="p" variant="bodyStrong">
       alignItems=&ldquo;center&ldquo;
     </Text>
     <Row {...args} alignItems="center" gap={1} templateColumns="repeat(3, 1fr)">
-      <DivWithBackground style={{ height: '100px' }}>1fr</DivWithBackground>
-      <DivWithBackground style={{ height: '50px' }}>1fr</DivWithBackground>
-      <DivWithBackground>1fr</DivWithBackground>
+      <div className={divWithBackground} style={{ height: '100px' }}>
+        1fr
+      </div>
+      <div className={divWithBackground} style={{ height: '50px' }}>
+        1fr
+      </div>
+      <div className={divWithBackground}>1fr</div>
     </Row>
     <Separator />
     <Text as="p" variant="bodyStrong">
       alignItems=&ldquo;end&ldquo;
     </Text>
     <Row {...args} alignItems="end" gap={1} templateColumns="repeat(3, 1fr)">
-      <DivWithBackground style={{ height: '100px' }}>1fr</DivWithBackground>
-      <DivWithBackground style={{ height: '50px' }}>1fr</DivWithBackground>
-      <DivWithBackground>1fr</DivWithBackground>
+      <div className={divWithBackground} style={{ height: '100px' }}>
+        1fr
+      </div>
+      <div className={divWithBackground} style={{ height: '50px' }}>
+        1fr
+      </div>
+      <div className={divWithBackground}>1fr</div>
     </Row>
   </Stack>
 )

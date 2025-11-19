@@ -1,7 +1,9 @@
-import { Theme } from '@emotion/react'
 import { DefaultTreeMapDatum } from '@nivo/treemap'
+import { consoleLightTheme } from '@ultraviolet/themes'
 import { describe, expect, it } from 'vitest'
 import { getAllIds, getDataColors, getOpacity, percentToHex } from '../treeMap'
+
+type Theme = typeof consoleLightTheme
 
 describe('getOpacity', () => {
   it('should return 100 for input 0', () => {

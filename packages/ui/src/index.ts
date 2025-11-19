@@ -11,7 +11,6 @@ export {
   useTheme,
 } from './theme'
 export {
-  Breakpoint,
   bounce,
   bounceDefault,
   down,

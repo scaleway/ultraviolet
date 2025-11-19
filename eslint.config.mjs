@@ -3,7 +3,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import babelParser from '@babel/eslint-parser'
-import scwEmotion from '@scaleway/eslint-config-react/emotion'
 import scwJavascript from '@scaleway/eslint-config-react/javascript'
 import scwTypescript from '@scaleway/eslint-config-react/typescript'
 import oxlint from 'eslint-plugin-oxlint'
@@ -76,7 +75,7 @@ export default [
       },
     },
   },
-  ...[...scwJavascript, ...scwEmotion].map(config => ({
+  ...scwJavascript.map(config => ({
     ...config,
     languageOptions: {
       parser: babelParser,
@@ -98,7 +97,7 @@ export default [
       },
     },
   },
-  ...[...scwTypescript, ...scwEmotion].map(config => ({
+  ...scwTypescript.map(config => ({
     ...config,
     files: ['**/*.{ts,tsx}'],
     rules: {
