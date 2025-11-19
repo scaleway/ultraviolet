@@ -125,7 +125,7 @@ export const timeinput = recipe({
       '&[data-size="large"]': {
         fontSize: theme.typography.body.fontSize,
       },
-      '&::moz-selection, &::selection': {
+      '&::selection': {
         background: 'none',
       },
     },
