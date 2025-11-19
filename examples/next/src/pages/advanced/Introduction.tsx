@@ -1,4 +1,4 @@
-import { Breakpoint, Stack, Text } from '@ultraviolet/ui'
+import { Stack, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
 import styles from '../../../styles/advanced.module.scss'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
@@ -17,9 +17,7 @@ const Introduction = () => (
       gap={2}
       justifyContent="space-between"
     >
-      <Breakpoint down="medium">
-        <GithubAndDocumentationButtons />
-      </Breakpoint>
+      <GithubAndDocumentationButtons />
       <Stack>
         <Text as="h1" sentiment="primary" variant="headingLarge">
           Scaleway <b>UI</b>

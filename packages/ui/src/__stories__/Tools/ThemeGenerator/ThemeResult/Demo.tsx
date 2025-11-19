@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import {
@@ -27,25 +26,12 @@ import {
   Text,
   Toggle,
 } from '../../../../components'
-
-const StyledStepper = styled(Stepper)`
-  padding: 0 ${({ theme }) => theme.space['2']};
-`
-
-const StyledStepList = styled(StepList)`
-  margin: 0;
-`
-
-const StyledStack = styled(Stack)`
-  gap: 6px; // This has to be custom because we need both row to be same size and this value doesn't exists in theme
-`
-
-const Container = styled.div`
-  background: ${({ theme }) => theme.colors.neutral.background};
-  box-shadow: ${({ theme }) => theme.shadows.hoverNeutral};
-  border-radius: ${({ theme }) => theme.radii.large};
-  padding: ${({ theme }) => theme.space['4']};
-`
+import {
+  themeGeneratorContainer,
+  themeGeneratorStack,
+  themeGeneratorStepList,
+  themeGeneratorStepper,
+} from './styles.css'
 
 export const Demo = () => {
   const [tabState, setTabState] = useState<number | string>(1)
@@ -57,7 +43,7 @@ export const Demo = () => {
   const [selectableCardState, setSelectableCardState] = useState('option-1')
 
   return (
-    <Container>
+    <div className={themeGeneratorContainer}>
       <Row gap={2} templateColumns="1fr 1fr">
         <Stack gap={2}>
           <Tabs
@@ -111,11 +97,11 @@ export const Demo = () => {
               </Row>
             </Stack>
           </Card>
-          <StyledStepper selected={1}>
+          <Stepper className={themeGeneratorStepper} selected={1}>
             <span>Initialize</span>
             <span>Create</span>
             <span>Done</span>
-          </StyledStepper>
+          </Stepper>
           <Stack direction="row" gap={1}>
             <Badge sentiment="neutral">UV-UI</Badge>
             <Badge sentiment="primary">UV-CORE</Badge>
@@ -135,7 +121,7 @@ export const Demo = () => {
             />
           </Card>
           <Card>
-            <StyledStepList>
+            <StepList className={themeGeneratorStepList}>
               <StepList.Item
                 bulletContent={<CheckIcon />}
                 sentiment="success"
@@ -150,7 +136,7 @@ export const Demo = () => {
               >
                 You have 10 days of trial
               </StepList.Item>
-            </StyledStepList>
+            </StepList>
           </Card>
         </Stack>
         <Stack gap={1}>
@@ -178,14 +164,14 @@ export const Demo = () => {
               >
                 <Stack alignItems="center" direction="row" gap={2}>
                   <Avatar shape="circle" text="MA" variant="text" />
-                  <StyledStack>
+                  <Stack className={themeGeneratorStack}>
                     <Text as="span" sentiment="primary" variant="bodySmall">
                       Review from Marc - 2 days ago
                     </Text>
                     <Text as="span" variant="body">
                       Ultraviolet is the best UI library I...
                     </Text>
-                  </StyledStack>
+                  </Stack>
                 </Stack>
                 <Button sentiment="neutral" size="small" variant="ghost">
                   <ArrowRightIcon />
@@ -249,6 +235,6 @@ export const Demo = () => {
           </Stack>
         </Stack>
       </Row>
-    </Container>
+    </div>
   )
 }

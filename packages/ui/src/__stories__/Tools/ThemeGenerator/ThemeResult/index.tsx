@@ -1,18 +1,11 @@
-import { ThemeProvider } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ArrowLeftIcon, EyeIcon, EyeOffIcon } from '@ultraviolet/icons'
+import { ThemeProvider } from '@ultraviolet/themes'
 import { useCallback, useState } from 'react'
 import { Button, Row, Stack, Text } from '../../../../components'
 import type { UltravioletUITheme } from '../../../../theme'
 import consoleLightTheme from '../../../../theme'
-import { normalize } from '../../../../utils'
 import { CodeIntegration } from './CodeIntegration'
 import { Demo } from './Demo' // For some reason Global doesn't work here this is the workaround I found
-
-// For some reason Global doesn't work here this is the workaround I found
-const Container = styled.div`
-  ${normalize()}
-`
 
 type ThemeResultProps = {
   theme: UltravioletUITheme
@@ -72,9 +65,7 @@ export const ThemeResult = ({
       </Row>
       <Stack gap={4}>
         <ThemeProvider theme={theme}>
-          <Container>
-            <Demo />
-          </Container>
+          <Demo />
         </ThemeProvider>
         <CodeIntegration theme={generatedPalette} />
       </Stack>

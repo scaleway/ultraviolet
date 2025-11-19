@@ -66,7 +66,6 @@ export const Loader = ({
       />
       <circle
         className={loaderCircleAnimation}
-        // oxlint-disable-next-line no-unknown-property
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"

@@ -1,7 +1,7 @@
-import { style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { style } from '@vanilla-extract/css'
 
-export const styledDiv = style({
+export const divWithBackground = style({
   padding: theme.space[1],
   background: theme.colors.primary.background,
   color: theme.colors.primary.text,
@@ -10,9 +10,4 @@ export const styledDiv = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  selectors: {
-    '&[data-width-full="true"]': {
-      width: '100%',
-    },
-  },
 })

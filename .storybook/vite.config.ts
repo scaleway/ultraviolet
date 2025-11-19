@@ -48,10 +48,6 @@ export default defineConfig({
     svgr({ memo: true, svgo: false }),
     react({
       jsxRuntime: 'automatic',
-      jsxImportSource: '@emotion/react',
-      babel: {
-        plugins: ['@emotion/babel-plugin'],
-      },
     }),
     vanillaExtractPlugin({})
   ],

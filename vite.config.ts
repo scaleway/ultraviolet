@@ -9,7 +9,6 @@ import type { ViteUserConfig } from 'vitest/config'
 const pkg = await readPackage()
 
 const externalPkgs = [
-  '@emotion',
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.optionalDependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
@@ -69,10 +68,6 @@ export const defaultConfig: ViteUserConfig = {
   },
   plugins: [
     react({
-      babel: {
-        plugins: ['@emotion/babel-plugin'],
-      },
-      jsxImportSource: '@emotion/react',
       jsxRuntime: 'automatic',
     }),
     preserveDirectives(),

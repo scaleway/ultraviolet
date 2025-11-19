@@ -53,7 +53,8 @@
       "require": "./dist/themes/console/*/index.cjs",
       "import": "./dist/themes/console/*/index.js"
     },
-    "./global": "./dist/themes.css"
+    "./global": "./dist/themes.css",
+    "./theme.css": "./dist/themes.css"
   },
   "peerDependencies": {
     "react": "18.x || 19.x",

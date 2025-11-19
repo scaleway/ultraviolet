@@ -1,33 +1,25 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { Text } from '../index'
-
-const Container = styled.div`
-  margin-bottom: ${({ theme }) => theme.space['2']};
-  margin-top: ${({ theme }) => theme.space['1']};
-  width: 200px;
-  background: ${({ theme }) => theme.colors.info.background};
-  padding: ${({ theme }) => theme.space['1']};
-`
+import { oneLineContainer } from './style.css'
 
 export const OneLine: StoryFn<typeof Text> = args => (
   <>
     <strong>Without ellipsis</strong>
-    <Container>
+    <div className={oneLineContainer}>
       <Text {...args} as="div" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </Text>
-    </Container>
+    </div>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
-    <Container>
+    <div className={oneLineContainer}>
       <Text {...args} as="div" oneLine variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </Text>
-    </Container>
+    </div>
   </>
 )
 

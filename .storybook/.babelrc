@@ -1,14 +1,5 @@
 {
-  "plugins": [
-    [
-      "@emotion",
-      {
-        "sourceMap": false,
-        "autoLabel": "never",
-        "labelFormat": "[filename]--[local]"
-      }
-    ]
-  ],
+
   "presets": [
     "@babel/preset-typescript",
     [
@@ -18,8 +9,7 @@
     [
       "@babel/preset-react",
       {
-        "runtime": "automatic",
-        "importSource": "@emotion/react"
+        "runtime": "automatic"
       }
     ]
   ]
