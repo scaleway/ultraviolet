@@ -75,4 +75,10 @@ describe('alert', () => {
         Sample Alert
       </Alert>,
     ))
+  test('renders correctly small', () =>
+    shouldMatchSnapshot(
+      <Alert className="small" size="small" title="title">
+        Sample Alert
+      </Alert>,
+    ))
 })
