@@ -239,7 +239,7 @@ export const Popup = forwardRef(
           }),
         )
       }
-    }, [hasArrow, placement, popupPortalTarget, align])
+    }, [hasArrow, placement, popupPortalTarget, align, children])
 
     /**
      * This function is called when we need to recompute positions of popup due to window scroll or resize.
