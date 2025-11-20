@@ -3,6 +3,8 @@ import { AlertCircleOutlineIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { TextInput } from '../../TextInput'
 import { Tooltip } from '../../Tooltip'
 import { TextArea } from '..'
 
@@ -13,6 +15,16 @@ export const Examples: StoryFn<typeof TextArea> = () => {
 
   return (
     <Stack gap={2}>
+      <Text as="div" variant="body">
+        Should be the same height as a TextInput when{' '}
+        <Text as="span" variant="code">
+          rows={1}
+        </Text>
+      </Text>
+      <Stack direction="row">
+        <TextArea label="textArea" onChange={setValue} rows={1} />
+        <TextInput label="textInput" />
+      </Stack>
       <TextArea
         label="Label"
         maxLength={200}

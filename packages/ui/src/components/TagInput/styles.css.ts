@@ -48,16 +48,19 @@ export const tagInputContainer = recipe({
         padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.large]} - 1px) ${
           theme.space['2']
         }`,
+        height: theme.sizing[600],
       },
       small: {
         padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.small]} - 1px) ${
           theme.space['1']
         }`,
+        height: theme.sizing[400],
       },
       medium: {
         padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.medium]} - 1px) ${
           theme.space['2']
         }`,
+        height: theme.sizing[500],
       },
     },
   },
