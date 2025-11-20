@@ -1,5 +1,34 @@
 # Change Log
 
+## 3.0.0-beta.28
+
+### Major Changes
+
+- [#5775](https://github.com/scaleway/ultraviolet/pull/5775) [`b062bbe`](https://github.com/scaleway/ultraviolet/commit/b062bbe30e73ca43e5684aaf98b03aea57fea4c9) Thanks [@lisalupi](https://github.com/lisalupi)! - - Remove `Emotion`
+  - Removed `Breakpoint`: use directly `up` and `down`
+
+### Patch Changes
+
+- [#5791](https://github.com/scaleway/ultraviolet/pull/5791) [`b7ab0e3`](https://github.com/scaleway/ultraviolet/commit/b7ab0e3e71e5d570b57d33907e1b51ae00d32c9a) Thanks [@lisalupi](https://github.com/lisalupi)! - `Alert`: add "size" prop
+
+- [#5789](https://github.com/scaleway/ultraviolet/pull/5789) [`63a8f2a`](https://github.com/scaleway/ultraviolet/commit/63a8f2a32a804c0c6767a9a030cb95de2cee563d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Popup`: position is recomputed when children changes
+
+- [#5798](https://github.com/scaleway/ultraviolet/pull/5798) [`83455a7`](https://github.com/scaleway/ultraviolet/commit/83455a73d5c258ffd4d33e5f2050d696270bc96c) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagInput` and `TextArea`: fix size
+
+- [#5782](https://github.com/scaleway/ultraviolet/pull/5782) [`b9f0d1e`](https://github.com/scaleway/ultraviolet/commit/b9f0d1e7ad0aae0a4e7756d7d7e107a8228e9419) Thanks [@lisalupi](https://github.com/lisalupi)! - All `Popup` components (`Popover`, `Tooltip`, `Menu`): 4 new positions `auto-` to have auto-placement but give priority to a direction. For instance, `auto-bottom` will try to place the popup beneath the disclosure first, if there is not enough place it will try top, then left, then right.
+  The priorities are :
+
+  - `auto-bottom` : bottom > top > left > right
+  - `auto-left` : left > right > top > bottom
+  - `auto-right` : right > left > top > bottom
+  - `auto` and `auto-top` : top > bottom > left > right
+
+  **BREAKING CHANGE**
+  `Menu`: prop `noShrink` renamed `shrink` with opposite behavior
+
+- Updated dependencies [[`85d3468`](https://github.com/scaleway/ultraviolet/commit/85d3468dfce3a7532866cf63a017274e65661c80)]:
+  - @ultraviolet/icons@5.0.0-beta.12
+
 ## 3.0.0-beta.27
 
 ### Major Changes

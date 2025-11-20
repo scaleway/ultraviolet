@@ -1,5 +1,12 @@
 # Change Log
 
+## 5.0.0-beta.12
+
+### Patch Changes
+
+- [#5797](https://github.com/scaleway/ultraviolet/pull/5797) [`85d3468`](https://github.com/scaleway/ultraviolet/commit/85d3468dfce3a7532866cf63a017274e65661c80) Thanks [@lisalupi](https://github.com/lisalupi)! - - `Logo`: new logo `RedHatLogo`
+  - `Icon`: new icon `CloseCircleIcon`
+
 ## 5.0.0-beta.11
 
 ### Major Changes
