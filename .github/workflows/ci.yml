@@ -19,7 +19,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -35,7 +35,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -51,7 +51,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -69,7 +69,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -86,7 +86,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -104,7 +104,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -122,7 +122,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
@@ -142,7 +142,7 @@ jobs:
       matrix:
         node: ["22", "24"]
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 10
       - uses: pnpm/action-setup@v4.2.0
@@ -183,7 +183,7 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - name: publint
         uses: actions/setup-node@v6.0.0
@@ -207,7 +207,7 @@ jobs:
     outputs:
       base_url: ${{ steps.deploy.outputs.url }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v5
       - name: Export custom variables
@@ -327,7 +327,7 @@ jobs:
       CI: true
       TURBO_CACHE: "remote:rw"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.0.0
         with:
