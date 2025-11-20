@@ -38,17 +38,19 @@
   "files": {
     "includes": [
       "**",
-      "!**/.turbo/",
-      "!**/.next/",
-      "!**/coverage",
-      "!**/node_modules/",
+      "!**/coverage/*",
+      "!**/node_modules/*",
       "!**/storybook-static",
-      "!**/dist",
+      "!**/.turbo/*",
+      "!**/.next/*",
+      "!**/coverage",
+      "!**/storybook-static/*",
+      "!**/dist/*",
       "!**/pnpm-lock.yaml",
       "!**/package.json",
       "!**/CHANGELOG.md",
       "!**/*.snap",
-      "!**/__snapshots__/",
+      "!**/__snapshots__/*",
       "!**/.storybook"
     ]
   },
