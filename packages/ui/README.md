@@ -59,34 +59,6 @@ const App = () => (
 > **Note**:
 > To generate your own theme easily you can check the [theme generator](https://storybook.ultraviolet.scaleway.com/?path=/docs/tools-theme-generator--docs).
 
-### Typescript
-To allow typescript theme typings with `@emotion/styled` components,
-you'll have to define the `@emotion/react` module `Theme` interface in your project.
-
-For example, in a `emotion.d.ts` file:
-
-- Declaration to use the default Ultraviolet Themes
-
-```ts
-import '@emotion/react'
-import type { UltravioletUITheme } from '@ultraviolet/ui'
-
-declare module '@emotion/react' {
-  export interface Theme extends UltravioletUITheme {}
-}
-```
-
-- Declaration to use your custom theme
-
-```ts
-import '@emotion/react'
-import type { MyTheme } from './src/theme'
-
-declare module '@emotion/react' {
-  export interface Theme extends MyTheme {}
-}
-```
-
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
