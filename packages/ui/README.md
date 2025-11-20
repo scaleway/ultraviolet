@@ -59,6 +59,63 @@ const App = () => (
 > **Note**:
 > To generate your own theme easily you can check the [theme generator](https://storybook.ultraviolet.scaleway.com/?path=/docs/tools-theme-generator--docs).
 
+## Migration from V2 to V3
+With the migration from `@ultraviolet/ui 2.0.0` to `@ultraviolet/ui 3.0.0`, several core changes have been introduced. These changes are due to the shift in styling from `Emotion` to `vanilla-extract`.
+
+### Theme provider
+To ensure the library works correctly, you must wrap your application with the `ThemeProvider` component. Import it from `@ultraviolet/themes` or `@ultraviolet/ui` (replacing the previous `Emotion`-based provider). 
+
+If your app still uses `Emotion`, you can combine both theme providers: 
+
+```js
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+import {
+  consoleLightTheme,
+  ThemeProvider as UVThemeProvider,
+} from '@ultraviolet/ui'
+
+const App = () => (
+  <UVThemeProvider theme={consoleLightTheme}>
+    <EmotionThemeProvider theme={consoleLightTheme}>
+        {children}
+    </EmotionThemeProvider>
+  </UVThemeProvider>
+)
+```
+
+### Style
+To ensure styles are applied, import the component styles at the root of your application:
+
+```js
+import '@ultraviolet/ui/styles'
+```
+To replace `normalize()` (which was used with Emotion), you can now import a global style with the same effect:
+
+Before:
+```js
+import { Global } from '@emotion/react'
+import { normalize } from '@ultraviolet/ui'
+import { ThemeProvider } from '@emotion/react'
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+      <Global styles={css`${normalize()}`}>
+      <MyApp />
+  </ThemeProvider>
+)
+```
+After: 
+```js
+import { ThemeProvider } from "@ultraviolet/themes"
+import "@ultraviolet/themes/global"
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <MyApp />
+  </ThemeProvider>
+)
+```
+
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
