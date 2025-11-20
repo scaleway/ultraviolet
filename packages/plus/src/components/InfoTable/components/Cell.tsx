@@ -2,7 +2,7 @@
 
 import { Stack, Text } from '@ultraviolet/ui'
 import type { CSSProperties, ReactNode } from 'react'
-import { cellText, cellTextOneLine, desc, term } from '../styles.css'
+import { cellText, desc, term } from '../styles.css'
 
 type CellProps = {
   children: ReactNode
@@ -31,7 +31,7 @@ export const InfoTableCell = ({
     <dd className={desc}>
       <Text
         as="div"
-        className={`${cellText} ${!multiline ? cellTextOneLine : ''}`}
+        className={`${cellText}`}
         oneLine={!multiline}
         prominence="default"
         sentiment="neutral"
