@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.18
+
+### Patch Changes
+
+- [#5799](https://github.com/scaleway/ultraviolet/pull/5799) [`d63ca76`](https://github.com/scaleway/ultraviolet/commit/d63ca76316e49b2949be927bb86835c5611542af) Thanks [@lisalupi](https://github.com/lisalupi)! - `InfoTable`: oneLine created a visual issue
+
 ## 3.0.0-beta.17
 
 ### Patch Changes
