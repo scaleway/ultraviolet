@@ -18,6 +18,7 @@ export const textAreaClearableContainer = style({
 export const textArea = recipe({
   base: {
     width: '100%',
+    minHeight: theme.sizing[600],
     resize: 'vertical',
     background: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,

@@ -197,7 +197,10 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               aria-invalid={!!error}
               aria-label={ariaLabel}
               autoFocus={autoFocus}
-              className={textAreaStyle({ error: !!error, success: !!success })}
+              className={textAreaStyle({
+                error: !!error,
+                success: !!success,
+              })}
               data-testid={dataTestId}
               disabled={disabled}
               id={id ?? localId}
