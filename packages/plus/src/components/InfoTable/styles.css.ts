@@ -58,12 +58,3 @@ globalStyle(`${cellText} > *`, {
   alignItems: 'center',
   marginRight: theme.space[1],
 })
-
-export const cellTextOneLine = style({})
-
-globalStyle(`${cellTextOneLine} > *`, {
-  overflow: 'hidden',
-  display: 'inline-block',
-  textOverflow: 'ellipsis',
-  width: '100%',
-})
