@@ -3,10 +3,8 @@ import { Stack, Tabs } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
 import { Children, isValidElement, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import {
-  dracula,
-  oneLight,
-} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import dracula from 'react-syntax-highlighter/dist/esm/styles/prism/dracula'
+import oneLight from 'react-syntax-highlighter/dist/esm/styles/prism/one-light'
 import styles from '../../styles/component.module.scss'
 
 type CopyBoxProps = {

@@ -10,7 +10,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  transpilePackages: ['react-syntax-highlighter'],
 }
 
 export default nextConfig
