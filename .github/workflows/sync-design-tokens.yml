@@ -9,7 +9,7 @@ jobs:
   synchronise:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         env:
           LANG: en_US.UTF-8
       - uses: pnpm/action-setup@v4.2.0

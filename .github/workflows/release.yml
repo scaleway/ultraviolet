@@ -23,7 +23,7 @@ jobs:
           default-project-id: ${{ vars.SCW_DEFAULT_PROJECT_ID }}
           default-organization-id: ${{ vars.SCW_DEFAULT_ORGANIZATION_ID }}
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Git Identity
         run: |
           git config --global user.name 'Scaleway Bot'

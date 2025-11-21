@@ -6,7 +6,7 @@ jobs:
   size:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - name: Use Node.js
         uses: actions/setup-node@v6.0.0
