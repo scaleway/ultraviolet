@@ -1,7 +1,7 @@
 'use client'
 
 import type { CSSProperties, ReactNode } from 'react'
-import { Children, forwardRef, useEffect, useState } from 'react'
+import { forwardRef, useEffect, useRef } from 'react'
 import { useListContext } from '../List/ListContext'
 import { listContainer } from '../List/styles.css'
 import { Body } from './Body'
@@ -52,19 +52,15 @@ type TableProps = Omit<
 }
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
-  const [childrenMemory, setChildrenMemory] = useState<ReactNode[]>(
-    Children.toArray(children),
-  )
-
+  const childrenRef = useRef(children)
   const { setRefList } = useListContext()
 
   // Reset ref list when children change
   useEffect(() => {
-    if (Children.toArray(children) !== childrenMemory) {
+    if (children !== childrenRef.current) {
       setRefList([])
-      setChildrenMemory(Children.toArray(children))
+      childrenRef.current = children
     }
-    // oxlint-disable react/exhaustive-deps
   }, [children, setRefList])
 
   return <div className={listContainer}>{children}</div>
