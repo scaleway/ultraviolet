@@ -21,6 +21,8 @@ export const setup = () => {
   beforeEach(() => {
     setupIntersectionMocking(vi.fn())
     vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+
+    window.ResizeObserver = vi.fn().mockImplementation(MockResize)
   })
 
   // oxlint-disable-next-line no-hooks

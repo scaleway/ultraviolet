@@ -43,7 +43,8 @@ describe('switchButton', () => {
     ))
 
   test('renders correctly with children changing', () => {
-    ResizeObserver = vi.fn((cb: ResizeObserverCallback) => {
+    const tempResizeObserver = window.ResizeObserver
+    window.ResizeObserver = vi.fn((cb: ResizeObserverCallback) => {
       resizeCallback = cb
 
       return {
@@ -72,6 +73,7 @@ describe('switchButton', () => {
     )
 
     expect(asFragment()).toMatchSnapshot()
+    window.ResizeObserver = tempResizeObserver
   })
 
   test('renders with tooltip', () =>
