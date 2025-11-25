@@ -1,6 +1,5 @@
 import { CheckCircleIcon } from '@ultraviolet/icons'
 import { Button, Text } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 
@@ -53,10 +52,9 @@ const planStarter = {
     ),
     price: '€0.99',
     priceDescription: '/month',
-    selectPlanButton: 'Select Plan',
     separator: true,
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'Starter',
   value: 'starter',
 }
@@ -82,7 +80,7 @@ const planProfessional = {
     selectPlanButton: 'Select Plan',
     separator: true,
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'professional',
   value: 'professional',
 }
@@ -117,7 +115,7 @@ const planAdvanced = {
     priceDescription: '/month',
     separator: true,
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'Advanced',
   value: 'advanced',
 }
