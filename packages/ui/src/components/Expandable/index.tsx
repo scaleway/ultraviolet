@@ -1,8 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { animationDurationVar, expandable } from './styles.css'
 
 const ANIMATION_DURATION = 300 // in ms
 
@@ -25,18 +26,8 @@ type ExpandableProps = {
    * The duration of the animation in ms. If set to 0, the animation will be disabled.
    */
   animationDuration?: number
+  style?: CSSProperties
 }
-
-export const StyledExpandable = styled('div', {
-  shouldForwardProp: prop => !['animationDuration'].includes(prop),
-})<{ animationDuration: number }>`
-  &[data-is-animated="true"] {
-    transition:
-      max-height ${({ animationDuration }) => animationDuration}ms ease-out,
-      opacity ${({ animationDuration }) => animationDuration}ms ease-out;
-    }
-  height: auto;
-`
 
 const NoAnimationExpandable = ({
   children,
@@ -44,11 +35,12 @@ const NoAnimationExpandable = ({
   minHeight,
   className,
   'data-testid': dataTestId,
+  style,
 }: ExpandableProps) => (
   <div
     className={className}
     data-testid={dataTestId}
-    style={{ display: !opened ? 'none' : undefined, minHeight }}
+    style={{ display: !opened ? 'none' : undefined, minHeight, ...style }}
   >
     {children}
   </div>
@@ -60,6 +52,7 @@ export const AnimatedExpandable = ({
   minHeight = 0,
   className,
   'data-testid': dataTestId,
+  style,
   animationDuration = ANIMATION_DURATION,
 }: ExpandableProps) => {
   const [height, setHeight] = useState<number | null>(null)
@@ -137,15 +130,20 @@ export const AnimatedExpandable = ({
   }, [animationDuration, height, minHeight, opened, shouldBeAnimated])
 
   return (
-    <StyledExpandable
-      animationDuration={animationDuration}
-      className={className}
+    <div
+      className={`${className ? `${className} ` : ''}${expandable}`}
       data-is-animated={shouldBeAnimated && !isFirstRender.current}
       data-testid={dataTestId}
       ref={ref}
+      style={{
+        ...assignInlineVars({
+          [animationDurationVar]: `${animationDuration}ms`,
+        }),
+        ...style,
+      }}
     >
       {children}
-    </StyledExpandable>
+    </div>
   )
 }
 
@@ -161,6 +159,7 @@ export const Expandable = ({
   className,
   'data-testid': dataTestId,
   animationDuration = ANIMATION_DURATION,
+  style,
 }: ExpandableProps) => {
   if (animationDuration > 0) {
     return (
@@ -170,6 +169,7 @@ export const Expandable = ({
         data-testid={dataTestId}
         minHeight={minHeight}
         opened={opened}
+        style={style}
       >
         {children}
       </AnimatedExpandable>
@@ -182,6 +182,7 @@ export const Expandable = ({
       data-testid={dataTestId}
       minHeight={minHeight}
       opened={opened}
+      style={style}
     >
       {children}
     </NoAnimationExpandable>

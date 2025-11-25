@@ -1,5 +1,70 @@
 # Change Log
 
+## 3.0.0-beta.4
+
+### Patch Changes
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+## 3.0.0-beta.3
+
+### Minor Changes
+
+- [#5747](https://github.com/scaleway/ultraviolet/pull/5747) [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6) Thanks [@lisalupi](https://github.com/lisalupi)! - To replace `Global` from Emotion and `normalize` from `@ultraviolet/ui`, you can now directly import the style as CSS to use in your app:
+
+  Before:
+
+  ```tsx
+  import { Global } from '@emotion/react'
+  import { normalize } from '@ultraviolet/ui'
+  import { ThemeProvider } from '@ultraviolet/themes'
+
+  const App = () => (
+      <ThemeProvider theme={theme}>
+          <Global styles={css`${normalize()}`}>
+          <MyApp />
+      </ThemeProvider>
+  )
+
+  ```
+
+  After :
+
+  ```tsx
+  import { ThemeProvider } from "@ultraviolet/themes";
+  import "@ultraviolet/themes/global";
+
+  const App = () => (
+    <ThemeProvider theme={theme}>
+      <MyApp />
+    </ThemeProvider>
+  );
+  ```
+
+## 3.0.0-beta.2
+
+### Major Changes
+
+- [#5632](https://github.com/scaleway/ultraviolet/pull/5632) [`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089) Thanks [@matthprost](https://github.com/matthprost)! - Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
+
+## 3.0.0-beta.1
+
+### Major Changes
+
+- [`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238) Thanks [@matthprost](https://github.com/matthprost)! - Release new beta version to compensate major released by error
+
+## 2.1.0-beta.1
+
+### Minor Changes
+
+- [#5513](https://github.com/scaleway/ultraviolet/pull/5513) [`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2) Thanks [@iManu](https://github.com/iManu)! - add simple root selector for generated css
+
+## 2.1.0-beta.0
+
+### Minor Changes
+
+- [#5433](https://github.com/scaleway/ultraviolet/pull/5433) [`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b) Thanks [@matthprost](https://github.com/matthprost)! - New `theme` provided that is a contract interface for vanilla extract
+
 ## 2.1.0
 
 ### Minor Changes

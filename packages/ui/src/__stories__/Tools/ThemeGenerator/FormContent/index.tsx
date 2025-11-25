@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import { CheckIcon, CloseIcon, RestoreIcon } from '@ultraviolet/icons'
 import { useState } from 'react'
 import {
@@ -10,16 +9,7 @@ import {
 } from '../../../../../../form/src'
 import { Button, Row, Stack, Text, Tooltip } from '../../../../components'
 import { hexadecimalColorRegex, INITIAL_VALUES } from '../contants'
-
-const CapitalizeText = styled(Text)`
-  &::first-letter {
-    text-transform: capitalize;
-  }
-`
-
-const StyledRow = styled(Row)`
-  width: 100%;
-`
+import { capitalizeText, row } from './style.css'
 
 export const FormContent = () => {
   const [confirmResetForm, setConfirmResetForm] = useState(false)
@@ -33,13 +23,14 @@ export const FormContent = () => {
     <Stack gap={6}>
       <Stack direction="row" gap={1}>
         <Stack flex={1} gap={1}>
-          <CapitalizeText
+          <Text
             as="label"
+            className={capitalizeText}
             htmlFor="sentiment_neutral"
             variant="bodyStrong"
           >
             Neutral sentiment name
-          </CapitalizeText>
+          </Text>
           <Tooltip text="Neutral sentiment name cannot be changed as it is essential for the theme to work.">
             <Stack flex={1}>
               <TextInputField
@@ -53,13 +44,14 @@ export const FormContent = () => {
           </Tooltip>
         </Stack>
         <Stack flex={1} gap={1}>
-          <CapitalizeText
+          <Text
             as="label"
+            className={capitalizeText}
             htmlFor="sentiment_neutral_value"
             variant="bodyStrong"
           >
             Neutral sentiment value
-          </CapitalizeText>
+          </Text>
           <Tooltip text="Neutral sentiment value cannot be changed as it is essential for the theme to work.">
             <Stack flex={1}>
               <TextInputField
@@ -86,8 +78,9 @@ export const FormContent = () => {
         return (
           <Stack direction="row" gap={1} key={field.id}>
             <Stack flex={1} gap={1}>
-              <CapitalizeText
+              <Text
                 as="label"
+                className={capitalizeText}
                 htmlFor={`sentiments.${index}.key`}
                 variant="bodyStrong"
               >
@@ -96,7 +89,7 @@ export const FormContent = () => {
                   : `Additional sentiment ${
                       index - countRequiredSentiments + 1
                     } name`}
-              </CapitalizeText>
+              </Text>
               <Tooltip
                 text={
                   isRequiredSentiment
@@ -116,8 +109,9 @@ export const FormContent = () => {
               </Tooltip>
             </Stack>
             <Stack flex={1} gap={1}>
-              <CapitalizeText
+              <Text
                 as="label"
+                className={capitalizeText}
                 htmlFor={`sentiments.${index}.value`}
                 variant="bodyStrong"
               >
@@ -126,22 +120,16 @@ export const FormContent = () => {
                   : `Additional sentiment ${
                       index - countRequiredSentiments + 1
                     } value`}
-              </CapitalizeText>
+              </Text>
               <Stack alignItems="center" direction="row" gap={1}>
-                <StyledRow gap={1} templateColumns="9fr 1fr">
+                <Row className={row} gap={1} templateColumns="9fr 1fr">
                   <TextInputField
                     id={`sentiments.${index}.value`}
                     name={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
                     regex={[hexadecimalColorRegex]}
                   />
-                  <TextInputField
-                    id={`sentiments.${index}.value`}
-                    name={`sentiments.${index}.value`}
-                    placeholder="#FFFFFF"
-                    regex={[hexadecimalColorRegex]}
-                  />
-                </StyledRow>
+                </Row>
                 {!isRequiredSentiment ? (
                   <Button
                     onClick={() => remove(index)}

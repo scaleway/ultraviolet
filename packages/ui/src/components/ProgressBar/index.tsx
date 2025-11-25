@@ -1,81 +1,21 @@
 'use client'
 
-import { keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
-import type { Color } from '../../theme'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties, ReactNode } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-const shineAnimation = keyframes`
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-`
-
-export const progressBarSentiments = [
-  'primary',
-  'success',
-  'warning',
-  'info',
-  'danger',
-] as const
-
-const StyledProgressContainer = styled.div`
-  overflow: hidden;
-  position: relative;
-  height: ${({ theme }) => theme.sizing['050']};
-  margin-left: 0;
-  margin-right: 0;
-  border-radius: ${({ theme }) => theme.radii.default};
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  width: 100%;
-`
-const StyledStack = styled(Stack)`
-  width: fit-content;
-`
-const StyledText = styled(Text)`
-  width: max-content;
-`
-const StyledProgress = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0)
-  );
-  animation: ${shineAnimation} 1s linear infinite;
-`
-
-const StyledFilled = styled('div', {
-  shouldForwardProp: prop => !['sentiment', 'percentageValue'].includes(prop),
-})<{ sentiment: string; percentageValue: number }>`
-  border-radius: ${({ theme }) => theme.radii.default};
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: ${({ theme, sentiment }) =>
-    theme.colors[sentiment as Color].backgroundStrong ?? 'inherit'};
-  transition: 0.3s width;
-  width: ${({ percentageValue }) => percentageValue}%;
-`
+import type { PROGRESS_BAR_SENTIMENTS } from './constants'
+import {
+  customText,
+  filledBarSentiments,
+  progressBar,
+  progressContainer,
+} from './styles.css'
+import { percentageValue } from './variables.css'
 
 type ProgressBarProps = {
-  sentiment?: (typeof progressBarSentiments)[number]
+  sentiment?: (typeof PROGRESS_BAR_SENTIMENTS)[number]
   value?: number
   showProgress?: boolean
   prefix?: ReactNode
@@ -90,6 +30,7 @@ type ProgressBarProps = {
   'data-testid'?: string
   'aria-labelledby'?: string
   'aria-label'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -110,6 +51,7 @@ export const ProgressBar = ({
   direction = 'column',
   'aria-labelledby': ariaLabelledBy,
   'aria-label': ariaLabel,
+  style,
 }: ProgressBarProps) => (
   <Stack
     alignItems="center"
@@ -146,33 +88,41 @@ export const ProgressBar = ({
       </Label>
     ) : null}
 
-    <StyledProgressContainer
+    <div
       aria-label={ariaLabel}
       aria-labelledby={ariaLabelledBy}
       aria-valuemax={max}
       aria-valuemin={0}
       aria-valuenow={value}
-      className={className}
+      className={`${className ? `${className} ` : ''}${progressContainer}`}
       data-testid={dataTestId}
       role="progressbar"
+      style={style}
     >
       {progress ? (
-        <StyledProgress />
+        <div className={progressBar} />
       ) : (
-        <StyledFilled
-          percentageValue={(100 * Math.max(0, Math.min(max, value))) / max}
-          sentiment={sentiment}
+        <div
+          className={filledBarSentiments[sentiment]}
+          style={assignInlineVars({
+            [percentageValue]: `${(100 * Math.max(0, Math.min(max, value))) / max}%`,
+          })}
         />
       )}
-    </StyledProgressContainer>
+    </div>
     {showProgress && direction === 'row' ? (
-      <StyledStack direction="row" gap={1}>
-        <StyledText as="label" sentiment="neutral" variant="bodySmall">
+      <Stack direction="row" gap={1} width="fit-content">
+        <Text
+          as="label"
+          className={customText}
+          sentiment="neutral"
+          variant="bodySmall"
+        >
           {prefix}
           {suffix === '%' ? (100 * value) / max : value}
           {suffix}
-        </StyledText>
-      </StyledStack>
+        </Text>
+      </Stack>
     ) : null}
   </Stack>
 )

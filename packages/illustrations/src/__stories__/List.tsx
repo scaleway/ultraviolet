@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import {
   ArrowDownIcon,
   ArrowUpIcon,
@@ -8,6 +7,15 @@ import {
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
 import * as assets from '../index'
+import {
+  buttonStory,
+  cardStory,
+  imageProductStory,
+  imageVariousStory,
+  margedStackStory,
+  snippetStory,
+  stackStory,
+} from './style.css'
 
 const defaultAssets = {
   products: assets.default.products,
@@ -15,7 +23,7 @@ const defaultAssets = {
 }
 
 type AssetsModule = Record<string, Record<string, Record<string, string>>>
-
+/* 
 const StyledSnippet = styled(Snippet)`
   padding: ${({ theme }) => theme.space['2']};
 `
@@ -56,7 +64,7 @@ const Card = styled(Stack)`
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: ${({ theme }) => theme.radii.large};
 `
-
+ */
 type SubListElementProps = {
   productName: string
   isExpanded: boolean
@@ -70,11 +78,11 @@ const SubListElement = ({
   setIsExpanded,
   category,
 }: SubListElementProps) => (
-  <MargedStack gap={1}>
-    <StyledButton onClick={setIsExpanded} sentiment="neutral">
+  <Stack className={margedStackStory} gap={1}>
+    <Button className={buttonStory} onClick={setIsExpanded} sentiment="neutral">
       {isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}
       {productName}
-    </StyledButton>
+    </Button>
     <Expandable opened={isExpanded}>
       <Stack gap={1}>
         {Object.keys(
@@ -85,16 +93,18 @@ const SubListElement = ({
           ]
 
           return (
-            <Card
+            <Stack
               alignItems="center"
+              className={cardStory}
               direction="row"
               flex={1}
               gap={2}
               key={productImg}
             >
               {category === 'products' ? (
-                <StyledImageProduct
+                <img
                   alt={productName}
+                  className={imageProductStory}
                   src={
                     (defaultAssets as AssetsModule)[category][productName][
                       productImg
@@ -103,8 +113,9 @@ const SubListElement = ({
                   width={200}
                 />
               ) : (
-                <StyledImageVarious
+                <img
                   alt={productName}
+                  className={imageVariousStory}
                   src={
                     (defaultAssets as AssetsModule)[category][productName][
                       productImg
@@ -113,18 +124,20 @@ const SubListElement = ({
                   width={200}
                 />
               )}
-              <StyledStack direction="column">
+              <Stack className={stackStory} direction="column">
                 <Text as="h3" variant="bodyStrong">
                   {productImg}.{imgSrc.split('.').pop()}
                 </Text>
-                <StyledSnippet>{`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}</StyledSnippet>
-              </StyledStack>
-            </Card>
+                <Snippet className={snippetStory}>
+                  {`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}
+                </Snippet>
+              </Stack>
+            </Stack>
           )
         })}
       </Stack>
     </Expandable>
-  </MargedStack>
+  </Stack>
 )
 
 export const List = () => {
@@ -178,7 +191,8 @@ export const List = () => {
 
           return (
             <div key={category}>
-              <StyledButton
+              <Button
+                className={buttonStory}
                 onClick={() => {
                   const newExpandedStates = { ...expandedStates }
                   newExpandedStates[category] = !expandedStates[category]
@@ -188,7 +202,7 @@ export const List = () => {
               >
                 {expandedStates[category] ? <ArrowUpIcon /> : <ArrowDownIcon />}
                 {category}
-              </StyledButton>
+              </Button>
               <Expandable opened={expandedStates[category]}>
                 <Stack gap={1}>
                   {Object.keys((defaultAssets as AssetsModule)[category]).map(

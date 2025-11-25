@@ -1,10 +1,5 @@
-import styled from '@emotion/styled'
 import type { Decorator, StoryFn } from '@storybook/react-vite'
 import { Separator } from '..'
-
-const StyledContainer = styled.div`
-  display: inline-flex;
-`
 
 export const Direction: StoryFn<typeof Separator> = args => (
   <>
@@ -20,8 +15,8 @@ Direction.args = {
 
 Direction.decorators = [
   Story => (
-    <StyledContainer>
+    <div style={{ display: 'inline-flex' }}>
       <Story />
-    </StyledContainer>
+    </div>
   ),
 ] as Decorator[]

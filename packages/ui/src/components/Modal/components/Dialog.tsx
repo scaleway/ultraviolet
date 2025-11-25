@@ -1,6 +1,6 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   FocusEventHandler,
   KeyboardEventHandler,
@@ -9,115 +9,18 @@ import type {
 } from 'react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { slideFromBottom } from '../../../utils/animations'
 import { Stack } from '../../Stack'
-import { MODAL_PLACEMENT, MODAL_WIDTH } from '../constants'
 import { useModal } from '../ModalProvider'
-import type { DialogProps, ModalPlacement, ModalSize } from '../types'
-
-const StyledDiv = styled(Stack)`
-  width: 100%;
-  height: 15rem;
-  background-color: ${({ theme }) => theme.colors.primary.background};
-  overflow: hidden;
-`
-
-const StyledImg = styled.img`
-  margin-inline: auto;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-`
-
-const StyledStack = styled(Stack)`
-  padding: ${({ theme }) => theme.space['3']};
- `
-
-const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: ${({ theme }) => theme.colors.overlay};
-  z-index: 1;
-  opacity: 0;
-
-  &[data-open='true'] {
-    padding: ${({ theme }) => theme.space['2']};
-    overflow: auto;
-    display: flex;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-  &[data-visible='true'] {
-    opacity: 1;
-  }
-
-`
-
-type StyledDialogProps = {
-  'data-size': ModalSize
-  'data-placement': ModalPlacement
-  position: number
-  size: ModalSize
-  top?: number
-}
-
-export const StyledDialog = styled('dialog', {
-  shouldForwardProp: prop =>
-    !['position', 'size', 'openedModals', 'top'].includes(prop),
-})<StyledDialogProps>`
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.overlay};
-  position: relative;
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 0;
-  padding: ${({ theme }) => theme.space['3']};
-  width: ${MODAL_WIDTH.medium}rem;
-  box-shadow: ${({ theme }) =>
-    `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
-
-
-
-  ${Object.entries(MODAL_WIDTH).map(
-    ([size, value]) => `
-      &[data-size="${size}"] {
-        width: ${value}rem;
-      }
-      `,
-  )}
-
-  ${Object.entries(MODAL_PLACEMENT).map(
-    ([placement, value]) => `
-        &[data-placement="${placement}"] {
-          ${value}
-        }
-        `,
-  )}
-
-  &[data-has-image='true'] {
-    padding: 0;
-  }
-
-  &[data-animation='true'] {
-    animation: ${slideFromBottom} 0.3s ease-in-out forwards;
-  }
-
-  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-  ${({ position, size, top }) =>
-    position > 0
-      ? `
-    width: calc(${MODAL_WIDTH[size]}rem - ${position * 50}px) !important;
-    transform: translate3d(0, -${top}px, 0);
-  `
-      : undefined}
-`
+import {
+  modal,
+  modalBackdrop,
+  modalContent,
+  modalImage,
+  modalImageContainer,
+  positionModal,
+  topModal,
+} from '../styles.css'
+import type { DialogProps } from '../types'
 
 // Prevent default behaviour on Escape
 const stopCancel: ReactEventHandler = event => {
@@ -139,6 +42,7 @@ export const Dialog = ({
   hideOnEsc,
   backdropClassName,
   image,
+  style,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -209,6 +113,7 @@ export const Dialog = ({
   // while the first opened modal should shrink
   const realPosition = [...openedModals].findIndex(object => object.id === id)
   const position = [...openedModals]
+    // oxlint-disable-next-line unicorn/no-array-reverse
     .reverse()
     .findIndex(object => object.id === id) // reverse method mutate array so we need to create a new array
   const modalAbove = openedModals[realPosition + 1]
@@ -256,33 +161,39 @@ export const Dialog = ({
       return
     }
 
-    const focusableEls =
-      dialogRef.current?.querySelectorAll(
-        'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
-      ) ?? []
+    const focusableEls = dialogRef.current?.querySelectorAll(
+      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+    )
 
     // Handle case when no interactive element are within the modal (including close icon)
-    if (focusableEls.length === 0) {
+    if (focusableEls?.length === 0) {
       event.preventDefault()
     }
 
-    const firstFocusableEl = focusableEls[0] as HTMLElement
-    const lastFocusableEl = focusableEls[focusableEls.length - 1] as HTMLElement
+    if (focusableEls) {
+      const elems = [...focusableEls]
+      const firstFocusableEl = elems[0]
+      const lastFocusableEl = elems.at(-1)
 
-    if (event.shiftKey) {
-      if (
-        document.activeElement === firstFocusableEl ||
+      if (event.shiftKey) {
+        if (
+          document.activeElement === firstFocusableEl ||
+          document.activeElement === dialogRef.current
+        ) {
+          if (lastFocusableEl instanceof HTMLElement) {
+            lastFocusableEl.focus()
+          }
+          event.preventDefault()
+        }
+      } else if (
+        document.activeElement === lastFocusableEl ||
         document.activeElement === dialogRef.current
       ) {
-        lastFocusableEl.focus()
+        if (firstFocusableEl instanceof HTMLElement) {
+          firstFocusableEl.focus()
+        }
         event.preventDefault()
       }
-    } else if (
-      document.activeElement === lastFocusableEl ||
-      document.activeElement === dialogRef.current
-    ) {
-      firstFocusableEl.focus()
-      event.preventDefault()
     }
   }, [])
 
@@ -304,22 +215,18 @@ export const Dialog = ({
     previsousOpenedModales.length < openedModals.length
 
   return createPortal(
-    <StyledBackdrop
-      className={backdropClassName}
-      data-animation={animation}
-      data-open
+    <div
+      className={`${backdropClassName} ${modalBackdrop({ open: true, visible: isVisible })}`}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
       onClick={handleClose}
       onFocus={stopFocus}
+      onKeyDown={() => {}}
     >
-      <StyledDialog
+      <dialog
         aria-label={ariaLabel}
         aria-modal
-        className={className}
-        data-animation={animation}
-        data-has-image={!!image}
-        data-placement={placement}
+        className={`${className ? `${className} ` : ''}${modal({ animation, image: !!image, placement, positivePosition: position > 0, size })}`}
         data-size={size}
         data-testid={dataTestId}
         id={id}
@@ -328,24 +235,34 @@ export const Dialog = ({
         onKeyDown={handleFocusTrap}
         onKeyUp={handleKeyUp}
         open
-        position={position}
         ref={dialogRef}
-        size={size}
+        style={{
+          ...assignInlineVars({
+            [topModal]: `-${top}px`,
+            [positionModal]: `${position * 50}px`,
+          }),
+          ...style,
+        }}
         tabIndex={0}
-        top={Math.max(top, 0)}
       >
         {image ? (
           <>
-            <StyledDiv alignItems="end" justifyContent="center">
-              <StyledImg alt="illustration" src={image} />
-            </StyledDiv>
-            <StyledStack gap={5}>{children}</StyledStack>
+            <Stack
+              alignItems="end"
+              className={modalImageContainer}
+              justifyContent="center"
+            >
+              <img alt="illustration" className={modalImage} src={image} />
+            </Stack>
+            <Stack className={modalContent} gap={5}>
+              {children}
+            </Stack>
           </>
         ) : (
           children
         )}
-      </StyledDialog>
-    </StyledBackdrop>,
+      </dialog>
+    </div>,
     containerRef.current,
   )
 }

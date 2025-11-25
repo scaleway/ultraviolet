@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Chip } from '..'
 
 describe('checkbox', () => {
-  test('renders correctly', () => shouldMatchEmotionSnapshot(<Chip>test</Chip>))
+  test('renders correctly', () => shouldMatchSnapshot(<Chip>test</Chip>))
   test('renders correctly wiht icon', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Chip>
         <Chip.Icon name="address" onClick={() => {}} />
         test
@@ -15,28 +15,28 @@ describe('checkbox', () => {
     ))
 
   test('renders correctly active', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Chip active>
         test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('renders correctly large', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Chip size="large">
         test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Chip disabled>
         test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('renders correctly active disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Chip active disabled>
         test <Chip.Icon name="address" />
       </Chip>,

@@ -1,37 +1,21 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CheckIcon } from '@ultraviolet/icons'
 import { StepList, Text } from '@ultraviolet/ui'
+import type { ReactNode } from 'react'
 import { useContext } from 'react'
 import { Data } from './helper'
-
-const CustomText = styled(Text)`
-  cursor: pointer;
-  transition: text-decoration-color 250ms ease-out;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-
-  &:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-  }
-  &:active {
-    text-decoration-thickness: 2px;
-  }
-`
-
-const StyledItem = styled(StepList.Item)`
-align-items: center;
-`
+import { steppedListCardStep, steppedListCardStepTitle } from './styles.css'
 
 type StepProps = {
   /**
    * The number of the step, max 5 steps.
    */
   stepNumber: number
+  /**
+   * An icon to replace the step number in the bullet
+   */
+  stepIcon?: ReactNode
   /**
    * Title of the step
    */
@@ -47,34 +31,47 @@ export const SteppedList = ({
   stepNumber,
   stepTitle,
   completed,
+  stepIcon,
   'data-testid': dataTestId,
 }: StepProps) => {
   const containerData = useContext(Data)
   const active = containerData.currentStep === stepNumber
 
   return completed ? (
-    <StyledItem
+    <StepList.Item
       bulletContent={<CheckIcon />}
+      className={steppedListCardStep}
       data-testid={dataTestId}
       onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : 'default'}
       sentiment="primary"
+      size="small"
     >
-      <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
+      <Text
+        as="h3"
+        className={steppedListCardStepTitle}
+        variant={active ? 'bodyStrong' : 'body'}
+      >
         {stepTitle}
-      </CustomText>
-    </StyledItem>
+      </Text>
+    </StepList.Item>
   ) : (
-    <StyledItem
-      bulletContent={String(stepNumber)}
+    <StepList.Item
+      bulletContent={stepIcon ?? String(stepNumber)}
+      className={steppedListCardStep}
       data-testid={dataTestId}
       onClick={() => containerData.setCurrentStep(stepNumber)}
       prominence={active ? 'strong' : undefined}
       sentiment={active ? 'primary' : undefined}
+      size="small"
     >
-      <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
+      <Text
+        as="h3"
+        className={steppedListCardStepTitle}
+        variant={active ? 'bodyStrong' : 'body'}
+      >
         {stepTitle}
-      </CustomText>
-    </StyledItem>
+      </Text>
+    </StepList.Item>
   )
 }

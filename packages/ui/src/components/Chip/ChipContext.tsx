@@ -6,6 +6,6 @@ import { createContext } from 'react'
 type ContextType = {
   isActive: boolean
   disabled: boolean
-  iconRef?: RefObject<HTMLButtonElement | null>
+  iconRef?: RefObject<HTMLDivElement | HTMLButtonElement | null>
 }
 export const ChipContext = createContext<ContextType | undefined>(undefined)

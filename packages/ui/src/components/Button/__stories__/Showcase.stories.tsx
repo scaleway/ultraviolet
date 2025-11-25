@@ -1,24 +1,10 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
-import type { ExtendedColor } from '../../../theme'
 import { SENTIMENTS } from '../../../theme'
 import { Stack, Table, Text } from '../..'
-import { Button, buttonVariants } from '..'
+import { Button } from '..'
+import { showCase } from './style.css'
 
-const StyledRow = styled(Table.Row, {
-  shouldForwardProp: prop => !['sentiment'].includes(prop),
-})<{ sentiment: ExtendedColor }>`
-  background: ${({ sentiment }) => {
-    if (sentiment === 'white') {
-      return 'black'
-    }
-    if (sentiment === 'black') {
-      return 'white'
-    }
-
-    return 'none'
-  }};
-`
+const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 
 const COLUMNS = [
   { label: '' },
@@ -33,7 +19,11 @@ export const Showcase: StoryFn<typeof Button> = args => (
   <Table columns={COLUMNS}>
     <Table.Body>
       {([...SENTIMENTS, 'white', 'black'] as const).map(sentiment => (
-        <StyledRow id={sentiment} key={sentiment} sentiment={sentiment}>
+        <Table.Row
+          className={showCase[sentiment]}
+          id={sentiment}
+          key={sentiment}
+        >
           <Table.Cell>
             <Text
               as="span"
@@ -61,7 +51,7 @@ export const Showcase: StoryFn<typeof Button> = args => (
               </Stack>
             </Table.Cell>
           ))}
-        </StyledRow>
+        </Table.Row>
       ))}
     </Table.Body>
   </Table>

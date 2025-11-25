@@ -1,45 +1,23 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
-import type { ReactNode } from 'react'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties, ReactNode } from 'react'
 import { useCallback, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
 import { Text } from '../Text'
-import Legends from './Legends'
+import { Legends } from './Legends'
+import {
+  containerPie,
+  contentPie,
+  emptyLegendPie,
+  heightContainerPie,
+} from './styles.css'
 import type { Data } from './types'
-
-const Container = styled.div<{ height: number }>`
-  display: flex;
-  align-items: center;
-  height: ${({ height }) => `${height}px`};
-`
-
-const EmptyLegend = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: ${({ theme }) => theme.space['5']};
-`
-
-const StyledContent = styled.div`
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-
-  font-size: ${({ theme }) => theme.typography.headingStrong};
-  line-height: 100px;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  text-align: center;
-  vertical-align: middle;
-`
 
 type PieChartProps = {
   chartProps?: Record<string, unknown>
@@ -50,6 +28,7 @@ type PieChartProps = {
   content?: ReactNode
   withLegend?: boolean
   margin?: Box
+  style?: CSSProperties
 }
 
 const DEFAULT_CHARTPROPS = {}
@@ -69,6 +48,7 @@ export const PieChart = ({
   withLegend = false,
   margin = DEFAULT_MARGIN,
   chartProps = DEFAULT_CHARTPROPS,
+  style,
 }: PieChartProps) => {
   const theme = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
@@ -78,16 +58,16 @@ export const PieChart = ({
   const EmptyLegendDisplayed = useCallback(
     () =>
       emptyLegend ? (
-        <EmptyLegend>
+        <div className={emptyLegendPie}>
           <Text as="p" variant="body">
             {emptyLegend}
           </Text>
-        </EmptyLegend>
+        </div>
       ) : null,
     [emptyLegend],
   )
 
-  const localColors = getLegendColor(theme)
+  const localColors = getLegendColor(theme as typeof UVTheme)
 
   const LegendDisplayer = useCallback(
     () =>
@@ -105,7 +85,15 @@ export const PieChart = ({
   )
 
   return (
-    <Container height={height}>
+    <div
+      className={containerPie}
+      style={{
+        ...assignInlineVars({
+          [heightContainerPie]: height ? `${height}px` : '',
+        }),
+        ...style,
+      }}
+    >
       <div style={{ position: 'relative' }}>
         <Pie
           activeOuterRadiusOffset={!isEmpty ? 4 : 0}
@@ -152,9 +140,9 @@ export const PieChart = ({
           width={width}
           {...chartProps}
         />
-        {content ? <StyledContent>{content}</StyledContent> : null}
+        {content ? <div className={contentPie}>{content}</div> : null}
       </div>
       {withLegend ? <LegendDisplayer /> : null}
-    </Container>
+    </div>
   )
 }

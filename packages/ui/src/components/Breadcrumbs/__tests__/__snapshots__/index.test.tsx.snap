@@ -2,544 +2,44 @@
 
 exports[`breadcrumbs > click on middle item 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-2 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-2:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-2:last-child .emotion-9 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-2 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-2:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-2:last-child .emotion-9 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-5 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-5 .e1afnb7a3,
-.emotion-5 .e1afnb7a2,
-.emotion-5 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-5>* {
-  pointer-events: none;
-}
-
-.emotion-5:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-5:hover .e1afnb7a3,
-.emotion-5:focus .e1afnb7a3,
-.emotion-5:hover .e1afnb7a2,
-.emotion-5:focus .e1afnb7a2,
-.emotion-5:hover .e1afnb7a4,
-.emotion-5:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-5:hover:visited,
-.emotion-5:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-5:hover::after,
-.emotion-5:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-5:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-5 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-5 .e1afnb7a3,
-.emotion-5 .e1afnb7a2,
-.emotion-5 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-5>* {
-  pointer-events: none;
-}
-
-.emotion-5:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-5:hover .e1afnb7a3,
-.emotion-5:focus .e1afnb7a3,
-.emotion-5:hover .e1afnb7a2,
-.emotion-5:focus .e1afnb7a2,
-.emotion-5:hover .e1afnb7a4,
-.emotion-5:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-5:hover:visited,
-.emotion-5:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-5:hover::after,
-.emotion-5:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-5:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-7 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  cursor: pointer;
-}
-
-.emotion-7[aria-disabled="true"] {
-  pointer-events: none;
-}
-
-.emotion-7:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-7:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-7:last-child .emotion-9 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.emotion-10:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-10 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-10:hover,
-.emotion-10:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.emotion-10:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-10 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-10:hover,
-.emotion-10:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <nav
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             Step 1
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-7 emotion-3"
+          class="styles__1yxbbx44 styles_clickable_true__1yxbbx45 styles__1yxbbx47"
         >
           <button
-            class="emotion-9 emotion-10 emotion-11"
+            class="styles__1yxbbx43 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 2
           </button>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
-          <button
-            class="emotion-9 emotion-10 emotion-11"
-            type="button"
+          <div
+            class="styles__1yxbbx43 styles__1yxbbx46 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             Step 3
-          </button>
+          </div>
         </li>
       </ol>
     </nav>
@@ -549,543 +49,42 @@ exports[`breadcrumbs > click on middle item 1`] = `
 
 exports[`breadcrumbs > last item should no be clickable 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-2 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-2:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-2:last-child .emotion-14 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-2 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-2:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-2:last-child .emotion-14 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-5 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-5 .e1afnb7a3,
-.emotion-5 .e1afnb7a2,
-.emotion-5 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-5>* {
-  pointer-events: none;
-}
-
-.emotion-5:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-5:hover .e1afnb7a3,
-.emotion-5:focus .e1afnb7a3,
-.emotion-5:hover .e1afnb7a2,
-.emotion-5:focus .e1afnb7a2,
-.emotion-5:hover .e1afnb7a4,
-.emotion-5:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-5:hover:visited,
-.emotion-5:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-5:hover::after,
-.emotion-5:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-5:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-5 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-5 .e1afnb7a3,
-.emotion-5 .e1afnb7a2,
-.emotion-5 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-5>* {
-  pointer-events: none;
-}
-
-.emotion-5:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-5:hover .e1afnb7a3,
-.emotion-5:focus .e1afnb7a3,
-.emotion-5:hover .e1afnb7a2,
-.emotion-5:focus .e1afnb7a2,
-.emotion-5:hover .e1afnb7a4,
-.emotion-5:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-5:hover:visited,
-.emotion-5:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-5:hover::after,
-.emotion-5:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-5:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-12 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  cursor: pointer;
-}
-
-.emotion-12[aria-disabled="true"] {
-  pointer-events: none;
-}
-
-.emotion-12:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-12:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-12:last-child .emotion-14 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.emotion-15:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-15:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-15 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-15:hover,
-.emotion-15:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.emotion-15:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-15:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-15 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-15:hover,
-.emotion-15:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <nav
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             Step 1
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1/step2"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             I'm a very long long long long long long long long long long long long step
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-12 emotion-3"
+          class="styles__1yxbbx44 styles_clickable_true__1yxbbx45 styles__1yxbbx47"
         >
           <button
-            class="emotion-14 emotion-15 emotion-16"
+            class="styles__1yxbbx43 styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
             type="button"
           >
             Step 3
@@ -1099,281 +98,45 @@ exports[`breadcrumbs > last item should no be clickable 1`] = `
 
 exports[`breadcrumbs > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-2 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-2:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-2:last-child .emotion-14 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-5 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-5 .e1afnb7a3,
-.emotion-5 .e1afnb7a2,
-.emotion-5 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-5>* {
-  pointer-events: none;
-}
-
-.emotion-5:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-5:hover .e1afnb7a3,
-.emotion-5:focus .e1afnb7a3,
-.emotion-5:hover .e1afnb7a2,
-.emotion-5:focus .e1afnb7a2,
-.emotion-5:hover .e1afnb7a4,
-.emotion-5:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-5:hover:visited,
-.emotion-5:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-5:hover::after,
-.emotion-5:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-5:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.emotion-15:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-15:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-15 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-15:hover,
-.emotion-15:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <nav
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             Step 1
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1/step2"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             I'm a very long long long long long long long long long long long long step
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
-          <button
-            class="emotion-14 emotion-15 emotion-16"
-            type="button"
+          <div
+            class="styles__1yxbbx43 styles__1yxbbx46 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             Step 3
-          </button>
+          </div>
         </li>
       </ol>
     </nav>
@@ -1383,90 +146,14 @@ exports[`breadcrumbs > renders correctly with default values 1`] = `
 
 exports[`breadcrumbs > renders correctly with invalid child 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <nav
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         Invalid child
       </ol>
@@ -1477,312 +164,46 @@ exports[`breadcrumbs > renders correctly with invalid child 1`] = `
 
 exports[`breadcrumbs > renders correctly with minWidth and maxWidth 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 38px;
-}
-
-.emotion-0>*:not(:last-child) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0>*:not(:last-child)::after {
-  content: '/';
-  color: #727683;
-  padding: 0 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.emotion-2 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.emotion-2:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-2:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-2:last-child .emotion-14 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-5 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.emotion-5 .e1afnb7a3,
-.emotion-5 .e1afnb7a2,
-.emotion-5 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-5>* {
-  pointer-events: none;
-}
-
-.emotion-5:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #222638;
-  text-decoration-color: #222638;
-}
-
-.emotion-5:hover .e1afnb7a3,
-.emotion-5:focus .e1afnb7a3,
-.emotion-5:hover .e1afnb7a2,
-.emotion-5:focus .e1afnb7a2,
-.emotion-5:hover .e1afnb7a4,
-.emotion-5:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-5:hover:visited,
-.emotion-5:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-5[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-5:hover::after,
-.emotion-5:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-5:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-7 {
-  display: inline;
-  height: 38px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 100px;
-  max-width: 200px;
-}
-
-.emotion-7:not(:first-child) .emotion-4 {
-  padding: 0 0.5rem;
-}
-
-.emotion-7:last-child .emotion-4 {
-  pointer-events: none;
-}
-
-.emotion-7:last-child .emotion-14 {
-  pointer-events: none;
-  cursor: default;
-}
-
-.emotion-15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  min-width: auto;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-}
-
-.emotion-15:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-15:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-15 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-15:hover,
-.emotion-15:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <nav
       aria-label="breadcrumb"
     >
       <ol
-        class="emotion-0 emotion-1"
+        class="styles__qxa0fl0"
       >
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             Step 1
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-7 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
+          style="--_1yxbbx41: 100px; --_1yxbbx40: 200px;"
         >
           <a
-            class="emotion-4 emotion-5 emotion-6"
+            class="styles__1yxbbx42 styles__1dtqm9e0 styles_prominence_stronger__1dtqm9e5 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_6__1dtqm9ek styles__1dtqm9en"
             data-variant="standalone"
             href="/step1/step2"
-            prominence="stronger"
-            variant="bodySmallStrong"
           >
             I'm a very long long long long long long long long long long long long step
           </a>
         </li>
         <li
-          aria-disabled="false"
-          class="emotion-2 emotion-3"
+          class="styles__1yxbbx44 styles__1yxbbx47"
         >
-          <button
-            class="emotion-14 emotion-15 emotion-16"
-            type="button"
+          <div
+            class="styles__1yxbbx43 styles__1yxbbx46 style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
           >
             Step 3
-          </button>
+          </div>
         </li>
       </ol>
     </nav>

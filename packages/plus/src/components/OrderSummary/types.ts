@@ -1,5 +1,5 @@
 import type { UnitInput } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import type orderSummaryLocales from './locales/en'
 
 export type TimeUnit = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'
@@ -46,6 +46,7 @@ export type PriceType = Record<string, PriceTypeSingle>
 
 export type SubCategoryType = {
   title?: string
+  additionalInfo?: ReactNode
   price?: number
   /**
    * List of elements to be displayed in the subcategory
@@ -119,4 +120,7 @@ export type OrderSummaryProps = {
    */
   onChange?: (price: PriceType, totalPrice: PriceTypeSingle) => void
   hideDetails?: boolean
+  className?: string
+  ['data-testid']?: string
+  style?: CSSProperties
 } & PeriodProps

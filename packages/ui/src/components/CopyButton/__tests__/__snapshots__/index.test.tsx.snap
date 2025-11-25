@@ -2,108 +2,22 @@
 
 exports[`copyButton > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_0_"
       aria-describedby="_r_0_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -125,108 +39,22 @@ exports[`copyButton > renders correctly 1`] = `
 
 exports[`copyButton > renders correctly sentiment large 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_4_"
       aria-describedby="_r_4_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -248,108 +76,22 @@ exports[`copyButton > renders correctly sentiment large 1`] = `
 
 exports[`copyButton > renders correctly sentiment medium 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_3_"
       aria-describedby="_r_3_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_medium__e1wcoe2 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -371,108 +113,22 @@ exports[`copyButton > renders correctly sentiment medium 1`] = `
 
 exports[`copyButton > renders correctly sentiment neutral 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_6_"
       aria-describedby="_r_6_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -494,108 +150,22 @@ exports[`copyButton > renders correctly sentiment neutral 1`] = `
 
 exports[`copyButton > renders correctly sentiment primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_5_"
       aria-describedby="_r_5_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -617,108 +187,22 @@ exports[`copyButton > renders correctly sentiment primary 1`] = `
 
 exports[`copyButton > renders correctly sentiment small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_2_"
       aria-describedby="_r_2_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -740,108 +224,22 @@ exports[`copyButton > renders correctly sentiment small 1`] = `
 
 exports[`copyButton > renders correctly sentiment xsmall 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_1_"
       aria-describedby="_r_1_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -863,109 +261,22 @@ exports[`copyButton > renders correctly sentiment xsmall 1`] = `
 
 exports[`copyButton > renders correctly with bordered 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-  border: 1px solid #792dd4;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_7_"
       aria-describedby="_r_7_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_outlined__e1wcoeh styles_sentiment_primary__e1wcoe7 styles_undefined_compound_9__e1wcoeu"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -987,108 +298,22 @@ exports[`copyButton > renders correctly with bordered 1`] = `
 
 exports[`copyButton > renders correctly with children 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_8_"
       aria-describedby="_r_8_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -1111,108 +336,22 @@ exports[`copyButton > renders correctly with children 1`] = `
 
 exports[`copyButton > renders correctly with custom class name 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_b_"
       aria-describedby="_r_b_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="custom-class emotion-2 emotion-3"
+        class="custom-class styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -1234,108 +373,22 @@ exports[`copyButton > renders correctly with custom class name 1`] = `
 
 exports[`copyButton > renders correctly with custom copied text 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_a_"
       aria-describedby="_r_a_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -1357,108 +410,22 @@ exports[`copyButton > renders correctly with custom copied text 1`] = `
 
 exports[`copyButton > renders correctly with custom copy text 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.emotion-4 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-4 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_9_"
       aria-describedby="_r_9_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
         aria-label="Copy"
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
         type="button"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path

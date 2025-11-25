@@ -1,22 +1,22 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import type { ProminenceProps } from '..'
-import { Link, PROMINENCES } from '..'
+import { Link } from '..'
+import { PROMINENCES } from '../constants'
 
 describe('link', () => {
   test(`render correctly with no sentiment`, () =>
-    shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
+    shouldMatchSnapshot(<Link href="/">Hello</Link>))
 
   describe('sentiment', () => {
     test.each(
       ['primary', 'info'].map(sentiment => [`render ${sentiment}`, sentiment]),
     )('%s', (_, sentiment) =>
-      shouldMatchEmotionSnapshot(
+      shouldMatchSnapshot(
         <Link href="/" sentiment={sentiment as 'primary' | 'info'}>
           Hello
         </Link>,
-      ),
-    )
+      ))
   })
 
   describe('prominence', () => {
@@ -26,33 +26,32 @@ describe('link', () => {
         prominence,
       ]),
     )('%s', (_, prominence) =>
-      shouldMatchEmotionSnapshot(
+      shouldMatchSnapshot(
         <Link href="/" prominence={prominence as ProminenceProps}>
           Hello
         </Link>,
-      ),
-    )
+      ))
   })
 
   test(`render correctly with target blank`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Link href="/" target="_blank">
         Hello
       </Link>,
     ))
 
   test(`render correctly prop primary`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Link href="/" sentiment="primary">
         Hello
       </Link>,
     ))
 
   test(`render correctly with href props`, () =>
-    shouldMatchEmotionSnapshot(<Link href="/">Hello</Link>))
+    shouldMatchSnapshot(<Link href="/">Hello</Link>))
 
   test(`render correctly with href props`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <>
         <Link href="/" iconPosition="left">
           Hello
@@ -70,7 +69,7 @@ describe('link', () => {
     ))
 
   test(`render correctly with variants props`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <>
         <Link href="/" variant="inline">
           Hello
@@ -82,7 +81,7 @@ describe('link', () => {
     ))
 
   test(`render correctly with bad sentiment`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       // @ts-expect-error Use a wrong sentiment
       <Link href="/" sentiment="wrong">
         Hello
@@ -90,7 +89,7 @@ describe('link', () => {
     ))
 
   test(`render correctly with sizes`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <>
         <Link href="/" size="large">
           Hello
@@ -107,7 +106,7 @@ describe('link', () => {
     ))
 
   test(`render correctly with oneLine`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
         <Link href="/" oneLine>
           Hello this is a very long text that should be truncated

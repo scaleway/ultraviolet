@@ -1,4 +1,4 @@
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -14,7 +14,7 @@ describe('estimateCost - index', () => {
     resetIntersectionMocking()
   })
   test('render isBeta without discount', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -23,7 +23,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render isBeta with discount', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost discount={0.5} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -32,7 +32,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render isBeta with discount more than 100%', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost discount={2} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -41,7 +41,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render isBeta with discount equal to 100%', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost discount={1} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -50,7 +50,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with discount 100% but no isBeta', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost discount={1}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -59,7 +59,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with isBeta but undefined discount', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost discount={undefined} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -68,7 +68,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with isBeta, price, discount 50%', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost discount={0.5} isBeta>
         <EstimateCost.Item label="Test" price={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -77,7 +77,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with item discount 50%', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item discount={0.5} label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -86,7 +86,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with item discount 50% and text', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           discount={0.5}
@@ -100,7 +100,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with item discount 50% and defaultTimeUnit months', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months">
         <EstimateCost.Item discount={0.5} label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -109,7 +109,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with all timeUnits values', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost
         timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
       >
@@ -120,7 +120,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with discount 1, isBeta and defaultTimeUnit months', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months" discount={1} isBeta>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -129,7 +129,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with discount 1 and defaultTimeUnit months', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months" discount={1}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -138,7 +138,7 @@ describe('estimateCost - index', () => {
     ))
 
   test('render with discount 0 and defaultTimeUnit months', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost defaultTimeUnit="months" discount={0}>
         <EstimateCost.Item label="Test" monthlyPrice={99}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>

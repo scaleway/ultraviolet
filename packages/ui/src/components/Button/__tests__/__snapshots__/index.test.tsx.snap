@@ -2,71 +2,12 @@
 
 exports[`button > render as an anchor with href prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
       aria-disabled="false"
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       href="http://scaleway.com"
       type="button"
     >
@@ -78,70 +19,11 @@ exports[`button > render as an anchor with href prop 1`] = `
 
 exports[`button > render large 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Hello
@@ -152,70 +34,11 @@ exports[`button > render large 1`] = `
 
 exports[`button > render medium 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_medium__e1wcoe2 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Hello
@@ -226,70 +49,11 @@ exports[`button > render medium 1`] = `
 
 exports[`button > render small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Hello
@@ -300,148 +64,17 @@ exports[`button > render small 1`] = `
 
 exports[`button > render with a tooltip 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-2 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2:hover,
-.emotion-2:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
       aria-controls="_r_23_"
       aria-describedby="_r_23_"
-      class="emotion-0 emotion-1"
-      data-container-full-width="false"
+      class="styles__w40vpo9"
       tabindex="0"
     >
       <button
-        class="emotion-2 emotion-3"
+        class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
         type="button"
       >
         Hello
@@ -453,70 +86,11 @@ exports[`button > render with a tooltip 1`] = `
 
 exports[`button > render with fullWidth 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_true__e1wcoe5 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Hello
@@ -527,132 +101,16 @@ exports[`button > render with fullWidth 1`] = `
 
 exports[`button > render with icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       disabled=""
       type="button"
     >
       <svg
-        class="emotion-2 emotion-3"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -670,133 +128,17 @@ exports[`button > render with icon 1`] = `
 
 exports[`button > render with icon on the right 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       disabled=""
       type="button"
     >
       Hello
       <svg
-        class="emotion-2 emotion-3"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -813,132 +155,16 @@ exports[`button > render with icon on the right 1`] = `
 
 exports[`button > render with icon only 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       disabled=""
       type="button"
     >
       <svg
-        class="emotion-2 emotion-3"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -954,141 +180,11 @@ exports[`button > render with icon only 1`] = `
 
 exports[`button > render with isLoading with icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .emotion-5 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .emotion-5 {
-  stroke: transparent;
-}
-
-.emotion-2 {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.emotion-4 {
-  stroke: #d9dadd;
-}
-
-.emotion-6 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       disabled=""
       type="button"
     >
@@ -1098,13 +194,13 @@ exports[`button > render with isLoading with icon 1`] = `
         aria-valuemin="0"
         aria-valuenow="20"
         aria-valuetext="20%"
-        class="emotion-2 emotion-3"
+        class="styles__tkulld2"
         role="progressbar"
         style="height: 1rem; width: 1rem;"
         viewBox="0 0 100 100"
       >
         <circle
-          class="emotion-4 emotion-5"
+          class="styles__tkulld1"
           cx="50"
           cy="50"
           fill="none"
@@ -1112,7 +208,7 @@ exports[`button > render with isLoading with icon 1`] = `
           stroke-width="16"
         />
         <circle
-          class="emotion-6"
+          class="styles__tkulld3"
           cx="50"
           cy="50"
           fill="none"
@@ -1125,7 +221,7 @@ exports[`button > render with isLoading with icon 1`] = `
         />
       </svg>
       <svg
-        class="emotion-7 emotion-8"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -1143,147 +239,15 @@ exports[`button > render with isLoading with icon 1`] = `
 
 exports[`button > render with isLoading with icon variant 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       <svg
-        class="emotion-2 emotion-3"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -1300,127 +264,11 @@ exports[`button > render with isLoading with icon variant 1`] = `
 
 exports[`button > render with isLoading without icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .emotion-5 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .emotion-5 {
-  stroke: transparent;
-}
-
-.emotion-2 {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.emotion-4 {
-  stroke: #d9dadd;
-}
-
-.emotion-6 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       disabled=""
       type="button"
     >
@@ -1430,13 +278,13 @@ exports[`button > render with isLoading without icon 1`] = `
         aria-valuemin="0"
         aria-valuenow="20"
         aria-valuetext="20%"
-        class="emotion-2 emotion-3"
+        class="styles__tkulld2"
         role="progressbar"
         style="height: 1rem; width: 1rem;"
         viewBox="0 0 100 100"
       >
         <circle
-          class="emotion-4 emotion-5"
+          class="styles__tkulld1"
           cx="50"
           cy="50"
           fill="none"
@@ -1444,7 +292,7 @@ exports[`button > render with isLoading without icon 1`] = `
           stroke-width="16"
         />
         <circle
-          class="emotion-6"
+          class="styles__tkulld3"
           cx="50"
           cy="50"
           fill="none"
@@ -1464,70 +312,11 @@ exports[`button > render with isLoading without icon 1`] = `
 
 exports[`button > render xsmall 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Hello
@@ -1540,113 +329,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&black 1
 
 exports[`button > variant-sentiment-disabled combination > render filled&black disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #151a2d;
-  border: none;
-  color: #ffffff;
-  background: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #151a2d;
-  border: none;
-  color: #ffffff;
-  background: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_black__e1wcoee styles_undefined_compound_7__e1wcoes"
       disabled=""
       type="button"
     >
@@ -1660,113 +347,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&danger 
 
 exports[`button > variant-sentiment-disabled combination > render filled&danger disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  background: #ffd3e3;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  background: #ffd3e3;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
       disabled=""
       type="button"
     >
@@ -1780,113 +365,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&info 1`
 
 exports[`button > variant-sentiment-disabled combination > render filled&info disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #0078d2;
-  border: none;
-  color: #ffffff;
-  background: #bee3ff;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #0078d2;
-  border: none;
-  color: #ffffff;
-  background: #bee3ff;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_info__e1wcoea styles_undefined_compound_3__e1wcoeo"
       disabled=""
       type="button"
     >
@@ -1900,113 +383,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&neutral
 
 exports[`button > variant-sentiment-disabled combination > render filled&neutral disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e9eaeb;
-  border: none;
-  color: #222638;
-  background: #f3f3f4;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e9eaeb;
-  border: none;
-  color: #222638;
-  background: #f3f3f4;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_neutral__e1wcoed styles_undefined_compound_6__e1wcoer"
       disabled=""
       type="button"
     >
@@ -2020,113 +401,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&primary
 
 exports[`button > variant-sentiment-disabled combination > render filled&primary disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       disabled=""
       type="button"
     >
@@ -2140,113 +419,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&seconda
 
 exports[`button > variant-sentiment-disabled combination > render filled&secondary disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #b824f9;
-  border: none;
-  color: #ffffff;
-  background: #f2d5ff;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #b824f9;
-  border: none;
-  color: #ffffff;
-  background: #f2d5ff;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_secondary__e1wcoe8 styles_undefined_compound_1__e1wcoem"
       disabled=""
       type="button"
     >
@@ -2260,113 +437,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&success
 
 exports[`button > variant-sentiment-disabled combination > render filled&success disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #2c8564;
-  border: none;
-  color: #ffffff;
-  background: #adebd5;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #2c8564;
-  border: none;
-  color: #ffffff;
-  background: #adebd5;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_success__e1wcoeb styles_undefined_compound_4__e1wcoep"
       disabled=""
       type="button"
     >
@@ -2380,113 +455,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&warning
 
 exports[`button > variant-sentiment-disabled combination > render filled&warning disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #fbc600;
-  border: none;
-  color: #222638;
-  background: #fff0b8;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #fbc600;
-  border: none;
-  color: #222638;
-  background: #fff0b8;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_warning__e1wcoec styles_undefined_compound_5__e1wcoeq"
       disabled=""
       type="button"
     >
@@ -2500,113 +473,11 @@ exports[`button > variant-sentiment-disabled combination > render filled&white 1
 
 exports[`button > variant-sentiment-disabled combination > render filled&white disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #ffffff;
-  border: none;
-  color: #151a2d;
-  background: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #ffffff;
-  border: none;
-  color: #151a2d;
-  background: #e9eaeb;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_white__e1wcoef styles_undefined_compound_8__e1wcoet"
       disabled=""
       type="button"
     >
@@ -2620,111 +491,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&black 1`
 
 exports[`button > variant-sentiment-disabled combination > render ghost&black disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #151a2d;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #151a2d;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_black__e1wcoee styles_undefined_compound_25__e1wcoe1a"
       disabled=""
       type="button"
     >
@@ -2738,111 +509,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&danger 1
 
 exports[`button > variant-sentiment-disabled combination > render ghost&danger disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #b3144d;
-  color: #ffbbd3;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #b3144d;
-  color: #ffbbd3;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_danger__e1wcoe9 styles_undefined_compound_20__e1wcoe15"
       disabled=""
       type="button"
     >
@@ -2856,111 +527,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&info 1`]
 
 exports[`button > variant-sentiment-disabled combination > render ghost&info disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #005da3;
-  color: #9ad4ff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #005da3;
-  color: #9ad4ff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_info__e1wcoea styles_undefined_compound_21__e1wcoe16"
       disabled=""
       type="button"
     >
@@ -2974,111 +545,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&neutral 
 
 exports[`button > variant-sentiment-disabled combination > render ghost&neutral disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
       disabled=""
       type="button"
     >
@@ -3092,111 +563,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&primary 
 
 exports[`button > variant-sentiment-disabled combination > render ghost&primary disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  color: #d8c5fc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  color: #d8c5fc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
       disabled=""
       type="button"
     >
@@ -3210,111 +581,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&secondar
 
 exports[`button > variant-sentiment-disabled combination > render ghost&secondary disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #ac22e7;
-  color: #ebbcff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #ac22e7;
-  color: #ebbcff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_secondary__e1wcoe8 styles_undefined_compound_19__e1wcoe14"
       disabled=""
       type="button"
     >
@@ -3328,111 +599,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&success 
 
 exports[`button > variant-sentiment-disabled combination > render ghost&success disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #22674e;
-  color: #7ee0bc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #22674e;
-  color: #7ee0bc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_success__e1wcoeb styles_undefined_compound_22__e1wcoe17"
       disabled=""
       type="button"
     >
@@ -3446,111 +617,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&warning 
 
 exports[`button > variant-sentiment-disabled combination > render ghost&warning disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #7c5400;
-  color: #ffdd5f;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #7c5400;
-  color: #ffdd5f;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_warning__e1wcoec styles_undefined_compound_23__e1wcoe18"
       disabled=""
       type="button"
     >
@@ -3564,111 +635,11 @@ exports[`button > variant-sentiment-disabled combination > render ghost&white 1`
 
 exports[`button > variant-sentiment-disabled combination > render ghost&white disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  color: #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_ghost__e1wcoei styles_sentiment_white__e1wcoef styles_undefined_compound_26__e1wcoe1b"
       disabled=""
       type="button"
     >
@@ -3682,113 +653,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&black
 
 exports[`button > variant-sentiment-disabled combination > render outlined&black disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #151a2d;
-  color: #151a2d;
-  color: #b5b7bd;
-  border: 1px solid #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #151a2d;
-  color: #151a2d;
-  color: #b5b7bd;
-  border: 1px solid #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_black__e1wcoee styles_undefined_compound_16__e1wcoe11"
       disabled=""
       type="button"
     >
@@ -3802,113 +671,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&dange
 
 exports[`button > variant-sentiment-disabled combination > render outlined&danger disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #b3144d;
-  color: #b3144d;
-  color: #ffbbd3;
-  border: 1px solid #ffbbd3;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #b3144d;
-  color: #b3144d;
-  color: #ffbbd3;
-  border: 1px solid #ffbbd3;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_danger__e1wcoe9 styles_undefined_compound_11__e1wcoew"
       disabled=""
       type="button"
     >
@@ -3922,113 +689,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&info 
 
 exports[`button > variant-sentiment-disabled combination > render outlined&info disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #005da3;
-  color: #005da3;
-  color: #9ad4ff;
-  border: 1px solid #9ad4ff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #005da3;
-  color: #005da3;
-  color: #9ad4ff;
-  border: 1px solid #9ad4ff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_info__e1wcoea styles_undefined_compound_12__e1wcoex"
       disabled=""
       type="button"
     >
@@ -4042,113 +707,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&neutr
 
 exports[`button > variant-sentiment-disabled combination > render outlined&neutral disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #b5b7bd;
-  color: #3f4250;
-  color: #b5b7bd;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #b5b7bd;
-  color: #3f4250;
-  color: #b5b7bd;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_neutral__e1wcoed styles_undefined_compound_15__e1wcoe10"
       disabled=""
       type="button"
     >
@@ -4162,113 +725,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&prima
 
 exports[`button > variant-sentiment-disabled combination > render outlined&primary disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_primary__e1wcoe7 styles_undefined_compound_9__e1wcoeu"
       disabled=""
       type="button"
     >
@@ -4282,113 +743,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&secon
 
 exports[`button > variant-sentiment-disabled combination > render outlined&secondary disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #ac22e7;
-  color: #ac22e7;
-  color: #ebbcff;
-  border: 1px solid #ebbcff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #ac22e7;
-  color: #ac22e7;
-  color: #ebbcff;
-  border: 1px solid #ebbcff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_secondary__e1wcoe8 styles_undefined_compound_10__e1wcoev"
       disabled=""
       type="button"
     >
@@ -4402,113 +761,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&succe
 
 exports[`button > variant-sentiment-disabled combination > render outlined&success disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #22674e;
-  color: #22674e;
-  color: #7ee0bc;
-  border: 1px solid #7ee0bc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #22674e;
-  color: #22674e;
-  color: #7ee0bc;
-  border: 1px solid #7ee0bc;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_success__e1wcoeb styles_undefined_compound_13__e1wcoey"
       disabled=""
       type="button"
     >
@@ -4522,113 +779,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&warni
 
 exports[`button > variant-sentiment-disabled combination > render outlined&warning disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #7c5400;
-  color: #7c5400;
-  color: #ffdd5f;
-  border: 1px solid #ffdd5f;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #7c5400;
-  color: #7c5400;
-  color: #ffdd5f;
-  border: 1px solid #ffdd5f;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_warning__e1wcoec styles_undefined_compound_14__e1wcoez"
       disabled=""
       type="button"
     >
@@ -4642,113 +797,11 @@ exports[`button > variant-sentiment-disabled combination > render outlined&white
 
 exports[`button > variant-sentiment-disabled combination > render outlined&white disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  color: #b5b7bd;
-  border: 1px solid #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  color: #b5b7bd;
-  border: 1px solid #b5b7bd;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_outlined__e1wcoeh styles_sentiment_white__e1wcoef styles_undefined_compound_17__e1wcoe12"
       disabled=""
       type="button"
     >

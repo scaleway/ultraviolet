@@ -1,73 +1,63 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Stack, Tag, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
+import {
+  conversationAvatar,
+  conversationBubble,
+  conversationContainer,
+  conversationInfos,
+  conversationRawMessage,
+  conversationTag,
+  styledText,
+} from './styles.css'
 
-const Conversation = ({ children }: { children: ReactNode }) => (
-  <Stack>{children}</Stack>
-)
-const StyledInfos = styled.div<{ align: 'left' | 'right' }>`
-  display: flex;
-  align-items: center;
-  justify-content: ${({ align }) =>
-    align === 'left' ? 'flex-start' : 'flex-end'};
-  margin: 0 ${({ theme }) => theme.space['7']};
-`
+const Conversation = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => <Stack style={style}>{children}</Stack>
+
 export const MessageInfos = ({
   children,
   align,
+  style,
 }: {
   children: ReactNode
   align: 'left' | 'right'
-}) => <StyledInfos align={align}>{children}</StyledInfos>
-
-const StyledText = styled(Text)`
-  margin-top: ${({ theme }) => theme.space['3']};
-  text-align: center;
-`
-
-export const Date = ({ children }: { children: ReactNode }) => (
-  <StyledText as="p" prominence="weak" variant="bodySmall">
+  style?: CSSProperties
+}) => (
+  <div className={conversationInfos[align]} style={style}>
     {children}
-  </StyledText>
+  </div>
 )
 
-const MessageContainer = styled('div', {
-  shouldForwardProp: prop => !['align'].includes(prop),
-})<{ align: 'left' | 'right' }>`
-  display: flex;
-  flex-direction: ${({ align }) => (align === 'left' ? 'row-reverse' : 'row')};
-  margin-bottom: ${({ theme }) => theme.space['2']};
-`
-
-const RawMessageContainer = styled('div', {
-  shouldForwardProp: prop => !['align'].includes(prop),
-})<{ align: 'left' | 'right' }>`
-  margin: 0 ${({ theme }) => theme.space['3']};
-  margin-top: ${({ theme }) => theme.space['3']};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => theme.space['3']};
-  background-color: ${({ theme, align }) =>
-    align === 'left'
-      ? theme.colors.neutral.backgroundStrong
-      : theme.colors.primary.background};
-`
-
-const AvatarContainer = styled.div`
-  display: flex;
-  align-self: flex-end;
-`
-
-const BubbleContainer = styled.div`
-  width: 100%;
-`
+export const Date = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => (
+  <Text
+    as="p"
+    className={styledText}
+    prominence="weak"
+    style={style}
+    variant="bodySmall"
+  >
+    {children}
+  </Text>
+)
 
 type MessageProps = {
   className?: string
   children: ReactNode
   avatar: ReactNode
   align?: 'left' | 'right'
+  style?: CSSProperties
 }
 
 export const Message = ({
@@ -75,23 +65,29 @@ export const Message = ({
   children,
   avatar,
   align = 'right',
+  style,
 }: MessageProps) => (
-  <MessageContainer align={align} className={className}>
-    <BubbleContainer>
-      <RawMessageContainer align={align}>{children}</RawMessageContainer>
-    </BubbleContainer>
-    <AvatarContainer>{avatar}</AvatarContainer>
-  </MessageContainer>
+  <div
+    className={`${className ? `${className} ` : ''}${conversationContainer[align]}`}
+    style={style}
+  >
+    <div className={conversationBubble}>
+      <div className={conversationRawMessage[align]}>{children}</div>
+    </div>
+    <div className={conversationAvatar}>{avatar}</div>
+  </div>
 )
 
-const StyledTag = styled(Tag)`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  height: 16px;
-  margin-right: ${({ theme }) => theme.space['1']};
-`
-
-export const MessageTag = ({ children }: { children: ReactNode }) => (
-  <StyledTag>{children}</StyledTag>
+export const MessageTag = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => (
+  <Tag className={conversationTag} style={style}>
+    {children}
+  </Tag>
 )
 
 Conversation.Date = Date

@@ -1,37 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { DateInputContext } from '../Context'
 import { formatValue, isSameMonth } from '../helpers'
-
-const Month = styled(Button)`
-  height: ${({ theme }) => theme.sizing['312']};
-  width: 100%;
-  padding: 0;
-  text-transform: capitalize;
-
-  &[aria-label="in-range"] {
-    color:  ${({ theme }) => theme.colors.primary.textHover};
-    background-color: ${({ theme }) => theme.colors.primary.background};
-  }
-
-  &[aria-label="in-range"]:hover {
-    color: ${({ theme }) => theme.colors.neutral.textStronger};
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
-  }
-
-  &[aria-label="not-current"] {
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-  }
-
-  &[aria-label="selected"] {
-    color: ${({ theme }) => theme.colors.neutral.textStronger};
-  }
-`
+import { capitalizedText, dayMonth as monthStyle } from './styles.css'
 
 export const Monthly = () => {
   const {
@@ -163,8 +138,9 @@ export const Monthly = () => {
         }
 
         return (
-          <Month
+          <Button
             aria-label={monthState()}
+            className={`${monthStyle} ${capitalizedText}`}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
@@ -187,7 +163,7 @@ export const Monthly = () => {
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
           >
             {month[1]}
-          </Month>
+          </Button>
         )
       })}
     </Row>

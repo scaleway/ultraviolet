@@ -11,13 +11,15 @@
     },
     "includes": [
       "!**/package.json",
+      ".oxlintrc.json",
       "**/*.ts",
       "**/*.tsx",
       "!**/dist/**",
       "!**/build/**",
       "!**/.turbo/**",
       "!**/prebuild.ts",
-      "!**/index.stories.tsx"
+      "!**/index.stories.tsx",
+      "!**/*.css.ts"
     ]
   },
   "css": {
@@ -36,17 +38,19 @@
   "files": {
     "includes": [
       "**",
-      "!**/.turbo/",
-      "!**/.next/",
-      "!**/coverage",
-      "!**/node_modules/",
+      "!**/coverage/*",
+      "!**/node_modules/*",
       "!**/storybook-static",
-      "!**/dist",
+      "!**/.turbo/*",
+      "!**/.next/*",
+      "!**/coverage",
+      "!**/storybook-static/*",
+      "!**/dist/*",
       "!**/pnpm-lock.yaml",
       "!**/package.json",
       "!**/CHANGELOG.md",
       "!**/*.snap",
-      "!**/__snapshots__/",
+      "!**/__snapshots__/*",
       "!**/.storybook"
     ]
   },
@@ -91,7 +95,12 @@
     }
   },
   "linter": {
-    "enabled": false
+    "enabled": false,
+    "rules": {
+      "complexity": {
+        "noImportantStyles": "off"
+      }
+    }
   },
   "overrides": [
     {

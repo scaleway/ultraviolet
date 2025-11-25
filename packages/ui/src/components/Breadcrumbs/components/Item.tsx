@@ -1,63 +1,24 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type {
+  KeyboardEvent,
+  MouseEvent as ReactMouseEvent,
+  ReactNode,
+} from 'react'
+import { useMemo } from 'react'
 import { Button } from '../../Button'
 import { Link } from '../../Link'
-import { HEIGHT } from '../constants'
-
-const StyledLink = styled(Link)`
-  padding-right: ${({ theme }) => theme.space['1']};
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`
-
-const StyledButton = styled(Button)<{ maxWidth?: string; minWidth?: string }>`
-  min-width: ${({ minWidth }) => minWidth || 'auto'};
-  max-width: ${({ maxWidth }) => maxWidth || 'fit-content'};
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  text-overflow: ellipsis;
-`
-
-const ItemContainer = styled.li<{ maxWidth?: string; minWidth?: string }>`
-  display: inline;
-  height: ${HEIGHT};
-  display: flex;
-  align-items: center;
-  flex: 1;
-  min-width: ${({ minWidth }) => minWidth || 'auto'};
-  max-width: ${({ maxWidth }) => maxWidth || 'fit-content'};
-
-  ${({ onClick }) =>
-    onClick
-      ? `
-    cursor: pointer;
-    &[aria-disabled="true"] {
-      pointer-events: none;
-    }
-    `
-      : ``}
-
-  &:not(:first-child) {
-    ${StyledLink} {
-      padding: 0 ${({ theme }) => theme.space['1']};
-    }
-  }
-
-  &:last-child {
-    ${StyledLink} {
-      pointer-events: none;
-    }
-
-    ${StyledButton} {
-      pointer-events: none;
-      cursor: default;
-    }
-  }
-`
+import { Text } from '../../Text'
+import {
+  breadcrumbsItem,
+  contentBreadcrumbs,
+  contentBreadcrumbsText,
+  itemContainerBreadcrumbs,
+  linkBreadcrumbs,
+  maxWidthVar,
+  minWidthVar,
+} from './styles.css'
 
 type ItemProps = {
   children: ReactNode
@@ -76,6 +37,7 @@ type ItemProps = {
   to?: string
   disabled?: boolean
   onClick?: (event: ReactMouseEvent<HTMLLIElement>) => void
+  onKeyDown?: (event: KeyboardEvent<HTMLLIElement>) => void
   className?: string
   maxWidth?: string
   minWidth?: string
@@ -87,33 +49,66 @@ export const Item = ({
   disabled = false,
   'aria-current': ariaCurrent,
   onClick,
+  onKeyDown,
   className,
   maxWidth,
   minWidth,
-}: ItemProps) => (
-  <ItemContainer
-    aria-current={ariaCurrent}
-    aria-disabled={disabled}
-    className={className}
-    maxWidth={maxWidth}
-    minWidth={minWidth}
-    onClick={onClick}
-  >
-    {to ? (
-      <StyledLink href={to} prominence="stronger" size="small">
-        {children}
-      </StyledLink>
-    ) : (
-      <StyledButton
-        disabled={disabled}
-        maxWidth={maxWidth}
-        minWidth={minWidth}
-        sentiment="neutral"
-        size="small"
-        variant="ghost"
+}: ItemProps) => {
+  const renderedChildren = useMemo(() => {
+    if (to) {
+      return (
+        <Link
+          className={linkBreadcrumbs}
+          href={to}
+          prominence="stronger"
+          size="small"
+        >
+          {children}
+        </Link>
+      )
+    }
+
+    if (onClick) {
+      return (
+        <Button
+          className={contentBreadcrumbs}
+          disabled={disabled}
+          sentiment="neutral"
+          size="small"
+          style={assignInlineVars({
+            [minWidthVar]: minWidth?.toString(),
+            [maxWidthVar]: maxWidth?.toString(),
+          })}
+          variant="ghost"
+        >
+          {children}
+        </Button>
+      )
+    }
+
+    return (
+      <Text
+        as="div"
+        className={`${contentBreadcrumbs} ${contentBreadcrumbsText}`}
+        variant="bodySmallStrong"
       >
         {children}
-      </StyledButton>
-    )}
-  </ItemContainer>
-)
+      </Text>
+    )
+  }, [children, disabled, maxWidth, minWidth, onClick, to])
+
+  return (
+    <li
+      aria-current={ariaCurrent}
+      className={`${className ? `${className} ` : ''}${itemContainerBreadcrumbs({ clickable: !!onClick })} ${breadcrumbsItem}`}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      style={assignInlineVars({
+        [minWidthVar]: minWidth?.toString(),
+        [maxWidthVar]: maxWidth?.toString(),
+      })}
+    >
+      {renderedChildren}
+    </li>
+  )
+}

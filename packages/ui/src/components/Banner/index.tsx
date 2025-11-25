@@ -1,10 +1,8 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { css, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { CloseIcon } from '@ultraviolet/icons'
-import type { ComponentProps, ReactNode } from 'react'
+import { useTheme } from '@ultraviolet/themes'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
 import { Button } from '../Button'
 import { Link } from '../Link'
@@ -12,97 +10,10 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import defaultIllustration from './assets/default-image.svg'
 import defaultIllustrationSmall from './assets/default-image-small.svg'
-
-type Variant = 'intro' | 'promotional'
-type Size = 'small' | 'medium'
-
-const styles = ({
-  theme,
-  variant,
-  size,
-}: {
-  theme: Theme
-  variant: Variant
-  size: Size
-}) => {
-  if (size === 'small') {
-    if (variant === 'intro') {
-      return css`
-        background: ${theme.colors.primary.background};
-        background-position: left, right;
-        background-repeat: no-repeat, no-repeat;
-        background-size: contain, contain;
-      `
-    }
-
-    if (variant === 'promotional') {
-      return css`
-        background-position: left, right;
-        background-image: ${theme.colors.other.gradients.background.linear.aqua};
-        background-repeat: no-repeat, no-repeat;
-        background-size: contain, contain;
-      `
-    }
-  }
-
-  if (size === 'medium') {
-    if (variant === 'intro') {
-      return css`
-        background: ${theme.colors.primary.background};
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: contain;
-      `
-    }
-
-    if (variant === 'promotional') {
-      return css`
-        background-image: ${theme.colors.other.gradients.background.linear.aqua};
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: contain;
-      `
-    }
-  }
-
-  return null
-}
-
-const Container = styled('div', {
-  shouldForwardProp: prop => !['variant', 'size', 'padding'].includes(prop),
-})<{ variant: Variant; size: Size }>`
-  padding: ${({ theme, size }) => theme.space[size === 'small' ? '2' : '3']};
-  border-radius: ${({ theme }) => theme.radii.large};
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: ${({ theme }) => theme.space['2']};
-  ${({ theme, variant, size }) => styles({ size, theme, variant })};
-
-  > svg:first-child,
-  > img {
-    height: ${({ size }) => (size === 'medium' ? '140px' : '100px')};
-    align-self: center;
-  }
-
-  button[name="close"] {
-    background: none;
-
-    &:hover {
-      background: none;
-    }
-  }
-`
-
-const ImageStack = styled(Stack, {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: Size }>`
-  width: ${({ size }) => (size === 'medium' ? '140px' : '74px')};
-`
+import type { BannerVariants } from './styles.css'
+import { banner, closeButtonBanner, imageStackBanner } from './styles.css'
 
 type BannerProps = {
-  variant?: Variant
-  size?: 'small' | 'medium'
   title: string
   children: ReactNode
   direction?: 'row' | 'column'
@@ -118,8 +29,9 @@ type BannerProps = {
   image?: ReactNode
   closable?: boolean
   className?: string
-  ['data-testid']?: string
-}
+  'data-testid'?: string
+  style?: CSSProperties
+} & BannerVariants
 
 /**
  * Banner component is used to display an informative message to the user with style.
@@ -139,6 +51,7 @@ export const Banner = ({
   className,
   closable = true,
   'data-testid': dataTestId,
+  style,
 }: BannerProps) => {
   const { theme } = useTheme()
   const defaultImage =
@@ -163,20 +76,22 @@ export const Banner = ({
   }
 
   return (
-    <Container
-      className={className}
+    <Stack
+      className={`${className ? `${className} ` : ''}${banner({ size, variant })}`}
       data-testid={dataTestId}
-      size={size}
-      variant={variant}
+      direction="row"
+      gap={2}
+      justifyContent="space-between"
+      style={style}
     >
       {image ? (
-        <ImageStack justifyContent="center" size={size}>
+        <Stack className={imageStackBanner[size]} justifyContent="center">
           {typeof image === 'string' ? <img alt="" src={image} /> : image}
-        </ImageStack>
+        </Stack>
       ) : (
-        <ImageStack justifyContent="center" size={size}>
+        <Stack className={imageStackBanner[size]} justifyContent="center">
           <img alt="" src={defaultImage} />
-        </ImageStack>
+        </Stack>
       )}
       <Stack
         alignItems={direction === 'column' ? 'start' : 'center'}
@@ -234,6 +149,7 @@ export const Banner = ({
       </Stack>
       {closable ? (
         <Button
+          className={closeButtonBanner}
           name="close"
           onClick={() => {
             setOpened(false)
@@ -251,6 +167,6 @@ export const Banner = ({
           <CloseIcon />
         </Button>
       ) : null}
-    </Container>
+    </Stack>
   )
 }

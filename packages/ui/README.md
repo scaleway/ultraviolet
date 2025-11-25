@@ -7,7 +7,7 @@ Ultraviolet UI is a set of React components and utilities to build fast applicat
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @ultraviolet/themes
 ```
 
 You will also need to import fonts in your project by adding:
@@ -27,19 +27,30 @@ You will also need to import fonts in your project by adding:
 />
 ```
 
+Or if you prefer to install the package for it you can add:
+```sh
+$ pnpm add @ultraviolet/fonts
+```
+
+and import it in your project:
+
+```ts
+import '@ultraviolet/fonts'
+```
+
 ### Usage
 
+For the library to work properly, you need to wrap your application with the `ThemeProvider` component. `ThemeProvider` will provide the theme to all components in your application and allow you to do `const theme = useTheme()` to have access to the theme object in your TSX files.
+
+You will also need to import styles of components for them to have the correct styles.
+
 ```tsx
-import { Global, ThemeProvider, css } from '@emotion/react'
-import { Button, normalize, theme } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/ui'
+import { Button, theme } from '@ultraviolet/ui'
+import '@ultraviolet/ui/styles'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Global
-      styles={css`
-        ${normalize()}
-      `}
-    />
     <Button onClick={() => console.log('clicked')}>Click Me</Button>
   </ThemeProvider>
 )
@@ -48,32 +59,61 @@ const App = () => (
 > **Note**:
 > To generate your own theme easily you can check the [theme generator](https://storybook.ultraviolet.scaleway.com/?path=/docs/tools-theme-generator--docs).
 
-### Typescript
-To allow typescript theme typings with `@emotion/styled` components,
-you'll have to define the `@emotion/react` module `Theme` interface in your project.
+## Migration from V2 to V3
+With the migration from `@ultraviolet/ui 2.0.0` to `@ultraviolet/ui 3.0.0`, several core changes have been introduced. These changes are due to the shift in styling from `Emotion` to `vanilla-extract`.
 
-For example, in a `emotion.d.ts` file:
+### Theme provider
+To ensure the library works correctly, you must wrap your application with the `ThemeProvider` component. Import it from `@ultraviolet/themes` or `@ultraviolet/ui` (replacing the previous `Emotion`-based provider). 
 
-- Declaration to use the default Ultraviolet Themes
+If your app still uses `Emotion`, you can combine both theme providers: 
 
-```ts
-import '@emotion/react'
-import type { UltravioletUITheme } from '@ultraviolet/ui'
+```js
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
+import {
+  consoleLightTheme,
+  ThemeProvider as UVThemeProvider,
+} from '@ultraviolet/ui'
 
-declare module '@emotion/react' {
-  export interface Theme extends UltravioletUITheme {}
-}
+const App = () => (
+  <UVThemeProvider theme={consoleLightTheme}>
+    <EmotionThemeProvider theme={consoleLightTheme}>
+        {children}
+    </EmotionThemeProvider>
+  </UVThemeProvider>
+)
 ```
 
-- Declaration to use your custom theme
+### Style
+To ensure styles are applied, import the component styles at the root of your application:
 
-```ts
-import '@emotion/react'
-import type { MyTheme } from './src/theme'
+```js
+import '@ultraviolet/ui/styles'
+```
+To replace `normalize()` (which was used with Emotion), you can now import a global style with the same effect:
 
-declare module '@emotion/react' {
-  export interface Theme extends MyTheme {}
-}
+Before:
+```js
+import { Global } from '@emotion/react'
+import { normalize } from '@ultraviolet/ui'
+import { ThemeProvider } from '@emotion/react'
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+      <Global styles={css`${normalize()}`}>
+      <MyApp />
+  </ThemeProvider>
+)
+```
+After: 
+```js
+import { ThemeProvider } from "@ultraviolet/themes"
+import "@ultraviolet/themes/global"
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <MyApp />
+  </ThemeProvider>
+)
 ```
 
 ## Documentation

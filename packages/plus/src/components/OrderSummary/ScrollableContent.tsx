@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import { NumberInput, Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import {
@@ -7,27 +6,14 @@ import {
   formatNumber,
 } from './helpers'
 import { OrderSummaryContext } from './Provider'
+import {
+  orderSummaryCategory,
+  orderSummaryDetails,
+  orderSummaryNumberInput,
+  orderSummaryScrollableContainer,
+} from './styles.css'
 import type { ItemsType, SubCategoryType } from './types'
 
-const StyledNumberInputV2 = styled(NumberInput)`
-max-width: 12.5rem;
-background-color: ${({ theme }) => theme.colors.neutral.background};
-`
-const ContainerScrollable = styled(Stack)`
-overflow-y: scroll;
-padding: ${({ theme }) => theme.space[3]};
-height: 100%;
-`
-
-const DetailsStack = styled(Stack)`
-padding-left: ${({ theme }) => theme.space[1]};
-`
-const CategoryStack = styled(Stack)`
-  :not(:last-child){
-    border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    padding-bottom: ${({ theme }) => theme.space[3]};
-  }
-`
 const CategoryName = ({ category }: { category: ItemsType }) => {
   const { categoriesPrice } = useContext(OrderSummaryContext)
 
@@ -67,7 +53,8 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
       )}
       {category.customContent}
       {category.numberInput ? (
-        <StyledNumberInputV2
+        <NumberInput
+          className={orderSummaryNumberInput}
           controls={category.numberInputControls}
           onChange={category.onChangeInput}
           size="small"
@@ -134,7 +121,21 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
   return (
     <Stack direction="column" gap={1}>
       <Stack alignItems="center" direction="row" justifyContent="space-between">
-        {subCategory.title ? (
+        {subCategory.additionalInfo ? (
+          <Stack alignItems="center" direction="row" gap={1}>
+            <Text
+              as="span"
+              prominence="strong"
+              sentiment="neutral"
+              variant="bodySmallStrong"
+            >
+              {subCategory.title}
+            </Text>
+            <Text as="span" italic sentiment="primary" variant="bodySmall">
+              {subCategory.additionalInfo}
+            </Text>
+          </Stack>
+        ) : (
           <Text
             as="span"
             prominence="strong"
@@ -143,7 +144,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
           >
             {subCategory.title}
           </Text>
-        ) : null}
+        )}
         {subCategory.customContent ? (
           <Text
             as="span"
@@ -155,7 +156,8 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
           </Text>
         ) : null}
         {subCategory.numberInput ? (
-          <StyledNumberInputV2
+          <NumberInput
+            className={orderSummaryNumberInput}
             controls={subCategory.numberInputControls}
             onChange={subCategory.onChangeInput}
             size="small"
@@ -196,7 +198,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         ) : null}
       </Stack>
 
-      <DetailsStack direction="column" gap={0.5}>
+      <Stack className={orderSummaryDetails} direction="column" gap={0.5}>
         {subCategory.details?.map(detail =>
           detail ? (
             <Text
@@ -209,7 +211,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
             </Text>
           ) : null,
         )}
-      </DetailsStack>
+      </Stack>
     </Stack>
   )
 }
@@ -218,10 +220,14 @@ export const ScrollableContent = () => {
   const { items } = useContext(OrderSummaryContext)
 
   return (
-    <ContainerScrollable gap={3}>
+    <Stack className={orderSummaryScrollableContainer} gap={3}>
       {items.map(category =>
         Object.keys(category).length > 0 && category.category ? (
-          <CategoryStack gap={1.5} key={category.category}>
+          <Stack
+            className={orderSummaryCategory}
+            gap={1.5}
+            key={category.category}
+          >
             <CategoryName category={category} />
             {category.subCategories &&
             Object.keys(category.subCategories).length > 0 ? (
@@ -234,9 +240,9 @@ export const ScrollableContent = () => {
                 ))}
               </Stack>
             ) : null}
-          </CategoryStack>
+          </Stack>
         ) : null,
       )}
-    </ContainerScrollable>
+    </Stack>
   )
 }

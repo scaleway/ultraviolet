@@ -1,24 +1,493 @@
 # Change Log
 
-## 2.1.6
+## 3.0.0-beta.29
 
 ### Patch Changes
 
-- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
-  Updated dependency `@types/react-dom` to `19.2.1`.
-  Updated dependency `react` to `19.2.0`.
-  Updated dependency `react-dom` to `19.2.0`.
+- [#5795](https://github.com/scaleway/ultraviolet/pull/5795) [`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.6`.
+  Updated dependency `@types/react-dom` to `19.2.3`.
+- Updated dependencies [[`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a)]:
+  - @ultraviolet/icons@5.0.0-beta.13
 
-- [#5691](https://github.com/scaleway/ultraviolet/pull/5691) [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `19.2.2`.
+## 3.0.0-beta.28
 
-- Updated dependencies [[`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918), [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb)]:
-  - @ultraviolet/icons@4.1.2
+### Major Changes
 
-## 2.1.5
+- [#5775](https://github.com/scaleway/ultraviolet/pull/5775) [`b062bbe`](https://github.com/scaleway/ultraviolet/commit/b062bbe30e73ca43e5684aaf98b03aea57fea4c9) Thanks [@lisalupi](https://github.com/lisalupi)! - - Remove `Emotion`
+  - Removed `Breakpoint`: use directly `up` and `down`
 
 ### Patch Changes
 
-- [#5657](https://github.com/scaleway/ultraviolet/pull/5657) [`e20eeab`](https://github.com/scaleway/ultraviolet/commit/e20eeab50d142fee1ef05260b01eb7eb75bd9976) Thanks [@iManu](https://github.com/iManu)! - Add `aria-keyshortcuts` attribute to Link & Button
+- [#5791](https://github.com/scaleway/ultraviolet/pull/5791) [`b7ab0e3`](https://github.com/scaleway/ultraviolet/commit/b7ab0e3e71e5d570b57d33907e1b51ae00d32c9a) Thanks [@lisalupi](https://github.com/lisalupi)! - `Alert`: add "size" prop
+
+- [#5789](https://github.com/scaleway/ultraviolet/pull/5789) [`63a8f2a`](https://github.com/scaleway/ultraviolet/commit/63a8f2a32a804c0c6767a9a030cb95de2cee563d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Popup`: position is recomputed when children changes
+
+- [#5798](https://github.com/scaleway/ultraviolet/pull/5798) [`83455a7`](https://github.com/scaleway/ultraviolet/commit/83455a73d5c258ffd4d33e5f2050d696270bc96c) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagInput` and `TextArea`: fix size
+
+- [#5782](https://github.com/scaleway/ultraviolet/pull/5782) [`b9f0d1e`](https://github.com/scaleway/ultraviolet/commit/b9f0d1e7ad0aae0a4e7756d7d7e107a8228e9419) Thanks [@lisalupi](https://github.com/lisalupi)! - All `Popup` components (`Popover`, `Tooltip`, `Menu`): 4 new positions `auto-` to have auto-placement but give priority to a direction. For instance, `auto-bottom` will try to place the popup beneath the disclosure first, if there is not enough place it will try top, then left, then right.
+  The priorities are :
+
+  - `auto-bottom` : bottom > top > left > right
+  - `auto-left` : left > right > top > bottom
+  - `auto-right` : right > left > top > bottom
+  - `auto` and `auto-top` : top > bottom > left > right
+
+  **BREAKING CHANGE**
+  `Menu`: prop `noShrink` renamed `shrink` with opposite behavior
+
+- Updated dependencies [[`85d3468`](https://github.com/scaleway/ultraviolet/commit/85d3468dfce3a7532866cf63a017274e65661c80)]:
+  - @ultraviolet/icons@5.0.0-beta.12
+
+## 3.0.0-beta.27
+
+### Major Changes
+
+- [#5766](https://github.com/scaleway/ultraviolet/pull/5766) [`2974892`](https://github.com/scaleway/ultraviolet/commit/2974892ab614235acdf141f1a83c9a867237cb9b) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE** Remove all emotion animation, replace with vanilla-extract animation by default.
+
+  ```js
+  import { fadeIn } from "@ultraviolet/ui"; // vanilla-extract animation
+  ```
+
+  To use animation in another context, add `Default` at the end of the animation name:
+
+  ```js
+  import { fadeInDefault } from "@ultraviolet/ui";
+  ```
+
+  This returns a string that can be used in many different places.
+
+  1. **Emotion**: create the keyframe then use it:
+
+  ```js
+  import { fadeInDefault } from "@ultraviolet/ui";
+  import { keyframes } from "@emotion/react";
+
+  const fadeInEmotion = keyframes`${fadeInDefault}`;
+  const StyledDiv = styled.div`
+    animation: ${fadeInEmotion} 1s ease infinite;
+  `;
+  ```
+
+  2. Vanilla CSS: simply add the name of the animation you want to use as a className.
+
+  ```js
+  const MyComponent = () => <div className="fadeIn">Hello World!</div>;
+  ```
+
+  To customize the animation, you must overrule the default settings:
+
+  ```js
+  const MyComponent = () => (
+    <div className="fadeIn" style={{ animationDuration: "300ms" }}>
+      Hello World!
+    </div>
+  );
+  ```
+
+### Minor Changes
+
+- [#5781](https://github.com/scaleway/ultraviolet/pull/5781) [`5747647`](https://github.com/scaleway/ultraviolet/commit/57476477b2e7888e644ac44fe31ba6f270913248) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat(ui): add TreeMap chart
+
+### Patch Changes
+
+- [#5779](https://github.com/scaleway/ultraviolet/pull/5779) [`ad4a930`](https://github.com/scaleway/ultraviolet/commit/ad4a930595722ef9e7764f1f2e2ba67948efaa06) Thanks [@lisalupi](https://github.com/lisalupi)! - `List`: update column width
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- Updated dependencies [[`c6eb5c7`](https://github.com/scaleway/ultraviolet/commit/c6eb5c7acd5b32f647306c35f9755c51e60ab33a), [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5), [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd)]:
+  - @ultraviolet/icons@5.0.0-beta.11
+  - @ultraviolet/themes@3.0.0-beta.4
+
+## 3.0.0-beta.26
+
+### Patch Changes
+
+- [#5771](https://github.com/scaleway/ultraviolet/pull/5771) [`abfbe9e`](https://github.com/scaleway/ultraviolet/commit/abfbe9e150f8e7880b03ea3ce69ede86f6c46420) Thanks [@etienne-scaleway](https://github.com/etienne-scaleway)! - `Popup`: Make sure to clear all timers when unmount
+
+## 3.0.0-beta.25
+
+### Major Changes
+
+- [#5758](https://github.com/scaleway/ultraviolet/pull/5758) [`bc629aa`](https://github.com/scaleway/ultraviolet/commit/bc629aa7771057a7ca7a9e59bff983a0df73d2fa) Thanks [@etienne-scaleway](https://github.com/etienne-scaleway)! - ! POTENTIAL BREAKING CHANGES !
+  Fixed the `maxLength` prop on TagList. This prop was previously implemented incorrectly and would only reduce the threshold by one when the total length exceeded `maxLength`.
+  This change might affect the number of visible tags, particularly if you have many long tags (the default `maxLength` is set to `600` characters) or if you have specified a custom `maxLength`.
+
+### Minor Changes
+
+- [#5762](https://github.com/scaleway/ultraviolet/pull/5762) [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCardOptionGroup` and `Toaster` migrate missing sub-components to vanilla extract
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+- [#5772](https://github.com/scaleway/ultraviolet/pull/5772) [`deba7e9`](https://github.com/scaleway/ultraviolet/commit/deba7e941ade8a796666c18f64bf7c2959709e19) Thanks [@lisalupi](https://github.com/lisalupi)! - `EmptyState`: fix sentiment on title
+
+- Updated dependencies [[`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3), [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983)]:
+  - @ultraviolet/icons@5.0.0-beta.10
+
+## 3.0.0-beta.24
+
+### Minor Changes
+
+- [#5756](https://github.com/scaleway/ultraviolet/pull/5756) [`4386617`](https://github.com/scaleway/ultraviolet/commit/4386617bee7563bb9f8fee177c936038f11dd47d) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Key`, `SelectableCardGroup` and `SelectableCardOptionGroup` to use vanilla-extract instead of Emotion and finish `LineChart` migration
+
+### Patch Changes
+
+- [#5747](https://github.com/scaleway/ultraviolet/pull/5747) [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6) Thanks [@lisalupi](https://github.com/lisalupi)! - Add e2e test of `SelectableCard` with `TextArea`
+
+- [#5753](https://github.com/scaleway/ultraviolet/pull/5753) [`5ac319e`](https://github.com/scaleway/ultraviolet/commit/5ac319e45abb27c624f2f33dd897be4cf1638312) Thanks [@lisalupi](https://github.com/lisalupi)! - `Button`: add box-shadow when button is active (accidentaly removed while migrating to vanilla extract)
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+  - @ultraviolet/icons@5.0.0-beta.9
+
+## 3.0.0-beta.23
+
+### Minor Changes
+
+- [#5713](https://github.com/scaleway/ultraviolet/pull/5713) [`0523069`](https://github.com/scaleway/ultraviolet/commit/0523069fd9a4455c375315ea7a47b4292ebc978e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Slider` to use vanilla extract instead of Emotion
+
+  - Add prop "style" to `Popup` and `Tooltip`
+
+- [#5723](https://github.com/scaleway/ultraviolet/pull/5723) [`eb6127e`](https://github.com/scaleway/ultraviolet/commit/eb6127e80e64644b0e2a4237a3cea291172acade) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Tabs` to use vanilla extract instead of Emotion
+
+- [#5745](https://github.com/scaleway/ultraviolet/pull/5745) [`0dcf373`](https://github.com/scaleway/ultraviolet/commit/0dcf37393506dc01609e803e11743b013296dfa0) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCard`: add "stopPropagation" in the children for keyboard events
+
+- [#5726](https://github.com/scaleway/ultraviolet/pull/5726) [`e23a69c`](https://github.com/scaleway/ultraviolet/commit/e23a69c30e95bec45b0a79e315682b330c0fbcef) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Table` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5746](https://github.com/scaleway/ultraviolet/pull/5746) [`317dbf6`](https://github.com/scaleway/ultraviolet/commit/317dbf6ee868f1e35dc1eeda47c3f169f3d1f391) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagInput`: "paste" shoud not automatically create a new tag
+
+- [#5750](https://github.com/scaleway/ultraviolet/pull/5750) [`3e9b92b`](https://github.com/scaleway/ultraviolet/commit/3e9b92bc1fe287d10f7806536fbb9256048d97af) Thanks [@lisalupi](https://github.com/lisalupi)! - `EmptyState`: content text should be neutral
+
+- [#5749](https://github.com/scaleway/ultraviolet/pull/5749) [`56915f1`](https://github.com/scaleway/ultraviolet/commit/56915f180a3da3289ebc5f6527e5a4427e441e1d) Thanks [@lisalupi](https://github.com/lisalupi)! - `List` and `UnitInput`: Fix vanilla-extract typos
+
+- [#5744](https://github.com/scaleway/ultraviolet/pull/5744) [`065f4e2`](https://github.com/scaleway/ultraviolet/commit/065f4e279b76b6953c6d9b4778cb6ed1b78f5e9b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Carousel`: fix container width
+
+- Updated dependencies [[`e2088f2`](https://github.com/scaleway/ultraviolet/commit/e2088f2f29499ba4c6737f638be657bb2b038d6b)]:
+  - @ultraviolet/icons@5.0.0-beta.8
+
+## 3.0.0-beta.22
+
+### Minor Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `InfoTable` to use vanilla extract instead of Emotion
+
+  - Add prop "style" to `Row`
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`7091562`](https://github.com/scaleway/ultraviolet/commit/709156284a91877ccbe72feba79b4ae44797319f) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `List` and `OfferList` to use vanilla-extract instead of Emotion
+
+  - HeaderCell: Rename prop `minWith`-> `minWidth`
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`203174a`](https://github.com/scaleway/ultraviolet/commit/203174a4d8a5e74bdff04b9d961b478423a8da1e) Thanks [@lisalupi](https://github.com/lisalupi)! - `UnitInput`: remove `&&` in style, since it is not needed anymore and replace id use with vanilla-extract class
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`0e47e5c`](https://github.com/scaleway/ultraviolet/commit/0e47e5c2288171ce4a3b3b613dbb4da4165428c7) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Menu` to usa vanilla extract instead of Emotion
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`a67faa2`](https://github.com/scaleway/ultraviolet/commit/a67faa2467ff6624b7a8c552c8e0b9d26c5b3063) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Dialog` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`97f362c`](https://github.com/scaleway/ultraviolet/commit/97f362ca8f84a654bd0174b719c5e660991fd866) Thanks [@lisalupi](https://github.com/lisalupi)! - `Breadcrumbs`: add padding on item without prop "to"
+
+- Updated dependencies [[`bf7256b`](https://github.com/scaleway/ultraviolet/commit/bf7256b5d2ef4b3b1346037bff5d86c2f47e4785)]:
+  - @ultraviolet/icons@5.0.0-beta.7
+
+## 3.0.0-beta.21
+
+### Minor Changes
+
+- [#5651](https://github.com/scaleway/ultraviolet/pull/5651) [`f6948b0`](https://github.com/scaleway/ultraviolet/commit/f6948b0aefe91750203bdbcd1b5173b872819004) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Snippet` to use vanilla extract instead of Emotion
+
+- [#5666](https://github.com/scaleway/ultraviolet/pull/5666) [`b348f99`](https://github.com/scaleway/ultraviolet/commit/b348f99ea11415508b618d52df29d1b7dcc4b302) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `Stepper` to use vanilla extract instead of Emotion
+
+- [#5665](https://github.com/scaleway/ultraviolet/pull/5665) [`c186192`](https://github.com/scaleway/ultraviolet/commit/c186192ad5e8e8e7e03f5e547602e34c04d8bac3) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Pagination />` to use vanilla extract
+
+- [#5675](https://github.com/scaleway/ultraviolet/pull/5675) [`fb3f4ca`](https://github.com/scaleway/ultraviolet/commit/fb3f4ca7a883c5f733afd01904eb4900769f1548) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Modal` and `Drawer` to use vanilla-extract instead of Emotion
+
+- [#5664](https://github.com/scaleway/ultraviolet/pull/5664) [`1893b2b`](https://github.com/scaleway/ultraviolet/commit/1893b2b6f104eb5843145c8cb69c46ac0ead6bbe) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Carousel />` to use vanilla extract
+
+- [#5662](https://github.com/scaleway/ultraviolet/pull/5662) [`fdb5be1`](https://github.com/scaleway/ultraviolet/commit/fdb5be1171509eaa17278264eae53e23be234925) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Toaster` and `Notification` to use vanilla extract instead of Emotion
+
+- [#5653](https://github.com/scaleway/ultraviolet/pull/5653) [`13350bc`](https://github.com/scaleway/ultraviolet/commit/13350bca640b8db2152219a7efbae1c922128558) Thanks [@matthprost](https://github.com/matthprost)! - Refactor search input to use fuzzy search from scaleway lib
+
+### Patch Changes
+
+- [#5699](https://github.com/scaleway/ultraviolet/pull/5699) [`634ced8`](https://github.com/scaleway/ultraviolet/commit/634ced8b45f33a7f192f2e8e3f862e83ad5c72b4) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Table.Row />` prop `selectDisabled` to be disabled when set to false
+
+- [#5661](https://github.com/scaleway/ultraviolet/pull/5661) [`3e9f9ad`](https://github.com/scaleway/ultraviolet/commit/3e9f9ad699a2415264a7b8f9c78d439b32ecef45) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `maxWidth` on `<UnitInput />` component
+
+## 3.0.0-beta.20
+
+### Major Changes
+
+- [#5632](https://github.com/scaleway/ultraviolet/pull/5632) [`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089) Thanks [@matthprost](https://github.com/matthprost)! - Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
+
+### Patch Changes
+
+- Updated dependencies [[`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089)]:
+  - @ultraviolet/themes@3.0.0-beta.2
+  - @ultraviolet/icons@5.0.0-beta.6
+
+## 3.0.0-beta.19
+
+### Minor Changes
+
+- [#5644](https://github.com/scaleway/ultraviolet/pull/5644) [`5c10948`](https://github.com/scaleway/ultraviolet/commit/5c10948eceb6a4e257bd6f752273dc7fee85d08e) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `SelectInput` to use vanilla extract instead of Emotion
+
+  - `Tag`: add prop `style`
+
+- [#5645](https://github.com/scaleway/ultraviolet/pull/5645) [`8ec50bb`](https://github.com/scaleway/ultraviolet/commit/8ec50bbb6b49f71ca574adeeaa1905d27511d0a8) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `EmptyState` to use vanilla extract instead of Emotion
+
+- [#5646](https://github.com/scaleway/ultraviolet/pull/5646) [`29bfec5`](https://github.com/scaleway/ultraviolet/commit/29bfec55c9519756f62f61aabcb775b0db1bc968) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `SearchInput` to use vanilla extract instead of Emotion
+  - `TextInput`: remove default outline when the input is focused (Firefox)
+
+### Patch Changes
+
+- [#5656](https://github.com/scaleway/ultraviolet/pull/5656) [`4d97647`](https://github.com/scaleway/ultraviolet/commit/4d97647adcc1fb2282ca1a7294c46310fc9ea695) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu` & `Popup`: when `placement='bottom'` or `placement='top'`, avoid negative values for "translate3d" to prevent negative positioning/x-overflow
+
+- [#5660](https://github.com/scaleway/ultraviolet/pull/5660) [`aa20c75`](https://github.com/scaleway/ultraviolet/commit/aa20c755e8f1bfa0f0ed927edfe53f8bda642102) Thanks [@lisalupi](https://github.com/lisalupi)! - `Checkbox`: fix classname
+
+- Updated dependencies [[`4fb8e97`](https://github.com/scaleway/ultraviolet/commit/4fb8e97474b1d8a33fa98f22cdddfdeed753e3f1)]:
+  - @ultraviolet/icons@5.0.0-beta.5
+
+## 3.0.0-beta.18
+
+### Minor Changes
+
+- [#5640](https://github.com/scaleway/ultraviolet/pull/5640) [`945ce38`](https://github.com/scaleway/ultraviolet/commit/945ce3842e11407e4bdda076c27f41465ec73284) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `UnitInput` to use vanilla extract instead of Emotion
+
+  - Add prop `style` to `SelectInput`
+
+- [#5622](https://github.com/scaleway/ultraviolet/pull/5622) [`12fc99d`](https://github.com/scaleway/ultraviolet/commit/12fc99dde57e3e97543bc26402a99ad0ea359cd8) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `TimeInput` to use vanilla-extract instead of Emotion
+
+- [#5614](https://github.com/scaleway/ultraviolet/pull/5614) [`a8b9b62`](https://github.com/scaleway/ultraviolet/commit/a8b9b6237173d72b9c74af2ac4d57b4b81949982) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `TagInput` and `TagList` to use vanilla-extract instead of emotion
+
+  - `TagList` : popover should be openable using keyboard keys (space or enter)
+
+- [#5608](https://github.com/scaleway/ultraviolet/pull/5608) [`d1b44ff`](https://github.com/scaleway/ultraviolet/commit/d1b44ffd1bf0a8ded5b13d3b51a3e8ed0077a46d) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<TextInput />` using vanilla extract
+
+- [#5634](https://github.com/scaleway/ultraviolet/pull/5634) [`4e03810`](https://github.com/scaleway/ultraviolet/commit/4e038106bf90dc1a44db45b19417d3ad04955c5c) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `SwitchButton` to use vanilla extract instead of Emotion
+
+- [#5615](https://github.com/scaleway/ultraviolet/pull/5615) [`e4d6b23`](https://github.com/scaleway/ultraviolet/commit/e4d6b23e719e64e48ec6fc4e8b18b863bd5dc471) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Toggle />` component to use vanilla extract
+
+- [#5624](https://github.com/scaleway/ultraviolet/pull/5624) [`6fb2304`](https://github.com/scaleway/ultraviolet/commit/6fb230499200457163122799f7bdfdc633407492) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `DateInput` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [#5628](https://github.com/scaleway/ultraviolet/pull/5628) [`4520138`](https://github.com/scaleway/ultraviolet/commit/452013864b764f77ab3f8024fc830a9a1170b618) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `style` on `<Skeleton />` component
+
+## 3.0.0-beta.17
+
+### Minor Changes
+
+- [#5631](https://github.com/scaleway/ultraviolet/pull/5631) [`6fdf91d`](https://github.com/scaleway/ultraviolet/commit/6fdf91da1cca7c74f843dbb338960ef9d1b686bb) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `TextArea` to use vanilla extract instead of Emotion
+
+- [#5627](https://github.com/scaleway/ultraviolet/pull/5627) [`3bca6bb`](https://github.com/scaleway/ultraviolet/commit/3bca6bb32cbab6b9359542b112568d84a11dcab9) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor component `NumberInput` to use vanilla extract instead of Emotion
+
+### Patch Changes
+
+- [#5639](https://github.com/scaleway/ultraviolet/pull/5639) [`c80b7c3`](https://github.com/scaleway/ultraviolet/commit/c80b7c30d1692a6f07e5a90fa73d03cba3627fa3) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Checkbox />` input size being wrong
+
+- Updated dependencies [[`776c6df`](https://github.com/scaleway/ultraviolet/commit/776c6df268e796d6ee741fce25d70e0991085f5e)]:
+  - @ultraviolet/icons@5.0.0-beta.4
+
+## 3.0.0-beta.16
+
+### Minor Changes
+
+- [#5582](https://github.com/scaleway/ultraviolet/pull/5582) [`1e8e44b`](https://github.com/scaleway/ultraviolet/commit/1e8e44b1175d645ffc7659f8d1ac338b0ef9af7f) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor chart components (`PieChart`, `BarChart` and `LineChart`) to use vanilla-extract instead of Emotion
+
+- [#5598](https://github.com/scaleway/ultraviolet/pull/5598) [`5c46f8a`](https://github.com/scaleway/ultraviolet/commit/5c46f8acf6c75499e40d9c9e78f380ea55f3eeb3) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Skeleton` to use vanilla extract instead of emotion
+  - Remove vanilla-extract variables in `BarStack` and create them directly in CSS
+
+### Patch Changes
+
+- [#5616](https://github.com/scaleway/ultraviolet/pull/5616) [`c3adef6`](https://github.com/scaleway/ultraviolet/commit/c3adef6960af5d6c1355244a0ab3a18ab42b4204) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`: container should be a "span", not a "div"
+
+- Updated dependencies [[`b19c4e5`](https://github.com/scaleway/ultraviolet/commit/b19c4e5c142fcbfd21b822c07baea90d34d8eee2), [`1f78aa4`](https://github.com/scaleway/ultraviolet/commit/1f78aa437fe0d449f5a68f94291a4a1bb6387290)]:
+  - @ultraviolet/icons@5.0.0-beta.3
+
+## 3.0.0-beta.15
+
+### Minor Changes
+
+- [#5596](https://github.com/scaleway/ultraviolet/pull/5596) [`d85d9f5`](https://github.com/scaleway/ultraviolet/commit/d85d9f5c782a16eacaf5f7f95956e121bb1daa32) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor `SelectableCard` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [#5609](https://github.com/scaleway/ultraviolet/pull/5609) [`4ade022`](https://github.com/scaleway/ultraviolet/commit/4ade022e8d80eaa44de37559c04f53e87f7f3d6a) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCardOptionGroup`: fix issue with radio style
+
+## 3.0.0-beta.14
+
+### Minor Changes
+
+- [#5580](https://github.com/scaleway/ultraviolet/pull/5580) [`d73ead7`](https://github.com/scaleway/ultraviolet/commit/d73ead73008c7798c3085724e1966d9e55503a24) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<RadioGroup />`, `<CheckboxGroup />` and `<ToggleGroup />` to use vanilla extract
+
+- [#5583](https://github.com/scaleway/ultraviolet/pull/5583) [`93d75dd`](https://github.com/scaleway/ultraviolet/commit/93d75dd371c3c7740e669b1567a2580d0e17afd8) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<ExpandableCard />` to use vanilla extract
+
+- [#5577](https://github.com/scaleway/ultraviolet/pull/5577) [`660d30e`](https://github.com/scaleway/ultraviolet/commit/660d30e5d85dac2be4f10f28f486c31ad922b60a) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Checkbox />` to use vanilla extract
+
+- [#5576](https://github.com/scaleway/ultraviolet/pull/5576) [`9ad2c9a`](https://github.com/scaleway/ultraviolet/commit/9ad2c9af20cc15669fdcd959f4e5c1b0971e99c6) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Tag` and `Card` to use vanilla-extract instead of Emotion
+
+- [#5578](https://github.com/scaleway/ultraviolet/pull/5578) [`aaa2c52`](https://github.com/scaleway/ultraviolet/commit/aaa2c521f9c2a924c50ecaf5aa49f92791e734c9) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor component `Breadcrumbs` to use vanilla-extract instead of emotion
+  - `Button`: Add prop "style"
+
+### Patch Changes
+
+- [#5593](https://github.com/scaleway/ultraviolet/pull/5593) [`245d454`](https://github.com/scaleway/ultraviolet/commit/245d4542c11d636973aaaef86ae53a57ab16f236) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: fix animation on small
+
+- [#5586](https://github.com/scaleway/ultraviolet/pull/5586) [`943b05a`](https://github.com/scaleway/ultraviolet/commit/943b05adef22d7e03976cd67a5d97f56c18c2482) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: placeholder shoul be a `span` instead of a `p`
+
+- Updated dependencies [[`568797d`](https://github.com/scaleway/ultraviolet/commit/568797dde5a4ca3cee9e56014d1e45dfff171b2c)]:
+  - @ultraviolet/icons@5.0.0-beta.2
+
+## 3.0.0-beta.13
+
+### Major Changes
+
+- [#5504](https://github.com/scaleway/ultraviolet/pull/5504) [`4a20bf5`](https://github.com/scaleway/ultraviolet/commit/4a20bf5ebc5b298cc5ed7e0842214701a2c1efc7) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactor components `Link` and `Bullet` to use vanilla-extract instead of Emotion
+  - `Bullet`: **BREAKING CHANGE** "disabled" is now a prop instead of a value of prop "sentiment"
+
+### Minor Changes
+
+- [#5533](https://github.com/scaleway/ultraviolet/pull/5533) [`47257af`](https://github.com/scaleway/ultraviolet/commit/47257afab643364777bf0f98a292bb87808242c7) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Radio />` component to use vanilla extract
+
+- [#5530](https://github.com/scaleway/ultraviolet/pull/5530) [`02ca583`](https://github.com/scaleway/ultraviolet/commit/02ca5830154c172c8d4e3cb92b8cff67ff14a976) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<GlobalAlert />` and `<Expandable />` to use vanilla extract
+
+- [#5520](https://github.com/scaleway/ultraviolet/pull/5520) [`1b41251`](https://github.com/scaleway/ultraviolet/commit/1b412515e05d1de803e65d7d57ef6dee02c55c8b) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<VerificationCode /> to use vanilla extract`
+
+- [#5518](https://github.com/scaleway/ultraviolet/pull/5518) [`647bf54`](https://github.com/scaleway/ultraviolet/commit/647bf545eb3496fee1503c8e18e68f1b4812fc25) Thanks [@matthprost](https://github.com/matthprost)! - Refactor component `<ProgressBar />` and fix component `<Badge />` useless variable in css generation
+
+### Patch Changes
+
+- [#5573](https://github.com/scaleway/ultraviolet/pull/5573) [`c79b4fb`](https://github.com/scaleway/ultraviolet/commit/c79b4fb72779a31b1b9b5f9ee3228fbc56630022) Thanks [@philibea](https://github.com/philibea)! - Add htmlFor on label for VerificationCode
+
+- [#5570](https://github.com/scaleway/ultraviolet/pull/5570) [`dce2961`](https://github.com/scaleway/ultraviolet/commit/dce2961df8780b3f11ac6527de93911c0ac6d560) Thanks [@lisalupi](https://github.com/lisalupi)! - `Button`: remove background color when hovering a disabled outlined/ghost button
+
+## 3.0.0-beta.12
+
+### Patch Changes
+
+- Updated dependencies [[`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238)]:
+  - @ultraviolet/icons@5.0.0-beta.1
+  - @ultraviolet/themes@3.0.0-beta.1
+
+## 3.0.0-beta.11
+
+### Patch Changes
+
+- [#5557](https://github.com/scaleway/ultraviolet/pull/5557) [`3f54ff6`](https://github.com/scaleway/ultraviolet/commit/3f54ff6109b2d123ccb0f56f4dccab81d6c3d82a) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix `<Stack />` and `<Row />` variables to provide default values
+
+## 3.0.0-beta.9
+
+### Minor Changes
+
+- [#5517](https://github.com/scaleway/ultraviolet/pull/5517) [`29d2395`](https://github.com/scaleway/ultraviolet/commit/29d2395c652b3035c286e3e13da934a268153940) Thanks [@matthprost](https://github.com/matthprost)! - Migrate components `<Label />` and `<PasswordCheck />` to vanilla extract
+
+### Patch Changes
+
+- [#5546](https://github.com/scaleway/ultraviolet/pull/5546) [`72382ac`](https://github.com/scaleway/ultraviolet/commit/72382ac8b93c7c0b5b1451fe625e0971117e4a30) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Stack />` to provide `as` prop for polymorphic composition used in `<Navigation />` for example
+
+## 3.0.0-beta.8
+
+### Minor Changes
+
+- [#5503](https://github.com/scaleway/ultraviolet/pull/5503) [`81cb7b1`](https://github.com/scaleway/ultraviolet/commit/81cb7b1fcae70e255351ede447a3cb2977a4f168) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Row />` component to use vanilla extract
+
+- [#5492](https://github.com/scaleway/ultraviolet/pull/5492) [`be21b81`](https://github.com/scaleway/ultraviolet/commit/be21b81f1a776a7b7edcb0ef96eed3e58264c33d) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Stack />` using vanilla extract
+
+- [#5500](https://github.com/scaleway/ultraviolet/pull/5500) [`0c071df`](https://github.com/scaleway/ultraviolet/commit/0c071df7fb6c5a5d96319baa7660ce801439eb97) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Notice`, `StepList` and `Status` to use vanilla-extract instead of Emotion
+
+- [#5532](https://github.com/scaleway/ultraviolet/pull/5532) [`80bdfbd`](https://github.com/scaleway/ultraviolet/commit/80bdfbd9b00cc58f87779779bc3eba4fdbc48e77) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Chip />` to use vanilla extract
+
+### Patch Changes
+
+- [#5527](https://github.com/scaleway/ultraviolet/pull/5527) [`f2d6c57`](https://github.com/scaleway/ultraviolet/commit/f2d6c57addd55d577329d9931c11866b955fcc92) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<NumberInput />` disabled button not working on re-render
+
+- [#5531](https://github.com/scaleway/ultraviolet/pull/5531) [`694b0d5`](https://github.com/scaleway/ultraviolet/commit/694b0d5fca9b4ffec2f81e2570466569eab08565) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Stack />` useless style applied
+
+- [#5534](https://github.com/scaleway/ultraviolet/pull/5534) [`43f5891`](https://github.com/scaleway/ultraviolet/commit/43f589191ef2e51fcf7533826ded0be28698fbe7) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Snippet />` to preserve indentation
+
+- Updated dependencies [[`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5)]:
+  - @ultraviolet/icons@4.1.0-beta.4
+
+## 3.0.0-beta.7
+
+### Minor Changes
+
+- [#5505](https://github.com/scaleway/ultraviolet/pull/5505) [`7de4324`](https://github.com/scaleway/ultraviolet/commit/7de43248e0591d95b510adcdb79d559862de9eb6) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - - Refactor components `Meter` and `BarStack` to use vanilla-extract instead of Emotion
+  - Add prop `style` to `Text` to be able to use vanilla-extract variables with it
+
+### Patch Changes
+
+- Updated dependencies [[`a6ca909`](https://github.com/scaleway/ultraviolet/commit/a6ca90992bc60e052e53fbe9317ca6ede96ebe4d), [`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2)]:
+  - @ultraviolet/icons@4.1.0-beta.3
+  - @ultraviolet/themes@2.1.0-beta.1
+
+## 3.0.0-beta.6
+
+### Major Changes
+
+- [`65da279`](https://github.com/scaleway/ultraviolet/commit/65da27924e47c48bfe97e485881d2a3aeb147bb6) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Popup`, `Popover` and `Tooltip` to use vanilla-extract instead of Emotion
+
+- [`6815e33`](https://github.com/scaleway/ultraviolet/commit/6815e33cae41e61b0285fca98fb6894837f1b6ef) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Loader` and `Separator` to use vanilla-extract instead of Emotion
+
+- [`cb3aaed`](https://github.com/scaleway/ultraviolet/commit/cb3aaeddda933b0ccb0db8a484e18dcbb631d6ff) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Avatar` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [`7a6a41e`](https://github.com/scaleway/ultraviolet/commit/7a6a41e26303a8c273700e2a32784ca515067f15) Thanks [@matthprost](https://github.com/matthprost)! - Fix className useless spacing on Banner and Button
+
+- [`475669b`](https://github.com/scaleway/ultraviolet/commit/475669bd710411ec99a5370ede1523535161fbdc) Thanks [@lisalupi](https://github.com/lisalupi)! - `ActionBar` & `Text`: Use css variable instead of style with vanilla extract
+
+- [`a65dcc1`](https://github.com/scaleway/ultraviolet/commit/a65dcc1e898321d13480c88036d5196c1fa28814) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: should display values correctly on first render
+
+- [#5490](https://github.com/scaleway/ultraviolet/pull/5490) [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.12`.
+  Updated dependency `@types/react-dom` to `19.1.9`.
+
+- [#5499](https://github.com/scaleway/ultraviolet/pull/5499) [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.3`.
+  Updated dependency `@babel/runtime` to `7.28.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
+  Updated dependency `@babel/preset-env` to `7.28.3`.
+- Updated dependencies [[`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542)]:
+  - @ultraviolet/icons@4.0.4-beta.2
+
+## 3.0.0-beta.5
+
+### Major Changes
+
+- [#5471](https://github.com/scaleway/ultraviolet/pull/5471) [`8d11143`](https://github.com/scaleway/ultraviolet/commit/8d111439baf02a951bab616dfea637e269f0f7ec) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Refactor components `Text` and `Alert` to use vanilla-extract instead of Emotion
+
+- [#5471](https://github.com/scaleway/ultraviolet/pull/5471) [`52f4748`](https://github.com/scaleway/ultraviolet/commit/52f47488f0b50e5d8dbdd1a78eb27d60786e6532) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - - Refactor component `Banner` to use vanilla-extract instead of Emotion
+  - Fix dark/darker theme on stories with vanilla extract
+
+### Patch Changes
+
+- [#5471](https://github.com/scaleway/ultraviolet/pull/5471) [`671427e`](https://github.com/scaleway/ultraviolet/commit/671427eab0dd3e7c72f7085c75a8e0dd77b26761) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Fix `Dialog` width
+
+## 3.0.0-beta.4
+
+### Major Changes
+
+- [`0ce72ef`](https://github.com/scaleway/ultraviolet/commit/0ce72ef33b9b21dfa4404f54d1b0aaa1f156e41c) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `ActionBar` and `Badge` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- [`963df3d`](https://github.com/scaleway/ultraviolet/commit/963df3db19a71edf8118d8ddfc87dbd9d3270ccd) Thanks [@lisalupi](https://github.com/lisalupi)! - `ExpandableCard`: new prop "open" (uncontrolled version of prop "expanded)
+
+- Updated dependencies [[`15512aa`](https://github.com/scaleway/ultraviolet/commit/15512aaad1da3218ea3765261451d15fb05d6660)]:
+  - @ultraviolet/icons@4.0.4-beta.1
+
+## 3.0.0-beta.3
+
+### Patch Changes
+
+- [#5437](https://github.com/scaleway/ultraviolet/pull/5437) [`9187560`](https://github.com/scaleway/ultraviolet/commit/9187560d39c6f7b1145bbc2df76898d7a797b78a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Snippet />` improve selection by removing after element on most of the lines
+
+- [#5445](https://github.com/scaleway/ultraviolet/pull/5445) [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` when tooltip is set
+
+- [#5438](https://github.com/scaleway/ultraviolet/pull/5438) [`cd7bed7`](https://github.com/scaleway/ultraviolet/commit/cd7bed7983dcae8c072b1140d1cbd92d8d026624) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Button />` class having a space in the beggining
 
 ## 2.1.4
 
@@ -68,11 +537,69 @@
 - [#5424](https://github.com/scaleway/ultraviolet/pull/5424) [`2be6ab9`](https://github.com/scaleway/ultraviolet/commit/2be6ab95b33591fb937f0c78e362a69702944bc4) Thanks [@lisalupi](https://github.com/lisalupi)! - - New component `Key`
   - Use component `Key` in `SearchInput` instead of custom
 
-## 2.0.6
+## 3.0.0-beta.2
 
 ### Patch Changes
 
-- [#5426](https://github.com/scaleway/ultraviolet/pull/5426) [`8a5652e`](https://github.com/scaleway/ultraviolet/commit/8a5652ea86f6bce6ff75f5123acfc5c6ae648ac7) Thanks [@lisalupi](https://github.com/lisalupi)! - `TagList`: arrow on popover should be visible
+- [#5435](https://github.com/scaleway/ultraviolet/pull/5435) [`c4b76f1`](https://github.com/scaleway/ultraviolet/commit/c4b76f1293eaf9b621af3f5a3584fc72d1eda80a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ThemeProvider />` to inject theme variable in the `<head>` of the page
+
+## 3.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b)]:
+  - @ultraviolet/themes@2.1.0-beta.0
+  - @ultraviolet/icons@4.0.4-beta.0
+
+## 3.0.0-beta.0
+
+### Major Changes
+
+- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES ⚠️
+  In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
+
+  ```tsx
+  import { ThemeProvider } from "@emotion/react";
+  import { consoleLightTheme } from "@ultraviolet/themes";
+
+  import { ThemeProvider as ThemeProviderUV } from "@ultraviolet/ui"; // ThemeProvider that generate the theme applied to components
+  import "@ultraviolet/ui/styles"; // Generated CSS used by components
+
+  export const App = (children) => {
+    <ThemeProvider theme={consoleLightTheme}>
+      <ThemeProviderUV>{children}</ThemeProviderUV>
+    </ThemeProvider>;
+  };
+  ```
+
+## 3.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b)]:
+  - @ultraviolet/themes@2.1.0-beta.0
+  - @ultraviolet/icons@4.0.4-beta.0
+
+## 3.0.0-beta.0
+
+### Major Changes
+
+- [#5428](https://github.com/scaleway/ultraviolet/pull/5428) [`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ BREAKING CHANGES ⚠️
+  In order to start using the new style, you will need to import new `<ThemeProvider />` and import new CSS generated at build time:
+
+  ```tsx
+  import { ThemeProvider } from "@emotion/react";
+  import { consoleLightTheme } from "@ultraviolet/themes";
+
+  import { ThemeProvider as ThemeProviderUV } from "@ultraviolet/ui"; // ThemeProvider that generate the theme applied to components
+  import "@ultraviolet/ui/styles"; // Generated CSS used by components
+
+  export const App = (children) => {
+    <ThemeProvider theme={consoleLightTheme}>
+      <ThemeProviderUV>{children}</ThemeProviderUV>
+    </ThemeProvider>;
+  };
+  ```
 
 ## 2.0.5
 

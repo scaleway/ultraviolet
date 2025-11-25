@@ -9,7 +9,6 @@ import type { ViteUserConfig } from 'vitest/config'
 const pkg = await readPackage()
 
 const externalPkgs = [
-  '@emotion',
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.optionalDependencies || {}),
   ...Object.keys(pkg.peerDependencies || {}),
@@ -21,7 +20,7 @@ const external = (id: string) => {
   }
 
   const match = (dependency: string) => new RegExp(`^${dependency}`).test(id)
-  const isExternal = externalPkgs.some(match)
+  const isExternal = externalPkgs.some(dep => match(dep))
   // alias of bundledDependencies package.json field array
   const isBundled = pkg.bundleDependencies?.some(match)
 
@@ -39,6 +38,7 @@ const targets = resolveToEsbuildTarget(
 
 export const defaultConfig: ViteUserConfig = {
   build: {
+    emitAssets: true,
     emptyOutDir: true,
     lib: {
       entry: 'src/index.ts',
@@ -49,7 +49,7 @@ export const defaultConfig: ViteUserConfig = {
 
         return `${filename}.${format}`
       },
-      formats: ['es', 'cjs'],
+      formats: ['es'],
       name: pkg.name,
     },
     minify: false,
@@ -68,10 +68,6 @@ export const defaultConfig: ViteUserConfig = {
   },
   plugins: [
     react({
-      babel: {
-        plugins: ['@emotion/babel-plugin'],
-      },
-      jsxImportSource: '@emotion/react',
       jsxRuntime: 'automatic',
     }),
     preserveDirectives(),

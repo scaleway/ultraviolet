@@ -9,13 +9,13 @@
 - Migration
 - Refactor
 
-### Summarise concisely:
+### Summarize concisely:
 
 #### What is expected?
 
 (Description of the new behavior)
 
-#### The following changes where made:
+#### The following changes were made:
 
 (Describe what you did)
 

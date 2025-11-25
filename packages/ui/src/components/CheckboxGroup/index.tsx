@@ -1,12 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { checkbox, fieldset } from './styles.css'
 
 type CheckboxGroupContextType = {
   groupName: string
@@ -18,12 +18,6 @@ type CheckboxGroupContextType = {
 const CheckboxGroupContext = createContext<
   CheckboxGroupContextType | undefined
 >(undefined)
-
-const StyledCheckbox = styled(Checkbox)`
-  label {
-    width: fit-content;
-  }
-`
 
 type CheckboxGroupCheckboxProps = Omit<
   ComponentProps<typeof Checkbox>,
@@ -46,6 +40,7 @@ export const CheckboxGroupCheckbox = ({
   'data-testid': dataTestId,
   required,
   tooltip,
+  style,
 }: CheckboxGroupCheckboxProps) => {
   const context = useContext(CheckboxGroupContext)
 
@@ -61,10 +56,10 @@ export const CheckboxGroupCheckbox = ({
   const checkboxValue = `${value}`
 
   return (
-    <StyledCheckbox
+    <Checkbox
       autoFocus={autoFocus}
       checked={groupValues?.includes(checkboxValue)}
-      className={className}
+      className={`${className ? `${className} ` : ''}${checkbox}`}
       data-testid={dataTestId}
       disabled={disabled}
       error={error || errorContext}
@@ -74,19 +69,14 @@ export const CheckboxGroupCheckbox = ({
       onChange={onChange}
       onFocus={onFocus}
       required={required}
+      style={style}
       tooltip={tooltip}
       value={checkboxValue}
     >
       {children}
-    </StyledCheckbox>
+    </Checkbox>
   )
 }
-
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-`
 
 type CheckboxGroupProps = {
   legend?: string
@@ -100,7 +90,7 @@ type CheckboxGroupProps = {
   required?: boolean
   description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
 /**
  * CheckboxGroup is a component that groups a set of checkboxes together with a legend and helper/error text.
@@ -118,6 +108,7 @@ export const CheckboxGroup = ({
   name,
   description,
   required = false,
+  style,
 }: CheckboxGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -133,7 +124,10 @@ export const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <fieldset
+          className={`${className ? `${className} ` : ''}${fieldset}`}
+          style={style}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -162,7 +156,7 @@ export const CheckboxGroup = ({
               {children}
             </Stack>
           </Stack>
-        </FieldSet>
+        </fieldset>
         {helper ? (
           <Text
             as="span"

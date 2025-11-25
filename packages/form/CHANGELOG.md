@@ -1,26 +1,194 @@
 # Change Log
 
-## 5.0.6
+## 6.0.0-beta.18
 
 ### Patch Changes
 
-- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
-  Updated dependency `@types/react-dom` to `19.2.1`.
-  Updated dependency `react` to `19.2.0`.
-  Updated dependency `react-dom` to `19.2.0`.
+- [#5795](https://github.com/scaleway/ultraviolet/pull/5795) [`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.6`.
+  Updated dependency `@types/react-dom` to `19.2.3`.
+- Updated dependencies [[`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a)]:
+  - @ultraviolet/icons@5.0.0-beta.13
+  - @ultraviolet/ui@3.0.0-beta.29
 
-- [#5691](https://github.com/scaleway/ultraviolet/pull/5691) [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `19.2.2`.
-
-- Updated dependencies [[`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918), [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb)]:
-  - @ultraviolet/icons@4.1.2
-  - @ultraviolet/ui@2.1.6
-
-## 5.0.5
+## 6.0.0-beta.17
 
 ### Patch Changes
 
-- Updated dependencies [[`e20eeab`](https://github.com/scaleway/ultraviolet/commit/e20eeab50d142fee1ef05260b01eb7eb75bd9976)]:
-  - @ultraviolet/ui@2.1.5
+- Updated dependencies [[`b7ab0e3`](https://github.com/scaleway/ultraviolet/commit/b7ab0e3e71e5d570b57d33907e1b51ae00d32c9a), [`63a8f2a`](https://github.com/scaleway/ultraviolet/commit/63a8f2a32a804c0c6767a9a030cb95de2cee563d), [`85d3468`](https://github.com/scaleway/ultraviolet/commit/85d3468dfce3a7532866cf63a017274e65661c80), [`b062bbe`](https://github.com/scaleway/ultraviolet/commit/b062bbe30e73ca43e5684aaf98b03aea57fea4c9), [`83455a7`](https://github.com/scaleway/ultraviolet/commit/83455a73d5c258ffd4d33e5f2050d696270bc96c), [`b9f0d1e`](https://github.com/scaleway/ultraviolet/commit/b9f0d1e7ad0aae0a4e7756d7d7e107a8228e9419)]:
+  - @ultraviolet/ui@3.0.0-beta.28
+  - @ultraviolet/icons@5.0.0-beta.12
+
+## 6.0.0-beta.16
+
+### Major Changes
+
+- [#5768](https://github.com/scaleway/ultraviolet/pull/5768) [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5) Thanks [@lisalupi](https://github.com/lisalupi)! - Remove `Emotion` and update READMEs.
+
+### Patch Changes
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- Updated dependencies [[`c6eb5c7`](https://github.com/scaleway/ultraviolet/commit/c6eb5c7acd5b32f647306c35f9755c51e60ab33a), [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5), [`ad4a930`](https://github.com/scaleway/ultraviolet/commit/ad4a930595722ef9e7764f1f2e2ba67948efaa06), [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd), [`2974892`](https://github.com/scaleway/ultraviolet/commit/2974892ab614235acdf141f1a83c9a867237cb9b), [`5747647`](https://github.com/scaleway/ultraviolet/commit/57476477b2e7888e644ac44fe31ba6f270913248)]:
+  - @ultraviolet/icons@5.0.0-beta.11
+  - @ultraviolet/ui@3.0.0-beta.27
+  - @ultraviolet/themes@3.0.0-beta.4
+
+## 6.0.0-beta.15
+
+### Patch Changes
+
+- Updated dependencies [[`abfbe9e`](https://github.com/scaleway/ultraviolet/commit/abfbe9e150f8e7880b03ea3ce69ede86f6c46420)]:
+  - @ultraviolet/ui@3.0.0-beta.26
+
+## 6.0.0-beta.14
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+- Updated dependencies [[`bc629aa`](https://github.com/scaleway/ultraviolet/commit/bc629aa7771057a7ca7a9e59bff983a0df73d2fa), [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3), [`deba7e9`](https://github.com/scaleway/ultraviolet/commit/deba7e941ade8a796666c18f64bf7c2959709e19), [`440d5bb`](https://github.com/scaleway/ultraviolet/commit/440d5bb536d3b10b9079e5cea83450d1b88001fa), [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983)]:
+  - @ultraviolet/ui@3.0.0-beta.25
+  - @ultraviolet/icons@5.0.0-beta.10
+
+## 6.0.0-beta.13
+
+### Patch Changes
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6), [`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6), [`4386617`](https://github.com/scaleway/ultraviolet/commit/4386617bee7563bb9f8fee177c936038f11dd47d), [`5ac319e`](https://github.com/scaleway/ultraviolet/commit/5ac319e45abb27c624f2f33dd897be4cf1638312)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+  - @ultraviolet/ui@3.0.0-beta.24
+  - @ultraviolet/icons@5.0.0-beta.9
+
+## 6.0.0-beta.12
+
+### Patch Changes
+
+- [#5748](https://github.com/scaleway/ultraviolet/pull/5748) [`c547316`](https://github.com/scaleway/ultraviolet/commit/c547316274609a8858a2602a0d69d6fae10dab1e) Thanks [@lisalupi](https://github.com/lisalupi)! - Export `ToggleGroupField` and fix story
+
+- Updated dependencies [[`317dbf6`](https://github.com/scaleway/ultraviolet/commit/317dbf6ee868f1e35dc1eeda47c3f169f3d1f391), [`e2088f2`](https://github.com/scaleway/ultraviolet/commit/e2088f2f29499ba4c6737f638be657bb2b038d6b), [`3e9b92b`](https://github.com/scaleway/ultraviolet/commit/3e9b92bc1fe287d10f7806536fbb9256048d97af), [`56915f1`](https://github.com/scaleway/ultraviolet/commit/56915f180a3da3289ebc5f6527e5a4427e441e1d), [`0523069`](https://github.com/scaleway/ultraviolet/commit/0523069fd9a4455c375315ea7a47b4292ebc978e), [`eb6127e`](https://github.com/scaleway/ultraviolet/commit/eb6127e80e64644b0e2a4237a3cea291172acade), [`0dcf373`](https://github.com/scaleway/ultraviolet/commit/0dcf37393506dc01609e803e11743b013296dfa0), [`065f4e2`](https://github.com/scaleway/ultraviolet/commit/065f4e279b76b6953c6d9b4778cb6ed1b78f5e9b), [`e23a69c`](https://github.com/scaleway/ultraviolet/commit/e23a69c30e95bec45b0a79e315682b330c0fbcef)]:
+  - @ultraviolet/ui@3.0.0-beta.23
+  - @ultraviolet/icons@5.0.0-beta.8
+
+## 6.0.0-beta.11
+
+### Patch Changes
+
+- Updated dependencies [[`bf7256b`](https://github.com/scaleway/ultraviolet/commit/bf7256b5d2ef4b3b1346037bff5d86c2f47e4785), [`68006e1`](https://github.com/scaleway/ultraviolet/commit/68006e14d373276ce7d77638ec6261229cce60b5), [`7091562`](https://github.com/scaleway/ultraviolet/commit/709156284a91877ccbe72feba79b4ae44797319f), [`203174a`](https://github.com/scaleway/ultraviolet/commit/203174a4d8a5e74bdff04b9d961b478423a8da1e), [`0e47e5c`](https://github.com/scaleway/ultraviolet/commit/0e47e5c2288171ce4a3b3b613dbb4da4165428c7), [`a67faa2`](https://github.com/scaleway/ultraviolet/commit/a67faa2467ff6624b7a8c552c8e0b9d26c5b3063), [`97f362c`](https://github.com/scaleway/ultraviolet/commit/97f362ca8f84a654bd0174b719c5e660991fd866)]:
+  - @ultraviolet/icons@5.0.0-beta.7
+  - @ultraviolet/ui@3.0.0-beta.22
+
+## 6.0.0-beta.10
+
+### Patch Changes
+
+- Updated dependencies [[`f6948b0`](https://github.com/scaleway/ultraviolet/commit/f6948b0aefe91750203bdbcd1b5173b872819004), [`b348f99`](https://github.com/scaleway/ultraviolet/commit/b348f99ea11415508b618d52df29d1b7dcc4b302), [`634ced8`](https://github.com/scaleway/ultraviolet/commit/634ced8b45f33a7f192f2e8e3f862e83ad5c72b4), [`c186192`](https://github.com/scaleway/ultraviolet/commit/c186192ad5e8e8e7e03f5e547602e34c04d8bac3), [`fb3f4ca`](https://github.com/scaleway/ultraviolet/commit/fb3f4ca7a883c5f733afd01904eb4900769f1548), [`3e9f9ad`](https://github.com/scaleway/ultraviolet/commit/3e9f9ad699a2415264a7b8f9c78d439b32ecef45), [`1893b2b`](https://github.com/scaleway/ultraviolet/commit/1893b2b6f104eb5843145c8cb69c46ac0ead6bbe), [`fdb5be1`](https://github.com/scaleway/ultraviolet/commit/fdb5be1171509eaa17278264eae53e23be234925), [`13350bc`](https://github.com/scaleway/ultraviolet/commit/13350bca640b8db2152219a7efbae1c922128558)]:
+  - @ultraviolet/ui@3.0.0-beta.21
+
+## 6.0.0-beta.9
+
+### Patch Changes
+
+- Updated dependencies [[`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089)]:
+  - @ultraviolet/themes@3.0.0-beta.2
+  - @ultraviolet/icons@5.0.0-beta.6
+  - @ultraviolet/ui@3.0.0-beta.20
+
+## 6.0.0-beta.8
+
+### Patch Changes
+
+- Updated dependencies [[`4fb8e97`](https://github.com/scaleway/ultraviolet/commit/4fb8e97474b1d8a33fa98f22cdddfdeed753e3f1), [`5c10948`](https://github.com/scaleway/ultraviolet/commit/5c10948eceb6a4e257bd6f752273dc7fee85d08e), [`4d97647`](https://github.com/scaleway/ultraviolet/commit/4d97647adcc1fb2282ca1a7294c46310fc9ea695), [`8ec50bb`](https://github.com/scaleway/ultraviolet/commit/8ec50bbb6b49f71ca574adeeaa1905d27511d0a8), [`aa20c75`](https://github.com/scaleway/ultraviolet/commit/aa20c755e8f1bfa0f0ed927edfe53f8bda642102), [`29bfec5`](https://github.com/scaleway/ultraviolet/commit/29bfec55c9519756f62f61aabcb775b0db1bc968)]:
+  - @ultraviolet/icons@5.0.0-beta.5
+  - @ultraviolet/ui@3.0.0-beta.19
+
+## 6.0.0-beta.7
+
+### Patch Changes
+
+- Updated dependencies [[`945ce38`](https://github.com/scaleway/ultraviolet/commit/945ce3842e11407e4bdda076c27f41465ec73284), [`12fc99d`](https://github.com/scaleway/ultraviolet/commit/12fc99dde57e3e97543bc26402a99ad0ea359cd8), [`4520138`](https://github.com/scaleway/ultraviolet/commit/452013864b764f77ab3f8024fc830a9a1170b618), [`a8b9b62`](https://github.com/scaleway/ultraviolet/commit/a8b9b6237173d72b9c74af2ac4d57b4b81949982), [`d1b44ff`](https://github.com/scaleway/ultraviolet/commit/d1b44ffd1bf0a8ded5b13d3b51a3e8ed0077a46d), [`4e03810`](https://github.com/scaleway/ultraviolet/commit/4e038106bf90dc1a44db45b19417d3ad04955c5c), [`e4d6b23`](https://github.com/scaleway/ultraviolet/commit/e4d6b23e719e64e48ec6fc4e8b18b863bd5dc471), [`6fb2304`](https://github.com/scaleway/ultraviolet/commit/6fb230499200457163122799f7bdfdc633407492)]:
+  - @ultraviolet/ui@3.0.0-beta.18
+
+## 6.0.0-beta.6
+
+### Patch Changes
+
+- Updated dependencies [[`776c6df`](https://github.com/scaleway/ultraviolet/commit/776c6df268e796d6ee741fce25d70e0991085f5e), [`c80b7c3`](https://github.com/scaleway/ultraviolet/commit/c80b7c30d1692a6f07e5a90fa73d03cba3627fa3), [`6fdf91d`](https://github.com/scaleway/ultraviolet/commit/6fdf91da1cca7c74f843dbb338960ef9d1b686bb), [`3bca6bb`](https://github.com/scaleway/ultraviolet/commit/3bca6bb32cbab6b9359542b112568d84a11dcab9)]:
+  - @ultraviolet/icons@5.0.0-beta.4
+  - @ultraviolet/ui@3.0.0-beta.17
+
+## 6.0.0-beta.5
+
+### Patch Changes
+
+- Updated dependencies [[`b19c4e5`](https://github.com/scaleway/ultraviolet/commit/b19c4e5c142fcbfd21b822c07baea90d34d8eee2), [`1f78aa4`](https://github.com/scaleway/ultraviolet/commit/1f78aa437fe0d449f5a68f94291a4a1bb6387290), [`1e8e44b`](https://github.com/scaleway/ultraviolet/commit/1e8e44b1175d645ffc7659f8d1ac338b0ef9af7f), [`5c46f8a`](https://github.com/scaleway/ultraviolet/commit/5c46f8acf6c75499e40d9c9e78f380ea55f3eeb3), [`c3adef6`](https://github.com/scaleway/ultraviolet/commit/c3adef6960af5d6c1355244a0ab3a18ab42b4204)]:
+  - @ultraviolet/icons@5.0.0-beta.3
+  - @ultraviolet/ui@3.0.0-beta.16
+
+## 6.0.0-beta.4
+
+### Patch Changes
+
+- Updated dependencies [[`4ade022`](https://github.com/scaleway/ultraviolet/commit/4ade022e8d80eaa44de37559c04f53e87f7f3d6a), [`d85d9f5`](https://github.com/scaleway/ultraviolet/commit/d85d9f5c782a16eacaf5f7f95956e121bb1daa32)]:
+  - @ultraviolet/ui@3.0.0-beta.15
+
+## 6.0.0-beta.3
+
+### Patch Changes
+
+- Updated dependencies [[`d73ead7`](https://github.com/scaleway/ultraviolet/commit/d73ead73008c7798c3085724e1966d9e55503a24), [`245d454`](https://github.com/scaleway/ultraviolet/commit/245d4542c11d636973aaaef86ae53a57ab16f236), [`93d75dd`](https://github.com/scaleway/ultraviolet/commit/93d75dd371c3c7740e669b1567a2580d0e17afd8), [`660d30e`](https://github.com/scaleway/ultraviolet/commit/660d30e5d85dac2be4f10f28f486c31ad922b60a), [`943b05a`](https://github.com/scaleway/ultraviolet/commit/943b05adef22d7e03976cd67a5d97f56c18c2482), [`568797d`](https://github.com/scaleway/ultraviolet/commit/568797dde5a4ca3cee9e56014d1e45dfff171b2c), [`9ad2c9a`](https://github.com/scaleway/ultraviolet/commit/9ad2c9af20cc15669fdcd959f4e5c1b0971e99c6), [`aaa2c52`](https://github.com/scaleway/ultraviolet/commit/aaa2c521f9c2a924c50ecaf5aa49f92791e734c9)]:
+  - @ultraviolet/ui@3.0.0-beta.14
+  - @ultraviolet/icons@5.0.0-beta.2
+
+## 6.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies [[`c79b4fb`](https://github.com/scaleway/ultraviolet/commit/c79b4fb72779a31b1b9b5f9ee3228fbc56630022), [`47257af`](https://github.com/scaleway/ultraviolet/commit/47257afab643364777bf0f98a292bb87808242c7), [`dce2961`](https://github.com/scaleway/ultraviolet/commit/dce2961df8780b3f11ac6527de93911c0ac6d560), [`4a20bf5`](https://github.com/scaleway/ultraviolet/commit/4a20bf5ebc5b298cc5ed7e0842214701a2c1efc7), [`02ca583`](https://github.com/scaleway/ultraviolet/commit/02ca5830154c172c8d4e3cb92b8cff67ff14a976), [`1b41251`](https://github.com/scaleway/ultraviolet/commit/1b412515e05d1de803e65d7d57ef6dee02c55c8b), [`647bf54`](https://github.com/scaleway/ultraviolet/commit/647bf545eb3496fee1503c8e18e68f1b4812fc25)]:
+  - @ultraviolet/ui@3.0.0-beta.13
+
+## 6.0.0-beta.1
+
+### Major Changes
+
+- [`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238) Thanks [@matthprost](https://github.com/matthprost)! - Release new beta version to compensate major released by error
+
+### Patch Changes
+
+- Updated dependencies [[`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238)]:
+  - @ultraviolet/icons@5.0.0-beta.1
+  - @ultraviolet/themes@3.0.0-beta.1
+  - @ultraviolet/ui@3.0.0-beta.12
+
+## 5.0.0-beta.11
+
+### Patch Changes
+
+- Updated dependencies [[`3f54ff6`](https://github.com/scaleway/ultraviolet/commit/3f54ff6109b2d123ccb0f56f4dccab81d6c3d82a)]:
+  - @ultraviolet/ui@3.0.0-beta.11
+
+## 5.0.0-beta.9
+
+### Patch Changes
+
+- Updated dependencies [[`29d2395`](https://github.com/scaleway/ultraviolet/commit/29d2395c652b3035c286e3e13da934a268153940), [`72382ac`](https://github.com/scaleway/ultraviolet/commit/72382ac8b93c7c0b5b1451fe625e0971117e4a30)]:
+  - @ultraviolet/ui@3.0.0-beta.9
+
+## 5.0.0-beta.8
+
+### Patch Changes
+
+- Updated dependencies [[`81cb7b1`](https://github.com/scaleway/ultraviolet/commit/81cb7b1fcae70e255351ede447a3cb2977a4f168), [`f2d6c57`](https://github.com/scaleway/ultraviolet/commit/f2d6c57addd55d577329d9931c11866b955fcc92), [`694b0d5`](https://github.com/scaleway/ultraviolet/commit/694b0d5fca9b4ffec2f81e2570466569eab08565), [`be21b81`](https://github.com/scaleway/ultraviolet/commit/be21b81f1a776a7b7edcb0ef96eed3e58264c33d), [`0c071df`](https://github.com/scaleway/ultraviolet/commit/0c071df7fb6c5a5d96319baa7660ce801439eb97), [`80bdfbd`](https://github.com/scaleway/ultraviolet/commit/80bdfbd9b00cc58f87779779bc3eba4fdbc48e77), [`43f5891`](https://github.com/scaleway/ultraviolet/commit/43f589191ef2e51fcf7533826ded0be28698fbe7), [`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5)]:
+  - @ultraviolet/ui@3.0.0-beta.8
+  - @ultraviolet/icons@4.1.0-beta.4
+
+## 5.0.0-beta.7
+
+### Patch Changes
+
+- Updated dependencies [[`a6ca909`](https://github.com/scaleway/ultraviolet/commit/a6ca90992bc60e052e53fbe9317ca6ede96ebe4d), [`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2), [`7de4324`](https://github.com/scaleway/ultraviolet/commit/7de43248e0591d95b510adcdb79d559862de9eb6)]:
+  - @ultraviolet/icons@4.1.0-beta.3
+  - @ultraviolet/themes@2.1.0-beta.1
+  - @ultraviolet/ui@3.0.0-beta.7
 
 ## 5.0.4
 
@@ -67,12 +235,71 @@
   - @ultraviolet/icons@4.0.4
   - @ultraviolet/ui@2.1.1
 
-## 5.0.0
+## 5.0.0-beta.6
 
 ### Patch Changes
 
-- Updated dependencies [[`2be6ab9`](https://github.com/scaleway/ultraviolet/commit/2be6ab95b33591fb937f0c78e362a69702944bc4)]:
-  - @ultraviolet/ui@2.1.0
+- [#5490](https://github.com/scaleway/ultraviolet/pull/5490) [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.12`.
+  Updated dependency `@types/react-dom` to `19.1.9`.
+
+- [#5499](https://github.com/scaleway/ultraviolet/pull/5499) [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.3`.
+  Updated dependency `@babel/runtime` to `7.28.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
+  Updated dependency `@babel/preset-env` to `7.28.3`.
+- Updated dependencies [[`65da279`](https://github.com/scaleway/ultraviolet/commit/65da27924e47c48bfe97e485881d2a3aeb147bb6), [`7a6a41e`](https://github.com/scaleway/ultraviolet/commit/7a6a41e26303a8c273700e2a32784ca515067f15), [`475669b`](https://github.com/scaleway/ultraviolet/commit/475669bd710411ec99a5370ede1523535161fbdc), [`a65dcc1`](https://github.com/scaleway/ultraviolet/commit/a65dcc1e898321d13480c88036d5196c1fa28814), [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7), [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542), [`6815e33`](https://github.com/scaleway/ultraviolet/commit/6815e33cae41e61b0285fca98fb6894837f1b6ef), [`cb3aaed`](https://github.com/scaleway/ultraviolet/commit/cb3aaeddda933b0ccb0db8a484e18dcbb631d6ff)]:
+  - @ultraviolet/ui@3.0.0-beta.6
+  - @ultraviolet/icons@4.0.4-beta.2
+
+## 5.0.0-beta.5
+
+### Patch Changes
+
+- Updated dependencies [[`671427e`](https://github.com/scaleway/ultraviolet/commit/671427eab0dd3e7c72f7085c75a8e0dd77b26761), [`8d11143`](https://github.com/scaleway/ultraviolet/commit/8d111439baf02a951bab616dfea637e269f0f7ec), [`52f4748`](https://github.com/scaleway/ultraviolet/commit/52f47488f0b50e5d8dbdd1a78eb27d60786e6532)]:
+  - @ultraviolet/ui@3.0.0-beta.5
+
+## 5.0.0-beta.4
+
+### Patch Changes
+
+- Updated dependencies [[`0ce72ef`](https://github.com/scaleway/ultraviolet/commit/0ce72ef33b9b21dfa4404f54d1b0aaa1f156e41c), [`963df3d`](https://github.com/scaleway/ultraviolet/commit/963df3db19a71edf8118d8ddfc87dbd9d3270ccd), [`15512aa`](https://github.com/scaleway/ultraviolet/commit/15512aaad1da3218ea3765261451d15fb05d6660)]:
+  - @ultraviolet/ui@3.0.0-beta.4
+  - @ultraviolet/icons@4.0.4-beta.1
+
+## 5.0.0-beta.3
+
+### Minor Changes
+
+- [#5439](https://github.com/scaleway/ultraviolet/pull/5439) [`32f1db8`](https://github.com/scaleway/ultraviolet/commit/32f1db8081e1dcb36c4ba39a035990e0a78d6eec) Thanks [@matthprost](https://github.com/matthprost)! - Remove all usages of `emotion` within the package
+
+### Patch Changes
+
+- [#5445](https://github.com/scaleway/ultraviolet/pull/5445) [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` when tooltip is set
+
+- Updated dependencies [[`9187560`](https://github.com/scaleway/ultraviolet/commit/9187560d39c6f7b1145bbc2df76898d7a797b78a), [`db1aedc`](https://github.com/scaleway/ultraviolet/commit/db1aedce578a5d1caedc299d666d8584250421b1), [`cd7bed7`](https://github.com/scaleway/ultraviolet/commit/cd7bed7983dcae8c072b1140d1cbd92d8d026624)]:
+  - @ultraviolet/ui@3.0.0-beta.3
+
+## 5.0.0-beta.2
+
+### Patch Changes
+
+- Updated dependencies [[`c4b76f1`](https://github.com/scaleway/ultraviolet/commit/c4b76f1293eaf9b621af3f5a3584fc72d1eda80a)]:
+  - @ultraviolet/ui@3.0.0-beta.2
+
+## 5.0.0-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b)]:
+  - @ultraviolet/themes@2.1.0-beta.0
+  - @ultraviolet/icons@4.0.4-beta.0
+  - @ultraviolet/ui@3.0.0-beta.1
+
+## 5.0.0-beta.0
+
+### Patch Changes
+
+- Updated dependencies [[`177fd92`](https://github.com/scaleway/ultraviolet/commit/177fd92f018b692084815705bf10537832368330)]:
+  - @ultraviolet/ui@3.0.0-beta.0
 
 ## 4.0.6
 

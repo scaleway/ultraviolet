@@ -1,13 +1,8 @@
-import styled from '@emotion/styled'
 import type { ComponentType } from 'react'
 import * as components from '../../components'
 import { Stack } from '../../components/Stack'
 import { Table } from '../../components/Table'
 import { Text } from '../../components/Text'
-
-const StyledTableRow = styled(Table.Row)`
-  vertical-align: top;
-`
 
 type PropertyType = {
   defaultValue: {
@@ -100,7 +95,7 @@ const Properties = () => {
   const sortedPropertiesUsagesCountAndComponentsName = Object.entries(
     propertiesUsagesCountAndComponentsName,
   )
-    .sort(([, { count: countA }], [, { count: countB }]) => countB - countA)
+    .toSorted(([, { count: countA }], [, { count: countB }]) => countB - countA)
     .reduce<Record<string, { count: number; components: string[] }>>(
       (acc, [property, value]) => ({
         ...acc,
@@ -168,10 +163,10 @@ const Properties = () => {
                       }
 
                       const reversedLocalProperty = [...lowerCaseLocalProperty]
-                        .reverse()
+                        .toReversed()
                         .join('')
                       const reversedLowerCaseProperty = [...lowerCaseProperty]
-                        .reverse()
+                        .toReversed()
                         .join('')
 
                       for (
@@ -233,7 +228,11 @@ const Properties = () => {
               ]
 
               return (
-                <StyledTableRow id={property} key={property}>
+                <Table.Row
+                  id={property}
+                  key={property}
+                  style={{ verticalAlign: 'top' }}
+                >
                   <Table.Cell>
                     <Text as="span" variant="bodyStrong">
                       {property}
@@ -264,7 +263,7 @@ const Properties = () => {
                       ].components.join(', ')}
                     </Text>
                   </Table.Cell>
-                </StyledTableRow>
+                </Table.Row>
               )
             },
           )}

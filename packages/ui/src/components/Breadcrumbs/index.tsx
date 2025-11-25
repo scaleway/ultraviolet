@@ -1,37 +1,14 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { JSX, ReactNode } from 'react'
+import type { CSSProperties, JSX, ReactNode } from 'react'
 import { Item } from './components/Item'
-import { HEIGHT } from './constants'
-
-const StyledOl = styled.ol`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: ${HEIGHT};
-
-  > *:not(:last-child) {
-  display: flex;
-  align-items: center;
-
-    &::after {
-      content: '/';
-      color: ${({ theme }) => theme.colors.neutral.textWeak};
-      padding: 0 ${({ theme }) => theme.space['0.5']};
-      font-size: ${({ theme }) => theme.typography.bodySmallStrong.fontSize};
-      font-weight: ${({ theme }) => theme.typography.bodySmallStrong.weight};
-    }
-  }
-`
+import { breadcrumbs } from './styles.css'
 
 type BreadcrumbsProps = {
   children: ReactNode
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
@@ -45,9 +22,15 @@ export const Breadcrumbs: BreadcrumbsType = ({
   children,
   className,
   'data-testid': dataTestId,
+  style,
 }) => (
-  <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
-    <StyledOl>{children}</StyledOl>
+  <nav
+    aria-label="breadcrumb"
+    className={className}
+    data-testid={dataTestId}
+    style={style}
+  >
+    <ol className={breadcrumbs}>{children}</ol>
   </nav>
 )
 

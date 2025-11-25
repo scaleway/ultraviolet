@@ -1,14 +1,15 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import type { BarDatum, BarSvgProps, BarTooltipProps } from '@nivo/bar'
 import { ResponsiveBar } from '@nivo/bar'
 import type { Box, DatumValue, ValueFormat } from '@nivo/core'
-import type { ComponentProps } from 'react'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import type { ComponentProps, CSSProperties } from 'react'
 import { useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
-import BarChartTooltip from './Tooltip'
+import { BarChartTooltip } from './Tooltip'
 
 type Formatter = ValueFormat<DatumValue>
 
@@ -32,6 +33,7 @@ type BarChartProps = {
   ) => ComponentProps<typeof BarChartTooltip>
   chartProps?: Partial<BarSvgProps<BarDatum>>
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
@@ -55,6 +57,7 @@ export const BarChart = ({
   chartProps,
   className,
   'data-testid': dataTestId,
+  style,
 }: BarChartProps) => {
   const theme = useTheme()
 
@@ -76,7 +79,11 @@ export const BarChart = ({
   )
 
   return (
-    <div className={className} data-testid={dataTestId} style={{ height }}>
+    <div
+      className={className}
+      data-testid={dataTestId}
+      style={{ height, ...style }}
+    >
       <ResponsiveBar
         axisBottom={{
           format: axisFormatters?.bottom,
@@ -92,7 +99,7 @@ export const BarChart = ({
           tickSize: 5,
           tickValues: tickValues?.left,
         }}
-        colors={getLegendColor(theme)}
+        colors={getLegendColor(theme as typeof UVTheme)}
         data={data}
         enableLabel={false}
         keys={keys}

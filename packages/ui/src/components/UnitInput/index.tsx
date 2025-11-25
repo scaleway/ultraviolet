@@ -1,7 +1,7 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ComponentProps,
   CSSProperties,
@@ -15,191 +15,16 @@ import { SelectInput } from '../SelectInput'
 import type { OptionType } from '../SelectInput/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import {
+  unitInputNumber,
+  unitInputNumberWrapper,
+  unitInputSize,
+  unitInputState,
+  unitInputUnit,
+  unitInputUnitWidth,
+  widthSelectInput,
+} from './styles.css'
 
-const INPUT_SIZE_HEIGHT = {
-  large: '600',
-  medium: '500',
-  small: '400', // sizing theme tokens key
-} as const
-
-const StyledNumberInputWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding-right: ${({ theme }) => theme.space['2']};
-  border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  width: 100%;
-  height: 100%;
-`
-
-const StyledInput = styled.input`
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: ${({ theme }) => theme.space['2']};
-  background: transparent;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  &[data-size="small"] {
-    padding-left: ${({ theme }) => theme.space['1']};
-  }
-
-  &[data-size="large"] {
-    font-size: ${({ theme }) => theme.typography.body.fontSize};
-  }
-
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-
-    &::placeholder {
-      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
-    }
-  }
-`
-
-const UnitInputWrapper = styled(Row)<{
-  'data-size': 'small' | 'medium' | 'large'
-  'data-success': boolean
-  'data-error': boolean
-  'data-disabled': boolean
-  'data-readonly': boolean
-}>`
-  width: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  &:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-  :not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.primary.border};
-    }
-  }
-
-  &:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within  {
-      border-color: ${({ theme }) => theme.colors.primary.borderHover};
-      & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.primary.border};
-    }
-    }
-
-  &:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-  :not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-    text-decoration: none;
-    border-color: ${({ theme }) => theme.colors.primary.border};
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.primary.border};
-    }
-  }
-
-  &[data-readonly='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-    cursor: default;
-  }
-
-  &[data-readonly='true']:active {
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-  }
-
-  &[data-size='small'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
-  }
-  &[data-size='medium'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.medium]};
-  }
-  &[data-size='large'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.large]};
-  }
-
-  &[data-success='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.success.border};
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.success.border};
-    }
-  }
-  &[data-success='true']:active {
-    border: 1px solid ${({ theme }) => theme.colors.success.border};
-    box-shadow: ${({ theme }) => theme.shadows.focusSuccess};
-
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.success.border};
-    }
-  }
-
-  &[data-error='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.danger.border};
-
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.danger.border};
-    }
-
-    & > ${StyledNumberInputWrapper}:hover {
-      border-right-color: ${({ theme }) => theme.colors.danger.border};
-    }
-  }
-
-  &[data-error='true']:active {
-    border: 1px solid ${({ theme }) => theme.colors.danger.border};
-    box-shadow: ${({ theme }) => theme.shadows.focusDanger};
-
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.danger.border};
-    }
-    & > ${StyledNumberInputWrapper}:hover {
-      border-right-color: ${({ theme }) => theme.colors.danger.border};
-    }
-  }
-
-  &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    cursor: not-allowed;
-
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    }
-  }
-`
-
-const CustomSelectInput = styled(SelectInput)<{
-  width?: number | string
-  maxWidth?: number | string
-  'data-disabled': boolean
-}>`
-  #unit {
-    border: none;
-    background: transparent;
-  }
-
-  ${({ width }) =>
-    width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
-  ${({ maxWidth }) =>
-    maxWidth &&
-    `max-width: ${typeof maxWidth === 'string' ? maxWidth : `${maxWidth}px`};`}
-
-  #unit:focus,
-  #unit:active {
-    box-shadow: none;
-  }
-`
 type UnitInputValue = { inputValue: number; unit: string }
 
 type UnitInputProps = {
@@ -217,6 +42,7 @@ type UnitInputProps = {
   helper?: string
   unitError?: string
   width?: CSSProperties['width']
+  maxWidth?: CSSProperties['maxWidth']
   placeholderUnit?: string
   error?: boolean | string
   success?: boolean | string
@@ -237,6 +63,7 @@ type UnitInputProps = {
   | 'required'
   | 'autoFocus'
   | 'onKeyDown'
+  | 'style'
 >
 
 export const UnitInput = ({
@@ -265,6 +92,7 @@ export const UnitInput = ({
   success,
   'data-testid': dataTestId,
   width,
+  maxWidth,
   labelInformation,
   readOnly,
   onFocus,
@@ -272,6 +100,7 @@ export const UnitInput = ({
   onKeyDown,
   dropdownAlign,
   templateColumns,
+  style,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
   const localId = useId()
@@ -285,6 +114,22 @@ export const UnitInput = ({
 
     return 'neutral'
   }, [error, success])
+  const computedState = useMemo(() => {
+    if (disabled) {
+      return 'disabled'
+    }
+    if (readOnly) {
+      return 'readOnly'
+    }
+    if (error) {
+      return 'error'
+    }
+    if (success) {
+      return 'success'
+    }
+
+    return 'default'
+  }, [disabled, readOnly, success, error])
 
   useEffect(() => {
     if (value !== undefined) {
@@ -295,6 +140,7 @@ export const UnitInput = ({
   return (
     <Stack
       gap={0.5}
+      maxWidth={maxWidth}
       onBlur={onBlur}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
@@ -310,23 +156,17 @@ export const UnitInput = ({
           {label}
         </Label>
       ) : null}
-      <UnitInputWrapper
+      <Row
+        className={`${unitInputSize[size]} ${unitInputState[computedState]}`}
         data-disabled={!!disabled}
-        data-error={!!error}
-        data-readonly={!!readOnly}
-        data-size={size}
-        data-success={!!success}
         data-testid={dataTestId}
         templateColumns={templateColumns ?? '1fr auto'}
       >
-        <StyledNumberInputWrapper id="input-field">
-          <StyledInput
+        <div className={unitInputNumberWrapper} id="input-field">
+          <input
             aria-invalid={!!error}
             autoFocus={autoFocus}
-            className={className}
-            data-error={error}
-            data-size={size}
-            data-success={success}
+            className={`${className ? `${className} ` : ''}${unitInputNumber[size]}`}
             data-testid="unit-input"
             disabled={disabled}
             id={id ?? localId}
@@ -350,13 +190,15 @@ export const UnitInput = ({
             readOnly={readOnly}
             required={required}
             step={step}
+            style={style}
             type="number"
             value={val}
           />
           {error ? <AlertCircleIcon sentiment="danger" /> : null}
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
-        </StyledNumberInputWrapper>
-        <CustomSelectInput
+        </div>
+        <SelectInput
+          className={`${unitInputUnit} ${unitInputUnitWidth}`}
           clearable={false}
           data-disabled={disabled}
           disabled={disabled}
@@ -373,10 +215,12 @@ export const UnitInput = ({
           readOnly={readOnly}
           searchable={false}
           size={size}
+          style={assignInlineVars({
+            [widthSelectInput]: selectInputWidth.toString(),
+          })}
           value={unitValue}
-          width={selectInputWidth}
         />
-      </UnitInputWrapper>
+      </Row>
       {error || typeof success === 'string' || typeof helper === 'string' ? (
         <Text
           as="p"

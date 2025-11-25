@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -15,7 +15,7 @@ describe('estimateCost - NumberInput Item', () => {
   })
 
   test('render basic props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
           <EstimateCost.NumberInput />
@@ -24,7 +24,7 @@ describe('estimateCost - NumberInput Item', () => {
     ))
 
   test('render basic with overlay', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
           <EstimateCost.NumberInput />
@@ -33,7 +33,7 @@ describe('estimateCost - NumberInput Item', () => {
     ))
 
   test('render with values', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item
           amount={50}
@@ -49,7 +49,7 @@ describe('estimateCost - NumberInput Item', () => {
     ))
 
   test('render with getAmountValue', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="NumberInput">
           <EstimateCost.NumberInput getAmountValue={value => value} />

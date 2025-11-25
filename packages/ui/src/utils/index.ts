@@ -1,4 +1,33 @@
 export {
+  bounce as bounceDefault,
+  fadeIn as fadeInDefault,
+  fadeOut as fadeOutDefault,
+  flash as flashDefault,
+  ping as pingDefault,
+  pulse as pulseDefault,
+  quickScaleDown as quickScaleDownDefault,
+  scaleBack as scaleBackDefault,
+  scaleDown as scaleDownDefault,
+  scaleForward as scaleForwardDefault,
+  scaleUp as scaleUpDefault,
+  sketchIn as sketchInDefault,
+  sketchOut as sketchOutDefault,
+  slideDownLarge as slideDownLargeDefault,
+  slideFromBottom as slideFromBottomDefault,
+  slideFromLeft as slideFromLeftDefault,
+  slideFromRight as slideFromRightDefault,
+  slideFromTop as slideFromTopDefault,
+  slideToBottom as slideToBottomDefault,
+  slideToLeft as slideToLeftDefault,
+  slideToRight as slideToRightDefault,
+  slideToTop as slideToTopDefault,
+  slideUpLarge as slideUpLargeDefault,
+  unfoldIn as unfoldInDefault,
+  unfoldOut as unfoldOutDefault,
+  zoomIn as zoomInDefault,
+  zoomOut as zoomOutDefault,
+} from './animations/animations'
+export {
   bounce,
   fadeIn,
   fadeOut,
@@ -26,9 +55,9 @@ export {
   unfoldOut,
   zoomIn,
   zoomOut,
-} from './animations'
+} from './animations/animationsVE.css'
 export { getUUID } from './ids'
 export { default as normalize } from './normalize'
 export type { ComparableType } from './orderBy'
 export { orderBy } from './orderBy'
-export { Breakpoint, down, up } from './responsive'
+export { down, up } from './responsive'

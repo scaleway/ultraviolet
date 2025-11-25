@@ -14,7 +14,24 @@ export const Shrink: StoryFn<typeof Menu> = () => (
       <Menu.Item>item</Menu.Item>
     </Menu>
 
-    <Menu disclosure={<Button>noShrink=true</Button>} noShrink>
+    <Menu
+      disclosure={<Button>default with placement bottom</Button>}
+      placement="bottom"
+    >
+      <Menu.Item>item</Menu.Item>
+      <Menu.Item>item</Menu.Item>
+      <Menu.Item>item</Menu.Item>
+      <Menu.Item>item</Menu.Item>
+      <Menu.Item>item</Menu.Item>
+
+      <Menu.Item>item</Menu.Item>
+    </Menu>
+
+    <Menu
+      disclosure={<Button>shrink=true and placement bottom</Button>}
+      placement="bottom"
+      shrink
+    >
       <Menu.Item>item</Menu.Item>
       <Menu.Item>item</Menu.Item>
       <Menu.Item>item</Menu.Item>
@@ -30,7 +47,7 @@ Shrink.parameters = {
   docs: {
     description: {
       story:
-        'When the menu is at the bottom of a page (not possible to scroll down further), with `placement = "bottom"`, it will shrink so that it does not cause overflow. It is possible to remove this feature using prop `noShrink`',
+        'When the menu is at the bottom of a page (not possible to scroll down further), with `placement = "bottom"`, it can shrink so that it does not cause overflow. Activate this feature using prop `shrink`',
     },
   },
 }

@@ -23,7 +23,7 @@ jobs:
           default-project-id: ${{ vars.SCW_DEFAULT_PROJECT_ID }}
           default-organization-id: ${{ vars.SCW_DEFAULT_ORGANIZATION_ID }}
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Git Identity
         run: |
           git config --global user.name 'Scaleway Bot'
@@ -34,7 +34,7 @@ jobs:
 
       - uses: pnpm/action-setup@v4.2.0
       - name: Use Node.js
-        uses: actions/setup-node@v5.0.0
+        uses: actions/setup-node@v6.0.0
         with:
           node-version: 22.20.0
           cache: "pnpm"

@@ -1,5 +1,5 @@
 import type { Alert } from '@ultraviolet/ui'
-import type { ComponentProps, JSX, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, JSX, ReactNode } from 'react'
 import type EstimateCostLocales from './locales/en'
 
 export type EstimateCostProps = {
@@ -106,6 +106,7 @@ export type EstimateCostProps = {
    * To find out all currencies checkout https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes section "Code" of the table.
    */
   currency?: string
+  style?: CSSProperties
   /**
    * Defines the way we display numbers depending on locale (ex: 1,000.00 or 1 000,00).
    * To understand better please read https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales

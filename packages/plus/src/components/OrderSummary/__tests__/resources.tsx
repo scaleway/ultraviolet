@@ -10,7 +10,17 @@ export const categoryDefault = {
   ),
   category: 'Category',
   subCategories: [
-    { details: ['Detail 1', 'Detail 2'], price: 12.2, title: 'SubCategory' },
+    {
+      additionalInfo: (
+        <Tooltip text="Info">
+          <InformationOutlineIcon sentiment="neutral" size="small" />7 days of
+          free backup
+        </Tooltip>
+      ),
+      details: ['Detail 1', 'Detail 2'],
+      price: 12.2,
+      title: 'SubCategory',
+    },
   ],
   total: 0,
 }

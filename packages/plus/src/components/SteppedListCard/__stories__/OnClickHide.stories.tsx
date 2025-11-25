@@ -1,28 +1,14 @@
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react-vite'
 import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
-import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
+import { WireIllustration } from '@ultraviolet/illustrations'
 import { Button, Expandable, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { SteppedListCard } from '../SteppedListCard'
 
-const StyledImage = styled.img`
-  filter: invert();
-`
-
 export const OnClickHide: StoryFn<
   ComponentProps<typeof SteppedListCard>
 > = props => {
-  const theme = useTheme()
-
-  const illustrationImage =
-    theme.theme === 'light' ? (
-      <StyledImage alt="blockStorage" src={blockStorageWire} width={200} />
-    ) : (
-      <img alt="blockStorage" src={blockStorageWire} width={200} />
-    )
   const [visible, setVisible] = useState(true)
 
   return (
@@ -34,7 +20,9 @@ export const OnClickHide: StoryFn<
       <Expandable opened={visible}>
         <SteppedListCard {...props} onClickHide={() => setVisible(!visible)}>
           <SteppedListCard.Step
-            image={illustrationImage}
+            image={
+              <WireIllustration height={200} name="blockStorage" width={200} />
+            }
             stepNumber={1}
             subHeader={
               <Text as="h3" sentiment="primary" variant="headingSmallStrong">
@@ -57,7 +45,9 @@ export const OnClickHide: StoryFn<
             )}
           </SteppedListCard.Step>
           <SteppedListCard.Step
-            image={illustrationImage}
+            image={
+              <WireIllustration height={200} name="blockStorage" width={200} />
+            }
             stepNumber={2}
             subHeader="Second step"
           >
@@ -81,7 +71,9 @@ export const OnClickHide: StoryFn<
 
 OnClickHide.args = {
   header: 'Header',
+  hideText: 'custom hide text',
   hideTooltipText: 'It will trigger "onClickHide"',
+  showText: 'custom show text',
   steps: ['Start', 'First step'],
 }
 

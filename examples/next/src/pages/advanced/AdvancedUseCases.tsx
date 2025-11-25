@@ -1,9 +1,9 @@
-import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
+import styles from '../../../styles/advanced.module.scss'
 import CopyBox from '../../components/CopyBoxCommand'
 
-const useCase1 = `import { ThemeProvider } from '@emotion/react'
-import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
+const useCase1 = `import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/themes'
 import React, { useCallback, useState } from 'react'
 
 const App = () => {
@@ -40,8 +40,8 @@ const App = () => {
 export default App
 `
 
-const useCase2 = `import styled from "@emotion/styled";
-import { ThemeProvider } from "@emotion/react";
+const useCase2 = `
+import { ThemeProvider } from "@ultraviolet/theme";
 import {
   theme,
   Button,
@@ -53,37 +53,33 @@ import {
 } from "@ultraviolet/ui"
 import React from "react"
 
-const StyledFieldContainer = styled.div\`
-  margin-bottom: \${({ theme }) => theme.space['2']};
-\`
-
 const App = () => (
   <ThemeProvider theme={theme}>
     <Card>
       <Text as="h1" variant="headingLarge">Welcome to this form example</Text>
-      <StyledFieldContainer>
+      <div>
         <TextBox
           name="name"
           label="Your name"
           placeholder="John Doe"
           notice="Same as your official ID"
         />
-      </StyledFieldContainer>
-      <StyledFieldContainer>
+      </div>
+      <div>
         <SelectInput name="language" placeholder="Your favourite language">
           <SelectInput.Option value="javascript1">Javascript</SelectInput.Option>
           <SelectInput.Option value="javascript2">Javascript</SelectInput.Option>
           <SelectInput.Option value="javascript3">Javascript</SelectInput.Option>
         </SelectInput>
-      </StyledFieldContainer>
-      <StyledFieldContainer>
+      </div>
+      <div>
         <Checkbox name="terms">I agree with this form</Checkbox>
-      </StyledFieldContainer>
-      <StyledFieldContainer>
+      </div>
+      <div>
         <Button name="submit" type="submit">
           Submit
         </Button>
-      </StyledFieldContainer>
+      </div>
     </Card>
   </ThemeProvider>
 )
@@ -91,17 +87,18 @@ const App = () => (
 export default App
 `
 
-const StyledTitle = styled(Text)`
-  align-self: center;
-`
-
 const AdvancedUseCases = () => (
   <section>
     <Stack gap={5}>
-      <StyledTitle as="h3" id="advanced-use-cases" variant="heading">
+      <Text
+        as="h3"
+        className={styles.title}
+        id="advanced-use-cases"
+        variant="heading"
+      >
         Advanced Use Cases
-      </StyledTitle>
-      <Text as="p" variant="body">
+      </Text>
+      <Text as="p" sentiment="neutral" variant="body">
         If you want to change the theme or even to create a dark theme, Scaleway
         UI allows you to do it easily
       </Text>

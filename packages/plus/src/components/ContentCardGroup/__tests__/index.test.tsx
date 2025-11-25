@@ -1,4 +1,4 @@
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { ContentCardGroup } from '..'
 
@@ -12,14 +12,14 @@ describe('contentCardGroup', () => {
   })
 
   test('renders correctly with required title & hread', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card href="http://scaleway.com" title="title" />
       </ContentCardGroup>,
     ))
 
   test('renders correctly with subtitle', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
           href="http://scaleway.com"
@@ -30,7 +30,7 @@ describe('contentCardGroup', () => {
     ))
 
   test('renders correctly with description', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
           description="description"
@@ -50,7 +50,7 @@ describe('contentCardGroup', () => {
   })
 
   test('renders correctly with link target _parent', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
           href="http://scaleway.com"
@@ -61,7 +61,7 @@ describe('contentCardGroup', () => {
     ))
 
   test('renders correctly with a children', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card href="http://scaleway.com" target="_parent">
           <div>test</div>
@@ -70,7 +70,7 @@ describe('contentCardGroup', () => {
     ))
 
   test('renders correctly with different title and subtitle and with custom titleAs and subtitleAs', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <ContentCardGroup>
         <ContentCardGroup.Card
           href="http://scaleway.com"

@@ -1,23 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import { useMemo } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-const TextPointer = styled(Text)`
-  cursor: ${({ disabled, htmlFor }) => {
-    if (disabled) {
-      return 'not-allowed'
-    }
-
-    if (htmlFor) {
-      return 'pointer'
-    }
-
-    return 'text'
-  }};
-`
+import { textPointer } from './styles.css'
 
 const LabelRequiredOrNot = ({
   children,
@@ -28,41 +15,62 @@ const LabelRequiredOrNot = ({
   as,
   sentiment,
   disabled,
-}: LabelProps) =>
-  required ? (
-    <Stack alignItems="start" direction="row" gap="0.5">
-      <TextPointer
-        as={as === 'label' ? 'label' : 'legend'}
-        disabled={disabled}
-        htmlFor={htmlFor}
-        id={id}
-        sentiment={sentiment}
-        variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-      >
-        {children}
-      </TextPointer>
-      <Text
-        aria-label="required"
-        as="span"
-        disabled={disabled}
-        sentiment="danger"
-        variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-      >
-        *
-      </Text>
-    </Stack>
-  ) : (
-    <TextPointer
+  style,
+}: LabelProps) => {
+  const textPointerValue = useMemo(() => {
+    if (disabled) {
+      return 'disabled'
+    }
+
+    if (htmlFor) {
+      return 'htmlFor'
+    }
+
+    return 'default'
+  }, [disabled, htmlFor])
+
+  if (required) {
+    return (
+      <Stack alignItems="start" direction="row" gap="0.5" style={style}>
+        <Text
+          as={as === 'label' ? 'label' : 'legend'}
+          className={textPointer[textPointerValue]}
+          disabled={disabled}
+          htmlFor={htmlFor}
+          id={id}
+          sentiment={sentiment}
+          variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+        >
+          {children}
+        </Text>
+        <Text
+          aria-label="required"
+          as="span"
+          disabled={disabled}
+          sentiment="danger"
+          variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+        >
+          *
+        </Text>
+      </Stack>
+    )
+  }
+
+  return (
+    <Text
       as={as === 'label' ? 'label' : 'legend'}
+      className={textPointer[textPointerValue]}
       disabled={disabled}
       htmlFor={htmlFor}
       id={id}
       sentiment={sentiment}
+      style={style}
       variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
     >
       {children}
-    </TextPointer>
+    </Text>
   )
+}
 
 type LabelProps = {
   /**
@@ -77,6 +85,7 @@ type LabelProps = {
   id?: string
   sentiment?: ComponentProps<typeof Text>['sentiment']
   disabled?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -92,6 +101,7 @@ export const Label = ({
   id,
   sentiment = 'neutral',
   disabled,
+  style,
 }: LabelProps) =>
   labelDescription ? (
     <Stack alignItems="center" direction="row" gap="1">
@@ -103,6 +113,7 @@ export const Label = ({
         required={required}
         sentiment={sentiment}
         size={size}
+        style={style}
       >
         {children}
       </LabelRequiredOrNot>
@@ -123,6 +134,7 @@ export const Label = ({
       required={required}
       sentiment={sentiment}
       size={size}
+      style={style}
     >
       {children}
     </LabelRequiredOrNot>

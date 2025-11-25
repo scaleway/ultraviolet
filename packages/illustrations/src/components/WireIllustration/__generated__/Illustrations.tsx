@@ -99,11 +99,15 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/k8sKapsule/k8s-kapsule-wire.svg',
   k8sKosmos:
     'https://assets.scaleway.com/illustrations/products/k8sKosmos/k8s-kosmos-wire.svg',
+  kafka:
+    'https://assets.scaleway.com/illustrations/products/kafka/kafka-wire.svg',
   kms: 'https://assets.scaleway.com/illustrations/products/kms/kms-wire.svg',
   loadBalancers:
     'https://assets.scaleway.com/illustrations/products/loadBalancers/load-balancers-wire.svg',
   localStorage:
     'https://assets.scaleway.com/illustrations/products/localStorage/local-storage-wire.svg',
+  mailbox:
+    'https://assets.scaleway.com/illustrations/products/mailbox/mailbox-wire.svg',
   managedDatabase:
     'https://assets.scaleway.com/illustrations/products/managedDatabase/managed-database-wire.svg',
   managedSearchDatabase:

@@ -1,110 +1,19 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../theme'
-import { typography } from '../../theme'
-import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
-
-const PROMINENCES = {
-  default: '',
-  strong: 'strong',
-  stronger: 'stronger',
-  weak: 'weak',
-}
+import type { PROMINENCES, TextVariant } from './constants'
+import { text } from './style.css'
+import { placementText, whiteSpaceText } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = CSSProperties['textAlign']
 type WhiteSpaceProps = CSSProperties['whiteSpace']
-type TextVariant = keyof typeof typography
-export const textVariants = Object.keys(typography) as TextVariant[]
-
-/**
- * Generate all styles available for text based on prominence and variants
- */
-const generateStyles = ({
-  placement,
-  prominence,
-  sentiment,
-  variant,
-  theme,
-  oneLine,
-  disabled,
-  italic,
-  underline,
-  whiteSpace,
-  strikeThrough,
-}: {
-  placement?: PlacementProps
-  prominence: ProminenceProps
-  theme: Theme
-  variant: TextVariant
-  sentiment?: ExtendedColor
-  oneLine: boolean
-  disabled: boolean
-  italic: boolean
-  underline: boolean
-  whiteSpace?: WhiteSpaceProps
-  strikeThrough?: boolean
-}): string => {
-  // stronger is available only for neutral sentiment
-  const definedProminence =
-    sentiment !== 'neutral' && prominence === 'stronger'
-      ? capitalize(PROMINENCES.default)
-      : capitalize(PROMINENCES[prominence])
-
-  const isSentimentMonochrome = sentiment === 'black' || sentiment === 'white'
-
-  const themeColor =
-    sentiment && !isSentimentMonochrome ? theme.colors[sentiment] : undefined
-
-  const text = `text${definedProminence}${
-    disabled ? 'Disabled' : ''
-  }` as keyof typeof themeColor
-
-  const textColor =
-    sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment][text]
-      : undefined
-
-  return `
-    ${
-      sentiment
-        ? `color: ${
-            !isSentimentMonochrome
-              ? textColor
-              : theme.colors.other.monochrome[sentiment].text
-          };`
-        : ''
-    }
-
-    font-size: ${theme.typography[variant].fontSize};
-    font-family: ${theme.typography[variant].fontFamily};
-    font-weight: ${theme.typography[variant].weight};
-    letter-spacing: ${theme.typography[variant].letterSpacing};
-    line-height: ${theme.typography[variant].lineHeight};
-    text-transform: ${theme.typography[variant].textCase};
-    text-decoration: ${theme.typography[variant].textDecoration};
-    ${placement ? ` text-align: ${placement};` : ''}
-    ${whiteSpace ? `white-space: ${whiteSpace};` : ''}
-
-    ${
-      oneLine
-        ? `white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;`
-        : ''
-    }
-    ${italic ? `font-style: italic;` : ''}
-    ${underline ? `text-decoration: underline;` : ''}
-    ${strikeThrough ? `text-decoration: line-through;` : ''}
-  `
-}
 
 type TextProps = {
   className?: string
@@ -125,36 +34,8 @@ type TextProps = {
   'aria-hidden'?: boolean
   strikeThrough?: boolean
   whiteSpace?: WhiteSpaceProps
+  style?: CSSProperties
 }
-
-const StyledText = styled('div', {
-  shouldForwardProp: prop =>
-    ![
-      'as',
-      'placement',
-      'variant',
-      'sentiment',
-      'prominence',
-      'oneLine',
-      'disabled',
-      'italic',
-      'underline',
-      'strikeThrough',
-      'whiteSpace',
-    ].includes(prop),
-})<{
-  placement?: PlacementProps
-  sentiment?: ExtendedColor
-  prominence: ProminenceProps
-  variant: TextVariant
-  oneLine: boolean
-  disabled: boolean
-  italic: boolean
-  underline: boolean
-  htmlFor?: string
-  strikeThrough?: boolean
-  whiteSpace?: WhiteSpaceProps
-}>(generateStyles)
 
 /**
  * Text component is used to display text with different variants and sentiments.
@@ -162,7 +43,7 @@ const StyledText = styled('div', {
 export const Text = ({
   variant,
   children,
-  as,
+  as: Component = 'div',
   sentiment,
   oneLine = false,
   placement,
@@ -178,6 +59,7 @@ export const Text = ({
   htmlFor,
   'data-testid': dataTestId,
   'aria-hidden': ariaHidden,
+  style,
 }: TextProps) => {
   const elementRef = useRef(null)
   const isOverflowing = useIsOverflowing(elementRef)
@@ -186,28 +68,24 @@ export const Text = ({
 
   return (
     <Tooltip text={oneLine && isOverflowing ? finalStringChildren : ''}>
-      <StyledText
+      <Component
         aria-hidden={ariaHidden}
-        as={as}
-        className={className}
+        className={`${className ? `${className} ` : ''}${text({ disabled, italic, oneLine, prominence, sentiment, strikeThrough, underline, variant })}`}
         data-testid={dataTestId}
         dir={dir}
-        disabled={disabled}
         htmlFor={htmlFor}
         id={id}
-        italic={italic}
-        oneLine={oneLine}
-        placement={placement}
-        prominence={prominence}
         ref={elementRef}
-        sentiment={sentiment}
-        strikeThrough={strikeThrough}
-        underline={underline}
-        variant={variant}
-        whiteSpace={whiteSpace}
+        style={{
+          ...assignInlineVars({
+            [placementText]: placement,
+            [whiteSpaceText]: whiteSpace,
+          }),
+          ...style,
+        }}
       >
         {children}
-      </StyledText>
+      </Component>
     </Tooltip>
   )
 }

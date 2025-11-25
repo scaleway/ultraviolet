@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/form",
-  "version": "5.0.6",
+  "version": "6.0.0-beta.18",
   "description": "Ultraviolet Form",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -63,19 +63,15 @@
     }
   ],
   "peerDependencies": {
-    "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.1",
     "@ultraviolet/ui": "workspace:*",
     "react": "18.x || 19.x",
     "react-dom": "18.x || 19.x"
   },
   "devDependencies": {
-    "@babel/core": "7.28.4",
-    "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.1",
+    "@babel/core": "7.28.5",
     "@types/final-form-focus": "1.1.7",
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
     "@ultraviolet/ui": "workspace:*",
     "@utils/test": "workspace:*",
     "react": "19.2.0",

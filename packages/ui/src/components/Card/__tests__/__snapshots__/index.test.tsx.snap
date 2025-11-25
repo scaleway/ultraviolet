@@ -2,28 +2,11 @@
 
 exports[`card > renders correctly with active 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="false"
       data-is-active="true"
     >
@@ -35,28 +18,11 @@ exports[`card > renders correctly with active 1`] = `
 
 exports[`card > renders correctly with active and disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="true"
       data-is-active="true"
     >
@@ -68,62 +34,18 @@ exports[`card > renders correctly with active and disabled 1`] = `
 
 exports[`card > renders correctly with advanced header 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-2[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-disabled="false"
     >
       <h2>
         Advanced Title
       </h2>
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
@@ -136,90 +58,23 @@ exports[`card > renders correctly with advanced header 1`] = `
 
 exports[`card > renders correctly with advanced header and subHeader 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-2[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-2[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-disabled="false"
     >
       <h2>
         Advanced Title
       </h2>
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <h2>
             Advanced subHeader
@@ -234,56 +89,16 @@ exports[`card > renders correctly with advanced header and subHeader 1`] = `
 
 exports[`card > renders correctly with advanced subHeader 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="false"
       data-is-active="false"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <h2>
           Advanced subHeader
@@ -297,28 +112,11 @@ exports[`card > renders correctly with advanced subHeader 1`] = `
 
 exports[`card > renders correctly with className 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="test emotion-0 emotion-1"
+      class="test styles__1p7tz3i1"
       data-disabled="false"
       data-is-active="false"
     >
@@ -330,28 +128,11 @@ exports[`card > renders correctly with className 1`] = `
 
 exports[`card > renders correctly with data-testid 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="false"
       data-is-active="false"
       data-testid="test"
@@ -364,28 +145,11 @@ exports[`card > renders correctly with data-testid 1`] = `
 
 exports[`card > renders correctly with disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="true"
       data-is-active="false"
     >
@@ -397,76 +161,20 @@ exports[`card > renders correctly with disabled 1`] = `
 
 exports[`card > renders correctly with disabled and header 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  color: #b5b7bd;
-  font-size: 1.5625rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-4[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-4[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-disabled="true"
     >
       <h2
-        class="emotion-2 emotion-3"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_strong__m4c9owj style_variant_heading__m4c9ow11 style_disabled_true__m4c9ow1a style_undefined_compound_61__m4c9ow31"
       >
         Title
       </h2>
       <div
-        class="emotion-4 emotion-5"
+        class="styles__1p7tz3i1"
         data-disabled="true"
         data-is-active="false"
       >
@@ -479,76 +187,20 @@ exports[`card > renders correctly with disabled and header 1`] = `
 
 exports[`card > renders correctly with header 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  color: #222638;
-  font-size: 1.5625rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-4[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-4[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-disabled="false"
     >
       <h2
-        class="emotion-2 emotion-3"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_strong__m4c9owj style_variant_heading__m4c9ow11 style_disabled_false__m4c9ow1b style_undefined_compound_25__m4c9ow21 style_undefined_compound_73__m4c9ow3d"
       >
         Title
       </h2>
       <div
-        class="emotion-4 emotion-5"
+        class="styles__1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
@@ -561,119 +213,28 @@ exports[`card > renders correctly with header 1`] = `
 
 exports[`card > renders correctly with header and subHeader 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  color: #222638;
-  font-size: 1.5625rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-4[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-4[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-8 {
-  color: #3f4250;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
       data-disabled="false"
     >
       <h2
-        class="emotion-2 emotion-3"
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_strong__m4c9owj style_variant_heading__m4c9ow11 style_disabled_false__m4c9ow1b style_undefined_compound_25__m4c9ow21 style_undefined_compound_73__m4c9ow3d"
       >
         Main title
       </h2>
       <div
-        class="emotion-4 emotion-5"
+        class="styles__1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <h3
-            class="emotion-8 emotion-3"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h3>
@@ -687,71 +248,19 @@ exports[`card > renders correctly with header and subHeader 1`] = `
 
 exports[`card > renders correctly with subHeader 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  color: #3f4250;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="false"
       data-is-active="false"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
       >
         <h3
-          class="emotion-4 emotion-5"
+          class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
         >
           Title
         </h3>
@@ -764,28 +273,11 @@ exports[`card > renders correctly with subHeader 1`] = `
 
 exports[`card > renders correctly without header 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1p7tz3i1"
       data-disabled="false"
       data-is-active="false"
     >

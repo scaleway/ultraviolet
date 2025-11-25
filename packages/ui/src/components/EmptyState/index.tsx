@@ -1,56 +1,11 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-const CONTAINER_SIZES = {
-  large: 71.25,
-  medium: 45,
-  small: 45, // in rem
-} as const
-
-type SizesTypes = keyof typeof CONTAINER_SIZES
-
-const IMAGE_SIZES: Record<SizesTypes, number> = {
-  large: 15,
-  medium: 6,
-  small: 4, // in rem
-}
-
-const CenteredText = styled(Text)`
-  text-align: center;
-`
-
-const Container = styled(Stack, {
-  shouldForwardProp: prop => !['size', 'bordered'].includes(prop),
-})<{
-  size: SizesTypes
-  bordered?: boolean
-}>`
-  max-width: ${({ size }) => CONTAINER_SIZES[size]}rem;
-  margin: 0 auto;
-  ${({ size }) => (size === 'large' ? 'padding: 0 8.75rem' : null)};
-  ${({ theme, bordered }) =>
-    bordered
-      ? `
-    border: 1px solid ${theme.colors.neutral.border};
-    border-radius: ${theme.radii.default};
-    `
-      : null};
-`
-
-const StyledStack = styled(Stack)`
-  padding: ${({ theme }) => theme.space['5']};
-`
-
-const Image = styled('img')<{ size: number }>`
-  width: ${({ size }) => size}rem;
-  height: ${({ size }) => size}rem;
-  object-fit: contain;
-`
+import type { SizesTypes } from './styles.css'
+import { emptyStateContainer, emptyStateImage, paddedStack } from './styles.css'
 
 type EmptyStateProps = {
   title?: string
@@ -77,6 +32,7 @@ type EmptyStateProps = {
   className?: string
   children?: ReactNode
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -94,40 +50,45 @@ export const EmptyState = ({
   bordered,
   children,
   'data-testid': dataTestId,
+  style,
 }: EmptyStateProps) => (
-  <Container
-    bordered={bordered}
-    className={className}
+  <Stack
+    className={`${className ? `${className} ` : ''}${emptyStateContainer({ bordered, size })}`}
     data-testid={dataTestId}
-    size={size}
+    style={style}
   >
-    <StyledStack
+    <Stack
       alignItems="center"
+      className={paddedStack}
       gap={size === 'small' ? 2 : 3}
       justifyContent="center"
     >
       <Stack alignItems="center" gap={2} justifyContent="center">
         {image && typeof image === 'string' ? (
-          <Image alt="" size={IMAGE_SIZES[size]} src={image} />
+          <img alt="" className={emptyStateImage[size]} src={image} />
         ) : (
           image
         )}
         <Stack alignItems="center" gap={0.5}>
           {title ? (
-            <CenteredText
+            <Text
               as="h2"
+              placement="center"
               prominence="strong"
+              sentiment="neutral"
               variant={size === 'small' ? 'bodyStrong' : 'headingSmall'}
             >
               {title}
-            </CenteredText>
+            </Text>
           ) : null}
-          <CenteredText
+          <Text
             as="p"
+            placement="center"
+            sentiment="neutral"
             variant={size === 'small' ? 'bodySmall' : 'body'}
           >
             {description}
-          </CenteredText>
+          </Text>
         </Stack>
       </Stack>
       <Stack alignItems="center" gap={2} justifyContent="center">
@@ -147,6 +108,6 @@ export const EmptyState = ({
         ) : null}
       </Stack>
       {children}
-    </StyledStack>
-  </Container>
+    </Stack>
+  </Stack>
 )

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
 export type DragNDropData = {
   index: number
@@ -39,4 +39,6 @@ export type NavigationProps = {
    * This function will be called when the user toggle the expand/collapse button or with the slider.
    */
   onToggleExpand?: (expanded: boolean) => void
+  'data-testid'?: string
+  style?: CSSProperties
 }

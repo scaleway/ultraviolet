@@ -1,13 +1,78 @@
 # @ultraviolet/illustrations
 
-## 5.0.3
+## 6.0.0-beta.6
+
+### Major Changes
+
+- [#5768](https://github.com/scaleway/ultraviolet/pull/5768) [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5) Thanks [@lisalupi](https://github.com/lisalupi)! - Remove `Emotion` and update READMEs.
 
 ### Patch Changes
 
-- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
-  Updated dependency `@types/react-dom` to `19.2.1`.
-  Updated dependency `react` to `19.2.0`.
-  Updated dependency `react-dom` to `19.2.0`.
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- Updated dependencies [[`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd)]:
+  - @ultraviolet/themes@3.0.0-beta.4
+
+## 6.0.0-beta.5
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+## 6.0.0-beta.4
+
+### Patch Changes
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+
+## 6.0.0-beta.3
+
+### Patch Changes
+
+- [#5738](https://github.com/scaleway/ultraviolet/pull/5738) [`186370b`](https://github.com/scaleway/ultraviolet/commit/186370bc783037fc100dfa074238a8e2238c451e) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustration `mailbox`
+
+## 6.0.0-beta.2
+
+### Major Changes
+
+- [#5632](https://github.com/scaleway/ultraviolet/pull/5632) [`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089) Thanks [@matthprost](https://github.com/matthprost)! - Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
+
+### Patch Changes
+
+- Updated dependencies [[`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089)]:
+  - @ultraviolet/themes@3.0.0-beta.2
+
+## 6.0.0-beta.1
+
+### Major Changes
+
+- [`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238) Thanks [@matthprost](https://github.com/matthprost)! - Release new beta version to compensate major released by error
+
+### Patch Changes
+
+- Updated dependencies [[`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238)]:
+  - @ultraviolet/themes@3.0.0-beta.1
+
+## 5.1.0-beta.2
+
+### Minor Changes
+
+- [#5528](https://github.com/scaleway/ultraviolet/pull/5528) [`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5) Thanks [@matthprost](https://github.com/matthprost)! - New illustration kafka
+
+## 5.0.2-beta.1
+
+### Patch Changes
+
+- Updated dependencies [[`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2)]:
+  - @ultraviolet/themes@2.1.0-beta.1
+
+## 5.0.2-beta.0
+
+### Patch Changes
+
+- Updated dependencies [[`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b)]:
+  - @ultraviolet/themes@2.1.0-beta.0
 
 ## 5.0.2
 

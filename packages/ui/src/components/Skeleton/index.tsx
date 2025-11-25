@@ -1,7 +1,6 @@
 'use client'
 
-import { keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
+import type { CSSProperties } from 'react'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
 import { BoxWithIcon } from './BoxWithIcon'
@@ -10,47 +9,7 @@ import { Line } from './Line'
 import { List } from './List'
 import { Slider } from './Slider'
 import { Square } from './Square'
-
-const shineAnimation = keyframes`
-  from {
-    left: -25%;
-  }
-  to {
-    left: 100%;
-  }
-`
-
-const StyledContainer = styled.div`
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-`
-
-const StyledDiv = styled.div`
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-    90deg,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}00,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}4D,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}66,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}4D,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}00
-  );
-  animation: ${shineAnimation} 1s linear infinite;
-  animation-direction: alternate;
-
-  @media (prefers-reduced-motion: reduce) {
-    animation: unset;
-  }
-`
+import { skeletonContainer, skeletonHighlight } from './styles.css'
 
 const variants = {
   block: Block,
@@ -72,6 +31,7 @@ type SkeletonProps = {
   className?: string
   'aria-label'?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -86,22 +46,25 @@ export const Skeleton = ({
   className,
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
+  style,
 }: SkeletonProps) => {
   const Component = variants[variant]
 
   return (
-    <StyledContainer
+    <div
       aria-busy
       aria-label={ariaLabel}
       aria-live="polite"
-      className={className}
+      className={`${className ? `${className} ` : ''}${skeletonContainer}`}
       data-testid={dataTestId}
+      style={style}
     >
       <Component col={col} length={length} />
 
-      <StyledDiv />
-    </StyledContainer>
+      <div className={skeletonHighlight} />
+    </div>
   )
 }
 
+// oxlint-disable-next-line react/only-export-components
 export const skeletonTypes = Object.keys(variants) as SkeletonVariant[]

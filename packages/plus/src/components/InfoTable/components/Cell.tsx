@@ -1,49 +1,24 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
-
-export const Term = styled.dt`
-  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
-  color: ${({ theme }) => theme.colors.neutral.textStrong};
-  display: inline-flex;
-  align-items: center;
-  min-width: 0;
-`
-
-const Desc = styled.dd`
-  color: ${({ theme }) => theme.colors.neutral.text};
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-`
+import type { CSSProperties, ReactNode } from 'react'
+import { cellText, desc, term } from '../styles.css'
 
 type CellProps = {
   children: ReactNode
   title: ReactNode
   multiline?: boolean
+  style?: CSSProperties
 }
-
-const StyledText = styled(Text)`
-  display: block; // To work with ellipsis (multiLine = false)
-  min-width: 0;
-  width: 100%;
-
-  & > * {
-    display: inline-flex;  // Children should be inline
-    align-items: center;
-    margin-right: ${({ theme }) => theme.space[1]}; // Replaces gap
-  }
-`
 
 export const InfoTableCell = ({
   children,
   title,
   multiline = false,
+  style,
 }: CellProps) => (
-  <Stack gap="0.5" minWidth="0" width="100%">
-    <Term>
+  <Stack gap="0.5" minWidth="0" style={style} width="100%">
+    <dt className={term}>
       <Text
         as="div"
         prominence="weak"
@@ -52,17 +27,18 @@ export const InfoTableCell = ({
       >
         {title}
       </Text>
-    </Term>
-    <Desc>
-      <StyledText
+    </dt>
+    <dd className={desc}>
+      <Text
         as="div"
+        className={`${cellText}`}
         oneLine={!multiline}
         prominence="default"
         sentiment="neutral"
         variant="body"
       >
         {children}
-      </StyledText>
-    </Desc>
+      </Text>
+    </dd>
   </Stack>
 )

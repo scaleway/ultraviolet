@@ -1,34 +1,21 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { NumberInput } from '@ultraviolet/ui'
+import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
-import { ItemResourceName } from '../componentStyle'
 import { useOverlay } from '../OverlayContext'
+import {
+  estimateCostItemResourceName,
+  estimateCostNumberInput,
+} from './components.css'
 import { Regular } from './Regular'
-
-const StyledNumberInput = styled(NumberInput)`
-  /* Removes arrows for an input type number */
-  /* Chrome, Safari, Edge, Opera */
-
-  input[type='number']::-webkit-inner-spin-button,
-  input[type='number']::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  /* Firefox */
-
-  input[type='number'] {
-    -moz-appearance: textfield;
-  }
-`
 
 type UnitProps = {
   amount?: number
   itemCallback?: (amount?: number, isVariant?: boolean) => void
   getAmountValue?: (amount?: number) => void
   unit?: string
+  style?: CSSProperties
 }
 
 export const Unit = ({
@@ -36,6 +23,7 @@ export const Unit = ({
   itemCallback,
   getAmountValue,
   unit,
+  style,
 }: UnitProps) => {
   const { isOverlay } = useOverlay()
   const [capacity, setCapacity] = useState(amount === 0 ? undefined : amount)
@@ -47,12 +35,13 @@ export const Unit = ({
   }, [getAmountValue, itemCallback, capacity, amount])
 
   return isOverlay ? (
-    <ItemResourceName animated={false}>
+    <div className={estimateCostItemResourceName()} style={style}>
       <Regular>{capacity}</Regular>
-    </ItemResourceName>
+    </div>
   ) : (
-    <div style={{ width: '150px' }}>
-      <StyledNumberInput
+    <div style={{ width: '150px', ...style }}>
+      <NumberInput
+        className={estimateCostNumberInput}
         controls={false}
         name="capacity"
         onChange={capacityText => {

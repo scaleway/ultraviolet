@@ -1,10 +1,14 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { PencilIcon, PencilOutlineIcon } from '@ultraviolet/icons'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { SENTIMENTS } from '../../../theme'
-import { Button, buttonSizes, buttonVariants } from '..'
+import { Button } from '..'
+import { SIZE_KEY } from '../constants'
+
+const buttonSizes = SIZE_KEY
+const buttonVariants = ['ghost', 'filled', 'outlined'] as const
 
 const MockOnClick = () => {}
 const EXTENDED_SENTIMENTS = [...SENTIMENTS, 'black', 'white'] as const
@@ -29,7 +33,7 @@ describe('button', () => {
           expect(asFragment).toMatchSnapshot()
         })
         test(`render ${variant}&${sentiment} disabled`, () =>
-          shouldMatchEmotionSnapshot(
+          shouldMatchSnapshot(
             <Button
               disabled
               onClick={MockOnClick}
@@ -45,7 +49,7 @@ describe('button', () => {
 
   buttonSizes.forEach(size => {
     test(`render ${size}`, () =>
-      shouldMatchEmotionSnapshot(
+      shouldMatchSnapshot(
         <Button onClick={MockOnClick} size={size}>
           Hello
         </Button>,
@@ -76,7 +80,7 @@ describe('button', () => {
   })
 
   test(`render with icon`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         <PencilIcon />
         Hello
@@ -84,7 +88,7 @@ describe('button', () => {
     ))
 
   test(`render with icon on the right`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         Hello
         <PencilIcon />
@@ -92,28 +96,28 @@ describe('button', () => {
     ))
 
   test(`render with icon only`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         <PencilOutlineIcon />
       </Button>,
     ))
 
   test(`render with fullWidth`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button fullWidth onClick={MockOnClick}>
         Hello
       </Button>,
     ))
 
   test(`render with isLoading without icon`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button isLoading onClick={MockOnClick}>
         Hello
       </Button>,
     ))
 
   test(`render with isLoading with icon`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button isLoading onClick={MockOnClick}>
         <PencilIcon />
         Hello
@@ -121,7 +125,7 @@ describe('button', () => {
     ))
 
   test(`render with isLoading with icon variant`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button onClick={MockOnClick}>
         <PencilOutlineIcon />
         Hello
@@ -129,14 +133,14 @@ describe('button', () => {
     ))
 
   test(`render as an anchor with href prop`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button href="http://scaleway.com" onClick={MockOnClick}>
         Scaleway
       </Button>,
     ))
 
   test(`render with a tooltip`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Button onClick={MockOnClick} tooltip="Hello world !">
         Hello
       </Button>,

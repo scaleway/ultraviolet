@@ -2,42 +2,11 @@
 
 exports[`tabs > renders correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1xz9hlg2"
       role="tablist"
     />
   </div>
@@ -46,362 +15,26 @@ exports[`tabs > renders correctly 1`] = `
 
 exports[`tabs > renders correctly with Tabs and last disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1xz9hlg2"
       role="tablist"
     >
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             First
           </div>
@@ -411,16 +44,16 @@ exports[`tabs > renders correctly with Tabs and last disabled 1`] = `
         aria-disabled="false"
         aria-label="1"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Second
           </div>
@@ -430,17 +63,17 @@ exports[`tabs > renders correctly with Tabs and last disabled 1`] = `
         aria-disabled="true"
         aria-label="2"
         aria-selected="true"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="true"
         disabled=""
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -453,338 +86,26 @@ exports[`tabs > renders correctly with Tabs and last disabled 1`] = `
 
 exports[`tabs > renders correctly with Tabs menu selected 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.emotion-22 {
-  display: inherit;
-}
-
-.emotion-22[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-22[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-24:hover,
-.emotion-24:active,
-.emotion-24:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-24:focus-visible {
-  outline: auto;
-}
-
-.emotion-24[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-24[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-24[aria-disabled='false']:not(:disabled):hover,
-.emotion-24[aria-disabled='false']:not(:disabled):focus,
-.emotion-24[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-24[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-24[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-24[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-24[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-24[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-24[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-24[aria-disabled='true'],
-.emotion-24:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-24 .emotion-26 {
-  color: inherit;
-  margin-left: 0.5rem;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.emotion-24[aria-expanded='true'] .emotion-26 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.emotion-27 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-27 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1xz9hlg2"
       role="tablist"
     >
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             First
           </div>
@@ -794,16 +115,16 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
         aria-disabled="false"
         aria-label="1"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Second
           </div>
@@ -813,41 +134,41 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
         aria-disabled="false"
         aria-label="2"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
         </div>
       </button>
       <div
-        class="emotion-20 emotion-21"
+        class="styles__1xz9hlg9"
       >
         <div
           aria-controls="menu-test"
           aria-describedby="menu-test"
-          class="emotion-22 emotion-23"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-24 emotion-25"
+            class="styles__1xz9hlg7"
             role="tab"
             type="button"
           >
             More
             <svg
-              class="emotion-26 emotion-27 emotion-28"
+              class="styles__1xz9hlg8 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -860,26 +181,26 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
         </div>
       </div>
       <div
-        class="emotion-20 emotion-21"
+        class="styles__1xz9hlg9"
       >
         <div
           aria-controls="menu-_r_1r_"
           aria-describedby="menu-_r_1r_"
-          class="emotion-22 emotion-23"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="true"
             aria-expanded="false"
             aria-haspopup="dialog"
-            class="emotion-24 emotion-25"
+            class="styles__1xz9hlg7"
             disabled=""
             role="tab"
             type="button"
           >
             More again
             <svg
-              class="emotion-26 emotion-27 emotion-28"
+              class="styles__1xz9hlg8 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -898,363 +219,27 @@ exports[`tabs > renders correctly with Tabs menu selected 1`] = `
 
 exports[`tabs > renders correctly with Tabs name 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1xz9hlg2"
       role="tablist"
     >
       <button
         aria-disabled="false"
         aria-label="first"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             First
           </div>
@@ -1264,16 +249,16 @@ exports[`tabs > renders correctly with Tabs name 1`] = `
         aria-disabled="false"
         aria-label="second"
         aria-selected="true"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="true"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Second
           </div>
@@ -1283,17 +268,17 @@ exports[`tabs > renders correctly with Tabs name 1`] = `
         aria-disabled="true"
         aria-label="three"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         disabled=""
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -1306,537 +291,31 @@ exports[`tabs > renders correctly with Tabs name 1`] = `
 
 exports[`tabs > renders correctly with Tabs with prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-10 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.emotion-32 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.emotion-54 {
-  margin-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-130 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.emotion-132 {
-  display: inherit;
-}
-
-.emotion-132[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-132[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-134 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-134:hover,
-.emotion-134:active,
-.emotion-134:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-134:focus-visible {
-  outline: auto;
-}
-
-.emotion-134[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-134[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-134[aria-disabled='false']:not(:disabled):hover,
-.emotion-134[aria-disabled='false']:not(:disabled):focus,
-.emotion-134[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-134[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
-.emotion-134[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
-.emotion-134[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-134[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-134[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-134[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-134[aria-disabled='true'],
-.emotion-134:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-134 .emotion-136 {
-  color: inherit;
-  margin-left: 0.5rem;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.emotion-134[aria-expanded='true'] .emotion-136 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.emotion-137 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-137 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-144 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 24px 6px #d9dadd66;
-}
-
-.emotion-144:hover,
-.emotion-144:active,
-.emotion-144:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-144:focus-visible {
-  outline: auto;
-}
-
-.emotion-144[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-144[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-144[aria-disabled='false']:not(:disabled):hover,
-.emotion-144[aria-disabled='false']:not(:disabled):focus,
-.emotion-144[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-144[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
-.emotion-144[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
-.emotion-144[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-144[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-144[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-144[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-144[aria-disabled='true'],
-.emotion-144:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-144 .emotion-136 {
-  color: inherit;
-  margin-left: 0.5rem;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.emotion-144[aria-expanded='true'] .emotion-136 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1xz9hlg2"
       role="tablist"
     >
       <button
         aria-disabled="false"
         aria-selected="true"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="true"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             First
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-11"
+              class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_strong__1yf71jye styles_sentiment_primary__1yf71jy4 styles_undefined_compound_7__1yf71jyn style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              style="--qabug41: nowrap;"
             >
               2
             </span>
@@ -1847,16 +326,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         aria-disabled="false"
         aria-label="1"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Second
           </div>
@@ -1865,16 +344,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Undefined
           </div>
@@ -1883,20 +362,21 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Counter
             <span
-              class="emotion-8 emotion-9 emotion-32 emotion-11"
+              class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              style="--qabug41: nowrap;"
             >
               12
             </span>
@@ -1907,20 +387,21 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         aria-disabled="false"
         aria-label="2"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Counter no items
             <span
-              class="emotion-8 emotion-9 emotion-32 emotion-11"
+              class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              style="--qabug41: nowrap;"
             >
               0
             </span>
@@ -1930,25 +411,26 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Conter and badge
             <span
-              class="emotion-8 emotion-9 emotion-32 emotion-11"
+              class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              style="--qabug41: nowrap;"
             >
               12
             </span>
             <span
-              class="emotion-54 emotion-55"
+              class="styles__1xz9hlg6"
             >
               Badge
             </span>
@@ -1958,20 +440,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Badge
             <span
-              class="emotion-54 emotion-55"
+              class="styles__1xz9hlg6"
             >
               Badge
             </span>
@@ -1981,16 +463,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -1999,16 +481,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2017,16 +499,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2035,16 +517,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2053,16 +535,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2071,16 +553,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2089,16 +571,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2107,16 +589,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2125,16 +607,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2143,16 +625,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
@@ -2161,41 +643,41 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       <button
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
         type="button"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>
         </div>
       </button>
       <div
-        class="emotion-130 emotion-131"
+        class="styles__1xz9hlg9"
       >
         <div
           aria-controls="menu-test"
           aria-describedby="menu-test"
-          class="emotion-132 emotion-133"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-134 emotion-135"
+            class="styles__1xz9hlg7"
             role="tab"
             type="button"
           >
             Blabla
             <svg
-              class="emotion-136 emotion-137 emotion-138"
+              class="styles__1xz9hlg8 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -2208,25 +690,25 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
         </div>
       </div>
       <div
-        class="emotion-130 emotion-131"
+        class="styles__1xz9hlg9"
       >
         <div
           aria-controls="menu-_r_o_"
           aria-describedby="menu-_r_o_"
-          class="emotion-132 emotion-133"
+          class="styles__w40vpo9"
           tabindex="-1"
         >
           <button
             aria-disabled="false"
             aria-expanded="true"
             aria-haspopup="dialog"
-            class="emotion-143 emotion-144 emotion-135"
+            class="styles__1xz9hlg1 styles__1xz9hlg7"
             role="tab"
             type="button"
           >
             More
             <svg
-              class="emotion-136 emotion-137 emotion-138"
+              class="styles__1xz9hlg8 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -2240,246 +722,29 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.emotion-1 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 14.5rem;
-  max-height: 30rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
-  background-color: #ffffff;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0;
-  min-width: 11.25rem;
-  max-width: 23.75rem;
-  padding: 0.125rem 0;
-}
-
-.emotion-1[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-1[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-1[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-1>.emotion-4 {
-  max-height: calc(30rem - 1rem);
-}
-
-.emotion-1[data-has-arrow='true']::after {
-  border-color: #ffffff transparent transparent transparent;
-}
-
-.emotion-3[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: calc(min(30rem, -24px) - 0.25rem);
-  background-color: #ffffff;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  position: relative;
-}
-
-.emotion-5:after,
-.emotion-5:before {
-  border: solid transparent;
-  border-width: 9px;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.emotion-5:after {
-  border-color: transparent;
-}
-
-.emotion-5:before {
-  border-color: transparent;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.emotion-9 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
-}
-
-.emotion-9:last-child {
-  border: none;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-12 svg {
-  fill: #3f4250;
-}
-
-.emotion-12:hover,
-.emotion-12:focus-visible,
-.emotion-12[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-12:hover svg,
-.emotion-12:focus-visible svg,
-.emotion-12[data-active='true'] svg {
-  fill: #222638;
-}
-
-.emotion-12[aria-selected='true'] {
-  color: #641cb3;
-}
-
-<div
-    class="emotion-0 emotion-1 emotion-2"
-    data-animated="false"
-    data-has-arrow="false"
+  <div
+    class="styles__gky3yh2 styles__w40vpo4 null"
     id="menu-test"
     role="dialog"
-    style="opacity: 1; animation: none;"
+    style="--ozfz3c0: -5px; --ozfz3c1: 0px; --ozfz3c2:  rotate(180deg); --ozfz3c4: translate3d(0px, 4px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(0px, 4px, 0); --ozfz3c7: 14.5rem; --ozfz3c3: fit-content; opacity: 1; animation: none;"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-max-height="true"
+      class="styles__w40vpo2 styles_hasMaxHeight_true__w40vpo3"
+      style="--ozfz3c3: fit-content;"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="styles__gky3yh7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
         role="menu"
+        style="--gky3yh0: 30rem; --gky3yh1: 30rem;"
       >
         <div
-          class="emotion-7 emotion-8"
+          class="styles__gky3yh5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="styles__gky3yha styles_borderless_false__gky3yhb"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="styles_default__1xz9hlg5 styles__gky3yhd styles_sentiment_neutral__gky3yhg styles_undefined_compound_0__gky3yhj"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -2490,10 +755,10 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             </button>
           </div>
           <div
-            class="emotion-9 emotion-10"
+            class="styles__gky3yha styles_borderless_false__gky3yhb"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="styles_default__1xz9hlg5 styles__gky3yhd styles_sentiment_neutral__gky3yhg styles_undefined_compound_0__gky3yhj"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -2507,591 +772,45 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.emotion-1 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 14.5rem;
-  max-height: 30rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
-  background-color: #ffffff;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0;
-  min-width: 11.25rem;
-  max-width: 23.75rem;
-  padding: 0.125rem 0;
-}
-
-.emotion-1[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-1[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-1[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-1>.emotion-4 {
-  max-height: calc(30rem - 1rem);
-}
-
-.emotion-1[data-has-arrow='true']::after {
-  border-color: #ffffff transparent transparent transparent;
-}
-
-.emotion-3[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: calc(min(30rem, -24px) - 0.25rem);
-  background-color: #ffffff;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  position: relative;
-}
-
-.emotion-5:after,
-.emotion-5:before {
-  border: solid transparent;
-  border-width: 9px;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.emotion-5:after {
-  border-color: transparent;
-}
-
-.emotion-5:before {
-  border-color: transparent;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-9 .emotion-12 {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.5rem 1rem;
-  border-bottom-width: 1.5px;
-  width: 100%;
-  cursor: pointer;
-  min-width: 6.875rem;
-  background-color: transparent;
-}
-
-.emotion-9 .emotion-12[aria-disabled='true'],
-.emotion-9 .emotion-12:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-11:hover,
-.emotion-11:active,
-.emotion-11:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-11:focus-visible {
-  outline: auto;
-}
-
-.emotion-11[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-11[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-11[aria-disabled='false']:not(:disabled):hover,
-.emotion-11[aria-disabled='false']:not(:disabled):focus,
-.emotion-11[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-11[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-17,
-.emotion-11[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-17,
-.emotion-11[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-17 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-11[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-11[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-11[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-11[aria-disabled='true'],
-.emotion-11:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-19 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.emotion-41 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.emotion-63 {
-  margin-left: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-139 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.emotion-141 {
-  display: inherit;
-}
-
-.emotion-141[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-141[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-143 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-143:hover,
-.emotion-143:active,
-.emotion-143:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-143:focus-visible {
-  outline: auto;
-}
-
-.emotion-143[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-143[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-143[aria-disabled='false']:not(:disabled):hover,
-.emotion-143[aria-disabled='false']:not(:disabled):focus,
-.emotion-143[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-143[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-17,
-.emotion-143[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-17,
-.emotion-143[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-17 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-143[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-143[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-143[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-143[aria-disabled='true'],
-.emotion-143:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-143 .emotion-145 {
-  color: inherit;
-  margin-left: 0.5rem;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.emotion-143[aria-expanded='true'] .emotion-145 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.emotion-146 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-146 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
-    class="emotion-0 emotion-1 emotion-2"
-    data-animated="false"
-    data-has-arrow="false"
+  <div
+    class="styles__gky3yh2 styles__w40vpo4 null"
     id="menu-_r_o_"
     role="dialog"
-    style="opacity: 1; animation: none;"
+    style="--ozfz3c0: -5px; --ozfz3c1: 0px; --ozfz3c2:  rotate(180deg); --ozfz3c4: translate3d(0px, 4px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(0px, 4px, 0); --ozfz3c7: 14.5rem; --ozfz3c3: fit-content; opacity: 1; animation: none;"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-max-height="true"
+      class="styles__w40vpo2 styles_hasMaxHeight_true__w40vpo3"
+      style="--ozfz3c3: fit-content;"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="styles__gky3yh7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
         role="menu"
+        style="--gky3yh0: 30rem; --gky3yh1: 30rem;"
       >
         <div
-          class="emotion-7 emotion-8"
+          class="styles__gky3yh5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="styles__1xz9hlg0"
           >
             <button
               aria-disabled="false"
               aria-selected="true"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="true"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   First
                   <span
-                    class="emotion-17 emotion-18 emotion-19 emotion-20"
+                    class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_strong__1yf71jye styles_sentiment_primary__1yf71jy4 styles_undefined_compound_7__1yf71jyn style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    style="--qabug41: nowrap;"
                   >
                     2
                   </span>
@@ -3102,16 +821,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
               aria-disabled="false"
               aria-label="1"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Second
                 </div>
@@ -3120,16 +839,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Undefined
                 </div>
@@ -3138,20 +857,21 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Counter
                   <span
-                    class="emotion-17 emotion-18 emotion-41 emotion-20"
+                    class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    style="--qabug41: nowrap;"
                   >
                     12
                   </span>
@@ -3162,20 +882,21 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
               aria-disabled="false"
               aria-label="2"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Counter no items
                   <span
-                    class="emotion-17 emotion-18 emotion-41 emotion-20"
+                    class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    style="--qabug41: nowrap;"
                   >
                     0
                   </span>
@@ -3185,25 +906,26 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Conter and badge
                   <span
-                    class="emotion-17 emotion-18 emotion-41 emotion-20"
+                    class="styles__1xz9hlg3 styles__1yf71jy0 styles_size_medium__1yf71jy2 styles_prominence_default__1yf71jyd styles_sentiment_neutral__1yf71jya styles_undefined_compound_6__1yf71jym style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+                    style="--qabug41: nowrap;"
                   >
                     12
                   </span>
                   <span
-                    class="emotion-63 emotion-64"
+                    class="styles__1xz9hlg6"
                   >
                     Badge
                   </span>
@@ -3213,20 +935,20 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Badge
                   <span
-                    class="emotion-63 emotion-64"
+                    class="styles__1xz9hlg6"
                   >
                     Badge
                   </span>
@@ -3236,16 +958,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3254,16 +976,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3272,16 +994,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3290,16 +1012,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3308,16 +1030,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3326,16 +1048,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3344,16 +1066,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3362,16 +1084,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3380,16 +1102,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3398,16 +1120,16 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
@@ -3416,41 +1138,41 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             <button
               aria-disabled="false"
               aria-selected="false"
-              class="emotion-11 emotion-12"
+              class="styles__1xz9hlg7"
               data-is-selected="false"
               role="tab"
               type="button"
             >
               <div
-                class="emotion-13 emotion-14"
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-15 emotion-14"
+                  class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   Very long tab name
                 </div>
               </div>
             </button>
             <div
-              class="emotion-139 emotion-140"
+              class="styles__1xz9hlg9"
             >
               <div
                 aria-controls="menu-test"
                 aria-describedby="menu-test"
-                class="emotion-141 emotion-142"
+                class="styles__w40vpo9"
                 tabindex="-1"
               >
                 <button
                   aria-disabled="false"
                   aria-expanded="true"
                   aria-haspopup="dialog"
-                  class="emotion-143 emotion-144"
+                  class="styles__1xz9hlg7"
                   role="tab"
                   type="button"
                 >
                   Blabla
                   <svg
-                    class="emotion-145 emotion-146 emotion-147"
+                    class="styles__1xz9hlg8 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3467,246 +1189,29 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(8px, 0px, 0);
-    -moz-transform: translate3d(8px, 0px, 0);
-    -ms-transform: translate3d(8px, 0px, 0);
-    transform: translate3d(8px, 0px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(8px, 0px, 0);
-    -moz-transform: translate3d(8px, 0px, 0);
-    -ms-transform: translate3d(8px, 0px, 0);
-    transform: translate3d(8px, 0px, 0);
-  }
-}
-
-.emotion-1 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 14.5rem;
-  max-height: 30rem;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(8px, 0px, 0);
-  -moz-transform: translate3d(8px, 0px, 0);
-  -ms-transform: translate3d(8px, 0px, 0);
-  transform: translate3d(8px, 0px, 0);
-  background-color: #ffffff;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0;
-  min-width: 11.25rem;
-  max-width: 23.75rem;
-  padding: 0.125rem 0;
-}
-
-.emotion-1[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-1[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: 0px;
-  left: -5px;
-  -webkit-transform: translate(50%, -50%) rotate(90deg);
-  -moz-transform: translate(50%, -50%) rotate(90deg);
-  -ms-transform: translate(50%, -50%) rotate(90deg);
-  transform: translate(50%, -50%) rotate(90deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-1[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-1>.emotion-4 {
-  max-height: calc(30rem - 1rem);
-}
-
-.emotion-1[data-has-arrow='true']::after {
-  border-color: #ffffff transparent transparent transparent;
-}
-
-.emotion-3[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: calc(min(30rem, -24px) - 0.25rem);
-  background-color: #ffffff;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  position: relative;
-}
-
-.emotion-5:after,
-.emotion-5:before {
-  border: solid transparent;
-  border-width: 9px;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.emotion-5:after {
-  border-color: transparent;
-}
-
-.emotion-5:before {
-  border-color: transparent;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.emotion-9 {
-  border-bottom: 1px solid #d9dadd;
-  padding: 0.25rem 0.25rem;
-  width: 100%;
-}
-
-.emotion-9:last-child {
-  border: none;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  text-align: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 2rem;
-  max-height: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: inherit;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  cursor: pointer;
-  min-width: 6.875rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  -webkit-transition: background-color 200ms,color 200ms;
-  transition: background-color 200ms,color 200ms;
-  color: #3f4250;
-  background: none;
-}
-
-.emotion-12 svg {
-  fill: #3f4250;
-}
-
-.emotion-12:hover,
-.emotion-12:focus-visible,
-.emotion-12[data-active='true'] {
-  background-color: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-12:hover svg,
-.emotion-12:focus-visible svg,
-.emotion-12[data-active='true'] svg {
-  fill: #222638;
-}
-
-.emotion-12[aria-selected='true'] {
-  color: #641cb3;
-}
-
-<div
-    class="emotion-0 emotion-1 emotion-2"
-    data-animated="false"
-    data-has-arrow="false"
+  <div
+    class="styles__gky3yh2 styles__w40vpo4 null"
     id="menu-test"
     role="dialog"
-    style="opacity: 1; animation: none;"
+    style="--ozfz3c0: 0px; --ozfz3c1: -5px; --ozfz3c2: translate(50%, -50%) rotate(90deg); --ozfz3c4: translate3d(8px, 0px, 0); --ozfz3c5: 0ms; --ozfz3c6: translate3d(8px, 0px, 0); --ozfz3c7: 14.5rem; --ozfz3c3: fit-content; opacity: 1; animation: none;"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-max-height="true"
+      class="styles__w40vpo2 styles_hasMaxHeight_true__w40vpo3"
+      style="--ozfz3c3: fit-content;"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="styles__gky3yh7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
         role="menu"
+        style="--gky3yh0: 30rem; --gky3yh1: 30rem;"
       >
         <div
-          class="emotion-7 emotion-8"
+          class="styles__gky3yh5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="styles__gky3yha styles_borderless_false__gky3yhb"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="styles_default__1xz9hlg5 styles__gky3yhd styles_sentiment_neutral__gky3yhg styles_undefined_compound_0__gky3yhj"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -3717,10 +1222,10 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
             </button>
           </div>
           <div
-            class="emotion-9 emotion-10"
+            class="styles__gky3yha styles_borderless_false__gky3yhb"
           >
             <button
-              class="emotion-11 emotion-12 emotion-13"
+              class="styles_default__1xz9hlg5 styles__gky3yhd styles_sentiment_neutral__gky3yhg styles_undefined_compound_0__gky3yhj"
               data-active="false"
               data-is-disclosure="false"
               data-is-menu-item="true"
@@ -3739,536 +1244,25 @@ exports[`tabs > renders correctly with Tabs with prop 1`] = `
 
 exports[`tabs > renders correctly with custom Tabs component 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.emotion-0::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #d9dadd;
-}
-
-.emotion-0::-webkit-scrollbar {
-  display: none;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-2:hover,
-.emotion-2:active,
-.emotion-2:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-2:focus-visible {
-  outline: auto;
-}
-
-.emotion-2[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover,
-.emotion-2[aria-disabled='false']:not(:disabled):focus,
-.emotion-2[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-2[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-2[aria-disabled='true'],
-.emotion-2:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-15 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #005da3;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  white-space: nowrap;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-}
-
-.emotion-15 .e1afnb7a3,
-.emotion-15 .e1afnb7a2,
-.emotion-15 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-15>* {
-  pointer-events: none;
-}
-
-.emotion-15:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-15:hover,
-.emotion-15:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #004c85;
-  text-decoration-color: #004c85;
-}
-
-.emotion-15:hover .e1afnb7a3,
-.emotion-15:focus .e1afnb7a3,
-.emotion-15:hover .e1afnb7a2,
-.emotion-15:focus .e1afnb7a2,
-.emotion-15:hover .e1afnb7a4,
-.emotion-15:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-15:hover:visited,
-.emotion-15:focus:visited {
-  text-decoration-color: transparent;
-  color: #641cb3;
-}
-
-.emotion-15[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-15:hover::after,
-.emotion-15:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-15:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-15:hover,
-.emotion-15:active,
-.emotion-15:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.emotion-15:focus-visible {
-  outline: auto;
-}
-
-.emotion-15[aria-selected='true'] {
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-15[aria-selected='true'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-15[aria-disabled='false']:not(:disabled):hover,
-.emotion-15[aria-disabled='false']:not(:disabled):focus,
-.emotion-15[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #641cb3;
-  border-bottom-color: #8c40ef;
-}
-
-.emotion-15[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.emotion-15[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.emotion-15[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
-  background-color: #f1eefc;
-  border-color: #f1eefc;
-  color: #641cb3;
-}
-
-.emotion-15[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.emotion-15[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.emotion-15[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
-  color: #641cb3;
-}
-
-.emotion-15[aria-disabled='true'],
-.emotion-15:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1xz9hlg2"
       role="tablist"
     >
       <div
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             First
           </div>
@@ -4277,31 +1271,30 @@ exports[`tabs > renders correctly with custom Tabs component 1`] = `
       <a
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-2 emotion-3"
+        class="styles__1xz9hlg7"
         data-is-selected="false"
         role="tab"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Second
           </div>
         </div>
       </a>
       <a
-        class="emotion-3 emotion-15 emotion-16"
+        class="styles__1xz9hlg7 styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
         data-variant="standalone"
         href="#"
-        variant="bodyStrong"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
           >
             Very long tab name
           </div>

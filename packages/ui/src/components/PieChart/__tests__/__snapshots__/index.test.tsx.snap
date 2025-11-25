@@ -1,1370 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PieChart > renders correctly when legend is focused 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #641cb3;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-  -webkit-animation: animation-0 linear 1500ms infinite;
-  animation: animation-0 linear 1500ms infinite;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 100%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-32 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-36 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-38 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
-                  data-testid="arc.compute"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-                <path
-                  d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
-                  data-testid="arc.gpu"
-                  fill="#0083e6"
-                  opacity="1"
-                  stroke="rgb(0, 92, 161)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <ul
-        class="emotion-2 emotion-3"
-      >
-        <div
-          aria-controls="chart-legend-compute"
-          aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-compute"
-            />
-            <div
-              class="emotion-10 emotion-11"
-              color="#5e47be"
-              id="chart-legend-compute"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-14 emotion-15"
-              >
-                Compute
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-18 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-20 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-        <div
-          aria-controls="chart-legend-gpu"
-          aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-24 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-gpu"
-            />
-            <div
-              class="emotion-28 emotion-11"
-              color="#0083e6"
-              id="chart-legend-gpu"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-32 emotion-15"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-36 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-38 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly when legend is hovered 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #641cb3;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-  -webkit-animation: animation-0 linear 1500ms infinite;
-  animation: animation-0 linear 1500ms infinite;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 100%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-32 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-36 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-38 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
-                  data-testid="arc.compute"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-                <path
-                  d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
-                  data-testid="arc.gpu"
-                  fill="#0083e6"
-                  opacity="1"
-                  stroke="rgb(0, 92, 161)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <ul
-        class="emotion-2 emotion-3"
-      >
-        <div
-          aria-controls="chart-legend-compute"
-          aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-compute"
-            />
-            <div
-              class="emotion-10 emotion-11"
-              color="#5e47be"
-              id="chart-legend-compute"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-14 emotion-15"
-              >
-                Compute
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-18 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-20 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-        <div
-          aria-controls="chart-legend-gpu"
-          aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-24 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-gpu"
-            />
-            <div
-              class="emotion-28 emotion-11"
-              color="#0083e6"
-              id="chart-legend-gpu"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-32 emotion-15"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-36 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-38 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly with data and content 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  font-size:font-family: Space Grotesk,sans-serif;
-  font-size: 1.5625rem;
-  font-weight: Medium;
-  letter-spacing: 0;
-  line-height: 2rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 500;
-  line-height: 100px;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  text-align: center;
-  vertical-align: middle;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M1.039,-92.994A93,93,0,0,1,1.039,92.994L1.039,74.393A74.4,74.4,0,0,0,1.039,-74.393Z"
-                  data-testid="arc.compute"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-                <path
-                  d="M-1.039,92.994A93,93,0,0,1,-1.039,-92.994L-1.039,-74.393A74.4,74.4,0,0,0,-1.039,74.393Z"
-                  data-testid="arc.gpu"
-                  fill="#0083e6"
-                  opacity="1"
-                  stroke="rgb(0, 92, 161)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div
-          class="emotion-2 emotion-3"
-        >
-          Test
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
-                  data-testid="arc.discount"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <ul
-        class="emotion-2 emotion-3"
-      >
-        <div
-          aria-controls="chart-legend-discount"
-          aria-describedby="chart-legend-discount"
-          class="emotion-4 emotion-5"
-          tabindex="0"
-        >
-          <li
-            class="emotion-6 emotion-7"
-          >
-            <div
-              class="emotion-8 emotion-9"
-              data-testid="chart-legend-discount"
-            />
-            <div
-              class="emotion-10 emotion-11"
-              color="#5e47be"
-              id="chart-legend-discount"
-            />
-            <div
-              class="emotion-12 emotion-13"
-            >
-              <span
-                class="emotion-14 emotion-15"
-              >
-                GPU Instances
-              </span>
-              <span
-                class="emotion-16 emotion-17"
-              >
-                <span
-                  class="emotion-18 emotion-19"
-                />
-              </span>
-            </div>
-            <div
-              class="emotion-20 emotion-21"
-            >
-              20
-            </div>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`PieChart > renders correctly with empty legend placeholder 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 2.5rem;
-}
-
-.emotion-4 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-      height="206"
-    >
-      <div
-        style="position: relative;"
-      >
-        <div
-          style="position: relative;"
-        >
-          <svg
-            height="206"
-            role="img"
-            width="206"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs
-              aria-hidden="true"
-            >
-              <pattern
-                height="5"
-                id="lines"
-                patternUnits="userSpaceOnUse"
-                width="5"
-              >
-                <rect
-                  fill="inherit"
-                  height="5"
-                  stroke="rgba(255, 0, 0, 0.1)"
-                  stroke-width="0"
-                  width="5"
-                />
-                <path
-                  d="
-                M 0 0 L 5 0
-                M 0 5 L 5 5
-            "
-                  stroke="#222638"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </pattern>
-            </defs>
-            <rect
-              fill="transparent"
-              height="206"
-              width="206"
-            />
-            <g
-              transform="translate(10,10)"
-            >
-              <g
-                transform="translate(93,93)"
-              >
-                <path
-                  d="M0,-93A93,93,0,1,1,0,93A93,93,0,1,1,0,-93M0,-74.4A74.4,74.4,0,1,0,0,74.4A74.4,74.4,0,1,0,0,-74.4Z"
-                  data-testid="arc.empty"
-                  fill="#5e47be"
-                  opacity="1"
-                  stroke="rgb(66, 50, 133)"
-                  stroke-width="0"
-                />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <p
-          class="emotion-4 emotion-5"
-        >
-          I am a legend
-        </p>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`pieChart > renders correctly when legend is focused 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #641cb3;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-  -webkit-animation: animation-0 linear 1500ms infinite;
-  animation: animation-0 linear 1500ms infinite;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 100%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-32 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-36 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-38 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -1438,44 +81,45 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
         </div>
       </div>
       <ul
-        class="emotion-2 emotion-3"
+        class="styles__6tpqrj6"
       >
         <div
           aria-controls="chart-legend-compute"
           aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_true__6tpqrj8"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-compute"
             />
             <div
-              class="emotion-10 emotion-11"
+              class="styles__6tpqrja styles_isFocused_true__6tpqrjb"
               color="#5e47be"
               id="chart-legend-compute"
+              style="--_6tpqrj1: #5e47be;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_true__6tpqrjg"
               >
                 Compute
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_true__6tpqrjl"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_isFocused__6tpqrje"
             >
               20
             </div>
@@ -1484,39 +128,40 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
         <div
           aria-controls="chart-legend-gpu"
           aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-24 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-gpu"
             />
             <div
-              class="emotion-28 emotion-11"
+              class="styles__6tpqrja"
               color="#0083e6"
               id="chart-legend-gpu"
+              style="--_6tpqrj1: #0083e6;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-32 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 GPU Instances
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-36 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-38 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -1530,189 +175,12 @@ exports[`pieChart > renders correctly when legend is focused 1`] = `
 
 exports[`pieChart > renders correctly when legend is hovered 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #641cb3;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-  -webkit-animation: animation-0 linear 1500ms infinite;
-  animation: animation-0 linear 1500ms infinite;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 100%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 500;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-32 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-36 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-38 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -1786,44 +254,45 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
         </div>
       </div>
       <ul
-        class="emotion-2 emotion-3"
+        class="styles__6tpqrj6"
       >
         <div
           aria-controls="chart-legend-compute"
           aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_true__6tpqrj8"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-compute"
             />
             <div
-              class="emotion-10 emotion-11"
+              class="styles__6tpqrja styles_isFocused_true__6tpqrjb"
               color="#5e47be"
               id="chart-legend-compute"
+              style="--_6tpqrj1: #5e47be;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_true__6tpqrjg"
               >
                 Compute
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_true__6tpqrjl"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_isFocused__6tpqrje"
             >
               20
             </div>
@@ -1832,39 +301,40 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
         <div
           aria-controls="chart-legend-gpu"
           aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-24 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-gpu"
             />
             <div
-              class="emotion-28 emotion-11"
+              class="styles__6tpqrja"
               color="#0083e6"
               id="chart-legend-gpu"
+              style="--_6tpqrj1: #0083e6;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-32 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 GPU Instances
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-36 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-38 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -1878,24 +348,12 @@ exports[`pieChart > renders correctly when legend is hovered 1`] = `
 
 exports[`pieChart > renders correctly with data 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -1975,49 +433,12 @@ exports[`pieChart > renders correctly with data 1`] = `
 
 exports[`pieChart > renders correctly with data and content 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  font-size:font-family: Space Grotesk,sans-serif;
-  font-size: 1.5625rem;
-  font-weight: Medium;
-  letter-spacing: 0;
-  line-height: 2rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 500;
-  line-height: 100px;
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  text-align: center;
-  vertical-align: middle;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -2090,7 +511,7 @@ exports[`pieChart > renders correctly with data and content 1`] = `
           </svg>
         </div>
         <div
-          class="emotion-2 emotion-3"
+          class="styles__6tpqrj5"
         >
           Test
         </div>
@@ -2102,135 +523,12 @@ exports[`pieChart > renders correctly with data and content 1`] = `
 
 exports[`pieChart > renders correctly with detailed legend 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -2304,44 +602,45 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
         </div>
       </div>
       <ul
-        class="emotion-2 emotion-3"
+        class="styles__6tpqrj6"
       >
         <div
           aria-controls="chart-legend-compute"
           aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-compute"
             />
             <div
-              class="emotion-10 emotion-11"
+              class="styles__6tpqrja"
               color="#5e47be"
               id="chart-legend-compute"
+              style="--_6tpqrj1: #5e47be;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Compute
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -2350,39 +649,40 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
         <div
           aria-controls="chart-legend-gpu"
           aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-gpu"
             />
             <div
-              class="emotion-28 emotion-11"
+              class="styles__6tpqrja"
               color="#0083e6"
               id="chart-legend-gpu"
+              style="--_6tpqrj1: #0083e6;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 GPU Instances
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -2396,126 +696,12 @@ exports[`pieChart > renders correctly with detailed legend 1`] = `
 
 exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -2581,44 +767,45 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
         </div>
       </div>
       <ul
-        class="emotion-2 emotion-3"
+        class="styles__6tpqrj6"
       >
         <div
           aria-controls="chart-legend-discount"
           aria-describedby="chart-legend-discount"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-discount"
             />
             <div
-              class="emotion-10 emotion-11"
+              class="styles__6tpqrja"
               color="#5e47be"
               id="chart-legend-discount"
+              style="--_6tpqrj1: #5e47be;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 GPU Instances
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -2632,47 +819,12 @@ exports[`pieChart > renders correctly with detailed legend and discount 1`] = `
 
 exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 2.5rem;
-}
-
-.emotion-4 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -2738,10 +890,10 @@ exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
         </div>
       </div>
       <div
-        class="emotion-2 emotion-3"
+        class="styles__6tpqrj4"
       >
         <p
-          class="emotion-4 emotion-5"
+          class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
         >
           I am a legend
         </p>
@@ -2753,207 +905,12 @@ exports[`pieChart > renders correctly with empty legend placeholder 1`] = `
 
 exports[`pieChart > renders correctly with legend 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-.emotion-2 {
-  font-size: 0.875rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 100%;
-  color: #3f4250;
-}
-
-.emotion-8 {
-  width: 250px;
-  height: 21px;
-  position: absolute;
-}
-
-.emotion-10 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #5e47be;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.emotion-14 {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  margin-right: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-16 {
-  border-bottom: 1px solid #d9dadd;
-  position: relative;
-  width: 100%;
-}
-
-.emotion-18 {
-  border-bottom: 1px solid #8c40ef;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: -1px;
-  -webkit-transition: width 500ms ease;
-  transition: width 500ms ease;
-  width: 0%;
-}
-
-.emotion-20 {
-  margin-left: 0.5rem;
-  font-weight: 400;
-}
-
-.emotion-28 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #0083e6;
-}
-
-.emotion-46 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #3ebd8f;
-}
-
-.emotion-64 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #ac2740;
-}
-
-.emotion-82 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #9a85ec;
-}
-
-.emotion-100 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #ff602e;
-}
-
-.emotion-118 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #483800;
-}
-
-.emotion-136 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #02a5ad;
-}
-
-.emotion-154 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #ffa488;
-}
-
-.emotion-172 {
-  display: inline-block;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  background: #96edf2;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"
@@ -3091,44 +1048,45 @@ exports[`pieChart > renders correctly with legend 1`] = `
         </div>
       </div>
       <ul
-        class="emotion-2 emotion-3"
+        class="styles__6tpqrj6"
       >
         <div
           aria-controls="chart-legend-compute"
           aria-describedby="chart-legend-compute"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-compute"
             />
             <div
-              class="emotion-10 emotion-11"
+              class="styles__6tpqrja"
               color="#5e47be"
               id="chart-legend-compute"
+              style="--_6tpqrj1: #5e47be;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Compute
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3137,39 +1095,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-gpu"
           aria-describedby="chart-legend-gpu"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-gpu"
             />
             <div
-              class="emotion-28 emotion-11"
+              class="styles__6tpqrja"
               color="#0083e6"
               id="chart-legend-gpu"
+              style="--_6tpqrj1: #0083e6;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 GPU Instances
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3178,39 +1137,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-functions"
           aria-describedby="chart-legend-functions"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-functions"
             />
             <div
-              class="emotion-46 emotion-11"
+              class="styles__6tpqrja"
               color="#3ebd8f"
               id="chart-legend-functions"
+              style="--_6tpqrj1: #3ebd8f;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Serverless Functions
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3219,39 +1179,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-containers"
           aria-describedby="chart-legend-containers"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-containers"
             />
             <div
-              class="emotion-64 emotion-11"
+              class="styles__6tpqrja"
               color="#ac2740"
               id="chart-legend-containers"
+              style="--_6tpqrj1: #ac2740;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Serverless Containers
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3260,39 +1221,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-s3"
           aria-describedby="chart-legend-s3"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-s3"
             />
             <div
-              class="emotion-82 emotion-11"
+              class="styles__6tpqrja"
               color="#9a85ec"
               id="chart-legend-s3"
+              style="--_6tpqrj1: #9a85ec;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Object Storage
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3301,39 +1263,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-dns"
           aria-describedby="chart-legend-dns"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-dns"
             />
             <div
-              class="emotion-100 emotion-11"
+              class="styles__6tpqrja"
               color="#ff602e"
               id="chart-legend-dns"
+              style="--_6tpqrj1: #ff602e;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Domain zones
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3342,39 +1305,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-appleSilicon"
           aria-describedby="chart-legend-appleSilicon"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-appleSilicon"
             />
             <div
-              class="emotion-118 emotion-11"
+              class="styles__6tpqrja"
               color="#483800"
               id="chart-legend-appleSilicon"
+              style="--_6tpqrj1: #483800;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Apple Silicon
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3383,39 +1347,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-baremetal"
           aria-describedby="chart-legend-baremetal"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-baremetal"
             />
             <div
-              class="emotion-136 emotion-11"
+              class="styles__6tpqrja"
               color="#02a5ad"
               id="chart-legend-baremetal"
+              style="--_6tpqrj1: #02a5ad;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Baremetal
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3424,39 +1389,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-database"
           aria-describedby="chart-legend-database"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-database"
             />
             <div
-              class="emotion-154 emotion-11"
+              class="styles__6tpqrja"
               color="#ffa488"
               id="chart-legend-database"
+              style="--_6tpqrj1: #ffa488;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Database
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3465,39 +1431,40 @@ exports[`pieChart > renders correctly with legend 1`] = `
         <div
           aria-controls="chart-legend-lb"
           aria-describedby="chart-legend-lb"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__6tpqrj7 styles_isFocused_false__6tpqrj9"
           >
             <div
-              class="emotion-8 emotion-9"
+              class="styles__6tpqrji"
               data-testid="chart-legend-lb"
             />
             <div
-              class="emotion-172 emotion-11"
+              class="styles__6tpqrja"
               color="#96edf2"
               id="chart-legend-lb"
+              style="--_6tpqrj1: #96edf2;"
             />
             <div
-              class="emotion-12 emotion-13"
+              class="styles__6tpqrjc"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="styles__6tpqrjf styles_isFocused_false__6tpqrjh"
               >
                 Load Balancer
               </span>
               <span
-                class="emotion-16 emotion-17"
+                class="styles__6tpqrjj"
               >
                 <span
-                  class="emotion-18 emotion-19"
+                  class="styles__6tpqrjk styles_isFocused_false__6tpqrjm"
                 />
               </span>
             </div>
             <div
-              class="emotion-20 emotion-21"
+              class="styles_default__6tpqrjd"
             >
               20
             </div>
@@ -3511,24 +1478,12 @@ exports[`pieChart > renders correctly with legend 1`] = `
 
 exports[`pieChart > renders correctly with no props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 206px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-      height="206"
+      class="styles__6tpqrj3"
+      style="--_6tpqrj0: 206px;"
     >
       <div
         style="position: relative;"

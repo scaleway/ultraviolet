@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Slider } from '..'
 
 export const Double: StoryFn<typeof Slider> = () => {
-  const [value, setValue] = useState<number[]>([1, 2])
+  const [value, setValue] = useState<number[]>([1, 3])
 
   return (
     <Slider
@@ -22,7 +22,7 @@ Double.args = {
   input: true,
   label: 'Label',
   step: 0.5,
-  value: [1, 2],
+  value: [1, 3],
 }
 
 Double.parameters = {

@@ -1,30 +1,15 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
-
-const StyledIcon = styled('svg', {
-  shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
-})<{ variant: 'neutral' | 'primary'; disabled?: boolean }>`
-  .fill {
-    fill: ${({ theme, variant, disabled }) =>
-      theme.colors.other.icon.category[variant][
-        disabled ? 'fillDisabled' : 'fill'
-      ]};
-  }
-
-  .fillStrong {
-    fill: ${({ theme, variant, disabled }) =>
-      theme.colors.other.icon.category[variant][
-        disabled ? 'fillStrongDisabled' : 'fillStrong'
-      ]};
-  }
-`
+import type { CSSProperties, ReactNode } from 'react'
+import type { VARIANTS } from './style.css'
+import { categoryIcon } from './style.css'
 
 export type IconProps = {
-  variant?: 'primary' | 'neutral'
+  variant?: (typeof VARIANTS)[number]
   disabled?: boolean
   children: ReactNode
+  className?: string
+  style?: CSSProperties
 }
 
 /**
@@ -35,14 +20,20 @@ export const Icon = ({
   variant = 'primary',
   disabled,
   children,
-}: IconProps) => (
-  <StyledIcon
-    disabled={disabled}
-    height="20"
-    variant={variant}
-    viewBox="0 0 20 20"
-    width="20"
-  >
-    {children}
-  </StyledIcon>
-)
+  className,
+  style,
+}: IconProps) => {
+  const computedVariant = `${variant}${disabled ? 'Disabled' : ''}` as const
+
+  return (
+    <svg
+      className={`${className ? `${className} ` : ''}${categoryIcon[computedVariant]}`}
+      height="20"
+      style={style}
+      viewBox="0 0 20 20"
+      width="20"
+    >
+      {children}
+    </svg>
+  )
+}

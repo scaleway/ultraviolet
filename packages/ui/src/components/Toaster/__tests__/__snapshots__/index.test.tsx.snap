@@ -2,70 +2,11 @@
 
 exports[`toaster > components > renders correctly Toast.Button 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-0 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-0:hover,
-.emotion-0:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1"
+      class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Test
@@ -76,71 +17,11 @@ exports[`toaster > components > renders correctly Toast.Button 1`] = `
 
 exports[`toaster > components > renders correctly Toast.Button and variant ghost 1`] = `
 <DocumentFragment>
-  .emotion-1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  color: #ffffff;
-}
-
-.emotion-1:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-1:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-1 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-1:hover,
-.emotion-1:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <button
-      class="emotion-0 emotion-1 emotion-2"
+      class="styles__11f0u3o2 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
       type="button"
     >
       Test
@@ -151,101 +32,13 @@ exports[`toaster > components > renders correctly Toast.Button and variant ghost
 
 exports[`toaster > components > renders correctly Toast.Link 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #ffffff;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 0.5rem;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.emotion-0 .e1afnb7a3,
-.emotion-0 .e1afnb7a2,
-.emotion-0 .e1afnb7a4 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.emotion-0>* {
-  pointer-events: none;
-}
-
-.emotion-0:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #f9f9fa;
-  text-decoration-color: #f9f9fa;
-}
-
-.emotion-0:hover .e1afnb7a3,
-.emotion-0:focus .e1afnb7a3,
-.emotion-0:hover .e1afnb7a2,
-.emotion-0:focus .e1afnb7a2,
-.emotion-0:hover .e1afnb7a4,
-.emotion-0:focus .e1afnb7a4 {
-  -webkit-transform: translate(-0.125rem, 0);
-  -moz-transform: translate(-0.125rem, 0);
-  -ms-transform: translate(-0.125rem, 0);
-  transform: translate(-0.125rem, 0);
-}
-
-.emotion-0:hover:visited,
-.emotion-0:focus:visited {
-  text-decoration-color: transparent;
-  color: #ffffff;
-}
-
-.emotion-0[data-variant='inline'] {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-0:hover::after,
-.emotion-0:focus::after {
-  background-color: #005da3;
-}
-
-.emotion-0:active {
-  text-decoration-thickness: 2px;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <a
-      class="emotion-0 emotion-1"
+      class="styles__1dtqm9e0 styles_prominence_strong__1dtqm9e4 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_5__1dtqm9ej styles__1dtqm9en"
       data-variant="standalone"
       href="scaleway.com"
-      prominence="strong"
-      variant="bodySmallStrong"
     >
       Test
     </a>
@@ -254,57 +47,24 @@ exports[`toaster > components > renders correctly Toast.Link 1`] = `
 `;
 
 exports[`toaster > renders correctly with all kind of toast 1`] = `
-.emotion-0 {
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <span
-  class="emotion-0 emotion-1"
+  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
 >
   This is a success
 </span>
 `;
 
 exports[`toaster > renders correctly with all kind of toast 2`] = `
-.emotion-0 {
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <span
-  class="emotion-0 emotion-1"
+  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
 >
   This is an error
 </span>
 `;
 
 exports[`toaster > renders correctly with all kind of toast 3`] = `
-.emotion-0 {
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <span
-  class="emotion-0 emotion-1"
+  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
 >
   This is a warning
 </span>
@@ -312,295 +72,7 @@ exports[`toaster > renders correctly with all kind of toast 3`] = `
 
 exports[`toaster > renders correctly with all kind of toast 4`] = `
 <DocumentFragment>
-  .emotion-0 {
-  border-radius: 0.25rem;
-  min-height: 3.5rem;
-}
-
-.emotion-0 .Toastify__toast-container {
-  width: 21.5rem;
-}
-
-.emotion-0 .Toastify__toast-body {
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-0.Toastify__toast--success {
-  background-color: #151a2d;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.emotion-0.Toastify__toast--error {
-  background-color: #e51963;
-  color: #ffffff;
-  padding: 1rem;
-}
-
-.emotion-0.Toastify__toast--warning {
-  background-color: #fbc600;
-  color: #222638;
-  padding: 1rem;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-3 {
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #2c8564;
-  border: none;
-  color: #ffffff;
-  background: none;
-  margin: auto;
-  margin-left: 0.5rem;
-}
-
-.emotion-6:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-6 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-6:hover,
-.emotion-6:active {
-  background: #297c5e;
-  color: #f9f9fa;
-}
-
-.emotion-6:hover,
-.emotion-6:active {
-  background: none;
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-8 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-8 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  background: none;
-  margin: auto;
-  margin-left: 0.5rem;
-}
-
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-16 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  background: #d6175c;
-  color: #f9f9fa;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  background: none;
-  box-shadow: none;
-  border: none;
-}
-
-.emotion-26 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #fbc600;
-  border: none;
-  color: #222638;
-  background: none;
-  margin: auto;
-  margin-left: 0.5rem;
-}
-
-.emotion-26:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-26:active {
-  box-shadow: 0px 0px 0px 3px #fbc60040;
-}
-
-.emotion-26 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-26:hover,
-.emotion-26:active {
-  background: #ebb200;
-  color: #151a2d;
-}
-
-.emotion-26:hover,
-.emotion-26:active {
-  background: none;
-  box-shadow: none;
-  border: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <section
@@ -612,12 +84,12 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
       id="toaster"
     >
       <div
-        class="Toastify__toast-container Toastify__toast-container--top-right"
+        class="Toastify__toast-container Toastify__toast-container--top-right styles__11f0u3o0"
         data-stacked="true"
         tabindex="-1"
       >
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-collapsed="true"
           data-in="true"
           data-pos="top"
@@ -627,21 +99,22 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           tabindex="0"
         >
           <div
-            class="emotion-1 emotion-2"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: 100%;"
           >
             <span
-              class="emotion-3 emotion-4"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               This is a success
             </span>
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-6 emotion-7"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_success__e1wcoeb styles_undefined_compound_4__e1wcoep"
             type="button"
           >
             <svg
-              class="emotion-8 emotion-9"
+              class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -666,7 +139,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
         </div>
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-collapsed="true"
           data-in="true"
           data-pos="top"
@@ -676,21 +149,22 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           tabindex="0"
         >
           <div
-            class="emotion-1 emotion-2"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: 100%;"
           >
             <span
-              class="emotion-3 emotion-4"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               This is an error
             </span>
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-16 emotion-7"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
             type="button"
           >
             <svg
-              class="emotion-8 emotion-9"
+              class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -715,7 +189,7 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           </div>
         </div>
         <div
-          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning emotion-0 Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
           data-in="true"
           data-pos="top"
           id="warning"
@@ -724,21 +198,22 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           tabindex="0"
         >
           <div
-            class="emotion-1 emotion-2"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn0: 100%;"
           >
             <span
-              class="emotion-3 emotion-4"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               This is a warning
             </span>
           </div>
           <button
             aria-label="close"
-            class="emotion-5 emotion-26 emotion-7"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_warning__e1wcoec styles_undefined_compound_5__e1wcoeq"
             type="button"
           >
             <svg
-              class="emotion-8 emotion-9"
+              class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path

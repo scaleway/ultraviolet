@@ -1,17 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
+import { estimateCostImage } from '../styles.css'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
-
-const StyledImage = styled.img`
-  width: 15px;
-  margin-right: ${({ theme }) => theme.space['1']};
-`
 
 type RegionProps = {
   shouldBeHidden?: boolean
@@ -29,7 +24,7 @@ type RegionProps = {
   image: string
   noBorder?: boolean
   noPrice?: boolean
-} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay'>
+} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay' | 'style'>
 
 export const Region = memo(
   ({
@@ -46,6 +41,7 @@ export const Region = memo(
     noBorder,
     noPrice,
     hideFromOverlay,
+    style,
   }: RegionProps) => {
     const { locales } = useEstimateCost()
 
@@ -63,9 +59,10 @@ export const Region = memo(
         priceText={priceText}
         productsCallback={productsCallback}
         shouldBeHidden={shouldBeHidden}
+        style={style}
       >
         <Strong>
-          <StyledImage alt={label} src={image} />
+          <img alt={label} className={estimateCostImage} src={image} />
           {label}
         </Strong>
       </Item>

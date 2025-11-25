@@ -21,7 +21,7 @@ export const Data = createContext<ContextType>({
 })
 
 type NextStepProps = {
-  completed: boolean
+  completed?: boolean
   setCompleted: React.Dispatch<React.SetStateAction<boolean[]>>
   stepNumber: number
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>
@@ -45,8 +45,9 @@ export const nextStep = ({
   done,
   onClickHide,
 }: NextStepProps) => {
+  const newValue = completed === undefined ? done[stepNumber - 1] : completed
   const tempDone = done.map((item, index) =>
-    index === stepNumber - 1 ? completed : item,
+    index === stepNumber - 1 ? newValue : item,
   )
   setCompleted(tempDone)
   if (numberOfSteps > stepNumber) {

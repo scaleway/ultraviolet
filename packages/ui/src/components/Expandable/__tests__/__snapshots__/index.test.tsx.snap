@@ -2,21 +2,13 @@
 
 exports[`expandable > renders correctly opened 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  height: auto;
-}
-
-.emotion-0[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__mlltm91"
       data-is-animated="false"
+      style="--mlltm90: 300ms;"
     >
       Sample Expandable
     </div>
@@ -26,22 +18,13 @@ exports[`expandable > renders correctly opened 1`] = `
 
 exports[`expandable > renders correctly with animationDuration 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  height: auto;
-}
-
-.emotion-0[data-is-animated="true"] {
-  -webkit-transition: max-height 500ms ease-out,opacity 500ms ease-out;
-  transition: max-height 500ms ease-out,opacity 500ms ease-out;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__mlltm91"
       data-is-animated="false"
-      style="max-height: 0px; overflow: hidden;"
+      style="--mlltm90: 500ms; max-height: 0px; overflow: hidden;"
     >
       Sample Expandable
     </div>
@@ -65,22 +48,13 @@ exports[`expandable > renders correctly with animationDuration set to 0 1`] = `
 
 exports[`expandable > renders correctly with className 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  height: auto;
-}
-
-.emotion-0[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="test emotion-0 emotion-1"
+      class="test styles__mlltm91"
       data-is-animated="false"
-      style="max-height: 0px; overflow: hidden;"
+      style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
     >
       Sample Expandable
     </div>
@@ -90,22 +64,13 @@ exports[`expandable > renders correctly with className 1`] = `
 
 exports[`expandable > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  height: auto;
-}
-
-.emotion-0[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__mlltm91"
       data-is-animated="false"
-      style="max-height: 0px; overflow: hidden;"
+      style="--mlltm90: 300ms; max-height: 0px; overflow: hidden;"
     >
       Sample Expandable
     </div>
@@ -115,22 +80,13 @@ exports[`expandable > renders correctly with default values 1`] = `
 
 exports[`expandable > renders correctly with minHeight 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  height: auto;
-}
-
-.emotion-0[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__mlltm91"
       data-is-animated="false"
-      style="max-height: 5px; overflow: hidden;"
+      style="--mlltm90: 300ms; max-height: 5px; overflow: hidden;"
     >
       Sample Expandable
     </div>

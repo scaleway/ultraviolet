@@ -1,143 +1,31 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ArrowDownIcon } from '@ultraviolet/icons'
-import type { ComponentProps } from 'react'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { ComponentProps, CSSProperties } from 'react'
 import { Children, useReducer } from 'react'
+import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import {
+  animatedArrowIcon,
+  buttonContainer,
+  centeredText,
+  line,
+  prefix as prefixStyle,
+  pretext,
+  rowsVar,
+  showMoreButton,
+  showMoreContainer,
+  snippetContainer,
+  stackStyle,
+} from './styles.css'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
 
 type Prefixes = 'lines' | 'command'
-
-const PreText = styled(Text, {
-  shouldForwardProp: prop =>
-    !['hasShowMoreButton', 'showMore', 'rows', 'noExpandable'].includes(prop),
-})<{
-  hasShowMoreButton?: boolean
-  showMore?: boolean
-  rows: number
-  noExpandable: boolean
-}>`
-  margin: 0;
-  padding: ${({ theme }) => theme.space['2']};
-  padding-right: ${({ theme }) => theme.space['9']};
-  overflow-x: ${({ hasShowMoreButton, showMore }) =>
-    hasShowMoreButton && !showMore ? 'hidden' : 'auto'};
-  height: auto;
-  counter-reset: section;
-
-
-  ${({ theme, noExpandable, rows }) =>
-    noExpandable
-      ? `
-    max-height: calc(${theme.typography.code.lineHeight} * ${rows} + ${theme.space['3']});
-    overflow-y: scroll;`
-      : `overflow-y: hidden;
-`}
-`
-
-const StyledSpan = styled('span', {
-  shouldForwardProp: prop =>
-    !['linePrefix', 'multiline', 'prefix'].includes(prop),
-})<{ linePrefix?: string; multiline?: boolean; prefix?: Prefixes }>`
-  display: block;
-
-
-  &:after {
-    content: "";
-    ${({ theme, multiline }) =>
-      multiline
-        ? `padding: ${theme.space['4']}`
-        : `padding-right: ${theme.space['8']}`};
-  }
-
-  ${({ prefix, theme }) =>
-    prefix
-      ? `
-    &:before {
-      color: ${theme.colors.neutral.textWeak};
-      width: ${prefix === 'lines' ? '35px' : ''};
-      display: inline-flex;
-      justify-content: flex-end;
-      counter-increment: section;
-      content: ${prefix === 'lines' ? 'counter(section)' : "'$'"};
-      padding-right: ${theme.space['1']};
-    }
-  `
-      : null}
-`
-
-const Container = styled('div', {
-  shouldForwardProp: prop => !['multiline'].includes(prop),
-})<{ multiline?: boolean }>`
-  position: relative;
-  display: flex;
-  justify-content: start;
-  max-width: 100%;
-  ${({ multiline }) => (multiline ? 'width: 100%;' : '')}
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: ${({ theme }) => theme.radii.default};
-`
-
-const StyledStack = styled(Stack)`
-  width: 100%;
-`
-
-const ButtonContainer = styled('div', {
-  shouldForwardProp: prop => !['multiline'].includes(prop),
-})<{ multiline?: boolean }>`
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: ${({ theme, multiline }) =>
-    `${theme.space[multiline ? '2' : '1']} ${theme.space['2']} 0 0`};
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 2px solid transparent;
-  ${({ multiline, theme }) =>
-    !multiline
-      ? `box-shadow: -27px 0 19px -11px ${theme.colors.neutral.backgroundWeak}`
-      : ''};
-`
-
-const ShowMoreContainer = styled('div', {
-  shouldForwardProp: prop => !['showMore'].includes(prop),
-})<{ showMore?: boolean }>`
-  width: 100%;
-  box-shadow: ${({ theme, showMore }) =>
-    !showMore
-      ? `0px -22px 19px -6px
-    ${theme.colors.neutral.backgroundWeak}`
-      : 'none'};
-`
-
-const StyledButton = styled.button`
-  width: 100%;
-  background: none;
-  border: none;
-  padding: ${({ theme }) => theme.space['2']};
-  padding-top: ${({ theme }) => theme.space['1']};
-  cursor: pointer;
-`
-
-const AlignCenterText = styled(Text)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const AnimatedArrowIcon = styled(ArrowDownIcon, {
-  shouldForwardProp: prop => !['showMore'].includes(prop),
-})<{ showMore?: boolean }>`
-  transform: ${({ showMore }) => (showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
-  transform-origin: center;
-  transition: transform 300ms ease-in-out;
-`
 
 type CodeContentProps = {
   children: string
@@ -160,25 +48,33 @@ const CodeContent = ({
   noExpandable,
   rows,
 }: CodeContentProps) => (
-  <PreText
+  <Text
     as="pre"
-    hasShowMoreButton={hasShowMoreButton}
-    noExpandable={noExpandable}
-    rows={rows}
-    showMore={showMore}
+    className={pretext({
+      noExpandable,
+      showMore: hasShowMoreButton && !showMore,
+    })}
+    style={assignInlineVars({
+      [rowsVar]: rows.toString(),
+    })}
     variant="code"
     whiteSpace={!multiline ? 'nowrap' : undefined}
   >
     {multiline ? (
       Children.map(lines, child => (
-        <StyledSpan key={child} multiline prefix={prefix}>
+        <span
+          className={`${line({ multiline: true })}  ${prefix ? prefixStyle[prefix] : ''}`}
+          key={child}
+        >
           {child}
-        </StyledSpan>
+        </span>
       ))
     ) : (
-      <StyledSpan prefix={prefix}>{children}</StyledSpan>
+      <span className={`${line()}  ${prefix ? prefixStyle[prefix] : ''}`}>
+        {children}
+      </span>
     )}
-  </PreText>
+  </Text>
 )
 
 type SnippetProps = {
@@ -197,6 +93,7 @@ type SnippetProps = {
   rows?: number
   noExpandable?: boolean
   onCopy?: () => void
+  style?: CSSProperties
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -216,6 +113,7 @@ export const Snippet = ({
   rows = 4,
   noExpandable = false,
   onCopy,
+  style,
 }: SnippetProps) => {
   const theme = useTheme()
   const [showMore, setShowMore] = useReducer(
@@ -233,12 +131,12 @@ export const Snippet = ({
     Number.parseFloat(theme.space[4]) * 16
 
   return (
-    <Container
-      className={className}
+    <div
+      className={`${className ? `${className} ` : ''}${snippetContainer[multiline ? 'multiline' : 'oneLine']}`}
       data-testid={dataTestId}
-      multiline={multiline}
+      style={style}
     >
-      <StyledStack>
+      <Stack className={stackStyle}>
         {hasShowMoreButton ? (
           <Expandable minHeight={minHeight} opened={showMore}>
             <CodeContent
@@ -262,7 +160,13 @@ export const Snippet = ({
             {children}
           </CodeContent>
         )}
-        <ButtonContainer multiline={multiline && numberOfLines > 1}>
+        <div
+          className={
+            buttonContainer[
+              multiline && numberOfLines > 1 ? 'multiline' : 'oneLine'
+            ]
+          }
+        >
           <CopyButton
             copiedText={copiedText}
             copyText={copyText}
@@ -270,27 +174,31 @@ export const Snippet = ({
             sentiment="neutral"
             value={children}
           />
-        </ButtonContainer>
+        </div>
         {hasShowMoreButton ? (
-          <ShowMoreContainer showMore={showMore}>
-            <StyledButton
+          <div className={showMoreContainer[showMore ? 'true' : 'false']}>
+            <button
               aria-expanded={showMore}
+              className={showMoreButton}
               onClick={setShowMore}
               type="button"
             >
-              <AlignCenterText
+              <Text
                 as="span"
+                className={centeredText}
                 sentiment="neutral"
                 variant="bodySmallStrong"
               >
                 {showMore ? hideText : showText}
                 &nbsp;
-                <AnimatedArrowIcon showMore={showMore} />
-              </AlignCenterText>
-            </StyledButton>
-          </ShowMoreContainer>
+                <ArrowDownIcon
+                  className={animatedArrowIcon[showMore ? 'true' : 'false']}
+                />
+              </Text>
+            </button>
+          </div>
         ) : null}
-      </StyledStack>
-    </Container>
+      </Stack>
+    </div>
   )
 }

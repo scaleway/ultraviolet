@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ActionDispatch } from 'react'
 import { useReducer } from 'react'
 import { describe, expect, test } from 'vitest'
@@ -20,7 +20,7 @@ describe('checkbox', () => {
   }
 
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox
         name="testing"
         onBlur={() => {}}
@@ -32,88 +32,86 @@ describe('checkbox', () => {
     ))
 
   test('renders correctly no child', () =>
-    shouldMatchEmotionSnapshot(
-      <Checkbox aria-label="check" onChange={() => {}} />,
-    ))
+    shouldMatchSnapshot(<Checkbox aria-label="check" onChange={() => {}} />))
 
   test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly required', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox onChange={() => {}} required>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly with tooltip', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox onChange={() => {}} tooltip="test">
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly checked', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox checked onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
   test('renders correctly checked with helper', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox checked helper="helper" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly indeterminate', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox checked="indeterminate" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly checked and disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox checked disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly indeterminate and disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox checked="indeterminate" disabled onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly invisible', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox data-visibility="true" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly with an error', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox error="test error" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly with a value', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
     ))
 
   test('renders correctly with indeterminate state', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Checkbox checked="indeterminate" onChange={() => {}}>
         Checkbox Label
       </Checkbox>,

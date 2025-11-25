@@ -1,19 +1,19 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
 import { Radio } from '../Radio'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { fieldset } from './styles.css'
 
 type RadioGroupContextType = {
   groupName?: string
   groupValue: string | number
   error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
 const RadioGroupContext = createContext<RadioGroupContextType | undefined>(
   undefined,
@@ -36,6 +36,7 @@ const RadioGroupRadio = ({
   onKeyDown,
   tooltip,
   'data-testid': dataTestId,
+  style,
 }: RadioGroupRadioProps) => {
   const context = useContext(RadioGroupContext)
 
@@ -60,17 +61,12 @@ const RadioGroupRadio = ({
       onChange={onChange}
       onFocus={onFocus}
       onKeyDown={onKeyDown}
+      style={style}
       tooltip={tooltip}
       value={value}
     />
   )
 }
-
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-`
 
 type RadioGroupProps = {
   legend?: string
@@ -116,7 +112,7 @@ export const RadioGroup = ({
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <fieldset className={`${className ? `${className} ` : ''}${fieldset}`}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -149,7 +145,7 @@ export const RadioGroup = ({
               {children}
             </Stack>
           </Stack>
-        </FieldSet>
+        </fieldset>
         {helper ? (
           <Text
             as="span"

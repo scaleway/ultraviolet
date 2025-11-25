@@ -1,9 +1,9 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { AlertCircleIcon, CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
-import type { DOMAttributes, ReactNode } from 'react'
+import { useTheme } from '@ultraviolet/themes'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties, DOMAttributes, ReactNode } from 'react'
 import {
   forwardRef,
   useEffect,
@@ -19,80 +19,14 @@ import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import {
+  paddingRightVar,
+  textAreaClearableContainer,
+  textArea as textAreaStyle,
+  textareaWrapper,
+} from './styles.css'
 
 const STATE_ICON_SIZE = 'small'
-
-const StyledTextAreaWrapper = styled.div`
-  position: relative;
-  display: flex;
-`
-
-const StyledTextAreaAbsoluteStack = styled(Stack)`
-  position: absolute;
-  top: ${({ theme }) => theme.space['1.5']};
-  right: ${({ theme }) => theme.space['1']};
-`
-
-type StyledTextAreaProps = {
-  hasSentimentIcon: boolean
-  isClearable: boolean
-}
-const StyledTextArea = styled('textarea', {
-  shouldForwardProp: prop =>
-    !['hasSentimentIcon', 'isClearable'].includes(prop),
-})<StyledTextAreaProps>`
-  width: 100%;
-  resize: vertical;
-  background: ${({ theme }) => theme.colors.neutral.background};
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) =>
-    `${theme.space['1.5']} ${theme.space['1']} ${theme.space['1.5']} ${theme.space['2']}`};
-  padding-right: ${({ theme, isClearable, hasSentimentIcon }) =>
-    /* including 1 optional if both element is visible + 1 because content is absolute 1space unit from right */
-    `calc(${theme.space[isClearable && hasSentimentIcon ? '4' : '3']} + ${
-      isClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
-    } + ${hasSentimentIcon ? `${STATE_ICON_SIZE}px` : '0px'})`};
-
-  &[data-success='true'] {
-    border-color: ${({ theme }) => theme.colors.success.border};
-  }
-
-  &[data-error='true'] {
-    border-color: ${({ theme }) => theme.colors.danger.border};
-  }
-
-  &[data-readonly='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-  }
-
-  &:disabled {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-
-    &::placeholder {
-      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
-    }
-  }
-
-  &:not(:disabled) {
-    &:hover {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    &:focus {
-      outline: none;
-      border-color: ${({ theme }) => theme.colors.primary.border};
-      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    }
-  }
-`
 
 type LabelProps =
   | {
@@ -154,6 +88,7 @@ type TextAreaProps = {
   onKeyDown?: DOMAttributes<HTMLTextAreaElement>['onKeyDown']
   clearable?: boolean
   labelDescription?: ReactNode
+  style?: CSSProperties
 } & LabelProps
 
 /**
@@ -189,6 +124,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       clearable = false,
       labelDescription,
       'aria-label': ariaLabel,
+      style,
     },
     ref,
   ) => {
@@ -200,27 +136,33 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     useEffect(() => {
       const textArea = textAreaRef.current
       const padding = theme.space['1.5']
+      if (!textArea) {
+        return
+      }
+      const updateHeight = () => {
+        if (textArea && rows === 'auto' && !maxRows) {
+          textArea.style.height = 'auto'
+          textArea.style.resize = 'none'
+          textArea.style.height = `${textArea.scrollHeight + 2}px`
+        } else if (textArea && maxRows) {
+          const lineHeight = Number.parseFloat(
+            getComputedStyle(textArea).lineHeight,
+          )
 
-      if (textArea && rows === 'auto' && !maxRows) {
-        textArea.style.height = 'auto'
-        textArea.style.resize = 'none'
-        textArea.style.height = `${textArea.scrollHeight + 2}px`
-      } else if (textArea && maxRows) {
-        const lineHeight = Number.parseFloat(
-          getComputedStyle(textArea).lineHeight,
-        )
+          textArea.style.height = 'auto'
+          const maxHeight = maxRows * lineHeight
 
-        textArea.style.height = 'auto'
-        const maxHeight = maxRows * lineHeight
+          textArea.style.height = `${textArea.scrollHeight + 2}px`
+          textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
 
-        textArea.style.height = `${textArea.scrollHeight + 2}px`
-        textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
-
-        if (typeof rows === 'number') {
-          const minHeight = rows * lineHeight
-          textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
+          if (typeof rows === 'number') {
+            const minHeight = rows * lineHeight
+            textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
+          }
         }
       }
+
+      requestAnimationFrame(updateHeight)
     }, [value, rows, theme, maxRows, textAreaRef.current?.value])
 
     const sentiment = useMemo(() => {
@@ -250,19 +192,18 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           </Label>
         ) : null}
         <Tooltip text={tooltip}>
-          <StyledTextAreaWrapper>
-            <StyledTextArea
+          <div className={textareaWrapper}>
+            <textarea
               aria-invalid={!!error}
               aria-label={ariaLabel}
               autoFocus={autoFocus}
-              data-error={!!error}
-              data-readonly={readOnly}
-              data-success={!!success}
+              className={textAreaStyle({
+                error: !!error,
+                success: !!success,
+              })}
               data-testid={dataTestId}
               disabled={disabled}
-              hasSentimentIcon={!!success || !!error}
               id={id ?? localId}
-              isClearable={!!computedClearable}
               maxLength={maxLength}
               minLength={minLength}
               name={name}
@@ -273,13 +214,23 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               onFocus={onFocus}
               onKeyDown={onKeyDown}
               placeholder={placeholder}
+              readOnly={!!readOnly}
               ref={textAreaRef}
               rows={rows !== 'auto' ? rows : 1}
+              style={{
+                ...assignInlineVars({
+                  [paddingRightVar]: `calc(${theme.space[computedClearable && (!!success || !!error) ? '4' : '3']} + ${
+                    computedClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
+                  } + ${!!success || !!error ? `${STATE_ICON_SIZE}px` : '0px'})`,
+                }),
+                ...style,
+              }}
               tabIndex={tabIndex}
               value={value}
             />
-            <StyledTextAreaAbsoluteStack
+            <Stack
               alignItems="center"
+              className={textAreaClearableContainer}
               direction="row"
               gap="1"
             >
@@ -296,12 +247,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   <CloseIcon />
                 </Button>
               ) : null}
-              {success ? (
+              {success && !error ? (
                 <CheckCircleIcon sentiment="success" size={STATE_ICON_SIZE} />
               ) : null}
               {error ? <AlertCircleIcon sentiment="danger" /> : null}
-            </StyledTextAreaAbsoluteStack>
-          </StyledTextAreaWrapper>
+            </Stack>
+          </div>
         </Tooltip>
 
         {notice || maxLength ? (

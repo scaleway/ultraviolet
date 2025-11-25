@@ -1,28 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { CSSProperties } from 'react'
 import { Text } from '../Text'
-
-const StyledStrength = styled(Text, {
-  shouldForwardProp: prop => !['color'].includes(prop),
-})<{ strength: Strength }>`
-  float: right;
-  vertical-align: top;
-  color: ${({ strength }) => strength.color};
-`
-
-const StyledWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-  border-radius: ${({ theme }) => theme.radii.default};
-  height: ${({ theme }) => theme.space['1']};
-  margin-top: ${({ theme }) => theme.space['1']};
-`
-
-const StyledMeter = styled.div`
-  border-radius: ${({ theme }) => theme.radii.default};
-  height: 100%;
-  transition: all 0.5s;
-`
+import { colorMeter, meter, strengthMeter, wrapperMeter } from './styles.css'
 
 type Strength = {
   /**
@@ -45,6 +26,7 @@ type PasswordStrengthMeterProps = {
   className?: string
   'data-testid'?: string
   id?: string
+  style?: CSSProperties
 }
 
 /**
@@ -56,6 +38,7 @@ export const Meter = ({
   value,
   className,
   'data-testid': dataTestId,
+  style,
   id,
 }: PasswordStrengthMeterProps) => {
   const toValue = ((value + 1) / strength.length) * 100
@@ -75,27 +58,31 @@ export const Meter = ({
       data-testid={dataTestId}
       id={id}
       role="meter"
+      style={style}
       title={title}
     >
       <Text as="p" id="meter-label" variant="bodySmallStrong">
         {title}
-        <StyledStrength
+        <Text
           as="span"
-          strength={strength[value]}
+          className={strengthMeter}
+          style={assignInlineVars({
+            [colorMeter]: strength[value].color,
+          })}
           variant="bodySmallStrong"
         >
           {text}
-        </StyledStrength>
+        </Text>
       </Text>
-
-      <StyledWrapper>
-        <StyledMeter
+      <div className={wrapperMeter}>
+        <div
+          className={meter}
           style={{
             backgroundColor,
             width,
           }}
         />
-      </StyledWrapper>
+      </div>
     </div>
   )
 }

@@ -1,21 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { List } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { Cell } from './components/Cell'
 import { Row } from './components/Row'
 import { OfferListProvider } from './OfferListProvider'
-
-const StyledList = styled(List)`
-   td:first-child,
-   th:first-child {
-    width: ${({ theme }) => theme.sizing[700]};
-    min-width:  ${({ theme }) => theme.sizing[700]};
-    max-width:  ${({ theme }) => theme.sizing[700]};
-  } 
-`
+import { offerList } from './styles.css'
 
 type OfferListProps = Omit<
   ComponentProps<typeof List>,
@@ -30,6 +21,9 @@ type OfferListProps = Omit<
    * Pre-selected rows (using their offerName). Must be an array when `type = "checkbox"`.
    */
   selected?: string | string[]
+  ['data-testid']?: string
+  className?: string
+  style?: CSSProperties
 }
 
 export const OfferList = ({
@@ -41,6 +35,9 @@ export const OfferList = ({
   autoCollapse,
   selected,
   onChangeSelect,
+  className,
+  style,
+  'data-testid': dataTestId,
 }: OfferListProps) => {
   const [radioSelectedRow, setRadioSelectedRow] = useState<string | undefined>(
     typeof selected === 'string' ? selected : undefined,
@@ -80,14 +77,17 @@ export const OfferList = ({
       setCheckboxSelectedRows={setCheckboxSelectedRows}
       setRadioSelectedRow={setRadioSelectedRow}
     >
-      <StyledList
+      <List
         autoCollapse={autoCollapse}
+        className={`${className ? `${className} ` : ''}${offerList}`}
         columns={computedColumns}
+        data-testid={dataTestId}
         expandable={false}
         selectable={false}
+        style={style}
       >
         {children}
-      </StyledList>
+      </List>
     </OfferListProvider>
   )
 }

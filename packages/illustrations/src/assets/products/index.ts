@@ -37,9 +37,11 @@ import * as ipfsPinning from './ipfsPinning'
 import * as jero from './jero'
 import * as k8sKapsule from './k8sKapsule'
 import * as k8sKosmos from './k8sKosmos'
+import * as kafka from './kafka'
 import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
 import * as localStorage from './localStorage'
+import * as mailbox from './mailbox'
 import * as managedDatabase from './managedDatabase'
 import * as managedSearchDatabase from './managedSearchDatabase'
 import * as mongoDB from './mongoDB'
@@ -101,9 +103,11 @@ export {
   jero,
   k8sKapsule,
   k8sKosmos,
+  kafka,
   kms,
   loadBalancers,
   localStorage,
+  mailbox,
   managedDatabase,
   managedSearchDatabase,
   mongoDB,

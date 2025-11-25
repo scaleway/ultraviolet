@@ -1,75 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { ChipContext } from './ChipContext'
 import { ChipIcon } from './ChipIcon'
+import { container } from './styles.css'
 
-const StyledContainer = styled(Stack)`
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['2']} `};
-  display: flex;
-  border-radius: ${({ theme }) => theme.radii.xlarge};
-  width: fit-content;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  cursor: pointer;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  text-align: center;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  user-select: none;
-
-
-  &[data-disabled="false"]:hover {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
-    border-color: ${({ theme }) => theme.colors.neutral.borderStrongHover};
-    color: ${({ theme }) => theme.colors.neutral.textHover};
-
-  }
-
-  &[data-disabled="true"] {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    cursor: not-allowed;
-  }
-
-  &[data-active="true"]{
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-    border-color:  ${({ theme }) => theme.colors.primary.backgroundStrong};
-    color: ${({ theme }) => theme.colors.neutral.textStronger};
-
-    &[data-disabled="false"]:hover{
-      background-color: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
-      border-color: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
-      color: ${({ theme }) => theme.colors.neutral.textStrongerHover};
-
-
-    }
-
-    &[data-disabled="true"] {
-      background-color: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
-      border: none;
-    }
-  }
-
-  &[data-size='medium']{
-    ${({ theme }) => `
-    height: ${theme.space[3]};
-    padding: ${theme.space['0.5']} ${theme.space['1.5']};`}
-  }
-
-  &[data-size='large']{
-    ${({ theme }) => `
-    height: ${theme.space[4]};
-    padding: ${theme.space['0.5']} ${theme.space['2']};`}
-  }
-
-  &[data-trailing-icon="true"] {
-    padding-right: ${({ theme }) => theme.space[1]}
-  }
-  `
 type ChipType = {
   children: ReactNode
   size?: 'medium' | 'large'
@@ -78,6 +16,7 @@ type ChipType = {
   className?: string
   'data-testid'?: string
   onClick?: (active: boolean) => void
+  style?: CSSProperties
 }
 
 /**
@@ -91,6 +30,7 @@ export const Chip = ({
   className,
   'data-testid': dataTestId,
   onClick,
+  style,
 }: ChipType) => {
   const [isActive, setIsActive] = useState(active)
   const [hasTrailingIcon, setTrailingIcon] = useState(false)
@@ -130,10 +70,14 @@ export const Chip = ({
 
   return (
     <ChipContext.Provider value={value}>
-      <Text as="div" variant={size === 'large' ? 'bodySmall' : 'caption'}>
-        <StyledContainer
+      <Text
+        as="div"
+        style={style}
+        variant={size === 'large' ? 'bodySmall' : 'caption'}
+      >
+        <Stack
           alignItems="center"
-          className={className}
+          className={`${className ? `${className} ` : ''}${container}`}
           data-active={isActive}
           data-disabled={disabled}
           data-prominence={prominence}
@@ -152,7 +96,7 @@ export const Chip = ({
           ref={chipRef}
         >
           {children}
-        </StyledContainer>
+        </Stack>
       </Text>
     </ChipContext.Provider>
   )

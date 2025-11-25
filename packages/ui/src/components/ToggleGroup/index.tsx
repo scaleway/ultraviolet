@@ -1,12 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Toggle } from '../Toggle'
+import { fieldset } from './styles.css'
 
 type ToggleGroupContextType = {
   groupName: string
@@ -38,6 +38,7 @@ export const ToggleGroupToggle = ({
   error,
   className,
   'data-testid': dataTestId,
+  style,
 }: ToggleGroupToggleProps) => {
   const context = useContext(ToggleGroupContext)
 
@@ -61,16 +62,11 @@ export const ToggleGroupToggle = ({
       label={label}
       name={ToggleName}
       onChange={onChange}
+      style={style}
       value={ToggleValue}
     />
   )
 }
-
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-`
 
 type ToggleGroupProps = {
   legend?: string
@@ -84,7 +80,7 @@ type ToggleGroupProps = {
   required?: boolean
   description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
-  Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
+  Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
 export const ToggleGroup = ({
   legend,
@@ -99,6 +95,7 @@ export const ToggleGroup = ({
   name,
   description,
   required = false,
+  style,
 }: ToggleGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -113,7 +110,10 @@ export const ToggleGroup = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <fieldset
+          className={`${className ? `${className} ` : ''}${fieldset}`}
+          style={style}
+        >
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -142,7 +142,7 @@ export const ToggleGroup = ({
               {children}
             </Stack>
           </Stack>
-        </FieldSet>
+        </fieldset>
         {helper ? (
           <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
             {helper}

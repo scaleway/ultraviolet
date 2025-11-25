@@ -14,7 +14,12 @@ export const categoryDefault = {
   additionalInfo: <AdditionalInfo />,
   category: 'Category',
   subCategories: [
-    { details: ['Detail 1', 'Detail 2'], price: 12.2, title: 'SubCategory' },
+    {
+      additionalInfo: <AdditionalInfo />,
+      details: ['Detail 1', 'Detail 2'],
+      price: 12.2,
+      title: 'SubCategory',
+    },
   ],
   total: 0,
 }

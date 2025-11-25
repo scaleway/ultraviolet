@@ -2,170 +2,34 @@
 
 exports[`textInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-5 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-7>.emotion-10 {
-  color: #3f4250;
-}
-
-.emotion-7>.emotion-10::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-7>.emotion-10::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-7>.emotion-10:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-7>.emotion-10::placeholder {
-  color: #727683;
-}
-
-.emotion-7[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-7[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-7[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-7[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-7[data-disabled='true']>.emotion-10 {
-  color: #b5b7bd;
-}
-
-.emotion-7[data-disabled='true']>.emotion-10::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-7[data-disabled='true']>.emotion-10::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-7[data-disabled='true']>.emotion-10:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-7[data-disabled='true']>.emotion-10::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-7:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-9 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-9[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-9[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
+          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
           for="_r_0_"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-7 emotion-8"
+            class="uv_q3q8049 uv_q3q8046"
             data-disabled="false"
             data-error="false"
+            data-has-focus="false"
             data-readonly="false"
             data-success="false"
           >
             <input
               aria-invalid="false"
-              class="emotion-9 emotion-10"
+              class="uv_q3q8045"
               data-size="large"
               id="_r_0_"
               name="test"
@@ -182,370 +46,43 @@ exports[`textInputField > should render correctly 1`] = `
 
 exports[`textInputField > should render correctly generated 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-}
-
-.emotion-7 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.emotion-9 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-11>.emotion-14 {
-  color: #3f4250;
-}
-
-.emotion-11>.emotion-14::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-11>.emotion-14::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-11>.emotion-14:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-11>.emotion-14::placeholder {
-  color: #727683;
-}
-
-.emotion-11[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-11[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-11[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-11[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-11[data-disabled='true']>.emotion-14 {
-  color: #b5b7bd;
-}
-
-.emotion-11[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-11[data-disabled='true']>.emotion-14::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-11[data-disabled='true']>.emotion-14:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-11[data-disabled='true']>.emotion-14::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-11:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-13 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-13[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-13[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding: 0 1rem;
-}
-
-.emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-17:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-17:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-17 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-17:hover,
-.emotion-17:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-19 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-19 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-21:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-21:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-21 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-21:hover,
-.emotion-21:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div
-          class="emotion-4 emotion-3"
+          class="uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
         >
           <label
-            class="emotion-6 emotion-7 emotion-8"
+            class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
             for="_r_3_"
           >
             Test
           </label>
           <span
-            class="emotion-9 emotion-8"
+            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owd uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1k uv_m4c9ow3c"
           >
             *
           </span>
         </div>
         <div>
           <div
-            class="emotion-11 emotion-12"
+            class="uv_q3q8049 uv_q3q8046"
             data-disabled="false"
             data-error="false"
+            data-has-focus="false"
             data-readonly="false"
             data-success="false"
           >
             <input
               aria-invalid="false"
-              class="emotion-13 emotion-14"
+              class="uv_q3q8045"
               data-size="large"
               id="_r_3_"
               name="test"
@@ -554,15 +91,15 @@ exports[`textInputField > should render correctly generated 1`] = `
               value="This is an example"
             />
             <div
-              class="emotion-15 emotion-16"
+              class="uv_q3q8042 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
               <button
                 aria-label="clear value"
-                class="emotion-17 emotion-18"
+                class="uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-19 emotion-20"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza styles_undefined_compound_39__1sbwqkz1n"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -575,7 +112,7 @@ exports[`textInputField > should render correctly generated 1`] = `
         </div>
       </div>
       <button
-        class="emotion-21 emotion-22"
+        class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
         type="submit"
       >
         Submit

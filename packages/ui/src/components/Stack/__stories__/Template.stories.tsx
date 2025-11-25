@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '..'
-import { DivWithBackground } from './DivWithBackground'
+import { child, firstChild, secondChild, thirdChild } from './styles.css'
 
 export const Template: StoryFn<typeof Stack> = props => (
   <Stack {...props}>
-    <DivWithBackground>First child</DivWithBackground>
-    <DivWithBackground>Second child</DivWithBackground>
-    <DivWithBackground>Third child</DivWithBackground>
+    <div className={`${child} ${firstChild}`}>First child</div>
+    <div className={`${child} ${secondChild}`}>Second child</div>
+    <div className={`${child} ${thirdChild}`}>Third child</div>
   </Stack>
 )

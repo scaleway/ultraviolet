@@ -1,21 +1,21 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { EmptyState } from '..'
 import kapsuleLogo from '../__stories__/illustrations/kapsule.webp'
 
 describe('emptySpace', () => {
   it('should work without parameters', () =>
-    shouldMatchEmotionSnapshot(<EmptyState description="test" />))
+    shouldMatchSnapshot(<EmptyState description="test" />))
 
   it('should work with image', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState description="test" image={kapsuleLogo}>
         content
       </EmptyState>,
     ))
 
   it('should work with image as component', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState
         description="test"
         image={<img alt="kapsule logo" src={kapsuleLogo} />}
@@ -25,7 +25,7 @@ describe('emptySpace', () => {
     ))
 
   it('should work with primary button', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState
         description="test"
         primaryButton={<button type="button">Test</button>}
@@ -35,7 +35,7 @@ describe('emptySpace', () => {
     ))
 
   it('should work with secondary button', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState
         description="test"
         secondaryButton={<button type="button">Test</button>}
@@ -45,7 +45,7 @@ describe('emptySpace', () => {
     ))
 
   it('should work with learn more', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState
         description="test"
         learnMore={{ link: 'https://scaleway.com', text: 'Learn more' }}
@@ -55,21 +55,21 @@ describe('emptySpace', () => {
     ))
 
   it('should work with border', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState bordered description="test">
         content
       </EmptyState>,
     ))
 
   it('should work with size', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState description="test" size="small">
         content
       </EmptyState>,
     ))
 
   it('should work with title', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EmptyState description="test" title="test">
         content
       </EmptyState>,

@@ -4,19 +4,14 @@
 
 Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 
-> **Note**
+> [!NOTE] 
 >
 > `@ultraviolet/ui` is using `@ultraviolet/theme` under the hood, therefore you don't need to install it if you want to use the default theme (`consoleLightTheme` and `consoleDarkTheme` are the default themes).
+> This package is only usefull if you want to use only `@ultraviolet/themes` without `@ultraviolet/ui` or if you want to create your own theme based on the existing ones.
 
 ## Get Started
 
-Using npm:
-
-```sh
-$ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
-```
-
-Directly importing the CSS theme in your HTML file:
+### CDN
 
 ```html
 <link rel="stylesheet" href="https://assets.scaleway.com/themes/light.css"> 
@@ -26,28 +21,39 @@ Directly importing the CSS theme in your HTML file:
 <link rel="stylesheet" href="https://assets.scaleway.com/themes/darker.css"> 
 ```
 
-### Usage
+### Using npm
 
-```js
-import { normalize, Button } from '@ultraviolet/ui'
-import { consoleDarkTheme } from '@ultraviolet/themes' // Here we import the theme we want to use
+```sh
+$ pnpm add @ultraviolet/themes
+```
+
+#### Pure CSS file
+
+```tsx
+import '@ultraviolet/themes/light.css'
+import '@ultraviolet/themes/dark.css'
+import '@ultraviolet/themes/darker.css'
+```
+
+#### With Provider and React
+
+This is the recommended version for React application.
+
+```tsx
+import { ThemeProvider, consoleLightTheme } from '@ultraviolet/themes' // Here we import the theme we want to use
 // import { consoleLightTheme } from "@ultraviolet/themes/console/light" // Alternatively you can directly import the light theme if your bundler doesn't have tree-shaking capabilities
-import { Global, css, ThemeProvider } from '@emotion/react'
 
-const App = () => (
-  <ThemeProvider theme={consoleDarkTheme}>
-    <Global
-      styles={css`
-        ${normalize()}
-      `}
-    />
-    <Button variant="primary" onClick={() => console.log('clicked')}>
-      Click Me
-    </Button>
+export const App = () => (
+  <ThemeProvider theme={consoleLightTheme}>
+    <YourApp />
   </ThemeProvider>
 )
 ```
-
+#### Normalized css
+Add this import for normalized css:
+```tsx
+import '@ultraviolet/themes/global'
+```
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).

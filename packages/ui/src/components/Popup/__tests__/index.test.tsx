@@ -1,25 +1,20 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshotWithPortal } from '@utils/test'
 import type { ComponentProps } from 'react'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { Popup } from '../../index'
 
 describe('popup', () => {
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+    shouldMatchSnapshotWithPortal(
       <Popup debounceDelay={0} text="test">
         Hover me
       </Popup>,
     ))
 
   test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Popup debounceDelay={0}>Hover me</Popup>,
-    ))
+    shouldMatchSnapshotWithPortal(<Popup debounceDelay={0}>Hover me</Popup>))
 
   test(`should display Popup on hover`, async () => {
     renderWithTheme(
@@ -146,7 +141,17 @@ describe('popup', () => {
   })
 
   describe(`defined placement`, () => {
-    ;['top', 'left', 'right', 'bottom'].forEach(placement => {
+    ;[
+      'top',
+      'left',
+      'right',
+      'bottom',
+      'auto',
+      'auto-top',
+      'auto-bottom',
+      'auto-left',
+      'auto-right',
+    ].forEach(placement => {
       test(`should renders Popup with placement ${placement}`, async () => {
         renderWithTheme(
           <Popup
@@ -211,5 +216,29 @@ describe('popup', () => {
     await waitFor(() => {
       expect(PopupPortal).not.toBeVisible()
     })
+  })
+
+  test(`should handle unmount correctly`, async () => {
+    const onClose = vi.fn()
+    const { unmount } = renderWithTheme(
+      <Popup onClose={onClose} text="test unmount!">
+        <p data-testid="unmount-children">Hover me</p>
+      </Popup>,
+    )
+
+    const input = screen.getByTestId('unmount-children')
+    await userEvent.hover(input)
+
+    await waitFor(
+      () => {
+        const PopupPortal = screen.getByText('test unmount!')
+        expect(PopupPortal).toBeVisible()
+      },
+      { timeout: 300 },
+    )
+
+    await userEvent.unhover(input)
+    unmount()
+    expect(onClose).not.toHaveBeenCalled()
   })
 })

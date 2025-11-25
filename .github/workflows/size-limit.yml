@@ -4,17 +4,14 @@ on:
     types: ["opened", "edited", "reopened", "synchronize"]
 jobs:
   size:
-    strategy:
-      matrix:
-        node: ["22"]
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4.2.0
       - name: Use Node.js
-        uses: actions/setup-node@v5.0.0
+        uses: actions/setup-node@v6.0.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 22.19.0
       - run: |
           pnpm install
           pnpm run size

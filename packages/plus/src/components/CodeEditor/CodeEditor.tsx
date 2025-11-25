@@ -1,108 +1,15 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
-import { consoleDarkTheme } from '@ultraviolet/themes'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
-
-const EditorContainer = styled.div`
-  position: relative;
-  width: 100%;
-
-  .cm-editor {
-    font-family: ${({ theme }) => theme.typography.code.fontFamily};
-    font-size:  ${({ theme }) => theme.typography.code.fontSize};
-    background-color: ${consoleDarkTheme.colors.neutral.backgroundWeak};
-    border-radius: ${({ theme }) => theme.space['0.5']};
-    border: 1px solid transparent;
-  }
-
-  .cm-editor.cm-focused {
-    outline: none;
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    border: 1px solid ${({ theme }) => theme.colors.primary.border};
-  }
-
-  .cm-content {
-    padding-block: ${({ theme }) => theme.space['2']};
-  };
-
-  .cm-gutters {
-    background-color: ${consoleDarkTheme.colors.neutral.backgroundHover};
-  }
-
-  .cm-lineNumbers {
-    padding-left: ${({ theme }) => theme.space['1']};
-  }
-
-  .cm-gutterElement {
-    color: #545454;
-  }
-
-  .cm-scroller {
-    border-radius: ${({ theme }) => theme.space['0.5']};
-  }
-
-  &[data-disabled="true"] {
-    pointer-events: none;
-    user-select: none;
-
-    .cm-editor {
-      background-color: ${
-        consoleDarkTheme.colors.neutral.backgroundWeakDisabled
-      };
-      color: ${consoleDarkTheme.colors.neutral.textDisabled};
-    }
-
-    .cm-line span {
-      color: ${consoleDarkTheme.colors.neutral.textDisabled};
-    }
-
-    .cm-gutter-Element {
-      color: ${consoleDarkTheme.colors.neutral.textWeakDisabled};
-    }
-
-    .cm-cursor {
-      border-left-color: transparent;
-      display: none;
-    }
-
-    .cm-selectionMatch {
-      background-color: transparent;
-    }
-
-    .cm-selectionLayer {
-      display: none;
-    }
-
-    .cm-editor.cm-focused {
-      box-shadow: none;
-      border: 1px solid transparent;
-    }
-  }
-`
-const StyledStack = styled(Stack)`
-  &[data-disabled="true"] {
-    cursor: not-allowed;
-  }
-`
-
-const StyledCopyButton = styled(CopyButton)`
-  position: absolute;
-  top: ${({ theme }) => theme.space['1']};
-  right: ${({ theme }) => theme.space['1']};
-
-  svg > path {
-    fill: ${consoleDarkTheme.colors.other.icon.product.original.fill};
-  }
-
-  &:hover {
-    background-color: ${consoleDarkTheme.colors.neutral.backgroundHover};
-  }
-`
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import {
+  codeEditor,
+  copyButton as copyButtonStyle,
+  disabledStack,
+} from './styles.css'
 
 type CodeEditorProps = {
   value: string
@@ -125,7 +32,9 @@ type CodeEditorProps = {
   'aria-label'?: string
   'data-testid'?: string
   className?: string
+  error?: string
   lineNumbers?: boolean
+  style?: CSSProperties
 }
 
 export const CodeEditor = ({
@@ -145,11 +54,13 @@ export const CodeEditor = ({
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
   className,
+  error,
   lineNumbers = true,
+  style,
 }: CodeEditorProps) => (
-  <StyledStack data-disabled={disabled} gap={0.5}>
+  <Stack className={disabled ? disabledStack : ''} gap={0.5} style={style}>
     {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
-    <EditorContainer data-disabled={disabled}>
+    <div className={codeEditor[disabled ? 'disabled' : 'default']}>
       <CodeMirror
         aria-disabled={disabled}
         aria-label={ariaLabel}
@@ -162,7 +73,7 @@ export const CodeEditor = ({
         className={className}
         data-testid={dataTestId}
         editable={!disabled || !readOnly}
-        extensions={[langs[extensions]()]}
+        extensions={[langs[extensions]?.() ?? langs['sh']]}
         height={height}
         id={id}
         onBlur={onBlur}
@@ -178,20 +89,26 @@ export const CodeEditor = ({
         width="100%"
       />
       {copyButton && !disabled ? (
-        <StyledCopyButton
+        <CopyButton
           bordered
+          className={copyButtonStyle}
           sentiment="neutral"
           size="small"
           value={value}
         >
           {typeof copyButton === 'string' ? copyButton : undefined}
-        </StyledCopyButton>
+        </CopyButton>
       ) : null}
-    </EditorContainer>
-    {helper ? (
+    </div>
+    {error && typeof error !== 'boolean' ? (
+      <Text as="span" sentiment="danger" variant="caption">
+        {error}
+      </Text>
+    ) : null}
+    {!error && helper ? (
       <Text as="span" prominence="weak" sentiment="neutral" variant="caption">
         {helper}
       </Text>
     ) : null}
-  </StyledStack>
+  </Stack>
 )

@@ -1,15 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Children } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-
-const Container = styled.span`
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1.5']}`};
-  text-align: left;
-`
+import { menuGroup } from '../styles.css'
 
 type GroupProps = {
   label: string
@@ -19,6 +14,7 @@ type GroupProps = {
    * Empty state will be shown when there are no children
    */
   emptyState?: ReactNode
+  style?: CSSProperties
 }
 
 export const Group = ({
@@ -26,12 +22,13 @@ export const Group = ({
   children,
   labelDescription,
   emptyState,
+  style,
 }: GroupProps) => {
   const isChildrenEmpty = Children.count(children) === 0
 
   return (
     <>
-      <Container>
+      <span className={menuGroup} style={style}>
         <Stack alignItems="center" direction="row" gap={1}>
           <Text
             as="span"
@@ -43,7 +40,7 @@ export const Group = ({
           </Text>
           {labelDescription || null}
         </Stack>
-      </Container>
+      </span>
       {isChildrenEmpty && emptyState ? emptyState : children}
     </>
   )

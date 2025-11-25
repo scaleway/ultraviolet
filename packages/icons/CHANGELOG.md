@@ -1,15 +1,131 @@
 # Change Log
 
-## 4.1.2
+## 5.0.0-beta.13
 
 ### Patch Changes
 
-- [#5606](https://github.com/scaleway/ultraviolet/pull/5606) [`e56c72e`](https://github.com/scaleway/ultraviolet/commit/e56c72e588b654b117144df28f74206df4633918) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.2`.
-  Updated dependency `@types/react-dom` to `19.2.1`.
-  Updated dependency `react` to `19.2.0`.
-  Updated dependency `react-dom` to `19.2.0`.
+- [#5795](https://github.com/scaleway/ultraviolet/pull/5795) [`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.6`.
+  Updated dependency `@types/react-dom` to `19.2.3`.
 
-- [#5691](https://github.com/scaleway/ultraviolet/pull/5691) [`feda068`](https://github.com/scaleway/ultraviolet/commit/feda06818b5c7fb1d2943af67bf9797547c95edb) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `19.2.2`.
+## 5.0.0-beta.12
+
+### Patch Changes
+
+- [#5797](https://github.com/scaleway/ultraviolet/pull/5797) [`85d3468`](https://github.com/scaleway/ultraviolet/commit/85d3468dfce3a7532866cf63a017274e65661c80) Thanks [@lisalupi](https://github.com/lisalupi)! - - `Logo`: new logo `RedHatLogo`
+  - `Icon`: new icon `CloseCircleIcon`
+
+## 5.0.0-beta.11
+
+### Major Changes
+
+- [#5768](https://github.com/scaleway/ultraviolet/pull/5768) [`3f0c64c`](https://github.com/scaleway/ultraviolet/commit/3f0c64c1fcc5c80af9275671795c6eb3886ceda5) Thanks [@lisalupi](https://github.com/lisalupi)! - Remove `Emotion` and update READMEs.
+
+### Patch Changes
+
+- [#5787](https://github.com/scaleway/ultraviolet/pull/5787) [`c6eb5c7`](https://github.com/scaleway/ultraviolet/commit/c6eb5c7acd5b32f647306c35f9755c51e60ab33a) Thanks [@lisalupi](https://github.com/lisalupi)! - `Flags`: disabled flags
+
+- [#5757](https://github.com/scaleway/ultraviolet/pull/5757) [`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd) Thanks [@philibea](https://github.com/philibea)! - remove cjs build
+
+- Updated dependencies [[`50851d4`](https://github.com/scaleway/ultraviolet/commit/50851d4cbf7123744e59d88c939f23d0fc575acd)]:
+  - @ultraviolet/themes@3.0.0-beta.4
+
+## 5.0.0-beta.10
+
+### Minor Changes
+
+- [#5761](https://github.com/scaleway/ultraviolet/pull/5761) [`29df8eb`](https://github.com/scaleway/ultraviolet/commit/29df8ebd47e8d0cdbf8a3ca73f74bfe9afdd3983) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `Flags`
+
+### Patch Changes
+
+- [#5759](https://github.com/scaleway/ultraviolet/pull/5759) [`ee2f3eb`](https://github.com/scaleway/ultraviolet/commit/ee2f3eb9bf0f16e95b57817e0c8a5e5eba1f6aa3) Thanks [@lisalupi](https://github.com/lisalupi)! - Add prop `style` to every component
+
+## 5.0.0-beta.9
+
+### Patch Changes
+
+- Updated dependencies [[`2eea0ad`](https://github.com/scaleway/ultraviolet/commit/2eea0add9d9b3988e3edcbdd54c2b1367e6923d6)]:
+  - @ultraviolet/themes@3.0.0-beta.3
+
+## 5.0.0-beta.8
+
+### Patch Changes
+
+- [#5724](https://github.com/scaleway/ultraviolet/pull/5724) [`e2088f2`](https://github.com/scaleway/ultraviolet/commit/e2088f2f29499ba4c6737f638be657bb2b038d6b) Thanks [@lisalupi](https://github.com/lisalupi)! - ProductIcon: new icons `ComputeOptimizedInstances`, `DevelopmentInstances`, `GeneralPurposeInstances` and `MemoryOptimizedInstances`
+
+## 5.0.0-beta.7
+
+### Patch Changes
+
+- [#5491](https://github.com/scaleway/ultraviolet/pull/5491) [`bf7256b`](https://github.com/scaleway/ultraviolet/commit/bf7256b5d2ef4b3b1346037bff5d86c2f47e4785) Thanks [@lisalupi](https://github.com/lisalupi)! - `Logo`: new logo `ToucanTocoLogo`
+
+## 5.0.0-beta.6
+
+### Major Changes
+
+- [#5632](https://github.com/scaleway/ultraviolet/pull/5632) [`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089) Thanks [@matthprost](https://github.com/matthprost)! - Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
+
+### Patch Changes
+
+- Updated dependencies [[`4d56ac4`](https://github.com/scaleway/ultraviolet/commit/4d56ac4f9b25449393fa3739a31097bcdfa40089)]:
+  - @ultraviolet/themes@3.0.0-beta.2
+
+## 5.0.0-beta.5
+
+### Minor Changes
+
+- [#5633](https://github.com/scaleway/ultraviolet/pull/5633) [`4fb8e97`](https://github.com/scaleway/ultraviolet/commit/4fb8e97474b1d8a33fa98f22cdddfdeed753e3f1) Thanks [@matthprost](https://github.com/matthprost)! - New system icons: `<AudioIcon />`, `<ImageIcon />`, `<ImageOutlineIcon />`, `<MusicIcon />`, `<MusicOutlineIcon />`, `<PaperclipIcon />`, `<VideoIcon />`, `<VideoOutlineIcon />
+
+## 5.0.0-beta.4
+
+### Patch Changes
+
+- [#5617](https://github.com/scaleway/ultraviolet/pull/5617) [`776c6df`](https://github.com/scaleway/ultraviolet/commit/776c6df268e796d6ee741fce25d70e0991085f5e) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icon : `MailboxProductIcon`
+
+## 5.0.0-beta.3
+
+### Major Changes
+
+- [#5597](https://github.com/scaleway/ultraviolet/pull/5597) [`b19c4e5`](https://github.com/scaleway/ultraviolet/commit/b19c4e5c142fcbfd21b822c07baea90d34d8eee2) Thanks [@lisalupi](https://github.com/lisalupi)! - **BREAKING CHANGE**
+  - `ClockOutlineIcon` has been renamed to `ClockIcon`
+  - `ClockOutlineOutlineIcon` has been renamed to `ClockOutlineIcon`
+
+### Patch Changes
+
+- [#5607](https://github.com/scaleway/ultraviolet/pull/5607) [`1f78aa4`](https://github.com/scaleway/ultraviolet/commit/1f78aa437fe0d449f5a68f94291a4a1bb6387290) Thanks [@lisalupi](https://github.com/lisalupi)! - New logos
+
+## 5.0.0-beta.2
+
+### Patch Changes
+
+- [#5595](https://github.com/scaleway/ultraviolet/pull/5595) [`568797d`](https://github.com/scaleway/ultraviolet/commit/568797dde5a4ca3cee9e56014d1e45dfff171b2c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Icon />` component to set correct compound variant for neutral
+
+## 5.0.0-beta.1
+
+### Major Changes
+
+- [`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238) Thanks [@matthprost](https://github.com/matthprost)! - Release new beta version to compensate major released by error
+
+### Patch Changes
+
+- Updated dependencies [[`f7a0e49`](https://github.com/scaleway/ultraviolet/commit/f7a0e49c94677e5d9603263a5f183f57a1a19238)]:
+  - @ultraviolet/themes@3.0.0-beta.1
+
+## 4.1.0-beta.4
+
+### Minor Changes
+
+- [#5528](https://github.com/scaleway/ultraviolet/pull/5528) [`272422f`](https://github.com/scaleway/ultraviolet/commit/272422f803f5bcdeb6d05f84455f6904e2b901c5) Thanks [@matthprost](https://github.com/matthprost)! - New product icon `<PasskeyProductIcon />`
+
+## 4.1.0-beta.3
+
+### Minor Changes
+
+- [`a6ca909`](https://github.com/scaleway/ultraviolet/commit/a6ca90992bc60e052e53fbe9317ca6ede96ebe4d) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor components `Icon`, `CategoryIcon`, `Logo` and `ProductIcon` to use vanilla-extract instead of Emotion
+
+### Patch Changes
+
+- Updated dependencies [[`4439df6`](https://github.com/scaleway/ultraviolet/commit/4439df607ffa1f7e6bb2a45bdbbedff6ae3c27b2)]:
+  - @ultraviolet/themes@2.1.0-beta.1
 
 ## 4.1.1
 
@@ -47,6 +163,31 @@
   Updated dependency `@babel/runtime` to `7.28.3`.
   Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
   Updated dependency `@babel/preset-env` to `7.28.3`.
+
+## 4.0.4-beta.2
+
+### Patch Changes
+
+- [#5490](https://github.com/scaleway/ultraviolet/pull/5490) [`2779f6d`](https://github.com/scaleway/ultraviolet/commit/2779f6de81b6e4522cf304d94d09dcd4f2bcc6f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.1.12`.
+  Updated dependency `@types/react-dom` to `19.1.9`.
+
+- [#5499](https://github.com/scaleway/ultraviolet/pull/5499) [`0f049c0`](https://github.com/scaleway/ultraviolet/commit/0f049c044ba9208abf7a1a6a6ea0d911803ea542) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.28.3`.
+  Updated dependency `@babel/runtime` to `7.28.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.28.3`.
+  Updated dependency `@babel/preset-env` to `7.28.3`.
+
+## 4.0.4-beta.1
+
+### Patch Changes
+
+- [`15512aa`](https://github.com/scaleway/ultraviolet/commit/15512aaad1da3218ea3765261451d15fb05d6660) Thanks [@lisalupi](https://github.com/lisalupi)! - New category icon: `UseCasesCategoryIcon`
+
+## 4.0.4-beta.0
+
+### Patch Changes
+
+- Updated dependencies [[`6f5f565`](https://github.com/scaleway/ultraviolet/commit/6f5f5650031f99808c710bfe069bdf7094ce336b)]:
+  - @ultraviolet/themes@2.1.0-beta.0
 
 ## 4.0.3
 

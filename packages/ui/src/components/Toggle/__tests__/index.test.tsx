@@ -1,30 +1,26 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { Toggle } from '..'
 
 describe('toggle', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(<Toggle name="test" onChange={() => {}} />))
+    shouldMatchSnapshot(<Toggle name="test" onChange={() => {}} />))
 
   test('renders correctly when checked', () =>
-    shouldMatchEmotionSnapshot(
-      <Toggle checked name="test" onChange={() => {}} />,
-    ))
+    shouldMatchSnapshot(<Toggle checked name="test" onChange={() => {}} />))
 
   test('renders correctly when disabled', () =>
-    shouldMatchEmotionSnapshot(
-      <Toggle disabled name="test" onChange={() => {}} />,
-    ))
+    shouldMatchSnapshot(<Toggle disabled name="test" onChange={() => {}} />))
 
   test('renders correctly when required with label', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle label="test" name="test" onChange={() => {}} required />,
     ))
 
   test('renders correctly when required with label left', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle
         label="test"
         labelPosition="left"
@@ -35,17 +31,17 @@ describe('toggle', () => {
     ))
 
   test('renders correctly with non default size', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle name="test" onChange={() => {}} size="small" />,
     ))
 
   test('renders correctly label', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle label="This is a label" name="test" onChange={() => {}} />,
     ))
 
   test('renders correctly with tooltip', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle
         label="This is a label"
         name="test"
@@ -55,7 +51,7 @@ describe('toggle', () => {
     ))
 
   test('renders correctly with labels on left', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle
         label="This is a label"
         labelPosition="left"
@@ -65,7 +61,7 @@ describe('toggle', () => {
     ))
 
   test('renders correctly with custom labels on right', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle
         label="This is a label"
         labelPosition="right"
@@ -75,7 +71,7 @@ describe('toggle', () => {
     ))
 
   test('renders correctly with complex label', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle label={<span>Custom label rendered</span>} name="test" />,
     ))
 
@@ -88,11 +84,11 @@ describe('toggle', () => {
   })
 
   test('renders correctly with helper', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle helper="This is a helper" label="This is a label" name="test" />,
     ))
   test('renders correctly with error', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Toggle
         error="error text"
         helper="This is a helper"

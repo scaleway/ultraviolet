@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -16,7 +16,7 @@ describe('estimateCost - Strong Item', () => {
   })
 
   test('render basic props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
           <EstimateCost.Strong>This is a strong Item</EstimateCost.Strong>
@@ -25,7 +25,7 @@ describe('estimateCost - Strong Item', () => {
     ))
 
   test('render with small variant', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
           <EstimateCost.Strong variant="small">
@@ -36,7 +36,7 @@ describe('estimateCost - Strong Item', () => {
     ))
 
   test('render with isDisabledOnOverlay', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Strong">
           <EstimateCost.Strong isDisabledOnOverlay>

@@ -1,86 +1,21 @@
 'use client'
 
-import { css, keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import type { ModalProps } from '../Modal'
 import { Modal } from '../Modal'
 import type { ModalState } from '../Modal/types'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-// oxlint-disable-next-line import/no-unassigned-import
-import './style.css'
-
-export const SIZES = {
-  large: 75.5,
-  medium: 49,
-  // 1 rem = 16 px
-  small: 22.25,
-}
-const slideIn = (translation: number) => keyframes`
-  from {
-    transform: translateX(${translation}rem);
-  }
-  to {
-    transform: translateX(0);
-  }
- `
-
-const slideAnimation = (size: 'small' | 'medium' | 'large') => {
-  if (size === 'small') {
-    return css`animation: ${slideIn(22)} linear 150ms;`
-  }
-  if (size === 'medium') {
-    return css`animation: ${slideIn(48)} linear 250ms;`
-  }
-
-  return css`animation: ${slideIn(70)} linear 300ms;`
-}
-
-const StyledModal = styled(Modal)`
-  margin-right: 0;
-  height: 100%;
-  border-radius: 0;
-  padding: 0;
-
-  &[data-size="small"]{
-    width: ${SIZES.small}rem;
-    ${slideAnimation('small')}
-  }
-
-  &[data-size="medium"]{
-    width: ${SIZES.medium}rem;
-    ${slideAnimation('medium')}
-  }
-
-  &[data-size="large"]{
-    width: ${SIZES.large}rem;
-    ${slideAnimation('large')}
-  }
-`
-const CustomStack = styled(Stack)`
-  height: 100%;
-  position: relative;
-`
-
-const ChildrenContainer = styled.div`
-  overflow-y: auto;
-  height: 100%;
-`
-export const DrawerContent = styled.div`
-  padding-inline: ${({ theme }) => theme.space[2]};
-`
-
-const StyledText = styled(Text)`
-  padding-inline: ${({ theme }) => theme.space[2]};
-  padding-top: ${({ theme }) => theme.space[4]};
-`
-
-const Footer = styled(Stack)`
-  padding: ${({ theme }) => theme.space[2]};
-  padding-top: 0;
-`
+import type { SizeProp } from './styles.css'
+import {
+  drawer,
+  drawerChildrenWrapper,
+  drawerContent,
+  drawerContentWrapper,
+  drawerFooter,
+  drawerHeader,
+} from './styles.css'
 
 type DrawerProps = Pick<
   ComponentProps<typeof Modal>,
@@ -95,9 +30,10 @@ type DrawerProps = Pick<
   | 'onClose'
   | 'open'
   | 'isClosable'
+  | 'style'
 > & {
   header?: ModalProps['children']
-  size?: keyof typeof SIZES
+  size?: SizeProp
   /**
    * Fixed info at the bottom of the
    */
@@ -105,6 +41,10 @@ type DrawerProps = Pick<
   separator?: boolean
   noPadding?: boolean
 }
+
+export const DrawerContent = ({ children }: { children: ReactNode }) => (
+  <div className={drawerContent}>{children}</div>
+)
 
 export const BaseDrawer = ({
   size = 'medium',
@@ -123,30 +63,33 @@ export const BaseDrawer = ({
   isClosable,
   separator = true,
   noPadding = false,
+  style,
 }: DrawerProps) => {
   const computeHeader = (modalProps: ModalState) => {
     if (typeof header === 'string') {
       return (
-        <StyledText
+        <Text
           as="h2"
+          className={drawerHeader}
           prominence="default"
           sentiment="neutral"
           variant="headingSmallStrong"
         >
           {header}
-        </StyledText>
+        </Text>
       )
     }
     if (typeof header === 'function') {
       return (
-        <StyledText
+        <Text
           as="h2"
+          className={drawerHeader}
           prominence="default"
           sentiment="neutral"
           variant="headingSmallStrong"
         >
           {header(modalProps)}
-        </StyledText>
+        </Text>
       )
     }
 
@@ -154,10 +97,10 @@ export const BaseDrawer = ({
   }
 
   return (
-    <StyledModal
+    <Modal
       ariaLabel={ariaLabel}
       backdropClassName="backdrop-drawer"
-      className={className}
+      className={`${className ? `${className} ` : ''}${drawer[size]}`}
       data-size={size}
       data-testid={dataTestId}
       disclosure={disclosure}
@@ -169,25 +112,26 @@ export const BaseDrawer = ({
       open={open}
       placement="top-right"
       size={size}
+      style={style}
     >
       {modalProps => {
         const content =
           typeof children === 'function' ? children(modalProps) : children
 
         return (
-          <CustomStack gap={2}>
+          <Stack className={drawerContentWrapper} gap={2}>
             {computeHeader(modalProps)}
             {separator ? <Separator /> : null}
-            <ChildrenContainer>
+            <div className={drawerChildrenWrapper}>
               {noPadding ? content : <DrawerContent>{content}</DrawerContent>}
-            </ChildrenContainer>
-            <Footer>
+            </div>
+            <Stack className={drawerFooter}>
               {typeof footer === 'function' ? footer(modalProps) : footer}
-            </Footer>
-          </CustomStack>
+            </Stack>
+          </Stack>
         )
       }}
-    </StyledModal>
+    </Modal>
   )
 }
 

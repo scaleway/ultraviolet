@@ -1,158 +1,69 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'danger' 1`] = `
+exports[`alert > renders correctly small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="small styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_small__1b838gx7 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__1b838gxd styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
+            viewBox="0 0 16 16"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM8 4C8.41421 4 8.75 4.33579 8.75 4.75V7.75C8.75 8.16421 8.41421 8.5 8 8.5C7.58579 8.5 7.25 8.16421 7.25 7.75V4.75C7.25 4.33579 7.58579 4 8 4ZM8 12C8.55228 12 9 11.5523 9 11C9 10.4477 8.55228 10 8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12Z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
+          >
+            <span
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_bodySmallStronger__m4c9owp style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
+            >
+              title
+            </span>
+            <p
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmall__m4c9own style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'danger' 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+    >
+      <div
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
+        >
+          <svg
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -162,10 +73,11 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -179,157 +91,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'info' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #e0f2ff;
-  color: #005da3;
-  border-left: 4px solid #005da3;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #005da3;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #005da3;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_info__1b838gx2 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_info__vbm0wq7 styles_size_large__vbm0wq8 styles_undefined_compound_38__vbm0wq1m"
             viewBox="0 0 20 20"
           >
             <path
@@ -338,10 +114,11 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -355,157 +132,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'neutral' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #f9f9fa;
-  color: #3f4250;
-  border-left: 4px solid #151a2d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #222638;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #222638;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_neutral__1b838gx5 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_strong__vbm0wqh styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_large__vbm0wq8 styles_undefined_compound_42__vbm0wq1q"
             viewBox="0 0 20 20"
           >
             <path
@@ -517,10 +158,11 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -534,157 +176,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'success' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #daf6ec;
-  color: #22674e;
-  border-left: 4px solid #22674e;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #22674e;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #22674e;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_success__1b838gx3 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_success__vbm0wq4 styles_size_large__vbm0wq8 styles_undefined_compound_35__vbm0wq1j"
             viewBox="0 0 20 20"
           >
             <path
@@ -693,10 +199,11 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -710,157 +217,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with all sentiments > renders correctly sentiment 'warning' 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #fff6e6;
-  color: #7c5400;
-  border-left: 4px solid #7c5400;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #7c5400;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #7c5400;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_warning__1b838gx4 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_warning__vbm0wq6 styles_size_large__vbm0wq8 styles_undefined_compound_37__vbm0wq1l"
             viewBox="0 0 20 20"
           >
             <path
@@ -870,10 +241,11 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -887,217 +259,21 @@ exports[`alert > renders correctly with all sentiments > renders correctly senti
 
 exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  margin-left: 2.5rem;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13:active {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-13 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  background: #d6175c;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -1107,17 +283,18 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
           </div>
         </div>
         <button
-          class="emotion-12 emotion-13 emotion-14"
+          class="styles_medium__1b838gxa styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
           type="button"
         >
           Button
@@ -1130,146 +307,21 @@ exports[`alert > renders correctly with buttonText and onClickButton 1`] = `
 
 exports[`alert > renders correctly with children as component 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -1279,7 +331,8 @@ exports[`alert > renders correctly with children as component 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p>
               Sample Alert
@@ -1294,233 +347,21 @@ exports[`alert > renders correctly with children as component 1`] = `
 
 exports[`alert > renders correctly with closable and onClose 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-13 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -1530,10 +371,11 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -1542,11 +384,11 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
       </div>
       <button
         aria-label="close"
-        class="emotion-12 emotion-13 emotion-14"
+        class="styles__1b838gxc styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         type="button"
       >
         <svg
-          class="emotion-15 emotion-7"
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
           viewBox="0 0 16 16"
         >
           <path
@@ -1561,157 +403,21 @@ exports[`alert > renders correctly with closable and onClose 1`] = `
 
 exports[`alert > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -1721,10 +427,11 @@ exports[`alert > renders correctly with default values 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
@@ -1738,346 +445,21 @@ exports[`alert > renders correctly with default values 1`] = `
 
 exports[`alert > renders correctly with disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #e51963;
-  border: none;
-  color: #ffffff;
-  background: #ffd3e3;
-  color: #ffffff;
-  margin-left: 2.5rem;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -2087,17 +469,18 @@ exports[`alert > renders correctly with disabled 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <p
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>
           </div>
         </div>
         <button
-          class="emotion-12 emotion-13 emotion-14"
+          class="styles_medium__1b838gxa styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
           disabled=""
           type="button"
         >
@@ -2111,169 +494,21 @@ exports[`alert > renders correctly with disabled 1`] = `
 
 exports[`alert > renders correctly with title 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  background-color: #ffebf2;
-  color: #b3144d;
-  border-left: 4px solid #b3144d;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.75rem;
-  color: #3f4250;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-10 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1b838gx0 styles_sentiment_danger__1b838gx1 styles_size_medium__1b838gx6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__1b838gx8 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_space-between_xxsmall__toi52u6p"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="styles__toi52u0 styles_alignItems_start_xxsmall__toi52u3j styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+          style="--_4k0ekn3: 1 1 auto;"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_large__vbm0wq8 styles_undefined_compound_36__vbm0wq1k"
             viewBox="0 0 20 20"
           >
             <path
@@ -2283,15 +518,16 @@ exports[`alert > renders correctly with title 1`] = `
             />
           </svg>
           <div
-            class="emotion-8 emotion-9"
+            class="styles__1b838gx9 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.75rem_xxsmall__toi52u27 styles_justifyContent_normal_xxsmall__toi52u5d"
+            style="--_4k0ekn3: 1 1 auto;"
           >
             <span
-              class="emotion-10 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_bodyStronger__m4c9owr style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
             >
               title
             </span>
             <p
-              class="emotion-12 emotion-11"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Sample Alert
             </p>

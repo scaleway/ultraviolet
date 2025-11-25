@@ -1,13 +1,14 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { EscapeIcon } from '@ultraviolet/icons'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
 import { SteppedListCard } from '..'
 
 describe('steppedListCard', () => {
   it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
         hideText="hide button"
@@ -34,7 +35,7 @@ describe('steppedListCard', () => {
     ))
 
   it('should hide the toggle button', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard
         header={<h1>Header</h1>}
         showToggleOption={false}
@@ -57,8 +58,32 @@ describe('steppedListCard', () => {
       </SteppedListCard>,
     ))
 
+  it('should work with step icon', () =>
+    shouldMatchSnapshot(
+      <SteppedListCard
+        header={<h1>Header</h1>}
+        showToggleOption={false}
+        steps={[{ icon: <EscapeIcon />, title: 'step 1' }, 'step2']}
+      >
+        <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
+          stepNumber={1}
+          subHeader="First step"
+        >
+          Description
+        </SteppedListCard.Step>
+        <SteppedListCard.Step
+          image={<img alt="blockStorage" src={blockStorageWire} width={200} />}
+          stepNumber={2}
+          subHeader={<h1>Title</h1>}
+        >
+          Description step 2
+        </SteppedListCard.Step>
+      </SteppedListCard>,
+    ))
+
   it('should work with custom hide action', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard
         header="Header"
         onClickHide={() => console.log('test')}
@@ -113,7 +138,7 @@ describe('steppedListCard', () => {
           {nextStep => (
             <>
               <p data-testid="step2desc">step2desc</p>
-              <button onClick={() => nextStep(false)} type="button">
+              <button onClick={() => nextStep()} type="button">
                 step2 button next
               </button>
             </>
@@ -153,6 +178,8 @@ describe('steppedListCard', () => {
     await userEvent.click(clickOnNotChecked)
     const contentStep2clicked = screen.getByText('step2 button next')
     expect(contentStep2clicked).toBeVisible()
+    await userEvent.click(contentStep2clicked)
+    expect(contentStep2clicked).not.toBeVisible()
   })
 
   test('should handle custom hide button', async () => {
@@ -260,7 +287,7 @@ describe('steppedListCard', () => {
   })
 
   it('should work with pre-completed step', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <SteppedListCard header={<h1>Header</h1>} steps={['step1', 'step2']}>
         <SteppedListCard.Step
           image={<img alt="blockStorage" src={blockStorageWire} width={200} />}

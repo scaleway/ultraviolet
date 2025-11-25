@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 import {
   Controls,
@@ -9,59 +8,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
-import background from '../assets/brand-background.png'
-
-const TitleDecorator = styled.div`
-  h1 {
-    color: ${({ theme }) => theme.colors.neutral.text};
-    font-size: ${({ theme }) => theme.typography.headingLargeStronger.fontSize};
-    font-family: ${({ theme }) => theme.typography.headingLargeStronger.fontFamily};
-    font-weight: ${({ theme }) => theme.typography.headingLargeStronger.weight};
-    letter-spacing: ${({ theme }) => theme.typography.headingLargeStronger.letterSpacing};
-    line-height: ${({ theme }) => theme.typography.headingLargeStronger.lineHeight};
-    text-transform: ${({ theme }) => theme.typography.headingLargeStronger.textCase};
-    text-decoration: ${({ theme }) => theme.typography.headingLargeStronger.textDecoration};
-    padding: ${({ theme }) => theme.space[5]} ${({ theme }) => theme.space[3]};
-    border-radius: ${({ theme }) => theme.radii.default};
-    background-image: url(${background});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-  }
-`
-
-const StyledH2 = styled(Text)`
-  padding-bottom: ${({ theme }) => theme.space[1]};
-  margin-bottom: ${({ theme }) => theme.space[2]};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.neutral.borderStronger};
-`
-
-const StoriesDecorator = styled(Stack)`
-  #stories {
-    color: ${({ theme }) => theme.colors.neutral.text};
-    font-size: ${({ theme }) => theme.typography.headingStrong.fontSize};
-    font-family: ${({ theme }) => theme.typography.headingStrong.fontFamily};
-    font-weight: ${({ theme }) => theme.typography.headingStrong.weight};
-    letter-spacing: ${({ theme }) => theme.typography.headingStrong.letterSpacing};
-    line-height: ${({ theme }) => theme.typography.headingStrong.lineHeight};
-    text-transform: ${({ theme }) => theme.typography.headingStrong.textCase};
-    text-decoration: ${({ theme }) => theme.typography.headingStrong.textDecoration};
-    padding-bottom: ${({ theme }) => theme.space[1]};
-    border-bottom: 2px solid ${({ theme }) => theme.colors.neutral.borderStronger};
-    margin-bottom: ${({ theme }) => theme.space[2]};
-  }
-`
-
-const StoriesThemes = styled.div`
-  .docs-story > div {
-    padding: 0;
-  }
-
-  .css-xzp052 .innerZoomElementWrapper > * {
-    border: 0 !important;
-  }
-`
+import { h2Decorator, storiesDecorator, storiesTheme, titleDecorator } from './globalStyle.css'
 
 type PageProps = {
   deprecated?: boolean
@@ -78,12 +25,12 @@ const Page = ({
   hideArgsTable,
   experimental,
 }: PageProps) => (
-  <StoriesThemes>
+  <div className={storiesTheme}>
     <Stack gap={1}>
       <div>
-        <TitleDecorator>
+        <div className={titleDecorator}>
           <Title />
-        </TitleDecorator>
+        </div>
         {deprecated ? (
           <Alert
             title="Deprecated component"
@@ -107,9 +54,9 @@ const Page = ({
       </div>
       <Stack gap={2}>
         <Stack>
-          <StyledH2 as="h2" variant="headingStrong">
+          <Text as="h2" className={h2Decorator} variant="headingStrong">
             Overview
-          </StyledH2>
+          </Text>
           <Subtitle />
           <Description />
         </Stack>
@@ -117,19 +64,19 @@ const Page = ({
           <Primary />
           {!hideArgsTable ? (
             <>
-              <StyledH2 as="h2" variant="headingStrong">
+              <Text as="h2" className={h2Decorator} variant="headingStrong">
                 Props
-              </StyledH2>
+              </Text>
               <Controls />
             </>
           ) : null}
         </div>
-        <StoriesDecorator>
+        <Stack className={storiesDecorator}>
           <Stories />
-        </StoriesDecorator>
+        </Stack>
       </Stack>
     </Stack>
-  </StoriesThemes>
+  </div>
 )
 
 export default Page

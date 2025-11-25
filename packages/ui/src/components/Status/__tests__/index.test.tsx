@@ -1,15 +1,15 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
-import { Status, statusSentiments } from '..'
+import { Status } from '..'
+import { SENTIMENTS } from '../constant'
 
 describe('status', () => {
-  test.each(statusSentiments)('renders correctly with type="%s"', sentiment =>
-    shouldMatchEmotionSnapshot(<Status sentiment={sentiment} />),
-  )
+  test.each(SENTIMENTS)('renders correctly with type="%s"', sentiment =>
+    shouldMatchSnapshot(<Status sentiment={sentiment} />))
 
   test(`render animated`, () =>
-    shouldMatchEmotionSnapshot(<Status animated sentiment="success" />))
+    shouldMatchSnapshot(<Status animated sentiment="success" />))
 
   test(`render with className`, () =>
-    shouldMatchEmotionSnapshot(<Status className="test" sentiment="success" />))
+    shouldMatchSnapshot(<Status className="test" sentiment="success" />))
 })

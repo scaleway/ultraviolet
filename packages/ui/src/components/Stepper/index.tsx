@@ -1,18 +1,10 @@
 'use client'
 
-import { css, keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'
 import { StepperProvider } from './StepperProvider'
-
-const LINE_HEIGHT_SIZES = {
-  medium: 4,
-  small: 2,
-} as const
-
-type Temporal = 'done' | 'current' | 'next'
+import { stepperContainer, stepperLine } from './styles.css'
 
 type StepperProps = {
   animated?: boolean
@@ -30,75 +22,8 @@ type StepperProps = {
   size?: 'small' | 'medium'
   'data-testid'?: string
   separator?: boolean
+  style?: CSSProperties
 }
-
-const StyledContainer = styled.div<{
-  size: 'small' | 'medium'
-  labelPosition: 'bottom' | 'right'
-  separator: boolean
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: ${({ theme, labelPosition, separator }) => {
-    if (separator) {
-      return labelPosition === 'bottom' ? theme.space['0.5'] : theme.space['1']
-    }
-
-    return theme.space['4']
-  }};
-`
-
-const loadingAnimation = keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-`
-
-const loadingStyle = css`
-  animation: ${loadingAnimation} 1s linear infinite;
-`
-
-const StyledLine = styled.div<{
-  temporal: Temporal
-  animated: boolean
-  'data-size': 'small' | 'medium'
-}>`
-    border-radius: ${({ theme }) => theme.radii.default};
-    flex-grow: 1;
-    border-radius: ${({ theme }) => theme.radii.default};
-    background-color: ${({ theme, temporal }) => (temporal === 'done' ? theme.colors.primary.backgroundStrong : theme.colors.neutral.backgroundStrong)};
-    position: relative;
-    height: ${LINE_HEIGHT_SIZES.medium}px;
-    margin-top: ${({ theme }) => theme.space['2']};
-    margin-bottom: ${({ theme }) => theme.space['2']};
-
-    &[data-size='small'] {
-      height: ${LINE_HEIGHT_SIZES.small}px;
-    }
-    ::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      border-radius: ${({ theme }) => theme.radii.default};
-      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-      ${({ temporal }) => {
-        if (temporal === 'done') {
-          return 'width: 100%;'
-        }
-
-        return null
-      }}
-      ${({ temporal, animated }) =>
-        temporal === 'current' && animated && loadingStyle}
-    }
-  `
 
 export const Stepper = ({
   children,
@@ -110,8 +35,11 @@ export const Stepper = ({
   size = 'medium',
   'data-testid': dataTestId,
   separator = true,
+  style,
 }: StepperProps) => {
-  const cleanChildren = Children.toArray(children).filter(isValidElement)
+  const cleanChildren = Children.toArray(children).filter(child =>
+    isValidElement(child),
+  )
   const lastStep = Children.count(cleanChildren) - 1
 
   return (
@@ -123,12 +51,10 @@ export const Stepper = ({
       separator={separator}
       size={size}
     >
-      <StyledContainer
-        className={className}
+      <div
+        className={`${className ? `${className} ` : ''}${stepperContainer({ labelPosition, separator })}`}
         data-testid={dataTestId}
-        labelPosition={labelPosition}
-        separator={separator}
-        size={size}
+        style={style}
       >
         {Children.map(cleanChildren, (child, index) => {
           const getTemporal = () => {
@@ -148,18 +74,16 @@ export const Stepper = ({
           return (
             <Fragment key={`creation-progress-${index}`}>
               <Step index={index} {...(child.props as object)} />
-
               {isNotLast && separator && labelPosition === 'right' ? (
-                <StyledLine
-                  animated={animated}
+                <div
+                  className={stepperLine({ animated, size, temporal })}
                   data-size={size}
-                  temporal={temporal}
                 />
               ) : null}
             </Fragment>
           )
         })}
-      </StyledContainer>
+      </div>
     </StepperProvider>
   )
 }

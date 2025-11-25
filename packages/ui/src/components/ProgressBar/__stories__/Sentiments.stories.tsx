@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { progressBarSentiments } from '..'
+import { PROGRESS_BAR_SENTIMENTS } from '../constants'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 export const Sentiments: StoryFn = props => (
   <>
-    {progressBarSentiments.map(sentiment => (
+    {PROGRESS_BAR_SENTIMENTS.map(sentiment => (
       <UncontrolledProgressBar
         key={sentiment}
         sentiment={sentiment}

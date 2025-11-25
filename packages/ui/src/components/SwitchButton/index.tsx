@@ -1,9 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type {
   ChangeEvent,
   ChangeEventHandler,
+  CSSProperties,
   FocusEventHandler,
   ReactNode,
 } from 'react'
@@ -15,28 +15,8 @@ import { FocusOverlay } from './FocusOverlay'
 import { Option } from './Option'
 import type { RefOptionType } from './SwitchButtonContext'
 import { SwitchButtonContext } from './SwitchButtonContext'
+import { switchButtonContainer } from './styles.css'
 
-const SIZES = {
-  medium: '600',
-  small: '500', // sizing token from theme
-} as const
-
-const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => theme.space['0.5']};
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
-  position: relative;
-
-  &[data-size='small'] {
-      height: ${({ theme }) => theme.sizing[SIZES.small]};
-  }
-
-  &[data-size='medium'] {
-      height: ${({ theme }) => theme.sizing[SIZES.medium]};
-  }
-`
 type SwitchButtonProps = {
   name?: string
   children: ReactNode
@@ -49,6 +29,7 @@ type SwitchButtonProps = {
   'data-testid'?: string
   size?: 'small' | 'medium'
   sentiment?: 'primary' | 'neutral'
+  style?: CSSProperties
 }
 
 /**
@@ -66,6 +47,7 @@ export const SwitchButton = ({
   className,
   children,
   'data-testid': dataTestId,
+  style,
 }: SwitchButtonProps) => {
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -174,8 +156,8 @@ export const SwitchButton = ({
     <SwitchButtonContext.Provider value={valueContext}>
       <Tooltip text={tooltip}>
         <Stack className={className} data-testid={dataTestId} direction="row">
-          <StyledBorderedBox
-            data-size={size}
+          <div
+            className={switchButtonContainer[size]}
             onMouseDown={event => {
               const rect = event.currentTarget.getBoundingClientRect()
               const clickX = event.clientX - rect.left
@@ -205,6 +187,7 @@ export const SwitchButton = ({
               }
             }}
             ref={containerRef}
+            style={style}
           >
             {width ? (
               <FocusOverlay
@@ -215,7 +198,7 @@ export const SwitchButton = ({
               />
             ) : null}
             {children}
-          </StyledBorderedBox>
+          </div>
         </Stack>
       </Tooltip>
     </SwitchButtonContext.Provider>

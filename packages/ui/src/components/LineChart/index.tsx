@@ -1,11 +1,12 @@
 'use client'
 
-import { useTheme } from '@emotion/react'
 import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import type { LineSvgProps, Serie } from '@nivo/line'
 import { ResponsiveLine } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
-import type { ComponentProps } from 'react'
+import type { theme as UVTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import { getNivoTheme } from '../../helpers/nivoTheme'
@@ -32,6 +33,7 @@ type LineChartProps = {
   >
   chartProps?: Partial<LineSvgProps>
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
@@ -60,6 +62,7 @@ export const LineChart = ({
   pointFormatters,
   tickValues,
   chartProps = DEFAULT_CHARTPROPS,
+  style,
   'data-testid': dataTestId,
 }: LineChartProps) => {
   const theme = useTheme()
@@ -86,11 +89,11 @@ export const LineChart = ({
     setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
   }, [dataset.datasets, selected])
 
-  const localColors = getLegendColor(theme)
+  const localColors = getLegendColor(theme as typeof UVTheme)
 
   return (
     <>
-      <div style={{ height }}>
+      <div style={{ height, ...style }}>
         <ResponsiveLine
           axisBottom={{
             format: axisFormatters?.bottom,

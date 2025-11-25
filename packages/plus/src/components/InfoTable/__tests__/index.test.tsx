@@ -1,10 +1,10 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { InfoTable } from '..'
 
 describe('infoTable', () => {
   it('should work with default props', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <InfoTable>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
@@ -31,7 +31,7 @@ describe('infoTable', () => {
     ))
 
   it('should work with multiLine', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <InfoTable>
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell title="title">cell</InfoTable.Cell>
@@ -58,7 +58,7 @@ describe('infoTable', () => {
     ))
 
   it('should work with width', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <InfoTable width="30%">
         <InfoTable.Row templateColumns="repeat(3, 1fr)">
           <InfoTable.Cell title="title">cell</InfoTable.Cell>

@@ -4,7 +4,6 @@
     "target": "es5",
     "module": "esnext",
     "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
     "forceConsistentCasingInFileNames": true,
     "noPropertyAccessFromIndexSignature": false,
     "noEmit": true,
@@ -16,7 +15,6 @@
   },
   "include": [
     "global.d.ts",
-    "emotion.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

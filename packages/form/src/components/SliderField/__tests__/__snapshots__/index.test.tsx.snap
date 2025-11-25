@@ -2,287 +2,38 @@
 
 exports[`sliderField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2[data-options='true'][data-double='true'] {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-9 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  min-width: 2.5rem;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-13 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  height: 0.5rem;
-  width: 100%;
-  position: relative;
-  background-color: #e9eaeb;
-  border-radius: 0.25rem;
-  background-image: linear-gradient(#8c40ef, #8c40ef);
-  background-repeat: no-repeat;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  outline: none;
-}
-
-.emotion-13:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-error='true'] {
-  background-image: linear-gradient(#e51963, #e51963);
-}
-
-.emotion-13[data-direction='column'] {
-  -webkit-align-self: baseline;
-  -ms-flex-item-align: baseline;
-  align-self: baseline;
-}
-
-.emotion-13[aria-disabled='true'] {
-  background-image: linear-gradient(#d8c5fc, #d8c5fc);
-}
-
-.emotion-13::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-13::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-13::-moz-range-thumb:hover,
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-13::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-13::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-13::-webkit-slider-thumb:hover,
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
         data-options="false"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10"
+              class="uv_a5ifr1h uv_a5ifr1k uv_a5ifr1i uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               data-testid="slider-value"
+              style="--uv_qabug40: right;"
             >
               0
             </span>
           </div>
           <div
-            class="emotion-11 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-label="test"
-              class="emotion-13 emotion-14"
+              class="uv_a5ifr1p uv_a5ifr1t uv_a5ifr1b uv_a5ifr1d uv_a5ifr1f"
               data-direction="column"
               data-error="false"
               id="_r_0_"
@@ -290,7 +41,7 @@ exports[`sliderField > should render correctly 1`] = `
               min="0"
               name="test"
               step="1"
-              style="background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"
@@ -305,275 +56,40 @@ exports[`sliderField > should render correctly 1`] = `
 
 exports[`sliderField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2[data-options='true'][data-double='true'] {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-9 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  min-width: 2.5rem;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-13 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  height: 0.5rem;
-  width: 100%;
-  position: relative;
-  background-color: #e9eaeb;
-  border-radius: 0.25rem;
-  background-image: linear-gradient(#8c40ef, #8c40ef);
-  background-repeat: no-repeat;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  outline: none;
-}
-
-.emotion-13[data-error='true'] {
-  background-image: linear-gradient(#e51963, #e51963);
-}
-
-.emotion-13[data-direction='column'] {
-  -webkit-align-self: baseline;
-  -ms-flex-item-align: baseline;
-  align-self: baseline;
-}
-
-.emotion-13[aria-disabled='true'] {
-  background-image: linear-gradient(#d8c5fc, #d8c5fc);
-}
-
-.emotion-13::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-13::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: not-allowed;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-13::-moz-range-thumb:hover,
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
-  border: null;
-}
-
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
-  box-shadow: null;
-  cursor: not-allowed;
-}
-
-.emotion-13::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-13::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: not-allowed;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-13::-webkit-slider-thumb:hover,
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
-  border: null;
-}
-
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
-  box-shadow: null;
-  cursor: not-allowed;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="Slider Input"
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
         data-options="false"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10"
+              class="uv_a5ifr1h uv_a5ifr1k uv_a5ifr1i uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               data-testid="slider-value"
+              style="--uv_qabug40: right;"
             >
               0
             </span>
           </div>
           <div
-            class="emotion-11 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-disabled="true"
               aria-label="Slider Input"
-              class="emotion-13 emotion-14"
+              class="uv_a5ifr1p uv_a5ifr1t uv_a5ifr1r uv_a5ifr1b uv_a5ifr1c uv_a5ifr1f"
               data-direction="column"
               data-error="false"
               disabled=""
@@ -582,7 +98,7 @@ exports[`sliderField > should render correctly disabled 1`] = `
               min="0"
               name="test"
               step="1"
-              style="background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"
@@ -597,509 +113,38 @@ exports[`sliderField > should render correctly disabled 1`] = `
 
 exports[`sliderField > should render correctly with possible values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2[data-options='true'][data-double='true'] {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-9 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  min-width: 2.5rem;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-13 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  height: 0.5rem;
-  width: 100%;
-  position: relative;
-  background-color: #e9eaeb;
-  border-radius: 0.25rem;
-  background-image: linear-gradient(#8c40ef, #8c40ef);
-  background-repeat: no-repeat;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  outline: none;
-}
-
-.emotion-13:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-13[data-error='true'] {
-  background-image: linear-gradient(#e51963, #e51963);
-}
-
-.emotion-13[data-direction='column'] {
-  -webkit-align-self: baseline;
-  -ms-flex-item-align: baseline;
-  align-self: baseline;
-}
-
-.emotion-13[aria-disabled='true'] {
-  background-image: linear-gradient(#d8c5fc, #d8c5fc);
-}
-
-.emotion-13::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-13::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-13::-moz-range-thumb:hover,
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-13::-moz-range-thumb:active,
-.emotion-13::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-13::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-13::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-13::-webkit-slider-thumb:hover,
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-13::-webkit-slider-thumb:active,
-.emotion-13::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-15 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 1rem;
-}
-
-.emotion-15[data-double='true'] {
-  margin-top: 2.5rem;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 0%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-17[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-17[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-19 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 16.666666666666668%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-21[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-21[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 33.333333333333336%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-25[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-25[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 50%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-29[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-29[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 66.66666666666667%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-33[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-33[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 83.33333333333333%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-37[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-37[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-41 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 100%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-41[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-41[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
         data-options="true"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10"
+              class="uv_a5ifr1h uv_a5ifr1k uv_a5ifr1i uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               data-testid="slider-value"
+              style="--uv_qabug40: right;"
             >
               1
             </span>
           </div>
           <div
-            class="emotion-11 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-label="test"
-              class="emotion-13 emotion-14"
+              class="uv_a5ifr1p uv_a5ifr1t uv_a5ifr1b uv_a5ifr1d uv_a5ifr1f"
               data-direction="column"
               data-error="false"
               id="_r_3_"
@@ -1107,95 +152,102 @@ exports[`sliderField > should render correctly with possible values 1`] = `
               min="0"
               name="test"
               step="1"
-              style="background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"
             />
             <datalist
-              class="emotion-15 emotion-16"
+              class="uv_a5ifr16"
               data-double="false"
             >
               <span
-                class="emotion-17 emotion-18"
+                class="uv_a5ifr18 uv_a5ifr19"
                 data-element-left="true"
                 data-element-right="false"
                 data-value="0"
+                style="--uv_a5ifr13: 0%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   1Mb
                 </p>
               </span>
               <span
-                class="emotion-21 emotion-18"
+                class="uv_a5ifr18"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="1"
+                style="--uv_a5ifr13: 16.666666666666668%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   3Mb
                 </p>
               </span>
               <span
-                class="emotion-25 emotion-18"
+                class="uv_a5ifr18"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="2"
+                style="--uv_a5ifr13: 33.333333333333336%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   5Mb
                 </p>
               </span>
               <span
-                class="emotion-29 emotion-18"
+                class="uv_a5ifr18"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="3"
+                style="--uv_a5ifr13: 50%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   10Mb
                 </p>
               </span>
               <span
-                class="emotion-33 emotion-18"
+                class="uv_a5ifr18"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="4"
+                style="--uv_a5ifr13: 66.66666666666667%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   50Mb
                 </p>
               </span>
               <span
-                class="emotion-37 emotion-18"
+                class="uv_a5ifr18"
                 data-element-left="false"
                 data-element-right="false"
                 data-value="5"
+                style="--uv_a5ifr13: 83.33333333333333%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   100Mb
                 </p>
               </span>
               <span
-                class="emotion-41 emotion-18"
+                class="uv_a5ifr18 uv_a5ifr1a"
                 data-element-left="false"
                 data-element-right="true"
                 data-value="6"
+                style="--uv_a5ifr13: 100%;"
               >
                 <p
-                  class="emotion-19 emotion-10"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 >
                   500Mb
                 </p>
@@ -1211,704 +263,59 @@ exports[`sliderField > should render correctly with possible values 1`] = `
 
 exports[`sliderField > should render correctly with possible values and double 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2[data-options='true'][data-double='true'] {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-11 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-16 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  height: 0.5rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-18 {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 0.5rem;
-  width: 100%;
-  min-width: 13.75rem;
-  border-radius: 0.25rem;
-  background: #e9eaeb;
-}
-
-.emotion-20 {
-  position: absolute;
-  height: 100%;
-  background-color: #8c40ef;
-  border-radius: 0.25rem;
-}
-
-.emotion-20[data-error='true'] {
-  background-color: #e51963;
-}
-
-.emotion-20[aria-disabled='true'] {
-  background-color: #d8c5fc;
-}
-
-.emotion-22 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-22:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-22:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-22::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-22::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -8px;
-}
-
-.emotion-22::-moz-range-thumb:hover,
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-22::-moz-range-thumb:active,
-.emotion-22::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-22::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-22:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-22::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -8px;
-}
-
-.emotion-22::-webkit-slider-thumb:hover,
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-22::-webkit-slider-thumb:active,
-.emotion-22::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24 {
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  padding: 0;
-  background: transparent;
-  outline: none;
-}
-
-.emotion-24:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-24::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-moz-range-thumb:hover,
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-moz-range-thumb:active,
-.emotion-24::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-24::-ms-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24:focus::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-24::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: -8px;
-}
-
-.emotion-24::-webkit-slider-thumb:hover,
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-24::-webkit-slider-thumb:active,
-.emotion-24::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-26 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  height: 1rem;
-}
-
-.emotion-26[data-double='true'] {
-  margin-top: 2.5rem;
-}
-
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 0%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-28[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-28[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-30 {
-  color: #641cb3;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 16.666666666666668%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-32[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-32[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-34 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 33.333333333333336%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-36[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-36[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 50%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-40[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-40[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-44 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 66.66666666666667%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-44[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-44[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 83.33333333333333%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-48[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-48[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-52 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  left: 100%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.emotion-52[data-element-left='true'] {
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-52[data-element-right='true'] {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_a5ifr14 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
         data-double="true"
         data-options="true"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            style="--uv_4k0ekn0: 100%;"
           >
             <div
-              class="emotion-8 emotion-5"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u6p"
             >
               <span
-                class="emotion-10 emotion-11 emotion-12"
+                class="uv_a5ifr1h uv_a5ifr1j uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 data-testid="value-left"
+                style="--uv_qabug40: right;"
               >
                 1
               </span>
               <span
-                class="emotion-10 emotion-11 emotion-12"
+                class="uv_a5ifr1h uv_a5ifr1j uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 data-testid="value-right"
+                style="--uv_qabug40: right;"
               >
                 500
               </span>
             </div>
             <div
-              class="emotion-16 emotion-17"
+              class="uv_a5ifr1v"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="uv_a5ifr1w"
               >
                 <div
                   aria-disabled="false"
-                  class="emotion-20 emotion-21"
+                  class="uv_a5ifr1x"
                   data-error="false"
                   style="left: 0%; right: 0%;"
                 />
               </div>
               <input
                 aria-label="test"
-                class="emotion-22 emotion-23"
+                class="uv_a5ifr1l uv_a5ifr1n uv_a5ifr1b uv_a5ifr1d uv_a5ifr1e uv_a5ifr1g"
                 data-direction="column"
                 data-testid="handle-left"
                 id="_r_d_"
@@ -1916,12 +323,13 @@ exports[`sliderField > should render correctly with possible values and double 1
                 min="0"
                 name="test"
                 step="1"
+                style="--uv_a5ifr12: calc(0% - 8px; --uv_a5ifr11: #ffffff;"
                 type="range"
                 value="0"
               />
               <input
                 aria-label="test"
-                class="emotion-24 emotion-23"
+                class="uv_a5ifr1l uv_a5ifr1n uv_a5ifr1b uv_a5ifr1d uv_a5ifr1e uv_a5ifr1g"
                 data-direction="column"
                 data-testid="handle-right"
                 id="_r_d_"
@@ -1929,93 +337,101 @@ exports[`sliderField > should render correctly with possible values and double 1
                 min="0"
                 name="test"
                 step="1"
+                style="--uv_a5ifr12: calc(100% - 8px; --uv_a5ifr11: #ffffff;"
                 type="range"
                 value="6"
               />
               <datalist
-                class="emotion-26 emotion-27"
+                class="uv_a5ifr16 uv_a5ifr17"
                 data-double="true"
               >
                 <span
-                  class="emotion-28 emotion-29"
+                  class="uv_a5ifr18 uv_a5ifr19"
                   data-element-left="true"
                   data-element-right="false"
                   data-value="0"
+                  style="--uv_a5ifr13: 0%;"
                 >
                   <p
-                    class="emotion-30 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9oww uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                   >
                     1Mb
                   </p>
                 </span>
                 <span
-                  class="emotion-32 emotion-29"
+                  class="uv_a5ifr18"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="1"
+                  style="--uv_a5ifr13: 16.666666666666668%;"
                 >
                   <p
-                    class="emotion-34 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     3Mb
                   </p>
                 </span>
                 <span
-                  class="emotion-36 emotion-29"
+                  class="uv_a5ifr18"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="2"
+                  style="--uv_a5ifr13: 33.333333333333336%;"
                 >
                   <p
-                    class="emotion-34 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     5Mb
                   </p>
                 </span>
                 <span
-                  class="emotion-40 emotion-29"
+                  class="uv_a5ifr18"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="3"
+                  style="--uv_a5ifr13: 50%;"
                 >
                   <p
-                    class="emotion-34 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     10Mb
                   </p>
                 </span>
                 <span
-                  class="emotion-44 emotion-29"
+                  class="uv_a5ifr18"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="4"
+                  style="--uv_a5ifr13: 66.66666666666667%;"
                 >
                   <p
-                    class="emotion-34 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     50Mb
                   </p>
                 </span>
                 <span
-                  class="emotion-48 emotion-29"
+                  class="uv_a5ifr18"
                   data-element-left="false"
                   data-element-right="false"
                   data-value="5"
+                  style="--uv_a5ifr13: 83.33333333333333%;"
                 >
                   <p
-                    class="emotion-34 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                   >
                     100Mb
                   </p>
                 </span>
                 <span
-                  class="emotion-52 emotion-29"
+                  class="uv_a5ifr18 uv_a5ifr1a"
                   data-element-left="false"
                   data-element-right="true"
                   data-value="6"
+                  style="--uv_a5ifr13: 100%;"
                 >
                   <p
-                    class="emotion-30 emotion-12"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9oww uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                   >
                     500Mb
                   </p>
@@ -2032,547 +448,44 @@ exports[`sliderField > should render correctly with possible values and double 1
 
 exports[`sliderField > should trigger events correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-2[data-options='true'][data-double='true'] {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-}
-
-.emotion-11 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.emotion-13 {
-  color: #b3144d;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-  min-width: 2.5rem;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-18:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-18[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-18[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-18:hover {
-  border-color: #792dd4;
-}
-
-.emotion-18[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-  cursor: not-allowed;
-}
-
-.emotion-18[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-18[data-controls='false']>.emotion-20 {
-  border-width: 0;
-}
-
-.emotion-18[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-18[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-18[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-21 {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: inherit;
-  background: inherit;
-  width: 100%;
-}
-
-.emotion-23 {
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 100%;
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.25rem;
-  text-align: center;
-  padding: 0.5rem;
-  background: none;
-}
-
-.emotion-23[data-has-unit='true'] {
-  text-align: left;
-  padding: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-23::-webkit-outer-spin-button,
-.emotion-23::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.emotion-23 {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  -ms-appearance: textfield;
-  appearance: textfield;
-}
-
-.emotion-23[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-23[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-23[data-size='large'] {
-  height: 3rem;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: Regular;
-  line-height: 1.5rem;
-}
-
-.emotion-23:-moz-read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-23:read-only {
-  color: #3f4250;
-  background: #f9f9fa;
-  border-block: 1px solid #d9dadd;
-}
-
-.emotion-23:-moz-read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-23:read-only~.exvap482 {
-  background: #f9f9fa;
-}
-
-.emotion-23:disabled {
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-  border-block: 1px solid #e9eaeb;
-}
-
-.emotion-23:disabled~.exvap482 {
-  background: #f3f3f4;
-  cursor: not-allowed;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-23:placeholder-shown~.exvap482 {
-  color: #727683;
-  font-size: 1rem;
-}
-
-.emotion-23[data-controls='false'] {
-  text-align: left;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: end;
-  justify-content: end;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-29 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  height: 0.5rem;
-  width: 100%;
-  position: relative;
-  background-color: #e9eaeb;
-  border-radius: 0.25rem;
-  background-image: linear-gradient(#8c40ef, #8c40ef);
-  background-repeat: no-repeat;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  outline: none;
-}
-
-.emotion-29:focus::-moz-range-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-29:focus::-webkit-slider-thumb {
-  border: 1.5px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-29[data-error='true'] {
-  background-image: linear-gradient(#e51963, #e51963);
-}
-
-.emotion-29[data-direction='column'] {
-  -webkit-align-self: baseline;
-  -ms-flex-item-align: baseline;
-  align-self: baseline;
-}
-
-.emotion-29[aria-disabled='true'] {
-  background-image: linear-gradient(#d8c5fc, #d8c5fc);
-}
-
-.emotion-29::-moz-range-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-29::-moz-range-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-29::-moz-range-thumb:hover,
-.emotion-29::-moz-range-thumb:active,
-.emotion-29::-moz-range-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-29::-moz-range-thumb:active,
-.emotion-29::-moz-range-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-29::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border: transparent;
-  background: transparent;
-}
-
-.emotion-29::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  width: 16px;
-  height: 16px;
-  background: #ffffff;
-  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
-  border-radius: 100%;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  position: absolute;
-  left: calc(0% - 8px);
-  top: -4px;
-}
-
-.emotion-29::-webkit-slider-thumb:hover,
-.emotion-29::-webkit-slider-thumb:active,
-.emotion-29::-webkit-slider-thumb:focus {
-  border: 1.5px solid #8c40ef;
-}
-
-.emotion-29::-webkit-slider-thumb:active,
-.emotion-29::-webkit-slider-thumb:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
         data-options="false"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u6d"
         >
           <div
-            class="emotion-6 emotion-5"
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
           >
             <div
-              class="emotion-8 emotion-5"
+              class="uv_toi52u0 uv_toi52u3j uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <label
-                class="emotion-10 emotion-11 emotion-12"
+                class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                 for="_r_t_"
               >
                 Test
               </label>
               <span
-                class="emotion-13 emotion-12"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owd uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow1k uv_m4c9ow3c"
               >
                 *
               </span>
             </div>
             <div
-              class="emotion-15 emotion-16 emotion-5"
+              class="uv_a5ifr110 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
             >
               <div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="uv_1ce7gb6h uv_1ce7gb6n uv_1ce7gb6i"
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
@@ -2581,14 +494,12 @@ exports[`sliderField > should trigger events correctly 1`] = `
                   data-unit="false"
                 >
                   <div
-                    class="emotion-20 emotion-21 emotion-22"
+                    class="uv_1ce7gb63 uv_1ce7gb64 uv_x6hyh50 uv_x6hyh52p uv_x6hyh561"
+                    style="--uv_3mg8xe0: 1fr auto; --uv_3mg8xe1: 1fr auto; --uv_3mg8xe2: 1fr auto; --uv_3mg8xe3: 1fr auto; --uv_3mg8xe4: 1fr auto; --uv_3mg8xe5: 1fr auto;"
                   >
                     <input
                       aria-label="input"
-                      class="emotion-23 emotion-24"
-                      data-controls="false"
-                      data-has-unit="false"
-                      data-size="small"
+                      class="uv_1ce7gb6b uv_1ce7gb6d uv_1ce7gb6g"
                       data-testid="slider-input"
                       id="_r_10_"
                       max="10"
@@ -2604,14 +515,15 @@ exports[`sliderField > should trigger events correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-25 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5v"
           />
           <div
-            class="emotion-27 emotion-5"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5j"
+            style="--uv_4k0ekn0: 100%;"
           >
             <input
               aria-label="test"
-              class="emotion-29 emotion-30"
+              class="uv_a5ifr1p uv_a5ifr1t uv_a5ifr1b uv_a5ifr1d uv_a5ifr1f"
               data-direction="column"
               data-error="false"
               id="_r_t_"
@@ -2619,7 +531,7 @@ exports[`sliderField > should trigger events correctly 1`] = `
               min="0"
               name="test"
               step="1"
-              style="background-size: 0% 100%;"
+              style="--uv_a5ifr12: calc(0% - 8px); --uv_a5ifr11: #ffffff; background-size: 0% 100%;"
               tabindex="0"
               type="range"
               value="0"

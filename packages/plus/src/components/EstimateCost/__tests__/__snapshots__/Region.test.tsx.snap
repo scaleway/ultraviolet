@@ -2,969 +2,52 @@
 
 exports[`estimateCost - Region > render region component 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.emotion-2 {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  height: 120px;
-  background-color: #ffffff;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
-  transition: bottom 0.3s,box-shadow 0.3s;
-  z-index: 1;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1.5rem 0;
-}
-
-.emotion-6 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-  border: 0;
-}
-
-.emotion-6:first-of-type,
-.emotion-6:last-child {
-  border: 0;
-}
-
-.emotion-8 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-14 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16 {
-  text-align: initial;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-21 {
-  width: 15px;
-  margin-right: 0.5rem;
-}
-
-.emotion-23 {
-  min-width: 200px;
-  padding: 0 24px;
-  border-left: 1px solid #d9dadd;
-}
-
-.emotion-23:first-of-type,
-.emotion-23:last-child {
-  border: 0;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-27 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-27 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-29 {
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 24px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-38 {
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 4px 4px 0 4px;
-}
-
-.emotion-38>* {
-  margin-top: 0;
-}
-
-.emotion-38>*+* {
-  margin-top: 16px;
-}
-
-.emotion-40 {
-  background-color: #ffffff;
-}
-
-.emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  color: #3f4250;
-  font-weight: 500;
-  padding: 1rem;
-}
-
-.emotion-45 {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-  margin-right: 0.5rem;
-}
-
-.emotion-45 .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.emotion-47 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-  padding: 0;
-}
-
-.emotion-49 {
-  max-width: 200px;
-  padding: 16px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  text-align: left;
-  float: right;
-}
-
-.emotion-51 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-54 {
-  display: grid;
-  grid-template-columns: auto auto;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  width: 100%;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus,
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus>.emotion-57,
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):active>.emotion-57 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within {
-  border-color: #792dd4;
-}
-
-.emotion-54:not([data-disabled='true']):not([data-readonly='true']):not(
-      [data-success='true']
-    ):not([data-error='true']):focus-within>.emotion-57 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover,
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-color: #8c40ef;
-}
-
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):not([data-readonly='true']):hover>.emotion-57,
-.emotion-54:not([data-disabled='true']):not([data-error='true']):not(
-      [data-success='true']
-    ):focus>.emotion-57 {
-  border-right-color: #8c40ef;
-}
-
-.emotion-54[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-54[data-readonly='true']:active {
-  border-color: #d9dadd;
-}
-
-.emotion-54[data-size='small'] {
-  height: 2rem;
-}
-
-.emotion-54[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-54[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-54[data-success='true'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-54[data-success='true']>.emotion-57 {
-  border-right-color: #22674e;
-}
-
-.emotion-54[data-success='true']:active {
-  border: 1px solid #22674e;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-54[data-success='true']:active>.emotion-57 {
-  border-right-color: #22674e;
-}
-
-.emotion-54[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-54[data-error='true']>.emotion-57 {
-  border-right-color: #b3144d;
-}
-
-.emotion-54[data-error='true']>.emotion-57:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-54[data-error='true']:active {
-  border: 1px solid #b3144d;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-54[data-error='true']:active>.emotion-57 {
-  border-right-color: #b3144d;
-}
-
-.emotion-54[data-error='true']:active>.emotion-57:hover {
-  border-right-color: #b3144d;
-}
-
-.emotion-54[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-54[data-disabled='true']>.emotion-57 {
-  border-right-color: #e9eaeb;
-}
-
-.emotion-56 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding-right: 1rem;
-  border-right: 1px solid #d9dadd;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-58 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  color: #3f4250;
-}
-
-.emotion-58[data-size="small"] {
-  padding-left: 0.5rem;
-}
-
-.emotion-58[data-size="large"] {
-  font-size: 1rem;
-}
-
-.emotion-58::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-58::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-58:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-58::placeholder {
-  color: #727683;
-}
-
-.emotion-58:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-58:disabled::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-58:disabled::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-58:disabled:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-58:disabled::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-61 {
-  width: 100%;
-  width: 100%;
-}
-
-.emotion-61 #unit {
-  border: none;
-  background: transparent;
-}
-
-.emotion-61 #unit:focus,
-.emotion-61 #unit:active {
-  box-shadow: none;
-}
-
-.emotion-63 {
-  display: inherit;
-}
-
-.emotion-63[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-63[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-65 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-67 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-67[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-67[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-67[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-67[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-67[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-67[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-67[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-67[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-67[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-67[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-67[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-67[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-67[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-67[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-67:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-67[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-67[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-70 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-72 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-74 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-74 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-78 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-}
-
-.emotion-80 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 56px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.emotion-88 {
-  text-align: right;
-}
-
-.emotion-91 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 500px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  margin-right: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 16px;
-  color: #222638;
-  font-weight: 500;
-  margin-right: 4px;
-}
-
-.emotion-95 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-left: 1px solid #d9dadd;
-  background-color: #f9f9fa;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-98 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-}
-
-.emotion-100 {
-  margin: 0;
-  width: 100%;
-  border-right: 1px solid #d9dadd;
-  border-radius: 0 0 0.25rem 0.25rem;
-}
-
-.emotion-104 {
-  width: 70%;
-}
-
-.emotion-106 {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  width: 70%;
-  min-width: 230px;
-  border-color: #d9dadd;
-  border-style: solid;
-  border-width: 0 1px 1px 1px;
-  border-right: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  height: 56px;
-  background-color: #f1eefc;
-  width: 30%;
-  min-width: 126px;
-}
-
-.emotion-109 {
-  color: #641cb3;
-  font-size: 1.5625rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__sk5tgau styles_inView_false__sk5tgaw"
         data-testid="summary-overlay"
+        style="--sk5tga1: 0;"
       >
         <ul
-          class="emotion-4 emotion-5"
+          class="styles__sk5tgax"
         >
           <li
-            class="emotion-6 emotion-7"
+            class="styles__sk5tgak styles_isFirstElement_true__sk5tgal"
           >
             <div
-              class="emotion-8 emotion-9"
-              width="inherit"
+              class="styles__sk5tga9"
+              style="--sk5tga0: 16px;"
             >
-              <div>
+              <div
+                class=""
+              >
                 <div
-                  class="emotion-10 emotion-1"
+                  class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                 >
                   <div
-                    class="emotion-12 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                   >
                     <p
-                      class="emotion-14 emotion-15"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                     >
                       Region
                     </p>
                   </div>
                 </div>
                 <div
-                  class="emotion-16 emotion-17"
+                  class="components__1ko5kn28 components_isOverlay_true__1ko5kn29"
                 >
                   <div
-                    class="emotion-18 emotion-19 emotion-20"
+                    class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k components__1ko5kn2o components_variant_normal__1ko5kn2p"
                   >
                     <img
                       alt="nl-ams"
-                      class="emotion-21 emotion-22"
+                      class="styles__sk5tga2"
                       src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23F0F0F0'%20d='M12%2024c6.627%200%2012-5.373%2012-12S18.627%200%2012%200%200%205.373%200%2012s5.373%2012%2012%2012'/%3e%3cpath%20fill='%23D80027'%20d='M24%2012c0-5.16-3.256-9.558-7.826-11.254v22.508C20.744%2021.558%2024%2017.16%2024%2012'/%3e%3cpath%20fill='%230052B4'%20d='M0%2012c0%205.16%203.257%209.558%207.826%2011.254V.746C3.256%202.442%200%206.84%200%2012'/%3e%3c/svg%3e"
                     />
                     nl-ams
@@ -974,13 +57,13 @@ exports[`estimateCost - Region > render region component 1`] = `
             </div>
           </li>
           <li
-            class="emotion-23 emotion-7"
+            class="styles__sk5tgak"
           >
             <div
-              class="emotion-25 emotion-1"
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
               <svg
-                class="emotion-27 emotion-28"
+                class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                 viewBox="0 0 20 20"
               >
                 <path
@@ -992,13 +75,13 @@ exports[`estimateCost - Region > render region component 1`] = `
               Estimated cost
             </div>
             <div
-              class="emotion-29 emotion-30"
+              class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
             >
               <div
-                class="emotion-18 emotion-32 emotion-20"
+                class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_big__1ko5kn2l components__1ko5kn2o components_variant_big__1ko5kn2q"
               >
                 <span
-                  class="emotion-34 emotion-35"
+                  class=" "
                 >
                   €0.00/Hour(s)
                 </span>
@@ -1008,7 +91,7 @@ exports[`estimateCost - Region > render region component 1`] = `
         </ul>
       </div>
       <span
-        class="emotion-14 emotion-15"
+        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
       >
         This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
       </span>
@@ -1016,23 +99,23 @@ exports[`estimateCost - Region > render region component 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-38 emotion-304"
+          class="styles_total__sk5tga4 styles__sk5tga3"
           data-testid="summary"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-40 emotion-302"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <thead>
             <tr>
               <th>
                 <h3
-                  class="emotion-42 emotion-43"
+                  class="styles__sk5tgae"
                 >
                   <svg
-                    class="emotion-44 emotion-45 emotion-28"
+                    class="styles__sk5tgas styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_primary__dkdfcq1 styles_size_medium__dkdfcq9 styles_undefined_compound_32__dkdfcq1g"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -1045,25 +128,26 @@ exports[`estimateCost - Region > render region component 1`] = `
                 </h3>
               </th>
               <th
-                class="emotion-47 emotion-48"
+                class="styles__sk5tgat styles__sk5tga8"
               >
                 <div
-                  class="emotion-49 emotion-50"
+                  class="styles__sk5tgag"
                 >
                   <div
-                    class="emotion-51 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                    style="--uv_4k0ekn0: 100%;"
                   >
                     <div
-                      class="emotion-53 emotion-54 emotion-55"
+                      class="uv_gwf0fld uv_gwf0fla uv_gwf0fl5 uv_x6hyh50 "
+                      style="--uv_3mg8xe0: auto auto; --uv_3mg8xe1: auto auto; --uv_3mg8xe2: auto auto; --uv_3mg8xe3: auto auto; --uv_3mg8xe4: auto auto; --uv_3mg8xe5: auto auto;"
                     >
                       <div
-                        class="emotion-56 emotion-57"
+                        class="uv_gwf0flb"
                         id="input-field"
                       >
                         <input
                           aria-invalid="false"
-                          class="emotion-58 emotion-59"
-                          data-size="medium"
+                          class="uv_gwf0fl3 uv_gwf0fl1"
                           data-testid="unit-input"
                           id="_r_3_"
                           max="9007199254740991"
@@ -1077,43 +161,40 @@ exports[`estimateCost - Region > render region component 1`] = `
                       </div>
                       <div
                         aria-label="iteration-unit"
-                        class="emotion-60 emotion-61 emotion-62"
+                        class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
+                        style="--uv_gwf0fl0: 100%;"
                       >
                         <div
                           aria-controls="_r_5_"
                           aria-describedby="_r_5_"
-                          class="emotion-63 emotion-64"
-                          data-container-full-width="true"
+                          class="uv_w40vpo9 uv_w40vpob"
                           tabindex="-1"
                         >
                           <div
-                            class="emotion-65 emotion-1"
+                            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           >
                             <div
                               aria-controls="_r_5_"
                               aria-expanded="false"
-                              class="emotion-67 emotion-68"
+                              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd7"
                               data-disabled="false"
-                              data-dropdownvisible="false"
                               data-readonly="false"
-                              data-size="medium"
-                              data-state="neutral"
                               data-testid="select-input-iteration-unit"
                               id="unit"
                               role="combobox"
                               tabindex="0"
                             >
-                              <div
-                                class="emotion-69 emotion-70 emotion-15"
+                              <span
+                                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
                               >
                                 Hour(s)
-                              </div>
+                              </span>
                               <div
-                                class="emotion-72 emotion-73"
+                                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                               >
                                 <svg
                                   aria-label="show dropdown"
-                                  class="emotion-74 emotion-28"
+                                  class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
                                   viewBox="0 0 16 16"
                                 >
                                   <path
@@ -1135,37 +216,37 @@ exports[`estimateCost - Region > render region component 1`] = `
           </thead>
           <tbody>
             <tr
-              class="emotion-76 emotion-77"
+              class="components__1ko5kn23"
             >
               <td
-                class="emotion-78 emotion-301"
-                width="70%"
+                class="styles__sk5tga9"
+                style="--sk5tga0: 16px;"
               >
                 <div
-                  class="emotion-80 emotion-81"
+                  class="components__1ko5kn25"
                 >
                   <div
-                    class="emotion-10 emotion-1"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   >
                     <div
-                      class="emotion-12 emotion-1"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u5d"
                     >
                       <p
-                        class="emotion-14 emotion-15"
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                       >
                         Region
                       </p>
                     </div>
                   </div>
                   <div
-                    class="emotion-88 emotion-17"
+                    class="components__1ko5kn28 components_isOverlay_false__1ko5kn2a"
                   >
                     <div
-                      class="emotion-18 emotion-91 emotion-20"
+                      class="components__1ko5kn2h components_isOverlay_false__1ko5kn2j components_variant_normal__1ko5kn2k components__1ko5kn2o components_variant_normal__1ko5kn2p"
                     >
                       <img
                         alt="nl-ams"
-                        class="emotion-21 emotion-22"
+                        class="styles__sk5tga2"
                         src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='%23F0F0F0'%20d='M12%2024c6.627%200%2012-5.373%2012-12S18.627%200%2012%200%200%205.373%200%2012s5.373%2012%2012%2012'/%3e%3cpath%20fill='%23D80027'%20d='M24%2012c0-5.16-3.256-9.558-7.826-11.254v22.508C20.744%2021.558%2024%2017.16%2024%2012'/%3e%3cpath%20fill='%230052B4'%20d='M0%2012c0%205.16%203.257%209.558%207.826%2011.254V.746C3.256%202.442%200%206.84%200%2012'/%3e%3c/svg%3e"
                       />
                       nl-ams
@@ -1174,10 +255,12 @@ exports[`estimateCost - Region > render region component 1`] = `
                 </div>
               </td>
               <td
-                class="emotion-95 emotion-96"
+                class="styles__sk5tga9 styles__sk5tga8"
+                style="--sk5tga0: 16px;"
               >
                 <p
-                  class="emotion-97 emotion-98 emotion-15"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owq uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                  style="--uv_qabug40: right;"
                 >
                   €0.00
                 </p>
@@ -1188,28 +271,29 @@ exports[`estimateCost - Region > render region component 1`] = `
         <table
           cellpadding="0"
           cellspacing="0"
-          class="emotion-100 emotion-101"
+          class="styles__sk5tgad"
         >
           <colgroup>
             <col />
             <col
-              class="emotion-40 emotion-302"
+              class="styles__sk5tga7"
             />
           </colgroup>
           <tbody>
             <tr>
               <td
                 aria-label="control"
-                class="emotion-104 emotion-105"
+                class="styles__sk5tgaf"
               />
               <td
-                class="emotion-106 emotion-300"
+                class="styles__sk5tga9 styles__sk5tgac"
+                style="--sk5tga0: 16px;"
               >
                 <h3
-                  class="emotion-108 emotion-109 emotion-15"
+                  class="styles_notBeta__sk5tgar uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                 >
                   <span
-                    class="emotion-34 emotion-35"
+                    class=" "
                   >
                     €0.00
                   </span>

@@ -1,41 +1,8 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Bullet } from '../Bullet'
-
-const Steps = styled.ul`
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['3']};
-  font-size: ${({ theme }) => theme.typography.body};
-`
-
-const Step = styled('li', {
-  shouldForwardProp: prop => !['disabled'].includes(prop),
-})<{ disabled: boolean }>`
-  display: flex;
-  align-items: flex-start;
-  gap: ${({ theme }) => theme.space['2']};
-  justify-content: center;
-  color: ${({ theme, disabled }) =>
-    disabled
-      ? theme.colors.neutral.textDisabled
-      : theme.colors.neutral.textStrong};
-`
-
-const StyledDiv = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: Sizes }>`
-  flex: 1;
-  margin: auto;
-  line-height: ${({ size }) => (size === 'medium' ? '32px' : '24px')};
-  font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
-  min-width: 0;
-`
+import { step, stepDiv, steps } from './styles.css'
 
 export type Sizes = 'small' | 'medium'
 
@@ -46,6 +13,7 @@ type ItemProps = {
   disabled?: boolean
   children: ReactNode
   onClick?: () => void
+  onKeyDown?: () => void
   className?: string
   bulletContent?: ReactNode
 }
@@ -56,28 +24,35 @@ const Item = ({
   prominence,
   children,
   onClick,
+  onKeyDown,
   size = 'medium',
   disabled = false,
   className,
 }: ItemProps) => (
-  <Step className={className} disabled={disabled} onClick={onClick}>
+  <li
+    className={`${className ? `${className} ` : ''}${step({ disabled })}`}
+    onClick={onClick}
+    onKeyDown={onKeyDown}
+  >
     {bulletContent ? (
       <Bullet
+        disabled={disabled}
         prominence={prominence}
-        sentiment={disabled ? 'disabled' : sentiment}
+        sentiment={sentiment}
         size={size}
       >
         {bulletContent}
       </Bullet>
     ) : null}
-    <StyledDiv size={size}>{children}</StyledDiv>
-  </Step>
+    <div className={stepDiv({ size })}>{children}</div>
+  </li>
 )
 
 type StepListProps = {
   children: ReactNode
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 /**
@@ -87,11 +62,16 @@ type StepListProps = {
 export const StepList = ({
   children,
   className,
+  style,
   'data-testid': dataTestId,
 }: StepListProps) => (
-  <Steps className={className} data-testid={dataTestId}>
+  <ul
+    className={`${className ? `${className} ` : ''}${steps}`}
+    data-testid={dataTestId}
+    style={style}
+  >
     {children}
-  </Steps>
+  </ul>
 )
 
 StepList.Item = Item

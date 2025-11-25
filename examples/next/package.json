@@ -9,31 +9,31 @@
   },
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "export": "next export",
     "start": "next start"
   },
   "dependencies": {
-    "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.1",
     "@scaleway/regex": "5.6.0",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
+    "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "next": "15.5.6",
+    "next": "16.0.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-schemaorg": "2.0.0",
-    "react-syntax-highlighter": "15.6.6",
+    "react-syntax-highlighter": "16.1.0",
     "react-use-clipboard": "1.0.9",
+    "sass": "1.94.0",
     "schema-dts": "1.1.5"
   },
   "devDependencies": {
-    "@babel/core": "7.28.4",
+    "@babel/core": "7.28.5",
     "@types/node": "22.18.11",
-    "@types/react": "19.2.2",
+    "@types/react": "19.2.6",
     "@types/react-syntax-highlighter": "15.5.13",
     "next-transpile-modules": "10.0.1"
   }

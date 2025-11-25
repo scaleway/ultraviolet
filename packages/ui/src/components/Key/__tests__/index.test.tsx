@@ -1,55 +1,55 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
-import { KEYS_MATCH, Key } from '../index'
+import { KEYS_MATCH } from '../constants'
+import { Key } from '../index'
 
 describe('key', () => {
-  test('renders correctly', () => shouldMatchEmotionSnapshot(<Key>A</Key>))
+  test('renders correctly', () => shouldMatchSnapshot(<Key>A</Key>))
   test('renders primary', () =>
-    shouldMatchEmotionSnapshot(<Key sentiment="primary">A</Key>))
+    shouldMatchSnapshot(<Key sentiment="primary">A</Key>))
   test('renders strong', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Key prominence="strong" sentiment="neutral">
         A
       </Key>,
     ))
   test('renders strong primary', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Key prominence="strong" sentiment="primary">
         A
       </Key>,
     ))
 
   test('renders disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Key disabled sentiment="neutral">
         A
       </Key>,
     ))
 
   test('renders disabled primary', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Key disabled sentiment="primary">
         A
       </Key>,
     ))
 
   test('renders disabled strong', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Key disabled prominence="strong" sentiment="neutral">
         A
       </Key>,
     ))
 
   test('renders disabled strong primary', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Key disabled prominence="strong" sentiment="primary">
         A
       </Key>,
     ))
 
-  test('renders small', () =>
-    shouldMatchEmotionSnapshot(<Key size="small">A</Key>))
+  test('renders small', () => shouldMatchSnapshot(<Key size="small">A</Key>))
 
   Object.keys(KEYS_MATCH).map(key =>
     test(`renders with special key ${key}`, () => {

@@ -1,10 +1,10 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { PasswordCheck } from '..'
 
 describe('passwordCheck', () => {
   test('render with custom values', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <PasswordCheck
         rules={[
           {

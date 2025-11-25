@@ -1,9 +1,9 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
+  CSSProperties,
   FocusEventHandler,
   KeyboardEventHandler,
   ReactNode,
@@ -11,109 +11,7 @@ import type {
 import { createRef, useId, useMemo, useState } from 'react'
 import { Label } from '../Label'
 import { Text } from '../Text'
-
-type Size = 'small' | 'medium' | 'large' | 'xlarge'
-
-const SIZE_HEIGHT = {
-  large: '600',
-  medium: '500',
-  small: '400',
-  xlarge: '800',
-} as const
-
-const SIZE_WIDTH = {
-  large: '500',
-  medium: '400',
-  small: '300',
-  xlarge: '700',
-} as const
-
-export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
-
-const StyledInput = styled('input', {
-  shouldForwardProp: prop => !['inputSize'].includes(prop),
-})<{
-  inputSize: Size
-}>`
-  background: ${({ theme }) => theme.colors.neutral.background};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  ${({ inputSize, theme }) => {
-    if (inputSize === 'small') {
-      return `
-           font-size: ${theme.typography.caption.fontSize};
-           font-weight: ${theme.typography.caption.weight};
-        `
-    }
-
-    return `
-           font-size: ${theme.typography.body.fontSize};
-           font-weight: ${theme.typography.body.weight};
-         `
-  }}
-  text-align: center;
-  border-radius: ${({ theme }) => theme.radii.default};
-  margin-right: ${({ theme }) => theme.space['1']};
-  width: ${({ inputSize, theme }) => theme.sizing[SIZE_WIDTH[inputSize]]};
-  height: ${({ inputSize, theme }) => theme.sizing[SIZE_HEIGHT[inputSize]]};
-  outline-style: none;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-
-  border: solid 1px ${({ theme }) => theme.colors.neutral.border};
-
-  &[aria-invalid='true'] {
-    border-color: ${({ theme }) => theme.colors.danger.border};
-  }
-
-  &[data-success='true'] {
-    border-color: ${({ theme }) => theme.colors.success.border};
-  }
-
-  &:hover,
-  &:focus {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-
-    &[aria-invalid='true'] {
-      border-color: ${({ theme }) => theme.colors.danger.borderHover};
-    }
-
-    &[data-success='true'] {
-      border-color: ${({ theme }) => theme.colors.success.borderHover};
-    }
-  }
-
-  &:focus {
-    box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &::placeholder {
-    color: ${({ disabled, theme }) =>
-      disabled
-        ? theme.colors.neutral.textWeakDisabled
-        : theme.colors.neutral.textWeak};
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    border: solid 1px ${({ theme }) => theme.colors.neutral.borderDisabled};
-  }
-`
-
-const FieldSet = styled.fieldset`
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['0.5']};
-`
+import { filedSetClass, inputClass, inputSizes } from './styles.css'
 
 const DEFAULT_ON_FUNCTION = () => {}
 
@@ -152,6 +50,7 @@ type VerificationCodeProps = {
   labelDescription?: ReactNode
   helper?: ReactNode
   success?: boolean | string
+  style?: CSSProperties
 }
 
 /**
@@ -164,7 +63,6 @@ export const VerificationCode = ({
   fields = 4,
   initialValue = '',
   inputId,
-  inputStyle = '',
   size = 'large',
   onChange = DEFAULT_ON_FUNCTION,
   onComplete = DEFAULT_ON_FUNCTION,
@@ -177,8 +75,10 @@ export const VerificationCode = ({
   labelDescription,
   helper,
   success,
+  style,
 }: VerificationCodeProps) => {
   const uniqueId = useId()
+  const id = inputId || uniqueId
   const valuesArray = Object.assign(new Array(fields).fill(''), [
     ...initialValue.substring(0, fields),
   ])
@@ -233,7 +133,7 @@ export const VerificationCode = ({
       const prevIndex = index - 1
       const nextIndex = index + 1
       const first = inputRefs[0]
-      const last = inputRefs[inputRefs.length - 1]
+      const last = inputRefs.at(-1)
       const prev = inputRefs[prevIndex]
       const next = inputRefs[nextIndex]
       const vals = [...values]
@@ -334,9 +234,15 @@ export const VerificationCode = ({
   }, [error, success])
 
   return (
-    <FieldSet className={className} data-testid={dataTestId}>
+    <fieldset
+      className={`${className ? `${className} ` : ''}${filedSetClass}`}
+      data-testid={dataTestId}
+      style={style}
+    >
       {label || labelDescription ? (
         <Label
+          htmlFor={`${id}-0`}
+          id={`${id}-label`}
           labelDescription={labelDescription}
           required={required}
           size={size === 'xlarge' ? 'large' : size}
@@ -346,16 +252,15 @@ export const VerificationCode = ({
       ) : null}
       <div>
         {values.map((value: string, index: number) => (
-          <StyledInput
+          <input
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
-            css={[inputStyle]}
+            className={`${inputSizes[size]} ${inputClass}`}
             data-success={!!success}
             data-testid={index}
             disabled={disabled}
-            id={`${inputId || uniqueId}-${index}`}
-            inputSize={size}
+            id={`${id}-${index}`}
             key={`field-${index}`}
             onChange={inputOnChange(index)}
             onFocus={inputOnFocus}
@@ -384,6 +289,6 @@ export const VerificationCode = ({
       {!error && !success && typeof helper !== 'string' && helper
         ? helper
         : null}
-    </FieldSet>
+    </fieldset>
   )
 }

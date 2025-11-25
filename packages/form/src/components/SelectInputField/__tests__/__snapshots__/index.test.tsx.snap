@@ -2,561 +2,49 @@
 
 exports[`selectInputField > should display right value on grouped options 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-18 {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  position: absolute;
-  max-width: 0px;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
-  width: 100%;
-  min-width: 320px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0rem;
-  margin-bottom: 5rem;
-}
-
-.emotion-18[data-animated="true"] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.emotion-18[data-has-arrow="true"]::after {
-  content: " ";
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.emotion-18[data-visible-in-dom="false"] {
-  display: none;
-}
-
-.emotion-18>.emotion-21 {
-  max-height: 100%;
-}
-
-.emotion-20[data-max-height="true"] {
-  overflow: auto;
-}
-
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-height: 256px;
-  overflow-y: auto;
-  padding: 0rem;
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
-}
-
-.emotion-24[data-grouped="true"] {
-  padding-top: 0rem;
-}
-
-.emotion-26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.125rem;
-}
-
-.emotion-28 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.emotion-30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  background-color: #f9f9fa;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  height: 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-  margin-bottom: 0.125rem;
-}
-
-.emotion-30:focus {
-  background-color: #f9f9fa;
-  outline: none;
-}
-
-.emotion-30[data-selectgroup='true'] {
-  padding-left: 1rem;
-  border-left: 0.25rem solid #f9f9fa;
-}
-
-.emotion-30[data-selectgroup='true']:focus {
-  background-color: #e9eaeb;
-}
-
-.emotion-32 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.emotion-36 {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 0.75rem 1rem 0.75rem 1rem;
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  color: #3f4250;
-  border-radius: 0.25rem;
-  border: 1px transparent solid;
-}
-
-.emotion-36:hover,
-.emotion-36:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-}
-
-.emotion-36[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.emotion-36[aria-disabled="true"] {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-}
-
-.emotion-36[aria-disabled="true"]:hover,
-.emotion-36 [aria-disabled="true"]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.emotion-40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  overflow: hidden;
-}
-
-.emotion-43 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-  overflow: auto;
-  text-overflow: ellipsis;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-.emotion-45 {
-  color: #727683;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="uv_uf6pag0"
       >
         <div
           aria-controls="_r_l_"
           aria-describedby="_r_l_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="true"
+          class="uv_w40vpo9 uv_w40vpob"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           >
             <div
               aria-controls="_r_l_"
               aria-expanded="true"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8 uv_1ba7kndc uv_1ba7kndf"
               data-disabled="false"
-              data-dropdownvisible="true"
               data-readonly="false"
-              data-size="large"
-              data-state="neutral"
               data-testid="select-input-test"
               id="_r_k_"
               role="combobox"
               tabindex="0"
             >
-              <div
-                class="emotion-10 emotion-11 emotion-12"
+              <span
+                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 Mercury
-              </div>
+              </span>
               <div
-                class="emotion-13 emotion-14"
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -569,34 +57,31 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
             </div>
           </div>
           <div
-            class="emotion-17 emotion-18 emotion-19"
-            data-animated="false"
-            data-has-arrow="false"
+            class="uv_5kpm8k0 uv_w40vpo4 null"
             id="_r_l_"
             role="dialog"
-            style="opacity: 1;"
+            style="--uv_ozfz3c0: -5px; --uv_ozfz3c1: 0px; --uv_ozfz3c2:  rotate(180deg); --uv_ozfz3c4: translate3d(0px, 4px, 0); --uv_ozfz3c5: 0ms; --uv_ozfz3c6: translate3d(0px, 4px, 0); --uv_ozfz3c7: 100%; opacity: 1;"
           >
             <div
-              class="emotion-20 emotion-21"
-              data-max-height="false"
+              class="uv_w40vpo2"
             >
               <div
-                class="emotion-22 emotion-7"
+                class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
               >
                 <div
-                  class="emotion-24 emotion-25"
+                  class="uv_5kpm8k1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   data-grouped="true"
                   id="select-dropdown"
                   role="listbox"
                 >
                   <div
-                    class="emotion-26 emotion-7"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
                   >
                     <div
-                      class="emotion-28 emotion-29"
+                      class="uv_5kpm8k5"
                     >
                       <button
-                        class="emotion-30 emotion-31"
+                        class=" uv_5kpm8k3"
                         data-selectgroup="false"
                         data-testid="group-0"
                         role="group"
@@ -604,41 +89,44 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         type="button"
                       >
                         <span
-                          class="emotion-32 emotion-12"
+                          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                          style="--uv_qabug40: left;"
                         >
                           JOVIAN PLANETS
                         </span>
                       </button>
                     </div>
                     <div
-                      class="emotion-26 emotion-7"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="jupiter"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-jupiter"
                         id="option-0"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-jupiter"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Jupiter
                             </span>
                           </div>
                           <span
-                            class="emotion-45 emotion-12"
+                            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                            style="--uv_qabug40: left;"
                           >
                             Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                           </span>
@@ -648,21 +136,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="saturn"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-saturn"
                         id="option-1"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-saturn"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Saturn
                             </span>
@@ -673,21 +162,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="uranus"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-uranus"
                         id="option-2"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-uranus"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Uranus
                             </span>
@@ -698,21 +188,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="neptune"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-neptune"
                         id="option-3"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-neptune"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Neptune
                             </span>
@@ -722,13 +213,13 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                     </div>
                   </div>
                   <div
-                    class="emotion-26 emotion-7"
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
                   >
                     <div
-                      class="emotion-28 emotion-29"
+                      class="uv_5kpm8k5"
                     >
                       <button
-                        class="emotion-30 emotion-31"
+                        class=" uv_5kpm8k3"
                         data-selectgroup="false"
                         data-testid="group-1"
                         role="group"
@@ -736,35 +227,37 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         type="button"
                       >
                         <span
-                          class="emotion-32 emotion-12"
+                          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                          style="--uv_qabug40: left;"
                         >
                           TERRESTRIAL PLANETS
                         </span>
                       </button>
                     </div>
                     <div
-                      class="emotion-26 emotion-7"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u21 uv_toi52u5d"
                       id="items"
                     >
                       <div
                         aria-disabled="false"
                         aria-label="mercury"
                         aria-selected="true"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6 uv_5kpm8k7"
                         data-testid="option-mercury"
                         id="option-0"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-mercury"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Mercury
                             </span>
@@ -775,21 +268,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="venus"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-venus"
                         id="option-1"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-venus"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Venus
                             </span>
@@ -800,27 +294,29 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="earth"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-earth"
                         id="option-2"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-earth"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Earth
                             </span>
                           </div>
                           <span
-                            class="emotion-45 emotion-12"
+                            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                            style="--uv_qabug40: left;"
                           >
                             Our home planet
                           </span>
@@ -830,21 +326,22 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="true"
                         aria-label="mars"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6 uv_5kpm8k8"
                         data-testid="option-mars"
                         id="option-3"
                         role="option"
                         tabindex="-1"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-mars"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Mars
                             </span>
@@ -855,27 +352,29 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
                         aria-disabled="false"
                         aria-label="pluto"
                         aria-selected="false"
-                        class="emotion-36 emotion-37"
+                        class="uv_5kpm8k6"
                         data-testid="option-pluto"
                         id="option-4"
                         role="option"
                         tabindex="0"
                       >
                         <div
-                          class="emotion-6 emotion-7"
+                          class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                           data-testid="option-stack-pluto"
                         >
                           <div
-                            class="emotion-40 emotion-41"
+                            class="uv_5kpm8kf uv_toi52u0 uv_toi52u31 uv_toi52u2j uv_toi52u7d uv_toi52u1v uv_toi52u6p"
                           >
                             <span
-                              class="emotion-42 emotion-43 emotion-12"
+                              class="uv_5kpm8ke uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                              style="--uv_qabug40: left;"
                             >
                               Pluto
                             </span>
                           </div>
                           <span
-                            class="emotion-45 emotion-12"
+                            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9own uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                            style="--uv_qabug40: left;"
                           >
                             Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                           </span>
@@ -896,250 +395,49 @@ exports[`selectInputField > should display right value on grouped options 1`] = 
 
 exports[`selectInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="uv_uf6pag0"
       >
         <div
           aria-controls="_r_1_"
           aria-describedby="_r_1_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="true"
+          class="uv_w40vpo9 uv_w40vpob"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           >
             <div
               aria-controls="_r_1_"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8"
               data-disabled="false"
-              data-dropdownvisible="false"
               data-readonly="false"
-              data-size="large"
-              data-state="neutral"
               data-testid="select-input-test"
               id="_r_0_"
               role="combobox"
               tabindex="0"
             >
-              <p
-                class="emotion-10 emotion-11 emotion-12"
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
               >
                 Select item
-              </p>
+              </span>
               <div
-                class="emotion-13 emotion-14"
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1160,250 +458,49 @@ exports[`selectInputField > should render correctly 1`] = `
 
 exports[`selectInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="uv_uf6pag0"
       >
         <div
           aria-controls="_r_6_"
           aria-describedby="_r_6_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="true"
+          class="uv_w40vpo9 uv_w40vpob"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           >
             <div
               aria-controls="_r_6_"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8 uv_1ba7knde"
               data-disabled="true"
-              data-dropdownvisible="false"
               data-readonly="false"
-              data-size="large"
-              data-state="neutral"
               data-testid="select-input-test"
               id="_r_5_"
               role="combobox"
               tabindex="0"
             >
-              <p
-                class="emotion-10 emotion-11 emotion-12"
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1a uv_m4c9ow33"
               >
                 Select item
-              </p>
+              </span>
               <div
-                class="emotion-13 emotion-14"
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_true__1sbwqkze styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1424,250 +521,49 @@ exports[`selectInputField > should render correctly disabled 1`] = `
 
 exports[`selectInputField > should render correctly grouped 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="uv_uf6pag0"
       >
         <div
           aria-controls="_r_g_"
           aria-describedby="_r_g_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="true"
+          class="uv_w40vpo9 uv_w40vpob"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           >
             <div
               aria-controls="_r_g_"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8"
               data-disabled="false"
-              data-dropdownvisible="false"
               data-readonly="false"
-              data-size="large"
-              data-state="neutral"
               data-testid="select-input-test"
               id="_r_f_"
               role="combobox"
               tabindex="0"
             >
-              <p
-                class="emotion-10 emotion-11 emotion-12"
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
               >
                 Select item
-              </p>
+              </span>
               <div
-                class="emotion-13 emotion-14"
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1688,250 +584,49 @@ exports[`selectInputField > should render correctly grouped 1`] = `
 
 exports[`selectInputField > should render correctly multiselect 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  color: #727683;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="uv_uf6pag0"
       >
         <div
           aria-controls="_r_b_"
           aria-describedby="_r_b_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="true"
+          class="uv_w40vpo9 uv_w40vpob"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           >
             <div
               aria-controls="_r_b_"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8"
               data-disabled="false"
-              data-dropdownvisible="false"
               data-readonly="false"
-              data-size="large"
-              data-state="neutral"
               data-testid="select-input-test"
               id="_r_a_"
               role="combobox"
               tabindex="0"
             >
-              <p
-                class="emotion-10 emotion-11 emotion-12"
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
               >
                 Select item
-              </p>
+              </span>
               <div
-                class="emotion-13 emotion-14"
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1952,249 +647,49 @@ exports[`selectInputField > should render correctly multiselect 1`] = `
 
 exports[`selectInputField > should trigger events 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  width: 100%;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-8 {
-  display: grid;
-  width: 100%;
-  gap: 0.5rem;
-  grid-template-columns: 1fr auto;
-  padding: 0.5rem;
-  padding-right: 0;
-  padding-left: 1rem;
-  cursor: pointer;
-  box-shadow: none;
-  background: #ffffff;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.emotion-8[data-size='small'] {
-  height: 2rem;
-  padding-left: 0.5rem;
-}
-
-.emotion-8[data-size='medium'] {
-  height: 2.5rem;
-}
-
-.emotion-8[data-size='large'] {
-  height: 3rem;
-}
-
-.emotion-8[data-state='neutral'] {
-  border: 1px solid #d9dadd;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):hover {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.emotion-8[data-state='neutral']:not([data-disabled='true']):focus-visible {
-  outline: 5px auto Highlight;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.emotion-8[data-state='neutral'][data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-8[data-state='success'] {
-  border: 1px solid #22674e;
-}
-
-.emotion-8[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #1b533f;
-  box-shadow: 0px 0px 0px 3px #45d19f40;
-}
-
-.emotion-8[data-state='success'][data-dropdownvisible='true'] {
-  border-color: #1b533f;
-}
-
-.emotion-8[data-state='danger'] {
-  border: 1px solid #b3144d;
-}
-
-.emotion-8[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
-  border-color: #92103f;
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-state='danger'][data-dropdownvisible='true'] {
-  border-color: #92103f;
-}
-
-.emotion-8:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-8[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-8[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding-right: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-15 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
         aria-label="test"
-        class="emotion-2 emotion-3"
+        class="uv_uf6pag0"
       >
         <div
           aria-controls="_r_29_"
           aria-describedby="_r_29_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="true"
+          class="uv_w40vpo9 uv_w40vpob"
           tabindex="-1"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
           >
             <div
               aria-controls="_r_29_"
               aria-expanded="false"
               aria-label=""
-              class="emotion-8 emotion-9"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8"
               data-disabled="false"
-              data-dropdownvisible="false"
               data-readonly="false"
-              data-size="large"
-              data-state="neutral"
               data-testid="select-input-test"
               id="_r_28_"
               role="combobox"
               tabindex="0"
             >
-              <div
-                class="emotion-10 emotion-11 emotion-12"
+              <span
+                class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 Mercury
-              </div>
+              </span>
               <div
-                class="emotion-13 emotion-14"
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-15 emotion-16"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
                   viewBox="0 0 16 16"
                 >
                   <path

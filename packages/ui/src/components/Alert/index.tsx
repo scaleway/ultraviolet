@@ -1,8 +1,5 @@
 'use client'
 
-import type { SerializedStyles, Theme } from '@emotion/react'
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import {
   AlertCircleIcon,
   CheckCircleOutlineIcon,
@@ -10,44 +7,20 @@ import {
   InformationOutlineIcon,
   LightBulbIcon,
 } from '@ultraviolet/icons'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useState } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-
-export const ALERT_SENTIMENTS = [
-  'danger',
-  'info',
-  'success',
-  'warning',
-  'neutral',
-] as const
-type AlertSentiment = (typeof ALERT_SENTIMENTS)[number]
-
-const alertStyles = ({
-  theme,
-  sentiment,
-}: {
-  theme: Theme
-  sentiment: AlertSentiment
-}): SerializedStyles => {
-  if (sentiment === 'neutral') {
-    return css`
-        background-color: ${theme.colors.neutral.backgroundWeak};
-        color: ${theme.colors.neutral.text};
-        border-left: 4px solid ${theme.colors.neutral.borderStronger};
-      `
-  }
-
-  const sentimentColor = theme.colors[sentiment]
-
-  return css`
-    background-color: ${sentimentColor.background};
-    color: ${sentimentColor.text};
-    border-left: 4px solid ${sentimentColor.border};
-  `
-}
+import {
+  alert,
+  buttonAlert,
+  buttonCloseAlert,
+  smallIcon,
+  textAlert,
+  wrapAlert,
+} from './styles.css'
+import type { AlertSentiment } from './type'
 
 const sentimentIcons = {
   danger: AlertCircleIcon,
@@ -56,32 +29,6 @@ const sentimentIcons = {
   success: CheckCircleOutlineIcon,
   warning: AlertCircleIcon,
 }
-
-const StyledStackContainer = styled(Stack, {
-  shouldForwardProp: prop => !['sentiment'].includes(prop),
-})<{ sentiment: AlertSentiment }>`
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => theme.space['2']};
-  ${alertStyles};
-`
-
-const TextStack = styled(Stack)`
-  color: ${({ theme }) => theme.colors.neutral.text};
-  flex-wrap: wrap;
-`
-
-const WrapStack = styled(Stack)`
-  flex-wrap: wrap;
-  width: 100%;
-`
-
-const StyledButton = styled(Button)`
-  margin-left: ${({ theme }) => theme.space['5']};
-`
-
-const CloseButton = styled(Button)`
-  align-self: start;
-`
 
 type AlertProps = {
   children: ReactNode
@@ -100,6 +47,8 @@ type AlertProps = {
    * Disabled the alert button.
    */
   disabled?: boolean
+  style?: CSSProperties
+  size?: 'medium' | 'small'
 }
 
 /**
@@ -116,6 +65,8 @@ export const Alert = ({
   className,
   disabled,
   'data-testid': dataTestId,
+  size = 'medium',
+  style,
 }: AlertProps) => {
   const [opened, setOpened] = useState(true)
   const Icon = sentimentIcons[sentiment]
@@ -125,55 +76,78 @@ export const Alert = ({
   }
 
   return (
-    <StyledStackContainer
-      className={className}
+    <Stack
+      className={`${className ? `${className} ` : ''}${alert({ sentiment, size })}`}
       data-testid={dataTestId}
       direction="row"
       gap={1}
-      sentiment={sentiment}
+      style={style}
     >
-      <WrapStack
+      <Stack
         alignItems="center"
+        className={wrapAlert}
         direction="row"
         gap={2}
         justifyContent="space-between"
+        wrap
       >
-        <Stack alignItems="start" direction="row" flex="1 1 auto" gap={2}>
+        <Stack
+          alignItems="start"
+          direction="row"
+          flex="1 1 auto"
+          gap={size === 'small' ? 1 : 2}
+        >
           <Icon
             aria-hidden="true"
+            className={size === 'small' ? smallIcon : ''}
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
-            size="large"
+            size={size === 'small' ? 'small' : 'large'}
           />
-          <TextStack direction="row" flex="1 1 auto" gap={1.5}>
+          <Stack
+            alignItems="center"
+            className={textAlert}
+            direction="row"
+            flex="1 1 auto"
+            gap={1.5}
+            wrap
+          >
             {title ? (
-              <Text as="span" sentiment={sentiment} variant="bodyStronger">
+              <Text
+                as="span"
+                sentiment={sentiment}
+                variant={
+                  size === 'small' ? 'bodySmallStronger' : 'bodyStronger'
+                }
+              >
                 {title}
               </Text>
             ) : null}
             {typeof children === 'string' ? (
-              <Text as="p" variant="body">
+              <Text as="p" variant={size === 'small' ? 'bodySmall' : 'body'}>
                 {children}
               </Text>
             ) : (
               children
             )}
-          </TextStack>
+          </Stack>
         </Stack>
         {buttonText ? (
-          <StyledButton
+          <Button
+            className={buttonAlert[size]}
             disabled={disabled}
             onClick={onClickButton}
             sentiment={sentiment}
             size="small"
           >
             {buttonText}
-          </StyledButton>
+          </Button>
         ) : null}
-      </WrapStack>
+      </Stack>
       {closable || onClose ? (
-        <CloseButton
+        <Button
           aria-label="close"
+          className={buttonCloseAlert}
           onClick={() => {
             setOpened(false)
             onClose?.()
@@ -183,8 +157,8 @@ export const Alert = ({
           variant="ghost"
         >
           <CloseIcon />
-        </CloseButton>
+        </Button>
       ) : null}
-    </StyledStackContainer>
+    </Stack>
   )
 }

@@ -58,16 +58,11 @@ for (const file of filesToAnalyze) {
           .replace(/\.tsx?$/, '')
 
         if (
-          ![
-            'react',
-            'react-vite',
-            'vitest',
-            'styled',
-            '@emotion/styled',
-            'components/',
-          ].some(string => normalizedFile.endsWith(string))
+          !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(
+            string => normalizedFile.endsWith(string),
+          )
         ) {
-          const importedComponent = normalizedFile.split('/').reverse()[0]
+          const importedComponent = normalizedFile.split('/').toReversed()[0]
 
           if (!graph[componentName]) {
             graph[componentName] = { dependsOn: [] }
@@ -128,7 +123,7 @@ const asRecord = Object.fromEntries(
 
       return [name, filteredDeps.length] as const
     })
-    .sort(([, aCount], [, bCount]) => aCount - bCount),
+    .toSorted(([, aCount], [, bCount]) => aCount - bCount),
 )
 
 fs.writeFileSync('depsFiltered.json', JSON.stringify(asRecord, null, 2))

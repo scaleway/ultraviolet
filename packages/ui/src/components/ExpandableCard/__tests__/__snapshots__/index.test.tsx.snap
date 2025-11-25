@@ -2,145 +2,23 @@
 
 exports[`expandableCard > renders correctly with complex header 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  position: relative;
-}
-
-.emotion-0:hover>.emotion-3 {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  width: 100%;
-  -webkit-transition: border-color 0.2s ease-in-out;
-  transition: border-color 0.2s ease-in-out;
-}
-
-.emotion-2[open] {
-  border-color: #8c40ef;
-}
-
-.emotion-2[open]>.emotion-14 {
-  border-color: #8c40ef;
-}
-
-.emotion-2[open] .emotion-6 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.emotion-2[data-clicking="true"] {
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  border-color: #8c40ef;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.emotion-4[data-disabled="true"] {
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-9 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-11 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13 {
-  border-top: 1px solid #d9dadd;
-  padding: 1.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__jd0jfn5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: 100%;"
     >
       <details
-        class="emotion-2 emotion-3"
+        class="styles__jd0jfn3"
         data-clicking="false"
       >
         <summary
-          class="emotion-4 emotion-5"
+          class="styles__jd0jfn2"
           data-disabled="false"
         >
           <svg
-            class="emotion-6 emotion-7 emotion-8"
+            class="styles__jd0jfn0 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
             viewBox="0 0 16 16"
           >
             <path
@@ -151,19 +29,19 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
           </svg>
           <div>
             <h2
-              class="emotion-9 emotion-10"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
             >
               Title
             </h2>
             <p
-              class="emotion-11 emotion-10"
+              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
             >
               Description
             </p>
           </div>
         </summary>
         <div
-          class="emotion-13 emotion-14"
+          class="styles__jd0jfn4"
         >
           Content
         </div>
@@ -175,134 +53,23 @@ exports[`expandableCard > renders correctly with complex header 1`] = `
 
 exports[`expandableCard > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  position: relative;
-}
-
-.emotion-0:hover>.emotion-3 {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  width: 100%;
-  -webkit-transition: border-color 0.2s ease-in-out;
-  transition: border-color 0.2s ease-in-out;
-}
-
-.emotion-2[open] {
-  border-color: #8c40ef;
-}
-
-.emotion-2[open]>.emotion-12 {
-  border-color: #8c40ef;
-}
-
-.emotion-2[open] .emotion-6 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.emotion-2[data-clicking="true"] {
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  border-color: #8c40ef;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.emotion-4[data-disabled="true"] {
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-7 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-9 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-11 {
-  border-top: 1px solid #d9dadd;
-  padding: 1.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__jd0jfn5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+      style="--_4k0ekn0: 100%;"
     >
       <details
-        class="emotion-2 emotion-3"
+        class="styles__jd0jfn3"
         data-clicking="false"
       >
         <summary
-          class="emotion-4 emotion-5"
+          class="styles__jd0jfn2"
           data-disabled="false"
         >
           <svg
-            class="emotion-6 emotion-7 emotion-8"
+            class="styles__jd0jfn0 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
             viewBox="0 0 16 16"
           >
             <path
@@ -312,13 +79,13 @@ exports[`expandableCard > renders correctly with default values 1`] = `
             />
           </svg>
           <h2
-            class="emotion-9 emotion-10"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-11 emotion-12"
+          class="styles__jd0jfn4"
         >
           Content
         </div>
@@ -330,255 +97,29 @@ exports[`expandableCard > renders correctly with default values 1`] = `
 
 exports[`expandableCard > works properly draggable 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 1rem;
-  position: relative;
-}
-
-.emotion-0:hover>.emotion-9 {
-  border-color: #8c40ef;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-  cursor: -webkit-grab;
-  cursor: grab;
-  padding-top: calc(1.5rem + 2px);
-}
-
-.emotion-2[data-visible="true"] {
-  opacity: 1;
-}
-
-.emotion-2:focus-within {
-  opacity: 1;
-}
-
-.emotion-2:active {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  opacity: 1;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  vertical-align: middle;
-  fill: #222638;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-6 .fillStroke {
-  stroke: #222638;
-  fill: none;
-}
-
-.emotion-8 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  width: 100%;
-  -webkit-transition: border-color 0.2s ease-in-out;
-  transition: border-color 0.2s ease-in-out;
-}
-
-.emotion-8[open] {
-  border-color: #8c40ef;
-}
-
-.emotion-8[open]>.emotion-18 {
-  border-color: #8c40ef;
-}
-
-.emotion-8[open] .emotion-12 {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.emotion-8[data-clicking="true"] {
-  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  border-color: #8c40ef;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.emotion-10[data-disabled="true"] {
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-}
-
-.emotion-13 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-13 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-15 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-17 {
-  border-top: 1px solid #d9dadd;
-  padding: 1.5rem;
-}
-
-.emotion-19 {
-  height: 1.5rem;
-  border-bottom: 2px solid;
-  border-color: transparent;
-  padding: 0.25rem 0;
-  width: 100%;
-  bottom: -5px;
-  position: absolute;
-}
-
-.emotion-19[data-first="true"] {
-  top: -1.5rem;
-}
-
-.emotion-19::after {
-  content: '';
-  left: 0;
-  bottom: -4px;
-  height: 0px;
-  width: 0px;
-  border: 3px solid;
-  border-color: inherit;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -0.5rem;
-  margin-left: -0.125rem;
-  position: absolute;
-}
-
-.emotion-29 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-29 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__jd0jfn5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
       data-draggable="true"
       data-value="card-1"
       draggable="true"
+      style="--_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__jd0jfn6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
         data-testid="draggable-icon-card-1"
         data-visible="true"
       >
         <div
           aria-controls="_r_6_"
           aria-describedby="_r_6_"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <svg
-            class="emotion-6 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_strong__vbm0wqh styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_42__vbm0wq1q"
             viewBox="0 0 16 16"
           >
             <path
@@ -588,15 +129,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-8 emotion-9"
+        class="styles__jd0jfn3"
         data-clicking="true"
       >
         <summary
-          class="emotion-10 emotion-11"
+          class="styles__jd0jfn2"
           data-disabled="false"
         >
           <svg
-            class="emotion-12 emotion-13 emotion-7"
+            class="styles__jd0jfn0 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
             viewBox="0 0 16 16"
           >
             <path
@@ -606,46 +147,47 @@ exports[`expandableCard > works properly draggable 1`] = `
             />
           </svg>
           <h2
-            class="emotion-15 emotion-16"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-17 emotion-18"
+          class="styles__jd0jfn4"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-19 emotion-20"
+        class="styles__jd0jfn1"
         data-first="true"
       />
       <div
-        class="emotion-19 emotion-20"
+        class="styles__jd0jfn1"
         data-testid="card-1-dropable-area"
         style="border-color: transparent;"
       />
     </div>
     <div
-      class="emotion-0 emotion-1"
+      class="styles__jd0jfn5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
       data-draggable="true"
       data-value="card-2"
       draggable="true"
+      style="--_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__jd0jfn6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
         data-testid="draggable-icon-card-2"
         data-visible="false"
       >
         <div
           aria-controls="_r_8_"
           aria-describedby="_r_8_"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <svg
-            class="emotion-29 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_58__vbm0wq26"
             viewBox="0 0 16 16"
           >
             <path
@@ -655,15 +197,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-8 emotion-9"
+        class="styles__jd0jfn3"
         data-clicking="false"
       >
         <summary
-          class="emotion-10 emotion-11"
+          class="styles__jd0jfn2"
           data-disabled="false"
         >
           <svg
-            class="emotion-12 emotion-13 emotion-7"
+            class="styles__jd0jfn0 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
             viewBox="0 0 16 16"
           >
             <path
@@ -673,41 +215,42 @@ exports[`expandableCard > works properly draggable 1`] = `
             />
           </svg>
           <h2
-            class="emotion-15 emotion-16"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-17 emotion-18"
+          class="styles__jd0jfn4"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-19 emotion-20"
+        class="styles__jd0jfn1"
         data-testid="card-2-dropable-area"
       />
     </div>
     <div
-      class="emotion-0 emotion-1"
+      class="styles__jd0jfn5 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
       data-draggable="true"
       data-value="card-3"
       draggable="true"
+      style="--_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="styles__jd0jfn6 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_center_xxsmall__toi52u5j"
         data-testid="draggable-icon-card-3"
         data-visible="false"
       >
         <div
           aria-controls="_r_a_"
           aria-describedby="_r_a_"
-          class="emotion-4 emotion-5"
+          class="styles__w40vpo9"
           tabindex="0"
         >
           <svg
-            class="emotion-29 emotion-7"
+            class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_58__vbm0wq26"
             viewBox="0 0 16 16"
           >
             <path
@@ -717,15 +260,15 @@ exports[`expandableCard > works properly draggable 1`] = `
         </div>
       </div>
       <details
-        class="emotion-8 emotion-9"
+        class="styles__jd0jfn3"
         data-clicking="false"
       >
         <summary
-          class="emotion-10 emotion-11"
+          class="styles__jd0jfn2"
           data-disabled="false"
         >
           <svg
-            class="emotion-12 emotion-13 emotion-7"
+            class="styles__jd0jfn0 styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
             viewBox="0 0 16 16"
           >
             <path
@@ -735,19 +278,19 @@ exports[`expandableCard > works properly draggable 1`] = `
             />
           </svg>
           <h2
-            class="emotion-15 emotion-16"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodyStrong__m4c9owq style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
           >
             Title
           </h2>
         </summary>
         <div
-          class="emotion-17 emotion-18"
+          class="styles__jd0jfn4"
         >
           Content
         </div>
       </details>
       <div
-        class="emotion-19 emotion-20"
+        class="styles__jd0jfn1"
         data-testid="card-3-dropable-area"
       />
     </div>

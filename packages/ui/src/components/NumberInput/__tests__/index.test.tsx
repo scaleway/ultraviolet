@@ -1,54 +1,48 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { NumberInput } from '..'
 
 describe('numberInput', () => {
   it('should renders correctly', () =>
-    shouldMatchEmotionSnapshot(
-      <NumberInput max={100} min={0} onChange={() => {}} />,
-    ))
+    shouldMatchSnapshot(<NumberInput max={100} min={0} onChange={() => {}} />))
 
   it('should renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(<NumberInput disabled />))
+    shouldMatchSnapshot(<NumberInput disabled />))
 
   it('should renders correctly without controls', () =>
-    shouldMatchEmotionSnapshot(<NumberInput controls={false} />))
+    shouldMatchSnapshot(<NumberInput controls={false} />))
 
   it('should renders correctly with label', () =>
-    shouldMatchEmotionSnapshot(<NumberInput label="Label" />))
+    shouldMatchSnapshot(<NumberInput label="Label" />))
 
   it('should renders correctly with label description', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <NumberInput labelDescription={<div>label description</div>} />,
     ))
 
   it('should renders correctly with error', () =>
-    shouldMatchEmotionSnapshot(<NumberInput error="This is an error" />))
+    shouldMatchSnapshot(<NumberInput error="This is an error" />))
 
   it('should renders correctly with success', () =>
-    shouldMatchEmotionSnapshot(<NumberInput success="This is a success" />))
+    shouldMatchSnapshot(<NumberInput success="This is a success" />))
 
   it('should renders correctly with placeholder', () =>
-    shouldMatchEmotionSnapshot(
-      <NumberInput placeholder="Enter a value here" />,
-    ))
+    shouldMatchSnapshot(<NumberInput placeholder="Enter a value here" />))
 
   it('should renders correctly min value', () =>
-    shouldMatchEmotionSnapshot(<NumberInput max={100} min={0} />))
+    shouldMatchSnapshot(<NumberInput max={100} min={0} />))
 
   it('should renders correctly max value', () =>
-    shouldMatchEmotionSnapshot(<NumberInput max={100} min={0} />))
+    shouldMatchSnapshot(<NumberInput max={100} min={0} />))
 
   describe('should renders correctly all sizes', () => {
     ;(['large', 'medium', 'small'] as const).forEach(size => {
       it(`with size ${size}`, () =>
-        shouldMatchEmotionSnapshot(
-          <NumberInput max={100} min={0} size={size} />,
-        ))
+        shouldMatchSnapshot(<NumberInput max={100} min={0} size={size} />))
       it(`with size ${size} and unit`, () =>
-        shouldMatchEmotionSnapshot(
+        shouldMatchSnapshot(
           <NumberInput max={100} min={0} size={size} unit="GB" />,
         ))
     })

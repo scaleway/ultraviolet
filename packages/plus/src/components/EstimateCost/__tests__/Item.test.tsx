@@ -1,4 +1,4 @@
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
@@ -25,7 +25,7 @@ describe('estimateCost - Item', () => {
   })
 
   test('render with tabulation', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" tabulation={2}>
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -35,7 +35,7 @@ describe('estimateCost - Item', () => {
   })
 
   test('render with labelTextVariant', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" labelTextVariant="bodySmall">
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -45,7 +45,7 @@ describe('estimateCost - Item', () => {
   })
 
   test('render with priceText', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" priceText="included">
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -55,7 +55,7 @@ describe('estimateCost - Item', () => {
   })
 
   test('render with tooltipInfo', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" tooltipInfo="This is a tooltip">
           <EstimateCost.Strong>Test</EstimateCost.Strong>
@@ -65,7 +65,7 @@ describe('estimateCost - Item', () => {
   })
 
   test('render with notice', () => {
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Test" notice="This is a notice">
           <EstimateCost.Strong>Test</EstimateCost.Strong>

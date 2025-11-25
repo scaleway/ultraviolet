@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { TimeInput } from '..'
 
@@ -8,34 +8,34 @@ const DEFAULT_VALUE = new Date('01/01/2000 11:23:14')
 
 describe('timeInput', () => {
   test('renders correctly with base props', () =>
-    shouldMatchEmotionSnapshot(<TimeInput />))
+    shouldMatchSnapshot(<TimeInput />))
 
   test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(<TimeInput disabled label="test" />))
+    shouldMatchSnapshot(<TimeInput disabled label="test" />))
 
   test('renders correctly readOnly', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" readOnly />))
+    shouldMatchSnapshot(<TimeInput label="test" readOnly />))
 
   test('renders correctly with error', () =>
-    shouldMatchEmotionSnapshot(<TimeInput error="error" label="test" />))
+    shouldMatchSnapshot(<TimeInput error="error" label="test" />))
 
   test('renders correctly clearable', () =>
-    shouldMatchEmotionSnapshot(<TimeInput clearable label="test" />))
+    shouldMatchSnapshot(<TimeInput clearable label="test" />))
 
   test('renders correctly required', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" required />))
+    shouldMatchSnapshot(<TimeInput label="test" required />))
 
   test('renders correctly small', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" size="small" />))
+    shouldMatchSnapshot(<TimeInput label="test" size="small" />))
 
   test('renders correctly large', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" size="large" />))
+    shouldMatchSnapshot(<TimeInput label="test" size="large" />))
 
   test('renders correctly with 12-hour format', () =>
-    shouldMatchEmotionSnapshot(<TimeInput label="test" timeFormat={12} />))
+    shouldMatchSnapshot(<TimeInput label="test" timeFormat={12} />))
 
   test('renders correctly with label description and helper', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TimeInput
         helper="helper"
         label="label"
@@ -44,7 +44,7 @@ describe('timeInput', () => {
     ))
 
   test('renders correctly with helper and error', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TimeInput
         error
         helper="helper"

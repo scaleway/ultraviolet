@@ -15,10 +15,10 @@ const parse = (data?: DatumValue | null): number => {
 }
 
 export const getMin = (values: DatumValue[] = []): number =>
-  values.length > 0 ? Math.min(...values.map(parse)) : 0
+  values.length > 0 ? Math.min(...values.map(data => parse(data))) : 0
 
 export const getMax = (values: DatumValue[] = []): number =>
-  values.length > 0 ? Math.max(...values.map(parse)) : 0
+  values.length > 0 ? Math.max(...values.map(data => parse(data))) : 0
 
 export const getAverage = (values: DatumValue[] = []): number =>
   values.length > 0
@@ -53,8 +53,11 @@ export const getMinChartValue = (preppedData?: Serie[]): number => {
   return Math.floor(minimum - minimum * 0.1)
 }
 
-export const getCurrent = (values: number[] = []): number =>
-  values.length > 0 ? values[values.length - 1] : 0
+export const getCurrent = (values: number[] = []): number => {
+  const val = values.at(-1)
+
+  return val ? val : 0
+}
 
 export const getSelected = (
   label: string,

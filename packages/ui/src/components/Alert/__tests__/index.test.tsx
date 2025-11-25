@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
-import { ALERT_SENTIMENTS, Alert } from '..'
+import { Alert } from '..'
 
 describe('alert', () => {
   beforeAll(() => {
@@ -14,38 +14,41 @@ describe('alert', () => {
   })
 
   test('renders correctly with default values', () =>
-    shouldMatchEmotionSnapshot(<Alert>Sample Alert</Alert>))
+    shouldMatchSnapshot(<Alert>Sample Alert</Alert>))
 
   test('renders correctly with children as component', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Alert>
         <p>Sample Alert</p>
       </Alert>,
     ))
 
   test('renders correctly with title', () =>
-    shouldMatchEmotionSnapshot(<Alert title="title">Sample Alert</Alert>))
+    shouldMatchSnapshot(<Alert title="title">Sample Alert</Alert>))
 
   test('renders correctly with buttonText and onClickButton', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Alert buttonText="Button" onClickButton={() => 'ok'}>
         Sample Alert
       </Alert>,
     ))
 
   test('renders correctly with closable and onClose', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Alert closable onClose={() => 'ok'}>
         Sample Alert
       </Alert>,
     ))
 
   describe(`renders correctly with all sentiments`, () => {
-    test.each(ALERT_SENTIMENTS)(`renders correctly sentiment %o`, sentiment =>
-      shouldMatchEmotionSnapshot(
-        <Alert sentiment={sentiment}>Sample Alert</Alert>,
-      ),
-    )
+    test.each([
+      'danger',
+      'info',
+      'success',
+      'warning',
+      'neutral',
+    ] as const)(`renders correctly sentiment %o`, sentiment =>
+      shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>))
   })
 
   test(`should render alert and then close it`, async () => {
@@ -67,8 +70,14 @@ describe('alert', () => {
   })
 
   test('renders correctly with disabled', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Alert buttonText="button" disabled>
+        Sample Alert
+      </Alert>,
+    ))
+  test('renders correctly small', () =>
+    shouldMatchSnapshot(
+      <Alert className="small" size="small" title="title">
         Sample Alert
       </Alert>,
     ))

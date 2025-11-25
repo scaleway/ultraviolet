@@ -1,10 +1,9 @@
 'use client'
 
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
-import { Badge, Stack, Text, Tooltip, zoomIn } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
@@ -17,15 +16,6 @@ import {
   useState,
 } from 'react'
 import {
-  OverlayRow,
-  priceCell,
-  Cell as StyledCell,
-  StyledDiv,
-  StyledLeftSide,
-  StyledTr,
-} from '../componentStyle'
-import {
-  MAX_CELL_WIDTH,
   maximumFractionDigits,
   maximumFractionDigitsLong,
   multiplier,
@@ -33,12 +23,28 @@ import {
 import { useEstimateCost } from '../EstimateCostProvider'
 import { calculatePrice } from '../helper'
 import { useOverlay } from '../OverlayContext'
+import {
+  estimateCostCell,
+  estimateCostOverlayRow,
+  estimateCostPriceCell,
+  paddingLeftCell,
+} from '../styles.css'
 import type {
   BareEstimateProduct,
   EstimateProduct,
   Iteration,
   Units,
 } from '../types'
+import {
+  estimateCostBadgeItem,
+  estimateCostLeftSide,
+  estimateCostMaxWidthText,
+  estimateCostResourceName,
+  estimateCostTextItem,
+  estimateCostTooltip,
+  estimateCostTr,
+  styledDiv,
+} from './components.css'
 
 const TIME_RELATED_UNIT: Units[] = [
   'seconds',
@@ -47,52 +53,6 @@ const TIME_RELATED_UNIT: Units[] = [
   'days',
   'months',
 ]
-
-const StyledResourceName = styled('div', {
-  shouldForwardProp: prop => !['isOverlay', 'animated'].includes(prop),
-})<{
-  isOverlay: boolean
-  animated: boolean
-}>`
-  text-align: ${({ isOverlay }) => (isOverlay ? 'initial' : 'right')};
-
-  ${({ isOverlay, animated }) =>
-    isOverlay
-      ? css`
-          height: 48px;
-          display: flex;
-          flex-direction: column;
-          -webkit-box-pack: center;
-          justify-content: center;
-          animation: ${animated ? css`800ms ${zoomIn}` : ''};
-        `
-      : null}
-`
-
-const StyledBadge = styled(Badge)`
-  margin-left: ${({ theme }) => theme.space['1']};
-  align-self: center;
-`
-
-const StyledText = styled(Text)`
-  margin-left: ${({ theme }) => theme.space['1']};
-`
-
-const MaxWidthText = styled(Text)`
-  max-width: 75%;
-`
-
-const TextAlignRight = styled(Text)`
-  text-align: right;
-`
-
-const StyledTooltip = styled(Tooltip)`
-  vertical-align: text-top;
-`
-
-const StyledPriceCell = styled(StyledCell)`
-  ${({ theme }) => priceCell(theme)}
-`
 
 type ExtraProps = {
   itemCallback: (amount: number, isVariant: boolean) => void
@@ -225,11 +185,8 @@ type ItemProps = {
    * To strike through the price
    */
   strikeThrough?: boolean
+  style?: CSSProperties
 }
-
-const StyleNoPriceItem = styled(Text)`
-  text-align: right;
-`
 
 export const Item = memo(
   ({
@@ -267,6 +224,7 @@ export const Item = memo(
     labelTextProminence, // To change left cell typography prominence
     notice, // To display a gray text below the label
     strikeThrough, // To strike through the price
+    style,
   }: ItemProps) => {
     const { locales, formatNumber } = useEstimateCost()
 
@@ -298,9 +256,9 @@ export const Item = memo(
     }, [baseUnit, locales])
 
     const { isOverlay } = useOverlay()
-    const Row = isOverlay ? OverlayRow : StyledTr
-    const Cell = isOverlay ? StyledCell.withComponent('div') : StyledCell
-    const LeftSide = isOverlay ? 'div' : StyledLeftSide
+    const Row = isOverlay ? 'li' : 'tr'
+    const Cell = isOverlay ? 'div' : 'td'
+    const LeftSide = 'div'
 
     const [amount, setAmount] = useState(currentAmount)
     const [isVariant, setIsVariant] = useState(false)
@@ -390,16 +348,26 @@ export const Item = memo(
 
     return (
       <Row
-        hideFromOverlay={hideFromOverlay}
-        isFirstElement={isFirstElement}
-        shouldBeHidden={shouldBeHidden}
+        className={
+          isOverlay
+            ? estimateCostOverlayRow({
+                hideFromOverlay,
+                isFirstElement,
+                shouldBeHidden,
+              })
+            : estimateCostTr
+        }
+        style={style}
       >
         <Cell
-          hasBorder={!isLastElement && !noBorder && !isOverlay}
-          tabulation={tabulation}
-          width={!isOverlay ? MAX_CELL_WIDTH : 'inherit'}
+          className={estimateCostCell({
+            hasBorder: !isLastElement && !noBorder && !isOverlay,
+          })}
+          style={assignInlineVars({
+            [paddingLeftCell]: `${(tabulation ?? 0) * 8 + 16}px`,
+          })}
         >
-          <LeftSide>
+          <LeftSide className={isOverlay ? '' : estimateCostLeftSide}>
             <Stack>
               <Stack direction="row">
                 <Text
@@ -410,34 +378,51 @@ export const Item = memo(
                   {label}
                 </Text>
                 {tooltipInfo ? (
-                  <StyledDiv>
-                    <StyledTooltip text={tooltipInfo}>
+                  <div className={styledDiv}>
+                    <Tooltip className={estimateCostTooltip} text={tooltipInfo}>
                       <HelpCircleOutlineIcon size="medium" />
-                    </StyledTooltip>
-                  </StyledDiv>
+                    </Tooltip>
+                  </div>
                 ) : null}
                 {subLabel && !isOverlay ? (
-                  <StyledText as="p" italic sentiment="primary" variant="body">
+                  <Text
+                    as="p"
+                    className={estimateCostTextItem}
+                    italic
+                    sentiment="primary"
+                    variant="body"
+                  >
                     {subLabel}
-                  </StyledText>
+                  </Text>
                 ) : null}
                 {discount > 0 && discountText ? (
-                  <StyledBadge
+                  <Badge
+                    className={estimateCostBadgeItem}
                     prominence="strong"
                     sentiment="warning"
                     size="small"
                   >
                     {discountText}
-                  </StyledBadge>
+                  </Badge>
                 ) : null}
               </Stack>
               {notice ? (
-                <MaxWidthText as="p" prominence="weak" variant="caption">
+                <Text
+                  as="p"
+                  className={estimateCostMaxWidthText}
+                  prominence="weak"
+                  variant="caption"
+                >
                   {notice}
-                </MaxWidthText>
+                </Text>
               ) : null}
             </Stack>
-            <StyledResourceName animated={animated} isOverlay={isOverlay}>
+            <div
+              className={estimateCostResourceName({
+                isAnimated: isOverlay && animated,
+                isOverlay,
+              })}
+            >
               {isDefined
                 ? Children.map(children, child =>
                     isValidElement<ExtraProps>(child)
@@ -450,18 +435,21 @@ export const Item = memo(
                       : null,
                   )
                 : textNotDefined || locales['estimate.cost.notDefined']}
-            </StyledResourceName>
+            </div>
           </LeftSide>
         </Cell>
         {!isOverlay ? (
-          <StyledPriceCell
-            hasBorder={!isLastElement && !noBorder}
-            primary={isPrimaryBackground}
+          <td
+            className={`${estimateCostCell({ hasBorder: !isLastElement && !noBorder, primary: isPrimaryBackground })} ${estimateCostPriceCell}`}
+            style={assignInlineVars({
+              [paddingLeftCell]: `16px`,
+            })}
           >
             {!noPrice ? (
               <>
-                <StyleNoPriceItem
+                <Text
                   as="p"
+                  placement="right"
                   prominence={
                     computedItemPrice === 0 && computedMaxItemPrice === 0
                       ? 'weak'
@@ -491,10 +479,10 @@ export const Item = memo(
                         maximumFractionDigits: formatMaximumFractionDigits,
                       })}`
                     : null}
-                </StyleNoPriceItem>
+                </Text>
                 {(amount - amountFree !== 1 && computedItemPrice > 0) ||
                 (maxAmount > 0 && computedMaxItemPrice > 0) ? (
-                  <TextAlignRight as="p" variant="body">
+                  <Text as="p" placement="right" variant="body">
                     {formatNumber(
                       calculatePrice({
                         amount: 1,
@@ -519,11 +507,11 @@ export const Item = memo(
                           'estimate.cost.units.hours.label'
                         ].toLowerCase()}`
                       : null}
-                  </TextAlignRight>
+                  </Text>
                 ) : null}
               </>
             ) : null}
-          </StyledPriceCell>
+          </td>
         ) : null}
       </Row>
     )

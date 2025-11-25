@@ -1,98 +1,21 @@
 'use client'
 
-import type { Theme } from '@emotion/react'
-import { keyframes, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import type { ReactNode, RefObject } from 'react'
+import { theme } from '@ultraviolet/themes'
+import type { CSSProperties, ReactNode, RefObject } from 'react'
 import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
+import { ColumnProvider } from '../List/ColumnProvider'
+import { listCheckboxInRange, listNoPaddingCell } from '../List/styles.css'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
+import {
+  tableCheckboxContainer,
+  tableExpandableWrapper,
+  tableTrAnimation,
+} from './styles.css'
 import { useTableContext } from './TableContext'
-import type { ColumnProps } from './types'
-
-const ExpandableWrapper = styled.tr`
-  width: 100%;
-  display: table-row;
-  vertical-align: middle;
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  padding: ${({ theme }) => theme.space['1']};
-  cursor: auto;
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
-`
-
-const StyledCheckboxContainer = styled.div`
-  display: flex;
-  width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]};
-`
-
-const StyledCheckbox = styled(Checkbox, {
-  shouldForwardProp: prop => !['inRange'].includes(prop),
-})<{ inRange: boolean }>`
-
-
-  ${({ theme, inRange }) =>
-    inRange
-      ? `
-        rect {
-          fill: ${theme.colors.neutral.backgroundHover};
-          stroke: ${theme.colors.neutral.borderHover};
-        }
-  `
-      : ''}
-
-`
-
-// We start at 5% and finish at 80% to leave the original background color
-// as we can't know if the table will be stripped or not
-const colorChange = (theme: Theme) => keyframes`
-  5% {
-    background-color: ${theme.colors.primary.background};
-  }
-  80% {
-    background-color: ${theme.colors.primary.background};
-  }
-`
-
-const StyledTr = styled('tr', {
-  shouldForwardProp: prop =>
-    !['highlightAnimation', 'columns', 'columnsStartAt'].includes(prop),
-})<{
-  highlightAnimation?: boolean
-  columns: ColumnProps[]
-  columnsStartAt?: number
-}>`
-  animation: ${({ highlightAnimation, theme }) =>
-    highlightAnimation ? colorChange(theme) : undefined}
-    3s linear;
-
-  ${({ columns, columnsStartAt }) =>
-    columns.map(
-      (column, index) => `
-    td:nth-of-type(${index + 1 + (columnsStartAt ?? 0)}) {
-      ${column.width ? `width: ${column.width};` : ''}
-      ${column.minWidth ? `min-width: ${column.minWidth};` : ''}
-      ${column.maxWidth ? `max-width: ${column.maxWidth};` : ''}
-    }
-  `,
-    )}
-`
-
-const NoPaddingCell = styled(Cell, {
-  shouldForwardProp: prop => !['maxWidth'].includes(prop),
-})<{ maxWidth?: string }>`
-  padding: 0;
-
-  &:first-of-type {
-    padding-left: ${({ theme }) => theme.space['2']};
-  }
-
-  max-width: ${({ maxWidth }) => maxWidth};
-`
 
 type RowProps = {
   children: ReactNode
@@ -106,6 +29,7 @@ type RowProps = {
   selectDisabled?: boolean | string
   highlightAnimation?: boolean
   expanded?: boolean
+  style?: CSSProperties
 }
 
 export const Row = ({
@@ -116,6 +40,7 @@ export const Row = ({
   highlightAnimation,
   expandable,
   expanded,
+  style,
   'data-testid': dataTestid,
 }: RowProps) => {
   const {
@@ -167,8 +92,6 @@ export const Row = ({
 
   const canClickRowToExpand = hasExpandable && !expandButton
 
-  const theme = useTheme()
-
   const childrenLength =
     Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
@@ -184,57 +107,74 @@ export const Row = ({
 
   return (
     <>
-      <StyledTr
-        className={className}
-        columns={columns}
-        columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
+      <tr
+        className={`${className ? `${className}` : ''}${highlightAnimation ? ` ${tableTrAnimation}` : ''}`}
         data-testid={dataTestid}
-        highlightAnimation={highlightAnimation}
         role={canClickRowToExpand ? 'button row' : 'row'}
+        style={style}
       >
         {selectable ? (
-          <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
-            <StyledCheckboxContainer>
-              <Tooltip
-                text={
-                  typeof selectDisabled === 'string'
-                    ? selectDisabled
-                    : undefined
-                }
-              >
-                <StyledCheckbox
-                  aria-label="select"
-                  checked={selectedRowIds[id]}
-                  disabled={selectDisabled !== undefined}
-                  inRange={inRange?.includes(id)}
-                  name="table-select-checkbox"
-                  onChange={() => handleOnChange(id, selectedRowIds[id])}
-                  ref={checkboxRowRef}
-                  value={id}
-                />
-              </Tooltip>
-            </StyledCheckboxContainer>
-          </NoPaddingCell>
+          <ColumnProvider width={theme.sizing[300]}>
+            <Cell className={listNoPaddingCell}>
+              <div className={tableCheckboxContainer}>
+                <Tooltip
+                  text={
+                    typeof selectDisabled === 'string'
+                      ? selectDisabled
+                      : undefined
+                  }
+                >
+                  <Checkbox
+                    aria-label="select"
+                    checked={selectedRowIds[id]}
+                    className={
+                      inRange?.includes(id) ? listCheckboxInRange : undefined
+                    }
+                    disabled={!!selectDisabled}
+                    name="table-select-checkbox"
+                    onChange={() => handleOnChange(id, selectedRowIds[id])}
+                    ref={checkboxRowRef}
+                    value={id}
+                  />
+                </Tooltip>
+              </div>
+            </Cell>
+          </ColumnProvider>
         ) : null}
         {expandButton ? (
-          <NoPaddingCell>
-            <Button
-              aria-label="expand"
-              data-testid="list-expand-button"
-              disabled={!expandable}
-              onClick={toggleRowExpand}
-              sentiment="neutral"
-              size="xsmall"
-              variant="ghost"
-            >
-              {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
-            </Button>
-          </NoPaddingCell>
+          <ColumnProvider width={theme.sizing[300]}>
+            <Cell className={listNoPaddingCell}>
+              <Button
+                aria-label="expand"
+                data-testid="list-expand-button"
+                disabled={!expandable}
+                onClick={toggleRowExpand}
+                sentiment="neutral"
+                size="xsmall"
+                variant="ghost"
+              >
+                {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
+              </Button>
+            </Cell>
+          </ColumnProvider>
         ) : null}
-        {children}
-      </StyledTr>
+        {Children.map(children, (child, index) => {
+          const column = columns[index]
+
+          return (
+            <ColumnProvider
+              maxWidth={column?.maxWidth}
+              minWidth={column?.minWidth}
+              width={column?.width}
+            >
+              {child}
+            </ColumnProvider>
+          )
+        })}
+      </tr>
       {expandable && expandedRowIds[id] ? (
-        <ExpandableWrapper
+        <tr
+          className={tableExpandableWrapper}
           data-expandable-content
           onClick={
             canClickRowToExpand
@@ -252,7 +192,7 @@ export const Row = ({
           }
         >
           <Cell colSpan={childrenLength}>{expandable}</Cell>
-        </ExpandableWrapper>
+        </tr>
       ) : null}
     </>
   )

@@ -15,7 +15,7 @@ jobs:
   upload-fonts:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.14.0"
       - uses: pnpm/action-setup@v4.2.0
-      - uses: actions/setup-node@v5.0.0
+      - uses: actions/setup-node@v6.0.0
         with:
           node-version: 22.20.0
           cache: "pnpm"

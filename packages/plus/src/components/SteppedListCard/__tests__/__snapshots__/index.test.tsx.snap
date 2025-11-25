@@ -2,364 +2,66 @@
 
 exports[`steppedListCard > should hide the toggle button 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-5 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-5[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-5[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-7 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-right: solid #d9dadd 1px;
-}
-
-.emotion-11 {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size:font-family: Inter,sans-serif;
-  font-size: 1rem;
-  font-weight: Regular;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: none;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 400;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #222638;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-18 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-21 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-21:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-21:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-31 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-31:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-31:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-33 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
-
-.emotion-35 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-37 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-39 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
       >
         <h1>
           Header
         </h1>
       </div>
       <div
-        class="emotion-4 emotion-5 emotion-6"
+        class="styles__l0ny240 uv_1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-7 emotion-3"
+          class="uv_x6hyh50 "
+          style="--uv_3mg8xe0: 1fr 3fr; --uv_3mg8xe1: 1fr 3fr; --uv_3mg8xe2: 1fr 3fr; --uv_3mg8xe3: 1fr 3fr; --uv_3mg8xe4: 1fr 3fr; --uv_3mg8xe5: 1fr 3fr;"
         >
           <div
-            class="emotion-9 emotion-10"
+            class="styles__l0ny241 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
           >
             <ul
-              class="emotion-11 emotion-12"
+              class="uv_1g1au380"
             >
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-16 emotion-17"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0d uv_1jy42m0m"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-20 emotion-21 emotion-22"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-14 emotion-15"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-26 emotion-17"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0c uv_1jy42m0h"
                 >
                   2
                 </div>
                 <div
-                  class="emotion-18 emotion-19"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-20 emotion-31 emotion-22"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -368,20 +70,20 @@ exports[`steppedListCard > should hide the toggle button 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="styles__l0ny242 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="styles__l0ny244"
             >
               <h3
-                class="emotion-37 emotion-22"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
               >
                 First step
               </h3>
             </div>
             Description
             <div
-              class="emotion-39 emotion-40"
+              class="styles__l0ny243"
             >
               <img
                 alt="blockStorage"
@@ -399,431 +101,74 @@ exports[`steppedListCard > should hide the toggle button 1`] = `
 
 exports[`steppedListCard > should work with custom hide action 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-4 {
-  font-size: 1.5625rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-6:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-6 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-6:hover,
-.emotion-6:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-9 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-9[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-9[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-11 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-right: solid #d9dadd 1px;
-}
-
-.emotion-15 {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size:font-family: Inter,sans-serif;
-  font-size: 1rem;
-  font-weight: Regular;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: none;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 400;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #222638;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-22 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-25 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-25:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-25:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-35 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-35:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-35:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
-
-.emotion-39 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-41 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
       >
         <h3
-          class="emotion-4 emotion-5"
+          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow11 uv_m4c9ow1b uv_m4c9ow3c"
         >
           Header
         </h3>
         <button
-          class="emotion-6 emotion-7"
+          class="styles__l0ny247 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
           type="button"
         >
           Hide
         </button>
       </div>
       <div
-        class="emotion-8 emotion-9 emotion-10"
+        class="styles__l0ny240 uv_1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-11 emotion-3"
+          class="uv_x6hyh50 "
+          style="--uv_3mg8xe0: 1fr 3fr; --uv_3mg8xe1: 1fr 3fr; --uv_3mg8xe2: 1fr 3fr; --uv_3mg8xe3: 1fr 3fr; --uv_3mg8xe4: 1fr 3fr; --uv_3mg8xe5: 1fr 3fr;"
         >
           <div
-            class="emotion-13 emotion-14"
+            class="styles__l0ny241 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
           >
             <ul
-              class="emotion-15 emotion-16"
+              class="uv_1g1au380"
             >
               <li
-                class="emotion-17 emotion-18 emotion-19"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-20 emotion-21"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0d uv_1jy42m0m"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-22 emotion-23"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-24 emotion-25 emotion-5"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-17 emotion-18 emotion-19"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-30 emotion-21"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0c uv_1jy42m0h"
                 >
                   2
                 </div>
                 <div
-                  class="emotion-22 emotion-23"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-24 emotion-35 emotion-5"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -832,10 +177,10 @@ exports[`steppedListCard > should work with custom hide action 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-37 emotion-38"
+            class="styles__l0ny242 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="styles__l0ny244"
             >
               <h1>
                 First step
@@ -843,7 +188,7 @@ exports[`steppedListCard > should work with custom hide action 1`] = `
             </div>
             Description
             <div
-              class="emotion-41 emotion-42"
+              class="styles__l0ny243"
             >
               <img
                 alt="blockStorage"
@@ -861,385 +206,15 @@ exports[`steppedListCard > should work with custom hide action 1`] = `
 
 exports[`steppedListCard > should work with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-4 {
-  display: inherit;
-}
-
-.emotion-4[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-4[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-6:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-6 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-6:hover,
-.emotion-6:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-9 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-9[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-9[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-11 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-right: solid #d9dadd 1px;
-}
-
-.emotion-15 {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size:font-family: Inter,sans-serif;
-  font-size: 1rem;
-  font-weight: Regular;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: none;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 400;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #222638;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-22 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-25 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-25:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-25:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-35 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-35:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-35:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
-
-.emotion-39 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-41 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
       >
         <h1>
           Header
@@ -1247,12 +222,11 @@ exports[`steppedListCard > should work with default props 1`] = `
         <div
           aria-controls="_r_0_"
           aria-describedby="_r_0_"
-          class="emotion-4 emotion-5"
-          data-container-full-width="false"
+          class="uv_w40vpo9"
           tabindex="0"
         >
           <button
-            class="emotion-6 emotion-7"
+            class="styles__l0ny247 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
             type="button"
           >
             hide button
@@ -1260,50 +234,51 @@ exports[`steppedListCard > should work with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-8 emotion-9 emotion-10"
+        class="styles__l0ny240 uv_1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-11 emotion-3"
+          class="uv_x6hyh50 "
+          style="--uv_3mg8xe0: 1fr 3fr; --uv_3mg8xe1: 1fr 3fr; --uv_3mg8xe2: 1fr 3fr; --uv_3mg8xe3: 1fr 3fr; --uv_3mg8xe4: 1fr 3fr; --uv_3mg8xe5: 1fr 3fr;"
         >
           <div
-            class="emotion-13 emotion-14"
+            class="styles__l0ny241 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
           >
             <ul
-              class="emotion-15 emotion-16"
+              class="uv_1g1au380"
             >
               <li
-                class="emotion-17 emotion-18 emotion-19"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-20 emotion-21"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0d uv_1jy42m0m"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-22 emotion-23"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-24 emotion-25 emotion-26"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-17 emotion-18 emotion-19"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-30 emotion-21"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0c uv_1jy42m0h"
                 >
                   2
                 </div>
                 <div
-                  class="emotion-22 emotion-23"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-24 emotion-35 emotion-26"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -1312,20 +287,20 @@ exports[`steppedListCard > should work with default props 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-37 emotion-38"
+            class="styles__l0ny242 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="styles__l0ny244"
             >
               <h3
-                class="emotion-41 emotion-26"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
               >
                 First step
               </h3>
             </div>
             Description
             <div
-              class="emotion-43 emotion-44"
+              class="styles__l0ny243"
             >
               <img
                 alt="blockStorage"
@@ -1343,811 +318,67 @@ exports[`steppedListCard > should work with default props 1`] = `
 
 exports[`steppedListCard > should work with pre-completed step 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-2 {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-4:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-4 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-4:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-4 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-7 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-7[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-7[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-7 {
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.emotion-7[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-7[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-.emotion-9 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-9 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-right: solid #d9dadd 1px;
-}
-
-.emotion-11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  border-right: solid #d9dadd 1px;
-}
-
-.emotion-13 {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size:font-family: Inter,sans-serif;
-  font-size: 1rem;
-  font-weight: Regular;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: none;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 400;
-}
-
-.emotion-13 {
-  list-style: none;
-  padding-left: 0;
-  text-align: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size:font-family: Inter,sans-serif;
-  font-size: 1rem;
-  font-weight: Regular;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: none;
-  text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  weight: 400;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #222638;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #222638;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-}
-
-.emotion-20 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-20 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin: auto;
-  line-height: 32px;
-  font-size: 24px;
-  min-width: 0;
-}
-
-.emotion-23 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-23:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-23:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-23 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-23:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-23:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #641cb3;
-  background: #f1eefc;
-  border: 1px solid #f1eefc;
-}
-
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #641cb3;
-  background: #f1eefc;
-  border: 1px solid #f1eefc;
-}
-
-.emotion-30 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-30 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-30 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-30 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-35 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-35:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-35:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-35 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-35:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.emotion-35:active {
-  text-decoration-thickness: 2px;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
-
-.emotion-37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-width: 0;
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
-
-.emotion-39 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-39 {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-41 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-41 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-}
-
-.emotion-43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: 100%;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
       >
         <h1>
           Header
         </h1>
         <button
-          class="emotion-4 emotion-5"
+          class="styles__l0ny247 uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
           type="button"
         >
           Hide
         </button>
       </div>
       <div
-        class="emotion-6 emotion-7 emotion-8"
+        class="styles__l0ny240 uv_1p7tz3i1"
         data-disabled="false"
         data-is-active="false"
       >
         <div
-          class="emotion-9 emotion-3"
+          class="uv_x6hyh50 "
+          style="--uv_3mg8xe0: 1fr 3fr; --uv_3mg8xe1: 1fr 3fr; --uv_3mg8xe2: 1fr 3fr; --uv_3mg8xe3: 1fr 3fr; --uv_3mg8xe4: 1fr 3fr; --uv_3mg8xe5: 1fr 3fr;"
         >
           <div
-            class="emotion-11 emotion-12"
+            class="styles__l0ny241 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
           >
             <ul
-              class="emotion-13 emotion-14"
+              class="uv_1g1au380"
             >
               <li
-                class="emotion-15 emotion-16 emotion-17"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-18 emotion-19"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0d uv_1jy42m0m"
                 >
                   1
                 </div>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-22 emotion-23 emotion-24"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step1
                   </h3>
                 </div>
               </li>
               <li
-                class="emotion-15 emotion-16 emotion-17"
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
               >
                 <div
-                  class="emotion-28 emotion-19"
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0c uv_1jy42m0f"
                 >
                   <svg
-                    class="emotion-30 emotion-31"
+                    class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_size_small__dkdfcqa styles_undefined_compound_39__dkdfcq1n"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -2157,10 +388,10 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
                   </svg>
                 </div>
                 <div
-                  class="emotion-20 emotion-21"
+                  class="uv_1g1au384 uv_1g1au385"
                 >
                   <h3
-                    class="emotion-22 emotion-35 emotion-24"
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
                   >
                     step2
                   </h3>
@@ -2169,20 +400,128 @@ exports[`steppedListCard > should work with pre-completed step 1`] = `
             </ul>
           </div>
           <div
-            class="emotion-37 emotion-38"
+            class="styles__l0ny242 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
             <div
-              class="emotion-39 emotion-40"
+              class="styles__l0ny244"
             >
               <h3
-                class="emotion-41 emotion-24"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
               >
                 First step
               </h3>
             </div>
             Description
             <div
-              class="emotion-43 emotion-44"
+              class="styles__l0ny243"
+            >
+              <img
+                alt="blockStorage"
+                src="https://assets.scaleway.com/illustrations/products/blockStorage/block-storage-wire.svg"
+                width="200"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`steppedListCard > should work with step icon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u5d"
+      style="--uv_4k0ekn0: 100%;"
+    >
+      <div
+        class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+      >
+        <h1>
+          Header
+        </h1>
+      </div>
+      <div
+        class="styles__l0ny240 uv_1p7tz3i1"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="uv_x6hyh50 "
+          style="--uv_3mg8xe0: 1fr 3fr; --uv_3mg8xe1: 1fr 3fr; --uv_3mg8xe2: 1fr 3fr; --uv_3mg8xe3: 1fr 3fr; --uv_3mg8xe4: 1fr 3fr; --uv_3mg8xe5: 1fr 3fr;"
+        >
+          <div
+            class="styles__l0ny241 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52up uv_toi52u5d"
+          >
+            <ul
+              class="uv_1g1au380"
+            >
+              <li
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
+              >
+                <div
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0d uv_1jy42m0m"
+                >
+                  <svg
+                    class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_size_small__dkdfcqa styles_undefined_compound_39__dkdfcq1n"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M8 7.333a.67.67 0 0 1-.667-.666.669.669 0 0 1 1.247-.334c.187.32.593.427.913.24a.666.666 0 0 0 .24-.913A2.01 2.01 0 0 0 8 4.66c-1.107 0-2 .893-2 2s.893 2 2 2c.367 0 .667.3.667.667a.669.669 0 0 1-1.247.333.666.666 0 0 0-.913-.24.666.666 0 0 0-.24.914c.346.593.993 1 1.733 1 1.107 0 2-.894 2-2 0-1.107-.893-2-2-2M4.667 6c.366 0 .666-.3.666-.667 0-.366-.3-.666-.666-.666H2v6.666h2.667c.366 0 .666-.3.666-.666S5.033 10 4.667 10H3.333V8.667h1.334c.366 0 .666-.3.666-.667s-.3-.667-.666-.667H3.333V6zm8.473 3.68c.18-.32.587-.44.907-.26v.007c.32.18.44.586.26.906a1.94 1.94 0 0 1-1.694 1.007c-1.1 0-1.946-.92-1.946-2V6.673c0-1.08.846-2 1.946-2 .74 0 1.367.414 1.694 1.007.18.32.06.727-.26.907a.67.67 0 0 1-.907-.26.6.6 0 0 0-.527-.327C12.3 6 12 6.273 12 6.667v2.68c.007.393.3.66.613.66.214 0 .414-.12.527-.327"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="uv_1g1au384 uv_1g1au385"
+                >
+                  <h3
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
+                  >
+                    step 1
+                  </h3>
+                </div>
+              </li>
+              <li
+                class="styles__l0ny246 uv_1g1au381 uv_1g1au383"
+              >
+                <div
+                  class="uv_1jy42m00 uv_1jy42m02 uv_1jy42m0c uv_1jy42m0h"
+                >
+                  2
+                </div>
+                <div
+                  class="uv_1g1au384 uv_1g1au385"
+                >
+                  <h3
+                    class="styles__l0ny245 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
+                  >
+                    step2
+                  </h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="styles__l0ny242 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+          >
+            <div
+              class="styles__l0ny244"
+            >
+              <h3
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
+              >
+                First step
+              </h3>
+            </div>
+            Description
+            <div
+              class="styles__l0ny243"
             >
               <img
                 alt="blockStorage"

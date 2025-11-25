@@ -1,42 +1,42 @@
 import { RayTopArrowIcon } from '@ultraviolet/icons'
-import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Separator } from '..'
 
 describe('separator', () => {
   test(`renders correctly with default props`, () =>
-    shouldMatchEmotionSnapshot(<Separator />))
+    shouldMatchSnapshot(<Separator />))
   test(`renders correctly with custom thickness`, () =>
-    shouldMatchEmotionSnapshot(<Separator thickness={3} />))
+    shouldMatchSnapshot(<Separator thickness={3} />))
   test(`renders correctly vertically`, () =>
-    shouldMatchEmotionSnapshot(<Separator direction="vertical" />))
+    shouldMatchSnapshot(<Separator direction="vertical" />))
   test(`renders correctly horizontally`, () =>
-    shouldMatchEmotionSnapshot(<Separator direction="horizontal" />))
+    shouldMatchSnapshot(<Separator direction="horizontal" />))
 
   test(`renders correctly with custom sentiment`, () =>
-    shouldMatchEmotionSnapshot(<Separator sentiment="primary" />))
+    shouldMatchSnapshot(<Separator sentiment="primary" />))
 
   test(`renders correctly with custom icon`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Separator>
         <RayTopArrowIcon />
       </Separator>,
     ))
 
   test(`renders correctly with custom sentiment and icon`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Separator sentiment="primary">
         <RayTopArrowIcon />
       </Separator>,
     ))
   test(`renders correctly with custom icon vertically`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Separator direction="vertical">
         <RayTopArrowIcon />
       </Separator>,
     ))
   test(`renders correctly with custom icon horizontally`, () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <Separator direction="horizontal">
         <RayTopArrowIcon />
       </Separator>,

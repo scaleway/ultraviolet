@@ -1,19 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { AlertCircleIcon, CloseIcon } from '@ultraviolet/icons'
-import type { FocusEvent, ReactNode } from 'react'
+import type { CSSProperties, FocusEvent, ReactNode } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import {
-  DEFAULT_DATE,
-  DEFAULT_PLACEHOLDER,
-  INPUT_SIZE_HEIGHT,
-  TIME_KEYS,
-} from './constants'
+import { DEFAULT_DATE, DEFAULT_PLACEHOLDER, TIME_KEYS } from './constants'
 import {
   canConcat,
   format,
@@ -24,6 +18,7 @@ import {
   isNumber,
   setValueByType,
 } from './helpers'
+import { timeinput, timeinputWrapper, timeSeparator } from './styles.css'
 
 export type Time = {
   h: string
@@ -31,136 +26,6 @@ export type Time = {
   s: string
   period?: string
 }
-
-const TimeInputWrapper = styled(Stack)<{
-  'data-readonly': boolean
-  'data-disabled': boolean
-  'data-size': 'small' | 'medium' | 'large'
-  'data-error': boolean
-}>`
-  display: flex;
-  cursor: text;
-  padding: ${({ theme }) => theme.space[1]};
-  box-shadow: none;
-  background: ${({ theme }) => theme.colors.neutral.background};
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-
-  &:not([data-disabled="true"]):not([data-readonly="true"]):active {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-  }
-
-  &[data-disabled="false"]:hover,
-  [data-disabled="false"]:focus {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    outline: none;
-  }
-
-  &:focus-within {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-  }
-
-  &[data-size='small'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
-    padding-left: ${({ theme }) => theme.space[1]};
-  }
-
-  &[data-size='medium'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.medium]};
-  }
-
-  &[data-size='large'] {
-    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.large]};
-  }
-
-  &[data-readonly='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-    cursor: default;
-  }
-
-  &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    cursor: not-allowed;
-    user-select: none;
-  }
-
-  &[data-error='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.danger.border};
-
-    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
-      border-color: ${({ theme }) => theme.colors.danger.borderHover};
-      box-shadow: ${({ theme }) => theme.shadows.focusDanger};
-    }
-
-    &:not([data-disabled="true"]):not([data-readonly="true"]):hover {
-      border-color: ${({ theme }) => theme.colors.danger.borderHover};
-    }
-  }
-`
-
-export const Input = styled.input<{
-  'data-size': 'small' | 'medium' | 'large'
-  'data-period'?: boolean
-}>`
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  width: ${({ theme }) => theme.sizing[312]};
-  height: ${({ theme }) => theme.sizing[300]};
-  text-align: center;
-  border-radius: ${({ theme }) => theme.radii.default};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  caret-color: transparent;
-
-  &[data-size='large'] {
-    font-size: ${({ theme }) => theme.typography.body.fontSize};
-  }
-
-  &:not(:disabled):hover {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-
-  &:not(:disabled):active,
-  :not(:disabled):focus{
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-    color:  ${({ theme }) => theme.colors.neutral.text};
-  }
-
-  &:read-only {
-    cursor: default;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    user-select: none;
-  }
-
-  &[data-period="true"] {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-
-    &[data-size="large"] {
-      width: calc(${({ theme }) => `${theme.sizing['312']} + ${theme.sizing['025']}`})
-    }
-
-  }
-
-  ::-moz-selection {
-    background: none;
-  }
-
-  ::selection {
-    background: none;
-  }
-`
-
-const CustomText = styled(Text)`
-padding-inline: ${({ theme }) => theme.space['0.25']};
-`
 
 type TimeInputProps = {
   placeholder?: Time
@@ -184,6 +49,7 @@ type TimeInputProps = {
    * Automatically focus on the element on render. Autofocus is applied to the hour input
    */
   autoFocus?: boolean
+  style?: CSSProperties
 } & (
   | {
       label?: string
@@ -217,6 +83,7 @@ export const TimeInput = ({
   className,
   id,
   autoFocus,
+  style,
   'data-testid': dataTestId,
   placeholder = DEFAULT_PLACEHOLDER,
   'aria-label': ariaLabel,
@@ -370,7 +237,7 @@ export const TimeInput = ({
   }
 
   return (
-    <Stack className={className} gap={0.5}>
+    <Stack className={className} gap={0.5} style={style}>
       {label || labelDescription ? (
         <Label
           htmlFor={id ?? localId}
@@ -381,14 +248,16 @@ export const TimeInput = ({
           {label}
         </Label>
       ) : null}
-      <TimeInputWrapper
+      <Stack
         alignItems="center"
         aria-label={ariaLabel}
         aria-required={required}
-        data-disabled={disabled}
-        data-error={!!error}
-        data-readonly={readOnly}
-        data-size={size}
+        className={timeinputWrapper({
+          disabled,
+          error: !!error,
+          readOnly,
+          size,
+        })}
         data-testid={dataTestId}
         direction="row"
         id={id}
@@ -433,7 +302,7 @@ export const TimeInput = ({
 
             return (
               <Stack direction="row" key={type}>
-                <Input
+                <input
                   aria-label={ariaLabel}
                   aria-valuemax={computeMaxValue()}
                   aria-valuemin={type === 'h' && timeFormat === 12 ? 1 : 0}
@@ -445,8 +314,9 @@ export const TimeInput = ({
                         )
                       : undefined
                   }
-                  autoComplete="false"
+                  autoComplete="off"
                   autoFocus={autoFocus && type === 'h'}
+                  className={timeinput()}
                   data-size={size}
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
@@ -492,27 +362,28 @@ export const TimeInput = ({
                   }
                 />
                 {type === 's' ? null : (
-                  <CustomText
+                  <Text
                     as="span"
+                    className={timeSeparator}
                     prominence="default"
                     sentiment="neutral"
                     variant="body"
                   >
                     :
-                  </CustomText>
+                  </Text>
                 )}
               </Stack>
             )
           })}
           {timeFormat === 12 ? (
-            <Input
+            <input
               aria-label={ariaLabel}
               aria-valuemax={12}
               aria-valuemin={0}
               aria-valuenow={period === 'am' ? 0 : 12}
               aria-valuetext={period}
-              autoComplete="false"
-              data-period
+              autoComplete="off"
+              className={timeinput({ period: true })}
               data-size={size}
               data-testid="am-pm-input"
               disabled={disabled}
@@ -566,7 +437,7 @@ export const TimeInput = ({
             ) : null}
           </Stack>
         ) : null}
-      </TimeInputWrapper>
+      </Stack>
       {helper || error ? (
         <Text
           as="p"

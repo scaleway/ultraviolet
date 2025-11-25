@@ -1,6 +1,6 @@
 'use client'
 
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ButtonHTMLAttributes,
   KeyboardEvent,
@@ -23,81 +23,20 @@ import {
 import { Popup } from '../Popup'
 import { SearchInput } from '../SearchInput'
 import { Stack } from '../Stack'
-import { SIZES } from './constants'
 import { getListItem, searchChildren } from './helpers'
 import { DisclosureContext, useMenu } from './MenuProvider'
+import {
+  heightAvailableSpace,
+  heightMenu,
+  menu,
+  menuContent,
+  menuFooter,
+  menuList,
+  menuSearchInput,
+} from './styles.css'
 import type { MenuProps } from './types'
 
 const SPACE_DISCLOSURE_POPUP = 24 // in px
-
-const StyledPopup = styled(Popup, {
-  shouldForwardProp: prop => !['searchable'].includes(prop),
-})<{ searchable: boolean }>`
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.raised};
-  box-shadow: ${({ theme }) =>
-    `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
-  padding: 0;
-
-  &[data-has-arrow='true'] {
-    &::after {
-      border-color: ${({ theme }) =>
-        theme.colors.other.elevation.background.raised}
-        transparent transparent transparent;
-    }
-  }
-
-  min-width: ${SIZES.small};
-  max-width: ${SIZES.large};
-
-  ${({ searchable }) => (searchable ? `min-width: 20rem` : null)};
-  padding: ${({ theme }) => `${theme.space['0.25']} 0`};
-
-`
-
-const Content = styled(Stack)`
-overflow: auto;
-`
-
-const Footer = styled(Stack)`
-  padding: ${({ theme }) => theme.space['1']};
-`
-
-const MenuList = styled(Stack, {
-  shouldForwardProp: prop => !['height', 'heightAvailableSpace'].includes(prop),
-})<{ height: string; heightAvailableSpace: string }>`
-  overflow-y: auto;
-  overflow-x: hidden;
-  max-height: ${({ theme, height, heightAvailableSpace }) =>
-    `calc(min(${height}, ${heightAvailableSpace}) - ${theme.space['0.5']})`};
-
-  &:after,
-  &:before {
-    border: solid transparent;
-    border-width: 9px;
-    content: ' ';
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &:after {
-    border-color: transparent;
-  }
-  &:before {
-    border-color: transparent;
-  }
-  background-color: ${({ theme }) =>
-    theme.colors.other.elevation.background.raised};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  border-radius: ${({ theme }) => theme.radii.default};
-  position: relative;
-`
-
-const StyledSearchInput = styled(SearchInput)`
-  padding: ${({ theme }) => theme.space['1']};
-`
 
 export const Menu = forwardRef(
   (
@@ -107,7 +46,7 @@ export const Menu = forwardRef(
       children,
       disclosure,
       hasArrow = false,
-      placement = 'bottom',
+      placement = 'auto-bottom',
       className,
       'data-testid': dataTestId,
       maxHeight,
@@ -117,7 +56,8 @@ export const Menu = forwardRef(
       align,
       searchable = false,
       footer,
-      noShrink = false,
+      shrink,
+      style,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -168,10 +108,17 @@ export const Menu = forwardRef(
     )
 
     useEffect(() => {
+      let timeout: ReturnType<typeof setTimeout> | undefined
       if (isVisible && searchable) {
-        setTimeout(() => {
+        timeout = setTimeout(() => {
           searchInputRef.current?.focus()
         }, 50)
+      }
+
+      return () => {
+        if (timeout) {
+          clearTimeout(timeout)
+        }
       }
     }, [isVisible, searchable])
 
@@ -251,7 +198,7 @@ export const Menu = forwardRef(
               if (indexOfCurrent > 0) {
                 listItem[indexOfCurrent - 1].focus()
               } else {
-                listItem[listItem.length - 1].focus()
+                listItem.at(-1)?.focus()
               }
             } else if (event.key === 'ArrowLeft' && triggerMethod === 'hover') {
               disclosureRef.current?.focus()
@@ -263,7 +210,7 @@ export const Menu = forwardRef(
     }
 
     useEffect(() => {
-      if (disclosureRef.current && placement === 'bottom' && !noShrink) {
+      if (disclosureRef.current && placement === 'bottom' && shrink) {
         const disclosureRect = disclosureRef.current.getBoundingClientRect()
         const disclosureBottom = disclosureRect.bottom
         const targetSize = portalTarget.getBoundingClientRect().bottom
@@ -271,20 +218,19 @@ export const Menu = forwardRef(
           targetSize - disclosureBottom - SPACE_DISCLOSURE_POPUP
         setPopupMaxHeight(`${availableSpace}px`)
       }
-    }, [isVisible, portalTarget, disclosureRef, placement, noShrink])
+    }, [isVisible, portalTarget, disclosureRef, placement, shrink])
 
     return (
-      <StyledPopup
+      <Popup
         align={align}
         aria-label={ariaLabel}
-        className={className}
-        data-has-arrow={hasArrow}
+        className={`${className ? `${className} ` : ''}${menu({ arrow: hasArrow, searchable })}`}
         debounceDelay={triggerMethod === 'hover' ? 250 : 0}
         dynamicDomRendering={dynamicDomRendering}
         hasArrow={hasArrow}
         hideOnClickOutside
         id={finalId}
-        maxHeight={maxHeight ?? '30rem'}
+        maxHeight={maxHeight ?? 'fit-content'}
         onClose={() => {
           setIsVisible(false)
           setLocalChild(null)
@@ -298,38 +244,41 @@ export const Menu = forwardRef(
         portalTarget={portalTarget}
         ref={menuRef}
         role="dialog"
-        searchable={searchable}
+        style={style}
         tabIndex={-1}
         text={
-          <MenuList
-            className={className}
+          <Stack
+            className={`${className ? `${className} ` : ''}${menuList}`}
             data-testid={dataTestId}
-            height={maxHeight ?? '30rem'}
-            heightAvailableSpace={popupMaxHeight}
             onKeyDown={handleKeyDown}
             onMouseEnter={() => setShouldBeVisible(true)}
             onMouseLeave={() => setShouldBeVisible(false)}
             role="menu"
+            style={assignInlineVars({
+              [heightMenu]: maxHeight ?? '30rem',
+              [heightAvailableSpace]: popupMaxHeight,
+            })}
           >
-            <Content ref={contentRef}>
+            <Stack className={menuContent} ref={contentRef}>
               {searchable && typeof children !== 'function' ? (
-                <StyledSearchInput
+                <SearchInput
+                  className={menuSearchInput}
                   onSearch={onSearch}
                   ref={searchInputRef}
                   size="small"
                 />
               ) : null}
               {finalChild}
-            </Content>
-            {footer ? <Footer>{footer}</Footer> : null}
-          </MenuList>
+            </Stack>
+            {footer ? <Stack className={menuFooter}>{footer}</Stack> : null}
+          </Stack>
         }
         visible={triggerMethod === 'click' ? isVisible : shouldBeVisible}
       >
         <DisclosureContext.Provider value>
           {finalDisclosure}
         </DisclosureContext.Provider>
-      </StyledPopup>
+      </Popup>
     )
   },
 )

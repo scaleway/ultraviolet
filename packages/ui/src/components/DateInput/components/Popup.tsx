@@ -1,11 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { Popup } from '../../Popup'
 import { POPUP_WIDTH } from '../constants'
-import { styleCalendarContainer } from '../helpers'
+import { dateinputPopup } from './styles.css'
 
 type PopupProps = {
   children: ReactNode
@@ -14,11 +13,6 @@ type PopupProps = {
   refInput: RefObject<HTMLInputElement | null>
   content: ReactNode
 }
-
-const StyledPopup = styled(Popup)`
-  ${({ theme }) => styleCalendarContainer(theme)}
-  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
-`
 
 const handleClickOutside = (
   event: MouseEvent,
@@ -44,7 +38,7 @@ export const CalendarPopup = ({
 }: PopupProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.addEventListener('mousedown', event =>
       handleClickOutside(event, ref, setVisible, refInput),
     )
@@ -56,8 +50,9 @@ export const CalendarPopup = ({
   }, [ref, setVisible, refInput])
 
   return (
-    <StyledPopup
+    <Popup
       align="start"
+      className={dateinputPopup}
       debounceDelay={0}
       disableAnimation
       hasArrow={false}
@@ -70,6 +65,6 @@ export const CalendarPopup = ({
       visible={visible}
     >
       {children}
-    </StyledPopup>
+    </Popup>
   )
 }

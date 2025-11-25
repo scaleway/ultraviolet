@@ -2,217 +2,7 @@
 
 exports[`searchInput > renders correctly without children props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-3 .emotion-8 {
-  border: none;
-}
-
-.emotion-3 .emotion-14 {
-  padding: 0;
-}
-
-.emotion-3 .el3h3g93 {
-  border: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-5>.emotion-14 {
-  color: #3f4250;
-}
-
-.emotion-5>.emotion-14::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::placeholder {
-  color: #727683;
-}
-
-.emotion-5[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-5[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-5[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-5[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14 {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 1rem;
-  border-right: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-7[data-size="small"] {
-  padding: 0.5rem;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: text;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-13 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-13[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-13[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -221,30 +11,31 @@ exports[`searchInput > renders correctly without children props 1`] = `
       <div
         aria-controls="_r_0_"
         aria-describedby="_r_0_"
-        class="emotion-0 emotion-1"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="styles__r3pe3n1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="styles__q3q8041 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -257,7 +48,7 @@ exports[`searchInput > renders correctly without children props 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="styles__q3q8045"
                 data-size="large"
                 id="_r_1_"
                 placeholder="Type something"
@@ -275,217 +66,7 @@ exports[`searchInput > renders correctly without children props 1`] = `
 
 exports[`searchInput > renders with disabled prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-3 .emotion-8 {
-  border: none;
-}
-
-.emotion-3 .emotion-14 {
-  padding: 0;
-}
-
-.emotion-3 .el3h3g93 {
-  border: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-5>.emotion-14 {
-  color: #3f4250;
-}
-
-.emotion-5>.emotion-14::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::placeholder {
-  color: #727683;
-}
-
-.emotion-5[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-5[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-5[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-5[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14 {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 1rem;
-  border-right: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-7[data-size="small"] {
-  padding: 0.5rem;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: text;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-13 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-13[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-13[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -494,30 +75,31 @@ exports[`searchInput > renders with disabled prop 1`] = `
       <div
         aria-controls="_r_3_"
         aria-describedby="_r_3_"
-        class="emotion-0 emotion-1"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="styles__r3pe3n1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="true"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="styles__q3q8041 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_true__vbm0wqe styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_2__vbm0wqm"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -530,7 +112,7 @@ exports[`searchInput > renders with disabled prop 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="styles__q3q8045"
                 data-size="large"
                 disabled=""
                 id="_r_4_"
@@ -549,267 +131,7 @@ exports[`searchInput > renders with disabled prop 1`] = `
 
 exports[`searchInput > renders with error prop 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-3 .emotion-8 {
-  border: none;
-}
-
-.emotion-3 .emotion-14 {
-  padding: 0;
-}
-
-.emotion-3 .el3h3g93 {
-  border: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-5>.emotion-14 {
-  color: #3f4250;
-}
-
-.emotion-5>.emotion-14::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::placeholder {
-  color: #727683;
-}
-
-.emotion-5[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-5[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-5[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-5[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14 {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 1rem;
-  border-right: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-7[data-size="small"] {
-  padding: 0.5rem;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: text;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-13 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-13[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-13[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  padding: 0 1rem;
-}
-
-.emotion-17 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-17 .fillStroke {
-  stroke: #b3144d;
-  fill: none;
-}
-
-.emotion-19 {
-  color: #b3144d;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -818,30 +140,31 @@ exports[`searchInput > renders with error prop 1`] = `
       <div
         aria-controls="_r_h_"
         aria-describedby="_r_h_"
-        class="emotion-0 emotion-1"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="styles__r3pe3n1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="true"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="styles__q3q8041 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -854,7 +177,7 @@ exports[`searchInput > renders with error prop 1`] = `
               </div>
               <input
                 aria-invalid="true"
-                class="emotion-13 emotion-14"
+                class="styles__q3q8045"
                 data-size="large"
                 id="_r_i_"
                 placeholder="Type something"
@@ -862,10 +185,10 @@ exports[`searchInput > renders with error prop 1`] = `
                 value=""
               />
               <div
-                class="emotion-15 emotion-16"
+                class="styles__q3q8042 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <svg
-                  class="emotion-17 emotion-12"
+                  class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_danger__vbm0wq5 styles_size_small__vbm0wqa styles_undefined_compound_36__vbm0wq1k"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -878,7 +201,7 @@ exports[`searchInput > renders with error prop 1`] = `
             </div>
           </div>
           <p
-            class="emotion-19 emotion-20"
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_danger__m4c9owd style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_8__m4c9ow1k style_undefined_compound_72__m4c9ow3c"
           >
             there is an error
           </p>
@@ -891,339 +214,7 @@ exports[`searchInput > renders with error prop 1`] = `
 
 exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-3 .emotion-8 {
-  border: none;
-}
-
-.emotion-3 .emotion-14 {
-  padding: 0;
-}
-
-.emotion-3 .emotion-16 {
-  border: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-5>.emotion-14 {
-  color: #3f4250;
-}
-
-.emotion-5>.emotion-14::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::placeholder {
-  color: #727683;
-}
-
-.emotion-5[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-5[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-5[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-5[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14 {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 1rem;
-  border-right: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-7[data-size="small"] {
-  padding: 0.5rem;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: text;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-13 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-13[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-13[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  cursor: text;
-}
-
-.emotion-19 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-19[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-19[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-19[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-19[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-19[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-19[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-21 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1232,30 +223,31 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
       <div
         aria-controls="_r_b_"
         aria-describedby="_r_b_"
-        class="emotion-0 emotion-1"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="styles__r3pe3n1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="styles__q3q8041 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1268,7 +260,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="styles__q3q8045"
                 data-size="large"
                 id="_r_c_"
                 placeholder="Type something"
@@ -1276,46 +268,46 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
                 value=""
               />
               <div
-                class="emotion-15 emotion-16"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-17 emotion-18"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
                     data-testid="key-Ctrl"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       Ctrl
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
                     data-testid="key-Shift"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       ⇧
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
                     data-testid="key-A"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       A
                     </span>
@@ -1333,339 +325,7 @@ exports[`searchInput > renders with shortcut prop > as array of string 1`] = `
 
 exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: inherit;
-}
-
-.emotion-0[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-0[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-3 .emotion-8 {
-  border: none;
-}
-
-.emotion-3 .emotion-14 {
-  padding: 0;
-}
-
-.emotion-3 .emotion-16 {
-  border: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 3rem;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-5>.emotion-14 {
-  color: #3f4250;
-}
-
-.emotion-5>.emotion-14::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-5>.emotion-14::placeholder {
-  color: #727683;
-}
-
-.emotion-5[data-success='true'] {
-  border-color: #22674e;
-}
-
-.emotion-5[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.emotion-5[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.emotion-5[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14 {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-webkit-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::-moz-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14:-ms-input-placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5[data-disabled='true']>.emotion-14::placeholder {
-  color: #b5b7bd;
-}
-
-.emotion-5:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 1rem;
-  border-right: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-7[data-size="small"] {
-  padding: 0.5rem;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: text;
-}
-
-.emotion-11 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-11 .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.emotion-13 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding-left: 1rem;
-  background: transparent;
-  font-size: 0.875rem;
-}
-
-.emotion-13[data-size='large'] {
-  font-size: 1rem;
-}
-
-.emotion-13[data-size='small'] {
-  padding-left: 0.5rem;
-}
-
-.emotion-15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 0 1rem;
-  border-left: 1px solid;
-  border-color: inherit;
-}
-
-.emotion-17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  cursor: text;
-}
-
-.emotion-19 {
-  cursor: default;
-  background: #f9f9fa;
-  border-radius: 0.25rem;
-  border: 0.5px solid #e9eaeb;
-  min-width: 1.5rem;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-19[data-prominence='strong'] {
-  background-color: #151a2d;
-  border-color: #d9dadd;
-}
-
-.emotion-19[data-prominence='strong'][data-disabled="true"] {
-  background-color: #e9eaeb;
-  border-color: #e9eaeb;
-}
-
-.emotion-19[data-disabled='true'] {
-  background-color: #f3f3f4;
-  border-color: #d9dadd;
-  cursor: not-allowed;
-}
-
-.emotion-19[data-sentiment="primary"] {
-  background-color: #f1eefc;
-  border-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'] {
-  background-color: #8c40ef;
-}
-
-.emotion-19[data-sentiment="primary"][data-prominence='strong'][data-disabled="true"] {
-  background-color: #e5dbfd;
-}
-
-.emotion-19[data-sentiment="primary"][data-disabled='true'] {
-  background: #f6f5fd;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-19[data-size="small"] {
-  min-width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-21 {
-  color: #3f4250;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
@@ -1674,30 +334,31 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
       <div
         aria-controls="_r_6_"
         aria-describedby="_r_6_"
-        class="emotion-0 emotion-1"
+        class="styles__w40vpo9"
         tabindex="0"
       >
         <div
-          class="emotion-2 emotion-3 emotion-4"
+          class="styles__r3pe3n1 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
         >
           <div>
             <div
-              class="emotion-5 emotion-6"
+              class="styles__q3q8049 styles_large__q3q8046"
               data-disabled="false"
               data-error="false"
+              data-has-focus="false"
               data-readonly="false"
               data-success="false"
             >
               <div
-                class="emotion-7 emotion-8"
+                class="styles__q3q8041 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                 data-size="large"
               >
                 <div
-                  class="emotion-9 emotion-10"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
                   data-testid="search-icon"
                 >
                   <svg
-                    class="emotion-11 emotion-12"
+                    class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_34__vbm0wq1i"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1710,7 +371,7 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
               </div>
               <input
                 aria-invalid="false"
-                class="emotion-13 emotion-14"
+                class="styles__q3q8045"
                 data-size="large"
                 id="_r_7_"
                 placeholder="Type something"
@@ -1718,33 +379,33 @@ exports[`searchInput > renders with shortcut prop > as boolean 1`] = `
                 value=""
               />
               <div
-                class="emotion-15 emotion-16"
+                class="styles__q3q8043 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
               >
                 <div
-                  class="emotion-17 emotion-18"
+                  class="styles__r3pe3n2 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
                 >
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
                     data-testid="key-Ctrl"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       Ctrl
                     </span>
                   </kbd>
                   <kbd
-                    class="emotion-19 emotion-20"
+                    class="styles__1g4bp0q0 styles_prominence_default__1g4bp0q2 styles_size_medium__1g4bp0q7 styles_sentiment_neutral__1g4bp0q5"
                     data-prominence="default"
                     data-sentiment="neutral"
                     data-size="medium"
                     data-testid="key-K"
                   >
                     <span
-                      class="emotion-21 emotion-22"
+                      class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
                     >
                       K
                     </span>

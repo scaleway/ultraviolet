@@ -2,598 +2,51 @@
 
 exports[`plans > should work with default props 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
-  height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-4 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10 {
-  font-size: 0.625rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-23 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-27 {
-  color: #d8c5fc;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-31 {
-  color: #d8c5fc;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33 {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.emotion-35 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-43:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-43 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-43:hover,
-.emotion-43:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-51 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-53 {
-  display: inherit;
-}
-
-.emotion-53[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-53[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-55 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-55 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-57 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: start;
-}
-
-.emotion-61 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-73 {
-  cursor: pointer;
-}
-
-.emotion-93 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-93 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-109 {
-  vertical-align: middle;
-  fill: #7ee0bc;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-109 .fillStroke {
-  stroke: #7ee0bc;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
             >
               Features
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-16 emotion-17"
+              class="styles__11wud80e uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-20 emotion-19"
+                  class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                 >
                   <span
-                    class="emotion-9 emotion-23 emotion-5"
+                    class="uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jyd uv_1yf71jy4 uv_1yf71jyf uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3f"
+                    style="--uv_qabug41: nowrap;"
                   >
                     <label
                       for="starter"
@@ -602,19 +55,19 @@ exports[`plans > should work with default props 1`] = `
                     </label>
                   </span>
                   <div
-                    class="emotion-25 emotion-19"
+                    class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   >
                     <span
-                      class="emotion-27 emotion-5"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1a uv_m4c9ow2c"
                     >
                       €0.99
                     </span>
                     <div
-                      class="emotion-29 emotion-19"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                       style="min-height: 16px;"
                     >
                       <span
-                        class="emotion-31 emotion-5"
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a uv_m4c9ow2c"
                       >
                         /month
                       </span>
@@ -622,18 +75,19 @@ exports[`plans > should work with default props 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="styles__11wud80f"
                 >
                   <div
-                    class="emotion-35 emotion-5"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
                   >
                     <div
                       style="display: flex; flex-direction: column; gap: 16px;"
                     >
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                       <p
                         style="padding-inline: 16px;"
@@ -642,18 +96,20 @@ exports[`plans > should work with default props 1`] = `
                       </p>
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <button
-                  class="emotion-43 emotion-44"
+                  class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe5 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                   type="button"
                 >
                   Select plan
@@ -666,28 +122,27 @@ exports[`plans > should work with default props 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Cache
                 </p>
                 <div
                   aria-controls="_r_9_"
                   aria-describedby="_r_9_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -699,23 +154,19 @@ exports[`plans > should work with default props 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €0.0135 per GB additionnal
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               100 GB
             </span>
@@ -723,34 +174,33 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Pipeline
                 </p>
                 <div
                   aria-controls="_r_d_"
                   aria-describedby="_r_d_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-73 emotion-74"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-55 emotion-56"
+                      class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -763,23 +213,19 @@ exports[`plans > should work with default props 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €4.00 per additional
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               1 pipeline
             </span>
@@ -787,17 +233,16 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Custom domaine
                 </p>
@@ -806,16 +251,11 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-93 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_large__dkdfcq8 styles_undefined_compound_26__dkdfcq1a"
               viewBox="0 0 20 20"
             >
               <path
@@ -826,28 +266,27 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   SSL Certificate
                 </p>
                 <div
                   aria-controls="_r_i_"
                   aria-describedby="_r_i_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -861,16 +300,11 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-109 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -883,17 +317,16 @@ exports[`plans > should work with default props 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Egress fees
                 </p>
@@ -902,16 +335,11 @@ exports[`plans > should work with default props 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-109 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -930,1155 +358,51 @@ exports[`plans > should work with default props 1`] = `
 
 exports[`plans > should work with group 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
-  height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
-}
-
-.emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
-  height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-4 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10 {
-  font-size: 0.625rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-10 {
-  font-size: 0.625rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-23 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-.emotion-23 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-27 {
-  color: #d8c5fc;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-27 {
-  color: #d8c5fc;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-31 {
-  color: #d8c5fc;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-31 {
-  color: #d8c5fc;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33 {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.emotion-33 {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.emotion-35 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-35 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-37 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-43:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-43 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-43:hover,
-.emotion-43:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-43:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-43 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-43:hover,
-.emotion-43:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-51 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-51 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-53 {
-  display: inherit;
-}
-
-.emotion-53[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-53[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-53 {
-  display: inherit;
-}
-
-.emotion-53[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-53[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-55 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-55 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-55 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-55 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-57 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: start;
-}
-
-.emotion-57 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: start;
-}
-
-.emotion-61 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-61 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-68 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.emotion-82 {
-  cursor: pointer;
-}
-
-.emotion-82 {
-  cursor: pointer;
-}
-
-.emotion-102 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-102 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-102 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-102 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-118 {
-  vertical-align: middle;
-  fill: #7ee0bc;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-118 .fillStroke {
-  stroke: #7ee0bc;
-  fill: none;
-}
-
-.emotion-118 {
-  vertical-align: middle;
-  fill: #7ee0bc;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-118 .fillStroke {
-  stroke: #7ee0bc;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
             >
               Features
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-16 emotion-17"
+              class="styles__11wud80e uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-20 emotion-19"
+                  class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                 >
                   <span
-                    class="emotion-9 emotion-23 emotion-5"
+                    class="uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jyd uv_1yf71jy4 uv_1yf71jyf uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3f"
+                    style="--uv_qabug41: nowrap;"
                   >
                     <label
                       for="starter"
@@ -2087,19 +411,19 @@ exports[`plans > should work with group 1`] = `
                     </label>
                   </span>
                   <div
-                    class="emotion-25 emotion-19"
+                    class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   >
                     <span
-                      class="emotion-27 emotion-5"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1a uv_m4c9ow2c"
                     >
                       €0.99
                     </span>
                     <div
-                      class="emotion-29 emotion-19"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                       style="min-height: 16px;"
                     >
                       <span
-                        class="emotion-31 emotion-5"
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a uv_m4c9ow2c"
                       >
                         /month
                       </span>
@@ -2107,18 +431,19 @@ exports[`plans > should work with group 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="styles__11wud80f"
                 >
                   <div
-                    class="emotion-35 emotion-5"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
                   >
                     <div
                       style="display: flex; flex-direction: column; gap: 16px;"
                     >
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                       <p
                         style="padding-inline: 16px;"
@@ -2127,18 +452,20 @@ exports[`plans > should work with group 1`] = `
                       </p>
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <button
-                  class="emotion-43 emotion-44"
+                  class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe5 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                   type="button"
                 >
                   Select plan
@@ -2151,28 +478,27 @@ exports[`plans > should work with group 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Cache
                 </p>
                 <div
                   aria-controls="_r_4d_"
                   aria-describedby="_r_4d_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -2184,82 +510,73 @@ exports[`plans > should work with group 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €0.0135 per GB additionnal
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               100 GB
             </span>
           </td>
         </tr>
         <tr
-          data-hide="false"
+          class=""
         >
           <td
-            class="emotion-2 emotion-3"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-49 emotion-19"
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
               <p
-                class="emotion-67 emotion-68 emotion-5"
+                class="styles__11wud80c uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owp uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
               >
                 group
               </p>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           />
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Pipeline
                 </p>
                 <div
                   aria-controls="_r_4i_"
                   aria-describedby="_r_4i_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-82 emotion-83"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-55 emotion-56"
+                      class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -2272,23 +589,19 @@ exports[`plans > should work with group 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €4.00 per additional
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               1 pipeline
             </span>
@@ -2296,17 +609,16 @@ exports[`plans > should work with group 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Custom domaine
                 </p>
@@ -2315,16 +627,11 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-102 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_large__dkdfcq8 styles_undefined_compound_26__dkdfcq1a"
               viewBox="0 0 20 20"
             >
               <path
@@ -2335,28 +642,27 @@ exports[`plans > should work with group 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   SSL Certificate
                 </p>
                 <div
                   aria-controls="_r_4n_"
                   aria-describedby="_r_4n_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -2370,16 +676,11 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-118 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -2392,17 +693,16 @@ exports[`plans > should work with group 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Egress fees
                 </p>
@@ -2411,16 +711,11 @@ exports[`plans > should work with group 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-118 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -2439,581 +734,45 @@ exports[`plans > should work with group 1`] = `
 
 exports[`plans > should work with hideFeatureText 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
-  height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-8 {
-  font-size: 0.625rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-21 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-25 {
-  color: #d8c5fc;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-29 {
-  color: #d8c5fc;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-31 {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.emotion-33 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-35 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-41 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-41:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-41:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-41 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-41:hover,
-.emotion-41:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-47 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-49 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-51 {
-  display: inherit;
-}
-
-.emotion-51[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-51[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-53 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-53 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-55 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: start;
-}
-
-.emotion-59 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-71 {
-  cursor: pointer;
-}
-
-.emotion-91 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-91 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-107 {
-  vertical-align: middle;
-  fill: #7ee0bc;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-107 .fillStroke {
-  stroke: #7ee0bc;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           />
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-6 emotion-7 emotion-8 emotion-9"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-6 emotion-7 emotion-8 emotion-9"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-14 emotion-15"
+              class="styles__11wud80e uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
-                class="emotion-16 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-18 emotion-17"
+                  class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                 >
                   <span
-                    class="emotion-7 emotion-21 emotion-9"
+                    class="uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jyd uv_1yf71jy4 uv_1yf71jyf uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3f"
+                    style="--uv_qabug41: nowrap;"
                   >
                     <label
                       for="starter"
@@ -3022,19 +781,19 @@ exports[`plans > should work with hideFeatureText 1`] = `
                     </label>
                   </span>
                   <div
-                    class="emotion-23 emotion-17"
+                    class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   >
                     <span
-                      class="emotion-25 emotion-9"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1a uv_m4c9ow2c"
                     >
                       €0.99
                     </span>
                     <div
-                      class="emotion-27 emotion-17"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                       style="min-height: 16px;"
                     >
                       <span
-                        class="emotion-29 emotion-9"
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a uv_m4c9ow2c"
                       >
                         /month
                       </span>
@@ -3042,18 +801,19 @@ exports[`plans > should work with hideFeatureText 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-31 emotion-32"
+                  class="styles__11wud80f"
                 >
                   <div
-                    class="emotion-33 emotion-9"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
                   >
                     <div
                       style="display: flex; flex-direction: column; gap: 16px;"
                     >
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-35 emotion-36"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                       <p
                         style="padding-inline: 16px;"
@@ -3062,18 +822,20 @@ exports[`plans > should work with hideFeatureText 1`] = `
                       </p>
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-35 emotion-36"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="emotion-16 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <button
-                  class="emotion-41 emotion-42"
+                  class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe5 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                   type="button"
                 >
                   Select plan
@@ -3086,28 +848,27 @@ exports[`plans > should work with hideFeatureText 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-27 emotion-17"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-47 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-49 emotion-9"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Cache
                 </p>
                 <div
                   aria-controls="_r_1g_"
                   aria-describedby="_r_1g_"
-                  class="emotion-51 emotion-52"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-53 emotion-54"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3119,23 +880,19 @@ exports[`plans > should work with hideFeatureText 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-55 emotion-9"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €0.0135 per GB additionnal
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
-              class="emotion-59 emotion-9"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               100 GB
             </span>
@@ -3143,34 +900,33 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-27 emotion-17"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-47 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-49 emotion-9"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Pipeline
                 </p>
                 <div
                   aria-controls="_r_1k_"
                   aria-describedby="_r_1k_"
-                  class="emotion-51 emotion-52"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-71 emotion-72"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-53 emotion-54"
+                      class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -3183,23 +939,19 @@ exports[`plans > should work with hideFeatureText 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-55 emotion-9"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €4.00 per additional
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
-              class="emotion-59 emotion-9"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               1 pipeline
             </span>
@@ -3207,17 +959,16 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-27 emotion-17"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-47 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-49 emotion-9"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Custom domaine
                 </p>
@@ -3226,16 +977,11 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-91 emotion-54"
+              class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_large__dkdfcq8 styles_undefined_compound_26__dkdfcq1a"
               viewBox="0 0 20 20"
             >
               <path
@@ -3246,28 +992,27 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-27 emotion-17"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-47 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-49 emotion-9"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   SSL Certificate
                 </p>
                 <div
                   aria-controls="_r_1p_"
                   aria-describedby="_r_1p_"
-                  class="emotion-51 emotion-52"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-53 emotion-54"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -3281,16 +1026,11 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-107 emotion-54"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -3303,17 +1043,16 @@ exports[`plans > should work with hideFeatureText 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-27 emotion-17"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-47 emotion-17"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-49 emotion-9"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Egress fees
                 </p>
@@ -3322,16 +1061,11 @@ exports[`plans > should work with hideFeatureText 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-107 emotion-54"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -3350,598 +1084,51 @@ exports[`plans > should work with hideFeatureText 1`] = `
 
 exports[`plans > should work with hideLabels 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
-  height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-4 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10 {
-  font-size: 0.625rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-23 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-27 {
-  color: #d8c5fc;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-31 {
-  color: #d8c5fc;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33 {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.emotion-35 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-43:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-43 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-43:hover,
-.emotion-43:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-51 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-53 {
-  display: inherit;
-}
-
-.emotion-53[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-53[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-55 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-55 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-57 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: start;
-}
-
-.emotion-61 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-73 {
-  cursor: pointer;
-}
-
-.emotion-93 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-93 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-109 {
-  vertical-align: middle;
-  fill: #7ee0bc;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-109 .fillStroke {
-  stroke: #7ee0bc;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="true"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
             >
               Features
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-16 emotion-17"
+              class="styles__11wud80e uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-20 emotion-19"
+                  class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                 >
                   <span
-                    class="emotion-9 emotion-23 emotion-5"
+                    class="uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jyd uv_1yf71jy4 uv_1yf71jyf uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3f"
+                    style="--uv_qabug41: nowrap;"
                   >
                     <label
                       for="starter"
@@ -3950,19 +1137,19 @@ exports[`plans > should work with hideLabels 1`] = `
                     </label>
                   </span>
                   <div
-                    class="emotion-25 emotion-19"
+                    class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   >
                     <span
-                      class="emotion-27 emotion-5"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1a uv_m4c9ow2c"
                     >
                       €0.99
                     </span>
                     <div
-                      class="emotion-29 emotion-19"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                       style="min-height: 16px;"
                     >
                       <span
-                        class="emotion-31 emotion-5"
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a uv_m4c9ow2c"
                       >
                         /month
                       </span>
@@ -3970,18 +1157,19 @@ exports[`plans > should work with hideLabels 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="styles__11wud80f"
                 >
                   <div
-                    class="emotion-35 emotion-5"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
                   >
                     <div
                       style="display: flex; flex-direction: column; gap: 16px;"
                     >
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                       <p
                         style="padding-inline: 16px;"
@@ -3990,18 +1178,20 @@ exports[`plans > should work with hideLabels 1`] = `
                       </p>
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <button
-                  class="emotion-43 emotion-44"
+                  class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe5 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                   type="button"
                 >
                   Select plan
@@ -4014,28 +1204,27 @@ exports[`plans > should work with hideLabels 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Cache
                 </p>
                 <div
                   aria-controls="_r_t_"
                   aria-describedby="_r_t_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4047,23 +1236,19 @@ exports[`plans > should work with hideLabels 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €0.0135 per GB additionnal
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-gb"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               100 GB
             </span>
@@ -4071,34 +1256,33 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Pipeline
                 </p>
                 <div
                   aria-controls="_r_11_"
                   aria-describedby="_r_11_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-73 emotion-74"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-55 emotion-56"
+                      class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -4111,23 +1295,19 @@ exports[`plans > should work with hideLabels 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €4.00 per additional
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-pipeline"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               1 pipeline
             </span>
@@ -4135,17 +1315,16 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Custom domaine
                 </p>
@@ -4154,16 +1333,11 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-93 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_large__dkdfcq8 styles_undefined_compound_26__dkdfcq1a"
               viewBox="0 0 20 20"
             >
               <path
@@ -4174,28 +1348,27 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   SSL Certificate
                 </p>
                 <div
                   aria-controls="_r_16_"
                   aria-describedby="_r_16_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4209,16 +1382,11 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-109 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -4231,17 +1399,16 @@ exports[`plans > should work with hideLabels 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="true"
+            class="styles__11wud803 styles_hide_true__11wud805"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Egress fees
                 </p>
@@ -4250,16 +1417,11 @@ exports[`plans > should work with hideLabels 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804 styles_hideLabels_true__11wud807"
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-109 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -4280,598 +1442,51 @@ exports[`plans > should work with popover as hint 1`] = `[Function]`;
 
 exports[`plans > should work with value 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0;
-  margin: 0 -1rem;
-  width: calc(100% + 2rem);
-  height: 1px;
-}
-
-.emotion-0 thead tr {
-  height: 100%;
-}
-
-.emotion-0 td {
-  outline: none;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.emotion-0 td[data-selectable='true'] {
-  cursor: pointer;
-}
-
-.emotion-0[data-hide-labels="true"] td {
-  text-align: start;
-  padding-left: 1.5rem;
-}
-
-.emotion-0 td:first-child {
-  text-align: left;
-}
-
-.emotion-0 thead td {
-  height: 100%;
-  vertical-align: top;
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-}
-
-.emotion-0 thead td:first-child {
-  vertical-align: bottom;
-}
-
-.emotion-0 thead td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-width: 1px 1px 0 1px;
-}
-
-.emotion-0 thead td:not(:first-child)[data-hover='true'],
-.emotion-0 thead td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 thead td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 2px 2px 0 2px;
-}
-
-.emotion-0 tbody td[data-space-after='true'] {
-  padding-bottom: 3rem;
-}
-
-.emotion-0 tbody td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-width: 0px 1px;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px;
-}
-
-.emotion-0 tbody tr:last-child td {
-  padding-bottom: 2rem;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child) {
-  border: 1px solid #d9dadd;
-  border-radius: 0 0 0.5rem 0.5rem;
-  border-width: 0 1px 1px 1px;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-hover='true'],
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-active='true'] {
-  border-color: #8c40ef;
-}
-
-.emotion-0 tbody tr:last-child td:not(:first-child)[data-focus='true'] {
-  border-color: blue;
-  border-width: 0px 2px 2px 2px;
-}
-
-.emotion-0 tr[data-hide="true"] {
-  display: none;
-}
-
-.emotion-2 {
-  background-color: transparent;
-}
-
-.emotion-2[data-disabled="true"] {
-  background-color: #f3f3f4;
-}
-
-.emotion-2[data-hide="true"] {
-  display: none;
-}
-
-.emotion-4 {
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-10 {
-  font-size: 0.625rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.5rem;
-  gap: 0.25rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1rem;
-  text-transform: uppercase;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(50%);
-  -moz-transform: translateX(-50%) translateY(50%);
-  -ms-transform: translateX(-50%) translateY(50%);
-  transform: translateX(-50%) translateY(50%);
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.emotion-18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.emotion-23 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 1rem;
-  padding: 0 0.75rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  text-transform: uppercase;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-.emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-27 {
-  color: #d8c5fc;
-  font-size: 1.3125rem;
-  font-family: Space Grotesk,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 2rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-31 {
-  color: #d8c5fc;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-33 {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.emotion-35 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-37 {
-  margin: 0;
-  border: 0;
-  width: auto;
-  height: 1px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e9eaeb;
-}
-
-.emotion-43 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2.5rem;
-  padding: 0 0.75rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-43:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-43:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-43 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-43:hover,
-.emotion-43:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-.emotion-49 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.emotion-51 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-53 {
-  display: inherit;
-}
-
-.emotion-53[data-container-full-height="true"] {
-  height: 100%;
-}
-
-.emotion-53[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-55 {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-55 .fillStroke {
-  stroke: #727683;
-  fill: none;
-}
-
-.emotion-57 {
-  color: #727683;
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: start;
-}
-
-.emotion-61 {
-  color: #b5b7bd;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-73 {
-  cursor: pointer;
-}
-
-.emotion-93 {
-  vertical-align: middle;
-  fill: #b5b7bd;
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-}
-
-.emotion-93 .fillStroke {
-  stroke: #b5b7bd;
-  fill: none;
-}
-
-.emotion-109 {
-  vertical-align: middle;
-  fill: #7ee0bc;
-  height: 1.25rem;
-  width: 1.25rem;
-  min-width: 1.25rem;
-  min-height: 1.25rem;
-}
-
-.emotion-109 .fillStroke {
-  stroke: #7ee0bc;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <table
-      class="emotion-0 emotion-1"
-      data-hide-labels="false"
+      class="styles__11wud801"
     >
       <thead>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow3c"
             >
               Features
             </span>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
           >
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               Out of stock
             </span>
             <span
-              class="emotion-8 emotion-9 emotion-10 emotion-5"
+              class="styles__11wud802 uv_1yf71jy0 uv_1yf71jy1 uv_1yf71jyd uv_1yf71jya uv_1yf71jym uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owt uv_m4c9ow1b uv_m4c9ow3c"
+              style="--uv_qabug41: nowrap;"
             >
               quotas
             </span>
             <div
-              class="emotion-16 emotion-17"
+              class="styles__11wud80e uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52ud uv_toi52u6p"
             >
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <div
-                  class="emotion-20 emotion-19"
+                  class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
                 >
                   <span
-                    class="emotion-9 emotion-23 emotion-5"
+                    class="uv_1yf71jy0 uv_1yf71jy2 uv_1yf71jyd uv_1yf71jy4 uv_1yf71jyf uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3f"
+                    style="--uv_qabug41: nowrap;"
                   >
                     <label
                       for="starter"
@@ -4880,19 +1495,19 @@ exports[`plans > should work with value 1`] = `
                     </label>
                   </span>
                   <div
-                    class="emotion-25 emotion-19"
+                    class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                   >
                     <span
-                      class="emotion-27 emotion-5"
+                      class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ow16 uv_m4c9ow1a uv_m4c9ow2c"
                     >
                       €0.99
                     </span>
                     <div
-                      class="emotion-29 emotion-19"
+                      class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
                       style="min-height: 16px;"
                     >
                       <span
-                        class="emotion-31 emotion-5"
+                        class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a uv_m4c9ow2c"
                       >
                         /month
                       </span>
@@ -4900,18 +1515,19 @@ exports[`plans > should work with value 1`] = `
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="styles__11wud80f"
                 >
                   <div
-                    class="emotion-35 emotion-5"
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9ows uv_m4c9ow1a"
                   >
                     <div
                       style="display: flex; flex-direction: column; gap: 16px;"
                     >
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                       <p
                         style="padding-inline: 16px;"
@@ -4920,18 +1536,20 @@ exports[`plans > should work with value 1`] = `
                       </p>
                       <hr
                         aria-orientation="horizontal"
-                        class="emotion-37 emotion-38"
+                        class="uv_bu43fbb uv_bu43fbc uv_bu43fbi"
                         role="separator"
+                        style="--uv_bu43fb0: 1px;"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="emotion-18 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+                style="--uv_4k0ekn0: 100%;"
               >
                 <button
-                  class="emotion-43 emotion-44"
+                  class="uv_e1wcoe0 uv_e1wcoe2 uv_e1wcoe5 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
                   type="button"
                 >
                   Select plan
@@ -4944,28 +1562,27 @@ exports[`plans > should work with value 1`] = `
       <tbody>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Cache
                 </p>
                 <div
                   aria-controls="_r_24_"
                   aria-describedby="_r_24_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -4977,23 +1594,19 @@ exports[`plans > should work with value 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €0.0135 per GB additionnal
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-gb"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               100 GB
             </span>
@@ -5001,34 +1614,33 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Pipeline
                 </p>
                 <div
                   aria-controls="_r_28_"
                   aria-describedby="_r_28_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="-1"
                 >
                   <div
-                    class="emotion-73 emotion-74"
+                    class="styles__11wud800"
                     data-testid="hint-popover"
                     role="button"
                     tabindex="0"
                   >
                     <svg
-                      class="emotion-55 emotion-56"
+                      class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -5041,23 +1653,19 @@ exports[`plans > should work with value 1`] = `
                 </div>
               </div>
               <div
-                class="emotion-57 emotion-5"
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9ows uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                style="--uv_qabug40: start;"
               >
                 €4.00 per additional
               </div>
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-pipeline"
           >
             <span
-              class="emotion-61 emotion-5"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1a uv_m4c9ow30"
             >
               1 pipeline
             </span>
@@ -5065,17 +1673,16 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Custom domaine
                 </p>
@@ -5084,16 +1691,11 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-domain"
           >
             <svg
-              class="emotion-93 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_large__dkdfcq8 styles_undefined_compound_26__dkdfcq1a"
               viewBox="0 0 20 20"
             >
               <path
@@ -5104,28 +1706,27 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   SSL Certificate
                 </p>
                 <div
                   aria-controls="_r_2d_"
                   aria-describedby="_r_2d_"
-                  class="emotion-53 emotion-54"
+                  class="uv_w40vpo9"
                   tabindex="0"
                 >
                   <svg
-                    class="emotion-55 emotion-56"
+                    class="styles__dkdfcq0 styles_prominence_weak__dkdfcqj styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_58__dkdfcq26"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -5139,16 +1740,11 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-ssl"
           >
             <svg
-              class="emotion-109 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path
@@ -5161,17 +1757,16 @@ exports[`plans > should work with value 1`] = `
         </tr>
         <tr>
           <td
-            class="emotion-2 emotion-3"
-            data-hide="false"
+            class="styles__11wud803"
           >
             <div
-              class="emotion-29 emotion-19"
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
             >
               <div
-                class="emotion-49 emotion-19"
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
               >
                 <p
-                  class="emotion-51 emotion-5"
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   Egress fees
                 </p>
@@ -5180,16 +1775,11 @@ exports[`plans > should work with value 1`] = `
             </div>
           </td>
           <td
-            class="emotion-2 emotion-3"
-            data-active="false"
-            data-disabled="true"
-            data-focus="false"
-            data-hover="false"
-            data-selectable="false"
+            class="styles__11wud803 styles_disabled_true__11wud804"
             data-testid="starter-fees"
           >
             <svg
-              class="emotion-109 emotion-56"
+              class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_success__dkdfcq4 styles_size_medium__dkdfcq9 styles_undefined_compound_3__dkdfcqn"
               viewBox="0 0 20 20"
             >
               <path

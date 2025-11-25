@@ -1,42 +1,15 @@
 'use client'
 
-import { css, useTheme } from '@emotion/react'
-import styled from '@emotion/styled'
+import { useTheme } from '@ultraviolet/themes'
+import type { CSSProperties } from 'react'
 import type { ExtendedColor } from '../../theme'
+import { SIZES } from './constants'
+import { circle, loader, loaderCircleAnimation } from './styles.css'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100
 const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
 const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
-
-export const SIZES = {
-  large: '300',
-  medium: '250',
-  small: '200',
-  xlarge: '400',
-  xsmall: '150',
-  xxlarge: '700',
-} as const
-
-const StyledSvg = styled('svg', {
-  shouldForwardProp: prop => !['active'].includes(prop),
-})<{ active: boolean }>`
-  ${({ active }) =>
-    active
-      ? `
-        animation: spin 0.75s linear infinite;
-
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `
-      : ''}
-`
 
 type LoaderProps = {
   active?: boolean
@@ -47,11 +20,8 @@ type LoaderProps = {
    * Label should be defined for accessibility, to indicate what is loading
    */
   label?: string
+  style?: CSSProperties
 }
-
-export const StyledCircle = styled.circle`
-stroke: ${({ theme }) => theme.colors.neutral.border};
-`
 
 /**
  * Loader is a circular progress indicator that can be used to indicate that an action is being performed.
@@ -62,6 +32,7 @@ export const Loader = ({
   sentiment = 'primary',
   active = false,
   label = 'Loading',
+  style,
 }: LoaderProps) => {
   const theme = useTheme()
 
@@ -70,21 +41,23 @@ export const Loader = ({
   const circleDiameter = Math.PI * 2 * circleRadius
 
   return (
-    <StyledSvg
-      active={active}
+    <svg
       aria-label={label}
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
+      className={active ? loader : undefined}
       role="progressbar"
       style={{
         height: theme.sizing[SIZES[size]],
         width: theme.sizing[SIZES[size]],
+        ...style,
       }}
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
     >
-      <StyledCircle
+      <circle
+        className={circle}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"
@@ -92,10 +65,7 @@ export const Loader = ({
         strokeWidth={16}
       />
       <circle
-        // oxlint-disable-next-line no-unknown-property
-        css={css`
-          transition: stroke-dashoffset 0.5s ease 0s;
-        `}
+        className={loaderCircleAnimation}
         cx={HALF_VIEWBOX_WIDTH}
         cy={HALF_VIEWBOX_HEIGHT}
         fill="none"
@@ -110,6 +80,6 @@ export const Loader = ({
         strokeLinecap="round"
         strokeWidth={16}
       />
-    </StyledSvg>
+    </svg>
   )
 }

@@ -1,12 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
 import {
   CheckCircleOutlineIcon,
   CloseCircleOutlineIcon,
 } from '@ultraviolet/icons'
+import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { passwordCheckContainer } from './styles.css'
 
 type Rule = {
   name: string
@@ -22,13 +23,8 @@ type PasswordCheckProps = {
   rules: Rule[]
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
 }
-
-const PasswordCheckContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: ${({ theme }) => theme.space['1']};
-`
 
 /**
  * PasswordCheck is a component that display a list of password rules with a check or a cross depending on the validity
@@ -38,8 +34,13 @@ export const PasswordCheck = ({
   rules,
   className,
   'data-testid': dataTestId,
+  style,
 }: PasswordCheckProps) => (
-  <PasswordCheckContainer className={className} data-testid={dataTestId}>
+  <div
+    className={`${className ? `${className} ` : ''}${passwordCheckContainer}`}
+    data-testid={dataTestId}
+    style={style}
+  >
     {rules.map(rule => (
       <Stack alignItems="center" direction="row" gap={1} key={rule.name}>
         {rule.valid ? (
@@ -61,5 +62,5 @@ export const PasswordCheck = ({
         </Text>
       </Stack>
     ))}
-  </PasswordCheckContainer>
+  </div>
 )

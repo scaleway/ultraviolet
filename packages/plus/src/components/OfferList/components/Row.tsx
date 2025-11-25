@@ -1,7 +1,7 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
+import { theme } from '@ultraviolet/themes'
 import {
   Badge as BadgeUV,
   Button,
@@ -10,77 +10,24 @@ import {
   Radio,
   Tooltip,
 } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useCallback, useMemo, useState } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
+import {
+  expandablePadding as expandablePaddingVar,
+  offerListBadge,
+  offerListBadgeContainer,
+  offerListBanner,
+  offerListNoPaddingCell,
+  offerListRowBanner,
+  offerListRowExpandable,
+  offerListRowSelectableContainer,
+  offerListRowSelected,
+  offerListRowSelectedExpandable,
+  offerListRowSelectedNotExpandable,
+} from '../styles.css'
 import { Banner } from './Banner'
-
-const StyledBadge = styled(BadgeUV)`
-  position: absolute;
-  left: ${({ theme }) => theme.space[1]};
-  transform: translateY(-150%);
-  top: 0;
-  left: ${({ theme }) => theme.space[3]};
-`
-
-const BadgeContainer = styled.div`
-position: absolute;
-top: ${({ theme }) => theme.space[2]};
-`
-
-const NoPaddingCell = styled(List.Cell)`
-  padding: 0;
-  width: 32px;
-
-  &:first-of-type {
-    padding-left: ${({ theme }) => theme.space['2']};
-  }
-
-`
-const StyledRow = styled(List.Row, {
-  shouldForwardProp: prop => !['selected', 'hasBanner'].includes(prop),
-})<{ selected: boolean; hasBanner: boolean }>`
-    ${({ theme, selected }) =>
-      selected
-        ? `td, td:first-child, td:last-child {
-      border-color: ${theme.colors.primary.border};
-    }`
-        : null}
-
-    &[aria-expanded='true'] {
-      ${({ theme, selected }) =>
-        selected
-          ? `
-          td, td:first-child, td:last-child, & + tr td {
-            border-color: ${theme.colors.primary.border};
-          }
-    `
-          : null}
-    }
-
-    ${({ hasBanner }) =>
-      hasBanner
-        ? `td, td:first-child {
-        border-bottom-left-radius: 0;
-        }
-
-        td, td:last-child {
-          border-bottom-right-radius: 0;
-        }
-    `
-        : null}
-`
-
-const SelectableContainer = styled.div`
-  display: flex;
-`
-
-const CustomExpandable = styled('div', {
-  shouldForwardProp: prop => !['padding'].includes(prop),
-})<{ padding?: ComponentProps<typeof List.Row>['expandablePadding'] }>`
-    padding: ${({ theme, padding }) =>
-      padding ? theme.space[padding] : theme.space['2']};
-`
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {
@@ -91,8 +38,11 @@ type RowProps = ComponentProps<typeof List.Row> & {
   badge?: {
     text: string
     sentiment?: ComponentProps<typeof BadgeUV>['sentiment']
+    prominence?: ComponentProps<typeof BadgeUV>['prominence']
   }
+  style?: CSSProperties
 }
+
 export const Row = ({
   children,
   disabled,
@@ -141,9 +91,17 @@ export const Row = ({
     if (expandable && !loading && expandedRowIds[id] && banner) {
       return (
         <>
-          <CustomExpandable padding={expandablePadding}>
+          <div
+            className={offerListRowExpandable}
+            style={assignInlineVars({
+              [expandablePaddingVar]:
+                theme.space[
+                  (expandablePadding ?? 2) as keyof typeof theme.space
+                ],
+            })}
+          >
             {expandableContent}
-          </CustomExpandable>
+          </div>
           <Banner disabled={disabled} sentiment={banner.sentiment}>
             {banner.text}
           </Banner>
@@ -174,41 +132,42 @@ export const Row = ({
     return checkboxSelectedRows.includes(offerName)
   }, [offerName, checkboxSelectedRows, radioSelectedRow, selectable])
 
+  const isSelected =
+    selectable === 'radio'
+      ? radioSelectedRow === offerName
+      : checkboxSelectedRows.includes(offerName)
+
   return (
     <>
-      <StyledRow
-        className={className}
+      <List.Row
+        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''} ${expandable ? offerListRowSelectedExpandable : offerListRowSelectedNotExpandable}`}
         data-dragging={dataDragging}
         data-testid={dataTestId}
         disabled={disabled}
         expandable={computedExpandableContent}
         expandablePadding={banner ? '0' : undefined}
         expanded={expanded ?? expandedRowIds[id]}
-        hasBanner={!!banner}
         highlightAnimation={highlightAnimation}
         id={id}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        selected={
-          selectable === 'radio'
-            ? radioSelectedRow === offerName
-            : checkboxSelectedRows.includes(offerName)
-        }
         style={style}
       >
-        <NoPaddingCell>
+        <List.Cell className={offerListNoPaddingCell}>
           {badge ? (
-            <BadgeContainer>
-              <StyledBadge
+            <div className={offerListBadgeContainer}>
+              <BadgeUV
+                className={offerListBadge}
                 disabled={disabled}
+                prominence={badge.prominence}
                 sentiment={badge.sentiment}
                 size="small"
               >
                 {badge.text}
-              </StyledBadge>
-            </BadgeContainer>
+              </BadgeUV>
+            </div>
           ) : null}
-          <SelectableContainer>
+          <div className={offerListRowSelectableContainer}>
             <Tooltip
               text={
                 typeof selectDisabled === 'string' ? selectDisabled : undefined
@@ -264,10 +223,10 @@ export const Row = ({
                 />
               )}
             </Tooltip>
-          </SelectableContainer>
-        </NoPaddingCell>
+          </div>
+        </List.Cell>
         {expandable ? (
-          <NoPaddingCell>
+          <List.Cell className={offerListNoPaddingCell}>
             <Button
               aria-label="expand"
               data-testid="list-expand-button"
@@ -279,10 +238,10 @@ export const Row = ({
             >
               {expandedRowIds[id] ? <ArrowUpIcon /> : <ArrowDownIcon />}
             </Button>
-          </NoPaddingCell>
+          </List.Cell>
         ) : null}
         {children}
-      </StyledRow>
+      </List.Row>
       {banner && !expandedRowIds[id] ? (
         <Banner
           colSpan={childrenNumber}

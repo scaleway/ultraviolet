@@ -1,159 +1,19 @@
-import styled from '@emotion/styled'
 import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
+import type { CSSProperties } from 'react'
 import { useState } from 'react'
 import { FeatureHint } from './FeatureHint'
 import PlansLocales from './locales/en'
 import { PlanHeader } from './PlanHeader'
+import {
+  plansCell,
+  plansOutOfStockBadge,
+  plansRowHidden,
+  plans as plansStyle,
+  plansUppercaseText,
+} from './styles.css'
 import type { Feature, PlanType } from './types'
 
-const PlanTable = styled.table`
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: ${({ theme }) => theme.space[2]} 0;
-
-  /* Needed to compensate border-spacing behavior */
-  margin: 0 -${({ theme }) => theme.space[2]};
-  width: calc(100% + ${({ theme }) => theme.space[4]});
-
-  /* Needed to have full height div in header cell */
-  height: 1px;
-
-  thead tr {
-    height: 100%;
-  }
-
-  /* All cells */
-  td {
-    outline: none;
-    padding: ${({ theme }) => theme.space['1']};
-    text-align: center;
-
-    &[data-selectable='true'] {
-      cursor: pointer;
-    }
-  }
-
-  &[data-hide-labels="true"] {
-    td {
-      text-align: start;
-      padding-left:  ${({ theme }) => theme.space['3']};
-    }
-  }
-
-  /* First column */
-  td:first-child {
-    text-align: left;
-  }
-
-  /* Header Cell */
-  thead td {
-    height: 100%;
-    vertical-align: top;
-    position: relative;
-    padding-top: ${({ theme }) => theme.space['4']};
-    padding-bottom: ${({ theme }) => theme.space['3']};
-  }
-
-  /* First Header Cell */
-  thead td:first-child {
-    vertical-align: bottom;
-  }
-
-  /* Not First Header Cell */
-  thead td:not(:first-child) {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: ${({ theme }) =>
-      `${theme.radii.large} ${theme.radii.large} 0 0`};
-    border-width: 1px 1px 0 1px;
-
-    &[data-hover='true'],
-    &[data-active='true'] {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    &[data-focus='true'] {
-      /* using native color to reproduce focus color */
-      border-color: blue;
-      border-width: 2px 2px 0 2px;
-    }
-  }
-
-  tbody td {
-    &[data-space-after='true'] {
-      padding-bottom: ${({ theme }) => theme.space['6']};
-    }
-  }
-
-  tbody td:not(:first-child) {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-width: 0px 1px;
-
-    &[data-hover='true'],
-    &[data-active='true'] {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    &[data-focus='true'] {
-      /* using native color to reproduce focus color */
-      border-color: blue;
-      border-width: 0px 2px;
-    }
-  }
-
-  /* Last row cells */
-  tbody tr:last-child td {
-    padding-bottom: ${({ theme }) => theme.space['4']};
-  }
-
-  tbody tr:last-child td:not(:first-child) {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: ${({ theme }) =>
-      `0 0 ${theme.radii.large} ${theme.radii.large}`};
-    border-width: 0 1px 1px 1px;
-
-    &[data-hover='true'],
-    &[data-active='true'] {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    &[data-focus='true'] {
-      /* using native color to reproduce focus color */
-      border-color: blue;
-      border-width: 0px 2px 2px 2px;
-    }
-  }
-
-  tr {
-    &[data-hide="true"] {
-    display: none;
-  }
-  }
-`
-
-const OutOfStockBadge = styled(Badge)`
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(50%);
-`
-
-const PlanCell = styled.td`
-    background-color: transparent;
-
-  &[data-disabled="true"] {
-      background-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundDisabled};
-    }
-
-  &[data-hide="true"] {
-    display: none;
-  }
-`
-
-const UppercaseText = styled(Text)`
-  text-transform: uppercase;
-`
 type PlansProps<T extends string> = {
   fieldName?: string
   onChange?: (newPlanValue: string | undefined) => void
@@ -163,6 +23,7 @@ type PlansProps<T extends string> = {
   hideFeatureText?: boolean
   hideLabels?: boolean
   locales?: Record<keyof typeof PlansLocales, string>
+  style?: CSSProperties
 }
 
 export const Plans = <T extends string>({
@@ -174,35 +35,50 @@ export const Plans = <T extends string>({
   hideFeatureText = false,
   hideLabels = false,
   locales = PlansLocales,
+  style,
 }: PlansProps<T>) => {
   const hasCardBehavior = !!(fieldName && onChange)
   const [focusedPlan, setFocusedPlan] = useState<string>()
   const [hoveredPlan, setHoveredPlan] = useState<string>()
 
   return (
-    <PlanTable data-hide-labels={hideLabels}>
+    <table className={plansStyle} style={style}>
       <thead>
         <tr>
-          <PlanCell data-hide={hideLabels}>
+          <td className={plansCell({ hide: hideLabels })}>
             {!hideFeatureText ? (
               <Text as="span" variant="headingSmallStrong">
                 {locales['plans.features']}
               </Text>
             ) : null}
-          </PlanCell>
+          </td>
           {plans.map(plan => {
             const computedDisabled = !!(plan.outOfStock || plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
 
             return (
-              <PlanCell
-                data-active={value === plan.value}
-                data-disabled={computedDisabled}
-                data-focus={focusedPlan === plan.value}
-                data-hover={hoveredPlan === plan.value}
-                data-selectable={selectable}
+              <td
+                className={plansCell({
+                  activeColor:
+                    value === plan.value || hoveredPlan === plan.value,
+                  disabled: computedDisabled,
+                  focus: focusedPlan === plan.value,
+                  hideLabels,
+                  selectable,
+                })}
                 key={plan.value}
+                onBlur={
+                  selectable ? () => setHoveredPlan(undefined) : undefined
+                }
                 onClick={selectable ? () => onChange(plan.value) : undefined}
+                onFocus={
+                  selectable ? () => setHoveredPlan(plan.value) : undefined
+                }
+                onKeyDown={event => {
+                  if ([' ', 'Enter'].includes(event.key) && selectable) {
+                    onChange(plan.value)
+                  }
+                }}
                 onMouseOut={
                   selectable ? () => setHoveredPlan(undefined) : undefined
                 }
@@ -211,14 +87,14 @@ export const Plans = <T extends string>({
                 }
               >
                 {plan.outOfStock ? (
-                  <OutOfStockBadge size="small">
+                  <Badge className={plansOutOfStockBadge} size="small">
                     {locales['plans.outOfStock']}
-                  </OutOfStockBadge>
+                  </Badge>
                 ) : null}
                 {plan.header.quotas ? (
-                  <OutOfStockBadge size="small">
+                  <Badge className={plansOutOfStockBadge} size="small">
                     {plan.header.quotas}
-                  </OutOfStockBadge>
+                  </Badge>
                 ) : null}
                 <PlanHeader
                   currentPlanValue={value}
@@ -228,7 +104,7 @@ export const Plans = <T extends string>({
                   plan={plan}
                   setFocusedPlan={setFocusedPlan}
                 />
-              </PlanCell>
+              </td>
             )
           })}
         </tr>
@@ -237,25 +113,32 @@ export const Plans = <T extends string>({
         {features.map(feature => {
           if ('group' in feature) {
             return (
-              <tr data-hide={hideLabels} key={feature.group}>
-                <PlanCell>
+              <tr
+                className={hideLabels ? plansRowHidden : ''}
+                key={feature.group}
+              >
+                <td className={plansCell({})}>
                   <Stack alignItems="center" direction="row" gap={1}>
-                    <UppercaseText
+                    <Text
                       as="p"
+                      className={plansUppercaseText}
                       sentiment="neutral"
                       variant="bodySmallStronger"
                     >
                       {feature.group}
-                    </UppercaseText>
+                    </Text>
                     {feature.hint ? <FeatureHint hint={feature.hint} /> : null}
                   </Stack>
-                </PlanCell>
+                </td>
                 {plans.map(plan => (
-                  <PlanCell
-                    data-active={value === plan.value}
-                    data-disabled={plan.outOfStock || plan.disabled}
-                    data-focus={focusedPlan === plan.value}
-                    data-hover={hoveredPlan === plan.value}
+                  <td
+                    className={plansCell({
+                      activeColor:
+                        value === plan.value || hoveredPlan === plan.value,
+                      disabled: plan.outOfStock || plan.disabled,
+                      focus: focusedPlan === plan.value,
+                      hide: hideLabels,
+                    })}
                     key={plan.value}
                   />
                 ))}
@@ -267,7 +150,7 @@ export const Plans = <T extends string>({
 
           return (
             <tr key={feature.key}>
-              <PlanCell data-hide={hideLabels}>
+              <td className={plansCell({ hide: hideLabels })}>
                 <Stack>
                   <Stack alignItems="center" direction="row" gap={1}>
                     <Text as="p" variant="bodyStrong">
@@ -287,23 +170,29 @@ export const Plans = <T extends string>({
                     </Text>
                   ) : null}
                 </Stack>
-              </PlanCell>
+              </td>
               {plans.map(plan => {
                 const computedDisabled = plan.outOfStock || plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
 
                 return (
-                  <PlanCell
-                    data-active={value === plan.value}
-                    data-disabled={computedDisabled}
-                    data-focus={focusedPlan === plan.value}
-                    data-hover={hoveredPlan === plan.value}
-                    data-selectable={selectable}
+                  <td
+                    className={plansCell({
+                      activeColor:
+                        value === plan.value || hoveredPlan === plan.value,
+                      disabled: computedDisabled,
+                      focus: focusedPlan === plan.value,
+                      hideLabels,
+                      selectable,
+                    })}
                     data-testid={`${plan.value}-${feature.key}`}
                     key={plan.value}
+                    onBlur={() => {}}
                     onClick={
                       selectable ? () => onChange(plan.value) : undefined
                     }
+                    onFocus={() => {}}
+                    onKeyDown={() => {}}
                     onMouseOut={
                       selectable
                         ? () => {
@@ -344,13 +233,13 @@ export const Plans = <T extends string>({
                         {plan.data[featureKey]}
                       </Text>
                     ) : null}
-                  </PlanCell>
+                  </td>
                 )
               })}
             </tr>
           )
         })}
       </tbody>
-    </PlanTable>
+    </table>
   )
 }

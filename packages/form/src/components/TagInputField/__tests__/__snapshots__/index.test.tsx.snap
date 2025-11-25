@@ -2,154 +2,29 @@
 
 exports[`tagInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  background-color: #ffffff;
-  padding: calc(0.75rem - 1px) 1rem;
-  cursor: text;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-4:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-4[data-success="true"] {
-  border-color: #22674e;
-}
-
-.emotion-4[data-error="true"] {
-  border-color: #b3144d;
-}
-
-.emotion-4:hover {
-  border-color: #792dd4;
-}
-
-.emotion-4[data-readonly="true"] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-}
-
-.emotion-4[data-disabled="true"] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-6 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 0.875rem;
-  background: inherit;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  height: 100%;
-}
-
-.emotion-8::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-8::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-8:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-8::placeholder {
-  color: #727683;
-}
-
-.emotion-8[data-size="large"] {
-  font-size: 1rem;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div>
           <div
-            class="emotion-4 emotion-5"
+            class="uv_sjgcm20 uv_sjgcm21"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
           >
             <div
-              class="emotion-6 emotion-7"
+              class="uv_sjgcm24"
             >
               <input
-                class="emotion-8 emotion-9"
+                class="uv_sjgcm26"
                 data-size="large"
                 id="_r_0_"
                 name="test"
@@ -168,430 +43,49 @@ exports[`tagInputField > should render correctly 1`] = `
 
 exports[`tagInputField > should render correctly with regex 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-5 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  background-color: #ffffff;
-  padding: calc(0.75rem - 1px) 1rem;
-  cursor: text;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-7:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-7[data-success="true"] {
-  border-color: #22674e;
-}
-
-.emotion-7[data-error="true"] {
-  border-color: #b3144d;
-}
-
-.emotion-7:hover {
-  border-color: #792dd4;
-}
-
-.emotion-7[data-readonly="true"] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-}
-
-.emotion-7[data-disabled="true"] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-9 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-14 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 14.5rem;
-}
-
-.emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.125rem;
-}
-
-.emotion-17:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-17:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-17 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-17:hover,
-.emotion-17:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-19 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-19 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 0.875rem;
-  background: inherit;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  height: 100%;
-}
-
-.emotion-21::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-21::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-21:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-21::placeholder {
-  color: #727683;
-}
-
-.emotion-21[data-size="large"] {
-  font-size: 1rem;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-25 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-25:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-25:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-25 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-25:hover,
-.emotion-25:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-29 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-  background: #e5dbfd;
-  color: #ffffff;
-}
-
-.emotion-29:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
+          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
           for="_r_2_"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-7 emotion-8"
+            class="uv_sjgcm20 uv_sjgcm21"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="uv_sjgcm24"
             >
               <span
-                class="emotion-11 emotion-12"
+                class="uv_d6zknp0 uv_d6zknp4"
               >
-                <div
-                  class="emotion-13 emotion-14 emotion-6"
+                <span
+                  class="uv_d6zknpa uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   4
-                </div>
+                </span>
                 <button
                   aria-label="Close tag"
-                  class="emotion-16 emotion-17 emotion-18"
+                  class="uv_d6zknpb uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
                   <svg
-                    class="emotion-19 emotion-20"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza styles_undefined_compound_39__1sbwqkz1n"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -601,7 +95,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
                 </button>
               </span>
               <input
-                class="emotion-21 emotion-22"
+                class="uv_sjgcm26"
                 data-size="large"
                 id="_r_2_"
                 name="test"
@@ -611,15 +105,15 @@ exports[`tagInputField > should render correctly with regex 1`] = `
               />
             </div>
             <div
-              class="emotion-23 emotion-24"
+              class="uv_sjgcm25"
             >
               <button
                 aria-label="clear value"
-                class="emotion-25 emotion-18"
+                class="uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-19 emotion-20"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza styles_undefined_compound_39__1sbwqkz1n"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -632,7 +126,7 @@ exports[`tagInputField > should render correctly with regex 1`] = `
         </div>
       </div>
       <button
-        class="emotion-29 emotion-30"
+        class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoej uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
         disabled=""
         type="submit"
       >
@@ -645,438 +139,49 @@ exports[`tagInputField > should render correctly with regex 1`] = `
 
 exports[`tagInputField > should works with defaultValues 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-5 {
-  color: #3f4250;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  background-color: #ffffff;
-  padding: calc(0.75rem - 1px) 1rem;
-  cursor: text;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 0.25rem;
-}
-
-.emotion-7:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-7[data-success="true"] {
-  border-color: #22674e;
-}
-
-.emotion-7[data-error="true"] {
-  border-color: #b3144d;
-}
-
-.emotion-7:hover {
-  border-color: #792dd4;
-}
-
-.emotion-7[data-readonly="true"] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-}
-
-.emotion-7[data-disabled="true"] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.emotion-9 {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 0.25rem;
-  padding: 0 0.5rem;
-  gap: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 1.5rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.emotion-14 {
-  font-size: 0.75rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 14.5rem;
-}
-
-.emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 2rem;
-  padding: 0 0.5rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0.125rem;
-}
-
-.emotion-17:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-17:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-17 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-17:hover,
-.emotion-17:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-19 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-19 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 0.875rem;
-  background: inherit;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  height: 100%;
-}
-
-.emotion-21::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.emotion-21::-moz-placeholder {
-  color: #727683;
-}
-
-.emotion-21:-ms-input-placeholder {
-  color: #727683;
-}
-
-.emotion-21::placeholder {
-  color: #727683;
-}
-
-.emotion-21[data-size="large"] {
-  font-size: 1rem;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.emotion-25 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 1.5rem;
-  padding: 0 0.25rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.25rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-25:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-25:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-25 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-25:hover,
-.emotion-25:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-29 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: #8c40ef;
-  border: none;
-  color: #ffffff;
-}
-
-.emotion-29:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-29:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-29 .e1y1n78x0 {
-  stroke: transparent;
-}
-
-.emotion-29:hover,
-.emotion-29:active {
-  background: #792dd4;
-  color: #f9f9fa;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <label
-          class="emotion-4 emotion-5 emotion-6"
+          class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
           for="_r_9_"
         >
           Test
         </label>
         <div>
           <div
-            class="emotion-7 emotion-8"
+            class="uv_sjgcm20 uv_sjgcm21"
             data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
           >
             <div
-              class="emotion-9 emotion-10"
+              class="uv_sjgcm24"
             >
               <span
-                class="emotion-11 emotion-12"
+                class="uv_d6zknp0 uv_d6zknp4"
               >
-                <div
-                  class="emotion-13 emotion-14 emotion-6"
+                <span
+                  class="uv_d6zknpa uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow7 uv_m4c9owi uv_m4c9ows uv_m4c9ow1b uv_m4c9ow3c"
                 >
                   First
-                </div>
+                </span>
                 <button
                   aria-label="Close tag"
-                  class="emotion-16 emotion-17 emotion-18"
+                  class="uv_d6zknpb uv_e1wcoe0 uv_e1wcoe3 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                   data-testid="close-tag"
                   type="button"
                 >
                   <svg
-                    class="emotion-19 emotion-20"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza styles_undefined_compound_39__1sbwqkz1n"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -1086,7 +191,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
                 </button>
               </span>
               <input
-                class="emotion-21 emotion-22"
+                class="uv_sjgcm26"
                 data-size="large"
                 id="_r_9_"
                 name="test"
@@ -1096,15 +201,15 @@ exports[`tagInputField > should works with defaultValues 1`] = `
               />
             </div>
             <div
-              class="emotion-23 emotion-24"
+              class="uv_sjgcm25"
             >
               <button
                 aria-label="clear value"
-                class="emotion-25 emotion-18"
+                class="uv_e1wcoe0 uv_e1wcoe4 uv_e1wcoe6 uv_e1wcoek uv_e1wcoei uv_e1wcoed uv_e1wcoe19"
                 type="button"
               >
                 <svg
-                  class="emotion-19 emotion-20"
+                  class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_size_small__1sbwqkza styles_undefined_compound_39__1sbwqkz1n"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -1117,7 +222,7 @@ exports[`tagInputField > should works with defaultValues 1`] = `
         </div>
       </div>
       <button
-        class="emotion-29 emotion-30"
+        class="uv_e1wcoe0 uv_e1wcoe1 uv_e1wcoe6 uv_e1wcoek uv_e1wcoeg uv_e1wcoe7 uv_e1wcoel"
         type="submit"
       >
         Submit

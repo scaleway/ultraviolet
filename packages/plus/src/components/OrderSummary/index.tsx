@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
 import { useEffect, useMemo, useState } from 'react'
 import { Units } from './constants'
@@ -7,30 +6,12 @@ import orderSummaryLocales from './locales/en'
 import { NonScrollableContent } from './NonScrollableContent'
 import { OrderSummaryContext } from './Provider'
 import { ScrollableContent } from './ScrollableContent'
+import {
+  orderSummaryContainer,
+  orderSummaryHeaderContainer,
+  orderSummaryStackBackground,
+} from './styles.css'
 import type { OrderSummaryProps, PriceType, TimeUnit } from './types'
-
-const Container = styled(Stack)`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  height: 100%;
-  width: 20rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
-    width: 27.5rem;
-  }
-`
-
-const HeaderContainer = styled(Stack)<{ 'data-hidedetails': boolean }>`
-  height: ${({ theme }) => theme.sizing[900]};
-  padding: ${({ theme }) => theme.space[3]};
-  padding-bottom: ${({ theme }) => theme.space[2]};
-
-  &[data-hidedetails="false"] {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  }
-`
-const StyledStack = styled(Stack)`
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-`
 
 export const OrderSummary = ({
   header,
@@ -52,6 +33,9 @@ export const OrderSummary = ({
   onChangeUnitInput,
   totalPriceDescription,
   additionalInfo,
+  className,
+  'data-testid': dataTestId,
+  style,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -152,11 +136,22 @@ export const OrderSummary = ({
 
   return (
     <OrderSummaryContext.Provider value={valueContext}>
-      <Container justifyContent={hideDetails ? 'flex-start' : 'space-between'}>
+      <Stack
+        className={`${className ? `${className} ` : ''}${orderSummaryContainer}`}
+        data-testId={dataTestId}
+        justifyContent={hideDetails ? 'flex-start' : 'space-between'}
+        style={style}
+      >
         {header ? (
-          <HeaderContainer
-            data-hidedetails={hideDetails}
+          <Stack
+            alignItems="center"
+            className={
+              orderSummaryHeaderContainer[
+                hideDetails ? 'hideDetails' : 'showDetails'
+              ]
+            }
             direction="row"
+            gap={2}
             justifyContent="space-between"
           >
             <Text
@@ -168,9 +163,10 @@ export const OrderSummary = ({
               {header}
             </Text>
             {!hideTimeUnit && !hideDetails ? (
-              <StyledStack>
+              <Stack className={orderSummaryStackBackground}>
                 <UnitInput
                   dropdownAlign="center"
+                  maxWidth="200px"
                   onChange={value => {
                     setTimePeriodAmount(value)
                   }}
@@ -184,11 +180,10 @@ export const OrderSummary = ({
                   templateColumns="2fr 3fr"
                   unitValue={unitUnitInput}
                   value={valueUnitInput}
-                  width="155px"
                 />
-              </StyledStack>
+              </Stack>
             ) : null}
-          </HeaderContainer>
+          </Stack>
         ) : null}
         {!hideDetails ? <ScrollableContent /> : null}
         <NonScrollableContent
@@ -203,7 +198,7 @@ export const OrderSummary = ({
         >
           {children}
         </NonScrollableContent>
-      </Container>
+      </Stack>
     </OrderSummaryContext.Provider>
   )
 }

@@ -1,8 +1,8 @@
 'use client'
 
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
+  CSSProperties,
   HTMLAttributes,
   KeyboardEventHandler,
   MouseEventHandler,
@@ -17,33 +17,45 @@ import {
   useEffect,
   useId,
   useImperativeHandle,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
 } from 'react'
 import { createPortal } from 'react-dom'
 import { isClientSide } from '../../helpers/isClientSide'
-import type { PositionsType } from './animations'
-import { animation, exitAnimation } from './animations'
 import type { PopupAlign, PopupPlacement } from './helpers'
+import { computePositions, DEFAULT_POSITIONS } from './helpers'
 import {
-  computePositions,
-  DEFAULT_ARROW_WIDTH,
-  DEFAULT_POSITIONS,
-} from './helpers'
+  animationPopup,
+  childrenContainerPopup,
+  containerPopup,
+  popup,
+} from './styles.css'
+import {
+  animationDurationPopup,
+  arrowLeft,
+  arrowTop,
+  arrowTransform,
+  maxHeightPopup,
+  maxWidthPopup,
+  popupInitialPosition,
+  popupPosition,
+} from './variables.css'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
 
 const noop = () => {}
 
-type StyledPopupProps = {
-  maxWidth: number | string
-  positions: PositionsType
-  reverseAnimation: boolean
-  maxHeight?: number | string
-  animationDuration?: number
-  isDialog: boolean
+export type PositionsType = {
+  arrowLeft: number
+  arrowTop: number
+  arrowTransform: string
+  placement: string
+  rotate: number
+  popupInitialPosition: string
+  popupPosition: string
 }
 
 /**
@@ -52,88 +64,8 @@ type StyledPopupProps = {
 const stopClickPropagation: MouseEventHandler = event => {
   event.nativeEvent.stopImmediatePropagation()
 }
-const Container = styled.div`
 
-  &[data-max-height="true"] {
-    overflow: auto;
-  }
-`
-const StyledPopup = styled('div', {
-  shouldForwardProp: prop =>
-    ![
-      'maxWidth',
-      'positions',
-      'reverseAnimation',
-      'maxHeight',
-      'animationDuration',
-      'isDialog',
-    ].includes(prop),
-})<StyledPopupProps>`
-  background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
-  color: ${({ theme }) => theme.colors.neutral.textStronger};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  text-align: center;
-  position: absolute;
-  max-width: ${({ maxWidth }) =>
-    typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};
-  max-height: ${({ maxHeight }) =>
-    typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight};
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  transform: ${({ positions }) => positions.popupPosition};
-
-  &[data-animated="true"] {
-    animation: ${({ positions, reverseAnimation, animationDuration }) => css`
-      ${animationDuration}ms ${
-        !reverseAnimation ? animation(positions) : exitAnimation(positions)
-      } forwards
-    `};
-  }
-
-  &[data-has-arrow="true"] {
-    &::after {
-      content: " ";
-      position: absolute;
-      top: ${({ positions }) => positions.arrowTop}px;
-      left: ${({ positions }) => positions.arrowLeft}px;
-      transform: ${({ positions }) => positions.arrowTransform}
-        rotate(${({ positions }) => positions.rotate}deg);
-      margin-left: -${DEFAULT_ARROW_WIDTH}px;
-      border-width: ${DEFAULT_ARROW_WIDTH}px;
-      border-style: solid;
-      border-color: ${({ theme }) => theme.colors.neutral.backgroundStronger}
-        transparent transparent transparent;
-      pointer-events: none;
-    }
-  }
-
-  &[data-visible-in-dom="false"] {
-    display: none;
-  }
-
-  & > ${Container} {
-  max-height: ${({ theme, maxHeight }) => (maxHeight ? `calc(${typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight} - ${theme.space[2]})` : '100%')}
-}
-`
-
-export const StyledChildrenContainer = styled.div`
-  display: inherit;
-
-
-  &[data-container-full-height="true"] {
-    height: 100%;
-  }
-
-  &[data-container-full-width="true"] {
-    width: 100%;
-  }
-`
+type PopupRole = 'dialog' | 'tooltip' | 'popup' | string
 
 type PopupProps = {
   /**
@@ -177,7 +109,7 @@ type PopupProps = {
    */
   visible?: boolean
   innerRef?: Ref<HTMLDivElement | null>
-  role?: string
+  role?: PopupRole
   'data-testid'?: string
   hasArrow?: boolean
   onClose?: () => void
@@ -209,6 +141,39 @@ type PopupProps = {
    * reason you need to disable it, you can set it to `false`.
    */
   dynamicDomRendering?: boolean
+  style?: CSSProperties
+}
+
+const getPopupPortalTarget = ({
+  node,
+  role,
+  portalTarget,
+}: {
+  node: HTMLElement | null
+  role: PopupRole
+  portalTarget?: HTMLElement
+}) => {
+  if (portalTarget) {
+    return portalTarget
+  }
+
+  if (role === 'dialog') {
+    if (node) {
+      return node
+    }
+    if (isClientSide) {
+      return document.body
+    }
+
+    return null
+  }
+
+  // We check if window exists for SSR
+  if (typeof window !== 'undefined') {
+    return document.body
+  }
+
+  return null
 }
 
 /**
@@ -241,6 +206,7 @@ export const Popup = forwardRef(
       disableAnimation = false,
       portalTarget,
       dynamicDomRendering = true,
+      style,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -251,30 +217,11 @@ export const Popup = forwardRef(
     useImperativeHandle(ref, () => innerPopupRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
-    const popupPortalTarget = useMemo(() => {
-      if (portalTarget) {
-        return portalTarget
-      }
-
-      if (role === 'dialog') {
-        if (childrenRef.current) {
-          return childrenRef.current
-        }
-        if (isClientSide) {
-          return document.body
-        }
-
-        return null
-      }
-
-      // We check if window exists for SSR
-      if (typeof window !== 'undefined') {
-        return document.body
-      }
-
-      return null
-      // oxlint-disable react/exhaustive-deps
-    }, [portalTarget, role, childrenRef.current])
+    const popupPortalTarget = getPopupPortalTarget({
+      node: childrenRef.current,
+      portalTarget,
+      role,
+    })
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
@@ -290,21 +237,25 @@ export const Popup = forwardRef(
     const uniqueId = useId()
     const generatedId = id ?? uniqueId
     const isControlled = visible !== undefined
+    const isAnimated = useMemo(
+      () => animationDuration > 0 && !maxHeight,
+      [animationDuration, maxHeight],
+    )
 
     const generatePopupPositions = useCallback(() => {
-      if (childrenRef.current && innerPopupRef.current) {
+      if (childrenRef.current && innerPopupRef.current && popupPortalTarget) {
         setPositions(
           computePositions({
             align,
             childrenRef,
             hasArrow,
             placement,
-            popupPortalTarget: popupPortalTarget as HTMLElement,
+            popupPortalTarget,
             popupRef: innerPopupRef,
           }),
         )
       }
-    }, [hasArrow, placement, popupPortalTarget, align])
+    }, [hasArrow, placement, align, popupPortalTarget])
 
     /**
      * This function is called when we need to recompute positions of popup due to window scroll or resize.
@@ -411,11 +362,33 @@ export const Popup = forwardRef(
       [closePopup, debounceDelay, visible],
     )
 
+    useLayoutEffect(() => {
+      const currentRef = childrenRef.current
+      const mutationObserver = new MutationObserver(() => {
+        generatePopupPositions()
+      })
+      const resizeObserver = new ResizeObserver(() => {
+        generatePopupPositions()
+      })
+
+      if (currentRef) {
+        resizeObserver.observe(currentRef)
+        mutationObserver.observe(currentRef, { characterData: true })
+      }
+
+      return () => {
+        if (currentRef) {
+          resizeObserver.unobserve(currentRef)
+          mutationObserver.disconnect()
+        }
+      }
+    }, [visibleInDom, generatePopupPositions])
+
     /**
      * Once popup is visible in the dom we can compute positions, then set it visible on screen and add event to
      * recompute positions on scroll or screen resize.
      */
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (visibleInDom) {
         generatePopupPositions()
 
@@ -444,12 +417,11 @@ export const Popup = forwardRef(
     ])
 
     // This will be triggered when positions are computed and popup is visible in the dom.
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (visibleInDom && innerPopupRef.current) {
         innerPopupRef.current.style.opacity = '1'
       }
-      // oxlint-disable react/exhaustive-deps
-    }, [positions])
+    }, [visibleInDom, positions])
 
     /**
      * If popup has `visible` prop it means the popup is manually controlled through this prop.
@@ -517,37 +489,56 @@ export const Popup = forwardRef(
       }
       event.stopPropagation()
 
-      const focusableEls =
-        innerPopupRef.current?.querySelectorAll(
-          'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
-        ) ?? []
+      const focusableEls = innerPopupRef.current?.querySelectorAll(
+        'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+      )
 
       // Handle case when no interactive element are within the modal (including close icon)
-      if (focusableEls.length === 0) {
+      if (focusableEls?.length === 0) {
         event.preventDefault()
       }
 
-      const firstFocusableEl = focusableEls[0] as HTMLElement
-      const lastFocusableEl = focusableEls[
-        focusableEls.length - 1
-      ] as HTMLElement
+      if (focusableEls) {
+        const elems = [...focusableEls]
+        const firstFocusableEl = elems[0]
+        const lastFocusableEl = elems.at(-1)
 
-      if (event.shiftKey) {
-        if (
-          document.activeElement === firstFocusableEl ||
+        if (event.shiftKey) {
+          if (
+            document.activeElement === firstFocusableEl ||
+            document.activeElement === innerPopupRef.current
+          ) {
+            if (lastFocusableEl instanceof HTMLElement) {
+              lastFocusableEl.focus()
+            }
+            event.preventDefault()
+          }
+        } else if (
+          document.activeElement === lastFocusableEl ||
           document.activeElement === innerPopupRef.current
         ) {
-          lastFocusableEl.focus()
+          if (firstFocusableEl instanceof HTMLElement) {
+            firstFocusableEl.focus()
+          }
           event.preventDefault()
         }
-      } else if (
-        document.activeElement === lastFocusableEl ||
-        document.activeElement === innerPopupRef.current
-      ) {
-        firstFocusableEl.focus()
-        event.preventDefault()
       }
     }, [])
+
+    /**
+     * On unmount, clear all timers
+     */
+    useEffect(
+      () => () => {
+        if (timer.current) {
+          clearTimeout(timer.current)
+        }
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current)
+        }
+      },
+      [],
+    )
 
     /**
      * Will render children conditionally if children is a function or not.
@@ -564,12 +555,14 @@ export const Popup = forwardRef(
       }
 
       return (
-        <StyledChildrenContainer
+        <div
           aria-controls={generatedId}
           aria-describedby={generatedId}
           aria-haspopup={ariaHasPopup}
-          data-container-full-height={containerFullHeight}
-          data-container-full-width={containerFullWidth}
+          className={childrenContainerPopup({
+            fullHeight: containerFullHeight,
+            fullWidth: containerFullWidth,
+          })}
           onBlur={!isControlled ? onPointerEvent(false) : noop}
           onFocus={!isControlled ? onPointerEvent(true) : noop}
           onKeyDown={event => {
@@ -581,7 +574,7 @@ export const Popup = forwardRef(
           tabIndex={tabIndex}
         >
           {children}
-        </StyledChildrenContainer>
+        </div>
       )
     }, [
       ariaHasPopup,
@@ -620,30 +613,48 @@ export const Popup = forwardRef(
         {renderChildren()}
         {shouldRender
           ? createPortal(
-              <StyledPopup
-                animationDuration={animationDuration}
-                className={className}
-                data-animated={animationDuration > 0 && !maxHeight}
-                data-has-arrow={hasArrow}
+              <div
+                className={`${className ? `${className} ` : ''}${popup({ hasArrow, visibleInDom: !dynamicDomRendering ? visibleInDom : undefined })} ${isAnimated ? animationPopup[reverseAnimation ? 'reverse' : 'notReverse'] : null}`}
                 data-testid={dataTestId}
                 data-visible-in-dom={
                   !dynamicDomRendering ? visibleInDom : undefined
                 }
                 id={generatedId}
-                isDialog={role === 'dialog'}
-                maxHeight={maxHeight}
-                maxWidth={maxWidth}
                 onClick={stopClickPropagation}
                 onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
                 onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
                 onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
-                positions={positions}
                 ref={innerPopupRef}
-                reverseAnimation={reverseAnimation}
                 role={role}
+                style={{
+                  ...assignInlineVars({
+                    [arrowTop]: `${positions.arrowTop}px`,
+                    [arrowLeft]: `${positions.arrowLeft}px`,
+                    [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
+                    [popupPosition]: positions.popupPosition,
+                    [animationDurationPopup]: `${animationDuration}ms`,
+                    [popupInitialPosition]: positions.popupInitialPosition,
+                    [maxWidthPopup]: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
+                    [maxHeightPopup]:
+                      typeof maxHeight === 'number'
+                        ? `${maxHeight}px`
+                        : maxHeight,
+                  }),
+                  ...style,
+                }}
               >
-                <Container data-max-height={!!maxHeight}>{text}</Container>
-              </StyledPopup>,
+                <div
+                  className={containerPopup({ hasMaxHeight: !!maxHeight })}
+                  style={assignInlineVars({
+                    [maxHeightPopup]:
+                      typeof maxHeight === 'number'
+                        ? `${maxHeight}px`
+                        : maxHeight,
+                  })}
+                >
+                  {text}
+                </div>
+              </div>,
               popupPortalTarget as HTMLElement,
             )
           : null}

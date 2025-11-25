@@ -1,43 +1,43 @@
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { TagInput } from '..'
 
 describe('tagInput', () => {
   it('should renders correctly', () =>
-    shouldMatchEmotionSnapshot(<TagInput onChange={() => {}} />))
+    shouldMatchSnapshot(<TagInput onChange={() => {}} />))
 
   it('should renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(<TagInput disabled />))
+    shouldMatchSnapshot(<TagInput disabled />))
 
   it('should renders correctly readOnly', () =>
-    shouldMatchEmotionSnapshot(<TagInput readOnly />))
+    shouldMatchSnapshot(<TagInput readOnly />))
 
   it('should renders correctly with label', () =>
-    shouldMatchEmotionSnapshot(<TagInput label="Label" />))
+    shouldMatchSnapshot(<TagInput label="Label" />))
 
   it('should renders correctly with labelDescription', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TagInput labelDescription={<div>label description</div>} />,
     ))
 
   it('should renders correctly with error', () =>
-    shouldMatchEmotionSnapshot(<TagInput error="This is an error" />))
+    shouldMatchSnapshot(<TagInput error="This is an error" />))
 
   it('should renders correctly with success', () =>
-    shouldMatchEmotionSnapshot(<TagInput success="This is a success" />))
+    shouldMatchSnapshot(<TagInput success="This is a success" />))
 
   it('should renders correctly with placeholder', () =>
-    shouldMatchEmotionSnapshot(<TagInput placeholder="Enter a value here" />))
+    shouldMatchSnapshot(<TagInput placeholder="Enter a value here" />))
 
   it('should renders correctly with some tags', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TagInput name="radio" onChange={() => {}} value={['hello', 'world']} />,
     ))
 
   it('should renders correctly with some tags objects', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchSnapshot(
       <TagInput
         name="radio"
         onChange={() => {}}
@@ -106,7 +106,7 @@ describe('tagInput', () => {
     expect(mockOnChange).toHaveBeenCalledWith(['hello'])
   })
 
-  it('should add tag on paste', async () => {
+  it('should not add tag on paste', async () => {
     const mockOnChange = vi.fn()
     renderWithTheme(
       <TagInput
@@ -117,10 +117,11 @@ describe('tagInput', () => {
       />,
     )
     const input = screen.getByRole<HTMLInputElement>('textbox')
-    fireEvent.paste(input, {
-      clipboardData: { getData: () => 'test' },
-    })
-    await waitFor(() => expect(input.value).toBe(''))
-    expect(mockOnChange).toHaveBeenCalledWith(['hello', 'world', 'test'])
+
+    await userEvent.click(input)
+    await userEvent.paste('test=')
+    await userEvent.type(input, 'new ')
+
+    expect(mockOnChange).toHaveBeenCalledWith(['hello', 'world', 'test=new'])
   })
 })

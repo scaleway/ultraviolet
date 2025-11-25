@@ -2,204 +2,32 @@
 
 exports[`radioField > should render correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-4[aria-disabled='false'],
-.emotion-4[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 .emotion-11 {
-  fill: #e5dbfd;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 .emotion-11 {
-  fill: #ffd3e3;
-}
-
-.emotion-4[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-4[aria-disabled='true']>label,
-.emotion-4[aria-disabled='true'] .emotion-7 {
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 .emotion-11 {
-  fill: #f3f3f4;
-}
-
-.emotion-6 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-6+.emotion-9 .emotion-13 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6:checked+svg .emotion-13 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-6:checked[aria-disabled='false'][aria-invalid='false']+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-6:checked[aria-disabled='true'][aria-invalid='false']+.emotion-9 {
-  fill: #d8c5fc;
-}
-
-.emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
-  fill: #e51963;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 .emotion-11 {
-  fill: #f1eefc;
-}
-
-.emotion-6[aria-disabled='false']:focus-visible+.emotion-9 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 .emotion-11 {
-  fill: #ffebf2;
-}
-
-.emotion-8 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-8 .emotion-11 {
-  fill: #ffffff;
-}
-
-.emotion-15 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div
           aria-disabled="false"
-          class="emotion-4 emotion-5"
+          class="uv_17da2jl3"
           data-checked="false"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="uv_17da2jl6"
             id="_r_0_"
             name="test"
             type="radio"
             value="test"
           />
           <svg
-            class="emotion-8 emotion-9"
+            class="uv_17da2jl7"
             viewBox="0 0 24 24"
           >
             <g>
@@ -210,13 +38,13 @@ exports[`radioField > should render correctly 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="emotion-10 emotion-11"
+                class="uv_17da2jl0"
                 cx="12"
                 cy="12"
                 r="8"
               />
               <circle
-                class="emotion-12 emotion-13"
+                class="uv_17da2jl8"
                 cx="12"
                 cy="12"
                 r="5"
@@ -224,7 +52,7 @@ exports[`radioField > should render correctly 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-14 emotion-15 emotion-16"
+            class="uv_17da2jl4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
             for="_r_0_"
           >
             Radio field
@@ -238,205 +66,33 @@ exports[`radioField > should render correctly 1`] = `
 
 exports[`radioField > should render correctly checked 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-4[aria-disabled='false'],
-.emotion-4[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 .emotion-11 {
-  fill: #e5dbfd;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 .emotion-11 {
-  fill: #ffd3e3;
-}
-
-.emotion-4[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-4[aria-disabled='true']>label,
-.emotion-4[aria-disabled='true'] .emotion-7 {
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 .emotion-11 {
-  fill: #f3f3f4;
-}
-
-.emotion-6 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-6+.emotion-9 .emotion-13 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6:checked+svg .emotion-13 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-6:checked[aria-disabled='false'][aria-invalid='false']+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-6:checked[aria-disabled='true'][aria-invalid='false']+.emotion-9 {
-  fill: #d8c5fc;
-}
-
-.emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
-  fill: #e51963;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 .emotion-11 {
-  fill: #f1eefc;
-}
-
-.emotion-6[aria-disabled='false']:focus-visible+.emotion-9 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 .emotion-11 {
-  fill: #ffebf2;
-}
-
-.emotion-8 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-8 .emotion-11 {
-  fill: #ffffff;
-}
-
-.emotion-15 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div
           aria-disabled="false"
-          class="emotion-4 emotion-5"
+          class="uv_17da2jl3"
           data-checked="true"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
             checked=""
-            class="emotion-6 emotion-7"
+            class="uv_17da2jl6"
             id="_r_8_"
             name="test"
             type="radio"
             value="checked"
           />
           <svg
-            class="emotion-8 emotion-9"
+            class="uv_17da2jl7"
             viewBox="0 0 24 24"
           >
             <g>
@@ -447,13 +103,13 @@ exports[`radioField > should render correctly checked 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="emotion-10 emotion-11"
+                class="uv_17da2jl0"
                 cx="12"
                 cy="12"
                 r="8"
               />
               <circle
-                class="emotion-12 emotion-13"
+                class="uv_17da2jl8"
                 cx="12"
                 cy="12"
                 r="5"
@@ -461,7 +117,7 @@ exports[`radioField > should render correctly checked 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-14 emotion-15 emotion-16"
+            class="uv_17da2jl4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
             for="_r_8_"
           >
             Radio field checked
@@ -475,197 +131,25 @@ exports[`radioField > should render correctly checked 1`] = `
 
 exports[`radioField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-4[aria-disabled='false'],
-.emotion-4[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 .emotion-11 {
-  fill: #e5dbfd;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 .emotion-11 {
-  fill: #ffd3e3;
-}
-
-.emotion-4[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-4[aria-disabled='true']>label,
-.emotion-4[aria-disabled='true'] .emotion-7 {
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 .emotion-11 {
-  fill: #f3f3f4;
-}
-
-.emotion-6 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-6+.emotion-9 .emotion-13 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6:checked+svg .emotion-13 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-6:checked[aria-disabled='false'][aria-invalid='false']+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-6:checked[aria-disabled='true'][aria-invalid='false']+.emotion-9 {
-  fill: #d8c5fc;
-}
-
-.emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
-  fill: #e51963;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 .emotion-11 {
-  fill: #f1eefc;
-}
-
-.emotion-6[aria-disabled='false']:focus-visible+.emotion-9 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 .emotion-11 {
-  fill: #ffebf2;
-}
-
-.emotion-8 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-8 .emotion-11 {
-  fill: #ffffff;
-}
-
-.emotion-15 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div
           aria-disabled="true"
-          class="emotion-4 emotion-5"
+          class="uv_17da2jl3"
           data-checked="false"
         >
           <input
             aria-disabled="true"
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="uv_17da2jl6"
             disabled=""
             id="_r_5_"
             name="test"
@@ -673,7 +157,7 @@ exports[`radioField > should render correctly disabled 1`] = `
             value="disabled"
           />
           <svg
-            class="emotion-8 emotion-9"
+            class="uv_17da2jl7"
             viewBox="0 0 24 24"
           >
             <g>
@@ -684,13 +168,13 @@ exports[`radioField > should render correctly disabled 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="emotion-10 emotion-11"
+                class="uv_17da2jl0"
                 cx="12"
                 cy="12"
                 r="8"
               />
               <circle
-                class="emotion-12 emotion-13"
+                class="uv_17da2jl8"
                 cx="12"
                 cy="12"
                 r="5"
@@ -698,7 +182,7 @@ exports[`radioField > should render correctly disabled 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-14 emotion-15 emotion-16"
+            class="uv_17da2jl4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
             for="_r_5_"
           >
             Radio field disabled
@@ -712,190 +196,33 @@ exports[`radioField > should render correctly disabled 1`] = `
 
 exports[`radioField > should render correctly with aria-label 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-4[aria-disabled='false'],
-.emotion-4[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 .emotion-11 {
-  fill: #e5dbfd;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 .emotion-11 {
-  fill: #ffd3e3;
-}
-
-.emotion-4[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-4[aria-disabled='true']>label,
-.emotion-4[aria-disabled='true'] .emotion-7 {
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 .emotion-11 {
-  fill: #f3f3f4;
-}
-
-.emotion-6 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-6+.emotion-9 .emotion-13 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6:checked+svg .emotion-13 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-6:checked[aria-disabled='false'][aria-invalid='false']+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-6:checked[aria-disabled='true'][aria-invalid='false']+.emotion-9 {
-  fill: #d8c5fc;
-}
-
-.emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
-  fill: #e51963;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 .emotion-11 {
-  fill: #f1eefc;
-}
-
-.emotion-6[aria-disabled='false']:focus-visible+.emotion-9 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 .emotion-11 {
-  fill: #ffebf2;
-}
-
-.emotion-8 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-8 .emotion-11 {
-  fill: #ffffff;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div
           aria-disabled="false"
-          class="emotion-4 emotion-5"
+          class="uv_17da2jl3"
           data-checked="false"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
             aria-label="Radio field"
-            class="emotion-6 emotion-7"
+            class="uv_17da2jl6"
             id="_r_3_"
             name="test"
             type="radio"
             value="test"
           />
           <svg
-            class="emotion-8 emotion-9"
+            class="uv_17da2jl7"
             viewBox="0 0 24 24"
           >
             <g>
@@ -906,13 +233,13 @@ exports[`radioField > should render correctly with aria-label 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="emotion-10 emotion-11"
+                class="uv_17da2jl0"
                 cx="12"
                 cy="12"
                 r="8"
               />
               <circle
-                class="emotion-12 emotion-13"
+                class="uv_17da2jl8"
                 cx="12"
                 cy="12"
                 r="5"
@@ -928,204 +255,32 @@ exports[`radioField > should render correctly with aria-label 1`] = `
 
 exports[`radioField > should trigger events correctly 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: contents;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.emotion-4[aria-disabled='false'],
-.emotion-4[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 .emotion-11 {
-  fill: #e5dbfd;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 {
-  fill: #b3144d;
-}
-
-.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 .emotion-11 {
-  fill: #ffd3e3;
-}
-
-.emotion-4[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-4[aria-disabled='true']>label,
-.emotion-4[aria-disabled='true'] .emotion-7 {
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.emotion-4[aria-disabled='true'] .emotion-9 .emotion-11 {
-  fill: #f3f3f4;
-}
-
-.emotion-6 {
-  cursor: pointer;
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.emotion-6+.emotion-9 .emotion-13 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.emotion-6:checked+svg .emotion-13 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.emotion-6:checked[aria-disabled='false'][aria-invalid='false']+.emotion-9 {
-  fill: #8c40ef;
-}
-
-.emotion-6:checked[aria-disabled='true'][aria-invalid='false']+.emotion-9 {
-  fill: #d8c5fc;
-}
-
-.emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
-  fill: #e51963;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.emotion-6[aria-disabled='false']:active+.emotion-9 .emotion-11 {
-  fill: #f1eefc;
-}
-
-.emotion-6[aria-disabled='false']:focus-visible+.emotion-9 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.emotion-6[aria-invalid='true']:focus+.emotion-9 .emotion-11 {
-  fill: #ffebf2;
-}
-
-.emotion-8 {
-  height: 1.5rem;
-  width: 1.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.emotion-8 .emotion-11 {
-  fill: #ffffff;
-}
-
-.emotion-15 {
-  font-size: 1rem;
-  font-family: Inter,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: pointer;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <form
-      class="emotion-0 emotion-1"
       novalidate=""
+      style="display: contents;"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="uv_17da2jl1 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
       >
         <div
           aria-disabled="false"
-          class="emotion-4 emotion-5"
+          class="uv_17da2jl3"
           data-checked="true"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
-            class="emotion-6 emotion-7"
+            class="uv_17da2jl6"
             id="_r_b_"
             name="test"
             type="radio"
             value="events"
           />
           <svg
-            class="emotion-8 emotion-9"
+            class="uv_17da2jl7"
             viewBox="0 0 24 24"
           >
             <g>
@@ -1136,13 +291,13 @@ exports[`radioField > should trigger events correctly 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="emotion-10 emotion-11"
+                class="uv_17da2jl0"
                 cx="12"
                 cy="12"
                 r="8"
               />
               <circle
-                class="emotion-12 emotion-13"
+                class="uv_17da2jl8"
                 cx="12"
                 cy="12"
                 r="5"
@@ -1150,7 +305,7 @@ exports[`radioField > should trigger events correctly 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-14 emotion-15 emotion-16"
+            class="uv_17da2jl4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow3c"
             for="_r_b_"
           >
             Radio field events

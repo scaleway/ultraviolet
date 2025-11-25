@@ -1,9 +1,8 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { CalendarRangeIcon } from '@ultraviolet/icons'
 import type { Locale } from 'date-fns'
-import type { ChangeEvent, FocusEvent } from 'react'
+import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Card } from '../Card'
 import { Stack } from '../Stack'
@@ -13,25 +12,9 @@ import type { ContextProps } from './Context'
 import { DateInputContext } from './Context'
 import { CalendarContent } from './components/CalendarContent'
 import { CalendarPopup } from './components/Popup'
-import {
-  createDate,
-  createDateRange,
-  formatValue,
-  styleCalendarContainer,
-} from './helpers'
+import { createDate, createDateRange, formatValue } from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
-
-const Container = styled.div`
-width: 100%;`
-
-const StyledCard = styled(Card)`
-  ${({ theme }) => styleCalendarContainer(theme)}
-  width: 16.5rem;
-
-  &[data-disabled="true"] {
-      cursor: not-allowed;
-    }
-`
+import { calendarContentWrapper, dateinputContainer } from './styles.css'
 
 type DateInputProps<IsRange extends undefined | boolean = false> = {
   autoFocus?: boolean
@@ -52,6 +35,7 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   value?: Date | null
   className?: string
   'data-testid'?: string
+  style?: CSSProperties
   excludeDates?: Date[]
   id?: string
   labelDescription?: string
@@ -113,6 +97,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   showMonthYearPicker = false,
   input = 'text',
   'data-testid': dataTestId,
+  style,
 }: DateInputProps<IsRange>) => {
   const defaultMonthToShow = useMemo(() => {
     if (value) {
@@ -308,8 +293,8 @@ export const DateInput = <IsRange extends undefined | boolean>({
 
   return (
     <DateInputContext.Provider value={valueContext}>
-      <Container
-        className={className}
+      <div
+        className={`${className ? `${className} ` : ''}${dateinputContainer}`}
         data-testid={dataTestId}
         id={id}
         onBlur={onBlur}
@@ -319,7 +304,13 @@ export const DateInput = <IsRange extends undefined | boolean>({
           }
         }}
         onFocus={onFocus}
+        onKeyDown={event => {
+          if ([' ', 'Enter'].includes(event.key) && !isPopupVisible) {
+            setVisible(true)
+          }
+        }}
         ref={popupRef}
+        style={style}
       >
         {input === 'text' ? (
           <CalendarPopup
@@ -392,12 +383,15 @@ export const DateInput = <IsRange extends undefined | boolean>({
               </Text>
             )}
 
-            <StyledCard disabled={disabled}>
+            <Card
+              className={calendarContentWrapper({ disabled })}
+              disabled={disabled}
+            >
               <CalendarContent />
-            </StyledCard>
+            </Card>
           </Stack>
         )}
-      </Container>
+      </div>
     </DateInputContext.Provider>
   )
 }

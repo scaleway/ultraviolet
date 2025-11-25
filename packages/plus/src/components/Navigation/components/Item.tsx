@@ -1,7 +1,5 @@
 'use client'
 
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import {
   ArrowDownIcon,
   ArrowRightIcon,
@@ -15,7 +13,6 @@ import {
   Badge,
   Button,
   Expandable,
-  fadeIn,
   Menu,
   Stack,
   Text,
@@ -23,8 +20,9 @@ import {
 } from '@ultraviolet/ui'
 import type {
   ComponentProps,
+  CSSProperties,
   DragEvent,
-  JSX,
+  ElementType,
   MouseEvent,
   ReactNode,
 } from 'react'
@@ -38,235 +36,31 @@ import {
   useMemo,
   useReducer,
 } from 'react'
-import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 import { useNavigation } from '../NavigationProvider'
 import type { PinUnPinType } from '../types'
 import { ItemContext, ItemProvider } from './ItemProvider'
-
-const RelativeDiv = styled.div`
-  position: relative;
-`
-
-const PaddedSpan = styled.span`
-  padding-left: ${({ theme }) => theme.space[1]}
-`
-
-const StyledPinIconOutline = styled(PinOutlineIcon, {
-  shouldForwardProp: prop => !['active'].includes(prop),
-})<{ active?: boolean }>`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  padding: ${({ theme }) => theme.space['0.25']};
-  border-radius: ${({ theme }) => theme.radii.default};
-  &:hover {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
-
-    ${({ active, theme }) =>
-      active ? `background: ${theme.colors.primary.backgroundHover};` : null}
-  }
-`
-
-const StyledUnpinIcon = StyledPinIconOutline.withComponent(UnpinIcon)
-
-const NeutralButtonLink = css`
-  color: inherit;
-  text-decoration: none;
-  background-color: inherit;
-  border: none;
-  text-align: left;
-`
-
-// Pin button when the navigation is expanded
-const LocalExpandButton = styled(Button)`
-  opacity: 0;
-  right: 0;
-  position: absolute;
-  left: -24px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 1;
-  }
-`
-
-const PinnedButton = LocalExpandButton.withComponent('div')
-
-const GrabIcon = styled(DragIcon)`
-  opacity: 0;
-  margin: 0 ${({ theme }) => theme.space['0.25']};
-  cursor: grab;
-`
-
-const StyledBadge = styled(Badge)``
-
-const StyledMenuItem = styled(Menu.Item, {
-  shouldForwardProp: prop => !['isPinnable', 'pinnedFeature'].includes(prop),
-})<{
-  isPinnable?: boolean
-  pinnedFeature?: boolean
-}>`
-  text-align: left;
-  &:hover,
-  &:focus,
-  &:active {
-    ${PinnedButton} {
-      opacity: 1;
-    }
-
-    ${StyledBadge} {
-      opacity: ${({ isPinnable, pinnedFeature }) =>
-        isPinnable && pinnedFeature ? 0 : 1};
-    }
-  }
-`
-
-const StyledMenu = styled(Menu)`
-  width: 180px;
-`
-
-const PaddingStack = styled(Stack)`
-  padding-left: 28px; // This value needs to be hardcoded because of the category icon size
-`
-
-const AnimatedIcon = styled(OpenInNewIcon)``
-
-const WrapText = styled(Text)`
-  overflow-wrap: anywhere;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-`
-
-const StyledStack = styled(Stack)`
-  padding-left: 28px; // This value needs to be hardcoded because of the category icon size
-`
-
-const StyledContainer = styled(Stack)`
-  ${NeutralButtonLink};
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  &[data-has-no-expand="false"] {
-    cursor: pointer;
-  }
-  margin-top: ${({ theme }) => theme.space['0.25']};
-  padding: ${({ theme }) =>
-    `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space['1']}`};
-
-  &[data-has-sub-label="true"] {
-    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  }
-
-  width: 100%;
-
-  &:hover[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ),
-  &:focus[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  }
-  &[data-has-active-children="true"][data-has-no-expand="false"]:not(
-      [disabled][data-is-active="true"]
-    ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
-    ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
-    }
-
-    ${PinnedButton} {
-      opacity: 1;
-    }
-
-    &[data-is-pinnable="true"][data-pinned-feature="true"] {
-      ${StyledBadge} {
-        opacity: 0;
-      }
-    }
-  }
-
-  &[data-has-no-expand="false"][data-pinned-feature="true"][data-is-pinnable="true"]:not([disabled]) {
-    &:hover,
-    &:focus,
-    &:active {
-      ${PinnedButton}, ${GrabIcon} {
-        opacity: 1;
-      }
-
-      ${StyledBadge} {
-        opacity: 0;
-      }
-    }
-  }
-
-  &:hover[data-has-children="false"][data-is-active="false"][data-is-pinnable="true"]:not([disabled]) {
-    ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
-    }
-  }
-
-  &:active[data-has-no-expand="false"]:not([disabled]):not(
-      [data-is-active="true"]
-    ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
-  }
-
-  &[data-is-active="true"],
-  &:hover[data-has-active="true"] {
-    background-color: ${({ theme }) => theme.colors.primary.background};
-
-    &:hover {
-      background-color: ${({ theme }) => theme.colors.primary.backgroundHover};
-    }
-  }
-
-  &[disabled] {
-    cursor: not-allowed;
-    background-color: unset;
-
-    ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
-    }
-  }
-
-  &[data-animation="collapse"][data-animation-type="complex"] {
-    animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out;
-    ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
-      animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse;
-    }
-  }
-
-  &[data-animation="expand"][data-animation-type="complex"] {
-    animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out reverse;
-    ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
-      animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out;
-    }
-
-    ${StyledStack} {
-      display: none;
-    }
-  }
-`
-
-const MenuStack = styled(Stack)`
-  padding: ${({ theme }) => `0 ${theme.space['2']}`};
-  margin-top: ${({ theme }) => theme.space['0.25']};
-`
-
-const StackIcon = styled(Stack)`
-  padding-top: ${({ theme }) => theme.space['0.5']};
-`
-
-const ContainerCategoryIcon = styled(Stack)`
-  min-width: 20px;
-`
+import {
+  navigationItemAnimatedIcon,
+  navigationItemBadge,
+  navigationItemCategoryIcon,
+  navigationItemContainer,
+  navigationItemContainerAnimated,
+  navigationItemDragIcon,
+  navigationItemMenu,
+  navigationItemMenuContainer,
+  navigationItemMenuPinned,
+  navigationItemMenuStack,
+  navigationItemPadded,
+  navigationItemPaddingStack,
+  navigationItemPinIcon,
+  navigationItemPinnedButton,
+  navigationItemRelative,
+  navigationItemShowDraggable,
+  navigationItemShowPinButton,
+  navigationItemStackIcon,
+  navigationItemWeakText,
+  navigationItemWrapText,
+} from './items.css'
 
 type ItemType = 'default' | 'pinned' | 'pinnedGroup'
 
@@ -342,7 +136,7 @@ type ItemProps = {
    * a non focusable element. This option allows you to choose the tag of the
    * item.
    */
-  as?: keyof JSX.IntrinsicElements
+  as?: ElementType
   /**
    * Use this prop if you want to remove the expand behavior when the item
    * has sub items.
@@ -350,10 +144,10 @@ type ItemProps = {
   noExpand?: boolean
   disabled?: boolean
   'data-testid'?: string
+  style?: CSSProperties
 }
 
 const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
-  // eslint-disable-next-line no-param-reassign
   event.currentTarget.style.opacity = '1'
 }
 
@@ -381,6 +175,7 @@ export const Item = memo(
     index,
     id,
     'data-testid': dataTestId,
+    style,
   }: ItemProps) => {
     const context = useNavigation()
     if (!context) {
@@ -422,9 +217,6 @@ export const Item = memo(
       onToggleExpand()
       onToggle?.(internalExpanded)
     }, [internalExpanded, onToggle])
-
-    const PaddedStack =
-      noExpand || type === 'pinnedGroup' ? Stack : PaddingStack
 
     const hasHrefAndNoChildren = href && !children
     const hasPinnedFeatureAndNoChildren =
@@ -483,18 +275,13 @@ export const Item = memo(
       return 'button'
     }, [as, hasHrefAndNoChildren, noExpand])
 
-    const Container = useMemo(
-      () => StyledContainer.withComponent(containerTag),
-      [containerTag],
-    )
-
     const ArrowIcon = useMemo(
       () => (internalExpanded ? ArrowDownIcon : ArrowRightIcon),
       [internalExpanded],
     )
 
     const PinUnpinIcon = useMemo(
-      () => (isItemPinned ? StyledUnpinIcon : StyledPinIconOutline),
+      () => (isItemPinned ? UnpinIcon : PinOutlineIcon),
       [isItemPinned],
     )
 
@@ -530,7 +317,7 @@ export const Item = memo(
             'text/plain',
             JSON.stringify({ index, label }),
           )
-          // eslint-disable-next-line no-param-reassign
+
           event.currentTarget.style.opacity = '0.5'
         }
 
@@ -545,25 +332,27 @@ export const Item = memo(
       [expanded],
     )
 
+    const showDraggableIcon =
+      !noExpand && pinnedFeature && shouldShowPinnedButton && !disabled
+
+    const showPinIcon =
+      !noExpand && !disabled && shouldShowPinnedButton && pinnedFeature
     // This content is when the navigation is expanded
+
+    const shouldHaveWeakText =
+      !!children && !active && shouldShowPinnedButton && !disabled
+
     if (expanded || (!expanded && animation === 'expand')) {
       return (
         <>
-          <Container
+          <Stack
             alignItems={categoryIcon ? 'flex-start' : 'center'}
             aria-expanded={ariaExpanded}
-            data-animation={shouldAnimate ? animation : undefined}
-            data-animation-type={animationType}
-            data-has-active-children={hasActiveChildren}
-            data-has-children={!!children}
-            data-has-no-expand={noExpand}
-            data-has-sub-label={!!subLabel}
-            data-is-active={active}
-            data-is-pinnable={shouldShowPinnedButton}
-            data-pinned-feature={pinnedFeature}
+            as={containerTag}
+            className={`${navigationItemContainer({ disabled, hasActive: hasActiveChildren, isActive: !!active, noExpand, subLabel: !!subLabel })} ${shouldAnimate && animationType === 'complex' ? navigationItemContainerAnimated[animation === 'collapse' ? 'collapse' : 'expand'] : ''} ${showDraggableIcon ? navigationItemShowDraggable : ''} ${showPinIcon ? navigationItemShowPinButton : ''} ${shouldHaveWeakText ? navigationItemWeakText : ''}`}
             data-testid={dataTestId}
             direction="row"
-            disabled={disabled}
+            disabled={containerTag === 'button' ? disabled : undefined}
             draggable={type === 'pinned' && expanded}
             gap={1}
             href={href}
@@ -573,6 +362,7 @@ export const Item = memo(
             onDragEnd={onDragEnd}
             onDragStart={onDragStart}
             rel={rel}
+            style={style}
             target={target}
           >
             <Stack
@@ -582,15 +372,17 @@ export const Item = memo(
               justifyContent="center"
             >
               {categoryIcon ? (
-                <ContainerCategoryIcon
+                <Stack
                   alignItems="center"
+                  className={navigationItemCategoryIcon}
                   justifyContent="center"
                 >
                   {categoryIcon}
-                </ContainerCategoryIcon>
+                </Stack>
               ) : null}
               {type === 'pinned' && expanded ? (
-                <GrabIcon
+                <DragIcon
+                  className={navigationItemDragIcon}
                   disabled={disabled}
                   prominence="weak"
                   sentiment="neutral"
@@ -599,8 +391,13 @@ export const Item = memo(
               ) : null}
               <Stack>
                 {!animation ? (
-                  <WrapText
+                  <Text
                     as="span"
+                    className={navigationItemWrapText({
+                      disabled,
+                      weak:
+                        hasActiveChildren && !noExpand && !disabled && !!active,
+                    })}
                     data-animation={animation}
                     disabled={disabled}
                     prominence={
@@ -614,13 +411,20 @@ export const Item = memo(
                   >
                     {label}
                     {labelDescription ? (
-                      <PaddedSpan>{labelDescription}</PaddedSpan>
+                      <span className={navigationItemPadded}>
+                        {labelDescription}
+                      </span>
                     ) : null}
-                  </WrapText>
+                  </Text>
                 ) : null}
                 {subLabel && !animation ? (
-                  <WrapText
+                  <Text
                     as="span"
+                    className={navigationItemWrapText({
+                      disabled,
+                      weak:
+                        hasActiveChildren && !noExpand && !disabled && !!active,
+                    })}
                     data-animation={animation}
                     disabled={disabled}
                     prominence="weak"
@@ -629,7 +433,7 @@ export const Item = memo(
                     whiteSpace="pre-wrap"
                   >
                     {subLabel}
-                  </WrapText>
+                  </Text>
                 ) : null}
               </Stack>
             </Stack>
@@ -641,14 +445,15 @@ export const Item = memo(
               {badgeText || hasPinnedFeatureAndNoChildren ? (
                 <>
                   {badgeText && !animation ? (
-                    <StyledBadge
+                    <Badge
+                      className={navigationItemBadge}
                       disabled={disabled}
                       prominence="strong"
                       sentiment={badgeSentiment}
                       size="small"
                     >
                       {badgeText}
-                    </StyledBadge>
+                    </Badge>
                   ) : null}
                   {shouldShowPinnedButton ? (
                     <Tooltip
@@ -659,10 +464,11 @@ export const Item = memo(
                           : pinTooltipLocale
                       }
                     >
-                      <RelativeDiv>
-                        <PinnedButton
+                      <div className={navigationItemRelative}>
+                        <div
+                          aria-disabled={isItemPinned ? false : isPinDisabled}
                           aria-label={isItemPinned ? 'unpin' : 'pin'}
-                          disabled={isItemPinned ? false : isPinDisabled}
+                          className={navigationItemPinnedButton}
                           onClick={(event: MouseEvent<HTMLDivElement>) => {
                             if (pinnedItems.length < pinLimit || isItemPinned) {
                               event.preventDefault()
@@ -681,54 +487,85 @@ export const Item = memo(
                               })
                             }
                           }}
+                          onKeyDown={() => {}}
                           role="button"
-                          sentiment={active ? 'primary' : 'neutral'}
-                          size="xsmall"
-                          variant="ghost"
                         >
                           <PinUnpinIcon
-                            active={active}
+                            className={
+                              navigationItemPinIcon[
+                                active ? 'active' : 'inactive'
+                              ]
+                            }
                             disabled={isItemPinned ? false : isPinDisabled}
                             sentiment={active ? 'primary' : 'neutral'}
                             size="medium"
                           />
-                        </PinnedButton>
-                      </RelativeDiv>
+                        </div>
+                      </div>
                     </Tooltip>
                   ) : null}
                 </>
               ) : null}
               {hasHrefAndNoChildren && target === '_blank' && !animation ? (
-                <AnimatedIcon
+                <OpenInNewIcon
                   disabled={disabled}
                   prominence="default"
                   sentiment="neutral"
                 />
               ) : null}
               {children ? (
-                <StackIcon alignItems="center" direction="row" gap={1}>
+                <Stack
+                  alignItems="center"
+                  className={navigationItemStackIcon}
+                  direction="row"
+                  gap={1}
+                >
                   {!animation && !noExpand ? (
                     <ArrowIcon prominence="weak" sentiment="neutral" />
                   ) : null}
-                </StackIcon>
+                </Stack>
               ) : null}
             </Stack>
-          </Container>
+          </Stack>
           {children ? (
             <>
               {!noExpand ? (
                 <ItemProvider>
                   <Expandable animationDuration={0} opened={internalExpanded}>
-                    <PaddedStack width={animation ? '100%' : undefined}>
+                    <Stack
+                      className={
+                        noExpand || type === 'pinnedGroup'
+                          ? ''
+                          : navigationItemPaddingStack({
+                              hide:
+                                shouldAnimate &&
+                                animationType === 'complex' &&
+                                animation === 'expand',
+                            })
+                      }
+                      width={animation ? '100%' : undefined}
+                    >
                       {children}
-                    </PaddedStack>
+                    </Stack>
                   </Expandable>
                 </ItemProvider>
               ) : (
                 <ItemProvider>
-                  <PaddedStack width={animation ? '100%' : undefined}>
+                  <Stack
+                    className={
+                      noExpand || type === 'pinnedGroup'
+                        ? ''
+                        : navigationItemPaddingStack({
+                            hide:
+                              shouldAnimate &&
+                              animationType === 'complex' &&
+                              animation === 'expand',
+                          })
+                    }
+                    width={animation ? '100%' : undefined}
+                  >
                     {children}
-                  </PaddedStack>
+                  </Stack>
                 </ItemProvider>
               )}
             </>
@@ -740,9 +577,16 @@ export const Item = memo(
     // This content is the menu of the navigation when collapsed
     if (categoryIcon || (Children.count(children) > 0 && !hasParents)) {
       return (
-        <MenuStack alignItems="start" gap={1} justifyContent="start">
+        <Stack
+          alignItems="start"
+          className={navigationItemMenuStack}
+          gap={1}
+          justifyContent="start"
+          style={style}
+        >
           {Children.count(children) > 0 ? (
-            <StyledMenu
+            <Menu
+              className={navigationItemMenuContainer}
               disclosure={
                 <Button
                   aria-label={label}
@@ -767,7 +611,7 @@ export const Item = memo(
               triggerMethod="hover"
             >
               <ItemProvider>{children}</ItemProvider>
-            </StyledMenu>
+            </Menu>
           ) : (
             <Tooltip placement="right" tabIndex={-1} text={label}>
               <Button
@@ -791,23 +635,24 @@ export const Item = memo(
               </Button>
             </Tooltip>
           )}
-        </MenuStack>
+        </Stack>
       )
     }
 
     // This content is what is inside a menu item the navigation is collapsed
     if (hasParents) {
       return (
-        <StyledMenuItem
+        <Menu.Item
           active={active}
           borderless
+          className={`${navigationItemMenu}${pinnedFeature && shouldShowPinnedButton ? ` ${navigationItemMenuPinned}` : ''}`}
           disabled={disabled}
           href={href}
-          isPinnable={shouldShowPinnedButton}
           onClick={() => onToggle?.(!!active)}
-          pinnedFeature={pinnedFeature}
+          // pinnedFeature={pinnedFeature}
           rel={rel}
           sentiment={active ? 'primary' : 'neutral'}
+          style={style}
           target={target}
         >
           <Stack
@@ -819,26 +664,42 @@ export const Item = memo(
             width="100%"
           >
             {!animation ? (
-              <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
+              <Text
+                as="span"
+                className={navigationItemWrapText({
+                  disabled,
+                  weak: hasActiveChildren && !noExpand && !disabled && !!active,
+                })}
+                variant="bodySmall"
+                whiteSpace="pre-wrap"
+              >
                 {label}
-              </WrapText>
+              </Text>
             ) : null}
             {labelDescription ? (
-              <PaddedSpan>{labelDescription}</PaddedSpan>
+              <span className={navigationItemPadded}>{labelDescription}</span>
             ) : null}
             <Stack direction="row">
               {badgeText && !animation ? (
-                <StyledBadge
+                <Badge
+                  className={navigationItemBadge}
                   disabled={disabled}
                   prominence="strong"
                   sentiment={badgeSentiment}
                   size="small"
                 >
                   {badgeText}
-                </StyledBadge>
+                </Badge>
               ) : null}
               {hasHrefAndNoChildren && target === '_blank' ? (
-                <AnimatedIcon
+                <OpenInNewIcon
+                  className={
+                    shouldAnimate && animationType === 'complex'
+                      ? navigationItemAnimatedIcon[
+                          animation === 'expand' ? 'expand' : 'collapse'
+                        ]
+                      : ''
+                  }
                   disabled={disabled}
                   prominence="weak"
                   sentiment="neutral"
@@ -853,10 +714,11 @@ export const Item = memo(
                       : pinTooltipLocale
                   }
                 >
-                  <RelativeDiv>
-                    <PinnedButton
+                  <div className={navigationItemRelative}>
+                    <div
+                      aria-disabled={isItemPinned ? false : isPinDisabled}
                       aria-label={isItemPinned ? 'unpin' : 'pin'}
-                      disabled={isItemPinned ? false : isPinDisabled}
+                      className={navigationItemPinnedButton}
                       onClick={(event: MouseEvent<HTMLDivElement>) => {
                         if (pinnedItems.length < pinLimit || isItemPinned) {
                           event.preventDefault()
@@ -875,24 +737,24 @@ export const Item = memo(
                           })
                         }
                       }}
+                      onKeyDown={() => {}}
                       role="button"
-                      sentiment={active ? 'primary' : 'neutral'}
-                      size="xsmall"
-                      variant="ghost"
                     >
                       <PinUnpinIcon
-                        active={active}
+                        className={
+                          navigationItemPinIcon[active ? 'active' : 'inactive']
+                        }
                         disabled={isItemPinned ? false : isPinDisabled}
                         sentiment={active ? 'primary' : 'neutral'}
                         size="medium"
                       />
-                    </PinnedButton>
-                  </RelativeDiv>
+                    </div>
+                  </div>
                 </Tooltip>
               ) : null}
             </Stack>
           </Stack>
-        </StyledMenuItem>
+        </Menu.Item>
       )
     }
 
@@ -900,18 +762,35 @@ export const Item = memo(
     if (!hasParents && href) {
       return (
         <Tooltip placement="right" text={label}>
-          <MenuStack alignItems="start" gap={1} justifyContent="start">
-            <Container
+          <Stack
+            alignItems="start"
+            className={navigationItemMenuStack}
+            gap={1}
+            justifyContent="start"
+          >
+            <Stack
               alignItems="center"
+              as={containerTag}
+              className={`${navigationItemContainer({ disabled })} ${shouldAnimate && animationType === 'complex' ? navigationItemContainerAnimated[animation === 'collapse' ? 'collapse' : 'expand'] : ''}`}
               gap={1}
               href={href}
               justifyContent="center"
               rel={rel}
               target={target}
             >
-              <AnimatedIcon prominence="weak" sentiment="neutral" />
-            </Container>
-          </MenuStack>
+              <OpenInNewIcon
+                className={
+                  shouldAnimate && animationType === 'complex'
+                    ? navigationItemAnimatedIcon[
+                        animation === 'expand' ? 'expand' : 'collapse'
+                      ]
+                    : ''
+                }
+                prominence="weak"
+                sentiment="neutral"
+              />
+            </Stack>
+          </Stack>
         </Tooltip>
       )
     }

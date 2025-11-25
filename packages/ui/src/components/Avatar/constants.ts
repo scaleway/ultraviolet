@@ -1,4 +1,4 @@
-import type { Theme } from '@emotion/react'
+import type { theme as UVTheme } from '@ultraviolet/themes'
 
 // Match the text variant with component size
 export const TEXT_VARIANT_BY_SIZE = {
@@ -9,9 +9,9 @@ export const TEXT_VARIANT_BY_SIZE = {
 } as const
 
 // Match the container size with actual px size
-export const sizes = (theme: Theme) =>
+export const sizes = (theme: typeof UVTheme) =>
   ({
-    large: '7rem', // TODO: add this value to tokens
+    large: '7rem', // Note: add this value to tokens
     medium: theme.sizing['800'],
     small: theme.sizing['400'],
     xsmall: theme.sizing['250'],

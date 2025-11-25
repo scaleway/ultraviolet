@@ -1,34 +1,26 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`bullet > renders correctly with a text 1`] = `
+exports[`bullet > renders correctly disabled 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_disabled_true__1jy42m0e styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c"
+    >
+      1
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`bullet > renders correctly with a text 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -38,50 +30,14 @@ exports[`bullet > renders correctly with a text 1`] = `
 
 exports[`bullet > renders correctly with an icon 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       <svg
-        class="emotion-2 emotion-3"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -95,50 +51,14 @@ exports[`bullet > renders correctly with an icon 1`] = `
 
 exports[`bullet > renders correctly with an icon and icon variant 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-.emotion-2 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1rem;
-  width: 1rem;
-  min-width: 1rem;
-  min-height: 1rem;
-}
-
-.emotion-2 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       <svg
-        class="emotion-2 emotion-3"
+        class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
         viewBox="0 0 16 16"
       >
         <path
@@ -154,69 +74,11 @@ exports[`bullet > renders correctly with an icon and icon variant 1`] = `
 
 exports[`bullet > sentiment > render danger 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #b3144d;
-  background: #ffebf2;
-  border: 1px solid #ffebf2;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
-    >
-      1
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`bullet > sentiment > render disabled 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #727683;
-  background: #e9eaeb;
-  border: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_4__1jy42m0j"
     >
       1
     </div>
@@ -226,33 +88,11 @@ exports[`bullet > sentiment > render disabled 1`] = `
 
 exports[`bullet > sentiment > render info 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #005da3;
-  background: #e0f2ff;
-  border: 1px solid #e0f2ff;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_6__1jy42m0l"
     >
       1
     </div>
@@ -262,33 +102,11 @@ exports[`bullet > sentiment > render info 1`] = `
 
 exports[`bullet > sentiment > render neutral 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -298,33 +116,11 @@ exports[`bullet > sentiment > render neutral 1`] = `
 
 exports[`bullet > sentiment > render primary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #641cb3;
-  background: #f1eefc;
-  border: 1px solid #f1eefc;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_0__1jy42m0f"
     >
       1
     </div>
@@ -334,33 +130,11 @@ exports[`bullet > sentiment > render primary 1`] = `
 
 exports[`bullet > sentiment > render secondary 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #ac22e7;
-  background: #f9ebff;
-  border: 1px solid #f9ebff;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_1__1jy42m0g"
     >
       1
     </div>
@@ -370,33 +144,11 @@ exports[`bullet > sentiment > render secondary 1`] = `
 
 exports[`bullet > sentiment > render success 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #22674e;
-  background: #daf6ec;
-  border: 1px solid #daf6ec;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_3__1jy42m0i"
     >
       1
     </div>
@@ -406,33 +158,11 @@ exports[`bullet > sentiment > render success 1`] = `
 
 exports[`bullet > sentiment > render warning 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #7c5400;
-  background: #fff6e6;
-  border: 1px solid #fff6e6;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_5__1jy42m0k"
     >
       1
     </div>
@@ -442,33 +172,11 @@ exports[`bullet > sentiment > render warning 1`] = `
 
 exports[`bullet > size > render medium 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_medium__1jy42m01 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -478,33 +186,11 @@ exports[`bullet > size > render medium 1`] = `
 
 exports[`bullet > size > render small 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.875rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_small__1jy42m02 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -514,33 +200,11 @@ exports[`bullet > size > render small 1`] = `
 
 exports[`bullet > size > render xsmall 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  font-size: 0.75rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_xsmall__1jy42m03 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>
@@ -550,33 +214,11 @@ exports[`bullet > size > render xsmall 1`] = `
 
 exports[`bullet > size > render xxsmall 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 1rem;
-  height: 1rem;
-  font-size: 0.625rem;
-  color: #3f4250;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="styles__1jy42m00 styles_size_xxsmall__1jy42m04 styles_prominence_default__1jy42m0c styles_undefined_compound_2__1jy42m0h"
     >
       1
     </div>

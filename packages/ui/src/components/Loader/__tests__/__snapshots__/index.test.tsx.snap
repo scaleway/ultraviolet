@@ -2,21 +2,7 @@
 
 exports[`loader > renders active with custom percentage 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -25,13 +11,13 @@ exports[`loader > renders active with custom percentage 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
+      class="styles__tkulld2"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -39,7 +25,7 @@ exports[`loader > renders active with custom percentage 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -57,21 +43,7 @@ exports[`loader > renders active with custom percentage 1`] = `
 
 exports[`loader > renders active with default percentage 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -80,13 +52,13 @@ exports[`loader > renders active with default percentage 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
+      class="styles__tkulld2"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -94,7 +66,7 @@ exports[`loader > renders active with default percentage 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -112,16 +84,7 @@ exports[`loader > renders active with default percentage 1`] = `
 
 exports[`loader > renders default props 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -130,13 +93,12 @@ exports[`loader > renders default props 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -144,7 +106,7 @@ exports[`loader > renders default props 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -162,16 +124,7 @@ exports[`loader > renders default props 1`] = `
 
 exports[`loader > renders with color neutral and primary 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -180,13 +133,12 @@ exports[`loader > renders with color neutral and primary 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -194,7 +146,7 @@ exports[`loader > renders with color neutral and primary 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -212,13 +164,12 @@ exports[`loader > renders with color neutral and primary 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -226,7 +177,7 @@ exports[`loader > renders with color neutral and primary 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -244,21 +195,7 @@ exports[`loader > renders with color neutral and primary 1`] = `
 
 exports[`loader > renders with percentage 75 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -267,13 +204,13 @@ exports[`loader > renders with percentage 75 1`] = `
       aria-valuemin="0"
       aria-valuenow="75"
       aria-valuetext="75%"
-      class="emotion-0 emotion-1"
+      class="styles__tkulld2"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -281,7 +218,7 @@ exports[`loader > renders with percentage 75 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -299,16 +236,7 @@ exports[`loader > renders with percentage 75 1`] = `
 
 exports[`loader > renders with sentiment danger 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -317,13 +245,12 @@ exports[`loader > renders with sentiment danger 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -331,7 +258,7 @@ exports[`loader > renders with sentiment danger 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -349,16 +276,7 @@ exports[`loader > renders with sentiment danger 1`] = `
 
 exports[`loader > renders with sentiment neutral 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -367,13 +285,12 @@ exports[`loader > renders with sentiment neutral 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -381,7 +298,7 @@ exports[`loader > renders with sentiment neutral 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -399,16 +316,7 @@ exports[`loader > renders with sentiment neutral 1`] = `
 
 exports[`loader > renders with sentiment primary 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -417,13 +325,12 @@ exports[`loader > renders with sentiment primary 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -431,7 +338,7 @@ exports[`loader > renders with sentiment primary 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -449,16 +356,7 @@ exports[`loader > renders with sentiment primary 1`] = `
 
 exports[`loader > renders with sentiment secondary 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -467,13 +365,12 @@ exports[`loader > renders with sentiment secondary 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -481,7 +378,7 @@ exports[`loader > renders with sentiment secondary 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -499,16 +396,7 @@ exports[`loader > renders with sentiment secondary 1`] = `
 
 exports[`loader > renders with sentiment success 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -517,13 +405,12 @@ exports[`loader > renders with sentiment success 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -531,7 +418,7 @@ exports[`loader > renders with sentiment success 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -549,16 +436,7 @@ exports[`loader > renders with sentiment success 1`] = `
 
 exports[`loader > renders with size large 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -567,13 +445,12 @@ exports[`loader > renders with size large 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 1.5rem; width: 1.5rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -581,7 +458,7 @@ exports[`loader > renders with size large 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -599,16 +476,7 @@ exports[`loader > renders with size large 1`] = `
 
 exports[`loader > renders with size medium 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -617,13 +485,12 @@ exports[`loader > renders with size medium 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 1.25rem; width: 1.25rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -631,7 +498,7 @@ exports[`loader > renders with size medium 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -649,16 +516,7 @@ exports[`loader > renders with size medium 1`] = `
 
 exports[`loader > renders with size small 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -667,13 +525,12 @@ exports[`loader > renders with size small 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 1rem; width: 1rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -681,7 +538,7 @@ exports[`loader > renders with size small 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -699,16 +556,7 @@ exports[`loader > renders with size small 1`] = `
 
 exports[`loader > renders with size xlarge 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -717,13 +565,12 @@ exports[`loader > renders with size xlarge 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 2rem; width: 2rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -731,7 +578,7 @@ exports[`loader > renders with size xlarge 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -749,16 +596,7 @@ exports[`loader > renders with size xlarge 1`] = `
 
 exports[`loader > renders with size xsmall 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -767,13 +605,12 @@ exports[`loader > renders with size xsmall 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 0.75rem; width: 0.75rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -781,7 +618,7 @@ exports[`loader > renders with size xsmall 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"
@@ -799,16 +636,7 @@ exports[`loader > renders with size xsmall 1`] = `
 
 exports[`loader > renders with size xxlarge 1`] = `
 <DocumentFragment>
-  .emotion-2 {
-  stroke: #d9dadd;
-}
-
-.emotion-4 {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<div
+  <div
     data-testid="testing"
   >
     <svg
@@ -817,13 +645,12 @@ exports[`loader > renders with size xxlarge 1`] = `
       aria-valuemin="0"
       aria-valuenow="20"
       aria-valuetext="20%"
-      class="emotion-0 emotion-1"
       role="progressbar"
       style="height: 3.5rem; width: 3.5rem;"
       viewBox="0 0 100 100"
     >
       <circle
-        class="emotion-2 emotion-3"
+        class="styles__tkulld1"
         cx="50"
         cy="50"
         fill="none"
@@ -831,7 +658,7 @@ exports[`loader > renders with size xxlarge 1`] = `
         stroke-width="16"
       />
       <circle
-        class="emotion-4"
+        class="styles__tkulld3"
         cx="50"
         cy="50"
         fill="none"

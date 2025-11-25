@@ -1,31 +1,22 @@
 'use client'
 
-import styled from '@emotion/styled'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useContext, useEffect } from 'react'
 import { Data, nextStep } from './helper'
+import {
+  steppedListCardContent,
+  steppedListCardImage,
+  steppedListCardSubHeader,
+} from './styles.css'
 
-const StyledContent = styled(Stack)`
-  min-width: 0;
-  padding: ${({ theme }) => theme.space['3']};
-  padding-top: ${({ theme }) => theme.space['4']};
-`
-
-const StyledImage = styled.div`
-  display: flex;
-  justify-content: right;
-`
-
-const StyledSubHeader = styled.div`
-  margin-bottom: ${({ theme }) => theme.space['3']};
-`
 type SteppedListContentProps = {
   subHeader?: ReactNode
-  children: ((nextStep: (completed: boolean) => void) => ReactNode) | ReactNode
+  children: ((nextStep: (completed?: boolean) => void) => ReactNode) | ReactNode
   image?: ReactNode
   stepNumber: number
   completed?: boolean
+  style?: CSSProperties
 }
 export const SteppedListContent = ({
   subHeader,
@@ -33,6 +24,7 @@ export const SteppedListContent = ({
   image,
   stepNumber,
   completed = false,
+  style,
 }: SteppedListContentProps) => {
   const {
     setDone,
@@ -55,8 +47,8 @@ export const SteppedListContent = ({
 
   if (stepNumber === currentStep) {
     return (
-      <StyledContent>
-        <StyledSubHeader>
+      <Stack className={steppedListCardContent} style={style}>
+        <div className={steppedListCardSubHeader}>
           {typeof subHeader === 'string' ? (
             <Text as="h3" variant="headingSmallStrong">
               {subHeader}
@@ -64,9 +56,9 @@ export const SteppedListContent = ({
           ) : (
             subHeader
           )}
-        </StyledSubHeader>
+        </div>
         {typeof children === 'function'
-          ? children((completedArg: boolean) =>
+          ? children((completedArg?: boolean) =>
               nextStep({
                 completed: completedArg,
                 done,
@@ -79,8 +71,8 @@ export const SteppedListContent = ({
               }),
             )
           : children}
-        <StyledImage>{image}</StyledImage>
-      </StyledContent>
+        <div className={steppedListCardImage}>{image}</div>
+      </Stack>
     )
   }
 

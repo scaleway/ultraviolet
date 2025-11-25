@@ -1,60 +1,10 @@
 'use client'
 
-import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
+import type { SIZES, VARIANTS } from './constants'
+import { productIconSizes, productIconVariants } from './styles.css'
 
-type Variants = 'primary' | 'danger' | 'warning' | 'original'
-
-export const SIZES = {
-  large: '600',
-  medium: '500',
-  small: '400',
-  xlarge: '800',
-  xsmall: '300',
-} as const
-
-const StyledIcon = styled('svg', {
-  shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
-})<{ variant: Variants; disabled?: boolean; size: keyof typeof SIZES }>`
-  & {
-    width: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`};
-    min-width: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`}; // This is to avoid the icon to shrink when the text is too long
-    height: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`};
-  }
-
-  path[fill].fill,
-  g[fill].fill > *,
-  g.fill > * {
-    fill: ${({ theme, variant, disabled }) =>
-      `${
-        theme.colors.other.icon.product[variant][
-          disabled ? 'fillDisabled' : 'fill'
-        ]
-      }`};
-  }
-
-  path[fill].fillStrong,
-  g[fill].fillStrong > *,
-  g.fillStrong > * {
-    fill: ${({ theme, variant, disabled }) =>
-      `${
-        theme.colors.other.icon.product[variant][
-          disabled ? 'fillStrongDisabled' : 'fillStrong'
-        ]
-      }`};
-  }
-
-  path[fill].fillWeak,
-  g[fill].fillWeak > *,
-  g.fillWeak > * {
-    fill: ${({ theme, variant, disabled }) =>
-      `${
-        theme.colors.other.icon.product[variant][
-          disabled ? 'fillWeakDisabled' : 'fillWeak'
-        ]
-      }`};
-  }
-`
+type Variants = (typeof VARIANTS)[number]
 
 export type IconProps = {
   variant?: Variants
@@ -62,6 +12,7 @@ export type IconProps = {
   size?: keyof typeof SIZES
   className?: string
   children: ReactNode
+  style?: CSSProperties
 }
 
 /**
@@ -74,14 +25,13 @@ export const Icon = ({
   size = 'small',
   className,
   children,
+  style,
 }: IconProps) => (
-  <StyledIcon
-    className={className}
-    disabled={disabled}
-    size={size}
-    variant={variant}
+  <svg
+    className={`${className ? `${className} ` : ''}${productIconSizes[size]} ${productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`]}`}
+    style={style}
     viewBox="0 0 64 64"
   >
     {children}
-  </StyledIcon>
+  </svg>
 )

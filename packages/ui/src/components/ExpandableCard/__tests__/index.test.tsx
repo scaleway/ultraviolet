@@ -122,4 +122,19 @@ describe('expandableCard', () => {
       expect(onToggleExpand).toHaveBeenCalled()
     })
   })
+
+  test('works properly when uncontrolled and open', async () => {
+    renderWithTheme(
+      <ExpandableCard data-testid="expandablecard" header="Title" open>
+        Content
+      </ExpandableCard>,
+    )
+
+    const title = screen.getByText('Title')
+    const content = screen.getByText('Content')
+    expect(content).toBeVisible()
+
+    await userEvent.click(title)
+    expect(content).not.toBeVisible()
+  })
 })
