@@ -2,4 +2,4 @@
 "@ultraviolet/ui": patch
 ---
 
-Add htmlFor on label for VerificationCode
+Add htmlFor on label for `VerificationCode`
