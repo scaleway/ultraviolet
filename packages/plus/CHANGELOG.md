@@ -1,5 +1,19 @@
 # @ultraviolet/plus
 
+## 3.0.0-beta.19
+
+### Patch Changes
+
+- [#5795](https://github.com/scaleway/ultraviolet/pull/5795) [`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.6`.
+  Updated dependency `@types/react-dom` to `19.2.3`.
+
+- [#5803](https://github.com/scaleway/ultraviolet/pull/5803) [`bdcdecf`](https://github.com/scaleway/ultraviolet/commit/bdcdecfca0f04f74c921c23f63e14dc279ce5382) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.25.3`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.25.3`.
+  Updated dependency `@uiw/react-codemirror` to `4.25.3`.
+- Updated dependencies [[`7b8d1bd`](https://github.com/scaleway/ultraviolet/commit/7b8d1bd477f0cdd23e7d3a4ce57cf30bbc3fec9a)]:
+  - @ultraviolet/icons@5.0.0-beta.13
+  - @ultraviolet/ui@3.0.0-beta.29
+
 ## 3.0.0-beta.18
 
 ### Patch Changes
