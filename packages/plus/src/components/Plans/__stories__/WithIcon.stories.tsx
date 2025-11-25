@@ -3,9 +3,8 @@ import {
   BasicSupportProductIcon,
   EntrepriseSupportProductIcon,
 } from '@ultraviolet/icons/product'
-import type { Text } from '@ultraviolet/ui'
 import { Button, Separator } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 
@@ -50,7 +49,7 @@ const planStarter = {
     price: '€0.99',
     priceDescription: '/month',
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'Starter',
   titleHeader: <BasicSupportProductIcon size="xlarge" />,
   value: 'starter',
@@ -81,7 +80,7 @@ const planProfessional = {
     price: '€12.99',
     priceDescription: '/month',
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'professional',
   titleHeader: <AdvancedSupportProductIcon size="xlarge" />,
   value: 'professional',
@@ -115,7 +114,7 @@ const planAdvanced = {
     price: '€109.99',
     priceDescription: '/month',
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'Advanced',
   titleHeader: <EntrepriseSupportProductIcon size="xlarge" />,
   value: 'advanced',

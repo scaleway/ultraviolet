@@ -1,7 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Button } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
 import { Plans } from '..'
 import { domain, fees, gb, pipeline, ssl } from './features'
 
@@ -15,7 +14,7 @@ const planStarter = {
   },
   header: {
     cta: (
-      <Button fullWidth size="medium">
+      <Button fullWidth size="medium" variant="outlined">
         Select plan
       </Button>
     ),
@@ -61,7 +60,7 @@ const planAdvanced = {
   },
   header: {
     cta: (
-      <Button fullWidth size="medium">
+      <Button fullWidth size="medium" variant="outlined">
         Select plan
       </Button>
     ),
@@ -74,18 +73,21 @@ const planAdvanced = {
   value: 'advanced',
 }
 
-export const Selectable: StoryFn<ComponentProps<typeof Plans>> = ({
+export const Highlight: StoryFn<ComponentProps<typeof Plans>> = ({
   ...props
-}) => {
-  const [value, setValue] = useState('advanced')
-  const onChange = (newValue?: string) => setValue(newValue ?? 'advanced')
+}) => <Plans {...props} fieldName="plans" />
 
-  return (
-    <Plans {...props} fieldName="plans" onChange={onChange} value={value} />
-  )
+Highlight.args = {
+  features: [gb, pipeline, domain, ssl, fees],
+  highlight: { content: 'Most popular', plan: 'professional' },
+  plans: [planStarter, planProfessional, planAdvanced],
 }
 
-Selectable.args = {
-  features: [gb, pipeline, domain, ssl, fees],
-  plans: [planStarter, planProfessional, planAdvanced],
+Highlight.parameters = {
+  docs: {
+    description: {
+      story:
+        'Highligh a plan using prop `highlight` where `highlight.plan` is the `value` of the highlighted plan and `highlight.content` is the text to display in the badge.',
+    },
+  },
 }
