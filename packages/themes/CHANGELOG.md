@@ -1,5 +1,54 @@
 # Change Log
 
+## 3.0.0
+
+### Major Changes
+
+- [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - Release new beta version to compensate major released by error
+
+- [#5819](https://github.com/scaleway/ultraviolet/pull/5819) [`48cc201`](https://github.com/scaleway/ultraviolet/commit/48cc201bd9278802a16d57e13c556364c88274bd) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor all components to use `vanilla-extract` instead of `Emotion`
+
+- [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - Theme provider has been moved to `@ultraviolet/themes` package. `@ultraviolet/ui` imports it internally and export `ThemeProvider` and `useTheme` hook for convenience.
+
+### Minor Changes
+
+- [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - To replace `Global` from Emotion and `normalize` from `@ultraviolet/ui`, you can now directly import the style as CSS to use in your app:
+
+  Before:
+
+  ```tsx
+  import { Global } from '@emotion/react'
+  import { normalize } from '@ultraviolet/ui'
+  import { ThemeProvider } from '@ultraviolet/themes'
+
+  const App = () => (
+      <ThemeProvider theme={theme}>
+          <Global styles={css`${normalize()}`}>
+          <MyApp />
+      </ThemeProvider>
+  )
+
+  ```
+
+  After :
+
+  ```tsx
+  import { ThemeProvider } from "@ultraviolet/themes";
+  import "@ultraviolet/themes/global";
+
+  const App = () => (
+    <ThemeProvider theme={theme}>
+      <MyApp />
+    </ThemeProvider>
+  );
+  ```
+
+- [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - New `theme` provided that is a contract interface for vanilla extract
+
+### Patch Changes
+
+- [#5816](https://github.com/scaleway/ultraviolet/pull/5816) [`37ce3eb`](https://github.com/scaleway/ultraviolet/commit/37ce3ebe31043332cf38b789711ff88b87a6bce3) Thanks [@lisalupi](https://github.com/lisalupi)! - remove cjs build
+
 ## 3.0.0-beta.4
 
 ### Patch Changes
