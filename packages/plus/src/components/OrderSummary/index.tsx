@@ -34,6 +34,8 @@ export const OrderSummary = ({
   totalPriceDescription,
   additionalInfo,
   className,
+  totalPriceInfoPlacement = 'left',
+  hideBeforePrice = false,
   'data-testid': dataTestId,
   style,
 }: OrderSummaryProps) => {
@@ -76,15 +78,15 @@ export const OrderSummary = ({
     const computedPrice = {
       maxPrice: Math.max(price[1], 0),
       maxPriceWithDiscount: Math.max(
-        price[1] * (discount < 1 ? 1 - discount : 1) -
-          (discount >= 1 ? Math.abs(discount) : 0),
+        price[1] * (discount <= 1 ? 1 - discount : 1) -
+          (discount > 1 ? Math.abs(discount) : 0),
         0,
       ),
       timeUnit: unitUnitInput,
       totalPrice: Math.max(price[0], 0),
       totalPriceWithDiscount: Math.max(
-        price[0] * (discount < 1 ? 1 - discount : 1) -
-          (discount >= 1 ? Math.abs(discount) : 0),
+        price[0] * (discount <= 1 ? 1 - discount : 1) -
+          (discount > 1 ? Math.abs(discount) : 0),
         0,
       ),
     }
@@ -190,10 +192,12 @@ export const OrderSummary = ({
           additionalInfo={additionalInfo}
           discount={discount}
           footer={footer}
+          hideBeforePrice={hideBeforePrice}
           hideDetails={hideDetails}
           totalPrice={totalPrice}
           totalPriceDescription={totalPriceDescription}
           totalPriceInfo={totalPriceInfo}
+          totalPriceInfoPlacement={totalPriceInfoPlacement}
           unit={unitUnitInput}
         >
           {children}
