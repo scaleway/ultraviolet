@@ -1,3 +1,4 @@
+import { AttachIcon } from '@ultraviolet/icons'
 import { NumberInput, Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import {
@@ -7,6 +8,8 @@ import {
 } from './helpers'
 import { OrderSummaryContext } from './Provider'
 import {
+  orderSummaryAnchor,
+  orderSummaryAnchorIcon,
   orderSummaryCategory,
   orderSummaryDetails,
   orderSummaryNumberInput,
@@ -35,7 +38,17 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
             sentiment="neutral"
             variant="bodyStrong"
           >
-            {category.category}
+            {category.anchor ? (
+              <a className={orderSummaryAnchor} href={category.anchor}>
+                <AttachIcon
+                  className={orderSummaryAnchorIcon({ size: 'medium' })}
+                  sentiment="info"
+                />
+                {category.category}
+              </a>
+            ) : (
+              category.category
+            )}
           </Text>
           <Text as="span" italic sentiment="primary" variant="bodySmall">
             {category.additionalInfo}
@@ -48,7 +61,17 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           sentiment="neutral"
           variant="bodyStrong"
         >
-          {category.category}
+          {category.anchor ? (
+            <a className={orderSummaryAnchor} href={category.anchor}>
+              <AttachIcon
+                className={orderSummaryAnchorIcon({ size: 'medium' })}
+                sentiment="info"
+              />
+              {category.category}
+            </a>
+          ) : (
+            category.category
+          )}
         </Text>
       )}
       {category.customContent}
@@ -121,15 +144,22 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
   return (
     <Stack direction="column" gap={1}>
       <Stack alignItems="center" direction="row" justifyContent="space-between">
-        {subCategory.additionalInfo ? (
+        {subCategory.additionalInfo || subCategory.icon ? (
           <Stack alignItems="center" direction="row" gap={1}>
+            {subCategory.icon}
             <Text
               as="span"
               prominence="strong"
               sentiment="neutral"
               variant="bodySmallStrong"
             >
-              {subCategory.title}
+              <AttachIcon
+                className={orderSummaryAnchorIcon({ size: 'small' })}
+                sentiment="info"
+              />
+              <a className={orderSummaryAnchor} href={subCategory.anchor}>
+                {subCategory.title}
+              </a>
             </Text>
             <Text as="span" italic sentiment="primary" variant="bodySmall">
               {subCategory.additionalInfo}
@@ -142,7 +172,17 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
             sentiment="neutral"
             variant="bodySmallStrong"
           >
-            {subCategory.title}
+            {subCategory.anchor ? (
+              <a className={orderSummaryAnchor} href={subCategory.anchor}>
+                <AttachIcon
+                  className={orderSummaryAnchorIcon({ size: 'small' })}
+                  sentiment="info"
+                />
+                {subCategory.title}
+              </a>
+            ) : (
+              subCategory.title
+            )}
           </Text>
         )}
         {subCategory.customContent ? (
@@ -197,13 +237,12 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
           </Text>
         ) : null}
       </Stack>
-
       <Stack className={orderSummaryDetails} direction="column" gap={0.5}>
-        {subCategory.details?.map(detail =>
+        {subCategory.details?.map((detail, index) =>
           detail ? (
             <Text
               as="span"
-              key={detail}
+              key={`${subCategory.title}-${index}`}
               sentiment="neutral"
               variant="bodySmall"
             >
@@ -228,7 +267,14 @@ export const ScrollableContent = () => {
             gap={1.5}
             key={category.category}
           >
-            <CategoryName category={category} />
+            {category.subTitle ? (
+              <Stack direction="column">
+                <CategoryName category={category} />
+                {category.subTitle}
+              </Stack>
+            ) : (
+              <CategoryName category={category} />
+            )}
             {category.subCategories &&
             Object.keys(category.subCategories).length > 0 ? (
               <Stack gap={1}>

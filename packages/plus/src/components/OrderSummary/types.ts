@@ -46,12 +46,13 @@ export type PriceType = Record<string, PriceTypeSingle>
 
 export type SubCategoryType = {
   title?: string
+  icon?: ReactNode
   additionalInfo?: ReactNode
   price?: number
   /**
    * List of elements to be displayed in the subcategory
    */
-  details?: string[]
+  details?: ReactNode[]
   discount?: number
   amount?: number[] | number
   amountFree?: number
@@ -71,11 +72,14 @@ export type SubCategoryType = {
    * Custom content to display next to the price
    */
   customContent?: ReactNode
+  anchor?: string
 } & NumberInputType
 
 export type ItemsType = {
   category: string
   additionalInfo?: ReactNode
+  /** Information to add beneath the catecgory name */
+  subTitle?: ReactNode
   subCategories?: SubCategoryType[]
   discount?: number
   /**
@@ -86,6 +90,7 @@ export type ItemsType = {
    * Whether the category price can be < 0 (e.g coupons)
    */
   allowNegative?: boolean
+  anchor?: string
 } & NumberInputType
 
 export type CurrencyType = 'EUR'
@@ -111,6 +116,7 @@ export type OrderSummaryProps = {
   totalPriceInfoPlacement?: 'left' | 'right'
   totalPriceDescription?: ReactNode
   additionalInfo?: string
+  priceInformation?: ReactNode
   hideBeforePrice?: boolean
   /**
    * Number of fraction digit to display in the price details
