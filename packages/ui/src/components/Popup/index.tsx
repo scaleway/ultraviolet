@@ -62,7 +62,7 @@ export type PositionsType = {
  * This event handle allow us to not bubble the event to document.body like this react-select works fine
  */
 const stopClickPropagation: MouseEventHandler = event => {
-  event.nativeEvent.stopImmediatePropagation()
+  event.stopPropagation()
 }
 
 type PopupRole = 'dialog' | 'tooltip' | 'popup' | string

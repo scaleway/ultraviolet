@@ -74,6 +74,7 @@ export const selectBar = recipe({
     size: {
       small: {
         height: theme.sizing[INPUT_SIZE_HEIGHT.small],
+        padding: 0,
         paddingLeft: theme.space[1],
       },
       medium: {
