@@ -1,5 +1,6 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons'
-import { Stack, Tooltip } from '@ultraviolet/ui'
+import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
+import { Stack, Text, Tooltip } from '@ultraviolet/ui'
 
 const AdditionalInfo = () => (
   <Stack alignItems="center" direction="row" gap={0.5}>
@@ -27,7 +28,13 @@ export const categoryDefault = {
 export const categoryAZ = {
   category: 'Availability Zone',
   discount: 0.5,
-  subCategories: [{ price: 5, title: 'PARIS 1' }],
+  subCategories: [
+    {
+      icon: <FranceFlag />,
+      price: 5,
+      title: 'PARIS',
+    },
+  ],
 }
 
 export const categoryM2 = {
@@ -49,6 +56,16 @@ export const categoryM2 = {
       title: 'macOs Sonoma',
     },
   ],
+  subTitle: (
+    <Stack direction="row" justifyContent="space-between">
+      <Text as="span" sentiment="success" variant="bodySmallStrong">
+        Carbon Emission
+      </Text>
+      <Text as="span" sentiment="success" variant="bodySmallStrong">
+        0.082kgCO2e
+      </Text>
+    </Stack>
+  ),
 }
 
 export const categoryOptions = {
@@ -118,4 +135,23 @@ export const rangePriceContent = {
       title: '20-30 nodes',
     },
   ],
+}
+
+export const anchorProduct = {
+  anchor: '#anchor-category',
+  category: 'This is an anchor',
+  subCategories: [
+    {
+      amount: 2,
+      anchor: '#anchor-sub-category',
+      details: ['detail', 'detail'],
+      price: 10,
+      title: 'This is also an anchor',
+    },
+    { amount: 1, price: 2, title: 'This is not an anchor' },
+  ],
+}
+export const nonAnchorProduct = {
+  category: 'This is not an anchor',
+  subCategories: [{ price: 10 }],
 }
