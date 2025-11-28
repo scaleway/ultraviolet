@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.1
+
+### Patch Changes
+
+- [#5830](https://github.com/scaleway/ultraviolet/pull/5830) [`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23) Thanks [@lisalupi](https://github.com/lisalupi)! - Add 20+ `Flags`
+
 ## 5.0.0
 
 ### Major Changes

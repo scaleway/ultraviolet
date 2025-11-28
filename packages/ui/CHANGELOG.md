@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#5835](https://github.com/scaleway/ultraviolet/pull/5835) [`c650f4f`](https://github.com/scaleway/ultraviolet/commit/c650f4fd70be4b6a09477514b5719becec6a278b) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Fix color of disabled option description text
+
+- [#5828](https://github.com/scaleway/ultraviolet/pull/5828) [`7bde3d9`](https://github.com/scaleway/ultraviolet/commit/7bde3d9d0c905f610b903d1af7802742e3cfcc4e) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
+  - click outside should work in every context
+  - fix placeholder alignment when small
+
+- [#5822](https://github.com/scaleway/ultraviolet/pull/5822) [`cb75383`](https://github.com/scaleway/ultraviolet/commit/cb7538341653c9dc485bd59ef107cea863449fa1) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`: new size "xsmall"
+
+- Updated dependencies [[`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23)]:
+  - @ultraviolet/icons@5.0.1
+
 ## 3.0.0
 
 ### Major Changes
