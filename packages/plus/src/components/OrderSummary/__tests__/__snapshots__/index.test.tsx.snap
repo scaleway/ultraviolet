@@ -35,7 +35,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl2 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_a0_"
+                  id="_r_br_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -51,8 +51,8 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_a2_"
-                  aria-describedby="_r_a2_"
+                  aria-controls="_r_bt_"
+                  aria-describedby="_r_bt_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -60,7 +60,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                   >
                     <div
-                      aria-controls="_r_a2_"
+                      aria-controls="_r_bt_"
                       aria-expanded="false"
                       class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
@@ -185,8 +185,8 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
               >
                 <div
-                  aria-controls="_r_ae_"
-                  aria-describedby="_r_ae_"
+                  aria-controls="_r_c9_"
+                  aria-describedby="_r_c9_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -231,8 +231,8 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
                   >
                     <div
-                      aria-controls="_r_ai_"
-                      aria-describedby="_r_ai_"
+                      aria-controls="_r_cd_"
+                      aria-describedby="_r_cd_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -635,12 +635,16 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
               Estimated cost additional info:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €383.83
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -674,12 +678,16 @@ exports[`orderSummary > should work with an empty list of item 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €0.00
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €0.00
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1322,12 +1330,16 @@ exports[`orderSummary > should work with children 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €383.83
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1879,12 +1891,16 @@ exports[`orderSummary > should work with default props 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €383.83
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1927,7 +1943,7 @@ exports[`orderSummary > should work with discount 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl2 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_d0_"
+                  id="_r_fm_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -1943,8 +1959,8 @@ exports[`orderSummary > should work with discount 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_d2_"
-                  aria-describedby="_r_d2_"
+                  aria-controls="_r_fo_"
+                  aria-describedby="_r_fo_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -1952,7 +1968,7 @@ exports[`orderSummary > should work with discount 1`] = `
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                   >
                     <div
-                      aria-controls="_r_d2_"
+                      aria-controls="_r_fo_"
                       aria-expanded="false"
                       class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
@@ -2053,19 +2069,23 @@ exports[`orderSummary > should work with discount 1`] = `
             </span>
           </div>
           <div
-            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
-              €5.00
-            </span>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-              data-testid="total-price"
-            >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                €5.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                data-testid="total-price"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -2109,7 +2129,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl2 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_ci_"
+                  id="_r_ed_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -2125,8 +2145,8 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_ck_"
-                  aria-describedby="_r_ck_"
+                  aria-controls="_r_ef_"
+                  aria-describedby="_r_ef_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -2134,7 +2154,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                   >
                     <div
-                      aria-controls="_r_ck_"
+                      aria-controls="_r_ef_"
                       aria-expanded="false"
                       class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
@@ -2235,19 +2255,209 @@ exports[`orderSummary > should work with discount in  % 1`] = `
             </span>
           </div>
           <div
-            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                €5.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                data-testid="total-price"
+              >
+                €2.50
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`orderSummary > should work with discount of 100% 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1q5g1ma0 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u6p"
+    >
+      <div
+        class="styles_showDetails__1q5g1ma3 styles__1q5g1ma1 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52ud uv_toi52u6p"
+      >
+        <h3
+          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+        >
+          summary
+        </h3>
+        <div
+          class="styles__1q5g1ma4 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn1: 200px;"
+          >
+            <div
+              class="uv_gwf0flc uv_gwf0fla uv_gwf0fl5 uv_x6hyh50 "
+              style="--uv_3mg8xe0: 2fr 3fr; --uv_3mg8xe1: 2fr 3fr; --uv_3mg8xe2: 2fr 3fr; --uv_3mg8xe3: 2fr 3fr; --uv_3mg8xe4: 2fr 3fr; --uv_3mg8xe5: 2fr 3fr;"
+            >
+              <div
+                class="uv_gwf0flb"
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="uv_gwf0fl2 uv_gwf0fl1"
+                  data-testid="unit-input"
+                  id="_r_er_"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                />
+              </div>
+              <div
+                aria-label="-unit"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
+                style="--uv_gwf0fl0: 100%;"
+              >
+                <div
+                  aria-controls="_r_et_"
+                  aria-describedby="_r_et_"
+                  class="uv_w40vpo9 uv_w40vpob"
+                  tabindex="-1"
+                >
+                  <div
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  >
+                    <div
+                      aria-controls="_r_et_"
+                      aria-expanded="false"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
+                      data-disabled="false"
+                      data-readonly="false"
+                      data-testid="select-input--unit"
+                      id="unit"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      >
+                        Hour(s)
+                      </span>
+                      <div
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                      >
+                        <svg
+                          aria-label="show dropdown"
+                          class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__1q5g1ma7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      >
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
           >
             <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              SimpleCategory
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
             >
               €5.00
             </span>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-              data-testid="total-price"
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
-              €2.50
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  subcategory
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €5.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__1q5g1ma5 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Estimated cost:
             </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                €5.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                data-testid="total-price"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -2890,12 +3100,16 @@ exports[`orderSummary > should work with footer 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €383.83
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+          </div>
         </div>
         footer
       </div>
@@ -2939,7 +3153,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl2 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_de_"
+                  id="_r_g4_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -2955,8 +3169,8 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_dg_"
-                  aria-describedby="_r_dg_"
+                  aria-controls="_r_g6_"
+                  aria-describedby="_r_g6_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -2964,7 +3178,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                   >
                     <div
-                      aria-controls="_r_dg_"
+                      aria-controls="_r_g6_"
                       aria-expanded="false"
                       class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
@@ -3065,18 +3279,199 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
             </span>
           </div>
           <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                €5
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                data-testid="total-price"
+              >
+                €3
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`orderSummary > should work with hide before price 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="test-className styles__1q5g1ma0 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u6p"
+    >
+      <div
+        class="styles_showDetails__1q5g1ma3 styles__1q5g1ma1 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52ud uv_toi52u6p"
+      >
+        <h3
+          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+        >
+          summary
+        </h3>
+        <div
+          class="styles__1q5g1ma4 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn1: 200px;"
+          >
+            <div
+              class="uv_gwf0flc uv_gwf0fla uv_gwf0fl5 uv_x6hyh50 "
+              style="--uv_3mg8xe0: 2fr 3fr; --uv_3mg8xe1: 2fr 3fr; --uv_3mg8xe2: 2fr 3fr; --uv_3mg8xe3: 2fr 3fr; --uv_3mg8xe4: 2fr 3fr; --uv_3mg8xe5: 2fr 3fr;"
+            >
+              <div
+                class="uv_gwf0flb"
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="uv_gwf0fl2 uv_gwf0fl1"
+                  data-testid="unit-input"
+                  id="_r_f9_"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                />
+              </div>
+              <div
+                aria-label="-unit"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
+                style="--uv_gwf0fl0: 100%;"
+              >
+                <div
+                  aria-controls="_r_fb_"
+                  aria-describedby="_r_fb_"
+                  class="uv_w40vpo9 uv_w40vpob"
+                  tabindex="-1"
+                >
+                  <div
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  >
+                    <div
+                      aria-controls="_r_fb_"
+                      aria-expanded="false"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
+                      data-disabled="false"
+                      data-readonly="false"
+                      data-testid="select-input--unit"
+                      id="unit"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      >
+                        Hour(s)
+                      </span>
+                      <div
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                      >
+                        <svg
+                          aria-label="show dropdown"
+                          class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__1q5g1ma7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      >
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              SimpleCategory
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €5.00
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  subcategory
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €5.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__1q5g1ma5 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+        >
+          <div
             class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
           >
             <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
             >
-              €5
+              Estimated cost:
             </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+          >
             <span
               class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
               data-testid="total-price"
             >
-              €3
+              €2.50
             </span>
           </div>
         </div>
@@ -3121,7 +3516,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl2 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_br_"
+                  id="_r_dm_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -3137,8 +3532,8 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_bt_"
-                  aria-describedby="_r_bt_"
+                  aria-controls="_r_do_"
+                  aria-describedby="_r_do_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -3146,7 +3541,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                   >
                     <div
-                      aria-controls="_r_bt_"
+                      aria-controls="_r_do_"
                       aria-expanded="false"
                       class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
@@ -3236,7 +3631,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   >
                     <input
                       class="uv_1ce7gb6b uv_1ce7gb6d"
-                      id="_r_c2_"
+                      id="_r_dt_"
                       max="9007199254740991"
                       min="0"
                       placeholder=""
@@ -3318,7 +3713,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       >
                         <input
                           class="uv_1ce7gb6b uv_1ce7gb6c uv_1ce7gb6d uv_1ce7gb6g"
-                          id="_r_c9_"
+                          id="_r_e4_"
                           max="9007199254740991"
                           min="0"
                           placeholder=""
@@ -3397,12 +3792,16 @@ exports[`orderSummary > should work with numberInputs 1`] = `
             </div>
             total price info
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €1.00
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €1.00
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -3570,12 +3969,16 @@ exports[`orderSummary > should work with price as a range 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €200.00 - €300.00
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €200.00 - €300.00
+            </span>
+          </div>
         </div>
         footer
       </div>
@@ -4223,12 +4626,668 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
             </div>
             total price info
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €383.83
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacement 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__1q5g1ma0 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u6p"
+    >
+      <div
+        class="styles_showDetails__1q5g1ma3 styles__1q5g1ma1 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52ud uv_toi52u6p"
+      >
+        <h3
+          class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+        >
+          summary
+        </h3>
+        <div
+          class="styles__1q5g1ma4 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            style="--uv_4k0ekn1: 200px;"
+          >
+            <div
+              class="uv_gwf0flc uv_gwf0fla uv_gwf0fl5 uv_x6hyh50 "
+              style="--uv_3mg8xe0: 2fr 3fr; --uv_3mg8xe1: 2fr 3fr; --uv_3mg8xe2: 2fr 3fr; --uv_3mg8xe3: 2fr 3fr; --uv_3mg8xe4: 2fr 3fr; --uv_3mg8xe5: 2fr 3fr;"
+            >
+              <div
+                class="uv_gwf0flb"
+                id="input-field"
+              >
+                <input
+                  aria-invalid="false"
+                  class="uv_gwf0fl2 uv_gwf0fl1"
+                  data-testid="unit-input"
+                  id="_r_a0_"
+                  max="9007199254740991"
+                  min="0"
+                  name="-value"
+                  placeholder="0"
+                  step="1"
+                  type="number"
+                  value="1"
+                />
+              </div>
+              <div
+                aria-label="-unit"
+                class="uv_gwf0flg uv_gwf0flf uv_uf6pag0"
+                style="--uv_gwf0fl0: 100%;"
+              >
+                <div
+                  aria-controls="_r_a2_"
+                  aria-describedby="_r_a2_"
+                  class="uv_w40vpo9 uv_w40vpob"
+                  tabindex="-1"
+                >
+                  <div
+                    class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+                  >
+                    <div
+                      aria-controls="_r_a2_"
+                      aria-expanded="false"
+                      class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
+                      data-disabled="false"
+                      data-readonly="false"
+                      data-testid="select-input--unit"
+                      id="unit"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <span
+                        class="uv_1ba7kndl uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                      >
+                        Hour(s)
+                      </span>
+                      <div
+                        class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                      >
+                        <svg
+                          aria-label="show dropdown"
+                          class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__1q5g1ma7 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      >
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Availability Zone
+            </span>
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                €5.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              >
+                €2.50
+              </span>
+            </div>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  PARIS 1
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €5.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Custom content
+            </span>
+            FREE
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              >
+                Category
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+              >
+                <div
+                  aria-controls="_r_ae_"
+                  aria-describedby="_r_ae_"
+                  class="uv_w40vpo9"
+                  tabindex="0"
+                >
+                  <svg
+                    class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  7 days of free backup
+                </div>
+              </span>
+            </div>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €12.20
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <div
+                  class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                >
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                  >
+                    SubCategory
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+                  >
+                    <div
+                      aria-controls="_r_ai_"
+                      aria-describedby="_r_ai_"
+                      class="uv_w40vpo9"
+                      tabindex="0"
+                    >
+                      <svg
+                        class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                      7 days of free backup
+                    </div>
+                  </span>
+                </div>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €12.20
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  Detail 1
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  Detail 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Configuration
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €129.10
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  M2-M
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €119.10
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  Apple M2 Chip
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  8 Cores CPU 8 cores GPU
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  256 GB SSD storage
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  16 GB memory
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  1 GB bandwidth
+                </span>
+              </div>
+            </div>
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  macOs Sonoma
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €10.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Options
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €0.00
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  0.5 Gbps public bandwidth
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  Included
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Coupon
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              -€10.00
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  PROMO2025
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  -€10.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              One time fees
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €250.00
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  Setup
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €200.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  Shipping
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €50.00
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Requests cost
+            </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €0.03
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  200000 requests
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €0.00000015 /request
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__1q5g1ma9 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              >
+                Storage
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow3 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9ow9 uv_m4c9owi uv_m4c9own uv_m4c9ow1b uv_m4c9ow1c uv_m4c9ow3c"
+              >
+                <svg
+                  class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                75GB free on public images
+              </span>
+            </div>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              €0.00
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            >
+              <div
+                class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+              >
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  100 GB of storage
+                </span>
+                <span
+                  class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owo uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                >
+                  €0.00003425 /GB/hours
+                </span>
+              </div>
+              <div
+                class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="styles__1q5g1ma5 uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52uj uv_toi52u5d"
+      >
+        <div
+          class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u6p"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9owq uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+            >
+              Estimated cost:
+            </span>
+          </div>
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
+          >
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+            total price info
+          </div>
         </div>
       </div>
     </div>
@@ -4789,12 +5848,16 @@ exports[`orderSummary > should work without unitInput 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €383.83
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €383.83
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -4834,12 +5897,16 @@ exports[`orderSummary > works with hideDetails 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €2.50/hours
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €2.50/hours
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -4871,19 +5938,23 @@ exports[`orderSummary > works with hideDetails 1`] = `
             </span>
           </div>
           <div
-            class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+            <div
+              class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
             >
-              €2.50
-            </span>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-              data-testid="total-price"
-            >
-              €1.25/hours
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owo uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                €2.50
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+                data-testid="total-price"
+              >
+                €1.25/hours
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -4927,7 +5998,7 @@ exports[`orderSummary > works with negative category price 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl2 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_e3_"
+                  id="_r_gp_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -4943,8 +6014,8 @@ exports[`orderSummary > works with negative category price 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_e5_"
-                  aria-describedby="_r_e5_"
+                  aria-controls="_r_gr_"
+                  aria-describedby="_r_gr_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -4952,7 +6023,7 @@ exports[`orderSummary > works with negative category price 1`] = `
                     class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
                   >
                     <div
-                      aria-controls="_r_e5_"
+                      aria-controls="_r_gr_"
                       aria-expanded="false"
                       class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd6"
                       data-disabled="false"
@@ -5104,12 +6175,16 @@ exports[`orderSummary > works with negative category price 1`] = `
               Estimated cost:
             </span>
           </div>
-          <span
-            class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
-            data-testid="total-price"
+          <div
+            class="uv_toi52u0 uv_toi52u3p uv_toi52u2d uv_toi52u7d uv_toi52u5d"
           >
-            €0.00
-          </span>
+            <span
+              class="uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owj uv_m4c9ow16 uv_m4c9ow1b uv_m4c9ow21 uv_m4c9ow3d"
+              data-testid="total-price"
+            >
+              €0.00
+            </span>
+          </div>
         </div>
       </div>
     </div>

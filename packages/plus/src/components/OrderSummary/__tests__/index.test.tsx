@@ -120,6 +120,18 @@ describe('orderSummary', () => {
       />,
     ))
 
+  test('should work with totalPriceInfo and totalPriceInfoPlacement', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        currency="EUR"
+        header="summary"
+        items={mockItems}
+        localeFormat="en-EN"
+        totalPriceInfo="total price info"
+        totalPriceInfoPlacement="right"
+      />,
+    ))
+
   test('should work with additionalInfo', () =>
     shouldMatchSnapshot(
       <OrderSummary
@@ -149,6 +161,42 @@ describe('orderSummary', () => {
         currency="EUR"
         discount={0.5}
         header="summary"
+        items={[simpleCategory]}
+        localeFormat="en-EN"
+      />,
+    )
+
+    const price = screen.getByTestId('total-price').textContent
+    expect(price).toBe('€2.50')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should work with discount of 100%', () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary
+        currency="EUR"
+        discount={1}
+        header="summary"
+        items={[simpleCategory]}
+        localeFormat="en-EN"
+      />,
+    )
+
+    const price = screen.getByTestId('total-price').textContent
+    expect(price).toBe('€0.00')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should work with hide before price', () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary
+        className="test-className"
+        currency="EUR"
+        discount={0.5}
+        header="summary"
+        hideBeforePrice
         items={[simpleCategory]}
         localeFormat="en-EN"
       />,

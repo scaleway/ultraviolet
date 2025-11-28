@@ -12,10 +12,12 @@ type NonScrollableContentProps = {
   footer: ReactNode
   children: ReactNode
   totalPriceInfo?: ReactNode
+  totalPriceInfoPlacement?: 'left' | 'right'
   totalPriceDescription?: ReactNode
   additionalInfo?: string
   hideDetails: boolean
   unit: TimeUnit
+  hideBeforePrice?: boolean
 }
 
 export const NonScrollableContent = ({
@@ -23,10 +25,12 @@ export const NonScrollableContent = ({
   footer,
   children,
   totalPriceInfo,
+  totalPriceInfoPlacement,
   hideDetails,
   unit,
   totalPriceDescription,
   additionalInfo,
+  hideBeforePrice,
 }: NonScrollableContentProps) => {
   const { locales } = useContext(OrderSummaryContext)
 
@@ -34,7 +38,7 @@ export const NonScrollableContent = ({
     <Stack className={orderSummaryNonScrollableContainer} gap={3}>
       {children}
       <Stack alignItems="center" direction="row" justifyContent="space-between">
-        {totalPriceInfo ? (
+        {totalPriceInfo && totalPriceInfoPlacement === 'left' ? (
           <Stack>
             <Stack alignItems="center" direction="row" gap={1}>
               <Text
@@ -63,28 +67,9 @@ export const NonScrollableContent = ({
             {totalPriceDescription}
           </Stack>
         )}
-        {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ? (
-          <Text
-            as="span"
-            data-testid="total-price"
-            prominence="strong"
-            sentiment="neutral"
-            variant="headingSmallStrong"
-          >
-            <DisplayPrice beforeOrAfter="after" price={totalPrice} />
-            {hideDetails ? `/${unit}` : null}
-          </Text>
-        ) : (
-          <Stack alignItems="center" direction="row" gap={1}>
-            <Text
-              as="span"
-              prominence="weak"
-              sentiment="neutral"
-              strikeThrough
-              variant="bodySmallStrong"
-            >
-              <DisplayPrice beforeOrAfter="before" price={totalPrice} />
-            </Text>
+        <Stack alignItems="end" direction="column">
+          {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ||
+          hideBeforePrice ? (
             <Text
               as="span"
               data-testid="total-price"
@@ -95,8 +80,33 @@ export const NonScrollableContent = ({
               <DisplayPrice beforeOrAfter="after" price={totalPrice} />
               {hideDetails ? `/${unit}` : null}
             </Text>
-          </Stack>
-        )}
+          ) : (
+            <Stack alignItems="center" direction="row" gap={1}>
+              <Text
+                as="span"
+                prominence="weak"
+                sentiment="neutral"
+                strikeThrough
+                variant="bodySmallStrong"
+              >
+                <DisplayPrice beforeOrAfter="before" price={totalPrice} />
+              </Text>
+              <Text
+                as="span"
+                data-testid="total-price"
+                prominence="strong"
+                sentiment="neutral"
+                variant="headingSmallStrong"
+              >
+                <DisplayPrice beforeOrAfter="after" price={totalPrice} />
+                {hideDetails ? `/${unit}` : null}
+              </Text>
+            </Stack>
+          )}
+          {totalPriceInfo && totalPriceInfoPlacement === 'right'
+            ? totalPriceInfo
+            : null}
+        </Stack>
       </Stack>
       {footer}
     </Stack>
