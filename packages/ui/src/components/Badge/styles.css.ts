@@ -73,6 +73,11 @@ export const badge = recipe({
         gap: theme.space[1],
         height: theme.sizing[SIZES.large],
       },
+      xsmall: {
+        padding: `0 ${theme.space[1]}`,
+        gap: theme.space['0.5'],
+        height: theme.sizing[SIZES.xsmall],
+      },
     },
 
     sentiment: {
