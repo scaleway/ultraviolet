@@ -50,7 +50,7 @@ export const DisplayOption = ({
                 as="span"
                 placement="left"
                 prominence="weak"
-                sentiment="neutral"
+                sentiment={option.disabled ? undefined : 'neutral'}
                 variant="bodySmall"
               >
                 {option.description}
@@ -87,13 +87,7 @@ export const DisplayOption = ({
               {option.label}
             </Text>
             {option.description ? (
-              <Text
-                as="span"
-                placement="left"
-                prominence="weak"
-                sentiment="neutral"
-                variant="bodySmall"
-              >
+              <Text as="span" placement="left" variant="bodySmall">
                 {option.description}
               </Text>
             ) : null}
@@ -136,7 +130,7 @@ export const DisplayOption = ({
                 as="span"
                 placement="left"
                 prominence="weak"
-                sentiment="neutral"
+                sentiment={option.disabled ? undefined : 'neutral'}
                 variant="bodySmall"
               >
                 {option.description}
@@ -179,7 +173,7 @@ export const DisplayOption = ({
             as="span"
             placement="left"
             prominence="weak"
-            sentiment="neutral"
+            sentiment={option.disabled ? undefined : 'neutral'}
             variant="bodySmall"
           >
             {option.description}
