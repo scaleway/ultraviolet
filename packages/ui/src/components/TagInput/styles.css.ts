@@ -48,16 +48,19 @@ export const tagInputContainer = recipe({
         padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.large]} - 1px) ${
           theme.space['2']
         }`,
+        minHeight: theme.sizing[600],
       },
       small: {
         padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.small]} - 1px) ${
           theme.space['1']
         }`,
+        minHeight: theme.sizing[400],
       },
       medium: {
         padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.medium]} - 1px) ${
           theme.space['2']
         }`,
+        minHeight: theme.sizing[500],
       },
     },
     multiline: {
@@ -73,13 +76,12 @@ export const tagInputContainer = recipe({
 })
 
 export const tagInputDataContainer = style({
+  height: '100%',
   display: 'flex',
   flexWrap: 'wrap',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   gap: theme.space[1],
   flex: 1,
-  height: '100%',
-  boxSizing: 'border-box',
 })
 
 export const tagInputStateContainer = style({
