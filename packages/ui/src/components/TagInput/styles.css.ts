@@ -40,6 +40,8 @@ export const tagInputContainer = recipe({
         cursor: 'not-allowed',
       },
     },
+    height: 'auto',
+    overflowY: 'auto',
   },
 
   variants: {
@@ -62,11 +64,6 @@ export const tagInputContainer = recipe({
         }`,
         minHeight: theme.sizing[500],
       },
-    },
-    multiline: {
-      height: 'auto',
-      maxHeight: '200px',
-      overflowY: 'auto',
     },
   },
   defaultVariants: {
