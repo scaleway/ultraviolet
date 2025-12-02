@@ -65,7 +65,6 @@ export const tagInputContainer = recipe({
     },
     multiline: {
       height: 'auto',
-      minHeight: theme.sizing[400],
       maxHeight: '200px',
       overflowY: 'auto',
     },
