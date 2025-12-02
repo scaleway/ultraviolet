@@ -24,6 +24,8 @@ type PlansProps<T extends string> = {
   hideLabels?: boolean
   locales?: Record<keyof typeof PlansLocales, string>
   style?: CSSProperties
+  /** Highlights a plan. Use plan value and define the content of the highlight badge */
+  highlight?: { plan: string; content: string }
 }
 
 export const Plans = <T extends string>({
@@ -36,6 +38,7 @@ export const Plans = <T extends string>({
   hideLabels = false,
   locales = PlansLocales,
   style,
+  highlight,
 }: PlansProps<T>) => {
   const hasCardBehavior = !!(fieldName && onChange)
   const [focusedPlan, setFocusedPlan] = useState<string>()
@@ -55,12 +58,15 @@ export const Plans = <T extends string>({
           {plans.map(plan => {
             const computedDisabled = !!(plan.outOfStock || plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
+            const isHighlighted = highlight && plan.value === highlight.plan
 
             return (
               <td
                 className={plansCell({
                   activeColor:
-                    value === plan.value || hoveredPlan === plan.value,
+                    value === plan.value ||
+                    hoveredPlan === plan.value ||
+                    (isHighlighted && !plan.outOfStock),
                   disabled: computedDisabled,
                   focus: focusedPlan === plan.value,
                   hideLabels,
@@ -91,9 +97,19 @@ export const Plans = <T extends string>({
                     {locales['plans.outOfStock']}
                   </Badge>
                 ) : null}
-                {plan.header.quotas ? (
+                {plan.header.quotas && !plan.outOfStock ? (
                   <Badge className={plansOutOfStockBadge} size="small">
                     {plan.header.quotas}
+                  </Badge>
+                ) : null}
+                {isHighlighted && !plan.outOfStock && !plan.header.quotas ? (
+                  <Badge
+                    className={plansOutOfStockBadge}
+                    prominence="strong"
+                    sentiment="primary"
+                    size="small"
+                  >
+                    {highlight.content}
                   </Badge>
                 ) : null}
                 <PlanHeader
@@ -130,18 +146,25 @@ export const Plans = <T extends string>({
                     {feature.hint ? <FeatureHint hint={feature.hint} /> : null}
                   </Stack>
                 </td>
-                {plans.map(plan => (
-                  <td
-                    className={plansCell({
-                      activeColor:
-                        value === plan.value || hoveredPlan === plan.value,
-                      disabled: plan.outOfStock || plan.disabled,
-                      focus: focusedPlan === plan.value,
-                      hide: hideLabels,
-                    })}
-                    key={plan.value}
-                  />
-                ))}
+                {plans.map(plan => {
+                  const isHighlighted =
+                    highlight && plan.value === highlight.plan
+
+                  return (
+                    <td
+                      className={plansCell({
+                        activeColor:
+                          value === plan.value ||
+                          hoveredPlan === plan.value ||
+                          (isHighlighted && !plan.outOfStock),
+                        disabled: plan.outOfStock || plan.disabled,
+                        focus: focusedPlan === plan.value,
+                        hide: hideLabels,
+                      })}
+                      key={plan.value}
+                    />
+                  )
+                })}
               </tr>
             )
           }
@@ -174,12 +197,15 @@ export const Plans = <T extends string>({
               {plans.map(plan => {
                 const computedDisabled = plan.outOfStock || plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
+                const isHighlighted = highlight && plan.value === highlight.plan
 
                 return (
                   <td
                     className={plansCell({
                       activeColor:
-                        value === plan.value || hoveredPlan === plan.value,
+                        value === plan.value ||
+                        hoveredPlan === plan.value ||
+                        (isHighlighted && !plan.outOfStock),
                       disabled: computedDisabled,
                       focus: focusedPlan === plan.value,
                       hideLabels,

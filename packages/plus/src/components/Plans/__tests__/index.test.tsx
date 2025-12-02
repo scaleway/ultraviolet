@@ -95,4 +95,13 @@ describe('plans', () => {
         plans={[planStarter]}
       />,
     ))
+
+  it('should work with highlighted plan', () =>
+    shouldMatchSnapshot(
+      <Plans
+        features={[gb]}
+        highlight={{ content: 'most popular', plan: 'professional' }}
+        plans={[planStarter, planAdvanced, planProfessional]}
+      />,
+    ))
 })

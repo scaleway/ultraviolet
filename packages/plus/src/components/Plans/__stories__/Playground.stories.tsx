@@ -1,6 +1,4 @@
-import type { Text } from '@ultraviolet/ui'
 import { Button } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'
 
@@ -22,7 +20,7 @@ const planStarter = {
     priceDescription: '/month',
     separator: true,
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'Starter',
   value: 'starter',
 }
@@ -45,7 +43,7 @@ const planProfessional = {
     priceDescription: '/month',
     separator: true,
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'professional',
   value: 'professional',
 }
@@ -68,7 +66,7 @@ const planAdvanced = {
     priceDescription: '/month',
     separator: true,
   },
-  sentiment: 'primary' as ComponentProps<typeof Text>['sentiment'],
+  sentiment: 'primary' as const,
   title: 'Advanced',
   value: 'advanced',
 }
