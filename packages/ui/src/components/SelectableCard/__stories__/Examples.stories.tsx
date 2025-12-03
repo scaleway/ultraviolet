@@ -1,6 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { Badge } from '../../Badge'
+import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
@@ -27,6 +28,9 @@ export const Examples: StoryFn = args => {
   })
   const [value5, onChange5] = useState({
     'label-29': false,
+  })
+  const [value6, onChange6] = useState({
+    'label-30': false,
   })
 
   return (
@@ -320,17 +324,57 @@ export const Examples: StoryFn = args => {
         {...args}
         checked={value5['label-29']}
         label="With an input in the children"
-        name="label-29" // fixed: match the state key
-        onChange={
-          event =>
-            onChange5({ ...value5, 'label-29': event.currentTarget.checked }) // fixed: spread value5
+        name="label-29"
+        onChange={event =>
+          onChange5({ ...value5, 'label-29': event.currentTarget.checked })
         }
         showTick
         type="checkbox"
-        value="label-29" // fixed: match the state key
+        value="label-29"
       >
         <TextArea label="" onChange={() => {}} />
       </SelectableCard>
+      <SelectableCard
+        {...args}
+        checked={value6['label-30']}
+        label={
+          <Stack direction="row" justifyContent="space-between">
+            <Stack direction="row" gap={1}>
+              <Text as="span" variant="body">
+                domain.com
+              </Text>
+              <Badge>Premium</Badge>
+            </Stack>
+            <Stack direction="row" gap={2}>
+              <Badge sentiment="primary">Save 64%</Badge>
+              <Stack alignItems="center" direction="row" gap="0.5">
+                <Text
+                  as="span"
+                  prominence="weak"
+                  sentiment="neutral"
+                  strikeThrough
+                  variant="captionSmall"
+                >
+                  €8.99
+                </Text>
+                <Text as="span" sentiment="neutral" variant="bodyStronger">
+                  €2.99 year
+                </Text>
+              </Stack>
+              <Button sentiment="primary" size="small" variant="outlined">
+                Add to cart
+              </Button>
+            </Stack>
+          </Stack>
+        }
+        name="label-30"
+        onChange={event =>
+          onChange6({ ...value6, 'label-30': event.currentTarget.checked })
+        }
+        showTick
+        type="checkbox"
+        value="label-30"
+      />
     </Stack>
   )
 }
