@@ -7,10 +7,15 @@ import type {
   MouseEventHandler,
   ReactNode,
 } from 'react'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
+import { Label } from '../Label'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import {
   barStack,
+  barStackLegendCircle,
+  barStackText,
   containerBarStack,
   wrapperBarStack,
   wrapperWidth,
@@ -47,7 +52,14 @@ type BarStackProps = {
   total?: number
   className?: string
   'data-testid'?: string
+  label?: string
+  labelInformation?: ReactNode
   style?: CSSProperties
+  /**
+   * Whether to add a legend inside or outside the chart
+   */
+  legend?: 'inside' | 'outside'
+  size?: 'large' | 'medium' | 'small' | 'xsmall'
 }
 
 /**
@@ -59,71 +71,154 @@ export const BarStack = ({
   className,
   'data-testid': dataTestId,
   style,
+  label,
+  labelInformation,
+  legend = 'inside',
+  size,
 }: BarStackProps) => {
   const computedTotal = useMemo(
     () => total ?? data.reduce((acc, { value }) => acc + value, 0),
     [total, data],
   )
 
+  const [hoveredBarId, setHoveredBarId] = useState<string | null>(null)
+
   return (
-    <div
-      className={`${className ? `${className} ` : ''}${containerBarStack}`}
-      data-testid={dataTestId}
-      style={style}
-    >
-      {data.map(
-        ({
-          id,
-          value,
-          text,
-          onClick,
-          onDoubleClick,
-          onKeyDown,
-          onMouseEnter,
-          onMouseLeave,
-          onMouseDown,
-          onMouseUp,
-          tooltip,
-        }) => (
-          <div
-            className={wrapperBarStack}
-            key={id}
-            style={assignInlineVars({
-              [wrapperWidth]: `${(value / computedTotal) * 100}%`,
-            })}
-          >
-            {tooltip ? (
-              <Tooltip id={`tooltip-${id}`} text={tooltip}>
-                <div
-                  className={barStack}
-                  onClick={onClick}
-                  onDoubleClick={onDoubleClick}
-                  onKeyDown={onKeyDown}
-                  onMouseDown={onMouseDown}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                  onMouseUp={onMouseUp}
-                >
-                  {text}
-                </div>
-              </Tooltip>
-            ) : (
+    <Stack gap={1}>
+      <Stack direction="column" gap={0.25}>
+        {labelInformation ? (
+          <Stack direction="row" justifyContent="space-between">
+            <Label>{label}</Label>
+            <Text as="span" sentiment="neutral" variant="body">
+              {labelInformation}
+            </Text>
+          </Stack>
+        ) : (
+          <Label>{label}</Label>
+        )}
+        <div
+          className={`${className ? `${className} ` : ''}${containerBarStack}`}
+          data-testid={dataTestId}
+          style={style}
+        >
+          {data.map(
+            ({
+              id,
+              value,
+              text,
+              onClick,
+              onDoubleClick,
+              onKeyDown,
+              onMouseEnter,
+              onMouseLeave,
+              onMouseDown,
+              onMouseUp,
+              tooltip,
+            }) => (
               <div
-                className={barStack}
-                onClick={onClick}
-                onDoubleClick={onDoubleClick}
-                onKeyDown={onKeyDown}
-                onMouseDown={onMouseDown}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-                onMouseUp={onMouseUp}
+                className={wrapperBarStack}
+                key={id}
+                style={assignInlineVars({
+                  [wrapperWidth]: `${(value / computedTotal) * 100}%`,
+                })}
               >
-                {text}
+                <Tooltip
+                  text={legend === 'outside' ? text : undefined}
+                  visible={hoveredBarId === id}
+                >
+                  {tooltip ? (
+                    <Tooltip id={`tooltip-${id}`} text={tooltip ?? text}>
+                      <div
+                        className={barStack({ size })}
+                        data-testid={`content-${id}`}
+                        onClick={onClick}
+                        onDoubleClick={onDoubleClick}
+                        onKeyDown={onKeyDown}
+                        onMouseDown={onMouseDown}
+                        onMouseEnter={event => {
+                          onMouseEnter?.(event)
+                        }}
+                        onMouseLeave={event => {
+                          onMouseLeave?.(event)
+                        }}
+                        onMouseUp={onMouseUp}
+                      >
+                        <Text
+                          as="span"
+                          className={barStackText}
+                          prominence="stronger"
+                          sentiment="neutral"
+                          variant={
+                            size === 'small' || size === 'xsmall'
+                              ? 'captionSmallStrong'
+                              : 'captionStrong'
+                          }
+                          whiteSpace="nowrap"
+                        >
+                          {legend === 'outside' ? '' : text}
+                        </Text>
+                      </div>
+                    </Tooltip>
+                  ) : (
+                    <div
+                      className={barStack({ size })}
+                      data-testid={`content-${id}`}
+                      onClick={onClick}
+                      onDoubleClick={onDoubleClick}
+                      onKeyDown={onKeyDown}
+                      onMouseDown={onMouseDown}
+                      onMouseEnter={onMouseEnter}
+                      onMouseLeave={onMouseLeave}
+                      onMouseUp={onMouseUp}
+                    >
+                      <Text
+                        as="span"
+                        className={barStackText}
+                        prominence="stronger"
+                        sentiment="neutral"
+                        variant={
+                          size === 'small' || size === 'xsmall'
+                            ? 'captionSmallStrong'
+                            : 'captionStrong'
+                        }
+                        whiteSpace="nowrap"
+                      >
+                        {legend === 'outside' ? '' : text}
+                      </Text>
+                    </div>
+                  )}
+                </Tooltip>
               </div>
-            )}
-          </div>
-        ),
-      )}
-    </div>
+            ),
+          )}
+        </div>
+      </Stack>
+      {legend === 'outside' ? (
+        <Stack direction="row" gap={2}>
+          {data.map(({ text, id }, index) => (
+            <Stack
+              alignItems="center"
+              data-testid={`legend-${id}`}
+              direction="row"
+              gap="0.5"
+              key={id}
+              onMouseEnter={() => {
+                setHoveredBarId(id)
+              }}
+              onMouseLeave={() => setHoveredBarId(null)}
+            >
+              <span
+                className={barStackLegendCircle({
+                  child: (index % 6) as 1 | 2 | 3 | 4 | 5 | 0,
+                })}
+              />
+              <Text as="span" sentiment="neutral" variant="caption">
+                {text}
+              </Text>
+            </Stack>
+          ))}
+        </Stack>
+      ) : null}
+    </Stack>
   )
 }

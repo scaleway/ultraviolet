@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from 'vitest'
 import { BarStack } from '..'
 
 const fakeData = [
-  { id: '1', text: 'Hello', value: 20 },
+  { id: '1', text: 'Hello', tooltip: 'tooltip', value: 20 },
   { id: '2', value: 42 },
   { id: '3', text: 'Encore', value: 42 },
   { id: '4', text: 'Next', value: 42 },
@@ -21,6 +21,31 @@ describe('barStack', () => {
   test('should render correctly with total', () => {
     const { asFragment } = renderWithTheme(
       <BarStack data={fakeData} total={1000} />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  test('should render correctly with label and label information', () => {
+    const { asFragment } = renderWithTheme(
+      <BarStack
+        className="classname"
+        data={fakeData}
+        label="label"
+        labelInformation="label information"
+        total={1000}
+      />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  Object.keys(['xsmall', 'small', 'large', 'medium']).forEach(size => {
+    test(`renders correctly size ${size}`, () => {
+      const { asFragment } = renderWithTheme(<BarStack data={fakeData} />)
+      expect(asFragment()).toMatchSnapshot()
+    })
+  })
+
+  test('should render correctly with legend outside', () => {
+    const { asFragment } = renderWithTheme(
+      <BarStack data={fakeData} legend="outside" total={1000} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -65,6 +90,31 @@ describe('barStack', () => {
     expect(onClick).toBeCalledTimes(3)
     await userEvent.unhover(helloDiv)
     expect(onMouseLeave).toBeCalledTimes(1)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly with hovering legend', async () => {
+    const { asFragment } = renderWithTheme(
+      <BarStack
+        data={[
+          {
+            id: '1',
+            text: 'Hello',
+            tooltip: 'tooltip',
+            value: 100,
+          },
+        ]}
+        legend="outside"
+      />,
+    )
+    const legend = screen.getByTestId('legend-1')
+    const content = screen.getByTestId('content-1')
+
+    await userEvent.hover(legend)
+    await userEvent.unhover(legend)
+    await userEvent.hover(content)
+    await userEvent.unhover(content)
 
     expect(asFragment()).toMatchSnapshot()
   })
