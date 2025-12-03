@@ -957,7 +957,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: 'Select all',
+      name: 'Selectall',
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1014,7 +1014,7 @@ describe('selectInput', () => {
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: 'Select all',
+      name: 'Selectall',
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
@@ -1159,7 +1159,7 @@ describe('selectInput', () => {
     })
 
     const selectAllCheckBox = screen.getByRole('checkbox', {
-      name: 'Select all',
+      name: 'Selectall',
     })
     const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
