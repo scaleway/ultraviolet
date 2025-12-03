@@ -23,7 +23,7 @@ pnpm build
 
 # Test
 pnpm test:unit`,
-  rows: 18,
+  rows: 14,
 }
 
 Rows.parameters = {

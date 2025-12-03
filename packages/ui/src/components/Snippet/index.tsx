@@ -2,11 +2,12 @@
 
 import { ArrowDownIcon } from '@ultraviolet/icons'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, CSSProperties } from 'react'
+import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useReducer } from 'react'
 import { useTheme } from '../../theme/ThemeProvider'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
+import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import {
@@ -94,6 +95,9 @@ type SnippetProps = {
   noExpandable?: boolean
   onCopy?: () => void
   style?: CSSProperties
+  helper?: string
+  label?: string
+  labelDescription?: ReactNode
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -114,6 +118,9 @@ export const Snippet = ({
   noExpandable = false,
   onCopy,
   style,
+  helper,
+  label,
+  labelDescription,
 }: SnippetProps) => {
   const theme = useTheme()
   const [showMore, setShowMore] = useReducer(
@@ -131,14 +138,29 @@ export const Snippet = ({
     Number.parseFloat(theme.space[4]) * 16
 
   return (
-    <div
-      className={`${className ? `${className} ` : ''}${snippetContainer[multiline ? 'multiline' : 'oneLine']}`}
-      data-testid={dataTestId}
-      style={style}
-    >
-      <Stack className={stackStyle}>
-        {hasShowMoreButton ? (
-          <Expandable minHeight={minHeight} opened={showMore}>
+    <Stack direction="column" gap={1} width="100%">
+      {label ? (
+        <Label labelDescription={labelDescription}>{label}</Label>
+      ) : null}
+      <div
+        className={`${className ? `${className} ` : ''}${snippetContainer[multiline ? 'multiline' : 'oneLine']}`}
+        data-testid={dataTestId}
+        style={style}
+      >
+        <Stack className={stackStyle}>
+          {hasShowMoreButton ? (
+            <Expandable minHeight={minHeight} opened={showMore}>
+              <CodeContent
+                lines={lines}
+                multiline={multiline}
+                noExpandable={noExpandable}
+                prefix={prefix}
+                rows={rows}
+              >
+                {children}
+              </CodeContent>
+            </Expandable>
+          ) : (
             <CodeContent
               lines={lines}
               multiline={multiline}
@@ -148,57 +170,52 @@ export const Snippet = ({
             >
               {children}
             </CodeContent>
-          </Expandable>
-        ) : (
-          <CodeContent
-            lines={lines}
-            multiline={multiline}
-            noExpandable={noExpandable}
-            prefix={prefix}
-            rows={rows}
+          )}
+          <div
+            className={
+              buttonContainer[
+                multiline && numberOfLines > 1 ? 'multiline' : 'oneLine'
+              ]
+            }
           >
-            {children}
-          </CodeContent>
-        )}
-        <div
-          className={
-            buttonContainer[
-              multiline && numberOfLines > 1 ? 'multiline' : 'oneLine'
-            ]
-          }
-        >
-          <CopyButton
-            copiedText={copiedText}
-            copyText={copyText}
-            onCopy={onCopy}
-            sentiment="neutral"
-            value={children}
-          />
-        </div>
-        {hasShowMoreButton ? (
-          <div className={showMoreContainer[showMore ? 'true' : 'false']}>
-            <button
-              aria-expanded={showMore}
-              className={showMoreButton}
-              onClick={setShowMore}
-              type="button"
-            >
-              <Text
-                as="span"
-                className={centeredText}
-                sentiment="neutral"
-                variant="bodySmallStrong"
-              >
-                {showMore ? hideText : showText}
-                &nbsp;
-                <ArrowDownIcon
-                  className={animatedArrowIcon[showMore ? 'true' : 'false']}
-                />
-              </Text>
-            </button>
+            <CopyButton
+              copiedText={copiedText}
+              copyText={copyText}
+              onCopy={onCopy}
+              sentiment="neutral"
+              value={children}
+            />
           </div>
-        ) : null}
-      </Stack>
-    </div>
+          {hasShowMoreButton ? (
+            <div className={showMoreContainer[showMore ? 'true' : 'false']}>
+              <button
+                aria-expanded={showMore}
+                className={showMoreButton}
+                onClick={setShowMore}
+                type="button"
+              >
+                <Text
+                  as="span"
+                  className={centeredText}
+                  sentiment="neutral"
+                  variant="bodySmallStrong"
+                >
+                  {showMore ? hideText : showText}
+                  &nbsp;
+                  <ArrowDownIcon
+                    className={animatedArrowIcon[showMore ? 'true' : 'false']}
+                  />
+                </Text>
+              </button>
+            </div>
+          ) : null}
+        </Stack>
+      </div>
+      {helper ? (
+        <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
+          {helper}
+        </Text>
+      ) : null}
+    </Stack>
   )
 }

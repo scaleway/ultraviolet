@@ -16,6 +16,7 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { SingleLine } from './SingleLine.stories'
+export { LabelHelper } from './LabelHelper.stories'
 export { LongSingleLine } from './LongSingleLine.stories'
 export { Multiline } from './Multiline.stories'
 export { LongMultiline } from './LongMultiline.stories'

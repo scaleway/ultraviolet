@@ -1,5 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { InformationIcon } from '@ultraviolet/icons'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
 import { Snippet } from '../index'
@@ -96,4 +97,23 @@ describe('snippet', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
+  test('renders correctly with label ', () =>
+    shouldMatchSnapshot(
+      <Snippet label="label">{TEST_VALUE_MULTILINE}</Snippet>,
+    ))
+
+  test('renders correctly with labelDescription', () =>
+    shouldMatchSnapshot(
+      <Snippet
+        label="label"
+        labelDescription={<InformationIcon size="small" />}
+      >
+        {TEST_VALUE_MULTILINE}
+      </Snippet>,
+    ))
+  test('renders correctly with helper ', () =>
+    shouldMatchSnapshot(
+      <Snippet helper="helper">{TEST_VALUE_MULTILINE}</Snippet>,
+    ))
 })
