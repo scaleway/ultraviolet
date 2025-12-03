@@ -55,27 +55,24 @@ export const badge = recipe({
     borderWidth: '1px',
     borderStyle: 'solid',
     textTransform: 'uppercase',
+    gap: theme.space['0.5'],
   },
   variants: {
     size: {
       small: {
         padding: `0 ${theme.space[1]}`,
-        gap: theme.space['0.5'],
         height: theme.sizing[SIZES.small],
       },
       medium: {
         padding: `0 ${theme.space[1.5]}`,
-        gap: theme.space[1],
         height: theme.sizing[SIZES.medium],
       },
       large: {
         padding: `0 ${theme.space[2]}`,
-        gap: theme.space[1],
         height: theme.sizing[SIZES.large],
       },
       xsmall: {
         padding: `0 ${theme.space[1]}`,
-        gap: theme.space['0.5'],
         height: theme.sizing[SIZES.xsmall],
       },
     },
