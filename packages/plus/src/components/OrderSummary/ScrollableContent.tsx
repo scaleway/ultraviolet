@@ -153,13 +153,17 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
               sentiment="neutral"
               variant="bodySmallStrong"
             >
-              <AttachIcon
-                className={orderSummaryAnchorIcon({ size: 'small' })}
-                sentiment="info"
-              />
-              <a className={orderSummaryAnchor} href={subCategory.anchor}>
-                {subCategory.title}
-              </a>
+              {subCategory.anchor ? (
+                <a className={orderSummaryAnchor} href={subCategory.anchor}>
+                  <AttachIcon
+                    className={orderSummaryAnchorIcon({ size: 'small' })}
+                    sentiment="info"
+                  />
+                  {subCategory.title}
+                </a>
+              ) : (
+                subCategory.title
+              )}
             </Text>
             <Text as="span" italic sentiment="primary" variant="bodySmall">
               {subCategory.additionalInfo}
