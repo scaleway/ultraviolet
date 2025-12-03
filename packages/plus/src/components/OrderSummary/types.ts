@@ -108,8 +108,10 @@ export type OrderSummaryProps = {
   footer?: ReactNode
   children?: ReactNode
   totalPriceInfo?: ReactNode
+  totalPriceInfoPlacement?: 'left' | 'right'
   totalPriceDescription?: ReactNode
   additionalInfo?: string
+  hideBeforePrice?: boolean
   /**
    * Number of fraction digit to display in the price details
    */

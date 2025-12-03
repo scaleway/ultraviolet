@@ -34,7 +34,6 @@ function generateVariants() {
         letterSpacing: theme.typography[key].letterSpacing,
         lineHeight: theme.typography[key].lineHeight,
         textTransform: theme.typography[key].textCase,
-        textDecoration: theme.typography[key].textDecoration,
       }
 
       return acc
