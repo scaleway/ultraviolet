@@ -13,6 +13,7 @@ export {
 export {
   bounce,
   bounceDefault,
+  cn,
   down,
   fadeIn,
   fadeInDefault,

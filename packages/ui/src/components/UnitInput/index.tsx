@@ -9,6 +9,7 @@ import type {
   ReactNode,
 } from 'react'
 import { useEffect, useId, useMemo, useState } from 'react'
+import { cn } from '../../utils'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'
@@ -166,7 +167,7 @@ export const UnitInput = ({
           <input
             aria-invalid={!!error}
             autoFocus={autoFocus}
-            className={`${className ? `${className} ` : ''}${unitInputNumber[size]}`}
+            className={cn(className, unitInputNumber[size])}
             data-testid="unit-input"
             disabled={disabled}
             id={id ?? localId}

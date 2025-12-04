@@ -56,6 +56,7 @@ export {
   zoomIn,
   zoomOut,
 } from './animations/animationsVE.css'
+export { cn } from './generateClassname'
 export { getUUID } from './ids'
 export { default as normalize } from './normalize'
 export type { ComparableType } from './orderBy'
