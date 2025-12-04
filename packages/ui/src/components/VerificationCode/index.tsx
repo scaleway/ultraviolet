@@ -9,6 +9,7 @@ import type {
   ReactNode,
 } from 'react'
 import { createRef, useId, useMemo, useState } from 'react'
+import { cn } from '../../utils'
 import { Label } from '../Label'
 import { Text } from '../Text'
 import { filedSetClass, inputClass, inputSizes } from './styles.css'
@@ -235,7 +236,7 @@ export const VerificationCode = ({
 
   return (
     <fieldset
-      className={`${className ? `${className} ` : ''}${filedSetClass}`}
+      className={cn(className, filedSetClass)}
       data-testid={dataTestId}
       style={style}
     >
@@ -256,7 +257,7 @@ export const VerificationCode = ({
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
-            className={`${inputSizes[size]} ${inputClass}`}
+            className={cn(inputSizes[size], inputClass)}
             data-success={!!success}
             data-testid={index}
             disabled={disabled}
