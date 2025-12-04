@@ -9,7 +9,7 @@ Ultraviolet Plus is a set of complex components that are built on top of Ultravi
 ## Get Started
 
 ```sh
-$ pnpm add @ultraviolet/ui @ultraviolet/plus
+$ pnpm add @ultraviolet/plus
 ```
 
 ### Usage
