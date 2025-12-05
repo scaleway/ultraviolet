@@ -7,7 +7,7 @@ Ultraviolet JS is a utility package to make Ultraviolet UI work with NextJS. Thi
 ### Get Started
 
 ```sh
-pnpm add @ultraviolet/nextjs @ultraviolet/ui @ultraviolet/themes
+pnpm add @ultraviolet/nextjs
 ```
 
 In you NextJS project you can implement the following:
