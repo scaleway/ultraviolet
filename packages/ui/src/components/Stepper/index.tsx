@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'
@@ -52,7 +53,10 @@ export const Stepper = ({
       size={size}
     >
       <div
-        className={`${className ? `${className} ` : ''}${stepperContainer({ labelPosition, separator })}`}
+        className={cn(
+          className,
+          stepperContainer({ labelPosition, separator }),
+        )}
         data-testid={dataTestId}
         style={style}
       >

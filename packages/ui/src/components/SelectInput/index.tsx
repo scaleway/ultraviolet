@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { useId, useRef } from 'react'
 import { Label } from '../Label'
@@ -208,7 +209,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
     >
       <div
         aria-label={name}
-        className={`${className ? `${className} ` : ''}${selectinputContainer}`}
+        className={cn(className, selectinputContainer)}
         onBlur={onBlur}
         onFocus={onFocus}
         style={style}

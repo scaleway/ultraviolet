@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
@@ -215,7 +215,11 @@ export const SingleSlider = ({
           <input
             aria-disabled={disabled}
             aria-label={ariaLabel ?? name}
-            className={`${className ? `${className} ` : ''}${sliderSingle({ direction, disabled, error: !!error })} ${sliderThumbStyle({ disabled, isDouble: false })}`}
+            className={cn(
+              className,
+              sliderSingle({ direction, disabled, error: !!error }),
+              sliderThumbStyle({ disabled, isDouble: false }),
+            )}
             data-direction={direction}
             data-error={!!error}
             data-testid={dataTestId}

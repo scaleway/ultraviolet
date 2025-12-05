@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Popup } from '../Popup'
@@ -53,7 +54,7 @@ export const Tooltip = forwardRef(
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
     <Popup
-      className={`${className ? `${className} ` : ''}${tooltip}`}
+      className={cn(className, tooltip)}
       containerFullHeight={containerFullHeight}
       containerFullWidth={containerFullWidth}
       data-testid={dataTestId}

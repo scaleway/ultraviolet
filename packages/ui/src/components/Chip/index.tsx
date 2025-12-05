@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
@@ -77,7 +78,7 @@ export const Chip = ({
       >
         <Stack
           alignItems="center"
-          className={`${className ? `${className} ` : ''}${container}`}
+          className={cn(className, container)}
           data-active={isActive}
           data-disabled={disabled}
           data-prominence={prominence}

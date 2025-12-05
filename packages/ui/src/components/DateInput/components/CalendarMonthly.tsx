@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
 import { Button } from '../../Button'
@@ -140,7 +141,7 @@ export const Monthly = () => {
         return (
           <Button
             aria-label={monthState()}
-            className={`${monthStyle} ${capitalizedText}`}
+            className={cn(monthStyle, capitalizedText)}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {

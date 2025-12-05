@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
 import { Button } from '../Button'
@@ -77,7 +77,7 @@ export const Banner = ({
 
   return (
     <Stack
-      className={`${className ? `${className} ` : ''}${banner({ size, variant })}`}
+      className={cn(className, banner({ size, variant }))}
       data-testid={dataTestId}
       direction="row"
       gap={2}

@@ -5,6 +5,7 @@ import {
   SortIcon as SortIconUV,
   SouthShortIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { listSortIcon } from '../List/styles.css'
@@ -66,7 +67,7 @@ export const HeaderCell = ({
     <th
       align={align}
       aria-sort={order}
-      className={`${className ? `${className} ` : ''}${tableHeaderCell({ align, checked: isCheckbox })}`}
+      className={cn(className, tableHeaderCell({ align, checked: isCheckbox }))}
       onClick={handleOrder}
       onKeyDown={
         handleOrder

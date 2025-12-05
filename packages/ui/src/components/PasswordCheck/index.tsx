@@ -4,6 +4,7 @@ import {
   CheckCircleOutlineIcon,
   CloseCircleOutlineIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -37,7 +38,7 @@ export const PasswordCheck = ({
   style,
 }: PasswordCheckProps) => (
   <div
-    className={`${className ? `${className} ` : ''}${passwordCheckContainer}`}
+    className={cn(className, passwordCheckContainer)}
     data-testid={dataTestId}
     style={style}
   >

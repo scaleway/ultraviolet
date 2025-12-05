@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import { Tooltip } from '../Tooltip'
 import type { SENTIMENTS } from './constant'
@@ -34,7 +35,7 @@ export const Status = ({
 }: StatusProps) => (
   <Tooltip text={tooltip}>
     <span
-      className={`${className ? `${className} ` : ''}${status({ notification })}`}
+      className={cn(className, status({ notification }))}
       data-testid={dataTestId}
       style={style}
     >

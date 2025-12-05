@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { Cell } from './Cell'
@@ -76,11 +77,7 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       selectable={selectable}
     >
       <TableContainer>
-        <table
-          className={`${className ? `${className} ` : ''}${list}`}
-          ref={ref}
-          style={style}
-        >
+        <table className={cn(className, list)} ref={ref} style={style}>
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
