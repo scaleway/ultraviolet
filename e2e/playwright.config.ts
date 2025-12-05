@@ -3,6 +3,7 @@
 import { defineConfig, devices } from '@playwright/test'
 
 const isCI = process.env['CI']
+// const isDebug = process.env['PWDEBUG']
 
 const baseURL = 'http://localhost:5173'
 
