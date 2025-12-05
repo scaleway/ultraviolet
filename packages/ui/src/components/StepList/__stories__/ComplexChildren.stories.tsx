@@ -1,4 +1,5 @@
 import { CheckIcon } from '@ultraviolet/icons'
+import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { StepList } from '..'
@@ -10,19 +11,11 @@ ComplexChild.decorators = [
   () => (
     <StepList>
       <StepList.Item bulletContent={<CheckIcon />} sentiment="success">
-        <Stack gap={1}>
+        <Stack alignItems="center" direction="row" gap={1}>
           <Text as="h4" variant="headingSmall">
             Lorem ipsum
           </Text>
-          <Text as="p" variant="body">
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum
-          </Text>
+          <Badge sentiment="warning">Beta</Badge>
         </Stack>
       </StepList.Item>
       <StepList.Item bulletContent={<CheckIcon />}>
