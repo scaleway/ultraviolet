@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import type {
   ChangeEvent,
   ComponentProps,
@@ -366,7 +366,10 @@ const CreateDropdown = ({
                 >
                   {group ? (
                     <button
-                      className={`${selectAllGroup ? dropdownGroupSelectable : ''} ${dropdownGroup}`}
+                      className={cn(
+                        selectAllGroup ? dropdownGroupSelectable : '',
+                        dropdownGroup,
+                      )}
                       data-selectgroup={selectAllGroup}
                       data-testid={`group-${index}`}
                       key={group}
@@ -508,7 +511,7 @@ const CreateDropdown = ({
     </Stack>
   ) : (
     <Stack
-      className={`${dropdownContainer} ${dropdownContainerUnGrouped}`}
+      className={cn(dropdownContainer, dropdownContainerUnGrouped)}
       gap={0.25}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}

@@ -1,6 +1,7 @@
 'use client'
 
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties } from 'react'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'
@@ -46,7 +47,7 @@ export const WireIllustration = ({
   style,
 }: IllustrationWireProp) => (
   <svg
-    className={`${illustrationVariants[sentiment]}${className ? ` ${className}` : ''}`}
+    className={cn(className, illustrationVariants[sentiment])}
     data-testid={dataTestId}
     style={{
       ...assignInlineVars({

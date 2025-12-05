@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowDownIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useReducer } from 'react'
@@ -64,14 +65,17 @@ const CodeContent = ({
     {multiline ? (
       Children.map(lines, child => (
         <span
-          className={`${line({ multiline: true })}  ${prefix ? prefixStyle[prefix] : ''}`}
+          className={cn(
+            line({ multiline: true }),
+            prefix ? prefixStyle[prefix] : '',
+          )}
           key={child}
         >
           {child}
         </span>
       ))
     ) : (
-      <span className={`${line()}  ${prefix ? prefixStyle[prefix] : ''}`}>
+      <span className={cn(line(), prefix ? prefixStyle[prefix] : '')}>
         {children}
       </span>
     )}
@@ -143,7 +147,10 @@ export const Snippet = ({
         <Label labelDescription={labelDescription}>{label}</Label>
       ) : null}
       <div
-        className={`${className ? `${className} ` : ''}${snippetContainer[multiline ? 'multiline' : 'oneLine']}`}
+        className={cn(
+          className,
+          snippetContainer[multiline ? 'multiline' : 'oneLine'],
+        )}
         data-testid={dataTestId}
         style={style}
       >

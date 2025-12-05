@@ -1,6 +1,7 @@
 'use client'
 
 import { SearchIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { Ref } from 'react'
 import {
   forwardRef,
@@ -265,7 +266,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             aria-live={ariaLive}
             autoComplete={autoComplete}
             autoFocus={autoFocus}
-            className={`${className ? `${className} ` : ''}${searchInput}`}
+            className={cn(className, searchInput)}
             clearable
             data-testid={dataTestId}
             disabled={disabled}

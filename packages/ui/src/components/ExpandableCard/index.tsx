@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import type {
   CSSProperties,
   DetailsHTMLAttributes,
@@ -204,7 +204,7 @@ const BaseExpandableCard = forwardRef(
           </Stack>
         ) : null}
         <details
-          className={`${className ? `${className} ` : ''}${detailsClass}`}
+          className={cn(className, detailsClass)}
           data-clicking={clicking}
           data-testid={dataTestId}
           key={clicking ? 'closed' : 'open'}

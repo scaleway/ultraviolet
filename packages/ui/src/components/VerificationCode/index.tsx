@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -235,7 +236,7 @@ export const VerificationCode = ({
 
   return (
     <fieldset
-      className={`${className ? `${className} ` : ''}${filedSetClass}`}
+      className={cn(className, filedSetClass)}
       data-testid={dataTestId}
       style={style}
     >
@@ -256,7 +257,7 @@ export const VerificationCode = ({
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
-            className={`${inputSizes[size]} ${inputClass}`}
+            className={cn(inputSizes[size], inputClass)}
             data-success={!!success}
             data-testid={index}
             disabled={disabled}

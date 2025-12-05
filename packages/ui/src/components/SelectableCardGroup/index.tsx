@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
@@ -128,9 +129,7 @@ export const SelectableCardGroup = ({
   return (
     <SelectableCardGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={`${className ? `${className} ` : ''}${selectableCardGroupFieldSet}`}
-        >
+        <fieldset className={cn(className, selectableCardGroupFieldSet)}>
           <Stack gap={1.5}>
             {legend ? (
               <Label

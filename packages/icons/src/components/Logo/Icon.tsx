@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SIZES } from './constant'
 import { logo } from './style.css'
@@ -20,11 +21,7 @@ export const Icon = ({
   children,
   style,
 }: IconProps) => (
-  <svg
-    className={`${className ? `${className} ` : ''}${logo[size]}`}
-    style={style}
-    viewBox="0 0 20 20"
-  >
+  <svg className={cn(className, logo[size])} style={style} viewBox="0 0 20 20">
     {children}
   </svg>
 )

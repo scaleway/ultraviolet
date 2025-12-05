@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { estimateCostLineThrough } from './components.css'
 
@@ -13,7 +14,7 @@ export const LineThrough = ({
   ...props
 }: LineThroughProps) => (
   <span
-    className={`${className ? `${className} ` : ''} ${isActive ? estimateCostLineThrough : ''}`}
+    className={cn(className, isActive ? estimateCostLineThrough : '')}
     {...props}
   />
 )

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties } from 'react'
 import { Block } from './Block'
 import { Blocks } from './Blocks'
@@ -55,7 +56,7 @@ export const Skeleton = ({
       aria-busy
       aria-label={ariaLabel}
       aria-live="polite"
-      className={`${className ? `${className} ` : ''}${skeletonContainer}`}
+      className={cn(className, skeletonContainer)}
       data-testid={dataTestId}
       style={style}
     >

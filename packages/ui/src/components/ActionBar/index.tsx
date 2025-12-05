@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { createPortal } from 'react-dom'
@@ -35,7 +36,7 @@ export const ActionBar = ({
 }: ActionBarProps) =>
   createPortal(
     <div
-      className={`${className ? `${className} ` : ''}${actionBar}`}
+      className={cn(className, actionBar)}
       data-testid={dataTestId}
       role={role}
       style={{

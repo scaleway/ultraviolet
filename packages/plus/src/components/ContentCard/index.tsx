@@ -1,6 +1,7 @@
 'use client'
 
 import { OpenInNewIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { Stack, Text } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
@@ -102,7 +103,7 @@ export const ContentCard = forwardRef<
 
     return (
       <Container
-        className={`${className ? `${className} ` : ''}${cardClass}${onClick || href ? ` ${activeClass}` : ''}`}
+        className={cn(className, cardClass, onClick || href ? activeClass : '')}
         disabled={disabled}
         href={!disabled ? href : undefined}
         onClick={!disabled ? onClick : undefined}

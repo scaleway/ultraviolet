@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
@@ -70,7 +71,19 @@ export const Text = ({
     <Tooltip text={oneLine && isOverflowing ? finalStringChildren : ''}>
       <Component
         aria-hidden={ariaHidden}
-        className={`${className ? `${className} ` : ''}${text({ disabled, italic, oneLine, prominence, sentiment, strikeThrough, underline, variant })}`}
+        className={cn(
+          className,
+          text({
+            disabled,
+            italic,
+            oneLine,
+            prominence,
+            sentiment,
+            strikeThrough,
+            underline,
+            variant,
+          }),
+        )}
         data-testid={dataTestId}
         dir={dir}
         htmlFor={htmlFor}

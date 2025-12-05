@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   CSSProperties,
@@ -614,7 +615,20 @@ export const Popup = forwardRef(
         {shouldRender
           ? createPortal(
               <div
-                className={`${className ? `${className} ` : ''}${popup({ hasArrow, visibleInDom: !dynamicDomRendering ? visibleInDom : undefined })} ${isAnimated ? animationPopup[reverseAnimation ? 'reverse' : 'notReverse'] : null}`}
+                className={cn(
+                  className,
+                  popup({
+                    hasArrow,
+                    visibleInDom: !dynamicDomRendering
+                      ? visibleInDom
+                      : undefined,
+                  }),
+                  isAnimated
+                    ? animationPopup[
+                        reverseAnimation ? 'reverse' : 'notReverse'
+                      ]
+                    : '',
+                )}
                 data-testid={dataTestId}
                 data-visible-in-dom={
                   !dynamicDomRendering ? visibleInDom : undefined

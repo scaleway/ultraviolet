@@ -1,6 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ComponentProps,
@@ -157,7 +158,7 @@ export const UnitInput = ({
         </Label>
       ) : null}
       <Row
-        className={`${unitInputSize[size]} ${unitInputState[computedState]}`}
+        className={cn(unitInputSize[size], unitInputState[computedState])}
         data-disabled={!!disabled}
         data-testid={dataTestId}
         templateColumns={templateColumns ?? '1fr auto'}
@@ -166,7 +167,7 @@ export const UnitInput = ({
           <input
             aria-invalid={!!error}
             autoFocus={autoFocus}
-            className={`${className ? `${className} ` : ''}${unitInputNumber[size]}`}
+            className={cn(className, unitInputNumber[size])}
             data-testid="unit-input"
             disabled={disabled}
             id={id ?? localId}
@@ -198,7 +199,7 @@ export const UnitInput = ({
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </div>
         <SelectInput
-          className={`${unitInputUnit} ${unitInputUnitWidth}`}
+          className={cn(unitInputUnit, unitInputUnitWidth)}
           clearable={false}
           data-disabled={disabled}
           disabled={disabled}

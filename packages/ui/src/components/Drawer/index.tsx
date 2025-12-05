@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, ReactNode } from 'react'
 import type { ModalProps } from '../Modal'
 import { Modal } from '../Modal'
@@ -100,7 +101,7 @@ export const BaseDrawer = ({
     <Modal
       ariaLabel={ariaLabel}
       backdropClassName="backdrop-drawer"
-      className={`${className ? `${className} ` : ''}${drawer[size]}`}
+      className={cn(className, drawer[size])}
       data-size={size}
       data-testid={dataTestId}
       disclosure={disclosure}

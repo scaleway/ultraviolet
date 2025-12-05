@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
@@ -42,7 +43,10 @@ export const Badge = ({
     <Text
       aria-label={ariaLabel}
       as="span"
-      className={`${className ? `${className} ` : ''}${badge({ disabled, prominence, sentiment, size })}`}
+      className={cn(
+        className,
+        badge({ disabled, prominence, sentiment, size }),
+      )}
       data-testid={dataTestId}
       prominence={disabled ? 'weak' : 'default'}
       style={style}

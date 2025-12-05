@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -141,7 +141,10 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}
             autoFocus={autoFocus}
-            className={`${className ? `${className} ` : ''}${button({ disabled, fullWidth, sentiment, size, variant })}`}
+            className={cn(
+              className,
+              button({ disabled, fullWidth, sentiment, size, variant }),
+            )}
             data-testid={dataTestId}
             download={download}
             href={href}
@@ -174,7 +177,10 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-haspopup={ariaHaspopup}
           aria-label={ariaLabel}
           autoFocus={autoFocus}
-          className={`${className ? `${className} ` : ''}${button({ disabled, fullWidth, sentiment, size, variant })}`}
+          className={cn(
+            className,
+            button({ disabled, fullWidth, sentiment, size, variant }),
+          )}
           data-testid={dataTestId}
           disabled={computeIsDisabled}
           name={name}
