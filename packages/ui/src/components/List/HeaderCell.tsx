@@ -5,6 +5,7 @@ import {
   SortIcon as SortIconUV,
   SouthShortIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
@@ -60,7 +61,7 @@ export const HeaderCell = ({
   return (
     <th
       aria-sort={order}
-      className={`${className ? `${className} ` : ''}${listHeaderCell}`}
+      className={cn(className, listHeaderCell)}
       onClick={handleOrder}
       onKeyDown={
         handleOrder

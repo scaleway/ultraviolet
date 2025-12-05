@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import type { LabelProp } from '../../types'
@@ -87,7 +88,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
         <Stack className={radioStack} gap={0.5}>
           <div
             aria-disabled={disabled}
-            className={`${className ? `${className} ` : ''}${container}`}
+            className={cn(className, container)}
             data-checked={checked}
             data-error={error}
             data-testid={dataTestId}

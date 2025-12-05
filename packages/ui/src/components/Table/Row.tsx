@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { theme } from '@ultraviolet/themes'
+import { cn, theme } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode, RefObject } from 'react'
 import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
@@ -108,7 +108,7 @@ export const Row = ({
   return (
     <>
       <tr
-        className={`${className ? `${className}` : ''}${highlightAnimation ? ` ${tableTrAnimation}` : ''}`}
+        className={cn(className, highlightAnimation ? tableTrAnimation : '')}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
         style={style}

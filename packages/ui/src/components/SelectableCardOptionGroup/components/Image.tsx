@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { disabledImage } from '../styles.css'
 import type { Sizes } from '../types'
 
@@ -19,7 +20,7 @@ type ImageType = {
 export const Image = ({ src, alt, size, disabled, className }: ImageType) => (
   <img
     alt={alt}
-    className={`${className ? `${className} ` : ''}${disabled ? disabledImage : ''}`}
+    className={cn(className, disabled ? disabledImage : '')}
     data-disabled={disabled}
     height={IMAGE_SIZES[size]}
     src={src}

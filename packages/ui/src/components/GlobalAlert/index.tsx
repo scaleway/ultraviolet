@@ -1,6 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { useReducer } from 'react'
 import { Button } from '../Button'
@@ -45,7 +46,7 @@ export const GlobalAlert = ({
   return (
     <Stack
       alignItems="center"
-      className={`${className ? `${className} ` : ''}${container[variant]}`}
+      className={cn(className, container[variant])}
       data-testid={dataTestId}
       data-variant={variant}
       direction="row"

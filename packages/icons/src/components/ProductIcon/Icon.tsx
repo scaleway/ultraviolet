@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SIZES, VARIANTS } from './constants'
 import { productIconSizes, productIconVariants } from './styles.css'
@@ -28,7 +29,11 @@ export const Icon = ({
   style,
 }: IconProps) => (
   <svg
-    className={`${className ? `${className} ` : ''}${productIconSizes[size]} ${productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`]}`}
+    className={cn(
+      className,
+      productIconSizes[size],
+      productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`],
+    )}
     style={style}
     viewBox="0 0 64 64"
   >

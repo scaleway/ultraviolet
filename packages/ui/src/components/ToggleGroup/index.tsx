@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
@@ -110,10 +111,7 @@ export const ToggleGroup = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={`${className ? `${className} ` : ''}${fieldset}`}
-          style={style}
-        >
+        <fieldset className={cn(className, fieldset)} style={style}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>

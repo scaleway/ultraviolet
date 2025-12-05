@@ -1,6 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, ReactNode, Ref } from 'react'
 import {
   forwardRef,
@@ -145,7 +146,7 @@ export const Popover = forwardRef(
     return (
       <Popup
         align={align}
-        className={`${className ? `${className} ` : ''}${popover({ sentiment, size })}`}
+        className={cn(className, popover({ sentiment, size }))}
         data-testid={dataTestId}
         debounceDelay={0}
         dynamicDomRendering={dynamicDomRendering}

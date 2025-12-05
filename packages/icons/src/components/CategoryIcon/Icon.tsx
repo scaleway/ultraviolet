@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import type { VARIANTS } from './style.css'
 import { categoryIcon } from './style.css'
@@ -27,7 +28,7 @@ export const Icon = ({
 
   return (
     <svg
-      className={`${className ? `${className} ` : ''}${categoryIcon[computedVariant]}`}
+      className={cn(className, categoryIcon[computedVariant])}
       height="20"
       style={style}
       viewBox="0 0 20 20"

@@ -1,6 +1,7 @@
 'use client'
 
 import { CheckIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
@@ -75,7 +76,26 @@ export const Step = ({
   return (
     <Stack
       alignItems="center"
-      className={`${className ? `${className} ` : 'step '}${stepContainer} ${separatorBottom ? stepperContainerRecipe({ animated, disabled, done: isDone, labelPosition, separator, size }) : ''} ${isActive && separator && animated ? animationStepperContainer[size] : ''} ${interactiveDone && !disabled ? stepperInteractive[isActive ? 'active' : 'inactive'] : ''}`}
+      className={cn(
+        className ?? 'step',
+        stepContainer,
+        separatorBottom
+          ? stepperContainerRecipe({
+              animated,
+              disabled,
+              done: isDone,
+              labelPosition,
+              separator,
+              size,
+            })
+          : '',
+        isActive && separator && animated
+          ? animationStepperContainer[size]
+          : '',
+        interactiveDone && !disabled
+          ? stepperInteractive[isActive ? 'active' : 'inactive']
+          : '',
+      )}
       data-testid={dataTestId ?? `stepper-step-${index}`}
       direction={labelPosition === 'right' ? 'row' : 'column'}
       gap={labelPosition === 'right' ? 1 : 0}

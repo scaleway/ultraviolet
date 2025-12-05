@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ButtonHTMLAttributes,
@@ -224,7 +225,7 @@ export const Menu = forwardRef(
       <Popup
         align={align}
         aria-label={ariaLabel}
-        className={`${className ? `${className} ` : ''}${menu({ arrow: hasArrow, searchable })}`}
+        className={cn(className, menu({ arrow: hasArrow, searchable }))}
         debounceDelay={triggerMethod === 'hover' ? 250 : 0}
         dynamicDomRendering={dynamicDomRendering}
         hasArrow={hasArrow}
@@ -248,7 +249,7 @@ export const Menu = forwardRef(
         tabIndex={-1}
         text={
           <Stack
-            className={`${className ? `${className} ` : ''}${menuList}`}
+            className={cn(className, menuList)}
             data-testid={dataTestId}
             onKeyDown={handleKeyDown}
             onMouseEnter={() => setShouldBeVisible(true)}

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import {
   Children,
@@ -103,7 +104,7 @@ export const Tabs = ({
   return (
     <TabsContext.Provider value={value}>
       <div
-        className={`${className ? `${className} ` : ''}${tabsContainer}`}
+        className={cn(className, tabsContainer)}
         data-testid={dataTestId}
         ref={tabsRef}
         role="tablist"

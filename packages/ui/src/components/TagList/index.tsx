@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -271,14 +272,20 @@ export const TagList = ({
 
   return (
     <div
-      className={`${className ? `${className} ` : ''}${tagListContainer}`}
+      className={cn(className, tagListContainer)}
       data-testid={dataTestId}
       style={{ visibility: isReady ? 'visible' : 'hidden', ...style }}
     >
       <div
-        className={`${tagContainer({
-          multiline,
-        })} ${(visibleTags.length === 1 && hiddenTags.length === 0) || popoverTriggerWidth ? ellipsisContainer : ''}`}
+        className={cn(
+          tagContainer({
+            multiline,
+          }),
+          (visibleTags.length === 1 && hiddenTags.length === 0) ||
+            popoverTriggerWidth
+            ? ellipsisContainer
+            : '',
+        )}
         data-testid={`${dataTestId ?? 'taglist'}-container`}
         ref={containerRef}
         style={assignInlineVars({

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { Label } from '../Label'
@@ -94,7 +95,7 @@ export const ProgressBar = ({
       aria-valuemax={max}
       aria-valuemin={0}
       aria-valuenow={value}
-      className={`${className ? `${className} ` : ''}${progressContainer}`}
+      className={cn(className, progressContainer)}
       data-testid={dataTestId}
       role="progressbar"
       style={style}

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { useListContext } from '../List/ListContext'
@@ -97,7 +98,11 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
     >
       <TableContainer>
         <table
-          className={`${table}${stripped ? ` ${tableStripped}` : ''}${bordered ? ` ${tableBordered}` : ''}`}
+          className={cn(
+            table,
+            stripped ? tableStripped : '',
+            bordered ? tableBordered : '',
+          )}
           ref={ref}
           style={style}
         >

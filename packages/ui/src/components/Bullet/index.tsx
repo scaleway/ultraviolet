@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Tooltip } from '../Tooltip'
@@ -38,7 +39,10 @@ export const Bullet = ({
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <div
-      className={`${className ? `${className} ` : ''}${bullet({ disabled, prominence, sentiment, size })}`}
+      className={cn(
+        className,
+        bullet({ disabled, prominence, sentiment, size }),
+      )}
       data-testid={dataTestId}
       style={style}
     >

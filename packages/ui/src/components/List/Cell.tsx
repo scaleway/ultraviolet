@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { forwardRef } from 'react'
@@ -21,7 +22,7 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
 
     return (
       <td
-        className={`${className ? `${className} ` : ''}${listCell}`}
+        className={cn(className, listCell)}
         colSpan={colSpan}
         data-testid={dataTestid}
         ref={ref}

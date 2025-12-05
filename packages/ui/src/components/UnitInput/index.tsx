@@ -158,7 +158,7 @@ export const UnitInput = ({
         </Label>
       ) : null}
       <Row
-        className={`${unitInputSize[size]} ${unitInputState[computedState]}`}
+        className={cn(unitInputSize[size], unitInputState[computedState])}
         data-disabled={!!disabled}
         data-testid={dataTestId}
         templateColumns={templateColumns ?? '1fr auto'}
@@ -199,7 +199,7 @@ export const UnitInput = ({
           {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </div>
         <SelectInput
-          className={`${unitInputUnit} ${unitInputUnitWidth}`}
+          className={cn(unitInputUnit, unitInputUnitWidth)}
           clearable={false}
           data-disabled={disabled}
           disabled={disabled}

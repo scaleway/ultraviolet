@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, ReactNode } from 'react'
 import { useId } from 'react'
 import { Label } from '../../Label'
@@ -63,7 +64,7 @@ export const Option = ({
   return (
     <SelectableCard
       checked={groupValue === value}
-      className={`${className ? `${className} ` : ''}${selectableCard}`}
+      className={cn(className, selectableCard)}
       data-testid={dataTestId}
       disabled={disabled || groupDisabled}
       isError={error}
@@ -132,7 +133,11 @@ export const Option = ({
           aria-label={
             typeof label === 'string' ? `${label} option` : `${value} option`
           }
-          className={`${optionSelectInput} ${disabled || groupDisabled ? optionSelectInputDisabled : ''} ${error ? optionSelectInputError : ''}`}
+          className={cn(
+            optionSelectInput,
+            disabled || groupDisabled ? optionSelectInputDisabled : '',
+            error ? optionSelectInputError : '',
+          )}
           data-testid={dataTestId ? `${dataTestId}-select` : undefined}
           disabled={disabled || groupDisabled}
           error={error}

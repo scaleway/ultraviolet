@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { Skeleton } from '../Skeleton'
 import { Cell } from './Cell'
 import { ColumnProvider } from './ColumnProvider'
@@ -25,7 +26,7 @@ export const SkeletonRows = ({
     <>
       {rowArray.map(index => (
         <tr
-          className={`${listRow({ sentiment: 'neutral' })} ${listLoadingRow}`}
+          className={cn(listRow({ sentiment: 'neutral' }), listLoadingRow)}
           id={`skeleton-${index}`}
           key={index}
           role="row"

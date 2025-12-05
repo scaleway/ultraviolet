@@ -5,6 +5,7 @@ import {
   CheckCircleOutlineIcon,
   CloseIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type {
   ChangeEvent,
   CSSProperties,
@@ -224,7 +225,7 @@ export const TagInput = ({
       <div>
         <Tooltip text={tooltip}>
           <div
-            className={`${className ? `${className} ` : ''}${tagInputContainer({ size })}`}
+            className={cn(className, tagInputContainer({ size }))}
             data-disabled={disabled}
             data-error={!!error}
             data-readonly={readOnly}

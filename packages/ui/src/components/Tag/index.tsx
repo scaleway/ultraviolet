@@ -1,6 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
@@ -104,7 +105,10 @@ export const Tag = ({
     return (
       <Tooltip text={isCopied ? copiedText : copyText}>
         <button
-          className={`${className ? `${className} ` : ''}${containerTag({ copiable, disabled, sentiment })}`}
+          className={cn(
+            className,
+            containerTag({ copiable, disabled, sentiment }),
+          )}
           data-testid={dataTestId}
           disabled={disabled}
           onClick={setCopied}
@@ -119,7 +123,7 @@ export const Tag = ({
 
   return (
     <span
-      className={`${className ? `${className} ` : ''}${containerTag({ disabled, sentiment })}`}
+      className={cn(className, containerTag({ disabled, sentiment }))}
       data-testid={dataTestId}
       style={style}
     >
