@@ -1,9 +1,6 @@
 'use client'
 
-import {
-  CheckCircleOutlineIcon,
-  CloseCircleOutlineIcon,
-} from '@ultraviolet/icons'
+import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
 import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -44,20 +41,12 @@ export const PasswordCheck = ({
     {rules.map(rule => (
       <Stack alignItems="center" direction="row" gap={1} key={rule.name}>
         {rule.valid ? (
-          <CheckCircleOutlineIcon
-            prominence="weak"
-            sentiment="success"
-            size="large"
-          />
+          <CheckCircleIcon prominence="weak" sentiment="success" size="small" />
         ) : (
-          <CloseCircleOutlineIcon
-            prominence="weak"
-            sentiment="neutral"
-            size="large"
-          />
+          <CloseIcon prominence="weak" sentiment="neutral" size="small" />
         )}
 
-        <Text as="p" variant="bodySmall">
+        <Text as="p" variant="caption">
           {rule.text}
         </Text>
       </Stack>
