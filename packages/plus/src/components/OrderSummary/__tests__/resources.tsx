@@ -1,4 +1,5 @@
 import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
 import { Tooltip } from '@ultraviolet/ui'
 
 export const categoryDefault = {
@@ -32,6 +33,7 @@ export const simpleCategory = {
 export const categoryAZ = {
   category: 'Availability Zone',
   discount: 0.5,
+  icon: <FranceFlag />,
   subCategories: [{ price: 5, title: 'PARIS 1' }],
 }
 
@@ -62,6 +64,7 @@ export const categoryOptions = {
   subCategories: [
     { customContent: 'Included', title: '0.5 Gbps public bandwidth' },
   ],
+  subTitle: 'sub title',
 }
 
 export const negativeItem = {
@@ -151,6 +154,20 @@ export const rangePriceContent = {
       amount: [20, 30],
       price: 10,
       title: '20-30 nodes',
+    },
+  ],
+}
+
+export const anchorProduct = {
+  anchor: '#anchor-category',
+  category: 'This is an anchor',
+  subCategories: [
+    {
+      amount: 2,
+      anchor: '#anchor-sub-category',
+      details: ['detail', 'detail'],
+      price: 10,
+      title: 'This is also an anchor',
     },
   ],
 }

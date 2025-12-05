@@ -38,6 +38,7 @@ export const OrderSummary = ({
   hideBeforePrice = false,
   'data-testid': dataTestId,
   style,
+  priceInformation,
 }: OrderSummaryProps) => {
   const [timePeriodUnit, setTimePeriodUnit] = useState<TimeUnit>(unitUnitInput)
   const [timePeriodAmount, setTimePeriodAmount] = useState(valueUnitInput)
@@ -194,6 +195,7 @@ export const OrderSummary = ({
           footer={footer}
           hideBeforePrice={hideBeforePrice}
           hideDetails={hideDetails}
+          priceInformation={priceInformation}
           totalPrice={totalPrice}
           totalPriceDescription={totalPriceDescription}
           totalPriceInfo={totalPriceInfo}
