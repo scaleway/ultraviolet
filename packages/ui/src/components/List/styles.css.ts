@@ -230,6 +230,12 @@ export const listCell = style({
   },
 })
 
+globalStyle(`${listCell} > *`, {
+  width: widthCell,
+  maxWidth: maxWidthCell,
+  minWidth: minWidthCell,
+})
+
 globalStyle(`${listRowBase} > td:first-child`, {
   borderLeft: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: ` ${theme.radii.default} 0 0 ${theme.radii.default}`,
