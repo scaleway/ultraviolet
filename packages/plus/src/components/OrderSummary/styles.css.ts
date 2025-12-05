@@ -1,5 +1,6 @@
 import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
 
 export const orderSummaryContainer = style({
   backgroundColor: theme.colors.neutral.backgroundWeak,
@@ -56,6 +57,42 @@ export const orderSummaryCategory = style({
     '&:not(:last-child)': {
       borderBottom: `1px solid ${theme.colors.neutral.border}`,
       paddingBottom: theme.space[3],
+    },
+  },
+})
+
+export const orderSummaryAnchor = style({
+  color: 'inherit',
+  textDecoration: 'inherit',
+  transition: 'color 250ms ease-out',
+  selectors: {
+    '&:hover': {
+      color: theme.colors.info.text,
+    },
+  },
+})
+
+export const orderSummaryAnchorIcon = recipe({
+  base: {
+    position: 'absolute',
+    opacity: 0,
+    transform: `translateX(calc(-1 *${theme.space[2]}))`,
+
+    transition: 'opacity 250ms ease-in-out',
+    selectors: {
+      [`${orderSummaryAnchor}:hover > &`]: {
+        opacity: 1,
+      },
+    },
+  },
+  variants: {
+    size: {
+      small: {
+        marginTop: theme.space['0.25'],
+      },
+      medium: {
+        marginTop: theme.space['0.5'],
+      },
     },
   },
 })
