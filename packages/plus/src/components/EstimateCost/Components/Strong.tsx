@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { memo } from 'react'
 import { estimateCostRegular, estimateCostStrong } from './components.css'
@@ -13,7 +14,10 @@ type StrongProps = {
 export const Strong = memo(
   ({ variant = 'normal', children = null, style }: StrongProps) => (
     <div
-      className={`${estimateCostRegular({ variant })} ${estimateCostStrong({ variant })}`}
+      className={cn(
+        estimateCostRegular({ variant }),
+        estimateCostStrong({ variant }),
+      )}
       style={style}
     >
       {children}

@@ -1,6 +1,7 @@
 'use client'
 
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
@@ -440,7 +441,13 @@ export const Item = memo(
         </Cell>
         {!isOverlay ? (
           <td
-            className={`${estimateCostCell({ hasBorder: !isLastElement && !noBorder, primary: isPrimaryBackground })} ${estimateCostPriceCell}`}
+            className={cn(
+              estimateCostCell({
+                hasBorder: !isLastElement && !noBorder,
+                primary: isPrimaryBackground,
+              }),
+              estimateCostPriceCell,
+            )}
             style={assignInlineVars({
               [paddingLeftCell]: `16px`,
             })}

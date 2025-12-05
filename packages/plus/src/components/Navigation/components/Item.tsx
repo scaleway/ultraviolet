@@ -9,6 +9,7 @@ import {
   UnpinIcon,
 } from '@ultraviolet/icons'
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
+import { cn } from '@ultraviolet/themes'
 import {
   Badge,
   Button,
@@ -349,7 +350,23 @@ export const Item = memo(
             alignItems={categoryIcon ? 'flex-start' : 'center'}
             aria-expanded={ariaExpanded}
             as={containerTag}
-            className={`${navigationItemContainer({ disabled, hasActive: hasActiveChildren, isActive: !!active, noExpand, subLabel: !!subLabel })} ${shouldAnimate && animationType === 'complex' ? navigationItemContainerAnimated[animation === 'collapse' ? 'collapse' : 'expand'] : ''} ${showDraggableIcon ? navigationItemShowDraggable : ''} ${showPinIcon ? navigationItemShowPinButton : ''} ${shouldHaveWeakText ? navigationItemWeakText : ''}`}
+            className={cn(
+              navigationItemContainer({
+                disabled,
+                hasActive: hasActiveChildren,
+                isActive: !!active,
+                noExpand,
+                subLabel: !!subLabel,
+              }),
+              shouldAnimate && animationType === 'complex'
+                ? navigationItemContainerAnimated[
+                    animation === 'collapse' ? 'collapse' : 'expand'
+                  ]
+                : '',
+              showDraggableIcon ? navigationItemShowDraggable : '',
+              showPinIcon ? navigationItemShowPinButton : '',
+              shouldHaveWeakText ? navigationItemWeakText : '',
+            )}
             data-testid={dataTestId}
             direction="row"
             disabled={containerTag === 'button' ? disabled : undefined}
@@ -645,7 +662,12 @@ export const Item = memo(
         <Menu.Item
           active={active}
           borderless
-          className={`${navigationItemMenu}${pinnedFeature && shouldShowPinnedButton ? ` ${navigationItemMenuPinned}` : ''}`}
+          className={cn(
+            navigationItemMenu,
+            pinnedFeature && shouldShowPinnedButton
+              ? navigationItemMenuPinned
+              : '',
+          )}
           disabled={disabled}
           href={href}
           onClick={() => onToggle?.(!!active)}
@@ -771,7 +793,14 @@ export const Item = memo(
             <Stack
               alignItems="center"
               as={containerTag}
-              className={`${navigationItemContainer({ disabled })} ${shouldAnimate && animationType === 'complex' ? navigationItemContainerAnimated[animation === 'collapse' ? 'collapse' : 'expand'] : ''}`}
+              className={cn(
+                navigationItemContainer({ disabled }),
+                shouldAnimate && animationType === 'complex'
+                  ? navigationItemContainerAnimated[
+                      animation === 'collapse' ? 'collapse' : 'expand'
+                    ]
+                  : '',
+              )}
               gap={1}
               href={href}
               justifyContent="center"
