@@ -1,6 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ComponentProps,
@@ -9,7 +10,6 @@ import type {
   ReactNode,
 } from 'react'
 import { useEffect, useId, useMemo, useState } from 'react'
-import { cn } from '../../utils'
 import { Label } from '../Label'
 import { Row } from '../Row'
 import { SelectInput } from '../SelectInput'

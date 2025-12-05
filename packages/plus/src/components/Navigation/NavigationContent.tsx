@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { Stack } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
@@ -130,11 +131,7 @@ export const NavigationContent = ({
   ])
 
   return (
-    <nav
-      className={`${className ? `${className} ` : ''}${navigation}`}
-      data-testid={dataTestId}
-      id={id}
-    >
+    <nav className={cn(className, navigation)} data-testid={dataTestId} id={id}>
       <div
         className={navigationContainer({
           animation: shouldAnimate ? animation : undefined,
@@ -147,7 +144,10 @@ export const NavigationContent = ({
       >
         {logo ? <Header logo={logo} /> : null}
         <div
-          className={`${navigationContentContainer}${expanded ? '' : ` ${navigationContentContainerCollapsed}`}`}
+          className={cn(
+            navigationContentContainer,
+            expanded ? '' : navigationContentContainerCollapsed,
+          )}
         >
           <Stack className={navigationContent} gap={0.25} ref={contentRef}>
             {children}

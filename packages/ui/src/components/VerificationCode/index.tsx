@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -9,7 +10,6 @@ import type {
   ReactNode,
 } from 'react'
 import { createRef, useId, useMemo, useState } from 'react'
-import { cn } from '../../utils'
 import { Label } from '../Label'
 import { Text } from '../Text'
 import { filedSetClass, inputClass, inputSizes } from './styles.css'

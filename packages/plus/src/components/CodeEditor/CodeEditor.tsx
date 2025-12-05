@@ -3,6 +3,7 @@
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
+import { cn } from '@ultraviolet/themes'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import {
@@ -58,9 +59,9 @@ export const CodeEditor = ({
   lineNumbers = true,
   style,
 }: CodeEditorProps) => (
-  <Stack className={disabled ? disabledStack : ''} gap={0.5} style={style}>
+  <Stack className={cn(disabled ? disabledStack : '')} gap={0.5} style={style}>
     {label ? <Label labelDescription={labelDescription}>{label}</Label> : null}
-    <div className={codeEditor[disabled ? 'disabled' : 'default']}>
+    <div className={cn(codeEditor[disabled ? 'disabled' : 'default'])}>
       <CodeMirror
         aria-disabled={disabled}
         aria-label={ariaLabel}

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { InfoTableCell } from './components/Cell'
 import { InfoTableRow } from './components/Row'
@@ -26,11 +27,7 @@ export const InfoTable = ({
   'data-testid': dataTestId,
 }: InfoTableProps) => (
   <InfoTableContext.Provider value={{ width }}>
-    <dl
-      className={`${className ? `${className} ` : ''}${dl}`}
-      data-testid={dataTestId}
-      style={style}
-    >
+    <dl className={cn(className, dl)} data-testid={dataTestId} style={style}>
       {children}
     </dl>
   </InfoTableContext.Provider>
