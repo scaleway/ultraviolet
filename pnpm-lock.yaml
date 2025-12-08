@@ -509,6 +509,9 @@ importers:
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../themes
+      '@ultraviolet/ui':
+        specifier: workspace:*
+        version: link:../ui
       react-hook-form:
         specifier: 7.55.0
         version: 7.55.0(react@19.2.0)
@@ -525,9 +528,6 @@ importers:
       '@types/react-dom':
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.7)
-      '@ultraviolet/ui':
-        specifier: workspace:*
-        version: link:../ui
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -604,13 +604,14 @@ importers:
         version: 19.2.0(react@19.2.0)
 
   packages/nextjs:
-    devDependencies:
+    dependencies:
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../themes
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
+    devDependencies:
       next:
         specifier: 16.0.7
         version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.2)
@@ -638,6 +639,9 @@ importers:
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../themes
+      '@ultraviolet/ui':
+        specifier: workspace:*
+        version: link:../ui
       '@vanilla-extract/css':
         specifier: 1.17.4
         version: 1.17.4(babel-plugin-macros@3.1.0)
@@ -666,9 +670,6 @@ importers:
       '@ultraviolet/illustrations':
         specifier: workspace:*
         version: link:../illustrations
-      '@ultraviolet/ui':
-        specifier: workspace:*
-        version: link:../ui
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
