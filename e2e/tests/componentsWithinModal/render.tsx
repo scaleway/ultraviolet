@@ -22,7 +22,11 @@ const Render = () => {
         />
         <div data-testid="input-value">{firstName}</div>
 
-        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
+        <Form
+          errors={mockErrors}
+          methods={methods}
+          onSubmit={() => {}}
+        >
           <Stack gap={1}>
             <TextInputField
               control={methods.control}
