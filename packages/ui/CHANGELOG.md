@@ -1,5 +1,42 @@
 # Change Log
 
+## 3.1.0
+
+### Minor Changes
+
+- [#5843](https://github.com/scaleway/ultraviolet/pull/5843) [`634c88f`](https://github.com/scaleway/ultraviolet/commit/634c88f9597b432c21afc9903c0d96e3d54b578d) Thanks [@lisalupi](https://github.com/lisalupi)! - `BarStack`:
+  - change style
+  - add props `label` and `labelDescription` to add a Label on top of the chart
+  - add prop `legend` to show the legend beneath the chart instead of inside of it
+  - add prop `size`
+  - text should have an ellipsis when overflowing
+
+### Patch Changes
+
+- [#5835](https://github.com/scaleway/ultraviolet/pull/5835) [`c650f4f`](https://github.com/scaleway/ultraviolet/commit/c650f4fd70be4b6a09477514b5719becec6a278b) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Fix color of disabled option description text
+
+- [#5828](https://github.com/scaleway/ultraviolet/pull/5828) [`7bde3d9`](https://github.com/scaleway/ultraviolet/commit/7bde3d9d0c905f610b903d1af7802742e3cfcc4e) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
+  - click outside should work in every context
+  - fix placeholder alignment when small
+
+- [#5846](https://github.com/scaleway/ultraviolet/pull/5846) [`019e4b3`](https://github.com/scaleway/ultraviolet/commit/019e4b3322d76f29986f275f5e852cc9d2089a43) Thanks [@lisalupi](https://github.com/lisalupi)! - `Snippet`: add label and helper
+
+- [#5845](https://github.com/scaleway/ultraviolet/pull/5845) [`cc568fc`](https://github.com/scaleway/ultraviolet/commit/cc568fc91c73e4ae185f304176a8690132eadff8) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - fix make tag input multiline by default
+
+- [#5824](https://github.com/scaleway/ultraviolet/pull/5824) [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.7`.
+
+- [#5844](https://github.com/scaleway/ultraviolet/pull/5844) [`173e194`](https://github.com/scaleway/ultraviolet/commit/173e194b9524e7396cf98fc8725eba068d4d65cb) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`: fix gap
+
+- [#5822](https://github.com/scaleway/ultraviolet/pull/5822) [`cb75383`](https://github.com/scaleway/ultraviolet/commit/cb7538341653c9dc485bd59ef107cea863449fa1) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`: new size "xsmall"
+
+- [#5854](https://github.com/scaleway/ultraviolet/pull/5854) [`6bc5d37`](https://github.com/scaleway/ultraviolet/commit/6bc5d376cd48c8dedf04f62e34b5b3c78f872a5e) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Cell`: force width/maxWidth/minWidth on children
+
+- [#5833](https://github.com/scaleway/ultraviolet/pull/5833) [`0e4dd48`](https://github.com/scaleway/ultraviolet/commit/0e4dd487741e0030d9f652e468b2dc035e2722d4) Thanks [@lisalupi](https://github.com/lisalupi)! - `Text`: fix prop strikeThrough by removing useless `textDecoration` in variant definition
+
+- Updated dependencies [[`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23), [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13), [`7625641`](https://github.com/scaleway/ultraviolet/commit/76256412346cff9d655d153d1b48741bc099db6d)]:
+  - @ultraviolet/icons@5.0.1
+
 ## 3.0.0
 
 ### Major Changes
