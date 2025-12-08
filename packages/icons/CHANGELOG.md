@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.0.1
+
+### Patch Changes
+
+- [#5830](https://github.com/scaleway/ultraviolet/pull/5830) [`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23) Thanks [@lisalupi](https://github.com/lisalupi)! - Add 20+ `Flags`
+
+- [#5824](https://github.com/scaleway/ultraviolet/pull/5824) [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.7`.
+
+- [#5837](https://github.com/scaleway/ultraviolet/pull/5837) [`7625641`](https://github.com/scaleway/ultraviolet/commit/76256412346cff9d655d153d1b48741bc099db6d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Icon`:
+  - new icons `DocPaperIcon` and `DocPaperOutlineIcon`
+  - update `DocIcon` and `DocOutlineIcon`
+
 ## 5.0.0
 
 ### Major Changes

@@ -1,5 +1,17 @@
 # Change Log
 
+## 6.0.1
+
+### Patch Changes
+
+- [#5856](https://github.com/scaleway/ultraviolet/pull/5856) [`1d7ad74`](https://github.com/scaleway/ultraviolet/commit/1d7ad7412c243ecb926bbe5760fbfbbc121cedef) Thanks [@lisalupi](https://github.com/lisalupi)! - ⚠️ `@ultraviolet/ui` is no longer a peer-dependency of `@ultraviolet/plus`, `@ultraviolet/form` and `@ultraviolet/nextjs` in order to simplify versioning with changeset
+
+- [#5824](https://github.com/scaleway/ultraviolet/pull/5824) [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.7`.
+
+- Updated dependencies [[`634c88f`](https://github.com/scaleway/ultraviolet/commit/634c88f9597b432c21afc9903c0d96e3d54b578d), [`c650f4f`](https://github.com/scaleway/ultraviolet/commit/c650f4fd70be4b6a09477514b5719becec6a278b), [`7bde3d9`](https://github.com/scaleway/ultraviolet/commit/7bde3d9d0c905f610b903d1af7802742e3cfcc4e), [`019e4b3`](https://github.com/scaleway/ultraviolet/commit/019e4b3322d76f29986f275f5e852cc9d2089a43), [`cc568fc`](https://github.com/scaleway/ultraviolet/commit/cc568fc91c73e4ae185f304176a8690132eadff8), [`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23), [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13), [`173e194`](https://github.com/scaleway/ultraviolet/commit/173e194b9524e7396cf98fc8725eba068d4d65cb), [`7625641`](https://github.com/scaleway/ultraviolet/commit/76256412346cff9d655d153d1b48741bc099db6d), [`cb75383`](https://github.com/scaleway/ultraviolet/commit/cb7538341653c9dc485bd59ef107cea863449fa1), [`6bc5d37`](https://github.com/scaleway/ultraviolet/commit/6bc5d376cd48c8dedf04f62e34b5b3c78f872a5e), [`0e4dd48`](https://github.com/scaleway/ultraviolet/commit/0e4dd487741e0030d9f652e468b2dc035e2722d4)]:
+  - @ultraviolet/ui@3.1.0
+  - @ultraviolet/icons@5.0.1
+
 ## 6.0.0
 
 ### Major Changes
