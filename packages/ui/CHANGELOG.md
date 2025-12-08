@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.1
+
+### Patch Changes
+
+- [#5870](https://github.com/scaleway/ultraviolet/pull/5870) [`10ced0d`](https://github.com/scaleway/ultraviolet/commit/10ced0d1c7e22af4ccaf4b8f4e60b655e56579da) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Cell`: fix width of child to take into account padding
+
 ## 3.1.0
 
 ### Minor Changes
