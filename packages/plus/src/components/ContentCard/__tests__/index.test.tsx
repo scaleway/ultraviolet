@@ -5,7 +5,6 @@ import illustration from '../assets/illustration.png'
 
 describe('contentCard', () => {
   beforeEach(() => {
-    vi.useFakeTimers()
     vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
   })
 

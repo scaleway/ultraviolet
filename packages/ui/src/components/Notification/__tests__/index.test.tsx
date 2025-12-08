@@ -1,13 +1,9 @@
 import { act, screen } from '@testing-library/react'
 import { renderWithTheme } from '@utils/test'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, describe, expect, test, vi } from 'vitest'
 import { NotificationContainer, notification } from '..'
 
 describe('toaster', () => {
-  beforeEach(() => {
-    vi.useFakeTimers()
-  })
-
   afterEach(() => {
     vi.clearAllTimers()
   })

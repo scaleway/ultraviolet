@@ -151,6 +151,7 @@ export default [
       ...disableRules,
       'no-console': 'off',
       'no-alert': 'off',
+      'prefer-arrow-callback': 'off',
       'react/jsx-props-no-spreading': 'off',
       'react/no-unstable-nested-components': 'off',
       'react/jsx-key': 'off',

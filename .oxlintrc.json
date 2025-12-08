@@ -51,6 +51,7 @@
       "plugins": ["import", "oxc", "vitest"],
       "rules": {
         "@typescript-eslint/consistent-type-imports": "off",
+        "eslint/func-names": "off",
         "import/export": "off",
         "import/no-anonymous-default-export": "off",
         "import/no-named-export": "off",

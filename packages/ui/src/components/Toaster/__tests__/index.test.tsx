@@ -1,14 +1,10 @@
 import { act, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, describe, expect, test, vi } from 'vitest'
 import { Toast, ToastContainer, toast } from '..'
 
 describe('toaster', () => {
-  beforeEach(() => {
-    vi.useFakeTimers()
-  })
-
   afterEach(() => {
     vi.clearAllTimers()
   })
