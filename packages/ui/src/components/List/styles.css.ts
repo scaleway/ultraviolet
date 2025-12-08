@@ -27,6 +27,8 @@ const colorChange = keyframes({
   },
 })
 
+const listCellPadding = theme.space[2]
+
 function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
   const color = theme.colors[sentiment]
   const base = {
@@ -206,7 +208,7 @@ export const listCell = style({
   display: 'table-cell',
   verticalAlign: 'middle',
   height: theme.sizing[750],
-  padding: `0 ${theme.space[2]}`,
+  padding: `0 ${listCellPadding}`,
   transition: 'box-shadow 200ms ease, border-color 200ms ease',
   borderTop: `1px solid ${theme.colors.neutral.border}`,
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
@@ -231,9 +233,10 @@ export const listCell = style({
 })
 
 globalStyle(`${listCell} > *`, {
-  width: widthCell,
-  maxWidth: maxWidthCell,
-  minWidth: minWidthCell,
+  /** Remove padding from width to avoid overflow since boxSizing = 'content-box' */
+  width: `calc(${widthCell} - ${listCellPadding} - ${listCellPadding})`,
+  maxWidth: `calc(${maxWidthCell} - ${listCellPadding} - ${listCellPadding})`,
+  minWidth: `calc(${minWidthCell} - ${listCellPadding} - ${listCellPadding})`,
 })
 
 globalStyle(`${listRowBase} > td:first-child`, {
