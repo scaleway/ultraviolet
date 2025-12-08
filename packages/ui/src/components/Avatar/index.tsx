@@ -1,7 +1,7 @@
 'use client'
 
-import { UploadIcon } from '@ultraviolet/icons'
-import { UserProductIcon } from '@ultraviolet/icons/product'
+import { UserProductIcon } from '@ultraviolet/icons/product/UserProductIcon'
+import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { cn, theme as UVTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'

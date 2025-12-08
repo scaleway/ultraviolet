@@ -7,16 +7,18 @@ import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
+type SelectableCardOptionGroupUI = typeof SelectableCardOptionGroup
+
 type SelectableCardOptionGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = Omit<
-  ComponentProps<typeof SelectableCardOptionGroup>,
+  ComponentProps<SelectableCardOptionGroupUI>,
   'onChange' | 'onChangeOption'
 > &
   Partial<
     Pick<
-      ComponentProps<typeof SelectableCardOptionGroup>,
+      ComponentProps<SelectableCardOptionGroupUI>,
       'onChangeOption' | 'onChange'
     >
   > &
@@ -24,7 +26,12 @@ type SelectableCardOptionGroupFieldProps<
     optionName?: string
   }
 
-export const SelectableCardOptionGroupField = <
+const SelectableCardOptionGroupFieldComponent: <
+  TFieldValues extends FieldValues = FieldValues,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>(
+  props: SelectableCardOptionGroupFieldProps<TFieldValues, TFieldName>,
+) => JSX.Element = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -87,4 +94,12 @@ export const SelectableCardOptionGroupField = <
   )
 }
 
-SelectableCardOptionGroupField.Option = SelectableCardOptionGroup.Option
+type SelectableCardOptionGroupFieldType =
+  typeof SelectableCardOptionGroupFieldComponent & {
+    Option: typeof SelectableCardOptionGroup.Option
+  }
+
+export const SelectableCardOptionGroupField: SelectableCardOptionGroupFieldType =
+  Object.assign(SelectableCardOptionGroupFieldComponent, {
+    Option: SelectableCardOptionGroup.Option,
+  })

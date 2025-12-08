@@ -1,11 +1,11 @@
-import type { MutableRefObject } from 'react'
+import type { RefObject } from 'react'
 import { useEffect, useState } from 'react'
 
 /**
  * This hook checks if the element has overflow based on the offsetWidth and scrollWidth of the element.
  */
 export const useIsOverflowing = (
-  ref: MutableRefObject<HTMLElement | HTMLDivElement | undefined | null>,
+  ref: RefObject<HTMLElement | HTMLDivElement | undefined | null>,
   callback?: (hasOverflow: boolean) => void,
 ) => {
   const [isOverflowing, setIsOverflowing] = useState(false)

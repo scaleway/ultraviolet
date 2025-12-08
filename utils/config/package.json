@@ -1,0 +1,14 @@
+{
+  "name": "@ultraviolet/config",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "tsconfig/"
+  ],
+  "export":{
+    "./tsconfig/*": "./tsconfig/*.json",
+    "./presets/*": "./presets/*.json"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

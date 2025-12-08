@@ -7,7 +7,6 @@ export default mergeConfig(defineConfig(defaultConfig), {
   build: {
     lib: {
       entry: {
-        '': resolve(__dirname, 'src/index.ts'),
         'components/CategoryIcon/index': resolve(
           __dirname,
           'src/components/CategoryIcon/index.ts',
@@ -24,6 +23,7 @@ export default mergeConfig(defineConfig(defaultConfig), {
           __dirname,
           'src/components/ProductIcon/index.ts',
         ),
+        'index': resolve(__dirname, 'src/index.ts'),
       },
     },
   },

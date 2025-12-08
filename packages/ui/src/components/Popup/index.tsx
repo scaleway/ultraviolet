@@ -66,7 +66,7 @@ const stopClickPropagation: MouseEventHandler = event => {
   event.stopPropagation()
 }
 
-type PopupRole = 'dialog' | 'tooltip' | 'popup' | string
+type PopupRole = 'dialog' | 'tooltip' | 'popup'
 
 type PopupProps = {
   /**
