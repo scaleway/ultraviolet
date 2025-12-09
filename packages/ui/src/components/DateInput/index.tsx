@@ -1,6 +1,7 @@
 'use client'
 
 import { CalendarRangeIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type { Locale } from 'date-fns'
 import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -294,7 +295,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
   return (
     <DateInputContext.Provider value={valueContext}>
       <div
-        className={`${className ? `${className} ` : ''}${dateinputContainer}`}
+        className={cn(className, dateinputContainer)}
         data-testid={dataTestId}
         id={id}
         onBlur={onBlur}

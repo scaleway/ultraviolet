@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'
@@ -108,7 +108,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       <Tooltip text={tooltip}>
         <div
           aria-disabled={disabled}
-          className={`${className ? `${className} ` : ''}${checkboxContainer}`}
+          className={cn(className, checkboxContainer)}
           data-checked={checked}
           data-error={!!error}
           data-testid={dataTestId}

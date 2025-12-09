@@ -2,7 +2,7 @@
 
 import { UploadIcon } from '@ultraviolet/icons'
 import { UserProductIcon } from '@ultraviolet/icons/product'
-import { theme as UVTheme } from '@ultraviolet/themes'
+import { cn, theme as UVTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
 import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
@@ -49,7 +49,7 @@ export const Avatar = ({
 
   return (
     <div
-      className={`${className ? `${className} ` : ''}${containerAvatar({ sentiment, shape, size })}`}
+      className={cn(className, containerAvatar({ sentiment, shape, size }))}
       data-has-background={!['user', 'image'].includes(variant)}
       data-testid={dataTestId}
       onClick={onClick}

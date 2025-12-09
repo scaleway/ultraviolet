@@ -7,6 +7,7 @@ import {
   CloseIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode, RefObject } from 'react'
 import {
@@ -113,7 +114,7 @@ const DisplayValues = ({
         >
           {potentiallyNonOverflowedValues.map(option => (
             <Tag
-              className={`${option.value} ${selectBarTags.hidden}`}
+              className={cn(option.value, selectBarTags.hidden)}
               key={option.value}
               onClose={() => {}}
             >

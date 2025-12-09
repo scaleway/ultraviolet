@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowDownIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type {
   ButtonHTMLAttributes,
   ComponentProps,
@@ -39,7 +40,7 @@ export const TabMenu = forwardRef(
             aria-disabled={disabled ?? 'false'}
             aria-haspopup="menu"
             aria-selected={ariaSelected}
-            className={`${className ? `${className} ` : ''}${tabsButton}`}
+            className={cn(className, tabsButton)}
             disabled={disabled}
             role="tab"
             type="button"

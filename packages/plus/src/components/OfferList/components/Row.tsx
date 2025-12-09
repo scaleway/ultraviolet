@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { theme } from '@ultraviolet/themes'
+import { cn, theme } from '@ultraviolet/themes'
 import {
   Badge as BadgeUV,
   Button,
@@ -18,7 +18,6 @@ import {
   expandablePadding as expandablePaddingVar,
   offerListBadge,
   offerListBadgeContainer,
-  offerListBanner,
   offerListNoPaddingCell,
   offerListRowBanner,
   offerListRowExpandable,
@@ -140,7 +139,14 @@ export const Row = ({
   return (
     <>
       <List.Row
-        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''} ${expandable ? offerListRowSelectedExpandable : offerListRowSelectedNotExpandable}`}
+        className={cn(
+          className,
+          banner ? offerListRowBanner : '',
+          isSelected ? offerListRowSelected : '',
+          expandable
+            ? offerListRowSelectedExpandable
+            : offerListRowSelectedNotExpandable,
+        )}
         data-dragging={dataDragging}
         data-testid={dataTestId}
         disabled={disabled}

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { Color } from '../../theme'
@@ -33,7 +34,7 @@ export const Cell = ({
   return (
     <td
       align={align}
-      className={`${className ? `${className} ` : ''}${tableCell({ align, sentiment })}`}
+      className={cn(className, tableCell({ align, sentiment }))}
       colSpan={colSpan}
       rowSpan={rowSpan}
       style={{

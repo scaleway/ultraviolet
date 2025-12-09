@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowRightIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type {
   CSSProperties,
   KeyboardEvent,
@@ -134,7 +135,10 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
         >
           <Tooltip text={tooltip}>
             <a
-              className={`${className ? `${className} ` : ''}${menuItem({ borderless: true, disabled, sentiment })}`}
+              className={cn(
+                className,
+                menuItem({ borderless: true, disabled, sentiment }),
+              )}
               data-active={active}
               data-is-disclosure={isDisclosure}
               data-is-menu-item
@@ -173,7 +177,10 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
       >
         <Tooltip text={tooltip}>
           <button
-            className={`${className ? `${className} ` : ''}${menuItem({ borderless, disabled, sentiment })}`}
+            className={cn(
+              className,
+              menuItem({ borderless, disabled, sentiment }),
+            )}
             data-active={active || (isVisible && isDisclosure)}
             data-is-disclosure={isDisclosure}
             data-is-menu-item

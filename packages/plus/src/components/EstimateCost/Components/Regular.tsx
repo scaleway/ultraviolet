@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { CSSProperties, ReactNode } from 'react'
 import { memo } from 'react'
 import { useOverlay } from '../OverlayContext'
@@ -25,7 +26,7 @@ export const Regular = memo(
 
     return !isDisabledOnOverlay || !isOverlay ? (
       <div
-        className={`${className ? `${className} ` : ''}${estimateCostRegular({ isOverlay, variant })}`}
+        className={cn(className, estimateCostRegular({ isOverlay, variant }))}
         style={style}
       >
         {children}

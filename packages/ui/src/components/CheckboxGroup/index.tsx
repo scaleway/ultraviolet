@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
@@ -59,7 +60,7 @@ export const CheckboxGroupCheckbox = ({
     <Checkbox
       autoFocus={autoFocus}
       checked={groupValues?.includes(checkboxValue)}
-      className={`${className ? `${className} ` : ''}${checkbox}`}
+      className={cn(className, checkbox)}
       data-testid={dataTestId}
       disabled={disabled}
       error={error || errorContext}
@@ -124,10 +125,7 @@ export const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={`${className ? `${className} ` : ''}${fieldset}`}
-          style={style}
-        >
+        <fieldset className={cn(className, fieldset)} style={style}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>

@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { theme } from '@ultraviolet/themes'
+import { cn, theme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   CSSProperties,
@@ -153,7 +153,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           }
           aria-disabled={disabled}
           aria-expanded={expandable ? expandedRowIds[id] : undefined}
-          className={`${className ? `${className} ` : ''}${listRow({ highlightAnimation, sentiment })}`}
+          className={cn(className, listRow({ highlightAnimation, sentiment }))}
           data-dragging={dataDragging}
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}

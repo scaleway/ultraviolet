@@ -5,6 +5,7 @@ import {
   ArrowRightIcon,
   OpenInNewIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/themes'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -113,7 +114,17 @@ export const Link = forwardRef(
           aria-current={ariaCurrent}
           aria-keyshortcuts={ariaKeyshortcuts}
           aria-label={ariaLabel}
-          className={`${className ? `${className} ` : ''}${link({ oneLine, prominence, sentiment, type: variant, variant: textVariant })} ${defaultLink}`}
+          className={cn(
+            className,
+            link({
+              oneLine,
+              prominence,
+              sentiment,
+              type: variant,
+              variant: textVariant,
+            }),
+            defaultLink,
+          )}
           data-testid={dataTestId}
           data-variant={variant}
           download={download}

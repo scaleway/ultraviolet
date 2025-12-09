@@ -1,3 +1,4 @@
+import { cn } from '@ultraviolet/themes'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
 import { useEffect, useMemo, useState } from 'react'
 import { Units } from './constants'
@@ -140,7 +141,7 @@ export const OrderSummary = ({
   return (
     <OrderSummaryContext.Provider value={valueContext}>
       <Stack
-        className={`${className ? `${className} ` : ''}${orderSummaryContainer}`}
+        className={cn(className, orderSummaryContainer)}
         data-testId={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}
         style={style}

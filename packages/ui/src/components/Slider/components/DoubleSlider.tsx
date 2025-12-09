@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
@@ -318,7 +318,15 @@ export const DoubleSlider = ({
             >
               <input
                 aria-label={ariaLabel ?? name}
-                className={`${className ? `${className} ` : ''}${sliderDouble({ disabled, hasTooltip: !!tooltip })} ${sliderThumbStyle({ disabled: !!disabled, hasTooltipDouble: !!tooltip, isDouble: true })}`}
+                className={cn(
+                  className,
+                  sliderDouble({ disabled, hasTooltip: !!tooltip }),
+                  sliderThumbStyle({
+                    disabled: !!disabled,
+                    hasTooltipDouble: !!tooltip,
+                    isDouble: true,
+                  }),
+                )}
                 data-direction={direction}
                 data-error={error}
                 data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
@@ -356,7 +364,15 @@ export const DoubleSlider = ({
             >
               <input
                 aria-label={ariaLabel ?? name}
-                className={`${className ? `${className} ` : ''}${sliderDouble({ disabled, hasTooltip: !!tooltip })} ${sliderThumbStyle({ disabled, hasTooltipDouble: !!tooltip, isDouble: true })}`}
+                className={cn(
+                  className,
+                  sliderDouble({ disabled, hasTooltip: !!tooltip }),
+                  sliderThumbStyle({
+                    disabled,
+                    hasTooltipDouble: !!tooltip,
+                    isDouble: true,
+                  }),
+                )}
                 data-direction={direction}
                 data-error={error}
                 data-testid={

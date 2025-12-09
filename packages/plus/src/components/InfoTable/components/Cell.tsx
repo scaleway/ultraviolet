@@ -31,7 +31,7 @@ export const InfoTableCell = ({
     <dd className={desc}>
       <Text
         as="div"
-        className={`${cellText}`}
+        className={cellText}
         oneLine={!multiline}
         prominence="default"
         sentiment="neutral"

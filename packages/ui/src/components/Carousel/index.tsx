@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
@@ -85,10 +86,7 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <div
-      className={`${className ? `${className} ` : ''}${wrapper}`}
-      data-testid={dataTestId}
-    >
+    <div className={cn(className, wrapper)} data-testid={dataTestId}>
       <span
         className={beforeScroll}
         data-testid={`${dataTestId}-before`}
@@ -97,7 +95,7 @@ export const Carousel = ({
         onMouseOver={handleScrollRight}
       />
       <div
-        className={`${className ? `${className} ` : ''}${scrollableWrapper}`}
+        className={cn(className, scrollableWrapper)}
         data-testid={`${dataTestId}-wrapper`}
         onDrag={() => handleScrollX(deltaX)}
         onDragEnd={() => {

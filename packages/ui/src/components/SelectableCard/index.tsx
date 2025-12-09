@@ -1,7 +1,7 @@
 'use client'
 
 import * as ProductIcon from '@ultraviolet/icons/product'
-import { useTheme } from '@ultraviolet/themes'
+import { cn, useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEventHandler,
@@ -247,7 +247,15 @@ export const SelectableCard = forwardRef(
       <ParentContainer>
         <Stack
           alignItems="start"
-          className={`${className ? `${className} ` : ''}${containerSelectableCard({ cursor: type === 'checkbox' && isComplexChildren ? 'default' : 'custom', image })} ${labelContainerSelectableCard[label ? 'label' : 'noLabel']}`}
+          className={cn(
+            className,
+            containerSelectableCard({
+              cursor:
+                type === 'checkbox' && isComplexChildren ? 'default' : 'custom',
+              image,
+            }),
+            labelContainerSelectableCard[label ? 'label' : 'noLabel'],
+          )}
           data-checked={checked}
           data-disabled={disabled}
           data-error={isError}
