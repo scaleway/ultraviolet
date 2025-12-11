@@ -57,8 +57,8 @@ importers:
         specifier: 0.25.1
         version: 0.25.1
       '@playwright/test':
-        specifier: 1.56.1
-        version: 1.56.1
+        specifier: 1.57.0
+        version: 1.57.0
       '@scaleway/eslint-config-react':
         specifier: 5.2.10
         version: 5.2.10(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
@@ -223,7 +223,7 @@ importers:
         version: 19.2.1(react@19.2.1)
       react-scan:
         specifier: 0.4.3
-        version: 0.4.3(@types/react@19.2.7)(next@16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2))(react-dom@19.2.1(react@19.2.1))(react-router-dom@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-router@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(rollup@4.53.3)
+        version: 0.4.3(@types/react@19.2.7)(next@16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2))(react-dom@19.2.1(react@19.2.1))(react-router-dom@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-router@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(rollup@4.53.3)
       read-pkg:
         specifier: 10.0.0
         version: 10.0.0
@@ -313,8 +313,8 @@ importers:
         specifier: 9.39.1
         version: 9.39.1
       '@playwright/test':
-        specifier: 1.56.1
-        version: 1.56.1
+        specifier: 1.57.0
+        version: 1.57.0
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7
@@ -368,7 +368,7 @@ importers:
         version: link:../../packages/ui
       next:
         specifier: 16.0.7
-        version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
+        version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -432,7 +432,7 @@ importers:
         version: link:../../packages/ui
       next:
         specifier: 16.0.7
-        version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
+        version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -614,7 +614,7 @@ importers:
     devDependencies:
       next:
         specifier: 16.0.7
-        version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
+        version: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -2879,8 +2879,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@playwright/test@1.56.1':
-    resolution: {integrity: sha512-vSMYtL/zOcFpvJCW71Q/OEGQb7KYBPAdKh35WNSkaZA75JlAO8ED8UN6GUNTm3drWomcbcqRPFqQbLae8yBTdg==}
+  '@playwright/test@1.57.0':
+    resolution: {integrity: sha512-6TyEnHgd6SArQO8UO2OMTxshln3QMWBtPGrOCgs3wVEmQmwyuNtB10IZMfmYDE0riwNR1cu4q+pPcxMVtaG3TA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7038,8 +7038,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright-core@1.56.1:
-    resolution: {integrity: sha512-hutraynyn31F+Bifme+Ps9Vq59hKuUCz7H1kDOcBs+2oGguKkWTU50bBWrtz34OUWmIwpBTWDxaRPXrIXkgvmQ==}
+  playwright-core@1.57.0:
+    resolution: {integrity: sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7048,8 +7048,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.56.1:
-    resolution: {integrity: sha512-aFi5B0WovBHTEvpM3DzXTUaeN6eN0qWnTkKx4NQaH4Wvcmc153PdaY2UBdSYKaGYw+UyWXSVyxDUg5DoPEttjw==}
+  playwright@1.57.0:
+    resolution: {integrity: sha512-ilYQj1s8sr2ppEJ2YVadYBN0Mb3mdo9J0wQ+UuDhzYqURwSoW4n1Xs5vs7ORwgDGmyEh33tRMeS8KhdkMoLXQw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -11102,9 +11102,9 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@playwright/test@1.56.1':
+  '@playwright/test@1.57.0':
     dependencies:
-      playwright: 1.56.1
+      playwright: 1.57.0
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -15675,7 +15675,7 @@ snapshots:
     dependencies:
       enhanced-resolve: 5.18.1
 
-  next@16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2):
+  next@16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2):
     dependencies:
       '@next/env': 16.0.7
       '@swc/helpers': 0.5.15
@@ -15693,7 +15693,7 @@ snapshots:
       '@next/swc-linux-x64-musl': 16.0.7
       '@next/swc-win32-arm64-msvc': 16.0.7
       '@next/swc-win32-x64-msvc': 16.0.7
-      '@playwright/test': 1.56.1
+      '@playwright/test': 1.57.0
       sass: 1.94.2
       sharp: 0.34.5
     transitivePeerDependencies:
@@ -15998,7 +15998,7 @@ snapshots:
 
   playwright-core@1.53.2: {}
 
-  playwright-core@1.56.1: {}
+  playwright-core@1.57.0: {}
 
   playwright@1.53.2:
     dependencies:
@@ -16006,9 +16006,9 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
-  playwright@1.56.1:
+  playwright@1.57.0:
     dependencies:
-      playwright-core: 1.56.1
+      playwright-core: 1.57.0
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -16402,7 +16402,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.2.1(react@19.2.1)
 
-  react-scan@0.4.3(@types/react@19.2.7)(next@16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2))(react-dom@19.2.1(react@19.2.1))(react-router-dom@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-router@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(rollup@4.53.3):
+  react-scan@0.4.3(@types/react@19.2.7)(next@16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2))(react-dom@19.2.1(react@19.2.1))(react-router-dom@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react-router@7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)(rollup@4.53.3):
     dependencies:
       '@babel/core': 7.28.5
       '@babel/generator': 7.28.0
@@ -16424,7 +16424,7 @@ snapshots:
       react-dom: 19.2.1(react@19.2.1)
       tsx: 4.21.0
     optionalDependencies:
-      next: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.56.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
+      next: 16.0.7(@babel/core@7.28.5)(@playwright/test@1.57.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.94.2)
       react-router: 7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       react-router-dom: 7.9.6(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       unplugin: 2.1.0
