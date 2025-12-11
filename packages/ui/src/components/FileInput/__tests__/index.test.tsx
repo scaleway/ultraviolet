@@ -1,0 +1,191 @@
+import { fireEvent, screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
+import { FileInput } from '..'
+
+const defaultFile = [
+  {
+    file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
+    fileName: 'cat.png',
+    lastModified: 1,
+    size: 30460,
+    type: 'image/png',
+  },
+  {
+    error: 'Maximum file size exceeded',
+    file: 'error.png',
+    fileName: 'error_example.png',
+    lastModified: 1,
+    size: 4046000000,
+    type: 'image/png',
+  },
+  {
+    file: 'sound.mp3',
+    fileName: 'sound.mp3',
+    lastModified: 1,
+    size: 0,
+    type: 'audio/mp3',
+  },
+  {
+    file: 'doc.pdf',
+    fileName: 'doc.pdf',
+    lastModified: 1,
+    size: 304600,
+    type: 'application/pdf',
+  },
+  {
+    file: 'video.mp4',
+    fileName: 'video.mp4',
+    lastModified: 1,
+    size: 40460000,
+    type: 'video/png',
+  },
+  {
+    file: 'loading.pdf',
+    fileName: 'loading_example.pdf',
+    lastModified: 1,
+    loading: true,
+    size: 40460000,
+    type: 'application/pdf',
+  },
+]
+
+describe('fileInput', () => {
+  test('renders correctly', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput helper="helper" label="label" title="title" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  test('renders correctly as an overlay', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput label="label" title="title" variant="overlay">
+        test
+      </FileInput>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  test('renders correctly small', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput label="label" size="small" title="title" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with multiple and list', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput aria-label="label" defaultFiles={defaultFile} list multiple />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly disabled', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput aria-label="label" disabled />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly onChange', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        list
+        multiple
+        onChangeFiles={onChange}
+      />,
+    )
+
+    const soundMp3File = screen.getByTestId('sound.mp3')
+    const closeButton = screen.getByTestId('remove-sound.mp3')
+
+    expect(soundMp3File).toBeInTheDocument()
+    await userEvent.click(closeButton)
+    expect(soundMp3File).not.toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with FileInput.Button', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        list
+        multiple
+        onChangeFiles={onChange}
+      >
+        <FileInput.Button>button</FileInput.Button>
+      </FileInput>,
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should throw error with FileInput.Button outside of FileInput', async () => {
+    expect(() =>
+      shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>),
+    ).toThrowError(
+      'FileInputContext should be inside FileInput to work properly.',
+    )
+  })
+
+  test('should work with function children and title', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        list
+        multiple
+        onChangeFiles={onChange}
+        title={inputId => <label htmlFor={inputId}>title</label>}
+      >
+        {inputId => <label htmlFor={inputId}>click me</label>}
+      </FileInput>,
+    )
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly ondrop, ondrag', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        list
+        multiple
+        onChangeFiles={onChange}
+        title="dragging"
+        variant="overlay"
+      >
+        nodrag
+      </FileInput>,
+    )
+
+    const defaultcontent = screen.getByText('nodrag')
+    const dragContainer = screen.getByTestId('drag-container')
+    fireEvent.dragOver(dragContainer)
+    fireEvent.drop(dragContainer)
+    expect(defaultcontent).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should handle drag state in dropzone variant', async () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput aria-label="label" title="upload files" variant="dropzone" />,
+    )
+
+    const dropzoneElement = screen.getByTestId('drag-container')
+    fireEvent.dragOver(dropzoneElement)
+    fireEvent.drop(dropzoneElement)
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+})
