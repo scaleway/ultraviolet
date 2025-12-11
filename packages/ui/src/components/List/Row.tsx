@@ -12,6 +12,7 @@ import type {
 import {
   Children,
   forwardRef,
+  isValidElement,
   useCallback,
   useEffect,
   useId,
@@ -142,8 +143,12 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       }
     }, [refList, setRefList])
 
-    const childrenLength =
-      Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+    const validChildrenArray = Children.toArray(children).filter(child =>
+      isValidElement(child),
+    )
+
+    const totalColumns =
+      columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
     return (
       <>
@@ -220,11 +225,12 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
               </Cell>
             </ColumnProvider>
           ) : null}
-          {Children.map(children, (child, index) => {
+          {validChildrenArray.map((child, index) => {
             const column = columns[index]
 
             return (
               <ColumnProvider
+                key={`column-provider-${child.key}`}
                 maxWidth={column?.maxWidth}
                 minWidth={column?.minWidth}
                 width={column?.width}
@@ -257,7 +263,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           >
             <Cell
               className={listExpandableCell}
-              colSpan={childrenLength}
+              colSpan={totalColumns}
               style={assignInlineVars({
                 [paddingExpandableCell]: theme.space[expandablePadding ?? '2'],
               })}
