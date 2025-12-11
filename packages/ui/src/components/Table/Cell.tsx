@@ -29,7 +29,7 @@ export const Cell = ({
   align = 'left',
   style,
 }: CellProps) => {
-  const { maxWidth, minWidth, width } = useColumnProvider()
+  const context = useColumnProvider()
 
   return (
     <td
@@ -39,9 +39,9 @@ export const Cell = ({
       rowSpan={rowSpan}
       style={{
         ...assignInlineVars({
-          [widthCell]: width,
-          [minWidthCell]: minWidth,
-          [maxWidthCell]: maxWidth,
+          [widthCell]: context?.width ?? 'auto',
+          [minWidthCell]: context?.minWidth ?? 'auto',
+          [maxWidthCell]: context?.maxWidth ?? 'none',
         }),
         ...style,
       }}
