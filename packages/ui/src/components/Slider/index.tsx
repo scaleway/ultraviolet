@@ -41,6 +41,7 @@ export const Slider = ({
   className,
   tooltipPosition = 'top',
   style,
+  labelDescription,
   'aria-label': ariaLabel,
 }: SliderProps) => {
   // we check if options exists if so we set the bounds to the length of the options
@@ -78,6 +79,7 @@ export const Slider = ({
           id={id}
           input={input}
           label={label}
+          labelDescription={labelDescription}
           max={correctedBounds.max}
           min={correctedBounds.min}
           name={name}
@@ -105,6 +107,7 @@ export const Slider = ({
           id={id}
           input={input}
           label={label}
+          labelDescription={labelDescription}
           max={correctedBounds.max}
           min={correctedBounds.min}
           name={name}

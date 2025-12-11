@@ -25,7 +25,13 @@ describe('single slider', () => {
 
   test('renders correctly', () => {
     shouldMatchSnapshot(
-      <Slider helper="helper" label="Label" name="Name" value={1} />,
+      <Slider
+        helper="helper"
+        label="Label"
+        labelDescription="labeldescription"
+        name="Name"
+        value={1}
+      />,
     )
   })
 

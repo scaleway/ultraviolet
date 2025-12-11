@@ -49,6 +49,7 @@ export const DoubleSlider = ({
   required,
   tooltipPosition,
   'aria-label': ariaLabel,
+  labelDescription,
 }: DoubleSliderProps) => {
   const theme = useTheme()
   const localId = useId()
@@ -274,7 +275,11 @@ export const DoubleSlider = ({
     <Stack direction="column" gap={1} justifyContent="left">
       {label ? (
         <Stack direction="row" justifyContent="space-between">
-          <Label htmlFor={finalId} required={required}>
+          <Label
+            htmlFor={finalId}
+            labelDescription={labelDescription}
+            required={required}
+          >
             {label}
           </Label>
         </Stack>

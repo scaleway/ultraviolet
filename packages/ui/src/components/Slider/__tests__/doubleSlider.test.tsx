@@ -29,6 +29,7 @@ describe('double slider', () => {
         direction="row"
         double
         label="Label"
+        labelDescription="labeldescription"
         name="Name"
         value={[1, 14]}
       />,
