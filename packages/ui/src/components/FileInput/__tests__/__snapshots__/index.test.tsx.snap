@@ -115,6 +115,19 @@ exports[`fileInput > renders correctly disabled 1`] = `
             for="_r_10_"
             style="--qabug40: left;"
           />
+          <button
+            class="styles__e1wcoe0 styles_size_large__e1wcoe1 styles_fullWidth_false__e1wcoe6 styles_disabled_true__e1wcoej styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+            data-testid="button"
+            disabled=""
+            type="button"
+          >
+            <label
+              class="styles_disabled__12cubgsd styles__12cubgsb"
+              for="_r_10_"
+            >
+              Disabled button
+            </label>
+          </button>
         </div>
       </div>
     </div>
@@ -139,7 +152,7 @@ exports[`fileInput > renders correctly onChange 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_13_"
+            id="_r_14_"
             name="label"
             type="file"
           />
@@ -156,7 +169,7 @@ exports[`fileInput > renders correctly onChange 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_13_"
+            for="_r_14_"
             style="--qabug40: left;"
           />
         </div>
@@ -477,7 +490,7 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
       >
         <input
           class="styles__12cubgs8"
-          id="_r_36_"
+          id="_r_37_"
           multiple=""
           name="label"
           type="file"
@@ -924,7 +937,7 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_1p_"
+            id="_r_1q_"
             name="label"
             type="file"
           />
@@ -941,7 +954,7 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_1p_"
+            for="_r_1q_"
             style="--qabug40: left;"
           />
           <button
@@ -950,7 +963,7 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
           >
             <label
               class="styles_default__12cubgsc styles__12cubgsb"
-              for="_r_1p_"
+              for="_r_1q_"
             >
               button
             </label>
@@ -1732,6 +1745,110 @@ exports[`fileInput > renders correctly with multiple and list 1`] = `
 </DocumentFragment>
 `;
 
+exports[`fileInput > should handle adding a file when selecting via the hidden file input 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+    >
+      <div
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        <div
+          class="styles__12cubgs0 styles_state_default__12cubgs2 styles_size_medium__12cubgs5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_center_xxsmall__toi52u5j"
+          data-testid="drag-container"
+        >
+          <input
+            class="styles__12cubgs8"
+            data-testid="test"
+            id="_r_3u_"
+            name="label"
+            type="file"
+          />
+          <svg
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_primary__vbm0wq1 styles_size_xlarge__vbm0wqb styles_undefined_compound_32__vbm0wq1g"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.25 13.25a.75.75 0 0 0 1.5 0V4.636l2.955 3.129a.75.75 0 0 0 1.09-1.03l-4.25-4.5a.75.75 0 0 0-1.09 0l-4.25 4.5a.75.75 0 1 0 1.09 1.03L9.25 4.636z"
+            />
+            <path
+              d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25z"
+            />
+          </svg>
+          <p
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            for="_r_3u_"
+            style="--qabug40: left;"
+          />
+        </div>
+      </div>
+      <div
+        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_wrap_xxsmall__toi52u7j styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+          data-testid="upload.png"
+        >
+          <div
+            class="styles_default__12cubgsk styles__12cubgsi styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_center_xxsmall__toi52u5j"
+          >
+            <div
+              class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+            >
+              <div
+                class="styles_default__12cubgsn styles__12cubgsl"
+              >
+                <svg
+                  class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_primary__vbm0wq1 styles_size_medium__vbm0wq9 styles_undefined_compound_32__vbm0wq1g"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.5 18H15.5C16.3284 18 17 17.3284 17 16.5L17 3.50001C17 2.67158 16.3289 2 15.5005 2.00001L4.5 2C3.67157 2 3 2.67157 3 3.5L3 16.5C3 17.3284 3.67157 18 4.5 18ZM6.24997 5.5C6.24997 5.08579 6.58576 4.75 6.99997 4.75H10.4635C10.8777 4.75 11.2135 5.08579 11.2135 5.5C11.2135 5.91421 10.8777 6.25 10.4635 6.25H6.99997C6.58576 6.25 6.24997 5.91421 6.24997 5.5ZM6.99997 7.75C6.58576 7.75 6.24997 8.08579 6.24997 8.5C6.24997 8.91421 6.58576 9.25 6.99997 9.25H12.4687C12.8829 9.25 13.2187 8.91421 13.2187 8.5C13.2187 8.08579 12.8829 7.75 12.4687 7.75H6.99997ZM6.24997 11.5C6.24997 11.0858 6.58576 10.75 6.99997 10.75H12.4687C12.8829 10.75 13.2187 11.0858 13.2187 11.5C13.2187 11.9142 12.8829 12.25 12.4687 12.25H6.99997C6.58576 12.25 6.24997 11.9142 6.24997 11.5ZM6.99997 13.75C6.58576 13.75 6.24997 14.0858 6.24997 14.5C6.24997 14.9142 6.58576 15.25 6.99997 15.25H9.73434C10.1486 15.25 10.4843 14.9142 10.4843 14.5C10.4843 14.0858 10.1486 13.75 9.73434 13.75H6.99997Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                <p
+                  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                >
+                  upload.png
+                </p>
+                <p
+                  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+                >
+                  5 B
+                </p>
+              </div>
+            </div>
+            <button
+              class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+              data-testid="remove-upload.png"
+              type="button"
+            >
+              <svg
+                class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`fileInput > should handle drag state in dropzone variant 1`] = `
 <DocumentFragment>
   <div
@@ -1749,7 +1866,7 @@ exports[`fileInput > should handle drag state in dropzone variant 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_3q_"
+            id="_r_3r_"
             name="label"
             type="file"
           />
@@ -1766,7 +1883,7 @@ exports[`fileInput > should handle drag state in dropzone variant 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_3q_"
+            for="_r_3r_"
             style="--qabug40: left;"
           >
             upload files
@@ -1795,7 +1912,7 @@ exports[`fileInput > should work with function children and title 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_2g_"
+            id="_r_2h_"
             name="label"
             type="file"
           />
@@ -1812,17 +1929,17 @@ exports[`fileInput > should work with function children and title 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_2g_"
+            for="_r_2h_"
             style="--qabug40: left;"
           >
             <label
-              for="_r_2g_"
+              for="_r_2h_"
             >
               title
             </label>
           </p>
           <label
-            for="_r_2g_"
+            for="_r_2h_"
           >
             click me
           </label>
