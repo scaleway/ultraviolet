@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const dropzone = recipe({
@@ -78,28 +78,58 @@ export const buttonFileInput = styleVariants({
   ],
 })
 
-export const dropzoneOverlay = styleVariants({
-  over: {
-    borderRadius: theme.radii.default,
-    border: `1px dashed ${theme.colors.primary.borderStrong}`,
-    background: theme.colors.primary.background,
-    cursor: 'copy',
-  },
-  default: {
-    border: '1px solid transparent',
-  },
-  page: {
-    borderRadius: theme.radii.default,
-    border: `1px dashed ${theme.colors.neutral.borderStrong}`,
-    background: theme.colors.primary.background,
-    cursor: 'copy',
-  },
+export const overlayWrapper = style({
+  height: 'fit-content',
+  width: 'fit-content',
+  position: 'relative',
 })
 
-export const hideChildren = style({})
+const dropzoneOverlayBase = style({
+  position: 'absolute',
+  inset: 0,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+})
 
-globalStyle(`${hideChildren} > *`, {
-  visibility: 'hidden',
+export const dropzoneOverlay = styleVariants({
+  over: [
+    dropzoneOverlayBase,
+    {
+      borderRadius: theme.radii.default,
+      border: `1px dashed ${theme.colors.primary.borderStrong}`,
+      background: theme.colors.primary.background,
+      cursor: 'copy',
+      textAlign: 'center',
+    },
+  ],
+  default: [
+    dropzoneOverlayBase,
+    {
+      display: 'none',
+    },
+  ],
+  page: [
+    dropzoneOverlayBase,
+    {
+      borderRadius: theme.radii.default,
+      border: `1px dashed ${theme.colors.neutral.borderStrong}`,
+      background: theme.colors.primary.background,
+      cursor: 'copy',
+      textAlign: 'center',
+    },
+  ],
+})
+
+const dropzoneOverlayDisabledOver = style({
+  background: theme.colors.primary.backgroundDisabled,
+  border: `1px dashed ${theme.colors.primary.borderDisabled}`,
+})
+
+export const dropzoneOverlayDisabled = styleVariants({
+  over: [dropzoneOverlayDisabledOver],
+  default: {},
+  page: [dropzoneOverlayDisabledOver],
 })
 
 const fileViewerContainerBase = style({

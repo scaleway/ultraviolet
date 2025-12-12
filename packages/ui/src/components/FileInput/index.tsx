@@ -9,7 +9,14 @@ import { Text } from '../Text'
 import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { FileInputContext } from './FileInputProvider'
-import { dropzone, dropzoneOverlay, fileInput, titleSmall } from './styles.css'
+import {
+  dropzone,
+  dropzoneOverlay,
+  dropzoneOverlayDisabled,
+  fileInput,
+  overlayWrapper,
+  titleSmall,
+} from './styles.css'
 import type { FileInputProps, FilesType } from './types'
 
 /**
@@ -29,6 +36,7 @@ const FileInputBase = ({
   accept,
   list,
   listPosition = 'bottom',
+  listLimit,
   'aria-label': ariaLabel,
   defaultFiles,
   onChangeFiles,
@@ -45,7 +53,8 @@ const FileInputBase = ({
 
   const onDragOver = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()
-    setDragState(disabled ? 'default' : 'over')
+    event.stopPropagation()
+    setDragState('over')
   }
 
   const onDragPage = () => setDragState('page')
@@ -75,45 +84,50 @@ const FileInputBase = ({
 
   const manageDrop = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()
-    const droppedFiles = [...(event.dataTransfer?.files ?? [])]
-    const newFiles = droppedFiles.map(file => ({
-      file: URL.createObjectURL(file),
-      fileName: file.name,
-      lastModified: file.lastModified,
-      size: file.size,
-      type: file.type,
-    }))
-    const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
 
-    setFiles(formattedFiles)
-    onDrop?.(event)
-    onChangeFiles?.(formattedFiles)
+    if (!disabled) {
+      const droppedFiles = [...(event.dataTransfer?.files ?? [])]
+      const newFiles = droppedFiles.map(file => ({
+        file: URL.createObjectURL(file),
+        fileName: file.name,
+        lastModified: file.lastModified,
+        size: file.size,
+        type: file.type,
+      }))
+      const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
+
+      setFiles(formattedFiles)
+      onDrop?.(event)
+      onChangeFiles?.(formattedFiles)
+    }
   }
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
 
-    const addedFiles = [...(event.target.files ?? [])]
+    if (!disabled) {
+      const addedFiles = [...(event.target.files ?? [])]
 
-    const newFiles = addedFiles.map(file => ({
-      file: URL.createObjectURL(file),
-      fileName: file.name,
-      lastModified: file.lastModified,
-      size: file.size,
-      type: file.type,
-    }))
+      const newFiles = addedFiles.map(file => ({
+        file: URL.createObjectURL(file),
+        fileName: file.name,
+        lastModified: file.lastModified,
+        size: file.size,
+        type: file.type,
+      }))
 
-    const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
-    setFiles(formattedFiles)
-    onChangeFiles?.(formattedFiles)
+      const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
+      setFiles(formattedFiles)
+      onChangeFiles?.(formattedFiles)
+    }
   }
-
   if (variant === 'overlay') {
     return (
       <Stack direction="column" gap="1.5">
         {list && listPosition === 'top' ? (
           <ListFiles
             files={files}
+            listLimit={listLimit}
             onChangeFiles={onChangeFiles}
             setFiles={setFiles}
           />
@@ -124,42 +138,52 @@ const FileInputBase = ({
           data-testid="drag-container"
           onDragOver={onDragOver}
         >
-          {disabled ? null : (
-            <input
-              accept={accept}
-              className={fileInput}
-              data-testid={dataTestid}
-              disabled={disabled}
-              id={inputId}
-              multiple={multiple}
-              name={label ?? ariaLabel}
-              onChange={onChange}
-              type="file"
-            />
-          )}
-          <div
-            className={dropzoneOverlay[dragState]}
-            onDragOver={event => event.preventDefault()}
-            onDrop={event => {
-              if (!disabled) {
-                onDrop?.(event)
-                manageDrop(event)
+          <input
+            accept={accept}
+            className={fileInput}
+            data-testid={dataTestid}
+            id={inputId}
+            multiple={multiple}
+            name={label ?? ariaLabel}
+            onChange={onChange}
+            type="file"
+          />
+          <div className={overlayWrapper}>
+            {typeof children === 'function' ? children(inputId) : children}
+            <div
+              className={
+                disabled
+                  ? dropzoneOverlayDisabled[dragState]
+                  : dropzoneOverlay[dragState]
               }
-            }}
-            style={style}
-          >
-            {title && typeof title === 'string' && dragState !== 'default' ? (
-              title
-            ) : (
-              <>
-                {typeof children === 'function' ? children(inputId) : children}
-              </>
-            )}
+              onDragOver={event => event.preventDefault()}
+              onDrop={event => {
+                if (!disabled) {
+                  onDrop?.(event)
+                  manageDrop(event)
+                }
+              }}
+              style={style}
+            >
+              {title &&
+              typeof title !== 'function' &&
+              dragState !== 'default' ? (
+                <Text
+                  as="div"
+                  disabled={disabled}
+                  sentiment="primary"
+                  variant="bodySmallStrong"
+                >
+                  {title}
+                </Text>
+              ) : null}
+            </div>
           </div>
         </div>
         {list && listPosition === 'bottom' ? (
           <ListFiles
             files={files}
+            listLimit={listLimit}
             onChangeFiles={onChangeFiles}
             setFiles={setFiles}
           />
@@ -238,6 +262,7 @@ const FileInputBase = ({
         {list ? (
           <ListFiles
             files={files}
+            listLimit={listLimit}
             onChangeFiles={onChangeFiles}
             setFiles={setFiles}
           />

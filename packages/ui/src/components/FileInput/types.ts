@@ -43,9 +43,8 @@ type OverlayVariantProps = {
   /** Size of the dropzone. When set to small, the component can be used inline */
   size?: never
   /** Main text to display in the dropzone */
-  title?: ReactNode
+  title: ReactNode
   children: ChildrenType
-  listPosition?: 'top' | 'bottom'
 }
 
 export type DropzoneVariantProps = {
@@ -55,8 +54,25 @@ export type DropzoneVariantProps = {
   children?: ChildrenType
   /** Main text to display in the dropzone */
   title?: ChildrenType
-  listPosition?: never
 }
+
+type ListTypeOverlay = {
+  list: true
+  variant: 'overlay'
+  listPosition?: 'top' | 'bottom'
+  listLimit?: { limit: number; overflowText: string }
+}
+type ListTypeDropZone = {
+  list: true
+  variant?: 'dropzone'
+  listPosition?: never
+  listLimit?: { limit: number; overflowText: string }
+}
+
+type ListType =
+  | ListTypeOverlay
+  | ListTypeDropZone
+  | { list?: false; listPosition?: never; listLimit?: never }
 
 export type FileInputProps = {
   style?: CSSProperties
@@ -67,17 +83,18 @@ export type FileInputProps = {
   onDrop?: (event: DragEvent<HTMLDivElement>) => void
   disabled?: boolean
   accept?: HTMLInputElement['accept']
-  list?: boolean
   onChangeFiles?: (files: FilesType[]) => void
   defaultFiles?: FilesType[]
   /** When set to true, multiple files can be added */
   multiple?: boolean
   'data-testid'?: string
 } & (OverlayVariantProps | DropzoneVariantProps) &
-  LabelType
+  LabelType &
+  ListType
 
 export type ListFilesProps = {
   files: FilesType[]
   setFiles: Dispatch<SetStateAction<FilesType[]>>
   onChangeFiles?: (files: FilesType[]) => void
+  listLimit?: { limit: number; overflowText: string }
 }

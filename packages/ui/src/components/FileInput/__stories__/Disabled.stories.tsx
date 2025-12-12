@@ -3,9 +3,10 @@ import { PlusIcon, UploadIcon } from '@ultraviolet/icons'
 import { Stack } from '../../Stack'
 import { FileInput } from '..'
 
-export const Disabled: StoryFn<typeof FileInput> = () => (
+export const Disabled: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={2}>
     <FileInput
+      accept={args.accept}
       disabled
       label="medium disabled"
       title="Drag and drop files to get started"
@@ -31,5 +32,18 @@ export const Disabled: StoryFn<typeof FileInput> = () => (
       title="Click or drag file to this area to upload"
       variant="dropzone"
     />
+    <FileInput
+      aria-label="label"
+      disabled
+      title={
+        <Stack direction="row" gap={1}>
+          <UploadIcon />
+          Click or drag file to this area to upload (disabled)
+        </Stack>
+      }
+      variant="overlay"
+    >
+      Some content (drag on me)
+    </FileInput>
   </Stack>
 )

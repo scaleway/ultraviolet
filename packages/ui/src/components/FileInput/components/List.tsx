@@ -5,6 +5,7 @@ import {
   ImageIcon,
   VideoIcon,
 } from '@ultraviolet/icons'
+import { useState } from 'react'
 import { Button } from '../../Button'
 import { Loader } from '../../Loader'
 import { Stack } from '../../Stack'
@@ -63,61 +64,90 @@ export const ListFiles = ({
   files,
   setFiles,
   onChangeFiles,
-}: ListFilesProps) => (
-  <Stack direction="row" gap={1} wrap="wrap">
-    {files.map(file => {
-      const fileType = getMimeTypeType(file.type)
-      const illustration = getIllustration(
-        fileType,
-        file.file,
-        !!file.error,
-        file.loading,
-      )
-      const sentiment = file.error ? 'danger' : 'neutral'
+  listLimit,
+}: ListFilesProps) => {
+  const [limit, setLimit] = useState(listLimit?.limit)
+  const seeAllOnClick = () => {
+    setLimit(undefined)
+  }
 
-      return (
-        <Stack data-testid={file.fileName} gap={0.5} key={file.fileName}>
-          <Stack
-            alignItems="center"
-            className={fileViewerContainer[file.error ? 'error' : 'default']}
-            direction="row"
-            gap={2}
-            justifyContent="center"
-          >
-            <Stack alignItems="center" direction="row" gap={1}>
-              {illustration}
-              <Stack direction="column">
-                <Text as="p" sentiment={sentiment} variant="bodySmallStrong">
-                  {file.fileName}
-                </Text>
-                <Text as="p" sentiment={sentiment} variant="caption">
-                  {formatFileSize(file.size)}
-                </Text>
+  return (
+    <Stack direction="row" gap={1} wrap="wrap">
+      {files.map((file, index) => {
+        if (!limit || index < limit) {
+          const fileType = getMimeTypeType(file.type)
+          const illustration = getIllustration(
+            fileType,
+            file.file,
+            !!file.error,
+            file.loading,
+          )
+          const sentiment = file.error ? 'danger' : 'neutral'
+
+          return (
+            <Stack data-testid={file.fileName} gap={0.5} key={file.fileName}>
+              <Stack
+                alignItems="center"
+                className={
+                  fileViewerContainer[file.error ? 'error' : 'default']
+                }
+                direction="row"
+                gap={2}
+                justifyContent="center"
+              >
+                <Stack alignItems="center" direction="row" gap={1}>
+                  {illustration}
+                  <Stack direction="column">
+                    <Text
+                      as="p"
+                      sentiment={sentiment}
+                      variant="bodySmallStrong"
+                    >
+                      {file.fileName}
+                    </Text>
+                    <Text as="p" sentiment={sentiment} variant="caption">
+                      {formatFileSize(file.size)}
+                    </Text>
+                  </Stack>
+                </Stack>
+                <Button
+                  data-testid={`remove-${file.fileName}`}
+                  onClick={() => {
+                    const newFiles = files.filter(
+                      oldFile => file.file !== oldFile.file,
+                    )
+                    setFiles(newFiles)
+                    onChangeFiles?.(newFiles)
+                  }}
+                  sentiment={sentiment}
+                  size="xsmall"
+                  variant="ghost"
+                >
+                  <CloseIcon />
+                </Button>
               </Stack>
+              {file.error ? (
+                <Text as="p" sentiment="danger" variant="caption">
+                  {file.error}
+                </Text>
+              ) : null}
             </Stack>
-            <Button
-              data-testid={`remove-${file.fileName}`}
-              onClick={() => {
-                const newFiles = files.filter(
-                  oldFile => file.file !== oldFile.file,
-                )
-                setFiles(newFiles)
-                onChangeFiles?.(newFiles)
-              }}
-              sentiment={sentiment}
-              size="xsmall"
-              variant="ghost"
-            >
-              <CloseIcon />
-            </Button>
-          </Stack>
-          {file.error ? (
-            <Text as="p" sentiment="danger" variant="caption">
-              {file.error}
-            </Text>
-          ) : null}
-        </Stack>
-      )
-    })}
-  </Stack>
-)
+          )
+        }
+
+        return null
+      })}
+      {limit && files.length > limit ? (
+        <Button
+          data-testid="see-all"
+          onClick={seeAllOnClick}
+          sentiment="primary"
+          size="large"
+          variant="ghost"
+        >
+          {listLimit?.overflowText} ({files.length})
+        </Button>
+      ) : null}
+    </Stack>
+  )
+}

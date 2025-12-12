@@ -11,10 +11,11 @@ const defaultFile = [
     type: 'image/png',
   },
 ]
-export const Multiple: StoryFn<typeof FileInput> = () => (
+export const Multiple: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput
       defaultFiles={defaultFile}
+      disabled={args.disabled}
       label="Multiple"
       list
       multiple
@@ -24,6 +25,7 @@ export const Multiple: StoryFn<typeof FileInput> = () => (
     />
     <FileInput
       defaultFiles={defaultFile}
+      disabled={args.disabled}
       label="Not multiple (default behavior)"
       list
       size="small"

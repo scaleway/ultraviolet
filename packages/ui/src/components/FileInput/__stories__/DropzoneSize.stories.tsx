@@ -4,9 +4,10 @@ import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { FileInput } from '..'
 
-export const DropzoneSize: StoryFn<typeof FileInput> = () => (
+export const DropzoneSize: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={2}>
     <FileInput
+      disabled={args.disabled}
       label="medium"
       title="Drag and drop files to get started"
       variant="dropzone"
@@ -28,6 +29,7 @@ export const DropzoneSize: StoryFn<typeof FileInput> = () => (
       </Stack>
     </FileInput>
     <FileInput
+      disabled={args.disabled}
       label="small"
       size="small"
       title="Click or drag file to this area to upload"
