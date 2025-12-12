@@ -5,7 +5,7 @@ import { Text } from '../../Text'
 import { FileInput } from '..'
 import type { FilesType } from '../types'
 
-export const Controlled: StoryFn<typeof FileInput> = () => {
+export const Controlled: StoryFn<typeof FileInput> = args => {
   const [files, setFiles] = useState<FilesType[]>([])
   const onChange = (f: FilesType[]) => setFiles(f)
 
@@ -13,6 +13,7 @@ export const Controlled: StoryFn<typeof FileInput> = () => {
     <Stack direction="column" gap={3}>
       <FileInput
         defaultFiles={[]}
+        disabled={args.disabled}
         label="type='dropzone'"
         multiple
         onChangeFiles={onChange}

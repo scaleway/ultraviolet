@@ -115,6 +115,32 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('should work correctly with listLimit', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        list
+        listLimit={{ limit: 3, overflowText: 'see all' }}
+        multiple
+        onChangeFiles={onChange}
+      />,
+    )
+
+    const nonOverflowedElement = screen.getByTestId('sound.mp3')
+
+    expect(screen.queryByTestId('video.mp4')).not.toBeInTheDocument()
+    expect(nonOverflowedElement).toBeInTheDocument()
+
+    const seeAllButton = screen.getByTestId('see-all')
+    await userEvent.click(seeAllButton)
+
+    expect(screen.getByTestId('video.mp4')).toBeInTheDocument()
+    expect(nonOverflowedElement).toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
   test('renders correctly with FileInput.Button', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(

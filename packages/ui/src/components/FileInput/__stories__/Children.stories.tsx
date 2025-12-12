@@ -4,10 +4,11 @@ import { Text } from '../../Text'
 import { FileInput } from '..'
 import { hereText } from './styles.css'
 
-export const Children: StoryFn<typeof FileInput> = () => (
+export const Children: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={2}>
     <FileInput
       aria-label="label"
+      disabled={args.disabled}
       list
       title={inputId => (
         <label htmlFor={inputId}>Click here to add a file (title)</label>
@@ -28,7 +29,13 @@ export const Children: StoryFn<typeof FileInput> = () => (
         </Stack>
       )}
     </FileInput>
-    <FileInput aria-label="label-2" list variant="overlay">
+    <FileInput
+      aria-label="label-2"
+      disabled={args.disabled}
+      list
+      title="drag here"
+      variant="overlay"
+    >
       {inputId => (
         <>
           Drag an drop on me or click{' '}
