@@ -38,7 +38,7 @@ const defaultFile = [
     fileName: 'video.mp4',
     lastModified: 1,
     size: 40460000,
-    type: 'video/png',
+    type: 'video/mp4',
   },
   {
     file: 'loading.pdf',

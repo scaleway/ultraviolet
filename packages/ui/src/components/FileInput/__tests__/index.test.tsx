@@ -82,8 +82,14 @@ describe('fileInput', () => {
 
   test('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" disabled />,
+      <FileInput aria-label="label" disabled>
+        <FileInput.Button data-testid="button">
+          Disabled button
+        </FileInput.Button>
+      </FileInput>,
     )
+
+    expect(screen.getByTestId('button')).toBeDisabled()
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -187,5 +193,60 @@ describe('fileInput', () => {
     fireEvent.drop(dropzoneElement)
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should handle adding a file when selecting via the hidden file input', async () => {
+    const onChangeFiles = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        data-testid="test"
+        list
+        onChangeFiles={onChangeFiles}
+      />,
+    )
+
+    const input = screen.getByTestId('test')
+
+    const file = new File(['hello'], 'upload.png', { type: 'application/pdf' })
+    await userEvent.upload(input, file)
+
+    expect(onChangeFiles).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'upload.png' }),
+      ]),
+    )
+
+    const added = screen.getByTestId('upload.png')
+    expect(added).toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should add a file with drag and drop', async () => {
+    const onChangeFiles = vi.fn()
+    renderWithTheme(
+      <FileInput aria-label="label" list onChangeFiles={onChangeFiles} />,
+    )
+
+    const dropzone = screen.getByTestId('drag-container')
+    const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [file],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'dnd.png' }),
+      ]),
+    )
+
+    const added = screen.getByTestId('dnd.png')
+    expect(added).toBeInTheDocument()
   })
 })
