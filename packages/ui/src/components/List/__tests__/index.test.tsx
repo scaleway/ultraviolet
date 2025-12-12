@@ -43,6 +43,22 @@ const columns: NonNullable<ComponentProps<typeof List>['columns']> = Array.from(
   label: `Column ${columnNumber}`,
 }))
 
+const columnWidthPx = {
+  id: 'width px',
+  label: 'width',
+  maxWidth: '100px',
+  minWidth: '0',
+  width: '100px',
+}
+
+const columnWidthPercent = {
+  id: 'width px',
+  label: 'width',
+  maxWidth: '33%',
+  minWidth: '33%',
+  width: '33%',
+}
+
 const Wrapper = ({ theme = consoleLightTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
@@ -163,6 +179,18 @@ describe('list', () => {
             <List.Cell>{columnC}</List.Cell>
             <List.Cell>{columnD}</List.Cell>
             <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
+
+  test('should render correctly with loading with column width', () =>
+    shouldMatchSnapshot(
+      <List columns={[columnWidthPercent, columnWidthPx]} loading selectable>
+        {data.map(({ id, columnA, columnB }) => (
+          <List.Row id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
           </List.Row>
         ))}
       </List>,
