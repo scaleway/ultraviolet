@@ -117,7 +117,7 @@ export const Step = ({
             isActive,
             size,
           })}
-          prominence="strong"
+          prominence="default"
           sentiment="primary"
           size={size}
         >

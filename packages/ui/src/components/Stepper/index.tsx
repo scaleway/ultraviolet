@@ -80,7 +80,7 @@ export const Stepper = ({
               <Step index={index} {...(child.props as object)} />
               {isNotLast && separator && labelPosition === 'right' ? (
                 <div
-                  className={stepperLine({ animated, size, temporal })}
+                  className={stepperLine({ animated, temporal })}
                   data-size={size}
                 />
               ) : null}
