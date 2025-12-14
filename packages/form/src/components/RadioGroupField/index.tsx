@@ -14,7 +14,7 @@ type RadioGroupFieldProps<
   Omit<ComponentProps<typeof RadioGroup>, 'value' | 'onChange' | 'legend'> &
   Partial<Pick<ComponentProps<typeof RadioGroup>, 'legend'>>
 
-export const RadioGroupField = <
+const RadioGroupFieldComponent = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -63,4 +63,13 @@ export const RadioGroupField = <
   )
 }
 
-RadioGroupField.Radio = RadioGroup.Radio
+type RadioGroupFieldType = typeof RadioGroupFieldComponent & {
+  Radio: typeof RadioGroup.Radio
+}
+
+export const RadioGroupField: RadioGroupFieldType = Object.assign(
+  RadioGroupFieldComponent,
+  {
+    Radio: RadioGroup.Radio,
+  },
+)

@@ -114,7 +114,15 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
 /**
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
-export const List = Object.assign(BaseList, {
+
+type ListType = typeof BaseList & {
+  Cell: typeof Cell
+  Row: typeof Row
+  SelectBar: typeof SelectBar
+  useListContext: typeof useListContext
+}
+
+export const List: ListType = Object.assign(BaseList, {
   Cell,
   Row,
   SelectBar,

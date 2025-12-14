@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react'
 import browserslist from 'browserslist'
+import { resolveToEsbuildTarget } from 'esbuild-plugin-browserslist'
 import { readPackage } from 'read-pkg'
 import preserveDirectives from 'rollup-preserve-directives'
 import { defineConfig } from 'vite'
@@ -26,14 +27,14 @@ const external = (id: string) => {
   return isExternal && !isBundled
 }
 
-/**
-const targetsBrowserlist = browserslist(
-  '> 0.5%, last 2 versions, Firefox ESR, not dead, last 3 years',
-  {
+const targets = resolveToEsbuildTarget(
+  browserslist('defaults', {
     ignoreUnknownVersions: false,
+  }),
+  {
+    printUnknownTargets: false,
   },
 )
-**/
 
 export const defaultConfig: ViteUserConfig = {
   build: {
@@ -51,21 +52,19 @@ export const defaultConfig: ViteUserConfig = {
       formats: ['es'],
       name: pkg.name,
     },
-    license: true,
     minify: false,
     outDir: 'dist',
-    rolldownOptions: {
+    rollupOptions: {
       external,
-      makeAbsoluteExternalsRelative: true,
       output: {
+        interop: 'compat',
         preserveModules: true,
-        preserveModulesRoot: 'src',
+        preserveModulesRoot: './src',
       },
-      treeshake: true,
-      // preserveEntrySignatures: "exports-only",
+      preserveSymlinks: true,
     },
     ssr: true,
-    // target: targetsBrowserlist,
+    target: [...targets],
   },
   plugins: [
     react({

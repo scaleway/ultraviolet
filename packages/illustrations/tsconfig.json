@@ -1,5 +1,10 @@
 {
   "extends": "@ultraviolet/config/tsconfig/base.json",
-  "include": ["src", "../../global.d.ts"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+
+  "include": ["src"],
   "exclude": ["node_modules", "coverage", "dist"]
 }

@@ -1,9 +1,9 @@
 {
-  "extends": "@ultraviolet/config/tsconfig/build.json",
+  "extends": "@ultraviolet/config/tsconfig/base.json",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist"
   },
-  "include": ["src", "../../global.d.ts", "vitest.setup.ts"],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "include": ["src"],
+  "exclude": ["node_modules", "coverage", "dist",  ]
 }

@@ -1,15 +1,14 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { ThemeProvider } from '@ultraviolet/themes'
+import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import defaultTheme from '../../../theme'
 import { List } from '..'
 
 type WrapperProps = {
-  theme?: typeof defaultTheme
+  theme?: typeof consoleLightTheme
   children: ReactNode
 }
 
@@ -44,17 +43,17 @@ const columns: NonNullable<ComponentProps<typeof List>['columns']> = Array.from(
   label: `Column ${columnNumber}`,
 }))
 
-const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
+const Wrapper = ({ theme = consoleLightTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
 describe('list', () => {
   beforeEach(() => {
-    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
   })
 
   afterEach(() => {
-    vi.spyOn(global.Math, 'random').mockRestore()
+    vi.spyOn(globalThis.Math, 'random').mockRestore()
   })
   test.skip('should throw an error', () => {
     const consoleErrMock = vi

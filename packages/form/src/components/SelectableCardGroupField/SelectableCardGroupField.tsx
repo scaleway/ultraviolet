@@ -16,7 +16,7 @@ type SelectableCardGroupFieldProps<
   Omit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
 
 const SelectableCardGroupFieldComponent = <
-  TFieldValues extends FieldValues = FieldValues,
+  TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   legend = '',

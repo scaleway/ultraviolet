@@ -85,7 +85,7 @@ type RadioGroupProps = {
 /**
  * RadioGroup is a component that allows users to select one option from a list of options using radio.
  */
-export const RadioGroup = ({
+const RadioGroupComponent = ({
   legend,
   legendDescription,
   value,
@@ -167,4 +167,13 @@ export const RadioGroup = ({
   )
 }
 
-RadioGroup.Radio = RadioGroupRadio
+type SelectableCardOptionGroupType = typeof RadioGroupComponent & {
+  Radio: typeof RadioGroupRadio
+}
+
+export const RadioGroup: SelectableCardOptionGroupType = Object.assign(
+  RadioGroupComponent,
+  {
+    Radio: RadioGroupRadio,
+  },
+)

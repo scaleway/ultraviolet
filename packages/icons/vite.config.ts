@@ -23,7 +23,7 @@ export default mergeConfig(defineConfig(defaultConfig), {
           __dirname,
           'src/components/ProductIcon/index.ts',
         ),
-        'index': resolve(__dirname, 'src/index.ts'),
+        index: resolve(__dirname, 'src/index.ts'),
       },
     },
   },

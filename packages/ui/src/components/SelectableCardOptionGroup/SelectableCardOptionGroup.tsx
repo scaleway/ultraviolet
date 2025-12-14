@@ -41,7 +41,7 @@ type SelectableCardOptionGroupProps = {
  *
  * **Be aware that once you click on the component, the first value of options will be selected by default.**
  */
-export const SelectableCardOptionGroup = ({
+const SelectableCardOptionGroupComponent = ({
   legend,
   legendDescription,
   className,
@@ -118,4 +118,12 @@ export const SelectableCardOptionGroup = ({
   )
 }
 
-SelectableCardOptionGroup.Option = Option
+type SelectableCardOptionGroupType =
+  typeof SelectableCardOptionGroupComponent & {
+    Option: typeof Option
+  }
+
+export const SelectableCardOptionGroup: SelectableCardOptionGroupType =
+  Object.assign(SelectableCardOptionGroupComponent, {
+    Option,
+  })

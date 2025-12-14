@@ -13,7 +13,7 @@ type ToggleGroupFieldProps<
 > = BaseFieldProps<TFieldValues, TFieldName> &
   Omit<ComponentProps<typeof ToggleGroup>, 'value' | 'onChange'>
 
-export const ToggleGroupField = <
+const ToggleGroupFieldComponent = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -70,4 +70,13 @@ export const ToggleGroupField = <
   )
 }
 
-ToggleGroupField.Toggle = ToggleGroup.Toggle
+type RadioGroupFieldType = typeof ToggleGroupFieldComponent & {
+  Toggle: typeof ToggleGroup.Toggle
+}
+
+export const ToggleGroupField: RadioGroupFieldType = Object.assign(
+  ToggleGroupFieldComponent,
+  {
+    Toggle: ToggleGroup.Toggle,
+  },
+)
