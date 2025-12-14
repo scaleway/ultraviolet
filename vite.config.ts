@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react'
-import browserslist from 'browserslist'
+// import browserslist from 'browserslist'
 import { readPackage } from 'read-pkg'
 import preserveDirectives from 'rollup-preserve-directives'
 import { defineConfig } from 'vite'
