@@ -16,6 +16,7 @@ coverage
 storybook-static
 .reports
 .pnpm-store
+.dist-comparison
 
 deps.json
 depsFiltered.json
@@ -56,3 +57,9 @@ next-env.d.ts*
 **/playwright-report/
 **/blob-report/
 **/playwright/.cache/
+
+#AI
+
+WARP.md
+CLAUDE.md
+AGENT.md
