@@ -33,6 +33,7 @@
     "oxc": "oxlint -c .oxlintrc.json",
     "oxc:fix": "pnpm run oxc --fix",
     "prepare": "husky",
+    "analyse:dist": "tsx ./utils/scripts/compare/compare-dist-migration.ts",
     "analyse:deps:ui": "tsx ./utils/scripts/analyse-deps.ts packages/ui/src/components",
     "analyse:deps:form": "tsx ./utils/scripts/analyse-deps.ts packages/form/src/components",
     "tokens:update": "tsx ./utils/scripts/figma-synchronise-tokens.tsx && pnpm run format packages/themes/src/themes/console",
