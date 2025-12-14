@@ -4,12 +4,14 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "types": ["vite/client", "@testing-library/jest-dom"],
+    "types": [
+      "vite/client",
+      "@testing-library/jest-dom"
+    ],
     "noEmit": true,
     "skipLibCheck": true,
     // Should be removed once we clear all errors
     "noUncheckedIndexedAccess": false,
-    "baseUrl": ".",
   },
   "include": [
     "**/*.ts",
@@ -21,5 +23,9 @@
     "expect.d.ts",
     "jest-axe.d.ts"
   ],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
 }
