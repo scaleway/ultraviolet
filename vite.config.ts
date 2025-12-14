@@ -1,5 +1,4 @@
 import react from '@vitejs/plugin-react'
-import browserslist from 'browserslist'
 import { readPackage } from 'read-pkg'
 import preserveDirectives from 'rollup-preserve-directives'
 import { defineConfig } from 'vite'
@@ -25,15 +24,6 @@ const external = (id: string) => {
 
   return isExternal && !isBundled
 }
-
-/**
-const targetsBrowserlist = browserslist(
-  '> 0.5%, last 2 versions, Firefox ESR, not dead, last 3 years',
-  {
-    ignoreUnknownVersions: false,
-  },
-)
-**/
 
 export const defaultConfig: ViteUserConfig = {
   build: {
@@ -62,10 +52,13 @@ export const defaultConfig: ViteUserConfig = {
         preserveModulesRoot: 'src',
       },
       treeshake: true,
-      // preserveEntrySignatures: "exports-only",
+      preserveEntrySignatures: 'exports-only',
+      experimental: {
+        // lazyBarrel: true,
+      },
     },
     ssr: true,
-    // target: targetsBrowserlist,
+    target: 'es2015',
   },
   plugins: [
     react({
