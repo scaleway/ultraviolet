@@ -19,7 +19,11 @@
     "build": {
       "cache": true,
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx}"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!**/*.stories.{tsx,jsx}",
+        "vite.config.ts"
+      ],
       "outputs": [
         "build/**",
         "dist/**",

@@ -16,11 +16,7 @@ type SelectableCardGroupFieldProps<
   Omit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
 
 const SelectableCardGroupFieldComponent = <
-<<<<<<< HEAD
   TFieldValues extends FieldValues,
-=======
-  TFieldValues extends FieldValues = FieldValues,
->>>>>>> c6fe95b82 (feat(vite-v8): migrate)
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   legend = '',

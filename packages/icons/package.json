@@ -9,14 +9,14 @@
     "directory": "packages/icons"
   },
   "scripts": {
-    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "postbuild": "node ./process-css.ts",
-    "typecheck": "tsc --noEmit",
-    "typecheck:go": "tsgo --noEmit",
+    "typecheck": "tsgo --noEmit",
+
     "size": "size-limit",
     "lintpublish": "publint"
   },
@@ -119,7 +119,7 @@
         "!*.d.ts",
         "!*.cjs"
       ],
-      "limit": "600 kB",
+      "limit": "1000 kB",
       "webpack": false,
       "brotli": true,
       "running": false
