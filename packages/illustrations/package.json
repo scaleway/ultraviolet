@@ -9,12 +9,12 @@
     "directory": "packages/illustrations"
   },
   "scripts": {
-    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsgo --noEmit",
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
@@ -108,7 +108,6 @@
     "@repo/config": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "@ultraviolet/config": "workspace:*",
     "@utils/test": "workspace:*",
     "@vanilla-extract/vite-plugin": "5.1.1",
     "react": "19.2.1",
