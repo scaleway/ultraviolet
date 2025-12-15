@@ -4,6 +4,7 @@ import { Badge } from '../../Badge'
 import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { SelectInput } from '../../SelectInput'
+import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { TextArea } from '../../TextArea'
@@ -110,10 +111,11 @@ export const Examples: StoryFn = args => {
           type="checkbox"
           value="label-20"
         >
-          <Stack gap={1}>
-            <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+            <Stack gap={3} width="100%">
               This option will cost you 1.99€ and provide you with a lot of
               happiness
+              <Separator />
               <SelectInput
                 label="Select a sub option"
                 options={[
@@ -122,9 +124,9 @@ export const Examples: StoryFn = args => {
                     value: 'option1',
                   },
                 ]}
-              />
-            </Text>
-          </Stack>
+              />{' '}
+            </Stack>
+          </Text>
         </SelectableCard>
         <SelectableCard
           {...args}
@@ -419,3 +421,7 @@ Examples.decorators = [
     </Stack>
   ),
 ]
+
+Examples.args = {
+  indented: true,
+}
