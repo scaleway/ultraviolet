@@ -71,7 +71,7 @@ export const ListFiles = ({
     setLimit(undefined)
   }
 
-  return (
+  return files.length > 0 ? (
     <Stack direction="row" gap={1} wrap="wrap">
       {files.map((file, index) => {
         if (!limit || index < limit) {
@@ -149,5 +149,5 @@ export const ListFiles = ({
         </Button>
       ) : null}
     </Stack>
-  )
+  ) : null
 }

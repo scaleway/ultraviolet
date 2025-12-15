@@ -3,10 +3,16 @@ import type {
   Dispatch,
   DragEvent,
   ReactNode,
+  RefObject,
   SetStateAction,
 } from 'react'
 
-type ChildrenType = ReactNode | ((inputId: string) => ReactNode)
+type ChildrenType =
+  | ReactNode
+  | ((
+      inputId: string,
+      inputRef: RefObject<HTMLInputElement | null>,
+    ) => ReactNode)
 
 export type FilesType = {
   fileName: string

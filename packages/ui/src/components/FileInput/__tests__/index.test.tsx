@@ -80,6 +80,13 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('renders correctly with multiple and list - empty', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput aria-label="label" list multiple />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly disabled', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" disabled>
@@ -175,9 +182,19 @@ describe('fileInput', () => {
         list
         multiple
         onChangeFiles={onChange}
-        title={inputId => <label htmlFor={inputId}>title</label>}
+        title={(inputId, inputRef) => (
+          <>
+            <label htmlFor={inputId}>title</label>
+            <button onClick={() => inputRef.current?.click()}>button</button>
+          </>
+        )}
       >
-        {inputId => <label htmlFor={inputId}>click me</label>}
+        {(inputId, inputRef) => (
+          <>
+            <label htmlFor={inputId}>title</label>
+            <button onClick={() => inputRef.current?.click()}>button</button>
+          </>
+        )}
       </FileInput>,
     )
 
