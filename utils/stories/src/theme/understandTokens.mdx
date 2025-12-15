@@ -1,0 +1,83 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { Badge } from '@ultraviolet/ui'
+import ThemeWrapper from '../components/ThemeWrapper'
+
+<Meta title="Customization/Understand Tokens" />
+
+# Colors
+
+Ultraviolet UI is based on `vanilla-extract` library.
+
+## Structure
+
+Ultraviolet UI provides you a set of colors defined trough theme allowing you to customize the theme as you need.
+
+Tokens are designed as follows: `sentiment.usageProminenceInteraction`
+
+* **sentiment** can be `primary`, `secondary`, `neutral`, `info`, `danger`, `warning` and `success`
+* **usage** can be `text`, `background` and `border`.
+* **prominence** can be `weak` and `strong`.
+* **interaction** can be `disabled` and `hover`.
+
+To goal of this pattern is to provide a consistent and verbose way to use colors in your application.
+
+When choosing what color to use from theme **you will first think about the sentiment** of the element you want to style: is it a danger? a warning? just an information? <br />
+**Then you will think about the usage** of the color: is it applied on a text? a background? a border? <br />
+**Then you will think about the prominence** of the color: is it a weak color? a strong color? <br />
+**Finally you will think about the interaction**: is it a disabled element? is it a hovered element? <br />
+
+> **Note:** Prominence will determine the importance you want to give to your color and so to what you display on screen.
+> A strong prominence will show a full and consistent color, it is made to put forward information.
+> Weak prominence on the other hand will show a blank color, it is made to be less intrusive
+> and show less important information.
+
+Once all those questions are asked, and you have answers, you can easily call the corresponding color. See the example below.
+
+<p> </p>
+
+## Simple example
+
+Let's start with an example: we want to create a Badge component. Let's say I want to create an informative Badge with an icon and a text. <br />
+The badge shouldn't be too much prominent, but it shouldn't be invisible too. It will have a medium prominence or in our case a `default` prominence.
+
+Let's define background color by asking previous questions:
+
+1. What is the sentiment? It's an information as said before, so we will use `info` sentiment.
+2. What is the usage? It's a background, so we will use `background` usage.
+3. What is the prominence? It's a default prominence, so we will use `default` prominence. **Important: when default prominence / interaction is used, you can omit it**.
+4. What is the interaction? It's a default interaction, so we will use `default` interaction. **Important: when default prominence / interaction is used, you can omit it**.
+
+This way we will get the following background color: `theme.colors.info.background`. <br />
+We can now redo the same for Text and Icon, and we will get: `theme.colors.info.text`.
+
+> **Note:** we only use `theme.colors.info.text` for both Icon and Text as we consider Icons the same usage as Text.
+
+All those colors combined will result in:
+
+<ThemeWrapper>
+  <Badge variant="info">This is a simple badge with info sentiment</Badge>
+</ThemeWrapper>
+
+<p> </p>
+
+## Advanced example
+
+Easy right? Let's now make it a bit more advanced adding prominence in our context, let's ask same questions as before the find best matching colors:
+
+1. What is the sentiment? It's an information, so we will use `info` sentiment.
+2. What is the usage? It's a background, so we will use `background` usage.
+3. What is the prominence? It's a strong prominence, so we will use `strong` prominence.
+4. What is the interaction? It's a default interaction, so we will use `default` interaction. **Important: when default prominence / interaction is used, you can omit it**.
+
+This way we will get the following background color: `theme.colors.info.backgroundStrong`. <br />
+Text and Icon color will be: `theme.colors.info.textStrong`.
+
+All those colors combined will result in:
+
+<ThemeWrapper>
+  <Badge variant="info" prominence="strong">
+    This is a simple badge with info sentiment and prominence strong
+  </Badge>
+</ThemeWrapper>
+
+It results in a different sets of colors and style to express a different context on where the badge is displayed.

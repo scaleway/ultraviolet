@@ -3,7 +3,7 @@
 import * as Icon from '@ultraviolet/icons'
 import type { RefObject } from 'react'
 import { useContext } from 'react'
-import type { PascalToCamelCaseWithoutSuffix } from 'src/types'
+import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 import { ChipContext } from './ChipContext'
 import { buttonContainer } from './styles.css'
 

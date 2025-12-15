@@ -13,6 +13,8 @@ export default {
   stories: [
     '../packages/*/src/**/__stories__/**/*.mdx',
     '../packages/*/src/**/__stories__/index.stories.tsx',
+    '../utils/stories/src/**/*.mdx',
+    '../utils/stories/src/**/index.stories.tsx'
   ],
 
   addons: [

@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
-import type { ExtendedColor } from 'src/theme'
+import type { ExtendedColor } from '../../theme'
 import { typography } from '../../theme'
 import { PROMINENCES } from './constants'
 import capitalize from '../../utils/capitalize'

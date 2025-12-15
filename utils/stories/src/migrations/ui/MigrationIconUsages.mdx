@@ -1,0 +1,196 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import '../styles.css'
+
+<Meta title="Migrations/Migrate Icon Usages" />
+
+# Migrate Icon Usages
+
+This migration has per main goal to optimize the bundle size and improve the performance of the application by removing the import of all icons from the `@ultraviolet/icons` package.
+<br/>
+Currently we import all the icons contained in the library but depending on your usage you may not need all of them. This issue is particularly important for the web application where the bundle size is a critical point.
+
+<br />
+
+## Summary of deprecated props among components
+
+You can find below the list of components that have deprecated props related to icons and the new usage to follow. Click on the component name to see the detailed migration.
+
+| Component        | Deprecated Props                     | New Usage                                      |
+|------------------|--------------------------------------|------------------------------------------------|
+| [Button](#button) | `icon`, `iconPosition`, `iconVariant` | Use the imported icon directly in the children |
+| [Badge](#badge)   | `icon`                               | Use the imported icon directly in the children |
+| [Bullet](#bullet) | `icon`, `iconVariant`                | Use the imported icon directly in the children |
+| [AvatarV2](#avatarv2) | `icon`                           | Use the imported icon directly in the children |
+| [Separator](#separator) | `icon`                         | Use the imported icon directly in the children |
+| [Tag](#tag)       | `icon`                               | Use the imported icon directly in the children |
+
+<br />
+
+## Size changes
+
+The size of the icons has been updated to be more consistent across the library. You can find below the mapping between the old sizes and the new sizes.
+
+| Previous Size | New Size |
+|---------------|----------|
+| -             | xsmall   |
+| small         | small    |
+| large         | medium   |
+| -             | large    |
+| xlarge        | xlarge   |
+| xxlarge       | xxlarge  |
+
+## PX to size
+
+We shouldn't use px anymore in the code. The size of the icons has been updated to be more consistent across the library. You can find below the mapping between the old sizes and the new sizes.
+
+| PX Value | Size Token |
+|----------|------------|
+| 12px     | xsmall     |
+| 16px     | small      |
+| 20px     | medium     |
+| 24px     | large      |
+| 32px     | xlarge     |
+| 40px     | xxlarge    |
+
+<br />
+
+## Detailed migration per components
+
+### Button
+
+`icon`, `iconPosition`, `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { Button } from '@ultraviolet/ui'
+
+<Button icon="pencil" iconPosition="right" iconVariant="outline">
+  Edit
+</Button>
+```
+
+```tsx
+// After
+import { Button } from '@ultraviolet/ui'
+import { PencilOutlineIcon } from '@ultraviolet/icons'
+
+<Button>
+  Edit <PencilOutlineIcon />
+</Button>
+```
+
+### Badge
+
+`icon` props is deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { Badge } from '@ultraviolet/ui'
+
+<Badge icon="pencil">
+  Edit
+</Button>
+```
+
+```tsx
+// After
+import { Badge } from '@ultraviolet/ui'
+import { PencilOutlineIcon } from '@ultraviolet/icons'
+
+<Badge>
+  Edit <PencilOutlineIcon />
+</Badge>
+```
+
+### Bullet
+
+`icon` and `iconVariant` props are deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { Bullet } from '@ultraviolet/ui'
+
+<Bullet icon="check" />
+<Bullet icon="check" iconVariant="outlined" />
+```
+
+```tsx
+// After
+import { Bullet } from '@ultraviolet/ui'
+import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+
+<Bullet>
+  <CheckIcon />
+</Bullet>
+
+<Bullet>
+  <CheckCircleOutlineIcon />
+</Bullet>
+```
+
+### AvatarV2
+
+`icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { AvatarV2 } from '@ultraviolet/ui'
+
+<AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
+```
+
+```tsx
+// After
+import { AvatarV2 } from '@ultraviolet/ui'
+import { MosaicIcon } from '@ultraviolet/icons'
+
+<AvatarV2 variant="icon" shape="circle" sentiment="primary">
+  <MosaicIcon size="xlarge" />
+</AvatarV2>
+```
+
+### Separator
+
+`icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { Separator } from '@ultraviolet/ui'
+
+<Separator direction="vertical" icon="ray-top-arrow" />
+```
+
+```tsx
+// After
+import { Separator } from '@ultraviolet/ui'
+import { RayTopArrowIcon } from '@ultraviolet/icons'
+
+<Separator direction="vertical">
+  <RayTopArrowIcon size="medium" />
+</Separator>
+```
+
+
+### Tag
+
+`icon` prop is deprecated. You can directly use the imported icon you need in the children.
+
+```tsx
+// Before
+import { Tag } from '@ultraviolet/ui'
+
+<Tag icon="check">
+  Valid
+</Tag>
+```
+
+```tsx
+// After
+import { Tag } from '@ultraviolet/ui'
+import { CheckIcon } from '@ultraviolet/icons'
+
+<Tag>
+  <CheckIcon size="small" />
+  Valid
+</Tag>
+```
