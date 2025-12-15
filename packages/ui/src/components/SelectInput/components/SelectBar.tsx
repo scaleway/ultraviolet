@@ -517,7 +517,7 @@ const SelectBar = ({
                 }
               }}
               sentiment="neutral"
-              size="small"
+              size={size === 'large' ? 'small' : 'xsmall'}
               variant="ghost"
             >
               <CloseIcon />
