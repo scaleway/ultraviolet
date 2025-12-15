@@ -115,7 +115,7 @@ exports[`fileInput > renders correctly disabled 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_true__m4c9ow1a style_undefined_compound_60__m4c9ow30"
-            for="_r_10_"
+            for="_r_13_"
             style="--qabug40: left;"
           />
           <button
@@ -126,7 +126,7 @@ exports[`fileInput > renders correctly disabled 1`] = `
           >
             <label
               class="styles_disabled__12cubgsd styles__12cubgsb"
-              for="_r_10_"
+              for="_r_13_"
             >
               Disabled button
             </label>
@@ -155,7 +155,7 @@ exports[`fileInput > renders correctly onChange 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_14_"
+            id="_r_17_"
             name="label"
             type="file"
           />
@@ -172,7 +172,7 @@ exports[`fileInput > renders correctly onChange 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_14_"
+            for="_r_17_"
             style="--qabug40: left;"
           />
         </div>
@@ -493,7 +493,7 @@ exports[`fileInput > renders correctly ondrop, ondrag 1`] = `
       >
         <input
           class="styles__12cubgs8"
-          id="_r_3u_"
+          id="_r_41_"
           multiple=""
           name="label"
           type="file"
@@ -943,7 +943,7 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_2h_"
+            id="_r_2k_"
             name="label"
             type="file"
           />
@@ -960,7 +960,7 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_2h_"
+            for="_r_2k_"
             style="--qabug40: left;"
           />
           <button
@@ -969,7 +969,7 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
           >
             <label
               class="styles_default__12cubgsc styles__12cubgsb"
-              for="_r_2h_"
+              for="_r_2k_"
             >
               button
             </label>
@@ -1337,6 +1337,50 @@ exports[`fileInput > renders correctly with FileInput.Button 1`] = `
               </svg>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`fileInput > renders correctly with multiple and list - empty 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.25rem_xxsmall__toi52u1v styles_justifyContent_normal_xxsmall__toi52u5d"
+    >
+      <div
+        class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_body__m4c9owm style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+      >
+        <div
+          class="styles__12cubgs0 styles_state_default__12cubgs2 styles_size_medium__12cubgs5 styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_center_xxsmall__toi52u5j"
+          data-testid="drag-container"
+        >
+          <input
+            class="styles__12cubgs8"
+            id="_r_10_"
+            name="label"
+            type="file"
+          />
+          <svg
+            class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_sentiment_primary__vbm0wq1 styles_size_xlarge__vbm0wqb styles_undefined_compound_32__vbm0wq1g"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.25 13.25a.75.75 0 0 0 1.5 0V4.636l2.955 3.129a.75.75 0 0 0 1.09-1.03l-4.25-4.5a.75.75 0 0 0-1.09 0l-4.25 4.5a.75.75 0 1 0 1.09 1.03L9.25 4.636z"
+            />
+            <path
+              d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25z"
+            />
+          </svg>
+          <p
+            class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
+            for="_r_10_"
+            style="--qabug40: left;"
+          />
         </div>
       </div>
     </div>
@@ -1769,7 +1813,7 @@ exports[`fileInput > should handle adding a file when selecting via the hidden f
           <input
             class="styles__12cubgs8"
             data-testid="test"
-            id="_r_4m_"
+            id="_r_4p_"
             name="label"
             type="file"
           />
@@ -1786,7 +1830,7 @@ exports[`fileInput > should handle adding a file when selecting via the hidden f
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_4m_"
+            for="_r_4p_"
             style="--qabug40: left;"
           />
         </div>
@@ -1872,7 +1916,7 @@ exports[`fileInput > should handle drag state in dropzone variant 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_4j_"
+            id="_r_4m_"
             name="label"
             type="file"
           />
@@ -1889,7 +1933,7 @@ exports[`fileInput > should handle drag state in dropzone variant 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_4j_"
+            for="_r_4m_"
             style="--qabug40: left;"
           >
             upload files
@@ -1918,7 +1962,7 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_1q_"
+            id="_r_1t_"
             name="label"
             type="file"
           />
@@ -1935,7 +1979,7 @@ exports[`fileInput > should work correctly with listLimit 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_1q_"
+            for="_r_1t_"
             style="--qabug40: left;"
           />
         </div>
@@ -2325,7 +2369,7 @@ exports[`fileInput > should work with function children and title 1`] = `
         >
           <input
             class="styles__12cubgs8"
-            id="_r_38_"
+            id="_r_3b_"
             name="label"
             type="file"
           />
@@ -2342,20 +2386,26 @@ exports[`fileInput > should work with function children and title 1`] = `
           </svg>
           <p
             class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_sentiment_neutral__m4c9owb style_prominence_default__m4c9owi style_variant_headingSmallStrong__m4c9ow16 style_disabled_false__m4c9ow1b style_undefined_compound_24__m4c9ow20 style_undefined_compound_72__m4c9ow3c"
-            for="_r_38_"
+            for="_r_3b_"
             style="--qabug40: left;"
           >
             <label
-              for="_r_38_"
+              for="_r_3b_"
             >
               title
             </label>
+            <button>
+              button
+            </button>
           </p>
           <label
-            for="_r_38_"
+            for="_r_3b_"
           >
-            click me
+            title
           </label>
+          <button>
+            button
+          </button>
         </div>
       </div>
       <div

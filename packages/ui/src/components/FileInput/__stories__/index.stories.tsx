@@ -10,9 +10,9 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { DropzoneSize } from './DropzoneSize.stories'
-export { Overlay } from './Overlay.stories'
+export { Children } from './Children.stories'
 export { Multiple } from './Multiple.stories'
 export { Disabled } from './Disabled.stories'
-export { Children } from './Children.stories'
+export { Overlay } from './Overlay.stories'
 export { List } from './List.stories'
 export { Controlled } from './Controlled.stories'

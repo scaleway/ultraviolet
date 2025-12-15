@@ -2,7 +2,7 @@
 
 import { UploadIcon } from '@ultraviolet/icons'
 import type { ChangeEvent, DragEvent } from 'react'
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -50,6 +50,7 @@ const FileInputBase = ({
   const [files, setFiles] = useState<FilesType[]>(defaultFiles ?? [])
 
   const inputId = useId()
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const onDragOver = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()
@@ -81,6 +82,12 @@ const FileInputBase = ({
       window.removeEventListener('dragleave', handleDragLeave)
     }
   }, [])
+
+  useEffect(() => {
+    if (defaultFiles) {
+      setFiles(defaultFiles)
+    }
+  }, [defaultFiles])
 
   const manageDrop = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()
@@ -132,7 +139,6 @@ const FileInputBase = ({
             setFiles={setFiles}
           />
         ) : null}
-
         <div
           className={className}
           data-testid="drag-container"
@@ -146,10 +152,13 @@ const FileInputBase = ({
             multiple={multiple}
             name={label ?? ariaLabel}
             onChange={onChange}
+            ref={inputRef}
             type="file"
           />
           <div className={overlayWrapper}>
-            {typeof children === 'function' ? children(inputId) : children}
+            {typeof children === 'function'
+              ? children(inputId, inputRef)
+              : children}
             <div
               className={
                 disabled
@@ -228,6 +237,7 @@ const FileInputBase = ({
                 id={inputId}
                 name={label ?? ariaLabel}
                 onChange={onChange}
+                ref={inputRef}
                 type="file"
               />
             )}
@@ -249,9 +259,11 @@ const FileInputBase = ({
               sentiment="neutral"
               variant={isSmall ? 'bodySmallStrong' : 'headingSmallStrong'}
             >
-              {typeof title === 'function' ? title(inputId) : title}
+              {typeof title === 'function' ? title(inputId, inputRef) : title}
             </Text>
-            {typeof children === 'function' ? children(inputId) : children}
+            {typeof children === 'function'
+              ? children(inputId, inputRef)
+              : children}
           </Stack>
         </Text>
         {helper ? (
