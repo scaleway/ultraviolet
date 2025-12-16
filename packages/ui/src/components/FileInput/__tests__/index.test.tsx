@@ -75,14 +75,25 @@ describe('fileInput', () => {
 
   test('renders correctly with multiple and list', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" defaultFiles={defaultFile} list multiple />,
+      <FileInput aria-label="label" defaultFiles={defaultFile} multiple>
+        <FileInput.List />
+      </FileInput>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with multiple and list - empty', () => {
     const { asFragment } = renderWithTheme(
-      <FileInput aria-label="label" list multiple />,
+      <FileInput aria-label="label" multiple>
+        <FileInput.List />
+      </FileInput>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with bottom', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput aria-label="label" bottom={<FileInput.List />} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -106,10 +117,11 @@ describe('fileInput', () => {
       <FileInput
         aria-label="label"
         defaultFiles={defaultFile}
-        list
         multiple
         onChangeFiles={onChange}
-      />,
+      >
+        <FileInput.List />
+      </FileInput>,
     )
 
     const soundMp3File = screen.getByTestId('sound.mp3')
@@ -128,11 +140,11 @@ describe('fileInput', () => {
       <FileInput
         aria-label="label"
         defaultFiles={defaultFile}
-        list
-        listLimit={{ limit: 3, overflowText: 'see all' }}
         multiple
         onChangeFiles={onChange}
-      />,
+      >
+        <FileInput.List limit={3} textLimit="see all" />
+      </FileInput>,
     )
 
     const nonOverflowedElement = screen.getByTestId('sound.mp3')
@@ -154,10 +166,10 @@ describe('fileInput', () => {
       <FileInput
         aria-label="label"
         defaultFiles={defaultFile}
-        list
         multiple
         onChangeFiles={onChange}
       >
+        <FileInput.List />
         <FileInput.Button>button</FileInput.Button>
       </FileInput>,
     )
@@ -179,11 +191,11 @@ describe('fileInput', () => {
       <FileInput
         aria-label="label"
         defaultFiles={defaultFile}
-        list
         multiple
         onChangeFiles={onChange}
         title={(inputId, inputRef) => (
           <>
+            <FileInput.List />
             <label htmlFor={inputId}>title</label>
             <button onClick={() => inputRef.current?.click()}>button</button>
           </>
@@ -207,12 +219,12 @@ describe('fileInput', () => {
       <FileInput
         aria-label="label"
         defaultFiles={defaultFile}
-        list
         multiple
         onChangeFiles={onChange}
         title="dragging"
         variant="overlay"
       >
+        <FileInput.List />
         nodrag
       </FileInput>,
     )
@@ -244,9 +256,10 @@ describe('fileInput', () => {
       <FileInput
         aria-label="label"
         data-testid="test"
-        list
         onChangeFiles={onChangeFiles}
-      />,
+      >
+        <FileInput.List />
+      </FileInput>,
     )
 
     const input = screen.getByTestId('test')
@@ -269,7 +282,9 @@ describe('fileInput', () => {
   test('should add a file with drag and drop', async () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
-      <FileInput aria-label="label" list onChangeFiles={onChangeFiles} />,
+      <FileInput aria-label="label" onChangeFiles={onChangeFiles}>
+        <FileInput.List />
+      </FileInput>,
     )
 
     const dropzone = screen.getByTestId('drag-container')

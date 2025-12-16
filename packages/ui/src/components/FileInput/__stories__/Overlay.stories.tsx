@@ -16,26 +16,29 @@ const Prompt = ({
   inputRef: RefObject<HTMLInputElement | null>
   setFiles: Dispatch<SetStateAction<FilesType[]>>
 }) => (
-  <Stack direction="row" gap={0.5} width="fit-content">
-    <Button
-      onClick={() => inputRef.current?.click()}
-      sentiment="neutral"
-      size="medium"
-    >
-      <UploadIcon />
-    </Button>
-    <TextInput
-      className={promptInput}
-      helper="this is an helper"
-      placeholder="Placeholder"
-      size="medium"
-    />
-    <Button onClick={() => setFiles([])} sentiment="neutral" size="medium">
-      <RebootIcon />
-    </Button>
-    <Button sentiment="primary" size="medium">
-      <SendIcon />
-    </Button>
+  <Stack className={promptWrapper} direction="column" gap="1.5" width="700px">
+    <FileInput.List limit={3} prominence="strong" textLimit="See all" />
+    <Stack direction="row" gap={0.5} width="fit-content">
+      <Button
+        onClick={() => inputRef.current?.click()}
+        sentiment="neutral"
+        size="medium"
+      >
+        <UploadIcon />
+      </Button>
+      <TextInput
+        className={promptInput}
+        helper="this is an helper"
+        placeholder="Placeholder"
+        size="medium"
+      />
+      <Button onClick={() => setFiles([])} sentiment="neutral" size="medium">
+        <RebootIcon />
+      </Button>
+      <Button sentiment="primary" size="medium">
+        <SendIcon />
+      </Button>
+    </Stack>
   </Stack>
 )
 
@@ -50,32 +53,27 @@ export const Overlay: StoryFn<typeof FileInput> = args => {
         title="Drop here"
         variant="overlay"
       >
-        Some content (this is also an overlay)
+        Some content (this is an overlay)
       </FileInput>
-      <Stack className={promptWrapper} width="fit-content">
-        <FileInput
-          aria-label="prompt"
-          defaultFiles={files}
-          list
-          listLimit={{ limit: 3, overflowText: 'See all' }}
-          listPosition="top"
-          multiple
-          onChangeFiles={newFiles => setFiles(newFiles)}
-          title={
-            <Stack
-              alignItems="center"
-              direction="row"
-              gap={1}
-              justifyContent="center"
-            >
-              <UploadIcon /> Drag file to this area to upload
-            </Stack>
-          }
-          variant="overlay"
-        >
-          {(_, inputRef) => <Prompt inputRef={inputRef} setFiles={setFiles} />}
-        </FileInput>
-      </Stack>
+      <FileInput
+        aria-label="prompt"
+        defaultFiles={files}
+        multiple
+        onChangeFiles={newFiles => setFiles(newFiles)}
+        title={
+          <Stack
+            alignItems="center"
+            direction="row"
+            gap={1}
+            justifyContent="center"
+          >
+            <UploadIcon /> Drag file to this area to upload
+          </Stack>
+        }
+        variant="overlay"
+      >
+        {(_, inputRef) => <Prompt inputRef={inputRef} setFiles={setFiles} />}
+      </FileInput>
     </Stack>
   )
 }

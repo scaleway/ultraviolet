@@ -14,20 +14,20 @@ const defaultFile = [
 export const Multiple: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput
+      bottom={<FileInput.List />}
       defaultFiles={defaultFile}
       disabled={args.disabled}
       label="Multiple"
-      list
       multiple
       size="small"
       title="Click or drag file here"
       variant="dropzone"
     />
     <FileInput
+      bottom={<FileInput.List />}
       defaultFiles={defaultFile}
       disabled={args.disabled}
       label="Not multiple (default behavior)"
-      list
       size="small"
       title="Click or drag file here"
       variant="dropzone"

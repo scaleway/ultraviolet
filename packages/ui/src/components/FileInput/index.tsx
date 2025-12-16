@@ -34,14 +34,12 @@ const FileInputBase = ({
   labelDescription,
   disabled,
   accept,
-  list,
-  listPosition = 'bottom',
-  listLimit,
   'aria-label': ariaLabel,
   defaultFiles,
   onChangeFiles,
   helper,
   multiple = false,
+  bottom,
   'data-testid': dataTestid,
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>(
@@ -130,42 +128,98 @@ const FileInputBase = ({
   }
   if (variant === 'overlay') {
     return (
-      <Stack direction="column" gap="1.5">
-        {list && listPosition === 'top' ? (
-          <ListFiles
-            files={files}
-            listLimit={listLimit}
-            onChangeFiles={onChangeFiles}
-            setFiles={setFiles}
-          />
-        ) : null}
-        <div
-          className={className}
-          data-testid="drag-container"
-          onDragOver={onDragOver}
-        >
-          <input
-            accept={accept}
-            className={fileInput}
-            data-testid={dataTestid}
-            id={inputId}
-            multiple={multiple}
-            name={label ?? ariaLabel}
-            onChange={onChange}
-            ref={inputRef}
-            type="file"
-          />
-          <div className={overlayWrapper}>
-            {typeof children === 'function'
-              ? children(inputId, inputRef)
-              : children}
-            <div
-              className={
-                disabled
-                  ? dropzoneOverlayDisabled[dragState]
-                  : dropzoneOverlay[dragState]
-              }
-              onDragOver={event => event.preventDefault()}
+      <FileInputContext.Provider
+        value={{ disabled, files, inputRef, onChangeFiles, setFiles }}
+      >
+        <Stack direction="column" gap={1}>
+          <div
+            className={className}
+            data-testid="drag-container"
+            onDragOver={onDragOver}
+          >
+            <input
+              accept={accept}
+              className={fileInput}
+              data-testid={dataTestid}
+              id={inputId}
+              multiple={multiple}
+              name={label ?? ariaLabel}
+              onChange={onChange}
+              ref={inputRef}
+              type="file"
+            />
+            <div className={overlayWrapper}>
+              {typeof children === 'function'
+                ? children(inputId, inputRef)
+                : children}
+              <div
+                className={
+                  disabled
+                    ? dropzoneOverlayDisabled[dragState]
+                    : dropzoneOverlay[dragState]
+                }
+                onDragOver={event => event.preventDefault()}
+                onDrop={event => {
+                  if (!disabled) {
+                    onDrop?.(event)
+                    manageDrop(event)
+                  }
+                }}
+                style={style}
+              >
+                {title &&
+                typeof title !== 'function' &&
+                dragState !== 'default' ? (
+                  <Text
+                    as="div"
+                    disabled={disabled}
+                    sentiment="primary"
+                    variant="bodySmallStrong"
+                  >
+                    {title}
+                  </Text>
+                ) : null}
+              </div>
+            </div>
+          </div>
+          {bottom ? (
+            <Text
+              as="div"
+              disabled={disabled}
+              prominence="weak"
+              sentiment="neutral"
+              variant="caption"
+            >
+              {bottom}
+            </Text>
+          ) : null}
+        </Stack>
+      </FileInputContext.Provider>
+    )
+  }
+
+  const isSmall = size === 'small'
+
+  return (
+    <FileInputContext.Provider
+      value={{ disabled, files, inputRef, onChangeFiles, setFiles }}
+    >
+      <Stack direction="column" gap={1}>
+        <Stack className={className} direction="column" gap={0.5}>
+          {label || labelDescription ? (
+            <Label labelDescription={labelDescription} size={size}>
+              {label}
+            </Label>
+          ) : null}
+          <Text as="div" disabled={disabled} sentiment="neutral" variant="body">
+            <Stack
+              alignItems="center"
+              className={dropzone({ disabled, size, state: dragState })}
+              data-testid="drag-container"
+              direction={isSmall ? 'row' : 'column'}
+              gap={isSmall ? 1 : 2}
+              justifyContent="center"
+              onDragOver={onDragOver}
               onDrop={event => {
                 if (!disabled) {
                   onDrop?.(event)
@@ -174,110 +228,65 @@ const FileInputBase = ({
               }}
               style={style}
             >
-              {title &&
-              typeof title !== 'function' &&
-              dragState !== 'default' ? (
-                <Text
-                  as="div"
+              {disabled ? null : (
+                <input
+                  accept={accept}
+                  className={fileInput}
+                  data-testid={dataTestid}
                   disabled={disabled}
-                  sentiment="primary"
-                  variant="bodySmallStrong"
-                >
-                  {title}
-                </Text>
-              ) : null}
-            </div>
-          </div>
-        </div>
-        {list && listPosition === 'bottom' ? (
-          <ListFiles
-            files={files}
-            listLimit={listLimit}
-            onChangeFiles={onChangeFiles}
-            setFiles={setFiles}
-          />
-        ) : null}
-      </Stack>
-    )
-  }
-
-  const isSmall = size === 'small'
-
-  return (
-    <FileInputContext.Provider value={{ disabled, inputRef }}>
-      <Stack className={className} direction="column" gap={0.5}>
-        {label || labelDescription ? (
-          <Label labelDescription={labelDescription} size={size}>
-            {label}
-          </Label>
-        ) : null}
-        <Text as="div" disabled={disabled} sentiment="neutral" variant="body">
-          <Stack
-            alignItems="center"
-            className={dropzone({ disabled, size, state: dragState })}
-            data-testid="drag-container"
-            direction={isSmall ? 'row' : 'column'}
-            gap={isSmall ? 1 : 2}
-            justifyContent="center"
-            onDragOver={onDragOver}
-            onDrop={event => {
-              if (!disabled) {
-                onDrop?.(event)
-                manageDrop(event)
-              }
-            }}
-            style={style}
-          >
-            {disabled ? null : (
-              <input
-                accept={accept}
-                className={fileInput}
-                data-testid={dataTestid}
+                  id={inputId}
+                  name={label ?? ariaLabel}
+                  onChange={onChange}
+                  ref={inputRef}
+                  type="file"
+                />
+              )}
+              <UploadIcon
                 disabled={disabled}
-                id={inputId}
-                name={label ?? ariaLabel}
-                onChange={onChange}
-                ref={inputRef}
-                type="file"
+                sentiment={isSmall ? 'neutral' : 'primary'}
+                size={isSmall ? 'small' : 'xlarge'}
               />
-            )}
-            <UploadIcon
-              disabled={disabled}
-              sentiment={isSmall ? 'neutral' : 'primary'}
-              size={isSmall ? 'small' : 'xlarge'}
-            />
-            <Text
-              as={isSmall ? 'label' : 'p'}
-              className={
-                isSmall
-                  ? titleSmall[disabled ? 'disabled' : 'default']
-                  : undefined
-              }
-              disabled={disabled}
-              htmlFor={inputId}
-              placement="left"
-              sentiment="neutral"
-              variant={isSmall ? 'bodySmallStrong' : 'headingSmallStrong'}
-            >
-              {typeof title === 'function' ? title(inputId, inputRef) : title}
-            </Text>
-            {typeof children === 'function'
-              ? children(inputId, inputRef)
-              : children}
-          </Stack>
-        </Text>
-        {helper ? (
-          <Text as="p" prominence="weak" sentiment="neutral" variant="caption">
-            {helper}
+              <Text
+                as={isSmall ? 'label' : 'p'}
+                className={
+                  isSmall
+                    ? titleSmall[disabled ? 'disabled' : 'default']
+                    : undefined
+                }
+                disabled={disabled}
+                htmlFor={inputId}
+                placement="left"
+                sentiment="neutral"
+                variant={isSmall ? 'bodySmallStrong' : 'headingSmallStrong'}
+              >
+                {typeof title === 'function' ? title(inputId, inputRef) : title}
+              </Text>
+              {typeof children === 'function'
+                ? children(inputId, inputRef)
+                : children}
+            </Stack>
           </Text>
-        ) : null}
-        {list ? (
-          <ListFiles
-            files={files}
-            listLimit={listLimit}
-            onChangeFiles={onChangeFiles}
-            setFiles={setFiles}
-          />
+          {helper ? (
+            <Text
+              as="p"
+              prominence="weak"
+              sentiment="neutral"
+              variant="caption"
+            >
+              {helper}
+            </Text>
+          ) : null}
+        </Stack>
+        {bottom ? (
+          <Text
+            as="div"
+            disabled={disabled}
+            prominence="weak"
+            sentiment="neutral"
+            variant="caption"
+          >
+            {bottom}
+          </Text>
         ) : null}
       </Stack>
     </FileInputContext.Provider>
@@ -286,4 +295,5 @@ const FileInputBase = ({
 
 export const FileInput = Object.assign(FileInputBase, {
   Button: FileInputButton,
+  List: ListFiles,
 })
