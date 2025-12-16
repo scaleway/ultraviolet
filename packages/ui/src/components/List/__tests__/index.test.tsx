@@ -184,7 +184,7 @@ describe('list', () => {
       </List>,
     ))
 
-  test('should render correctly with loading with column width', () =>
+  test('should render correctly with column width', () =>
     shouldMatchSnapshot(
       <List columns={[columnWidthPercent, columnWidthPx]} loading selectable>
         {data.map(({ id, columnA, columnB }) => (
@@ -196,6 +196,22 @@ describe('list', () => {
       </List>,
     ))
 
+  test('should render correctly with column width and colMode strict', () =>
+    shouldMatchSnapshot(
+      <List
+        colMode="strict"
+        columns={[columnWidthPercent, columnWidthPx]}
+        loading
+        selectable
+      >
+        {data.map(({ id, columnA, columnB }) => (
+          <List.Row id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
   test('should render correctly with disabled rows', () =>
     shouldMatchSnapshot(
       <List columns={columns}>

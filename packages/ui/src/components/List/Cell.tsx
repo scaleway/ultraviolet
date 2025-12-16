@@ -5,7 +5,8 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { useColumnProvider } from './ColumnProvider'
-import { listCell } from './styles.css'
+import { useListContext } from './ListContext'
+import { listCell, listCellStrict } from './styles.css'
 import {
   listCellPadding,
   maxWidthCell,
@@ -27,7 +28,7 @@ type CellProps = {
 export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
   ({ children, className, 'data-testid': dataTestid, colSpan, style }, ref) => {
     const context = useColumnProvider()
-
+    const { colMode } = useListContext()
     const width = context?.width
     const maxWidth = context?.width
     const minWidth = context?.width
@@ -45,7 +46,11 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
 
     return (
       <td
-        className={cn(className, listCell)}
+        className={cn(
+          className,
+          listCell,
+          colMode === 'strict' ? listCellStrict : '',
+        )}
         colSpan={colSpan}
         data-testid={dataTestid}
         ref={ref}

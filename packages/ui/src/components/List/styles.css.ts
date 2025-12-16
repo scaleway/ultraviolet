@@ -234,7 +234,9 @@ export const listCell = style({
   },
 })
 
-globalStyle(`${listCell} > *`, {
+export const listCellStrict = style({})
+
+globalStyle(`${listCellStrict} > *`, {
   width: widthChildrenCell,
   maxWidth: maxWidthChildrenCell,
   minWidth: minWidthChildrenCell,

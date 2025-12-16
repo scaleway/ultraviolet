@@ -515,7 +515,7 @@ exports[`list > should not collapse a row by clicking on expandable content 1`] 
         </thead>
         <tbody>
           <tr
-            aria-controls="_r_a1_"
+            aria-controls="_r_a3_"
             aria-expanded="true"
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e"
             data-highlight="false"
@@ -557,10 +557,10 @@ exports[`list > should not collapse a row by clicking on expandable content 1`] 
             class="styles__inoh548"
             data-expandable-content="true"
             data-highlight="false"
-            id="_r_a1_"
+            id="_r_a3_"
           >
             <td
-              class="styles__inoh54n styles__inoh54k"
+              class="styles__inoh54o styles__inoh54k"
               colspan="5"
               style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto; --_1431nf63: var(--rwwhsl9v);"
             >
@@ -1777,6 +1777,638 @@ exports[`list > should render correctly with bad sort value 1`] = `
 </DocumentFragment>
 `;
 
+exports[`list > should render correctly with column width 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__inoh541"
+    >
+      <table
+        class="styles__inoh542"
+      >
+        <thead>
+          <tr
+            class="styles__inoh546"
+          >
+            <th
+              class="styles__inoh547 styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                <div
+                  aria-disabled="true"
+                  class="styles__9pjq8o6"
+                  data-checked="false"
+                  data-error="false"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-invalid="false"
+                    aria-label="select all"
+                    class="styles__9pjq8o5"
+                    disabled=""
+                    id="_r_2a_"
+                    name="list-select-checkbox"
+                    type="checkbox"
+                    value="all"
+                  />
+                  <svg
+                    class="styles__9pjq8o3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <g>
+                      <rect
+                        class="styles__9pjq8o1"
+                        height="16"
+                        rx="0.125rem"
+                        stroke-width="2"
+                        width="16"
+                        x="4"
+                        y="4"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                        fill="white"
+                        fill-rule="evenodd"
+                        height="9"
+                        width="12"
+                        x="5"
+                        y="4"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              style="--_1431nf60: 33%; --_1431nf62: 33%; --_1431nf61: 33%;"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                width
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              style="--_1431nf60: 100px; --_1431nf62: 0; --_1431nf61: 100px;"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                width
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-0"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-1"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-2"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-3"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-4"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`list > should render correctly with column width and colMode strict 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__inoh541"
+    >
+      <table
+        class="styles__inoh542"
+      >
+        <thead>
+          <tr
+            class="styles__inoh546"
+          >
+            <th
+              class="styles__inoh547 styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                <div
+                  aria-disabled="true"
+                  class="styles__9pjq8o6"
+                  data-checked="false"
+                  data-error="false"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-invalid="false"
+                    aria-label="select all"
+                    class="styles__9pjq8o5"
+                    disabled=""
+                    id="_r_2c_"
+                    name="list-select-checkbox"
+                    type="checkbox"
+                    value="all"
+                  />
+                  <svg
+                    class="styles__9pjq8o3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <g>
+                      <rect
+                        class="styles__9pjq8o1"
+                        height="16"
+                        rx="0.125rem"
+                        stroke-width="2"
+                        width="16"
+                        x="4"
+                        y="4"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                        fill="white"
+                        fill-rule="evenodd"
+                        height="9"
+                        width="12"
+                        x="5"
+                        y="4"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              style="--_1431nf60: 33%; --_1431nf62: 33%; --_1431nf61: 33%;"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                width
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              style="--_1431nf60: 100px; --_1431nf62: 0; --_1431nf61: 100px;"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                width
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-0"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-1"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-2"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-3"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
+            id="skeleton-4"
+            role="row"
+          >
+            <td />
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 33%; --_1431nf66: 33%; --_1431nf65: 33%; --_1431nf67: 100%; --_1431nf68: 100%; --_1431nf69: 100%;"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+            <td
+              class="styles__inoh54k styles__inoh54l"
+              style="--_1431nf64: 100px; --_1431nf66: 100px; --_1431nf65: 100px; --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(100px - var(--rwwhsl9v) - var(--rwwhsl9v));"
+            >
+              <div
+                aria-busy="true"
+                aria-live="polite"
+                class="styles__inoh54q styles__c2hb451"
+              >
+                <div
+                  class="stylesVariants__fr4c0td"
+                  style="--fr4c0t1: 7.5rem;"
+                />
+                <div
+                  class="styles__c2hb452"
+                />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`list > should render correctly with disabled rows 1`] = `
 <DocumentFragment>
   <div
@@ -2701,60 +3333,6 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 1
                 <div
-                  aria-controls="_r_ab_"
-                  aria-describedby="_r_ab_"
-                  class="styles__w40vpo9"
-                  tabindex="0"
-                >
-                  <svg
-                    class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_58__vbm0wq26"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </th>
-            <th
-              class="styles__inoh545"
-              tabindex="-1"
-            >
-              <div
-                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-              >
-                Column 2
-                <div
-                  aria-controls="_r_ac_"
-                  aria-describedby="_r_ac_"
-                  class="styles__w40vpo9"
-                  tabindex="0"
-                >
-                  <svg
-                    class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_58__vbm0wq26"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </th>
-            <th
-              class="styles__inoh545"
-              tabindex="-1"
-            >
-              <div
-                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
-              >
-                Column 3
-                <div
                   aria-controls="_r_ad_"
                   aria-describedby="_r_ad_"
                   class="styles__w40vpo9"
@@ -2780,7 +3358,7 @@ exports[`list > should render correctly with info 1`] = `
               <div
                 class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
               >
-                Column 4
+                Column 2
                 <div
                   aria-controls="_r_ae_"
                   aria-describedby="_r_ae_"
@@ -2807,10 +3385,64 @@ exports[`list > should render correctly with info 1`] = `
               <div
                 class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
               >
-                Column 5
+                Column 3
                 <div
                   aria-controls="_r_af_"
                   aria-describedby="_r_af_"
+                  class="styles__w40vpo9"
+                  tabindex="0"
+                >
+                  <svg
+                    class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_58__vbm0wq26"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                Column 4
+                <div
+                  aria-controls="_r_ag_"
+                  aria-describedby="_r_ag_"
+                  class="styles__w40vpo9"
+                  tabindex="0"
+                >
+                  <svg
+                    class="styles__vbm0wq0 styles_prominence_weak__vbm0wqj styles_disabled_false__vbm0wqf styles_sentiment_neutral__vbm0wq3 styles_size_small__vbm0wqa styles_undefined_compound_58__vbm0wq26"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M8 2.3125C4.85888 2.3125 2.3125 4.85888 2.3125 8C2.3125 11.1411 4.85888 13.6875 8 13.6875C11.1411 13.6875 13.6875 11.1411 13.6875 8C13.6875 4.85888 11.1411 2.3125 8 2.3125ZM1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8ZM7.34375 5.35677C7.34375 4.99433 7.63756 4.70052 8 4.70052H8.00529C8.36772 4.70052 8.66154 4.99433 8.66154 5.35677V5.36206C8.66154 5.72449 8.36772 6.01831 8.00529 6.01831H8C7.63756 6.01831 7.34375 5.72449 7.34375 5.36206V5.35677ZM7.55734 8.12213C7.28751 8.1578 7.01294 8.02195 6.88439 7.76484C6.7223 7.44066 6.8537 7.04647 7.17787 6.88439L7.20711 6.86976C8.11256 6.41704 9.13206 7.23485 8.88653 8.21695L8.44266 9.99246C8.71249 9.95679 8.98705 10.0926 9.11561 10.3497C9.2777 10.6739 9.14631 11.0681 8.82214 11.2302L8.79289 11.2448L8.79289 11.2448C7.88744 11.6975 6.86794 10.8797 7.11347 9.89764L7.55734 8.12213Z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52u3d styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_0.5rem_xxsmall__toi52u7 styles_justifyContent_normal_xxsmall__toi52u5d"
+              >
+                Column 5
+                <div
+                  aria-controls="_r_ah_"
+                  aria-describedby="_r_ah_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
@@ -3303,7 +3935,7 @@ exports[`list > should render correctly with isExpandable and autoClose rows the
             </td>
           </tr>
           <tr
-            aria-controls="_r_6j_"
+            aria-controls="_r_6l_"
             aria-expanded="true"
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e"
             data-highlight="false"
@@ -3345,10 +3977,10 @@ exports[`list > should render correctly with isExpandable and autoClose rows the
             class="styles__inoh548"
             data-expandable-content="true"
             data-highlight="false"
-            id="_r_6j_"
+            id="_r_6l_"
           >
             <td
-              class="styles__inoh54n styles__inoh54k"
+              class="styles__inoh54o styles__inoh54k"
               colspan="5"
               style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto; --_1431nf63: var(--rwwhsl9v);"
             >
@@ -4182,7 +4814,7 @@ exports[`list > should render correctly with loading 1`] = `
         </thead>
         <tbody>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-0"
             role="row"
           >
@@ -4193,7 +4825,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4211,7 +4843,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4229,7 +4861,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4247,7 +4879,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4265,7 +4897,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4278,7 +4910,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-1"
             role="row"
           >
@@ -4289,7 +4921,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4307,7 +4939,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4325,7 +4957,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4343,7 +4975,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4361,7 +4993,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4374,7 +5006,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-2"
             role="row"
           >
@@ -4385,7 +5017,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4403,7 +5035,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4421,7 +5053,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4439,7 +5071,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4457,7 +5089,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4470,7 +5102,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-3"
             role="row"
           >
@@ -4481,7 +5113,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4499,7 +5131,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4517,7 +5149,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4535,7 +5167,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4553,7 +5185,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4566,7 +5198,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-4"
             role="row"
           >
@@ -4577,7 +5209,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4595,7 +5227,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4613,7 +5245,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4631,7 +5263,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4649,7 +5281,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5107,7 +5739,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
         </thead>
         <tbody>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-0"
             role="row"
           >
@@ -5119,7 +5751,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5137,7 +5769,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5155,7 +5787,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5173,7 +5805,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5191,7 +5823,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5204,7 +5836,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-1"
             role="row"
           >
@@ -5216,7 +5848,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5234,7 +5866,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5252,7 +5884,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5270,7 +5902,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5288,7 +5920,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5301,7 +5933,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-2"
             role="row"
           >
@@ -5313,7 +5945,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5331,7 +5963,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5349,7 +5981,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5367,7 +5999,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5385,7 +6017,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5398,7 +6030,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-3"
             role="row"
           >
@@ -5410,7 +6042,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5428,7 +6060,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5446,7 +6078,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5464,7 +6096,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5482,7 +6114,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5495,7 +6127,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54o"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54e styles__inoh54p"
             id="skeleton-4"
             role="row"
           >
@@ -5507,7 +6139,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5525,7 +6157,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5543,7 +6175,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5561,7 +6193,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5579,7 +6211,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54p styles__c2hb451"
+                class="styles__inoh54q styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6160,11 +6792,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6249,11 +6881,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6338,11 +6970,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6427,11 +7059,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6516,11 +7148,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6605,11 +7237,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6694,11 +7326,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6783,11 +7415,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6872,11 +7504,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -6961,11 +7593,11 @@ exports[`list > should render correctly with selectable 1`] = `
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7084,7 +7716,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select all"
                     class="styles__9pjq8o5"
-                    id="_r_3a_"
+                    id="_r_3c_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -7178,11 +7810,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7195,7 +7827,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_3e_"
+                    id="_r_3g_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -7267,11 +7899,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7284,7 +7916,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_3i_"
+                    id="_r_3k_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -7356,11 +7988,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7373,7 +8005,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_3m_"
+                    id="_r_3o_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -7445,11 +8077,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7462,7 +8094,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_3q_"
+                    id="_r_3s_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -7534,11 +8166,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7551,7 +8183,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_3u_"
+                    id="_r_40_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -7623,11 +8255,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7640,7 +8272,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_42_"
+                    id="_r_44_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -7712,11 +8344,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7729,7 +8361,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_46_"
+                    id="_r_48_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -7801,11 +8433,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7818,7 +8450,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_4a_"
+                    id="_r_4c_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -7890,11 +8522,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7907,7 +8539,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_4e_"
+                    id="_r_4g_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -7979,11 +8611,11 @@ exports[`list > should render correctly with selectable then click on first row 
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -7996,7 +8628,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_4i_"
+                    id="_r_4k_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"
@@ -8102,7 +8734,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select all"
                     class="styles__9pjq8o5"
-                    id="_r_aq_"
+                    id="_r_as_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -8194,11 +8826,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8211,7 +8843,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_au_"
+                    id="_r_b0_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -8283,11 +8915,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8300,7 +8932,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_b2_"
+                    id="_r_b4_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -8372,11 +9004,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8389,7 +9021,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_b6_"
+                    id="_r_b8_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -8461,11 +9093,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8478,7 +9110,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_ba_"
+                    id="_r_bc_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -8550,11 +9182,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8567,7 +9199,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_be_"
+                    id="_r_bg_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -8639,11 +9271,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8656,7 +9288,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_bi_"
+                    id="_r_bk_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -8728,11 +9360,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8745,7 +9377,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_bm_"
+                    id="_r_bo_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -8817,11 +9449,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8834,7 +9466,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_bq_"
+                    id="_r_bs_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -8906,11 +9538,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -8923,7 +9555,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_bu_"
+                    id="_r_c0_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -8995,11 +9627,11 @@ exports[`list > should render correctly with selectable with shift click for mul
             tabindex="-1"
           >
             <td
-              class="styles__inoh54m styles__inoh54k"
+              class="styles__inoh54n styles__inoh54k"
               style="--_1431nf64: var(--rwwhsl9f); --_1431nf66: var(--rwwhsl9f); --_1431nf65: var(--rwwhsl9f); --_1431nf67: calc(var(--_1431nf64) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf68: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v)); --_1431nf69: calc(var(--rwwhsl9f) - var(--rwwhsl9v) - var(--rwwhsl9v));"
             >
               <div
-                class="styles__inoh54l"
+                class="styles__inoh54m"
               >
                 <div
                   aria-disabled="false"
@@ -9012,7 +9644,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o5"
-                    id="_r_c2_"
+                    id="_r_c4_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"

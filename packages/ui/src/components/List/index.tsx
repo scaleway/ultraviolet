@@ -33,6 +33,12 @@ type ListProps = {
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
   className?: string
   style?: CSSProperties
+  /**
+   * when set to strict, when a column width, minWidth or maxWidth is defined
+   * it will forcefully resize each cell to have the correct width
+   * @deprecated in the future list will automatically have a strict mode.
+   */
+  colMode?: 'strict' | 'flexible'
 }
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
@@ -66,11 +72,13 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       onSelectedChange,
       className,
       style,
+      colMode = 'flexible',
     },
     ref,
   ) => (
     <ListProvider
       autoCollapse={autoCollapse}
+      colMode={colMode}
       columns={columns}
       expandButton={expandable}
       onSelectedChange={onSelectedChange}
