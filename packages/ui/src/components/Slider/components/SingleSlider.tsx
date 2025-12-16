@@ -183,7 +183,9 @@ export const SingleSlider = ({
     THUMB_SIZE / 2 -
     sliderWidth / 2
 
-  const valueToShow = options ? options[selectedIndex]?.value : selectedIndex
+  const valueToShow = options?.[selectedIndex]
+    ? options[selectedIndex].value
+    : selectedIndex
 
   return (
     <Stack direction={direction} gap={1} justifyContent="left">

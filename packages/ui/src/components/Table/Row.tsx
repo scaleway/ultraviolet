@@ -132,7 +132,9 @@ export const Row = ({
                     }
                     disabled={!!selectDisabled}
                     name="table-select-checkbox"
-                    onChange={() => handleOnChange(id, selectedRowIds[id])}
+                    onChange={() =>
+                      handleOnChange(id, selectedRowIds[id] ?? false)
+                    }
                     ref={checkboxRowRef}
                     value={id}
                   />

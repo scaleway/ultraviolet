@@ -1,11 +1,10 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "@ultraviolet/config/tsconfig/build.json",
   "compilerOptions": {
-    "noEmit": false,
-    "emitDeclarationOnly": true,
     "rootDir": "src",
     "outDir": "dist"
   },
+  "include": ["src"],
   "exclude": [
     "*.config.ts",
     "*.setup.ts",
@@ -13,6 +12,5 @@
     "**/__mocks__",
     "**/__stories__",
     "src/**/*.test.tsx",
-    "vitest.setup.ts"
   ]
 }

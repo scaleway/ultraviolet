@@ -98,7 +98,7 @@ type SelectableCardGroupProps = {
 /**
  * SelectableCardGroup is a component that allows users to select cards from a list of cards using SelectableCard.
  */
-export const SelectableCardGroup = ({
+const SelectableCardGroupComponent = ({
   legend,
   legendDescription,
   value,
@@ -165,4 +165,13 @@ export const SelectableCardGroup = ({
   )
 }
 
-SelectableCardGroup.Card = CardSelectableCard
+type SelectableCardOptionGroupType = typeof SelectableCardGroupComponent & {
+  Card: typeof CardSelectableCard
+}
+
+export const SelectableCardGroup: SelectableCardOptionGroupType = Object.assign(
+  SelectableCardGroupComponent,
+  {
+    Card: CardSelectableCard,
+  },
+)

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@scaleway/tsconfig",
   "compilerOptions": {
     "target": "esnext",
@@ -7,16 +8,18 @@
     "noEmit": true,
     "skipLibCheck": true,
     // Should be removed once we clear all errors
-    "noUncheckedIndexedAccess": false
+    "noUncheckedIndexedAccess": false,
+    "baseUrl": ".",
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
+    "vitest.setup.ts",
     "global.d.ts",
     "expect.d.ts",
     "jest-axe.d.ts"
   ],
-  "exclude": ["node_modules", "coverage", "dist", "examples"]
+  "exclude": ["node_modules", "coverage", "dist"]
 }

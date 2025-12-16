@@ -7,16 +7,15 @@ import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
+type SelectableCardGroupProps = ComponentProps<typeof SelectableCardGroup>
+
 type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof SelectableCardGroup>,
-    'name' | 'onChange' | 'value'
-  >
+  Omit<SelectableCardGroupProps, 'name' | 'onChange' | 'value'>
 
-export const SelectableCardGroupField = <
+const SelectableCardGroupFieldComponent = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -82,4 +81,11 @@ export const SelectableCardGroupField = <
   )
 }
 
-SelectableCardGroupField.Card = SelectableCardGroup.Card
+type SelectableCardGroupFieldType = typeof SelectableCardGroupFieldComponent & {
+  Card: typeof SelectableCardGroup.Card
+}
+
+export const SelectableCardGroupField: SelectableCardGroupFieldType =
+  Object.assign(SelectableCardGroupFieldComponent, {
+    Card: SelectableCardGroup.Card,
+  })

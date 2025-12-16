@@ -83,7 +83,7 @@ type ToggleGroupProps = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
-export const ToggleGroup = ({
+const ToggleGroupComponent = ({
   legend,
   legendDescription,
   value,
@@ -156,4 +156,13 @@ export const ToggleGroup = ({
   )
 }
 
-ToggleGroup.Toggle = ToggleGroupToggle
+type SelectableCardOptionGroupType = typeof ToggleGroupComponent & {
+  Toggle: typeof ToggleGroupToggle
+}
+
+export const ToggleGroup: SelectableCardOptionGroupType = Object.assign(
+  ToggleGroupComponent,
+  {
+    Toggle: ToggleGroupToggle,
+  },
+)
