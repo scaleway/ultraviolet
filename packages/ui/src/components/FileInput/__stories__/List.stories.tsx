@@ -52,10 +52,10 @@ const defaultFile = [
 export const List: StoryFn<typeof FileInput> = args => (
   <Stack direction="column" gap={3}>
     <FileInput
+      bottom={<FileInput.List />}
       defaultFiles={defaultFile}
       disabled={args.disabled}
       label="type='dropzone'"
-      list
       multiple
       size="small"
       title="Click or drag file here"
@@ -66,34 +66,19 @@ export const List: StoryFn<typeof FileInput> = args => (
       aria-label="label"
       defaultFiles={defaultFile}
       disabled={args.disabled}
-      list
-      listPosition="top"
       multiple
       title="dnd here"
       variant="overlay"
     >
-      Type &quot;ovelay&quot; (listPosition=&quot;top&quot;)
+      Type &quot;ovelay&quot;
+      <FileInput.List />
     </FileInput>
     <Separator />
     <FileInput
-      aria-label="label"
-      defaultFiles={defaultFile}
-      disabled={args.disabled}
-      list
-      listPosition="bottom"
-      multiple
-      title="dnd here"
-      variant="overlay"
-    >
-      Type &quot;ovelay&quot; (listPosition=&quot;bottom&quot;)
-    </FileInput>
-    <Separator />
-    <FileInput
+      bottom={<FileInput.List limit={3} textLimit="See all" />}
       defaultFiles={defaultFile}
       disabled={args.disabled}
       label="With prop listLimit"
-      list
-      listLimit={{ limit: 3, overflowText: 'See all' }}
       multiple
       size="small"
       title="Click or drag file here"
@@ -106,7 +91,7 @@ List.parameters = {
   docs: {
     description: {
       story:
-        'With prop `list` it is possible to display all the drag&drop files added to the input. When using the FileInput as an overlay, it is possible to add the list on top or beneath the content using prop `listPosition`. Size is displayed and computed automatically from file.sie (number, in byte). It is also possible to add a limit to the number of visible files in the list using prop `listLimit`.',
+        'With sub-component `FileInput.List` it is possible to display all the drag&drop files added to the input. The size of each file is displayed and computed automatically from file.size (number, in byte). It is also possible to add a limit to the number of visible files in the list using prop `limit` & `limitText` (text to put in the "see all" button). To work properly, the list needs the `FileInputProvider`, so it is only usable in the context of the FileInputComponent. Use prop `bottom` to add it outside the fileInput container.',
     },
   },
 }

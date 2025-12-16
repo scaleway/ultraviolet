@@ -128,6 +128,12 @@ export const fileViewerContainer = styleVariants({
       background: theme.colors.neutral.backgroundWeak,
     },
   ],
+  strong: [
+    fileViewerContainerBase,
+    {
+      background: theme.colors.neutral.background,
+    },
+  ],
 })
 export const fileViewerImageBase = style({
   width: theme.sizing[400],
@@ -152,4 +158,11 @@ export const fileViewerImage = styleVariants({
       background: theme.colors.primary.background,
     },
   ],
+})
+
+export const fileInfo = style({
+  maxWidth: 264,
+  textWrap: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 })

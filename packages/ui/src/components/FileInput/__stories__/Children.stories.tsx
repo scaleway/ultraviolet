@@ -14,8 +14,8 @@ export const Children: StoryFn<typeof FileInput> = args => {
       With inputId
       <FileInput
         aria-label="label"
+        bottom={<FileInput.List />}
         disabled={args.disabled}
-        list
         title={inputId => (
           <label htmlFor={inputId}>Click here to add a file (title)</label>
         )}
@@ -38,7 +38,6 @@ export const Children: StoryFn<typeof FileInput> = args => {
       <FileInput
         aria-label="label-2"
         disabled={args.disabled}
-        list
         title="drag here"
         variant="overlay"
       >
@@ -55,6 +54,7 @@ export const Children: StoryFn<typeof FileInput> = args => {
               here
             </Text>{' '}
             to add a file
+            <FileInput.List />
           </>
         )}
       </FileInput>

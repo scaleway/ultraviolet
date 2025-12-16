@@ -10,9 +10,10 @@ import { Button } from '../../Button'
 import { Loader } from '../../Loader'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import { useFileInput } from '../FileInputProvider'
 import { formatFileSize, getMimeTypeType } from '../helpers'
-import { fileViewerContainer, fileViewerImage } from '../styles.css'
-import type { ListFilesProps, MimeType } from '../types'
+import { fileInfo, fileViewerContainer, fileViewerImage } from '../styles.css'
+import type { ListProps, MimeType } from '../types'
 
 const getIllustration = (
   type: MimeType,
@@ -61,20 +62,20 @@ const getIllustration = (
 }
 
 export const ListFiles = ({
-  files,
-  setFiles,
-  onChangeFiles,
-  listLimit,
-}: ListFilesProps) => {
-  const [limit, setLimit] = useState(listLimit?.limit)
+  limit,
+  textLimit,
+  prominence = 'default',
+}: ListProps) => {
+  const [computedLimit, setLimit] = useState(limit)
   const seeAllOnClick = () => {
     setLimit(undefined)
   }
+  const { files, setFiles, onChangeFiles } = useFileInput()
 
   return files.length > 0 ? (
     <Stack direction="row" gap={1} wrap="wrap">
       {files.map((file, index) => {
-        if (!limit || index < limit) {
+        if (!computedLimit || index < computedLimit) {
           const fileType = getMimeTypeType(file.type)
           const illustration = getIllustration(
             fileType,
@@ -89,7 +90,7 @@ export const ListFiles = ({
               <Stack
                 alignItems="center"
                 className={
-                  fileViewerContainer[file.error ? 'error' : 'default']
+                  fileViewerContainer[file.error ? 'error' : prominence]
                 }
                 direction="row"
                 gap={2}
@@ -97,9 +98,10 @@ export const ListFiles = ({
               >
                 <Stack alignItems="center" direction="row" gap={1}>
                   {illustration}
-                  <Stack direction="column">
+                  <Stack className={fileInfo} direction="column">
                     <Text
                       as="p"
+                      oneLine
                       sentiment={sentiment}
                       variant="bodySmallStrong"
                     >
@@ -137,7 +139,7 @@ export const ListFiles = ({
 
         return null
       })}
-      {limit && files.length > limit ? (
+      {computedLimit && files.length > computedLimit ? (
         <Button
           data-testid="see-all"
           onClick={seeAllOnClick}
@@ -145,7 +147,7 @@ export const ListFiles = ({
           size="large"
           variant="ghost"
         >
-          {listLimit?.overflowText} ({files.length})
+          {textLimit} ({files.length})
         </Button>
       ) : null}
     </Stack>

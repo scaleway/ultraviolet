@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
+import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { FileInput } from '..'
@@ -23,12 +24,17 @@ export const Controlled: StoryFn<typeof FileInput> = args => {
       />
       <Text as="div" variant="body">
         Files:
-        <ul>
-          {files.map(file => (
-            <li key={file.fileName}>{file.fileName}</li>
-          ))}
-        </ul>
+        {files.length > 0 ? (
+          <ul>
+            {files.map(file => (
+              <li key={file.fileName}>{file.fileName}</li>
+            ))}
+          </ul>
+        ) : (
+          ' none'
+        )}
       </Text>
+      <Button onClick={() => setFiles([])}>Reset</Button>
     </Stack>
   )
 }

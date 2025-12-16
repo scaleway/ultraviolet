@@ -1,11 +1,4 @@
-import type {
-  CSSProperties,
-  Dispatch,
-  DragEvent,
-  ReactNode,
-  RefObject,
-  SetStateAction,
-} from 'react'
+import type { CSSProperties, DragEvent, ReactNode, RefObject } from 'react'
 
 type ChildrenType =
   | ReactNode
@@ -51,6 +44,7 @@ type OverlayVariantProps = {
   /** Main text to display in the dropzone */
   title: ReactNode
   children: ChildrenType
+  bottom?: never
 }
 
 export type DropzoneVariantProps = {
@@ -60,25 +54,9 @@ export type DropzoneVariantProps = {
   children?: ChildrenType
   /** Main text to display in the dropzone */
   title?: ChildrenType
+  /** Content to add outside the container */
+  bottom?: ReactNode
 }
-
-type ListTypeOverlay = {
-  list: true
-  variant: 'overlay'
-  listPosition?: 'top' | 'bottom'
-  listLimit?: { limit: number; overflowText: string }
-}
-type ListTypeDropZone = {
-  list: true
-  variant?: 'dropzone'
-  listPosition?: never
-  listLimit?: { limit: number; overflowText: string }
-}
-
-type ListType =
-  | ListTypeOverlay
-  | ListTypeDropZone
-  | { list?: false; listPosition?: never; listLimit?: never }
 
 export type FileInputProps = {
   style?: CSSProperties
@@ -95,12 +73,12 @@ export type FileInputProps = {
   multiple?: boolean
   'data-testid'?: string
 } & (OverlayVariantProps | DropzoneVariantProps) &
-  LabelType &
-  ListType
+  LabelType
 
-export type ListFilesProps = {
-  files: FilesType[]
-  setFiles: Dispatch<SetStateAction<FilesType[]>>
-  onChangeFiles?: (files: FilesType[]) => void
-  listLimit?: { limit: number; overflowText: string }
-}
+type LimitType =
+  | { limit: number; textLimit: string }
+  | { limit?: never; textLimit?: never }
+
+export type ListProps = {
+  prominence?: 'default' | 'strong'
+} & LimitType
