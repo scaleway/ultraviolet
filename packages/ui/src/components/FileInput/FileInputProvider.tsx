@@ -1,9 +1,10 @@
+import type { RefObject } from 'react'
 import { createContext, useContext } from 'react'
 
 type FileInputContextType =
   | {
       disabled?: boolean
-      inputId: string
+      inputRef: RefObject<HTMLInputElement | null>
     }
   | undefined
 export const FileInputContext = createContext<FileInputContextType>(undefined)

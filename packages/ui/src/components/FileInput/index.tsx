@@ -204,7 +204,7 @@ const FileInputBase = ({
   const isSmall = size === 'small'
 
   return (
-    <FileInputContext.Provider value={{ disabled, inputId }}>
+    <FileInputContext.Provider value={{ disabled, inputRef }}>
       <Stack className={className} direction="column" gap={0.5}>
         {label || labelDescription ? (
           <Label labelDescription={labelDescription} size={size}>
