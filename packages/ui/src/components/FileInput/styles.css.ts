@@ -55,29 +55,6 @@ export const titleSmall = styleVariants({
   },
 })
 
-const buttonFileInputBase = style({
-  display: 'flex',
-  gap: theme.space[1],
-  alignItems: 'center',
-  justifyContent: 'center',
-  cursor: 'pointer',
-})
-
-export const buttonFileInput = styleVariants({
-  default: [
-    buttonFileInputBase,
-    {
-      cursor: 'pointer',
-    },
-  ],
-  disabled: [
-    buttonFileInputBase,
-    {
-      cursor: 'not-allowed',
-    },
-  ],
-})
-
 export const overlayWrapper = style({
   height: 'fit-content',
   width: 'fit-content',

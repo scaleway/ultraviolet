@@ -1,7 +1,6 @@
 import type { ComponentProps } from 'react'
 import { Button } from '../../Button'
 import { useFileInput } from '../FileInputProvider'
-import { buttonFileInput } from '../styles.css'
 
 export const FileInputButton = ({
   children,
@@ -12,14 +11,12 @@ export const FileInputButton = ({
   const isDisabled = disabled || context.disabled
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Button {...props} disabled={isDisabled}>
-      <label
-        className={buttonFileInput[isDisabled ? 'disabled' : 'default']}
-        htmlFor={context.inputId}
-      >
-        {children}
-      </label>
+    <Button
+      {...props}
+      disabled={isDisabled}
+      onClick={() => context.inputRef.current?.click()}
+    >
+      {children}
     </Button>
   )
 }
