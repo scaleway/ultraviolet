@@ -9,12 +9,16 @@ import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import { recipe } from '@vanilla-extract/recipes'
 import { SENTIMENTS } from '../../theme'
 import {
+  listCellPadding,
   maxWidthCell,
+  maxWidthChildrenCell,
   maxWidthHeaderCell,
   minWidthCell,
+  minWidthChildrenCell,
   minWidthHeaderCell,
   paddingExpandableCell,
   widthCell,
+  widthChildrenCell,
   widthHeaderCell,
 } from './variables.css'
 
@@ -26,8 +30,6 @@ const colorChange = keyframes({
     backgroundColor: theme.colors.primary.background,
   },
 })
-
-const listCellPadding = theme.space[2]
 
 function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
   const color = theme.colors[sentiment]
@@ -232,11 +234,12 @@ export const listCell = style({
   },
 })
 
-globalStyle(`${listCell} > *`, {
-  /** Remove padding from width to avoid overflow since boxSizing = 'content-box' */
-  width: `calc(${widthCell} - ${listCellPadding} - ${listCellPadding})`,
-  maxWidth: `calc(${maxWidthCell} - ${listCellPadding} - ${listCellPadding})`,
-  minWidth: `calc(${minWidthCell} - ${listCellPadding} - ${listCellPadding})`,
+export const listCellStrict = style({})
+
+globalStyle(`${listCellStrict} > *`, {
+  width: widthChildrenCell,
+  maxWidth: maxWidthChildrenCell,
+  minWidth: minWidthChildrenCell,
 })
 
 globalStyle(`${listRowBase} > td:first-child`, {

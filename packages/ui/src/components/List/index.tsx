@@ -1,7 +1,13 @@
 'use client'
 
 import { cn } from '@ultraviolet/themes'
-import type { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react'
+import type {
+  CSSProperties,
+  Dispatch,
+  ReactNode,
+  RefAttributes,
+  SetStateAction,
+} from 'react'
 import { Children, forwardRef, useEffect, useState } from 'react'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
@@ -33,6 +39,17 @@ type ListProps = {
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
   className?: string
   style?: CSSProperties
+  colMode: 'strict' | 'flexible' | undefined
+}
+
+type NewListProps = Omit<ListProps, 'colMode'> & {
+  colMode: 'strict'
+}
+type LegacyListProps = Omit<ListProps, 'colMode'> & {
+  /**
+   * @deprecated use `colMode="strict"` instead
+   */
+  colMode?: 'flexible' | undefined
 }
 
 const TableContainer = ({ children }: { children: ReactNode }) => {
@@ -54,7 +71,7 @@ const TableContainer = ({ children }: { children: ReactNode }) => {
   return <div className={listContainer}>{children}</div>
 }
 
-const BaseList = forwardRef<HTMLTableElement, ListProps>(
+const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
   (
     {
       expandable = false,
@@ -66,11 +83,13 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
       onSelectedChange,
       className,
       style,
+      colMode = 'flexible',
     },
     ref,
   ) => (
     <ListProvider
       autoCollapse={autoCollapse}
+      colMode={colMode}
       columns={columns}
       expandButton={expandable}
       onSelectedChange={onSelectedChange}
@@ -114,8 +133,12 @@ const BaseList = forwardRef<HTMLTableElement, ListProps>(
 /**
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
-
-type ListType = typeof BaseList & {
+type ListType = {
+  (props: NewListProps & RefAttributes<HTMLTableElement>): ReactNode
+  /**
+   * @deprecated Use `colMode="strict"`
+   */
+  (props: LegacyListProps & RefAttributes<HTMLTableElement>): ReactNode
   Cell: typeof Cell
   Row: typeof Row
   SelectBar: typeof SelectBar

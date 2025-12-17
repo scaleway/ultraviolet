@@ -3,9 +3,9 @@ import { createContext, useContext } from 'react'
 
 type ContextType =
   | {
-      width: string
-      maxWidth: string
-      minWidth: string
+      width?: string
+      maxWidth?: string
+      minWidth?: string
     }
   | undefined
 
@@ -25,9 +25,9 @@ export const ColumnProvider = ({
 }: ColumnProviderProps) => (
   <ColumnContext.Provider
     value={{
-      maxWidth: maxWidth ?? 'none',
-      minWidth: minWidth ?? 'auto',
-      width: width ?? 'auto',
+      maxWidth,
+      minWidth,
+      width,
     }}
   >
     {children}
@@ -35,16 +35,4 @@ export const ColumnProvider = ({
 )
 
 // oxlint-disable-next-line react/only-export-components
-export const useColumnProvider = () => {
-  const context = useContext(ColumnContext)
-
-  if (!context) {
-    return {
-      maxWidth: 'none',
-      minWidth: 'auto',
-      width: 'auto',
-    }
-  }
-
-  return context
-}
+export const useColumnProvider = () => useContext(ColumnContext)
