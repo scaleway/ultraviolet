@@ -45,6 +45,7 @@ export const SingleSlider = ({
   prefix,
   suffix,
   required,
+  labelDescription,
   'aria-label': ariaLabel,
   tooltipPosition,
 }: SingleSliderProps) => {
@@ -195,7 +196,11 @@ export const SingleSlider = ({
           direction="row"
           justifyContent="space-between"
         >
-          <Label htmlFor={finalId} required={required}>
+          <Label
+            htmlFor={finalId}
+            labelDescription={labelDescription}
+            required={required}
+          >
             {label}
           </Label>
           {direction === 'column' ? styledValue(valueToShow) : null}

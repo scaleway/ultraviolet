@@ -24,6 +24,7 @@ type DefaultProps = {
    */
   step?: number
   required?: boolean
+  labelDescription?: ReactNode
   /**
    * Where to position the tooltip
    */
