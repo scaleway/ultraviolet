@@ -30,7 +30,7 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
           label="item1"
         />
       </Navigation.Group>
-      {/* @ts-expect-error we try to test whe no children is provided */}
+      {/* @ts-expect-error we try to test when no children is provided */}
       <Navigation.Group label="Empty Group" />
     </Navigation>
   </NavigationProvider>

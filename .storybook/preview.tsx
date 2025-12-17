@@ -154,7 +154,7 @@ const preview: Preview = {
     }),
   ],
 };
- 
+
 
 const decorators = [
   (Story: StoryFn, context: { globals: { theme: string } }) => {
