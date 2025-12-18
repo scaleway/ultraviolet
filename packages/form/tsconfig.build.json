@@ -1,10 +1,12 @@
 {
-  "extends": "@ultraviolet/config/tsconfig/build.json",
+  "extends": "@repo/config/tsconfig/build.json",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist"
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "exclude": [
     "*.config.ts",
     "*.setup.ts",

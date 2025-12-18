@@ -13,7 +13,6 @@ yarn.lock
 .eslintcache
 dist/
 coverage
-storybook-static
 .reports
 .pnpm-store
 .dist-comparison
@@ -35,6 +34,10 @@ yalc.lock
 
 out
 .next
+
+#storybook
+debug-storybook.log
+storybook-static
 
 #vite
 vite.config.ts.*

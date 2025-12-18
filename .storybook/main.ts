@@ -1,29 +1,19 @@
-import { createRequire } from "node:module";
-import { dirname, join } from "node:path";
 import type { StorybookConfig } from '@storybook/react-vite'
 import remarkGfm from 'remark-gfm'
 
-const require = createRequire(import.meta.url);
-
-const getAbsolutePath = (value: string): string => {
-  return dirname(require.resolve(join(value, "package.json")));
-}
-
 export default {
   stories: [
-    '../packages/*/src/**/__stories__/**/*.mdx',
     '../packages/*/src/**/__stories__/index.stories.tsx',
-    '../utils/stories/src/**/*.mdx',
-    '../utils/stories/src/**/index.stories.tsx'
+    '../utils/stories/src/**/*.mdx'
   ],
 
   addons: [
-    getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-a11y"),
-    getAbsolutePath("@storybook/addon-themes"),
-    getAbsolutePath("storybook-addon-tag-badges"),
+    "@storybook/addon-links",
+    "@storybook/addon-a11y", 
+    "@storybook/addon-themes",
+    "storybook-addon-tag-badges",
     {
-      name: getAbsolutePath("@storybook/addon-docs"),
+      name: "@storybook/addon-docs",
       options: {
         mdxPluginOptions: {
           mdxCompileOptions: {
@@ -35,7 +25,7 @@ export default {
   ],
 
   framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+    name: "@storybook/react-vite",
     options: {
       builder: {
         viteConfigPath: '.storybook/vite.config.ts',
@@ -44,7 +34,7 @@ export default {
   },
 
   core: {
-    builder: getAbsolutePath("@storybook/builder-vite"),
+    builder: "@storybook/builder-vite",
     disableTelemetry: true,
   },
 

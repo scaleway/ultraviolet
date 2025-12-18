@@ -1,6 +1,8 @@
 {
-  "extends": "@ultraviolet/config/tsconfig/build.json",
-  "include": ["src"],
+  "extends": "@repo/config/tsconfig/build.json",
+  "include": [
+    "src"
+  ],
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist"

@@ -6,7 +6,6 @@
 "@ultraviolet/icons": patch
 "@ultraviolet/form": patch
 "@ultraviolet/plus": patch
-"@ultraviolet/config": patch
 "@ultraviolet/ui": patch
 ---
 

@@ -29,3 +29,5 @@ export const Changelog = () => {
     </Stack>
   )
 }
+
+export default Changelog
