@@ -323,7 +323,10 @@ const CreateDropdown = ({
                 aria-disabled={false}
                 aria-label="select-all"
                 aria-selected={selectedData.allSelected}
-                className={dropdownItem({ selected: selectedData.allSelected })}
+                className={cn(
+                  dropdownItem({ selected: selectedData.allSelected }),
+                  'dropdown-item-uv',
+                )}
                 data-testid="select-all"
                 id="select-all"
                 onClick={selectAllOptions}
@@ -426,7 +429,7 @@ const CreateDropdown = ({
                 </div>
               ) : null}
               <Stack gap="0.25" id="items">
-                {displayedOptions[group].map((option, indexOption) => (
+                {displayedOptions[group].map(option => (
                   <div
                     aria-disabled={!!option.disabled}
                     aria-label={option.value}
@@ -434,14 +437,17 @@ const CreateDropdown = ({
                       selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
                     }
-                    className={dropdownItem({
-                      disabled: !!option.disabled,
-                      selected:
-                        selectedData.selectedValues.includes(option.value) &&
-                        !option.disabled,
-                    })}
+                    className={cn(
+                      dropdownItem({
+                        disabled: !!option.disabled,
+                        selected:
+                          selectedData.selectedValues.includes(option.value) &&
+                          !option.disabled,
+                      }),
+                      'dropdown-item-uv',
+                    )}
                     data-testid={`option-${option.value}`}
-                    id={`option-${indexOption}`}
+                    id={`option-${option.value}`}
                     key={option.value}
                     onClick={event => {
                       if (!option.disabled) {
@@ -527,7 +533,10 @@ const CreateDropdown = ({
             aria-disabled={false}
             aria-label="select-all"
             aria-selected={selectedData.allSelected}
-            className={dropdownItem({ selected: selectedData.allSelected })}
+            className={cn(
+              dropdownItem({ selected: selectedData.allSelected }),
+              'dropdown-item-uv',
+            )}
             data-testid="select-all"
             onClick={selectAllOptions}
             onKeyDown={event =>
@@ -567,7 +576,7 @@ const CreateDropdown = ({
         {isLoading ? (
           <Skeleton variant="block" />
         ) : (
-          displayedOptions.map((option, index) => (
+          displayedOptions.map(option => (
             <div
               aria-disabled={!!option.disabled}
               aria-label={option.value}
@@ -575,14 +584,17 @@ const CreateDropdown = ({
                 selectedData.selectedValues.includes(option.value) &&
                 !option.disabled
               }
-              className={dropdownItem({
-                disabled: !!option.disabled,
-                selected:
-                  selectedData.selectedValues.includes(option.value) &&
-                  !option.disabled,
-              })}
+              className={cn(
+                dropdownItem({
+                  disabled: !!option.disabled,
+                  selected:
+                    selectedData.selectedValues.includes(option.value) &&
+                    !option.disabled,
+                }),
+                'dropdown-item-uv',
+              )}
               data-testid={`option-${option.value}`}
-              id={`option-${index}`}
+              id={`option-${option.value}`}
               key={option.value}
               onClick={event => {
                 if (!option.disabled) {
