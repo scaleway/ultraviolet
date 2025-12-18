@@ -1,5 +1,20 @@
 # @ultraviolet/nextjs
 
+## 3.0.3
+
+### Patch Changes
+
+- [#5861](https://github.com/scaleway/ultraviolet/pull/5861) [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.1`.
+  Updated dependency `react-dom` to `19.2.1`.
+
+- [#5885](https://github.com/scaleway/ultraviolet/pull/5885) [`38c6e83`](https://github.com/scaleway/ultraviolet/commit/38c6e8303a763c78e60846e2aa3bab409a95c255) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `16.0.9`.
+
+- [#5890](https://github.com/scaleway/ultraviolet/pull/5890) [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581) Thanks [@philibea](https://github.com/philibea)! - tsconfig add isolated module
+
+- Updated dependencies [[`5374a2a`](https://github.com/scaleway/ultraviolet/commit/5374a2afe9c58a445b2a0dc3ff3a5733ece0a4ea), [`ec99ee5`](https://github.com/scaleway/ultraviolet/commit/ec99ee591e1de6b9c9428146fa7f8cb1bda1b81e), [`d1b9517`](https://github.com/scaleway/ultraviolet/commit/d1b9517b55a3f84ea94d52e09bbbb4b872e7219c), [`774fb31`](https://github.com/scaleway/ultraviolet/commit/774fb31d7929ae8bf20f180f54d38fec8fdb968b), [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`22e27d6`](https://github.com/scaleway/ultraviolet/commit/22e27d621a269ddfd8f952e76e20b11c6914ad2b), [`3a1daaa`](https://github.com/scaleway/ultraviolet/commit/3a1daaad38cbebec5509e1162c4351c0a251afd4), [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56), [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581)]:
+  - @ultraviolet/ui@3.2.0
+  - @ultraviolet/themes@3.0.1
+
 ## 3.0.2
 
 ### Patch Changes

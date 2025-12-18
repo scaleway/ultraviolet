@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 2.0.1
+
+### Patch Changes
+
+- [#5890](https://github.com/scaleway/ultraviolet/pull/5890) [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581) Thanks [@philibea](https://github.com/philibea)! - tsconfig add isolated module
+
 ## 2.0.0
 
 ### Major Changes
