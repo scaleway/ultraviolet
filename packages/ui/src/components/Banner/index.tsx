@@ -1,7 +1,8 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import { cn, useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
 import { Button } from '../Button'

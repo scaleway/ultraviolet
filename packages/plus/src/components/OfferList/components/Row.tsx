@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { cn, theme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
 import {
   Badge as BadgeUV,
   Button,
@@ -10,6 +10,7 @@ import {
   Radio,
   Tooltip,
 } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useCallback, useMemo, useState } from 'react'

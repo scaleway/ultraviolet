@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'

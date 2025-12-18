@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
 import { List } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { Cell } from './components/Cell'

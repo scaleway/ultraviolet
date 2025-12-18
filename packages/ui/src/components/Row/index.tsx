@@ -1,6 +1,7 @@
 'use client'
 
-import { cn, consoleLightTheme } from '@ultraviolet/themes'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { UltravioletUITheme } from '../../theme'

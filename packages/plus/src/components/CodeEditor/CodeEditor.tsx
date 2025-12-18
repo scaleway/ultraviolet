@@ -3,8 +3,8 @@
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
 import CodeMirror from '@uiw/react-codemirror'
-import { cn } from '@ultraviolet/themes'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import {
   codeEditor,

@@ -1,8 +1,8 @@
 'use client'
 
 import { OpenInNewIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
 import { Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'

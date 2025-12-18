@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { disabledImage } from '../styles.css'
 import type { Sizes } from '../types'
 

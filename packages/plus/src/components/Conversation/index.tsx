@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
 import { Stack, Tag, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import {
   conversationAvatar,

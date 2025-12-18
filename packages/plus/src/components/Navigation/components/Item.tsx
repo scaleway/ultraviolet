@@ -9,7 +9,6 @@ import {
   UnpinIcon,
 } from '@ultraviolet/icons'
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
-import { cn } from '@ultraviolet/themes'
 import {
   Badge,
   Button,
@@ -19,6 +18,7 @@ import {
   Text,
   Tooltip,
 } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type {
   ComponentProps,
   CSSProperties,

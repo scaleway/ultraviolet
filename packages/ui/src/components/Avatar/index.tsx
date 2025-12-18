@@ -2,7 +2,8 @@
 
 import { UserProductIcon } from '@ultraviolet/icons/product/UserProductIcon'
 import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
-import { cn, theme as UVTheme } from '@ultraviolet/themes'
+import { theme as UVTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
 import { DEFAULT_COLORS, sizes, TEXT_VARIANT_BY_SIZE } from './constants'
