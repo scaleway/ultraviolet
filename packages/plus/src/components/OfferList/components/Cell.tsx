@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
 import { List, Skeleton } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
 import { offerListCell, offerListLoadingCell } from '../styles.css'

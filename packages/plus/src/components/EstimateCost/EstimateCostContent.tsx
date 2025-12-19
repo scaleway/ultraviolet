@@ -1,8 +1,8 @@
 'use client'
 
 import { CalculatorIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
 import { Alert, Badge, Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, ReactNode } from 'react'
 import {

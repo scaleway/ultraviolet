@@ -1,12 +1,12 @@
 {
   "extends": "@repo/config/tsconfig/build.json",
-  "include": [
-    "src"
-  ],
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist"
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "*.config.ts",
     "*.setup.ts",

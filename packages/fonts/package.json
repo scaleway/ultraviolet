@@ -32,6 +32,9 @@
     "linux"
   ],
   "type": "module",
+  "devDependencies": {
+    "@repo/config": "workspace:*"
+  },
   "exports": {
     ".": {
       "style": "./dist/fonts.css",

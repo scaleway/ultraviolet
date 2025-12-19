@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { PROMINENCES } from './constants'
-import capitalize from '../../utils/capitalize'
+import { capitalize } from '@ultraviolet/utils'
 
 const TRANSITION_DURATION = 250
 

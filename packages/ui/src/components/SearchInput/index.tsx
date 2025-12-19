@@ -1,7 +1,7 @@
 'use client'
 
 import { SearchIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { Ref } from 'react'
 import {
   forwardRef,

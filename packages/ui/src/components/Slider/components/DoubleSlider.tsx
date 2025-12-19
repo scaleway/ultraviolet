@@ -1,6 +1,7 @@
 'use client'
 
-import { cn, useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'

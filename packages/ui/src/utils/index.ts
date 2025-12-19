@@ -1,3 +1,9 @@
+export type { ComparableType } from '@ultraviolet/utils'
+export {
+  capitalize,
+  getUUID,
+  orderBy,
+} from '@ultraviolet/utils'
 export {
   bounce as bounceDefault,
   fadeIn as fadeInDefault,
@@ -56,8 +62,5 @@ export {
   zoomIn,
   zoomOut,
 } from './animations/animationsVE.css'
-export { getUUID } from './ids'
 export { default as normalize } from './normalize'
-export type { ComparableType } from './orderBy'
-export { orderBy } from './orderBy'
 export { down, up } from './responsive'

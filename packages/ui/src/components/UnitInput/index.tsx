@@ -1,7 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ComponentProps,

@@ -1,7 +1,8 @@
 'use client'
 
 import * as ProductIcon from '@ultraviolet/icons/product'
-import { cn, useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEventHandler,

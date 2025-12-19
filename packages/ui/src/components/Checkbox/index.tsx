@@ -1,6 +1,7 @@
 'use client'
 
-import { cn, useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'

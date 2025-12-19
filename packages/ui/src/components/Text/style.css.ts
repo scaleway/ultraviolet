@@ -4,7 +4,7 @@ import { recipe } from '@vanilla-extract/recipes'
 import type { ExtendedColor } from '../../theme'
 import { typography } from '../../theme'
 import { PROMINENCES } from './constants'
-import capitalize from '../../utils/capitalize'
+import { capitalize } from '@ultraviolet/utils'
 import { placementText, whiteSpaceText } from './variables.css'
 
 type TypographyKey = keyof typeof typography

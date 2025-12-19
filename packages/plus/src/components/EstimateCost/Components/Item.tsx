@@ -1,8 +1,8 @@
 'use client'
 
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
 import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import {

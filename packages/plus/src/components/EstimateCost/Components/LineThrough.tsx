@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { estimateCostLineThrough } from './components.css'
 

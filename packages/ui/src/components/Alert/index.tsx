@@ -7,7 +7,7 @@ import {
   InformationOutlineIcon,
   LightBulbIcon,
 } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useState } from 'react'
 import { Button } from '../Button'

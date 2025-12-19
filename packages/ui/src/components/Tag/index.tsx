@@ -1,7 +1,7 @@
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import useClipboard from 'react-use-clipboard'
