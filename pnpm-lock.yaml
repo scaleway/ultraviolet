@@ -180,8 +180,8 @@ importers:
         specifier: 10.1.10
         version: 10.1.10(eslint@9.39.1(jiti@2.4.2))(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(typescript@5.9.3)
       eslint-plugin-testing-library:
-        specifier: 7.13.5
-        version: 7.13.5(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
+        specifier: 7.13.6
+        version: 7.13.6(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
       expect:
         specifier: 30.2.0
         version: 30.2.0
@@ -5552,8 +5552,8 @@ packages:
       eslint: '>=8'
       storybook: ^10.1.10
 
-  eslint-plugin-testing-library@7.13.5:
-    resolution: {integrity: sha512-75rUmtNnXeO9cyMwG78vXxGEB7muIQ+IwcwBTma+M9KFc68SFaMKevGydObsUgX+IFef4lRLO/ysR9JqK1odyg==}
+  eslint-plugin-testing-library@7.13.6:
+    resolution: {integrity: sha512-90h3bGIK6QEvxkE8WWFiCXhYLG/Q1BZuf7snUSO/Ma7g7AnyTfKGFfjHl23o6nmg6a/lv0VX3VNyBv06m6cOcw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
@@ -14459,10 +14459,10 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-testing-library@7.13.5(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3):
+  eslint-plugin-testing-library@7.13.6(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3):
     dependencies:
-      '@typescript-eslint/scope-manager': 8.47.0
-      '@typescript-eslint/utils': 8.47.0(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
+      '@typescript-eslint/scope-manager': 8.48.1
+      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.4.2)
     transitivePeerDependencies:
       - supports-color
