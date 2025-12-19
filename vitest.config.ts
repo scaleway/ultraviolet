@@ -30,7 +30,11 @@ export const createVitestConfig = (
           provider: 'istanbul',
           reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
         },
-        css: true,
+        css: {
+          modules: {
+            classNameStrategy: 'non-scoped',
+          },
+        },
         deps: {
           optimizer: {
             web: {
