@@ -115,6 +115,7 @@ export const textPie = recipe({
   base: {
     flex: 'none',
     marginRight: theme.space[1],
+    maxWidth: '100%',
   },
   variants: {
     isFocused: {
