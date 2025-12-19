@@ -14,11 +14,10 @@ export const Playground: StoryFn<
   ComponentProps<typeof OptionSelector>
 > = props => {
   const [zone, setZone] = useState<SelectorOption[]>(franceOptions)
-  const [value, setValue] = useState('')
-  const [value2, setValue2] = useState('')
+  const [value, setValue] = useState({ first: '', second: '' })
 
   const onChangeRegion = (newRegion: string) => {
-    setValue(newRegion)
+    setValue(oldValue => ({ first: newRegion, second: oldValue.second }))
     if (newRegion === 'fr') {
       setZone(franceOptions)
     }
@@ -31,7 +30,7 @@ export const Playground: StoryFn<
   }
 
   const onChangeZone = (newZone: string) => {
-    setValue2(newZone)
+    setValue(oldValue => ({ first: oldValue.first, second: newZone }))
   }
 
   return (
@@ -41,13 +40,13 @@ export const Playground: StoryFn<
         label: 'Region',
         onChange: onChangeRegion,
         options: firstSelectorOptions,
-        value,
+        value: value.first,
       }}
       secondSelector={{
         label: 'Zone',
         onChange: onChangeZone,
         options: zone,
-        value: value2,
+        value: value.second,
       }}
     />
   )

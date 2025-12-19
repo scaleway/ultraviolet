@@ -1,0 +1,217 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`optionSelector > should work onChang - first selector 1`] = `[Function]`;
+
+exports[`optionSelector > should work onChang - second selector 1`] = `[Function]`;
+
+exports[`optionSelector > should work readonly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="uv_x6hyh50 uv_x6hyh52v uv_x6hyh5d"
+      style="--uv_3mg8xe0: 1fr auto 1fr; --uv_3mg8xe1: 1fr auto 1fr; --uv_3mg8xe2: 1fr auto 1fr; --uv_3mg8xe3: 1fr auto 1fr; --uv_3mg8xe4: 1fr auto 1fr; --uv_3mg8xe5: 1fr auto 1fr;"
+    >
+      <div
+        class="uv_uf6pag0"
+      >
+        <div
+          aria-controls="_r_1l_"
+          aria-describedby="_r_1l_"
+          class="uv_w40vpo9 uv_w40vpob"
+          tabindex="-1"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+          >
+            <label
+              class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              for="_r_1k_"
+            >
+              Region
+            </label>
+            <div
+              aria-controls="_r_1l_"
+              aria-expanded="false"
+              aria-label="Region"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8 uv_1ba7kndd"
+              data-disabled="false"
+              data-readonly="true"
+              data-testid="first-selector"
+              id="_r_1k_"
+              role="combobox"
+              tabindex="0"
+            >
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                Select item
+              </span>
+              <div
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              >
+                <svg
+                  aria-label="show dropdown"
+                  class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_2__dkdfcqm"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`optionSelector > should work with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="uv_x6hyh50 uv_x6hyh52v uv_x6hyh5d"
+      style="--uv_3mg8xe0: 1fr auto 1fr; --uv_3mg8xe1: 1fr auto 1fr; --uv_3mg8xe2: 1fr auto 1fr; --uv_3mg8xe3: 1fr auto 1fr; --uv_3mg8xe4: 1fr auto 1fr; --uv_3mg8xe5: 1fr auto 1fr;"
+    >
+      <div
+        class="uv_uf6pag0"
+      >
+        <div
+          aria-controls="_r_1_"
+          aria-describedby="_r_1_"
+          class="uv_w40vpo9 uv_w40vpob"
+          tabindex="-1"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+          >
+            <label
+              class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              for="_r_0_"
+            >
+              Region
+            </label>
+            <div
+              aria-controls="_r_1_"
+              aria-expanded="false"
+              aria-label="Region"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8"
+              data-disabled="false"
+              data-readonly="false"
+              data-testid="first-selector"
+              id="_r_0_"
+              role="combobox"
+              tabindex="0"
+            >
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+              >
+                Select item
+              </span>
+              <div
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              >
+                <svg
+                  aria-label="show dropdown"
+                  class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_false__dkdfcqf styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_34__dkdfcq1i"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`optionSelector > should work with default values 1`] = `[Function]`;
+
+exports[`optionSelector > should work with disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="uv_x6hyh50 uv_x6hyh52v uv_x6hyh5d"
+      style="--uv_3mg8xe0: 1fr auto 1fr; --uv_3mg8xe1: 1fr auto 1fr; --uv_3mg8xe2: 1fr auto 1fr; --uv_3mg8xe3: 1fr auto 1fr; --uv_3mg8xe4: 1fr auto 1fr; --uv_3mg8xe5: 1fr auto 1fr;"
+    >
+      <div
+        class="uv_uf6pag0"
+      >
+        <div
+          aria-controls="_r_1f_"
+          aria-describedby="_r_1f_"
+          class="uv_w40vpo9 uv_w40vpob"
+          tabindex="-1"
+        >
+          <div
+            class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+          >
+            <label
+              class="uv_17td3g91 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+              for="_r_1e_"
+            >
+              Region
+            </label>
+            <div
+              aria-controls="_r_1f_"
+              aria-expanded="false"
+              aria-label="Region"
+              class="uv_1ba7knd5 uv_1ba7knd4 uv_1ba7knd9 uv_1ba7knd8 uv_1ba7knde"
+              data-disabled="true"
+              data-readonly="false"
+              data-testid="first-selector"
+              id="_r_1e_"
+              role="combobox"
+              tabindex="0"
+            >
+              <span
+                class="uv_1ba7knd3 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1a uv_m4c9ow33"
+              >
+                Select item
+              </span>
+              <div
+                class="uv_1ba7knd2 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+              >
+                <svg
+                  aria-label="show dropdown"
+                  class="styles__dkdfcq0 styles_prominence_default__dkdfcqg styles_disabled_true__dkdfcqe styles_sentiment_neutral__dkdfcq3 styles_size_small__dkdfcqa styles_undefined_compound_2__dkdfcqm"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`optionSelector > should work with error - first selector 1`] = `[Function]`;
+
+exports[`optionSelector > should work with error - first selector 2`] = `[Function]`;
+
+exports[`optionSelector > should work with only one option 1`] = `[Function]`;

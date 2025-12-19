@@ -5,7 +5,7 @@ export type SelectorOption = {
   content: ReactNode
   icon?: ReactNode
   value: string
-  hoverContent?: string
+  hoverContent?: ReactNode
   disabled?: boolean
   tooltip?: string
   optionalInfo?: ReactNode
@@ -21,6 +21,7 @@ export type SelectorProps = {
   disabled?: boolean
   helper?: string
   readOnly?: boolean
+  placeholder?: string
 }
 
 export type OptionSelectorProps = {
@@ -30,4 +31,6 @@ export type OptionSelectorProps = {
   firstSelector: SelectorProps
   secondSelector?: SelectorProps
   size?: ComponentProps<typeof SelectInput>['size']
+  disabled?: boolean
+  readOnly?: boolean
 }

@@ -40,7 +40,7 @@ export const OneOption: StoryFn<
       firstSelector={{
         label: 'Region',
         onChange: onChangeRegion,
-        options: firstSelectorOptions,
+        options: [firstSelectorOptions[0]],
         value,
       }}
       secondSelector={{
