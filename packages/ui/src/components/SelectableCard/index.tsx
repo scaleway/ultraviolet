@@ -30,6 +30,7 @@ import {
   divSelectableCard,
   illustrationSelectableCard,
   imageSelectableCard,
+  indentedCard,
   labelContainerSelectableCard,
   selectableElementSelectableCard,
   stackSelectableCard,
@@ -58,6 +59,7 @@ export type SelectableCardProps = {
   tooltip?: string
   'data-testid'?: string
   style?: CSSProperties
+  indented?: boolean
 } & (
   | {
       illustration?: string
@@ -100,6 +102,7 @@ export const SelectableCard = forwardRef(
       illustration,
       'aria-label': ariaLabel,
       style,
+      indented = true,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -322,7 +325,10 @@ export const SelectableCard = forwardRef(
             )}
             {children ? (
               <Stack
-                className={stackSelectableCard}
+                className={cn(
+                  stackSelectableCard,
+                  !!label && showTick && indented ? indentedCard : undefined,
+                )}
                 data-has-default-cursor={
                   type === 'checkbox' && isComplexChildren
                 }

@@ -143,6 +143,22 @@ describe('selectableCard', () => {
           </SelectableCard>,
         ))
 
+      test('renders correctly with indented disabled', () =>
+        shouldMatchSnapshot(
+          <SelectableCard
+            indented={false}
+            label="label"
+            name="label-14"
+            onChange={() => {}}
+            showTick
+            type={type}
+            value="label-14"
+          >
+            Offer the best experience to your Mac, iPhone and iPad users with
+            VNC, the remote desktop-sharing protocol. Learn more
+          </SelectableCard>,
+        ))
+
       test('renders correctly with productIcon', () =>
         shouldMatchSnapshot(
           <SelectableCard
