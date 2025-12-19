@@ -49,6 +49,8 @@ export const OptionSelector = ({
   firstSelector,
   secondSelector,
   size = 'large',
+  disabled,
+  readOnly,
 }: OptionSelectorProps) => {
   const firstValue = useMemo(() => {
     if (firstSelector.value) {
@@ -56,7 +58,11 @@ export const OptionSelector = ({
     }
 
     if (firstSelector.options.length === 1) {
-      return firstSelector.options[1].value
+      firstSelector.onChange?.(
+        firstSelector.options[0].value as string & string[],
+      )
+
+      return firstSelector.options[0].value
     }
 
     return undefined
@@ -68,6 +74,10 @@ export const OptionSelector = ({
     }
 
     if (secondSelector?.options.length === 1) {
+      secondSelector.onChange?.(
+        secondSelector.options[0].value as string & string[],
+      )
+
       return secondSelector?.options[0].value
     }
 
@@ -95,7 +105,8 @@ export const OptionSelector = ({
       templateColumns="1fr auto 1fr"
     >
       <SelectInput
-        disabled={firstSelector.disabled}
+        data-testid="first-selector"
+        disabled={firstSelector.disabled || disabled}
         error={firstSelector.error}
         helper={firstSelector.helper}
         label={firstSelector.label}
@@ -103,7 +114,12 @@ export const OptionSelector = ({
         onChange={onChangeFirstSelector}
         optionalInfoPlacement="right"
         options={firstSelectorOptions}
-        readOnly={firstSelector.options.length === 1 || firstSelector.readOnly}
+        placeholder={firstSelector.placeholder}
+        readOnly={
+          firstSelector.options.length === 1 ||
+          firstSelector.readOnly ||
+          readOnly
+        }
         size={size}
         value={firstValue}
       />
@@ -116,7 +132,10 @@ export const OptionSelector = ({
             size={size}
           />
           <SelectInput
-            disabled={!!firstSelector.error || secondSelector.disabled}
+            data-testid="second-selector"
+            disabled={
+              !!firstSelector.error || secondSelector.disabled || disabled
+            }
             error={secondSelector.error}
             helper={secondSelector.helper}
             label={secondSelector.label}
@@ -124,8 +143,11 @@ export const OptionSelector = ({
             onChange={onChangeSecondSelector}
             optionalInfoPlacement="right"
             options={secondSelectorOptions}
+            placeholder={secondSelector.placeholder}
             readOnly={
-              secondSelector.options.length === 1 || secondSelector.readOnly
+              secondSelector.options.length === 1 ||
+              secondSelector.readOnly ||
+              readOnly
             }
             size={size}
             value={secondValue}
