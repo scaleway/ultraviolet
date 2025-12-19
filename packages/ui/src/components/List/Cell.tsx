@@ -30,13 +30,13 @@ export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
     const context = useColumnProvider()
     const { colMode } = useListContext()
     const width = context?.width
-    const maxWidth = context?.width
-    const minWidth = context?.width
+    const maxWidth = context?.maxWidth
+    const minWidth = context?.minWidth
 
     /** Remove padding from width to avoid overflow since boxSizing = 'content-box' */
     const widthChildren = width?.includes('%')
       ? '100%'
-      : `calc(${widthCell} - ${listCellPadding} - ${listCellPadding})`
+      : `calc(${width} - ${listCellPadding} - ${listCellPadding})`
     const maxWidthChildren = maxWidth?.includes('%')
       ? '100%'
       : `calc(${maxWidth} - ${listCellPadding} - ${listCellPadding})`
