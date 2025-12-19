@@ -37,7 +37,7 @@
     "analyse:deps:ui": "tsx ./utils/scripts/analyse-deps.ts packages/ui/src/components",
     "analyse:deps:form": "tsx ./utils/scripts/analyse-deps.ts packages/form/src/components",
     "tokens:update": "tsx ./utils/scripts/figma-synchronise-token/index.ts && pnpm run format packages/themes/src/themes/console",
-    "icons:update": "tsx ./utils/scripts/generate-icons-file.ts && pnpm run format packages/icons",
+    "icons:update": "tsx ./utils/scripts/generate-icons-file.tsx && pnpm run format packages/icons",
     "release": "pnpm build && pnpm changeset publish",
     "svg": "svgo --config=./svgo.config.mjs --pretty --multipass",
     "svg:all": "pnpm run svg -r -f 'packages/illustrations/src/assets'",
