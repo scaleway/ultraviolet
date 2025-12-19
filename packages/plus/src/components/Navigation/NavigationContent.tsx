@@ -81,9 +81,6 @@ export const NavigationContent = ({
     }
 
     const mousedown = (event: MouseEvent) => {
-      document.body.style.pointerEvents = 'none'
-      document.body.style.userSelect = 'none'
-
       prevX = event.clientX
       navRect = navigationRef.current?.getBoundingClientRect()
 
@@ -106,9 +103,6 @@ export const NavigationContent = ({
 
         document.removeEventListener('mousemove', mouseMove)
         window.removeEventListener('mouseup', mouseup)
-
-        document.body.style.pointerEvents = ''
-        document.body.style.userSelect = ''
       }
 
       document.addEventListener('mousemove', mouseMove)
