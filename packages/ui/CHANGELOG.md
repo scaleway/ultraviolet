@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.2.1
+
+### Patch Changes
+
+- [#5891](https://github.com/scaleway/ultraviolet/pull/5891) [`1b34a68`](https://github.com/scaleway/ultraviolet/commit/1b34a68987c49c100e2fe01dbc9b6814bb3e7749) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCard`: new prop `indented` (true by default) to add or remove an indent in order to align the children with the label
+
+- [#5901](https://github.com/scaleway/ultraviolet/pull/5901) [`c4708a8`](https://github.com/scaleway/ultraviolet/commit/c4708a82dae51724af2fe3a0f13d777138b63a78) Thanks [@lisalupi](https://github.com/lisalupi)! - `List` width variable should not also be minWidth and maxWidth
+
 ## 3.2.0
 
 ### Minor Changes
