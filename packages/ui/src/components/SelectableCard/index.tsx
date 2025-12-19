@@ -1,7 +1,8 @@
 'use client'
 
 import * as ProductIcon from '@ultraviolet/icons/product'
-import { cn, useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEventHandler,
@@ -30,6 +31,7 @@ import {
   divSelectableCard,
   illustrationSelectableCard,
   imageSelectableCard,
+  indentedCard,
   labelContainerSelectableCard,
   selectableElementSelectableCard,
   stackSelectableCard,
@@ -58,6 +60,7 @@ export type SelectableCardProps = {
   tooltip?: string
   'data-testid'?: string
   style?: CSSProperties
+  indented?: boolean
 } & (
   | {
       illustration?: string
@@ -100,6 +103,7 @@ export const SelectableCard = forwardRef(
       illustration,
       'aria-label': ariaLabel,
       style,
+      indented = true,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -322,7 +326,10 @@ export const SelectableCard = forwardRef(
             )}
             {children ? (
               <Stack
-                className={stackSelectableCard}
+                className={cn(
+                  stackSelectableCard,
+                  !!label && showTick && indented ? indentedCard : undefined,
+                )}
                 data-has-default-cursor={
                   type === 'checkbox' && isComplexChildren
                 }

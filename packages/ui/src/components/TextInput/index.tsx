@@ -8,7 +8,7 @@ import {
   EyeIcon,
   EyeOffIcon,
 } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   ChangeEventHandler,

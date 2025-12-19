@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ReactNode } from 'react'
 import type { SIZES } from './constant'
 import { flag } from './style.css'

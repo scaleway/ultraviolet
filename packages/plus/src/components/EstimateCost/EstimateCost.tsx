@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, ReactNode } from 'react'
 import { Children } from 'react'

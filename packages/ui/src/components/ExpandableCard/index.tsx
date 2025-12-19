@@ -1,7 +1,8 @@
 'use client'
 
 import { ArrowDownIcon, DragIcon } from '@ultraviolet/icons'
-import { cn, useTheme } from '@ultraviolet/themes'
+import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type {
   CSSProperties,
   DetailsHTMLAttributes,

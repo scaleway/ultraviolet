@@ -1,7 +1,7 @@
 'use client'
 
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties } from 'react'
 import { ILLUSTRATIONS } from './__generated__/Illustrations'

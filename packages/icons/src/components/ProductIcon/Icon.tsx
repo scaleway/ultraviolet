@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SIZES, VARIANTS } from './constants'
 import { productIconSizes, productIconVariants } from './styles.css'

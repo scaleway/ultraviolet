@@ -5,7 +5,7 @@ import {
   ArrowRightIcon,
   OpenInNewIcon,
 } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,

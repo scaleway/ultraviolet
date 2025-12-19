@@ -2,7 +2,8 @@
 
 import type { DatumValue } from '@nivo/core'
 import type { Serie } from '@nivo/line'
-import { cn, theme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'

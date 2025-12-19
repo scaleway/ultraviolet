@@ -1,7 +1,8 @@
 'use client'
 
 import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
-import { cn, theme } from '@ultraviolet/themes'
+import { theme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode, RefObject } from 'react'
 import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'

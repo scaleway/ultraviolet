@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ReactNode, SVGProps } from 'react'
 import { forwardRef } from 'react'
 import type { PROMINENCES, SENTIMENTS, SIZES } from './constants'

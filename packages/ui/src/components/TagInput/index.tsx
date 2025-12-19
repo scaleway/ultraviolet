@@ -5,7 +5,7 @@ import {
   CheckCircleOutlineIcon,
   CloseIcon,
 } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn, getUUID } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   CSSProperties,
@@ -13,7 +13,6 @@ import type {
   ReactNode,
 } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
-import { getUUID } from '../../utils'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'

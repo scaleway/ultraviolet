@@ -1,7 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CheckIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'

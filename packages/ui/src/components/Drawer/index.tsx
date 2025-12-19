@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
 import type { ModalProps } from '../Modal'
 import { Modal } from '../Modal'

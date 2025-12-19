@@ -2,7 +2,7 @@
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
-import { createContext, useContext, useEffect } from 'react'
+import { createContext, useContext, useLayoutEffect } from 'react'
 import { consoleLightTheme } from './themes'
 import { theme as themeContract } from './vanilla/themes.css'
 
@@ -40,7 +40,7 @@ export const ThemeProvider = ({
   children,
   theme = consoleLightTheme,
 }: ThemeProviderProps) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)
     const cssVars = assignInlineVars(themeContract, theme)

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'

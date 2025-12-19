@@ -1,5 +1,5 @@
+import { getUUID } from '@ultraviolet/utils'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import { getUUID } from '../ids'
 
 describe('ids', () => {
   describe('getUUID', () => {

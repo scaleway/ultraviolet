@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowRightIcon } from '@ultraviolet/icons'
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type {
   CSSProperties,
   KeyboardEvent,

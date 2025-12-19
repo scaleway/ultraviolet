@@ -1,5 +1,5 @@
-import { cn } from '@ultraviolet/themes'
 import { Stack, Text, UnitInput } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { useEffect, useMemo, useState } from 'react'
 import { Units } from './constants'
 import { calculateCategoryPrice } from './helpers'

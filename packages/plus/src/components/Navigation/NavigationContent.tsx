@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
 import { Stack } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
 import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'

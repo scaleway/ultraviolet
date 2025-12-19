@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
 import { Button } from '../../Button'

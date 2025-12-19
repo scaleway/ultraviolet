@@ -114,9 +114,6 @@ export const illustrationSelectableCard = style({
 
 export const stackSelectableCard = style({
   selectors: {
-    '&[data-has-label="true"]': {
-      paddingLeft: theme.space[4],
-    },
     '&[data-has-label="false"]': {
       display: 'contents',
     },
@@ -124,6 +121,10 @@ export const stackSelectableCard = style({
       cursor: 'default',
     },
   },
+})
+
+export const indentedCard = style({
+  paddingLeft: theme.space[4],
 })
 
 export const selectableElementSelectableCard = style({
