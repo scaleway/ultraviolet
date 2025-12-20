@@ -32,6 +32,7 @@ type PerPageProps = {
   numberOfItemsText?: string
   page: number
   numberOfItems: number
+  portalTarget?: HTMLElement
 }
 
 export const PerPage = ({
@@ -42,6 +43,7 @@ export const PerPage = ({
   numberOfItemsText,
   page,
   numberOfItems,
+  portalTarget,
 }: PerPageProps) => {
   const handleChange = (value: string) => {
     const intValue = Number.parseInt(value, 10)
@@ -58,6 +60,7 @@ export const PerPage = ({
         name="select-items-per-page"
         onChange={handleChange}
         options={optionsItemsPerPage}
+        portalTarget={portalTarget}
         size="small"
         style={{
           width: 'fit-content',
