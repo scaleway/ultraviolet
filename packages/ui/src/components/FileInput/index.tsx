@@ -2,7 +2,7 @@
 
 import { UploadIcon } from '@ultraviolet/icons'
 import type { ChangeEvent, DragEvent } from 'react'
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -40,6 +40,7 @@ const FileInputBase = ({
   helper,
   multiple = false,
   bottom,
+  required,
   'data-testid': dataTestid,
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>(
@@ -67,7 +68,7 @@ const FileInputBase = ({
     }
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener('dragenter', onDragPage)
     window.addEventListener('dragend', handleDragLeave)
     window.addEventListener('drop', handleDrop)
@@ -112,7 +113,6 @@ const FileInputBase = ({
 
     if (!disabled) {
       const addedFiles = [...(event.target.files ?? [])]
-
       const newFiles = addedFiles.map(file => ({
         file: URL.createObjectURL(file),
         fileName: file.name,
@@ -146,6 +146,7 @@ const FileInputBase = ({
               name={label ?? ariaLabel}
               onChange={onChange}
               ref={inputRef}
+              required={required}
               type="file"
             />
             <div className={overlayWrapper}>
@@ -207,7 +208,11 @@ const FileInputBase = ({
       <Stack direction="column" gap={1}>
         <Stack className={className} direction="column" gap={0.5}>
           {label || labelDescription ? (
-            <Label labelDescription={labelDescription} size={size}>
+            <Label
+              labelDescription={labelDescription}
+              required={required}
+              size={size}
+            >
               {label}
             </Label>
           ) : null}
@@ -238,6 +243,7 @@ const FileInputBase = ({
                   name={label ?? ariaLabel}
                   onChange={onChange}
                   ref={inputRef}
+                  required={required}
                   type="file"
                 />
               )}

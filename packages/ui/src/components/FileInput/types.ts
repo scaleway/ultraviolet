@@ -61,7 +61,6 @@ export type DropzoneVariantProps = {
 export type FileInputProps = {
   style?: CSSProperties
   className?: string
-  label?: string
   labelDescription?: ReactNode
   helper?: string
   onDrop?: (event: DragEvent<HTMLDivElement>) => void
@@ -72,6 +71,7 @@ export type FileInputProps = {
   /** When set to true, multiple files can be added */
   multiple?: boolean
   'data-testid'?: string
+  required?: boolean
 } & (OverlayVariantProps | DropzoneVariantProps) &
   LabelType
 
