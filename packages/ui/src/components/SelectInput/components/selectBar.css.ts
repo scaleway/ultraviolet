@@ -15,7 +15,6 @@ export const minWidthTag = createVar({
 })
 
 export const selectbarState = style({
-  paddingRight: theme.space[2],
   display: 'flex',
 })
 
@@ -75,13 +74,15 @@ export const selectBar = recipe({
       small: {
         height: theme.sizing[INPUT_SIZE_HEIGHT.small],
         padding: 0,
-        paddingLeft: theme.space[1],
+        paddingInline: theme.space[1],
       },
       medium: {
         height: theme.sizing[INPUT_SIZE_HEIGHT.medium],
+        paddingInline: theme.space['1.5'],
       },
       large: {
         height: theme.sizing[INPUT_SIZE_HEIGHT.large],
+        paddingInline: theme.space[2],
       },
     },
     state: {
