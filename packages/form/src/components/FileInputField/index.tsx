@@ -87,7 +87,19 @@ const FileInputFieldBase = <
   )
 }
 
-export const FileInputField = Object.assign(FileInputFieldBase, {
-  Button: FileInput.Button,
-  List: FileInput.List,
-})
+/**
+ * List is a component that displays a list of items based on the columns you provide and the data you pass.
+ */
+type FileInputFieldType = {
+  (props: FileInputFieldProps<FieldValues, FieldPath<FieldValues>>): ReactNode
+  List: typeof FileInput.List
+  Button: typeof FileInput.Button
+}
+
+export const FileInputField: FileInputFieldType = Object.assign(
+  FileInputFieldBase,
+  {
+    Button: FileInput.Button,
+    List: FileInput.List,
+  },
+)
