@@ -426,7 +426,7 @@ const CreateDropdown = ({
                 </div>
               ) : null}
               <Stack gap="0.25" id="items">
-                {displayedOptions[group].map(option => (
+                {displayedOptions[group].map((option, indexOption) => (
                   <div
                     aria-disabled={!!option.disabled}
                     aria-label={option.value}
@@ -444,7 +444,7 @@ const CreateDropdown = ({
                       'dropdown-item-uv',
                     )}
                     data-testid={`option-${option.value}`}
-                    id={`option-${option.value}`}
+                    id={`option-${indexOption}`}
                     key={option.value}
                     onClick={event => {
                       if (!option.disabled) {
@@ -573,7 +573,7 @@ const CreateDropdown = ({
         {isLoading ? (
           <Skeleton variant="block" />
         ) : (
-          displayedOptions.map(option => (
+          displayedOptions.map((option, index) => (
             <div
               aria-disabled={!!option.disabled}
               aria-label={option.value}
@@ -591,7 +591,7 @@ const CreateDropdown = ({
                 'dropdown-item-uv',
               )}
               data-testid={`option-${option.value}`}
-              id={`option-${option.value}`}
+              id={`option-${index}`}
               key={option.value}
               onClick={event => {
                 if (!option.disabled) {
