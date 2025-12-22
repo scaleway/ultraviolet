@@ -3,7 +3,9 @@ import { RebootIcon, SendIcon, UploadIcon } from '@ultraviolet/icons'
 import type { Dispatch, RefObject, SetStateAction } from 'react'
 import { useState } from 'react'
 import { Button } from '../../Button'
+import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 import { TextInput } from '../../TextInput'
 import { FileInput } from '..'
 import type { FilesType } from '../types'
@@ -53,8 +55,11 @@ export const Overlay: StoryFn<typeof FileInput> = args => {
         title="Drop here"
         variant="overlay"
       >
-        Some content (this is an overlay)
+        <Text as="div" variant="headingSmall">
+          Some content (this is an overlay) <UploadIcon />
+        </Text>
       </FileInput>
+      <Separator />
       <FileInput
         aria-label="prompt"
         defaultFiles={files}
