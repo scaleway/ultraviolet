@@ -42,6 +42,7 @@ import {
   dropdownGroupWrapper,
   dropdownItem,
   dropdownLoadMore,
+  emptyStateGroupStyle,
   footer as footerStyle,
 } from './dropdown.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
@@ -63,6 +64,8 @@ export type DropdownProps = {
   size: 'small' | 'medium' | 'large'
   dropdownAlign?: ComponentProps<typeof Popup>['align']
   portalTarget?: ComponentProps<typeof Popup>['portalTarget']
+  groupError?: Record<string, ReactNode>
+  groupEmptyState?: Record<string, ReactNode>
 }
 
 export type CreateDropdownProps = {
@@ -73,6 +76,8 @@ export type CreateDropdownProps = {
   optionalInfoPlacement: 'left' | 'right'
   defaultSearchValue: string | null
   isLoading?: boolean
+  groupError?: Record<string, ReactNode>
+  groupEmptyState?: Record<string, ReactNode>
 }
 
 const NON_SEARCHABLE_KEYS = [
@@ -191,6 +196,8 @@ const CreateDropdown = ({
   optionalInfoPlacement,
   defaultSearchValue,
   isLoading,
+  groupEmptyState,
+  groupError,
 }: CreateDropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -358,47 +365,64 @@ const CreateDropdown = ({
               </div>
             </Stack>
           ) : null}
-          {Object.keys(displayedOptions).map((group, index) => (
-            <Stack gap={0.25} key={group}>
-              {displayedOptions[group].length > 0 ? (
-                <div
-                  className={dropdownGroupWrapper}
-                  id={selectAllGroup ? 'items' : undefined}
-                >
-                  {group ? (
-                    <button
-                      className={cn(
-                        selectAllGroup ? dropdownGroupSelectable : '',
-                        dropdownGroup,
-                      )}
-                      data-selectgroup={selectAllGroup}
-                      data-testid={`group-${index}`}
-                      key={group}
-                      onClick={() =>
-                        selectAllGroup ? handleSelectGroup(group) : null
-                      }
-                      onKeyDown={event => {
-                        if ([' ', 'Enter'].includes(event.key)) {
-                          event.preventDefault()
-                          handleSelectGroup(group)
+          {Object.keys(displayedOptions).map((group, index) => {
+            const hasElements = displayedOptions[group].length > 0
+            const emptyStateGroup = groupEmptyState?.[group] ?? null
+            const errorGroup = groupError?.[group] ?? null
+
+            return (
+              <Stack gap={0.25} key={group}>
+                {hasElements || emptyStateGroup ? (
+                  <div
+                    className={dropdownGroupWrapper}
+                    id={selectAllGroup ? 'items' : undefined}
+                  >
+                    {group ? (
+                      <button
+                        className={cn(
+                          selectAllGroup ? dropdownGroupSelectable : '',
+                          dropdownGroup,
+                        )}
+                        data-selectgroup={selectAllGroup}
+                        data-testid={`group-${index}`}
+                        key={group}
+                        onClick={() =>
+                          selectAllGroup ? handleSelectGroup(group) : null
                         }
-                      }}
-                      role="group"
-                      tabIndex={selectAllGroup ? 0 : -1}
-                      type="button"
-                    >
-                      {selectAllGroup ? (
-                        <Checkbox
-                          checked={selectedData.selectedGroups.includes(group)}
-                          className={dropdownCheckbox}
-                          data-testid="select-group"
-                          disabled={false}
-                          onChange={() =>
-                            selectAllGroup ? handleSelectGroup(group) : null
+                        onKeyDown={event => {
+                          if ([' ', 'Enter'].includes(event.key)) {
+                            event.preventDefault()
+                            handleSelectGroup(group)
                           }
-                          tabIndex={-1}
-                          value={group}
-                        >
+                        }}
+                        role="group"
+                        tabIndex={selectAllGroup ? 0 : -1}
+                        type="button"
+                      >
+                        {selectAllGroup ? (
+                          <Checkbox
+                            checked={selectedData.selectedGroups.includes(
+                              group,
+                            )}
+                            className={dropdownCheckbox}
+                            data-testid="select-group"
+                            disabled={false}
+                            onChange={() =>
+                              selectAllGroup ? handleSelectGroup(group) : null
+                            }
+                            tabIndex={-1}
+                            value={group}
+                          >
+                            <Text
+                              as="span"
+                              placement="left"
+                              sentiment="neutral"
+                              variant="caption"
+                            >
+                              {group.toUpperCase()}
+                            </Text>
+                          </Checkbox>
+                        ) : (
                           <Text
                             as="span"
                             placement="left"
@@ -407,76 +431,53 @@ const CreateDropdown = ({
                           >
                             {group.toUpperCase()}
                           </Text>
-                        </Checkbox>
-                      ) : (
-                        <Text
-                          as="span"
-                          placement="left"
-                          sentiment="neutral"
-                          variant="caption"
-                        >
-                          {group.toUpperCase()}
-                        </Text>
-                      )}
-                    </button>
+                        )}
+                      </button>
+                    ) : null}
+                  </div>
+                ) : null}
+                <Stack gap="0.25" id="items">
+                  {!hasElements ? (
+                    <Text
+                      as="span"
+                      className={emptyStateGroupStyle}
+                      prominence="weak"
+                      sentiment="neutral"
+                      variant="body"
+                    >
+                      {emptyStateGroup}
+                    </Text>
                   ) : null}
-                </div>
-              ) : null}
-              <Stack gap="0.25" id="items">
-                {displayedOptions[group].map((option, indexOption) => (
-                  <div
-                    aria-disabled={!!option.disabled}
-                    aria-label={option.value}
-                    aria-selected={
-                      selectedData.selectedValues.includes(option.value) &&
-                      !option.disabled
-                    }
-                    className={dropdownItem({
-                      disabled: !!option.disabled,
-                      selected:
-                        selectedData.selectedValues.includes(option.value) &&
-                        !option.disabled,
-                    })}
-                    data-testid={`option-${option.value}`}
-                    id={`option-${indexOption}`}
-                    key={option.value}
-                    onClick={event => {
-                      if (!option.disabled) {
-                        handleClick({
-                          clickedOption: option,
-                          event,
-                          group,
-                        })
-                      }
-                    }}
-                    onKeyDown={event => {
-                      const shouldClick = [' ', 'Enter'].includes(event.key)
-                      if (shouldClick) {
-                        handleClick({
-                          clickedOption: option,
-                          event,
-                          group,
-                        })
-                      }
-                    }}
-                    ref={
-                      option.value === defaultSearchValue ||
-                      option.searchText === defaultSearchValue
-                        ? focusedItemRef
-                        : null
-                    }
-                    role="option"
-                    tabIndex={!option.disabled ? 0 : -1}
-                  >
-                    {multiselect ? (
-                      <Checkbox
-                        checked={
+                  {errorGroup ? (
+                    <Text
+                      as="span"
+                      className={emptyStateGroupStyle}
+                      sentiment="danger"
+                      variant="body"
+                    >
+                      {errorGroup}
+                    </Text>
+                  ) : null}
+                  {displayedOptions[group].map((option, indexOption) =>
+                    errorGroup ? null : (
+                      <div
+                        aria-disabled={!!option.disabled}
+                        aria-label={option.value}
+                        aria-selected={
                           selectedData.selectedValues.includes(option.value) &&
                           !option.disabled
                         }
-                        className={dropdownCheckbox}
-                        disabled={option.disabled}
-                        onChange={event => {
+                        className={dropdownItem({
+                          disabled: !!option.disabled,
+                          selected:
+                            selectedData.selectedValues.includes(
+                              option.value,
+                            ) && !option.disabled,
+                        })}
+                        data-testid={`option-${option.value}`}
+                        id={`option-${indexOption}`}
+                        key={option.value}
+                        onClick={event => {
                           if (!option.disabled) {
                             handleClick({
                               clickedOption: option,
@@ -485,27 +486,66 @@ const CreateDropdown = ({
                             })
                           }
                         }}
-                        tabIndex={-1}
-                        value={option.value}
+                        onKeyDown={event => {
+                          const shouldClick = [' ', 'Enter'].includes(event.key)
+                          if (shouldClick) {
+                            handleClick({
+                              clickedOption: option,
+                              event,
+                              group,
+                            })
+                          }
+                        }}
+                        ref={
+                          option.value === defaultSearchValue ||
+                          option.searchText === defaultSearchValue
+                            ? focusedItemRef
+                            : null
+                        }
+                        role="option"
+                        tabIndex={!option.disabled ? 0 : -1}
                       >
-                        <DisplayOption
-                          descriptionDirection={descriptionDirection}
-                          option={option}
-                          optionalInfoPlacement={optionalInfoPlacement}
-                        />
-                      </Checkbox>
-                    ) : (
-                      <DisplayOption
-                        descriptionDirection={descriptionDirection}
-                        option={option}
-                        optionalInfoPlacement={optionalInfoPlacement}
-                      />
-                    )}
-                  </div>
-                ))}
+                        {multiselect ? (
+                          <Checkbox
+                            checked={
+                              selectedData.selectedValues.includes(
+                                option.value,
+                              ) && !option.disabled
+                            }
+                            className={dropdownCheckbox}
+                            disabled={option.disabled}
+                            onChange={event => {
+                              if (!option.disabled) {
+                                handleClick({
+                                  clickedOption: option,
+                                  event,
+                                  group,
+                                })
+                              }
+                            }}
+                            tabIndex={-1}
+                            value={option.value}
+                          >
+                            <DisplayOption
+                              descriptionDirection={descriptionDirection}
+                              option={option}
+                              optionalInfoPlacement={optionalInfoPlacement}
+                            />
+                          </Checkbox>
+                        ) : (
+                          <DisplayOption
+                            descriptionDirection={descriptionDirection}
+                            option={option}
+                            optionalInfoPlacement={optionalInfoPlacement}
+                          />
+                        )}
+                      </div>
+                    ),
+                  )}
+                </Stack>
               </Stack>
-            </Stack>
-          ))}
+            )
+          })}
         </>
       )}
       {loadMore ? <Stack className={dropdownLoadMore}>{loadMore}</Stack> : null}
@@ -664,6 +704,8 @@ export const Dropdown = ({
   dropdownAlign,
   portalTarget,
   id,
+  groupError,
+  groupEmptyState,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -844,6 +886,8 @@ export const Dropdown = ({
             defaultSearchValue={defaultSearchValue}
             descriptionDirection={descriptionDirection}
             emptyState={emptyState}
+            groupEmptyState={groupEmptyState}
+            groupError={groupError}
             isEmpty={isEmpty}
             isLoading={isLoading}
             loadMore={loadMore}
