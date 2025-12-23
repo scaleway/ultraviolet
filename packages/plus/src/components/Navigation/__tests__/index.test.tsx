@@ -93,6 +93,10 @@ describe('navigation', () => {
       name: 'pin',
     })[0]
 
+    await userEvent.hover(pinButton)
+    await waitFor(() => {
+      expect(pinButton).toBeVisible()
+    })
     await userEvent.click(pinButton)
     expect(asFragment()).toMatchSnapshot()
 
@@ -113,7 +117,12 @@ describe('navigation', () => {
       name: 'unpin',
     })[0]
 
+    await userEvent.hover(pinButton)
+    await waitFor(() => {
+      expect(pinButton).toBeVisible()
+    })
     await userEvent.click(unpinButton)
+
     expect(asFragment()).toMatchSnapshot()
   })
 })
