@@ -12,7 +12,7 @@ type BasicNavigationProps = Pick<
 >
 
 const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
-  <NavigationProvider pinnedFeature={pinnedFeature}>
+  <NavigationProvider animationType="simple" pinnedFeature={pinnedFeature}>
     <Navigation logo={<p>Logo</p>}>
       <Navigation.PinnedItems />
       <Navigation.Separator />
@@ -104,6 +104,8 @@ describe('navigation', () => {
     await userEvent.click(pinnedGroup)
 
     expect(asFragment()).toMatchSnapshot()
+    // close pinned group
+    await userEvent.click(pinnedGroup)
 
     await waitFor(() => {
       expect(
@@ -117,9 +119,9 @@ describe('navigation', () => {
       name: 'unpin',
     })[0]
 
-    await userEvent.hover(pinButton)
+    await userEvent.hover(unpinButton)
     await waitFor(() => {
-      expect(pinButton).toBeVisible()
+      expect(unpinButton).toBeVisible()
     })
     await userEvent.click(unpinButton)
 
