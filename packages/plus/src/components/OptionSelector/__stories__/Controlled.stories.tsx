@@ -10,6 +10,9 @@ import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { OptionSelector } from '../OptionSelector'
 
+const capitalizeFirstLetter = (str: string): string =>
+  `${str.charAt(0).toUpperCase()}${str.slice(1)}`
+
 const options = [
   {
     content: 'Ubuntu',
@@ -67,10 +70,7 @@ export const Controlled: StoryFn<
         }}
         secondSelector={{
           label: 'Zone',
-          options: makeVersions(
-            String(value.first).charAt(0).toUpperCase() +
-              String(value.first).slice(1),
-          ),
+          options: makeVersions(capitalizeFirstLetter(value.first)),
         }}
       />
       <OptionSelector
@@ -84,10 +84,7 @@ export const Controlled: StoryFn<
         secondSelector={{
           label: 'Zone',
           onChange: onChangeVersion,
-          options: makeVersions(
-            String(value.first).charAt(0).toUpperCase() +
-              String(value.first).slice(1),
-          ),
+          options: makeVersions(capitalizeFirstLetter(value.second)),
           value: value.second,
         }}
       />

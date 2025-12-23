@@ -53,11 +53,23 @@ export const firstSelectorOptions = [
 
 export const franceOptions = [
   {
-    content: 'PAR 1',
+    content: (
+      <Stack alignItems="center" direction="row" gap={0.5}>
+        PAR 1{' '}
+        <Stack direction="row" gap="0.25">
+          <LeafIcon sentiment="success" />
+          <LeafIcon sentiment="success" />
+          <LeafIcon disabled sentiment="neutral" />
+        </Stack>
+      </Stack>
+    ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        PAR 1{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <FranceFlag />,
     optionalInfo: (
@@ -79,9 +91,12 @@ export const franceOptions = [
       </Stack>
     ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        PAR 2{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <FranceFlag />,
     value: 'par-2',
@@ -98,9 +113,12 @@ export const franceOptions = [
       </Stack>
     ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        PAR 3{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <FranceFlag />,
     value: 'par-3',
@@ -109,11 +127,23 @@ export const franceOptions = [
 
 export const polandOptions = [
   {
-    content: 'WAW 1',
+    content: (
+      <Stack alignItems="center" direction="row" gap={0.5}>
+        WAW 1{' '}
+        <Stack direction="row" gap="0.25">
+          <LeafIcon sentiment="success" />
+          <LeafIcon sentiment="success" />
+          <LeafIcon disabled sentiment="neutral" />
+        </Stack>
+      </Stack>
+    ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        WAW 1{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <PolandFlag />,
     value: 'waw-1',
@@ -130,9 +160,12 @@ export const polandOptions = [
       </Stack>
     ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        WAW 2{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <PolandFlag />,
     value: 'waw-2',
@@ -149,9 +182,12 @@ export const polandOptions = [
       </Stack>
     ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        WAW 3{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <PolandFlag />,
     value: 'waw-3',
@@ -160,11 +196,23 @@ export const polandOptions = [
 
 export const netherlandsOptions = [
   {
-    content: 'AMS 1',
+    content: (
+      <Stack alignItems="center" direction="row" gap={0.5}>
+        AMS 1{' '}
+        <Stack direction="row" gap="0.25">
+          <LeafIcon sentiment="success" />
+          <LeafIcon sentiment="success" />
+          <LeafIcon disabled sentiment="neutral" />
+        </Stack>
+      </Stack>
+    ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        AMS 1{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <NetherlandsFlag />,
     value: 'ams-1',
@@ -181,9 +229,12 @@ export const netherlandsOptions = [
       </Stack>
     ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        AMS 2{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <NetherlandsFlag />,
     value: 'ams-2',
@@ -191,7 +242,7 @@ export const netherlandsOptions = [
   {
     content: (
       <Stack alignItems="center" direction="row" gap={0.5}>
-        AMS{' '}
+        AMS 3{' '}
         <Stack direction="row" gap="0.25">
           <LeafIcon sentiment="success" />
           <LeafIcon sentiment="success" />
@@ -200,9 +251,12 @@ export const netherlandsOptions = [
       </Stack>
     ),
     hoverContent: (
-      <Text as="div" sentiment="success" variant="bodyStrong">
-        0.77 gCO2e/hour
-      </Text>
+      <Stack alignItems="baseline" direction="row" gap={0.5}>
+        AMS 3{' '}
+        <Text as="div" sentiment="success" variant="caption">
+          0.77 gCO2e/hour
+        </Text>
+      </Stack>
     ),
     icon: <NetherlandsFlag />,
     value: 'ams-3',
