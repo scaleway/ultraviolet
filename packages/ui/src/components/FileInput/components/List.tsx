@@ -70,7 +70,7 @@ export const ListFiles = ({
   const seeAllOnClick = () => {
     setLimit(undefined)
   }
-  const { files, setFiles, onChangeFiles } = useFileInput()
+  const { files, setFiles, onChangeFiles, error } = useFileInput()
 
   return files.length > 0 ? (
     <Stack direction="row" gap={1} wrap="wrap">
@@ -80,7 +80,7 @@ export const ListFiles = ({
           const illustration = getIllustration(
             fileType,
             file.file,
-            !!file.error,
+            !!file.error || error,
             file.loading,
           )
           const sentiment = file.error ? 'danger' : 'neutral'
@@ -90,7 +90,9 @@ export const ListFiles = ({
               <Stack
                 alignItems="center"
                 className={
-                  fileViewerContainer[file.error ? 'error' : prominence]
+                  fileViewerContainer[
+                    file.error || error ? 'error' : prominence
+                  ]
                 }
                 direction="row"
                 gap={2}

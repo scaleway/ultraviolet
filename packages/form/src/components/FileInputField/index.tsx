@@ -4,6 +4,7 @@ import { FileInput } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
+import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 type FileInputFieldProps<
@@ -37,7 +38,12 @@ const FileInputFieldBase = <
   children,
   ...props
 }: FileInputFieldProps<TFieldValues, TFieldName>) => {
-  const { field } = useController<TFieldValues, TFieldName>({
+  const { getError } = useErrors()
+
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues, TFieldName>({
     control,
     name,
     rules: {
@@ -50,6 +56,7 @@ const FileInputFieldBase = <
     return (
       <FileInput
         {...props}
+        error={getError({ label }, error)}
         label={label}
         onChangeFiles={files => {
           field.onChange(files)
@@ -70,6 +77,7 @@ const FileInputFieldBase = <
     <FileInput
       {...props}
       bottom={bottom}
+      error={getError({ label }, error)}
       label={label}
       onChangeFiles={files => {
         field.onChange(files)

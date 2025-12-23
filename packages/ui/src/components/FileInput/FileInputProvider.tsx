@@ -9,6 +9,7 @@ type FileInputContextType =
       files: FilesType[]
       setFiles: Dispatch<SetStateAction<FilesType[]>>
       onChangeFiles?: (files: FilesType[]) => void
+      error: boolean
     }
   | undefined
 export const FileInputContext = createContext<FileInputContextType>(undefined)
