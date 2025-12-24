@@ -3,7 +3,7 @@
 import { ArrowLeftDoubleIcon, ArrowRightDoubleIcon } from '@ultraviolet/icons'
 import { Button, Tooltip } from '@ultraviolet/ui'
 import type { RefObject } from 'react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
 import { useNavigation } from './NavigationProvider'
 import { navigationStickyFooter } from './styles.css'
 import type { NavigationProps } from './types'
@@ -14,7 +14,7 @@ type FooterProps = {
 }
 
 export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
-  const { expanded, toggleExpand, locales } = useNavigation()
+  const { expanded, toggleExpand, locales, animation } = useNavigation()
 
   const isScrollAtBottom = useCallback(() => {
     if (contentRef.current) {
@@ -36,7 +36,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
   )
 
   // This is for detecting if there is scroll on the content and set the shadow on the footer
-  useEffect(() => {
+  useLayoutEffect(() => {
     const currentContentRef = contentRef.current
 
     const scroll = () => {
@@ -57,7 +57,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
   }, [footerHasOverflowStyle, isScrollAtBottom, contentRef])
 
   // This will set the shadow on the footer when the component is mounted
-  useEffect(() => {
+  useLayoutEffect(() => {
     setFooterHasOverflowStyle(isScrollAtBottom())
   }, [isScrollAtBottom])
 
@@ -78,7 +78,11 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
     <div
       className={navigationStickyFooter({ overflow: footerHasOverflowStyle })}
     >
-      <Tooltip debounceDelay={0} placement="right" text={label}>
+      <Tooltip
+        disableAnimation={animation === false}
+        placement="right"
+        text={label}
+      >
         <Button
           aria-label={label}
           onClick={() => {

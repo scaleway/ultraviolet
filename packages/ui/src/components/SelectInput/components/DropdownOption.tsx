@@ -23,7 +23,7 @@ export const DisplayOption = ({
 }: DisplayOptionProps) => {
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
     return (
-      <Tooltip text={option.tooltip}>
+      <Tooltip disableAnimation text={option.tooltip}>
         <Stack
           data-testid={`option-stack-${option.value}`}
           direction="row"
@@ -64,7 +64,7 @@ export const DisplayOption = ({
 
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'right') {
     return (
-      <Tooltip text={option.tooltip}>
+      <Tooltip disableAnimation text={option.tooltip}>
         <Stack
           alignItems="baseline"
           data-testid={`option-stack-${option.value}`}
@@ -102,7 +102,7 @@ export const DisplayOption = ({
 
   if (descriptionDirection === 'column' && optionalInfoPlacement === 'left') {
     return (
-      <Tooltip text={option.tooltip}>
+      <Tooltip disableAnimation text={option.tooltip}>
         <Stack
           alignItems="normal"
           direction="row"
@@ -143,7 +143,7 @@ export const DisplayOption = ({
   }
 
   return (
-    <Tooltip text={option.tooltip}>
+    <Tooltip disableAnimation text={option.tooltip}>
       <Stack
         alignItems="normal"
         data-testid={`option-stack-${option.value}`}

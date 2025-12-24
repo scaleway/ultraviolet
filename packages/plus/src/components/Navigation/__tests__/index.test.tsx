@@ -12,7 +12,7 @@ type BasicNavigationProps = Pick<
 >
 
 const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
-  <NavigationProvider animationType="simple" pinnedFeature={pinnedFeature}>
+  <NavigationProvider animation={false} pinnedFeature={pinnedFeature}>
     <Navigation logo={<p>Logo</p>}>
       <Navigation.PinnedItems />
       <Navigation.Separator />

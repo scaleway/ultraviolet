@@ -22,6 +22,7 @@ type TooltipProps = Pick<
   | 'portalTarget'
   | 'tabIndex'
   | 'debounceDelay'
+  | 'disableAnimation'
   | 'style'
 > & {
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
@@ -48,6 +49,7 @@ export const Tooltip = forwardRef(
       'data-testid': dataTestId,
       portalTarget,
       debounceDelay,
+      disableAnimation,
       tabIndex,
       style,
     }: TooltipProps,
@@ -59,6 +61,7 @@ export const Tooltip = forwardRef(
       containerFullWidth={containerFullWidth}
       data-testid={dataTestId}
       debounceDelay={debounceDelay}
+      disableAnimation={disableAnimation}
       id={id}
       innerRef={innerRef}
       maxWidth={maxWidth}
