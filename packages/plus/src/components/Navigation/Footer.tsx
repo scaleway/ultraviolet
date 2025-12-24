@@ -78,7 +78,7 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
     <div
       className={navigationStickyFooter({ overflow: footerHasOverflowStyle })}
     >
-      <Tooltip placement="right" text={label}>
+      <Tooltip debounceDelay={0} placement="right" text={label}>
         <Button
           aria-label={label}
           onClick={() => {
