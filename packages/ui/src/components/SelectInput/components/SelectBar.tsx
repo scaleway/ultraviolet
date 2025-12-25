@@ -425,7 +425,7 @@ const SelectBar = ({
   ])
 
   return (
-    <Tooltip text={tooltip}>
+    <Tooltip disableAnimation text={tooltip}>
       <div
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
