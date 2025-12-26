@@ -11,7 +11,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v6.1.0
         with:
-          node-version: 24.11.1
+          node-version: 24.12.0
       - run: |
           pnpm install
           pnpm run size
