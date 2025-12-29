@@ -72,6 +72,7 @@ export type FileInputProps = {
   multiple?: boolean
   'data-testid'?: string
   required?: boolean
+  error?: boolean | string
 } & (OverlayVariantProps | DropzoneVariantProps) &
   LabelType
 

@@ -41,6 +41,7 @@ const FileInputBase = ({
   multiple = false,
   bottom,
   required,
+  error,
   'data-testid': dataTestid,
 }: FileInputProps) => {
   const [dragState, setDragState] = useState<'over' | 'default' | 'page'>(
@@ -129,7 +130,14 @@ const FileInputBase = ({
   if (variant === 'overlay') {
     return (
       <FileInputContext.Provider
-        value={{ disabled, files, inputRef, onChangeFiles, setFiles }}
+        value={{
+          disabled,
+          error: !!error,
+          files,
+          inputRef,
+          onChangeFiles,
+          setFiles,
+        }}
       >
         <Stack direction="column" gap={1}>
           <div
@@ -194,6 +202,11 @@ const FileInputBase = ({
               {bottom}
             </Text>
           ) : null}
+          {error && typeof error === 'string' ? (
+            <Text as="p" sentiment="danger" variant="bodySmall">
+              {error}
+            </Text>
+          ) : null}
         </Stack>
       </FileInputContext.Provider>
     )
@@ -203,7 +216,14 @@ const FileInputBase = ({
 
   return (
     <FileInputContext.Provider
-      value={{ disabled, files, inputRef, onChangeFiles, setFiles }}
+      value={{
+        disabled,
+        error: !!error,
+        files,
+        inputRef,
+        onChangeFiles,
+        setFiles,
+      }}
     >
       <Stack direction="column" gap={1}>
         <Stack className={className} direction="column" gap={0.5}>
@@ -283,6 +303,11 @@ const FileInputBase = ({
             </Text>
           ) : null}
         </Stack>
+        {error && typeof error === 'string' ? (
+          <Text as="p" sentiment="danger" variant="bodySmall">
+            {error}
+          </Text>
+        ) : null}
         {bottom ? (
           <Text
             as="div"

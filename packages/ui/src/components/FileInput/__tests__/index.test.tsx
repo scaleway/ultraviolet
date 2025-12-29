@@ -111,6 +111,24 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('renders correctly with error', () => {
+    const { asFragment } = renderWithTheme(
+      <FileInput
+        aria-label="label"
+        defaultFiles={defaultFile}
+        disabled
+        error="error"
+      >
+        <FileInput.Button data-testid="button">
+          Disabled button
+        </FileInput.Button>
+      </FileInput>,
+    )
+
+    expect(screen.getByTestId('button')).toBeDisabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly onChange', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -160,6 +178,7 @@ describe('fileInput', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
   test('renders correctly with FileInput.Button', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -197,14 +216,18 @@ describe('fileInput', () => {
           <>
             <FileInput.List />
             <label htmlFor={inputId}>title</label>
-            <button onClick={() => inputRef.current?.click()}>button</button>
+            <button onClick={() => inputRef.current?.click()} type="button">
+              button
+            </button>
           </>
         )}
       >
         {(inputId, inputRef) => (
           <>
             <label htmlFor={inputId}>title</label>
-            <button onClick={() => inputRef.current?.click()}>button</button>
+            <button onClick={() => inputRef.current?.click()} type="button">
+              button
+            </button>
           </>
         )}
       </FileInput>,
