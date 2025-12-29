@@ -336,6 +336,7 @@ const CreateDropdown = ({
                   className={dropdownCheckbox}
                   data-testid="select-all-checkbox"
                   disabled={false}
+                  name="select-all"
                   onChange={selectAllOptions}
                   tabIndex={-1}
                   value="select-all"

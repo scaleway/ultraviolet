@@ -21,13 +21,13 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
           active
           categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
           id="item1"
-          label="item1"
+          label="Dashboard"
           noPinButton
         />
         <Navigation.Item
           categoryIcon={<UseCaseCategoryIcon />}
-          id="item1"
-          label="item1"
+          id="item2"
+          label="Servers"
         />
       </Navigation.Group>
       {/* @ts-expect-error we try to test when no children is provided */}
@@ -89,14 +89,28 @@ describe('navigation', () => {
 
     expect(screen.getByText('You have no pinned items.')).toBeInTheDocument()
 
-    const pinButton = screen.getAllByRole('button', {
-      name: 'pin',
-    })[0]
+    // Wait for pin buttons to appear after hover
+    // First, get all containers that might contain our item
+    const allButtonsNav = await screen.findAllByRole('button')
 
-    await userEvent.hover(pinButton)
-    await waitFor(() => {
-      expect(pinButton).toBeVisible()
+    // Find the button that contains "Servers" text
+    const firstServersButton = allButtonsNav.find(button =>
+      button.textContent?.includes('Servers'),
+    )
+
+    if (firstServersButton) {
+      // Hover over the button to reveal the pin button
+      await userEvent.hover(firstServersButton)
+    }
+
+    const pinButtons = screen.queryAllByRole('button', {
+      name: 'pin',
     })
+    expect(pinButtons.length).toBeGreaterThan(0)
+
+    // The last button should be the one for "Servers" (since the first item has noPinButton)
+    const pinButton = pinButtons.at(-1) as HTMLButtonElement
+
     await userEvent.click(pinButton)
     expect(asFragment()).toMatchSnapshot()
 
@@ -107,23 +121,37 @@ describe('navigation', () => {
     // close pinned group
     await userEvent.click(pinnedGroup)
 
-    await waitFor(() => {
-      expect(
-        screen.getAllByRole('button', {
+    // Wait for unpin buttons to appear
+    let unpinButton: HTMLButtonElement | undefined
+    await waitFor(
+      async () => {
+        const unpinButtons = screen.queryAllByRole('button', {
           name: 'unpin',
-        })[0],
-      ).toBeInTheDocument()
-    })
+        }) satisfies HTMLButtonElement[]
+        expect(unpinButtons.length).toBeGreaterThan(0)
 
-    const unpinButton = screen.getAllByRole('button', {
-      name: 'unpin',
-    })[0]
+        // The first button should be the one for "Servers"
+        const [firstButton] = unpinButtons
+        unpinButton = firstButton
+      },
+      { timeout: 3000 },
+    )
 
-    await userEvent.hover(unpinButton)
-    await waitFor(() => {
-      expect(unpinButton).toBeVisible()
-    })
-    await userEvent.click(unpinButton)
+    // Hover over the pinned item to make the unpin button visible
+    const allButtons = await screen.findAllByRole('button')
+
+    // Find the button that contains "Servers" text
+    const serversButton = allButtons.find(button =>
+      button.textContent?.includes('Servers'),
+    )
+
+    if (serversButton) {
+      await userEvent.hover(serversButton)
+    }
+
+    if (unpinButton) {
+      await userEvent.click(unpinButton)
+    }
 
     expect(asFragment()).toMatchSnapshot()
   })

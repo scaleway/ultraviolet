@@ -96,7 +96,11 @@ export const defaultConfig: ViteUserConfig = {
       provider: 'istanbul',
       reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
     },
-    css: true,
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
+    },
     deps: {
       optimizer: {
         web: {
@@ -105,7 +109,7 @@ export const defaultConfig: ViteUserConfig = {
         },
       },
     },
-    environment: 'jsdom',
+    environment: 'happy-dom',
     exclude: [
       '**/node_modules/**',
       '**/{dist,build}/**',
@@ -118,7 +122,7 @@ export const defaultConfig: ViteUserConfig = {
     globals: true,
     logHeapUsage: true,
     mockReset: true,
-    name: 'browser-jsdom',
+    name: 'happy-dom',
     outputFile: {
       junit: '.reports/tests.xml',
     },

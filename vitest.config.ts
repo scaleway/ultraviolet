@@ -43,7 +43,7 @@ export const createVitestConfig = (
             },
           },
         },
-        environment: 'jsdom',
+        environment: 'happy-dom',
         exclude: [
           '**/node_modules/**',
           '**/{dist,build}/**',
@@ -56,7 +56,7 @@ export const createVitestConfig = (
         globals: true,
         logHeapUsage: true,
         mockReset: true,
-        name: 'browser-jsdom',
+        name: 'happy-dom',
         outputFile: {
           junit: '.reports/tests.xml',
         },
