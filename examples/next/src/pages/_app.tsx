@@ -1,18 +1,17 @@
+import {
+  consoleDarkTheme,
+  consoleLightTheme,
+  ThemeProvider,
+} from '@ultraviolet/themes'
 import { extendTheme, Stack } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useCallback, useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Head from '../components/Head'
 import Header from '../components/Header'
-// oxlint-disable-next-line import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/themes/global'
-import {
-  consoleDarkTheme,
-  consoleLightTheme,
-  ThemeProvider,
-} from '@ultraviolet/themes'
 import '@ultraviolet/themes/dark.css'
 import '@ultraviolet/themes/light.css'
 import '@ultraviolet/themes/darker.css'
@@ -96,10 +95,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head />
       <Stack alignItems="center" gap={4}>
         <Header setTheme={setThemes} />
-        <Component
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...pageProps}
-        />
+        <Component {...pageProps} />
         <Footer />
       </Stack>
     </ThemeProvider>

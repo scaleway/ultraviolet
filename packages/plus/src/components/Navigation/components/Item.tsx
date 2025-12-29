@@ -1,5 +1,7 @@
 'use client'
 
+// oxlint-disable eslint/max-statements
+
 import {
   ArrowDownIcon,
   ArrowRightIcon,
@@ -505,6 +507,7 @@ export const Item = memo(
                             }
                           }}
                           onKeyDown={() => {}}
+                          // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
                           role="button"
                         >
                           <PinUnpinIcon
@@ -760,6 +763,7 @@ export const Item = memo(
                         }
                       }}
                       onKeyDown={() => {}}
+                      // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
                       role="button"
                     >
                       <PinUnpinIcon

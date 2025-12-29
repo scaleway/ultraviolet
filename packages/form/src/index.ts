@@ -1,5 +1,4 @@
-/* eslint-disable eslint-comments/disable-enable-pair */
-/* eslint-disable no-restricted-syntax */
+// oxlint-disable import/export
 
 export type * from 'react-hook-form'
 export {

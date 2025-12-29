@@ -14,6 +14,7 @@ export type OptionType = {
   optionalInfo?: ReactNode
 }
 
+// oxlint-disable-next-line eslint/max-statements
 describe('selectInput', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -1380,7 +1381,7 @@ describe('selectInput', () => {
 
     await userEvent.click(footer)
 
-    expect(f).toHaveBeenCalledOnce()
+    expect(f).toHaveBeenCalledTimes(1)
     setTimeout(() => expect(dropdown).not.toBeVisible(), 500)
 
     expect(asFragment()).toMatchSnapshot()

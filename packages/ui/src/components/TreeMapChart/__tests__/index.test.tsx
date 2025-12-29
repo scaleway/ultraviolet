@@ -2,14 +2,15 @@ import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
-import { ReactNode, useState } from 'react'
+import type { ReactNode } from 'react'
+import { useState } from 'react'
 import { describe, expect, test, vi } from 'vitest'
 import { TreeMapChart } from '..'
 import {
   treeMapChartSimpleData,
   treeMapChartWithCustomContentData,
 } from '../__stories__/mockData'
-import { DataType } from '../types'
+import type { DataType } from '../types'
 
 type MockedNodeType = {
   color: string
@@ -42,14 +43,15 @@ vi.mock('@nivo/treemap', () => ({
   }: MockedResponsiveTreeMapHtmlType) => {
     const [hoveredNode, setHoveredNode] = useState<MockedNodeType | null>(null)
 
+    const { children } = data
+
     return (
       <>
         <div
           data-testid="treemap-mock"
           style={{ height: '500px', position: 'relative', width: '1000px' }}
         >
-          {/* eslint-disable-next-line testing-library/no-node-access */}
-          {data.children?.map((child: DataType, index: number) => {
+          {children?.map((child: DataType, index: number) => {
             const mockNode = {
               color: '#641cb3',
               data: child,
@@ -101,7 +103,7 @@ describe('treeMapChart', () => {
       consoleLightTheme,
     )
 
-    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
+    // eslint-disable-next-line testing-library/no-node-access, testing-library/no-container
     const chartContainer = container.querySelector('[style*="height"]')
     expect(chartContainer).toHaveStyle({ height: '400px' })
   })

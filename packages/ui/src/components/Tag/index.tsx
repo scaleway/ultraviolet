@@ -112,6 +112,7 @@ export const Tag = ({
           data-testid={dataTestId}
           disabled={disabled}
           onClick={setCopied}
+          type="button"
         >
           <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
             {children}

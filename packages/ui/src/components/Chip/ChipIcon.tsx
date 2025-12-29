@@ -1,5 +1,6 @@
 'use client'
 
+// oxlint-disable-next-line import/no-namespace
 import * as Icon from '@ultraviolet/icons'
 import type { RefObject } from 'react'
 import { useContext } from 'react'
@@ -53,6 +54,7 @@ export const ChipIcon = ({
           }
         }}
         ref={iconRef as RefObject<HTMLButtonElement | null>}
+        type="button"
       >
         <IconUsed
           disabled={disabled}

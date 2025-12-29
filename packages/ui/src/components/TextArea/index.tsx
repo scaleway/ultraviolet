@@ -196,7 +196,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
             <textarea
               aria-invalid={!!error}
               aria-label={ariaLabel}
-              autoFocus={autoFocus}
+              autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
               className={textAreaStyle({
                 error: !!error,
                 success: !!success,

@@ -141,6 +141,7 @@ const getValues = (
   return Object.keys(res).length > 0 ? res : null
 }
 
+// oxlint-disable-next-line eslint/max-statements
 export const generatePalette = (
   figmaTokensJson: JsonType,
   themeMatch: ThemeMatchType,

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 // oxlint-disable eslint/no-console
+// oxlint-disable eslint/max-statements
 
 import { createHash } from 'node:crypto'
 import fs, {

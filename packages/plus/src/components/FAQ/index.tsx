@@ -1,5 +1,6 @@
 'use client'
 
+// oxlint-disable-next-line import/no-namespace
 import * as ProductIcon from '@ultraviolet/icons/product'
 import { Bullet, Card, Stack, Text } from '@ultraviolet/ui'
 import type { CSSProperties } from 'react'

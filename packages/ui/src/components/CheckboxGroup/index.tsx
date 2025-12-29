@@ -58,7 +58,7 @@ export const CheckboxGroupCheckbox = ({
 
   return (
     <Checkbox
-      autoFocus={autoFocus}
+      autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
       checked={groupValues?.includes(checkboxValue)}
       className={cn(className, checkbox)}
       data-testid={dataTestId}

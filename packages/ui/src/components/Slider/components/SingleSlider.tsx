@@ -23,6 +23,8 @@ import {
 import type { SingleSliderProps } from '../types'
 import { Options } from './Options'
 
+// Should be split into smaller function
+// oxlint-disable-next-line eslint/max-statements
 export const SingleSlider = ({
   name,
   tooltip,

@@ -48,7 +48,6 @@ class MyDocument extends Document {
           />
 
           <script
-            // eslint-disable-next-line react/jsx-props-no-spreading
             {...jsonLdScriptProps<CreativeWork>({
               '@context': 'https://schema.org',
               '@type': 'CreativeWork',

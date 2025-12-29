@@ -49,7 +49,7 @@ const RadioGroupRadio = ({
 
   return (
     <Radio
-      autoFocus={autoFocus}
+      autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
       checked={groupValue === value}
       className={className}
       data-testid={dataTestId}
