@@ -31,7 +31,7 @@ type MockedResponsiveTreeMapHtmlType = {
 }
 
 // ResponsiveTreeMapHtml is mocked because Nivo's HTML rendering doesn't produce an output
-// in jsdom. The actual component relies on DOM measurements and complex calculations
+// in jsdom | happy-dom. The actual component relies on DOM measurements and complex calculations
 // that don't work properly in tests.
 // This mock renders a simplified but predictable structure that represents the data
 // accurately for snapshot testing

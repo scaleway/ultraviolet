@@ -29,6 +29,27 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm run build
 
+  build_storybook:
+    strategy:
+      matrix:
+        node: ["24"]
+    runs-on: ubuntu-24.04
+    needs: [build]
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_CACHE: "remote:rw"
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4.2.0
+      - uses: actions/setup-node@v6.1.0
+        with:
+          node-version: ${{ matrix.node }}
+      - name: build
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm run build
+          pnpm run build:storybook
+
   build_examples:
     runs-on: ubuntu-24.04
     env:
