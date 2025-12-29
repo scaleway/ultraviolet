@@ -1,0 +1,65 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Guidelines/How to make a breaking changes?" />
+
+# How to make a breaking changes as a maintainer?
+
+How to break change a component and what is the process of migration? That's what we will see in this documentation.
+
+<br />
+
+## My component has breaking changes but can be easily migrated
+
+It is okay to make breaking changes into a component but to do so you need to make documentation out of it. While making your PR
+please explain what is breaking with a detailed explanation. In this case we won't create a second version of the breaking component, a simple documentation will fit.
+
+<br />
+
+## My component has breaking changes, and we can't have a 1:1 easy migration path
+
+This is the last solution to choose. Your breaking is so big that it couldn't be migrated easily, in this case you need to rename your component, two possibilities:
+
+* Your component don't have a new name then you will need to add V2 at the end of it. Example: You're refactoring Button so your component name should be ButtonV2.
+* Your component already have a new name (ex: Switch becomes Toggle) then use the new name.
+
+In this scenario both old and new components will coexist until the end of migration. Here are the step of the migration:
+
+1. Step one, write a migration documentation. You should write the documentation into the same folder of the component.
+   For example if you migrate Button component, documentation should be in: `src/Components/Action/__stories__/migration.stories.mdx`.
+   You can find a template of migration documentation into `src/__stories__/MigrationTemplate.mdx.example`
+   This documentation is **REQUIRED** in order to merge your component.
+
+2. Step two, the old component should be marked as deprecated in story.
+
+   For stories, you can simply use the parameter `deprecated`, `deprecatedReason` and `migrationLink` into your story default export.
+   `migrationLink` should be the link to your migration documentation for this component. It should look as follows:
+
+   ```typescript
+   export default {
+     component: Button,
+     parameters: {
+       deprecated: true,
+       deprecatedReason:
+         'This component is deprecated please do not use it any more.',
+       migrationLink: 'migration-typography-to-text',
+     },
+     title: 'Components/Action/Button',
+   } as Meta
+   ```
+
+   This will add a badge and a message into your storybook documentation. It should look as follows:
+
+   <img src="https://scaleway-ui-storybook.s3.fr-par.scw.cloud/Screenshot%202023-01-25%20at%2014.13.48.png" alt="deprecated example screenshot" width="1000px" />
+
+3. Third step is to mark component deprecated through JSDoc comments with a beautiful description on what to replace usage by. This should be shown in typescript hints. It should look as follows:
+
+   ```tsx
+   /**
+    * @deprecated Has been replaced by component BetterButton, please this one instead.
+    */
+   const Button = props => <div>This is supposed to be a button</div>
+   ```
+
+4. Create your PR on GitHub.
+
+5. Final step and most important one: the end of life of old component. You've finished your migration, so you should remove old component folder.

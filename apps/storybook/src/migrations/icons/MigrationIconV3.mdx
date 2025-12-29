@@ -1,0 +1,70 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Icons/Migrations/Package icons from v2 to v3" />
+
+# Package icons from v2 to v3
+
+New big change in icons, we added a new way to import icons. You can now directly import the icon name through `@ultraviolet/icons`.
+
+```tsx
+// Before
+import { Icon } from '@ultraviolet/icons';
+
+const MyComponent = () => (
+  <Icon name="address" sentiment="danger" size="small" />
+);
+```
+
+```tsx
+// Now
+import { AddressIcon } from '@ultraviolet/icons';
+// OR
+import { AddressIcon } from '@ultraviolet/icons/AddressIcon';
+
+const MyComponent = () => (
+  <Address sentiment="danger" size="small" />
+);
+```
+
+This change will make it easier to use icons in your project and reduce the bundle size.
+Exact same pattern is changed for `<CategoryIcon />` and `<ProductIcon />`:
+
+```tsx
+// Before
+import { CategoryIcon } from '@ultraviolet/icons'
+
+// Now
+import { BaremetalCategoryIcon } from '@ultraviolet/icons/category'
+// OR
+import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
+```
+
+```tsx
+// Before
+import { ProductIcon } from '@ultraviolet/icons'
+
+// Now
+import { InstanceProductIcon } from '@ultraviolet/icons/product'
+// OR
+import { InstanceProductIcon } from '@ultraviolet/icons/product/InstanceProductIcon'
+```
+
+## Prop changes
+
+- `name` prop is removed from all icons as the import itself is the name of the icon.
+
+**All other props are the same as before.**
+
+## Specific needs
+
+If needed you can import all icons at once:
+
+```tsx
+import * as Icons from '@ultraviolet/icons';
+
+const MyComponent = ({ iconName }) => (
+  <div>
+    {Icons[iconName]}
+  </div>
+)
+```

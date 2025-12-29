@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Migrations/Menu to MenuV2" />
+
+# Migrate Menu to MenuV2
+
+## `placement` prop
+
+The `placement` prop has been updated and now uses the values from the internal `Popup` component. The following values are now valid:
+
+* `left`
+* `right`
+* `top`
+* `right`
+
+## `disclosure` prop
+
+The `disclosure` prop object argument only has a `visible` property.
+
+## `children` prop
+
+The `children` prop no longer have a popover argument.

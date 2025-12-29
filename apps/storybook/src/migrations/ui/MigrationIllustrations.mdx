@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Migrations/Illustrations V2" />
+
+# Illustrations V2
+
+## How to use @ultraviolet/illustrations
+
+Assets are now imported directly from an S3 bucket in order to reduce the size of the package. 
+
+**Path to the components changed**. Although `@ultraviolet/illustrations/components/DynamicIllustration` is still supported, **a simpler way to import it was added**: to use `<DynamicIllustration />` simply write 
+```javascript
+import { DynamicIllustration } from '@ultraviolet/illustrations'
+```
+
+The path to import illustrations did not change.
+For example:
+
+```javascript
+import { notFound } from '@ultraviolet/illustrations/various/feedback'
+```
+
+A typo was corrected on quantum, make sure to import `quantumOriginal` and not `quantumOrignal`
+
+## How to add illustrations to the package
+Simply add the illustrations you want to add to the correct folder and simply create a PR. Once the branch is approved and merged, they will be automatically added to the bucket and exported.
+
+To add the new assets to `<DynamicIllustration />`, follow the same steps but before creating the PR, do not forget to add the light and dark version of the new illustrations to src/components/DynamicIllustration/Illustrations.tsx.

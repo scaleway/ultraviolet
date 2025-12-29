@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Migrations/TextInput to TextInputV2" />
+
+# Migrate TextInput to TextInputV2
+
+## Properties to migrate
+
+* `type` (string) => `type` (text | password | url | email)
+* `random` (string) => `onRandomize` (`() => void`): the function will be triggered when the random button is clicked
+* `notice` (string) => `helper` (string)
+* `height` (string | number) => `size` (small | medium | large)
+* `defaultValue` (string | number) => `value`
+* `unit` (string) => `suffix` (string)
+* `valid` (boolean) => `success` (string | boolean): note that only `success` prop allows both `string` and `boolean` values
+
+## Removed properties
+
+* `min` (string | number): if the need is to set a minLength, use the `minLength` (number) prop
+* `max` (string | number): if the need is to set a maxLength, use the `maxLength` (number) prop
+* `cols` (number): not relevant for this component, if needed use `TextArea` component
+* `edit` (boolean)
+* `fillAvailable` (boolean)
+* `generated` (boolean)
+* `multiline` (boolean): not relevant for this component, use `TextArea` component instead
+* `noTopLabel` (boolean): just don't set the `label` prop if you don't want a label, you will still need to set `aria-label` or `aria-labelledby` to make the input accessible
+* `resizable` (boolean): not relevant for this component, use `TextArea` component instead
+* `rows` (number): not relevant for this component, if needed use `TextArea` component
+* `wrap` (string)
+* `inputProps` (object)

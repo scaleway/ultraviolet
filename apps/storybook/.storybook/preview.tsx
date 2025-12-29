@@ -185,9 +185,11 @@ const decorators = [
   withThemeProvider,
 ]
 
-export default {
+const defaultExport = {
   parameters,
   decorators,
   preview,
   tags: ['autodocs']
 } satisfies Preview
+
+export default defaultExport

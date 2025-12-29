@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import Colors from '../components/Colors'
+
+<Meta title="Customization/Colors" />
+
+# Customize colors
+
+You can customize colors by extending the theme. <br />
+This means default colors will apply if you didn't override them all.
+
+To customize theme you will need to use `extendTheme` utility function. It will generate a well formatted theme to pass
+to your Theme Provider.
+
+You will need to pass an object with the same structure as the [default theme](https://github.com/scaleway/ultraviolet/blob/main/src/theme/tokens/light.ts), but with your own colors.
+
+```tsx
+import { ThemeProvider } from '@ultraviolet/themes'
+import { Badge, extendTheme } from '@ultraviolet/ui'
+
+function App() {
+  const myTheme = extendTheme({
+      colors: {
+          danger: {
+              background: '#ffe1e7',
+              backgroundDisabled: '#fff5f7',
+              backgroundHover: '#ffe1e7',
+              backgroundStrong: '#dd3252',
+              backgroundStrongDisabled: '#fbbac6',
+              backgroundStrongHover: '#a6102d',
+              border: '#a6102d',
+              borderDisabled: '#fbbac6',
+              borderHover: '#a6102d',
+              borderStrong: '#ffffff',
+              borderStrongDisabled: '#fbbac6',
+              borderStrongHover: '#a6102d',
+              text: '#a6102d',
+              textDisabled: '#fbbac6',
+              textHover: '#a6102d',
+              textStrong: '#ffffff',
+              textStrongDisabled: '#fff5f7',
+              textStrongHover: '#ffffff',
+          },
+          ...,
+      }
+  })
+
+  return (
+    <ThemeProvider theme={myTheme}>
+        <Badge sentiments="danger">Example</Badge>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```
+
+### API
+
+#### `extendTheme({extendedTheme}: {extendedTheme: Theme})`
+
+This function take in parameters an object with de same structure of the default theme. It will return a deep merged object with the default theme.
+
+## Default Values
+
+Here are all default colors we use in Ultraviolet UI. You can switch to dark theme on storybook to see dark mode colors.
+
+<Colors />

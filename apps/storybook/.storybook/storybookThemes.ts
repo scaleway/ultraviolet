@@ -1,8 +1,8 @@
 import { create } from 'storybook/theming'
-import lightTheme, { darkTheme } from '../packages/ui/src/theme'
-import logoDark from './assets/logo-dark.png'
-import logoLight from './assets/logo-light.png'
-import type lightBrandImage from './assets/scaleway-text-light.png'
+import { consoleLightTheme, consoleDarkTheme } from '@ultraviolet/themes'
+// import logoDark from './assets/logo-dark.png'
+// import logoLight from './assets/logo-light.png'
+// import type lightBrandImage from './assets/scaleway-text-light.png'
 
 enum Base {
   LIGHT = 'light',
@@ -11,16 +11,16 @@ enum Base {
 
 type GenerateStorybookThemeProps = {
   base: Base
-  theme: typeof darkTheme | typeof lightTheme
+  theme: typeof consoleDarkTheme | typeof consoleLightTheme
   brandUrl: string
-  brandImage: typeof lightBrandImage
+  // brandImage: typeof lightBrandImage
 }
 
 const generateStorybookTheme = ({
   base,
   theme,
   brandUrl,
-  brandImage,
+  // brandImage,
 }: GenerateStorybookThemeProps) =>
   create({
     base,
@@ -39,7 +39,7 @@ const generateStorybookTheme = ({
     // BIZARRE
     booleanBg: theme.colors.neutral.background,
     booleanSelectedBg: theme.colors.primary.background,
-    brandImage,
+    // brandImage,
     brandTitle: 'Ultraviolet UI',
 
     brandUrl,
@@ -60,14 +60,14 @@ const generateStorybookTheme = ({
 
 export const light = generateStorybookTheme({
   base: Base.LIGHT,
-  brandImage: logoLight,
+  // brandImage: logoLight,
   brandUrl: 'https://github.com/scaleway/ultraviolet',
-  theme: lightTheme,
+  theme: consoleLightTheme,
 })
 
 export const dark = generateStorybookTheme({
   base: Base.DARK,
-  brandImage: logoDark,
+  // brandImage: logoDark,
   brandUrl: 'https://github.com/scaleway/ultraviolet',
-  theme: darkTheme,
+  theme: consoleDarkTheme,
 })

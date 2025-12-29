@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Migrations/NumberInput to NumberInputV2" />
+
+# Migrate NumberInput to NumberInputV2
+
+## Properties to migrate
+
+* `minValue` (string) -> `min` ( number)
+* `maxValue` (string) -> `max` ( number)
+* `step` (string) -> `step` (string | number)
+* `value` (string) -> `value` (number)
+* `text` (string) -> `unit` (string)
+* `disabledTooltip` (string) -> `tooltip` (string)
+
+## Removed properties
+
+* `onMaxCrossed` (function)
+* `onMinCrossed` (function)
+* `defaultValue` (string)
+
+## Behavior change
+
+* The component act as uncontrolled component as long as the `value` prop is not provided.
+  If you set `value`, you will have to handle the `onChange` event to update the value.
+
+* If you set a `min` or `max` value and that the component is controlled (you set the `value` prop).
+
+* <b>⚠ WARNING:</b> If the `min` or `max` prop is set in addition with `step` prop
+  you need to be coherent in the number you are setting up. If the `step` is a multiple
+  of 5 then you need to set your `min` or `max` to be also a multiple of 5.
+
+* If the input is empty the `onChange` will receive `null` as value

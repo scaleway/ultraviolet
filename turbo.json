@@ -8,12 +8,13 @@
     "//#lint:fix": {
       "cache": false
     },
-    "//#build:storybook": {
+    "build:storybook": {
       "dependsOn": ["^build"],
       "passThroughEnv": ["STORYBOOK_ENVIRONMENT"],
-      "outputs": ["build/**", "dist/**", "storybook-static/**"]
+      "outputs": ["build/**", "dist/**", "storybook-static/**"],
+      "cache": true
     },
-    "//#build:storybook:stats": {
+    "build:storybook:stats": {
       "dependsOn": ["^build"],
       "passThroughEnv": ["STORYBOOK_ENVIRONMENT"]
     },
