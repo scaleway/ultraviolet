@@ -137,7 +137,7 @@ jobs:
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
-    needs: [typecheck, format]
+    needs: [build]
     strategy:
       matrix:
         node: ["24"]

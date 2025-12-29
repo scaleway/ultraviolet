@@ -10,6 +10,8 @@ export default mergeConfig(viteConfig, {
     }),
   ],
   test: {
+    environment: 'happy-dom',
+    name: 'uv/form happy-dom',
     setupFiles: ['./vitest.setup.ts'],
   },
 })

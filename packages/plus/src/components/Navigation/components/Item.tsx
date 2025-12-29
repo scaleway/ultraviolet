@@ -151,7 +151,8 @@ type ItemProps = {
 }
 
 const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
-  event.currentTarget.style.opacity = '1'
+  const element = event.currentTarget
+  element.style.opacity = '1'
 }
 
 export const Item = memo(
@@ -208,8 +209,16 @@ export const Item = memo(
       if (type !== 'pinnedGroup' && pinnedFeature) {
         registerItem({ [id]: { active, label, onClickPinUnpin, onToggle } })
       }
-      // oxlint-disable react/exhaustive-deps
-    }, [active, id, label, registerItem])
+    }, [
+      active,
+      id,
+      label,
+      onClickPinUnpin,
+      onToggle,
+      pinnedFeature,
+      registerItem,
+      type,
+    ])
 
     const [internalExpanded, onToggleExpand] = useReducer(
       prevState => !prevState,
@@ -321,7 +330,8 @@ export const Item = memo(
             JSON.stringify({ index, label }),
           )
 
-          event.currentTarget.style.opacity = '0.5'
+          const element = event.currentTarget
+          element.style.opacity = '0.5'
         }
 
         return undefined
