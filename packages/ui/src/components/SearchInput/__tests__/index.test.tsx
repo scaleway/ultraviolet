@@ -1,7 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { useState } from 'react'
 import { describe, expect, test } from 'vitest'
+import { Button } from '../../Button'
 import { SearchInput } from '..'
 
 describe('searchInput', () => {
@@ -280,6 +282,50 @@ describe('searchInput', () => {
 
     await waitFor(() => {
       expect(SearchInputElement).toHaveFocus()
+    })
+  })
+
+  test('resets to empty string when value is manually reset', async () => {
+    const TestComponent = () => {
+      const [value, setValue] = useState<string | undefined>('initial value')
+
+      return (
+        <>
+          <Button
+            data-testid="reset-button"
+            onClick={() => setValue(undefined)}
+          >
+            Reset
+          </Button>
+          <SearchInput
+            data-testid="search-bar"
+            label="input-label"
+            onSearch={() => {}}
+            placeholder="Type something"
+            popupPlacement="bottom"
+            size="large"
+            value={value}
+          >
+            <div />
+          </SearchInput>
+        </>
+      )
+    }
+
+    renderWithTheme(<TestComponent />)
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+    const resetButton = screen.getByTestId('reset-button')
+
+    // Initially should have the initial value
+    expect(SearchInputElement).toHaveValue('initial value')
+
+    // Click reset button to clear the value
+    await userEvent.click(resetButton)
+
+    // Should have an empty string value after reset
+    await waitFor(() => {
+      expect(SearchInputElement).toHaveValue('')
     })
   })
 })

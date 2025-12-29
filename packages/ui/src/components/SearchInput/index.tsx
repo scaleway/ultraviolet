@@ -8,6 +8,7 @@ import {
   useCallback,
   useEffect,
   useImperativeHandle,
+  useLayoutEffect,
   useMemo,
   useReducer,
   useRef,
@@ -72,7 +73,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const focusedLinkIndex = useRef(0)
     const popupRef = useRef<HTMLDivElement>(null)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [searchTerms, setSearchTerms] = useState(defaultValue)
+    const [searchTerms, setSearchTerms] = useState<string>(defaultValue)
     const [isMacOS, setIsMacOS] = useState(false)
     const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
@@ -121,13 +122,13 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       }
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       document.addEventListener('keyup', handleNavigation)
 
       return () => document.removeEventListener('keyup', handleNavigation)
     }, [])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       resizeSearchBar()
 
       window.addEventListener('resize', resizeSearchBar)
@@ -136,9 +137,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     }, [])
 
     useEffect(() => {
-      if (value !== undefined) {
-        setSearchTerms(value)
-      }
+      setSearchTerms(value ?? '')
     }, [value])
 
     const onSearchCallback = (localValue: string) => {
@@ -212,7 +211,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       [keyPressed],
     )
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (shortcut && !disabled) {
         document.body.addEventListener('keydown', handleKeyPressed)
         document.body.addEventListener('keyup', handleKeyReleased)
