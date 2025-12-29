@@ -31,4 +31,14 @@ describe('tag', () => {
 
   test('renders correctly with copiable', () =>
     shouldMatchSnapshot(<Tag copiable>test</Tag>))
+
+  test('renders correctly with copiable and copy button', () =>
+    shouldMatchSnapshot(
+      <Tag copiable copyButton>
+        test
+      </Tag>,
+    ))
+
+  test('renders correctly with code variant', () =>
+    shouldMatchSnapshot(<Tag variant="code">test</Tag>))
 })

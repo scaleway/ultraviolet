@@ -1,7 +1,13 @@
-import type { Decorator } from '@storybook/react-vite'
-import { Template } from './Template.stories'
+import type { Decorator, StoryFn } from '@storybook/react-vite'
+import { Stack } from '../../Stack'
+import { Tag } from '..'
 
-export const Copiable = Template.bind({})
+export const Copiable: StoryFn<typeof Tag> = args => (
+  <Stack gap={1}>
+    Without copyButton: <Tag {...args} />
+    With copyButton: <Tag {...args} copyButton />
+  </Stack>
+)
 
 Copiable.args = {
   children: 'Tag content',
