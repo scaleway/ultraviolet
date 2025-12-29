@@ -1,5 +1,5 @@
-import { DefaultTreeMapDatum } from '@nivo/treemap'
-import { consoleLightTheme } from '@ultraviolet/themes'
+import type { DefaultTreeMapDatum } from '@nivo/treemap'
+import type { consoleLightTheme } from '@ultraviolet/themes'
 import { describe, expect, it } from 'vitest'
 import { getAllIds, getDataColors, getOpacity, percentToHex } from '../treeMap'
 

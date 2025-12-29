@@ -77,7 +77,7 @@ describe('checkbox', () => {
 
     const chip = screen.getByTestId('test')
     await userEvent.click(chip)
-    expect(mockOnClick1).toHaveBeenCalledOnce()
+    expect(mockOnClick1).toHaveBeenCalledTimes(1)
 
     const chipDisabled = screen.getByTestId('test-disabled')
     await userEvent.click(chipDisabled)
@@ -85,7 +85,7 @@ describe('checkbox', () => {
 
     const chipIcon = screen.getByTestId('test-icon')
     await userEvent.click(chipIcon)
-    expect(mockOnClickIcon1).toHaveBeenCalledOnce()
+    expect(mockOnClickIcon1).toHaveBeenCalledTimes(1)
 
     const chipIconDisabled = screen.getByTestId('test-icon-disabled')
     await userEvent.click(chipIconDisabled)

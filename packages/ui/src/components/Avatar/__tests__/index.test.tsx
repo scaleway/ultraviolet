@@ -81,7 +81,7 @@ describe('avatar', () => {
         expect(asFragment()).toMatchSnapshot()
 
         await userEvent.click(avatar)
-        expect(onClick).toHaveBeenCalledOnce()
+        expect(onClick).toHaveBeenCalledTimes(1)
       })
     })
   })

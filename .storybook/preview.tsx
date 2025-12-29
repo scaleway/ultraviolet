@@ -174,12 +174,13 @@ const decorators = [
       <>
         <ThemeProviderUI theme={finalTheme()}>
           {
-            // eslint-disable-next-line react/jsx-curly-brace-presence
+            // oxlint-disable-next-line react/jsx-curly-brace-presence
             <Story />
           }
         </ThemeProviderUI>
       </>
-    )}, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
+    )
+  }, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
 
   withThemeProvider,
 ]

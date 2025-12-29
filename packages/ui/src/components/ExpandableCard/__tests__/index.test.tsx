@@ -97,7 +97,7 @@ describe('expandableCard', () => {
     await userEvent.tab()
     await userEvent.keyboard('[Enter]')
     await userEvent.keyboard('[ArrowUp]')
-    expect(onKeyDown).toHaveBeenCalledOnce()
+    expect(onKeyDown).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
   })

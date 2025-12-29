@@ -17,7 +17,7 @@ describe('pagination', () => {
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -43,7 +43,7 @@ describe('pagination', () => {
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -67,7 +67,7 @@ describe('pagination', () => {
     const { asFragment } = renderWithTheme(
       <Pagination onChange={mockOnClick} page={0} pageCount={2} />,
     )
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -77,7 +77,7 @@ describe('pagination', () => {
     const { asFragment } = renderWithTheme(
       <Pagination onChange={mockOnClick} page={3} pageCount={2} />,
     )
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -118,7 +118,7 @@ describe('pagination', () => {
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -139,7 +139,7 @@ describe('pagination', () => {
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -162,13 +162,13 @@ describe('pagination', () => {
     )
     const nextButton = screen.getByRole('button', { name: 'Next' })
     await userEvent.click(nextButton)
-    expect(mockOnClick).toHaveBeenCalledOnce()
+    expect(mockOnClick).toHaveBeenCalledTimes(1)
 
     const selectInput = screen.getByTestId('select-input-select-items-per-page')
     await userEvent.click(selectInput)
 
     const elementsPerPage25 = screen.getByTestId('option-25')
     await userEvent.click(elementsPerPage25)
-    expect(mockOnClickPerPage).toHaveBeenCalledOnce()
+    expect(mockOnClickPerPage).toHaveBeenCalledTimes(1)
   })
 })

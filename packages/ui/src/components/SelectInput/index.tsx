@@ -241,7 +241,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
               </Label>
             ) : null}
             <SelectBar
-              autoFocus={autofocus}
+              autoFocus={autofocus} // oxlint-disable-line jsx_a11y/no-autofocus
               clearable={clearable}
               data-testid={finalDataTestId}
               disabled={disabled}

@@ -29,6 +29,7 @@ import type { SearchInputProps } from './types'
  * - `toggleIsOpen`: a function to toggle the popup
  */
 export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
+  // oxlint-disable-next-line eslint/max-statements
   (
     {
       placeholder,
@@ -265,7 +266,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             aria-labelledby={ariaLabelledby}
             aria-live={ariaLive}
             autoComplete={autoComplete}
-            autoFocus={autoFocus}
+            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             className={cn(className, searchInput)}
             clearable
             data-testid={dataTestId}

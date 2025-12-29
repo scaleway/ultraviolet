@@ -17,7 +17,7 @@ export const Ordering: StoryFn = args => {
         return -1 * orderMultiplicator
       }
       if (a[currentOrder.columnId] > b[currentOrder.columnId]) {
-        return 1 * orderMultiplicator
+        return Number(orderMultiplicator)
       }
 
       return 0

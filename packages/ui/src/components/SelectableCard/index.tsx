@@ -1,5 +1,6 @@
 'use client'
 
+// oxlint-disable-next-line import/no-namespace
 import * as ProductIcon from '@ultraviolet/icons/product'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
@@ -275,6 +276,7 @@ export const SelectableCard = forwardRef(
           }
           onKeyDown={onKeyDown}
           ref={ref}
+          // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
           role="button"
           style={{
             ...assignInlineVars({

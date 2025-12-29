@@ -44,7 +44,6 @@ const CopyBox = ({ children }: CopyBoxProps) => {
 
 type CommandProps = {
   command: string
-  // eslint-disable-next-line react/no-unused-prop-types
   title: string
   showLineNumbers?: boolean
 }

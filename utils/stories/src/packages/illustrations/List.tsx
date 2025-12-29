@@ -1,9 +1,12 @@
+// oxlint-disable import/no-namespace
+
 import {
   ArrowDownIcon,
   ArrowUpIcon,
   MinusIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
+
 import * as productsIllustrations from '@ultraviolet/illustrations/products'
 import * as variousIllustrations from '@ultraviolet/illustrations/various'
 import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
@@ -191,8 +194,11 @@ export const List = () => {
             <Button
               className={buttonStory}
               onClick={() => {
-                const newExpandedStates = { ...expandedStates }
-                newExpandedStates[category] = !expandedStates[category]
+                const newExpandedStates = {
+                  ...expandedStates,
+                  [category]: !expandedStates[category],
+                }
+
                 setExpandedStates(newExpandedStates)
               }}
               sentiment="neutral"
@@ -211,9 +217,11 @@ export const List = () => {
                       productName={productName}
                       setIsExpanded={() => {
                         // Toggle the expanded state for a specific element
-                        const newExpandedStates = { ...expandedStates }
-                        newExpandedStates[productName] =
-                          !expandedStates[productName]
+                        const newExpandedStates = {
+                          ...expandedStates,
+                          [productName]: !expandedStates[productName],
+                        }
+
                         setExpandedStates(newExpandedStates)
                       }}
                     />

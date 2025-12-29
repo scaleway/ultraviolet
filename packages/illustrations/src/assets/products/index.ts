@@ -3,6 +3,8 @@
  * PLEASE DO NOT EDIT HERE
  */
 
+// oxlint-disable import/no-namespace
+
 import * as accountExperience from './accountExperience'
 import * as apiGateway from './apiGateway'
 import * as appleSilicon from './appleSilicon'

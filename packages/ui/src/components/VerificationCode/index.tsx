@@ -130,6 +130,7 @@ export const VerificationCode = ({
 
   const inputOnKeyDown =
     (index: number): KeyboardEventHandler<HTMLInputElement> =>
+    // oxlint-disable-next-line eslint/max-statements
     event => {
       const prevIndex = index - 1
       const nextIndex = index + 1

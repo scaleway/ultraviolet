@@ -242,7 +242,7 @@ export const NumberInput = forwardRef(
               >
                 <input
                   aria-label={ariaLabel}
-                  autoFocus={autoFocus}
+                  autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
                   className={numberinput({ controls, hasUnit: !!unit, size })}
                   data-testid={dataTestId}
                   disabled={disabled}

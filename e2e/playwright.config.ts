@@ -34,7 +34,7 @@ export default defineConfig({
   reporter: 'line',
   retries: isCI ? 2 : 0,
   testDir: './tests',
-  timeout: isCI ? 1 * times['1min'] : undefined,
+  timeout: isCI ? Number(times['1min']) : undefined,
   use: {
     baseURL,
     trace: 'on-first-retry',

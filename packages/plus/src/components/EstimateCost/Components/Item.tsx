@@ -1,5 +1,7 @@
 'use client'
 
+// oxlint-disable eslint/max-statements
+
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'

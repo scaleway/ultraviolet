@@ -166,7 +166,7 @@ export const UnitInput = ({
         <div className={unitInputNumberWrapper} id="input-field">
           <input
             aria-invalid={!!error}
-            autoFocus={autoFocus}
+            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             className={cn(className, unitInputNumber[size])}
             data-testid="unit-input"
             disabled={disabled}

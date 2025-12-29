@@ -1,5 +1,7 @@
-// oxlint-disable-next-line import/no-unassigned-import
+// oxlint-disable import/no-unassigned-import
 import '@ultraviolet/fonts/fonts.css'
+import '@ultraviolet/themes/global'
+import '@ultraviolet/ui/styles'
 import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
@@ -10,8 +12,6 @@ import {
   BrowserRouter as Router,
   Routes,
 } from 'react-router-dom'
-import '@ultraviolet/themes/global'
-import '@ultraviolet/ui/styles'
 
 const GlobalWrapper = ({ children }: { children: ReactNode }) => (
   <div style={{ padding: '48px' }}>{children}</div>

@@ -72,9 +72,9 @@ describe('button', () => {
       </Button>,
     )
     await userEvent.click(screen.getByRole('button'))
-    expect(onPointerDown).toHaveBeenCalledOnce()
+    expect(onPointerDown).toHaveBeenCalledTimes(1)
     await userEvent.keyboard('a')
-    expect(onKeyDown).toHaveBeenCalledOnce()
+    expect(onKeyDown).toHaveBeenCalledTimes(1)
 
     expect(asFragment).toMatchSnapshot()
   })
