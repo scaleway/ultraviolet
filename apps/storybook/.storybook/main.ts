@@ -3,13 +3,13 @@ import remarkGfm from 'remark-gfm'
 
 export default {
   stories: [
-    '../packages/*/src/**/__stories__/index.stories.tsx',
-    '../utils/stories/src/**/*.mdx'
+    '../../../packages/*/src/**/__stories__/index.stories.tsx',
+    // '../utils/stories/src/**/*.mdx'
   ],
 
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-a11y", 
+    "@storybook/addon-a11y",
     "@storybook/addon-themes",
     "storybook-addon-tag-badges",
     {

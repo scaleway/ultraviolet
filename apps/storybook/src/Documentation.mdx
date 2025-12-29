@@ -1,0 +1,133 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Guidelines/Documentation Guidelines" />
+
+# Documentation Guidelines
+
+This page explains what are the guidelines for writing documentation for components as a maintainer.
+
+## Folder and files structure
+
+First of all, you need to understand how is structured our current stories. We have a folder for each component,
+and inside of it, we have a folder for stories and a file for each story. If we take the example of Button component
+here is how the folder should look alike:
+
+```bash
+Button
+├── __stories__
+│   ├── index.stories.tsx
+│   ├── Template.stories.tsx
+│   ├── Playground.stories.tsx
+```
+
+***
+
+`index.stories.tsx` contains exports of each story and the parameters for the component story page. Here is an example with just Playground story:
+
+```tsx
+import type { Meta } from '@storybook/react-vite'
+import { Button } from '..'
+
+export default {
+  component: Button,
+  decorators: [
+    StoryComponent => (
+      <div style={{ display: 'flex', gap: 16 }}>
+        <StoryComponent />
+      </div>
+    ),
+  ],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A button is a component used to define a call to action',
+      },
+    },
+  },
+  title: 'Components/Action/Button',
+} as Meta<typeof Button>
+
+export { Playground } from './Playground.stories'
+```
+
+Here we have the `component` parameter that is used to define the component that the story is related to. The `decorators`
+parameter is used to define the decorators that will be applied to the story. The `parameters` parameter is used to define the parameters for the component story page.
+The `title` parameter is used to define the title of the story.
+
+***
+
+`Template.stories.tsx` contains the default template of a story. If your story only change properties values you can use this template as base. Here is an example:
+
+```tsx
+import type { StoryFn } from '@storybook/react-vite'
+import { Button } from '..'
+
+export const Template: StoryFn<typeof Button> = ({ ...props }) => (
+  <Button {...props} aria-label="test" />
+)
+```
+
+***
+
+`Playground.stories.tsx` contains the playground of a story. This story will be the one user will manually change properties on storybook itself. Here is an example:
+
+```tsx
+import { Template } from './Template.stories'
+
+export const Playground = Template.bind({})
+
+Playground.args = {
+  children: 'Button text',
+}
+```
+
+## How to write a story
+
+Now that you understood how is structured our current stories, you can start writing your own story. Here are some guidelines to follow:
+
+* The story should be written in a `.stories.tsx` file.
+* The story should be exported in the `index.stories.tsx` file.
+* The story should use the `Template` as base if it only changes properties values.
+
+Then you can simply create your file, write your story and export it in the `index.stories.tsx` file.
+
+## Custom behaviors
+
+Maybe you noticed that some of our stories have deprecated or experimental state. This is because we have some custom behaviors, we customized storybook
+page structure to add those status. Here is how to add those behaviors:
+
+* To add a deprecated state, you need to add the `deprecated` parameter in the `index.stories.tsx` file. Here is an example:
+
+```tsx
+export default {
+  component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component: 'A button is a component used to define a call to action',
+      },
+    },
+    deprecated: true,
+    deprecatedReason: 'This component is deprecated please use ListV2 instead.', // You can also add a reason to be shown on the storybook page
+    migrationLink: '?path=/docs/components-action-button--playground', // The link should be a storybook path
+  },
+  title: 'Components/Action/Button',
+} as Meta<typeof Button>
+```
+
+* To add an experimental state, you need to add the `experimental` parameter in the `index.stories.tsx` file. Here is an example:
+
+```tsx
+export default {
+  component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component: 'A button is a component used to define a call to action',
+      },
+    },
+    experimental: true,
+  },
+  title: 'Components/Action/Button',
+} as Meta<typeof Button>
+```

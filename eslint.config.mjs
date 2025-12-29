@@ -44,6 +44,7 @@ export default [
       '**/.vitest/',
       '**/coverage/',
       '.storybook',
+      'apps/storybook/.storybook',
       'eslint.config.mjs',
       'next-env.d.ts'
     ],
@@ -145,6 +146,7 @@ export default [
       'utils/test/**/*.{ts,tsx}',
       '**/vitest.setup.ts',
       '.storybook/**',
+      'apps/storybook/.storybook/**',
     ],
 
     rules: {

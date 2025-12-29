@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Customization/Shadows" />
+
+# Shadows
+
+The default theme has a set of shadows that can be used to create a sense of depth and hierarchy.
+
+## Customize shadows
+
+You may also want to customize your shadows. To do that you need to create your own theme and pass it to the `ThemeProvider` component. <br />
+You will need to pass an object with the same structure as the [default theme](https://github.com/scaleway/ultraviolet/blob/main/src/theme/tokens/light.ts), but with your own typography.
+
+```tsx
+import { ThemeProvider } from '@ultraviolet/themes'
+import { Tooltip, extendTheme } from '@ultraviolet/ui'
+
+function App() {
+  const myTheme = extendTheme({
+    shadows: {
+      tooltip: '10px 0px 20px 16px #000000',
+    },
+  })
+
+  return (
+    <ThemeProvider theme={myTheme}>
+      <Tooltip text="I'm a tooltip">
+        <p>Example</p>
+      </Tooltip>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```

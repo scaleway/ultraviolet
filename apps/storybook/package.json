@@ -1,0 +1,54 @@
+{
+  "name": "@ultraviolet/storybook",
+  "version": "0.0.0",
+  "description": "Ultraviolet Storybook",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "utils/stories"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "start:storybook": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
+    "start:storybook:production": "STORYBOOK_ENVIRONMENT=production storybook dev -p 6006",
+    "build:storybook": "STORYBOOK_ENVIRONMENT=production storybook build",
+    "build:storybook:stats": "pnpm run build:storybook -- --webpack-stats-json"
+  },
+  "keywords": [
+    "fonts",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=10.x"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "type": "module",
+  "dependencies": {
+    "@storybook/addon-a11y": "10.1.10",
+    "@storybook/addon-docs": "10.1.10",
+    "@storybook/addon-links": "10.1.10",
+    "@storybook/addon-themes": "10.1.10",
+    "@storybook/builder-vite": "10.1.10",
+    "@storybook/mdx2-csf": "1.1.0",
+    "@storybook/react-vite": "10.1.10",
+    "@types/node": "24.10.4",
+    "@ultraviolet/form": "workspace:*",
+    "@ultraviolet/icons": "workspace:*",
+    "@ultraviolet/illustrations": "workspace:*",
+    "@ultraviolet/plus": "workspace:*",
+    "@ultraviolet/themes": "workspace:*",
+    "@ultraviolet/ui": "workspace:*",
+    "@vanilla-extract/css": "1.17.4",
+    "@vanilla-extract/dynamic": "2.1.5",
+    "@vanilla-extract/recipes": "0.5.7",
+    "@vanilla-extract/sprinkles": "1.6.5",
+    "react": "19.2.3",
+    "storybook": "10.1.10",
+    "storybook-addon-tag-badges": "3.0.4"
+  }
+}

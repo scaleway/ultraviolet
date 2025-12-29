@@ -1,0 +1,58 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Customization/Typography" />
+
+# Typography
+
+In general way you won't have to use typography from theme as you may use Text component for any text. <br />
+But if you need to use it, you can use it like this: `theme.typography`.
+
+## Customize typography
+
+You may also want to customize your typography fonts or sizes. To do that you need to create your own theme and pass it to the `ThemeProvider` component. <br />
+You will need to pass an object with the same structure as the [default theme](https://github.com/scaleway/ultraviolet/blob/main/src/theme/tokens/light.ts), but with your own typography.
+
+```tsx
+import { css, Global, ThemeProvider } from '@ultraviolet/themes'
+import { Text, extendTheme } from '@ultraviolet/ui'
+import AsapRegularWoff2 from 'assets/fonts/asap/Asap-Regular.woff2'
+
+const fonts = css`
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapRegularWoff2}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+`
+
+function App() {
+  const myTheme = extendTheme({
+    typography: {
+      myTypography: {
+        fontFamily: 'Asap',
+        fontSize: '16px',
+        fontWeight: 'Regular',
+        letterSpacing: '0',
+        lineHeight: '24px',
+        paragraphSpacing: 'none',
+        textCase: 'none',
+        textDecoration: 'none',
+        weight: '400',
+      },
+    },
+  })
+
+  return (
+    <ThemeProvider theme={myTheme}>
+      <Global styles={[fonts]} />
+      <Text as="p" variant="myTypography">
+        Example
+      </Text>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```

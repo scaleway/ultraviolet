@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Customization/Dark mode" />
+
+# Dark mode
+
+## How to?
+
+Ultraviolet UI is designed to be used in both light and dark mode. The kit also provide both light and dark theme. <br />
+You can enable easily switch between light and dark mode by passing `theme` or `darkTheme` to the `ThemeProvider` component.
+
+Example:
+
+```tsx
+import { ThemeProvider } from '@ultraviolet/themes'
+import { theme, darkTheme, Button, Text } from '@ultraviolet/ui'
+import { useState } from 'react'
+
+function App() {
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
+
+  return (
+    <ThemeProvider theme={isDarkTheme ? darkTheme : theme}>
+      <Text as="p" variant="body">
+        Current theme: {theme}
+      </Text>
+
+      <Button onClick={() => setIsDarkTheme(!isDarkTheme)}>Switch theme</Button>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```

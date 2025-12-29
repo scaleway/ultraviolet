@@ -74,27 +74,6 @@ importers:
       '@size-limit/preset-big-lib':
         specifier: 12.0.0
         version: 12.0.0(esbuild@0.27.0)(size-limit@12.0.0(jiti@2.4.2))
-      '@storybook/addon-a11y':
-        specifier: 10.1.10
-        version: 10.1.10(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
-      '@storybook/addon-docs':
-        specifier: 10.1.10
-        version: 10.1.10(@types/react@19.2.7)(esbuild@0.27.0)(rollup@4.53.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vite@7.3.0(@types/node@24.10.4)(jiti@2.4.2)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.39.0)(tsx@4.21.0)(yaml@2.8.1))(webpack@5.104.1(esbuild@0.27.0))
-      '@storybook/addon-links':
-        specifier: 10.1.10
-        version: 10.1.10(react@19.2.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
-      '@storybook/addon-themes':
-        specifier: 10.1.10
-        version: 10.1.10(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
-      '@storybook/builder-vite':
-        specifier: 10.1.10
-        version: 10.1.10(esbuild@0.27.0)(rollup@4.53.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vite@7.3.0(@types/node@24.10.4)(jiti@2.4.2)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.39.0)(tsx@4.21.0)(yaml@2.8.1))(webpack@5.104.1(esbuild@0.27.0))
-      '@storybook/mdx2-csf':
-        specifier: 1.1.0
-        version: 1.1.0
-      '@storybook/react-vite':
-        specifier: 10.1.10
-        version: 10.1.10(esbuild@0.27.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.53.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)(vite@7.3.0(@types/node@24.10.4)(jiti@2.4.2)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.39.0)(tsx@4.21.0)(yaml@2.8.1))(webpack@5.104.1(esbuild@0.27.0))
       '@svgr/rollup':
         specifier: 8.1.0
         version: 8.1.0(rollup@4.53.3)(typescript@5.9.3)
@@ -251,12 +230,6 @@ importers:
       size-limit:
         specifier: 12.0.0
         version: 12.0.0(jiti@2.4.2)
-      storybook:
-        specifier: 10.1.10
-        version: 10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      storybook-addon-tag-badges:
-        specifier: 3.0.4
-        version: 3.0.4(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       svgo:
         specifier: 4.0.0
         version: 4.0.0
@@ -287,6 +260,72 @@ importers:
       zxcvbn:
         specifier: 4.4.2
         version: 4.4.2
+
+  apps/storybook:
+    dependencies:
+      '@storybook/addon-a11y':
+        specifier: 10.1.10
+        version: 10.1.10(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
+      '@storybook/addon-docs':
+        specifier: 10.1.10
+        version: 10.1.10(@types/react@19.2.7)(esbuild@0.27.0)(rollup@4.53.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vite@7.3.0(@types/node@24.10.4)(jiti@2.4.2)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.39.0)(tsx@4.21.0)(yaml@2.8.1))(webpack@5.104.1(esbuild@0.27.0))
+      '@storybook/addon-links':
+        specifier: 10.1.10
+        version: 10.1.10(react@19.2.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
+      '@storybook/addon-themes':
+        specifier: 10.1.10
+        version: 10.1.10(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
+      '@storybook/builder-vite':
+        specifier: 10.1.10
+        version: 10.1.10(esbuild@0.27.0)(rollup@4.53.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(vite@7.3.0(@types/node@24.10.4)(jiti@2.4.2)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.39.0)(tsx@4.21.0)(yaml@2.8.1))(webpack@5.104.1(esbuild@0.27.0))
+      '@storybook/mdx2-csf':
+        specifier: 1.1.0
+        version: 1.1.0
+      '@storybook/react-vite':
+        specifier: 10.1.10
+        version: 10.1.10(esbuild@0.27.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(rollup@4.53.3)(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)(vite@7.3.0(@types/node@24.10.4)(jiti@2.4.2)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.39.0)(tsx@4.21.0)(yaml@2.8.1))(webpack@5.104.1(esbuild@0.27.0))
+      '@types/node':
+        specifier: 24.10.4
+        version: 24.10.4
+      '@ultraviolet/form':
+        specifier: workspace:*
+        version: link:../../packages/form
+      '@ultraviolet/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
+      '@ultraviolet/illustrations':
+        specifier: workspace:*
+        version: link:../../packages/illustrations
+      '@ultraviolet/plus':
+        specifier: workspace:*
+        version: link:../../packages/plus
+      '@ultraviolet/themes':
+        specifier: workspace:*
+        version: link:../../packages/themes
+      '@ultraviolet/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@vanilla-extract/css':
+        specifier: 1.17.4
+        version: 1.17.4(babel-plugin-macros@3.1.0)
+      '@vanilla-extract/dynamic':
+        specifier: 2.1.5
+        version: 2.1.5
+      '@vanilla-extract/recipes':
+        specifier: 0.5.7
+        version: 0.5.7(@vanilla-extract/css@1.17.4(babel-plugin-macros@3.1.0))
+      '@vanilla-extract/sprinkles':
+        specifier: 1.6.5
+        version: 1.6.5(@vanilla-extract/css@1.17.4(babel-plugin-macros@3.1.0))
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      storybook:
+        specifier: 10.1.10
+        version: 10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      storybook-addon-tag-badges:
+        specifier: 3.0.4
+        version: 3.0.4(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
 
   e2e:
     dependencies:

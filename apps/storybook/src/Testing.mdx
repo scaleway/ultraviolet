@@ -1,0 +1,88 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Testing" />
+
+# Welcome to Ultraviolet UI
+
+We rely heavily on jest and snapshots to ensure our components behaviour and output are correct
+
+### Rule of thumb
+
+We tend towards 100% of coverage, this won't be able to cover all edge cases and behavior, but it's a good start to avoid regressions and improve confidence in the codebase. Thus, all introduced code or feature must have corresponding test cases
+
+## Quick start
+
+Every js files inside a `__tests__` folder will be executed
+
+```sh
+$ pnpm run test # Will run all tests
+$ pnpm run test --updateSnapshot # Will update all snapshots
+$ pnpm run test:watch # Will watch tests and only rerun the one who are modified
+$ pnpm run test:coverage # Will generate a coverage report
+$ pnpm run test:coverage --coverageReporters lcov && open coverage/lcov-report/index.html # Will generate an open an html code coverage report
+```
+
+## Testing behavior (click, hover, input, ...)
+
+You can use [`@testing-library/user-event`](https://testing-library.com/docs/ecosystem-user-event/) or `fireEvent` from [`@testing-library/react`](https://testing-library.com/docs/dom-testing-library/api-events/) to trigger events
+
+As stated in [`@testing-library/react`](https://testing-library.com/docs/dom-testing-library/api-events/) documentation you should favor [`@testing-library/user-event`](https://testing-library.com/docs/ecosystem-user-event/) whenever possible
+
+## Helpers
+
+### `renderWithTheme(component, options, theme = defaultTheme)`
+
+This will wrap the provided node with a ThemeProvider and render it
+
+
+
+This is useful when you need to dig through a rendered node
+
+```jsx
+test(`click checkbox`, async () => {
+  const node = renderWithTheme(<input role="checkbox" />)
+
+  const input = node.getByRole('checkbox')
+  await userEvent.click(input)
+  expect(input.getAttribute('aria-checked')).toBe('true')
+})
+```
+
+* `component`: A valid React Node
+* `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
+* `theme`: A theme available as an object, you can find an example in `src/theme`
+
+### `shouldMatchSnapshot(component, options = {})`
+
+This will wrap the provided node with a ThemeProvider, render it and snapshot it at the end of the execution
+
+> ⚠ This is an async function and need to be either in an async function or directly returned to jest
+
+```jsx
+test(`click and snapshot checkbox`, async () =>
+  shouldMatchSnapshot(<input role="checkbox" />, {
+    transform: async ({ getByRole }) => {
+      const input = getByRole('checkbox')
+      await userEvent.click(input)
+    },
+  }))
+```
+
+* `component`: A valid React Node
+* `options`: `{ options, transform, theme } = {}`
+  * `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
+  * `theme`: A theme available as an object, you can find an example in `src/theme`
+  * `transform`: an async function receiving in parameters the rendered node. This can be used to apply transformation to the component before snapshotting
+
+### `shouldMatchSnapshotWithPortal(component, options = {})`
+
+This is a variation of `shouldMatchSnapshot` which bind the node to `document.body` in order to be able to test components with Portals
+
+```jsx
+test(`renders with Modal`, () =>
+  shouldMatchSnapshotWithPortal(
+    <Modal>
+      <div>test</div>
+    </Modal>,
+  ))
+```

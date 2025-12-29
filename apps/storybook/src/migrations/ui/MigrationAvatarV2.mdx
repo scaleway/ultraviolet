@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Migrations/Avatar to AvatarV2" />
+
+# Migrate Avatar to AvatarV2
+
+#### `image` prop
+
+Use variant `image` with prop `image`:
+
+```tsx
+// Before
+<Avatar image="my-image.png" />
+
+// After
+<AvatarV2 variant="image" image="my-image.png" />
+```
+
+#### `size` prop
+
+Instead of a number you can use `small`, `medium`, `large` or `xlarge`.
+
+#### `textBgColor`, `textColor`, `textSize` prop
+
+Those props are deprecated as the background is a fixed color. For the `textSize` use prop `size` instead it will define the size of the text.
+
+#### `lock` prop
+
+Use variant `icon` and prop `icon="lock"`:
+
+```tsx
+// Before
+<Avatar lock />
+
+// After
+<AvatarV2 variant="icon" icon="lock" />
+```
+
+#### `text` prop
+
+Use variant `text` with prop `text`:
+
+```tsx
+// Before
+<Avatar text="AB" />
+
+// After
+<AvatarV2 variant="text" text="AB" />
+```

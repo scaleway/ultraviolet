@@ -1,0 +1,50 @@
+import {Meta} from '@storybook/blocks'
+
+// Tip: Search and replace OldComponent and NewComponent with the component you're making documentation about.
+
+<Meta title="Migrations/OldComponent to NewComponent"/>
+
+
+# Migrate OldComponent to NewComponent
+
+Welcome to the migration of OldComponent into NewComponent, here we will see how to easily migrate to NewComponent component.
+
+## One of the main changes is...
+
+A description of it...
+
+Example:
+
+```tsx
+import { OldComponent } from '@ultraviolet/ui'
+
+const MyComponent = () => (
+  <OldComponent>
+      My text
+  </OldComponent />
+)
+```
+
+Becomes:
+
+```tsx
+import { NewComponent } from '@ultraviolet/ui'
+
+const MyComponent = () => (
+  <NewComponent>
+      My text
+  </NewComponent />
+)
+```
+
+## Old and new props matching
+
+- `children` &rarr; `children`: No changes
+
+---
+
+- `as` &rarr; `as`*: Become required
+
+---
+
+etc...
