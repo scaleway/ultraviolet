@@ -14,8 +14,15 @@ export const minWidthTag = createVar({
   initialValue: 'fit-content',
 })
 
-export const selectbarState = style({
-  display: 'flex',
+export const selectbarState = styleVariants({
+  small: {
+    display: 'flex',
+    height: theme.sizing[300],
+  },
+  large: {
+    display: 'flex',
+    height: theme.sizing[400],
+  },
 })
 
 export const selectinputPlaceholder = style({
@@ -65,6 +72,7 @@ export const selectBarBase = style({
   boxShadow: 'none',
   background: theme.colors.neutral.background,
   borderRadius: theme.radii.default,
+  alignItems: 'center',
 })
 
 export const selectBar = recipe({

@@ -501,7 +501,7 @@ const SelectBar = ({
         )}
         <Stack
           alignItems="center"
-          className={selectbarState}
+          className={selectbarState[size === 'medium' ? 'small' : size]}
           direction="row"
           gap={1}
           ref={arrowRef}
