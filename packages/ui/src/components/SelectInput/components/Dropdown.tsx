@@ -49,8 +49,8 @@ import {
   dropdownGroupWrapper,
   dropdownItem,
   dropdownLoadMore,
-  emptyStateGroupStyle,
   dropdownWidth,
+  emptyStateGroupStyle,
   footer as footerStyle,
 } from './dropdown.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
