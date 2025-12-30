@@ -9,7 +9,8 @@ import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } fro
 import type { ReactNode } from 'react'
 import { cloneElement, isValidElement, useState } from 'react'
 import '@ultraviolet/fonts/fonts.css'
-import '@ultraviolet/themes/theme.css'
+// don't know how it's work today
+import "../../packages/themes/dist/themes.css"
 import { GlobalAlert } from '@ultraviolet/ui'
 import { globalStyleStoryBook } from './globalStyle.css'
 
