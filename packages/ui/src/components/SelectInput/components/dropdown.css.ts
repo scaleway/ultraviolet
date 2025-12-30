@@ -1,11 +1,12 @@
 import { theme } from '@ultraviolet/themes'
-import { style } from '@vanilla-extract/css'
+import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 const DROPDOWN_MAX_HEIGHT = 256
+export const dropdownWidth = createVar()
 
 export const dropdown = style({
-  width: '90%',
+  width: dropdownWidth,
   minWidth: 320,
   backgroundColor: theme.colors.other.elevation.background.raised,
   color: theme.colors.neutral.text,
