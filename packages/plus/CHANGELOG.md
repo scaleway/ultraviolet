@@ -1,5 +1,68 @@
 # @ultraviolet/plus
 
+## 3.1.3
+
+### Patch Changes
+
+- Updated dependencies [[`1b34a68`](https://github.com/scaleway/ultraviolet/commit/1b34a68987c49c100e2fe01dbc9b6814bb3e7749), [`c4708a8`](https://github.com/scaleway/ultraviolet/commit/c4708a82dae51724af2fe3a0f13d777138b63a78)]:
+  - @ultraviolet/ui@3.2.1
+
+## 3.1.2
+
+### Patch Changes
+
+- [#5857](https://github.com/scaleway/ultraviolet/pull/5857) [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287) Thanks [@lisalupi](https://github.com/lisalupi)! - Use `cn` function to generate clean classnames
+
+- [#5869](https://github.com/scaleway/ultraviolet/pull/5869) [`3a1daaa`](https://github.com/scaleway/ultraviolet/commit/3a1daaad38cbebec5509e1162c4351c0a251afd4) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Dependency upgrade: Upgrade vitest to v4
+
+- [#5861](https://github.com/scaleway/ultraviolet/pull/5861) [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.1`.
+  Updated dependency `react-dom` to `19.2.1`.
+
+- [#5890](https://github.com/scaleway/ultraviolet/pull/5890) [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581) Thanks [@philibea](https://github.com/philibea)! - tsconfig add isolated module
+
+- Updated dependencies [[`5374a2a`](https://github.com/scaleway/ultraviolet/commit/5374a2afe9c58a445b2a0dc3ff3a5733ece0a4ea), [`ec99ee5`](https://github.com/scaleway/ultraviolet/commit/ec99ee591e1de6b9c9428146fa7f8cb1bda1b81e), [`d1b9517`](https://github.com/scaleway/ultraviolet/commit/d1b9517b55a3f84ea94d52e09bbbb4b872e7219c), [`774fb31`](https://github.com/scaleway/ultraviolet/commit/774fb31d7929ae8bf20f180f54d38fec8fdb968b), [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`22e27d6`](https://github.com/scaleway/ultraviolet/commit/22e27d621a269ddfd8f952e76e20b11c6914ad2b), [`3a1daaa`](https://github.com/scaleway/ultraviolet/commit/3a1daaad38cbebec5509e1162c4351c0a251afd4), [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56), [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581)]:
+  - @ultraviolet/ui@3.2.0
+  - @ultraviolet/themes@3.0.1
+  - @ultraviolet/icons@5.0.2
+
+## 3.1.1
+
+### Patch Changes
+
+- Updated dependencies [[`10ced0d`](https://github.com/scaleway/ultraviolet/commit/10ced0d1c7e22af4ccaf4b8f4e60b655e56579da)]:
+  - @ultraviolet/ui@3.1.1
+
+## 3.1.0
+
+### Minor Changes
+
+- [#5836](https://github.com/scaleway/ultraviolet/pull/5836) [`4432843`](https://github.com/scaleway/ultraviolet/commit/4432843f502fac07df39bfaa844154203fd71557) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+  - New prop `priceInformation` to display on the right side of the estimated cost
+  - New prop `icon` for a subcategory to add an icon on the left side of the subcategory title
+  - Prop `details` (subcategory) is now a `ReactNode` instead of a `string`
+  - New prop `subtitle` (category) to add information beneath the category name
+  - New prop `anchor` (category and subcategory)
+
+### Patch Changes
+
+- [#5821](https://github.com/scaleway/ultraviolet/pull/5821) [`e064b69`](https://github.com/scaleway/ultraviolet/commit/e064b6930434aad7b1e31f1e960f00ae291bb43f) Thanks [@lisalupi](https://github.com/lisalupi)! - `Plans`: new prop "highlight"
+
+- [#5833](https://github.com/scaleway/ultraviolet/pull/5833) [`0e4dd48`](https://github.com/scaleway/ultraviolet/commit/0e4dd487741e0030d9f652e468b2dc035e2722d4) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
+  - new prop `totalPriceInfoPlacement` for the placement of `totalPriceInfo`
+  - new prop `hideBeforePrice` to only show discounted price
+  - `discount = 1` interpreted as 100% instead of 1€ for the total price
+
+- [#5856](https://github.com/scaleway/ultraviolet/pull/5856) [`1d7ad74`](https://github.com/scaleway/ultraviolet/commit/1d7ad7412c243ecb926bbe5760fbfbbc121cedef) Thanks [@lisalupi](https://github.com/lisalupi)! - ⚠️ `@ultraviolet/ui` is no longer a peer-dependency of `@ultraviolet/plus`, `@ultraviolet/form` and `@ultraviolet/nextjs` in order to simplify versioning with changeset
+
+- [#5852](https://github.com/scaleway/ultraviolet/pull/5852) [`fa8b53c`](https://github.com/scaleway/ultraviolet/commit/fa8b53c3ba4aaa152c6fb10eece94b22f6de0223) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `10.0.0`.
+
+- [#5824](https://github.com/scaleway/ultraviolet/pull/5824) [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.7`.
+
+- Updated dependencies [[`634c88f`](https://github.com/scaleway/ultraviolet/commit/634c88f9597b432c21afc9903c0d96e3d54b578d), [`c650f4f`](https://github.com/scaleway/ultraviolet/commit/c650f4fd70be4b6a09477514b5719becec6a278b), [`7bde3d9`](https://github.com/scaleway/ultraviolet/commit/7bde3d9d0c905f610b903d1af7802742e3cfcc4e), [`019e4b3`](https://github.com/scaleway/ultraviolet/commit/019e4b3322d76f29986f275f5e852cc9d2089a43), [`cc568fc`](https://github.com/scaleway/ultraviolet/commit/cc568fc91c73e4ae185f304176a8690132eadff8), [`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23), [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13), [`173e194`](https://github.com/scaleway/ultraviolet/commit/173e194b9524e7396cf98fc8725eba068d4d65cb), [`7625641`](https://github.com/scaleway/ultraviolet/commit/76256412346cff9d655d153d1b48741bc099db6d), [`cb75383`](https://github.com/scaleway/ultraviolet/commit/cb7538341653c9dc485bd59ef107cea863449fa1), [`6bc5d37`](https://github.com/scaleway/ultraviolet/commit/6bc5d376cd48c8dedf04f62e34b5b3c78f872a5e), [`0e4dd48`](https://github.com/scaleway/ultraviolet/commit/0e4dd487741e0030d9f652e468b2dc035e2722d4)]:
+  - @ultraviolet/ui@3.1.0
+  - @ultraviolet/icons@5.0.1
+
 ## 3.0.0
 
 ### Major Changes

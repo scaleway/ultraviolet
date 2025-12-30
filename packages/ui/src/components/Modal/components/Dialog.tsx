@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   FocusEventHandler,
@@ -216,7 +217,10 @@ export const Dialog = ({
 
   return createPortal(
     <div
-      className={`${backdropClassName} ${modalBackdrop({ open: true, visible: isVisible })}`}
+      className={cn(
+        backdropClassName,
+        modalBackdrop({ open: true, visible: isVisible }),
+      )}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       data-visible={isVisible}
       onClick={handleClose}
@@ -226,7 +230,16 @@ export const Dialog = ({
       <dialog
         aria-label={ariaLabel}
         aria-modal
-        className={`${className ? `${className} ` : ''}${modal({ animation, image: !!image, placement, positivePosition: position > 0, size })}`}
+        className={cn(
+          className,
+          modal({
+            animation,
+            image: !!image,
+            placement,
+            positivePosition: position > 0,
+            size,
+          }),
+        )}
         data-size={size}
         data-testid={dataTestId}
         id={id}

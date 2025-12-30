@@ -23,9 +23,9 @@ jobs:
           git config --global user.email 'github@scaleway.com'
       - uses: pnpm/action-setup@v4.2.0
       - name: Use Node.js
-        uses: actions/setup-node@v6.0.0
+        uses: actions/setup-node@v6.1.0
         with:
-          node-version: 24.11.1
+          node-version: 24.12.0
           cache: "pnpm"
       - name: Run changesets-renovate
         run: pnpm dlx @scaleway/changesets-renovate

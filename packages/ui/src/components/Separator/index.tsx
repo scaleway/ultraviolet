@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SeparatorVariants } from './styles.css'
@@ -28,7 +29,7 @@ export const Separator = ({
   children ? (
     <div
       aria-orientation={direction}
-      className={`${className ? `${className} ` : ''}${iconWraperSeparator({ direction, sentiment })}`}
+      className={cn(className, iconWraperSeparator({ direction, sentiment }))}
       data-testid={dataTestId}
       role="separator"
       style={style}
@@ -50,7 +51,7 @@ export const Separator = ({
   ) : (
     <hr
       aria-orientation={direction}
-      className={`${className ? `${className} ` : ''}${hr({ direction, sentiment })}`}
+      className={cn(className, hr({ direction, sentiment }))}
       data-testid={dataTestId}
       role="separator"
       style={assignInlineVars({

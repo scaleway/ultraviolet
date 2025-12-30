@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
@@ -97,7 +98,7 @@ type SelectableCardGroupProps = {
 /**
  * SelectableCardGroup is a component that allows users to select cards from a list of cards using SelectableCard.
  */
-export const SelectableCardGroup = ({
+const SelectableCardGroupComponent = ({
   legend,
   legendDescription,
   value,
@@ -128,9 +129,7 @@ export const SelectableCardGroup = ({
   return (
     <SelectableCardGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={`${className ? `${className} ` : ''}${selectableCardGroupFieldSet}`}
-        >
+        <fieldset className={cn(className, selectableCardGroupFieldSet)}>
           <Stack gap={1.5}>
             {legend ? (
               <Label
@@ -166,4 +165,13 @@ export const SelectableCardGroup = ({
   )
 }
 
-SelectableCardGroup.Card = CardSelectableCard
+type SelectableCardOptionGroupType = typeof SelectableCardGroupComponent & {
+  Card: typeof CardSelectableCard
+}
+
+export const SelectableCardGroup: SelectableCardOptionGroupType = Object.assign(
+  SelectableCardGroupComponent,
+  {
+    Card: CardSelectableCard,
+  },
+)

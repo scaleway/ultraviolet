@@ -7,6 +7,7 @@ import {
   CloseIcon,
   PlusIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode, RefObject } from 'react'
 import {
@@ -113,7 +114,7 @@ const DisplayValues = ({
         >
           {potentiallyNonOverflowedValues.map(option => (
             <Tag
-              className={`${option.value} ${selectBarTags.hidden}`}
+              className={cn(option.value, selectBarTags.hidden)}
               key={option.value}
               onClose={() => {}}
             >
@@ -272,130 +273,135 @@ const SelectBar = ({
       0 - (arrowRef.current?.offsetWidth ?? 0) - SIZES_TAG.paddings
     )
   }, [innerRef.current?.offsetWidth])
+
   // We then want to measure the tags length before displaying them
   // so we can determine if there is an overflow or not
   // We use useLayoutEffect to ensure the measurement is done before the browser paints
-  useLayoutEffect(() => {
-    if (selectedData.selectedValues.length === 0) {
-      setOverflowAmount(0)
-      setNonOverFlowedValues([])
-    }
-
-    if (measureRef.current && selectedData.selectedValues.length > 0) {
-      const toMeasureElements: HTMLCollection = measureRef.current.children
-      const toMeasureElementsArray = [...toMeasureElements]
-      const innerWidth = getWidth()
-
-      const {
-        measuredVisibleTags,
-        measuredHiddenTags,
-        accumulatedWidth,
-        lastVisibleElementWidth,
-        lastVisibleLabel,
-      } = toMeasureElementsArray.reduce(
-        (
-          accumulator: {
-            measuredVisibleTags: OptionType[]
-            measuredHiddenTags: number
-            accumulatedWidth: number
-            lastVisibleElementWidth: number
-            lastVisibleLabel: ReactNode
-          },
-          currentValue,
-          index,
-        ) => {
-          const elementWidth = (currentValue as HTMLDivElement).offsetWidth
-
-          const newAccumulatedWidth =
-            accumulator.accumulatedWidth + elementWidth + SIZES_TAG.gap
-
-          const canBeVisible = newAccumulatedWidth <= innerWidth
-
-          return {
-            accumulatedWidth: !canBeVisible
-              ? accumulator.accumulatedWidth
-              : newAccumulatedWidth,
-            lastVisibleElementWidth: canBeVisible
-              ? elementWidth
-              : accumulator.lastVisibleElementWidth,
-            lastVisibleLabel: canBeVisible
-              ? potentiallyNonOverflowedValues[index].label
-              : accumulator.lastVisibleLabel,
-            measuredHiddenTags:
-              accumulator.measuredHiddenTags + (!canBeVisible ? 1 : 0),
-            measuredVisibleTags: [
-              ...accumulator.measuredVisibleTags,
-              canBeVisible && potentiallyNonOverflowedValues[index],
-            ].filter(Boolean) as OptionType[],
-          }
-        },
-        {
-          accumulatedWidth: 0,
-          lastVisibleElementWidth: 0,
-          lastVisibleLabel: '',
-          measuredHiddenTags: 0,
-          measuredVisibleTags: [],
-        },
-      )
-
-      const additionnalElementsWidth =
-        SIZES_TAG.paddings + (refPlusTag.current?.offsetWidth ?? 0)
-      const finalWidth =
-        accumulatedWidth + (measuredHiddenTags ? additionnalElementsWidth : 0)
-
-      const overflowPx = finalWidth - innerWidth
-      const hasOverflow = overflowPx > 0
-      const hasHiddenTags = measuredHiddenTags > 0
-      const lastVisibleElementMaxSize = lastVisibleElementWidth - overflowPx
-
-      // If only one element is selected and it is hidden, we need to show it
-      if (measuredHiddenTags === 1 && measuredVisibleTags.length === 0) {
+  useLayoutEffect(
+    // oxlint-disable-next-line eslint/max-statements
+    () => {
+      if (selectedData.selectedValues.length === 0) {
         setOverflowAmount(0)
-        setNonOverFlowedValues([potentiallyNonOverflowedValues[0]])
-
-        const newOverflowPx =
-          lastVisibleElementWidth +
-          (measuredHiddenTags > 1 ? additionnalElementsWidth : 0) -
-          innerWidth
-        setLastElementMaxWidth(lastVisibleElementWidth - newOverflowPx)
-        setOverflow(true)
+        setNonOverFlowedValues([])
       }
 
-      // If it overflows with the last tag, we need to add an ellipsis to the last element if there is enough space (>60px)
-      // and if it is a string (do not cut ReactNode label)
-      // else we hide it completely and add it to the overflow amount
-      else if (
-        hasOverflow &&
-        hasHiddenTags &&
-        (lastVisibleElementMaxSize > 65 ||
-          (measuredVisibleTags.length === 1 &&
-            lastVisibleElementMaxSize > 65)) &&
-        typeof lastVisibleLabel === 'string'
-      ) {
-        setLastElementMaxWidth(lastVisibleElementMaxSize)
-        setOverflow(true)
-        setOverflowAmount(measuredHiddenTags)
-        setNonOverFlowedValues(measuredVisibleTags)
-      } else if (hasOverflow && hasHiddenTags) {
-        setLastElementMaxWidth(0)
-        setOverflow(false)
-        setOverflowAmount(measuredHiddenTags + 1)
-        setNonOverFlowedValues(measuredVisibleTags.slice(0, -1))
+      if (measureRef.current && selectedData.selectedValues.length > 0) {
+        const toMeasureElements: HTMLCollection = measureRef.current.children
+        const toMeasureElementsArray = [...toMeasureElements]
+        const innerWidth = getWidth()
+
+        const {
+          measuredVisibleTags,
+          measuredHiddenTags,
+          accumulatedWidth,
+          lastVisibleElementWidth,
+          lastVisibleLabel,
+        } = toMeasureElementsArray.reduce(
+          (
+            accumulator: {
+              measuredVisibleTags: OptionType[]
+              measuredHiddenTags: number
+              accumulatedWidth: number
+              lastVisibleElementWidth: number
+              lastVisibleLabel: ReactNode
+            },
+            currentValue,
+            index,
+          ) => {
+            const elementWidth = (currentValue as HTMLDivElement).offsetWidth
+
+            const newAccumulatedWidth =
+              accumulator.accumulatedWidth + elementWidth + SIZES_TAG.gap
+
+            const canBeVisible = newAccumulatedWidth <= innerWidth
+
+            return {
+              accumulatedWidth: !canBeVisible
+                ? accumulator.accumulatedWidth
+                : newAccumulatedWidth,
+              lastVisibleElementWidth: canBeVisible
+                ? elementWidth
+                : accumulator.lastVisibleElementWidth,
+              lastVisibleLabel: canBeVisible
+                ? potentiallyNonOverflowedValues[index].label
+                : accumulator.lastVisibleLabel,
+              measuredHiddenTags:
+                accumulator.measuredHiddenTags + (!canBeVisible ? 1 : 0),
+              measuredVisibleTags: [
+                ...accumulator.measuredVisibleTags,
+                canBeVisible && potentiallyNonOverflowedValues[index],
+              ].filter(Boolean) as OptionType[],
+            }
+          },
+          {
+            accumulatedWidth: 0,
+            lastVisibleElementWidth: 0,
+            lastVisibleLabel: '',
+            measuredHiddenTags: 0,
+            measuredVisibleTags: [],
+          },
+        )
+
+        const additionnalElementsWidth =
+          SIZES_TAG.paddings + (refPlusTag.current?.offsetWidth ?? 0)
+        const finalWidth =
+          accumulatedWidth + (measuredHiddenTags ? additionnalElementsWidth : 0)
+
+        const overflowPx = finalWidth - innerWidth
+        const hasOverflow = overflowPx > 0
+        const hasHiddenTags = measuredHiddenTags > 0
+        const lastVisibleElementMaxSize = lastVisibleElementWidth - overflowPx
+
+        // If only one element is selected and it is hidden, we need to show it
+        if (measuredHiddenTags === 1 && measuredVisibleTags.length === 0) {
+          setOverflowAmount(0)
+          setNonOverFlowedValues([potentiallyNonOverflowedValues[0]])
+
+          const newOverflowPx =
+            lastVisibleElementWidth +
+            (measuredHiddenTags > 1 ? additionnalElementsWidth : 0) -
+            innerWidth
+          setLastElementMaxWidth(lastVisibleElementWidth - newOverflowPx)
+          setOverflow(true)
+        }
+
+        // If it overflows with the last tag, we need to add an ellipsis to the last element if there is enough space (>60px)
+        // and if it is a string (do not cut ReactNode label)
+        // else we hide it completely and add it to the overflow amount
+        else if (
+          hasOverflow &&
+          hasHiddenTags &&
+          (lastVisibleElementMaxSize > 65 ||
+            (measuredVisibleTags.length === 1 &&
+              lastVisibleElementMaxSize > 65)) &&
+          typeof lastVisibleLabel === 'string'
+        ) {
+          setLastElementMaxWidth(lastVisibleElementMaxSize)
+          setOverflow(true)
+          setOverflowAmount(measuredHiddenTags)
+          setNonOverFlowedValues(measuredVisibleTags)
+        } else if (hasOverflow && hasHiddenTags) {
+          setLastElementMaxWidth(0)
+          setOverflow(false)
+          setOverflowAmount(measuredHiddenTags + 1)
+          setNonOverFlowedValues(measuredVisibleTags.slice(0, -1))
+        }
+        // Otherwise, we have enough space to show all tags
+        else {
+          setOverflow(false)
+          setOverflowAmount(measuredHiddenTags)
+          setNonOverFlowedValues(measuredVisibleTags)
+        }
       }
-      // Otherwise, we have enough space to show all tags
-      else {
-        setOverflow(false)
-        setOverflowAmount(measuredHiddenTags)
-        setNonOverFlowedValues(measuredVisibleTags)
-      }
-    }
-    setDisplayShadowCopy(false)
-  }, [
-    displayShadowCopy,
-    potentiallyNonOverflowedValues,
-    selectedData.selectedValues.length,
-    getWidth,
-  ])
+      setDisplayShadowCopy(false)
+    },
+    [
+      displayShadowCopy,
+      potentiallyNonOverflowedValues,
+      selectedData.selectedValues.length,
+      getWidth,
+    ],
+  )
 
   useEffect(() => {
     setSelectedData({ type: 'update' })
@@ -424,11 +430,12 @@ const SelectBar = ({
   ])
 
   return (
-    <Tooltip text={tooltip}>
+    <Tooltip disableAnimation text={tooltip}>
       <div
         aria-controls={dropdownId}
         aria-expanded={isDropdownVisible}
         aria-label={label}
+        // oxlint-disable-next-line jsx_a11y/no-autofocus
         autoFocus={autoFocus}
         className={selectBar({
           disabled,
@@ -516,7 +523,7 @@ const SelectBar = ({
                 }
               }}
               sentiment="neutral"
-              size="small"
+              size={size === 'large' ? 'small' : 'xsmall'}
               variant="ghost"
             >
               <CloseIcon />

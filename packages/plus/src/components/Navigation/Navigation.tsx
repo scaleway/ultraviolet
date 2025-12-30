@@ -12,8 +12,27 @@ import type { NavigationProps } from './types'
  * You can wrap your navigation items like `<Navigation.Item>` with your router
  * to make it work in your application.
  */
-export const Navigation = ({ children, ...props }: NavigationProps) => (
-  <NavigationContent {...props}>{children}</NavigationContent>
+export const Navigation = ({
+  'data-testid': dataTestId,
+  children,
+  className,
+  id,
+  logo,
+  onToggleExpand,
+  onWidthResize,
+  style,
+}: NavigationProps) => (
+  <NavigationContent
+    className={className}
+    data-testid={dataTestId}
+    id={id}
+    logo={logo}
+    onToggleExpand={onToggleExpand}
+    onWidthResize={onWidthResize}
+    style={style}
+  >
+    {children}
+  </NavigationContent>
 )
 
 Navigation.Group = Group

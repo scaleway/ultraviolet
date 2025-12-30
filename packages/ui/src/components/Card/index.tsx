@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Stack } from '../Stack'
@@ -42,7 +43,7 @@ export const Card = forwardRef(
   ) =>
     header ? (
       <Stack
-        className={`${className ? `${className} ` : ''}${stackCard}`}
+        className={cn(className, stackCard)}
         data-disabled={disabled}
         data-testid={dataTestId}
         gap={1}
@@ -90,7 +91,7 @@ export const Card = forwardRef(
       </Stack>
     ) : (
       <div
-        className={`${className ? `${className} ` : ''}${borderedBox}`}
+        className={cn(className, borderedBox)}
         data-disabled={disabled}
         data-is-active={active}
         data-testid={dataTestId}

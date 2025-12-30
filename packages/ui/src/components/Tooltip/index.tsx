@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Popup } from '../Popup'
@@ -21,6 +22,7 @@ type TooltipProps = Pick<
   | 'portalTarget'
   | 'tabIndex'
   | 'debounceDelay'
+  | 'disableAnimation'
   | 'style'
 > & {
   placement?: Exclude<ComponentProps<typeof Popup>['placement'], 'nested-menu'>
@@ -47,17 +49,19 @@ export const Tooltip = forwardRef(
       'data-testid': dataTestId,
       portalTarget,
       debounceDelay,
+      disableAnimation,
       tabIndex,
       style,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
     <Popup
-      className={`${className ? `${className} ` : ''}${tooltip}`}
+      className={cn(className, tooltip)}
       containerFullHeight={containerFullHeight}
       containerFullWidth={containerFullWidth}
       data-testid={dataTestId}
       debounceDelay={debounceDelay}
+      disableAnimation={disableAnimation}
       id={id}
       innerRef={innerRef}
       maxWidth={maxWidth}

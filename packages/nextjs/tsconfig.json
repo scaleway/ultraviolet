@@ -1,8 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@repo/config/tsconfig/base.json",
   "compilerOptions": {
-    "baseUrl": "."
+    "rootDir": "src",
+    "outDir": "dist"
   },
-  "include": ["src", "../../global.d.ts"],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
 }

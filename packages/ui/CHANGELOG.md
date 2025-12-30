@@ -1,5 +1,88 @@
 # Change Log
 
+## 3.2.1
+
+### Patch Changes
+
+- [#5891](https://github.com/scaleway/ultraviolet/pull/5891) [`1b34a68`](https://github.com/scaleway/ultraviolet/commit/1b34a68987c49c100e2fe01dbc9b6814bb3e7749) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectableCard`: new prop `indented` (true by default) to add or remove an indent in order to align the children with the label
+
+- [#5901](https://github.com/scaleway/ultraviolet/pull/5901) [`c4708a8`](https://github.com/scaleway/ultraviolet/commit/c4708a82dae51724af2fe3a0f13d777138b63a78) Thanks [@lisalupi](https://github.com/lisalupi)! - `List` width variable should not also be minWidth and maxWidth
+
+## 3.2.0
+
+### Minor Changes
+
+- [#5875](https://github.com/scaleway/ultraviolet/pull/5875) [`5374a2a`](https://github.com/scaleway/ultraviolet/commit/5374a2afe9c58a445b2a0dc3ff3a5733ece0a4ea) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix `List.Cell` width when it is in %
+
+- [#5878](https://github.com/scaleway/ultraviolet/pull/5878) [`22e27d6`](https://github.com/scaleway/ultraviolet/commit/22e27d621a269ddfd8f952e76e20b11c6914ad2b) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix(List.Row): Do not map over invalid children, if a `null` child exist it will break the columns widths because we use child index to retrieve column style
+
+### Patch Changes
+
+- [#5863](https://github.com/scaleway/ultraviolet/pull/5863) [`ec99ee5`](https://github.com/scaleway/ultraviolet/commit/ec99ee591e1de6b9c9428146fa7f8cb1bda1b81e) Thanks [@lisalupi](https://github.com/lisalupi)! - `PasswordCheck`: update style
+
+- [#5884](https://github.com/scaleway/ultraviolet/pull/5884) [`d1b9517`](https://github.com/scaleway/ultraviolet/commit/d1b9517b55a3f84ea94d52e09bbbb4b872e7219c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Stepper`:
+
+  - Change the prominence of the "Done" bullet
+  - Reduce height of the bar between steps (2px -> 1px)
+
+- [#5882](https://github.com/scaleway/ultraviolet/pull/5882) [`774fb31`](https://github.com/scaleway/ultraviolet/commit/774fb31d7929ae8bf20f180f54d38fec8fdb968b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Slider`: Add prop `labelDescription`
+
+- [#5857](https://github.com/scaleway/ultraviolet/pull/5857) [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287) Thanks [@lisalupi](https://github.com/lisalupi)! - Use `cn` function to generate clean classnames
+
+- [#5869](https://github.com/scaleway/ultraviolet/pull/5869) [`3a1daaa`](https://github.com/scaleway/ultraviolet/commit/3a1daaad38cbebec5509e1162c4351c0a251afd4) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Dependency upgrade: Upgrade vitest to v4
+
+- [#5861](https://github.com/scaleway/ultraviolet/pull/5861) [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.1`.
+  Updated dependency `react-dom` to `19.2.1`.
+
+- [#5890](https://github.com/scaleway/ultraviolet/pull/5890) [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581) Thanks [@philibea](https://github.com/philibea)! - tsconfig add isolated module
+
+- Updated dependencies [[`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56), [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581)]:
+  - @ultraviolet/themes@3.0.1
+  - @ultraviolet/icons@5.0.2
+
+## 3.1.1
+
+### Patch Changes
+
+- [#5870](https://github.com/scaleway/ultraviolet/pull/5870) [`10ced0d`](https://github.com/scaleway/ultraviolet/commit/10ced0d1c7e22af4ccaf4b8f4e60b655e56579da) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Cell`: fix width of child to take into account padding
+
+## 3.1.0
+
+### Minor Changes
+
+- [#5843](https://github.com/scaleway/ultraviolet/pull/5843) [`634c88f`](https://github.com/scaleway/ultraviolet/commit/634c88f9597b432c21afc9903c0d96e3d54b578d) Thanks [@lisalupi](https://github.com/lisalupi)! - `BarStack`:
+  - change style
+  - add props `label` and `labelDescription` to add a Label on top of the chart
+  - add prop `legend` to show the legend beneath the chart instead of inside of it
+  - add prop `size`
+  - text should have an ellipsis when overflowing
+
+### Patch Changes
+
+- [#5835](https://github.com/scaleway/ultraviolet/pull/5835) [`c650f4f`](https://github.com/scaleway/ultraviolet/commit/c650f4fd70be4b6a09477514b5719becec6a278b) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Fix color of disabled option description text
+
+- [#5828](https://github.com/scaleway/ultraviolet/pull/5828) [`7bde3d9`](https://github.com/scaleway/ultraviolet/commit/7bde3d9d0c905f610b903d1af7802742e3cfcc4e) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
+  - click outside should work in every context
+  - fix placeholder alignment when small
+
+- [#5846](https://github.com/scaleway/ultraviolet/pull/5846) [`019e4b3`](https://github.com/scaleway/ultraviolet/commit/019e4b3322d76f29986f275f5e852cc9d2089a43) Thanks [@lisalupi](https://github.com/lisalupi)! - `Snippet`: add label and helper
+
+- [#5845](https://github.com/scaleway/ultraviolet/pull/5845) [`cc568fc`](https://github.com/scaleway/ultraviolet/commit/cc568fc91c73e4ae185f304176a8690132eadff8) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - fix make tag input multiline by default
+
+- [#5824](https://github.com/scaleway/ultraviolet/pull/5824) [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.7`.
+
+- [#5844](https://github.com/scaleway/ultraviolet/pull/5844) [`173e194`](https://github.com/scaleway/ultraviolet/commit/173e194b9524e7396cf98fc8725eba068d4d65cb) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`: fix gap
+
+- [#5822](https://github.com/scaleway/ultraviolet/pull/5822) [`cb75383`](https://github.com/scaleway/ultraviolet/commit/cb7538341653c9dc485bd59ef107cea863449fa1) Thanks [@lisalupi](https://github.com/lisalupi)! - `Badge`: new size "xsmall"
+
+- [#5854](https://github.com/scaleway/ultraviolet/pull/5854) [`6bc5d37`](https://github.com/scaleway/ultraviolet/commit/6bc5d376cd48c8dedf04f62e34b5b3c78f872a5e) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Cell`: force width/maxWidth/minWidth on children
+
+- [#5833](https://github.com/scaleway/ultraviolet/pull/5833) [`0e4dd48`](https://github.com/scaleway/ultraviolet/commit/0e4dd487741e0030d9f652e468b2dc035e2722d4) Thanks [@lisalupi](https://github.com/lisalupi)! - `Text`: fix prop strikeThrough by removing useless `textDecoration` in variant definition
+
+- Updated dependencies [[`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23), [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13), [`7625641`](https://github.com/scaleway/ultraviolet/commit/76256412346cff9d655d153d1b48741bc099db6d)]:
+  - @ultraviolet/icons@5.0.1
+
 ## 3.0.0
 
 ### Major Changes

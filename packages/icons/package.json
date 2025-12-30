@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/icons",
-  "version": "5.0.0",
+  "version": "5.0.2",
   "description": "Ultraviolet Icons",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -123,14 +123,16 @@
   },
   "devDependencies": {
     "@babel/core": "7.28.5",
+    "@repo/config": "workspace:*",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "dependencies": {
     "@ultraviolet/themes": "workspace:*",
+    "@ultraviolet/utils": "workspace:*",
     "@vanilla-extract/css": "1.17.4",
     "@vanilla-extract/dynamic": "2.1.5",
     "@vanilla-extract/recipes": "0.5.7"

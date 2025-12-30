@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
@@ -22,6 +23,8 @@ import {
 import type { SingleSliderProps } from '../types'
 import { Options } from './Options'
 
+// Should be split into smaller function
+// oxlint-disable-next-line eslint/max-statements
 export const SingleSlider = ({
   name,
   tooltip,
@@ -45,6 +48,7 @@ export const SingleSlider = ({
   prefix,
   suffix,
   required,
+  labelDescription,
   'aria-label': ariaLabel,
   tooltipPosition,
 }: SingleSliderProps) => {
@@ -183,7 +187,9 @@ export const SingleSlider = ({
     THUMB_SIZE / 2 -
     sliderWidth / 2
 
-  const valueToShow = options ? options[selectedIndex]?.value : selectedIndex
+  const valueToShow = options?.[selectedIndex]
+    ? options[selectedIndex].value
+    : selectedIndex
 
   return (
     <Stack direction={direction} gap={1} justifyContent="left">
@@ -193,7 +199,11 @@ export const SingleSlider = ({
           direction="row"
           justifyContent="space-between"
         >
-          <Label htmlFor={finalId} required={required}>
+          <Label
+            htmlFor={finalId}
+            labelDescription={labelDescription}
+            required={required}
+          >
             {label}
           </Label>
           {direction === 'column' ? styledValue(valueToShow) : null}
@@ -215,7 +225,11 @@ export const SingleSlider = ({
           <input
             aria-disabled={disabled}
             aria-label={ariaLabel ?? name}
-            className={`${className ? `${className} ` : ''}${sliderSingle({ direction, disabled, error: !!error })} ${sliderThumbStyle({ disabled, isDouble: false })}`}
+            className={cn(
+              className,
+              sliderSingle({ direction, disabled, error: !!error }),
+              sliderThumbStyle({ disabled, isDouble: false }),
+            )}
             data-direction={direction}
             data-error={!!error}
             data-testid={dataTestId}

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import type { LabelProp } from '../../types'
@@ -87,7 +88,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
         <Stack className={radioStack} gap={0.5}>
           <div
             aria-disabled={disabled}
-            className={`${className ? `${className} ` : ''}${container}`}
+            className={cn(className, container)}
             data-checked={checked}
             data-error={error}
             data-testid={dataTestId}
@@ -96,7 +97,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               aria-disabled={disabled}
               aria-invalid={!!error} // oxlint-disable-line eslint-plugin-jsx-a11y(role-supports-aria-props)
               aria-label={ariaLabel}
-              autoFocus={autoFocus}
+              autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
               checked={checked}
               className={radio}
               disabled={disabled}

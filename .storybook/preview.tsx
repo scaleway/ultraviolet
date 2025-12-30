@@ -10,6 +10,7 @@ import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
+import { withThemeByClassName } from '@storybook/addon-themes'
 
 import { scan } from "react-scan"
 
@@ -140,6 +141,21 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
   )
 }
 
+
+const preview: Preview = {
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: '',
+        dark: 'dark',
+        darker: "darker"
+      },
+      defaultTheme: 'light',
+    }),
+  ],
+};
+
+
 const decorators = [
   (Story: StoryFn, context: { globals: { theme: string } }) => {
     const theme = context.globals.theme || "light"
@@ -158,12 +174,13 @@ const decorators = [
       <>
         <ThemeProviderUI theme={finalTheme()}>
           {
-            // eslint-disable-next-line react/jsx-curly-brace-presence
+            // oxlint-disable-next-line react/jsx-curly-brace-presence
             <Story />
           }
         </ThemeProviderUI>
       </>
-    )}, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
+    )
+  }, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
 
   withThemeProvider,
 ]
@@ -171,5 +188,6 @@ const decorators = [
 export default {
   parameters,
   decorators,
+  preview,
   tags: ['autodocs']
 } satisfies Preview

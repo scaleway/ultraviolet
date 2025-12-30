@@ -33,16 +33,6 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['@ultraviolet/*'],
-    include: [
-      '@vanilla-extract/css-utils',
-      '@vanilla-extract/css',
-      '@vanilla-extract/css/fileScope',
-      '@vanilla-extract/dynamic',
-      '@vanilla-extract/recipes',
-      '@vanilla-extract/recipes/createRuntimeFn',
-      '@vanilla-extract/sprinkles',
-      '@vanilla-extract/sprinkles/createRuntimeSprinkles',
-    ]
   },
   plugins: [
     svgr({ memo: true, svgo: false }),

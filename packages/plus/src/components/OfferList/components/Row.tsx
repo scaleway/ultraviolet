@@ -10,6 +10,7 @@ import {
   Radio,
   Tooltip,
 } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Children, useCallback, useMemo, useState } from 'react'
@@ -18,7 +19,6 @@ import {
   expandablePadding as expandablePaddingVar,
   offerListBadge,
   offerListBadgeContainer,
-  offerListBanner,
   offerListNoPaddingCell,
   offerListRowBanner,
   offerListRowExpandable,
@@ -140,7 +140,14 @@ export const Row = ({
   return (
     <>
       <List.Row
-        className={`${className ? `${className} ` : ''}${banner ? offerListRowBanner : ''}${isSelected ? `${offerListBanner ? ' ' : ''}${offerListRowSelected}` : ''} ${expandable ? offerListRowSelectedExpandable : offerListRowSelectedNotExpandable}`}
+        className={cn(
+          className,
+          banner ? offerListRowBanner : '',
+          isSelected ? offerListRowSelected : '',
+          expandable
+            ? offerListRowSelectedExpandable
+            : offerListRowSelectedNotExpandable,
+        )}
         data-dragging={dataDragging}
         data-testid={dataTestId}
         disabled={disabled}

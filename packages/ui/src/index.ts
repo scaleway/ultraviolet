@@ -1,6 +1,5 @@
 import './utils/animations/animations.css'
 
-// eslint-disable-next-line no-restricted-syntax
 export * from './components'
 export type { UltravioletUITheme } from './theme'
 export {

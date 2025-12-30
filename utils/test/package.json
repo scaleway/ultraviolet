@@ -21,12 +21,14 @@
   },
   "dependencies": {
     "@testing-library/jest-dom": "6.9.1",
-    "@testing-library/react": "16.3.0",
-    "@types/react": "19.2.7",
+    "@testing-library/react": "16.3.1",
     "@ultraviolet/themes": "workspace:*",
-    "jsdom": "26.1.0",
-    "react": "19.2.0",
-    "react-intersection-observer": "9.16.0",
-    "vitest": "3.2.4"
+    "react": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.4",
+    "@types/react": "19.2.7",
+    "react-intersection-observer": "10.0.0",
+    "vitest": "4.0.16"
   }
 }

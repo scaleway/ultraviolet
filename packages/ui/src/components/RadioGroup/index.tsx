@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
@@ -48,7 +49,7 @@ const RadioGroupRadio = ({
 
   return (
     <Radio
-      autoFocus={autoFocus}
+      autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
       checked={groupValue === value}
       className={className}
       data-testid={dataTestId}
@@ -84,7 +85,7 @@ type RadioGroupProps = {
 /**
  * RadioGroup is a component that allows users to select one option from a list of options using radio.
  */
-export const RadioGroup = ({
+const RadioGroupComponent = ({
   legend,
   legendDescription,
   value,
@@ -112,7 +113,7 @@ export const RadioGroup = ({
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset className={`${className ? `${className} ` : ''}${fieldset}`}>
+        <fieldset className={cn(className, fieldset)}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -166,4 +167,13 @@ export const RadioGroup = ({
   )
 }
 
-RadioGroup.Radio = RadioGroupRadio
+type SelectableCardOptionGroupType = typeof RadioGroupComponent & {
+  Radio: typeof RadioGroupRadio
+}
+
+export const RadioGroup: SelectableCardOptionGroupType = Object.assign(
+  RadioGroupComponent,
+  {
+    Radio: RadioGroupRadio,
+  },
+)

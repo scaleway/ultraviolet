@@ -10,13 +10,15 @@ Playground.parameters = {
       story: `Use prop \`item\` to define the element to add in the order summary. Items are defined by categories, and each category have a few prop
 - \`category\` (**required**): name of the category (*string*)
 - \`additionalInfo\`: data to add right next to the category title (*ReactNode*) 
+- \`subTitle\`: information to add beneath the category title (*ReactNode*)
 - \`discount\`: discount to apply to the whole category (if <1, in %, else absolute value). The price without discount is displayed struck through next to the discounted price (*number*)
 - \`customContent\`: hide the price of the category and display this content instead (*ReactNode*)
 - \`allowNegative\`: set to \`true\` if the category price can be < 0 (e.g coupons) (*boolean*)
 - \`subCategories\`: list of the sub-categories in the category. A sub-category consists of :
         - \`title\`: title of the sub-category (*string*)
+        - \`icon\`: icon to put before the sub-category title (*ReactNode*)
         - \`price\`: price of the sub-category. When a price is defined as a range, the final cost will be displayed as a range too (*number* for a fixed price, *[number, number]* for a range).
-        - \`details\`: list of elements to be displayed in the subCategory (*string[]*)
+        - \`details\`: list of elements to be displayed in the subCategory. (*ReactNode[]*)
         - \`amount\`: quantity. The price is computed taking into account the amount : \`finalPrice = amount * price\` (*number*)
         - \`amountFree\`: quantity free: \`finalPrice = (amount - amountFree) * price\` (*number*)
         - \`fixedPrice\`: when set to \`true\`, the final price does not depend on the time (*boolean*)

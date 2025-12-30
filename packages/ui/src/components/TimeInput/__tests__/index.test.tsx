@@ -108,7 +108,7 @@ describe('timeInput', () => {
     const seconds = screen.getByTestId('seconds-input')
 
     await userEvent.type(minutes, '3')
-    expect(mockOnChange).toHaveBeenCalledOnce()
+    expect(mockOnChange).toHaveBeenCalledTimes(1)
     expect(minutes).toHaveValue('03')
 
     await userEvent.type(minutes, '2')
@@ -138,7 +138,7 @@ describe('timeInput', () => {
       />,
     )
     await userEvent.click(screen.getByTestId('clear'))
-    expect(mockOnChange).toHaveBeenCalledOnce()
+    expect(mockOnChange).toHaveBeenCalledTimes(1)
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -200,7 +200,7 @@ describe('timeInput', () => {
     await userEvent.click(seconds)
     await userEvent.keyboard('[ArrowUp]')
     expect(seconds).toHaveValue('15')
-    expect(mockOnChange).toHaveBeenCalledOnce()
+    expect(mockOnChange).toHaveBeenCalledTimes(1)
     await userEvent.keyboard('[ArrowDown]')
     expect(seconds).toHaveValue('14')
 

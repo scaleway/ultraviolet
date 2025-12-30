@@ -1,8 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { useState } from 'react'
 import { Badge } from '../../Badge'
+import { Button } from '../../Button'
 import { Row } from '../../Row'
 import { SelectInput } from '../../SelectInput'
+import { Separator } from '../../Separator'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { TextArea } from '../../TextArea'
@@ -27,6 +29,9 @@ export const Examples: StoryFn = args => {
   })
   const [value5, onChange5] = useState({
     'label-29': false,
+  })
+  const [value6, onChange6] = useState({
+    'label-30': false,
   })
 
   return (
@@ -97,16 +102,20 @@ export const Examples: StoryFn = args => {
           }
           name="label-20"
           onChange={event =>
-            onChange2({ ...value2, 'label-20': event.currentTarget.checked })
+            onChange2(prevState => ({
+              ...prevState,
+              'label-20': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
           value="label-20"
         >
-          <Stack gap={1}>
-            <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+          <Text as="p" prominence="weak" sentiment="neutral" variant="body">
+            <Stack gap={3} width="100%">
               This option will cost you 1.99€ and provide you with a lot of
               happiness
+              <Separator />
               <SelectInput
                 label="Select a sub option"
                 options={[
@@ -115,9 +124,9 @@ export const Examples: StoryFn = args => {
                     value: 'option1',
                   },
                 ]}
-              />
-            </Text>
-          </Stack>
+              />{' '}
+            </Stack>
+          </Text>
         </SelectableCard>
         <SelectableCard
           {...args}
@@ -134,7 +143,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-21"
           onChange={event =>
-            onChange2({ ...value2, 'label-21': event.currentTarget.checked })
+            onChange2(prevState => ({
+              ...prevState,
+              'label-21': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -163,7 +175,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-22"
           onChange={event =>
-            onChange3({ ...value3, 'label-22': event.currentTarget.checked })
+            onChange3(prevState => ({
+              ...prevState,
+              'label-22': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -189,7 +204,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-23"
           onChange={event =>
-            onChange3({ ...value3, 'label-23': event.currentTarget.checked })
+            onChange3(prevState => ({
+              ...prevState,
+              'label-23': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -216,7 +234,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-24"
           onChange={event =>
-            onChange3({ ...value3, 'label-24': event.currentTarget.checked })
+            onChange3(prevState => ({
+              ...prevState,
+              'label-24': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -243,7 +264,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-25"
           onChange={event =>
-            onChange3({ ...value3, 'label-25': event.currentTarget.checked })
+            onChange3(prevState => ({
+              ...prevState,
+              'label-25': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -270,7 +294,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-26"
           onChange={event =>
-            onChange4({ ...value4, 'label-26': event.currentTarget.checked })
+            onChange4(prevState => ({
+              ...prevState,
+              'label-26': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -289,7 +316,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-27"
           onChange={event =>
-            onChange4({ ...value4, 'label-27': event.currentTarget.checked })
+            onChange4(prevState => ({
+              ...prevState,
+              'label-27': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -309,7 +339,10 @@ export const Examples: StoryFn = args => {
           }
           name="label-28"
           onChange={event =>
-            onChange4({ ...value4, 'label-28': event.currentTarget.checked })
+            onChange4(prevState => ({
+              ...prevState,
+              'label-28': event.currentTarget.checked,
+            }))
           }
           showTick
           type="checkbox"
@@ -320,17 +353,63 @@ export const Examples: StoryFn = args => {
         {...args}
         checked={value5['label-29']}
         label="With an input in the children"
-        name="label-29" // fixed: match the state key
-        onChange={
-          event =>
-            onChange5({ ...value5, 'label-29': event.currentTarget.checked }) // fixed: spread value5
+        name="label-29"
+        onChange={event =>
+          onChange5(prevState => ({
+            ...prevState,
+            'label-29': event.currentTarget.checked,
+          }))
         }
         showTick
         type="checkbox"
-        value="label-29" // fixed: match the state key
+        value="label-29"
       >
         <TextArea label="" onChange={() => {}} />
       </SelectableCard>
+      <SelectableCard
+        {...args}
+        checked={value6['label-30']}
+        label={
+          <Stack direction="row" justifyContent="space-between">
+            <Stack direction="row" gap={1}>
+              <Text as="span" variant="body">
+                domain.com
+              </Text>
+              <Badge>Premium</Badge>
+            </Stack>
+            <Stack direction="row" gap={2}>
+              <Badge sentiment="primary">Save 64%</Badge>
+              <Stack alignItems="center" direction="row" gap="0.5">
+                <Text
+                  as="span"
+                  prominence="weak"
+                  sentiment="neutral"
+                  strikeThrough
+                  variant="captionSmall"
+                >
+                  €8.99
+                </Text>
+                <Text as="span" sentiment="neutral" variant="bodyStronger">
+                  €2.99 year
+                </Text>
+              </Stack>
+              <Button sentiment="primary" size="small" variant="outlined">
+                Add to cart
+              </Button>
+            </Stack>
+          </Stack>
+        }
+        name="label-30"
+        onChange={event =>
+          onChange6(prevState => ({
+            ...prevState,
+            'label-30': event.currentTarget.checked,
+          }))
+        }
+        showTick
+        type="checkbox"
+        value="label-30"
+      />
     </Stack>
   )
 }
@@ -342,3 +421,7 @@ Examples.decorators = [
     </Stack>
   ),
 ]
+
+Examples.args = {
+  indented: true,
+}

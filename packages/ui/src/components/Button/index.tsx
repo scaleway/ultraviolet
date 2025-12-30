@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -61,7 +62,7 @@ type FinalProps = CommonProps & {
 export const Button = forwardRef<Element, FinalProps>(
   (
     {
-      type = 'button',
+      type = 'button' as const,
       className,
       'data-testid': dataTestId,
       sentiment = 'primary',
@@ -140,8 +141,11 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-label={ariaLabel}
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}
-            autoFocus={autoFocus}
-            className={`${className ? `${className} ` : ''}${button({ disabled, fullWidth, sentiment, size, variant })}`}
+            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+            className={cn(
+              className,
+              button({ disabled, fullWidth, sentiment, size, variant }),
+            )}
             data-testid={dataTestId}
             download={download}
             href={href}
@@ -173,8 +177,11 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-expanded={ariaExpanded}
           aria-haspopup={ariaHaspopup}
           aria-label={ariaLabel}
-          autoFocus={autoFocus}
-          className={`${className ? `${className} ` : ''}${button({ disabled, fullWidth, sentiment, size, variant })}`}
+          autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+          className={cn(
+            className,
+            button({ disabled, fullWidth, sentiment, size, variant }),
+          )}
           data-testid={dataTestId}
           disabled={computeIsDisabled}
           name={name}
@@ -191,7 +198,7 @@ export const Button = forwardRef<Element, FinalProps>(
           role={role}
           style={style}
           tabIndex={tabIndex}
-          type={type}
+          type={type} // oxlint-disable-line react/button-has-type
         >
           {content}
         </button>

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -129,6 +130,7 @@ export const VerificationCode = ({
 
   const inputOnKeyDown =
     (index: number): KeyboardEventHandler<HTMLInputElement> =>
+    // oxlint-disable-next-line eslint/max-statements
     event => {
       const prevIndex = index - 1
       const nextIndex = index + 1
@@ -235,7 +237,7 @@ export const VerificationCode = ({
 
   return (
     <fieldset
-      className={`${className ? `${className} ` : ''}${filedSetClass}`}
+      className={cn(className, filedSetClass)}
       data-testid={dataTestId}
       style={style}
     >
@@ -256,7 +258,7 @@ export const VerificationCode = ({
             aria-invalid={!!error}
             aria-label={`${ariaLabel} ${index}`}
             autoComplete="off"
-            className={`${inputSizes[size]} ${inputClass}`}
+            className={cn(inputSizes[size], inputClass)}
             data-success={!!success}
             data-testid={index}
             disabled={disabled}

@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/fonts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Ultraviolet Fonts",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -32,14 +32,18 @@
     "linux"
   ],
   "type": "module",
+  "devDependencies": {
+    "@repo/config": "workspace:*"
+  },
   "exports": {
     ".": {
+      "style": "./dist/fonts.css",
       "require": "./dist/fonts.css",
       "import": "./dist/fonts.css",
-      "style": "./dist/fonts.css",
       "default": "./dist/fonts.css"
     },
     "./fonts.css": {
+      "style": "./dist/fonts.css",
       "require": "./dist/fonts.css",
       "import": "./dist/fonts.css",
       "default": "./dist/fonts.css"

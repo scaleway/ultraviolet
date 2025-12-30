@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'
@@ -108,7 +109,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       <Tooltip text={tooltip}>
         <div
           aria-disabled={disabled}
-          className={`${className ? `${className} ` : ''}${checkboxContainer}`}
+          className={cn(className, checkboxContainer)}
           data-checked={checked}
           data-error={!!error}
           data-testid={dataTestId}
@@ -119,7 +120,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             aria-describedby={error ? `${localId}-hint` : undefined}
             aria-invalid={!!error}
             aria-label={ariaLabel}
-            autoFocus={autoFocus}
+            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
             checked={isCheck}
             className={checkboxInput}
             disabled={disabled}

@@ -14,16 +14,16 @@ jobs:
           LANG: en_US.UTF-8
       - uses: pnpm/action-setup@v4.2.0
       - name: Use Node.js
-        uses: actions/setup-node@v6.0.0
+        uses: actions/setup-node@v6.1.0
         with:
-          node-version: 24.11.1
+          node-version: 24.12.0
           cache: "pnpm"
       - run: pnpm install
       - name: Generate json files
         run: pnpm run tokens:update
 
       - name: Compare & Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GH_TOKEN }}
           base: main

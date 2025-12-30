@@ -1,6 +1,7 @@
 'use client'
 
 import { Stack, Tag, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import {
   conversationAvatar,
@@ -67,10 +68,7 @@ export const Message = ({
   align = 'right',
   style,
 }: MessageProps) => (
-  <div
-    className={`${className ? `${className} ` : ''}${conversationContainer[align]}`}
-    style={style}
-  >
+  <div className={cn(className, conversationContainer[align])} style={style}>
     <div className={conversationBubble}>
       <div className={conversationRawMessage[align]}>{children}</div>
     </div>

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
@@ -53,7 +54,7 @@ export const EmptyState = ({
   style,
 }: EmptyStateProps) => (
   <Stack
-    className={`${className ? `${className} ` : ''}${emptyStateContainer({ bordered, size })}`}
+    className={cn(className, emptyStateContainer({ bordered, size }))}
     data-testid={dataTestId}
     style={style}
   >

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type {
   ComponentProps,
   CSSProperties,
@@ -81,7 +82,7 @@ export const Tab = forwardRef(
           aria-disabled={disabled}
           aria-label={value ? `${value}` : undefined}
           aria-selected={isSelected}
-          className={`${className ? `${className} ` : ''}${tabsButton}`}
+          className={cn(className, tabsButton)}
           data-is-selected={isSelected}
           disabled={computedAs === 'button' ? disabled : undefined}
           onClick={event => {

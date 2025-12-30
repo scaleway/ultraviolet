@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Label } from '../../Label'
@@ -49,6 +50,7 @@ export const DoubleSlider = ({
   required,
   tooltipPosition,
   'aria-label': ariaLabel,
+  labelDescription,
 }: DoubleSliderProps) => {
   const theme = useTheme()
   const localId = useId()
@@ -274,7 +276,11 @@ export const DoubleSlider = ({
     <Stack direction="column" gap={1} justifyContent="left">
       {label ? (
         <Stack direction="row" justifyContent="space-between">
-          <Label htmlFor={finalId} required={required}>
+          <Label
+            htmlFor={finalId}
+            labelDescription={labelDescription}
+            required={required}
+          >
             {label}
           </Label>
         </Stack>
@@ -318,7 +324,15 @@ export const DoubleSlider = ({
             >
               <input
                 aria-label={ariaLabel ?? name}
-                className={`${className ? `${className} ` : ''}${sliderDouble({ disabled, hasTooltip: !!tooltip })} ${sliderThumbStyle({ disabled: !!disabled, hasTooltipDouble: !!tooltip, isDouble: true })}`}
+                className={cn(
+                  className,
+                  sliderDouble({ disabled, hasTooltip: !!tooltip }),
+                  sliderThumbStyle({
+                    disabled: !!disabled,
+                    hasTooltipDouble: !!tooltip,
+                    isDouble: true,
+                  }),
+                )}
                 data-direction={direction}
                 data-error={error}
                 data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
@@ -356,7 +370,15 @@ export const DoubleSlider = ({
             >
               <input
                 aria-label={ariaLabel ?? name}
-                className={`${className ? `${className} ` : ''}${sliderDouble({ disabled, hasTooltip: !!tooltip })} ${sliderThumbStyle({ disabled, hasTooltipDouble: !!tooltip, isDouble: true })}`}
+                className={cn(
+                  className,
+                  sliderDouble({ disabled, hasTooltip: !!tooltip }),
+                  sliderThumbStyle({
+                    disabled,
+                    hasTooltipDouble: !!tooltip,
+                    isDouble: true,
+                  }),
+                )}
                 data-direction={direction}
                 data-error={error}
                 data-testid={
@@ -375,7 +397,7 @@ export const DoubleSlider = ({
                 onFocus={onFocus}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${((selectedIndexes[1] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [leftVar]: `calc(${(((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background

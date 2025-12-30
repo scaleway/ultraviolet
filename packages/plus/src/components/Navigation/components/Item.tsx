@@ -1,5 +1,7 @@
 'use client'
 
+// oxlint-disable eslint/max-statements
+
 import {
   ArrowDownIcon,
   ArrowRightIcon,
@@ -18,6 +20,7 @@ import {
   Text,
   Tooltip,
 } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type {
   ComponentProps,
   CSSProperties,
@@ -148,7 +151,8 @@ type ItemProps = {
 }
 
 const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
-  event.currentTarget.style.opacity = '1'
+  const element = event.currentTarget
+  element.style.opacity = '1'
 }
 
 export const Item = memo(
@@ -205,8 +209,16 @@ export const Item = memo(
       if (type !== 'pinnedGroup' && pinnedFeature) {
         registerItem({ [id]: { active, label, onClickPinUnpin, onToggle } })
       }
-      // oxlint-disable react/exhaustive-deps
-    }, [active, id, label, registerItem])
+    }, [
+      active,
+      id,
+      label,
+      onClickPinUnpin,
+      onToggle,
+      pinnedFeature,
+      registerItem,
+      type,
+    ])
 
     const [internalExpanded, onToggleExpand] = useReducer(
       prevState => !prevState,
@@ -318,7 +330,8 @@ export const Item = memo(
             JSON.stringify({ index, label }),
           )
 
-          event.currentTarget.style.opacity = '0.5'
+          const element = event.currentTarget
+          element.style.opacity = '0.5'
         }
 
         return undefined
@@ -349,7 +362,23 @@ export const Item = memo(
             alignItems={categoryIcon ? 'flex-start' : 'center'}
             aria-expanded={ariaExpanded}
             as={containerTag}
-            className={`${navigationItemContainer({ disabled, hasActive: hasActiveChildren, isActive: !!active, noExpand, subLabel: !!subLabel })} ${shouldAnimate && animationType === 'complex' ? navigationItemContainerAnimated[animation === 'collapse' ? 'collapse' : 'expand'] : ''} ${showDraggableIcon ? navigationItemShowDraggable : ''} ${showPinIcon ? navigationItemShowPinButton : ''} ${shouldHaveWeakText ? navigationItemWeakText : ''}`}
+            className={cn(
+              navigationItemContainer({
+                disabled,
+                hasActive: hasActiveChildren,
+                isActive: !!active,
+                noExpand,
+                subLabel: !!subLabel,
+              }),
+              shouldAnimate && animationType === 'complex'
+                ? navigationItemContainerAnimated[
+                    animation === 'collapse' ? 'collapse' : 'expand'
+                  ]
+                : '',
+              showDraggableIcon ? navigationItemShowDraggable : '',
+              showPinIcon ? navigationItemShowPinButton : '',
+              shouldHaveWeakText ? navigationItemWeakText : '',
+            )}
             data-testid={dataTestId}
             direction="row"
             disabled={containerTag === 'button' ? disabled : undefined}
@@ -488,6 +517,7 @@ export const Item = memo(
                             }
                           }}
                           onKeyDown={() => {}}
+                          // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
                           role="button"
                         >
                           <PinUnpinIcon
@@ -645,7 +675,12 @@ export const Item = memo(
         <Menu.Item
           active={active}
           borderless
-          className={`${navigationItemMenu}${pinnedFeature && shouldShowPinnedButton ? ` ${navigationItemMenuPinned}` : ''}`}
+          className={cn(
+            navigationItemMenu,
+            pinnedFeature && shouldShowPinnedButton
+              ? navigationItemMenuPinned
+              : '',
+          )}
           disabled={disabled}
           href={href}
           onClick={() => onToggle?.(!!active)}
@@ -738,6 +773,7 @@ export const Item = memo(
                         }
                       }}
                       onKeyDown={() => {}}
+                      // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
                       role="button"
                     >
                       <PinUnpinIcon
@@ -771,7 +807,14 @@ export const Item = memo(
             <Stack
               alignItems="center"
               as={containerTag}
-              className={`${navigationItemContainer({ disabled })} ${shouldAnimate && animationType === 'complex' ? navigationItemContainerAnimated[animation === 'collapse' ? 'collapse' : 'expand'] : ''}`}
+              className={cn(
+                navigationItemContainer({ disabled }),
+                shouldAnimate && animationType === 'complex'
+                  ? navigationItemContainerAnimated[
+                      animation === 'collapse' ? 'collapse' : 'expand'
+                    ]
+                  : '',
+              )}
               gap={1}
               href={href}
               justifyContent="center"

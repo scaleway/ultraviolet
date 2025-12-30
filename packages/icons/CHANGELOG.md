@@ -1,5 +1,31 @@
 # Change Log
 
+## 5.0.2
+
+### Patch Changes
+
+- [#5857](https://github.com/scaleway/ultraviolet/pull/5857) [`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287) Thanks [@lisalupi](https://github.com/lisalupi)! - Use `cn` function to generate clean classnames
+
+- [#5861](https://github.com/scaleway/ultraviolet/pull/5861) [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.1`.
+  Updated dependency `react-dom` to `19.2.1`.
+
+- [#5890](https://github.com/scaleway/ultraviolet/pull/5890) [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581) Thanks [@philibea](https://github.com/philibea)! - tsconfig add isolated module
+
+- Updated dependencies [[`e173e1d`](https://github.com/scaleway/ultraviolet/commit/e173e1dcc89be8ff5ce30b5ac1e00ce5e8e84287), [`ec3805a`](https://github.com/scaleway/ultraviolet/commit/ec3805aff08299614dce412db7ab9fbaa6141f56), [`44aa0e5`](https://github.com/scaleway/ultraviolet/commit/44aa0e5fc7f789c2c286c238dc2f528a69677581)]:
+  - @ultraviolet/themes@3.0.1
+
+## 5.0.1
+
+### Patch Changes
+
+- [#5830](https://github.com/scaleway/ultraviolet/pull/5830) [`9bcbc09`](https://github.com/scaleway/ultraviolet/commit/9bcbc092a10a604f4f5fe3bea29c2a0bb85e5f23) Thanks [@lisalupi](https://github.com/lisalupi)! - Add 20+ `Flags`
+
+- [#5824](https://github.com/scaleway/ultraviolet/pull/5824) [`a0d8757`](https://github.com/scaleway/ultraviolet/commit/a0d87578627cab57138181861559e6db7ab97d13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.7`.
+
+- [#5837](https://github.com/scaleway/ultraviolet/pull/5837) [`7625641`](https://github.com/scaleway/ultraviolet/commit/76256412346cff9d655d153d1b48741bc099db6d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Icon`:
+  - new icons `DocPaperIcon` and `DocPaperOutlineIcon`
+  - update `DocIcon` and `DocOutlineIcon`
+
 ## 5.0.0
 
 ### Major Changes

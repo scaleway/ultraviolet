@@ -39,6 +39,7 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
             setVisible(true)
           }
         }}
+        // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
         role="button"
         tabIndex={0}
       >

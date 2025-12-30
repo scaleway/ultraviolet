@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEventHandler,
   InputHTMLAttributes,
@@ -60,10 +61,13 @@ export const Toggle = forwardRef(
       <Tooltip text={tooltip}>
         <label
           aria-disabled={disabled}
-          className={`${className ? `${className} ` : ''}${labelReceipe({
-            disabled,
-            labelPosition,
-          })}`}
+          className={cn(
+            className,
+            labelReceipe({
+              disabled,
+              labelPosition,
+            }),
+          )}
           data-testid={dataTestId}
         >
           <Stack alignItems="baseline" gap={0.25}>

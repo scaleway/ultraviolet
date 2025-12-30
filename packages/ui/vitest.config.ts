@@ -10,6 +10,8 @@ export default mergeConfig(defineConfig(defaultConfig), {
     }),
   ], // Enable unstable mode for better compatibility with Vitest
   test: {
+    environment: 'happy-dom',
+    name: 'uv/ui happy-dom',
     setupFiles: ['./vitest.setup.ts'],
   },
 })

@@ -12,7 +12,6 @@ describe('dateInput', () => {
   test('renders correctly with default props', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
-        autoFocus={false}
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"
         locale={fr}
@@ -381,7 +380,6 @@ describe('dateInput', () => {
   test('renders correctly custom format with range', () => {
     const { asFragment } = renderWithTheme(
       <DateInput
-        autoFocus={false}
         endDate={new Date('1995-12-11T03:24:00.000+00:00')}
         format={value => (value instanceof Date ? value.toISOString() : value)}
         label="Date"

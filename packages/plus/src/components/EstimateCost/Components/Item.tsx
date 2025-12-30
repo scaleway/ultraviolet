@@ -1,7 +1,10 @@
 'use client'
 
+// oxlint-disable eslint/max-statements
+
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import {
@@ -440,7 +443,13 @@ export const Item = memo(
         </Cell>
         {!isOverlay ? (
           <td
-            className={`${estimateCostCell({ hasBorder: !isLastElement && !noBorder, primary: isPrimaryBackground })} ${estimateCostPriceCell}`}
+            className={cn(
+              estimateCostCell({
+                hasBorder: !isLastElement && !noBorder,
+                primary: isPrimaryBackground,
+              }),
+              estimateCostPriceCell,
+            )}
             style={assignInlineVars({
               [paddingLeftCell]: `16px`,
             })}

@@ -8,6 +8,7 @@ import {
   EyeIcon,
   EyeOffIcon,
 } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -193,7 +194,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
         <div>
           <Tooltip text={tooltip}>
             <div
-              className={`${inputWrapper} ${inputWrapperSizes[size]}`}
+              className={cn(inputWrapper, inputWrapperSizes[size])}
               data-disabled={disabled}
               data-error={!!error}
               data-has-focus={hasFocus}
@@ -226,6 +227,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                 aria-label={ariaLabel}
                 aria-labelledby={ariaLabelledBy}
                 autoComplete={autoComplete}
+                // oxlint-disable-next-line jsx_a11y/no-autofocus
                 autoFocus={autoFocus}
                 className={inputClass}
                 data-size={size}

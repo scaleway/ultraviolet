@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { Button } from '../../Button'
 import { toasterButton } from '../styles.css'
@@ -12,7 +13,7 @@ export const ToastButton = ({
   if (variant === 'ghost') {
     return (
       <Button
-        className={`${className ? `${className} ` : ''}${toasterButton}`}
+        className={cn(className, toasterButton)}
         {...props}
         size="xsmall"
         variant={variant}

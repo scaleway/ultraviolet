@@ -1,6 +1,7 @@
 'use client'
 
 import { List } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { Cell } from './components/Cell'
@@ -79,7 +80,7 @@ export const OfferList = ({
     >
       <List
         autoCollapse={autoCollapse}
-        className={`${className ? `${className} ` : ''}${offerList}`}
+        className={cn(className, offerList)}
         columns={computedColumns}
         data-testid={dataTestId}
         expandable={false}

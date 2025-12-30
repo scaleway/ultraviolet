@@ -2,10 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { keyframes, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-const LINE_HEIGHT_SIZES = {
-  medium: 4,
-  small: 2,
-} as const
+const LINE_HEIGHT_SIZES = 1
 
 const loadingAnimation = keyframes({
   '0%': {
@@ -77,7 +74,7 @@ export const stepperLine = recipe({
     marginTop: theme.space[2],
     marginBottom: theme.space[2],
     backgroundColor: theme.colors.neutral.backgroundStrong,
-
+    height: `${LINE_HEIGHT_SIZES}px`,
     selectors: {
       '&::after': {
         content: '""',
@@ -103,14 +100,6 @@ export const stepperLine = recipe({
       },
       current: {},
     },
-    size: {
-      small: {
-        height: `${LINE_HEIGHT_SIZES.small}px`,
-      },
-      medium: {
-        height: `${LINE_HEIGHT_SIZES.medium}px`,
-      },
-    },
     animated: {
       true: {},
     },
@@ -129,7 +118,6 @@ export const stepperLine = recipe({
   ],
   defaultVariants: {
     animated: false,
-    size: 'medium',
     temporal: 'next',
   },
 })
@@ -176,11 +164,11 @@ export const stepperContainerRecipe = recipe({
             position: 'relative',
             alignSelf: 'baseline',
             borderRadius: theme.radii.default,
-            top: theme.space[2],
+            top: `calc(${theme.space[1.5]} - 1px)`,
             width: `calc(100% - ${theme.space[5]})`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES.small}px`,
+            height: `${LINE_HEIGHT_SIZES}px`,
           },
           '&:not(:last-child)::before': {
             content: '""',
@@ -188,11 +176,11 @@ export const stepperContainerRecipe = recipe({
             alignSelf: 'baseline',
             borderRadius: theme.radii.default,
             backgroundColor: theme.colors.neutral.backgroundStrong,
-            top: 18,
+            top: theme.space['1.5'],
             width: `calc(100% - ${theme.space[5]})`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES.small}px`,
+            height: `${LINE_HEIGHT_SIZES}px`,
           },
         },
       },
@@ -206,11 +194,11 @@ export const stepperContainerRecipe = recipe({
             position: 'relative',
             alignSelf: 'baseline',
             borderRadius: theme.radii.default,
-            top: theme.space[2],
+            top: `calc(${theme.space[2]} - 1px)`,
             width: `calc(100% - ${theme.space[6]})`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES.medium}px`,
+            height: `${LINE_HEIGHT_SIZES}px`,
           },
           '&:not(:last-child)::before': {
             content: '""',
@@ -218,11 +206,11 @@ export const stepperContainerRecipe = recipe({
             alignSelf: 'baseline',
             borderRadius: theme.radii.default,
             backgroundColor: theme.colors.neutral.backgroundStrong,
-            top: 20,
+            top: theme.space[2],
             width: `calc(100% - ${theme.space[6]})`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES.medium}px`,
+            height: `${LINE_HEIGHT_SIZES}px`,
           },
         },
       },

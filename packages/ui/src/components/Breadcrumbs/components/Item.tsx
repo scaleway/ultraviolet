@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   KeyboardEvent,
@@ -89,7 +90,7 @@ export const Item = ({
     return (
       <Text
         as="div"
-        className={`${contentBreadcrumbs} ${contentBreadcrumbsText}`}
+        className={cn(contentBreadcrumbs, contentBreadcrumbsText)}
         variant="bodySmallStrong"
       >
         {children}
@@ -100,7 +101,11 @@ export const Item = ({
   return (
     <li
       aria-current={ariaCurrent}
-      className={`${className ? `${className} ` : ''}${itemContainerBreadcrumbs({ clickable: !!onClick })} ${breadcrumbsItem}`}
+      className={cn(
+        className,
+        itemContainerBreadcrumbs({ clickable: !!onClick }),
+        breadcrumbsItem,
+      )}
       onClick={onClick}
       onKeyDown={onKeyDown}
       style={assignInlineVars({

@@ -1,7 +1,9 @@
 'use client'
 
+// oxlint-disable-next-line import/no-namespace
 import * as ProductIcon from '@ultraviolet/icons/product'
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEventHandler,
@@ -30,6 +32,7 @@ import {
   divSelectableCard,
   illustrationSelectableCard,
   imageSelectableCard,
+  indentedCard,
   labelContainerSelectableCard,
   selectableElementSelectableCard,
   stackSelectableCard,
@@ -58,6 +61,7 @@ export type SelectableCardProps = {
   tooltip?: string
   'data-testid'?: string
   style?: CSSProperties
+  indented?: boolean
 } & (
   | {
       illustration?: string
@@ -100,6 +104,7 @@ export const SelectableCard = forwardRef(
       illustration,
       'aria-label': ariaLabel,
       style,
+      indented = true,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -247,7 +252,15 @@ export const SelectableCard = forwardRef(
       <ParentContainer>
         <Stack
           alignItems="start"
-          className={`${className ? `${className} ` : ''}${containerSelectableCard({ cursor: type === 'checkbox' && isComplexChildren ? 'default' : 'custom', image })} ${labelContainerSelectableCard[label ? 'label' : 'noLabel']}`}
+          className={cn(
+            className,
+            containerSelectableCard({
+              cursor:
+                type === 'checkbox' && isComplexChildren ? 'default' : 'custom',
+              image,
+            }),
+            labelContainerSelectableCard[label ? 'label' : 'noLabel'],
+          )}
           data-checked={checked}
           data-disabled={disabled}
           data-error={isError}
@@ -263,6 +276,7 @@ export const SelectableCard = forwardRef(
           }
           onKeyDown={onKeyDown}
           ref={ref}
+          // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
           role="button"
           style={{
             ...assignInlineVars({
@@ -314,7 +328,10 @@ export const SelectableCard = forwardRef(
             )}
             {children ? (
               <Stack
-                className={stackSelectableCard}
+                className={cn(
+                  stackSelectableCard,
+                  !!label && showTick && indented ? indentedCard : undefined,
+                )}
                 data-has-default-cursor={
                   type === 'checkbox' && isComplexChildren
                 }

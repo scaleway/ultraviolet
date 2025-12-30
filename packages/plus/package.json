@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/plus",
-  "version": "3.0.0",
+  "version": "3.1.3",
   "description": "Ultraviolet Plus",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -64,19 +64,18 @@
     }
   ],
   "peerDependencies": {
-    "@ultraviolet/ui": "workspace:*",
     "react": "18.x || 19.x",
     "react-dom": "18.x || 19.x"
   },
   "devDependencies": {
     "@babel/core": "7.28.5",
+    "@repo/config": "workspace:*",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@ultraviolet/illustrations": "workspace:*",
-    "@ultraviolet/ui": "workspace:*",
     "@utils/test": "workspace:*",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "dependencies": {
     "@uiw/codemirror-extensions-langs": "4.25.2",
@@ -84,10 +83,12 @@
     "@uiw/react-codemirror": "4.25.2",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
+    "@ultraviolet/ui": "workspace:*",
+    "@ultraviolet/utils": "workspace:*",
     "@vanilla-extract/css": "1.17.4",
     "@vanilla-extract/dynamic": "2.1.5",
     "@vanilla-extract/recipes": "0.5.7",
     "csstype": "3.2.3",
-    "react-intersection-observer": "9.16.0"
+    "react-intersection-observer": "10.0.0"
   }
 }

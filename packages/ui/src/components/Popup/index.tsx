@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   CSSProperties,
@@ -65,7 +66,7 @@ const stopClickPropagation: MouseEventHandler = event => {
   event.stopPropagation()
 }
 
-type PopupRole = 'dialog' | 'tooltip' | 'popup' | string
+type PopupRole = 'dialog' | 'tooltip' | 'popup' | (string & object)
 
 type PopupProps = {
   /**
@@ -180,6 +181,7 @@ const getPopupPortalTarget = ({
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const Popup = forwardRef(
+  // oxlint-disable-next-line eslint/max-statements
   (
     {
       children,
@@ -614,7 +616,20 @@ export const Popup = forwardRef(
         {shouldRender
           ? createPortal(
               <div
-                className={`${className ? `${className} ` : ''}${popup({ hasArrow, visibleInDom: !dynamicDomRendering ? visibleInDom : undefined })} ${isAnimated ? animationPopup[reverseAnimation ? 'reverse' : 'notReverse'] : null}`}
+                className={cn(
+                  className,
+                  popup({
+                    hasArrow,
+                    visibleInDom: !dynamicDomRendering
+                      ? visibleInDom
+                      : undefined,
+                  }),
+                  isAnimated
+                    ? animationPopup[
+                        reverseAnimation ? 'reverse' : 'notReverse'
+                      ]
+                    : '',
+                )}
                 data-testid={dataTestId}
                 data-visible-in-dom={
                   !dynamicDomRendering ? visibleInDom : undefined

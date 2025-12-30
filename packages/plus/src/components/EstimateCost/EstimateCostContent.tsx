@@ -2,6 +2,7 @@
 
 import { CalculatorIcon } from '@ultraviolet/icons'
 import { Alert, Badge, Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, ReactNode } from 'react'
 import {
@@ -335,7 +336,10 @@ export const EstimateCostContent = ({
                       <TitleComponent locales={locales} />
                     </th>
                     <th
-                      className={`${estimateCostPriceCellContent} ${estimateCostPriceCell}`}
+                      className={cn(
+                        estimateCostPriceCellContent,
+                        estimateCostPriceCell,
+                      )}
                     >
                       <div className={estimateCostTimeCell}>
                         <CustomUnitInput
@@ -397,7 +401,10 @@ export const EstimateCostContent = ({
                 <tr>
                   <td aria-label="control" className={estimateCostEmptyCell} />
                   <td
-                    className={`${estimateCostCell({ hasBorder: false, primary: false })} ${estimateCostTotalPriceCell}`}
+                    className={cn(
+                      estimateCostCell({ hasBorder: false, primary: false }),
+                      estimateCostTotalPriceCell,
+                    )}
                     style={assignInlineVars({
                       [paddingLeftCell]: `16px`,
                     })}

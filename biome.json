@@ -61,6 +61,7 @@
     "includes": [
       "**/*.ts",
       "**/*.tsx",
+      ".storybook/**",
       "!**/dist/**",
       "!**/build/**",
       "!**/.turbo/**"
@@ -91,7 +92,8 @@
       "enabled": true
     },
     "parser": {
-      "allowComments": true
+      "allowComments": true,
+      "allowTrailingCommas": true
     }
   },
   "linter": {

@@ -1,6 +1,7 @@
 'use client'
 
 import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Text } from '../Text'
 import { notice } from './styles.css'
@@ -23,7 +24,7 @@ export const Notice = ({
 }: NoticeProps) => (
   <Text
     as="span"
-    className={`${className ? `${className} ` : ''}${notice}`}
+    className={cn(className, notice)}
     data-testid={dataTestId}
     prominence="weak"
     sentiment="neutral"

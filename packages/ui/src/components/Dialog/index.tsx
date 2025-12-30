@@ -1,6 +1,7 @@
 'use client'
 
 import { AlertCircleIcon, CheckIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { Bullet } from '../Bullet'
@@ -87,7 +88,7 @@ export const BaseDialog = ({
   return (
     <Modal
       ariaLabel={ariaLabel}
-      className={`${className ? `${className} ` : ''}${dialogXsmall}`}
+      className={cn(className, dialogXsmall)}
       data-testid={dataTestId}
       disclosure={disclosure}
       hideOnClickOutside={hideOnClickOutside}

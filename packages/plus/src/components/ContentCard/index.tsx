@@ -2,6 +2,7 @@
 
 import { OpenInNewIcon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
@@ -102,7 +103,7 @@ export const ContentCard = forwardRef<
 
     return (
       <Container
-        className={`${className ? `${className} ` : ''}${cardClass}${onClick || href ? ` ${activeClass}` : ''}`}
+        className={cn(className, cardClass, onClick || href ? activeClass : '')}
         disabled={disabled}
         href={!disabled ? href : undefined}
         onClick={!disabled ? onClick : undefined}

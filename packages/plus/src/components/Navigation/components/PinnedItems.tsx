@@ -85,7 +85,6 @@ export const PinnedItems = ({
   const onDragOver = useCallback(
     (event: DragEvent<HTMLDivElement>) => {
       event.preventDefault()
-
       event.currentTarget.style.borderColor = theme.colors.primary.border
     },
     [theme.colors.primary.border],

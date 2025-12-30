@@ -1,0 +1,72 @@
+{
+  "name": "@ultraviolet/utils",
+  "version": "1.0.0",
+  "description": "Shared utilities for the repository",
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "packages/repo-utils"
+  },
+  "scripts": {
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "size": "size-limit",
+    "lintpublish": "publint"
+  },
+  "keywords": [
+    "utilities",
+    "helpers",
+    "shared"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dist/"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "size-limit": [
+    {
+      "path": [
+        "dist/**/*.js",
+        "!*.d.ts",
+        "!*.cjs"
+      ],
+      "limit": "10 kB",
+      "webpack": false,
+      "brotli": true,
+      "running": false
+    }
+  ],
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/react": "19.2.7",
+    "@utils/test": "workspace:*"
+  }
+}

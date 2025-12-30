@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   ComponentProps,
@@ -335,6 +336,7 @@ const CreateDropdown = ({
                   className={dropdownCheckbox}
                   data-testid="select-all-checkbox"
                   disabled={false}
+                  name="select-all"
                   onChange={selectAllOptions}
                   tabIndex={-1}
                   value="select-all"
@@ -366,7 +368,10 @@ const CreateDropdown = ({
                 >
                   {group ? (
                     <button
-                      className={`${selectAllGroup ? dropdownGroupSelectable : ''} ${dropdownGroup}`}
+                      className={cn(
+                        selectAllGroup ? dropdownGroupSelectable : '',
+                        dropdownGroup,
+                      )}
                       data-selectgroup={selectAllGroup}
                       data-testid={`group-${index}`}
                       key={group}
@@ -508,7 +513,7 @@ const CreateDropdown = ({
     </Stack>
   ) : (
     <Stack
-      className={`${dropdownContainer} ${dropdownContainerUnGrouped}`}
+      className={cn(dropdownContainer, dropdownContainerUnGrouped)}
       gap={0.25}
       id="select-dropdown"
       onKeyDown={handleKeyDownSelect}

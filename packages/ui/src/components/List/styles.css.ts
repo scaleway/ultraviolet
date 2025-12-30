@@ -9,12 +9,16 @@ import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import { recipe } from '@vanilla-extract/recipes'
 import { SENTIMENTS } from '../../theme'
 import {
+  listCellPadding,
   maxWidthCell,
+  maxWidthChildrenCell,
   maxWidthHeaderCell,
   minWidthCell,
+  minWidthChildrenCell,
   minWidthHeaderCell,
   paddingExpandableCell,
   widthCell,
+  widthChildrenCell,
   widthHeaderCell,
 } from './variables.css'
 
@@ -206,7 +210,7 @@ export const listCell = style({
   display: 'table-cell',
   verticalAlign: 'middle',
   height: theme.sizing[750],
-  padding: `0 ${theme.space[2]}`,
+  padding: `0 ${listCellPadding}`,
   transition: 'box-shadow 200ms ease, border-color 200ms ease',
   borderTop: `1px solid ${theme.colors.neutral.border}`,
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
@@ -228,6 +232,14 @@ export const listCell = style({
       borderBottomColor: theme.colors.primary.border,
     },
   },
+})
+
+export const listCellStrict = style({})
+
+globalStyle(`${listCellStrict} > *`, {
+  width: widthChildrenCell,
+  maxWidth: maxWidthChildrenCell,
+  minWidth: minWidthChildrenCell,
 })
 
 globalStyle(`${listRowBase} > td:first-child`, {

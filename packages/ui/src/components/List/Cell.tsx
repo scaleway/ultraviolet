@@ -1,11 +1,21 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { useColumnProvider } from './ColumnProvider'
-import { listCell } from './styles.css'
-import { maxWidthCell, minWidthCell, widthCell } from './variables.css'
+import { useListContext } from './ListContext'
+import { listCell, listCellStrict } from './styles.css'
+import {
+  listCellPadding,
+  maxWidthCell,
+  maxWidthChildrenCell,
+  minWidthCell,
+  minWidthChildrenCell,
+  widthCell,
+  widthChildrenCell,
+} from './variables.css'
 
 type CellProps = {
   children?: ReactNode
@@ -17,19 +27,41 @@ type CellProps = {
 
 export const Cell = forwardRef<HTMLTableCellElement, CellProps>(
   ({ children, className, 'data-testid': dataTestid, colSpan, style }, ref) => {
-    const { maxWidth, minWidth, width } = useColumnProvider()
+    const context = useColumnProvider()
+    const { colMode } = useListContext()
+    const width = context?.width
+    const maxWidth = context?.maxWidth
+    const minWidth = context?.minWidth
+
+    /** Remove padding from width to avoid overflow since boxSizing = 'content-box' */
+    const widthChildren = width?.includes('%')
+      ? '100%'
+      : `calc(${width} - ${listCellPadding} - ${listCellPadding})`
+    const maxWidthChildren = maxWidth?.includes('%')
+      ? '100%'
+      : `calc(${maxWidth} - ${listCellPadding} - ${listCellPadding})`
+    const minWidthChildren = minWidth?.includes('%')
+      ? '100%'
+      : `calc(${minWidth} - ${listCellPadding} - ${listCellPadding})`
 
     return (
       <td
-        className={`${className ? `${className} ` : ''}${listCell}`}
+        className={cn(
+          className,
+          listCell,
+          colMode === 'strict' ? listCellStrict : '',
+        )}
         colSpan={colSpan}
         data-testid={dataTestid}
         ref={ref}
         style={{
           ...assignInlineVars({
-            [widthCell]: width,
-            [minWidthCell]: minWidth,
-            [maxWidthCell]: maxWidth,
+            [widthCell]: width ?? 'auto',
+            [minWidthCell]: minWidth ?? 'auto',
+            [maxWidthCell]: maxWidth ?? 'none',
+            [widthChildrenCell]: width ? widthChildren : 'auto',
+            [maxWidthChildrenCell]: maxWidth ? maxWidthChildren : 'none',
+            [minWidthChildrenCell]: minWidth ? minWidthChildren : 'auto',
           }),
           ...style,
         }}

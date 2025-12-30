@@ -1,6 +1,7 @@
 'use client'
 
 import { consoleLightTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { UltravioletUITheme } from '../../theme'
@@ -73,18 +74,22 @@ export const Row = ({
   style,
 }: RowProps) => (
   <div
-    className={`${className ? `${className} ` : ''}${row} ${sprinkles({
-      alignItems:
-        typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
-      gap:
-        typeof gap === 'object'
-          ? mapRepsonsiveGap(gap)
-          : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
-      justifyContent:
-        typeof justifyContent === 'object'
-          ? justifyContent
-          : { xxsmall: justifyContent },
-    })}`}
+    className={cn(
+      className,
+      row,
+      sprinkles({
+        alignItems:
+          typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
+        gap:
+          typeof gap === 'object'
+            ? mapRepsonsiveGap(gap)
+            : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
+        justifyContent:
+          typeof justifyContent === 'object'
+            ? justifyContent
+            : { xxsmall: justifyContent },
+      }),
+    )}
     data-testid={dataTestId}
     style={{
       ...assignInlineVars({

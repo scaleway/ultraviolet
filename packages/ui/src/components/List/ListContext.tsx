@@ -50,6 +50,7 @@ export type ListContextValue = {
   refList: RefObject<HTMLInputElement>[]
   setRefList: Dispatch<SetStateAction<RefObject<HTMLInputElement>[]>>
   handleOnChange: (value: string, checked: boolean) => void
+  colMode?: 'strict' | 'flexible'
 }
 
 const ListContext = createContext<ListContextValue | undefined>(undefined)
@@ -61,6 +62,7 @@ export type ListProviderProps = {
   expandButton: boolean
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
   columns: ColumnProps[]
+  colMode?: 'strict' | 'flexible'
 }
 
 const checkStateOfCheckboxs = (ids: RowState) => {
@@ -86,6 +88,7 @@ export const ListProvider = ({
   expandButton,
   onSelectedChange,
   columns,
+  colMode,
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
@@ -331,6 +334,7 @@ export const ListProvider = ({
     () => ({
       allRowSelectValue,
       collapseRow,
+      colMode,
       columns,
       expandButton,
       expandedRowIds,
@@ -370,6 +374,7 @@ export const ListProvider = ({
       unselectAll,
       unselectRow,
       handleOnChange,
+      colMode,
     ],
   )
 

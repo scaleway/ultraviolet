@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'
@@ -52,7 +53,10 @@ export const Stepper = ({
       size={size}
     >
       <div
-        className={`${className ? `${className} ` : ''}${stepperContainer({ labelPosition, separator })}`}
+        className={cn(
+          className,
+          stepperContainer({ labelPosition, separator }),
+        )}
         data-testid={dataTestId}
         style={style}
       >
@@ -76,7 +80,7 @@ export const Stepper = ({
               <Step index={index} {...(child.props as object)} />
               {isNotLast && separator && labelPosition === 'right' ? (
                 <div
-                  className={stepperLine({ animated, size, temporal })}
+                  className={stepperLine({ animated, temporal })}
                   data-size={size}
                 />
               ) : null}

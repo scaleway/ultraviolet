@@ -28,7 +28,7 @@ type ElementProps = {
   required?: boolean
 }
 
-export const CheckboxGroupField = <
+const CheckboxGroupFieldComponent = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
@@ -124,4 +124,13 @@ export const CheckboxGroupField = <
   )
 }
 
-CheckboxGroupField.Checkbox = CheckboxGroup.Checkbox
+type RadioGroupFieldType = typeof CheckboxGroupFieldComponent & {
+  Checkbox: typeof CheckboxGroup.Checkbox
+}
+
+export const CheckboxGroupField: RadioGroupFieldType = Object.assign(
+  CheckboxGroupFieldComponent,
+  {
+    Checkbox: CheckboxGroup.Checkbox,
+  },
+)

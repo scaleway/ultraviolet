@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   CSSProperties,
@@ -97,7 +98,7 @@ export const BarStack = ({
           <Label>{label}</Label>
         )}
         <div
-          className={`${className ? `${className} ` : ''}${containerBarStack}`}
+          className={cn(className, containerBarStack)}
           data-testid={dataTestId}
           style={style}
         >

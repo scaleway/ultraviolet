@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { Bullet } from '../Bullet'
 import { step, stepDiv, steps } from './styles.css'
@@ -30,7 +31,7 @@ const Item = ({
   className,
 }: ItemProps) => (
   <li
-    className={`${className ? `${className} ` : ''}${step({ disabled })}`}
+    className={cn(className, step({ disabled }))}
     onClick={onClick}
     onKeyDown={onKeyDown}
   >
@@ -65,11 +66,7 @@ export const StepList = ({
   style,
   'data-testid': dataTestId,
 }: StepListProps) => (
-  <ul
-    className={`${className ? `${className} ` : ''}${steps}`}
-    data-testid={dataTestId}
-    style={style}
-  >
+  <ul className={cn(className, steps)} data-testid={dataTestId} style={style}>
     {children}
   </ul>
 )

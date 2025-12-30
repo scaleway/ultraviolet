@@ -6,7 +6,7 @@ import type { TagType } from '..'
 import { TagList } from '..'
 
 // - This function mocks the offsetWidth of DOM elements:
-// as JSDOM ( used by testing-library ) only emulates the DOM elements
+// as JSDOM | happy-dom ( used by testing-library ) only emulates the DOM elements
 // so it does not render the elements in any way to be able to know their size or position.
 // - These mocks are specifically tailored for the running code
 // - If the code changes, these mocks may need to be updated accordingly

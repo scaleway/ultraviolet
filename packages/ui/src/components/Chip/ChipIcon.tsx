@@ -1,9 +1,10 @@
 'use client'
 
+// oxlint-disable-next-line import/no-namespace
 import * as Icon from '@ultraviolet/icons'
 import type { RefObject } from 'react'
 import { useContext } from 'react'
-import type { PascalToCamelCaseWithoutSuffix } from 'src/types'
+import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 import { ChipContext } from './ChipContext'
 import { buttonContainer } from './styles.css'
 
@@ -53,6 +54,7 @@ export const ChipIcon = ({
           }
         }}
         ref={iconRef as RefObject<HTMLButtonElement | null>}
+        type="button"
       >
         <IconUsed
           disabled={disabled}

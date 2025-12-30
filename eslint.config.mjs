@@ -28,6 +28,7 @@ const disableRules = {
   'react/no-unused-prop-types': 'off',
   'react/jsx-props-no-spreading': 'warn',
   '@typescript-eslint/no-unnecessary-condition': 'off',
+  'no-restricted-syntax': 'off'
 }
 
 export default [
@@ -44,7 +45,7 @@ export default [
       '**/coverage/',
       '.storybook',
       'eslint.config.mjs',
-      'next-env.d.ts',
+      'next-env.d.ts'
     ],
   },
   {
@@ -61,7 +62,7 @@ export default [
         project: [
           'tsconfig.json',
           'packages/*/tsconfig.json',
-          'tools/*/tsconfig.json',
+          'tools/*/tsconfig.json'
         ],
       },
     },
@@ -151,6 +152,7 @@ export default [
       ...disableRules,
       'no-console': 'off',
       'no-alert': 'off',
+      'prefer-arrow-callback': 'off',
       'react/jsx-props-no-spreading': 'off',
       'react/no-unstable-nested-components': 'off',
       'react/jsx-key': 'off',

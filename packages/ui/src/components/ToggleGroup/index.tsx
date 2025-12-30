@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 import { Label } from '../Label'
@@ -82,7 +83,7 @@ type ToggleGroupProps = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required' | 'style'>
 
-export const ToggleGroup = ({
+const ToggleGroupComponent = ({
   legend,
   legendDescription,
   value,
@@ -110,10 +111,7 @@ export const ToggleGroup = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <fieldset
-          className={`${className ? `${className} ` : ''}${fieldset}`}
-          style={style}
-        >
+        <fieldset className={cn(className, fieldset)} style={style}>
           <Stack gap={1.5}>
             {legend || description ? (
               <Stack gap={0.5}>
@@ -158,4 +156,13 @@ export const ToggleGroup = ({
   )
 }
 
-ToggleGroup.Toggle = ToggleGroupToggle
+type SelectableCardOptionGroupType = typeof ToggleGroupComponent & {
+  Toggle: typeof ToggleGroupToggle
+}
+
+export const ToggleGroup: SelectableCardOptionGroupType = Object.assign(
+  ToggleGroupComponent,
+  {
+    Toggle: ToggleGroupToggle,
+  },
+)

@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
@@ -14,6 +14,7 @@ export type OptionType = {
   optionalInfo?: ReactNode
 }
 
+// oxlint-disable-next-line eslint/max-statements
 describe('selectInput', () => {
   beforeAll(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
@@ -96,9 +97,12 @@ describe('selectInput', () => {
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
-    await waitFor(() => {
-      expect(dropdown).toBeVisible()
-    })
+    await waitFor(
+      () => {
+        expect(dropdown).toBeVisible()
+      },
+      { timeout: 1000 },
+    )
     await userEvent.click(screen.getByTestId('search-bar'))
     expect(asFragment()).toMatchSnapshot()
   })
@@ -1149,19 +1153,28 @@ describe('selectInput', () => {
 
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
-    const selectAllGroupCheckBox = screen.getByRole('checkbox', {
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(
+      () => {
+        expect(dropdown).toBeVisible()
+      },
+      { timeout: 1000 },
+    )
+
+    const selectAllGroupCheckBox = within(dropdown).getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
-    const selectAllGroup = screen.getByTestId('group-1')
+    const selectAllGroup = within(dropdown).getByTestId('group-1')
+
     await userEvent.click(selectAllGroup)
-    const venus = screen.getByRole('checkbox', {
+    const venus = within(dropdown).getByRole('checkbox', {
       name: /venus/i,
     })
 
-    const selectAllCheckBox = screen.getByRole('checkbox', {
+    const selectAllCheckBox = within(dropdown).getByRole('checkbox', {
       name: 'Select all',
     })
-    const selectAll = screen.getByTestId('select-all')
+    const selectAll = within(dropdown).getByTestId('select-all')
     await userEvent.click(selectAll)
 
     await userEvent.click(screen.getByTestId('option-venus'))
@@ -1280,6 +1293,11 @@ describe('selectInput', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1295,6 +1313,11 @@ describe('selectInput', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1310,6 +1333,12 @@ describe('selectInput', () => {
     )
     const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
@@ -1326,6 +1355,12 @@ describe('selectInput', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -1342,6 +1377,11 @@ describe('selectInput', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -1374,14 +1414,20 @@ describe('selectInput', () => {
 
     const footer = screen.getByTestId('buttonclose')
     const dropdown = screen.getByRole('dialog')
+
     await waitFor(() => {
       expect(dropdown).toBeVisible()
+      expect(footer).toBeVisible()
     })
 
     await userEvent.click(footer)
 
-    expect(f).toHaveBeenCalledOnce()
-    setTimeout(() => expect(dropdown).not.toBeVisible(), 500)
+    expect(f).toHaveBeenCalledTimes(1)
+
+    await waitFor(() => {
+      expect(dropdown).not.toBeVisible()
+      expect(footer).not.toBeVisible()
+    })
 
     expect(asFragment()).toMatchSnapshot()
   })

@@ -5,6 +5,7 @@ import {
   CheckCircleOutlineIcon,
   CloseIcon,
 } from '@ultraviolet/icons'
+import { cn, getUUID } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   CSSProperties,
@@ -12,7 +13,6 @@ import type {
   ReactNode,
 } from 'react'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
-import { getUUID } from '../../utils'
 import { Button } from '../Button'
 import { Label } from '../Label'
 import { Stack } from '../Stack'
@@ -224,7 +224,7 @@ export const TagInput = ({
       <div>
         <Tooltip text={tooltip}>
           <div
-            className={`${className ? `${className} ` : ''}${tagInputContainer({ size })}`}
+            className={cn(className, tagInputContainer({ size }))}
             data-disabled={disabled}
             data-error={!!error}
             data-readonly={readOnly}

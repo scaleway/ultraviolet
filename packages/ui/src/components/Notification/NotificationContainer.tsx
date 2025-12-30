@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import { ToastContainer as BaseToastContainer, Slide } from 'react-toastify'
@@ -44,7 +45,7 @@ export const NotificationContainer = ({
 }: NotificationContainerProps) => (
   <BaseToastContainer
     autoClose={autoClose}
-    className={`${className ? `${className} ` : ''}${notificationStyle}`}
+    className={cn(className, notificationStyle)}
     containerId={containerId}
     data-testid={dataTestId}
     draggable={false}

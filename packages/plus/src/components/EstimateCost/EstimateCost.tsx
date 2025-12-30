@@ -1,6 +1,7 @@
 'use client'
 
 import { Text } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps, ReactNode } from 'react'
 import { Children } from 'react'
@@ -27,7 +28,7 @@ const Image = (props: ComponentProps<'img'>) => (
     // Explicit alt otherwise there is an oxc error
     alt={props.alt}
     {...props}
-    className={`${props.className ? `${props.className} ` : ''}${estimateCostImage}`}
+    className={cn(props.className, estimateCostImage)}
   />
 )
 

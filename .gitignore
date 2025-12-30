@@ -13,9 +13,9 @@ yarn.lock
 .eslintcache
 dist/
 coverage
-storybook-static
 .reports
 .pnpm-store
+.dist-comparison
 
 deps.json
 depsFiltered.json
@@ -34,6 +34,10 @@ yalc.lock
 
 out
 .next
+
+#storybook
+debug-storybook.log
+storybook-static
 
 #vite
 vite.config.ts.*
@@ -56,3 +60,12 @@ next-env.d.ts*
 **/playwright-report/
 **/blob-report/
 **/playwright/.cache/
+
+# IDE
+.zed
+
+#AI
+AGENTS.md
+WARP.md
+CLAUDE.md
+QWEN.md

@@ -4,6 +4,7 @@ import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { OrderSummary } from '..'
 import {
+  anchorProduct,
   categoryAZ,
   categoryCustomContent,
   categoryDefault,
@@ -95,6 +96,18 @@ describe('orderSummary', () => {
         header="summary"
         items={mockItems}
         localeFormat="en-EN"
+      />,
+    ))
+
+  test('should work with price information', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        currency="EUR"
+        footer="footer"
+        header="summary"
+        items={mockItems}
+        localeFormat="en-EN"
+        priceInformation="Information"
       />,
     ))
 
@@ -262,6 +275,27 @@ describe('orderSummary', () => {
     )
     const price = screen.getByTestId('total-price').textContent
     expect(price).toBe('€0.00')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should work with anchors', async () => {
+    const { asFragment } = renderWithTheme(
+      <OrderSummary
+        currency="EUR"
+        discount={0.5}
+        fractionDigits={0}
+        header="summary"
+        items={[anchorProduct]}
+        localeFormat="en-EN"
+      />,
+    )
+
+    const anchor1Link = screen.getByText('This is an anchor')
+    const anchor2Link = screen.getByText('This is also an anchor')
+
+    await userEvent.click(anchor1Link)
+    await userEvent.click(anchor2Link)
 
     expect(asFragment()).toMatchSnapshot()
   })

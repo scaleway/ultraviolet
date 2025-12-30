@@ -3,6 +3,7 @@
 import type { DatumValue } from '@nivo/core'
 import type { Serie } from '@nivo/line'
 import { theme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
@@ -53,10 +54,7 @@ export const CustomLegend = ({
   className,
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
-  <div
-    className={`${className ? `${className} ` : ''}${container}`}
-    data-testid={dataTestId}
-  >
+  <div className={cn(className, container)} data-testid={dataTestId}>
     <div className={lineChartHead}>
       <div className={longContainer}>Legend</div>
       <Cell value="Minimum" variant="body" />

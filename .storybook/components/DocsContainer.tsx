@@ -1,5 +1,6 @@
 import type {
-  DocsContainerProps as BaseContainerProps} from '@storybook/addon-docs/blocks';
+  DocsContainerProps as BaseContainerProps
+} from '@storybook/addon-docs/blocks'
 import {
   DocsContainer as BaseContainer,
   Unstyled,
@@ -8,9 +9,10 @@ import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } fro
 import type { ReactNode } from 'react'
 import { cloneElement, isValidElement, useState } from 'react'
 import '@ultraviolet/fonts/fonts.css'
-import { GlobalAlert } from '@ultraviolet/ui'
+// don't know how it's work today
 import "../../packages/themes/dist/themes.css"
-import { globalStyleStoryBook } from './globalStyle.css';
+import { GlobalAlert } from '@ultraviolet/ui'
+import { globalStyleStoryBook } from './globalStyle.css'
 
 type ExtraProps = {
   /**
@@ -69,22 +71,22 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
       <div className={globalStyleStoryBook}>
         <ThemeProviderUV theme={lightTheme}>
           {isBeta ?
-          <GlobalAlert
-            buttonText="Access to Beta"
-            onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
-            closable={false}
-          >
-            A Beta version is available. Please use this version if your dependencies include the Beta release.
-          </GlobalAlert> : null}
+            <GlobalAlert
+              buttonText="Access to Beta"
+              onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
+              closable={false}
+            >
+              A Beta version is available. Please use this version if your dependencies include the Beta release.
+            </GlobalAlert> : null}
           <BaseContainer context={context}>
             {isValidElement<ExtraProps>(children)
               ? cloneElement(children, {
-                  deprecated: parameters?.deprecated,
-                  deprecatedReason: parameters?.deprecatedReason,
-                  migrationLink: parameters?.migrationLink,
-                  hideArgsTable: parameters?.hideArgsTable,
-                  experimental: isPlusLibrary ? true : parameters?.experimental,
-                })
+                deprecated: parameters?.deprecated,
+                deprecatedReason: parameters?.deprecatedReason,
+                migrationLink: parameters?.migrationLink,
+                hideArgsTable: parameters?.hideArgsTable,
+                experimental: isPlusLibrary ? true : parameters?.experimental,
+              })
               : children}
           </BaseContainer>
         </ThemeProviderUV>

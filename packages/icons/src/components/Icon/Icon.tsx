@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ReactNode, SVGProps } from 'react'
 import { forwardRef } from 'react'
 import type { PROMINENCES, SENTIMENTS, SIZES } from './constants'
@@ -47,7 +48,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
   ) => (
     <svg
       aria-label={ariaLabel}
-      className={`${className ? `${className} ` : ''}${icon({ disabled, prominence, sentiment, size })}`}
+      className={cn(className, icon({ disabled, prominence, sentiment, size }))}
       cursor={cursor}
       data-testid={dataTestId}
       ref={ref}

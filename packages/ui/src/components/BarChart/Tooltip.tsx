@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
 import { barColorSquare, barTooltipContainer, colorBar } from './styles.css'
@@ -19,10 +20,7 @@ export const BarChartTooltip = ({
   className,
   'data-testid': dataTestId,
 }: BarChartTooltipProps) => (
-  <div
-    className={`${className ? `${className} ` : ''}${barTooltipContainer}`}
-    data-testid={dataTestId}
-  >
+  <div className={cn(className, barTooltipContainer)} data-testid={dataTestId}>
     <div>
       <span
         className={barColorSquare}

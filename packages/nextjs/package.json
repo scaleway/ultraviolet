@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/nextjs",
-  "version": "3.0.0",
+  "version": "3.0.4",
   "description": "Ultraviolet NextJS utility package",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -51,17 +51,18 @@
     }
   },
   "peerDependencies": {
-    "@ultraviolet/themes": "workspace:*",
-    "@ultraviolet/ui": "workspace:*",
     "next": "15.x || 16.x",
     "react": "18.x || 19.x",
     "react-dom": "18.x || 19.x"
   },
   "devDependencies": {
+    "@repo/config": "workspace:*",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "dependencies": {
     "@ultraviolet/themes": "workspace:*",
-    "@ultraviolet/ui": "workspace:*",
-    "next": "16.0.5",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "@ultraviolet/ui": "workspace:*"
   }
 }

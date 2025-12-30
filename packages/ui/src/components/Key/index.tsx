@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { useMemo } from 'react'
 import { Text } from '../Text'
@@ -50,7 +51,10 @@ export const Key = ({
 
   return (
     <kbd
-      className={`${className ? `${className} ` : ''}${keyStyle({ disabled, prominence, sentiment, size })}`}
+      className={cn(
+        className,
+        keyStyle({ disabled, prominence, sentiment, size }),
+      )}
       data-disabled={disabled}
       data-prominence={prominence}
       data-sentiment={sentiment}

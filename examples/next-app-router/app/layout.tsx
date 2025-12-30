@@ -1,5 +1,5 @@
+// oxlint-disable import/no-unassigned-import
 import type { Metadata } from 'next'
-// oxlint-disable-next-line import/no-unassigned-import
 import './globals.css'
 import { ThemeRegistry } from '@ultraviolet/nextjs'
 import { consoleLightTheme } from '@ultraviolet/themes'

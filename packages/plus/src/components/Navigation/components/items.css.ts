@@ -219,17 +219,22 @@ export const navigationItemPinnedButton = style({
   top: 0,
   bottom: 0,
   margin: 'auto',
+  pointerEvents: 'visible',
+  visibility: 'visible',
   selectors: {
     '&:hover, &:focus, &:active': {
       opacity: 1,
+      pointerEvents: 'auto',
     },
     [`${navigationItemMenu}:hover &, ${navigationItemMenu}:focus &, ${navigationItemMenu}:active &`]:
       {
         opacity: 1,
+        pointerEvents: 'auto',
       },
     [`${navigationItemShowPinButton}:hover &, ${navigationItemShowPinButton}:active &, ${navigationItemShowPinButton}:focus &`]:
       {
         opacity: 1,
+        pointerEvents: 'auto',
       },
   },
 })

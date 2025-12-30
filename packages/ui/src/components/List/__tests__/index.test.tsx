@@ -1,15 +1,14 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { ThemeProvider } from '@ultraviolet/themes'
+import { consoleLightTheme, ThemeProvider } from '@ultraviolet/themes'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import defaultTheme from '../../../theme'
 import { List } from '..'
 
 type WrapperProps = {
-  theme?: typeof defaultTheme
+  theme?: typeof consoleLightTheme
   children: ReactNode
 }
 
@@ -44,17 +43,33 @@ const columns: NonNullable<ComponentProps<typeof List>['columns']> = Array.from(
   label: `Column ${columnNumber}`,
 }))
 
-const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
+const columnWidthPx = {
+  id: 'width px',
+  label: 'width',
+  maxWidth: '100px',
+  minWidth: '0',
+  width: '100px',
+}
+
+const columnWidthPercent = {
+  id: 'width px',
+  label: 'width',
+  maxWidth: '33%',
+  minWidth: '33%',
+  width: '33%',
+}
+
+const Wrapper = ({ theme = consoleLightTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
 describe('list', () => {
   beforeEach(() => {
-    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
   })
 
   afterEach(() => {
-    vi.spyOn(global.Math, 'random').mockRestore()
+    vi.spyOn(globalThis.Math, 'random').mockRestore()
   })
   test.skip('should throw an error', () => {
     const consoleErrMock = vi
@@ -169,6 +184,34 @@ describe('list', () => {
       </List>,
     ))
 
+  test('should render correctly with column width', () =>
+    shouldMatchSnapshot(
+      <List columns={[columnWidthPercent, columnWidthPx]} loading selectable>
+        {data.map(({ id, columnA, columnB }) => (
+          <List.Row id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
+
+  test('should render correctly with column width and colMode strict', () =>
+    shouldMatchSnapshot(
+      <List
+        colMode="strict"
+        columns={[columnWidthPercent, columnWidthPx]}
+        loading
+        selectable
+      >
+        {data.map(({ id, columnA, columnB }) => (
+          <List.Row id={id} key={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
   test('should render correctly with disabled rows', () =>
     shouldMatchSnapshot(
       <List columns={columns}>

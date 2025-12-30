@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import type { Color } from '../../theme'
@@ -28,19 +29,19 @@ export const Cell = ({
   align = 'left',
   style,
 }: CellProps) => {
-  const { maxWidth, minWidth, width } = useColumnProvider()
+  const context = useColumnProvider()
 
   return (
     <td
       align={align}
-      className={`${className ? `${className} ` : ''}${tableCell({ align, sentiment })}`}
+      className={cn(className, tableCell({ align, sentiment }))}
       colSpan={colSpan}
       rowSpan={rowSpan}
       style={{
         ...assignInlineVars({
-          [widthCell]: width,
-          [minWidthCell]: minWidth,
-          [maxWidthCell]: maxWidth,
+          [widthCell]: context?.width ?? 'auto',
+          [minWidthCell]: context?.minWidth ?? 'auto',
+          [maxWidthCell]: context?.maxWidth ?? 'none',
         }),
         ...style,
       }}

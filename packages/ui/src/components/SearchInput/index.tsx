@@ -1,12 +1,14 @@
 'use client'
 
 import { SearchIcon } from '@ultraviolet/icons'
+import { cn } from '@ultraviolet/utils'
 import type { Ref } from 'react'
 import {
   forwardRef,
   useCallback,
   useEffect,
   useImperativeHandle,
+  useLayoutEffect,
   useMemo,
   useReducer,
   useRef,
@@ -28,6 +30,7 @@ import type { SearchInputProps } from './types'
  * - `toggleIsOpen`: a function to toggle the popup
  */
 export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
+  // oxlint-disable-next-line eslint/max-statements
   (
     {
       placeholder,
@@ -70,7 +73,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const focusedLinkIndex = useRef(0)
     const popupRef = useRef<HTMLDivElement>(null)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [searchTerms, setSearchTerms] = useState(defaultValue)
+    const [searchTerms, setSearchTerms] = useState<string>(defaultValue)
     const [isMacOS, setIsMacOS] = useState(false)
     const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
@@ -119,13 +122,13 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       }
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       document.addEventListener('keyup', handleNavigation)
 
       return () => document.removeEventListener('keyup', handleNavigation)
     }, [])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       resizeSearchBar()
 
       window.addEventListener('resize', resizeSearchBar)
@@ -134,9 +137,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     }, [])
 
     useEffect(() => {
-      if (value !== undefined) {
-        setSearchTerms(value)
-      }
+      setSearchTerms(value ?? '')
     }, [value])
 
     const onSearchCallback = (localValue: string) => {
@@ -210,7 +211,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       [keyPressed],
     )
 
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (shortcut && !disabled) {
         document.body.addEventListener('keydown', handleKeyPressed)
         document.body.addEventListener('keyup', handleKeyReleased)
@@ -264,8 +265,8 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
             aria-labelledby={ariaLabelledby}
             aria-live={ariaLive}
             autoComplete={autoComplete}
-            autoFocus={autoFocus}
-            className={`${className ? `${className} ` : ''}${searchInput}`}
+            autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
+            className={cn(className, searchInput)}
             clearable
             data-testid={dataTestId}
             disabled={disabled}

@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
@@ -131,7 +132,7 @@ export const AnimatedExpandable = ({
 
   return (
     <div
-      className={`${className ? `${className} ` : ''}${expandable}`}
+      className={cn(className, expandable)}
       data-is-animated={shouldBeAnimated && !isFirstRender.current}
       data-testid={dataTestId}
       ref={ref}

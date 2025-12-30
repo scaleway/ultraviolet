@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/themes",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Ultraviolet Themes",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -40,11 +40,11 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "require": "./dist/index.js",
       "import": "./dist/index.js"
     },
     "./*.css": "./dist/style/*.css",
@@ -65,7 +65,8 @@
     "@vanilla-extract/dynamic": "2.1.5"
   },
   "devDependencies": {
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "@repo/config": "workspace:*",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   }
 }

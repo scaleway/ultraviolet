@@ -1,6 +1,7 @@
 'use client'
 
 import { Stack } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { useEffect, useRef } from 'react'
 import { NAVIGATION_COLLASPED_WIDTH, NAVIGATION_MIN_WIDTH } from './constants'
@@ -80,9 +81,6 @@ export const NavigationContent = ({
     }
 
     const mousedown = (event: MouseEvent) => {
-      document.body.style.pointerEvents = 'none'
-      document.body.style.userSelect = 'none'
-
       prevX = event.clientX
       navRect = navigationRef.current?.getBoundingClientRect()
 
@@ -105,9 +103,6 @@ export const NavigationContent = ({
 
         document.removeEventListener('mousemove', mouseMove)
         window.removeEventListener('mouseup', mouseup)
-
-        document.body.style.pointerEvents = ''
-        document.body.style.userSelect = ''
       }
 
       document.addEventListener('mousemove', mouseMove)
@@ -130,11 +125,7 @@ export const NavigationContent = ({
   ])
 
   return (
-    <nav
-      className={`${className ? `${className} ` : ''}${navigation}`}
-      data-testid={dataTestId}
-      id={id}
-    >
+    <nav className={cn(className, navigation)} data-testid={dataTestId} id={id}>
       <div
         className={navigationContainer({
           animation: shouldAnimate ? animation : undefined,
@@ -147,7 +138,10 @@ export const NavigationContent = ({
       >
         {logo ? <Header logo={logo} /> : null}
         <div
-          className={`${navigationContentContainer}${expanded ? '' : ` ${navigationContentContainerCollapsed}`}`}
+          className={cn(
+            navigationContentContainer,
+            expanded ? '' : navigationContentContainerCollapsed,
+          )}
         >
           <Stack className={navigationContent} gap={0.25} ref={contentRef}>
             {children}

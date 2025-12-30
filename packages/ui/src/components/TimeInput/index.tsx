@@ -118,7 +118,7 @@ export const TimeInput = ({
         setFilled({ h: true, m: true, s: true })
       }
     }
-    // oxlint-disable react-hooks/exhaustive-deps
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
   const handleChangePeriod = (key: 'a' | 'p') => {
@@ -165,8 +165,11 @@ export const TimeInput = ({
     if (type === 'h' && isCompleteHour(timeFormat, newValue)) {
       refMinutes.current?.focus()
     }
-    const newFilled = { ...filled }
-    newFilled[type] = true
+
+    const newFilled = {
+      ...filled,
+      [type]: true,
+    }
 
     setTime(newTime)
     onChange?.(newTime)
@@ -185,8 +188,10 @@ export const TimeInput = ({
     } else {
       setValueByType(type, newTime, currentValue === 59 ? 0 : currentValue + 1)
     }
-    const newFilled = { ...filled }
-    newFilled[type] = true
+    const newFilled = {
+      ...filled,
+      [type]: true,
+    }
 
     setTime(newTime)
     onChange?.(newTime)
@@ -205,8 +210,10 @@ export const TimeInput = ({
     } else {
       setValueByType(type, newTime, currentValue === 0 ? 59 : currentValue - 1)
     }
-    const newFilled = { ...filled }
-    newFilled[type] = true
+    const newFilled = {
+      ...filled,
+      [type]: true,
+    }
 
     setTime(newTime)
     onChange?.(newTime)
@@ -315,6 +322,7 @@ export const TimeInput = ({
                       : undefined
                   }
                   autoComplete="off"
+                  // oxlint-disable-next-line jsx_a11y/no-autofocus
                   autoFocus={autoFocus && type === 'h'}
                   className={timeinput()}
                   data-size={size}
