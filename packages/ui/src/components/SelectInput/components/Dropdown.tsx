@@ -2,6 +2,7 @@
 
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {
   ChangeEvent,
   ComponentProps,
@@ -42,6 +43,7 @@ import {
   dropdownGroupWrapper,
   dropdownItem,
   dropdownLoadMore,
+  dropdownWidth,
   footer as footerStyle,
 } from './dropdown.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
@@ -685,6 +687,16 @@ export const Dropdown = ({
   )
   const modalContext = use(ModalContext)
 
+  const resizeDropdown = useCallback(() => {
+    if (
+      refSelect.current &&
+      refSelect.current.getBoundingClientRect().width > 0 &&
+      refSelect.current.getBoundingClientRect().width !== maxWidth
+    ) {
+      setWidth(refSelect.current.getBoundingClientRect().width)
+    }
+  }, [refSelect, maxWidth])
+
   useLayoutEffect(() => {
     if (refSelect.current && isDropdownVisible) {
       const position =
@@ -712,21 +724,13 @@ export const Dropdown = ({
               top: overflow,
             })
           }
+          resizeDropdown()
         } else {
           window.scrollBy({ behavior: 'smooth', top: overflow })
         }
       }
     }
-  }, [isDropdownVisible, refSelect, size, modalContext, theme])
-
-  const resizeDropdown = useCallback(() => {
-    if (
-      refSelect.current &&
-      refSelect.current.getBoundingClientRect().width > 0
-    ) {
-      setWidth(refSelect.current.getBoundingClientRect().width)
-    }
-  }, [refSelect])
+  }, [isDropdownVisible, refSelect, size, modalContext, theme, resizeDropdown])
 
   useEffect(() => {
     resizeDropdown()
@@ -831,6 +835,10 @@ export const Dropdown = ({
       portalTarget={portalTarget}
       ref={ref}
       role="dialog"
+      style={assignInlineVars({
+        [dropdownWidth]:
+          typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
+      })}
       tabIndex={-1}
       text={
         <Stack>
