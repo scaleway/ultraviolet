@@ -123,7 +123,7 @@ export const OptionSelector = ({
         size={size}
         value={firstValue}
       />
-      {firstSelector.value && secondSelector && secondSelectorOptions ? (
+      {firstValue && secondSelector && secondSelectorOptions ? (
         <>
           <RayStartArrowIcon
             className={optionSelectorArrow[size]}

@@ -1,14 +1,14 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { OptionSelector } from '../OptionSelector'
-import type { SelectorOption } from '../types'
 import {
   firstSelectorOptions,
   franceOptions,
   netherlandsOptions,
   polandOptions,
-} from './resources'
+} from '../__mock__/resources'
+import { OptionSelector } from '../OptionSelector'
+import type { SelectorOption } from '../types'
 
 export const Playground: StoryFn<
   ComponentProps<typeof OptionSelector>
