@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, vi } from 'vitest'
 import { OptionSelector } from '..'
-import { firstSelectorOptions, franceOptions } from './resources'
+import { firstSelectorOptions, franceOptions } from '../__mock__/resources'
 
 describe('optionSelector', () => {
   it('should work with default props', () =>
@@ -133,7 +133,7 @@ describe('optionSelector', () => {
     expect(firstSelector).toHaveAttribute('data-readonly', 'true')
     expect(secondSelector).toBeVisible()
     expect(secondSelector).toHaveAttribute('data-readonly', 'true')
-    expect(screen.getByText('PAR 1')).toBeVisible()
+    expect(screen.getAllByText('PAR 1')[0]).toBeVisible()
     expect(asFragment).toMatchSnapshot()
   })
 
@@ -168,7 +168,7 @@ describe('optionSelector', () => {
     await userEvent.click(screen.getByTestId('option-pl'))
     expect(dropdown).not.toBeVisible()
     expect(screen.getByText('WARSAW')).toBeVisible()
-    expect(onChange).toHaveBeenCalledOnce()
+    expect(onChange).toHaveBeenCalledTimes(1)
     expect(asFragment).toMatchSnapshot()
   })
 
@@ -200,8 +200,8 @@ describe('optionSelector', () => {
 
     await userEvent.click(screen.getByTestId('option-par-1'))
     expect(dropdown).not.toBeVisible()
-    expect(screen.getByText('PAR 1')).toBeVisible()
-    expect(onChange).toHaveBeenCalledOnce()
+    expect(screen.getAllByText('PAR 1')[0]).toBeVisible()
+    expect(onChange).toHaveBeenCalledTimes(1)
     expect(asFragment).toMatchSnapshot()
   })
 })

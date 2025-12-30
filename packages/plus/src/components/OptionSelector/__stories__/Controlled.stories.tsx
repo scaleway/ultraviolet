@@ -6,6 +6,7 @@ import {
   WindowsLogo,
 } from '@ultraviolet/icons/logo'
 import { Stack } from '@ultraviolet/ui'
+import { capitalize } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { OptionSelector } from '../OptionSelector'
@@ -67,10 +68,7 @@ export const Controlled: StoryFn<
         }}
         secondSelector={{
           label: 'Zone',
-          options: makeVersions(
-            String(value.first).charAt(0).toUpperCase() +
-              String(value.first).slice(1),
-          ),
+          options: makeVersions(capitalize(value.first)),
         }}
       />
       <OptionSelector
@@ -84,10 +82,7 @@ export const Controlled: StoryFn<
         secondSelector={{
           label: 'Zone',
           onChange: onChangeVersion,
-          options: makeVersions(
-            String(value.first).charAt(0).toUpperCase() +
-              String(value.first).slice(1),
-          ),
+          options: makeVersions(capitalize(value.first)),
           value: value.second,
         }}
       />
