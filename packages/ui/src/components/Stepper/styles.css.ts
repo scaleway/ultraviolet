@@ -220,11 +220,6 @@ export const stepperContainerRecipe = recipe({
       style: {
         flexDirection: 'column',
         flex: 1,
-        selectors: {
-          '&:last-child': {
-            marginTop: theme.space[1],
-          },
-        },
       },
     },
     {
