@@ -1,6 +1,7 @@
 export { CheckboxField } from './CheckboxField'
 export { CheckboxGroupField } from './CheckboxGroupField'
 export { DateInputField } from './DateInputField'
+export { FileInputField } from './FileInputField'
 export { Form } from './Form'
 export { KeyValueField } from './KeyValueField'
 export { NumberInputField } from './NumberInputField'
