@@ -15,6 +15,10 @@ const dediboxGpuKeyvisual = `${BASE_URL}/products/dedibox/dedibox-gpu-keyvisual.
 const dediboxGpuOriginal = `${BASE_URL}/products/dedibox/dedibox-gpu-original.webp`
 const dediboxGpuWire = `${BASE_URL}/products/dedibox/dedibox-gpu-wire.svg`
 const dediboxKeyvisual = `${BASE_URL}/products/dedibox/dedibox-keyvisual.webp`
+const dediboxNextContent = `${BASE_URL}/products/dedibox/dedibox-next-content.webp`
+const dediboxNextKeyvisual = `${BASE_URL}/products/dedibox/dedibox-next-keyvisual.webp`
+const dediboxNextOriginal = `${BASE_URL}/products/dedibox/dedibox-next-original.webp`
+const dediboxNextWire = `${BASE_URL}/products/dedibox/dedibox-next-wire.svg`
 const dediboxOriginal = `${BASE_URL}/products/dedibox/dedibox-original.webp`
 const dediboxProContent = `${BASE_URL}/products/dedibox/dedibox-pro-content.webp`
 const dediboxProKeyvisual = `${BASE_URL}/products/dedibox/dedibox-pro-keyvisual.webp`
@@ -41,6 +45,10 @@ export {
   dediboxGpuOriginal,
   dediboxGpuWire,
   dediboxKeyvisual,
+  dediboxNextContent,
+  dediboxNextKeyvisual,
+  dediboxNextOriginal,
+  dediboxNextWire,
   dediboxOriginal,
   dediboxProContent,
   dediboxProKeyvisual,

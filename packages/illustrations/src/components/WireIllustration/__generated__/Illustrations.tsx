@@ -39,6 +39,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-core-wire.svg',
   dediboxGpu:
     'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-gpu-wire.svg',
+  dediboxNext:
+    'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-next-wire.svg',
   dediboxPro:
     'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-pro-wire.svg',
   dediboxStart:
