@@ -21,8 +21,10 @@
         "**/__stories__/**/*.{ts,tsx}",
         "**/__tests__/**/*.{ts,tsx}",
         ".storybook/**/*.{ts,tsx}",
+        ".storybook/**/*.{ts,tsx}",
+        "**/__generated__/**/*.{ts,tsx}",
         "examples/**",
-        ".storybook/**/*.{ts,tsx}"
+        "e2e/**/*.{ts,tsx}",
       ],
       "rules": {
         "eslint/no-alert": "off",
@@ -31,8 +33,11 @@
         "import/no-named-export": "off",
         "import/no-namespace": "off",
         "import/no-unassigned-import": "off",
+        "react/jsx-max-depth": ["error", {
+          "max": 8
+        }],
         "react/jsx-pascal-case": "off",
-        "react/only-export-components": "off"
+        "react/only-export-components": "off",
       }
     },
     {
@@ -98,6 +103,10 @@
         }
     ],
     "import/no-unassigned-import": "off",
+    "jsx-a11y/aria-proptypes": "warn",
+    "react/jsx-max-depth": ["error", {
+      "max": 10
+    }],
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading":"off",
     "unicorn/empty-brace-spaces":"off",

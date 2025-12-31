@@ -36,7 +36,19 @@
       "dependsOn": ["build"]
     },
     "typecheck": {
-      "dependsOn": ["build"],
+      "dependsOn": ["^build"],
+      "inputs": ["**/*.{ts,tsx}", "tsconfig.json"]
+    },
+    "type:generate": {
+      "dependsOn": ["^build"],
+      "inputs": ["**/*.{ts,tsx}"]
+    },
+    "typecheck:go": {
+      "dependsOn": ["^build"],
+      "inputs": ["**/*.{ts,tsx}"]
+    },
+    "type:generate:go": {
+      "dependsOn": ["^build"],
       "inputs": ["**/*.{ts,tsx}"]
     },
     "e2e": {
