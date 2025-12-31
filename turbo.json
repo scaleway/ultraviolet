@@ -27,7 +27,8 @@
         "!.next/cache/**",
         "out/**",
         "storybook-static/**"
-      ]
+      ],
+      "cache": true
     },
     "lintpublish": {
       "dependsOn": ["build"]

@@ -9,7 +9,7 @@ exports[`tag > renders correctly 1`] = `
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </span>
@@ -27,7 +27,7 @@ exports[`tag > renders correctly colored 1`] = `
       class="styles__d6zknp0 styles_sentiment_primary__d6zknp5"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </span>
@@ -45,7 +45,7 @@ exports[`tag > renders correctly disabled 1`] = `
       class="styles__d6zknp0 styles_disabled_true__d6zknp9 styles_sentiment_neutral__d6zknp4"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </span>
@@ -63,7 +63,25 @@ exports[`tag > renders correctly neutral 1`] = `
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+      >
+        test
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > renders correctly with code variant 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <span
+      class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
+    >
+      <span
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_code__m4c9owy style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </span>
@@ -84,14 +102,55 @@ exports[`tag > renders correctly with copiable 1`] = `
       tabindex="0"
     >
       <button
-        class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp4"
+        class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp4 styles_undefined_compound_2__d6zknpc"
         type="button"
       >
         <span
-          class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+          class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
         >
           test
         </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`tag > renders correctly with copiable and copy button 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="_r_a_"
+      aria-describedby="_r_a_"
+      class="styles__w40vpo9"
+      tabindex="0"
+    >
+      <button
+        class="styles__d6zknp0 styles_copiable_true__d6zknp1 styles_sentiment_neutral__d6zknp4 styles_undefined_compound_2__d6zknpc"
+        type="button"
+      >
+        <span
+          class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        >
+          test
+        </span>
+        <svg
+          class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_xsmall__vbm0wqc styles_undefined_compound_39__vbm0wq1n"
+          viewBox="0 0 16 16"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+            fill-rule="evenodd"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -107,7 +166,7 @@ exports[`tag > renders correctly with icon 1`] = `
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         <svg
           class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
@@ -135,7 +194,7 @@ exports[`tag > renders correctly with isLoading 1`] = `
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </span>
@@ -185,13 +244,13 @@ exports[`tag > renders correctly with onClose 1`] = `
       class="styles__d6zknp0 styles_sentiment_neutral__d6zknp4"
     >
       <span
-        class="styles__d6zknpa style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+        class="styles__d6zknph style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_true__m4c9ow7 style_prominence_default__m4c9owi style_variant_caption__m4c9ows style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
       >
         test
       </span>
       <button
         aria-label="Close tag"
-        class="styles__d6zknpb styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
+        class="styles__d6zknpi styles__e1wcoe0 styles_size_small__e1wcoe3 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_neutral__e1wcoed styles_undefined_compound_24__e1wcoe19"
         data-testid="close-tag"
         type="button"
       >

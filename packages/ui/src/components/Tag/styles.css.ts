@@ -30,8 +30,6 @@ export const containerTag = recipe({
         selectors: {
           '&:hover, &:active': {
             cursor: 'pointer',
-            background: theme.colors.neutral.backgroundWeakHover,
-            borderColor: theme.colors.neutral.borderStrongHover,
           },
           '&:active': {
             boxShadow: theme.shadows.focusNeutral,
@@ -59,6 +57,20 @@ export const containerTag = recipe({
       },
     },
   },
+  compoundVariants: SENTIMENTS.map(sentiment => ({
+    variants: { copiable: true, sentiment },
+    style: {
+      selectors: {
+        '&:hover, &:active': {
+          background: theme.colors[sentiment].backgroundHover,
+          borderColor:
+            theme.colors[sentiment][
+              sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'
+            ],
+        },
+      },
+    },
+  })),
   defaultVariants: {
     copiable: false,
     disabled: false,

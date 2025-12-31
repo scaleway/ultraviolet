@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseIcon } from '@ultraviolet/icons'
+import { CloseIcon, CopyContentIcon } from '@ultraviolet/icons'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
@@ -20,17 +20,19 @@ type TagProps = {
   sentiment?: (typeof SENTIMENTS)[number]
   disabled?: boolean
   copiable?: boolean
+  copyButton?: boolean
   copyText?: string
   copiedText?: string
   className?: string
   children: ReactNode
+  variant?: 'default' | 'code'
   'data-testid'?: string
   style?: CSSProperties
 }
 
 type TagInnerProps = Omit<
   TagProps,
-  'copiable' | 'copyText' | 'copiedText' | 'className' | 'data-testid'
+  'copyText' | 'copiedText' | 'className' | 'data-testid'
 >
 
 const TagInner = ({
@@ -38,6 +40,9 @@ const TagInner = ({
   isLoading = false,
   onClose,
   disabled = false,
+  copiable,
+  variant,
+  copyButton,
 }: TagInnerProps) => (
   <>
     <Text
@@ -45,11 +50,13 @@ const TagInner = ({
       as="span"
       className={textTag}
       oneLine
-      variant="caption"
+      variant={variant === 'code' ? 'code' : 'caption'}
     >
       {children}
     </Text>
-
+    {copiable && copyButton && !isLoading ? (
+      <CopyContentIcon size="xsmall" />
+    ) : null}
     {onClose && !isLoading ? (
       <Button
         aria-label="Close tag"
@@ -77,10 +84,12 @@ export const Tag = ({
   isLoading,
   onClose,
   copiable = false,
+  copyButton,
   copyText = 'Copy',
   copiedText = 'Copied!',
   disabled,
   sentiment = 'neutral',
+  variant = 'default',
   className,
   style,
   'data-testid': dataTestId,
@@ -114,7 +123,14 @@ export const Tag = ({
           onClick={setCopied}
           type="button"
         >
-          <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
+          <TagInner
+            copiable
+            copyButton={copyButton}
+            disabled={disabled}
+            isLoading={isLoading}
+            onClose={onClose}
+            variant={variant}
+          >
             {children}
           </TagInner>
         </button>
@@ -128,7 +144,12 @@ export const Tag = ({
       data-testid={dataTestId}
       style={style}
     >
-      <TagInner disabled={disabled} isLoading={isLoading} onClose={onClose}>
+      <TagInner
+        disabled={disabled}
+        isLoading={isLoading}
+        onClose={onClose}
+        variant={variant}
+      >
         {children}
       </TagInner>
     </span>
