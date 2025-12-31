@@ -119,7 +119,7 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
       return wrap
     }, [wrap])
 
-    const Component = as || 'div'
+    const Component = as ?? 'div'
 
     const sprinkleClassName = sprinkles({
       alignItems:

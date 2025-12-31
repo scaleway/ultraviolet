@@ -36,7 +36,7 @@ export const IllustrationContainer = ({
     // Check if the illustration ends with .svg to handle it as an SVG to ensure the 'fill' property and "width" are correct by changing them directly to what we want
     if (illustration?.endsWith('.svg')) {
       fetch(illustration)
-        .then(response => response.text())
+        .then(async response => response.text())
         .then(svg => {
           const updatedSvg = svg
             .replace(

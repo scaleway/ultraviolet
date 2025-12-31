@@ -72,7 +72,7 @@ export const DateInputField = <
       }
       error={getError({ label, maxDate, minDate }, error)}
       format={
-        format ||
+        format ??
         (value => {
           if (!value) {
             return ''

@@ -9,7 +9,8 @@
     "directory": "utils/stories"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "typecheck:go": "tsgo --noEmit"
   },
   "keywords": [
     "fonts",

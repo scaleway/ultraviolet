@@ -40,7 +40,6 @@ type ExtraProps = {
 
 type DocsContainerProps = BaseContainerProps & {
   context?: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }
@@ -50,6 +49,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
   const parameters = scope?.parameters
 
+  // oxlint-disable-next-line typescript/no-unsafe-call
   const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
 
   if (

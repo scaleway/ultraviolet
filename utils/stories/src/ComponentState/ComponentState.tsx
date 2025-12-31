@@ -33,7 +33,8 @@ const ComponentState = () => {
   useEffect(() => {
     Promise.allSettled(
       componentsNames.map(
-        name =>
+        async name =>
+          // oxlint-disable-next-line typescript/no-unsafe-return
           import(
             `../../../../packages/ui/src/components/${name}/__stories__/index.stories.tsx`
           ),
@@ -42,10 +43,12 @@ const ComponentState = () => {
       .then(localModules => {
         setModules(localModules)
       })
-      .catch(error => {
+      .catch((error: unknown) => {
         const { error: consoleError } = console
 
-        consoleError('Error loading component stories:', error)
+        if (error instanceof Error) {
+          consoleError('Error loading component stories:', error)
+        }
       })
   }, [])
 

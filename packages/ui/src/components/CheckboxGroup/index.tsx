@@ -54,7 +54,7 @@ export const CheckboxGroupCheckbox = ({
   const { groupName, onChange, groupValues, error: errorContext } = context
 
   const checkboxName = `${groupName}.${name ?? ''}`
-  const checkboxValue = `${value}`
+  const checkboxValue = value.toString()
 
   return (
     <Checkbox

@@ -49,7 +49,9 @@ describe('numberInputField', () => {
       <Form
         errors={mockFormErrors}
         methods={result.current}
-        onSubmit={value => onSubmit(value)}
+        onSubmit={value => {
+          onSubmit(value)
+        }}
       >
         <NumberInputField label="Test" name="test" required />
         <Submit>Submit</Submit>

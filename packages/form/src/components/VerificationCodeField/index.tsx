@@ -51,7 +51,7 @@ export const VerificationCodeField = <
   return (
     <VerificationCode
       {...props}
-      error={getError({ label: label || 'verification-code-field' }, error)}
+      error={getError({ label: label ?? 'verification-code-field' }, error)}
       fields={fields}
       inputId={inputId}
       label={label}

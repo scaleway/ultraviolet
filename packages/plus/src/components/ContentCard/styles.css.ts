@@ -75,7 +75,7 @@ export const subContainer = styleVariants({
   noHref: [
     subContainerBase,
     {
-      padding: `${theme.space['3']}`,
+      padding: theme.space['3'],
     },
   ],
   row: [

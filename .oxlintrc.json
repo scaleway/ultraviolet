@@ -8,7 +8,6 @@
   "ignorePatterns": [
     "**/app.config.d.ts",
     "**/package.config.d.ts",
-    "eslint.config.mjs",
     "next.config.js",
     "*.d.ts",
     "svgo.config.mjs"
@@ -20,7 +19,9 @@
         "**/__tests__/**/*.{ts,tsx}",
         ".storybook/**/*.{ts,tsx}",
         "examples/**",
-        ".storybook/**/*.{ts,tsx}"
+        ".storybook/**/*.{ts,tsx}",
+        "utils/stories/**/*.{ts,tsx}",
+        "utils/scripts/*.ts"
       ],
       "rules": {
         "eslint/no-alert": "off",
@@ -30,7 +31,12 @@
         "import/no-namespace": "off",
         "import/no-unassigned-import": "off",
         "react/jsx-pascal-case": "off",
-        "react/only-export-components": "off"
+        "react/no-array-index-key": "off",
+        "react/only-export-components": "off",
+        "typescript/no-unsafe-assignment": "warn",
+        "typescript/no-unsafe-member-access": "warn",
+        "typescript/no-unsafe-return": "warn",
+        "typescript/no-unsafe-call": "warn"
       }
     },
     {
@@ -48,7 +54,6 @@
       ],
       "plugins": ["import", "oxc", "vitest"],
       "rules": {
-        "@typescript-eslint/consistent-type-imports": "off",
         "eslint/func-names": "off",
         "eslint/max-statements": [
           "error",
@@ -64,6 +69,10 @@
         "jsx_a11y/label-has-associated-control": "off",
         "no-console": "off",
         "node/no-process-env": "off",
+        "typescript/no-unsafe-member-access": "off",
+        "typescript/consistent-type-imports": "off",
+        "typescript/promise-function-async": "warn",
+        "typescript/no-unsafe-assignment": "warn",
         "vitest/prefer-called-times": "off",
         "vitest/prefer-describe-function-title": "warn",
         "vitest/prefer-lowercase-title": "error"
@@ -115,6 +124,8 @@
       }
     ],
     "import/no-unassigned-import": "off",
+    "import/no-nodejs-modules": "warn",
+    "react/display-name": "off",
     "react/jsx-max-depth": [
       "error",
       {
@@ -124,7 +135,18 @@
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
     "react/no-multi-comp": "warn",
-    "import/no-nodejs-modules": "warn",
+    "typescript/prefer-nullish-coalescing": [
+      "off",
+      {
+        "ignoreBooleanCoercion": true
+      }
+    ],
+    "typescript/no-confusing-void-expression": "off",
+    "typescript/no-deprecated": "warn",
+    "typescript/no-misused-spread": "warn",
+    "typescript/no-unsafe-type-assertion": "warn",
+    "typescript/promise-function-async": "off",
+    "typescript/strict-boolean-expressions": "off",
     "unicorn/empty-brace-spaces": "off",
     "unicorn/prefer-global-this": "off"
   }

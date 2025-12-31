@@ -112,7 +112,9 @@ function compareManifests(
   reportPath: string,
 ): void {
   console.log('Comparing manifests...')
+  // oxlint-disable-next-line typescript/no-unsafe-assignment
   const baseline: Manifest = JSON.parse(readFileSync(baselinePath, 'utf8'))
+  // oxlint-disable-next-line typescript/no-unsafe-assignment
   const current: Manifest = JSON.parse(readFileSync(currentPath, 'utf8'))
 
   let report = 'Migration Comparison Report\n'

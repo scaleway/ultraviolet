@@ -35,7 +35,7 @@ export const getMaxChartValue = (preppedData?: Serie[]): number => {
   }
 
   const maximum = Math.max(
-    ...preppedData.map(({ data }) => getMax(data.map(({ y }) => y || 0))),
+    ...preppedData.map(({ data }) => getMax(data.map(({ y }) => y ?? 0))),
   )
 
   return Math.ceil(maximum + maximum * 0.1)
@@ -47,7 +47,7 @@ export const getMinChartValue = (preppedData?: Serie[]): number => {
   }
 
   const minimum = Math.min(
-    ...preppedData.map(({ data }) => getMin(data.map(({ y }) => y || 0))),
+    ...preppedData.map(({ data }) => getMin(data.map(({ y }) => y ?? 0))),
   )
 
   return Math.floor(minimum - minimum * 0.1)
@@ -56,7 +56,7 @@ export const getMinChartValue = (preppedData?: Serie[]): number => {
 export const getCurrent = (values: number[] = []): number => {
   const val = values.at(-1)
 
-  return val || 0
+  return val ?? 0
 }
 
 export const getSelected = (

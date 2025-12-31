@@ -93,7 +93,7 @@ export const InfiniteScroll = ({
             .then(() => {
               setIsLoading(false)
             })
-            .catch(error => {
+            .catch((error: unknown) => {
               setIsLoading(false)
               throw error
             })
@@ -108,7 +108,7 @@ export const InfiniteScroll = ({
       return
     }
     let scrollableContainer =
-      scrollParentRef?.current || containerRef.current?.parentElement
+      scrollParentRef?.current ?? containerRef.current?.parentElement
     while (scrollableContainer && scrollableContainer !== document.body) {
       const { overflowY } = window.getComputedStyle(scrollableContainer)
       if (overflowY === 'auto' || overflowY === 'scroll') {
@@ -135,7 +135,7 @@ export const InfiniteScroll = ({
     }
   }, [debounce, handleScroll, hasMore, onLoadMore, scrollParentRef])
 
-  const localLoader = useMemo(() => loader || <Loader active />, [loader])
+  const localLoader = useMemo(() => loader ?? <Loader active />, [loader])
 
   if (isLoading) {
     return localLoader

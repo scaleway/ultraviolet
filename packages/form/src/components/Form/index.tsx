@@ -41,10 +41,11 @@ export const Form = <TFieldValues extends FieldValues>({
         <form
           name={name}
           noValidate
-          onSubmit={async e => {
+          // oxlint-disabled-next-line typescript/no-misused-promises
+          onSubmit={e => {
             e.preventDefault()
             e.stopPropagation()
-            await handleSubmit(e)
+            handleSubmit(e).catch(() => null)
           }}
           style={{ display: 'contents' }}
         >

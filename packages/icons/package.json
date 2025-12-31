@@ -16,6 +16,7 @@
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "postbuild": "node ./process-css.ts",
     "typecheck": "tsc --noEmit",
+    "typecheck:go": "tsgo --noEmit",
     "size": "size-limit",
     "lintpublish": "publint"
   },

@@ -109,7 +109,7 @@ export const TextAreaField = <
       onKeyDown={onKeyDownHandler}
       required={required}
       value={field.value}
-      {...(label ? { label } : { 'aria-label': ariaLabel as string })}
+      {...(label ? { label } : { 'aria-label': ariaLabel! })}
     />
   )
 }

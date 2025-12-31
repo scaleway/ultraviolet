@@ -286,7 +286,7 @@ export const Examples: StoryFn = args => {
           checked={value4['label-26']}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
-              <img alt="fr" src={fr} width={24} />
+              <img alt="fr" height={24} src={fr} width={24} />
               <Text as="span" variant="bodyStrong">
                 France
               </Text>

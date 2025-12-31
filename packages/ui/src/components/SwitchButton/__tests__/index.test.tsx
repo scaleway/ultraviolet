@@ -150,7 +150,7 @@ describe('switchButton', () => {
     await userEvent.click(rightButton)
   })
 
-  test('throws error when using button outside of context', async () => {
+  test('throws error when using button outside of context', () => {
     expect(() =>
       renderWithTheme(
         <SwitchButton.Option value="left">Left</SwitchButton.Option>,

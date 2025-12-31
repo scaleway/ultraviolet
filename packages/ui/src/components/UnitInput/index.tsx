@@ -105,7 +105,9 @@ export const UnitInput = ({
   style,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
-  const localId = useId()
+  const uniqueId = useId()
+
+  const localId = id ?? uniqueId
   const sentiment = useMemo(() => {
     if (error) {
       return 'danger'
@@ -150,7 +152,7 @@ export const UnitInput = ({
     >
       {label || labelInformation ? (
         <Label
-          htmlFor={id ?? localId}
+          htmlFor={localId}
           labelDescription={labelInformation}
           required={required}
           size={size}
@@ -171,7 +173,7 @@ export const UnitInput = ({
             className={cn(className, unitInputNumber[size])}
             data-testid="unit-input"
             disabled={disabled}
-            id={id ?? localId}
+            id={localId}
             max={max}
             min={min}
             name={`${name}-value`}

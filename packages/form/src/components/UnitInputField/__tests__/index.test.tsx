@@ -51,7 +51,9 @@ describe('unitInputField', () => {
       <Form
         errors={mockErrors}
         methods={result.current}
-        onSubmit={value => onSubmit(value)}
+        onSubmit={value => {
+          onSubmit(value)
+        }}
       >
         <UnitInputField
           label="Test"

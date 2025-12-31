@@ -59,14 +59,16 @@ export const Option = ({
   } = useSelectableCardOptionGroup()
 
   const generatedId = useId()
-  const inputId = id || generatedId
+  const inputId = id ?? generatedId
+
+  const isDisabled = disabled || groupDisabled
 
   return (
     <SelectableCard
       checked={groupValue === value}
       className={cn(className, selectableCard)}
       data-testid={dataTestId}
-      disabled={disabled || groupDisabled}
+      disabled={isDisabled}
       isError={error}
       onChange={event => {
         onChange?.(event)
@@ -79,7 +81,7 @@ export const Option = ({
       tooltip={tooltip}
       type="radio"
       value={value}
-      {...(label ? { id: inputId } : { 'aria-label': ariaLabel as string })}
+      {...(label ? { id: inputId } : { 'aria-label': ariaLabel! })}
     >
       <Stack
         className={optionFullHeight}
@@ -100,7 +102,7 @@ export const Option = ({
           {typeof image === 'string' ? (
             <Image
               alt={typeof label === 'string' ? label : value}
-              disabled={disabled || groupDisabled}
+              disabled={isDisabled}
               size={size}
               src={image}
             />
@@ -116,7 +118,7 @@ export const Option = ({
           >
             {typeof label === 'string' ? (
               <Label
-                disabled={disabled || groupDisabled}
+                disabled={isDisabled}
                 htmlFor={inputId}
                 labelDescription={labelDescription}
                 sentiment={groupValue === value ? 'primary' : 'neutral'}
@@ -135,11 +137,11 @@ export const Option = ({
           }
           className={cn(
             optionSelectInput,
-            disabled || groupDisabled ? optionSelectInputDisabled : '',
+            isDisabled ? optionSelectInputDisabled : '',
             error ? optionSelectInputError : '',
           )}
           data-testid={dataTestId ? `${dataTestId}-select` : undefined}
-          disabled={disabled || groupDisabled}
+          disabled={isDisabled}
           error={error}
           name="selectable-card-option"
           onChange={onChangeOption}

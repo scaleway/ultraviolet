@@ -34,26 +34,26 @@ const createCSSFile = (theme: string, content: UvThemeType) => {
 
 const writeFiles = async () => {
   const figmaTokensResponse: Response = await fetch(TOKENS_URL)
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
   const figmaTokensJson = (await figmaTokensResponse.json()) as JsonType
 
   // For each theme
-  await Promise.all(
-    themesMatches.map(async themeMatch => {
-      const output = generatePalette(figmaTokensJson, themeMatch)
-      const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}/__generated__/index.ts`
-      writeFile(
-        filePath,
-        `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(
-          output,
-        )}`,
-        {},
-        () => {
-          console.log(`File written ${filePath}`)
-        },
-      )
-      createCSSFile(themeMatch.outputTheme, output as UvThemeType) // Create CSS-tokens
-    }),
-  )
+  for (const themeMatch of themesMatches) {
+    // oxlint-disable-next-line typescript/no-unsafe-type-assertion
+    const output = generatePalette(figmaTokensJson, themeMatch) as UvThemeType
+    const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}/__generated__/index.ts`
+    writeFile(
+      filePath,
+      `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(
+        output,
+      )}`,
+      {},
+      () => {
+        console.log(`File written ${filePath}`)
+      },
+    )
+    createCSSFile(themeMatch.outputTheme, output) // Create CSS-tokens
+  }
 }
 
 try {

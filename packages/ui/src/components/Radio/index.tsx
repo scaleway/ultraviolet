@@ -82,7 +82,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
     forwadedRef,
   ) => {
     const generatedId = useId()
-    const localId = id || generatedId
+    const localId = id ?? generatedId
 
     return (
       <Tooltip text={tooltip}>
