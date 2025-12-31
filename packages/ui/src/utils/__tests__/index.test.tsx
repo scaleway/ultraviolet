@@ -2,7 +2,7 @@ import { getUUID } from '@ultraviolet/utils'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 
 describe('ids', () => {
-  describe('getUUID', () => {
+  describe(getUUID, () => {
     beforeEach(() => {
       vi.spyOn(globalThis.Math, 'random').mockReturnValue(
         0.415_591_366_944_480_4,

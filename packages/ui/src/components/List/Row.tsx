@@ -107,7 +107,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     const checkboxRef = useRef<HTMLInputElement>(null)
 
     const isSelectDisabled =
-      disabled || (selectDisabled !== undefined && selectDisabled !== false)
+      disabled ?? (selectDisabled !== undefined && selectDisabled !== false)
 
     const hasExpandable = !!expandable
     useEffect(() => {
@@ -237,7 +237,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                   aria-label="expand"
                   className={listExpandableButton}
                   data-testid="list-expand-button"
-                  disabled={disabled || !expandable}
+                  disabled={disabled ?? !expandable}
                   onClick={() => toggleRowExpand()}
                   sentiment={sentiment}
                   size="small"

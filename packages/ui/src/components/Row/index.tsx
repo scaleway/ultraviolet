@@ -98,7 +98,8 @@ export const Row = ({
             ...acc,
             [templateColumn[column as keyof typeof templateColumn]]:
               typeof templateColumns === 'object'
-                ? templateColumns[column as keyof typeof templateColumns] || ''
+                ? (templateColumns[column as keyof typeof templateColumns] ??
+                  '')
                 : templateColumns,
           }),
           {},
@@ -108,7 +109,7 @@ export const Row = ({
             ...acc,
             [paddings[localPadding as keyof typeof padding]]:
               typeof padding === 'object'
-                ? padding[localPadding as keyof typeof templateColumns] || ''
+                ? (padding[localPadding as keyof typeof templateColumns] ?? '')
                 : padding,
           }),
           {},

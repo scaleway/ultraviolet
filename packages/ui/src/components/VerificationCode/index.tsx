@@ -79,7 +79,7 @@ export const VerificationCode = ({
   style,
 }: VerificationCodeProps) => {
   const uniqueId = useId()
-  const id = inputId || uniqueId
+  const id = inputId ?? uniqueId
   const valuesArray = Object.assign(new Array(fields).fill(''), [
     ...initialValue.substring(0, fields),
   ])
@@ -286,7 +286,7 @@ export const VerificationCode = ({
           sentiment={sentiment}
           variant="caption"
         >
-          {error || success || helper}
+          {(error || success) ?? helper}
         </Text>
       ) : null}
       {!(error || success) && typeof helper !== 'string' && helper

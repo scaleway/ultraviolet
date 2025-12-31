@@ -137,7 +137,7 @@ export const TagList = ({
       return
     }
 
-    const parentWidth = containerRef.current.parentElement?.offsetWidth || 0
+    const parentWidth = containerRef.current.parentElement?.offsetWidth ?? 0
 
     const toMeasureElements: HTMLCollection =
       measureRef.current.children[0].children
@@ -214,8 +214,8 @@ export const TagList = ({
 
       // Remove the last tag if we have a popover and add it to the hidden tags
       const tagsContainer = containerRef.current
-      const tagsContainerWidth = containerRef.current?.offsetWidth || 0
-      const parentWidth = tagsContainer?.parentElement?.offsetWidth || 0
+      const tagsContainerWidth = containerRef.current?.offsetWidth ?? 0
+      const parentWidth = tagsContainer?.parentElement?.offsetWidth ?? 0
 
       if (
         visibleTags.length > 1 &&

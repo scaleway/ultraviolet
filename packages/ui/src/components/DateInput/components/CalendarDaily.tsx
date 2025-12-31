@@ -120,8 +120,8 @@ export const Daily = () => {
 
         // Whether the date is selected
         const isSelected =
-          (value && isSameDay(constructedDate, new Date(value))) ||
-          (range?.end && isSameDay(constructedDate, range.end)) ||
+          (value && isSameDay(constructedDate, new Date(value))) ??
+          (range?.end && isSameDay(constructedDate, range.end)) ??
           (range?.start && isSameDay(constructedDate, range.start))
 
         // Whether the date is after the start date - useful when selectsRange is set to true
@@ -134,13 +134,13 @@ export const Daily = () => {
             constructedDate > range.start &&
             hoveredDate &&
             constructedDate < hoveredDate &&
-            !range.end) ||
+            !range.end) ??
           (selectsRange &&
             range?.start &&
             constructedDate < range.start &&
             hoveredDate &&
             constructedDate > hoveredDate &&
-            !range.end) ||
+            !range.end) ??
           (range?.start &&
             range.end &&
             constructedDate < range.end &&

@@ -26,7 +26,7 @@ export const MultiStateInput = ({
   if (type === 'checkbox') {
     const labelProps = label
       ? { 'aria-label': undefined, children: label }
-      : { 'aria-label': ariaLabel as string }
+      : { 'aria-label': ariaLabel! }
 
     return (
       <Checkbox
@@ -49,7 +49,7 @@ export const MultiStateInput = ({
   }
 
   if (type === 'radio') {
-    const labelProps = label ? { label } : { 'aria-label': ariaLabel as string }
+    const labelProps = label ? { label } : { 'aria-label': ariaLabel! }
 
     return (
       <Radio
@@ -71,7 +71,7 @@ export const MultiStateInput = ({
     )
   }
   if (type === 'toggle') {
-    const labelProps = label ? { label } : { 'aria-label': ariaLabel as string }
+    const labelProps = label ? { label } : { 'aria-label': ariaLabel! }
 
     return (
       <Toggle

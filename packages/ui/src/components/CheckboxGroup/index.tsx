@@ -54,7 +54,7 @@ export const CheckboxGroupCheckbox = ({
   const { groupName, onChange, groupValues, error: errorContext } = context
 
   const checkboxName = `${groupName}.${name ?? ''}`
-  const checkboxValue = `${value}`
+  const checkboxValue = value.toString()
 
   return (
     <Checkbox
@@ -63,7 +63,7 @@ export const CheckboxGroupCheckbox = ({
       className={cn(className, checkboxGroup)}
       data-testid={dataTestId}
       disabled={disabled}
-      error={error || errorContext}
+      error={error ?? errorContext}
       helper={helper}
       name={checkboxName}
       onBlur={onBlur}

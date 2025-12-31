@@ -14,6 +14,7 @@ const ThemeContext = createContext(consoleLightTheme)
 // oxlint-disable-next-line react/only-export-components
 export const useTheme = () => {
   const context = useContext(ThemeContext)
+  // oxlint-disable-next-line typescript/strict-boolean-expressions
   if (!context) {
     throw new Error(
       'useTheme must be used within a ThemeProvider imported from @ultraviolet/ui',

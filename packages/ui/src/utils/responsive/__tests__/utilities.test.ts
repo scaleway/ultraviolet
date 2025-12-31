@@ -6,7 +6,7 @@ import { screens } from '../../../theme'
 import { down, up } from '../utilities'
 
 describe('responsive utilities', () => {
-  describe('up', () => {
+  describe(up, () => {
     ;(Object.keys(screens) as ScreenSize[]).forEach(brk => {
       test(`works with ${brk}`, () => {
         expect(up(brk, 'border: 1px solid red;')).toMatchSnapshot()
@@ -17,7 +17,7 @@ describe('responsive utilities', () => {
       expect(up('yolo', 'border: 1px solid red;')).toMatchSnapshot()
     })
   })
-  describe('down', () => {
+  describe(down, () => {
     ;(Object.keys(screens) as ScreenSize[]).forEach(brk => {
       test(`works with ${brk}`, () => {
         expect(down(brk, 'border: 1px solid red;')).toMatchSnapshot()

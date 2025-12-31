@@ -9,9 +9,9 @@ import type { ViteUserConfig } from 'vitest/config'
 const pkg = await readPackage()
 
 const externalPkgs = [
-  ...Object.keys(pkg.dependencies || {}),
-  ...Object.keys(pkg.optionalDependencies || {}),
-  ...Object.keys(pkg.peerDependencies || {}),
+  ...Object.keys(pkg.dependencies ?? {}),
+  ...Object.keys(pkg.optionalDependencies ?? {}),
+  ...Object.keys(pkg.peerDependencies ?? {}),
 ]
 
 const external = (id: string) => {

@@ -48,6 +48,7 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
       <SelectInput
         label="Switch Locale"
         name="locale-switcher"
+        // oxlint-disable-next-line typescript/no-misused-promises
         onChange={onChange}
         options={localesOptions}
         searchable={false}
@@ -59,7 +60,7 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
         label={currentLocale}
         locale={dateFns}
         onChange={v => {
-          setValue(v as Date)
+          setValue(v)
         }}
         selectsRange={false}
         value={value}

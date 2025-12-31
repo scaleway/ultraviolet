@@ -28,7 +28,7 @@ describe('submit', () => {
       <Submit>Test</Submit>,
       {},
       {
-        onSubmit: () =>
+        onSubmit: async () =>
           new Promise(resolve => {
             setTimeout(() => resolve(undefined), 500)
           }),
@@ -36,11 +36,11 @@ describe('submit', () => {
     )
     await userEvent.click(
       // eslint-disable-next-line testing-library/no-node-access
-      screen.getByText('Test').closest('button') as HTMLButtonElement,
+      screen.getByText('Test').closest('button')!,
     )
     expect(
       // eslint-disable-next-line testing-library/no-node-access
-      screen.getByText('Test').closest('button') as HTMLButtonElement,
+      screen.getByText('Test').closest('button')!,
     ).toBeDisabled()
 
     expect(asFragment()).toMatchSnapshot()

@@ -61,7 +61,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
           <div>
             {subtitle ? (
               <Text
-                as={subtitleAs || 'h5'}
+                as={subtitleAs ?? 'h5'}
                 oneLine
                 prominence="weak"
                 sentiment="neutral"
@@ -71,7 +71,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
               </Text>
             ) : null}
             <Text
-              as={titleAs || 'h3'}
+              as={titleAs ?? 'h3'}
               oneLine
               sentiment="neutral"
               variant="bodyStrong"

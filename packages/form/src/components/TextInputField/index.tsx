@@ -93,7 +93,7 @@ export const TextInputField = <
         )
       }}
       required={required}
-      value={field.value === undefined ? '' : field.value}
+      value={field.value ?? ''}
     />
   )
 }

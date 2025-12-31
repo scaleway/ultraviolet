@@ -8,7 +8,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charSet="utf8" />
+          <meta charSet="utf-8" />
           <meta
             content="Scaleway Open Source Component Library"
             name="description"

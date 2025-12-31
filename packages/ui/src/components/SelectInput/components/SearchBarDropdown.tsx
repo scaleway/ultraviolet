@@ -36,9 +36,9 @@ const searchRegex = (data: OptionType[], query: string) =>
     return (
       (query.length > 2
         ? isFuzzyMatch(query, referenceText)
-        : referenceText.match(regex)) ||
+        : referenceText.match(regex)) ??
       (typeof option.description === 'string' &&
-        option.description.match(regex)) ||
+        option.description.match(regex)) ??
       option.value.match(regex)
     )
   })

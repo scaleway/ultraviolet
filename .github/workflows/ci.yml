@@ -116,7 +116,7 @@ jobs:
       - name: oxlint
         run: |
           pnpm install --frozen-lockfile
-          pnpm run oxc --quiet
+          pnpm run oxc:type-aware --quiet
 
   lint:
     runs-on: ubuntu-24.04
