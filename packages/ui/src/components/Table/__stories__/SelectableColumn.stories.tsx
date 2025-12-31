@@ -63,7 +63,9 @@ export const SelectableColumn: StoryFn = () => {
               <Checkbox
                 checked={getAllState(incidentNotifications)}
                 id="incident"
-                onChange={() => selectAll(setIndicentNotifications)}
+                onChange={() => {
+                  selectAll(setIndicentNotifications)
+                }}
               >
                 <Text as="span" htmlFor="incident" variant="bodySmall">
                   Incident notifications

@@ -14,8 +14,10 @@
     "size": "size-limit",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vite.config.ts",
-    "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
+    "typecheck:go": "tsgo --noEmit",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "type:generate:go": "tsgo --declaration -p tsconfig.build.json",
     "watch:build": "vite build --config vite.config.ts --watch",
     "watch": "pnpm run '/^watch:.*/'",
     "lintpublish": "publint"
