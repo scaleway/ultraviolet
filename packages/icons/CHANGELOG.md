@@ -1,5 +1,19 @@
 # Change Log
 
+## 5.0.3
+
+### Patch Changes
+
+- [#5896](https://github.com/scaleway/ultraviolet/pull/5896) [`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.3`.
+  Updated dependency `react-dom` to `19.2.3`.
+
+- [#5921](https://github.com/scaleway/ultraviolet/pull/5921) [`5adc0e6`](https://github.com/scaleway/ultraviolet/commit/5adc0e6b1bc3e610fd21f03b320639dcc43b2df1) Thanks [@lisalupi](https://github.com/lisalupi)! - New logo `OpenaiLogo`, new icon `HomeIcon` and new category icon `NextServersProductIcon`
+
+- [#5902](https://github.com/scaleway/ultraviolet/pull/5902) [`d509f5c`](https://github.com/scaleway/ultraviolet/commit/d509f5cc1b5469fdb368973544d8d0d6a38dfbc6) Thanks [@lisalupi](https://github.com/lisalupi)! - New logos `DatadogLogo`and `OpenTelemetryLogo`
+
+- Updated dependencies [[`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7)]:
+  - @ultraviolet/themes@3.0.2
+
 ## 5.0.2
 
 ### Patch Changes

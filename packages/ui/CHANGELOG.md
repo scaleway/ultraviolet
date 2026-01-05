@@ -1,5 +1,40 @@
 # Change Log
 
+## 3.3.0
+
+### Minor Changes
+
+- [#5937](https://github.com/scaleway/ultraviolet/pull/5937) [`22994af`](https://github.com/scaleway/ultraviolet/commit/22994af651f7eb409ed6568dd7e11cbe1445e126) Thanks [@lisalupi](https://github.com/lisalupi)! - `Tag`:
+
+  - add copy icon when `copiable` with prop `copyButton`
+  - new variant "code"
+  - fix hover style when copiable
+
+- [#5874](https://github.com/scaleway/ultraviolet/pull/5874) [`64a051e`](https://github.com/scaleway/ultraviolet/commit/64a051eb9d1de401edfda77d931ce72382fed7e1) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `FileInput`
+
+### Patch Changes
+
+- [#5892](https://github.com/scaleway/ultraviolet/pull/5892) [`9d45b88`](https://github.com/scaleway/ultraviolet/commit/9d45b88cc22118f8bcd498aec748d1ceff09e845) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix padding and fix clear button size
+
+- [#5941](https://github.com/scaleway/ultraviolet/pull/5941) [`f1b9119`](https://github.com/scaleway/ultraviolet/commit/f1b9119d59378e56c44caa307a3040e0ef3b613d) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix dropdown width
+
+- [#5942](https://github.com/scaleway/ultraviolet/pull/5942) [`ad3fddd`](https://github.com/scaleway/ultraviolet/commit/ad3fddd2ce77f59a7f5e04157f4c363180eec55c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Stepper`: remove useless margin
+
+- [#5943](https://github.com/scaleway/ultraviolet/pull/5943) [`d8f8952`](https://github.com/scaleway/ultraviolet/commit/d8f8952f530eea717f7bc3756b8401b39795661d) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix alignment in the select bar
+
+- [#5905](https://github.com/scaleway/ultraviolet/pull/5905) [`9583dc7`](https://github.com/scaleway/ultraviolet/commit/9583dc703bdd0b65f5c86c268137a45b5d59aa05) Thanks [@lisalupi](https://github.com/lisalupi)! - `PieChart`: legend text should wrap and not overflow
+
+- [#5896](https://github.com/scaleway/ultraviolet/pull/5896) [`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.3`.
+  Updated dependency `react-dom` to `19.2.3`.
+
+- [#5928](https://github.com/scaleway/ultraviolet/pull/5928) [`c532a07`](https://github.com/scaleway/ultraviolet/commit/c532a071ae72689ca6c68233eff49988e1208299) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.1.3`.
+
+- [#5940](https://github.com/scaleway/ultraviolet/pull/5940) [`9bc47cf`](https://github.com/scaleway/ultraviolet/commit/9bc47cfa03ca1e380e01f147cabfaeacb3c7471d) Thanks [@philibea](https://github.com/philibea)! - SearchInput reset correctly when undefined is set by the user
+
+- Updated dependencies [[`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7), [`5adc0e6`](https://github.com/scaleway/ultraviolet/commit/5adc0e6b1bc3e610fd21f03b320639dcc43b2df1), [`d509f5c`](https://github.com/scaleway/ultraviolet/commit/d509f5cc1b5469fdb368973544d8d0d6a38dfbc6)]:
+  - @ultraviolet/icons@5.0.3
+  - @ultraviolet/themes@3.0.2
+
 ## 3.2.1
 
 ### Patch Changes
