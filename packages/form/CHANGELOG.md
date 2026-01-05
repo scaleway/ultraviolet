@@ -1,5 +1,18 @@
 # Change Log
 
+## 6.0.5
+
+### Patch Changes
+
+- [#5874](https://github.com/scaleway/ultraviolet/pull/5874) [`64a051e`](https://github.com/scaleway/ultraviolet/commit/64a051eb9d1de401edfda77d931ce72382fed7e1) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `FileInputField`
+
+- [#5896](https://github.com/scaleway/ultraviolet/pull/5896) [`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.3`.
+  Updated dependency `react-dom` to `19.2.3`.
+- Updated dependencies [[`22994af`](https://github.com/scaleway/ultraviolet/commit/22994af651f7eb409ed6568dd7e11cbe1445e126), [`9d45b88`](https://github.com/scaleway/ultraviolet/commit/9d45b88cc22118f8bcd498aec748d1ceff09e845), [`64a051e`](https://github.com/scaleway/ultraviolet/commit/64a051eb9d1de401edfda77d931ce72382fed7e1), [`f1b9119`](https://github.com/scaleway/ultraviolet/commit/f1b9119d59378e56c44caa307a3040e0ef3b613d), [`ad3fddd`](https://github.com/scaleway/ultraviolet/commit/ad3fddd2ce77f59a7f5e04157f4c363180eec55c), [`d8f8952`](https://github.com/scaleway/ultraviolet/commit/d8f8952f530eea717f7bc3756b8401b39795661d), [`9583dc7`](https://github.com/scaleway/ultraviolet/commit/9583dc703bdd0b65f5c86c268137a45b5d59aa05), [`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7), [`c532a07`](https://github.com/scaleway/ultraviolet/commit/c532a071ae72689ca6c68233eff49988e1208299), [`9bc47cf`](https://github.com/scaleway/ultraviolet/commit/9bc47cfa03ca1e380e01f147cabfaeacb3c7471d), [`5adc0e6`](https://github.com/scaleway/ultraviolet/commit/5adc0e6b1bc3e610fd21f03b320639dcc43b2df1), [`d509f5c`](https://github.com/scaleway/ultraviolet/commit/d509f5cc1b5469fdb368973544d8d0d6a38dfbc6)]:
+  - @ultraviolet/ui@3.3.0
+  - @ultraviolet/icons@5.0.3
+  - @ultraviolet/themes@3.0.2
+
 ## 6.0.4
 
 ### Patch Changes

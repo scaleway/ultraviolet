@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#5896](https://github.com/scaleway/ultraviolet/pull/5896) [`f72efaf`](https://github.com/scaleway/ultraviolet/commit/f72efafcac5143935efe7d62df823131e6e023f7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.3`.
+  Updated dependency `react-dom` to `19.2.3`.
+
 ## 3.0.1
 
 ### Patch Changes
