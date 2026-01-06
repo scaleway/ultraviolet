@@ -741,6 +741,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
+
   test('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInput
@@ -1431,5 +1432,43 @@ describe('selectInput', () => {
     })
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handles correctly when adding options', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+
+    expect(venus).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new value')
+
+    expect(venus).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+
+    await userEvent.click(addOption)
+
+    expect(onClick).toHaveBeenCalledTimes(1)
   })
 })

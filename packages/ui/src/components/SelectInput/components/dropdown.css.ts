@@ -7,8 +7,8 @@ export const dropdownWidth = createVar()
 
 export const dropdown = style({
   backgroundColor: theme.colors.other.elevation.background.raised,
-  boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   color: theme.colors.neutral.text,
+  boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   marginBottom: theme.space[10],
   minWidth: 320,
   overflow: 'hidden',
@@ -28,29 +28,29 @@ export const dropdownContainerUnGrouped = style({
 })
 
 export const dropdownGroup = style({
-  alignItems: 'center',
-  background: theme.colors.neutral.backgroundWeak,
-  border: 'none',
   display: 'flex',
-  height: theme.space[4],
+  width: '100%',
   justifyContent: 'left',
-  marginBottom: theme.space['0.25'],
-  paddingInline: theme.space[2],
+  alignItems: 'center',
+  border: 'none',
+  background: theme.colors.neutral.backgroundWeak,
   position: 'sticky',
+  top: 0,
+  paddingInline: theme.space[2],
+  height: theme.space[4],
+  textAlign: 'left',
+  marginBottom: theme.space['0.25'],
   selectors: {
     '&:focus': {
       background: theme.colors.neutral.backgroundWeak,
       outline: 'none',
     },
   },
-  textAlign: 'left',
-  top: 0,
-  width: '100%',
 })
 
 export const dropdownGroupSelectable = style({
-  borderLeft: `${theme.space['0.5']} solid ${theme.colors.neutral.backgroundWeak}`,
   paddingLeft: theme.space[2],
+  borderLeft: `${theme.space['0.5']} solid ${theme.colors.neutral.backgroundWeak}`,
   selectors: {
     '&:focus': {
       backgroundColor: theme.colors.neutral.backgroundHover,
@@ -64,30 +64,35 @@ export const dropdownGroupWrapper = style({
 })
 
 export const dropdownItemBase = style({
+  textAlign: 'left',
   backgroundColor: theme.colors.other.elevation.background.raised,
-  border: '1px solid transparent',
-  borderRadius: theme.radii.default,
-  color: theme.colors.neutral.text,
-  marginInline: theme.space['0.5'],
   paddingBlock: theme.space['1.5'],
   paddingInline: theme.space[2],
-  selectors: {
-    '&:hover, &:focus': {
-      backgroundColor: theme.colors.primary.background,
-      color: theme.colors.primary.text,
-      cursor: 'pointer',
-    },
-  },
-  textAlign: 'left',
+  marginInline: theme.space['0.5'],
+  color: theme.colors.neutral.text,
+  borderRadius: theme.radii.default,
+  border: '1px solid transparent',
 })
 
 export const dropdownItem = recipe({
-  base: [dropdownItemBase],
-  defaultVariants: {
-    disabled: false,
-    selected: false,
-  },
+  base: [
+    dropdownItemBase,
+    {
+      selectors: {
+        '&:hover, &:focus': {
+          backgroundColor: theme.colors.primary.background,
+          color: theme.colors.primary.text,
+          cursor: 'pointer',
+        },
+      },
+    },
+  ],
   variants: {
+    selected: {
+      true: {
+        backgroundColor: theme.colors.primary.background,
+      },
+    },
     disabled: {
       true: {
         backgroundColor: theme.colors.neutral.backgroundDisabled,
@@ -102,27 +107,26 @@ export const dropdownItem = recipe({
         },
       },
     },
-    selected: {
-      true: {
-        backgroundColor: theme.colors.primary.background,
-      },
-    },
+  },
+  defaultVariants: {
+    disabled: false,
+    selected: false,
   },
 })
 
 export const footer = style({
-  boxShadow: theme.shadows.dropdown,
+  width: '100%',
   paddingBlock: theme.space['1.5'],
   paddingInline: theme.space[2],
-  width: '100%',
+  boxShadow: theme.shadows.dropdown,
 })
 
 export const dropdownCheckbox = style({
-  alignItems: 'center',
-  pointerEvents: 'none',
+  width: '100%',
   position: 'static',
   textAlign: 'left',
-  width: '100%',
+  alignItems: 'center',
+  pointerEvents: 'none',
 })
 
 export const dropdownEmptyState = style({ padding: theme.space[2] })
@@ -134,11 +138,11 @@ export const dropdownInfo = style({
 })
 
 export const dropdownInfoTextItem = style({
+  overflow: 'auto',
+  textOverflow: 'ellipsis',
   flexShrink: 0,
   flexWrap: 'wrap',
   maxWidth: '100%',
-  overflow: 'auto',
-  textOverflow: 'ellipsis',
 })
 
 export const dropdownInfoContainer = style({ overflow: 'hidden' })
@@ -147,3 +151,16 @@ export const searchBar = style({
   paddingBlock: theme.space['1.5'],
   paddingInline: theme.space[2],
 })
+
+export const comboboxCreate = style([
+  dropdownItemBase,
+  {
+    marginBottom: theme.space[0.5],
+    selectors: {
+      '&:hover, &:focus': {
+        backgroundColor: theme.colors.neutral.backgroundHover,
+        cursor: 'pointer',
+      },
+    },
+  },
+])
