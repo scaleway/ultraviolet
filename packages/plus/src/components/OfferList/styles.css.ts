@@ -154,14 +154,8 @@ export const offerListBannerStack = recipe({
 
 export const offerListBadge = style({
   position: 'absolute',
-  transform: 'translateY(-150%)',
-  top: 0,
-  left: theme.space[3],
-})
-
-export const offerListBadgeContainer = style({
-  position: 'absolute',
-  top: theme.space[2],
+  transform: 'translateY(-160%)',
+  left: theme.space[5],
 })
 
 export const offerListNoPaddingCell = style({
