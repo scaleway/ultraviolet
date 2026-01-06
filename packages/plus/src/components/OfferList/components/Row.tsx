@@ -18,7 +18,6 @@ import { useOfferListContext } from '../OfferListProvider'
 import {
   expandablePadding as expandablePaddingVar,
   offerListBadge,
-  offerListBadgeContainer,
   offerListNoPaddingCell,
   offerListRowBanner,
   offerListRowExpandable,
@@ -162,17 +161,15 @@ export const Row = ({
       >
         <List.Cell className={offerListNoPaddingCell}>
           {badge ? (
-            <div className={offerListBadgeContainer}>
-              <BadgeUV
-                className={offerListBadge}
-                disabled={disabled}
-                prominence={badge.prominence}
-                sentiment={badge.sentiment}
-                size="small"
-              >
-                {badge.text}
-              </BadgeUV>
-            </div>
+            <BadgeUV
+              className={offerListBadge}
+              disabled={disabled}
+              prominence={badge.prominence}
+              sentiment={badge.sentiment}
+              size="small"
+            >
+              {badge.text}
+            </BadgeUV>
           ) : null}
           <div className={offerListRowSelectableContainer}>
             <Tooltip
