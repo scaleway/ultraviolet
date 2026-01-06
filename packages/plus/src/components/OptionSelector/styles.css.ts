@@ -3,13 +3,13 @@ import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 
 export const optionSelectorArrow = styleVariants({
   small: {
-    marginTop: theme.space[4],
+    marginTop: `calc(${theme.space[4]} + 1px)`,
   },
   medium: {
-    marginTop: theme.space[4],
+    marginTop: `calc(${theme.space[4]} + ${theme.space[0.5]})`,
   },
   large: {
-    marginTop: theme.space[5],
+    marginTop: `calc(${theme.space[5]} + ${theme.space[0.25]})`,
   },
 })
 

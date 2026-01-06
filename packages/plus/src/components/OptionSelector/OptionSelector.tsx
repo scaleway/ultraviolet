@@ -8,7 +8,13 @@ import { RevealOnHover } from './RevealOnHover'
 import { optionSelectorArrow } from './styles.css'
 import type { OptionSelectorProps, SelectorOption } from './types'
 
-const mergeIconWithContent = (content: ReactNode, icon: ReactNode) => (
+const IconWithContent = ({
+  content,
+  icon,
+}: {
+  content: ReactNode
+  icon: ReactNode
+}) => (
   <Stack alignItems="center" direction="row" gap="1.5">
     {icon}
     {content}
@@ -21,11 +27,15 @@ const makeSelectInputOptions = (
   options.map(option => {
     const optionLabel = option.hoverContent ? (
       <RevealOnHover
-        content={mergeIconWithContent(option.content, option.icon)}
-        hoverContent={mergeIconWithContent(option.hoverContent, option.icon)}
+        content={
+          <IconWithContent content={option.content} icon={option.icon} />
+        }
+        hoverContent={
+          <IconWithContent content={option.hoverContent} icon={option.icon} />
+        }
       />
     ) : (
-      mergeIconWithContent(option.content, option.icon)
+      <IconWithContent content={option.content} icon={option.icon} />
     )
 
     return {

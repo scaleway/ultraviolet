@@ -220,7 +220,7 @@ export const netherlandsOptions = [
   {
     content: (
       <Stack alignItems="center" direction="row" gap={0.5}>
-        AMS{' '}
+        AMS 2{' '}
         <Stack direction="row" gap="0.25">
           <LeafIcon sentiment="success" />
           <LeafIcon sentiment="success" />
