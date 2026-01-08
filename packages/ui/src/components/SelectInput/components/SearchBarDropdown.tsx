@@ -2,9 +2,10 @@
 
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
 import { SearchIcon } from '@ultraviolet/icons'
-import type { Dispatch, SetStateAction } from 'react'
+import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { TextInput } from '../../TextInput'
+import { OPTION_SELECTOR } from '../constants'
 import { useSelectInput } from '../SelectInputProvider'
 import type { DataType, OptionType } from '../types'
 import { searchBar } from './dropdown.css'
@@ -125,7 +126,11 @@ export const SearchBarDropdown = ({
     setSearchInput(search)
   }
 
-  const handleKeyDown = (key: string, search?: string) => {
+  const handleKeyDown = (
+    event: KeyboardEvent<HTMLInputElement>,
+    search?: string,
+  ) => {
+    const { key } = event
     if (key === 'Enter') {
       const closestOption = findClosestOption(displayedOptions, search)
       if (closestOption) {
@@ -152,8 +157,12 @@ export const SearchBarDropdown = ({
           onChange?.(selectedData.selectedValues[0] ?? '')
         }
       }
-    } else if (key === 'Tab') {
-      searchInputRef.current?.blur()
+    } else if (key === 'Tab' || key === 'ArrowDown') {
+      event?.preventDefault()
+      const optionsDropdown = document.querySelectorAll(OPTION_SELECTOR)
+      if (optionsDropdown && optionsDropdown.length > 0) {
+        ;(optionsDropdown[0] as HTMLElement).focus()
+      }
     }
   }
 
@@ -179,7 +188,7 @@ export const SearchBarDropdown = ({
       onBlur={() => setSearchBarActive(false)}
       onChange={event => handleChange(event.target.value)}
       onFocus={() => setSearchBarActive(true)}
-      onKeyDown={event => handleKeyDown(event.key, searchInput)}
+      onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}
       prefix={<SearchIcon sentiment="neutral" size="small" />}
       ref={searchInputRef}

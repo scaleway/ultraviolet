@@ -742,6 +742,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
+
   test('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInput
@@ -1430,5 +1431,96 @@ describe('selectInput', () => {
     })
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handles correctly when adding options - single select', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+
+    expect(venus).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new value')
+
+    expect(venus).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+
+    await userEvent.click(addOption)
+
+    expect(onClick).toHaveBeenCalledTimes(1)
+  })
+
+  test('handles correctly when adding options - multiselect select', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        multiselect
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+    const earth = screen.getByTestId('option-earth')
+
+    expect(venus).toBeVisible()
+    expect(earth).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('ven')
+
+    expect(venus).toBeVisible()
+    expect(earth).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[Enter]')
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new-planet')
+
+    expect(screen.getByTestId('add-option')).toBeVisible()
+    expect(venus).not.toBeVisible()
+    expect(earth).not.toBeVisible()
+
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[Enter]')
+
+    expect(onClick).toHaveBeenCalledTimes(2)
   })
 })
