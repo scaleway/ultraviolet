@@ -55,7 +55,12 @@
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
-    "./styles": "./dist/ui.css"
+    "./styles": "./dist/ui.css",
+    "./compositions/*": {
+      "types": "./dist/components/compositions/*/index.d.ts",
+      "require": "./dist/components/compositions/*/index.cjs",
+      "default": "./dist/components/compositions/*/index.js"
+    }
   },
   "size-limit": [
     {

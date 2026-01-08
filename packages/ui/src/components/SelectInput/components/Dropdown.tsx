@@ -323,7 +323,9 @@ const CreateDropdown = ({
                 aria-disabled={false}
                 aria-label="select-all"
                 aria-selected={selectedData.allSelected}
-                className={dropdownItem({ selected: selectedData.allSelected })}
+                className={cn(
+                  dropdownItem({ selected: selectedData.allSelected }),
+                )}
                 data-testid="select-all"
                 id="select-all"
                 onClick={selectAllOptions}
@@ -434,12 +436,14 @@ const CreateDropdown = ({
                       selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
                     }
-                    className={dropdownItem({
-                      disabled: !!option.disabled,
-                      selected:
-                        selectedData.selectedValues.includes(option.value) &&
-                        !option.disabled,
-                    })}
+                    className={cn(
+                      dropdownItem({
+                        disabled: !!option.disabled,
+                        selected:
+                          selectedData.selectedValues.includes(option.value) &&
+                          !option.disabled,
+                      }),
+                    )}
                     data-testid={`option-${option.value}`}
                     id={`option-${indexOption}`}
                     key={option.value}
@@ -527,7 +531,7 @@ const CreateDropdown = ({
             aria-disabled={false}
             aria-label="select-all"
             aria-selected={selectedData.allSelected}
-            className={dropdownItem({ selected: selectedData.allSelected })}
+            className={cn(dropdownItem({ selected: selectedData.allSelected }))}
             data-testid="select-all"
             onClick={selectAllOptions}
             onKeyDown={event =>
@@ -575,12 +579,14 @@ const CreateDropdown = ({
                 selectedData.selectedValues.includes(option.value) &&
                 !option.disabled
               }
-              className={dropdownItem({
-                disabled: !!option.disabled,
-                selected:
-                  selectedData.selectedValues.includes(option.value) &&
-                  !option.disabled,
-              })}
+              className={cn(
+                dropdownItem({
+                  disabled: !!option.disabled,
+                  selected:
+                    selectedData.selectedValues.includes(option.value) &&
+                    !option.disabled,
+                }),
+              )}
               data-testid={`option-${option.value}`}
               id={`option-${index}`}
               key={option.value}

@@ -10,6 +10,7 @@ export default defineConfig({
     extensions: ['.mjs', '.js', '.ts', '.tsx', '.json', '.css'],
     // alias is needed or Vite will not resolve the packages correctly with storybook
     alias: {
+      '@ultraviolet/ui/compositions': resolve('packages/ui/src/components/compositions'),
       '@ultraviolet/ui': resolve('packages/ui/src'),
       '@ultraviolet/themes': resolve('packages/themes/src'),
       '@ultraviolet/plus': resolve('packages/plus/src'),
