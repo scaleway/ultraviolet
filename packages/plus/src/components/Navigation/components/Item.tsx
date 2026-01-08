@@ -38,6 +38,7 @@ import {
   useEffect,
   useMemo,
   useReducer,
+  useRef,
 } from 'react'
 import { useNavigation } from '../NavigationProvider'
 import type { PinUnPinType } from '../types'
@@ -205,20 +206,21 @@ export const Item = memo(
       animationType,
     } = context
 
+    const makeRegisterRef = useRef<() => void>(null)
+
+    // Use ref to avoid infinite loop
+    useEffect(() => {
+      makeRegisterRef.current = () =>
+        registerItem({
+          [id]: { active, label, onClickPinUnpin, onToggle },
+        })
+    }, [active, id, label, onClickPinUnpin, registerItem, onToggle])
+
     useEffect(() => {
       if (type !== 'pinnedGroup' && pinnedFeature) {
-        registerItem({ [id]: { active, label, onClickPinUnpin, onToggle } })
+        makeRegisterRef.current?.()
       }
-    }, [
-      active,
-      id,
-      label,
-      onClickPinUnpin,
-      onToggle,
-      pinnedFeature,
-      registerItem,
-      type,
-    ])
+    }, [type, pinnedFeature, active, id, label, registerItem])
 
     const [internalExpanded, onToggleExpand] = useReducer(
       prevState => !prevState,
