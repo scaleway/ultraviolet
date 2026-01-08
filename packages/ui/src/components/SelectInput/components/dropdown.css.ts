@@ -13,6 +13,7 @@ export const dropdown = style({
   boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
   padding: theme.space[0],
   marginBottom: theme.space[10],
+  overflow: 'auto',
 })
 
 export const dropdownContainer = style({
