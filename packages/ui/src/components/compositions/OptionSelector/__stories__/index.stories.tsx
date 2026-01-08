@@ -3,7 +3,7 @@ import { OptionSelector } from '..'
 
 export default {
   component: OptionSelector,
-  title: 'Plus/Compositions/OptionSelector',
+  title: 'Compositions/OptionSelector',
 } satisfies Meta
 
 export { Playground } from './Playground.stories'

@@ -325,7 +325,6 @@ const CreateDropdown = ({
                 aria-selected={selectedData.allSelected}
                 className={cn(
                   dropdownItem({ selected: selectedData.allSelected }),
-                  'dropdown-item-uv',
                 )}
                 data-testid="select-all"
                 id="select-all"
@@ -444,7 +443,6 @@ const CreateDropdown = ({
                           selectedData.selectedValues.includes(option.value) &&
                           !option.disabled,
                       }),
-                      'dropdown-item-uv',
                     )}
                     data-testid={`option-${option.value}`}
                     id={`option-${indexOption}`}
@@ -533,10 +531,7 @@ const CreateDropdown = ({
             aria-disabled={false}
             aria-label="select-all"
             aria-selected={selectedData.allSelected}
-            className={cn(
-              dropdownItem({ selected: selectedData.allSelected }),
-              'dropdown-item-uv',
-            )}
+            className={cn(dropdownItem({ selected: selectedData.allSelected }))}
             data-testid="select-all"
             onClick={selectAllOptions}
             onKeyDown={event =>
@@ -591,7 +586,6 @@ const CreateDropdown = ({
                     selectedData.selectedValues.includes(option.value) &&
                     !option.disabled,
                 }),
-                'dropdown-item-uv',
               )}
               data-testid={`option-${option.value}`}
               id={`option-${index}`}

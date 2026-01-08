@@ -1,38 +1,36 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
+import { Stack } from '../../../Stack'
+import { OptionSelector } from '..'
+import type { ValueType } from '../__mock__/resources'
 import {
   firstSelectorOptions,
   franceOptions,
   netherlandsOptions,
   polandOptions,
 } from '../__mock__/resources'
-import { OptionSelector } from '../OptionSelector'
 import type { SelectorOption } from '../types'
 
 export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
   const [zone, setZone] = useState<SelectorOption[]>(franceOptions)
-  const [valueFirstExample, setValueFirstExample] = useState({
+  const [valueFirstExample, setValueFirstExample] = useState<ValueType>({
     first: 'fr',
     second: '',
   })
 
   const [zone2, setZone2] = useState<SelectorOption[]>(franceOptions)
-  const [valueSecondExample, setValueSecondExample] = useState({
+  const [valueSecondExample, setValueSecondExample] = useState<ValueType>({
     first: 'fr',
     second: '',
   })
 
-  const onChangeRegion = (newRegion: string) => {
-    setValueFirstExample(oldValue => ({
-      first: newRegion,
-      second: oldValue.second,
-    }))
-    if (newRegion === 'fr') {
+  const onChangeErrorRegion = (newValue: ValueType) => {
+    setValueFirstExample(newValue)
+    if (newValue.first === 'fr') {
       setZone(franceOptions)
     }
-    if (newRegion === 'pl') {
+    if (newValue.first === 'pl') {
       setValueSecondExample(oldValue => ({
         first: oldValue.first,
         second: polandOptions[0].value,
@@ -40,7 +38,7 @@ export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
       setZone(polandOptions)
     }
 
-    if (newRegion === 'nl') {
+    if (newValue.first === 'nl') {
       setValueSecondExample(oldValue => ({
         first: oldValue.first,
         second: netherlandsOptions[0].value,
@@ -48,33 +46,17 @@ export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
       setZone(netherlandsOptions)
     }
   }
-  const onChangeRegion2 = (newRegion: string) => {
-    setValueSecondExample(oldValue => ({
-      first: newRegion,
-      second: oldValue.second,
-    }))
-    if (newRegion === 'fr') {
+  const onChangeErrorZone = (newValue: ValueType) => {
+    setValueSecondExample(newValue)
+    if (newValue.first === 'fr') {
       setZone2(franceOptions)
     }
-    if (newRegion === 'pl') {
+    if (newValue.first === 'pl') {
       setZone2(polandOptions)
     }
-    if (newRegion === 'nl') {
+    if (newValue.first === 'nl') {
       setZone2(netherlandsOptions)
     }
-  }
-
-  const onChangeZone = (newZone: string) => {
-    setValueFirstExample(oldValue => ({
-      first: oldValue.first,
-      second: newZone,
-    }))
-  }
-  const onChangeZone2 = (newZone: string) => {
-    setValueSecondExample(oldValue => ({
-      first: oldValue.first,
-      second: newZone,
-    }))
   }
 
   return (
@@ -87,39 +69,35 @@ export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
               ? 'France cannot be selected'
               : false,
           label: 'Region',
-          onChange: onChangeRegion,
           options: firstSelectorOptions,
-          value: valueFirstExample.first,
         }}
+        onChange={onChangeErrorRegion}
         secondSelector={{
           helper:
             valueFirstExample.second === 'fr'
               ? 'Disabled because the first selector has an error'
               : '',
           label: 'Zone',
-          onChange: onChangeZone,
           options: zone,
-          value: valueFirstExample.second,
         }}
+        value={valueFirstExample}
       />
       <OptionSelector
         {...props}
         firstSelector={{
           label: 'Region',
-          onChange: onChangeRegion2,
           options: firstSelectorOptions,
-          value: valueSecondExample.first,
         }}
+        onChange={onChangeErrorZone}
         secondSelector={{
           error:
             valueSecondExample.second === zone2[0].value
               ? 'Cannot select this zone'
               : '',
           label: 'Zone',
-          onChange: onChangeZone2,
           options: zone2,
-          value: valueSecondExample.second,
         }}
+        value={valueSecondExample}
       />
     </Stack>
   )

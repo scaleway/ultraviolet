@@ -1,5 +1,5 @@
-import type { SelectInput } from '@ultraviolet/ui'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { SelectInput } from '../../SelectInput'
 
 export type SelectorOption = {
   content: ReactNode
@@ -11,18 +11,16 @@ export type SelectorOption = {
   optionalInfo?: ReactNode
 }
 
-export type SelectorProps = {
-  label: string
-  labelDescription?: ReactNode
-  options: SelectorOption[]
-  value?: string
-  onChange?: ComponentProps<typeof SelectInput>['onChange']
-  error?: boolean | string
-  disabled?: boolean
-  helper?: string
-  readOnly?: boolean
-  placeholder?: string
-}
+export type SelectorProps = Pick<
+  ComponentProps<typeof SelectInput>,
+  | 'label'
+  | 'labelDescription'
+  | 'error'
+  | 'disabled'
+  | 'helper'
+  | 'readOnly'
+  | 'placeholder'
+> & { options: SelectorOption[] }
 
 export type OptionSelectorProps = {
   className?: string
@@ -33,4 +31,10 @@ export type OptionSelectorProps = {
   size?: ComponentProps<typeof SelectInput>['size']
   disabled?: boolean
   readOnly?: boolean
+  name?: string
+  'aria-label'?: string
+  error?: string | boolean
+  required?: boolean
+  onChange?: (values: { first?: string; second?: string }) => void
+  value?: { first?: string; second?: string }
 }

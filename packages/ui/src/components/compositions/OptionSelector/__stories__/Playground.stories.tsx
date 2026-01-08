@@ -1,36 +1,36 @@
 import type { StoryFn } from '@storybook/react-vite'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
+import { OptionSelector } from '..'
+import type { ValueType } from '../__mock__/resources'
 import {
   firstSelectorOptions,
   franceOptions,
   netherlandsOptions,
   polandOptions,
 } from '../__mock__/resources'
-import { OptionSelector } from '../OptionSelector'
 import type { SelectorOption } from '../types'
 
 export const Playground: StoryFn<
   ComponentProps<typeof OptionSelector>
 > = props => {
   const [zone, setZone] = useState<SelectorOption[]>(franceOptions)
-  const [value, setValue] = useState({ first: '', second: '' })
+  const [value, setValue] = useState<{ first?: string; second?: string }>({
+    first: '',
+    second: '',
+  })
 
-  const onChangeRegion = (newRegion: string) => {
-    setValue(oldValue => ({ first: newRegion, second: oldValue.second }))
-    if (newRegion === 'fr') {
+  const onChange = (newValue: ValueType) => {
+    setValue(newValue)
+    if (newValue.first === 'fr') {
       setZone(franceOptions)
     }
-    if (newRegion === 'pl') {
+    if (newValue.first === 'pl') {
       setZone(polandOptions)
     }
-    if (newRegion === 'nl') {
+    if (newValue.first === 'nl') {
       setZone(netherlandsOptions)
     }
-  }
-
-  const onChangeZone = (newZone: string) => {
-    setValue(oldValue => ({ first: oldValue.first, second: newZone }))
   }
 
   return (
@@ -38,16 +38,14 @@ export const Playground: StoryFn<
       {...props}
       firstSelector={{
         label: 'Region',
-        onChange: onChangeRegion,
         options: firstSelectorOptions,
-        value: value.first,
       }}
+      onChange={onChange}
       secondSelector={{
         label: 'Zone',
-        onChange: onChangeZone,
         options: zone,
-        value: value.second,
       }}
+      value={value}
     />
   )
 }

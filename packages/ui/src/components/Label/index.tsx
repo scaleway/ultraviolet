@@ -86,6 +86,7 @@ type LabelProps = {
   sentiment?: ComponentProps<typeof Text>['sentiment']
   disabled?: boolean
   style?: CSSProperties
+  className?: string
 }
 
 /**
@@ -102,9 +103,10 @@ export const Label = ({
   sentiment = 'neutral',
   disabled,
   style,
+  className,
 }: LabelProps) =>
   labelDescription ? (
-    <Stack alignItems="center" direction="row" gap="1">
+    <Stack alignItems="center" className={className} direction="row" gap="1">
       <LabelRequiredOrNot
         as={as}
         disabled={disabled}

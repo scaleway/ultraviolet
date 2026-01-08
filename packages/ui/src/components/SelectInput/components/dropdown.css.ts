@@ -63,24 +63,26 @@ export const dropdownGroupWrapper = style({
   top: 0,
 })
 
-export const dropdownItem = recipe({
-  base: {
-    textAlign: 'left',
-    backgroundColor: theme.colors.other.elevation.background.raised,
-    paddingBlock: theme.space['1.5'],
-    paddingInline: theme.space[2],
-    marginInline: theme.space['0.5'],
-    color: theme.colors.neutral.text,
-    borderRadius: theme.radii.default,
-    border: '1px solid transparent',
-    selectors: {
-      '&:hover, &:focus': {
-        backgroundColor: theme.colors.primary.background,
-        color: theme.colors.primary.text,
-        cursor: 'pointer',
-      },
+export const dropdownItemBase = style({
+  textAlign: 'left',
+  backgroundColor: theme.colors.other.elevation.background.raised,
+  paddingBlock: theme.space['1.5'],
+  paddingInline: theme.space[2],
+  marginInline: theme.space['0.5'],
+  color: theme.colors.neutral.text,
+  borderRadius: theme.radii.default,
+  border: '1px solid transparent',
+  selectors: {
+    '&:hover, &:focus': {
+      backgroundColor: theme.colors.primary.background,
+      color: theme.colors.primary.text,
+      cursor: 'pointer',
     },
   },
+})
+
+export const dropdownItem = recipe({
+  base: [dropdownItemBase],
   variants: {
     selected: {
       true: {

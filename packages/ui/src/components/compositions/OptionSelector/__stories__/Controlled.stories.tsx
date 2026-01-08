@@ -5,11 +5,12 @@ import {
   UbuntuLogo,
   WindowsLogo,
 } from '@ultraviolet/icons/logo'
-import { Stack } from '@ultraviolet/ui'
 import { capitalize } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { OptionSelector } from '../OptionSelector'
+import { Stack } from '../../../Stack'
+import { OptionSelector } from '..'
+import type { ValueType } from '../__mock__/resources'
 
 const options = [
   {
@@ -48,15 +49,10 @@ const makeVersions = (os: string) => [
 export const Controlled: StoryFn<
   ComponentProps<typeof OptionSelector>
 > = props => {
-  const [value, setValue] = useState({ first: '', second: '' })
-
-  const onChangeOS = (newOs: string) => {
-    setValue(oldValue => ({ first: newOs, second: oldValue.second }))
-  }
-
-  const onChangeVersion = (newVersion: string) => {
-    setValue(oldValue => ({ first: oldValue.first, second: newVersion }))
-  }
+  const [value, setValue] = useState<ValueType>({
+    first: '',
+    second: '',
+  })
 
   return (
     <Stack direction="column" gap={1}>
@@ -68,23 +64,21 @@ export const Controlled: StoryFn<
         }}
         secondSelector={{
           label: 'Zone',
-          options: makeVersions(capitalize(value.first)),
+          options: makeVersions(capitalize(value.first ?? '')),
         }}
       />
       <OptionSelector
         {...props}
         firstSelector={{
           label: 'Controlled',
-          onChange: onChangeOS,
           options,
-          value: value.first,
         }}
+        onChange={newValue => setValue(newValue)}
         secondSelector={{
           label: 'Zone',
-          onChange: onChangeVersion,
-          options: makeVersions(capitalize(value.first)),
-          value: value.second,
+          options: makeVersions(capitalize(value.first ?? '')),
         }}
+        value={value}
       />
       <ul>
         <li>Selected OS: {value.first}</li>

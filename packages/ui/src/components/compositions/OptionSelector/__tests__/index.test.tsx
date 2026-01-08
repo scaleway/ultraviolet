@@ -5,6 +5,13 @@ import { describe, expect, it, vi } from 'vitest'
 import { OptionSelector } from '..'
 import { firstSelectorOptions, franceOptions } from '../__mock__/resources'
 
+const value = { first: firstSelectorOptions[0].value }
+const valueBoth = {
+  first: firstSelectorOptions[0].value,
+  second: franceOptions[0].value,
+}
+const valueSecond = { second: franceOptions[0].value }
+
 describe('optionSelector', () => {
   it('should work with default props', () =>
     shouldMatchSnapshot(
@@ -26,12 +33,12 @@ describe('optionSelector', () => {
           error: 'error',
           label: 'Region',
           options: firstSelectorOptions,
-          value: firstSelectorOptions[0].value,
         }}
         secondSelector={{
           label: 'Zone',
           options: franceOptions,
         }}
+        value={value}
       />,
     )
 
@@ -47,12 +54,12 @@ describe('optionSelector', () => {
           error: 'error',
           label: 'Region',
           options: firstSelectorOptions,
-          value: firstSelectorOptions[0].value,
         }}
         secondSelector={{
           label: 'Zone',
           options: franceOptions,
         }}
+        value={value}
       />,
     )
 
@@ -67,14 +74,13 @@ describe('optionSelector', () => {
         firstSelector={{
           label: 'Region',
           options: firstSelectorOptions,
-          value: firstSelectorOptions[0].value,
         }}
         secondSelector={{
           error: 'error',
           label: 'Zone',
           options: franceOptions,
-          value: franceOptions[0].value,
         }}
+        value={valueBoth}
       />,
     )
 
@@ -116,12 +122,12 @@ describe('optionSelector', () => {
         firstSelector={{
           label: 'Region',
           options: [firstSelectorOptions[0]],
-          value: firstSelectorOptions[0].value,
         }}
         secondSelector={{
           label: 'Zone',
           options: [franceOptions[0]],
         }}
+        value={value}
       />,
     )
     const paris = screen.getByText('PARIS')
@@ -143,15 +149,15 @@ describe('optionSelector', () => {
       <OptionSelector
         firstSelector={{
           label: 'Region',
-          onChange,
           options: firstSelectorOptions,
           placeholder: 'placeholder',
         }}
+        onChange={onChange}
         secondSelector={{
           label: 'Zone',
           options: franceOptions,
-          value: franceOptions[0].value,
         }}
+        value={valueSecond}
       />,
     )
 
@@ -179,14 +185,14 @@ describe('optionSelector', () => {
         firstSelector={{
           label: 'Region',
           options: firstSelectorOptions,
-          value: firstSelectorOptions[0].value,
         }}
+        onChange={onChange}
         secondSelector={{
           label: 'Zone',
-          onChange,
           options: franceOptions,
           placeholder: 'placeholder',
         }}
+        value={value}
       />,
     )
 

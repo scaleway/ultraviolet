@@ -1,11 +1,21 @@
 'use client'
 
 import { RayStartArrowIcon } from '@ultraviolet/icons'
-import { Row, SelectInput, Stack } from '@ultraviolet/ui'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
 import { useMemo } from 'react'
+import { Label } from '../../Label'
+import { SelectInput } from '../../SelectInput'
+import { Stack } from '../../Stack'
 import { RevealOnHover } from './RevealOnHover'
-import { optionSelectorArrow } from './styles.css'
+import {
+  arrow,
+  firstLabel,
+  firstSelectInput,
+  optionSelectorWrapper,
+  secondLabel,
+  secondSelectInput,
+} from './styles.css'
 import type { OptionSelectorProps, SelectorOption } from './types'
 
 const IconWithContent = ({
@@ -61,65 +71,77 @@ export const OptionSelector = ({
   size = 'large',
   disabled,
   readOnly,
+  'aria-label': ariaLabel,
+  error,
+  required,
+  onChange,
+  name,
+  value,
 }: OptionSelectorProps) => {
   const firstValue = useMemo(() => {
-    if (firstSelector.value) {
-      return firstSelector.value
+    if (value?.first) {
+      return value.first
     }
 
     if (firstSelector.options.length === 1) {
-      firstSelector.onChange?.(
-        firstSelector.options[0].value as string & string[],
-      )
+      onChange?.({
+        first: firstSelector.options[0].value as string & string[],
+        second: value?.second,
+      })
 
       return firstSelector.options[0].value
     }
 
     return undefined
-  }, [firstSelector])
+  }, [value?.first, value?.second, onChange, firstSelector])
 
   const secondValue = useMemo(() => {
-    if (secondSelector?.value) {
-      return secondSelector?.value
+    if (value?.second) {
+      return value.second
     }
 
     if (secondSelector?.options.length === 1) {
-      secondSelector.onChange?.(
-        secondSelector.options[0].value as string & string[],
-      )
+      onChange?.({
+        first: value?.first,
+        second: secondSelector.options[0].value as string & string[],
+      })
 
       return secondSelector?.options[0].value
     }
 
     return undefined
-  }, [secondSelector])
+  }, [secondSelector, value?.first, value?.second, onChange])
 
   const firstSelectorOptions = makeSelectInputOptions(firstSelector.options)
   const secondSelectorOptions = secondSelector?.options
     ? makeSelectInputOptions(secondSelector.options)
     : undefined
 
-  const onChangeFirstSelector = (value: string) => {
-    firstSelector.onChange?.(value as string & string[])
+  const onChangeFirstSelector = (val: string) => {
+    onChange?.({ first: val, second: value?.second })
   }
-  const onChangeSecondSelector = (value: string) =>
-    secondSelector?.onChange?.(value as string & string[])
+  const onChangeSecondSelector = (val: string) =>
+    onChange?.({ first: value?.first, second: val as string & string[] })
 
   return (
-    <Row
-      alignItems="start"
-      className={className}
+    <fieldset
+      aria-label={ariaLabel}
+      aria-required={required}
+      className={cn(className, optionSelectorWrapper)}
       data-testid={dataTestId}
-      gap={2}
+      name={name}
       style={style}
-      templateColumns="1fr auto 1fr"
     >
+      <Label className={firstLabel}>{firstSelector.label}</Label>
+      {firstValue && secondSelector && secondSelectorOptions ? (
+        <Label className={secondLabel}>{secondSelector?.label}</Label>
+      ) : null}
       <SelectInput
+        className={firstSelectInput}
         data-testid="first-selector"
         disabled={firstSelector.disabled || disabled}
-        error={firstSelector.error}
+        error={error || firstSelector.error}
         helper={firstSelector.helper}
-        label={firstSelector.label}
         labelDescription={firstSelector.labelDescription}
         onChange={onChangeFirstSelector}
         optionalInfoPlacement="right"
@@ -130,25 +152,26 @@ export const OptionSelector = ({
           firstSelector.readOnly ||
           readOnly
         }
+        required={required}
         size={size}
         value={firstValue}
       />
       {firstValue && secondSelector && secondSelectorOptions ? (
         <>
           <RayStartArrowIcon
-            className={optionSelectorArrow[size]}
+            className={arrow}
             prominence="weak"
             sentiment="neutral"
             size={size}
           />
           <SelectInput
+            className={secondSelectInput}
             data-testid="second-selector"
             disabled={
               !!firstSelector.error || secondSelector.disabled || disabled
             }
-            error={secondSelector.error}
+            error={!!error || secondSelector.error}
             helper={secondSelector.helper}
-            label={secondSelector.label}
             labelDescription={secondSelector.labelDescription}
             onChange={onChangeSecondSelector}
             optionalInfoPlacement="right"
@@ -164,6 +187,6 @@ export const OptionSelector = ({
           />
         </>
       ) : null}
-    </Row>
+    </fieldset>
   )
 }

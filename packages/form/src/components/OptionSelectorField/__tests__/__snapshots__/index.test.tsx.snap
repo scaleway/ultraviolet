@@ -1,0 +1,363 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`optionSelectorField > should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <fieldset
+        class="uv_12opk3l0"
+        name="test"
+      >
+        <label
+          class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+        >
+          label
+        </label>
+        <div
+          class="uv_12opk3l4 uv_uf6pag0"
+        >
+          <div
+            aria-controls="_r_2_"
+            aria-describedby="_r_2_"
+            class="uv_w40vpo9 uv_w40vpob"
+            tabindex="-1"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            >
+              <div
+                aria-controls="_r_2_"
+                aria-expanded="false"
+                class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7knda uv_1ba7knd9"
+                data-disabled="false"
+                data-readonly="false"
+                data-testid="first-selector"
+                id="_r_1_"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="uv_1ba7knd4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                >
+                  Select item
+                </span>
+                <div
+                  class="uv_1ba7knd3 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`optionSelectorField > should render correctly disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <fieldset
+        class="uv_12opk3l0"
+        name="test"
+      >
+        <label
+          class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+        >
+          label
+        </label>
+        <div
+          class="uv_12opk3l4 uv_uf6pag0"
+        >
+          <div
+            aria-controls="_r_8_"
+            aria-describedby="_r_8_"
+            class="uv_w40vpo9 uv_w40vpob"
+            tabindex="-1"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            >
+              <div
+                aria-controls="_r_8_"
+                aria-expanded="false"
+                class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7knda uv_1ba7knd9 uv_1ba7kndf"
+                data-disabled="true"
+                data-readonly="false"
+                data-testid="first-selector"
+                id="_r_7_"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="uv_1ba7knd4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1a uv_m4c9ow33"
+                >
+                  Select item
+                </span>
+                <div
+                  class="uv_1ba7knd3 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_true__1sbwqkze styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_2__1sbwqkzm"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`optionSelectorField > should trigger events 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+      style="display: contents;"
+    >
+      <fieldset
+        class="uv_12opk3l0"
+        name="test"
+      >
+        <label
+          class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+        >
+          label
+        </label>
+        <label
+          class="uv_17td3g92 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owq uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+        >
+          Second
+        </label>
+        <div
+          class="uv_12opk3l4 uv_uf6pag0"
+        >
+          <div
+            aria-controls="_r_e_"
+            aria-describedby="_r_e_"
+            class="uv_w40vpo9 uv_w40vpob"
+            tabindex="-1"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            >
+              <div
+                aria-controls="_r_e_"
+                aria-expanded="false"
+                class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7knda uv_1ba7knd9"
+                data-disabled="false"
+                data-readonly="false"
+                data-testid="first-selector"
+                id="_r_d_"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="uv_1ba7kndm uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owi uv_m4c9owm uv_m4c9ow1b uv_m4c9ow20 uv_m4c9ow3c"
+                >
+                  <div
+                    class="uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u27 uv_toi52u5d"
+                  >
+                    <svg
+                      class="style_small__1739vf22"
+                      viewBox="0 0 20 20"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        fill="#f47421"
+                        r="9"
+                      />
+                      <circle
+                        cx="10"
+                        cy="10"
+                        fill="none"
+                        r="4.365"
+                        stroke="#ffffff"
+                        stroke-width="1.71"
+                      />
+                      <g>
+                        <circle
+                          cx="3.88"
+                          cy="10"
+                          fill="#f47421"
+                          r="1.68752"
+                        />
+                        <path
+                          d="M13.4,10H15.4"
+                          stroke="#f47421"
+                          stroke-width="0.64756"
+                        />
+                        <circle
+                          cx="3.88"
+                          cy="10"
+                          fill="#ffffff"
+                          r="1.20149"
+                        />
+                      </g>
+                      <g
+                        transform="rotate(120,10,10)"
+                      >
+                        <circle
+                          cx="3.88"
+                          cy="10"
+                          fill="#f47421"
+                          r="1.68752"
+                        />
+                        <path
+                          d="M13.4,10H15.4"
+                          stroke="#f47421"
+                          stroke-width="0.64756"
+                        />
+                        <circle
+                          cx="3.88"
+                          cy="10"
+                          fill="#ffffff"
+                          r="1.20149"
+                        />
+                      </g>
+                      <g
+                        transform="rotate(240,10,10)"
+                      >
+                        <circle
+                          cx="3.88"
+                          cy="10"
+                          fill="#f47421"
+                          r="1.68752"
+                        />
+                        <path
+                          d="M13.4,10H15.4"
+                          stroke="#f47421"
+                          stroke-width="0.64756"
+                        />
+                        <circle
+                          cx="3.88"
+                          cy="10"
+                          fill="#ffffff"
+                          r="1.20149"
+                        />
+                      </g>
+                    </svg>
+                    Ubuntu
+                  </div>
+                </span>
+                <div
+                  class="uv_1ba7knd3 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <svg
+          class="uv_12opk3l6 styles__1sbwqkz0 styles_prominence_weak__1sbwqkzj styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_large__1sbwqkz8 styles_undefined_compound_58__1sbwqkz26"
+          viewBox="0 0 20 20"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M4 12a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H4.75A.75.75 0 0 1 4 12"
+            fill-rule="evenodd"
+          />
+          <path
+            d="M8 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+          />
+        </svg>
+        <div
+          class="uv_12opk3l5 uv_uf6pag0"
+        >
+          <div
+            aria-controls="_r_t_"
+            aria-describedby="_r_t_"
+            class="uv_w40vpo9 uv_w40vpob"
+            tabindex="-1"
+          >
+            <div
+              class="uv_toi52u0 uv_toi52u31 uv_toi52u2d uv_toi52u7d uv_toi52u1v uv_toi52u5d"
+            >
+              <div
+                aria-controls="_r_t_"
+                aria-expanded="false"
+                class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7knda uv_1ba7knd9"
+                data-disabled="false"
+                data-readonly="false"
+                data-testid="second-selector"
+                id="_r_s_"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="uv_1ba7knd4 uv_m4c9ow0 uv_m4c9ow2 uv_m4c9ow4 uv_m4c9ow6 uv_m4c9ow8 uv_m4c9owb uv_m4c9owl uv_m4c9owm uv_m4c9ow1b uv_m4c9ow23 uv_m4c9ow3f"
+                >
+                  Select item
+                </span>
+                <div
+                  class="uv_1ba7knd3 uv_toi52u0 uv_toi52u3d uv_toi52u2j uv_toi52u7d uv_toi52u7 uv_toi52u5d"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="styles__1sbwqkz0 styles_prominence_default__1sbwqkzg styles_disabled_false__1sbwqkzf styles_sentiment_neutral__1sbwqkz3 styles_size_small__1sbwqkza styles_undefined_compound_34__1sbwqkz1i"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</DocumentFragment>
+`;
