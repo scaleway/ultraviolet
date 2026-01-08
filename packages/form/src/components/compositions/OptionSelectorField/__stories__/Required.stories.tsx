@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { Submit } from '../../Submit'
+import { Submit } from '../../../Submit'
 import { OptionSelectorField } from '..'
 import { firstSelectorOptions, secondSelectorOptions } from './resources'
 

@@ -1,11 +1,12 @@
 import type { Meta } from '@storybook/react-vite'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { Form, SelectInputField } from '../..'
-import { useForm } from '../../..'
-import { mockErrors } from '../../../mocks'
+import { Form } from '../../..'
+import { useForm } from '../../../..'
+import { mockErrors } from '../../../../mocks'
+import { OptionSelectorField } from '..'
 
 export default {
-  component: SelectInputField,
+  component: OptionSelectorField,
   decorators: [
     ChildStory => {
       const methods = useForm()
@@ -76,7 +77,7 @@ export default {
       },
     },
   },
-  title: 'Form/Components/Fields/OptionSelectorField',
+  title: 'Form/Components/Compositions/OptionSelectorField',
 } as Meta
 
 export { Playground } from './Playground.stories'

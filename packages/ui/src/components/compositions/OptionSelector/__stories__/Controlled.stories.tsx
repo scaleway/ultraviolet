@@ -8,6 +8,7 @@ import {
 import { capitalize } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
+import { Button } from '../../../Button'
 import { Stack } from '../../../Stack'
 import { OptionSelector } from '..'
 import type { ValueType } from '../__mock__/resources'
@@ -84,6 +85,12 @@ export const Controlled: StoryFn<
         <li>Selected OS: {value.first}</li>
         <li>Selected version: {value.second}</li>
       </ul>
+      <Button
+        onClick={() => setValue({ first: options[0].value })}
+        style={{ width: 'fit-content' }}
+      >
+        Set first selector value to Ubuntu
+      </Button>
     </Stack>
   )
 }
