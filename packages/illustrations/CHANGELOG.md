@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.3
+
+### Patch Changes
+
+- [#5944](https://github.com/scaleway/ultraviolet/pull/5944) [`8895907`](https://github.com/scaleway/ultraviolet/commit/88959079449b1c30396849816e7d1427c3ad0e51) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustration `DediboxNext`
+
 ## 6.0.2
 
 ### Patch Changes
