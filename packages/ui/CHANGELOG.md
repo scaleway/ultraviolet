@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.3.1
+
+### Patch Changes
+
+- [#5958](https://github.com/scaleway/ultraviolet/pull/5958) [`b844a9d`](https://github.com/scaleway/ultraviolet/commit/b844a9d5915b1bd4a7d901e96d841eeaecf827f3) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix overflow in dropdown
+
 ## 3.3.0
 
 ### Minor Changes

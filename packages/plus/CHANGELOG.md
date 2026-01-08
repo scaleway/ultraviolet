@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 3.1.5
+
+### Patch Changes
+
+- [#5959](https://github.com/scaleway/ultraviolet/pull/5959) [`e8b5adf`](https://github.com/scaleway/ultraviolet/commit/e8b5adfd138ae123653c0ca1c2dab9415f5fa8b3) Thanks [@lisalupi](https://github.com/lisalupi)! - `Navigation.Item`: fix infinite loop with register item
+
+- [#5951](https://github.com/scaleway/ultraviolet/pull/5951) [`6fd50a3`](https://github.com/scaleway/ultraviolet/commit/6fd50a3563f189693aa625fe739be11c22a56c1e) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList`: fix badge placement (Safari)
+
+- Updated dependencies [[`b844a9d`](https://github.com/scaleway/ultraviolet/commit/b844a9d5915b1bd4a7d901e96d841eeaecf827f3)]:
+  - @ultraviolet/ui@3.3.1
+
 ## 3.1.4
 
 ### Patch Changes

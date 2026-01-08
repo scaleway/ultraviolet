@@ -1,5 +1,12 @@
 # @ultraviolet/nextjs
 
+## 3.0.6
+
+### Patch Changes
+
+- Updated dependencies [[`b844a9d`](https://github.com/scaleway/ultraviolet/commit/b844a9d5915b1bd4a7d901e96d841eeaecf827f3)]:
+  - @ultraviolet/ui@3.3.1
+
 ## 3.0.5
 
 ### Patch Changes
