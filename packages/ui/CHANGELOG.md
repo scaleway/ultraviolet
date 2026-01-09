@@ -1,5 +1,19 @@
 # Change Log
 
+## 3.4.0
+
+### Minor Changes
+
+- [#5898](https://github.com/scaleway/ultraviolet/pull/5898) [`fb6d20f`](https://github.com/scaleway/ultraviolet/commit/fb6d20fc543d51458091546e9e4120299449a397) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `OptionSelector`
+
+  This component is part of a new type of components, meant to replace `@ultraviolet/plus`. Import it from `@ultraviolet/ui/compositions/OptionSelector`.
+
+### Patch Changes
+
+- [#5963](https://github.com/scaleway/ultraviolet/pull/5963) [`91d356e`](https://github.com/scaleway/ultraviolet/commit/91d356ecaf117813d9e84cebb9f31bf2f41e93b7) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: use `useContext` instead of `use` for compatibility
+
+- [#5898](https://github.com/scaleway/ultraviolet/pull/5898) [`fb6d20f`](https://github.com/scaleway/ultraviolet/commit/fb6d20fc543d51458091546e9e4120299449a397) Thanks [@lisalupi](https://github.com/lisalupi)! - `Label`: add prop `classname`
+
 ## 3.3.1
 
 ### Patch Changes
