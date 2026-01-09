@@ -14,8 +14,8 @@ import type {
   SetStateAction,
 } from 'react'
 import {
-  use,
   useCallback,
+  useContext,
   useEffect,
   useLayoutEffect,
   useMemo,
@@ -691,7 +691,7 @@ export const Dropdown = ({
   const [maxWidth, setWidth] = useState<string | number>(
     refSelect.current?.offsetWidth ?? '100%',
   )
-  const modalContext = use(ModalContext)
+  const modalContext = useContext(ModalContext)
 
   const resizeDropdown = useCallback(() => {
     if (
