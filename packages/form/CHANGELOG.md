@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.0.7
+
+### Patch Changes
+
+- [#5898](https://github.com/scaleway/ultraviolet/pull/5898) [`fb6d20f`](https://github.com/scaleway/ultraviolet/commit/fb6d20fc543d51458091546e9e4120299449a397) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `OptionSelectorField`
+  This component is part of a new type of components, import it from `@ultraviolet/form/compositions/OptionSelector`.
+- Updated dependencies [[`91d356e`](https://github.com/scaleway/ultraviolet/commit/91d356ecaf117813d9e84cebb9f31bf2f41e93b7), [`fb6d20f`](https://github.com/scaleway/ultraviolet/commit/fb6d20fc543d51458091546e9e4120299449a397), [`fb6d20f`](https://github.com/scaleway/ultraviolet/commit/fb6d20fc543d51458091546e9e4120299449a397)]:
+  - @ultraviolet/ui@3.4.0
+
 ## 6.0.6
 
 ### Patch Changes
