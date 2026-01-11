@@ -57,6 +57,7 @@ const EstimateCost = ({
   overlayUnit = 'hours',
   children = null,
   locales = EstimateCostLocales,
+  compact,
   numberLocales = 'en-EN',
   currency = 'EUR',
   style,
@@ -73,6 +74,7 @@ const EstimateCost = ({
       alertVariant={alertVariant}
       commitmentFees={commitmentFees}
       commitmentFeesContent={commitmentFeesContent}
+      compact={compact}
       defaultTimeUnit={defaultTimeUnit}
       description={description}
       disableOverlayLeft={disableOverlayLeft}

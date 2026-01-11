@@ -28,6 +28,9 @@ import {
   estimateCostBadgeBeta,
   estimateCostCalculatorIcon,
   estimateCostCell,
+  estimateCostCompact,
+  estimateCostCompactText,
+  estimateCostContent,
   estimateCostEmptyCell,
   estimateCostEmptyTable,
   estimateCostFeesTable,
@@ -124,6 +127,7 @@ export const EstimateCostContent = ({
   overlayMargin,
   onTotalPriceChange,
   style,
+  compact,
 }: EstimateCostProps) => {
   const { formatNumber } = useEstimateCost()
   const [ref, inView] = useInView()
@@ -290,142 +294,174 @@ export const EstimateCostContent = ({
   }, [hideTimeUnit, iteration, defaultTimeUnit])
 
   return (
-    <Stack gap={2} style={style}>
-      {!hideOverlay ? (
-        <OverlayComponent
-          disableOverlayLeft={disableOverlayLeft}
-          disableOverlayRight={disableOverlayRight}
-          discount={discount}
-          inView={inView}
-          isBeta={isBeta}
-          OverlayLeft={OverlayLeft}
-          OverlayRight={OverlayRight}
-          overlayMargin={overlayMargin}
-          totalPrice={totalPrice}
-          unit={overlayUnit ?? 'hours'}
+    <>
+      {compact ? (
+        <Stack
+          alignItems="center"
+          className={estimateCostCompact}
+          direction="row"
+          justifyContent="space-between"
         >
-          {children}
-        </OverlayComponent>
+          <Text as="p" className={estimateCostCompactText} variant="bodyStrong">
+            <CalculatorIcon sentiment="primary" size="medium" />
+            {locales['estimate.cost.label']}
+          </Text>
+          <Stack alignItems="center" direction="row">
+            <Text as="span" variant="headingSmallStrong">
+              €{totalPrice.total}
+            </Text>
+            <Text as="span" variant="bodyStrong">
+              /
+              {iteration.unit.length > 1 && iteration.unit.endsWith('s')
+                ? iteration.unit.slice(0, -1)
+                : iteration.unit}
+            </Text>
+          </Stack>
+        </Stack>
       ) : null}
-      {description === false ? null : (
-        <DescriptionComponent description={description} locales={locales} />
-      )}
-      {alert ? (
-        <Alert sentiment={alertVariant} title={alertTitle}>
-          {alert}
-        </Alert>
-      ) : null}
-      <OverlayContextProvider value={providerValue}>
-        <div>
-          {children ? (
-            <table
-              cellPadding="0"
-              cellSpacing="0"
-              className={estimateCostTable[hideTotal ? 'noTotal' : 'total']}
-              data-testid="summary"
-              ref={ref}
-            >
-              <colgroup>
-                <col />
-                <col className={estimateCostPriceColumn} />
-              </colgroup>
-              {!hideTimeUnit ? (
-                <thead>
-                  <tr>
-                    <th>
-                      <TitleComponent locales={locales} />
-                    </th>
-                    <th
-                      className={cn(
-                        estimateCostPriceCellContent,
-                        estimateCostPriceCell,
-                      )}
-                    >
-                      <div className={estimateCostTimeCell}>
-                        <CustomUnitInput
-                          defaultTimeUnit={defaultTimeUnit}
-                          iteration={iteration}
-                          setIteration={setIteration}
-                          timeUnits={timeUnits}
-                        />
-                      </div>
-                    </th>
-                  </tr>
-                </thead>
-              ) : null}
-              <tbody>
-                {Children.map(children, (child, index) =>
-                  isValidElement<ExtraProps>(child)
-                    ? cloneElement(child, {
-                        discount:
-                          discount &&
-                          !(
-                            (
-                              child as {
-                                props: Record<string, unknown>
-                              }
-                            ).props as {
-                              discount?: number
-                            }
-                          ).discount
-                            ? discount
-                            : (
-                                (
-                                  child as {
-                                    props: Record<string, unknown>
-                                  }
-                                ).props as {
-                                  discount?: number
-                                }
-                              ).discount,
-                        isLastElement: index === Children.count(children) - 1,
-                        iteration,
-                        productsCallback,
-                      })
-                    : child,
-                )}
-              </tbody>
-            </table>
-          ) : null}
-          {!hideTotal ? (
-            <table
-              cellPadding="0"
-              cellSpacing="0"
-              className={estimateCostEmptyTable}
-            >
-              <colgroup>
-                <col />
-                <col className={estimateCostPriceColumn} />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <td aria-label="control" className={estimateCostEmptyCell} />
-                  <td
-                    className={cn(
-                      estimateCostCell({ hasBorder: false, primary: false }),
-                      estimateCostTotalPriceCell,
-                    )}
-                    style={assignInlineVars({
-                      [paddingLeftCell]: `16px`,
-                    })}
-                  >
-                    {isBeta ? (
-                      <Badge
-                        className={
-                          estimateCostBadgeBeta[
-                            locales[
-                              `estimate.cost.beta.${
-                                discount > 0 ? 'discount' : 'free'
-                              }`
-                            ].length > 25
-                              ? 'long'
-                              : 'short'
-                          ]
-                        }
-                        prominence="strong"
-                        sentiment="warning"
+      <Stack
+        className={estimateCostContent[compact ? 'compact' : 'default']}
+        gap={2}
+        style={style}
+      >
+        {!hideOverlay ? (
+          <OverlayComponent
+            disableOverlayLeft={disableOverlayLeft}
+            disableOverlayRight={disableOverlayRight}
+            discount={discount}
+            inView={inView}
+            isBeta={isBeta}
+            OverlayLeft={OverlayLeft}
+            OverlayRight={OverlayRight}
+            overlayMargin={overlayMargin}
+            totalPrice={totalPrice}
+            unit={overlayUnit ?? 'hours'}
+          >
+            {children}
+          </OverlayComponent>
+        ) : null}
+        {description === false ? null : (
+          <DescriptionComponent description={description} locales={locales} />
+        )}
+        {alert ? (
+          <Alert sentiment={alertVariant} title={alertTitle}>
+            {alert}
+          </Alert>
+        ) : null}
+        <OverlayContextProvider value={providerValue}>
+          <div>
+            {children ? (
+              <table
+                cellPadding="0"
+                cellSpacing="0"
+                className={estimateCostTable[hideTotal ? 'noTotal' : 'total']}
+                data-testid="summary"
+                ref={ref}
+              >
+                <colgroup>
+                  <col />
+                  <col className={estimateCostPriceColumn} />
+                </colgroup>
+                {!hideTimeUnit ? (
+                  <thead>
+                    <tr>
+                      <th>
+                        <TitleComponent locales={locales} />
+                      </th>
+                      <th
+                        className={cn(
+                          estimateCostPriceCellContent,
+                          estimateCostPriceCell,
+                        )}
                       >
-                        {`${discount > 0 ? discount * 100 : ''}
+                        <div className={estimateCostTimeCell}>
+                          <CustomUnitInput
+                            defaultTimeUnit={defaultTimeUnit}
+                            iteration={iteration}
+                            setIteration={setIteration}
+                            timeUnits={timeUnits}
+                          />
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                ) : null}
+                <tbody>
+                  {Children.map(children, (child, index) =>
+                    isValidElement<ExtraProps>(child)
+                      ? cloneElement(child, {
+                          discount:
+                            discount &&
+                            !(
+                              (
+                                child as {
+                                  props: Record<string, unknown>
+                                }
+                              ).props as {
+                                discount?: number
+                              }
+                            ).discount
+                              ? discount
+                              : (
+                                  (
+                                    child as {
+                                      props: Record<string, unknown>
+                                    }
+                                  ).props as {
+                                    discount?: number
+                                  }
+                                ).discount,
+                          isLastElement: index === Children.count(children) - 1,
+                          iteration,
+                          productsCallback,
+                        })
+                      : child,
+                  )}
+                </tbody>
+              </table>
+            ) : null}
+            {!hideTotal ? (
+              <table
+                cellPadding="0"
+                cellSpacing="0"
+                className={estimateCostEmptyTable}
+              >
+                <colgroup>
+                  <col />
+                  <col className={estimateCostPriceColumn} />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td
+                      aria-label="control"
+                      className={estimateCostEmptyCell}
+                    />
+                    <td
+                      className={cn(
+                        estimateCostCell({ hasBorder: false, primary: false }),
+                        estimateCostTotalPriceCell,
+                      )}
+                      style={assignInlineVars({
+                        [paddingLeftCell]: `16px`,
+                      })}
+                    >
+                      {isBeta ? (
+                        <Badge
+                          className={
+                            estimateCostBadgeBeta[
+                              locales[
+                                `estimate.cost.beta.${
+                                  discount > 0 ? 'discount' : 'free'
+                                }`
+                              ].length > 25
+                                ? 'long'
+                                : 'short'
+                            ]
+                          }
+                          prominence="strong"
+                          sentiment="warning"
+                        >
+                          {`${discount > 0 ? discount * 100 : ''}
                           ${
                             locales[
                               `estimate.cost.beta.${
@@ -433,94 +469,101 @@ export const EstimateCostContent = ({
                               }`
                             ]
                           }`}
-                      </Badge>
-                    ) : null}
-                    <Text
-                      as="h3"
-                      className={estimateCostText[isBeta ? 'beta' : 'notBeta']}
-                      sentiment="primary"
-                      variant="heading"
-                    >
-                      <LineThrough
-                        isActive={isBeta && (discount === 0 || discount >= 1)}
+                        </Badge>
+                      ) : null}
+                      <Text
+                        as="h3"
+                        className={
+                          estimateCostText[isBeta ? 'beta' : 'notBeta']
+                        }
+                        sentiment="primary"
+                        variant="heading"
                       >
-                        {totalValue}
-                        {totalPrice.maxTotal > 0 ? ` - ${totalMaxValue}` : null}
-                      </LineThrough>
-                    </Text>
-                    {hideHourlyPriceOnTotal &&
-                    totalPrice.hourly > 0 &&
-                    totalPrice.hourly !== totalPrice.total &&
-                    totalPrice.total > 0 ? (
-                      <Text as="p" placement="right" variant="body">
                         <LineThrough
                           isActive={isBeta && (discount === 0 || discount >= 1)}
                         >
-                          {formatNumber(totalPrice.hourly, {
-                            maximumFractionDigits: isLongFractionDigits
-                              ? maximumFractionDigitsLong.hours
-                              : maximumFractionDigits.hours,
-                          })}
-                          {totalPrice.maxHourly > 0
-                            ? ` - ${formatNumber(totalPrice.maxHourly, {
-                                maximumFractionDigits: isLongFractionDigits
-                                  ? maximumFractionDigitsLong.hours
-                                  : maximumFractionDigits.hours,
-                              })}`
+                          {totalValue}
+                          {totalPrice.maxTotal > 0
+                            ? ` - ${totalMaxValue}`
                             : null}
-                          /
-                          {locales[
-                            `estimate.cost.units.hours.label`
-                          ].toLowerCase()}
                         </LineThrough>
                       </Text>
-                    ) : null}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          ) : null}
-          {commitmentFees !== undefined || monthlyFees !== undefined ? (
-            <>
-              <Text
-                as="h3"
-                className={estimatecostFeesText}
-                variant="headingSmall"
-              >
-                {
-                  locales[
-                    `estimate.cost.fees.${
-                      commitmentFees ? 'oneTime' : 'monthly'
-                    }.title`
-                  ]
-                }
-              </Text>
-              <table className={estimateCostFeesTable}>
-                <tbody>
-                  <Item
-                    isLastElement
-                    label={
-                      commitmentFees
-                        ? locales['estimate.cost.fees.commitment']
-                        : monthlyFeesLabel
-                    }
-                    noIteration
-                    price={commitmentFees || monthlyFees}
-                    productsCallback={{
-                      add: () => {},
-                      remove: () => {},
-                    }}
-                  >
-                    {commitmentFees
-                      ? commitmentFeesContent
-                      : monthlyFeesContent}
-                  </Item>
+                      {hideHourlyPriceOnTotal &&
+                      totalPrice.hourly > 0 &&
+                      totalPrice.hourly !== totalPrice.total &&
+                      totalPrice.total > 0 ? (
+                        <Text as="p" placement="right" variant="body">
+                          <LineThrough
+                            isActive={
+                              isBeta && (discount === 0 || discount >= 1)
+                            }
+                          >
+                            {formatNumber(totalPrice.hourly, {
+                              maximumFractionDigits: isLongFractionDigits
+                                ? maximumFractionDigitsLong.hours
+                                : maximumFractionDigits.hours,
+                            })}
+                            {totalPrice.maxHourly > 0
+                              ? ` - ${formatNumber(totalPrice.maxHourly, {
+                                  maximumFractionDigits: isLongFractionDigits
+                                    ? maximumFractionDigitsLong.hours
+                                    : maximumFractionDigits.hours,
+                                })}`
+                              : null}
+                            /
+                            {locales[
+                              `estimate.cost.units.hours.label`
+                            ].toLowerCase()}
+                          </LineThrough>
+                        </Text>
+                      ) : null}
+                    </td>
+                  </tr>
                 </tbody>
               </table>
-            </>
-          ) : null}
-        </div>
-      </OverlayContextProvider>
-    </Stack>
+            ) : null}
+            {commitmentFees !== undefined || monthlyFees !== undefined ? (
+              <>
+                <Text
+                  as="h3"
+                  className={estimatecostFeesText}
+                  variant="headingSmall"
+                >
+                  {
+                    locales[
+                      `estimate.cost.fees.${
+                        commitmentFees ? 'oneTime' : 'monthly'
+                      }.title`
+                    ]
+                  }
+                </Text>
+                <table className={estimateCostFeesTable}>
+                  <tbody>
+                    <Item
+                      isLastElement
+                      label={
+                        commitmentFees
+                          ? locales['estimate.cost.fees.commitment']
+                          : monthlyFeesLabel
+                      }
+                      noIteration
+                      price={commitmentFees || monthlyFees}
+                      productsCallback={{
+                        add: () => {},
+                        remove: () => {},
+                      }}
+                    >
+                      {commitmentFees
+                        ? commitmentFeesContent
+                        : monthlyFeesContent}
+                    </Item>
+                  </tbody>
+                </table>
+              </>
+            ) : null}
+          </div>
+        </OverlayContextProvider>
+      </Stack>
+    </>
   )
 }

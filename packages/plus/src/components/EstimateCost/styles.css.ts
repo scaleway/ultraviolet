@@ -232,3 +232,23 @@ export const estimateCostSideItem = style({
   padding: '12px 0',
   minWidth: 158,
 })
+
+export const estimateCostContent = styleVariants({
+  compact: {
+    display: 'none',
+  },
+  default: {},
+})
+
+export const estimateCostCompact = style({
+  background: theme.colors.neutral.backgroundWeak,
+  padding: theme.space[2],
+})
+
+export const estimateCostCompactText = style({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: theme.space[1],
+  alignItems: 'center',
+  justifyContent: 'center',
+})
