@@ -95,7 +95,7 @@ export const Banner = ({
         </Stack>
       )}
       <Stack
-        alignItems={direction === 'column' ? 'start' : 'center'}
+        alignItems={direction === 'column' ? 'flex-start' : 'center'}
         direction={direction}
         gap={2}
         justifyContent="space-between"

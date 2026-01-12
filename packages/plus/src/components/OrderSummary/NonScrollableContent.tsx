@@ -69,7 +69,7 @@ export const NonScrollableContent = ({
             {totalPriceDescription}
           </Stack>
         )}
-        <Stack alignItems="end" direction="column">
+        <Stack alignItems="flex-end" direction="column">
           {totalPrice.totalPrice === totalPrice.totalPriceWithDiscount ||
           hideBeforePrice ? (
             <Text

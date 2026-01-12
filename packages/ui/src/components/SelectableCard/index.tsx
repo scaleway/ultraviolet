@@ -251,7 +251,7 @@ export const SelectableCard = forwardRef(
     return (
       <ParentContainer>
         <Stack
-          alignItems="start"
+          alignItems="flex-start"
           className={cn(
             className,
             containerSelectableCard({

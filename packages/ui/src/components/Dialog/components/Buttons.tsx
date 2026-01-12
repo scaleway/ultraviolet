@@ -12,7 +12,7 @@ export const DialogButtons = ({
   secondaryButton,
   primaryButton,
 }: DialogButtonsProps) => (
-  <Stack direction="row" gap={2} justifyContent="end">
+  <Stack direction="row" gap={2} justifyContent="flex-end">
     {secondaryButton}
     {primaryButton}
   </Stack>

@@ -273,7 +273,7 @@ const FileInputBase = ({
                 size={isSmall ? 'small' : 'xlarge'}
               />
               <Text
-                as={isSmall ? 'label' : 'p'}
+                as={isSmall ? 'label' : 'div'}
                 className={
                   isSmall
                     ? titleSmall[disabled ? 'disabled' : 'default']

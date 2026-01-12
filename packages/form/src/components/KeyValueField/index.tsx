@@ -89,7 +89,7 @@ export const KeyValueField = <
         <Stack gap={3}>
           {fields.map((field, index) => (
             <Row
-              alignItems="end"
+              alignItems="flex-end"
               gap={2}
               key={field.id}
               templateColumns="1fr 1fr auto"
