@@ -7,9 +7,12 @@ import { useMemo } from 'react'
 import { Label } from '../../Label'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 import { RevealOnHover } from './RevealOnHover'
 import {
   arrow,
+  errorFirstSelector,
+  errorSecondSelector,
   firstLabel,
   firstSelectInput,
   optionSelectorWrapper,
@@ -132,15 +135,19 @@ export const OptionSelector = ({
       name={name}
       style={style}
     >
-      <Label className={firstLabel}>{firstSelector.label}</Label>
+      <Label className={firstLabel} required={required}>
+        {firstSelector.label}
+      </Label>
       {firstValue && secondSelector && secondSelectorOptions ? (
-        <Label className={secondLabel}>{secondSelector?.label}</Label>
+        <Label className={secondLabel} required={required}>
+          {secondSelector?.label}
+        </Label>
       ) : null}
       <SelectInput
         className={firstSelectInput}
         data-testid="first-selector"
         disabled={firstSelector.disabled || disabled}
-        error={error || firstSelector.error}
+        error={error || !!firstSelector.error}
         helper={firstSelector.helper}
         labelDescription={firstSelector.labelDescription}
         onChange={onChangeFirstSelector}
@@ -170,7 +177,7 @@ export const OptionSelector = ({
             disabled={
               !!firstSelector.error || secondSelector.disabled || disabled
             }
-            error={!!error || secondSelector.error}
+            error={!!error || !!secondSelector.error}
             helper={secondSelector.helper}
             labelDescription={secondSelector.labelDescription}
             onChange={onChangeSecondSelector}
@@ -186,6 +193,27 @@ export const OptionSelector = ({
             value={secondValue}
           />
         </>
+      ) : null}
+      {/** Do not use error directly from SelectInput to avoid misalignment issues */}
+      {firstSelector.error && typeof firstSelector.error === 'string' ? (
+        <Text
+          as="p"
+          className={errorFirstSelector}
+          sentiment="danger"
+          variant="caption"
+        >
+          {firstSelector.error}
+        </Text>
+      ) : null}
+      {secondSelector?.error && typeof secondSelector?.error === 'string' ? (
+        <Text
+          as="p"
+          className={errorSecondSelector}
+          sentiment="danger"
+          variant="caption"
+        >
+          {secondSelector.error}
+        </Text>
       ) : null}
     </fieldset>
   )

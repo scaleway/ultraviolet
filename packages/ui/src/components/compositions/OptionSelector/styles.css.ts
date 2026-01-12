@@ -58,3 +58,15 @@ export const arrow = style({
   gridColumn: '2',
   gridRow: '2',
 })
+
+export const errorFirstSelector = style({
+  gridColumn: '1',
+  gridRow: '3',
+  marginTop: `calc(-1 * ${theme.space['1']})`,
+})
+
+export const errorSecondSelector = style({
+  gridColumn: '3',
+  gridRow: '3',
+  marginTop: `calc(-1 * ${theme.space['1']})`,
+})
