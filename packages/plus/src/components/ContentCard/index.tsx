@@ -105,8 +105,8 @@ export const ContentCard = forwardRef<
       <Container
         className={cn(className, cardClass, onClick || href ? activeClass : '')}
         disabled={disabled}
-        href={!disabled ? href : undefined}
-        onClick={!disabled ? onClick : undefined}
+        href={disabled ? undefined : href}
+        onClick={disabled ? undefined : onClick}
         ref={ref}
         role={onClick && !href ? 'button' : undefined}
         style={style}
@@ -134,9 +134,9 @@ export const ContentCard = forwardRef<
             <Stack direction={direction} flex={1} gap={2}>
               <Stack
                 alignItems={
-                  !subtitle && !description && !children ? 'center' : undefined
+                  subtitle || description || children ? undefined : 'center'
                 }
-                className={subContainer[!href ? 'noHref' : direction]}
+                className={subContainer[href ? direction : 'noHref']}
                 direction={direction}
                 flex="1 1 auto"
                 gap={2}

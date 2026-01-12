@@ -1,3 +1,5 @@
+// biome-ignore-all lint/performance/useTopLevelRegex: to fix
+
 const fontWeightMap = {
   Medium: 500,
   Regular: 400,

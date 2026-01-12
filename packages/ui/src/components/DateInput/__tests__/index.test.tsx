@@ -6,7 +6,7 @@ import tk from 'timekeeper'
 import { describe, expect, test, vi } from 'vitest'
 import { DateInput } from '..'
 
-tk.freeze(new Date(1609503120000))
+tk.freeze(new Date(1_609_503_120_000))
 
 describe('dateInput', () => {
   test('renders correctly with default props', () => {

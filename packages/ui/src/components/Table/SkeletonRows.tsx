@@ -21,6 +21,7 @@ export const SkeletonRows = ({ selectable, rows, cols }: SkeletonRowsProps) => {
           className={tableSkeletonRow}
           id={`skeleton-${index}`}
           key={index}
+          // biome-ignore  lint/a11y/noRedundantRoles: to fix
           role="row"
         >
           {selectable ? <Cell /> : null}

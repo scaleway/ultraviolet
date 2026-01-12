@@ -1,5 +1,5 @@
-import { globalStyle, style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const errorText = style({
   paddingTop: theme.space['0.5'],
@@ -15,9 +15,9 @@ export const checkMixedMark = style({})
 export const icon = style({
   borderRadius: theme.radii.default,
   height: theme.sizing['300'],
-  width: theme.sizing['300'],
-  minWidth: theme.sizing['300'],
   minHeight: theme.sizing['300'],
+  minWidth: theme.sizing['300'],
+  width: theme.sizing['300'],
 })
 
 globalStyle(`${icon} path`, {
@@ -26,24 +26,24 @@ globalStyle(`${icon} path`, {
 })
 
 export const label = style({
-  width: '100%',
   cursor: 'pointer',
+  width: '100%',
 })
 
 export const checkboxInput = style({
-  position: 'absolute',
-  whiteSpace: 'nowrap',
-  opacity: 0,
   borderWidth: 0,
   height: theme.sizing['300'],
+  opacity: 0,
+  position: 'absolute',
+  whiteSpace: 'nowrap',
   width: theme.sizing['300'],
 })
 
 export const checkboxContainer = style({
-  position: 'relative',
-  display: 'inline-flex',
   alignItems: 'center',
+  display: 'inline-flex',
   gap: theme.space['1'],
+  position: 'relative',
 })
 
 globalStyle(`${checkboxInput}:not(:disabled)`, {
@@ -55,8 +55,8 @@ globalStyle(`${checkboxInput}:disabled`, {
 })
 
 globalStyle(`${checkboxContainer}[aria-disabled='true']`, {
-  cursor: 'not-allowed',
   color: theme.colors.neutral.textDisabled,
+  cursor: 'not-allowed',
 })
 globalStyle(`${checkboxContainer}[aria-disabled='true'] label`, {
   cursor: 'not-allowed',
@@ -67,8 +67,8 @@ globalStyle(`${checkboxContainer}[aria-disabled='true'] .${icon}`, {
   fill: theme.colors.neutral.borderDisabled,
 })
 globalStyle(`${checkboxContainer}[aria-disabled='true'] .${innerCheckbox}`, {
-  stroke: theme.colors.neutral.borderStrongDisabled,
   fill: theme.colors.neutral.backgroundDisabled,
+  stroke: theme.colors.neutral.borderStrongDisabled,
 })
 
 globalStyle(
@@ -80,8 +80,8 @@ globalStyle(
 globalStyle(
   `${checkboxContainer}[aria-disabled='true'] input[aria-invalid="true"]:checked + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.danger.borderStrongDisabled,
     fill: theme.colors.danger.backgroundStrongDisabled,
+    stroke: theme.colors.danger.borderStrongDisabled,
   },
 )
 
@@ -94,8 +94,8 @@ globalStyle(
 globalStyle(
   `${checkboxContainer}[aria-disabled='true'] input[aria-invalid="true"] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.danger.borderDisabled,
     fill: theme.colors.danger.background,
+    stroke: theme.colors.danger.borderDisabled,
   },
 )
 
@@ -108,8 +108,8 @@ globalStyle(
 globalStyle(
   `${checkboxContainer}[aria-disabled='true'] input:checked + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.primary.borderDisabled,
     fill: theme.colors.primary.borderDisabled,
+    stroke: theme.colors.primary.borderDisabled,
   },
 )
 
@@ -122,15 +122,15 @@ globalStyle(
 globalStyle(
   `${checkboxContainer}[aria-disabled='true'] input[aria-checked="mixed"] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.primary.borderStrongDisabled,
     fill: theme.colors.primary.backgroundStrongDisabled,
+    stroke: theme.colors.primary.borderStrongDisabled,
   },
 )
 
 globalStyle(`${checkboxContainer} input:checked + .${icon} path`, {
+  transform: 'scale(1) translate(2px, 2px)',
   transformOrigin: 'center',
   transition: '200ms transform ease-in-out',
-  transform: 'scale(1) translate(2px, 2px)',
 })
 
 globalStyle(`${checkboxContainer} input:checked + .${icon} .${innerCheckbox}`, {
@@ -165,36 +165,36 @@ globalStyle(
 globalStyle(
   `${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='false'] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.primary.borderHover,
     fill: theme.colors.primary.backgroundHover,
+    stroke: theme.colors.primary.borderHover,
   },
 )
 globalStyle(
   `${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='true'] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.primary.borderStrongHover,
     fill: theme.colors.primary.backgroundStrongHover,
+    stroke: theme.colors.primary.borderStrongHover,
   },
 )
 globalStyle(
   `${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='false'][aria-checked='mixed'] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.primary.borderStrongHover,
     fill: theme.colors.primary.backgroundStrongHover,
+    stroke: theme.colors.primary.borderStrongHover,
   },
 )
 globalStyle(
   `${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='false'] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.danger.borderHover,
     fill: theme.colors.danger.backgroundHover,
+    stroke: theme.colors.danger.borderHover,
   },
 )
 globalStyle(
   `${checkboxContainer}:hover[aria-disabled='false'] input[aria-invalid='true'][aria-checked='true'] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.danger.borderStrongHover,
     fill: theme.colors.danger.backgroundStrongHover,
+    stroke: theme.colors.danger.borderStrongHover,
   },
 )
 
@@ -205,8 +205,8 @@ globalStyle(`${checkboxContainer} input[aria-invalid="true"] + .${icon}`, {
 globalStyle(
   `${checkboxContainer} input[aria-invalid="true"] + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.danger.backgroundStrong,
     fill: theme.colors.danger.background,
+    stroke: theme.colors.danger.backgroundStrong,
   },
 )
 
@@ -217,8 +217,8 @@ globalStyle(`${checkboxInput}:focus + .${icon}`, {
 })
 
 globalStyle(`${checkboxInput}:focus + .${icon} .${innerCheckbox}`, {
-  stroke: theme.colors.primary.borderHover,
   fill: theme.colors.primary.backgroundHover,
+  stroke: theme.colors.primary.borderHover,
 })
 
 globalStyle(`${checkboxInput}[aria-invalid='true']:focus + .${icon}`, {
@@ -230,8 +230,8 @@ globalStyle(`${checkboxInput}[aria-invalid='true']:focus + .${icon}`, {
 globalStyle(
   `${checkboxInput}[aria-invalid='true']:focus + .${icon} .${innerCheckbox}`,
   {
-    stroke: theme.colors.danger.borderHover,
     fill: theme.colors.danger.backgroundHover,
+    stroke: theme.colors.danger.borderHover,
   },
 )
 

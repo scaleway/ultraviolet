@@ -8,7 +8,7 @@ export type MockData = {
 
 export const generateData = (count?: number, prefix?: string): MockData[] =>
   new Array(count).map((_, index) => ({
-    department: index % 3 === 0 ? `Front` : `Not Front`,
+    department: index % 3 === 0 ? 'Front' : 'Not Front',
     description: `Fake message for row ${index}`,
     id: `${prefix ? `${prefix}-` : ''}${index}`,
     name: `Scaler ${prefix ? `${prefix}-` : ''}${index}`,

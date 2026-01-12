@@ -59,7 +59,7 @@ describe('banner', () => {
       </Banner>,
     ))
 
-  test(`should render banner and then close it`, async () => {
+  test('should render banner and then close it', async () => {
     renderWithTheme(
       <Banner data-testid="banner" direction="row" title="Title">
         Description
@@ -77,7 +77,7 @@ describe('banner', () => {
     })
   })
 
-  test(`should render correctly with dark theme`, () =>
+  test('should render correctly with dark theme', () =>
     shouldMatchSnapshot(
       <Banner linkText="Learn more" title="Title">
         Descritpion

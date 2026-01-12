@@ -1,3 +1,5 @@
+// biome-ignore-all  lint/a11y/useAriaPropsSupportedByRole: to fix
+
 'use client'
 
 import { cn } from '@ultraviolet/utils'
@@ -258,7 +260,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             />
           </Stack>
         </Dropdown>
-        {!error && !success && helper ? (
+        {!(error || success) && helper ? (
           <Text
             as="p"
             className={selectinputHelper}

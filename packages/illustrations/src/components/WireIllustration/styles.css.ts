@@ -1,5 +1,5 @@
-import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { createVar, style, styleVariants } from '@vanilla-extract/css'
 
 export const COLORS = [
   'primary',
@@ -16,11 +16,11 @@ export const heightVar = createVar()
 export const url = createVar()
 
 const illustrationBase = style({
+  height: heightVar,
+  mask: url,
   maskSize: 'contain',
   WebkitMask: url,
-  mask: url,
   width: widthVar,
-  height: heightVar,
 })
 
 export const illustrationVariants = styleVariants(

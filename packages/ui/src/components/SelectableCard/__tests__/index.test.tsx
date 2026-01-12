@@ -199,7 +199,7 @@ describe('selectableCard', () => {
         })
       })
 
-      test(`should trigger onChange when click on the label using getByLabelText`, async () => {
+      test('should trigger onChange when click on the label using getByLabelText', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(
@@ -222,7 +222,7 @@ describe('selectableCard', () => {
         })
       })
 
-      test(`should trigger onChange when click on the label using getByRole`, async () => {
+      test('should trigger onChange when click on the label using getByRole', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(
@@ -245,7 +245,7 @@ describe('selectableCard', () => {
         })
       })
 
-      test(`should trigger onChange when click on the card`, async () => {
+      test('should trigger onChange when click on the card', async () => {
         const onChange = vi.fn()
 
         renderWithTheme(

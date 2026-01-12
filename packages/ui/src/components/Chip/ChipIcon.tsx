@@ -33,6 +33,7 @@ export const ChipIcon = ({
   const { disabled, isActive, iconRef } = context
 
   const IconUsed =
+    // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
     Icon[
       `${
         (name as string).charAt(0).toUpperCase() + (name as string).slice(1)

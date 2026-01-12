@@ -166,7 +166,7 @@ export const OrderSummary = ({
             >
               {header}
             </Text>
-            {!hideTimeUnit && !hideDetails ? (
+            {hideTimeUnit || hideDetails ? null : (
               <Stack className={orderSummaryStackBackground}>
                 <UnitInput
                   dropdownAlign="center"
@@ -186,10 +186,10 @@ export const OrderSummary = ({
                   value={valueUnitInput}
                 />
               </Stack>
-            ) : null}
+            )}
           </Stack>
         ) : null}
-        {!hideDetails ? <ScrollableContent /> : null}
+        {hideDetails ? null : <ScrollableContent />}
         <NonScrollableContent
           additionalInfo={additionalInfo}
           discount={discount}

@@ -38,14 +38,14 @@ type TableProps = Omit<
   selectable?: boolean
   /**
    * Set it to true if you want to display a placeholder during loading
-   * */
+   */
   loading?: boolean
   bordered?: boolean
   stripped?: boolean
   expandable?: boolean
   /**
    * Auto collapse is collapsing expandable row when another is expanding
-   * */
+   */
   autoCollapse?: boolean
   expandButton?: boolean
   columns: ColumnProps[]
@@ -113,6 +113,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
                   align={column.align}
                   info={column.info}
                   isOrdered={column.isOrdered}
+                  // biome-ignore lint/suspicious/noArrayIndexKey: to fix
                   key={`header-column-${index}`}
                   maxWidth={column.maxWidth}
                   minWidth={column.minWidth}

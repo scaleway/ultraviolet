@@ -1,5 +1,5 @@
-import { style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { SIZE_HEIGHT } from '../Button/constants'
 
 export const closeButton = style({
@@ -15,19 +15,19 @@ export const closeButton = style({
 })
 
 const containerBase = style({
-  width: '100%',
   height: theme.sizing['700'],
   padding: `0 ${theme.space['2']}`,
+  width: '100%',
 })
 
 export const container = styleVariants({
-  info: [
-    containerBase,
-    { backgroundColor: theme.colors.info.backgroundStrong },
-  ],
   danger: [
     containerBase,
     { backgroundColor: theme.colors.danger.backgroundStrong },
+  ],
+  info: [
+    containerBase,
+    { backgroundColor: theme.colors.info.backgroundStrong },
   ],
   promotional: [
     containerBase,

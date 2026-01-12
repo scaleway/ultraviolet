@@ -11,22 +11,22 @@ export const stackStory = style({
 })
 
 export const buttonStory = style({
-  width: 'fit-content',
-  height: 'fit-content',
   background: 'none',
   border: 'none',
+  height: 'fit-content',
   padding: `${theme.space['0.5']} ${theme.space[1]}`,
   textAlign: 'left',
+  width: 'fit-content',
 })
 
 export const imageProductStory = style({
-  borderRadius: `${theme.radii.large} 0 0 ${theme.radii.large}`,
   background: theme.colors.neutral.backgroundStronger,
+  borderRadius: `${theme.radii.large} 0 0 ${theme.radii.large}`,
 })
 
 export const imageVariousStory = style({
-  borderRadius: `${theme.radii.large} 0 0 ${theme.radii.large}`,
   background: theme.colors.neutral.backgroundStronger,
+  borderRadius: `${theme.radii.large} 0 0 ${theme.radii.large}`,
 })
 
 export const margedStackStory = style({

@@ -1,16 +1,17 @@
-import type {
-  DocsContainerProps as BaseContainerProps
-} from '@storybook/addon-docs/blocks'
+import type { DocsContainerProps as BaseContainerProps } from '@storybook/addon-docs/blocks'
 import {
   DocsContainer as BaseContainer,
   Unstyled,
 } from '@storybook/addon-docs/blocks'
-import { consoleLightTheme as lightTheme, ThemeProvider as ThemeProviderUV } from '@ultraviolet/themes'
+import {
+  consoleLightTheme as lightTheme,
+  ThemeProvider as ThemeProviderUV,
+} from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
 import { cloneElement, isValidElement, useState } from 'react'
 import '@ultraviolet/fonts/fonts.css'
 // don't know how it's work today
-import "../../packages/themes/dist/themes.css"
+import '../../packages/themes/dist/themes.css'
 import { GlobalAlert } from '@ultraviolet/ui'
 import { globalStyleStoryBook } from './globalStyle.css'
 
@@ -56,7 +57,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
     window.location.hostname === 'storybook.ultraviolet.scaleway.com'
   ) {
     fetch('https://api.github.com/repos/scaleway/ultraviolet/branches/beta')
-      .then((data) => {
+      .then(data => {
         if (data.ok) {
           setIsBeta(true)
         }
@@ -70,23 +71,29 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
     <Unstyled>
       <div className={globalStyleStoryBook}>
         <ThemeProviderUV theme={lightTheme}>
-          {isBeta ?
+          {isBeta ? (
             <GlobalAlert
               buttonText="Access to Beta"
-              onClickButton={() => window.top?.location.assign('https://beta.storybook.ultraviolet.scaleway.com')}
               closable={false}
+              onClickButton={() =>
+                window.top?.location.assign(
+                  'https://beta.storybook.ultraviolet.scaleway.com',
+                )
+              }
             >
-              A Beta version is available. Please use this version if your dependencies include the Beta release.
-            </GlobalAlert> : null}
+              A Beta version is available. Please use this version if your
+              dependencies include the Beta release.
+            </GlobalAlert>
+          ) : null}
           <BaseContainer context={context}>
             {isValidElement<ExtraProps>(children)
               ? cloneElement(children, {
-                deprecated: parameters?.deprecated,
-                deprecatedReason: parameters?.deprecatedReason,
-                migrationLink: parameters?.migrationLink,
-                hideArgsTable: parameters?.hideArgsTable,
-                experimental: isPlusLibrary ? true : parameters?.experimental,
-              })
+                  deprecated: parameters?.deprecated,
+                  deprecatedReason: parameters?.deprecatedReason,
+                  experimental: isPlusLibrary ? true : parameters?.experimental,
+                  hideArgsTable: parameters?.hideArgsTable,
+                  migrationLink: parameters?.migrationLink,
+                })
               : children}
           </BaseContainer>
         </ThemeProviderUV>

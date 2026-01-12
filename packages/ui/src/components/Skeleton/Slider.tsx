@@ -16,6 +16,7 @@ export const Slider = ({ length = 4 }: { length?: number }) => (
     })}
   >
     {Array.from({ length }, (_, i) => (
+      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <div className={sliderSkeletonCard} key={`skeleton-slider-card-${i}`}>
         <div className={sliderSkeletonBanner} />
       </div>

@@ -16,7 +16,10 @@ export default function Home() {
         </Text>
         <Text as="p" variant="body">
           Ultraviolet works with Next.js app router by providing{' '}
-          <Text as="code" variant="code">{`<ThemeRegistry />`}</Text>.
+          <Text as="code" variant="code">
+            {'<ThemeRegistry />'}
+          </Text>
+          .
         </Text>
         <Text as="p" variant="body">
           All components will work seamlessly with Next.js app router.

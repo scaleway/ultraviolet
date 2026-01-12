@@ -49,11 +49,11 @@ export const Plans = <T extends string>({
       <thead>
         <tr>
           <td className={plansCell({ hide: hideLabels })}>
-            {!hideFeatureText ? (
+            {hideFeatureText ? null : (
               <Text as="span" variant="headingSmallStrong">
                 {locales['plans.features']}
               </Text>
-            ) : null}
+            )}
           </td>
           {plans.map(plan => {
             const computedDisabled = !!(plan.outOfStock || plan.disabled)

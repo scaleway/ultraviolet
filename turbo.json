@@ -1,23 +1,23 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["tsconfig.json"],
-  "ui": "stream",
   "globalEnv": ["STORYBOOK_ENVIRONMENT", "ENVIRONMENT"],
   "tasks": {
-    "//#format": {},
-    "//#lint:fix": {
-      "cache": false
-    },
     "//#build:storybook": {
       "dependsOn": ["^build"],
-      "passThroughEnv": ["STORYBOOK_ENVIRONMENT"],
-      "outputs": ["build/**", "dist/**", "storybook-static/**"]
+      "outputs": ["build/**", "dist/**", "storybook-static/**"],
+      "passThroughEnv": ["STORYBOOK_ENVIRONMENT"]
     },
     "//#build:storybook:stats": {
       "dependsOn": ["^build"],
       "passThroughEnv": ["STORYBOOK_ENVIRONMENT"]
     },
+    "//#format": {},
+    "//#lint:fix": {
+      "cache": false
+    },
     "build": {
+      "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx}"],
       "outputs": [
@@ -27,8 +27,10 @@
         "!.next/cache/**",
         "out/**",
         "storybook-static/**"
-      ],
-      "cache": true
+      ]
+    },
+    "e2e": {
+      "dependsOn": ["build"]
     },
     "lintpublish": {
       "dependsOn": ["build"]
@@ -36,12 +38,10 @@
     "size": {
       "dependsOn": ["build"]
     },
-    "typecheck": {
+    "start": {
+      "cache": false,
       "dependsOn": ["build"],
-      "inputs": ["**/*.{ts,tsx}"]
-    },
-    "e2e": {
-      "dependsOn": ["build"]
+      "persistent": true
     },
     "test:unit": {
       "dependsOn": ["build"],
@@ -51,10 +51,10 @@
       "dependsOn": ["build"],
       "passThroughEnv": ["VITEST_*"]
     },
-    "start": {
+    "typecheck": {
       "dependsOn": ["build"],
-      "persistent": true,
-      "cache": false
+      "inputs": ["**/*.{ts,tsx}"]
     }
-  }
+  },
+  "ui": "stream"
 }

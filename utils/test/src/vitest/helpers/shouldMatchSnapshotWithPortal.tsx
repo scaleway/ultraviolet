@@ -15,6 +15,7 @@ export const makeShouldMatchSnapshotWithPortal = (
   globalThis.console = { ...console, error: vi.fn() }
 
   const { asFragment, unmount } = render(children, { wrapper })
+  // biome-ignore  lint/suspicious/noMisplacedAssertion: use inside it/expect
   expect(asFragment()).toMatchSnapshot()
 
   // Unmounting to don't see the warning message described above

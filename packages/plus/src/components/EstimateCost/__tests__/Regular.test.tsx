@@ -69,7 +69,7 @@ describe('estimateCost - Regular Item', () => {
   test('render basic props with long fractions digits', () =>
     shouldMatchSnapshot(
       <EstimateCost>
-        <EstimateCost.Item label="Regular" longFractionDigits price={0.000001}>
+        <EstimateCost.Item label="Regular" longFractionDigits price={0.000_001}>
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
       </EstimateCost>,
@@ -83,7 +83,7 @@ describe('estimateCost - Regular Item', () => {
           label="Regular"
           longFractionDigits
           maxAmount={100}
-          price={0.000001}
+          price={0.000_001}
         >
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>
@@ -97,7 +97,7 @@ describe('estimateCost - Regular Item', () => {
           amount={0}
           label="Regular"
           maxAmount={100}
-          price={0.000001}
+          price={0.000_001}
           unit="Node"
         >
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
@@ -168,7 +168,7 @@ describe('estimateCost - Regular Item', () => {
       </EstimateCost>,
     ))
 
-  test(`render with hourly price range`, async () => {
+  test('render with hourly price range', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item
@@ -190,7 +190,7 @@ describe('estimateCost - Regular Item', () => {
     await waitFor(() => expect(input.value).toBe('10'))
   })
 
-  test(`render with hourly price range and longFractionDigits`, async () => {
+  test('render with hourly price range and longFractionDigits', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item

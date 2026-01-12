@@ -12,5 +12,6 @@ export const makeShouldMatchSnapshot = (
 ) => {
   const { asFragment } = render(children, { wrapper })
 
+  // biome-ignore  lint/suspicious/noMisplacedAssertion: use inside it/expect
   expect(asFragment()).toMatchSnapshot()
 }

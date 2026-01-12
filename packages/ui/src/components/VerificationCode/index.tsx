@@ -263,6 +263,7 @@ export const VerificationCode = ({
             data-testid={index}
             disabled={disabled}
             id={`${id}-${index}`}
+            // biome-ignore lint/suspicious/noArrayIndexKey: should be safe as we can have the same value
             key={`field-${index}`}
             onChange={inputOnChange(index)}
             onFocus={inputOnFocus}
@@ -281,14 +282,14 @@ export const VerificationCode = ({
         <Text
           as="p"
           disabled={disabled}
-          prominence={!error && !success ? 'weak' : 'default'}
+          prominence={error || success ? 'default' : 'weak'}
           sentiment={sentiment}
           variant="caption"
         >
           {error || success || helper}
         </Text>
       ) : null}
-      {!error && !success && typeof helper !== 'string' && helper
+      {!(error || success) && typeof helper !== 'string' && helper
         ? helper
         : null}
     </fieldset>

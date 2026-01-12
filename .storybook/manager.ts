@@ -1,28 +1,28 @@
-import { addons } from 'storybook/manager-api'
 import { consoleLightTheme } from '@ultraviolet/themes'
+import { addons } from 'storybook/manager-api'
 import { light } from './storybookThemes'
 
 addons.setConfig({
-  theme: light,
   tagBadges: [
     {
-      tags: 'experimental',
       badge: {
-        text: '🧪 Experimental',
         bgColor: consoleLightTheme.colors.warning.background,
         fgColor: consoleLightTheme.colors.warning.text,
+        text: '🧪 Experimental',
         tooltip:
           'This component is at an unstable stage and is subject to change in future releases.',
       },
+      tags: 'experimental',
     },
     {
-      tags: 'deprecated',
       badge: {
-        text: '⛔ Deprecated',
         bgColor: consoleLightTheme.colors.danger.background,
         fgColor: consoleLightTheme.colors.danger.text,
+        text: '⛔ Deprecated',
         tooltip: 'This component is deprecated please do not use it any more.',
       },
+      tags: 'deprecated',
     },
   ],
+  theme: light,
 })

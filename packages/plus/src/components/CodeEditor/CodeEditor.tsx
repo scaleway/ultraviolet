@@ -73,7 +73,7 @@ export const CodeEditor = ({
         }}
         className={className}
         data-testid={dataTestId}
-        editable={!disabled || !readOnly}
+        editable={!(disabled && readOnly)}
         extensions={[langs[extensions]?.() ?? langs['sh']]}
         height={height}
         id={id}

@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import {
   headerCellMaxWidth,
   headerCellMinWidth,
@@ -9,7 +10,6 @@ import {
   minWidthCell,
   widthCell,
 } from './variables.css'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 const colorChange = keyframes({
   '5%': {
@@ -21,9 +21,9 @@ const colorChange = keyframes({
 })
 
 export const table = style({
-  width: '100%',
-  boxSizing: 'content-box',
   borderCollapse: 'collapse',
+  boxSizing: 'content-box',
+  width: '100%',
 })
 
 export const tableStripped = style({})
@@ -40,29 +40,29 @@ globalStyle(`${tableBordered} tbody tr`, {
 export const tableCell = recipe({
   base: {
     display: 'table-cell',
-    verticalAlign: 'middle',
-    padding: theme.space[1],
     fontSize: theme.typography.bodySmall.fontSize,
     maxWidth: maxWidthCell,
     minWidth: minWidthCell,
+    padding: theme.space[1],
+    verticalAlign: 'middle',
     width: widthCell,
   },
   variants: {
     align: {
-      left: { textAlign: 'left' },
       center: { textAlign: 'center' },
+      left: { textAlign: 'left' },
       right: { textAlign: 'right' },
     },
     sentiment: {
+      danger: { backgroundColor: theme.colors.danger.background },
+      info: { backgroundColor: theme.colors.info.background },
+      neutral: { backgroundColor: theme.colors.neutral.background },
       primary: {
         backgroundColor: theme.colors.primary.background,
       },
       secondary: { backgroundColor: theme.colors.secondary.background },
-      danger: { backgroundColor: theme.colors.danger.background },
-      info: { backgroundColor: theme.colors.info.background },
       success: { backgroundColor: theme.colors.success.background },
       warning: { backgroundColor: theme.colors.warning.background },
-      neutral: { backgroundColor: theme.colors.neutral.background },
     },
   },
 })
@@ -74,19 +74,24 @@ export const tableHeader = style({
 export const tableHeaderCell = recipe({
   base: {
     display: 'table-cell',
-    verticalAlign: 'middle',
-    padding: theme.space[1],
-    width: headerCellWidth,
     maxWidth: headerCellMaxWidth,
     minWidth: headerCellMinWidth,
+    padding: theme.space[1],
     selectors: {
       "&[role*='button']": {
         cursor: 'pointer',
         userSelect: 'none',
       },
     },
+    verticalAlign: 'middle',
+    width: headerCellWidth,
   },
   variants: {
+    align: {
+      center: { textAlign: 'center' },
+      left: { textAlign: 'left' },
+      right: { textAlign: 'right' },
+    },
     checked: {
       true: {
         selectors: {
@@ -96,30 +101,25 @@ export const tableHeaderCell = recipe({
         },
       },
     },
-    align: {
-      left: { textAlign: 'left' },
-      center: { textAlign: 'center' },
-      right: { textAlign: 'right' },
-    },
   },
 })
 
 export const headerCellText = style({
+  alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'center',
   gap: theme.space[1],
 })
 
 export const tableExpandableWrapper = style({
-  width: '100%',
-  display: 'table-row',
-  verticalAlign: 'middle',
-  borderTop: `1px solid ${theme.colors.neutral.border}`,
-  padding: theme.space[1],
-  cursor: 'auto',
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+  borderTop: `1px solid ${theme.colors.neutral.border}`,
+  cursor: 'auto',
+  display: 'table-row',
+  padding: theme.space[1],
+  verticalAlign: 'middle',
+  width: '100%',
 })
 
 export const tableCheckboxContainer = style({
@@ -132,4 +132,4 @@ export const tableTrAnimation = style({
 })
 
 export const tableSkeletonRow = style({ cursor: 'progress' })
-export const tableSkeleton = style({ width: '80%', maxWidth: '100%' })
+export const tableSkeleton = style({ maxWidth: '100%', width: '80%' })

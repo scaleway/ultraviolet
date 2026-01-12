@@ -41,7 +41,7 @@ const NoAnimationExpandable = ({
   <div
     className={className}
     data-testid={dataTestId}
-    style={{ display: !opened ? 'none' : undefined, minHeight, ...style }}
+    style={{ display: opened ? undefined : 'none', minHeight, ...style }}
   >
     {children}
   </div>

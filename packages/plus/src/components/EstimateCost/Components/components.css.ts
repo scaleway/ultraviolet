@@ -10,8 +10,8 @@ export const maxWidthText = style({
 })
 
 export const estimateCostImage = style({
-  width: 15,
   marginRight: theme.space[1],
+  width: 15,
 })
 
 export const estimateCostTr = style({})
@@ -19,23 +19,26 @@ export const estimateCostTr = style({})
 export const styledDiv = style({ marginLeft: theme.space['0.5'] })
 
 export const estimateCostLeftSide = style({
+  alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',
-  WebkitBoxPack: 'justify',
   justifyContent: 'space-between',
-  alignItems: 'center',
   minHeight: theme.sizing[700],
-  paddingTop: theme.space[1],
   paddingBottom: theme.space[1],
+  paddingTop: theme.space[1],
+  WebkitBoxPack: 'justify',
 })
 
 export const estimateCostItemResourceName = recipe({
   base: {
-    height: theme.sizing[600],
     display: 'flex',
     flexDirection: 'column',
-    WebkitBoxPack: 'center',
+    height: theme.sizing[600],
     justifyContent: 'center',
+    WebkitBoxPack: 'center',
+  },
+  defaultVariants: {
+    animated: false,
   },
   variants: {
     animated: {
@@ -44,41 +47,38 @@ export const estimateCostItemResourceName = recipe({
       },
     },
   },
-  defaultVariants: {
-    animated: false,
-  },
 })
 
 export const estimateCostResourceName = recipe({
+  defaultVariants: {
+    isAnimated: false,
+    isOverlay: false,
+  },
   variants: {
-    isOverlay: {
-      true: {
-        textAlign: 'initial',
-        height: theme.sizing[600],
-        display: 'flex',
-        flexDirection: 'column',
-        WebkitBoxPack: 'center',
-        justifyContent: 'center',
-      },
-      false: {
-        textAlign: 'right',
-      },
-    },
     isAnimated: {
       true: {
         animation: `${zoomIn} 800ms`,
       },
     },
-  },
-  defaultVariants: {
-    isAnimated: false,
-    isOverlay: false,
+    isOverlay: {
+      false: {
+        textAlign: 'right',
+      },
+      true: {
+        display: 'flex',
+        flexDirection: 'column',
+        height: theme.sizing[600],
+        justifyContent: 'center',
+        textAlign: 'initial',
+        WebkitBoxPack: 'center',
+      },
+    },
   },
 })
 
 export const estimateCostBadgeItem = style({
-  marginLeft: theme.space[1],
   alignSelf: 'center',
+  marginLeft: theme.space[1],
 })
 
 export const estimateCostTextItem = style({
@@ -92,58 +92,58 @@ export const estimateCostMaxWidthText = style({
 export const estimateCostTooltip = style({ verticalAlign: 'text-top' })
 
 export const estimateCostLineThrough = style({
-  textDecorationLine: 'line-through',
   textDecorationColor: theme.colors.warning.border,
+  textDecorationLine: 'line-through',
 })
 
 export const estimateCostRegular = recipe({
   base: {
-    maxWidth: 500,
     alignItems: 'center',
-    fontSize: 16,
     color: theme.colors.neutral.textStrong,
+    fontSize: 16,
     marginRight: theme.space['0.5'],
-  },
-  variants: {
-    isOverlay: {
-      true: {
-        display: 'flex',
-      },
-      false: {
-        display: 'inline-flex',
-      },
-    },
-    variant: {
-      normal: {},
-      big: {},
-      capitalized: {},
-      small: {
-        display: 'block',
-        fontSize: 14,
-        lineHeight: 8,
-        color: theme.colors.neutral.text,
-      },
-    },
+    maxWidth: 500,
   },
   defaultVariants: {
     isOverlay: false,
     variant: 'normal',
   },
+  variants: {
+    isOverlay: {
+      false: {
+        display: 'inline-flex',
+      },
+      true: {
+        display: 'flex',
+      },
+    },
+    variant: {
+      big: {},
+      capitalized: {},
+      normal: {},
+      small: {
+        color: theme.colors.neutral.text,
+        display: 'block',
+        fontSize: 14,
+        lineHeight: 8,
+      },
+    },
+  },
 })
 
 export const estimateCostStrong = recipe({
   base: {
-    display: 'inline-flex',
     alignItems: 'center',
     color: theme.colors.neutral.textStrong,
+    display: 'inline-flex',
     fontWeight: 500,
     marginRight: 4,
   },
+  defaultVariants: {
+    variant: 'normal',
+  },
   variants: {
     variant: {
-      normal: {
-        fontSize: 16,
-      },
       big: {
         fontSize: 24,
       },
@@ -151,13 +151,13 @@ export const estimateCostStrong = recipe({
         fontSize: 16,
         textTransform: 'capitalize',
       },
+      normal: {
+        fontSize: 16,
+      },
       small: {
         fontSize: 16,
       },
     },
-  },
-  defaultVariants: {
-    variant: 'normal',
   },
 })
 
@@ -165,8 +165,8 @@ export const estimateCostNumberInput = style({
   MozAppearance: 'textfield',
   selectors: {
     '&::-webkit-inner-spin-button, &::webkit-outer-spin-button': {
-      WebkitAppearance: 'none',
       margin: 0,
+      WebkitAppearance: 'none',
     },
   },
 })

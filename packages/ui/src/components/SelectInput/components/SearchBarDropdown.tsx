@@ -47,7 +47,13 @@ const findClosestOption = (
   searchInput: string | undefined,
 ) => {
   if (searchInput) {
-    if (!Array.isArray(options)) {
+    if (Array.isArray(options)) {
+      const possibleOption = [...options].find(option => !option.disabled)
+
+      if (possibleOption) {
+        return possibleOption
+      }
+    } else {
       const possibleOptions = { ...options }
       Object.keys(possibleOptions).map((group: string) => {
         possibleOptions[group] = possibleOptions[group].filter(
@@ -66,12 +72,6 @@ const findClosestOption = (
           .find(value => !!value)
 
         return firstFit
-      }
-    } else {
-      const possibleOption = [...options].find(option => !option.disabled)
-
-      if (possibleOption) {
-        return possibleOption
       }
     }
   }
@@ -101,7 +101,13 @@ export const SearchBarDropdown = ({
 
   const handleChange = (search: string) => {
     if (search.length > 0) {
-      if (!Array.isArray(options)) {
+      if (Array.isArray(options)) {
+        const filteredOptions = searchRegex(
+          [...options],
+          escapeRegExp(search.toString()),
+        )
+        onSearch(filteredOptions)
+      } else {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
           filteredOptions[group] = searchRegex(
@@ -111,12 +117,6 @@ export const SearchBarDropdown = ({
 
           return null
         })
-        onSearch(filteredOptions)
-      } else {
-        const filteredOptions = searchRegex(
-          [...options],
-          escapeRegExp(search.toString()),
-        )
         onSearch(filteredOptions)
       }
     } else {
@@ -132,11 +132,11 @@ export const SearchBarDropdown = ({
         if (multiselect) {
           setSelectedData({
             clickedOption: closestOption,
-            group: !Array.isArray(options)
-              ? Object.keys(options).find(group =>
+            group: Array.isArray(options)
+              ? undefined
+              : Object.keys(options).find(group =>
                   options[group].includes(closestOption),
-                )
-              : undefined,
+                ),
             type: 'selectOption',
           })
           onChange?.(

@@ -7,7 +7,7 @@ import {
 } from 'react-intersection-observer/test-utils'
 import { afterEach, beforeEach, expect, vi } from 'vitest'
 
-const MockResize = vi.fn(function () {
+const MockResize = vi.fn(function mock() {
   return {
     disconnect: vi.fn(),
     observe: vi.fn(),
@@ -22,7 +22,7 @@ export const setup = () => {
   // oxlint-disable-next-line no-hooks
   beforeEach(() => {
     setupIntersectionMocking(vi.fn)
-    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
+    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
 
     window.ResizeObserver = vi.fn().mockImplementation(MockResize)
   })

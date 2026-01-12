@@ -5,7 +5,7 @@ import { describe, test } from 'vitest'
 import { Carousel } from '..'
 
 describe('carousel', () => {
-  test(`renders correctly with default props`, () =>
+  test('renders correctly with default props', () =>
     shouldMatchSnapshot(
       <Carousel>
         <Carousel.Item>Item 1</Carousel.Item>

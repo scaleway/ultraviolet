@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/react-vite'
 import {
   Conversation,
-  Date,
+  DateComponent,
   Message,
   MessageInfos,
   MessageTag as Tag,
@@ -10,7 +10,7 @@ import {
 export default {
   component: Conversation,
   subcomponents: {
-    'Conversation.Date': Date,
+    'Conversation.Date': DateComponent,
     'Conversation.Message': Message,
     'Conversation.Tag': Tag,
     'Conversation.MessageInfos': MessageInfos,

@@ -325,6 +325,7 @@ export const OptionalInfo5 = [
     label: 'Warsaw',
     optionalInfo: (
       <Button
+        // biome-ignore lint/suspicious/noAlert: ok
         onClick={() => alert('We will enable Warsaw soon!')}
         sentiment="neutral"
         size="xsmall"

@@ -28,7 +28,8 @@ export const FAQ = ({
   style,
 }: FAQProps) => {
   const ProductIconUsed = productIconName
-    ? ProductIcon[
+    ? // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
+      ProductIcon[
         `${
           productIconName.charAt(0).toUpperCase() + productIconName.slice(1)
         }ProductIcon` as keyof typeof ProductIcon

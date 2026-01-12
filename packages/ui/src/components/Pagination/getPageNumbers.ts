@@ -1,6 +1,6 @@
 const NUMBER_OF_BUTTONS_IN_BETWEEN = 3
 /**
- *  * Return a list of page numbers around the currentPage
+ * Return a list of page numbers around the currentPage
  * @param currentPage The current page
  * @param pageCount The last page number
  * @param range The number of pages wanted

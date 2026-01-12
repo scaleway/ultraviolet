@@ -24,11 +24,11 @@ export default {
       } = methods.formState
 
       return (
-        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+        <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form input values:
               </Text>
               <Snippet prefix="lines">
@@ -36,7 +36,7 @@ export default {
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form values:
               </Text>
               <Snippet prefix="lines">
@@ -75,4 +75,5 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
+
 export { Required } from './Required.stories'

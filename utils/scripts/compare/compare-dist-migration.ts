@@ -2,6 +2,7 @@
 
 // oxlint-disable eslint/no-console
 // oxlint-disable eslint/max-statements
+// biome-ignore-all lint/style/noNonNullAssertion: error
 
 import { createHash } from 'node:crypto'
 import fs, {
@@ -169,7 +170,7 @@ function compareManifests(
       }
     }
 
-    const modifiedFiles = []
+    const modifiedFiles: string[] = []
     for (const file of commonFiles) {
       const baselineFile = baseline.packages[pkg].files.find(
         f => f.path === file,

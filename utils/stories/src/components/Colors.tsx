@@ -224,7 +224,9 @@ const Colors = () => {
 
                     const gradient = gradientBackgroundColorsType[
                       background as keyof typeof gradientBackgroundColorsType
-                    ].replace(/;$/, '')
+                    ]
+                      // biome-ignore lint/performance/useTopLevelRegex: to fix
+                      .replace(/;$/, '')
 
                     return (
                       <Stack key={background}>

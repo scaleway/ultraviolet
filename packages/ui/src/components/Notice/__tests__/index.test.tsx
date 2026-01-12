@@ -3,6 +3,6 @@ import { describe, test } from 'vitest'
 import { Notice } from '..'
 
 describe('notice', () => {
-  test(`renders correctly with default props`, () =>
+  test('renders correctly with default props', () =>
     shouldMatchSnapshot(<Notice>Hello</Notice>))
 })

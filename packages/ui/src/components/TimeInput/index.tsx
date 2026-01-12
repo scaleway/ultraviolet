@@ -329,7 +329,7 @@ export const TimeInput = ({
                   data-testid={`${fullName()}-input`}
                   disabled={disabled}
                   onChange={event => {
-                    if (!readOnly && !disabled) {
+                    if (!(readOnly || disabled)) {
                       const key = getLastTypedChar(
                         event.target.value,
                         getValueByType(type, time),
@@ -343,7 +343,7 @@ export const TimeInput = ({
                     event.stopPropagation()
                   }}
                   onKeyDown={event => {
-                    if (!readOnly && !disabled) {
+                    if (!(readOnly || disabled)) {
                       if (event.key === 'ArrowUp') {
                         event.preventDefault()
                         handleIncrease(type)
@@ -396,7 +396,7 @@ export const TimeInput = ({
               data-testid="am-pm-input"
               disabled={disabled}
               onChange={event => {
-                if (!readOnly && !disabled) {
+                if (!(readOnly || disabled)) {
                   const key = event.target.value.slice(-1)
                   if (isAOrP(key)) {
                     handleChangePeriod(key as 'a' | 'p')
@@ -405,7 +405,7 @@ export const TimeInput = ({
               }}
               onClick={event => event.stopPropagation()}
               onKeyDown={event => {
-                if (!readOnly && !disabled) {
+                if (!(readOnly || disabled)) {
                   if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
                     event.preventDefault()
                     handleChangePeriod(period === 'am' ? 'p' : 'a')

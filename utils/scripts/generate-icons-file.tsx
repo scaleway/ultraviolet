@@ -1,4 +1,5 @@
 // oxlint-disable eslint/no-console
+// biome-ignore-all lint/performance/useTopLevelRegex: error
 
 import { existsSync, promises } from 'node:fs'
 import path from 'node:path'

@@ -1,48 +1,47 @@
-import { globalStyle, style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const arrowIcon = style({
   transition: 'transform 0.2s ease-in-out',
 })
 
 export const dropableArea = style({
-  height: theme.space['3'],
   borderBottom: '2px solid',
   borderColor: 'transparent',
-  padding: `${theme.space['0.5']} 0`,
-  width: '100%',
   bottom: '-5px',
+  height: theme.space['3'],
+  padding: `${theme.space['0.5']} 0`,
   position: 'absolute',
   selectors: {
-    '&[data-first="true"]': {
-      top: `-${theme.space['3']}`,
-    },
-
     '&::after': {
-      content: "''",
-      left: 0,
-      bottom: '-4px',
-      height: '0px',
-      width: '0px',
       border: '3px solid',
       borderColor: 'inherit',
       borderRadius: theme.radii.circle,
+      bottom: '-4px',
+      content: "''",
       display: 'flex',
-      marginTop: `-${theme.space['1']}`,
+      height: '0px',
+      left: 0,
       marginLeft: `-${theme.space['0.25']}`,
+      marginTop: `-${theme.space['1']}`,
       position: 'absolute',
+      width: '0px',
+    },
+    '&[data-first="true"]': {
+      top: `-${theme.space['3']}`,
     },
   },
+  width: '100%',
 })
 
 export const summaryClass = style({
+  alignItems: 'center',
+  cursor: 'pointer',
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'center',
   gap: theme.space['2'],
-  padding: theme.space['3'],
   listStyleType: 'none',
-  cursor: 'pointer',
+  padding: theme.space['3'],
 
   selectors: {
     '&[data-disabled="true"]': {
@@ -56,19 +55,18 @@ export const summaryClass = style({
 export const detailsClass = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
-  width: '100%',
-  transition: 'border-color 0.2s ease-in-out',
 
   selectors: {
+    '&[data-clicking="true"]': {
+      borderColor: theme.colors.primary.border,
+      boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
+    },
     '&[open]': {
       borderColor: theme.colors.primary.border,
     },
-
-    '&[data-clicking="true"]': {
-      boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
-      borderColor: theme.colors.primary.border,
-    },
   },
+  transition: 'border-color 0.2s ease-in-out',
+  width: '100%',
 })
 
 export const content = style({
@@ -93,23 +91,22 @@ globalStyle(`${stackClass}:hover > ${detailsClass}`, {
 })
 
 export const dragIconContainer = style({
+  cursor: 'grab',
   height: '100%',
   opacity: 0,
-  transition: 'opacity 0.2s ease-in-out',
-  cursor: 'grab',
   paddingTop: `calc(${theme.space['3']} + 2px)`,
 
   selectors: {
-    '&[data-visible="true"]': {
+    '&:active': {
+      cursor: 'grabbing',
       opacity: 1,
     },
     '&:focus-within': {
       opacity: 1,
     },
-
-    '&:active': {
-      cursor: 'grabbing',
+    '&[data-visible="true"]': {
       opacity: 1,
     },
   },
+  transition: 'opacity 0.2s ease-in-out',
 })

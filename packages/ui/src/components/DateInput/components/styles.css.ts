@@ -5,8 +5,8 @@ import { calendarContentWrapper } from '../styles.css'
 export const dateinputPopup = style([
   calendarContentWrapper(),
   {
-    width: '100%',
     boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
+    width: '100%',
   },
 ])
 
@@ -17,18 +17,17 @@ export const capitalizedTextDay = style([
 ])
 
 export const dayMonth = style({
-  height: theme.sizing[312],
-  width: '100%',
-  padding: 0,
   color: theme.colors.neutral.textWeak,
+  height: theme.sizing[312],
+  padding: 0,
   selectors: {
     "&[aria-label='in-range']": {
-      color: theme.colors.primary.textHover,
       backgroundColor: theme.colors.primary.background,
+      color: theme.colors.primary.textHover,
     },
     '&[aria-label="in-range"]:hover': {
-      color: theme.colors.neutral.textStronger,
       backgroundColor: theme.colors.primary.backgroundStrongHover,
+      color: theme.colors.neutral.textStronger,
     },
     '&[aria-label="not-current"], &:disabled': {
       color: theme.colors.neutral.textDisabled,
@@ -37,4 +36,5 @@ export const dayMonth = style({
       color: theme.colors.neutral.textStronger,
     },
   },
+  width: '100%',
 })

@@ -6,19 +6,19 @@ import { Loader } from '..'
 import { SIZES } from '../constants'
 
 describe('loader', () => {
-  test(`renders default props`, () =>
+  test('renders default props', () =>
     shouldMatchSnapshot(<Loader label="Loading test" />))
 
-  test(`renders active with default percentage`, () =>
+  test('renders active with default percentage', () =>
     shouldMatchSnapshot(<Loader active label="Loading test" />))
 
-  test(`renders active with custom percentage`, () =>
+  test('renders active with custom percentage', () =>
     shouldMatchSnapshot(<Loader active label="Loading test" />))
 
-  test(`renders with percentage 75`, () =>
+  test('renders with percentage 75', () =>
     shouldMatchSnapshot(<Loader active label="Loading test" percentage={75} />))
 
-  test(`renders with color neutral and primary`, () =>
+  test('renders with color neutral and primary', () =>
     shouldMatchSnapshot(
       <>
         <Loader label="Loading test" sentiment="neutral" />

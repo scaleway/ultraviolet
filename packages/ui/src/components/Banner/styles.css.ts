@@ -7,13 +7,56 @@ export const banner = recipe({
   base: {
     borderRadius: theme.radii.large,
   },
+  compoundVariants: [
+    {
+      style: {
+        background: theme.colors.primary.background,
+        backgroundPosition: 'left, right',
+        backgroundRepeat: 'no-repeat, no-repeat',
+        backgroundSize: 'contain, contain',
+      },
+      variants: { size: 'small', variant: 'intro' },
+    },
+    {
+      style: {
+        background: theme.colors.primary.background,
+        backgroundPosition: 'right',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+      },
+      variants: { size: 'medium', variant: 'intro' },
+    },
+    {
+      style: {
+        backgroundImage: theme.colors.other.gradients.background.linear.aqua,
+        backgroundPosition: 'left, right',
+        backgroundRepeat: 'no-repeat, no-repeat',
+        backgroundSize: 'contain, contain',
+      },
+      variants: { size: 'small', variant: 'promotional' },
+    },
+    {
+      style: {
+        backgroundImage: theme.colors.other.gradients.background.linear.aqua,
+        backgroundPosition: 'right',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain',
+      },
+      variants: { size: 'medium', variant: 'promotional' },
+    },
+  ],
+
+  defaultVariants: {
+    size: 'medium',
+    variant: 'intro',
+  },
   variants: {
     size: {
-      small: {
-        padding: theme.space[2],
-      },
       medium: {
         padding: theme.space[3],
+      },
+      small: {
+        padding: theme.space[2],
       },
     },
     variant: {
@@ -21,57 +64,14 @@ export const banner = recipe({
       promotional: {},
     },
   },
-  compoundVariants: [
-    {
-      variants: { variant: 'intro', size: 'small' },
-      style: {
-        background: theme.colors.primary.background,
-        backgroundPosition: 'left, right',
-        backgroundRepeat: 'no-repeat, no-repeat',
-        backgroundSize: 'contain, contain',
-      },
-    },
-    {
-      variants: { variant: 'intro', size: 'medium' },
-      style: {
-        background: theme.colors.primary.background,
-        backgroundPosition: 'right',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
-      },
-    },
-    {
-      variants: { variant: 'promotional', size: 'small' },
-      style: {
-        backgroundImage: theme.colors.other.gradients.background.linear.aqua,
-        backgroundPosition: 'left, right',
-        backgroundRepeat: 'no-repeat, no-repeat',
-        backgroundSize: 'contain, contain',
-      },
-    },
-    {
-      variants: { variant: 'promotional', size: 'medium' },
-      style: {
-        backgroundImage: theme.colors.other.gradients.background.linear.aqua,
-        backgroundPosition: 'right',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
-      },
-    },
-  ],
-
-  defaultVariants: {
-    variant: 'intro',
-    size: 'medium',
-  },
 })
 
 export const imageStackBanner = styleVariants({
-  small: {
-    width: '74px',
-  },
   medium: {
     width: '140px',
+  },
+  small: {
+    width: '74px',
   },
 })
 

@@ -38,7 +38,7 @@ describe('dateInputField', () => {
     await userEvent.click(input)
     await userEvent.click(screen.getByText('15'))
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
 
     expect(resultForm.current.getValues('test')).toEqual(
@@ -46,7 +46,7 @@ describe('dateInputField', () => {
     )
 
     expect(asFragment()).toMatchSnapshot()
-  }, 10000)
+  }, 10_000)
 
   test('should test range', async () => {
     const onBlur = vi.fn()
@@ -81,7 +81,7 @@ describe('dateInputField', () => {
     ])
 
     expect(asFragment()).toMatchSnapshot()
-  }, 10000)
+  }, 10_000)
 
   test('should clear field', async () => {
     const onBlur = vi.fn()
@@ -105,11 +105,11 @@ describe('dateInputField', () => {
     await userEvent.click(clearButton)
 
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
 
     expect(resultForm.current.getValues('test')).toEqual(null)
 
     expect(asFragment()).toMatchSnapshot()
-  }, 10000)
+  }, 10_000)
 })

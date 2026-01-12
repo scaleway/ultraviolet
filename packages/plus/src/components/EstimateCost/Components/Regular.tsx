@@ -24,13 +24,13 @@ export const Regular = memo(
   }: RegularProps) => {
     const { isOverlay } = useOverlay()
 
-    return !isDisabledOnOverlay || !isOverlay ? (
+    return isDisabledOnOverlay && isOverlay ? null : (
       <div
         className={cn(className, estimateCostRegular({ isOverlay, variant }))}
         style={style}
       >
         {children}
       </div>
-    ) : null
+    )
   },
 )

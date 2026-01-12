@@ -1,5 +1,5 @@
-import { globalStyle, style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const innerCircleRing = style({})
 export const radioStack = style({})
@@ -8,60 +8,59 @@ export const margedText = style({
 })
 
 export const container = style({
-  position: 'relative',
+  alignItems: 'flex-start',
   display: 'flex',
   flex: 1,
-  alignItems: 'flex-start',
   gap: theme.space['1'],
+  position: 'relative',
   selectors: {
     "&[aria-disabled='false']": {
       cursor: 'pointer',
     },
     "&[aria-disabled='true']": {
-      cursor: 'not-allowed',
       color: theme.colors.neutral.textDisabled,
+      cursor: 'not-allowed',
     },
   },
 })
 
 export const textLabel = style({
-  flex: 1,
   cursor: 'pointer',
+  flex: 1,
   selectors: {
     [`${container}[aria-disabled='true'] > &`]: {
-      cursor: 'not-allowed',
       color: theme.colors.neutral.textDisabled,
+      cursor: 'not-allowed',
     },
   },
 })
 
 export const labelStyle = style({
-  flex: 1,
   cursor: 'pointer',
+  flex: 1,
 })
 
 export const radio = style({
-  cursor: 'pointer',
-  position: 'absolute',
-  height: theme.sizing['300'],
-  width: theme.sizing['300'],
-  opacity: 0,
-  whiteSpace: 'nowrap',
   borderWidth: 0,
+  cursor: 'pointer',
+  height: theme.sizing['300'],
+  opacity: 0,
+  position: 'absolute',
   selectors: {
     "&[aria-disabled='true']": {
       cursor: 'not-allowed',
     },
   },
+  whiteSpace: 'nowrap',
+  width: theme.sizing['300'],
 })
 
 export const ring = style({
-  height: theme.sizing['300'],
-  width: theme.sizing['300'],
-  minWidth: theme.sizing['300'],
-  minHeight: theme.sizing['300'],
   borderRadius: theme.radii.circle,
   fill: theme.colors.neutral.border,
+  height: theme.sizing['300'],
+  minHeight: theme.sizing['300'],
+  minWidth: theme.sizing['300'],
   selectors: {
     [`${container} ${radio}:checked[aria-disabled='false'][aria-invalid='false'] + &`]:
       {
@@ -90,18 +89,17 @@ export const ring = style({
       fill: theme.colors.primary.border,
     },
     [`${container}[aria-disabled='true'] &`]: {
-      fill: theme.colors.neutral.borderDisabled,
       cursor: 'not-allowed',
+      fill: theme.colors.neutral.borderDisabled,
     },
     [`${container} ${radio}[aria-invalid='true'] + &`]: {
       fill: theme.colors.danger.border,
     },
   },
+  width: theme.sizing['300'],
 })
 
 export const radioMark = style({
-  transformOrigin: 'center',
-  transition: '200ms transform ease-in-out',
   selectors: {
     [`${container} ${radio} + ${ring} &`]: {
       transform: 'scale(0)',
@@ -110,6 +108,8 @@ export const radioMark = style({
       transform: 'scale(1)',
     },
   },
+  transformOrigin: 'center',
+  transition: '200ms transform ease-in-out',
 })
 
 globalStyle(

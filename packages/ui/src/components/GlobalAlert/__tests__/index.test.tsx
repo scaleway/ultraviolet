@@ -25,7 +25,7 @@ describe('globalAlert', () => {
       </GlobalAlert>,
     ))
 
-  describe(`renders correctly with all variants`, () => {
+  describe('renders correctly with all variants', () => {
     ;(['info', 'danger', 'promotional'] as const).forEach(variant => {
       test(`renders correctly variant ${variant}`, () =>
         shouldMatchSnapshot(
@@ -34,7 +34,7 @@ describe('globalAlert', () => {
     })
   })
 
-  test(`should render GlobalAlert and then close it`, async () => {
+  test('should render GlobalAlert and then close it', async () => {
     renderWithTheme(
       <GlobalAlert data-testid="GlobalAlert" onClose={() => 'ok'}>
         Sample GlobalAlert

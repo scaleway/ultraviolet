@@ -1,5 +1,7 @@
 'use client'
 
+// biome-ignore-all lint/a11y/noSvgWithoutTitle: to check
+
 import { cn } from '@ultraviolet/utils'
 import type { ReactNode, SVGProps } from 'react'
 import { forwardRef } from 'react'

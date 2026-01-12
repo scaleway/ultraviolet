@@ -60,7 +60,7 @@ const CodeContent = ({
       [rowsVar]: rows.toString(),
     })}
     variant="code"
-    whiteSpace={!multiline ? 'nowrap' : undefined}
+    whiteSpace={multiline ? undefined : 'nowrap'}
   >
     {multiline ? (
       Children.map(lines, child => (

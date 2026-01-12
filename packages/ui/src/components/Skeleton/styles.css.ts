@@ -15,21 +15,23 @@ function createColor(opacity: number) {
 }
 
 export const skeletonContainer = style({
-  position: 'relative',
-  width: '100%',
-  overflow: 'hidden',
   cursor: 'progress',
   display: 'flex',
   flexFlow: 'column',
   height: '100%',
+  overflow: 'hidden',
+  position: 'relative',
+  width: '100%',
 })
 
 export const skeletonHighlight = style({
-  position: 'absolute',
-  top: 0,
-  height: '100%',
-  width: '25%',
-  opacity: 0.8,
+  '@media': {
+    '(prefers-reduced-motion: reduce)': {
+      animation: 'unset',
+    },
+  },
+  animation: `${shineAnimation} 1s linear infinite`,
+  animationDirection: 'alternate',
   background: `linear-gradient(
     90deg,
     ${createColor(0)},
@@ -38,11 +40,9 @@ export const skeletonHighlight = style({
     ${createColor(0.3)},
     ${createColor(0)}
   )`,
-  animation: `${shineAnimation} 1s linear infinite`,
-  animationDirection: 'alternate',
-  '@media': {
-    '(prefers-reduced-motion: reduce)': {
-      animation: 'unset',
-    },
-  },
+  height: '100%',
+  opacity: 0.8,
+  position: 'absolute',
+  top: 0,
+  width: '25%',
 })

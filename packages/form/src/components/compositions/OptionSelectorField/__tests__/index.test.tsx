@@ -49,7 +49,7 @@ describe('optionSelectorField', () => {
 
     await userEvent.click(option)
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
 
     expect(asFragment()).toMatchSnapshot()

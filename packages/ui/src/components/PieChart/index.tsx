@@ -96,18 +96,18 @@ export const PieChart = ({
     >
       <div style={{ position: 'relative' }}>
         <Pie
-          activeOuterRadiusOffset={!isEmpty ? 4 : 0}
+          activeOuterRadiusOffset={isEmpty ? 0 : 4}
           colors={localColors}
           cornerRadius={0}
           data={
-            !isEmpty
-              ? data
-              : [
+            isEmpty
+              ? [
                   {
                     id: 'empty',
                     percent: 100,
                   },
                 ]
+              : data
           }
           defs={[
             {

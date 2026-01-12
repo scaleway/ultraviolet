@@ -93,7 +93,7 @@ export const Tab = forwardRef(
           }}
           onKeyDown={event => {
             onKeyDown?.(event)
-            if (!event.defaultPrevented && !disabled && value) {
+            if (!(event.defaultPrevented || disabled) && value) {
               onChange(value)
             }
           }}

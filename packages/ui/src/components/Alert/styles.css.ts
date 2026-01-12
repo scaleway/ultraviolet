@@ -9,25 +9,29 @@ function createStyleAlert(sentiment: AlertSentiment) {
 
   return {
     backgroundColor: sentimentColor.background,
-    color: sentimentColor.text,
     borderLeft: `4px solid ${sentimentColor.border}`,
+    color: sentimentColor.text,
   }
 }
 export const alert = recipe({
   base: {
     borderRadius: theme.radii.default,
   },
+  defaultVariants: {
+    sentiment: 'danger',
+    size: 'medium',
+  },
   variants: {
     sentiment: {
       danger: createStyleAlert('danger'),
       info: createStyleAlert('info'),
-      success: createStyleAlert('success'),
-      warning: createStyleAlert('warning'),
       neutral: {
         backgroundColor: theme.colors.neutral.backgroundWeak,
-        color: theme.colors.neutral.text,
         borderLeft: `4px solid ${theme.colors.neutral.borderStronger}`,
+        color: theme.colors.neutral.text,
       },
+      success: createStyleAlert('success'),
+      warning: createStyleAlert('warning'),
     },
     size: {
       medium: {
@@ -37,10 +41,6 @@ export const alert = recipe({
         padding: theme.space['1.5'],
       },
     },
-  },
-  defaultVariants: {
-    sentiment: 'danger',
-    size: 'medium',
   },
 })
 

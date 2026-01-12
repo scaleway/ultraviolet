@@ -16,13 +16,13 @@ export const shrinkHeight = keyframes({
 
 export const groupAnimation = keyframes({
   '0%': {
-    opacity: 0,
-    maxHeight: 0,
     marginBottom: -8,
+    maxHeight: 0,
+    opacity: 0,
   },
   '100%': {
-    opacity: 1,
-    maxHeight: 40,
     marginBottom: 0,
+    maxHeight: 40,
+    opacity: 1,
   },
 })

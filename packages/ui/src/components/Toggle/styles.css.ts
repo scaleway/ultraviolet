@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const sizes = {
@@ -17,27 +17,26 @@ export const sizes = {
 
 export const toggle = recipe({
   base: {
-    boxSizing: 'content-box',
-    outline: 'none',
-    overflow: 'hidden',
-    display: 'flex',
     alignItems: 'center',
+    backgroundColor: theme.colors.neutral.backgroundStrong,
     border: 'none',
     borderRadius: theme.radii.xlarge,
+    boxSizing: 'content-box',
+    display: 'flex',
+    outline: 'none',
+    overflow: 'hidden',
     position: 'relative',
-    transition: 'all 300ms',
-    backgroundColor: theme.colors.neutral.backgroundStrong,
     selectors: {
       '&:after': {
+        backgroundColor: theme.colors.neutral.background,
+        borderRadius: theme.radii.circle,
         content: '""',
+        height: theme.sizing['200'],
+        left: '5px',
         position: 'absolute',
         top: `calc(50% - ${theme.sizing['200']} / 2)`,
-        left: '5px',
-        width: theme.sizing['200'],
-        height: theme.sizing['200'],
-        borderRadius: theme.radii.circle,
-        backgroundColor: theme.colors.neutral.background,
         transition: 'all 300ms',
+        width: theme.sizing['200'],
       },
       '&:focus-within, &:focus': {
         boxShadow: theme.shadows.focusNeutral,
@@ -47,144 +46,145 @@ export const toggle = recipe({
         transform: 'translateX(-100%)',
       },
     },
+    transition: 'all 300ms',
+  },
+  compoundVariants: [
+    {
+      style: {
+        backgroundColor: theme.colors.danger.backgroundDisabled,
+        selectors: {
+          '&:has(input:checked)': {
+            backgroundColor: theme.colors.danger.backgroundStrongDisabled,
+            color: theme.colors.danger.textStrongDisabled,
+          },
+        },
+      },
+      variants: { disabled: true, error: true },
+    },
+  ],
+  defaultVariants: {
+    disabled: false,
+    error: false,
+    size: 'large',
   },
   variants: {
-    size: {
-      large: {
-        width: sizes.large.width,
-        height: sizes.large.height,
-        selectors: {
-          '&:after': {
-            width: sizes.large.ball,
-            height: sizes.large.ball,
-            top: `calc(50% - ${sizes.large.ball} / 2)`,
-          },
-        },
-      },
-      small: {
-        width: sizes.small.width,
-        height: sizes.small.height,
-        selectors: {
-          '&:after': {
-            width: sizes.small.ball,
-            height: sizes.small.ball,
-            top: `calc(50% - ${sizes.small.ball} / 2)`,
-          },
-        },
-      },
-    },
     disabled: {
-      true: {
-        background: theme.colors.neutral.backgroundStrongDisabled,
-        selectors: {
-          '&:hover': {
-            background: theme.colors.neutral.backgroundStrongDisabled,
-          },
-          '&:has(input:checked)': {
-            color: theme.colors.neutral.textStrongDisabled,
-            backgroundColor: theme.colors.primary.backgroundStrongDisabled,
-          },
-        },
-      },
       false: {
         selectors: {
-          '&:hover': {
-            backgroundColor: theme.colors.neutral.backgroundStrongHover,
-          },
           '&:has(input:checked)': {
-            color: theme.colors.neutral.textStrong,
             backgroundColor: theme.colors.primary.backgroundStrong,
+            color: theme.colors.neutral.textStrong,
+          },
+          '&:has(input:checked):focus-within, &:has(input:checked):focus': {
+            boxShadow: theme.shadows.focusPrimary,
           },
           '&:has(input:checked):hover': {
             backgroundColor: theme.colors.primary.backgroundStrongHover,
           },
-          '&:has(input:checked):focus-within, &:has(input:checked):focus': {
-            boxShadow: theme.shadows.focusPrimary,
+          '&:hover': {
+            backgroundColor: theme.colors.neutral.backgroundStrongHover,
+          },
+        },
+      },
+      true: {
+        background: theme.colors.neutral.backgroundStrongDisabled,
+        selectors: {
+          '&:has(input:checked)': {
+            backgroundColor: theme.colors.primary.backgroundStrongDisabled,
+            color: theme.colors.neutral.textStrongDisabled,
+          },
+          '&:hover': {
+            background: theme.colors.neutral.backgroundStrongDisabled,
           },
         },
       },
     },
     error: {
+      false: {},
       true: {
         backgroundColor: theme.colors.danger.background,
         selectors: {
-          '&:hover': {
-            background: theme.colors.danger.backgroundHover,
-          },
-          '&:has(input:checked):hover': {
-            backgroundColor: theme.colors.danger.backgroundStrongHover,
-          },
           '&:has(input:checked)': {
-            color: theme.colors.danger.textStrong,
             backgroundColor: theme.colors.danger.backgroundStrong,
+            color: theme.colors.danger.textStrong,
           },
           '&:has(input:checked):focus-within, &:has(input:checked):focus': {
             boxShadow: theme.shadows.focusDanger,
           },
-        },
-      },
-      false: {},
-    },
-  },
-  compoundVariants: [
-    {
-      variants: { disabled: true, error: true },
-      style: {
-        backgroundColor: theme.colors.danger.backgroundDisabled,
-        selectors: {
-          '&:has(input:checked)': {
-            color: theme.colors.danger.textStrongDisabled,
-            backgroundColor: theme.colors.danger.backgroundStrongDisabled,
+          '&:has(input:checked):hover': {
+            backgroundColor: theme.colors.danger.backgroundStrongHover,
+          },
+          '&:hover': {
+            background: theme.colors.danger.backgroundHover,
           },
         },
       },
     },
-  ],
-  defaultVariants: {
-    size: 'large',
-    disabled: false,
-    error: false,
+    size: {
+      large: {
+        height: sizes.large.height,
+        selectors: {
+          '&:after': {
+            height: sizes.large.ball,
+            top: `calc(50% - ${sizes.large.ball} / 2)`,
+            width: sizes.large.ball,
+          },
+        },
+        width: sizes.large.width,
+      },
+      small: {
+        height: sizes.small.height,
+        selectors: {
+          '&:after': {
+            height: sizes.small.ball,
+            top: `calc(50% - ${sizes.small.ball} / 2)`,
+            width: sizes.small.ball,
+          },
+        },
+        width: sizes.small.width,
+      },
+    },
   },
 })
 
 export const checkbox = style({
-  position: 'absolute',
-  opacity: 0,
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
   cursor: 'pointer',
+  height: '100%',
+  left: 0,
+  opacity: 0,
+  position: 'absolute',
   selectors: {
     '&[disabled]': {
       cursor: 'not-allowed',
     },
   },
+  top: 0,
+  width: '100%',
 })
 
 export const label = recipe({
   base: {
+    alignItems: 'start',
+    cursor: 'pointer',
     display: 'flex',
     gap: theme.space['1'],
-    alignItems: 'start',
     width: 'fit-content',
-    cursor: 'pointer',
+  },
+  defaultVariants: {
+    disabled: false,
+    labelPosition: 'right',
   },
   variants: {
+    disabled: {
+      false: {},
+      true: {
+        color: theme.colors.neutral.textDisabled,
+        cursor: 'not-allowed',
+      },
+    },
     labelPosition: {
       left: { flexDirection: 'row' },
       right: { flexDirection: 'row-reverse' },
     },
-    disabled: {
-      true: {
-        cursor: 'not-allowed',
-        color: theme.colors.neutral.textDisabled,
-      },
-      false: {},
-    },
-  },
-  defaultVariants: {
-    labelPosition: 'right',
-    disabled: false,
   },
 })

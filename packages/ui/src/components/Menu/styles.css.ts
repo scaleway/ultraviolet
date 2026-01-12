@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
+import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { SIZES } from './constants'
-import { createVar, globalStyle, style } from '@vanilla-extract/css'
 
 export const heightMenu = createVar()
 export const heightAvailableSpace = createVar()
@@ -37,9 +37,13 @@ export const menu = recipe({
   base: {
     backgroundColor: theme.colors.other.elevation.background.raised,
     boxShadow: `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`,
-    padding: `${theme.space['0.25']} 0`,
-    minWidth: SIZES.small,
     maxWidth: SIZES.large,
+    minWidth: SIZES.small,
+    padding: `${theme.space['0.25']} 0`,
+  },
+  defaultVariants: {
+    arrow: false,
+    searchable: false,
   },
   variants: {
     arrow: {
@@ -57,10 +61,6 @@ export const menu = recipe({
       },
     },
   },
-  defaultVariants: {
-    arrow: false,
-    searchable: false,
-  },
 })
 
 export const menuContent = style({ overflow: 'auto' })
@@ -68,11 +68,11 @@ export const menuContent = style({ overflow: 'auto' })
 export const menuFooter = style({ padding: theme.space[1] })
 
 export const menuList = style({
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space['0.5']})`,
   backgroundColor: theme.colors.other.elevation.background.raised,
   color: theme.colors.neutral.text,
+  maxHeight: `calc(min(${heightMenu}, ${heightAvailableSpace}) - ${theme.space['0.5']})`,
+  overflowX: 'hidden',
+  overflowY: 'auto',
   position: 'relative',
   selectors: {
     '&:after, &:before': {
@@ -80,9 +80,9 @@ export const menuList = style({
       borderWidth: 9,
       content: ' ',
       height: 0,
-      width: 0,
-      position: 'absolute',
       pointerEvents: 'none',
+      position: 'absolute',
+      width: 0,
     },
   },
 })
@@ -103,6 +103,9 @@ export const menuItemContainer = recipe({
     },
     width: '100%',
   },
+  defaultVariants: {
+    borderless: false,
+  },
   variants: {
     borderless: {
       false: {
@@ -114,36 +117,54 @@ export const menuItemContainer = recipe({
       },
     },
   },
-  defaultVariants: {
-    borderless: false,
-  },
 })
 
 export const menuItem = recipe({
   base: {
-    background: 'none',
-    textDecoration: 'none',
-    display: 'flex',
-    justifyContent: 'start',
-    textAlign: 'left',
     alignItems: 'center',
-    minHeight: theme.sizing[400],
-    maxHeight: theme.sizing[500],
-    fontSize: theme.typography.bodySmall.fontSize,
-    lineHeight: theme.typography.bodySmall.lineHeight,
-    fontWeight: 'inherit',
-    padding: `${theme.space['0.5']} ${theme.space['1']}`,
+    background: 'none',
     border: 'none',
-    cursor: 'pointer',
-    minWidth: '6.875rem',
-    width: '100%',
     borderRadius: theme.radii.default,
-    transition: `background-color ${ANIMATION_DURATION}ms, color ${ANIMATION_DURATION}ms`,
+    cursor: 'pointer',
+    display: 'flex',
+    fontSize: theme.typography.bodySmall.fontSize,
+    fontWeight: 'inherit',
+    justifyContent: 'start',
+    lineHeight: theme.typography.bodySmall.lineHeight,
+    maxHeight: theme.sizing[500],
+    minHeight: theme.sizing[400],
+    minWidth: '6.875rem',
+    padding: `${theme.space['0.5']} ${theme.space['1']}`,
     selectors: {
       '&:focus': {
         textDecoration: 'none',
       },
     },
+    textAlign: 'left',
+    textDecoration: 'none',
+    transition: `background-color ${ANIMATION_DURATION}ms, color ${ANIMATION_DURATION}ms`,
+    width: '100%',
+  },
+  compoundVariants: [
+    ...ITEM_SENTIMENT.map(sentiment => ({
+      style: makeItemStyle(sentiment, false),
+      variants: {
+        disabled: false,
+        sentiment,
+      },
+    })),
+    ...ITEM_SENTIMENT.map(sentiment => ({
+      style: makeItemStyle(sentiment, true),
+      variants: {
+        disabled: true,
+        sentiment,
+      },
+    })),
+  ],
+  defaultVariants: {
+    borderless: false,
+    disabled: false,
+    sentiment: 'neutral',
   },
   variants: {
     borderless: {
@@ -157,27 +178,6 @@ export const menuItem = recipe({
     sentiment: Object.fromEntries(
       ITEM_SENTIMENT.map(sentiment => [sentiment, {}]),
     ),
-  },
-  compoundVariants: [
-    ...ITEM_SENTIMENT.map(sentiment => ({
-      variants: {
-        sentiment,
-        disabled: false,
-      },
-      style: makeItemStyle(sentiment, false),
-    })),
-    ...ITEM_SENTIMENT.map(sentiment => ({
-      variants: {
-        sentiment,
-        disabled: true,
-      },
-      style: makeItemStyle(sentiment, true),
-    })),
-  ],
-  defaultVariants: {
-    borderless: false,
-    disabled: false,
-    sentiment: 'neutral',
   },
 })
 

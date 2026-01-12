@@ -18,72 +18,72 @@ function getBulletStyle(
 ) {
   if (sentiment === 'neutral') {
     return {
+      background: theme.colors.neutral.background,
+      border: `1px solid ${theme.colors.neutral.border}`,
       color:
         prominence === 'strong'
           ? theme.colors.neutral.textStrong
           : theme.colors.neutral.text,
-      background: theme.colors.neutral.background,
-      border: `1px solid ${theme.colors.neutral.border}`,
     }
   }
   const text = `text${PROMINENCES[prominence]}` as const
   const background = `background${PROMINENCES[prominence]}` as const
 
   return {
-    color: theme.colors[sentiment][text],
     background: theme.colors[sentiment][background],
     border: `1px solid ${theme.colors[sentiment][background]}`,
+    color: theme.colors[sentiment][text],
   }
 }
 export const bullet = recipe({
   base: {
-    display: 'flex',
-    borderRadius: theme.radii.circle,
-    justifyContent: 'center',
     alignItems: 'center',
-  },
-  variants: {
-    size: Object.fromEntries(
-      Object.keys(SIZES).map(size => [
-        size,
-        {
-          width: theme.sizing[SIZES[size as keyof typeof SIZES]],
-          height: theme.sizing[SIZES[size as keyof typeof SIZES]],
-          fontSize:
-            theme.typography[TEXT_VARIANT[size as keyof typeof TEXT_VARIANT]]
-              .fontSize,
-        },
-      ]),
-    ),
-    sentiment: Object.fromEntries(
-      Object.keys(SENTIMENTS).map(sentiment => [sentiment, {}]),
-    ),
-    prominence: {
-      default: {},
-      strong: {},
-    },
-    disabled: {
-      true: {
-        color: theme.colors.neutral.textWeak,
-        backgroundColor: theme.colors.neutral.backgroundStrong,
-        border: 'none',
-      },
-    },
+    borderRadius: theme.radii.circle,
+    display: 'flex',
+    justifyContent: 'center',
   },
   compoundVariants: Object.keys(PROMINENCES).flatMap(prominence =>
     SENTIMENTS.map(sentiment => ({
-      variants: {
-        sentiment,
-        prominence: prominence as ProminenceType,
-        disabled: false,
-      },
       style: getBulletStyle(sentiment, prominence as ProminenceType),
+      variants: {
+        disabled: false,
+        prominence: prominence as ProminenceType,
+        sentiment,
+      },
     })),
   ),
   defaultVariants: {
     disabled: false,
+    prominence: 'default',
     sentiment: 'neutral',
     size: 'medium',
-    prominence: 'default',
+  },
+  variants: {
+    disabled: {
+      true: {
+        backgroundColor: theme.colors.neutral.backgroundStrong,
+        border: 'none',
+        color: theme.colors.neutral.textWeak,
+      },
+    },
+    prominence: {
+      default: {},
+      strong: {},
+    },
+    sentiment: Object.fromEntries(
+      Object.keys(SENTIMENTS).map(sentiment => [sentiment, {}]),
+    ),
+    size: Object.fromEntries(
+      Object.keys(SIZES).map(size => [
+        size,
+        {
+          fontSize:
+            theme.typography[TEXT_VARIANT[size as keyof typeof TEXT_VARIANT]]
+              .fontSize,
+          height: theme.sizing[SIZES[size as keyof typeof SIZES]],
+          width: theme.sizing[SIZES[size as keyof typeof SIZES]],
+        },
+      ]),
+    ),
   },
 })

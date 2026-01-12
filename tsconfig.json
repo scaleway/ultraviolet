@@ -1,16 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@scaleway/tsconfig",
   "compilerOptions": {
-    "target": "esnext",
+    "baseUrl": ".",
     "module": "esnext",
-    "types": ["vite/client", "@testing-library/jest-dom"],
     "noEmit": true,
-    "skipLibCheck": true,
     // Should be removed once we clear all errors
     "noUncheckedIndexedAccess": false,
-    "baseUrl": ".",
+    "skipLibCheck": true,
+    "target": "esnext",
+    "types": ["vite/client", "@testing-library/jest-dom"]
   },
+  "exclude": ["node_modules", "coverage", "dist"],
+  "extends": "@scaleway/tsconfig",
   "include": [
     "**/*.ts",
     "**/*.tsx",
@@ -20,6 +21,5 @@
     "global.d.ts",
     "expect.d.ts",
     "jest-axe.d.ts"
-  ],
-  "exclude": ["node_modules", "coverage", "dist"]
+  ]
 }

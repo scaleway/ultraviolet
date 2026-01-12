@@ -6,6 +6,7 @@ import { CodeEditor } from '../CodeEditor'
 // which is causing the snapshot to fail randomly. Also, CodeEditor component
 // doesn't implement anything more than a Text all the rest comes from an external
 // library.
+// biome-ignore lint/suspicious/noSkippedTests: to fix
 describe.skip('codeEditor', () => {
   it('should render correctly with content', () =>
     shouldMatchSnapshot(

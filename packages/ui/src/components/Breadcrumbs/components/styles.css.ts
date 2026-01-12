@@ -3,39 +3,39 @@ import { createVar, globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const maxWidthVar = createVar({
-  syntax: '*',
   inherits: false,
   initialValue: 'fit-content',
+  syntax: '*',
 })
 export const minWidthVar = createVar({
-  syntax: '*',
   inherits: false,
   initialValue: 'auto',
+  syntax: '*',
 })
 
 export const linkBreadcrumbs = style({
-  paddingRight: theme.space[1],
-  whiteSpace: 'nowrap',
   overflow: 'hidden',
+  paddingRight: theme.space[1],
   textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 })
 
 export const contentBreadcrumbs = style({
-  minWidth: minWidthVar,
-  maxWidth: maxWidthVar,
-  overflow: 'hidden',
-  whiteSpace: 'nowrap',
   display: 'block',
+  maxWidth: maxWidthVar,
+  minWidth: minWidthVar,
+  overflow: 'hidden',
   textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
 })
 
 export const itemContainerBreadcrumbs = recipe({
   base: {
-    display: 'flex',
     alignItems: 'center',
+    display: 'flex',
     flex: '1',
-    minWidth: minWidthVar,
     maxWidth: maxWidthVar,
+    minWidth: minWidthVar,
   },
   variants: {
     clickable: {
@@ -61,6 +61,6 @@ globalStyle(`${breadcrumbsItem}:last-child ${linkBreadcrumbs}`, {
 })
 
 globalStyle(`${breadcrumbsItem}:last-child ${contentBreadcrumbs}`, {
-  pointerEvents: 'none',
   cursor: 'default',
+  pointerEvents: 'none',
 })

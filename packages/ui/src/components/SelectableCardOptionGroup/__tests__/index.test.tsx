@@ -424,7 +424,7 @@ describe('selectableCardOptionGroup', () => {
 
     await userEvent.click(screen.getByLabelText('Debian'))
     await waitFor(() => {
-      expect(onChange).toHaveBeenCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
 
     await userEvent.click(screen.getByLabelText('Debian option'))

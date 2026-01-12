@@ -171,7 +171,14 @@ export const DoubleSlider = ({
         min={min}
         onBlur={event => {
           // Default to min/max when the input is left empty
-          if (!event.target.value) {
+          if (event.target.value) {
+            const newValue = Number.parseFloat(event.target.value)
+            if (side === 'left') {
+              internalOnChangeRef([newValue, selectedIndexes[1]])
+            } else if (side === 'right') {
+              internalOnChangeRef([selectedIndexes[0], newValue])
+            }
+          } else {
             if (side === 'left') {
               const index = activeValue('left')
               if (index === 0) {
@@ -188,13 +195,6 @@ export const DoubleSlider = ({
               } else {
                 internalOnChangeRef([selectedIndexes[0], max])
               }
-            }
-          } else {
-            const newValue = Number.parseFloat(event.target.value)
-            if (side === 'left') {
-              internalOnChangeRef([newValue, selectedIndexes[1]])
-            } else if (side === 'right') {
-              internalOnChangeRef([selectedIndexes[0], newValue])
             }
           }
         }}

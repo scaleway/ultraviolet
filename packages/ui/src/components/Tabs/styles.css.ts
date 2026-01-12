@@ -7,109 +7,104 @@ export const tabsMenuContainer = style({
 })
 
 export const tabsMenu = style({
+  background: `${theme.colors.neutral.background} !important`,
+  bottom: 0,
+  boxShadow: theme.shadows.menu,
   position: 'sticky',
   right: 0,
   top: 0,
-  bottom: 0,
-  background: `${theme.colors.neutral.background} !important`,
-  boxShadow: theme.shadows.menu,
 })
 
 export const tabsContainer = style({
   display: 'flex',
   flexWrap: 'nowrap',
+  msOverflowStyle: 'none',
   overflowX: 'scroll',
   position: 'relative',
-  zIndex: 0,
-  msOverflowStyle: 'none',
   scrollbarWidth: 'none',
   selectors: {
-    '&::after': {
-      zIndex: -1,
-      content: '""',
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      height: 2,
-      background: theme.colors.neutral.border,
-    },
     '&::-webkit-scrollbar': {
       display: 'none',
     },
+    '&::after': {
+      background: theme.colors.neutral.border,
+      bottom: 0,
+      content: '""',
+      height: 2,
+      left: 0,
+      position: 'absolute',
+      right: 0,
+      zIndex: -1,
+    },
   },
+  zIndex: 0,
 })
 
 export const tabsBadge = style({
-  padding: `0 ${theme.space[1]}`,
   marginLeft: theme.space[1],
+  padding: `0 ${theme.space[1]}`,
 })
 
 export const tabsTextSelected = styleVariants({
+  default: {},
   selected: {
     color: theme.colors.primary.text,
   },
-  default: {},
 })
 
 export const tabsBadgeContainer = style({
-  marginLeft: theme.space[1],
   display: 'flex',
+  marginLeft: theme.space[1],
 })
 
 export const tabsButton = style({
+  alignItems: 'baseline',
+  background: 'none',
+  border: 'none',
+  borderBottom: `2px solid ${theme.colors.neutral.border}`,
+  color: theme.colors.neutral.text,
+  cursor: 'pointer',
   display: 'flex',
   flexDirection: 'row',
-  padding: `${theme.space[1]} ${theme.space[2]}`,
-  cursor: 'pointer',
-  justifyContent: 'center',
-  alignItems: 'baseline',
-  whiteSpace: 'nowrap',
-  color: theme.colors.neutral.text,
-  textDecoration: 'none',
-  userSelect: 'none',
-  touchAction: 'manipulation',
-  transition: 'color 0.2s',
-  border: 'none',
-  background: 'none',
-  borderBottom: `2px solid ${theme.colors.neutral.border}`,
-  outline: 'none',
-  fontSize: theme.typography.bodyStrong.fontSize,
   fontFamily: theme.typography.bodyStrong.fontFamily,
+  fontSize: theme.typography.bodyStrong.fontSize,
   fontWeight: theme.typography.bodyStrong.weight,
+  justifyContent: 'center',
   letterSpacing: theme.typography.bodyStrong.letterSpacing,
   lineHeight: theme.typography.bodyStrong.lineHeight,
+  outline: 'none',
+  padding: `${theme.space[1]} ${theme.space[2]}`,
   selectors: {
-    '&:hover, &:active, &:focus': {
-      textDecoration: 'none',
-      outline: 'none',
-    },
     '&:focus-visible': {
       outline: 'auto',
     },
-    '&[aria-selected="true"]': {
-      color: theme.colors.primary.text,
-      borderBottomColor: theme.colors.primary.border,
+    '&:hover, &:active, &:focus': {
+      outline: 'none',
+      textDecoration: 'none',
     },
     '&[aria-disabled="false"]:not(:disabled):focus, &[aria-disabled="false"]:not(:disabled):hover, &[aria-disabled="false"]:not(:disabled):active':
       {
-        outline: 'none',
-        color: theme.colors.primary.text,
         borderBottomColor: theme.colors.primary.border,
+        color: theme.colors.primary.text,
+        outline: 'none',
       },
     '&[aria-disabled="true"], &:disabled': {
       cursor: 'not-allowed',
       filter: 'grayscale(1) opacity(50%)',
     },
+    '&[aria-selected="true"]': {
+      borderBottomColor: theme.colors.primary.border,
+      color: theme.colors.primary.text,
+    },
     [`${tabsMenuContainer} &`]: {
-      fontSize: theme.typography.bodySmall.fontSize,
-      lineHeight: theme.typography.bodySmall.lineHeight,
-      fontWeight: 'inherit',
-      borderBottomWidth: 1.5,
-      width: '100%',
-      cursor: 'pointer',
-      minWidth: '6.875rem',
       backgroundColor: 'transparent',
+      borderBottomWidth: 1.5,
+      cursor: 'pointer',
+      fontSize: theme.typography.bodySmall.fontSize,
+      fontWeight: 'inherit',
+      lineHeight: theme.typography.bodySmall.lineHeight,
+      minWidth: '6.875rem',
+      width: '100%',
     },
     [`${tabsMenuContainer} &[aria-disabled='true']`]: {
       cursor: 'not-allowed',
@@ -120,6 +115,11 @@ export const tabsButton = style({
       filter: 'grayscale(1) opacity(50%)',
     },
   },
+  textDecoration: 'none',
+  touchAction: 'manipulation',
+  transition: 'color 0.2s',
+  userSelect: 'none',
+  whiteSpace: 'nowrap',
 })
 
 globalStyle(
@@ -145,11 +145,11 @@ export const tabsArrowIcon = style({
 })
 
 export const tabsMenuWrapper = style({
+  bottom: 0,
   display: 'flex',
   position: 'sticky',
-  top: 0,
-  bottom: 0,
   right: 0,
+  top: 0,
 })
 
 globalStyle(`${tabsButton}[aria-expanded="true"] ${tabsArrowIcon}`, {

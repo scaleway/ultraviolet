@@ -9,9 +9,9 @@ export const tagListContainer = style({ display: 'flex' })
 
 export const tagContainer = recipe({
   base: {
-    display: 'flex',
     alignItems: 'center',
     color: theme.colors.neutral.text,
+    display: 'flex',
     gap: TAGS_GAP,
   },
   variants: {
@@ -26,28 +26,28 @@ export const tagContainer = recipe({
 export const ellipsisContainer = style({
   selectors: {
     '&:has(.ellipsed)': {
-      width: `calc(100% - ${popoverTriggerWidthVar})`,
       maxWidth: 'fit-content',
+      width: `calc(100% - ${popoverTriggerWidthVar})`,
     },
   },
 })
 
 globalStyle(`${ellipsisContainer} span, ${ellipsisContainer} div`, {
-  width: '100%',
   maxWidth: 'fit-content',
+  width: '100%',
 })
 
 export const tagsWrapper = style({
-  cursor: 'pointer',
-  color: theme.colors.primary.text,
-  border: 'none',
-  fontSize: theme.typography.bodySmall.fontSize,
   alignSelf: 'center',
+  backgroundColor: 'transparent',
+  border: 'none',
+  color: theme.colors.primary.text,
+  cursor: 'pointer',
+  fontSize: theme.typography.bodySmall.fontSize,
   maxWidth: '21.875rem',
   overflow: 'hidden',
-  whiteSpace: 'pre',
-  textOverflow: 'ellipsis',
-  backgroundColor: 'transparent',
   paddingLeft: theme.space[1],
   paddingRight: theme.space[1],
+  textOverflow: 'ellipsis',
+  whiteSpace: 'pre',
 })

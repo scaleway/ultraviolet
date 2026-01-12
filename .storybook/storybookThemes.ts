@@ -4,6 +4,7 @@ import logoDark from './assets/logo-dark.png'
 import logoLight from './assets/logo-light.png'
 import type lightBrandImage from './assets/scaleway-text-light.png'
 
+// biome-ignore lint/style/noEnum: to fix avoid enum !!
 enum Base {
   LIGHT = 'light',
   DARK = 'dark',
@@ -23,7 +24,6 @@ const generateStorybookTheme = ({
   brandImage,
 }: GenerateStorybookThemeProps) =>
   create({
-    base,
     // UI
     appBg: theme.colors.neutral.background,
     appBorderColor: theme.colors.neutral.borderWeak,
@@ -33,8 +33,7 @@ const generateStorybookTheme = ({
 
     // Toolbar default and active colors
     barTextColor: theme.colors.neutral.textWeak,
-    buttonBg: theme.colors.neutral.background,
-    buttonBorder: theme.colors.neutral.border,
+    base,
 
     // BIZARRE
     booleanBg: theme.colors.neutral.background,
@@ -43,6 +42,8 @@ const generateStorybookTheme = ({
     brandTitle: 'Ultraviolet UI',
 
     brandUrl,
+    buttonBg: theme.colors.neutral.background,
+    buttonBorder: theme.colors.neutral.border,
 
     colorPrimary: theme.colors.primary.backgroundStrong,
     colorSecondary: theme.colors.primary.backgroundStrong,

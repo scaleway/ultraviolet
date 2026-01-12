@@ -134,7 +134,7 @@ export const defaultConfig: ViteUserConfig = {
       },
     },
     setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
-    testTimeout: 10000,
+    testTimeout: 10_000,
   },
 }
 

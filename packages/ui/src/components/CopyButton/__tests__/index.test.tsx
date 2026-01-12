@@ -49,7 +49,7 @@ describe('copyButton', () => {
     renderWithTheme(<CopyButton onCopy={onCopy} value="test" />)
 
     await userEvent.click(screen.getByRole('button'))
-    expect(onCopy).toBeCalledTimes(1)
+    expect(onCopy).toHaveBeenCalledOnce()
     // @ts-expect-error we are voluntarily based on an older browser spec
 
     expect(window.clipboardData.getData()).toBe('test')

@@ -40,18 +40,18 @@ describe('alert', () => {
       </Alert>,
     ))
 
-  describe(`renders correctly with all sentiments`, () => {
+  describe('renders correctly with all sentiments', () => {
     test.each([
       'danger',
       'info',
       'success',
       'warning',
       'neutral',
-    ] as const)(`renders correctly sentiment %o`, sentiment =>
+    ] as const)('renders correctly sentiment %o', sentiment =>
       shouldMatchSnapshot(<Alert sentiment={sentiment}>Sample Alert</Alert>))
   })
 
-  test(`should render alert and then close it`, async () => {
+  test('should render alert and then close it', async () => {
     renderWithTheme(
       <Alert closable data-testid="alert" onClose={() => 'ok'}>
         Sample Alert

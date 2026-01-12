@@ -85,8 +85,7 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
           value={category.numberInputValue}
         />
       ) : null}
-      {!category.customContent &&
-      !category.numberInput &&
+      {!(category.customContent || category.numberInput) &&
       categoryPrice.totalPrice === categoryPrice.totalPriceWithDiscount ? (
         <Text
           as="span"
@@ -98,8 +97,7 @@ const CategoryName = ({ category }: { category: ItemsType }) => {
         </Text>
       ) : null}
 
-      {!category.customContent &&
-      !category.numberInput &&
+      {!(category.customContent || category.numberInput) &&
       categoryPrice.totalPrice !== categoryPrice.totalPriceWithDiscount ? (
         <Stack alignItems="center" direction="row" gap={1}>
           <Text

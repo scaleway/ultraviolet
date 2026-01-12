@@ -10,7 +10,7 @@ describe('avatar', () => {
   describe.each([
     'circle',
     'square',
-  ] as const)(`renders correctly with shape %s`, shape => {
+  ] as const)('renders correctly with shape %s', shape => {
     describe.each([
       'xsmall',
       'small',
@@ -81,7 +81,7 @@ describe('avatar', () => {
         expect(asFragment()).toMatchSnapshot()
 
         await userEvent.click(avatar)
-        expect(onClick).toHaveBeenCalledTimes(1)
+        expect(onClick).toHaveBeenCalledOnce()
       })
     })
   })

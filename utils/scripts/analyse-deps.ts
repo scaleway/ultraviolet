@@ -15,7 +15,7 @@ type DependencyGraph = {
 const graph: DependencyGraph = {}
 
 const walk = (dir: string): string[] => {
-  const results = []
+  const results: string[] = []
   const list = fs.readdirSync(dir)
 
   for (const file of list) {

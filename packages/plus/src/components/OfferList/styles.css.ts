@@ -33,19 +33,19 @@ function createBannerStyle(
 export const offerList = style({})
 
 globalStyle(`${offerList} td:first-child, ${offerList} th:first-child`, {
-  width: theme.sizing[700],
-  minWidth: theme.sizing[700],
   maxWidth: theme.sizing[700],
+  minWidth: theme.sizing[700],
+  width: theme.sizing[700],
 })
 
 export const offerListBanner = style({
-  width: '100%',
-  display: 'table-row',
-  verticalAlign: 'middle',
-  cursor: 'auto',
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+  cursor: 'auto',
+  display: 'table-row',
   position: 'relative',
+  verticalAlign: 'middle',
+  width: '100%',
 })
 
 globalStyle(
@@ -58,15 +58,48 @@ globalStyle(
 
 export const offerListBannerText = recipe({
   base: {
-    transition: 'border-color 200ms ease',
+    border: `1px solid ${theme.colors.neutral.border}`,
+    borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+    borderTopColor: 'transparent',
     marginTop: `calc((${theme.space[2]} * -1) - 1px)`,
     paddingBlock: theme.space['0.5'],
     paddingInline: theme.space[1],
-    borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
-    border: `1px solid ${theme.colors.neutral.border}`,
-    borderTopColor: 'transparent',
+    transition: 'border-color 200ms ease',
+  },
+  compoundVariants: [
+    ...SENTIMENTS.map(sentiment => ({
+      style: createBannerStyle(sentiment, false),
+      variants: { disabled: false, sentiment },
+    })),
+    ...SENTIMENTS.map(sentiment => ({
+      style: createBannerStyle(sentiment, true),
+      variants: { disabled: true, sentiment },
+    })),
+    {
+      style: {
+        border: `1px solid ${theme.colors.primary.border}`,
+        borderTopColor: 'transparent',
+      },
+      variants: { disabled: false, primaryBorder: true },
+    },
+    {
+      style: {
+        borderTopColor: 'transparent',
+      },
+      variants: { disabled: true, primaryBorder: true },
+    },
+  ],
+  defaultVariants: {
+    disabled: false,
+    primaryBorder: false,
+    sentiment: 'neutral',
   },
   variants: {
+    disabled: {
+      true: {
+        border: `1px solid ${theme.colors.neutral.border}`,
+      },
+    },
     primaryBorder: {
       false: {
         border: `1px solid ${theme.colors.neutral.border}`,
@@ -76,56 +109,22 @@ export const offerListBannerText = recipe({
       },
     },
     sentiment: Object.fromEntries(SENTIMENTS.map(sentiment => [sentiment, {}])),
-    disabled: {
-      true: {
-        border: `1px solid ${theme.colors.neutral.border}`,
-      },
-    },
-  },
-  compoundVariants: [
-    ...SENTIMENTS.map(sentiment => ({
-      variants: { sentiment, disabled: false },
-      style: createBannerStyle(sentiment, false),
-    })),
-    ...SENTIMENTS.map(sentiment => ({
-      variants: { sentiment, disabled: true },
-      style: createBannerStyle(sentiment, true),
-    })),
-    {
-      variants: { primaryBorder: true, disabled: false },
-      style: {
-        border: `1px solid ${theme.colors.primary.border}`,
-        borderTopColor: 'transparent',
-      },
-    },
-    {
-      variants: { primaryBorder: true, disabled: true },
-      style: {
-        borderTopColor: 'transparent',
-      },
-    },
-  ],
-  defaultVariants: {
-    primaryBorder: false,
-    sentiment: 'neutral',
-    disabled: false,
   },
 })
 
 export const offerListBannerCell = style({
-  height: 'fit-content',
   borderTopLeftRadius: 0,
   borderTopRightRadius: 0,
-  width: '100%',
+  height: 'fit-content',
   padding: 0,
+  width: '100%',
 })
 
 export const offerListBannerStack = recipe({
   base: {
-    height: 'fit-content',
-    borderTop: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
-    width: '100%',
+    borderTop: `1px solid ${theme.colors.neutral.border}`,
+    height: 'fit-content',
     paddingBlock: theme.space['0.5'],
     paddingInline: theme.space[1],
     selectors: {
@@ -133,6 +132,10 @@ export const offerListBannerStack = recipe({
         backgroundColor: theme.colors.neutral.backgroundDisabled,
       },
     },
+    width: '100%',
+  },
+  defaultVariants: {
+    sentiment: 'neutral',
   },
   variants: {
     sentiment: Object.fromEntries(
@@ -147,25 +150,22 @@ export const offerListBannerStack = recipe({
       ]),
     ),
   },
-  defaultVariants: {
-    sentiment: 'neutral',
-  },
 })
 
 export const offerListBadge = style({
+  left: theme.space[5],
   position: 'absolute',
   transform: 'translateY(-160%)',
-  left: theme.space[5],
 })
 
 export const offerListNoPaddingCell = style({
   padding: 0,
-  width: 32,
   selectors: {
     '&:first-of-type': {
       paddingLeft: theme.space[2],
     },
   },
+  width: 32,
 })
 
 export const offerListRowSelected = style({

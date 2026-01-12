@@ -31,7 +31,7 @@ describe('tooltip', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`should display tooltip on hover`, async () => {
+  test('should display tooltip on hover', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -45,7 +45,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should display tooltip on hover with function children`, async () => {
+  test('should display tooltip on hover with function children', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         {props => (
@@ -63,7 +63,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should display tooltip on hover and hide when exit`, async () => {
+  test('should display tooltip on hover and hide when exit', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -82,7 +82,7 @@ describe('tooltip', () => {
     })
   })
 
-  test(`should display tooltip on hover and hide when exit and hover back before animation ends`, async () => {
+  test('should display tooltip on hover and hide when exit and hover back before animation ends', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -99,7 +99,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should create tooltip with random id`, async () => {
+  test('should create tooltip with random id', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -113,7 +113,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should renders tooltip with maxWidth`, async () => {
+  test('should renders tooltip with maxWidth', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -127,7 +127,7 @@ describe('tooltip', () => {
     expect(tooltipPortal).toBeVisible()
   })
 
-  describe(`defined placement`, () => {
+  describe('defined placement', () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
       test(`should renders tooltip with placement ${placement}`, async () => {
         renderWithTheme(
@@ -149,7 +149,7 @@ describe('tooltip', () => {
     })
   })
 
-  test(`should verify accessibility`, async () => {
+  test('should verify accessibility', async () => {
     renderWithTheme(
       <Tooltip debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>

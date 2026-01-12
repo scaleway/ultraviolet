@@ -9,15 +9,15 @@ describe('progressBar', () => {
       shouldMatchSnapshot(<ProgressBar sentiment={sentiment} value={40} />))
   })
 
-  it(`renders progression`, () => shouldMatchSnapshot(<ProgressBar progress />))
+  it('renders progression', () => shouldMatchSnapshot(<ProgressBar progress />))
 
-  it(`renders correctly when value > 100`, () =>
+  it('renders correctly when value > 100', () =>
     shouldMatchSnapshot(<ProgressBar value={250} />))
 
-  it(`renders correctly when value < 0`, () =>
+  it('renders correctly when value < 0', () =>
     shouldMatchSnapshot(<ProgressBar value={-250} />))
 
-  it(`renders correctly with label, labelDescription and showProgress, direction column`, () =>
+  it('renders correctly with label, labelDescription and showProgress, direction column', () =>
     shouldMatchSnapshot(
       <ProgressBar
         label="Label"
@@ -27,7 +27,7 @@ describe('progressBar', () => {
       />,
     ))
 
-  it(`renders correctly with label, labelDescription and showProgress, direction row`, () =>
+  it('renders correctly with label, labelDescription and showProgress, direction row', () =>
     shouldMatchSnapshot(
       <ProgressBar
         direction="row"
@@ -38,7 +38,7 @@ describe('progressBar', () => {
       />,
     ))
 
-  it(`renders correctly with label, labelDescription as ReactNode, direction row`, () =>
+  it('renders correctly with label, labelDescription as ReactNode, direction row', () =>
     shouldMatchSnapshot(
       <ProgressBar
         direction="row"
@@ -48,7 +48,7 @@ describe('progressBar', () => {
       />,
     ))
 
-  it(`renders correctly with label, labelDescription as ReactNode, direction column`, () =>
+  it('renders correctly with label, labelDescription as ReactNode, direction column', () =>
     shouldMatchSnapshot(
       <ProgressBar
         direction="column"
@@ -58,22 +58,22 @@ describe('progressBar', () => {
       />,
     ))
 
-  it(`renders correctly with only showProgress, direction row`, () =>
+  it('renders correctly with only showProgress, direction row', () =>
     shouldMatchSnapshot(
       <ProgressBar direction="row" showProgress value={40} />,
     ))
 
-  it(`renders correctly with only showProgress, direction column`, () =>
+  it('renders correctly with only showProgress, direction column', () =>
     shouldMatchSnapshot(
       <ProgressBar direction="column" showProgress value={40} />,
     ))
 
-  it(`renders correctly with only label, direction column`, () =>
+  it('renders correctly with only label, direction column', () =>
     shouldMatchSnapshot(
       <ProgressBar direction="column" label="label" value={40} />,
     ))
 
-  it(`renders correctly with suffix and prefix, direction column`, () =>
+  it('renders correctly with suffix and prefix, direction column', () =>
     shouldMatchSnapshot(
       <ProgressBar
         direction="column"
@@ -85,7 +85,7 @@ describe('progressBar', () => {
       />,
     ))
 
-  it(`renders correctly with suffix and prefix, direction row`, () =>
+  it('renders correctly with suffix and prefix, direction row', () =>
     shouldMatchSnapshot(
       <ProgressBar
         direction="row"
@@ -97,7 +97,7 @@ describe('progressBar', () => {
       />,
     ))
 
-  it(`renders correctly with max`, () =>
+  it('renders correctly with max', () =>
     shouldMatchSnapshot(
       <ProgressBar direction="row" label="label" max={10} value={4} />,
     ))

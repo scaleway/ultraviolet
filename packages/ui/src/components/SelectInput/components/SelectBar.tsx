@@ -130,8 +130,9 @@ const DisplayValues = ({
           disabled={disabled}
           key={option?.value}
           onClose={
-            !readOnly
-              ? event => {
+            readOnly
+              ? undefined
+              : event => {
                   event.stopPropagation()
                   setSelectedData({
                     clickedOption: option,
@@ -142,7 +143,6 @@ const DisplayValues = ({
                   )
                   onChange?.(newSelectedValues)
                 }
-              : undefined
           }
           sentiment="neutral"
           style={
@@ -316,9 +316,9 @@ const SelectBar = ({
             const canBeVisible = newAccumulatedWidth <= innerWidth
 
             return {
-              accumulatedWidth: !canBeVisible
-                ? accumulator.accumulatedWidth
-                : newAccumulatedWidth,
+              accumulatedWidth: canBeVisible
+                ? newAccumulatedWidth
+                : accumulator.accumulatedWidth,
               lastVisibleElementWidth: canBeVisible
                 ? elementWidth
                 : accumulator.lastVisibleElementWidth,
@@ -326,7 +326,7 @@ const SelectBar = ({
                 ? potentiallyNonOverflowedValues[index].label
                 : accumulator.lastVisibleLabel,
               measuredHiddenTags:
-                accumulator.measuredHiddenTags + (!canBeVisible ? 1 : 0),
+                accumulator.measuredHiddenTags + (canBeVisible ? 0 : 1),
               measuredVisibleTags: [
                 ...accumulator.measuredVisibleTags,
                 canBeVisible && potentiallyNonOverflowedValues[index],
@@ -453,10 +453,10 @@ const SelectBar = ({
         }
         onKeyDown={event => {
           if (event.key === 'ArrowDown') {
-            if (!isDropdownVisible) {
-              setIsDropdownVisible(true)
+            if (isDropdownVisible) {
+              document.getElementById('option-0')?.focus()
             } else {
-              document.getElementById(`option-0`)?.focus()
+              setIsDropdownVisible(true)
             }
           }
           if (event.key === ' ') {

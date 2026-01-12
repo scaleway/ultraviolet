@@ -1,35 +1,30 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Ultraviolet UI Base Config",
-  "extends": "@scaleway/tsconfig",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "types": ["vite/client", "@testing-library/jest-dom", "../../global.d.ts"],
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
-    "strict": true,
-    "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "allowJs": false,
+    "allowSyntheticDefaultImports": true,
     "checkJs": false,
     "composite": false,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
     "incremental": false,
+    "isolatedDeclarations": false,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "esnext",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
 
     "noUncheckedIndexedAccess": false,
-    "isolatedDeclarations": false
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["vite/client", "@testing-library/jest-dom", "../../global.d.ts"]
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "coverage"
-  ]
+  "display": "Ultraviolet UI Base Config",
+  "exclude": ["node_modules", "dist", "build", "coverage"],
+  "extends": "@scaleway/tsconfig"
 }

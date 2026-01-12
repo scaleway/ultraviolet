@@ -130,7 +130,7 @@ export const FormContent = () => {
                     regex={[hexadecimalColorRegex]}
                   />
                 </Row>
-                {!isRequiredSentiment ? (
+                {isRequiredSentiment ? null : (
                   <Button
                     onClick={() => remove(index)}
                     sentiment="neutral"
@@ -139,7 +139,7 @@ export const FormContent = () => {
                   >
                     <CloseIcon />
                   </Button>
-                ) : null}
+                )}
               </Stack>
             </Stack>
           </Stack>

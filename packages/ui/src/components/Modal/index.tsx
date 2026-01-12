@@ -100,7 +100,30 @@ export const Modal = ({
           visible={visible}
         />
       ) : null}
-      {!context ? (
+      {context ? (
+        <ModalContent
+          ariaLabel={ariaLabel}
+          backdropClassName={backdropClassName}
+          className={className}
+          dataTestId={dataTestId}
+          finalId={finalId}
+          finalSize={size}
+          handleClose={handleClose}
+          handleOpen={handleOpen}
+          handleToggle={handleToggle}
+          hideOnClickOutside={hideOnClickOutside}
+          hideOnEsc={hideOnEsc}
+          image={image}
+          isClosable={isClosable}
+          open={open}
+          placement={placement}
+          preventBodyScroll={preventBodyScroll}
+          style={style}
+          visible={visible}
+        >
+          {children}
+        </ModalContent>
+      ) : (
         <ModalProvider>
           <ModalContent
             ariaLabel={ariaLabel}
@@ -125,29 +148,6 @@ export const Modal = ({
             {children}
           </ModalContent>
         </ModalProvider>
-      ) : (
-        <ModalContent
-          ariaLabel={ariaLabel}
-          backdropClassName={backdropClassName}
-          className={className}
-          dataTestId={dataTestId}
-          finalId={finalId}
-          finalSize={size}
-          handleClose={handleClose}
-          handleOpen={handleOpen}
-          handleToggle={handleToggle}
-          hideOnClickOutside={hideOnClickOutside}
-          hideOnEsc={hideOnEsc}
-          image={image}
-          isClosable={isClosable}
-          open={open}
-          placement={placement}
-          preventBodyScroll={preventBodyScroll}
-          style={style}
-          visible={visible}
-        >
-          {children}
-        </ModalContent>
       )}
     </>
   )

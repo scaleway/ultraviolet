@@ -42,8 +42,8 @@ export const closeButtonToaster = style({
   selectors: {
     '&:hover, &:active': {
       background: 'none',
-      boxShadow: 'none',
       border: 'none',
+      boxShadow: 'none',
     },
   },
 })

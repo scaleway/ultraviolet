@@ -287,28 +287,28 @@ export const Popup = forwardRef(
      */
     const closePopup = useCallback(() => {
       const closeFunction = () => {
-        if (!disableAnimation) {
+        if (disableAnimation) {
+          onClose?.()
+          unmountPopupFromDom()
+        } else {
           setReverseAnimation(true)
 
           timer.current = setTimeout(() => {
             onClose?.()
             unmountPopupFromDom()
           }, animationDuration)
-        } else {
-          onClose?.()
-          unmountPopupFromDom()
         }
       }
 
-      if (!disableAnimation) {
+      if (disableAnimation) {
+        closeFunction()
+      } else {
         debounceTimer.current = setTimeout(
           () => {
             closeFunction()
           },
           debounceDelay && !disableAnimation ? debounceDelay : 0,
         )
-      } else {
-        closeFunction()
       }
     }, [
       animationDuration,
@@ -548,10 +548,10 @@ export const Popup = forwardRef(
     const renderChildren = useCallback(() => {
       if (typeof children === 'function') {
         return children({
-          onBlur: !isControlled ? onPointerEvent(false) : noop,
-          onFocus: !isControlled ? onPointerEvent(true) : noop,
-          onPointerEnter: !isControlled ? onPointerEvent(true) : noop,
-          onPointerLeave: !isControlled ? onPointerEvent(false) : noop,
+          onBlur: isControlled ? noop : onPointerEvent(false),
+          onFocus: isControlled ? noop : onPointerEvent(true),
+          onPointerEnter: isControlled ? noop : onPointerEvent(true),
+          onPointerLeave: isControlled ? noop : onPointerEvent(false),
           ref: childrenRef,
         })
       }
@@ -565,13 +565,13 @@ export const Popup = forwardRef(
             fullHeight: containerFullHeight,
             fullWidth: containerFullWidth,
           })}
-          onBlur={!isControlled ? onPointerEvent(false) : noop}
-          onFocus={!isControlled ? onPointerEvent(true) : noop}
+          onBlur={isControlled ? noop : onPointerEvent(false)}
+          onFocus={isControlled ? noop : onPointerEvent(true)}
           onKeyDown={event => {
             onKeyDown?.(event)
           }}
-          onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
-          onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
+          onPointerEnter={isControlled ? noop : onPointerEvent(true)}
+          onPointerLeave={isControlled ? noop : onPointerEvent(false)}
           ref={childrenRef}
           tabIndex={tabIndex}
         >
@@ -620,9 +620,9 @@ export const Popup = forwardRef(
                   className,
                   popup({
                     hasArrow,
-                    visibleInDom: !dynamicDomRendering
-                      ? visibleInDom
-                      : undefined,
+                    visibleInDom: dynamicDomRendering
+                      ? undefined
+                      : visibleInDom,
                   }),
                   isAnimated
                     ? animationPopup[
@@ -632,13 +632,13 @@ export const Popup = forwardRef(
                 )}
                 data-testid={dataTestId}
                 data-visible-in-dom={
-                  !dynamicDomRendering ? visibleInDom : undefined
+                  dynamicDomRendering ? undefined : visibleInDom
                 }
                 id={generatedId}
                 onClick={stopClickPropagation}
                 onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
-                onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
-                onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
+                onPointerEnter={isControlled ? noop : onPointerEvent(true)}
+                onPointerLeave={isControlled ? noop : onPointerEvent(false)}
                 ref={innerPopupRef}
                 role={role}
                 style={{

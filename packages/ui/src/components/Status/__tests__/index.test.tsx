@@ -7,9 +7,9 @@ describe('status', () => {
   test.each(SENTIMENTS)('renders correctly with type="%s"', sentiment =>
     shouldMatchSnapshot(<Status sentiment={sentiment} />))
 
-  test(`render animated`, () =>
+  test('render animated', () =>
     shouldMatchSnapshot(<Status animated sentiment="success" />))
 
-  test(`render with className`, () =>
+  test('render with className', () =>
     shouldMatchSnapshot(<Status className="test" sentiment="success" />))
 })

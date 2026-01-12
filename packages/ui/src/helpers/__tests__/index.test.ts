@@ -1,3 +1,4 @@
+// biome-ignore-all lint/style/noDoneCallback: test ok
 import type { KeyboardEvent } from 'react'
 import { describe, expect, test, vi } from 'vitest'
 import isJSONString from '../isJSON'
@@ -70,7 +71,7 @@ describe('parseIntOr', () => {
   test.each`
     test                                | value                  | expected
     ${'is correct number'}              | ${10}                  | ${10}
-    ${'is BigInt'}                      | ${900719925474099267n} | ${900719925474099300}
+    ${'is BigInt'}                      | ${900719925474099267n} | ${900_719_925_474_099_300}
     ${'is string containing Number'}    | ${'10'}                | ${10}
     ${'is string starting w/ Number'}   | ${'10a'}               | ${10}
     ${'is Float'}                       | ${15.6}                | ${15}

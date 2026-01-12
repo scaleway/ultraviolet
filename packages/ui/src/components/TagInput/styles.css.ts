@@ -10,100 +10,100 @@ export const TAGINPUT_SIZE_PADDING = {
 
 export const tagInputContainer = recipe({
   base: {
-    display: 'flex',
-    gap: theme.space[1],
     backgroundColor: theme.colors.neutral.background,
-    cursor: 'text',
     border: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: theme.radii.default,
+    cursor: 'text',
+    display: 'flex',
+    gap: theme.space[1],
+    height: 'auto',
+    overflowY: 'auto',
     selectors: {
       '&:focus-within': {
         borderColor: theme.colors.primary.borderHover,
         boxShadow: theme.shadows.focusPrimary,
       },
-      '&[data-success="true"]': {
-        borderColor: theme.colors.success.border,
+      '&:hover': {
+        borderColor: theme.colors.primary.borderHover,
+      },
+      '&[data-disabled="true"]': {
+        background: theme.colors.neutral.backgroundDisabled,
+        borderColor: theme.colors.neutral.borderDisabled,
+        cursor: 'not-allowed',
       },
       '&[data-error="true"]': {
         borderColor: theme.colors.danger.border,
       },
-      '&:hover': {
-        borderColor: theme.colors.primary.borderHover,
-      },
       '&[data-readonly="true"]': {
-        borderColor: theme.colors.neutral.border,
         background: theme.colors.neutral.backgroundWeak,
+        borderColor: theme.colors.neutral.border,
       },
-      '&[data-disabled="true"]': {
-        borderColor: theme.colors.neutral.borderDisabled,
-        background: theme.colors.neutral.backgroundDisabled,
-        cursor: 'not-allowed',
-      },
-    },
-    height: 'auto',
-    overflowY: 'auto',
-  },
-
-  variants: {
-    size: {
-      large: {
-        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.large]} - 1px) ${
-          theme.space['2']
-        }`,
-        minHeight: theme.sizing[600],
-      },
-      small: {
-        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.small]} - 1px) ${
-          theme.space['1']
-        }`,
-        minHeight: theme.sizing[400],
-      },
-      medium: {
-        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.medium]} - 1px) ${
-          theme.space['2']
-        }`,
-        minHeight: theme.sizing[500],
+      '&[data-success="true"]': {
+        borderColor: theme.colors.success.border,
       },
     },
   },
   defaultVariants: {
     size: 'large',
   },
+
+  variants: {
+    size: {
+      large: {
+        minHeight: theme.sizing[600],
+        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.large]} - 1px) ${
+          theme.space['2']
+        }`,
+      },
+      medium: {
+        minHeight: theme.sizing[500],
+        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.medium]} - 1px) ${
+          theme.space['2']
+        }`,
+      },
+      small: {
+        minHeight: theme.sizing[400],
+        padding: `calc(${theme.space[TAGINPUT_SIZE_PADDING.small]} - 1px) ${
+          theme.space['1']
+        }`,
+      },
+    },
+  },
 })
 
 export const tagInputDataContainer = style({
-  height: '100%',
-  display: 'flex',
-  flexWrap: 'wrap',
   alignItems: 'center',
-  gap: theme.space[1],
+  display: 'flex',
   flex: 1,
+  flexWrap: 'wrap',
+  gap: theme.space[1],
+  height: '100%',
 })
 
 export const tagInputStateContainer = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   gap: theme.space[1],
 })
 
 export const tagInput = style({
+  background: 'inherit',
+  border: 'none',
+  color: theme.colors.neutral.text,
   display: 'flex',
   flex: 1,
   fontSize: theme.typography.bodySmall.fontSize,
-  background: 'inherit',
-  color: theme.colors.neutral.text,
-  border: 'none',
-  outline: 'none',
   height: '100%',
+  outline: 'none',
   selectors: {
     '&::placeholder': {
       color: theme.colors.neutral.textWeak,
     },
-    '&[data-size="large"]': {
-      fontSize: theme.typography.body.fontSize,
-    },
     '&:focus': {
       outline: 'none',
+    },
+    '&[data-size="large"]': {
+      fontSize: theme.typography.body.fontSize,
     },
   },
 })

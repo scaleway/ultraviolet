@@ -55,7 +55,7 @@ export const CopyButton = ({
       style={style}
       tooltip={isCopied ? copiedText : copyText}
       type="button"
-      variant={!bordered ? 'ghost' : 'outlined'}
+      variant={bordered ? 'outlined' : 'ghost'}
     >
       {isCopied ? <CheckIcon /> : <CopyContentIcon />}
       {children}

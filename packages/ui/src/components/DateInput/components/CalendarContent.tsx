@@ -40,15 +40,15 @@ export const CalendarContent = () => {
                 minDate <= new Date(yearToShow, monthToShow - 1, 0)) &&
               !readOnly
             ) {
-              if (!showMonthYearPicker) {
+              if (showMonthYearPicker) {
+                setYearToShow(yearToShow - 1)
+              } else {
                 const [prevMonth, year] = getPreviousMonth(
                   monthToShow,
                   yearToShow,
                 )
                 setMonthToShow(prevMonth)
                 setYearToShow(year)
-              } else {
-                setYearToShow(yearToShow - 1)
               }
             }
           }}
@@ -65,7 +65,7 @@ export const CalendarContent = () => {
           sentiment="neutral"
           variant="bodyStrong"
         >
-          {!showMonthYearPicker ? MONTHS_ARR[monthToShow - 1] : null}&nbsp;
+          {showMonthYearPicker ? null : MONTHS_ARR[monthToShow - 1]}&nbsp;
           {yearToShow}
         </Text>
         <Button
@@ -79,12 +79,12 @@ export const CalendarContent = () => {
               (!maxDate || maxDate >= new Date(yearToShow, monthToShow, 1)) &&
               !readOnly
             ) {
-              if (!showMonthYearPicker) {
+              if (showMonthYearPicker) {
+                setYearToShow(yearToShow + 1)
+              } else {
                 const [monthNext, year] = getNextMonth(monthToShow, yearToShow)
                 setMonthToShow(monthNext)
                 setYearToShow(year)
-              } else {
-                setYearToShow(yearToShow + 1)
               }
             }
           }}

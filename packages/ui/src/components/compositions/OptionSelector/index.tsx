@@ -46,9 +46,14 @@ const makeSelectInputOptions = (
         hoverContent={
           <IconWithContent content={option.hoverContent} icon={option.icon} />
         }
+        key={option.value}
       />
     ) : (
-      <IconWithContent content={option.content} icon={option.icon} />
+      <IconWithContent
+        content={option.content}
+        icon={option.icon}
+        key={option.value}
+      />
     )
 
     return {
@@ -127,6 +132,7 @@ export const OptionSelector = ({
     onChange?.({ first: value?.first, second: val as string & string[] })
 
   return (
+    // biome-ignore lint/a11y/useAriaPropsSupportedByRole: to fix
     <fieldset
       aria-label={ariaLabel}
       aria-required={required}

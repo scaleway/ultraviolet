@@ -102,11 +102,11 @@ describe('verificationCode', () => {
     pasteEventWithValue(screen.getByDisplayValue('1'), '12')
 
     expect(onChange).toHaveBeenLastCalledWith('12')
-    expect(onChange).toHaveBeenCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
 
     pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
     expect(onComplete).toHaveBeenLastCalledWith('1234')
-    expect(onComplete).toHaveBeenCalledTimes(1)
+    expect(onComplete).toHaveBeenCalledOnce()
   })
 
   test('should handle error', () => {

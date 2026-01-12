@@ -144,7 +144,8 @@ export const SelectableCard = forwardRef(
     })
 
     const ProductIconUsed = productIcon
-      ? ProductIcon[
+      ? // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
+        ProductIcon[
           `${
             productIcon.charAt(0).toUpperCase() + productIcon.slice(1)
           }ProductIcon` as keyof typeof ProductIcon
@@ -238,8 +239,10 @@ export const SelectableCard = forwardRef(
 
           // Check if the event target is the input element, its associated label, or the children content
           if (
-            !inputElement.contains(targetNode) &&
-            !labelElement?.contains(targetNode)
+            !(
+              inputElement.contains(targetNode) ||
+              labelElement?.contains(targetNode)
+            )
           ) {
             inputElement.click()
           }
@@ -280,8 +283,8 @@ export const SelectableCard = forwardRef(
           role="button"
           style={{
             ...assignInlineVars({
-              [inputDisplay]: !showTick ? 'none' : 'inline',
-              [labelDisplay]: !showTick && !label ? 'none' : 'inline',
+              [inputDisplay]: showTick ? 'inline' : 'none',
+              [labelDisplay]: showTick || label ? 'inline' : 'none',
               [widthSelectable]: label ? '100%' : 'auto',
             }),
             ...style,

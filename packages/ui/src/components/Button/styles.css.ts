@@ -34,32 +34,32 @@ const sentimentThemeMap: Record<
   Exclude<(typeof sentiments)[number], 'black' | 'white'>,
   typeof theme.colors.primary
 > = {
-  primary: theme.colors.primary,
-  secondary: theme.colors.secondary,
   danger: theme.colors.danger,
   info: theme.colors.info,
+  neutral: theme.colors.neutral,
+  primary: theme.colors.primary,
+  secondary: theme.colors.secondary,
   success: theme.colors.success,
   warning: theme.colors.warning,
-  neutral: theme.colors.neutral,
 }
 
 function getFilledStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'black') {
     return {
       background: monochrome.black.background,
-      color: monochrome.white.text,
       border: 'none',
+      color: monochrome.white.text,
       selectors: {
-        '&:hover, &:active': {
-          background: monochrome.black.backgroundHover,
-          color: monochrome.white.textHover,
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
         '&:disabled': {
           background: monochrome.black.backgroundDisabled,
           color: monochrome.black.textDisabled,
         },
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        '&:hover, &:active': {
+          background: monochrome.black.backgroundHover,
+          color: monochrome.white.textHover,
         },
       },
     }
@@ -67,19 +67,19 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'white') {
     return {
       background: monochrome.white.background,
-      color: monochrome.black.text,
       border: 'none',
+      color: monochrome.black.text,
       selectors: {
-        '&:hover, &:active': {
-          background: monochrome.white.backgroundHover,
-          color: monochrome.black.textHover,
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
         '&:disabled': {
           background: monochrome.white.backgroundDisabled,
           color: monochrome.white.textDisabled,
         },
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        '&:hover, &:active': {
+          background: monochrome.white.backgroundHover,
+          color: monochrome.black.textHover,
         },
       },
     }
@@ -88,19 +88,19 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
 
   return {
     background: selectedSentiment.backgroundStrong,
-    color: selectedSentiment.textStrong,
     border: 'none',
+    color: selectedSentiment.textStrong,
     selectors: {
-      '&:hover, &:active': {
-        background: selectedSentiment.backgroundStrongHover,
-        color: selectedSentiment.textStrongHover,
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
       '&:disabled': {
         background: selectedSentiment.backgroundStrongDisabled,
         color: selectedSentiment.textStrongDisabled,
       },
-      '&:active:not(:disabled)': {
-        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+      '&:hover, &:active': {
+        background: selectedSentiment.backgroundStrongHover,
+        color: selectedSentiment.textStrongHover,
       },
     },
   }
@@ -110,21 +110,21 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'black') {
     return {
       background: 'none',
-      color: monochrome.black.text,
       border: `1px solid ${monochrome.black.border}`,
+      color: monochrome.black.text,
       selectors: {
-        '&:hover, &:active': {
-          background: monochrome.black.backgroundHover,
-          color: monochrome.white.textHover,
-          border: `1px solid ${monochrome.black.borderHover}`,
-        },
-        '&:disabled': {
-          color: monochrome.black.textDisabled,
-          border: `1px solid ${monochrome.black.borderDisabled}`,
-          background: 'none',
-        },
         '&:active:not(:disabled)': {
           boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
+        '&:disabled': {
+          background: 'none',
+          border: `1px solid ${monochrome.black.borderDisabled}`,
+          color: monochrome.black.textDisabled,
+        },
+        '&:hover, &:active': {
+          background: monochrome.black.backgroundHover,
+          border: `1px solid ${monochrome.black.borderHover}`,
+          color: monochrome.white.textHover,
         },
       },
     }
@@ -132,21 +132,21 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'white') {
     return {
       background: 'none',
-      color: monochrome.white.text,
       border: `1px solid ${monochrome.white.border}`,
+      color: monochrome.white.text,
       selectors: {
-        '&:hover, &:active': {
-          background: monochrome.white.backgroundHover,
-          color: monochrome.black.textHover,
-          border: `1px solid ${monochrome.white.borderHover}`,
-        },
-        '&:disabled': {
-          color: monochrome.white.textDisabled,
-          border: `1px solid ${monochrome.white.borderDisabled}`,
-          background: 'none',
-        },
         '&:active:not(:disabled)': {
           boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
+        '&:disabled': {
+          background: 'none',
+          border: `1px solid ${monochrome.white.borderDisabled}`,
+          color: monochrome.white.textDisabled,
+        },
+        '&:hover, &:active': {
+          background: monochrome.white.backgroundHover,
+          border: `1px solid ${monochrome.white.borderHover}`,
+          color: monochrome.black.textHover,
         },
       },
     }
@@ -156,21 +156,21 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
 
     return {
       background: 'none',
-      color: selectedSentiment.text,
       border: `1px solid ${selectedSentiment.borderStrong}`,
+      color: selectedSentiment.text,
       selectors: {
-        '&:hover, &:active': {
-          background: selectedSentiment.backgroundHover,
-          color: selectedSentiment.textHover,
-          border: `1px solid ${selectedSentiment.borderStrongHover}`,
-        },
-        '&:disabled': {
-          color: selectedSentiment.textDisabled,
-          border: `1px solid ${selectedSentiment.borderStrongDisabled}`,
-          background: 'none',
-        },
         '&:active:not(:disabled)': {
           boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
+        '&:disabled': {
+          background: 'none',
+          border: `1px solid ${selectedSentiment.borderStrongDisabled}`,
+          color: selectedSentiment.textDisabled,
+        },
+        '&:hover, &:active': {
+          background: selectedSentiment.backgroundHover,
+          border: `1px solid ${selectedSentiment.borderStrongHover}`,
+          color: selectedSentiment.textHover,
         },
       },
     }
@@ -179,21 +179,21 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
 
   return {
     background: 'none',
-    color: selectedSentiment.text,
     border: `1px solid ${selectedSentiment.border}`,
+    color: selectedSentiment.text,
     selectors: {
-      '&:hover, &:active': {
-        background: selectedSentiment.backgroundHover,
-        color: selectedSentiment.textHover,
-        border: `1px solid ${selectedSentiment.borderHover}`,
-      },
-      '&:disabled': {
-        color: selectedSentiment.textDisabled,
-        border: `1px solid ${selectedSentiment.borderDisabled}`,
-        background: 'none',
-      },
       '&:active:not(:disabled)': {
         boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+      },
+      '&:disabled': {
+        background: 'none',
+        border: `1px solid ${selectedSentiment.borderDisabled}`,
+        color: selectedSentiment.textDisabled,
+      },
+      '&:hover, &:active': {
+        background: selectedSentiment.backgroundHover,
+        border: `1px solid ${selectedSentiment.borderHover}`,
+        color: selectedSentiment.textHover,
       },
     },
   }
@@ -203,19 +203,19 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'black') {
     return {
       background: 'none',
-      color: monochrome.black.text,
       border: 'none',
+      color: monochrome.black.text,
       selectors: {
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
+        '&:disabled': {
+          background: 'none',
+          color: monochrome.black.textDisabled,
+        },
         '&:hover, &:active': {
           background: monochrome.black.backgroundHover,
           color: monochrome.white.textHover,
-        },
-        '&:disabled': {
-          color: monochrome.black.textDisabled,
-          background: 'none',
-        },
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -223,19 +223,19 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'white') {
     return {
       background: 'none',
-      color: monochrome.white.text,
       border: 'none',
+      color: monochrome.white.text,
       selectors: {
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        },
+        '&:disabled': {
+          background: 'none',
+          color: monochrome.white.textDisabled,
+        },
         '&:hover, &:active': {
           background: monochrome.white.backgroundHover,
           color: monochrome.black.textHover,
-        },
-        '&:disabled': {
-          color: monochrome.white.textDisabled,
-          background: 'none',
-        },
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -244,27 +244,27 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
 
   return {
     background: 'none',
-    color: selectedSentiment.text,
     border: 'none',
+    color: selectedSentiment.text,
     selectors: {
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+      },
+      '&:disabled': {
+        background: 'none',
+        color: selectedSentiment.textDisabled,
+      },
       '&:hover, &:active': {
         background: selectedSentiment.backgroundHover,
         color: selectedSentiment.textHover,
-      },
-      '&:disabled': {
-        color: selectedSentiment.textDisabled,
-        background: 'none',
-      },
-      '&:active:not(:disabled)': {
-        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
     },
   }
 }
 
 const sharedSizeStyled = {
-  fontSize: theme.typography.bodySmallStrong.fontSize,
   fontFamily: theme.typography.bodySmallStrong.fontFamily,
+  fontSize: theme.typography.bodySmallStrong.fontSize,
   fontWeight: theme.typography.bodySmallStrong.weight,
   letterSpacing: theme.typography.bodySmallStrong.letterSpacing,
   lineHeight: theme.typography.bodySmallStrong.lineHeight,
@@ -272,110 +272,110 @@ const sharedSizeStyled = {
 
 export const button = recipe({
   base: {
-    display: 'inline-flex',
-    position: 'relative',
-    flexDirection: 'row',
-    boxSizing: 'border-box',
     alignItems: 'center',
+    borderRadius: theme.radii.default,
+    boxSizing: 'border-box',
+    display: 'inline-flex',
+    flexDirection: 'row',
     justifyContent: 'center',
     outlineOffset: '2px',
-    whiteSpace: 'nowrap',
-    textDecoration: 'none',
-    borderRadius: theme.radii.default,
+    position: 'relative',
     selectors: {
       '&:hover': {
         textDecoration: 'none',
       },
     },
-  },
-  variants: {
-    size: {
-      large: {
-        height: theme.sizing[SIZE_HEIGHT.large],
-        paddingLeft: theme.space[SIZE_PADDING_KEY.large],
-        paddingRight: theme.space[SIZE_PADDING_KEY.large],
-        gap: theme.space[SIZE_GAP_KEY.large],
-        fontSize: theme.typography.bodyStrong.fontSize,
-        fontFamily: theme.typography.bodyStrong.fontFamily,
-        fontWeight: theme.typography.bodyStrong.weight,
-        letterSpacing: theme.typography.bodyStrong.letterSpacing,
-        lineHeight: theme.typography.bodyStrong.lineHeight,
-      },
-      medium: {
-        height: theme.sizing[SIZE_HEIGHT.medium],
-        paddingLeft: theme.space[SIZE_PADDING_KEY.medium],
-        paddingRight: theme.space[SIZE_PADDING_KEY.medium],
-        gap: theme.space[SIZE_GAP_KEY.medium],
-        ...sharedSizeStyled,
-      },
-      small: {
-        height: theme.sizing[SIZE_HEIGHT.small],
-        paddingLeft: theme.space[SIZE_PADDING_KEY.small],
-        paddingRight: theme.space[SIZE_PADDING_KEY.small],
-        gap: theme.space[SIZE_GAP_KEY.small],
-        ...sharedSizeStyled,
-      },
-      xsmall: {
-        height: theme.sizing[SIZE_HEIGHT.xsmall],
-        paddingLeft: theme.space[SIZE_PADDING_KEY.xsmall],
-        paddingRight: theme.space[SIZE_PADDING_KEY.xsmall],
-        gap: theme.space[SIZE_GAP_KEY.xsmall],
-        ...sharedSizeStyled,
-      },
-    },
-    fullWidth: {
-      true: {
-        width: '100%',
-      },
-      false: {
-        width: 'auto',
-      },
-    },
-    sentiment: {
-      primary: {},
-      secondary: {},
-      danger: {},
-      info: {},
-      success: {},
-      warning: {},
-      neutral: {},
-      black: {},
-      white: {},
-    },
-    variant: {
-      filled: {},
-      outlined: {},
-      ghost: {},
-    },
-    disabled: {
-      true: {
-        cursor: 'not-allowed',
-      },
-      false: {
-        cursor: 'pointer',
-      },
-    },
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
   },
   compoundVariants: [
     ...sentiments.map(sentiment => ({
-      variants: { variant: 'filled' as const, sentiment },
       style: getFilledStyle(sentiment),
+      variants: { sentiment, variant: 'filled' as const },
     })),
     ...sentiments.map(sentiment => ({
-      variants: { variant: 'outlined' as const, sentiment },
       style: getOutlinedStyle(sentiment),
+      variants: { sentiment, variant: 'outlined' as const },
     })),
     ...sentiments.map(sentiment => ({
-      variants: { variant: 'ghost' as const, sentiment },
       style: getGhostStyle(sentiment),
+      variants: { sentiment, variant: 'ghost' as const },
     })),
   ],
   defaultVariants: {
-    size: 'large',
-    fullWidth: false,
     disabled: false,
-    variant: 'filled',
+    fullWidth: false,
     sentiment: 'primary',
+    size: 'large',
+    variant: 'filled',
+  },
+  variants: {
+    disabled: {
+      false: {
+        cursor: 'pointer',
+      },
+      true: {
+        cursor: 'not-allowed',
+      },
+    },
+    fullWidth: {
+      false: {
+        width: 'auto',
+      },
+      true: {
+        width: '100%',
+      },
+    },
+    sentiment: {
+      black: {},
+      danger: {},
+      info: {},
+      neutral: {},
+      primary: {},
+      secondary: {},
+      success: {},
+      warning: {},
+      white: {},
+    },
+    size: {
+      large: {
+        fontFamily: theme.typography.bodyStrong.fontFamily,
+        fontSize: theme.typography.bodyStrong.fontSize,
+        fontWeight: theme.typography.bodyStrong.weight,
+        gap: theme.space[SIZE_GAP_KEY.large],
+        height: theme.sizing[SIZE_HEIGHT.large],
+        letterSpacing: theme.typography.bodyStrong.letterSpacing,
+        lineHeight: theme.typography.bodyStrong.lineHeight,
+        paddingLeft: theme.space[SIZE_PADDING_KEY.large],
+        paddingRight: theme.space[SIZE_PADDING_KEY.large],
+      },
+      medium: {
+        gap: theme.space[SIZE_GAP_KEY.medium],
+        height: theme.sizing[SIZE_HEIGHT.medium],
+        paddingLeft: theme.space[SIZE_PADDING_KEY.medium],
+        paddingRight: theme.space[SIZE_PADDING_KEY.medium],
+        ...sharedSizeStyled,
+      },
+      small: {
+        gap: theme.space[SIZE_GAP_KEY.small],
+        height: theme.sizing[SIZE_HEIGHT.small],
+        paddingLeft: theme.space[SIZE_PADDING_KEY.small],
+        paddingRight: theme.space[SIZE_PADDING_KEY.small],
+        ...sharedSizeStyled,
+      },
+      xsmall: {
+        gap: theme.space[SIZE_GAP_KEY.xsmall],
+        height: theme.sizing[SIZE_HEIGHT.xsmall],
+        paddingLeft: theme.space[SIZE_PADDING_KEY.xsmall],
+        paddingRight: theme.space[SIZE_PADDING_KEY.xsmall],
+        ...sharedSizeStyled,
+      },
+    },
+    variant: {
+      filled: {},
+      ghost: {},
+      outlined: {},
+    },
   },
 })
 

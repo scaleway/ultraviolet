@@ -8,8 +8,8 @@ export const sliderLength = createVar()
 export const CIRCLE_SIZE = 12.875
 
 export const blockSkeletonLine = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   padding: `${theme.space[3]} ${theme.space[2]}`,
   selectors: {
     '&:not(:last-child)': {
@@ -19,39 +19,39 @@ export const blockSkeletonLine = style({
 })
 
 export const blockSkeletonList = style({
-  minHeight: '12.5rem',
-  width: '100%',
-  height: '100%',
-  padding: theme.space[2],
   border: `1px solid ${theme.colors.neutral.borderWeak}`,
   borderRadius: theme.radii.default,
+  height: '100%',
   margin: 0,
+  minHeight: '12.5rem',
+  padding: theme.space[2],
+  width: '100%',
 })
 
 export const blocksContainer = style({
   display: 'grid',
-  gridTemplateColumns: `repeat(${columns}, 1fr)`,
   gap: theme.space[2],
+  gridTemplateColumns: `repeat(${columns}, 1fr)`,
 })
 
 export const blocksSkeleton = style({
-  width: '100%',
-  display: 'flex',
   alignItems: 'center',
-  padding: `${theme.space[1]} ${theme.space[2]}`,
   border: `1px solid ${theme.colors.neutral.borderWeak}`,
   borderRadius: theme.radii.default,
+  display: 'flex',
   overflow: 'hidden',
+  padding: `${theme.space[1]} ${theme.space[2]}`,
+  width: '100%',
 })
 
 export const boxWithIconSkeleton = style({
-  height: '8.125rem',
-  display: 'flex',
-  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-evenly',
   border: `1px solid ${theme.colors.neutral.borderWeak}`,
   borderRadius: theme.radii.default,
+  display: 'flex',
+  flexDirection: 'column',
+  height: '8.125rem',
+  justifyContent: 'space-evenly',
   overflow: 'hidden',
 })
 
@@ -61,44 +61,44 @@ export const donutSkeletonContainer = style({
 
 export const donutSkeletonSvg = style({
   height: `${CIRCLE_SIZE}rem`,
-  width: `${CIRCLE_SIZE}rem`,
   transform: 'rotate(-90deg)',
+  width: `${CIRCLE_SIZE}rem`,
 })
 
 export const donutSkeletonCircle = style({
-  transformOrigin: '50% 50%',
-  stroke: theme.colors.neutral.borderWeak,
-  strokeWidth: 18,
-  strokeLinecap: 'butt',
   fill: 'none',
+  stroke: theme.colors.neutral.borderWeak,
+  strokeLinecap: 'butt',
+  strokeWidth: 18,
+  transformOrigin: '50% 50%',
 })
 
 export const donutSkeletonLineList = style({
   display: 'grid',
-  listStyle: 'none',
   gap: theme.space[2],
+  listStyle: 'none',
 })
 
 export const iconSkeleton = style({
-  marginRight: theme.space[1],
-  width: theme.space[4],
-  height: theme.space[4],
-  minWidth: theme.space[4],
-  borderRadius: theme.radii.large,
   backgroundColor: theme.colors.neutral.borderWeak,
+  borderRadius: theme.radii.large,
+  height: theme.space[4],
+  marginRight: theme.space[1],
+  minWidth: theme.space[4],
+  width: theme.space[4],
 })
 
 export const lineSkeleton = style({
-  height: theme.sizing[150],
-  width: widthLine,
-  maxWidth: '100%',
-  borderRadius: theme.radii.large,
   backgroundColor: theme.colors.neutral.borderWeak,
+  borderRadius: theme.radii.large,
+  height: theme.sizing[150],
+  maxWidth: '100%',
+  width: widthLine,
 })
 
 export const listSkeletonLi = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   height: theme.sizing[600],
   padding: `${theme.space['0.5']} ${theme.space[1]}`,
   selectors: {
@@ -114,36 +114,36 @@ export const listSkeletonDiv = style({
 
 export const listSkeletonUl = style({
   listStyle: 'none',
-  padding: 0,
   margin: 0,
+  padding: 0,
 })
 
 export const sliderSkeletonContainer = style({
-  height: '17.375rem',
   display: 'grid',
-  gridTemplateColumns: `repeat(${sliderLength}, 1fr)`,
   gap: theme.space[2],
+  gridTemplateColumns: `repeat(${sliderLength}, 1fr)`,
+  height: '17.375rem',
   overflow: 'auto',
 })
 
 export const sliderSkeletonCard = style({
   border: `1px solid ${theme.colors.neutral.borderWeak}`,
   borderRadius: theme.radii.default,
-  width: '14.875rem',
   height: '16.375rem',
   overflow: 'hidden',
+  width: '14.875rem',
 })
 
 export const sliderSkeletonBanner = style({
-  border: `1px solid ${theme.colors.neutral.borderWeak}`,
   backgroundColor: theme.colors.neutral.borderWeak,
-  width: '100%',
+  border: `1px solid ${theme.colors.neutral.borderWeak}`,
   height: '33%',
+  width: '100%',
 })
 
 export const squareSkeleton = style({
-  height: '100%',
-  width: '100%',
-  maxWidth: '100%',
   backgroundColor: theme.colors.neutral.borderWeak,
+  height: '100%',
+  maxWidth: '100%',
+  width: '100%',
 })

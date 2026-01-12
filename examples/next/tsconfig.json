@@ -1,23 +1,18 @@
 {
-  "extends": "@scaleway/tsconfig",
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "jsx": "preserve",
+    "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noEmit": true,
     "incremental": true,
     "isolatedModules": true,
+    "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true
+    "module": "esnext",
+    "noEmit": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "skipLibCheck": true,
+    "target": "es5"
   },
-  "include": [
-    "global.d.ts",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "extends": "@scaleway/tsconfig",
+  "include": ["global.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

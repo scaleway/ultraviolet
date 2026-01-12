@@ -8,6 +8,7 @@ import { blockSkeletonLine, blockSkeletonList } from './stylesVariants.css'
 export const Block = ({ length = 3 }: { length?: number }) => (
   <ul className={blockSkeletonList}>
     {Array.from({ length }, (_, i) => (
+      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <Fragment key={`skeleton-block-${i}`}>
         <li className={blockSkeletonLine}>
           <IconSkeleton />

@@ -1,6 +1,8 @@
 import type { TIME_KEYS } from './constants'
 
-export const isNumber = (key: string) => /^\d+$/.test(key)
+const regexNumber = /^\d+$/
+
+export const isNumber = (key: string) => regexNumber.test(key)
 export const isAOrP = (key: string) => ['a', 'A', 'p', 'P'].includes(key)
 
 const isValidNewHour = (old: number, key: number, timeFormat: number) => {

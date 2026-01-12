@@ -26,7 +26,7 @@ type RowProps = {
   'data-testid'?: string
   /**
    * Row cannot be selected if this prop is provided. boolean true disabled selection, a string disable selection and a tooltip will be displayed on checkbox hover.
-   * */
+   */
   selectDisabled?: boolean | string
   highlightAnimation?: boolean
   expanded?: boolean

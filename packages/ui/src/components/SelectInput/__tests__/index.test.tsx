@@ -1,18 +1,17 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import type { ReactNode } from 'react'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInput } from '..'
 import { cities, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
 
-export type OptionType = {
-  value: string
-  label: ReactNode
-  disabled: boolean
-  description?: string
-  optionalInfo?: ReactNode
-}
+// export type OptionType = {
+//   value: string
+//   label: ReactNode
+//   disabled: boolean
+//   description?: string
+//   optionalInfo?: ReactNode
+// }
 
 // oxlint-disable-next-line eslint/max-statements
 describe('selectInput', () => {
@@ -665,7 +664,7 @@ describe('selectInput', () => {
     })
     await userEvent.click(venus)
 
-    expect(onChange).toHaveBeenCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
   })
 
   test('handles keydown when not searchable on ungrouped data', async () => {
@@ -797,6 +796,7 @@ describe('selectInput', () => {
     expect(input.textContent).toContain('Jupiter')
   })
 
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('handles correctly with searchable and closest value - multiselect', async () => {
     // There is issues with this test
     renderWithTheme(
@@ -857,6 +857,7 @@ describe('selectInput', () => {
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
   })
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     // There is issues with this test
     renderWithTheme(
@@ -907,7 +908,7 @@ describe('selectInput', () => {
 
     await userEvent.keyboard('[Backspace]')
     await userEvent.keyboard('[Enter]')
-  }, 10000)
+  }, 10_000)
 
   test('renders correctly selected tags when multiselect', async () => {
     renderWithTheme(
@@ -998,7 +999,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).toBeChecked()
     await userEvent.keyboard('<') // Nothing when the user press any key
     expect(selectAllCheckBox).toBeChecked()
-  }, 15000)
+  }, 15_000)
 
   test('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
@@ -1055,7 +1056,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).toBeChecked()
     await userEvent.keyboard('<') // Nothing when the user press any key
     expect(selectAllCheckBox).toBeChecked()
-  }, 10000)
+  }, 10_000)
 
   test('handles correcty selectAllGroup', async () => {
     renderWithTheme(
@@ -1099,7 +1100,7 @@ describe('selectInput', () => {
 
     await userEvent.click(screen.getByTestId('option-mercury'))
     expect(selectAllGroupCheckBox).toBeChecked()
-  }, 10000)
+  }, 10_000)
 
   test('handles correcty selectAllGroup - keyboard events', async () => {
     renderWithTheme(
@@ -1132,7 +1133,7 @@ describe('selectInput', () => {
 
     await userEvent.click(selectAllGroup)
     expect(selectAllGroupCheckBox).not.toBeChecked()
-  }, 10000)
+  }, 10_000)
 
   test('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
@@ -1200,7 +1201,7 @@ describe('selectInput', () => {
     expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
     expect(selectAllCheckBox).toBeChecked()
-  }, 10000)
+  }, 10_000)
 
   test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
     renderWithTheme(
@@ -1422,7 +1423,7 @@ describe('selectInput', () => {
 
     await userEvent.click(footer)
 
-    expect(f).toHaveBeenCalledTimes(1)
+    expect(f).toHaveBeenCalledOnce()
 
     await waitFor(() => {
       expect(dropdown).not.toBeVisible()

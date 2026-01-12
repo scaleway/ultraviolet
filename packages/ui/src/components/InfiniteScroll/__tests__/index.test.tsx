@@ -44,7 +44,7 @@ describe('infiniteScroll', () => {
     fireEvent.scroll(scrollContainer, { target: { scrollTop: 300 } })
 
     await waitFor(() => {
-      expect(onLoadMore).toHaveBeenCalledTimes(1)
+      expect(onLoadMore).toHaveBeenCalledOnce()
     })
   })
 
@@ -85,7 +85,7 @@ describe('infiniteScroll', () => {
     fireEvent.scroll(scrollContainer, { target: { scrollTop: 300 } })
 
     await waitFor(() => {
-      expect(onLoadMore).toHaveBeenCalledTimes(1)
+      expect(onLoadMore).toHaveBeenCalledOnce()
     })
   })
 })

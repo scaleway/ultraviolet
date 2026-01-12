@@ -259,7 +259,7 @@ export const Daily = () => {
             disabled={disabled || isExcluded || isOutsideRange}
             key={`${data.month}-${data.day}`}
             onClick={event => {
-              if (!isExcluded && !isOutsideRange && !readOnly) {
+              if (!(isExcluded || isOutsideRange || readOnly)) {
                 const newDate = getNewDate()
 
                 if (selectsRange) {

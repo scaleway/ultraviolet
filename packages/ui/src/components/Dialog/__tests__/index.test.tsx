@@ -66,6 +66,6 @@ describe('dialog', () => {
 
     const button = screen.getByText('Cancel')
     await userEvent.click(button)
-    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).toHaveBeenCalledOnce()
   })
 })

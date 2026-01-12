@@ -65,6 +65,7 @@ describe('pieChart', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('renders correctly when chart is hovered', async () => {
     const { container } = renderWithTheme(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,

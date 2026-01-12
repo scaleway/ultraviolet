@@ -39,14 +39,14 @@ describe('textInputField', () => {
     await userEvent.click(hours)
     await userEvent.keyboard('[ArrowUp]')
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
 
     await waitFor(() => {
-      expect(onFocus).toBeCalledTimes(1)
+      expect(onFocus).toHaveBeenCalledOnce()
     })
 
     await userEvent.click(screen.getByText('blur'))
-    expect(onBlur).toHaveBeenCalledTimes(1)
+    expect(onBlur).toHaveBeenCalledOnce()
   })
 })

@@ -25,7 +25,7 @@ export type ListContextValue = {
   // ============ Expandable logic ============
   /**
    * @returns an unregister function
-   * */
+   */
   registerExpandableRow: (rowId: string, expanded?: boolean) => () => void
   expandedRowIds: RowState
   expandRow: (rowId: string) => void
@@ -34,7 +34,7 @@ export type ListContextValue = {
   // ============ Selectable logic ============
   /**
    * @returns an unregister function
-   * */
+   */
   registerSelectableRow: (rowId: string) => () => void
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
   selectAllHandler: (event: ReactChangeEvent<HTMLInputElement>) => void

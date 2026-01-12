@@ -4,43 +4,43 @@ import { recipe } from '@vanilla-extract/recipes'
 
 export const dropzone = recipe({
   base: {
-    textAlign: 'center',
     border: `1px dashed ${theme.colors.neutral.borderStrong}`,
-  },
-  variants: {
-    state: {
-      over: {},
-      default: {},
-      page: {},
-    },
-    size: {
-      small: {
-        padding: theme.space[2],
-      },
-      medium: {
-        padding: theme.space[5],
-      },
-    },
-    disabled: {
-      true: {
-        cursor: 'not-allowed',
-        background: theme.colors.neutral.backgroundDisabled,
-      },
-    },
+    textAlign: 'center',
   },
   compoundVariants: [
     {
-      variants: { disabled: false, state: 'over' },
       style: {
         background: theme.colors.neutral.backgroundHover,
         cursor: 'copy',
       },
+      variants: { disabled: false, state: 'over' },
     },
   ],
   defaultVariants: {
-    state: 'default',
-    size: 'medium',
     disabled: false,
+    size: 'medium',
+    state: 'default',
+  },
+  variants: {
+    disabled: {
+      true: {
+        background: theme.colors.neutral.backgroundDisabled,
+        cursor: 'not-allowed',
+      },
+    },
+    size: {
+      medium: {
+        padding: theme.space[5],
+      },
+      small: {
+        padding: theme.space[2],
+      },
+    },
+    state: {
+      default: {},
+      over: {},
+      page: {},
+    },
   },
 })
 
@@ -57,41 +57,41 @@ export const titleSmall = styleVariants({
 
 export const overlayWrapper = style({
   height: 'fit-content',
-  width: 'fit-content',
   position: 'relative',
+  width: 'fit-content',
 })
 
 const dropzoneOverlayBase = style({
-  position: 'absolute',
-  inset: 0,
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
+  inset: 0,
   justifyContent: 'center',
+  position: 'absolute',
 })
 
 export const dropzoneOverlay = styleVariants({
-  over: [
-    dropzoneOverlayBase,
-    {
-      borderRadius: theme.radii.default,
-      border: `1px dashed ${theme.colors.primary.borderStrong}`,
-      background: theme.colors.primary.background,
-      cursor: 'copy',
-      textAlign: 'center',
-    },
-  ],
   default: [
     dropzoneOverlayBase,
     {
       display: 'none',
     },
   ],
+  over: [
+    dropzoneOverlayBase,
+    {
+      background: theme.colors.primary.background,
+      border: `1px dashed ${theme.colors.primary.borderStrong}`,
+      borderRadius: theme.radii.default,
+      cursor: 'copy',
+      textAlign: 'center',
+    },
+  ],
   page: [
     dropzoneOverlayBase,
     {
-      borderRadius: theme.radii.default,
-      border: `1px dashed ${theme.colors.neutral.borderStrong}`,
       background: theme.colors.primary.background,
+      border: `1px dashed ${theme.colors.neutral.borderStrong}`,
+      borderRadius: theme.radii.default,
       cursor: 'copy',
       textAlign: 'center',
     },
@@ -104,28 +104,28 @@ const dropzoneOverlayDisabledOver = style({
 })
 
 export const dropzoneOverlayDisabled = styleVariants({
-  over: [dropzoneOverlayDisabledOver],
   default: {},
+  over: [dropzoneOverlayDisabledOver],
   page: [dropzoneOverlayDisabledOver],
 })
 
 const fileViewerContainerBase = style({
-  width: 'fit-content',
-  padding: theme.space[1],
   borderRadius: theme.radii.default,
+  padding: theme.space[1],
+  width: 'fit-content',
 })
 
 export const fileViewerContainer = styleVariants({
-  error: [
-    fileViewerContainerBase,
-    {
-      background: theme.colors.danger.background,
-    },
-  ],
   default: [
     fileViewerContainerBase,
     {
       background: theme.colors.neutral.backgroundWeak,
+    },
+  ],
+  error: [
+    fileViewerContainerBase,
+    {
+      background: theme.colors.danger.background,
     },
   ],
   strong: [
@@ -136,33 +136,33 @@ export const fileViewerContainer = styleVariants({
   ],
 })
 export const fileViewerImageBase = style({
-  width: theme.sizing[400],
-  height: theme.sizing[400],
-  objectFit: 'cover',
+  alignItems: 'center',
   borderRadius: theme.radii.default,
   display: 'flex',
+  height: theme.sizing[400],
   justifyContent: 'center',
-  alignItems: 'center',
+  objectFit: 'cover',
+  width: theme.sizing[400],
 })
 
 export const fileViewerImage = styleVariants({
-  error: [
-    fileViewerImageBase,
-    {
-      background: theme.colors.danger.background,
-    },
-  ],
   default: [
     fileViewerImageBase,
     {
       background: theme.colors.primary.background,
     },
   ],
+  error: [
+    fileViewerImageBase,
+    {
+      background: theme.colors.danger.background,
+    },
+  ],
 })
 
 export const fileInfo = style({
   maxWidth: 264,
-  textWrap: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
+  textWrap: 'nowrap',
 })

@@ -15,25 +15,25 @@ function getSquareStyle(size: keyof ReturnType<typeof sizes>) {
 
 function sizeStyle(size: keyof ReturnType<typeof sizes>) {
   return {
-    width: sizes(theme)[size],
     height: sizes(theme)[size],
+    width: sizes(theme)[size],
   }
 }
 
 const borderRadiusSquare = Object.keys(sizes(theme)).map(size => ({
-  variants: {
-    size: size as keyof ReturnType<typeof sizes>,
-    shape: 'square' as const,
-  },
   style: getSquareStyle(size as keyof ReturnType<typeof sizes>),
+  variants: {
+    shape: 'square' as const,
+    size: size as keyof ReturnType<typeof sizes>,
+  },
 }))
 
 const baseStyle = {
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
+  height: '100%',
   justifyContent: 'center',
   width: '100%',
-  height: '100%',
 }
 
 export const containerAvatar = recipe({
@@ -41,7 +41,27 @@ export const containerAvatar = recipe({
     position: 'relative',
   },
 
+  compoundVariants: borderRadiusSquare,
+
   variants: {
+    sentiment: {
+      neutral: {
+        color: theme.colors.neutral.text,
+        selectors: {
+          "&[data-has-background='true']": {
+            backgroundColor: theme.colors.neutral.backgroundStrong,
+          },
+        },
+      },
+      primary: {
+        color: theme.colors.neutral.textStronger,
+        selectors: {
+          "&[data-has-background='true']": {
+            backgroundColor: theme.colors.primary.backgroundStrong,
+          },
+        },
+      },
+    },
     shape: {
       circle: {
         borderRadius: theme.radii.circle,
@@ -54,49 +74,31 @@ export const containerAvatar = recipe({
       small: sizeStyle('small'),
       xsmall: sizeStyle('xsmall'),
     },
-    sentiment: {
-      primary: {
-        color: theme.colors.neutral.textStronger,
-        selectors: {
-          "&[data-has-background='true']": {
-            backgroundColor: theme.colors.primary.backgroundStrong,
-          },
-        },
-      },
-      neutral: {
-        color: theme.colors.neutral.text,
-        selectors: {
-          "&[data-has-background='true']": {
-            backgroundColor: theme.colors.neutral.backgroundStrong,
-          },
-        },
-      },
-    },
   },
-
-  compoundVariants: borderRadiusSquare,
 })
 
 export const uploadContainer = recipe({
   base: {
-    position: 'absolute',
-    opacity: '0',
-    top: '0',
-    left: '0',
+    alignItems: 'center',
     bottom: '0',
-    right: '0',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-    transition: 'opacity 180ms ease-in-out, background-color 180ms ease-in-out',
+    left: '0',
+    opacity: '0',
+    position: 'absolute',
+    right: '0',
     selectors: {
       [`${containerAvatar()}:hover &`]: {
-        opacity: 1,
-        cursor: 'pointer',
         backgroundColor: theme.colors.overlay,
+        cursor: 'pointer',
+        opacity: 1,
       },
     },
+    top: '0',
+    transition: 'opacity 180ms ease-in-out, background-color 180ms ease-in-out',
   },
+
+  compoundVariants: borderRadiusSquare,
 
   variants: {
     shape: {
@@ -112,8 +114,6 @@ export const uploadContainer = recipe({
       xsmall: {},
     },
   },
-
-  compoundVariants: borderRadiusSquare,
 })
 
 export const productIconContainer = recipe({
@@ -121,6 +121,7 @@ export const productIconContainer = recipe({
     ...baseStyle,
     overflow: 'hidden',
   },
+  compoundVariants: borderRadiusSquare,
   variants: {
     shape: {
       circle: {
@@ -135,7 +136,6 @@ export const productIconContainer = recipe({
       xsmall: sizeStyle('xsmall'),
     },
   },
-  compoundVariants: borderRadiusSquare,
 })
 
 export const elementContainer = recipe({
@@ -160,28 +160,28 @@ export const colorsAvatar = recipe({
     borderRight: `calc(${finalSizeAvatar} / 2) solid ${halvedColorAvatar}`,
     borderTop: `calc(${finalSizeAvatar} / 2) solid ${finalColorAvatar}`,
   },
+  compoundVariants: borderRadiusSquare,
 
   variants: {
-    size: {
-      large: sizeStyle('large'),
-      medium: sizeStyle('medium'),
-      small: sizeStyle('small'),
-      xsmall: sizeStyle('xsmall'),
-    },
     shape: {
       circle: {
         borderRadius: theme.radii.circle,
       },
       square: {},
     },
+    size: {
+      large: sizeStyle('large'),
+      medium: sizeStyle('medium'),
+      small: sizeStyle('small'),
+      xsmall: sizeStyle('xsmall'),
+    },
   },
-  compoundVariants: borderRadiusSquare,
 })
 
 export const svgAvatar = recipe({
   base: {
-    width: '100% !important',
     height: '100% !important',
+    width: '100% !important',
   },
   variants: {
     shape: {

@@ -6,7 +6,7 @@ exports[`toaster > components > renders correctly Toast.Button 1`] = `
     data-testid="testing"
   >
     <button
-      class="styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_primary__e1wcoe7 styles_undefined_compound_0__e1wcoel"
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_xsmall__e1wcoeh styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
       type="button"
     >
       Test
@@ -21,7 +21,7 @@ exports[`toaster > components > renders correctly Toast.Button and variant ghost
     data-testid="testing"
   >
     <button
-      class="styles__11f0u3o2 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_ghost__e1wcoei styles_sentiment_primary__e1wcoe7 styles_undefined_compound_18__e1wcoe13"
+      class="styles__11f0u3o2 styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_xsmall__e1wcoeh styles_variant_ghost__e1wcoej styles_undefined_compound_18__e1wcoe13"
       type="button"
     >
       Test
@@ -36,7 +36,7 @@ exports[`toaster > components > renders correctly Toast.Link 1`] = `
     data-testid="testing"
   >
     <a
-      class="styles__1dtqm9e0 styles_prominence_strong__1dtqm9e4 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_5__1dtqm9ej styles__1dtqm9en"
+      class="styles__1dtqm9e0 styles_oneLine_false__1dtqm9e1 styles_prominence_strong__1dtqm9e4 styles_sentiment_info__1dtqm9e7 styles_type_standalone__1dtqm9ea styles_variant_bodySmallStrong__1dtqm9eb styles_undefined_compound_5__1dtqm9ej styles__1dtqm9en"
       data-variant="standalone"
       href="scaleway.com"
     >
@@ -48,7 +48,7 @@ exports[`toaster > components > renders correctly Toast.Link 1`] = `
 
 exports[`toaster > renders correctly with all kind of toast 1`] = `
 <span
-  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+  class="style__m4c9ow0 style_disabled_false__m4c9ow1 style_italic_false__m4c9ow3 style_oneLine_false__m4c9ow5 style_prominence_default__m4c9ow7 style_strikeThrough_false__m4c9owk style_underline_false__m4c9owm style_variant_bodySmallStrong__m4c9owq style_undefined_compound_72__m4c9ow3c"
 >
   This is a success
 </span>
@@ -56,7 +56,7 @@ exports[`toaster > renders correctly with all kind of toast 1`] = `
 
 exports[`toaster > renders correctly with all kind of toast 2`] = `
 <span
-  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+  class="style__m4c9ow0 style_disabled_false__m4c9ow1 style_italic_false__m4c9ow3 style_oneLine_false__m4c9ow5 style_prominence_default__m4c9ow7 style_strikeThrough_false__m4c9owk style_underline_false__m4c9owm style_variant_bodySmallStrong__m4c9owq style_undefined_compound_72__m4c9ow3c"
 >
   This is an error
 </span>
@@ -64,7 +64,7 @@ exports[`toaster > renders correctly with all kind of toast 2`] = `
 
 exports[`toaster > renders correctly with all kind of toast 3`] = `
 <span
-  class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+  class="style__m4c9ow0 style_disabled_false__m4c9ow1 style_italic_false__m4c9ow3 style_oneLine_false__m4c9ow5 style_prominence_default__m4c9ow7 style_strikeThrough_false__m4c9owk style_underline_false__m4c9owm style_variant_bodySmallStrong__m4c9owq style_undefined_compound_72__m4c9ow3c"
 >
   This is a warning
 </span>
@@ -99,22 +99,22 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           tabindex="0"
         >
           <div
-            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_normal_xxsmall__toi52u5v"
             style="--_4k0ekn0: 100%;"
           >
             <span
-              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              class="style__m4c9ow0 style_disabled_false__m4c9ow1 style_italic_false__m4c9ow3 style_oneLine_false__m4c9ow5 style_prominence_default__m4c9ow7 style_strikeThrough_false__m4c9owk style_underline_false__m4c9owm style_variant_bodySmallStrong__m4c9owq style_undefined_compound_72__m4c9ow3c"
             >
               This is a success
             </span>
           </div>
           <button
             aria-label="close"
-            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_success__e1wcoeb styles_undefined_compound_4__e1wcoep"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_success__e1wcoeb styles_size_xsmall__e1wcoeh styles_variant_filled__e1wcoei styles_undefined_compound_4__e1wcoep"
             type="button"
           >
             <svg
-              class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
+              class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -149,22 +149,22 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           tabindex="0"
         >
           <div
-            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_normal_xxsmall__toi52u5v"
             style="--_4k0ekn0: 100%;"
           >
             <span
-              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              class="style__m4c9ow0 style_disabled_false__m4c9ow1 style_italic_false__m4c9ow3 style_oneLine_false__m4c9ow5 style_prominence_default__m4c9ow7 style_strikeThrough_false__m4c9owk style_underline_false__m4c9owm style_variant_bodySmallStrong__m4c9owq style_undefined_compound_72__m4c9ow3c"
             >
               This is an error
             </span>
           </div>
           <button
             aria-label="close"
-            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_danger__e1wcoe9 styles_undefined_compound_2__e1wcoen"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_danger__e1wcoe6 styles_size_xsmall__e1wcoeh styles_variant_filled__e1wcoei styles_undefined_compound_2__e1wcoen"
             type="button"
           >
             <svg
-              class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
+              class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path
@@ -198,22 +198,22 @@ exports[`toaster > renders correctly with all kind of toast 4`] = `
           tabindex="0"
         >
           <div
-            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u31 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u7d styles_gap_1rem_xxsmall__toi52ud styles_justifyContent_normal_xxsmall__toi52u5d"
+            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_1rem_xxsmall__toi52u3v styles_justifyContent_normal_xxsmall__toi52u5v"
             style="--_4k0ekn0: 100%;"
           >
             <span
-              class="style__m4c9ow0 style_strikeThrough_false__m4c9ow2 style_italic_false__m4c9ow4 style_underline_false__m4c9ow6 style_oneLine_false__m4c9ow8 style_prominence_default__m4c9owi style_variant_bodySmallStrong__m4c9owo style_disabled_false__m4c9ow1b style_undefined_compound_72__m4c9ow3c"
+              class="style__m4c9ow0 style_disabled_false__m4c9ow1 style_italic_false__m4c9ow3 style_oneLine_false__m4c9ow5 style_prominence_default__m4c9ow7 style_strikeThrough_false__m4c9owk style_underline_false__m4c9owm style_variant_bodySmallStrong__m4c9owq style_undefined_compound_72__m4c9ow3c"
             >
               This is a warning
             </span>
           </div>
           <button
             aria-label="close"
-            class="styles__11f0u3o1 styles__e1wcoe0 styles_size_xsmall__e1wcoe4 styles_fullWidth_false__e1wcoe6 styles_disabled_false__e1wcoek styles_variant_filled__e1wcoeg styles_sentiment_warning__e1wcoec styles_undefined_compound_5__e1wcoeq"
+            class="styles__11f0u3o1 styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_warning__e1wcoec styles_size_xsmall__e1wcoeh styles_variant_filled__e1wcoei styles_undefined_compound_5__e1wcoeq"
             type="button"
           >
             <svg
-              class="styles__vbm0wq0 styles_prominence_default__vbm0wqg styles_disabled_false__vbm0wqf styles_size_small__vbm0wqa styles_undefined_compound_39__vbm0wq1n"
+              class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
               viewBox="0 0 16 16"
             >
               <path

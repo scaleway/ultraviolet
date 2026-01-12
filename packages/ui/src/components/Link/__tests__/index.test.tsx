@@ -5,7 +5,7 @@ import { Link } from '..'
 import { PROMINENCES } from '../constants'
 
 describe('link', () => {
-  test(`render correctly with no sentiment`, () =>
+  test('render correctly with no sentiment', () =>
     shouldMatchSnapshot(<Link href="/">Hello</Link>))
 
   describe('sentiment', () => {
@@ -33,24 +33,24 @@ describe('link', () => {
       ))
   })
 
-  test(`render correctly with target blank`, () =>
+  test('render correctly with target blank', () =>
     shouldMatchSnapshot(
       <Link href="/" target="_blank">
         Hello
       </Link>,
     ))
 
-  test(`render correctly prop primary`, () =>
+  test('render correctly prop primary', () =>
     shouldMatchSnapshot(
       <Link href="/" sentiment="primary">
         Hello
       </Link>,
     ))
 
-  test(`render correctly with href props`, () =>
+  test('render correctly with href props', () =>
     shouldMatchSnapshot(<Link href="/">Hello</Link>))
 
-  test(`render correctly with href props`, () =>
+  test('render correctly with href props', () =>
     shouldMatchSnapshot(
       <>
         <Link href="/" iconPosition="left">
@@ -68,7 +68,7 @@ describe('link', () => {
       </>,
     ))
 
-  test(`render correctly with variants props`, () =>
+  test('render correctly with variants props', () =>
     shouldMatchSnapshot(
       <>
         <Link href="/" variant="inline">
@@ -80,7 +80,7 @@ describe('link', () => {
       </>,
     ))
 
-  test(`render correctly with bad sentiment`, () =>
+  test('render correctly with bad sentiment', () =>
     shouldMatchSnapshot(
       // @ts-expect-error Use a wrong sentiment
       <Link href="/" sentiment="wrong">
@@ -88,7 +88,7 @@ describe('link', () => {
       </Link>,
     ))
 
-  test(`render correctly with sizes`, () =>
+  test('render correctly with sizes', () =>
     shouldMatchSnapshot(
       <>
         <Link href="/" size="large">
@@ -105,7 +105,7 @@ describe('link', () => {
       </>,
     ))
 
-  test(`render correctly with oneLine`, () =>
+  test('render correctly with oneLine', () =>
     shouldMatchSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
         <Link href="/" oneLine>

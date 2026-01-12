@@ -42,7 +42,7 @@ type RowProps = {
   expandable?: ReactNode
   /**
    * Row cannot be selected if this prop is provided. boolean true disabled selection, a string disable selection and a tooltip will be displayed on checkbox hover.
-   * */
+   */
   selectDisabled?: boolean | string
   disabled?: boolean
   sentiment?: (typeof SENTIMENTS)[number]

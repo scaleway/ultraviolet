@@ -103,7 +103,7 @@ describe('tooltip', () => {
       </Popover>,
     ))
 
-  describe(`should render correctly with placement`, () => {
+  describe('should render correctly with placement', () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
       test(`should renders tooltip with placement ${placement}`, () => {
         shouldMatchSnapshot(
@@ -121,7 +121,7 @@ describe('tooltip', () => {
     })
   })
 
-  describe(`should render correctly with sentiment`, () => {
+  describe('should render correctly with sentiment', () => {
     ;(['neutral', 'primary'] as const).forEach(sentiment => {
       test(`should renders tooltip with placement ${sentiment}`, () => {
         shouldMatchSnapshot(
@@ -139,7 +139,7 @@ describe('tooltip', () => {
     })
   })
 
-  describe(`should render correctly with sizes`, () => {
+  describe('should render correctly with sizes', () => {
     ;['small', 'medium', 'large'].forEach(size => {
       test(`should renders tooltip with placement ${size}`, () => {
         const { asFragment } = renderWithTheme(
@@ -158,7 +158,7 @@ describe('tooltip', () => {
     })
   })
 
-  test(`should render visible on mount and close on click on close button`, async () => {
+  test('should render visible on mount and close on click on close button', async () => {
     const onClose = vi.fn(() => {})
 
     renderWithTheme(
@@ -179,10 +179,10 @@ describe('tooltip', () => {
     const closeButton = screen.getByLabelText('close')
     await userEvent.click(closeButton)
 
-    expect(onClose).toHaveBeenCalledTimes(1)
+    expect(onClose).toHaveBeenCalledOnce()
   })
 
-  test(`should render visible on mount and close on click outside`, async () => {
+  test('should render visible on mount and close on click outside', async () => {
     const onClose = vi.fn(() => {})
 
     renderWithTheme(
@@ -210,14 +210,14 @@ describe('tooltip', () => {
 
     // Need to await cause popup close is in a setTimeout
     await waitFor(() => {
-      expect(onClose).toHaveBeenCalledTimes(1)
+      expect(onClose).toHaveBeenCalledOnce()
     })
   })
 
   // This test is made to check advanced use cases of popover with inputs inside and a modal that contains the same inputs
   // The goal is to check if at any time the popover or the modal close unexpectedly when interacting with the inputs
-  describe(`advanced test`, () => {
-    test(`should open popover click on select, choose an option and fill text input without closing popover`, async () => {
+  describe('advanced test', () => {
+    test('should open popover click on select, choose an option and fill text input without closing popover', async () => {
       renderWithTheme(<AdvancedPopover />)
       const buttonControlsPopover = screen.getByTestId('button-popover')
 
@@ -247,7 +247,7 @@ describe('tooltip', () => {
       })
     })
 
-    test(`should open popover then modal within popover, click on select, choose an option and fill text input without closing modal and popover`, async () => {
+    test('should open popover then modal within popover, click on select, choose an option and fill text input without closing modal and popover', async () => {
       renderWithTheme(<AdvancedPopover />)
       const buttonControlsPopover = screen.getByTestId('button-popover')
 

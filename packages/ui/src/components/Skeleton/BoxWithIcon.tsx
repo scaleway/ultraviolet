@@ -23,6 +23,7 @@ export const BoxWithIcon = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
+      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <div className={boxWithIconSkeleton} key={`skeleton-box-${i}`}>
         <IconSkeleton />
         <Line />

@@ -50,6 +50,7 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 )
 
 describe('table', () => {
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')
