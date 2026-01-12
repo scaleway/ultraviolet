@@ -93,7 +93,7 @@ export const Alert = ({
         wrap
       >
         <Stack
-          alignItems="start"
+          alignItems="flex-start"
           direction="row"
           flex="1 1 auto"
           gap={size === 'small' ? 1 : 2}

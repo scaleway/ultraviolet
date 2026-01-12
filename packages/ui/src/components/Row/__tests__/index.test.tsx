@@ -38,9 +38,17 @@ describe('row', () => {
   test('renders correctly with responsive values', () =>
     shouldMatchSnapshot(
       <Row
-        alignItems={{ large: 'end', medium: 'center', small: 'start' }}
+        alignItems={{
+          large: 'flex-end',
+          medium: 'center',
+          small: 'flex-start',
+        }}
         gap={{ large: 3, medium: 2, small: 1 }}
-        justifyContent={{ large: 'end', medium: 'center', small: 'start' }}
+        justifyContent={{
+          large: 'flex-end',
+          medium: 'center',
+          small: 'flex-start',
+        }}
         padding={{ large: 2, medium: 1, small: 0 }}
         templateColumns={{
           large: '2fr 1fr',

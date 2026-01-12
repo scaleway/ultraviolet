@@ -610,10 +610,10 @@ export const Item = memo(
     if (categoryIcon || (Children.count(children) > 0 && !hasParents)) {
       return (
         <Stack
-          alignItems="start"
+          alignItems="flex-start"
           className={navigationItemMenuStack}
           gap={1}
-          justifyContent="start"
+          justifyContent="flex-start"
           style={style}
         >
           {Children.count(children) > 0 ? (
@@ -801,10 +801,10 @@ export const Item = memo(
       return (
         <Tooltip placement="right" text={label}>
           <Stack
-            alignItems="start"
+            alignItems="flex-start"
             className={navigationItemMenuStack}
             gap={1}
-            justifyContent="start"
+            justifyContent="flex-start"
           >
             <Stack
               alignItems="center"

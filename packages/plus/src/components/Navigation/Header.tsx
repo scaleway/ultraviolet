@@ -16,7 +16,7 @@ export const Header = memo(({ logo }: HeaderProps) => {
   return (
     <div className={navigationHeader}>
       <Stack
-        alignItems="start"
+        alignItems="flex-start"
         className={navigationLogoContainer}
         justifyContent={!expanded ? 'center' : undefined}
       >

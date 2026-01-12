@@ -210,7 +210,7 @@ export const SingleSlider = ({
         </Stack>
       ) : null}
 
-      <Stack direction="row" justifyContent="end">
+      <Stack direction="row" justifyContent="flex-end">
         {direction === 'column' && !label ? styledValue(valueToShow) : null}
       </Stack>
       <Stack direction="column" gap={1} justifyContent="center" width="100%">

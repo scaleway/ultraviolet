@@ -261,7 +261,7 @@ export const Dialog = ({
         {image ? (
           <>
             <Stack
-              alignItems="end"
+              alignItems="flex-end"
               className={modalImageContainer}
               justifyContent="center"
             >

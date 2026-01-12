@@ -139,7 +139,7 @@ const RadioGroupComponent = ({
               </Stack>
             ) : null}
             <Stack
-              alignItems="start"
+              alignItems="flex-start"
               direction={direction}
               gap={direction === 'column' ? 1 : 2}
             >

@@ -186,7 +186,9 @@ export const ContentCard = forwardRef<
                   className={iconStack[direction]}
                   direction={direction}
                   flex={1}
-                  justifyContent={direction === 'column' ? 'center' : 'end'}
+                  justifyContent={
+                    direction === 'column' ? 'center' : 'flex-end'
+                  }
                 >
                   <div className={iconContainer}>
                     <OpenInNewIcon disabled={disabled} sentiment="neutral" />
