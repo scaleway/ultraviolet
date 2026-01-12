@@ -41,6 +41,7 @@ export const Slider = ({
   className,
   tooltipPosition = 'top',
   style,
+  customValueDisplay,
   labelDescription,
   'aria-label': ariaLabel,
 }: SliderProps) => {
@@ -72,6 +73,7 @@ export const Slider = ({
         <DoubleSlider
           aria-label={ariaLabel}
           className={className}
+          customValueDisplay={customValueDisplay}
           data-testid={dataTestId}
           direction={direction}
           disabled={disabled}
@@ -100,6 +102,7 @@ export const Slider = ({
         <SingleSlider
           aria-label={ariaLabel}
           className={className}
+          customValueDisplay={customValueDisplay}
           data-testid={dataTestId}
           direction={direction}
           disabled={disabled}
