@@ -139,21 +139,30 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       if (!textArea) {
         return
       }
+
       const updateHeight = () => {
         if (textArea && rows === 'auto' && !maxRows) {
           textArea.style.height = 'auto'
           textArea.style.resize = 'none'
           textArea.style.height = `${textArea.scrollHeight + 2}px`
-        } else if (textArea && maxRows) {
+        } else {
+          textArea.style.resize = 'vertical'
+        }
+
+        if (textArea && (maxRows || typeof rows === 'number')) {
           const lineHeight = Number.parseFloat(
             getComputedStyle(textArea).lineHeight,
           )
 
-          textArea.style.height = 'auto'
-          const maxHeight = maxRows * lineHeight
+          if (maxRows) {
+            textArea.style.height = 'auto'
+            const maxHeight = maxRows * lineHeight
 
-          textArea.style.height = `${textArea.scrollHeight + 2}px`
-          textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
+            textArea.style.height = `${textArea.scrollHeight + 2}px`
+            textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
+          } else if (typeof rows === 'number') {
+            textArea.style.height = 'auto'
+          }
 
           if (typeof rows === 'number') {
             const minHeight = rows * lineHeight

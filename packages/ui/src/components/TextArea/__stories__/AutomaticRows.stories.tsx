@@ -34,14 +34,14 @@ export const AutomaticRows: StoryFn<typeof TextArea> = () => {
       />
       <TextArea
         aria-label={undefined}
-        label="AutoExpandMax=4"
+        label="maxRows=4"
         maxRows={4}
         onChange={setValue3}
         value={value3}
       />
       <TextArea
         aria-label={undefined}
-        label="Rows=2, AutoExpandMax=4"
+        label="Rows=2, maxRows=4"
         maxRows={4}
         name="example-4"
         onChange={setValue4}
@@ -50,7 +50,7 @@ export const AutomaticRows: StoryFn<typeof TextArea> = () => {
       />
       <TextArea
         aria-label={undefined}
-        label="Rows=auto, AutoExpandMax=4"
+        label="Rows=auto, maxRows=4"
         maxRows={4}
         name="example-5"
         onChange={setValue5}
