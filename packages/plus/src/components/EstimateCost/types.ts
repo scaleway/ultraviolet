@@ -22,7 +22,7 @@ export type EstimateCostProps = {
    */
   commitmentFeesContent?: ReactNode
   /**
-   * When set to true, only the estiamted final cost is displayed
+   * When set to true, only the estimated final cost is displayed
    */
   compact?: boolean
   /**
