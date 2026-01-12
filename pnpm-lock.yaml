@@ -48,8 +48,8 @@ importers:
         specifier: 20.3.1
         version: 20.3.1
       '@eslint/compat':
-        specifier: 2.0.0
-        version: 2.0.0(eslint@9.39.2(jiti@2.4.2))
+        specifier: 2.0.1
+        version: 2.0.1(eslint@9.39.2(jiti@2.4.2))
       '@eslint/eslintrc':
         specifier: 3.3.3
         version: 3.3.3
@@ -2371,6 +2371,15 @@ packages:
       eslint:
         optional: true
 
+  '@eslint/compat@2.0.1':
+    resolution: {integrity: sha512-yl/JsgplclzuvGFNqwNYV4XNPhP3l62ZOP9w/47atNAdmDtIFCx6X7CSk/SlWUuBGkT4Et/5+UD+WyvX2iiIWA==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+    peerDependencies:
+      eslint: ^8.40 || 9
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+
   '@eslint/config-array@0.21.1':
     resolution: {integrity: sha512-aw1gNayWpdI/jSYVgzN5pL0cfzU02GT3NBpeT/DXbx1/1x7ZKxFPd9bwrzygx/qiwIQiJ1sw/zD8qY/kRvlGHA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2385,6 +2394,10 @@ packages:
 
   '@eslint/core@1.0.0':
     resolution: {integrity: sha512-PRfWP+8FOldvbApr6xL7mNCw4cJcSTq4GA7tYbgq15mRb0kWKO/wEB2jr+uwjFH3sZvEZneZyCUGTxsv4Sahyw==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
+  '@eslint/core@1.0.1':
+    resolution: {integrity: sha512-r18fEAj9uCk+VjzGt2thsbOmychS+4kxI14spVNibUO2vqKX7obOG+ymZljAwuPZl+S3clPGwCwTDtrdqTiY6Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@eslint/eslintrc@3.3.3':
@@ -10463,6 +10476,12 @@ snapshots:
     optionalDependencies:
       eslint: 9.39.2(jiti@2.4.2)
 
+  '@eslint/compat@2.0.1(eslint@9.39.2(jiti@2.4.2))':
+    dependencies:
+      '@eslint/core': 1.0.1
+    optionalDependencies:
+      eslint: 9.39.2(jiti@2.4.2)
+
   '@eslint/config-array@0.21.1':
     dependencies:
       '@eslint/object-schema': 2.1.7
@@ -10480,6 +10499,10 @@ snapshots:
       '@types/json-schema': 7.0.15
 
   '@eslint/core@1.0.0':
+    dependencies:
+      '@types/json-schema': 7.0.15
+
+  '@eslint/core@1.0.1':
     dependencies:
       '@types/json-schema': 7.0.15
 
