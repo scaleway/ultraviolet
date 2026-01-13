@@ -1,4 +1,4 @@
-import { screen, waitFor, within } from '@testing-library/react'
+import { fireEvent, screen, waitFor, within } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
@@ -214,6 +214,7 @@ describe('selectInput', () => {
       expect(dropdown).toBeVisible()
     })
     expect(screen.getByText('error')).toBeVisible()
+    fireEvent.focus(input)
 
     expect(asFragment()).toMatchSnapshot()
   })
