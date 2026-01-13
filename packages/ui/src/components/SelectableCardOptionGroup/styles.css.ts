@@ -5,8 +5,8 @@ import { selectBarBase } from '../SelectInput/components/selectBar.css'
 
 export const selectableCardOptionFieldSet = style({
   border: 'none',
-  padding: 0,
   margin: 0,
+  padding: 0,
 })
 
 export const disabledImage = style({
@@ -14,15 +14,15 @@ export const disabledImage = style({
 })
 
 export const selectableCard = style({
+  cursor: 'pointer',
   padding: 0,
   paddingTop: theme.space[2],
-  cursor: 'pointer',
 })
 
 globalStyle(`${selectableCard} ${radioStack}`, {
-  position: 'absolute',
-  padding: theme.space[1],
   marginTop: `calc(-1 * ${theme.space[2]})`,
+  padding: theme.space[1],
+  position: 'absolute',
 })
 
 export const optionFullHeight = style({ height: '100%' })
@@ -32,10 +32,10 @@ export const optionSelectInputDisabled = style({})
 export const optionSelectInputError = style({})
 
 globalStyle(`${optionSelectInput} ${selectBarBase}`, {
-  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
   borderBottom: 0,
-  borderRight: 0,
   borderLeft: 0,
+  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+  borderRight: 0,
 })
 
 globalStyle(

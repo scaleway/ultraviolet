@@ -80,7 +80,7 @@ describe('selectableCardField', () => {
     )
     const input = screen.getByLabelText('Radio 1')
     await userEvent.click(input)
-    expect(onChange).toBeCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     await userEvent.click(input)
     expect(onChange).toBeCalledTimes(2)
     expect(asFragment()).toMatchSnapshot()

@@ -53,7 +53,7 @@ describe('fileInputField', () => {
     await user.upload(fileInput, file)
 
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
   })
 })

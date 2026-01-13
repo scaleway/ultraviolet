@@ -154,7 +154,18 @@ const handleKeyDown = (
     const currentSearch = search + event.key
     setSearch(currentSearch)
     ref.current.focus()
-    if (!Array.isArray(options)) {
+    if (Array.isArray(options)) {
+      const closestOption = [...options].find(option =>
+        option.searchText
+          ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
+          : option.value.toLocaleLowerCase().startsWith(currentSearch),
+      )
+      if (closestOption) {
+        setDefaultSearch(closestOption.searchText ?? closestOption.value)
+      } else {
+        setDefaultSearch(null)
+      }
+    } else {
       const closestOptions = { ...options }
       Object.keys(closestOptions).map((group: string) => {
         closestOptions[group] = closestOptions[group].filter(option =>
@@ -166,17 +177,6 @@ const handleKeyDown = (
         return null
       })
       const closestOption = closestOptions[Object.keys(closestOptions)[0]][0]
-      if (closestOption) {
-        setDefaultSearch(closestOption.searchText ?? closestOption.value)
-      } else {
-        setDefaultSearch(null)
-      }
-    } else {
-      const closestOption = [...options].find(option =>
-        option.searchText
-          ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
-          : option.value.toLocaleLowerCase().startsWith(currentSearch),
-      )
       if (closestOption) {
         setDefaultSearch(closestOption.searchText ?? closestOption.value)
       } else {
@@ -263,7 +263,9 @@ const CreateDropdown = ({
         onChange([])
       } else {
         const allValues: OptionType[] = []
-        if (!Array.isArray(options)) {
+        if (Array.isArray(options)) {
+          options.map(option => allValues.push(option))
+        } else {
           Object.keys(options).map((group: string) =>
             options[group].map(option => {
               if (!option.disabled) {
@@ -273,8 +275,6 @@ const CreateDropdown = ({
               return null
             }),
           )
-        } else {
-          options.map(option => allValues.push(option))
         }
         onChange?.(allValues.map(value => value.value))
       }
@@ -305,7 +305,146 @@ const CreateDropdown = ({
     }
   }
 
-  return !Array.isArray(displayedOptions) ? (
+  return Array.isArray(displayedOptions) ? (
+    <Stack
+      className={cn(dropdownContainer, dropdownContainerUnGrouped)}
+      gap={0.25}
+      id="select-dropdown"
+      onKeyDown={handleKeyDownSelect}
+      role="listbox"
+    >
+      {selectAll && multiselect ? (
+        <Stack gap={0.25} id="items" tabIndex={-1}>
+          <div
+            aria-disabled={false}
+            aria-label="select-all"
+            aria-selected={selectedData.allSelected}
+            className={cn(dropdownItem({ selected: selectedData.allSelected }))}
+            data-testid="select-all"
+            onClick={selectAllOptions}
+            onKeyDown={event =>
+              [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
+            }
+            role="option"
+            tabIndex={0}
+          >
+            <Checkbox
+              checked={selectedData.allSelected}
+              className={dropdownCheckbox}
+              data-testid="select-all-checkbox"
+              disabled={false}
+              onChange={selectAllOptions}
+              tabIndex={-1}
+              value="select-all"
+            >
+              <Stack direction="column">
+                <Text as="span" placement="left" variant="body">
+                  {selectAll.label}
+                </Text>
+                <Text
+                  as="span"
+                  placement="left"
+                  prominence="weak"
+                  sentiment="neutral"
+                  variant="bodySmall"
+                >
+                  {selectAll.description}
+                </Text>
+              </Stack>
+            </Checkbox>
+          </div>
+        </Stack>
+      ) : null}
+      <Stack gap={0.25} id="items">
+        {isLoading ? (
+          <Skeleton variant="block" />
+        ) : (
+          displayedOptions.map((option, index) => (
+            <div
+              aria-disabled={!!option.disabled}
+              aria-label={option.value}
+              aria-selected={
+                selectedData.selectedValues.includes(option.value) &&
+                !option.disabled
+              }
+              className={cn(
+                dropdownItem({
+                  disabled: !!option.disabled,
+                  selected:
+                    selectedData.selectedValues.includes(option.value) &&
+                    !option.disabled,
+                }),
+              )}
+              data-testid={`option-${option.value}`}
+              id={`option-${index}`}
+              key={option.value}
+              onClick={event => {
+                if (!option.disabled) {
+                  handleClick({
+                    clickedOption: option,
+                    event,
+                  })
+                }
+              }}
+              onKeyDown={event => {
+                const shouldClick = [' ', 'Enter'].includes(event.key)
+                if (shouldClick) {
+                  handleClick({
+                    clickedOption: option,
+                    event,
+                  })
+                }
+              }}
+              ref={
+                option.value === defaultSearchValue ||
+                option.searchText === defaultSearchValue
+                  ? focusedItemRef
+                  : null
+              }
+              role="option"
+              tabIndex={option.disabled ? -1 : 0}
+            >
+              {multiselect ? (
+                <Checkbox
+                  checked={
+                    selectedData.selectedValues.includes(option.value) &&
+                    !option.disabled
+                  }
+                  className={dropdownCheckbox}
+                  disabled={option.disabled}
+                  onChange={event => {
+                    if (!option.disabled) {
+                      handleClick({
+                        clickedOption: option,
+                        event,
+                      })
+                    }
+                  }}
+                  tabIndex={-1}
+                  value={option.value}
+                >
+                  <DisplayOption
+                    descriptionDirection={descriptionDirection}
+                    option={option}
+                    optionalInfoPlacement={optionalInfoPlacement}
+                  />
+                </Checkbox>
+              ) : (
+                <DisplayOption
+                  descriptionDirection={descriptionDirection}
+                  option={option}
+                  optionalInfoPlacement={optionalInfoPlacement}
+                />
+              )}
+            </div>
+          ))
+        )}
+        {loadMore ? (
+          <Stack className={dropdownLoadMore}>{loadMore}</Stack>
+        ) : null}
+      </Stack>
+    </Stack>
+  ) : (
     <Stack
       className={dropdownContainer}
       data-grouped
@@ -371,6 +510,7 @@ const CreateDropdown = ({
                   id={selectAllGroup ? 'items' : undefined}
                 >
                   {group ? (
+                    // biome-ignore  lint/a11y/noInteractiveElementToNoninteractiveRole: to fix
                     <button
                       className={cn(
                         selectAllGroup ? dropdownGroupSelectable : '',
@@ -473,7 +613,7 @@ const CreateDropdown = ({
                         : null
                     }
                     role="option"
-                    tabIndex={!option.disabled ? 0 : -1}
+                    tabIndex={option.disabled ? -1 : 0}
                   >
                     {multiselect ? (
                       <Checkbox
@@ -516,145 +656,6 @@ const CreateDropdown = ({
         </>
       )}
       {loadMore ? <Stack className={dropdownLoadMore}>{loadMore}</Stack> : null}
-    </Stack>
-  ) : (
-    <Stack
-      className={cn(dropdownContainer, dropdownContainerUnGrouped)}
-      gap={0.25}
-      id="select-dropdown"
-      onKeyDown={handleKeyDownSelect}
-      role="listbox"
-    >
-      {selectAll && multiselect ? (
-        <Stack gap={0.25} id="items" tabIndex={-1}>
-          <div
-            aria-disabled={false}
-            aria-label="select-all"
-            aria-selected={selectedData.allSelected}
-            className={cn(dropdownItem({ selected: selectedData.allSelected }))}
-            data-testid="select-all"
-            onClick={selectAllOptions}
-            onKeyDown={event =>
-              [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
-            }
-            role="option"
-            tabIndex={0}
-          >
-            <Checkbox
-              checked={selectedData.allSelected}
-              className={dropdownCheckbox}
-              data-testid="select-all-checkbox"
-              disabled={false}
-              onChange={selectAllOptions}
-              tabIndex={-1}
-              value="select-all"
-            >
-              <Stack direction="column">
-                <Text as="span" placement="left" variant="body">
-                  {selectAll.label}
-                </Text>
-                <Text
-                  as="span"
-                  placement="left"
-                  prominence="weak"
-                  sentiment="neutral"
-                  variant="bodySmall"
-                >
-                  {selectAll.description}
-                </Text>
-              </Stack>
-            </Checkbox>
-          </div>
-        </Stack>
-      ) : null}
-      <Stack gap={0.25} id="items">
-        {isLoading ? (
-          <Skeleton variant="block" />
-        ) : (
-          displayedOptions.map((option, index) => (
-            <div
-              aria-disabled={!!option.disabled}
-              aria-label={option.value}
-              aria-selected={
-                selectedData.selectedValues.includes(option.value) &&
-                !option.disabled
-              }
-              className={cn(
-                dropdownItem({
-                  disabled: !!option.disabled,
-                  selected:
-                    selectedData.selectedValues.includes(option.value) &&
-                    !option.disabled,
-                }),
-              )}
-              data-testid={`option-${option.value}`}
-              id={`option-${index}`}
-              key={option.value}
-              onClick={event => {
-                if (!option.disabled) {
-                  handleClick({
-                    clickedOption: option,
-                    event,
-                  })
-                }
-              }}
-              onKeyDown={event => {
-                const shouldClick = [' ', 'Enter'].includes(event.key)
-                if (shouldClick) {
-                  handleClick({
-                    clickedOption: option,
-                    event,
-                  })
-                }
-              }}
-              ref={
-                option.value === defaultSearchValue ||
-                option.searchText === defaultSearchValue
-                  ? focusedItemRef
-                  : null
-              }
-              role="option"
-              tabIndex={!option.disabled ? 0 : -1}
-            >
-              {multiselect ? (
-                <Checkbox
-                  checked={
-                    selectedData.selectedValues.includes(option.value) &&
-                    !option.disabled
-                  }
-                  className={dropdownCheckbox}
-                  disabled={option.disabled}
-                  onChange={event => {
-                    if (!option.disabled) {
-                      handleClick({
-                        clickedOption: option,
-                        event,
-                      })
-                    }
-                  }}
-                  tabIndex={-1}
-                  value={option.value}
-                >
-                  <DisplayOption
-                    descriptionDirection={descriptionDirection}
-                    option={option}
-                    optionalInfoPlacement={optionalInfoPlacement}
-                  />
-                </Checkbox>
-              ) : (
-                <DisplayOption
-                  descriptionDirection={descriptionDirection}
-                  option={option}
-                  optionalInfoPlacement={optionalInfoPlacement}
-                />
-              )}
-            </div>
-          ))
-        )}
-        {loadMore ? (
-          <Stack className={dropdownLoadMore}>{loadMore}</Stack>
-        ) : null}
-      </Stack>
     </Stack>
   )
 }

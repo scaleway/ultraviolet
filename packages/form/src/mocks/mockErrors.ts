@@ -22,6 +22,6 @@ export const mockErrors: FormErrors = {
   minDate: ({ minDate }) => `Date must be greater than ${minDate?.toString()}`,
   minLength: ({ minLength }) =>
     `This field should have a length greater than ${minLength}`,
-  pattern: () => `This field should match the regex`,
+  pattern: () => 'This field should match the regex',
   required: () => 'This field is required',
 }

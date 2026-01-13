@@ -1,19 +1,19 @@
+import { theme } from '@ultraviolet/themes'
 import {
   createVar,
   globalStyle,
   style,
   styleVariants,
 } from '@vanilla-extract/css'
-import { theme } from '@ultraviolet/themes'
 import { TEXTINPUT_SIZE_HEIGHT } from './constants'
 
 export const hasFocusVar = createVar()
 
 export const basicPrefix = style({
-  padding: theme.space['2'],
-  borderRight: '1px solid',
   borderColor: 'inherit',
+  borderRight: '1px solid',
   height: '100%',
+  padding: theme.space['2'],
 
   selectors: {
     '&[data-size="small"]': {
@@ -27,36 +27,29 @@ export const stateStack = style({
 })
 
 export const basicSuffix = style({
-  padding: `0 ${theme.space['2']}`,
-  borderLeft: `1px solid`,
-  borderColor: `inherit`,
+  borderColor: 'inherit',
+  borderLeft: '1px solid',
   height: '100%',
+  padding: `0 ${theme.space['2']}`,
 })
 
 export const ctaSuffix = style({
-  padding: `0 ${theme.space['1']}`,
-  borderLeft: `1px solid`,
-  borderColor: `inherit`,
+  borderColor: 'inherit',
+  borderLeft: '1px solid',
   height: '100%',
+  padding: `0 ${theme.space['1']}`,
 })
 
 export const inputClass = style({
-  flex: 1,
-  border: 'none',
-  outline: 'none',
-  height: '100%',
-  width: '100%',
-  paddingLeft: theme.space['2'],
   background: 'transparent',
+  border: 'none',
+  flex: 1,
   fontSize: theme.typography.bodySmall.fontSize,
+  height: '100%',
+  outline: 'none',
+  paddingLeft: theme.space['2'],
 
   selectors: {
-    '&[data-size="large"]': {
-      fontSize: theme.typography.body.fontSize,
-    },
-    '&[data-size="small"]': {
-      paddingLeft: theme.space['1'],
-    },
     '&:disabled': {
       cursor: 'not-allowed',
       userSelect: 'none',
@@ -64,7 +57,14 @@ export const inputClass = style({
     '&:focus': {
       outline: 'none',
     },
+    '&[data-size="large"]': {
+      fontSize: theme.typography.body.fontSize,
+    },
+    '&[data-size="small"]': {
+      paddingLeft: theme.space['1'],
+    },
   },
+  width: '100%',
 })
 
 export const inputWrapperSizes = styleVariants(
@@ -83,37 +83,37 @@ export const inputWrapperSizes = styleVariants(
 )
 
 export const inputWrapper = style({
+  alignItems: 'center',
+  background: theme.colors.neutral.background,
+  border: `1px solid ${theme.colors.neutral.border}`,
+  borderRadius: theme.radii.default,
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'center',
-  borderRadius: theme.radii.default,
-  border: `1px solid ${theme.colors.neutral.border}`,
-  background: theme.colors.neutral.background,
-  width: '100%',
 
   selectors: {
-    "&[data-success='true']": {
-      borderColor: theme.colors.success.border,
-    },
-    "&[data-error='true']": {
-      borderColor: theme.colors.danger.border,
-    },
-    "&[data-readonly='true']": {
-      background: theme.colors.neutral.backgroundWeak,
-      borderColor: theme.colors.neutral.border,
+    '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
+      borderColor: theme.colors.primary.border,
     },
     "&[data-disabled='true']": {
       background: theme.colors.neutral.backgroundDisabled,
       borderColor: theme.colors.neutral.borderDisabled,
     },
-    "&[data-has-focus='true']": {
-      boxShadow: theme.shadows.focusPrimary,
-      border: `1px solid ${theme.colors.primary.border}`,
+    "&[data-error='true']": {
+      borderColor: theme.colors.danger.border,
     },
-    '&:not([data-disabled="true"]):not([data-readonly="true"]):hover': {
-      borderColor: theme.colors.primary.border,
+    "&[data-has-focus='true']": {
+      border: `1px solid ${theme.colors.primary.border}`,
+      boxShadow: theme.shadows.focusPrimary,
+    },
+    "&[data-readonly='true']": {
+      background: theme.colors.neutral.backgroundWeak,
+      borderColor: theme.colors.neutral.border,
+    },
+    "&[data-success='true']": {
+      borderColor: theme.colors.success.border,
     },
   },
+  width: '100%',
 })
 
 globalStyle(`${inputWrapper} > ${inputClass}`, {

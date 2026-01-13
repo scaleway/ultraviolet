@@ -35,14 +35,14 @@ describe('menu', () => {
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
       </Menu>,
     ))
-  test(`renders with Menu.Item`, () =>
+  test('renders with Menu.Item', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item>Menu.Item</Menu.Item>
       </Menu>,
     ))
 
-  test(`renders with Menu.Group`, () =>
+  test('renders with Menu.Group', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group">
@@ -51,7 +51,7 @@ describe('menu', () => {
       </Menu>,
     ))
 
-  test(`renders with Menu.Group and labelDescription`, () =>
+  test('renders with Menu.Group and labelDescription', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Group label="Group" labelDescription="This is a description">
@@ -60,7 +60,7 @@ describe('menu', () => {
       </Menu>,
     ))
 
-  test(`renders with Menu.ItemLink`, () =>
+  test('renders with Menu.ItemLink', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
@@ -92,7 +92,7 @@ describe('menu', () => {
     await waitFor(() => expect(menu).not.toBeVisible())
   })
 
-  test(`renders with Menu.ItemLink & Menu.Item disabled`, () =>
+  test('renders with Menu.ItemLink & Menu.Item disabled', () =>
     shouldMatchSnapshotWithPortal(
       <Menu disclosure={() => disclosure} visible>
         <Menu.Item disabled>Menu.Item disabled</Menu.Item>
@@ -332,33 +332,33 @@ describe('menu', () => {
   })
 
   describe('menu.Item', () => {
-    test(`render with default props`, () =>
+    test('render with default props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item>Default Props</Menu.Item>
         </Menu>,
       ))
 
-    test(`render with sentiment danger`, () =>
+    test('render with sentiment danger', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item sentiment="danger">Danger</Menu.Item>
         </Menu>,
       ))
 
-    test(`render with disabled props`, () =>
+    test('render with disabled props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item disabled>Disabled Props</Menu.Item>
         </Menu>,
       ))
-    test(`render with borderless props`, () =>
+    test('render with borderless props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item borderless>Borderless Props</Menu.Item>
         </Menu>,
       ))
-    test(`render with active props`, () =>
+    test('render with active props', () =>
       shouldMatchSnapshot(
         <Menu disclosure={disclosure} visible>
           <Menu.Item active>Active Props</Menu.Item>

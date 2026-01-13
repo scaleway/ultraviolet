@@ -370,14 +370,14 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           <Text
             as="p"
             disabled={disabled}
-            prominence={!error && !success ? 'weak' : 'default'}
+            prominence={error || success ? 'default' : 'weak'}
             sentiment={sentiment}
             variant="caption"
           >
             {error || success || helper}
           </Text>
         ) : null}
-        {!error && !success && typeof helper !== 'string' && helper
+        {!(error || success) && typeof helper !== 'string' && helper
           ? helper
           : null}
       </Stack>

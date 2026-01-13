@@ -1,14 +1,14 @@
 import { theme } from '@ultraviolet/themes'
-import { SIZES, VARIANTS } from './constants'
 import { globalStyle, styleVariants } from '@vanilla-extract/css'
+import { SIZES, VARIANTS } from './constants'
 
 const PROMINENCES = ['Weak', 'Strong', ''] as const
 
 function generateSizeStyle(size: keyof typeof SIZES) {
   return {
     height: theme.sizing[SIZES[size]],
-    width: theme.sizing[SIZES[size]],
     minWidth: theme.sizing[SIZES[size]],
+    width: theme.sizing[SIZES[size]],
   }
 }
 

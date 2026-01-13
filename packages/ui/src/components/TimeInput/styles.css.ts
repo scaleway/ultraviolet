@@ -1,41 +1,29 @@
 import { theme } from '@ultraviolet/themes'
+import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { INPUT_SIZE_HEIGHT } from './constants'
-import { style } from '@vanilla-extract/css'
 
 export const timeinputWrapper = recipe({
   base: {
-    display: 'flex',
-    cursor: 'text',
-    padding: theme.space[1],
-    boxShadow: 'none',
     background: theme.colors.neutral.background,
-    borderRadius: theme.radii.default,
     border: `1px solid ${theme.colors.neutral.border}`,
+    borderRadius: theme.radii.default,
+    boxShadow: 'none',
+    cursor: 'text',
+    display: 'flex',
+    padding: theme.space[1],
     selectors: {
-      '&:focus-within': {
-        borderColor: theme.colors.primary.borderHover,
-      },
       '&:active': {
         borderColor: theme.colors.primary.borderHover,
         boxShadow: theme.shadows.focusPrimary,
+      },
+      '&:focus-within': {
+        borderColor: theme.colors.primary.borderHover,
       },
     },
   },
   variants: {
     disabled: {
-      true: {
-        selectors: {
-          '&:active': {
-            borderColor: theme.colors.neutral.borderDisabled,
-            boxShadow: 'none',
-          },
-        },
-        background: theme.colors.neutral.backgroundDisabled,
-        borderColor: theme.colors.neutral.borderDisabled,
-        cursor: 'not-allowed',
-        userSelect: 'none',
-      },
       false: {
         selectors: {
           '&:hover, &:focus': {
@@ -44,21 +32,17 @@ export const timeinputWrapper = recipe({
           },
         },
       },
-    },
-    readOnly: {
       true: {
+        background: theme.colors.neutral.backgroundDisabled,
+        borderColor: theme.colors.neutral.borderDisabled,
+        cursor: 'not-allowed',
         selectors: {
           '&:active': {
-            borderColor: theme.colors.neutral.border,
+            borderColor: theme.colors.neutral.borderDisabled,
             boxShadow: 'none',
           },
-          '&:focus-within': {
-            borderColor: theme.colors.neutral.border,
-          },
         },
-        background: theme.colors.neutral.backgroundWeak,
-        borderColor: theme.colors.neutral.border,
-        cursor: 'default',
+        userSelect: 'none',
       },
     },
     error: {
@@ -69,25 +53,41 @@ export const timeinputWrapper = recipe({
             borderColor: theme.colors.danger.borderHover,
             boxShadow: theme.shadows.focusDanger,
           },
-          '&:hover': {
+          '&:focus-within': {
             borderColor: theme.colors.danger.borderHover,
           },
-          '&:focus-within': {
+          '&:hover': {
             borderColor: theme.colors.danger.borderHover,
           },
         },
       },
     },
+    readOnly: {
+      true: {
+        background: theme.colors.neutral.backgroundWeak,
+        borderColor: theme.colors.neutral.border,
+        cursor: 'default',
+        selectors: {
+          '&:active': {
+            borderColor: theme.colors.neutral.border,
+            boxShadow: 'none',
+          },
+          '&:focus-within': {
+            borderColor: theme.colors.neutral.border,
+          },
+        },
+      },
+    },
     size: {
-      small: {
-        height: theme.sizing[INPUT_SIZE_HEIGHT.small],
-        paddingLeft: theme.space[1],
+      large: {
+        height: theme.sizing[INPUT_SIZE_HEIGHT.large],
       },
       medium: {
         height: theme.sizing[INPUT_SIZE_HEIGHT.medium],
       },
-      large: {
-        height: theme.sizing[INPUT_SIZE_HEIGHT.large],
+      small: {
+        height: theme.sizing[INPUT_SIZE_HEIGHT.small],
+        paddingLeft: theme.space[1],
       },
     },
   },
@@ -95,40 +95,43 @@ export const timeinputWrapper = recipe({
 
 export const timeinput = recipe({
   base: {
-    border: 'none',
-    outline: 'none',
     background: 'transparent',
-    fontSize: theme.typography.bodySmall.fontSize,
-    width: theme.sizing[312],
-    height: theme.sizing[300],
-    textAlign: 'center',
+    border: 'none',
     borderRadius: theme.radii.default,
-    color: theme.colors.neutral.text,
     caretColor: 'transparent',
+    color: theme.colors.neutral.text,
+    fontSize: theme.typography.bodySmall.fontSize,
+    height: theme.sizing[300],
+    outline: 'none',
     selectors: {
-      '&:not(:disabled):hover': {
-        backgroundColor: theme.colors.neutral.backgroundHover,
-        color: theme.colors.neutral.textWeak,
+      '&::selection': {
+        background: 'none',
+      },
+      '&:disabled': {
+        cursor: 'not-allowed',
+        userSelect: 'none',
       },
       '&:not(:disabled):active, &:not(:disabled):focus': {
         backgroundColor: theme.colors.neutral.backgroundStrong,
         color: theme.colors.neutral.text,
         outline: 0,
       },
+      '&:not(:disabled):hover': {
+        backgroundColor: theme.colors.neutral.backgroundHover,
+        color: theme.colors.neutral.textWeak,
+      },
       '&:read-only': {
         cursor: 'default',
-      },
-      '&:disabled': {
-        cursor: 'not-allowed',
-        userSelect: 'none',
       },
       '&[data-size="large"]': {
         fontSize: theme.typography.body.fontSize,
       },
-      '&::selection': {
-        background: 'none',
-      },
     },
+    textAlign: 'center',
+    width: theme.sizing[312],
+  },
+  defaultVariants: {
+    period: false,
   },
   variants: {
     period: {
@@ -141,9 +144,6 @@ export const timeinput = recipe({
         },
       },
     },
-  },
-  defaultVariants: {
-    period: false,
   },
 })
 

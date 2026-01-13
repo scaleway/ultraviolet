@@ -6,14 +6,14 @@ export default {
         overrides: {
           // this will ensure we keep className essential for theme switch
           removeUnknownsAndDefaults: {
-            unknownContent: true,
-            unknownAttrs: false,
             defaultAttrs: true,
             defaultMarkupDeclarations: true,
-            uselessOverrides: true,
-            keepDataAttrs: true,
             keepAriaAttrs: true,
+            keepDataAttrs: true,
             keepRoleAttr: false,
+            unknownAttrs: false,
+            unknownContent: true,
+            uselessOverrides: true,
           },
           removeViewBox: false,
         },

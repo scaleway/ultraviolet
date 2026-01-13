@@ -70,7 +70,7 @@ const SignUp = () => {
   const [age, setAge] = useState(0)
 
   const handleSubmit = (val: FormValues) => {
-    let timeDiff = Math.abs(Date.now() - val.birthdate.getTime())
+    const timeDiff = Math.abs(Date.now() - val.birthdate.getTime())
     const computedAge = Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25)
     setAge(computedAge)
     setAlertSubmit(computedAge < 1 ? 'too young' : 'success')

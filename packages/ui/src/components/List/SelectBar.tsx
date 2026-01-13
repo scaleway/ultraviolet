@@ -12,7 +12,7 @@ type SelectBarProps<T> = {
   data: T[]
   /**
    * The idKey of each data entry
-   * */
+   */
   idKey: keyof T
 }
 

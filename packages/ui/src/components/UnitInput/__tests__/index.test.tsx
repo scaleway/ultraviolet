@@ -19,7 +19,7 @@ const options = [
   },
 ]
 describe('unitInput', () => {
-  test(`renders with default props`, () =>
+  test('renders with default props', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -29,7 +29,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with min max`, () =>
+  test('renders with min max', () =>
     shouldMatchSnapshot(
       <UnitInput
         max={100}
@@ -39,7 +39,7 @@ describe('unitInput', () => {
         options={options}
       />,
     ))
-  test(`renders with size small`, () =>
+  test('renders with size small', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -50,7 +50,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with size medioum`, () =>
+  test('renders with size medioum', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -61,7 +61,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders click`, async () => {
+  test('renders click', async () => {
     const { asFragment } = renderWithTheme(
       <UnitInput
         name="test"
@@ -77,7 +77,7 @@ describe('unitInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`renders with size large`, () =>
+  test('renders with size large', () =>
     shouldMatchSnapshot(
       <UnitInput
         name="test"
@@ -88,7 +88,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with disabled and placeHolder`, () =>
+  test('renders with disabled and placeHolder', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -100,7 +100,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with dropdownAlign center`, () =>
+  test('renders with dropdownAlign center', () =>
     shouldMatchSnapshot(
       <UnitInput
         dropdownAlign="center"
@@ -112,7 +112,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with success`, () =>
+  test('renders with success', () =>
     shouldMatchSnapshot(
       <UnitInput
         helper="text"
@@ -125,7 +125,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with error`, () =>
+  test('renders with error', () =>
     shouldMatchSnapshot(
       <UnitInput
         error="error"
@@ -137,7 +137,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
-  test(`renders with error  and success`, () =>
+  test('renders with error  and success', () =>
     shouldMatchSnapshot(
       <UnitInput
         error
@@ -206,7 +206,7 @@ describe('unitInput', () => {
     await userEvent.click(screen.getByTestId('option-mb'))
   })
 
-  test(`renders with label and no label information`, () =>
+  test('renders with label and no label information', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -218,7 +218,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
-  test(`renders with label and label information`, () =>
+  test('renders with label and label information', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -231,7 +231,7 @@ describe('unitInput', () => {
         placeholder="100"
       />,
     ))
-  test(`renders with no label and label information`, () =>
+  test('renders with no label and label information', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled
@@ -244,7 +244,7 @@ describe('unitInput', () => {
       />,
     ))
 
-  test(`renders with default value`, () =>
+  test('renders with default value', () =>
     shouldMatchSnapshot(
       <UnitInput
         disabled

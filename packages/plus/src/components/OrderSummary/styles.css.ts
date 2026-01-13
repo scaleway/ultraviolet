@@ -3,14 +3,14 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const orderSummaryContainer = style({
-  backgroundColor: theme.colors.neutral.backgroundWeak,
-  height: '100%',
-  minWidth: '20rem',
   '@media': {
     '(min-width: 1440px)': {
       minWidth: '27.5rem',
     },
   },
+  backgroundColor: theme.colors.neutral.backgroundWeak,
+  height: '100%',
+  minWidth: '20rem',
 })
 
 const orderSummaryHeaderContainerBase = style({
@@ -32,20 +32,20 @@ export const orderSummaryStackBackground = style({
 })
 
 export const orderSummaryNonScrollableContainer = style({
-  padding: theme.space[3],
   borderTop: `1px solid ${theme.colors.neutral.border}`,
+  padding: theme.space[3],
 })
 
 export const orderSummaryNumberInput = style({
-  maxWidth: '12.5rem',
   backgroundColor: theme.colors.neutral.background,
+  maxWidth: '12.5rem',
 })
 
 export const orderSummaryScrollableContainer = style({
+  height: '100%',
+  minHeight: '10rem',
   overflowY: 'scroll',
   padding: theme.space[3],
-  minHeight: '10rem',
-  height: '100%',
 })
 
 export const orderSummaryDetails = style({
@@ -63,35 +63,35 @@ export const orderSummaryCategory = style({
 
 export const orderSummaryAnchor = style({
   color: 'inherit',
-  textDecoration: 'inherit',
-  transition: 'color 250ms ease-out',
   selectors: {
     '&:hover': {
       color: theme.colors.info.text,
     },
   },
+  textDecoration: 'inherit',
+  transition: 'color 250ms ease-out',
 })
 
 export const orderSummaryAnchorIcon = recipe({
   base: {
-    position: 'absolute',
     opacity: 0,
-    transform: `translateX(calc(-1 *${theme.space[2]}))`,
-
-    transition: 'opacity 250ms ease-in-out',
+    position: 'absolute',
     selectors: {
       [`${orderSummaryAnchor}:hover > &`]: {
         opacity: 1,
       },
     },
+    transform: `translateX(calc(-1 *${theme.space[2]}))`,
+
+    transition: 'opacity 250ms ease-in-out',
   },
   variants: {
     size: {
-      small: {
-        marginTop: theme.space['0.25'],
-      },
       medium: {
         marginTop: theme.space['0.5'],
+      },
+      small: {
+        marginTop: theme.space['0.25'],
       },
     },
   },

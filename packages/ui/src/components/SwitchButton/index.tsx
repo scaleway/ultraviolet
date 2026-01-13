@@ -163,15 +163,15 @@ export const SwitchButton = ({
               const clickX = event.clientX - rect.left
               const clickInCurrentElement =
                 clickX > position && clickX < position + width
-              if (!clickInCurrentElement) {
+              if (clickInCurrentElement) {
+                setMouseDownSide(null)
+              } else {
                 setMouseDownSide(
                   clickX < getPosition(getElement(localValue))
                     ? 'left'
                     : 'right',
                 )
                 setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
-              } else {
-                setMouseDownSide(null)
               }
             }}
             onMouseLeave={() => {

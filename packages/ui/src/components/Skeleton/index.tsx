@@ -52,6 +52,7 @@ export const Skeleton = ({
   const Component = variants[variant]
 
   return (
+    // biome-ignore lint/a11y/useAriaPropsSupportedByRole: to fix
     <div
       aria-busy
       aria-label={ariaLabel}

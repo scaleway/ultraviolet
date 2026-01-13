@@ -106,7 +106,7 @@ export const TagList = ({
 
     const potentiallyVisibleTagsLength = Math.max(
       1,
-      tags.length > tmpThreshold || false ? tmpThreshold : tags.length,
+      tags.length > tmpThreshold ? tmpThreshold : tags.length,
     )
     const potentiallyVisibleTags = tags.slice(0, potentiallyVisibleTagsLength)
     const surelyHiddenTags = tags.slice(potentiallyVisibleTagsLength)
@@ -341,6 +341,7 @@ export const TagList = ({
               }
             }}
             ref={popoverTriggerRef}
+            // biome-ignore lint/a11y/noNoninteractiveTabindex : to fix
             tabIndex={0}
           >
             +{hiddenTags.length}

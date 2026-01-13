@@ -1,36 +1,20 @@
 import { theme } from '@ultraviolet/themes'
 import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { checkboxContainer } from '../Checkbox/styles.css'
 import { radioStack } from '../Radio/styles.css'
 import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
-import { checkboxContainer } from '../Checkbox/styles.css'
 
 export const containerSelectableCard = recipe({
   base: {
-    position: 'relative',
-    padding: theme.space[2],
-    borderRadius: theme.radii.default,
-    transition: `
-    border-color 200ms ease,
-    box-shadow 200ms ease`,
-    cursor: 'pointer',
     background: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,
+    borderRadius: theme.radii.default,
     color: theme.colors.neutral.text,
-    width: '100%',
+    cursor: 'pointer',
+    padding: theme.space[2],
+    position: 'relative',
     selectors: {
-      '&[data-checked="true"]': {
-        border: `1px solid ${theme.colors.primary.border}`,
-      },
-      '&[data-error="true"]': {
-        border: `1px solid ${theme.colors.danger.border}`,
-      },
-      '&[data-disabled="true"]': {
-        border: `1px solid ${theme.colors.neutral.borderDisabled}`,
-        color: theme.colors.neutral.textDisabled,
-        background: theme.colors.neutral.backgroundDisabled,
-        cursor: 'not-allowed',
-      },
       '&:hover:not([data-error="true"]):not([data-disabled="true"]), &:active:not([data-error="true"]):not([data-disabled="true"])':
         {
           border: `1px solid ${theme.colors.primary.border}`,
@@ -40,11 +24,38 @@ export const containerSelectableCard = recipe({
         {
           boxShadow: theme.shadows.hoverPrimary,
         },
+      '&[data-checked="true"]': {
+        border: `1px solid ${theme.colors.primary.border}`,
+      },
+      '&[data-disabled="true"]': {
+        background: theme.colors.neutral.backgroundDisabled,
+        border: `1px solid ${theme.colors.neutral.borderDisabled}`,
+        color: theme.colors.neutral.textDisabled,
+        cursor: 'not-allowed',
+      },
+      '&[data-error="true"]': {
+        border: `1px solid ${theme.colors.danger.border}`,
+      },
     },
+    transition: `
+    border-color 200ms ease,
+    box-shadow 200ms ease`,
+    width: '100%',
+  },
+  defaultVariants: {
+    cursor: 'custom',
+    image: 'none',
   },
   variants: {
+    cursor: {
+      custom: {
+        cursor: 'pointer',
+      },
+      default: {
+        cursor: 'default',
+      },
+    },
     image: {
-      none: {},
       icon: {
         padding: theme.space[0],
         paddingRight: theme.space[2],
@@ -52,19 +63,8 @@ export const containerSelectableCard = recipe({
       illustration: {
         padding: theme.space[0],
       },
+      none: {},
     },
-    cursor: {
-      default: {
-        cursor: 'default',
-      },
-      custom: {
-        cursor: 'pointer',
-      },
-    },
-  },
-  defaultVariants: {
-    image: 'none',
-    cursor: 'custom',
   },
 })
 
@@ -88,37 +88,37 @@ globalStyle(`${labelContainerSelectableCard.label} ${checkboxContainer}`, {
 })
 
 export const divSelectableCard = style({
-  display: 'flex',
-  gap: 0,
-  flexFlow: 'column',
   alignItems: 'normal',
+  display: 'flex',
+  flexFlow: 'column',
+  gap: 0,
   justifyContent: 'center',
   minWidth: '11.25rem',
-  position: 'relative',
   overflow: 'hidden',
+  position: 'relative',
 })
 
 export const imageSelectableCard = style({
-  objectFit: 'cover',
-  position: 'absolute',
-  minWidth: '13.75rem',
   height: 'auto',
   left: theme.space[1],
+  minWidth: '13.75rem',
+  objectFit: 'cover',
+  position: 'absolute',
 })
 
 export const illustrationSelectableCard = style({
-  padding: theme.space[2],
-  maxWidth: 'calc(100% - 10rem)',
   flex: '0 1 auto',
+  maxWidth: 'calc(100% - 10rem)',
+  padding: theme.space[2],
 })
 
 export const stackSelectableCard = style({
   selectors: {
-    '&[data-has-label="false"]': {
-      display: 'contents',
-    },
     '&[data-has-default-cursor="true"]': {
       cursor: 'default',
+    },
+    '&[data-has-label="false"]': {
+      display: 'contents',
     },
   },
 })
@@ -128,17 +128,17 @@ export const indentedCard = style({
 })
 
 export const selectableElementSelectableCard = style({
-  display: 'inline-flex',
   alignItems: 'start',
+  display: 'inline-flex',
   selectors: {
     '&[data-checked="true"]': {
       color: theme.colors.primary.text,
     },
-    '&[data-error="true"]': {
-      color: theme.colors.danger.text,
-    },
     '&[data-disabled="true"]': {
       color: theme.colors.neutral.textDisabled,
+    },
+    '&[data-error="true"]': {
+      color: theme.colors.danger.text,
     },
   },
 })

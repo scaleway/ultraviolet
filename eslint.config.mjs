@@ -14,21 +14,21 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 const disableRules = {
-  // ---- biome rules ----
-  'import/order': 'off',
-  "sort-imports": "off",
-  'import/no-unresolved': 'off',
-  '@stylistic/no-extra-semi': 'off',
   '@stylistic/brace-style': 'off',
-  '@typescript-eslint/no-unsafe-return': 'off',
+  '@stylistic/no-extra-semi': 'off',
+  '@typescript-eslint/no-unnecessary-condition': 'off',
   '@typescript-eslint/no-unsafe-assignment': 'off',
   '@typescript-eslint/no-unsafe-member-access': 'off',
+  '@typescript-eslint/no-unsafe-return': 'off',
+  'import/no-unresolved': 'off',
+  // ---- biome rules ----
+  'import/order': 'off',
+  'no-restricted-syntax': 'off',
+  'react/jsx-props-no-spreading': 'warn',
 
   // to check
   'react/no-unused-prop-types': 'off',
-  'react/jsx-props-no-spreading': 'warn',
-  '@typescript-eslint/no-unnecessary-condition': 'off',
-  'no-restricted-syntax': 'off'
+  'sort-imports': 'off',
 }
 
 export default [
@@ -45,26 +45,25 @@ export default [
       '**/coverage/',
       '.storybook',
       'eslint.config.mjs',
-      'next-env.d.ts'
+      'next-env.d.ts',
     ],
   },
   {
     languageOptions: {
+      ecmaVersion: 'latest',
       globals: {
         ...globals.browser,
       },
 
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-
       parserOptions: {
-        tsconfigRootDir: dirname,
         project: [
           'tsconfig.json',
           'packages/*/tsconfig.json',
-          'tools/*/tsconfig.json'
+          'tools/*/tsconfig.json',
         ],
+        tsconfigRootDir: dirname,
       },
+      sourceType: 'module',
     },
 
     settings: {
@@ -78,10 +77,10 @@ export default [
   },
   ...scwJavascript.map(config => ({
     ...config,
+    files: ['**/*.js', '**/*.mjs'],
     languageOptions: {
       parser: babelParser,
     },
-    files: ['**/*.js', '**/*.mjs'],
     rules: {
       ...config.rules,
       ...disableRules,
@@ -91,11 +90,11 @@ export default [
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 5,
-      sourceType: 'script',
 
       parserOptions: {
         project: ['tsconfig.json'],
       },
+      sourceType: 'script',
     },
   },
   ...scwTypescript.map(config => ({
@@ -104,8 +103,8 @@ export default [
     rules: {
       ...config.rules,
       ...disableRules,
+      '@typescript-eslint/no-unnecessary-condition': 'off',
       'react/jsx-props-no-spreading': 'warn',
-      '@typescript-eslint/no-unnecessary-condition': 'off'
     },
   })),
   {
@@ -120,11 +119,11 @@ export default [
 
     languageOptions: {
       ecmaVersion: 5,
-      sourceType: 'script',
 
       parserOptions: {
         project: ['tsconfig.json'],
       },
+      sourceType: 'script',
     },
   },
   {
@@ -150,25 +149,24 @@ export default [
     rules: {
       ...config.rules,
       ...disableRules,
-      'no-console': 'off',
-      'no-alert': 'off',
-      'prefer-arrow-callback': 'off',
-      'react/jsx-props-no-spreading': 'off',
-      'react/no-unstable-nested-components': 'off',
-      'react/jsx-key': 'off',
-      'import/no-extraneous-dependencies': 'off',
-      'import/no-relative-packages': 'off',
 
       '@typescript-eslint/no-unnecessary-condition': 'off',
-      'typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
+      'import/no-extraneous-dependencies': 'off',
+      'import/no-relative-packages': 'off',
+      'no-alert': 'off',
+      'no-console': 'off',
+      'prefer-arrow-callback': 'off',
+      'react/jsx-key': 'off',
+      'react/jsx-props-no-spreading': 'off',
+      'react/no-unstable-nested-components': 'off',
+      'typescript-eslint/no-explicit-any': 'off',
     },
   })),
   {
-    files: ['**/*.d.ts', '**/vite.config.ts', '**/vitest.config.*',
-],
+    files: ['**/*.d.ts', '**/vite.config.ts', '**/vitest.config.*'],
 
     rules: {
       'import/no-extraneous-dependencies': 'off',

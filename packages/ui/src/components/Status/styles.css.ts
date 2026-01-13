@@ -7,9 +7,9 @@ const HEIGHT = '10px'
 const WIDTH = '10px'
 
 const baseCircle = {
-  width: WIDTH,
-  height: HEIGHT,
   borderRadius: theme.radii.circle,
+  height: HEIGHT,
+  width: WIDTH,
 }
 
 const sentimentsCircleStatus = Object.fromEntries(
@@ -37,9 +37,9 @@ export const circleStatus = recipe({
 export const animatedCircleStatus = recipe({
   base: {
     ...baseCircle,
-    position: 'absolute',
-    opacity: 0.75,
     animation: `${ping} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite`,
+    opacity: 0.75,
+    position: 'absolute',
   },
   variants: {
     sentiment: sentimentsCircleStatus,
@@ -49,15 +49,15 @@ export const animatedCircleStatus = recipe({
 export const status = recipe({
   base: {
     display: 'flex',
-    width: WIDTH,
     height: HEIGHT,
+    width: WIDTH,
   },
   variants: {
     notification: {
       true: {
         position: 'absolute',
-        top: theme.space['0.5'],
         right: theme.space['0.5'],
+        top: theme.space['0.5'],
       },
     },
   },

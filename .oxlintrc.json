@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "extends": [
-    // oxc doesn't support node exports aliasing yet, we can't use @scaleway/oxlint-config/typescript yet
-    // https://github.com/oxc-project/oxc/issues/15538
     "./node_modules/@scaleway/oxlint-config/configs/index.json",
     "./node_modules/@scaleway/oxlint-config/configs/react.json",
     "./node_modules/@scaleway/oxlint-config/configs/typescript.json"
@@ -52,9 +50,12 @@
       "rules": {
         "@typescript-eslint/consistent-type-imports": "off",
         "eslint/func-names": "off",
-        "eslint/max-statements":["error", {
-          "max": 100,
-        }],
+        "eslint/max-statements": [
+          "error",
+          {
+            "max": 100
+          }
+        ],
         "import/export": "off",
         "import/no-anonymous-default-export": "off",
         "import/no-named-export": "off",
@@ -63,15 +64,20 @@
         "jsx_a11y/label-has-associated-control": "off",
         "no-console": "off",
         "node/no-process-env": "off",
+        "vitest/prefer-describe-function-title": "warn",
+        "vitest/prefer-called-times": "off",
         "vitest/prefer-lowercase-title": "error"
       }
     },
     {
       "files": ["e2e/**/*.{ts,tsx}"],
       "rules": {
-        "eslint/max-statements":["error", {
-          "max": 30,
-        }],
+        "eslint/max-statements": [
+          "error",
+          {
+            "max": 30
+          }
+        ],
         "node/no-process-env": "off"
       }
     }
@@ -86,21 +92,37 @@
     "jsx-a11y"
   ],
   "rules": {
-    "eslint/max-statements":["error", {
-      "max": 30,
-    }],
+    "eslint/complexity": [
+      "warn",
+      {
+        "max": 30,
+        "variant": "modified"
+      }
+    ],
+    "eslint/max-statements": [
+      "error",
+      {
+        "max": 30
+      }
+    ],
     "eslint/no-param-reassign": "error",
     "eslint/sort-imports": [
-        "off",
-        {
-          "ignoreDeclarationSort": true,
-          "memberSyntaxSortOrder": ["single", "multiple", "all", "none"]
-        }
+      "off",
+      {
+        "ignoreDeclarationSort": true,
+        "memberSyntaxSortOrder": ["single", "multiple", "all", "none"]
+      }
     ],
     "import/no-unassigned-import": "off",
     "react/jsx-no-useless-fragment": "off",
-    "react/jsx-props-no-spreading":"off",
-    "unicorn/empty-brace-spaces":"off",
+    "react/jsx-max-depth": [
+      "error",
+      {
+        "max": 10
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "unicorn/empty-brace-spaces": "off",
     "unicorn/prefer-global-this": "off"
   }
 }

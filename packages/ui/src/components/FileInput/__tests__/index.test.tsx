@@ -9,7 +9,7 @@ const defaultFile = [
     file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
     fileName: 'cat.png',
     lastModified: 1,
-    size: 30460,
+    size: 30_460,
     type: 'image/png',
   },
   {
@@ -17,7 +17,7 @@ const defaultFile = [
     file: 'error.png',
     fileName: 'error_example.png',
     lastModified: 1,
-    size: 4046000000,
+    size: 4_046_000_000,
     type: 'image/png',
   },
   {
@@ -31,14 +31,14 @@ const defaultFile = [
     file: 'doc.pdf',
     fileName: 'doc.pdf',
     lastModified: 1,
-    size: 304600,
+    size: 304_600,
     type: 'application/pdf',
   },
   {
     file: 'video.mp4',
     fileName: 'video.mp4',
     lastModified: 1,
-    size: 40460000,
+    size: 40_460_000,
     type: 'video/png',
   },
   {
@@ -46,7 +46,7 @@ const defaultFile = [
     fileName: 'loading_example.pdf',
     lastModified: 1,
     loading: true,
-    size: 40460000,
+    size: 40_460_000,
     type: 'application/pdf',
   },
 ]

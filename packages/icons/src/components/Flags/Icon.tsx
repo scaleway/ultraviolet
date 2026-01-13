@@ -1,3 +1,5 @@
+// biome-ignore-all lint/a11y/noSvgWithoutTitle: to check
+
 'use client'
 
 import { cn } from '@ultraviolet/utils'

@@ -27,10 +27,12 @@ export const Separator = ({
   style,
 }: SeparatorProps) =>
   children ? (
+    // biome-ignore  lint/a11y/useFocusableInteractive: to fix
     <div
       aria-orientation={direction}
       className={cn(className, iconWraperSeparator({ direction, sentiment }))}
       data-testid={dataTestId}
+      // biome-ignore lint/a11y/useAriaPropsForRole: to fix
       role="separator"
       style={style}
     >
@@ -53,7 +55,6 @@ export const Separator = ({
       aria-orientation={direction}
       className={cn(className, hr({ direction, sentiment }))}
       data-testid={dataTestId}
-      role="separator"
       style={assignInlineVars({
         [thicknessSeparator]: `${thickness}px`,
       })}

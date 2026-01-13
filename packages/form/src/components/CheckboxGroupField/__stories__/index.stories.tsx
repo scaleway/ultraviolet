@@ -30,25 +30,25 @@ export default {
 
       return (
         <Form
+          errors={mockErrors}
+          methods={methods}
           onSubmit={data => {
             // oxlint-disable-next-line eslint/no-console
             console.log('data', data)
           }}
-          errors={mockErrors}
-          methods={methods}
         >
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form input values:
               </Text>
-              <Snippet prefix="lines" initiallyExpanded>
+              <Snippet initiallyExpanded prefix="lines">
                 {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form values:
               </Text>
               <Snippet prefix="lines">
@@ -84,6 +84,7 @@ export default {
 } as Meta<typeof CheckboxGroupField>
 
 export { Playground } from './Playground.stories'
+
 export { Required } from './Required.stories'
 export { PartiallyRequired } from './PartiallyRequired.stories'
 export { NotRequired } from './NotRequired.stories'

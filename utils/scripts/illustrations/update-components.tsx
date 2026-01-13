@@ -1,3 +1,4 @@
+// biome-ignore-all lint/performance/useTopLevelRegex: error
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -34,7 +35,7 @@ export const updateWireIllustrations = (
     'use client'
 
     ${WARNING}
-    
+
      export const ILLUSTRATIONS = {
     ${illustrations
       .map(element => {
@@ -47,7 +48,7 @@ export const updateWireIllustrations = (
         return `${categoryNotCapitalized}: "${baseUrl}/products/${directory}/${categorySnake}-wire.svg",`
       })
       .join('\n')}}
-    
+
     `,
   )
 }
@@ -88,8 +89,8 @@ export const updateDynamicIllustrations = (
   fs.writeFileSync(
     indexPath,
     `
-    'use client' 
-    
+    'use client'
+
     ${WARNING}
 
     const BASE_URL = '${baseUrl}'

@@ -1,54 +1,54 @@
-import { createVar, style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { createVar, style } from '@vanilla-extract/css'
 
 export const widthVar = createVar()
 
 export const wrapper = style({
-  position: 'relative',
   marginLeft: '-100px',
   marginRight: '-100px',
+  position: 'relative',
   width: '100%',
 })
 
 export const beforeScroll = style({
+  background: `linear-gradient(-90deg, transparent, ${theme.colors.neutral.background})`,
+  content: "''",
+  cursor: 'w-resize',
+  height: '100%',
   position: 'absolute',
   width: '100px',
-  height: '100%',
-  content: "''",
-  background: `linear-gradient(-90deg, transparent, ${theme.colors.neutral.background})`,
-  cursor: 'w-resize',
   zIndex: 'auto',
 })
 
 export const scrollableWrapper = style({
+  display: 'flex',
+  gap: theme.space['2'],
   overflowX: 'scroll',
   overflowY: 'hidden',
-  whiteSpace: 'nowrap',
-  display: 'flex',
   padding: '0 100px',
-  gap: theme.space['2'],
+  whiteSpace: 'nowrap',
 })
 
 export const afterScroll = style({
-  position: 'absolute',
+  background: `linear-gradient(-90deg, ${theme.colors.neutral.background}, transparent)`,
   bottom: '0',
-  right: '0',
-  width: '100px',
-  height: '100%',
   content: "''",
   cursor: 'e-resize',
+  height: '100%',
+  position: 'absolute',
+  right: '0',
+  width: '100px',
   zIndex: 'auto',
-  background: `linear-gradient(-90deg, ${theme.colors.neutral.background}, transparent)`,
 })
 
 export const borderWrapper = style({
-  display: 'flex',
   alignItems: 'stretch',
-  width: widthVar,
+  cursor: 'grab',
+  display: 'flex',
+  flexShrink: '0',
+  height: 'auto',
   maxWidth: widthVar,
   overflowWrap: 'break-word',
   whiteSpace: 'normal',
-  height: 'auto',
-  cursor: 'grab',
-  flexShrink: '0',
+  width: widthVar,
 })

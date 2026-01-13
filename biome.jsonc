@@ -1,0 +1,86 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "off",
+        "useSortedProperties": "off"
+      }
+    }
+  },
+  "extends": ["@scaleway/biome/core", "@scaleway/biome/react"],
+  "overrides": [
+    {
+      "assist": {
+        "actions": {
+          "source": {
+            "organizeImports": "off"
+          }
+        }
+      },
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noAlert": "off",
+            "noShadowRestrictedNames": "warn"
+          }
+        }
+      },
+      "includes": ["**/*.stories.tsx"]
+    }
+  ],
+  "linter": {
+    "rules": {
+      "a11y": {
+        "noNoninteractiveElementInteractions": "warn",
+        "noStaticElementInteractions": "warn",
+        "noSvgWithoutTitle": "warn",
+        "useSemanticElements": "warn"
+      },
+      "complexity": {
+        "noForEach": "warn",
+        "noImportantStyles": "off",
+        "useLiteralKeys": "off",
+        "noExcessiveCognitiveComplexity": "warn",
+        "noUselessFragments": "warn"
+      },
+      "correctness": {
+        // handle by: oxlint typescript-eslint/no-unsafe-call)
+        "noUndeclaredVariables": "off",
+        // handle by: oxlint react-hooks/exhaustive-deps
+        "useExhaustiveDependencies": "off",
+        "useSingleJsDocAsterisk": "error",
+        // should be fix: Images without specified width and height can cause layout shifts as the browser does not know how much space to reserve for them, leading to a poor user experience. It’s recommended to always include these attributes to prevent such issues.
+        "useImageSize": "warn"
+      },
+      "performance": {
+        // need to be fixed
+        "noAccumulatingSpread": "off",
+        "noBarrelFile": "off",
+        "noNamespaceImport": "off",
+        "useTopLevelRegex": "warn"
+      },
+      "style": {
+        // handle by: oxlint typescript/consistent-type-definitions
+        "noExportedImports": "off",
+        "useConsistentTypeDefinitions": "off",
+        // handle by: oxlint no-non-null-assertion
+        "noNonNullAssertion": "warn"
+      },
+      "suspicious": {
+        "noDocumentCookie": "off",
+        "noEmptyBlockStatements": "off",
+        // handle by: oxlint eslint/no-explicit-any
+        "noExplicitAny": "off",
+        "useAwait": "off",
+        "useIterableCallbackReturn": "warn"
+      },
+      "security": {
+        // handle by: oxlint  react/no-danger
+        "noDangerouslySetInnerHtml": "warn"
+      }
+    }
+  }
+}

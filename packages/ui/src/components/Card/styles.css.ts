@@ -12,14 +12,14 @@ export const stackCard = style({
 export const borderedBox = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
-  padding: theme.space[3],
   flex: '1 1 auto',
+  padding: theme.space[3],
   selectors: {
-    "&[data-is-active='true']": {
-      border: `1px solid ${theme.colors.primary.border}`,
-    },
     "&[data-disabled='true']": {
       border: `1px solid ${theme.colors.neutral.borderDisabled}`,
+    },
+    "&[data-is-active='true']": {
+      border: `1px solid ${theme.colors.primary.border}`,
     },
   },
 })

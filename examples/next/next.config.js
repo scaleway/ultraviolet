@@ -1,5 +1,8 @@
 const nextConfig = {
   compress: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     loader: 'imgix',
@@ -7,9 +10,6 @@ const nextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 }
 
 export default nextConfig

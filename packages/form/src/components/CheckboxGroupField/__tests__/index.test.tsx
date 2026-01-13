@@ -59,7 +59,7 @@ describe('checkboxField', () => {
     )
     const input = screen.getAllByRole('checkbox', { hidden: true })[0]
     await userEvent.click(input)
-    expect(onChange).toBeCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     expect(input).toBeChecked()
 
     await userEvent.click(input)

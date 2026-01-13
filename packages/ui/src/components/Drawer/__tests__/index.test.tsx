@@ -14,28 +14,28 @@ describe('drawer', () => {
     vi.restoreAllMocks()
   })
 
-  test(`renders with default Props`, () =>
+  test('renders with default Props', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer disclosure={<button type="button">Test</button>} header="header">
         <div>test</div>
       </Drawer>,
     ))
 
-  test(`renders without disclosure`, () =>
+  test('renders without disclosure', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer disclosure={undefined} header="header">
         <div>test</div>
       </Drawer>,
     ))
 
-  test(`renders without separator`, () =>
+  test('renders without separator', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer disclosure={undefined} header="header" separator={false}>
         <div>test</div>
       </Drawer>,
     ))
 
-  test(`renders with default Props and function children`, async () => {
+  test('renders with default Props and function children', async () => {
     const { asFragment } = renderWithTheme(
       <Drawer disclosure={<button type="button">Open</button>} header="header">
         {({ close }) => (
@@ -52,21 +52,21 @@ describe('drawer', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`renders with default Props and function children open`, () =>
+  test('renders with default Props and function children open', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer header="header" open>
         {() => <div>test</div>}
       </Drawer>,
     ))
 
-  test(`renders with open={true}`, () =>
+  test('renders with open={true}', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer header="header" open>
         <div>test</div>
       </Drawer>,
     ))
 
-  test(`renders custom size=medium`, async () => {
+  test('renders custom size=medium', async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
         disclosure={<button type="button">button</button>}
@@ -81,7 +81,7 @@ describe('drawer', () => {
     await userEvent.click(button)
     expect(asFragment()).toMatchSnapshot()
   })
-  test(`renders custom size=large`, async () => {
+  test('renders custom size=large', async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
         disclosure={<button type="button">button</button>}
@@ -97,7 +97,7 @@ describe('drawer', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`renders custom size=small`, async () => {
+  test('renders custom size=small', async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
         disclosure={<button type="button">button</button>}
@@ -113,14 +113,14 @@ describe('drawer', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`renders with custom classNames`, () =>
+  test('renders with custom classNames', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer className="test" header="header" open>
         <div>test</div>
       </Drawer>,
     ))
 
-  test(`renders with disclosure`, () =>
+  test('renders with disclosure', () =>
     shouldMatchSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
@@ -132,7 +132,7 @@ describe('drawer', () => {
       </Drawer>,
     ))
 
-  test(`renders with disclosure and onClose`, async () => {
+  test('renders with disclosure and onClose', async () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Drawer
@@ -160,7 +160,7 @@ describe('drawer', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`disclosure function render onClick props is called`, async () => {
+  test('disclosure function render onClick props is called', async () => {
     const mockOnClick = vi.fn()
 
     renderWithTheme(
@@ -179,10 +179,10 @@ describe('drawer', () => {
     )
     const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`disclosure function render onClick props is call with toggle`, async () => {
+  test('disclosure function render onClick props is call with toggle', async () => {
     const mockOnClick = vi.fn()
 
     renderWithTheme(
@@ -207,7 +207,7 @@ describe('drawer', () => {
     )
     const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
   test(`should call 'close' prop from render props`, async () => {
@@ -230,10 +230,10 @@ describe('drawer', () => {
     )
     const modalButton = screen.getByRole('button', { name: 'Close' })
     await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`disclosure Component render onClick props is call`, async () => {
+  test('disclosure Component render onClick props is call', async () => {
     const mockOnClick = vi.fn()
 
     renderWithTheme(
@@ -253,10 +253,10 @@ describe('drawer', () => {
     const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
 
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`test hideOnEsc is true`, async () => {
+  test('test hideOnEsc is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Drawer
@@ -273,10 +273,10 @@ describe('drawer', () => {
     await userEvent.click(screen.getByRole('dialog'))
     await userEvent.keyboard('{Escape}')
 
-    expect(mockOnClose).toBeCalledTimes(1)
+    expect(mockOnClose).toHaveBeenCalledOnce()
   })
 
-  test(`function footer`, async () => {
+  test('function footer', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(
@@ -308,7 +308,7 @@ describe('drawer', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`with footer`, () => {
+  test('with footer', () => {
     shouldMatchSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
@@ -326,7 +326,7 @@ describe('drawer', () => {
     )
   })
 
-  test(`custom header`, () => {
+  test('custom header', () => {
     shouldMatchSnapshotWithPortal(
       <Drawer
         ariaLabel="drawer-test"
@@ -341,7 +341,7 @@ describe('drawer', () => {
     )
   })
 
-  test(`function header`, async () => {
+  test('function header', async () => {
     const mockOnClick = vi.fn()
 
     const { asFragment } = renderWithTheme(

@@ -70,11 +70,11 @@ describe('checkboxField', () => {
 
     const input = screen.getByRole('checkbox', { hidden: true })
     act(() => input.focus())
-    expect(onFocus).toBeCalledTimes(1)
+    expect(onFocus).toHaveBeenCalledOnce()
     await userEvent.click(input)
-    expect(onChange).toBeCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     act(() => input.blur())
-    expect(onBlur).toBeCalledTimes(1)
+    expect(onBlur).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
   })
 

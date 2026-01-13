@@ -5,9 +5,9 @@ import {
   style,
   styleVariants,
 } from '@vanilla-extract/css'
-import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import { recipe } from '@vanilla-extract/recipes'
 import { SENTIMENTS } from '../../theme'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import {
   listCellPadding,
   maxWidthCell,
@@ -34,20 +34,20 @@ const colorChange = keyframes({
 function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
   const color = theme.colors[sentiment]
   const base = {
-    color: color.text,
-    borderColor: color.border,
     backgroundColor: color.background,
+    borderColor: color.border,
+    color: color.text,
   }
   if (sentiment === 'neutral') {
     return {
       ...base,
       selectors: {
-        '&[data-expandable-content]': {
-          borderColor: color.border,
-        },
         '&:not([aria-disabled="true"]):hover': {
           borderColor: theme.colors.primary.border,
           boxShadow: theme.shadows.hoverPrimary,
+        },
+        '&[data-expandable-content]': {
+          borderColor: color.border,
         },
       },
     }
@@ -65,16 +65,16 @@ function makeRowStyleSentiment(sentiment: (typeof SENTIMENTS)[number]) {
 
 export const listContainer = style({
   minWidth: '100%',
-  width: '100%',
   overflowX: 'auto',
+  width: '100%',
 })
 
 export const list = style({
-  width: '100%',
+  borderSpacing: `0 ${theme.space[2]}`,
   boxSizing: 'content-box',
   gap: theme.space[1],
-  borderSpacing: `0 ${theme.space[2]}`,
   position: 'relative',
+  width: '100%',
 })
 
 export const listSortIcon = styleVariants({
@@ -88,38 +88,38 @@ export const listSortIcon = styleVariants({
 })
 
 export const listHeaderCell = style({
+  color: theme.colors.neutral.text,
   display: 'table-cell',
-  textAlign: 'left',
-  verticalAlign: 'middle',
+  fontFamily: theme.typography.bodySmall.fontFamily,
   fontSize: theme.typography.bodySmall.fontSize,
   fontWeight: theme.typography.bodySmall.fontWeight,
-  fontFamily: theme.typography.bodySmall.fontFamily,
-  color: theme.colors.neutral.text,
   gap: theme.space[1],
-  padding: `0 ${theme.space[2]}`,
-  width: widthHeaderCell,
   maxWidth: maxWidthHeaderCell,
   minWidth: minWidthHeaderCell,
+  padding: `0 ${theme.space[2]}`,
   selectors: {
+    '&[aria-sort]': {
+      color: theme.colors.primary.text,
+    },
     "&[role*='button']": {
       cursor: 'pointer',
       userSelect: 'none',
     },
-    '&[aria-sort]': {
-      color: theme.colors.primary.text,
-    },
   },
+  textAlign: 'left',
+  verticalAlign: 'middle',
+  width: widthHeaderCell,
 })
 
 export const listHeaderRow = style({
   display: 'table-row,',
-  verticalAlign: 'middle',
   padding: `0 ${theme.space[2]}`,
+  verticalAlign: 'middle',
 })
 
 export const listNoPaddingHeaderCell = style({
-  padding: 0,
   maxWidth: theme.sizing[SELECTABLE_CHECKBOX_SIZE],
+  padding: 0,
   selectors: {
     '&:first-of-type': {
       paddingLeft: theme.space[2],
@@ -128,14 +128,14 @@ export const listNoPaddingHeaderCell = style({
 })
 
 export const listExpandableWrapper = style({
-  width: '100%',
-  display: 'table-row',
-  verticalAlign: 'middle',
-  cursor: 'auto',
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
-  transform: `translate3d(0, calc(-1 * ${theme.space[2]}), 0)`,
+  cursor: 'auto',
+  display: 'table-row',
   position: 'relative',
+  transform: `translate3d(0, calc(-1 * ${theme.space[2]}), 0)`,
+  verticalAlign: 'middle',
+  width: '100%',
 })
 
 globalStyle(
@@ -147,8 +147,8 @@ globalStyle(
 
 globalStyle(`${listExpandableWrapper} > td`, {
   border: `1px solid ${theme.colors.neutral.border}`,
-  borderTop: 'none',
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+  borderTop: 'none',
 })
 
 globalStyle(`${listExpandableWrapper}[data-highlight="true"] > td`, {
@@ -163,60 +163,57 @@ globalStyle(`${listCheckboxInRange} rect`, {
 })
 
 const listRowBase = style({
-  display: 'table-row',
-  verticalAlign: 'middle',
-  position: 'relative',
-  boxShadow: 'none',
   backgroundColor: theme.colors.neutral.background,
-  fontSize: theme.typography.bodySmall.fontSize,
+  boxShadow: 'none',
   columnGap: theme.space[2],
+  display: 'table-row',
+  fontSize: theme.typography.bodySmall.fontSize,
+  position: 'relative',
   selectors: {
-    "&[role='button row']": {
-      cursor: 'pointer',
-    },
-    "&[data-highlight='true']": {
-      boxShadow: theme.shadows.hoverPrimary,
-    },
     "&[aria-disabled='true']": {
       backgroundColor: theme.colors.neutral.backgroundDisabled,
       color: theme.colors.neutral.textDisabled,
       cursor: 'not-allowed',
     },
+    "&[data-highlight='true']": {
+      boxShadow: theme.shadows.hoverPrimary,
+    },
+    "&[role='button row']": {
+      cursor: 'pointer',
+    },
   },
+  verticalAlign: 'middle',
 })
 
 export const listRow = recipe({
   base: listRowBase,
+  defaultVariants: {
+    highlightAnimation: false,
+    sentiment: 'neutral',
+  },
   variants: {
+    highlightAnimation: {
+      true: {
+        animation: `${colorChange} 3s linear`,
+      },
+    },
     sentiment: Object.fromEntries(
       SENTIMENTS.map(sentiment => [
         sentiment,
         makeRowStyleSentiment(sentiment) as object,
       ]),
     ),
-    highlightAnimation: {
-      true: {
-        animation: `${colorChange} 3s linear`,
-      },
-    },
-  },
-  defaultVariants: {
-    sentiment: 'neutral',
-    highlightAnimation: false,
   },
 })
 
 export const listCell = style({
-  display: 'table-cell',
-  verticalAlign: 'middle',
-  height: theme.sizing[750],
-  padding: `0 ${listCellPadding}`,
-  transition: 'box-shadow 200ms ease, border-color 200ms ease',
-  borderTop: `1px solid ${theme.colors.neutral.border}`,
   borderBottom: `1px solid ${theme.colors.neutral.border}`,
-  width: widthCell,
+  borderTop: `1px solid ${theme.colors.neutral.border}`,
+  display: 'table-cell',
+  height: theme.sizing[750],
   maxWidth: maxWidthCell,
   minWidth: minWidthCell,
+  padding: `0 ${listCellPadding}`,
   selectors: {
     [`${listRowBase}[aria-expanded="true"] > &`]: {
       borderTopColor: theme.colors.primary.border,
@@ -232,14 +229,17 @@ export const listCell = style({
       borderBottomColor: theme.colors.primary.border,
     },
   },
+  transition: 'box-shadow 200ms ease, border-color 200ms ease',
+  verticalAlign: 'middle',
+  width: widthCell,
 })
 
 export const listCellStrict = style({})
 
 globalStyle(`${listCellStrict} > *`, {
-  width: widthChildrenCell,
   maxWidth: maxWidthChildrenCell,
   minWidth: minWidthChildrenCell,
+  width: widthChildrenCell,
 })
 
 globalStyle(`${listRowBase} > td:first-child`, {
@@ -248,8 +248,8 @@ globalStyle(`${listRowBase} > td:first-child`, {
 })
 
 globalStyle(`${listRowBase} > td:last-child`, {
-  borderRight: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+  borderRight: `1px solid ${theme.colors.neutral.border}`,
 })
 
 globalStyle(
@@ -265,8 +265,8 @@ globalStyle(`${listRowBase}[aria-expanded='true'] > td:first-child`, {
 })
 
 globalStyle(`${listRowBase}[aria-expanded='true'] > td:last-child`, {
-  borderRight: `1px solid ${theme.colors.primary.border}`,
   borderRadius: `0 ${theme.radii.default} 0 0`,
+  borderRight: `1px solid ${theme.colors.primary.border}`,
 })
 
 globalStyle(
@@ -279,8 +279,8 @@ globalStyle(
 export const listCheckboxContainer = style({ display: 'flex' })
 
 export const listNoPaddingCell = style({
-  padding: 0,
   maxWidth: theme.sizing[SELECTABLE_CHECKBOX_SIZE],
+  padding: 0,
   selectors: {
     '&:first-of-type': {
       paddingLeft: theme.space[2],
@@ -297,8 +297,8 @@ export const listLoadingRow = style({
 })
 
 export const listSkeleton = style({
-  width: '80%',
-  maxWidth: '100%',
   alignItems: 'start',
   justifyContent: 'center',
+  maxWidth: '100%',
+  width: '80%',
 })

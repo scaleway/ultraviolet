@@ -39,19 +39,19 @@ function makeStyleSize(size: SizeProp) {
   }
 
   return {
-    marginRight: 0,
-    height: '100%',
+    animation: `${slideIn(translations[size])} linear ${animationDuration[size]}ms`,
     borderRadius: 0,
+    height: '100%',
+    marginRight: 0,
     padding: 0,
     width: `${SIZES[size]}rem`,
-    animation: `${slideIn(translations[size])} linear ${animationDuration[size]}ms`,
   }
 }
 
 export const drawer = styleVariants({
-  small: makeStyleSize('small'),
-  medium: makeStyleSize('medium'),
   large: makeStyleSize('large'),
+  medium: makeStyleSize('medium'),
+  small: makeStyleSize('small'),
 })
 
 export const drawerContentWrapper = style({

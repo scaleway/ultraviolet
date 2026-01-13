@@ -78,7 +78,7 @@ describe('useOnFieldChange', () => {
 
     rerender()
 
-    expect(callback).toHaveBeenCalledTimes(1)
+    expect(callback).toHaveBeenCalledOnce()
   })
 
   test('should render when condition change', () => {
@@ -113,6 +113,6 @@ describe('useOnFieldChange', () => {
 
     rerender({ enabled: true })
 
-    expect(callback).toHaveBeenCalledTimes(1)
+    expect(callback).toHaveBeenCalledOnce()
   })
 })

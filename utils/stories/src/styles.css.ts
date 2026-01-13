@@ -14,11 +14,11 @@ export const noMarginText = style({ margin: 0 })
 
 export const card = style({
   alignItems: 'center',
+  background: computedBackground,
   display: 'flex',
   justifyContent: 'space-between',
-  width: '100%',
   padding: 8,
-  background: computedBackground,
+  width: '100%',
 })
 export const paddingCard = styleVariants({
   default: { padding: 8 },

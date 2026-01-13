@@ -256,6 +256,7 @@ export const Dialog = ({
           }),
           ...style,
         }}
+        // biome-ignore  lint/a11y/noNoninteractiveTabindex: to fix
         tabIndex={0}
       >
         {image ? (

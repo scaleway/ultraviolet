@@ -3,11 +3,11 @@ import { globalStyle, style } from '@vanilla-extract/css'
 import { dropdownItemBase } from '../../SelectInput/components/dropdown.css'
 
 export const optionSelectorWrapper = style({
-  display: 'grid',
-  gridTemplateColumns: `1fr ${theme.space[4]} 1fr`,
-  gap: theme.space[2],
   alignItems: 'center',
   border: 'none',
+  display: 'grid',
+  gap: theme.space[2],
+  gridTemplateColumns: `1fr ${theme.space[4]} 1fr`,
 })
 
 export const revealOnHover = style({})

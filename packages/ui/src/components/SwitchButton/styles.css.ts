@@ -9,53 +9,53 @@ const SIZES = {
 const switchButtonContainerBase = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
-  padding: theme.space['0.5'],
   display: 'flex',
   gap: theme.space[1],
+  padding: theme.space['0.5'],
   position: 'relative',
 })
 
 export const switchButtonContainer = styleVariants({
-  small: [switchButtonContainerBase, { height: theme.sizing[SIZES.small] }],
   medium: [switchButtonContainerBase, { height: theme.sizing[SIZES.medium] }],
+  small: [switchButtonContainerBase, { height: theme.sizing[SIZES.small] }],
 })
 
 export const switchButtonOptionBase = style({
-  border: 'none',
-  padding: `${theme.space[1]} ${theme.space[2]}`,
-  fontWeight: theme.typography.bodyStrong.weight,
-  justifyContent: 'center',
   alignItems: 'center',
-  transition: 'all 200ms ease-in-out ',
-  whiteSpace: 'nowrap',
   background: 'transparent',
+  border: 'none',
+  fontWeight: theme.typography.bodyStrong.weight,
   height: '100%',
-  userSelect: 'none',
+  justifyContent: 'center',
+  padding: `${theme.space[1]} ${theme.space[2]}`,
   selectors: {
     '&:hover, &:active': {
-      boxShadow: 'none !important',
       border: 'none !important',
+      boxShadow: 'none !important',
     },
-    '&[data-checked="false"][data-error="false"][data-disabled="false"]:active':
-      { boxShadow: 'none' },
     '&[data-checked="false"]:hover:not([data-error="true"])[data-disabled="false"]':
       { boxShadow: 'none' },
+    '&[data-checked="false"][data-error="false"][data-disabled="false"]:active':
+      { boxShadow: 'none' },
     '&[data-checked="true"]': { border: 'none' },
-    '&[data-disabled="true"]': { border: 'none', background: 'transparent' },
+    '&[data-disabled="true"]': { background: 'transparent', border: 'none' },
   },
+  transition: 'all 200ms ease-in-out ',
+  userSelect: 'none',
+  whiteSpace: 'nowrap',
 })
 
 /**
  * Create style variant so it is easier to deal with the global styles
  */
 export const switchButtonOption = styleVariants({
-  primary: [switchButtonOptionBase],
   neutral: [switchButtonOptionBase],
+  primary: [switchButtonOptionBase],
 })
 
 globalStyle(`${switchButtonOptionBase}[data-checked="true"] label`, {
-  transition: 'color 300ms ease-in-out',
   color: theme.colors.neutral.textStrong,
+  transition: 'color 300ms ease-in-out',
 })
 
 globalStyle(`${switchButtonOptionBase} label`, {
@@ -87,20 +87,20 @@ globalStyle(
 )
 
 const focusOverlayBase = style({
-  position: 'absolute',
-  height: `calc(100% - ${theme.space[1]})`,
   borderRadius: theme.radii.default,
+  height: `calc(100% - ${theme.space[1]})`,
+  position: 'absolute',
   transformOrigin: 'left center',
   transition: 'all 200ms ease-in-out',
 })
 
 export const focusOverlay = styleVariants({
-  primary: [
-    focusOverlayBase,
-    { background: theme.colors.primary.backgroundStrong },
-  ],
   neutral: [
     focusOverlayBase,
     { background: theme.colors.neutral.backgroundStrong },
+  ],
+  primary: [
+    focusOverlayBase,
+    { background: theme.colors.primary.backgroundStrong },
   ],
 })

@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
+import { keyframes, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { DEFAULT_ARROW_WIDTH } from './helpers'
-import { keyframes, styleVariants } from '@vanilla-extract/css'
 import {
   animationDurationPopup,
   arrowLeft,
@@ -37,8 +37,8 @@ const exitAnimation = keyframes({
 
 export const containerPopup = recipe({
   base: {
-    overflow: 'auto',
     maxHeight: '100%',
+    overflow: 'auto',
   },
   variants: {
     hasMaxHeight: {
@@ -52,37 +52,41 @@ export const containerPopup = recipe({
 export const popup = recipe({
   base: {
     backgroundColor: theme.colors.neutral.backgroundStronger,
-    color: theme.colors.neutral.textStronger,
     borderRadius: theme.radii.default,
-    padding: `${theme.space['0.5']} ${theme.space[1]}`,
-    textAlign: 'center',
-    position: 'absolute',
-    overflowWrap: 'break-word',
+    color: theme.colors.neutral.textStronger,
     fontSize: '0.8rem',
     inset: '0 auto auto 0',
-    top: 0,
     left: 0,
-    opacity: 0,
-    zIndex: 1,
-    transform: popupPosition,
-    maxWidth: maxWidthPopup,
     maxHeight: maxHeightPopup,
+    maxWidth: maxWidthPopup,
+    opacity: 0,
+    overflowWrap: 'break-word',
+    padding: `${theme.space['0.5']} ${theme.space[1]}`,
+    position: 'absolute',
+    textAlign: 'center',
+    top: 0,
+    transform: popupPosition,
+    zIndex: 1,
+  },
+  defaultVariants: {
+    hasArrow: true,
+    visibleInDom: true,
   },
   variants: {
     hasArrow: {
       true: {
         selectors: {
           '&::after': {
+            borderColor: `${theme.colors.neutral.backgroundStronger} transparent transparent transparent`,
+            borderStyle: 'solid',
+            borderWidth: `${DEFAULT_ARROW_WIDTH}px`,
             content: ' ',
+            left: arrowLeft,
+            marginLeft: `-${DEFAULT_ARROW_WIDTH}px`,
+            pointerEvents: 'none',
             position: 'absolute',
             top: arrowTop,
-            left: arrowLeft,
             transform: arrowTransform,
-            marginLeft: `-${DEFAULT_ARROW_WIDTH}px`,
-            borderWidth: `${DEFAULT_ARROW_WIDTH}px`,
-            borderStyle: 'solid',
-            borderColor: `${theme.colors.neutral.backgroundStronger} transparent transparent transparent`,
-            pointerEvents: 'none',
           },
         },
       },
@@ -93,18 +97,14 @@ export const popup = recipe({
       },
     },
   },
-  defaultVariants: {
-    hasArrow: true,
-    visibleInDom: true,
-  },
 })
 
 export const animationPopup = styleVariants({
-  reverse: {
-    animation: `${animationDurationPopup} ${exitAnimation} forwards`,
-  },
   notReverse: {
     animation: `${animationDurationPopup} ${animation} forwards`,
+  },
+  reverse: {
+    animation: `${animationDurationPopup} ${exitAnimation} forwards`,
   },
 })
 

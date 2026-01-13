@@ -144,7 +144,7 @@ describe('tabs', () => {
       </Tabs>,
     )
     fireEvent.keyDown(screen.getByText('First'), { code: 'Enter' })
-    expect(onChange).toHaveBeenCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     fireEvent.keyDown(screen.getByText('Second'), { code: 'Enter' })
     expect(onChange).toHaveBeenCalledTimes(2)
     onChange.mockReset()
@@ -189,7 +189,7 @@ describe('tabs', () => {
     fireEvent.click(screen.getByText('Disabled'))
     fireEvent.click(screen.getByText('No value'))
     expect(onChange).not.toHaveBeenCalled()
-    expect(onFirstTabClick).toHaveBeenCalledTimes(1)
+    expect(onFirstTabClick).toHaveBeenCalledOnce()
   })
 
   test('no onChange', () => {

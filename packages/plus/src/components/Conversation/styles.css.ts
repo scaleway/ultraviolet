@@ -2,8 +2,8 @@ import { theme } from '@ultraviolet/themes'
 import { style, styleVariants } from '@vanilla-extract/css'
 
 const conversationInfosBase = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   margin: `0 ${theme.space[7]}`,
 })
 
@@ -28,9 +28,9 @@ export const conversationContainer = styleVariants({
 })
 
 const conversationRawMessageBase = style({
+  borderRadius: theme.radii.default,
   margin: theme.space[3],
   marginBottom: 0,
-  borderRadius: theme.radii.default,
   padding: theme.space[3],
 })
 export const conversationRawMessage = styleVariants({
@@ -45,8 +45,8 @@ export const conversationRawMessage = styleVariants({
 })
 
 export const conversationAvatar = style({
-  display: 'flex',
   alignSelf: 'flex-end',
+  display: 'flex',
 })
 
 export const conversationBubble = style({ width: '100%' })

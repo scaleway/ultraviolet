@@ -5,10 +5,8 @@ import { recipe } from '@vanilla-extract/recipes'
 export const wrapperWidth = createVar()
 
 export const wrapperBarStack = style({
-  width: wrapperWidth,
-  minWidth: 0,
-  transition: 'width 500ms',
   backgroundColor: theme.colors.neutral.backgroundWeak,
+  minWidth: 0,
   selectors: {
     '&:nth-child(6n+1)': {
       backgroundColor: theme.colors.other.data.charts.data1,
@@ -29,54 +27,56 @@ export const wrapperBarStack = style({
       backgroundColor: theme.colors.other.data.charts.data6,
     },
   },
+  transition: 'width 500ms',
+  width: wrapperWidth,
 })
 
 export const barStack = recipe({
   base: {
-    display: 'flex',
     alignItems: 'center',
+    display: 'flex',
+    minWidth: 0,
     padding: theme.space[1],
     width: '100%',
-    minWidth: 0,
+  },
+  defaultVariants: {
+    size: 'medium',
   },
   variants: {
     size: {
-      xsmall: {
-        height: theme.sizing[200],
-        fontSize: theme.typography.captionSmallStrong.fontSize,
-      },
-      small: {
-        height: theme.sizing[300],
-        fontSize: theme.typography.captionSmallStrong.fontSize,
-      },
+      fontSize: theme.typography.captionStrong.fontSize,
+      large: { height: theme.sizing[500] },
       medium: {
         fontSize: theme.typography.captionStrong.fontSize,
         height: theme.sizing[400],
       },
-      fontSize: theme.typography.captionStrong.fontSize,
-      large: { height: theme.sizing[500] },
+      small: {
+        fontSize: theme.typography.captionSmallStrong.fontSize,
+        height: theme.sizing[300],
+      },
+      xsmall: {
+        fontSize: theme.typography.captionSmallStrong.fontSize,
+        height: theme.sizing[200],
+      },
     },
-  },
-  defaultVariants: {
-    size: 'medium',
   },
 })
 
 export const barStackText = style({
   display: 'block',
-  width: '100%',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
+  width: '100%',
 })
 
 export const containerBarStack = style({
-  width: '100%',
-  display: 'flex',
   backgroundColor: theme.colors.neutral.backgroundWeak,
   borderRadius: theme.radii.default,
   boxShadow: theme.shadows.defaultShadow,
-  overflow: 'hidden',
+  display: 'flex',
   gap: theme.space['0.25'],
+  overflow: 'hidden',
+  width: '100%',
 })
 
 export const barStackLabel = style({
@@ -85,9 +85,12 @@ export const barStackLabel = style({
 
 export const barStackLegendCircle = recipe({
   base: {
-    width: theme.sizing[100],
-    height: theme.sizing[100],
     borderRadius: theme.radii.circle,
+    height: theme.sizing[100],
+    width: theme.sizing[100],
+  },
+  defaultVariants: {
+    child: 0,
   },
   variants: {
     child: {
@@ -98,8 +101,5 @@ export const barStackLegendCircle = recipe({
       4: { backgroundColor: theme.colors.other.data.charts.data5 },
       5: { backgroundColor: theme.colors.other.data.charts.data6 },
     },
-  },
-  defaultVariants: {
-    child: 0,
   },
 })

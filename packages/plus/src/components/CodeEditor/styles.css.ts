@@ -4,15 +4,15 @@ import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 export const disabledStack = style({ cursor: 'not-allowed' })
 
 export const copyButton = style({
-  position: 'absolute',
-  top: theme.space[1],
-  right: theme.space[1],
   backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
+  position: 'absolute',
+  right: theme.space[1],
   selectors: {
     '&:hover': {
       backgroundColor: consoleDarkTheme.colors.neutral.backgroundHover,
     },
   },
+  top: theme.space[1],
 })
 
 globalStyle(`${copyButton} svg > path`, {
@@ -25,23 +25,23 @@ const codeEditorBase = style({
 })
 
 export const codeEditor = styleVariants({
-  disabled: [codeEditorBase, { pointerEvents: 'none', userSelect: 'none' }],
   default: [codeEditorBase],
+  disabled: [codeEditorBase, { pointerEvents: 'none', userSelect: 'none' }],
 })
 
 /** Default style */
 globalStyle(`${codeEditorBase} .cm-editor`, {
+  backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
+  border: '1px solid transparent',
+  borderRadius: theme.space['0.5'],
   fontFamily: theme.typography.code.fontFamily,
   fontSize: theme.typography.code.fontSize,
-  backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
-  borderRadius: theme.space['0.5'],
-  border: `1px solid transparent`,
 })
 
 globalStyle(`${codeEditorBase} .cm-editor.cm-focused`, {
-  outline: 'none',
-  boxShadow: theme.shadows.focusPrimary,
   border: `1px solid ${theme.colors.primary.border}`,
+  boxShadow: theme.shadows.focusPrimary,
+  outline: 'none',
 })
 
 globalStyle(`${codeEditorBase} .cm-content`, {
@@ -94,6 +94,6 @@ globalStyle(`${codeEditor.disabled} .cm-selectionLayer`, {
 })
 
 globalStyle(`${codeEditor.disabled} .cm-editor.cm-focused`, {
-  boxShadow: 'none',
   border: '1px solid transparent',
+  boxShadow: 'none',
 })

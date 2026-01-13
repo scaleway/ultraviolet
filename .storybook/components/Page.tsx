@@ -1,4 +1,3 @@
-import { linkTo } from '@storybook/addon-links'
 import {
   Controls,
   Description,
@@ -7,8 +6,14 @@ import {
   Subtitle,
   Title,
 } from '@storybook/addon-docs/blocks'
+import { linkTo } from '@storybook/addon-links'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
-import { h2Decorator, storiesDecorator, storiesTheme, titleDecorator } from './globalStyle.css'
+import {
+  h2Decorator,
+  storiesDecorator,
+  storiesTheme,
+  titleDecorator,
+} from './globalStyle.css'
 
 type PageProps = {
   deprecated?: boolean
@@ -33,19 +38,20 @@ const Page = ({
         </div>
         {deprecated ? (
           <Alert
-            title="Deprecated component"
             buttonText={migrationLink ? 'How to migrate?' : undefined}
             onClickButton={migrationLink ? linkTo(migrationLink) : undefined}
+            title="Deprecated component"
           >
-            {deprecatedReason ?? 'This component is deprecated and should not be used in new projects.'}
+            {deprecatedReason ??
+              'This component is deprecated and should not be used in new projects.'}
           </Alert>
         ) : null}
         {experimental ? (
           <Alert
-            sentiment="warning"
-            title="Experimental component"
             buttonText="Learn more about component states"
             onClickButton={linkTo('state-components-state--docs')}
+            sentiment="warning"
+            title="Experimental component"
           >
             This component is at an unstable stage and is subject to change in
             future releases.
@@ -62,14 +68,14 @@ const Page = ({
         </Stack>
         <div>
           <Primary />
-          {!hideArgsTable ? (
+          {hideArgsTable ? null : (
             <>
               <Text as="h2" className={h2Decorator} variant="headingStrong">
                 Props
               </Text>
               <Controls />
             </>
-          ) : null}
+          )}
         </div>
         <Stack className={storiesDecorator}>
           <Stories />

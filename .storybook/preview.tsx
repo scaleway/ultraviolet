@@ -1,18 +1,20 @@
+// biome-ignore-all  lint/complexity/noUselessFragments: to fix
+
 import type { Preview, StoryFn } from '@storybook/react-vite'
-import { themes } from 'storybook/theming'
 import {
-  consoleDarkTheme as darkTheme,
   consoleDarkerTheme as darkerTheme,
+  consoleDarkTheme as darkTheme,
   consoleLightTheme as lightTheme,
-  ThemeProvider as ThemeProviderUI
+  ThemeProvider as ThemeProviderUI,
 } from '@ultraviolet/themes'
+import { themes } from 'storybook/theming'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 import { withThemeByClassName } from '@storybook/addon-themes'
 
-import { scan } from "react-scan"
+import { scan } from 'react-scan'
 
 const BREAKPOINT_ORDER = [
   'xlarge',
@@ -30,8 +32,9 @@ const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
       [key]: {
         name: key,
         styles: {
-          width: lightTheme.breakpoints[key as keyof typeof lightTheme.breakpoints],
           height: '600px',
+          width:
+            lightTheme.breakpoints[key as keyof typeof lightTheme.breakpoints],
         },
       },
     }
@@ -45,10 +48,6 @@ scan({
 })
 
 const parameters: Preview['parameters'] = {
-  darkMode: {
-    dark: { ...themes.dark, ...dark },
-    light: { ...themes.normal, ...light, default: true },
-  },
   backgrounds: {
     disable: true,
     grid: {
@@ -57,29 +56,33 @@ const parameters: Preview['parameters'] = {
     values: [
       {
         name: 'light',
-        value: 'linear-gradient(90deg,#ffffff 10px,transparent 1%) 50%,linear-gradient(#ffffff 10px,transparent 1%) 50%,#eceef2',
         textColor: '#3f4250',
+        value:
+          'linear-gradient(90deg,#ffffff 10px,transparent 1%) 50%,linear-gradient(#ffffff 10px,transparent 1%) 50%,#eceef2',
       },
       {
         name: 'dark',
-        value: 'linear-gradient(90deg,#151a2d 10px,transparent 1%) 50%,linear-gradient(#151a2d 10px,transparent 1%) 50%,#303445',
         textColor: '#b8bac0',
+        value:
+          'linear-gradient(90deg,#151a2d 10px,transparent 1%) 50%,linear-gradient(#151a2d 10px,transparent 1%) 50%,#303445',
       },
       {
         name: 'darker',
-        value: 'linear-gradient(90deg,#000000 10px,transparent 1%) 50%,linear-gradient(#000000 10px,transparent 1%) 50%,#151a2d',
         textColor: '#d8d9dc',
+        value:
+          'linear-gradient(90deg,#000000 10px,transparent 1%) 50%,linear-gradient(#000000 10px,transparent 1%) 50%,#151a2d',
       },
     ],
   },
-  viewMode: 'docs',
-  previewTabs: {
-    canvas: { hidden: false },
+  darkMode: {
+    dark: { ...themes.dark, ...dark },
+    light: { ...themes.normal, ...light, default: true },
   },
-  viewport: {
-    viewports: {
-      ...VIEWPORTS
-    }
+  docs: {
+    container: DocsContainer,
+    page: Page,
+    source: { excludeDecorators: true }, // Exclude decorators from source code
+    toc: true,
   },
   options: {
     storySort: {
@@ -105,11 +108,14 @@ const parameters: Preview['parameters'] = {
       ],
     },
   },
-  docs: {
-    toc: true,
-    container: DocsContainer,
-    page: Page,
-    source: { excludeDecorators: true }, // Exclude decorators from source code
+  previewTabs: {
+    canvas: { hidden: false },
+  },
+  viewMode: 'docs',
+  viewport: {
+    viewports: {
+      ...VIEWPORTS,
+    },
   },
 }
 
@@ -122,7 +128,10 @@ const getThemeColor = (theme: string) => {
   return { background, textColor }
 }
 
-const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string } }) => {
+const withThemeProvider = (
+  Story: StoryFn,
+  context: { globals: { theme: string } },
+) => {
   const { theme } = context.globals
   const { background, textColor } = getThemeColor(theme)
 
@@ -132,8 +141,8 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
         background,
         backgroundPosition: '-4px -4px',
         backgroundSize: '12px 12px',
-        padding: '30px',
         color: textColor,
+        padding: '30px',
       }}
     >
       <Story {...context} />
@@ -141,29 +150,27 @@ const withThemeProvider = (Story: StoryFn, context: { globals: { theme: string }
   )
 }
 
-
 const preview: Preview = {
   decorators: [
     withThemeByClassName({
-      themes: {
-        light: '',
-        dark: 'dark',
-        darker: "darker"
-      },
       defaultTheme: 'light',
+      themes: {
+        dark: 'dark',
+        darker: 'darker',
+        light: '',
+      },
     }),
   ],
-};
-
+}
 
 const decorators = [
   (Story: StoryFn, context: { globals: { theme: string } }) => {
-    const theme = context.globals.theme || "light"
+    const theme = context.globals.theme || 'light'
     const finalTheme = () => {
-      if (theme === "light") {
+      if (theme === 'light') {
         return lightTheme
       }
-      if (theme === "dark") {
+      if (theme === 'dark') {
         return darkTheme
       }
 
@@ -186,8 +193,8 @@ const decorators = [
 ]
 
 export default {
-  parameters,
   decorators,
+  parameters,
   preview,
-  tags: ['autodocs']
+  tags: ['autodocs'],
 } satisfies Preview

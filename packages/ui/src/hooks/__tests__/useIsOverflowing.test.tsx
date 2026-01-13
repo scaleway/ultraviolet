@@ -21,7 +21,7 @@ describe('useIsOverflowing', () => {
       expect(result.current).toBeFalsy()
     })
 
-    expect(callback).toHaveBeenCalledTimes(1)
+    expect(callback).toHaveBeenCalledOnce()
   })
 
   it('should be true with overflow', async () => {

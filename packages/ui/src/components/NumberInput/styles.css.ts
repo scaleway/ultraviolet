@@ -1,30 +1,33 @@
 import { theme } from '@ultraviolet/themes'
 import { styleVariants } from '@vanilla-extract/css'
-import { SIZES } from './constant'
 import { recipe } from '@vanilla-extract/recipes'
+import { SIZES } from './constant'
 
 export const numberinputSideContainer = styleVariants({
-  small: {
-    padding: `${theme.space['0.25']} ${theme.space['1']}`,
-    height: theme.sizing[SIZES.small],
+  large: {
+    height: theme.sizing[SIZES.large],
+    padding: `${theme.space['0.5']} ${theme.space['1']}`,
   },
   medium: {
-    padding: `${theme.space['0.25']} ${theme.space['1']}`,
     height: theme.sizing[SIZES.medium],
+    padding: `${theme.space['0.25']} ${theme.space['1']}`,
   },
-  large: {
-    padding: `${theme.space['0.5']} ${theme.space['1']}`,
-    height: theme.sizing[SIZES.large],
+  small: {
+    height: theme.sizing[SIZES.small],
+    padding: `${theme.space['0.25']} ${theme.space['1']}`,
   },
 })
 
 export const inputContainer = recipe({
   base: {
-    borderWidth: '0 1px 0 1px',
-    borderStyle: 'solid',
-    borderColor: 'inherit',
     background: 'inherit',
+    borderColor: 'inherit',
+    borderStyle: 'solid',
+    borderWidth: '0 1px 0 1px',
     width: '100%',
+  },
+  defaultVariants: {
+    controls: true,
   },
   variants: {
     controls: {
@@ -33,30 +36,16 @@ export const inputContainer = recipe({
       },
     },
   },
-  defaultVariants: {
-    controls: true,
-  },
 })
 
 export const unit = recipe({
-  base: { display: 'flex', alignItems: 'center', padding: theme.space[1] },
+  base: { alignItems: 'center', display: 'flex', padding: theme.space[1] },
+  defaultVariants: {
+    disabled: false,
+    readOnly: false,
+    size: 'large',
+  },
   variants: {
-    size: {
-      small: {
-        height: theme.sizing[SIZES.small],
-        fontSize: theme.typography.bodySmall.fontSize,
-      },
-
-      medium: {
-        height: theme.sizing[SIZES.medium],
-        fontSize: theme.typography.bodySmall.fontSize,
-      },
-
-      large: {
-        height: theme.sizing[SIZES.large],
-        fontSize: theme.typography.body.fontSize,
-      },
-    },
     disabled: {
       true: {
         background: theme.colors.neutral.backgroundDisabled,
@@ -69,99 +58,109 @@ export const unit = recipe({
         background: theme.colors.neutral.backgroundWeak,
       },
     },
-  },
-  defaultVariants: {
-    size: 'large',
-    disabled: false,
-    readOnly: false,
+    size: {
+      large: {
+        fontSize: theme.typography.body.fontSize,
+        height: theme.sizing[SIZES.large],
+      },
+
+      medium: {
+        fontSize: theme.typography.bodySmall.fontSize,
+        height: theme.sizing[SIZES.medium],
+      },
+      small: {
+        fontSize: theme.typography.bodySmall.fontSize,
+        height: theme.sizing[SIZES.small],
+      },
+    },
   },
 })
 
 export const numberinput = recipe({
   base: {
-    outline: 'none',
+    background: 'none',
     border: 'none',
-    width: '100%',
     color: theme.colors.neutral.text,
-    fontSize: theme.typography.bodySmall.fontSize,
     fontFamily: theme.typography.bodySmall.fontFamily,
+    fontSize: theme.typography.bodySmall.fontSize,
     fontWeight: theme.typography.bodySmall.fontWeight,
     lineHeight: theme.typography.bodySmall.lineHeight,
-    textAlign: 'center',
+    outline: 'none',
     padding: theme.space[1],
-    background: 'none',
     selectors: {
-      '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
-        WebkitAppearance: 'none',
-        margin: 0,
-      },
       '&': {
         appearance: 'textarea',
         MozAppearance: 'textfield',
       },
-      '&:read-only': {
-        color: theme.colors.neutral.text,
-        background: theme.colors.neutral.backgroundWeak,
-        borderBlock: `1px solid ${theme.colors.neutral.border}`,
-      },
-      '&:disabled': {
-        color: theme.colors.neutral.textDisabled,
-        background: theme.colors.neutral.backgroundDisabled,
-        cursor: 'not-allowed',
-        borderBlock: `1px solid ${theme.colors.neutral.borderDisabled}`,
+      '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+        margin: 0,
+        WebkitAppearance: 'none',
       },
       '&::placeholder': {
         color: theme.colors.neutral.textWeak,
         fontSize: theme.typography.body.fontSize,
       },
+      '&:disabled': {
+        background: theme.colors.neutral.backgroundDisabled,
+        borderBlock: `1px solid ${theme.colors.neutral.borderDisabled}`,
+        color: theme.colors.neutral.textDisabled,
+        cursor: 'not-allowed',
+      },
       '&:focus': {
         outline: 'none',
       },
+      '&:read-only': {
+        background: theme.colors.neutral.backgroundWeak,
+        borderBlock: `1px solid ${theme.colors.neutral.border}`,
+        color: theme.colors.neutral.text,
+      },
     },
+    textAlign: 'center',
+    width: '100%',
+  },
+  defaultVariants: {
+    controls: true,
+    hasUnit: false,
+    size: 'large',
   },
   variants: {
-    hasUnit: {
-      true: {
-        textAlign: 'left',
-        padding: `${theme.space['1']} 0 ${theme.space['1']} ${theme.space['1']}`,
-      },
-    },
-    size: {
-      small: {
-        height: theme.sizing[SIZES.small],
-      },
-      medium: {
-        height: theme.sizing[SIZES.medium],
-      },
-      large: {
-        height: theme.sizing[SIZES.large],
-        fontSize: theme.typography.body.fontSize,
-        fontFamily: theme.typography.body.fontFamily,
-        fontWeight: theme.typography.body.fontWeight,
-        lineHeight: theme.typography.body.lineHeight,
-      },
-    },
     controls: {
       false: {
         textAlign: 'left',
       },
     },
-  },
-  defaultVariants: {
-    hasUnit: false,
-    size: 'large',
-    controls: true,
+    hasUnit: {
+      true: {
+        padding: `${theme.space['1']} 0 ${theme.space['1']} ${theme.space['1']}`,
+        textAlign: 'left',
+      },
+    },
+    size: {
+      large: {
+        fontFamily: theme.typography.body.fontFamily,
+        fontSize: theme.typography.body.fontSize,
+        fontWeight: theme.typography.body.fontWeight,
+        height: theme.sizing[SIZES.large],
+        lineHeight: theme.typography.body.lineHeight,
+      },
+      medium: {
+        height: theme.sizing[SIZES.medium],
+      },
+      small: {
+        height: theme.sizing[SIZES.small],
+      },
+    },
   },
 })
 
 export const numberinputContainer = recipe({
   base: {
-    display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
     border: `1px solid ${theme.colors.neutral.border}`,
     borderRadius: theme.radii.default,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     selectors: {
       '&:focus-within': {
         borderColor: theme.colors.primary.borderHover,
@@ -172,29 +171,28 @@ export const numberinputContainer = recipe({
       },
     },
   },
+  defaultVariants: {
+    size: 'large',
+    state: 'default',
+  },
   variants: {
+    size: {
+      large: {
+        height: theme.sizing[SIZES.large],
+      },
+
+      medium: {
+        height: theme.sizing[SIZES.medium],
+      },
+      small: {
+        height: theme.sizing[SIZES.small],
+      },
+    },
     state: {
       default: {},
-      success: {
-        borderColor: theme.colors.success.border,
-      },
-      error: { borderColor: theme.colors.danger.border },
-      readOnly: {
-        borderColor: theme.colors.neutral.border,
-        background: theme.colors.neutral.backgroundWeak,
-        cursor: 'not-allowed',
-        selectors: {
-          '&:hover': {
-            borderColor: theme.colors.neutral.border,
-          },
-          '&:focus-within': {
-            borderColor: theme.colors.neutral.border,
-          },
-        },
-      },
       disabled: {
-        borderColor: theme.colors.neutral.borderDisabled,
         background: theme.colors.neutral.backgroundDisabled,
+        borderColor: theme.colors.neutral.borderDisabled,
         cursor: 'not-allowed',
         selectors: {
           '&:hover': {
@@ -202,23 +200,23 @@ export const numberinputContainer = recipe({
           },
         },
       },
+      error: { borderColor: theme.colors.danger.border },
+      readOnly: {
+        background: theme.colors.neutral.backgroundWeak,
+        borderColor: theme.colors.neutral.border,
+        cursor: 'not-allowed',
+        selectors: {
+          '&:focus-within': {
+            borderColor: theme.colors.neutral.border,
+          },
+          '&:hover': {
+            borderColor: theme.colors.neutral.border,
+          },
+        },
+      },
+      success: {
+        borderColor: theme.colors.success.border,
+      },
     },
-    size: {
-      small: {
-        height: theme.sizing[SIZES.small],
-      },
-
-      medium: {
-        height: theme.sizing[SIZES.medium],
-      },
-
-      large: {
-        height: theme.sizing[SIZES.large],
-      },
-    },
-  },
-  defaultVariants: {
-    size: 'large',
-    state: 'default',
   },
 })

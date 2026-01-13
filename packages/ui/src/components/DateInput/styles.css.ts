@@ -6,11 +6,11 @@ export const dateinputContainer = style({ width: '100%' })
 
 export const calendarContentWrapper = recipe({
   base: {
-    width: '16.5rem',
+    backgroundColor: theme.colors.other.elevation.background.raised,
+    borderRadius: theme.radii.default,
     color: theme.colors.neutral.text,
     padding: theme.space[2],
-    borderRadius: theme.radii.default,
-    backgroundColor: theme.colors.other.elevation.background.raised,
+    width: '16.5rem',
   },
   variants: {
     disabled: {

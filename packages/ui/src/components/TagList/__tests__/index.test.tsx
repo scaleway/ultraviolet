@@ -81,7 +81,7 @@ const mockOffsetWidth = (
     }
 
     console.warn(
-      `offsetWidth accessed but could not detect which element is measured !`,
+      'offsetWidth accessed but could not detect which element is measured !',
       new Error('stop').stack?.split('\n')[4],
     )
 

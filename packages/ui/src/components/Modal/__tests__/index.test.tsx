@@ -19,54 +19,54 @@ describe('modal', () => {
     vi.restoreAllMocks()
   })
 
-  test(`useModal() should throw error if not rendered in provider`, () => {
+  test('useModal() should throw error if not rendered in provider', () => {
     expect(() => renderHook(() => useModal())).toThrow(
       'useModal must be used within a ModalProvider',
     )
   })
 
-  test(`renders with default Props`, () =>
+  test('renders with default Props', () =>
     shouldMatchSnapshotWithPortal(
       <Modal disclosure={<button type="button">Test</button>}>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders without disclosure`, () =>
+  test('renders without disclosure', () =>
     shouldMatchSnapshotWithPortal(
       <Modal disclosure={undefined}>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders with default Props and function children`, () =>
+  test('renders with default Props and function children', () =>
     shouldMatchSnapshotWithPortal(<Modal>{() => <div>test</div>}</Modal>))
 
-  test(`renders with default Props and function children open`, () =>
+  test('renders with default Props and function children open', () =>
     shouldMatchSnapshotWithPortal(<Modal open>{() => <div>test</div>}</Modal>))
 
-  test(`renders with open={true}`, () =>
+  test('renders with open={true}', () =>
     shouldMatchSnapshotWithPortal(
       <Modal open>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders with open={true} and no close icon`, () =>
+  test('renders with open={true} and no close icon', () =>
     shouldMatchSnapshotWithPortal(
       <Modal isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders open custom size`, () =>
+  test('renders open custom size', () =>
     shouldMatchSnapshotWithPortal(
       <Modal open size="medium">
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders with custom classNames`, () =>
+  test('renders with custom classNames', () =>
     shouldMatchSnapshotWithPortal(
       <Modal
         backdropClassName={customDialogBackdropStyles}
@@ -77,14 +77,14 @@ describe('modal', () => {
       </Modal>,
     ))
 
-  test(`renders with image`, () =>
+  test('renders with image', () =>
     shouldMatchSnapshotWithPortal(
       <Modal image={illustration} isClosable={false} open>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders with disclosure`, () =>
+  test('renders with disclosure', () =>
     shouldMatchSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
@@ -95,7 +95,7 @@ describe('modal', () => {
       </Modal>,
     ))
 
-  test(`renders with disclosure and onBeforeClose`, async () => {
+  test('renders with disclosure and onBeforeClose', async () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Modal
@@ -122,7 +122,7 @@ describe('modal', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`renders with disclosure and onClose`, async () => {
+  test('renders with disclosure and onClose', async () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Modal
@@ -149,7 +149,7 @@ describe('modal', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`disclosure function render onClick props is called`, async () => {
+  test('disclosure function render onClick props is called', async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -165,10 +165,10 @@ describe('modal', () => {
     )
     const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`disclosure function render onClick props is call with toggle`, async () => {
+  test('disclosure function render onClick props is call with toggle', async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -190,7 +190,7 @@ describe('modal', () => {
     )
     const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
   test(`should call 'close' prop from render props`, async () => {
@@ -211,10 +211,10 @@ describe('modal', () => {
     )
     const modalButton = screen.getByRole('button', { name: 'Close' })
     await userEvent.click(modalButton)
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`disclosure Component render onClick props is call`, async () => {
+  test('disclosure Component render onClick props is call', async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -231,10 +231,10 @@ describe('modal', () => {
     const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
 
-    expect(mockOnClick).toBeCalledTimes(1)
+    expect(mockOnClick).toHaveBeenCalledOnce()
   })
 
-  test(`test hideOnEsc is true`, async () => {
+  test('test hideOnEsc is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
@@ -250,10 +250,10 @@ describe('modal', () => {
     await userEvent.click(screen.getByRole('dialog'))
     await userEvent.keyboard('{Escape}')
 
-    expect(mockOnClose).toBeCalledTimes(1)
+    expect(mockOnClose).toHaveBeenCalledOnce()
   })
 
-  test(`test hideOnEsc is false`, async () => {
+  test('test hideOnEsc is false', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
@@ -271,7 +271,7 @@ describe('modal', () => {
     expect(mockOnClose).toBeCalledTimes(0)
   })
 
-  test(`test hideOnClickOutside is true`, async () => {
+  test('test hideOnClickOutside is true', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
@@ -288,10 +288,10 @@ describe('modal', () => {
     await userEvent.click(screen.getByRole('dialog'))
     await userEvent.click(screen.getByTestId('test-backdrop'))
 
-    expect(mockOnClose).toBeCalledTimes(1)
+    expect(mockOnClose).toHaveBeenCalledOnce()
   })
 
-  test(`test hideOnClickOutside is false`, async () => {
+  test('test hideOnClickOutside is false', async () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal

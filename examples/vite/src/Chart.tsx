@@ -6,11 +6,11 @@ const lineChartData = [
     data: [
       {
         x: '2025-01-01T10:17:20Z',
-        y: 3.1025217,
+        y: 3.102_521_7,
       },
       {
         x: '2025-01-01T22:17:20Z',
-        y: 4.358333,
+        y: 4.358_333,
       },
       {
         x: '2025-01-02T10:17:20Z',
@@ -18,11 +18,11 @@ const lineChartData = [
       },
       {
         x: '2025-01-02T22:17:20Z',
-        y: 3.0166667,
+        y: 3.016_666_7,
       },
       {
         x: '2025-01-03T10:17:20Z',
-        y: 3.0166667,
+        y: 3.016_666_7,
       },
       {
         x: '2025-01-03T22:17:20Z',
@@ -34,15 +34,15 @@ const lineChartData = [
       },
       {
         x: '2025-01-04T22:17:20Z',
-        y: 3.1416667,
+        y: 3.141_666_7,
       },
       {
         x: '2025-01-05T10:17:20Z',
-        y: 2.8833334,
+        y: 2.883_333_4,
       },
       {
         x: '2025-01-05T22:17:20Z',
-        y: 3.1583333,
+        y: 3.158_333_3,
       },
       {
         x: '2025-01-06T10:17:20Z',
@@ -50,7 +50,7 @@ const lineChartData = [
       },
       {
         x: '2025-01-06T22:17:20Z',
-        y: 3.1666667,
+        y: 3.166_666_7,
       },
       {
         x: '2025-01-07T10:17:20Z',
@@ -62,7 +62,7 @@ const lineChartData = [
       },
       {
         x: '2025-01-08T10:17:20Z',
-        y: 3.0666666,
+        y: 3.066_666_6,
       },
     ],
     id: 'lineChartSerie',
@@ -74,8 +74,7 @@ export const Chart = () => {
   const [data, setData] = useState<typeof lineChartData | undefined>(undefined)
 
   useEffect(() => {
-    let timeoutId: number | undefined = undefined
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setData(lineChartData)
     }, 1000)
 

@@ -68,7 +68,7 @@ export const createVitestConfig = (
           },
         },
         setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
-        testTimeout: 10000,
+        testTimeout: 10_000,
         ...options,
       },
     }),

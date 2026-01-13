@@ -4,9 +4,9 @@ import { createVar, style } from '@vanilla-extract/css'
 export const colorMeter = createVar()
 
 export const strengthMeter = style({
+  color: colorMeter,
   float: 'right',
   verticalAlign: 'top',
-  color: colorMeter,
 })
 
 export const wrapperMeter = style({

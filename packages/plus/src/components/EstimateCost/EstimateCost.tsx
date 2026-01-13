@@ -134,7 +134,7 @@ const Ellipsis = ({
   return (
     <div
       data-testid={dataTestId}
-      style={{ display: !isOverlay ? 'inline-flex' : undefined }}
+      style={{ display: isOverlay ? undefined : 'inline-flex' }}
     >
       <Text
         as="p"

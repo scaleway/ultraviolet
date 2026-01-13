@@ -1,11 +1,10 @@
-import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
-import { paddings, templateColumn } from './variables.css'
+import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import type { CSSProperties } from 'react'
+import { paddings, templateColumn } from './variables.css'
 
 export const row = style({
-  display: 'grid',
   '@media': {
     [`screen and (min-width: ${consoleLightTheme.breakpoints.xlarge})`]: {
       gridTemplateColumns: templateColumn.xlarge,
@@ -37,6 +36,7 @@ export const row = style({
         padding: paddings.xxsmall,
       },
   },
+  display: 'grid',
 })
 
 const breakpoints = Object.keys(
@@ -105,8 +105,8 @@ export const responsiveProperties = defineProperties({
   conditions: themeBreakpoints,
   defaultCondition: 'xxsmall',
   properties: {
-    gap: themeSpace,
     alignItems: alignItemsValues,
+    gap: themeSpace,
     justifyContent: justifyContentValues,
   },
   responsiveArray: ['xxsmall', 'xsmall', 'small', 'medium', 'large'],

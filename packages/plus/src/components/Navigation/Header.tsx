@@ -18,7 +18,7 @@ export const Header = memo(({ logo }: HeaderProps) => {
       <Stack
         alignItems="flex-start"
         className={navigationLogoContainer}
-        justifyContent={!expanded ? 'center' : undefined}
+        justifyContent={expanded ? undefined : 'center'}
       >
         {typeof logo === 'function' ? logo(animation ? false : expanded) : logo}
       </Stack>

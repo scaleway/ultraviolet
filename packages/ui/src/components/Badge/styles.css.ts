@@ -17,15 +17,15 @@ function getDefaultStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'neutral') {
     return {
       background: theme.colors.neutral.backgroundWeak,
-      color: theme.colors.neutral.text,
       borderColor: theme.colors.neutral.border,
+      color: theme.colors.neutral.text,
     }
   }
 
   return {
     background: theme.colors[sentiment].background,
-    color: theme.colors[sentiment].text,
     borderColor: theme.colors[sentiment].background,
+    color: theme.colors[sentiment].text,
   }
 }
 
@@ -33,98 +33,98 @@ function getStrongStyle(sentiment: (typeof sentiments)[number]) {
   if (sentiment === 'neutral') {
     return {
       background: theme.colors.neutral.backgroundStronger,
-      color: theme.colors.neutral.textStronger,
       borderColor: theme.colors.neutral.borderStronger,
+      color: theme.colors.neutral.textStronger,
     }
   }
 
   return {
     background: theme.colors[sentiment].backgroundStrong,
-    color: theme.colors[sentiment].textStrong,
     borderColor: theme.colors[sentiment].backgroundStrong,
+    color: theme.colors[sentiment].textStrong,
   }
 }
 
 export const badge = recipe({
   base: {
-    display: 'inline-flex',
     alignItems: 'center',
-    justifyContent: 'center',
     borderRadius: theme.radii.xlarge,
-    width: 'fit-content',
-    borderWidth: '1px',
     borderStyle: 'solid',
-    textTransform: 'uppercase',
+    borderWidth: '1px',
+    display: 'inline-flex',
     gap: theme.space['0.5'],
+    justifyContent: 'center',
+    textTransform: 'uppercase',
+    width: 'fit-content',
+  },
+
+  compoundVariants: [
+    ...sentiments.map(sentiment => ({
+      style: getDefaultStyle(sentiment),
+      variants: {
+        disabled: false,
+        prominence: 'default' as const,
+        sentiment,
+      },
+    })),
+    ...sentiments.map(sentiment => ({
+      style: getStrongStyle(sentiment),
+      variants: {
+        disabled: false,
+        prominence: 'strong' as const,
+        sentiment,
+      },
+    })),
+  ],
+  defaultVariants: {
+    disabled: false,
+    prominence: 'default',
+    sentiment: 'neutral',
+    size: 'medium',
   },
   variants: {
-    size: {
-      small: {
-        padding: `0 ${theme.space[1]}`,
-        height: theme.sizing[SIZES.small],
+    disabled: {
+      true: {
+        backgroundColor: theme.colors.neutral.backgroundStrong,
+        border: 'none',
+        color: theme.colors.neutral.textWeak,
       },
-      medium: {
-        padding: `0 ${theme.space[1.5]}`,
-        height: theme.sizing[SIZES.medium],
-      },
-      large: {
-        padding: `0 ${theme.space[2]}`,
-        height: theme.sizing[SIZES.large],
-      },
-      xsmall: {
-        padding: `0 ${theme.space[1]}`,
-        height: theme.sizing[SIZES.xsmall],
-      },
-    },
-
-    sentiment: {
-      primary: {},
-      secondary: {},
-      danger: {},
-      info: {},
-      success: {},
-      warning: {},
-      neutral: {},
-      black: {},
-      white: {},
     },
 
     prominence: {
       default: {},
       strong: {},
     },
-    disabled: {
-      true: {
-        border: 'none',
-        color: theme.colors.neutral.textWeak,
-        backgroundColor: theme.colors.neutral.backgroundStrong,
+
+    sentiment: {
+      black: {},
+      danger: {},
+      info: {},
+      neutral: {},
+      primary: {},
+      secondary: {},
+      success: {},
+      warning: {},
+      white: {},
+    },
+    size: {
+      large: {
+        height: theme.sizing[SIZES.large],
+        padding: `0 ${theme.space[2]}`,
+      },
+      medium: {
+        height: theme.sizing[SIZES.medium],
+        padding: `0 ${theme.space[1.5]}`,
+      },
+      small: {
+        height: theme.sizing[SIZES.small],
+        padding: `0 ${theme.space[1]}`,
+      },
+      xsmall: {
+        height: theme.sizing[SIZES.xsmall],
+        padding: `0 ${theme.space[1]}`,
       },
     },
-  },
-
-  compoundVariants: [
-    ...sentiments.map(sentiment => ({
-      variants: {
-        prominence: 'default' as const,
-        sentiment,
-        disabled: false,
-      },
-      style: getDefaultStyle(sentiment),
-    })),
-    ...sentiments.map(sentiment => ({
-      variants: {
-        prominence: 'strong' as const,
-        sentiment,
-        disabled: false,
-      },
-      style: getStrongStyle(sentiment),
-    })),
-  ],
-  defaultVariants: {
-    size: 'medium',
-    prominence: 'default',
-    sentiment: 'neutral',
-    disabled: false,
   },
 })
 

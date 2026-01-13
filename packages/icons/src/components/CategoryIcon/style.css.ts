@@ -1,14 +1,14 @@
-import { globalStyle, styleVariants } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { globalStyle, styleVariants } from '@vanilla-extract/css'
 
 export const VARIANTS = ['primary', 'neutral'] as const
 const FILL_CLASSES = ['fill', 'fillStrong'] as const
 
 export const categoryIcon = styleVariants({
-  primaryDisabled: {},
-  primary: {},
-  neutralDisabled: {},
   neutral: {},
+  neutralDisabled: {},
+  primary: {},
+  primaryDisabled: {},
 })
 
 const color = theme.colors.other.icon.category

@@ -5,7 +5,7 @@ import illustration from '../assets/illustration.png'
 
 describe('contentCard', () => {
   beforeEach(() => {
-    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+    vi.spyOn(global.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
   })
 
   afterEach(() => {
@@ -87,7 +87,7 @@ describe('contentCard', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  describe(`renders correctly with all directions`, () => {
+  describe('renders correctly with all directions', () => {
     const directions = ['row', 'column'] as const
     directions.forEach(direction => {
       test(`renders correctly direction ${direction}`, () => {

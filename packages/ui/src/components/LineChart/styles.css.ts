@@ -5,15 +5,15 @@ export const colorLine = createVar()
 export const backgroundColorLegend = createVar()
 
 export const textLegend = style({
-  textAlign: 'right',
+  alignSelf: 'center',
   flex: 1,
   minWidth: theme.sizing[900],
-  alignSelf: 'center',
+  textAlign: 'right',
 })
 
 export const cellValueContainer = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
 })
 
 export const longContainer = style({
@@ -26,20 +26,20 @@ export const container = style({
 })
 
 export const lineTooltipContainer = style({
-  display: 'flex',
+  alignItems: 'center',
   background: theme.colors.neutral.backgroundStronger,
   borderRadius: theme.radii.small,
   boxShadow: theme.shadows.tooltip,
+  display: 'flex',
   padding: `${theme.space['0.5']} ${theme.space[1]}`,
-  alignItems: 'center',
 })
 
 export const lineColorSquare = style({
-  display: 'block',
-  width: theme.sizing[175],
-  height: theme.sizing[175],
   background: colorLine,
+  display: 'block',
+  height: theme.sizing[175],
   marginRight: theme.space['1.5'],
+  width: theme.sizing[175],
 })
 
 export const lineChartBody = style({})
@@ -49,9 +49,9 @@ globalStyle(`${lineChartBody} > :not(:last-child)`, {
 })
 
 export const lineChartHead = style({
+  borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
   display: 'flex',
   paddingBottom: theme.space[1],
-  borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
 })
 
 globalStyle(`${lineChartHead} > :not(:last-child)`, {
@@ -59,10 +59,10 @@ globalStyle(`${lineChartHead} > :not(:last-child)`, {
 })
 
 export const lineChartLegend = style({
+  backgroundColor: backgroundColorLegend,
+  height: 2,
   marginLeft: theme.space[2],
   width: theme.sizing[400],
-  height: 2,
-  backgroundColor: backgroundColorLegend,
 })
 
 export const lineChartRow = style({

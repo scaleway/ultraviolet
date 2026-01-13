@@ -1,3 +1,5 @@
+// oxlint-disable eslint/complexity
+
 'use client'
 
 import { CalculatorIcon } from '@ultraviolet/icons'
@@ -252,8 +254,9 @@ export const EstimateCostContent = ({
               Math.max(product.amount - product.amountFree, 0)),
         0,
       ),
-      total: !hideTotal
-        ? products.reduce(
+      total: hideTotal
+        ? 0
+        : products.reduce(
             (acc, product) =>
               acc +
               calculatePrice({
@@ -265,8 +268,7 @@ export const EstimateCostContent = ({
                 timeUnit: product.noIteration ? 'hours' : iteration.unit,
               }),
             0,
-          )
-        : 0,
+          ),
     })
     onTotalPriceChange?.({
       total: totalPrice.total,
@@ -324,7 +326,7 @@ export const EstimateCostContent = ({
         gap={2}
         style={style}
       >
-        {!hideOverlay ? (
+        {hideOverlay ? null : (
           <OverlayComponent
             disableOverlayLeft={disableOverlayLeft}
             disableOverlayRight={disableOverlayRight}
@@ -339,7 +341,7 @@ export const EstimateCostContent = ({
           >
             {children}
           </OverlayComponent>
-        ) : null}
+        )}
         {description === false ? null : (
           <DescriptionComponent description={description} locales={locales} />
         )}
@@ -362,7 +364,7 @@ export const EstimateCostContent = ({
                   <col />
                   <col className={estimateCostPriceColumn} />
                 </colgroup>
-                {!hideTimeUnit ? (
+                {hideTimeUnit ? null : (
                   <thead>
                     <tr>
                       <th>
@@ -385,7 +387,7 @@ export const EstimateCostContent = ({
                       </th>
                     </tr>
                   </thead>
-                ) : null}
+                )}
                 <tbody>
                   {Children.map(children, (child, index) =>
                     isValidElement<ExtraProps>(child)
@@ -420,7 +422,7 @@ export const EstimateCostContent = ({
                 </tbody>
               </table>
             ) : null}
-            {!hideTotal ? (
+            {hideTotal ? null : (
               <table
                 cellPadding="0"
                 cellSpacing="0"
@@ -442,7 +444,7 @@ export const EstimateCostContent = ({
                         estimateCostTotalPriceCell,
                       )}
                       style={assignInlineVars({
-                        [paddingLeftCell]: `16px`,
+                        [paddingLeftCell]: '16px',
                       })}
                     >
                       {isBeta ? (
@@ -512,7 +514,7 @@ export const EstimateCostContent = ({
                               : null}
                             /
                             {locales[
-                              `estimate.cost.units.hours.label`
+                              'estimate.cost.units.hours.label'
                             ].toLowerCase()}
                           </LineThrough>
                         </Text>
@@ -521,7 +523,7 @@ export const EstimateCostContent = ({
                   </tr>
                 </tbody>
               </table>
-            ) : null}
+            )}
             {commitmentFees !== undefined || monthlyFees !== undefined ? (
               <>
                 <Text

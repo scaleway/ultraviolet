@@ -33,63 +33,82 @@ const loadingAnimationStepMedium = keyframes({
 
 export const stepperContainer = recipe({
   base: {
+    alignItems: 'stretch',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'stretch',
   },
-  variants: {
-    separator: {
-      true: {},
-      false: {
-        gap: theme.space[4],
+  compoundVariants: [
+    {
+      style: {
+        gap: theme.space['0.5'],
       },
+      variants: { labelPosition: 'bottom', separator: true },
     },
+    {
+      style: {
+        gap: theme.space[1],
+      },
+      variants: { labelPosition: 'right', separator: true },
+    },
+  ],
+  variants: {
     labelPosition: {
       bottom: {},
       right: {},
     },
+    separator: {
+      false: {
+        gap: theme.space[4],
+      },
+      true: {},
+    },
   },
-  compoundVariants: [
-    {
-      variants: { separator: true, labelPosition: 'bottom' },
-      style: {
-        gap: theme.space['0.5'],
-      },
-    },
-    {
-      variants: { separator: true, labelPosition: 'right' },
-      style: {
-        gap: theme.space[1],
-      },
-    },
-  ],
 })
 
 export const stepperLine = recipe({
   base: {
+    backgroundColor: theme.colors.neutral.backgroundStrong,
     borderRadius: theme.radii.default,
     flexGrow: 1,
-    position: 'relative',
-    marginTop: theme.space[2],
-    marginBottom: theme.space[2],
-    backgroundColor: theme.colors.neutral.backgroundStrong,
     height: `${LINE_HEIGHT_SIZES}px`,
+    marginBottom: theme.space[2],
+    marginTop: theme.space[2],
+    position: 'relative',
     selectors: {
       '&::after': {
-        content: '""',
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        height: '100%',
-        borderRadius: theme.radii.default,
         backgroundColor: theme.colors.primary.backgroundStrong,
+        borderRadius: theme.radii.default,
+        content: '""',
+        height: '100%',
+        left: 0,
+        position: 'absolute',
+        top: 0,
       },
     },
   },
+  compoundVariants: [
+    {
+      style: {
+        selectors: {
+          '&::after': {
+            animation: `${loadingAnimation} 1s linear infinite`,
+          },
+        },
+      },
+      variants: { animated: true, temporal: 'current' },
+    },
+  ],
+  defaultVariants: {
+    animated: false,
+    temporal: 'next',
+  },
   variants: {
+    animated: {
+      true: {},
+    },
     temporal: {
-      next: {},
+      current: {},
       done: {
         backgroundColor: theme.colors.primary.backgroundStrong,
         selectors: {
@@ -98,136 +117,87 @@ export const stepperLine = recipe({
           },
         },
       },
-      current: {},
+      next: {},
     },
-    animated: {
-      true: {},
-    },
-  },
-  compoundVariants: [
-    {
-      variants: { temporal: 'current', animated: true },
-      style: {
-        selectors: {
-          '&::after': {
-            animation: `${loadingAnimation} 1s linear infinite`,
-          },
-        },
-      },
-    },
-  ],
-  defaultVariants: {
-    animated: false,
-    temporal: 'next',
   },
 })
 
 export const stepContainer = style({
   display: 'flex',
-  whiteSpace: 'nowrap',
   transition: 'text-decoration 300ms',
+  whiteSpace: 'nowrap',
 })
 
 export const stepperContainerRecipe = recipe({
-  variants: {
-    size: {
-      small: {},
-      medium: {},
-    },
-    animated: {
-      true: {},
-    },
-    disabled: {
-      true: {
-        cursor: 'not-allowed',
-      },
-      false: {},
-    },
-    separator: {
-      true: {},
-    },
-    labelPosition: {
-      top: {},
-      bottom: {},
-    },
-    done: {
-      true: {},
-    },
-  },
   compoundVariants: [
     {
-      variants: { labelPosition: 'bottom', separator: true, size: 'small' },
       style: {
         selectors: {
-          '&:not(:last-child):after': {
-            content: '""',
-            position: 'relative',
+          '&:not(:last-child)::before': {
             alignSelf: 'baseline',
+            backgroundColor: theme.colors.neutral.backgroundStrong,
             borderRadius: theme.radii.default,
-            top: `calc(${theme.space[1.5]} - 1px)`,
-            width: `calc(100% - ${theme.space[5]})`,
+            content: '""',
+            height: `${LINE_HEIGHT_SIZES}px`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES}px`,
-          },
-          '&:not(:last-child)::before': {
-            content: '""',
             position: 'relative',
-            alignSelf: 'baseline',
-            borderRadius: theme.radii.default,
-            backgroundColor: theme.colors.neutral.backgroundStrong,
             top: theme.space['1.5'],
             width: `calc(100% - ${theme.space[5]})`,
+          },
+          '&:not(:last-child):after': {
+            alignSelf: 'baseline',
+            borderRadius: theme.radii.default,
+            content: '""',
+            height: `${LINE_HEIGHT_SIZES}px`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES}px`,
+            position: 'relative',
+            top: `calc(${theme.space[1.5]} - 1px)`,
+            width: `calc(100% - ${theme.space[5]})`,
           },
         },
       },
+      variants: { labelPosition: 'bottom', separator: true, size: 'small' },
     },
     {
-      variants: { labelPosition: 'bottom', separator: true, size: 'medium' },
       style: {
         selectors: {
-          '&:not(:last-child):after': {
-            content: '""',
-            position: 'relative',
+          '&:not(:last-child)::before': {
             alignSelf: 'baseline',
+            backgroundColor: theme.colors.neutral.backgroundStrong,
             borderRadius: theme.radii.default,
-            top: `calc(${theme.space[2]} - 1px)`,
-            width: `calc(100% - ${theme.space[6]})`,
+            content: '""',
+            height: `${LINE_HEIGHT_SIZES}px`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES}px`,
-          },
-          '&:not(:last-child)::before': {
-            content: '""',
             position: 'relative',
-            alignSelf: 'baseline',
-            borderRadius: theme.radii.default,
-            backgroundColor: theme.colors.neutral.backgroundStrong,
             top: theme.space[2],
             width: `calc(100% - ${theme.space[6]})`,
+          },
+          '&:not(:last-child):after': {
+            alignSelf: 'baseline',
+            borderRadius: theme.radii.default,
+            content: '""',
+            height: `${LINE_HEIGHT_SIZES}px`,
             left: 'calc(50% + 25px)',
             order: -1,
-            height: `${LINE_HEIGHT_SIZES}px`,
+            position: 'relative',
+            top: `calc(${theme.space[2]} - 1px)`,
+            width: `calc(100% - ${theme.space[6]})`,
           },
         },
       },
+      variants: { labelPosition: 'bottom', separator: true, size: 'medium' },
     },
     {
-      variants: { separator: true, labelPosition: 'bottom' },
       style: {
-        flexDirection: 'column',
         flex: 1,
+        flexDirection: 'column',
       },
+      variants: { labelPosition: 'bottom', separator: true },
     },
     {
-      variants: {
-        done: true,
-        separator: true,
-        labelPosition: 'bottom',
-      },
       style: {
         selectors: {
           '&:not(:last-child):after': {
@@ -235,15 +205,45 @@ export const stepperContainerRecipe = recipe({
           },
         },
       },
+      variants: {
+        done: true,
+        labelPosition: 'bottom',
+        separator: true,
+      },
     },
   ],
   defaultVariants: {
-    size: 'medium',
     animated: false,
     disabled: false,
-    separator: true,
-    labelPosition: 'bottom',
     done: false,
+    labelPosition: 'bottom',
+    separator: true,
+    size: 'medium',
+  },
+  variants: {
+    animated: {
+      true: {},
+    },
+    disabled: {
+      false: {},
+      true: {
+        cursor: 'not-allowed',
+      },
+    },
+    done: {
+      true: {},
+    },
+    labelPosition: {
+      bottom: {},
+      top: {},
+    },
+    separator: {
+      true: {},
+    },
+    size: {
+      medium: {},
+      small: {},
+    },
   },
 })
 
@@ -251,48 +251,65 @@ export const animationStepperContainer = styleVariants({
   medium: {
     selectors: {
       '&:not(:last-child):after': {
-        backgroundColor: theme.colors.primary.backgroundStrong,
         animation: `${loadingAnimationStepMedium} 1s linear infinite`,
+        backgroundColor: theme.colors.primary.backgroundStrong,
       },
     },
   },
   small: {
     selectors: {
       '&:not(:last-child):after': {
-        backgroundColor: theme.colors.primary.backgroundStrong,
         animation: `${loadingAnimationStepSmall} 1s linear infinite`,
+        backgroundColor: theme.colors.primary.backgroundStrong,
       },
     },
   },
 })
 
 export const stepperInteractive = styleVariants({
-  inactive: {
+  active: {
     cursor: 'pointer',
   },
-  active: {
+  inactive: {
     cursor: 'pointer',
   },
 })
 
 const stepBulletBase = style({
-  transition: 'box-shadow 300ms',
   selectors: {
     [`${stepperInteractive.active}:hover > &`]: {
       boxShadow: theme.shadows.focusPrimary,
     },
   },
+  transition: 'box-shadow 300ms',
 })
 
 export const stepBullet = recipe({
   base: stepBulletBase,
+  defaultVariants: {
+    disabled: false,
+    isActive: false,
+    size: 'medium',
+  },
   variants: {
-    size: {
-      small: {
-        minWidth: theme.space[3],
+    disabled: {
+      false: {
+        selectors: {
+          [`${stepperInteractive.inactive}:hover > &`]: {
+            boxShadow: theme.shadows.focusPrimary,
+          },
+        },
       },
-      medium: {
-        minWidth: theme.space[4],
+      true: {
+        backgroundColor: theme.colors.neutral.backgroundDisabled,
+        borderColor: theme.colors.neutral.borderDisabled,
+        boxShadow: 'none',
+        color: theme.colors.neutral.textDisabled,
+        selectors: {
+          '&:hover': {
+            boxShadow: 'none',
+          },
+        },
       },
     },
     isActive: {
@@ -301,39 +318,18 @@ export const stepBullet = recipe({
         boxShadow: theme.shadows.focusPrimary,
       },
     },
-    disabled: {
-      true: {
-        color: theme.colors.neutral.textDisabled,
-        backgroundColor: theme.colors.neutral.backgroundDisabled,
-        boxShadow: 'none',
-        borderColor: theme.colors.neutral.borderDisabled,
-        selectors: {
-          '&:hover': {
-            boxShadow: 'none',
-          },
-        },
+    size: {
+      medium: {
+        minWidth: theme.space[4],
       },
-      false: {
-        selectors: {
-          [`${stepperInteractive.inactive}:hover > &`]: {
-            boxShadow: theme.shadows.focusPrimary,
-          },
-        },
+      small: {
+        minWidth: theme.space[3],
       },
     },
-  },
-  defaultVariants: {
-    size: 'medium',
-    disabled: false,
-    isActive: false,
   },
 })
 
 const stepTextBase = style({
-  transition: 'text-decoration-color 250ms ease-out',
-  textDecorationThickness: 1,
-  textUnderlineOffset: 2,
-  textDecorationColor: 'transparent',
   selectors: {
     [`${stepperInteractive.active}:hover > &`]: {
       color: theme.colors.primary.textHover,
@@ -341,15 +337,24 @@ const stepTextBase = style({
       textDecorationThickness: 1,
     },
   },
+  textDecorationColor: 'transparent',
+  textDecorationThickness: 1,
+  textUnderlineOffset: 2,
+  transition: 'text-decoration-color 250ms ease-out',
 })
 
 export const stepText = recipe({
   base: stepTextBase,
+  defaultVariants: {
+    disabled: false,
+  },
   variants: {
-    disabled: {
+    addMarginTop: {
       true: {
-        color: theme.colors.neutral.textDisabled,
+        marginTop: theme.space[1],
       },
+    },
+    disabled: {
       false: {
         selectors: {
           [`${stepperInteractive.inactive}:hover > &`]: {
@@ -359,14 +364,9 @@ export const stepText = recipe({
           },
         },
       },
-    },
-    addMarginTop: {
       true: {
-        marginTop: theme.space[1],
+        color: theme.colors.neutral.textDisabled,
       },
     },
-  },
-  defaultVariants: {
-    disabled: false,
   },
 })

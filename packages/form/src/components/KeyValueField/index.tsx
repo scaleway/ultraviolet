@@ -144,7 +144,7 @@ export const KeyValueField = <
             handleFieldChange()
           }}
           sentiment="primary"
-          tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}
+          tooltip={canAdd ? addButton.tooltip : maxSizeReachedTooltip}
           variant="outlined"
         >
           <PlusIcon />

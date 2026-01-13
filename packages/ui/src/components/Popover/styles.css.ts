@@ -1,19 +1,19 @@
 import { theme } from '@ultraviolet/themes'
-import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
 import { SIZES_WIDTH } from './constant'
 
 function createSizesPopover(size: keyof typeof SIZES_WIDTH) {
   return {
-    width: `${SIZES_WIDTH[size]}rem`,
     maxWidth: `${SIZES_WIDTH[size]}rem`,
+    width: `${SIZES_WIDTH[size]}rem`,
   }
 }
 export const popover = recipe({
   base: {
+    boxShadow: theme.shadows.popover,
     padding: theme.space[2],
     textAlign: 'initial',
-    boxShadow: theme.shadows.popover,
   },
   variants: {
     sentiment: {

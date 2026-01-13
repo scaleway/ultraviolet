@@ -1,6 +1,8 @@
-'use client'
-
+// biome-ignore-all lint/a11y/useFocusableInteractive: to fix
 // oxlint-disable eslint/max-statements
+// oxlint-disable eslint/complexity
+
+'use client'
 
 import {
   ArrowDownIcon,
@@ -351,7 +353,7 @@ export const Item = memo(
       !noExpand && pinnedFeature && shouldShowPinnedButton && !disabled
 
     const showPinIcon =
-      !noExpand && !disabled && shouldShowPinnedButton && pinnedFeature
+      !(noExpand || disabled) && shouldShowPinnedButton && pinnedFeature
     // This content is when the navigation is expanded
 
     const shouldHaveWeakText =
@@ -421,7 +423,7 @@ export const Item = memo(
                 />
               ) : null}
               <Stack>
-                {!animation ? (
+                {animation ? null : (
                   <Text
                     as="span"
                     className={navigationItemWrapText({
@@ -447,7 +449,7 @@ export const Item = memo(
                       </span>
                     ) : null}
                   </Text>
-                ) : null}
+                )}
                 {subLabel && !animation ? (
                   <Text
                     as="span"
@@ -552,16 +554,35 @@ export const Item = memo(
                   direction="row"
                   gap={1}
                 >
-                  {!animation && !noExpand ? (
+                  {animation || noExpand ? null : (
                     <ArrowIcon prominence="weak" sentiment="neutral" />
-                  ) : null}
+                  )}
                 </Stack>
               ) : null}
             </Stack>
           </Stack>
           {children ? (
+            // biome-ignore lint/complexity/noUselessFragments: allow multiple ternary
             <>
-              {!noExpand ? (
+              {noExpand ? (
+                <ItemProvider>
+                  <Stack
+                    className={
+                      noExpand || type === 'pinnedGroup'
+                        ? ''
+                        : navigationItemPaddingStack({
+                            hide:
+                              shouldAnimate &&
+                              animationType === 'complex' &&
+                              animation === 'expand',
+                          })
+                    }
+                    width={animation ? '100%' : undefined}
+                  >
+                    {children}
+                  </Stack>
+                </ItemProvider>
+              ) : (
                 <ItemProvider>
                   <Expandable animationDuration={0} opened={internalExpanded}>
                     <Stack
@@ -580,24 +601,6 @@ export const Item = memo(
                       {children}
                     </Stack>
                   </Expandable>
-                </ItemProvider>
-              ) : (
-                <ItemProvider>
-                  <Stack
-                    className={
-                      noExpand || type === 'pinnedGroup'
-                        ? ''
-                        : navigationItemPaddingStack({
-                            hide:
-                              shouldAnimate &&
-                              animationType === 'complex' &&
-                              animation === 'expand',
-                          })
-                    }
-                    width={animation ? '100%' : undefined}
-                  >
-                    {children}
-                  </Stack>
                 </ItemProvider>
               )}
             </>
@@ -700,7 +703,7 @@ export const Item = memo(
             justifyContent="space-between"
             width="100%"
           >
-            {!animation ? (
+            {animation ? null : (
               <Text
                 as="span"
                 className={navigationItemWrapText({
@@ -712,7 +715,7 @@ export const Item = memo(
               >
                 {label}
               </Text>
-            ) : null}
+            )}
             {labelDescription ? (
               <span className={navigationItemPadded}>{labelDescription}</span>
             ) : null}

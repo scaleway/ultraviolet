@@ -4,18 +4,18 @@ import { createVar, style } from '@vanilla-extract/css'
 export const colorBar = createVar()
 
 export const barTooltipContainer = style({
-  display: 'flex',
+  alignItems: 'center',
   background: theme.colors.neutral.backgroundWeakElevated,
   borderRadius: theme.radii.small,
   boxShadow: theme.shadows.tooltip,
+  display: 'flex',
   padding: `${theme.space[1]} ${theme.space[2]}`,
-  alignItems: 'center',
 })
 
 export const barColorSquare = style({
-  display: 'block',
-  width: theme.sizing[150],
-  height: theme.sizing[150],
   background: colorBar,
+  display: 'block',
+  height: theme.sizing[150],
   marginRight: theme.space['1.5'],
+  width: theme.sizing[150],
 })

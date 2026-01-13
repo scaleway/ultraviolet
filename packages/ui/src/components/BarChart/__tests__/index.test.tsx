@@ -41,6 +41,7 @@ describe('barChart', () => {
   test('renders correctly with negative values', () =>
     shouldMatchSnapshot(<BarChart data={barChartPositiveNegativeData} />))
 
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('renders correctly with custom tooltip format', async () => {
     const { container } = renderWithTheme(
       <BarChart

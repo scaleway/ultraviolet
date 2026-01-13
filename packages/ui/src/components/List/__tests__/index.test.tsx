@@ -65,12 +65,13 @@ const Wrapper = ({ theme = consoleLightTheme, children }: WrapperProps) => (
 
 describe('list', () => {
   beforeEach(() => {
-    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.4155913669444804)
+    vi.spyOn(globalThis.Math, 'random').mockReturnValue(0.415_591_366_944_480_4)
   })
 
   afterEach(() => {
     vi.spyOn(globalThis.Math, 'random').mockRestore()
   })
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')

@@ -120,6 +120,7 @@ export const PinnedItems = ({
                     active={items[itemId]?.active ?? false}
                     id={itemId}
                     index={index}
+                    key={itemId}
                     label={items[itemId].label}
                     onClickPinUnpin={
                       items[itemId]?.onClickPinUnpin ?? undefined

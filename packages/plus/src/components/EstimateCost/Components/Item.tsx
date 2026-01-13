@@ -1,6 +1,7 @@
-'use client'
-
 // oxlint-disable eslint/max-statements
+// oxlint-disable eslint/complexity
+
+'use client'
 
 import { HelpCircleOutlineIcon } from '@ultraviolet/icons'
 import { Badge, Stack, Text, Tooltip } from '@ultraviolet/ui'
@@ -364,7 +365,7 @@ export const Item = memo(
       >
         <Cell
           className={estimateCostCell({
-            hasBorder: !isLastElement && !noBorder && !isOverlay,
+            hasBorder: !(isLastElement || noBorder || isOverlay),
           })}
           style={assignInlineVars({
             [paddingLeftCell]: `${(tabulation ?? 0) * 8 + 16}px`,
@@ -441,20 +442,20 @@ export const Item = memo(
             </div>
           </LeftSide>
         </Cell>
-        {!isOverlay ? (
+        {isOverlay ? null : (
           <td
             className={cn(
               estimateCostCell({
-                hasBorder: !isLastElement && !noBorder,
+                hasBorder: !(isLastElement || noBorder),
                 primary: isPrimaryBackground,
               }),
               estimateCostPriceCell,
             )}
             style={assignInlineVars({
-              [paddingLeftCell]: `16px`,
+              [paddingLeftCell]: '16px',
             })}
           >
-            {!noPrice ? (
+            {noPrice ? null : (
               <>
                 <Text
                   as="p"
@@ -473,11 +474,11 @@ export const Item = memo(
                   variant={noIterationText ? 'headingSmall' : 'bodyStrong'}
                 >
                   {priceText}
-                  {!priceText
-                    ? formatNumber(computedItemPrice, {
+                  {priceText
+                    ? null
+                    : formatNumber(computedItemPrice, {
                         maximumFractionDigits: formatMaximumFractionDigits,
-                      })
-                    : null}
+                      })}
                   {noIterationText ? (
                     <Text as="span" sentiment="primary" variant="bodySmall">
                       /{noIterationText}
@@ -511,17 +512,17 @@ export const Item = memo(
                           `estimate.cost.units.${unit as Units}.label`
                         ].toLowerCase()
                       : `/${unit}`}
-                    {!noIteration
-                      ? `/${locales[
+                    {noIteration
+                      ? null
+                      : `/${locales[
                           'estimate.cost.units.hours.label'
-                        ].toLowerCase()}`
-                      : null}
+                        ].toLowerCase()}`}
                   </Text>
                 ) : null}
               </>
-            ) : null}
+            )}
           </td>
-        ) : null}
+        )}
       </Row>
     )
   },

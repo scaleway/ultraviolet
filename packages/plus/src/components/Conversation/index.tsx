@@ -35,7 +35,7 @@ export const MessageInfos = ({
   </div>
 )
 
-export const Date = ({
+export const DateComponent = ({
   children,
   style,
 }: {
@@ -88,7 +88,7 @@ export const MessageTag = ({
   </Tag>
 )
 
-Conversation.Date = Date
+Conversation.Date = DateComponent
 Conversation.Message = Message
 Conversation.MessageInfos = MessageInfos
 Conversation.Tag = MessageTag

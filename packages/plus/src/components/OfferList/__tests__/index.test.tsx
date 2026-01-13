@@ -131,7 +131,7 @@ describe('offerList', () => {
 
     const radioVenus = screen.getByDisplayValue('venus')
     await userEvent.click(radioVenus)
-    expect(onChange).toHaveBeenCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     expect(radioVenus).toBeChecked()
     expect(radioJupiter).not.toBeChecked()
     expect(asFragment()).toMatchSnapshot()

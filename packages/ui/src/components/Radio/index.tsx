@@ -117,6 +117,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               <RadioMarkedIcon />
             </svg>
             {label ? (
+              // biome-ignore lint/complexity/noUselessFragments: ok
               <>
                 {typeof label === 'string' ? (
                   <Text

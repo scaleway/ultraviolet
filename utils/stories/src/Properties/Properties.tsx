@@ -62,10 +62,10 @@ const Properties = () => {
 
   const countPropertiesUsages = propertiesList.reduce<Record<string, number>>(
     (acc, property) => {
-      if (!acc[property]) {
-        acc[property] = 1
-      } else {
+      if (acc[property]) {
         acc[property] += 1
+      } else {
+        acc[property] = 1
       }
 
       return acc

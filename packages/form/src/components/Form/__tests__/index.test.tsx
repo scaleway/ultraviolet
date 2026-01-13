@@ -34,7 +34,7 @@ describe('form', () => {
       </Form>,
     )
     await userEvent.click(screen.getByText('Submit'))
-    await waitFor(() => expect(onSubmit).toBeCalledTimes(1))
+    await waitFor(() => expect(onSubmit).toHaveBeenCalledOnce())
     expect(asFragment()).toMatchSnapshot()
   })
 })

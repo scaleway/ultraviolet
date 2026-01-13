@@ -1,564 +1,725 @@
 :root,
 :root.dark-theme {
-    --color-danger-background: #4e0921;
-    --color-danger-background-disabled: #47081e;
-    --color-danger-background-hover: #650b2b;
-    --color-danger-background-strong: #e71964;
-    --color-danger-background-strong-disabled: #790d34;
-    --color-danger-background-strong-hover: #fb1c6c;
-    --color-danger-border: #ff72a5;
-    --color-danger-border-disabled: #790d34;
-    --color-danger-border-hover: #ffc0d7;
-    --color-danger-border-strong: #e71964;
-    --color-danger-border-strong-disabled: #790d34;
-    --color-danger-border-strong-hover: #fb1c6c;
-    --color-danger-icon: #ff72a5;
-    --color-danger-icon-disabled: #790d34;
-    --color-danger-icon-hover: #ffc0d7;
-    --color-danger-icon-strong: #0c0f1a;
-    --color-danger-icon-strong-disabled: #0c0f1a;
-    --color-danger-icon-strong-hover: #0c0f1a;
-    --color-danger-text: #ff72a5;
-    --color-danger-text-disabled: #790d34;
-    --color-danger-text-hover: #ffc0d7;
-    --color-danger-text-strong: #0c0f1a;
-    --color-danger-text-strong-disabled: #0c0f1a;
-    --color-danger-text-strong-hover: #151a2d;
-    --color-info-background: #002847;
-    --color-info-background-disabled: #00243f;
-    --color-info-background-hover: #003359;
-    --color-info-background-strong: #0085e7;
-    --color-info-background-strong-disabled: #003f6e;
-    --color-info-background-strong-hover: #008df7;
-    --color-info-border: #34a8ff;
-    --color-info-border-disabled: #003f6e;
-    --color-info-border-hover: #6fc2ff;
-    --color-info-border-strong: #0085e7;
-    --color-info-border-strong-disabled: #003f6e;
-    --color-info-border-strong-hover: #008df7;
-    --color-info-icon: #34a8ff;
-    --color-info-icon-disabled: #003f6e;
-    --color-info-icon-hover: #6fc2ff;
-    --color-info-icon-strong: #0c0f1a;
-    --color-info-icon-strong-disabled: #0c0f1a;
-    --color-info-icon-strong-hover: #151a2d;
-    --color-info-text: #34a8ff;
-    --color-info-text-disabled: #003f6e;
-    --color-info-text-hover: #6fc2ff;
-    --color-info-text-strong: #0c0f1a;
-    --color-info-text-strong-disabled: #0c0f1a;
-    --color-info-text-strong-hover: #151a2d;
-    --color-neutral-background: #151a2d;
-    --color-neutral-background-disabled: #1e2335;
-    --color-neutral-background-hover: #303445;
-    --color-neutral-background-strong: #484b5a;
-    --color-neutral-background-strong-disabled: #252a3b;
-    --color-neutral-background-strong-hover: #626672;
-    --color-neutral-background-stronger: #e9e9ec;
-    --color-neutral-background-stronger-disabled: #252a3b;
-    --color-neutral-background-stronger-hover: #ffffff;
-    --color-neutral-background-weak: #252a3b;
-    --color-neutral-background-weak-disabled: #1e2335;
-    --color-neutral-background-weak-elevated: #191f33;
-    --color-neutral-background-weak-hover: #303445;
-    --color-neutral-border: #626672;
-    --color-neutral-border-disabled: #252a3b;
-    --color-neutral-border-hover: #7e8291;
-    --color-neutral-border-strong: #7e8291;
-    --color-neutral-border-strong-disabled: #252a3b;
-    --color-neutral-border-strong-hover: #b8bac0;
-    --color-neutral-border-stronger: #e9e9ec;
-    --color-neutral-border-stronger-disabled: #1e2335;
-    --color-neutral-border-stronger-hover: #ffffff;
-    --color-neutral-border-weak: #484b5a;
-    --color-neutral-border-weak-disabled: #252a3b;
-    --color-neutral-border-weak-hover: #626672;
-    --color-neutral-icon: #e9e9ec;
-    --color-neutral-icon-disabled: #484b5a;
-    --color-neutral-icon-hover: #ffffff;
-    --color-neutral-icon-strong: #ffffff;
-    --color-neutral-icon-strong-disabled: #484b5a;
-    --color-neutral-icon-strong-hover: #e9e9ec;
-    --color-neutral-icon-stronger: #0c0f1a;
-    --color-neutral-icon-stronger-disabled: #484b5a;
-    --color-neutral-icon-stronger-hover: #151a2d;
-    --color-neutral-icon-weak: #b8bac0;
-    --color-neutral-icon-weak-disabled: #484b5a;
-    --color-neutral-icon-weak-hover: #e9e9ec;
-    --color-neutral-text: #b8bac0;
-    --color-neutral-text-disabled: #484b5a;
-    --color-neutral-text-hover: #e9e9ec;
-    --color-neutral-text-strong: #ffffff;
-    --color-neutral-text-strong-disabled: #484b5a;
-    --color-neutral-text-strong-hover: #ffffff;
-    --color-neutral-text-stronger: #0c0f1a;
-    --color-neutral-text-stronger-disabled: #484b5a;
-    --color-neutral-text-stronger-hover: #151a2d;
-    --color-neutral-text-weak: #7e8291;
-    --color-neutral-text-weak-disabled: #484b5a;
-    --color-neutral-text-weak-hover: #b8bac0;
-    --color-other-data-charts-danger: #e24d69;
-    --color-other-data-charts-data1: #8d40ee;
-    --color-other-data-charts-data10: #b4f2f6;
-    --color-other-data-charts-data11: #005899;
-    --color-other-data-charts-data12: #2c8666;
-    --color-other-data-charts-data13: #e2a1ff;
-    --color-other-data-charts-data14: #92ac41;
-    --color-other-data-charts-data2: #008df7;
-    --color-other-data-charts-data3: #3cb589;
-    --color-other-data-charts-data4: #ea8396;
-    --color-other-data-charts-data5: #a795ef;
-    --color-other-data-charts-data6: #ff602e;
-    --color-other-data-charts-data7: #a66a2d;
-    --color-other-data-charts-data8: #029aa2;
-    --color-other-data-charts-data9: #ffa285;
-    --color-other-data-charts-success: #44d09e;
-    --color-other-elevation-background-fixed: #1e2335;
-    --color-other-elevation-background-fixed-reversed: #1e2335;
-    --color-other-elevation-background-overlay: #303445;
-    --color-other-elevation-background-raised: #252a3b;
-    --color-other-elevation-background-raised-reversed: #252a3b;
-    --color-other-gradients-background-linear-accent: linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-linear-aqua: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-linear-blue: linear-gradient(151deg, #47b0ff 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-linear-emerald: linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-linear-fuschia: linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-linear-magenta: linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-linear-primary: linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);
-    --color-other-gradients-background-radial-aqua-fuschia: radial-gradient(15% 40% at -4% 50%,rgba(251, 198, 0, 0.3) 0%,rgba(251, 198, 0, 0) 100%),radial-gradient(25% 50% at -4% 24%,rgba(255, 96, 46, 0.3) 0%,rgba(255, 96, 46, 0) 100%),radial-gradient(40% 70% at 100% 25%,rgba(249, 27, 108, 0.6) 0%,rgba(249, 27, 108, 0) 100%),radial-gradient(90% 40% at 140% 0%,rgba(3, 207, 218, 1) 60%,rgba(3, 207, 218, 0) 120%),#110b1e;
-    --color-other-gradients-background-radial-aqua-purple: radial-gradient(15% 40% at -4% 50%,rgba(251, 198, 0, 0.3) 0%,rgba(251, 198, 0, 0) 100%),radial-gradient(25% 50% at -4% 24%,rgba(255, 96, 46, 0.3) 0%,rgba(255, 96, 46, 0) 100%),radial-gradient(40% 70% at 100% 25%,rgba(121, 45, 212, 0.8) 0%,rgba(121, 45, 212, 0) 100%),radial-gradient(90% 40% at 140% 0%,rgba(3, 207, 218, 1) 60%,rgba(3, 207, 218, 0) 120%),#110b1e;
-    --color-other-gradients-background-radial-fuschia-purple: radial-gradient(15% 40% at -4% 50%,rgba(251, 198, 0, 0.3) 0%,rgba(251, 198, 0, 0) 100%),radial-gradient(25% 50% at -4% 24%,rgba(255, 96, 46, 0.3) 0%,rgba(255, 96, 46, 0) 100%),radial-gradient(40% 70% at 100% 25%,rgba(249, 27, 108, 0.6) 0%,rgba(249, 27, 108, 0) 100%),radial-gradient(90% 40% at 140% 0%,rgba(3, 207, 218, 1) 60%,rgba(3, 207, 218, 0) 120%),#110b1e;
-    --color-other-gradients-background-radial-lime: radial-gradient(15% 40% at -4% 50%,rgba(251, 198, 0, 0.3) 0%,rgba(251, 198, 0, 0) 100%),radial-gradient(25% 50% at -4% 24%,rgba(255, 96, 46, 0.3) 0%,rgba(255, 96, 46, 0) 100%),radial-gradient(40% 70% at 100% 25%,rgba(122, 186, 38, 0.8) 0%,rgba(122, 186, 38, 0) 100%),radial-gradient(90% 40% at 140% 0%,rgba(122, 186, 38, 1) 60%,rgba(122, 186, 38, 0) 120%),#110b1e;
-    --color-other-gradients-background-radial-magenta: radial-gradient(15% 40% at -4% 50%,rgba(251, 198, 0, 0.3) 0%,rgba(251, 198, 0, 0) 100%),radial-gradient(25% 50% at -4% 24%,rgba(255, 96, 46, 0.3) 0%,rgba(255, 96, 46, 0) 100%),radial-gradient(40% 70% at 100% 25%,rgba(236, 11, 195, 0.8) 0%,rgba(236, 11, 195, 0) 100%),radial-gradient(90% 40% at 140% 0%,rgba(236, 11, 195, 1) 60%,rgba(236, 11, 195, 0) 120%),#110b1e;
-    --color-other-gradients-background-radial-purple: radial-gradient(15% 40% at -4% 50%,rgba(251, 198, 0, 0.3) 0%,rgba(251, 198, 0, 0) 100%),radial-gradient(25% 50% at -4% 24%,rgba(255, 96, 46, 0.3) 0%,rgba(255, 96, 46, 0) 100%),radial-gradient(40% 70% at 100% 25%,rgba(121, 45, 212, 0.8) 0%,rgba(121, 45, 212, 0) 100%),radial-gradient(90% 40% at 140% 0%,rgba(249, 27, 108, 0.8) 60%,rgba(249, 27, 108, 0) 120%),#110b1e;
-    --color-other-gradients-text-dark: #0c0f1a;
-    --color-other-gradients-text-light: #ffffff;
-    --color-other-icon-category-neutral-fill: #e9e9ec;
-    --color-other-icon-category-neutral-fill-disabled: #252a3b;
-    --color-other-icon-category-neutral-fill-strong: #7e8291;
-    --color-other-icon-category-neutral-fill-strong-disabled: #484b5a;
-    --color-other-icon-category-primary-fill: #a061f4;
-    --color-other-icon-category-primary-fill-disabled: #252a3b;
-    --color-other-icon-category-primary-fill-strong: #d8c5fc;
-    --color-other-icon-category-primary-fill-strong-disabled: #484b5a;
-    --color-other-icon-product-danger-fill: #4e0921;
-    --color-other-icon-product-danger-fill-disabled: #484b5a;
-    --color-other-icon-product-danger-fill-strong: #4e0921;
-    --color-other-icon-product-danger-fill-strong-disabled: #484b5a;
-    --color-other-icon-product-danger-fill-weak: #e71964;
-    --color-other-icon-product-danger-fill-weak-disabled: #252a3b;
-    --color-other-icon-product-original-fill: #ffffff;
-    --color-other-icon-product-original-fill-disabled: #484b5a;
-    --color-other-icon-product-original-fill-strong: #bf96f8;
-    --color-other-icon-product-original-fill-strong-disabled: #484b5a;
-    --color-other-icon-product-original-fill-weak: #4f1c89;
-    --color-other-icon-product-original-fill-weak-disabled: #252a3b;
-    --color-other-icon-product-primary-fill: #a061f4;
-    --color-other-icon-product-primary-fill-disabled: #484b5a;
-    --color-other-icon-product-primary-fill-strong: #ccaefc;
-    --color-other-icon-product-primary-fill-strong-disabled: #484b5a;
-    --color-other-icon-product-primary-fill-weak: #2d1c51;
-    --color-other-icon-product-primary-fill-weak-disabled: #252a3b;
-    --color-other-icon-product-warning-fill: #36220e;
-    --color-other-icon-product-warning-fill-disabled: #484b5a;
-    --color-other-icon-product-warning-fill-strong: #36220e;
-    --color-other-icon-product-warning-fill-strong-disabled: #484b5a;
-    --color-other-icon-product-warning-fill-weak: #ebb000;
-    --color-other-icon-product-warning-fill-weak-disabled: #252a3b;
-    --color-other-monochrome-black-background: #151a2d;
-    --color-other-monochrome-black-background-disabled: #252a3b;
-    --color-other-monochrome-black-background-hover: #191f33;
-    --color-other-monochrome-black-border: #151a2d;
-    --color-other-monochrome-black-border-disabled: #484b5a;
-    --color-other-monochrome-black-border-hover: #191f33;
-    --color-other-monochrome-black-icon: #151a2d;
-    --color-other-monochrome-black-icon-disabled: #484b5a;
-    --color-other-monochrome-black-icon-hover: #191f33;
-    --color-other-monochrome-black-text: #151a2d;
-    --color-other-monochrome-black-text-disabled: #484b5a;
-    --color-other-monochrome-black-text-hover: #191f33;
-    --color-other-monochrome-white-background: #ffffff;
-    --color-other-monochrome-white-background-disabled: #252a3b;
-    --color-other-monochrome-white-background-hover: #e9e9ec;
-    --color-other-monochrome-white-border: #ffffff;
-    --color-other-monochrome-white-border-disabled: #484b5a;
-    --color-other-monochrome-white-border-hover: #e9e9ec;
-    --color-other-monochrome-white-icon: #ffffff;
-    --color-other-monochrome-white-icon-disabled: #484b5a;
-    --color-other-monochrome-white-icon-hover: #e9e9ec;
-    --color-other-monochrome-white-text: #ffffff;
-    --color-other-monochrome-white-text-disabled: #484b5a;
-    --color-other-monochrome-white-text-hover: #e9e9ec;
-    --color-overlay: #151a2da6;
-    --color-primary-background: #2d1c51;
-    --color-primary-background-disabled: #251b47;
-    --color-primary-background-hover: #3d206f;
-    --color-primary-background-strong: #8d40ee;
-    --color-primary-background-strong-disabled: #3d206f;
-    --color-primary-background-strong-hover: #964cf6;
-    --color-primary-border: #bf96f8;
-    --color-primary-border-disabled: #4f1c89;
-    --color-primary-border-hover: #ccaefc;
-    --color-primary-border-strong: #8d40ee;
-    --color-primary-border-strong-disabled: #3d206f;
-    --color-primary-border-strong-hover: #964cf6;
-    --color-primary-icon: #bf96f8;
-    --color-primary-icon-disabled: #4f1c89;
-    --color-primary-icon-hover: #ccaefc;
-    --color-primary-icon-strong: #ffffff;
-    --color-primary-icon-strong-disabled: #0c0f1a;
-    --color-primary-icon-strong-hover: #ffffff;
-    --color-primary-text: #bf96f8;
-    --color-primary-text-disabled: #4f1c89;
-    --color-primary-text-hover: #ccaefc;
-    --color-primary-text-strong: #ffffff;
-    --color-primary-text-strong-disabled: #0c0f1a;
-    --color-primary-text-strong-hover: #ffffff;
-    --color-secondary-background: #3e0d54;
-    --color-secondary-background-disabled: #370b4b;
-    --color-secondary-background-hover: #50106b;
-    --color-secondary-background-strong: #c53eff;
-    --color-secondary-background-strong-disabled: #611383;
-    --color-secondary-background-strong-hover: #cb52ff;
-    --color-secondary-border: #d77bff;
-    --color-secondary-border-disabled: #611383;
-    --color-secondary-border-hover: #edc2ff;
-    --color-secondary-border-strong: #c53eff;
-    --color-secondary-border-strong-disabled: #611383;
-    --color-secondary-border-strong-hover: #cb52ff;
-    --color-secondary-icon: #d77bff;
-    --color-secondary-icon-disabled: #611383;
-    --color-secondary-icon-hover: #e2a1ff;
-    --color-secondary-icon-strong: #0c0f1a;
-    --color-secondary-icon-strong-disabled: #0c0f1a;
-    --color-secondary-icon-strong-hover: #151a2d;
-    --color-secondary-text: #d77bff;
-    --color-secondary-text-disabled: #611383;
-    --color-secondary-text-hover: #e2a1ff;
-    --color-secondary-text-strong: #0c0f1a;
-    --color-secondary-text-strong-disabled: #0c0f1a;
-    --color-secondary-text-strong-hover: #151a2d;
-    --color-success-background: #0e2b21;
-    --color-success-background-disabled: #0d261d;
-    --color-success-background-hover: #12382a;
-    --color-success-background-strong: #3cb589;
-    --color-success-background-strong-disabled: #1b533f;
-    --color-success-background-strong-hover: #44d09e;
-    --color-success-border: #3cb589;
-    --color-success-border-disabled: #174535;
-    --color-success-border-hover: #44d09e;
-    --color-success-border-strong: #2c8666;
-    --color-success-border-strong-disabled: #1b533f;
-    --color-success-border-strong-hover: #30926f;
-    --color-success-icon: #3cb589;
-    --color-success-icon-disabled: #174535;
-    --color-success-icon-hover: #44d09e;
-    --color-success-icon-strong: #0c0f1a;
-    --color-success-icon-strong-disabled: #0c0f1a;
-    --color-success-icon-strong-hover: #151a2d;
-    --color-success-text: #3cb589;
-    --color-success-text-disabled: #174535;
-    --color-success-text-hover: #44d09e;
-    --color-success-text-strong: #0c0f1a;
-    --color-success-text-strong-disabled: #0c0f1a;
-    --color-success-text-strong-hover: #151a2d;
-    --color-warning-background: #362200;
-    --color-warning-background-disabled: #302000;
-    --color-warning-background-hover: #472c00;
-    --color-warning-background-strong: #ebb000;
-    --color-warning-background-strong-disabled: #8a5e00;
-    --color-warning-background-strong-hover: #ffca07;
-    --color-warning-border: #d39700;
-    --color-warning-border-disabled: #553600;
-    --color-warning-border-hover: #ebb000;
-    --color-warning-border-strong: #ebb000;
-    --color-warning-border-strong-disabled: #8a5e00;
-    --color-warning-border-strong-hover: #ffca07;
-    --color-warning-icon: #ebb000;
-    --color-warning-icon-disabled: #553600;
-    --color-warning-icon-hover: #d39700;
-    --color-warning-icon-strong: #302000;
-    --color-warning-icon-strong-disabled: #764d01;
-    --color-warning-icon-strong-hover: #362200;
-    --color-warning-text: #d39700;
-    --color-warning-text-disabled: #553600;
-    --color-warning-text-hover: #ebb000;
-    --color-warning-text-strong: #0c0f1a;
-    --color-warning-text-strong-disabled: #0c0f1a;
-    --color-warning-text-strong-hover: #151a2d;
-    --radius-circle: 100%;
-    --radius-default: 0.25rem;
-    --radius-large: 0.5rem;
-    --radius-none: 0rem;
-    --radius-small: 0.125rem;
-    --radius-xlarge: 1rem;
-    --radius-xxlarge: 1.5rem;
-    --shadow-bulk: 0px 4px 32px 8px #0c0f1a66;
-    --shadow-default-shadow: 0px 0px 8px 2px #0c0f1a66;
-    --shadow-drawer: 0px 0px 40px 10px #0c0f1a8c;
-    --shadow-dropdown: 0px 4px 24px 6px #0c0f1a66;
-    --shadow-fixed-0: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-fixed-1: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-fixed-reversed-0: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-fixed-reversed-1: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-focus-danger: 0px 0px 0px 3px #e7196440;
-    --shadow-focus-info: 0px 0px 0px 3px #004b8340;
-    --shadow-focus-neutral: 0px 0px 0px 3px #0c0f1a8c;
-    --shadow-focus-primary: 0px 0px 0px 3px #a061f440;
-    --shadow-focus-success: 0px 0px 0px 3px #1b533f40;
-    --shadow-focus-warning: 0px 0px 0px 3px #4b3b0040;
-    --shadow-hover-danger: 0px 4px 16px 4px #570a25cc;
-    --shadow-hover-info: 0px 4px 16px 4px #00243fcc;
-    --shadow-hover-neutral: 0px 4px 16px 4px #0c0f1a66;
-    --shadow-hover-primary: 0px 4px 16px 4px #2a1848cc;
-    --shadow-hover-success: 0px 4px 16px 4px #0d261dcc;
-    --shadow-hover-warning: 0px 4px 16px 4px #302000cc;
-    --shadow-menu: 0px 0px 24px 6px #0c0f1a66;
-    --shadow-modal: 0px 8px 40px 10px #0c0f1a8c;
-    --shadow-overlay-0: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-overlay-1: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-popover: 0px 4px 32px 8px #0c0f1a8c;
-    --shadow-raised-0: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-raised-1: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-raised-reversed-0: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-raised-reversed-1: 0px 0px 0px 0px rgba(0,0,0,0.0);
-    --shadow-tab-bar-active: 0px -2px 0px 0px #bf96f8;
-    --shadow-tab-bar-off: 0px -1px 0px 0px #484b5a;
-    --shadow-tooltip: 0px 4px 32px 8px #0c0f1a66;
-    --space-0: 0rem;
-    --space-1: 0.5rem;
-    --space-2: 1rem;
-    --space-3: 1.5rem;
-    --space-4: 2rem;
-    --space-5: 2.5rem;
-    --space-6: 3rem;
-    --space-7: 3.5rem;
-    --space-8: 4rem;
-    --space-9: 4.5rem;
-    --space-10: 5rem;
-    --space-0-25: 0.125rem;
-    --space-0-5: 0.25rem;
-    --space-1-5: 0.75rem;
-    --typography-body-font-family: Inter, sans-serif;
-    --typography-body-font-size: 1rem;
-    --typography-body-font-weight: 400;
-    --typography-body-letter-spacing: 0;
-    --typography-body-line-height: 1.5rem;
-    --typography-body-paragraph-spacing: none;
-    --typography-body-text-case: none;
-    --typography-body-text-decoration: none;
-    --typography-body-weight: 400;
-    --typography-body-small-font-family: Inter, sans-serif;
-    --typography-body-small-font-size: 0.875rem;
-    --typography-body-small-font-weight: 400;
-    --typography-body-small-letter-spacing: 0;
-    --typography-body-small-line-height: 1.25rem;
-    --typography-body-small-paragraph-spacing: 0;
-    --typography-body-small-text-case: none;
-    --typography-body-small-text-decoration: none;
-    --typography-body-small-weight: 400;
-    --typography-body-small-strong-font-family: Inter, sans-serif;
-    --typography-body-small-strong-font-size: 0.875rem;
-    --typography-body-small-strong-font-weight: 500;
-    --typography-body-small-strong-letter-spacing: 0;
-    --typography-body-small-strong-line-height: 1.25rem;
-    --typography-body-small-strong-paragraph-spacing: 0;
-    --typography-body-small-strong-text-case: none;
-    --typography-body-small-strong-text-decoration: none;
-    --typography-body-small-strong-weight: 500;
-    --typography-body-small-stronger-font-family: Inter, sans-serif;
-    --typography-body-small-stronger-font-size: 0.875rem;
-    --typography-body-small-stronger-font-weight: 600;
-    --typography-body-small-stronger-letter-spacing: 0;
-    --typography-body-small-stronger-line-height: 1.25rem;
-    --typography-body-small-stronger-paragraph-spacing: 0;
-    --typography-body-small-stronger-text-case: none;
-    --typography-body-small-stronger-text-decoration: none;
-    --typography-body-small-stronger-weight: 600;
-    --typography-body-strong-font-family: Inter, sans-serif;
-    --typography-body-strong-font-size: 1rem;
-    --typography-body-strong-font-weight: 500;
-    --typography-body-strong-letter-spacing: 0;
-    --typography-body-strong-line-height: 1.5rem;
-    --typography-body-strong-paragraph-spacing: 0;
-    --typography-body-strong-text-case: none;
-    --typography-body-strong-text-decoration: none;
-    --typography-body-strong-weight: 500;
-    --typography-body-stronger-font-family: Inter, sans-serif;
-    --typography-body-stronger-font-size: 1rem;
-    --typography-body-stronger-font-weight: 600;
-    --typography-body-stronger-letter-spacing: 0;
-    --typography-body-stronger-line-height: 1.5rem;
-    --typography-body-stronger-paragraph-spacing: 0;
-    --typography-body-stronger-text-case: none;
-    --typography-body-stronger-text-decoration: none;
-    --typography-body-stronger-weight: 600;
-    --typography-caption-font-family: Inter, sans-serif;
-    --typography-caption-font-size: 0.75rem;
-    --typography-caption-font-weight: 400;
-    --typography-caption-letter-spacing: 0;
-    --typography-caption-line-height: 1rem;
-    --typography-caption-paragraph-spacing: 0;
-    --typography-caption-text-case: none;
-    --typography-caption-text-decoration: none;
-    --typography-caption-weight: 400;
-    --typography-caption-small-font-family: Inter, sans-serif;
-    --typography-caption-small-font-size: 0.625rem;
-    --typography-caption-small-font-weight: 400;
-    --typography-caption-small-letter-spacing: 0;
-    --typography-caption-small-line-height: 1rem;
-    --typography-caption-small-paragraph-spacing: 0;
-    --typography-caption-small-text-case: none;
-    --typography-caption-small-text-decoration: none;
-    --typography-caption-small-weight: 400;
-    --typography-caption-small-strong-font-family: Inter, sans-serif;
-    --typography-caption-small-strong-font-size: 0.625rem;
-    --typography-caption-small-strong-font-weight: 500;
-    --typography-caption-small-strong-letter-spacing: 0;
-    --typography-caption-small-strong-line-height: 1rem;
-    --typography-caption-small-strong-paragraph-spacing: 0;
-    --typography-caption-small-strong-text-case: none;
-    --typography-caption-small-strong-text-decoration: none;
-    --typography-caption-small-strong-weight: 500;
-    --typography-caption-small-stronger-font-family: Inter, sans-serif;
-    --typography-caption-small-stronger-font-size: 0.625rem;
-    --typography-caption-small-stronger-font-weight: 600;
-    --typography-caption-small-stronger-letter-spacing: 0;
-    --typography-caption-small-stronger-line-height: 1rem;
-    --typography-caption-small-stronger-paragraph-spacing: 0;
-    --typography-caption-small-stronger-text-case: none;
-    --typography-caption-small-stronger-text-decoration: none;
-    --typography-caption-small-stronger-weight: 600;
-    --typography-caption-strong-font-family: Inter, sans-serif;
-    --typography-caption-strong-font-size: 0.75rem;
-    --typography-caption-strong-font-weight: 500;
-    --typography-caption-strong-letter-spacing: 0;
-    --typography-caption-strong-line-height: 1rem;
-    --typography-caption-strong-paragraph-spacing: 0;
-    --typography-caption-strong-text-case: none;
-    --typography-caption-strong-text-decoration: none;
-    --typography-caption-strong-weight: 500;
-    --typography-caption-stronger-font-family: Inter, sans-serif;
-    --typography-caption-stronger-font-size: 0.75rem;
-    --typography-caption-stronger-font-weight: 600;
-    --typography-caption-stronger-letter-spacing: 0;
-    --typography-caption-stronger-line-height: 1rem;
-    --typography-caption-stronger-paragraph-spacing: 0;
-    --typography-caption-stronger-text-case: none;
-    --typography-caption-stronger-text-decoration: none;
-    --typography-caption-stronger-weight: 600;
-    --typography-code-font-family: JetBrains, monospace;
-    --typography-code-font-size: 0.875rem;
-    --typography-code-font-weight: 400;
-    --typography-code-letter-spacing: 0;
-    --typography-code-line-height: 1.25rem;
-    --typography-code-paragraph-spacing: 0;
-    --typography-code-text-case: none;
-    --typography-code-text-decoration: none;
-    --typography-code-weight: 400;
-    --typography-code-strong-font-family: JetBrains, monospace;
-    --typography-code-strong-font-size: 0.875rem;
-    --typography-code-strong-font-weight: 500;
-    --typography-code-strong-letter-spacing: 0;
-    --typography-code-strong-line-height: 1.25rem;
-    --typography-code-strong-paragraph-spacing: 0;
-    --typography-code-strong-text-case: none;
-    --typography-code-strong-text-decoration: none;
-    --typography-code-strong-weight: 500;
-    --typography-code-stronger-font-family: JetBrains, monospace;
-    --typography-code-stronger-font-size: 0.875rem;
-    --typography-code-stronger-font-weight: Bold;
-    --typography-code-stronger-letter-spacing: 0;
-    --typography-code-stronger-line-height: 1.25rem;
-    --typography-code-stronger-paragraph-spacing: 0;
-    --typography-code-stronger-text-case: none;
-    --typography-code-stronger-text-decoration: none;
-    --typography-code-stronger-weight: 600;
-    --typography-heading-font-family: Space Grotesk, sans-serif;
-    --typography-heading-font-size: 1.5625rem;
-    --typography-heading-font-weight: 400;
-    --typography-heading-letter-spacing: 0;
-    --typography-heading-line-height: 2rem;
-    --typography-heading-paragraph-spacing: 0;
-    --typography-heading-text-case: none;
-    --typography-heading-text-decoration: none;
-    --typography-heading-weight: 400;
-    --typography-heading-large-font-family: Space Grotesk, sans-serif;
-    --typography-heading-large-font-size: 2.1875rem;
-    --typography-heading-large-font-weight: 400;
-    --typography-heading-large-letter-spacing: 0;
-    --typography-heading-large-line-height: 3rem;
-    --typography-heading-large-paragraph-spacing: 0;
-    --typography-heading-large-text-case: none;
-    --typography-heading-large-text-decoration: none;
-    --typography-heading-large-weight: 400;
-    --typography-heading-large-strong-font-family: Space Grotesk, sans-serif;
-    --typography-heading-large-strong-font-size: 2.1875rem;
-    --typography-heading-large-strong-font-weight: 500;
-    --typography-heading-large-strong-letter-spacing: 0;
-    --typography-heading-large-strong-line-height: 3rem;
-    --typography-heading-large-strong-paragraph-spacing: 0;
-    --typography-heading-large-strong-text-case: none;
-    --typography-heading-large-strong-text-decoration: none;
-    --typography-heading-large-strong-weight: 500;
-    --typography-heading-large-stronger-font-family: Space Grotesk, sans-serif;
-    --typography-heading-large-stronger-font-size: 2.1875rem;
-    --typography-heading-large-stronger-font-weight: 600;
-    --typography-heading-large-stronger-letter-spacing: 0;
-    --typography-heading-large-stronger-line-height: 3rem;
-    --typography-heading-large-stronger-paragraph-spacing: 0;
-    --typography-heading-large-stronger-text-case: none;
-    --typography-heading-large-stronger-text-decoration: none;
-    --typography-heading-large-stronger-weight: 600;
-    --typography-heading-small-font-family: Space Grotesk, sans-serif;
-    --typography-heading-small-font-size: 1.3125rem;
-    --typography-heading-small-font-weight: 400;
-    --typography-heading-small-letter-spacing: 0;
-    --typography-heading-small-line-height: 2rem;
-    --typography-heading-small-paragraph-spacing: 0;
-    --typography-heading-small-text-case: none;
-    --typography-heading-small-text-decoration: none;
-    --typography-heading-small-weight: 400;
-    --typography-heading-small-strong-font-family: Space Grotesk, sans-serif;
-    --typography-heading-small-strong-font-size: 1.3125rem;
-    --typography-heading-small-strong-font-weight: 500;
-    --typography-heading-small-strong-letter-spacing: 0;
-    --typography-heading-small-strong-line-height: 2rem;
-    --typography-heading-small-strong-paragraph-spacing: 0;
-    --typography-heading-small-strong-text-case: none;
-    --typography-heading-small-strong-text-decoration: none;
-    --typography-heading-small-strong-weight: 500;
-    --typography-heading-small-stronger-font-family: Space Grotesk, sans-serif;
-    --typography-heading-small-stronger-font-size: 1.3125rem;
-    --typography-heading-small-stronger-font-weight: 600;
-    --typography-heading-small-stronger-letter-spacing: 0;
-    --typography-heading-small-stronger-line-height: 2rem;
-    --typography-heading-small-stronger-paragraph-spacing: 0;
-    --typography-heading-small-stronger-text-case: none;
-    --typography-heading-small-stronger-text-decoration: none;
-    --typography-heading-small-stronger-weight: 600;
-    --typography-heading-strong-font-family: Space Grotesk, sans-serif;
-    --typography-heading-strong-font-size: 1.5625rem;
-    --typography-heading-strong-font-weight: 500;
-    --typography-heading-strong-letter-spacing: 0;
-    --typography-heading-strong-line-height: 2rem;
-    --typography-heading-strong-paragraph-spacing: 0;
-    --typography-heading-strong-text-case: none;
-    --typography-heading-strong-text-decoration: none;
-    --typography-heading-strong-weight: 500;
-    --typography-heading-stronger-font-family: Space Grotesk, sans-serif;
-    --typography-heading-stronger-font-size: 1.5625rem;
-    --typography-heading-stronger-font-weight: 600;
-    --typography-heading-stronger-letter-spacing: 0;
-    --typography-heading-stronger-line-height: 2rem;
-    --typography-heading-stronger-paragraph-spacing: 0;
-    --typography-heading-stronger-text-case: none;
-    --typography-heading-stronger-text-decoration: none;
-    --typography-heading-stronger-weight: 600;
-    --breakpoint-large: 1440px;
-    --breakpoint-medium: 1280px;
-    --breakpoint-small: 1080px;
-    --breakpoint-xlarge: 1800px;
-    --breakpoint-xsmall: 720px;
-    --breakpoint-xxsmall: 320px;
+  --color-danger-background: #4e0921;
+  --color-danger-background-disabled: #47081e;
+  --color-danger-background-hover: #650b2b;
+  --color-danger-background-strong: #e71964;
+  --color-danger-background-strong-disabled: #790d34;
+  --color-danger-background-strong-hover: #fb1c6c;
+  --color-danger-border: #ff72a5;
+  --color-danger-border-disabled: #790d34;
+  --color-danger-border-hover: #ffc0d7;
+  --color-danger-border-strong: #e71964;
+  --color-danger-border-strong-disabled: #790d34;
+  --color-danger-border-strong-hover: #fb1c6c;
+  --color-danger-icon: #ff72a5;
+  --color-danger-icon-disabled: #790d34;
+  --color-danger-icon-hover: #ffc0d7;
+  --color-danger-icon-strong: #0c0f1a;
+  --color-danger-icon-strong-disabled: #0c0f1a;
+  --color-danger-icon-strong-hover: #0c0f1a;
+  --color-danger-text: #ff72a5;
+  --color-danger-text-disabled: #790d34;
+  --color-danger-text-hover: #ffc0d7;
+  --color-danger-text-strong: #0c0f1a;
+  --color-danger-text-strong-disabled: #0c0f1a;
+  --color-danger-text-strong-hover: #151a2d;
+  --color-info-background: #002847;
+  --color-info-background-disabled: #00243f;
+  --color-info-background-hover: #003359;
+  --color-info-background-strong: #0085e7;
+  --color-info-background-strong-disabled: #003f6e;
+  --color-info-background-strong-hover: #008df7;
+  --color-info-border: #34a8ff;
+  --color-info-border-disabled: #003f6e;
+  --color-info-border-hover: #6fc2ff;
+  --color-info-border-strong: #0085e7;
+  --color-info-border-strong-disabled: #003f6e;
+  --color-info-border-strong-hover: #008df7;
+  --color-info-icon: #34a8ff;
+  --color-info-icon-disabled: #003f6e;
+  --color-info-icon-hover: #6fc2ff;
+  --color-info-icon-strong: #0c0f1a;
+  --color-info-icon-strong-disabled: #0c0f1a;
+  --color-info-icon-strong-hover: #151a2d;
+  --color-info-text: #34a8ff;
+  --color-info-text-disabled: #003f6e;
+  --color-info-text-hover: #6fc2ff;
+  --color-info-text-strong: #0c0f1a;
+  --color-info-text-strong-disabled: #0c0f1a;
+  --color-info-text-strong-hover: #151a2d;
+  --color-neutral-background: #151a2d;
+  --color-neutral-background-disabled: #1e2335;
+  --color-neutral-background-hover: #303445;
+  --color-neutral-background-strong: #484b5a;
+  --color-neutral-background-strong-disabled: #252a3b;
+  --color-neutral-background-strong-hover: #626672;
+  --color-neutral-background-stronger: #e9e9ec;
+  --color-neutral-background-stronger-disabled: #252a3b;
+  --color-neutral-background-stronger-hover: #ffffff;
+  --color-neutral-background-weak: #252a3b;
+  --color-neutral-background-weak-disabled: #1e2335;
+  --color-neutral-background-weak-elevated: #191f33;
+  --color-neutral-background-weak-hover: #303445;
+  --color-neutral-border: #626672;
+  --color-neutral-border-disabled: #252a3b;
+  --color-neutral-border-hover: #7e8291;
+  --color-neutral-border-strong: #7e8291;
+  --color-neutral-border-strong-disabled: #252a3b;
+  --color-neutral-border-strong-hover: #b8bac0;
+  --color-neutral-border-stronger: #e9e9ec;
+  --color-neutral-border-stronger-disabled: #1e2335;
+  --color-neutral-border-stronger-hover: #ffffff;
+  --color-neutral-border-weak: #484b5a;
+  --color-neutral-border-weak-disabled: #252a3b;
+  --color-neutral-border-weak-hover: #626672;
+  --color-neutral-icon: #e9e9ec;
+  --color-neutral-icon-disabled: #484b5a;
+  --color-neutral-icon-hover: #ffffff;
+  --color-neutral-icon-strong: #ffffff;
+  --color-neutral-icon-strong-disabled: #484b5a;
+  --color-neutral-icon-strong-hover: #e9e9ec;
+  --color-neutral-icon-stronger: #0c0f1a;
+  --color-neutral-icon-stronger-disabled: #484b5a;
+  --color-neutral-icon-stronger-hover: #151a2d;
+  --color-neutral-icon-weak: #b8bac0;
+  --color-neutral-icon-weak-disabled: #484b5a;
+  --color-neutral-icon-weak-hover: #e9e9ec;
+  --color-neutral-text: #b8bac0;
+  --color-neutral-text-disabled: #484b5a;
+  --color-neutral-text-hover: #e9e9ec;
+  --color-neutral-text-strong: #ffffff;
+  --color-neutral-text-strong-disabled: #484b5a;
+  --color-neutral-text-strong-hover: #ffffff;
+  --color-neutral-text-stronger: #0c0f1a;
+  --color-neutral-text-stronger-disabled: #484b5a;
+  --color-neutral-text-stronger-hover: #151a2d;
+  --color-neutral-text-weak: #7e8291;
+  --color-neutral-text-weak-disabled: #484b5a;
+  --color-neutral-text-weak-hover: #b8bac0;
+  --color-other-data-charts-danger: #e24d69;
+  --color-other-data-charts-data1: #8d40ee;
+  --color-other-data-charts-data10: #b4f2f6;
+  --color-other-data-charts-data11: #005899;
+  --color-other-data-charts-data12: #2c8666;
+  --color-other-data-charts-data13: #e2a1ff;
+  --color-other-data-charts-data14: #92ac41;
+  --color-other-data-charts-data2: #008df7;
+  --color-other-data-charts-data3: #3cb589;
+  --color-other-data-charts-data4: #ea8396;
+  --color-other-data-charts-data5: #a795ef;
+  --color-other-data-charts-data6: #ff602e;
+  --color-other-data-charts-data7: #a66a2d;
+  --color-other-data-charts-data8: #029aa2;
+  --color-other-data-charts-data9: #ffa285;
+  --color-other-data-charts-success: #44d09e;
+  --color-other-elevation-background-fixed: #1e2335;
+  --color-other-elevation-background-fixed-reversed: #1e2335;
+  --color-other-elevation-background-overlay: #303445;
+  --color-other-elevation-background-raised: #252a3b;
+  --color-other-elevation-background-raised-reversed: #252a3b;
+  --color-other-gradients-background-linear-accent: linear-gradient(
+    151deg,
+    #ff602e 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-linear-aqua: linear-gradient(
+    151deg,
+    #03cfda 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-linear-blue: linear-gradient(
+    151deg,
+    #47b0ff 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-linear-emerald: linear-gradient(
+    151deg,
+    #45d19f 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-linear-fuschia: linear-gradient(
+    151deg,
+    #f91b6c 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-linear-magenta: linear-gradient(
+    151deg,
+    #ec0bc3 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-linear-primary: linear-gradient(
+    151deg,
+    #792dd4 0%,
+    #3d1862 28.91%,
+    #151a2d 75.01%
+  );
+  --color-other-gradients-background-radial-aqua-fuschia:
+    radial-gradient(
+      15% 40% at -4% 50%,
+      rgba(251, 198, 0, 0.3) 0%,
+      rgba(251, 198, 0, 0) 100%
+    ),
+    radial-gradient(
+      25% 50% at -4% 24%,
+      rgba(255, 96, 46, 0.3) 0%,
+      rgba(255, 96, 46, 0) 100%
+    ),
+    radial-gradient(
+      40% 70% at 100% 25%,
+      rgba(249, 27, 108, 0.6) 0%,
+      rgba(249, 27, 108, 0) 100%
+    ),
+    radial-gradient(
+      90% 40% at 140% 0%,
+      rgba(3, 207, 218, 1) 60%,
+      rgba(3, 207, 218, 0) 120%
+    ),
+    #110b1e;
+  --color-other-gradients-background-radial-aqua-purple:
+    radial-gradient(
+      15% 40% at -4% 50%,
+      rgba(251, 198, 0, 0.3) 0%,
+      rgba(251, 198, 0, 0) 100%
+    ),
+    radial-gradient(
+      25% 50% at -4% 24%,
+      rgba(255, 96, 46, 0.3) 0%,
+      rgba(255, 96, 46, 0) 100%
+    ),
+    radial-gradient(
+      40% 70% at 100% 25%,
+      rgba(121, 45, 212, 0.8) 0%,
+      rgba(121, 45, 212, 0) 100%
+    ),
+    radial-gradient(
+      90% 40% at 140% 0%,
+      rgba(3, 207, 218, 1) 60%,
+      rgba(3, 207, 218, 0) 120%
+    ),
+    #110b1e;
+  --color-other-gradients-background-radial-fuschia-purple:
+    radial-gradient(
+      15% 40% at -4% 50%,
+      rgba(251, 198, 0, 0.3) 0%,
+      rgba(251, 198, 0, 0) 100%
+    ),
+    radial-gradient(
+      25% 50% at -4% 24%,
+      rgba(255, 96, 46, 0.3) 0%,
+      rgba(255, 96, 46, 0) 100%
+    ),
+    radial-gradient(
+      40% 70% at 100% 25%,
+      rgba(249, 27, 108, 0.6) 0%,
+      rgba(249, 27, 108, 0) 100%
+    ),
+    radial-gradient(
+      90% 40% at 140% 0%,
+      rgba(3, 207, 218, 1) 60%,
+      rgba(3, 207, 218, 0) 120%
+    ),
+    #110b1e;
+  --color-other-gradients-background-radial-lime:
+    radial-gradient(
+      15% 40% at -4% 50%,
+      rgba(251, 198, 0, 0.3) 0%,
+      rgba(251, 198, 0, 0) 100%
+    ),
+    radial-gradient(
+      25% 50% at -4% 24%,
+      rgba(255, 96, 46, 0.3) 0%,
+      rgba(255, 96, 46, 0) 100%
+    ),
+    radial-gradient(
+      40% 70% at 100% 25%,
+      rgba(122, 186, 38, 0.8) 0%,
+      rgba(122, 186, 38, 0) 100%
+    ),
+    radial-gradient(
+      90% 40% at 140% 0%,
+      rgba(122, 186, 38, 1) 60%,
+      rgba(122, 186, 38, 0) 120%
+    ),
+    #110b1e;
+  --color-other-gradients-background-radial-magenta:
+    radial-gradient(
+      15% 40% at -4% 50%,
+      rgba(251, 198, 0, 0.3) 0%,
+      rgba(251, 198, 0, 0) 100%
+    ),
+    radial-gradient(
+      25% 50% at -4% 24%,
+      rgba(255, 96, 46, 0.3) 0%,
+      rgba(255, 96, 46, 0) 100%
+    ),
+    radial-gradient(
+      40% 70% at 100% 25%,
+      rgba(236, 11, 195, 0.8) 0%,
+      rgba(236, 11, 195, 0) 100%
+    ),
+    radial-gradient(
+      90% 40% at 140% 0%,
+      rgba(236, 11, 195, 1) 60%,
+      rgba(236, 11, 195, 0) 120%
+    ),
+    #110b1e;
+  --color-other-gradients-background-radial-purple:
+    radial-gradient(
+      15% 40% at -4% 50%,
+      rgba(251, 198, 0, 0.3) 0%,
+      rgba(251, 198, 0, 0) 100%
+    ),
+    radial-gradient(
+      25% 50% at -4% 24%,
+      rgba(255, 96, 46, 0.3) 0%,
+      rgba(255, 96, 46, 0) 100%
+    ),
+    radial-gradient(
+      40% 70% at 100% 25%,
+      rgba(121, 45, 212, 0.8) 0%,
+      rgba(121, 45, 212, 0) 100%
+    ),
+    radial-gradient(
+      90% 40% at 140% 0%,
+      rgba(249, 27, 108, 0.8) 60%,
+      rgba(249, 27, 108, 0) 120%
+    ),
+    #110b1e;
+  --color-other-gradients-text-dark: #0c0f1a;
+  --color-other-gradients-text-light: #ffffff;
+  --color-other-icon-category-neutral-fill: #e9e9ec;
+  --color-other-icon-category-neutral-fill-disabled: #252a3b;
+  --color-other-icon-category-neutral-fill-strong: #7e8291;
+  --color-other-icon-category-neutral-fill-strong-disabled: #484b5a;
+  --color-other-icon-category-primary-fill: #a061f4;
+  --color-other-icon-category-primary-fill-disabled: #252a3b;
+  --color-other-icon-category-primary-fill-strong: #d8c5fc;
+  --color-other-icon-category-primary-fill-strong-disabled: #484b5a;
+  --color-other-icon-product-danger-fill: #4e0921;
+  --color-other-icon-product-danger-fill-disabled: #484b5a;
+  --color-other-icon-product-danger-fill-strong: #4e0921;
+  --color-other-icon-product-danger-fill-strong-disabled: #484b5a;
+  --color-other-icon-product-danger-fill-weak: #e71964;
+  --color-other-icon-product-danger-fill-weak-disabled: #252a3b;
+  --color-other-icon-product-original-fill: #ffffff;
+  --color-other-icon-product-original-fill-disabled: #484b5a;
+  --color-other-icon-product-original-fill-strong: #bf96f8;
+  --color-other-icon-product-original-fill-strong-disabled: #484b5a;
+  --color-other-icon-product-original-fill-weak: #4f1c89;
+  --color-other-icon-product-original-fill-weak-disabled: #252a3b;
+  --color-other-icon-product-primary-fill: #a061f4;
+  --color-other-icon-product-primary-fill-disabled: #484b5a;
+  --color-other-icon-product-primary-fill-strong: #ccaefc;
+  --color-other-icon-product-primary-fill-strong-disabled: #484b5a;
+  --color-other-icon-product-primary-fill-weak: #2d1c51;
+  --color-other-icon-product-primary-fill-weak-disabled: #252a3b;
+  --color-other-icon-product-warning-fill: #36220e;
+  --color-other-icon-product-warning-fill-disabled: #484b5a;
+  --color-other-icon-product-warning-fill-strong: #36220e;
+  --color-other-icon-product-warning-fill-strong-disabled: #484b5a;
+  --color-other-icon-product-warning-fill-weak: #ebb000;
+  --color-other-icon-product-warning-fill-weak-disabled: #252a3b;
+  --color-other-monochrome-black-background: #151a2d;
+  --color-other-monochrome-black-background-disabled: #252a3b;
+  --color-other-monochrome-black-background-hover: #191f33;
+  --color-other-monochrome-black-border: #151a2d;
+  --color-other-monochrome-black-border-disabled: #484b5a;
+  --color-other-monochrome-black-border-hover: #191f33;
+  --color-other-monochrome-black-icon: #151a2d;
+  --color-other-monochrome-black-icon-disabled: #484b5a;
+  --color-other-monochrome-black-icon-hover: #191f33;
+  --color-other-monochrome-black-text: #151a2d;
+  --color-other-monochrome-black-text-disabled: #484b5a;
+  --color-other-monochrome-black-text-hover: #191f33;
+  --color-other-monochrome-white-background: #ffffff;
+  --color-other-monochrome-white-background-disabled: #252a3b;
+  --color-other-monochrome-white-background-hover: #e9e9ec;
+  --color-other-monochrome-white-border: #ffffff;
+  --color-other-monochrome-white-border-disabled: #484b5a;
+  --color-other-monochrome-white-border-hover: #e9e9ec;
+  --color-other-monochrome-white-icon: #ffffff;
+  --color-other-monochrome-white-icon-disabled: #484b5a;
+  --color-other-monochrome-white-icon-hover: #e9e9ec;
+  --color-other-monochrome-white-text: #ffffff;
+  --color-other-monochrome-white-text-disabled: #484b5a;
+  --color-other-monochrome-white-text-hover: #e9e9ec;
+  --color-overlay: #151a2da6;
+  --color-primary-background: #2d1c51;
+  --color-primary-background-disabled: #251b47;
+  --color-primary-background-hover: #3d206f;
+  --color-primary-background-strong: #8d40ee;
+  --color-primary-background-strong-disabled: #3d206f;
+  --color-primary-background-strong-hover: #964cf6;
+  --color-primary-border: #bf96f8;
+  --color-primary-border-disabled: #4f1c89;
+  --color-primary-border-hover: #ccaefc;
+  --color-primary-border-strong: #8d40ee;
+  --color-primary-border-strong-disabled: #3d206f;
+  --color-primary-border-strong-hover: #964cf6;
+  --color-primary-icon: #bf96f8;
+  --color-primary-icon-disabled: #4f1c89;
+  --color-primary-icon-hover: #ccaefc;
+  --color-primary-icon-strong: #ffffff;
+  --color-primary-icon-strong-disabled: #0c0f1a;
+  --color-primary-icon-strong-hover: #ffffff;
+  --color-primary-text: #bf96f8;
+  --color-primary-text-disabled: #4f1c89;
+  --color-primary-text-hover: #ccaefc;
+  --color-primary-text-strong: #ffffff;
+  --color-primary-text-strong-disabled: #0c0f1a;
+  --color-primary-text-strong-hover: #ffffff;
+  --color-secondary-background: #3e0d54;
+  --color-secondary-background-disabled: #370b4b;
+  --color-secondary-background-hover: #50106b;
+  --color-secondary-background-strong: #c53eff;
+  --color-secondary-background-strong-disabled: #611383;
+  --color-secondary-background-strong-hover: #cb52ff;
+  --color-secondary-border: #d77bff;
+  --color-secondary-border-disabled: #611383;
+  --color-secondary-border-hover: #edc2ff;
+  --color-secondary-border-strong: #c53eff;
+  --color-secondary-border-strong-disabled: #611383;
+  --color-secondary-border-strong-hover: #cb52ff;
+  --color-secondary-icon: #d77bff;
+  --color-secondary-icon-disabled: #611383;
+  --color-secondary-icon-hover: #e2a1ff;
+  --color-secondary-icon-strong: #0c0f1a;
+  --color-secondary-icon-strong-disabled: #0c0f1a;
+  --color-secondary-icon-strong-hover: #151a2d;
+  --color-secondary-text: #d77bff;
+  --color-secondary-text-disabled: #611383;
+  --color-secondary-text-hover: #e2a1ff;
+  --color-secondary-text-strong: #0c0f1a;
+  --color-secondary-text-strong-disabled: #0c0f1a;
+  --color-secondary-text-strong-hover: #151a2d;
+  --color-success-background: #0e2b21;
+  --color-success-background-disabled: #0d261d;
+  --color-success-background-hover: #12382a;
+  --color-success-background-strong: #3cb589;
+  --color-success-background-strong-disabled: #1b533f;
+  --color-success-background-strong-hover: #44d09e;
+  --color-success-border: #3cb589;
+  --color-success-border-disabled: #174535;
+  --color-success-border-hover: #44d09e;
+  --color-success-border-strong: #2c8666;
+  --color-success-border-strong-disabled: #1b533f;
+  --color-success-border-strong-hover: #30926f;
+  --color-success-icon: #3cb589;
+  --color-success-icon-disabled: #174535;
+  --color-success-icon-hover: #44d09e;
+  --color-success-icon-strong: #0c0f1a;
+  --color-success-icon-strong-disabled: #0c0f1a;
+  --color-success-icon-strong-hover: #151a2d;
+  --color-success-text: #3cb589;
+  --color-success-text-disabled: #174535;
+  --color-success-text-hover: #44d09e;
+  --color-success-text-strong: #0c0f1a;
+  --color-success-text-strong-disabled: #0c0f1a;
+  --color-success-text-strong-hover: #151a2d;
+  --color-warning-background: #362200;
+  --color-warning-background-disabled: #302000;
+  --color-warning-background-hover: #472c00;
+  --color-warning-background-strong: #ebb000;
+  --color-warning-background-strong-disabled: #8a5e00;
+  --color-warning-background-strong-hover: #ffca07;
+  --color-warning-border: #d39700;
+  --color-warning-border-disabled: #553600;
+  --color-warning-border-hover: #ebb000;
+  --color-warning-border-strong: #ebb000;
+  --color-warning-border-strong-disabled: #8a5e00;
+  --color-warning-border-strong-hover: #ffca07;
+  --color-warning-icon: #ebb000;
+  --color-warning-icon-disabled: #553600;
+  --color-warning-icon-hover: #d39700;
+  --color-warning-icon-strong: #302000;
+  --color-warning-icon-strong-disabled: #764d01;
+  --color-warning-icon-strong-hover: #362200;
+  --color-warning-text: #d39700;
+  --color-warning-text-disabled: #553600;
+  --color-warning-text-hover: #ebb000;
+  --color-warning-text-strong: #0c0f1a;
+  --color-warning-text-strong-disabled: #0c0f1a;
+  --color-warning-text-strong-hover: #151a2d;
+  --radius-circle: 100%;
+  --radius-default: 0.25rem;
+  --radius-large: 0.5rem;
+  --radius-none: 0rem;
+  --radius-small: 0.125rem;
+  --radius-xlarge: 1rem;
+  --radius-xxlarge: 1.5rem;
+  --shadow-bulk: 0px 4px 32px 8px #0c0f1a66;
+  --shadow-default-shadow: 0px 0px 8px 2px #0c0f1a66;
+  --shadow-drawer: 0px 0px 40px 10px #0c0f1a8c;
+  --shadow-dropdown: 0px 4px 24px 6px #0c0f1a66;
+  --shadow-fixed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-fixed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-fixed-reversed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-fixed-reversed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-focus-danger: 0px 0px 0px 3px #e7196440;
+  --shadow-focus-info: 0px 0px 0px 3px #004b8340;
+  --shadow-focus-neutral: 0px 0px 0px 3px #0c0f1a8c;
+  --shadow-focus-primary: 0px 0px 0px 3px #a061f440;
+  --shadow-focus-success: 0px 0px 0px 3px #1b533f40;
+  --shadow-focus-warning: 0px 0px 0px 3px #4b3b0040;
+  --shadow-hover-danger: 0px 4px 16px 4px #570a25cc;
+  --shadow-hover-info: 0px 4px 16px 4px #00243fcc;
+  --shadow-hover-neutral: 0px 4px 16px 4px #0c0f1a66;
+  --shadow-hover-primary: 0px 4px 16px 4px #2a1848cc;
+  --shadow-hover-success: 0px 4px 16px 4px #0d261dcc;
+  --shadow-hover-warning: 0px 4px 16px 4px #302000cc;
+  --shadow-menu: 0px 0px 24px 6px #0c0f1a66;
+  --shadow-modal: 0px 8px 40px 10px #0c0f1a8c;
+  --shadow-overlay-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-overlay-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-popover: 0px 4px 32px 8px #0c0f1a8c;
+  --shadow-raised-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-raised-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-raised-reversed-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-raised-reversed-1: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --shadow-tab-bar-active: 0px -2px 0px 0px #bf96f8;
+  --shadow-tab-bar-off: 0px -1px 0px 0px #484b5a;
+  --shadow-tooltip: 0px 4px 32px 8px #0c0f1a66;
+  --space-0: 0rem;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-7: 3.5rem;
+  --space-8: 4rem;
+  --space-9: 4.5rem;
+  --space-10: 5rem;
+  --space-0-25: 0.125rem;
+  --space-0-5: 0.25rem;
+  --space-1-5: 0.75rem;
+  --typography-body-font-family: Inter, sans-serif;
+  --typography-body-font-size: 1rem;
+  --typography-body-font-weight: 400;
+  --typography-body-letter-spacing: 0;
+  --typography-body-line-height: 1.5rem;
+  --typography-body-paragraph-spacing: none;
+  --typography-body-text-case: none;
+  --typography-body-text-decoration: none;
+  --typography-body-weight: 400;
+  --typography-body-small-font-family: Inter, sans-serif;
+  --typography-body-small-font-size: 0.875rem;
+  --typography-body-small-font-weight: 400;
+  --typography-body-small-letter-spacing: 0;
+  --typography-body-small-line-height: 1.25rem;
+  --typography-body-small-paragraph-spacing: 0;
+  --typography-body-small-text-case: none;
+  --typography-body-small-text-decoration: none;
+  --typography-body-small-weight: 400;
+  --typography-body-small-strong-font-family: Inter, sans-serif;
+  --typography-body-small-strong-font-size: 0.875rem;
+  --typography-body-small-strong-font-weight: 500;
+  --typography-body-small-strong-letter-spacing: 0;
+  --typography-body-small-strong-line-height: 1.25rem;
+  --typography-body-small-strong-paragraph-spacing: 0;
+  --typography-body-small-strong-text-case: none;
+  --typography-body-small-strong-text-decoration: none;
+  --typography-body-small-strong-weight: 500;
+  --typography-body-small-stronger-font-family: Inter, sans-serif;
+  --typography-body-small-stronger-font-size: 0.875rem;
+  --typography-body-small-stronger-font-weight: 600;
+  --typography-body-small-stronger-letter-spacing: 0;
+  --typography-body-small-stronger-line-height: 1.25rem;
+  --typography-body-small-stronger-paragraph-spacing: 0;
+  --typography-body-small-stronger-text-case: none;
+  --typography-body-small-stronger-text-decoration: none;
+  --typography-body-small-stronger-weight: 600;
+  --typography-body-strong-font-family: Inter, sans-serif;
+  --typography-body-strong-font-size: 1rem;
+  --typography-body-strong-font-weight: 500;
+  --typography-body-strong-letter-spacing: 0;
+  --typography-body-strong-line-height: 1.5rem;
+  --typography-body-strong-paragraph-spacing: 0;
+  --typography-body-strong-text-case: none;
+  --typography-body-strong-text-decoration: none;
+  --typography-body-strong-weight: 500;
+  --typography-body-stronger-font-family: Inter, sans-serif;
+  --typography-body-stronger-font-size: 1rem;
+  --typography-body-stronger-font-weight: 600;
+  --typography-body-stronger-letter-spacing: 0;
+  --typography-body-stronger-line-height: 1.5rem;
+  --typography-body-stronger-paragraph-spacing: 0;
+  --typography-body-stronger-text-case: none;
+  --typography-body-stronger-text-decoration: none;
+  --typography-body-stronger-weight: 600;
+  --typography-caption-font-family: Inter, sans-serif;
+  --typography-caption-font-size: 0.75rem;
+  --typography-caption-font-weight: 400;
+  --typography-caption-letter-spacing: 0;
+  --typography-caption-line-height: 1rem;
+  --typography-caption-paragraph-spacing: 0;
+  --typography-caption-text-case: none;
+  --typography-caption-text-decoration: none;
+  --typography-caption-weight: 400;
+  --typography-caption-small-font-family: Inter, sans-serif;
+  --typography-caption-small-font-size: 0.625rem;
+  --typography-caption-small-font-weight: 400;
+  --typography-caption-small-letter-spacing: 0;
+  --typography-caption-small-line-height: 1rem;
+  --typography-caption-small-paragraph-spacing: 0;
+  --typography-caption-small-text-case: none;
+  --typography-caption-small-text-decoration: none;
+  --typography-caption-small-weight: 400;
+  --typography-caption-small-strong-font-family: Inter, sans-serif;
+  --typography-caption-small-strong-font-size: 0.625rem;
+  --typography-caption-small-strong-font-weight: 500;
+  --typography-caption-small-strong-letter-spacing: 0;
+  --typography-caption-small-strong-line-height: 1rem;
+  --typography-caption-small-strong-paragraph-spacing: 0;
+  --typography-caption-small-strong-text-case: none;
+  --typography-caption-small-strong-text-decoration: none;
+  --typography-caption-small-strong-weight: 500;
+  --typography-caption-small-stronger-font-family: Inter, sans-serif;
+  --typography-caption-small-stronger-font-size: 0.625rem;
+  --typography-caption-small-stronger-font-weight: 600;
+  --typography-caption-small-stronger-letter-spacing: 0;
+  --typography-caption-small-stronger-line-height: 1rem;
+  --typography-caption-small-stronger-paragraph-spacing: 0;
+  --typography-caption-small-stronger-text-case: none;
+  --typography-caption-small-stronger-text-decoration: none;
+  --typography-caption-small-stronger-weight: 600;
+  --typography-caption-strong-font-family: Inter, sans-serif;
+  --typography-caption-strong-font-size: 0.75rem;
+  --typography-caption-strong-font-weight: 500;
+  --typography-caption-strong-letter-spacing: 0;
+  --typography-caption-strong-line-height: 1rem;
+  --typography-caption-strong-paragraph-spacing: 0;
+  --typography-caption-strong-text-case: none;
+  --typography-caption-strong-text-decoration: none;
+  --typography-caption-strong-weight: 500;
+  --typography-caption-stronger-font-family: Inter, sans-serif;
+  --typography-caption-stronger-font-size: 0.75rem;
+  --typography-caption-stronger-font-weight: 600;
+  --typography-caption-stronger-letter-spacing: 0;
+  --typography-caption-stronger-line-height: 1rem;
+  --typography-caption-stronger-paragraph-spacing: 0;
+  --typography-caption-stronger-text-case: none;
+  --typography-caption-stronger-text-decoration: none;
+  --typography-caption-stronger-weight: 600;
+  --typography-code-font-family: JetBrains, monospace;
+  --typography-code-font-size: 0.875rem;
+  --typography-code-font-weight: 400;
+  --typography-code-letter-spacing: 0;
+  --typography-code-line-height: 1.25rem;
+  --typography-code-paragraph-spacing: 0;
+  --typography-code-text-case: none;
+  --typography-code-text-decoration: none;
+  --typography-code-weight: 400;
+  --typography-code-strong-font-family: JetBrains, monospace;
+  --typography-code-strong-font-size: 0.875rem;
+  --typography-code-strong-font-weight: 500;
+  --typography-code-strong-letter-spacing: 0;
+  --typography-code-strong-line-height: 1.25rem;
+  --typography-code-strong-paragraph-spacing: 0;
+  --typography-code-strong-text-case: none;
+  --typography-code-strong-text-decoration: none;
+  --typography-code-strong-weight: 500;
+  --typography-code-stronger-font-family: JetBrains, monospace;
+  --typography-code-stronger-font-size: 0.875rem;
+  --typography-code-stronger-font-weight: Bold;
+  --typography-code-stronger-letter-spacing: 0;
+  --typography-code-stronger-line-height: 1.25rem;
+  --typography-code-stronger-paragraph-spacing: 0;
+  --typography-code-stronger-text-case: none;
+  --typography-code-stronger-text-decoration: none;
+  --typography-code-stronger-weight: 600;
+  --typography-heading-font-family: Space Grotesk, sans-serif;
+  --typography-heading-font-size: 1.5625rem;
+  --typography-heading-font-weight: 400;
+  --typography-heading-letter-spacing: 0;
+  --typography-heading-line-height: 2rem;
+  --typography-heading-paragraph-spacing: 0;
+  --typography-heading-text-case: none;
+  --typography-heading-text-decoration: none;
+  --typography-heading-weight: 400;
+  --typography-heading-large-font-family: Space Grotesk, sans-serif;
+  --typography-heading-large-font-size: 2.1875rem;
+  --typography-heading-large-font-weight: 400;
+  --typography-heading-large-letter-spacing: 0;
+  --typography-heading-large-line-height: 3rem;
+  --typography-heading-large-paragraph-spacing: 0;
+  --typography-heading-large-text-case: none;
+  --typography-heading-large-text-decoration: none;
+  --typography-heading-large-weight: 400;
+  --typography-heading-large-strong-font-family: Space Grotesk, sans-serif;
+  --typography-heading-large-strong-font-size: 2.1875rem;
+  --typography-heading-large-strong-font-weight: 500;
+  --typography-heading-large-strong-letter-spacing: 0;
+  --typography-heading-large-strong-line-height: 3rem;
+  --typography-heading-large-strong-paragraph-spacing: 0;
+  --typography-heading-large-strong-text-case: none;
+  --typography-heading-large-strong-text-decoration: none;
+  --typography-heading-large-strong-weight: 500;
+  --typography-heading-large-stronger-font-family: Space Grotesk, sans-serif;
+  --typography-heading-large-stronger-font-size: 2.1875rem;
+  --typography-heading-large-stronger-font-weight: 600;
+  --typography-heading-large-stronger-letter-spacing: 0;
+  --typography-heading-large-stronger-line-height: 3rem;
+  --typography-heading-large-stronger-paragraph-spacing: 0;
+  --typography-heading-large-stronger-text-case: none;
+  --typography-heading-large-stronger-text-decoration: none;
+  --typography-heading-large-stronger-weight: 600;
+  --typography-heading-small-font-family: Space Grotesk, sans-serif;
+  --typography-heading-small-font-size: 1.3125rem;
+  --typography-heading-small-font-weight: 400;
+  --typography-heading-small-letter-spacing: 0;
+  --typography-heading-small-line-height: 2rem;
+  --typography-heading-small-paragraph-spacing: 0;
+  --typography-heading-small-text-case: none;
+  --typography-heading-small-text-decoration: none;
+  --typography-heading-small-weight: 400;
+  --typography-heading-small-strong-font-family: Space Grotesk, sans-serif;
+  --typography-heading-small-strong-font-size: 1.3125rem;
+  --typography-heading-small-strong-font-weight: 500;
+  --typography-heading-small-strong-letter-spacing: 0;
+  --typography-heading-small-strong-line-height: 2rem;
+  --typography-heading-small-strong-paragraph-spacing: 0;
+  --typography-heading-small-strong-text-case: none;
+  --typography-heading-small-strong-text-decoration: none;
+  --typography-heading-small-strong-weight: 500;
+  --typography-heading-small-stronger-font-family: Space Grotesk, sans-serif;
+  --typography-heading-small-stronger-font-size: 1.3125rem;
+  --typography-heading-small-stronger-font-weight: 600;
+  --typography-heading-small-stronger-letter-spacing: 0;
+  --typography-heading-small-stronger-line-height: 2rem;
+  --typography-heading-small-stronger-paragraph-spacing: 0;
+  --typography-heading-small-stronger-text-case: none;
+  --typography-heading-small-stronger-text-decoration: none;
+  --typography-heading-small-stronger-weight: 600;
+  --typography-heading-strong-font-family: Space Grotesk, sans-serif;
+  --typography-heading-strong-font-size: 1.5625rem;
+  --typography-heading-strong-font-weight: 500;
+  --typography-heading-strong-letter-spacing: 0;
+  --typography-heading-strong-line-height: 2rem;
+  --typography-heading-strong-paragraph-spacing: 0;
+  --typography-heading-strong-text-case: none;
+  --typography-heading-strong-text-decoration: none;
+  --typography-heading-strong-weight: 500;
+  --typography-heading-stronger-font-family: Space Grotesk, sans-serif;
+  --typography-heading-stronger-font-size: 1.5625rem;
+  --typography-heading-stronger-font-weight: 600;
+  --typography-heading-stronger-letter-spacing: 0;
+  --typography-heading-stronger-line-height: 2rem;
+  --typography-heading-stronger-paragraph-spacing: 0;
+  --typography-heading-stronger-text-case: none;
+  --typography-heading-stronger-text-decoration: none;
+  --typography-heading-stronger-weight: 600;
+  --breakpoint-large: 1440px;
+  --breakpoint-medium: 1280px;
+  --breakpoint-small: 1080px;
+  --breakpoint-xlarge: 1800px;
+  --breakpoint-xsmall: 720px;
+  --breakpoint-xxsmall: 320px;
 }

@@ -174,7 +174,7 @@ describe('optionSelector', () => {
     await userEvent.click(screen.getByTestId('option-pl'))
     expect(dropdown).not.toBeVisible()
     expect(screen.getByText('WARSAW')).toBeVisible()
-    expect(onChange).toHaveBeenCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     expect(asFragment).toMatchSnapshot()
   })
 
@@ -207,7 +207,7 @@ describe('optionSelector', () => {
     await userEvent.click(screen.getByTestId('option-par-1'))
     expect(dropdown).not.toBeVisible()
     expect(screen.getAllByText('PAR 1')[0]).toBeVisible()
-    expect(onChange).toHaveBeenCalledTimes(1)
+    expect(onChange).toHaveBeenCalledOnce()
     expect(asFragment).toMatchSnapshot()
   })
 })

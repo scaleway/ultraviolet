@@ -3,6 +3,7 @@ import { createVar, style } from '@vanilla-extract/css'
 export const animationDurationVar = createVar()
 
 export const expandable = style({
+  height: 'auto',
   selectors: {
     '&[data-is-animated="true"]': {
       transition: `
@@ -11,5 +12,4 @@ export const expandable = style({
       `,
     },
   },
-  height: 'auto',
 })

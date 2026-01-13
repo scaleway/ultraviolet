@@ -1,3 +1,5 @@
+// oxlint-disable eslint/complexity
+
 'use client'
 
 import { cn } from '@ultraviolet/utils'
@@ -145,7 +147,7 @@ export const Monthly = () => {
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
-              if (!isExcluded && !isOutsideRange && !readOnly) {
+              if (!(isExcluded || isOutsideRange || readOnly)) {
                 if (selectsRange) {
                   onClickRange(event, constructedDate)
                 } else {

@@ -1,9 +1,9 @@
 import { theme } from '@ultraviolet/themes'
-import { style, styleVariants } from '@vanilla-extract/css'
-import { ANIMATION_DURATION } from '../constants'
-import { shrinkHeight } from '../animations.css'
 import { fadeIn } from '@ultraviolet/ui'
+import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { shrinkHeight } from '../animations.css'
+import { ANIMATION_DURATION } from '../constants'
 
 export const navigationItemMenuContainer = style({ width: 180 })
 
@@ -12,12 +12,12 @@ export const navigationItemRelative = style({ position: 'relative' })
 export const navigationItemPadded = style({ paddingLeft: theme.space[1] })
 
 const navigationItemPinIconBase = style({
-  position: 'absolute',
-  top: 0,
+  borderRadius: theme.radii.default,
   bottom: 0,
   margin: 'auto 0',
   padding: theme.space['0.25'],
-  borderRadius: theme.radii.default,
+  position: 'absolute',
+  top: 0,
 })
 
 export const navigationItemPinIcon = styleVariants({
@@ -46,55 +46,21 @@ export const navigationItemMenu = style({
 export const navigationItemMenuPinned = style({})
 
 export const navigationItemContainerBase = style({
-  color: 'inherit',
-  textDecoration: 'none',
   backgroundColor: 'inherit',
   border: 'none',
-  textAlign: 'left',
   borderRadius: theme.radii.default,
+  color: 'inherit',
   marginTop: theme.space['0.25'],
   padding: `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space[1]}`,
+  textAlign: 'left',
+  textDecoration: 'none',
   width: '100%',
 })
 
 export const navigationItemContainer = recipe({
   base: navigationItemContainerBase,
-  variants: {
-    noExpand: {
-      false: {
-        cursor: 'pointer',
-      },
-    },
-    disabled: {
-      true: {
-        cursor: 'not-allowed',
-        backgroundColor: 'unset',
-      },
-    },
-    isActive: {
-      true: {
-        selectors: {
-          '&:hover': {
-            backgroundColor: theme.colors.primary.backgroundHover,
-          },
-        },
-        backgroundColor: theme.colors.primary.background,
-      },
-    },
-    hasActive: {
-      true: {
-        backgroundColor: theme.colors.neutral.backgroundHover,
-      },
-    },
-    subLabel: {
-      true: {
-        padding: `${theme.space['0.5']} ${theme.space['1']}`,
-      },
-    },
-  },
   compoundVariants: [
     {
-      variants: { noExpand: false, disabled: false, isActive: false },
       style: {
         selectors: {
           '&:active': {
@@ -102,24 +68,20 @@ export const navigationItemContainer = recipe({
           },
         },
       },
+      variants: { disabled: false, isActive: false, noExpand: false },
     },
     {
-      variants: {
-        hasActive: true,
-        noExpand: false,
-        disabled: false,
-        isActive: false,
-      },
       style: {
         backgroundColor: theme.colors.neutral.backgroundWeakHover,
       },
+      variants: {
+        disabled: false,
+        hasActive: true,
+        isActive: false,
+        noExpand: false,
+      },
     },
     {
-      variants: {
-        noExpand: false,
-        disabled: false,
-        isActive: false,
-      },
       style: {
         selectors: {
           '&:hover, &:focus': {
@@ -127,14 +89,52 @@ export const navigationItemContainer = recipe({
           },
         },
       },
+      variants: {
+        disabled: false,
+        isActive: false,
+        noExpand: false,
+      },
     },
   ],
   defaultVariants: {
-    noExpand: false,
     disabled: false,
-    isActive: false,
     hasActive: false,
+    isActive: false,
+    noExpand: false,
     subLabel: false,
+  },
+  variants: {
+    disabled: {
+      true: {
+        backgroundColor: 'unset',
+        cursor: 'not-allowed',
+      },
+    },
+    hasActive: {
+      true: {
+        backgroundColor: theme.colors.neutral.backgroundHover,
+      },
+    },
+    isActive: {
+      true: {
+        backgroundColor: theme.colors.primary.background,
+        selectors: {
+          '&:hover': {
+            backgroundColor: theme.colors.primary.backgroundHover,
+          },
+        },
+      },
+    },
+    noExpand: {
+      false: {
+        cursor: 'pointer',
+      },
+    },
+    subLabel: {
+      true: {
+        padding: `${theme.space['0.5']} ${theme.space['1']}`,
+      },
+    },
   },
 })
 
@@ -152,9 +152,9 @@ export const navigationItemShowPinButton = style({})
 export const navigationItemWeakText = style({})
 
 export const navigationItemDragIcon = style({
-  opacity: 0,
-  margin: `0 ${theme.space['0.25']}`,
   cursor: 'grab',
+  margin: `0 ${theme.space['0.25']}`,
+  opacity: 0,
   selectors: {
     [`${navigationItemShowDraggable}:hover &, ${navigationItemShowDraggable}:focus &, ${navigationItemShowDraggable}:active & `]:
       {
@@ -164,16 +164,20 @@ export const navigationItemDragIcon = style({
 })
 export const navigationItemWrapText = recipe({
   base: {
-    overflowWrap: 'anywhere',
-    overflow: 'hidden',
     display: '-webkit-box',
-    WebkitBoxOrient: 'vertical',
-    WebkitLineClamp: 2,
+    overflow: 'hidden',
+    overflowWrap: 'anywhere',
     selectors: {
       [`${navigationItemWeakText}:hover &`]: {
         color: theme.colors.neutral.textWeakHover,
       },
     },
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 2,
+  },
+  defaultVariants: {
+    disabled: false,
+    weak: false,
   },
   variants: {
     disabled: {
@@ -186,10 +190,6 @@ export const navigationItemWrapText = recipe({
         color: theme.colors.neutral.textWeakHover,
       },
     },
-  },
-  defaultVariants: {
-    disabled: false,
-    weak: false,
   },
 })
 
@@ -212,15 +212,13 @@ export const navigationItemBadge = style({
 })
 
 export const navigationItemPinnedButton = style({
-  opacity: 0,
-  right: 0,
-  position: 'absolute',
-  left: '-24px',
-  top: 0,
   bottom: 0,
+  left: '-24px',
   margin: 'auto',
+  opacity: 0,
   pointerEvents: 'visible',
-  visibility: 'visible',
+  position: 'absolute',
+  right: 0,
   selectors: {
     '&:hover, &:focus, &:active': {
       opacity: 1,
@@ -237,20 +235,22 @@ export const navigationItemPinnedButton = style({
         pointerEvents: 'auto',
       },
   },
+  top: 0,
+  visibility: 'visible',
 })
 
 export const navigationItemAnimatedIcon = styleVariants({
-  expand: {
-    animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out`,
-  },
   collapse: {
     animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse`,
+  },
+  expand: {
+    animation: `${fadeIn} ${ANIMATION_DURATION}ms ease-in-out`,
   },
 })
 
 export const navigationItemMenuStack = style({
-  padding: `0 ${theme.space[2]}`,
   marginTop: theme.space['0.25'],
+  padding: `0 ${theme.space[2]}`,
   width: 'fit-content',
 })
 

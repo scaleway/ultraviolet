@@ -56,7 +56,7 @@ describe('button', () => {
       ))
   })
 
-  test(`work with onPointerDown and onKeyDown`, async () => {
+  test('work with onPointerDown and onKeyDown', async () => {
     const onPointerDown = vi.fn()
     const onKeyDown = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -72,14 +72,14 @@ describe('button', () => {
       </Button>,
     )
     await userEvent.click(screen.getByRole('button'))
-    expect(onPointerDown).toHaveBeenCalledTimes(1)
+    expect(onPointerDown).toHaveBeenCalledOnce()
     await userEvent.keyboard('a')
-    expect(onKeyDown).toHaveBeenCalledTimes(1)
+    expect(onKeyDown).toHaveBeenCalledOnce()
 
     expect(asFragment).toMatchSnapshot()
   })
 
-  test(`render with icon`, () =>
+  test('render with icon', () =>
     shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         <PencilIcon />
@@ -87,7 +87,7 @@ describe('button', () => {
       </Button>,
     ))
 
-  test(`render with icon on the right`, () =>
+  test('render with icon on the right', () =>
     shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         Hello
@@ -95,28 +95,28 @@ describe('button', () => {
       </Button>,
     ))
 
-  test(`render with icon only`, () =>
+  test('render with icon only', () =>
     shouldMatchSnapshot(
       <Button disabled onClick={MockOnClick}>
         <PencilOutlineIcon />
       </Button>,
     ))
 
-  test(`render with fullWidth`, () =>
+  test('render with fullWidth', () =>
     shouldMatchSnapshot(
       <Button fullWidth onClick={MockOnClick}>
         Hello
       </Button>,
     ))
 
-  test(`render with isLoading without icon`, () =>
+  test('render with isLoading without icon', () =>
     shouldMatchSnapshot(
       <Button isLoading onClick={MockOnClick}>
         Hello
       </Button>,
     ))
 
-  test(`render with isLoading with icon`, () =>
+  test('render with isLoading with icon', () =>
     shouldMatchSnapshot(
       <Button isLoading onClick={MockOnClick}>
         <PencilIcon />
@@ -124,7 +124,7 @@ describe('button', () => {
       </Button>,
     ))
 
-  test(`render with isLoading with icon variant`, () =>
+  test('render with isLoading with icon variant', () =>
     shouldMatchSnapshot(
       <Button onClick={MockOnClick}>
         <PencilOutlineIcon />
@@ -132,14 +132,14 @@ describe('button', () => {
       </Button>,
     ))
 
-  test(`render as an anchor with href prop`, () =>
+  test('render as an anchor with href prop', () =>
     shouldMatchSnapshot(
       <Button href="http://scaleway.com" onClick={MockOnClick}>
         Scaleway
       </Button>,
     ))
 
-  test(`render with a tooltip`, () =>
+  test('render with a tooltip', () =>
     shouldMatchSnapshot(
       <Button onClick={MockOnClick} tooltip="Hello world !">
         Hello

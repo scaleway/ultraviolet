@@ -40,7 +40,7 @@ describe('breadcrumbs', () => {
     )
     const step2 = screen.getByText('Step 2')
     await userEvent.click(step2)
-    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).toHaveBeenCalledOnce()
     expect(asFragment()).toMatchSnapshot()
   })
 

@@ -1,36 +1,36 @@
-import { globalStyle, style } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const customStack = style({
   minWidth: 0,
 })
 
 export const iconWrapper = style({
-  display: 'inline-flex',
   background: theme.colors.neutral.backgroundWeak,
-  padding: theme.space['1'],
   borderRadius: theme.radii.default,
+  display: 'inline-flex',
+  padding: theme.space['1'],
 })
 
 export const styledWrapper = style({
-  padding: theme.space['3'],
-  textDecoration: 'none',
   height: '100%',
+  padding: theme.space['3'],
 
   selectors: {
-    '&:not(:first-child)': {
-      borderTop: `1px solid ${theme.colors.neutral.border}`,
-    },
     '&:first-child': {
       borderRadius: `${theme.radii.default} ${theme.radii.default} 0 0`,
-    },
-    '&:last-child': {
-      borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
     },
     '&:hover': {
       background: theme.colors.neutral.backgroundHover,
     },
+    '&:last-child': {
+      borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+    },
+    '&:not(:first-child)': {
+      borderTop: `1px solid ${theme.colors.neutral.border}`,
+    },
   },
+  textDecoration: 'none',
 })
 
 globalStyle(`${styledWrapper} .${iconWrapper}`, {
@@ -46,9 +46,9 @@ export const fullHeightStack = style({
 })
 
 export const groupCardWrapper = style({
-  borderRadius: theme.radii.default,
-  border: `1px solid ${theme.colors.neutral.border}`,
   background: theme.colors.neutral.background,
+  border: `1px solid ${theme.colors.neutral.border}`,
+  borderRadius: theme.radii.default,
   minWidth: 0,
 })
 
@@ -62,7 +62,7 @@ export const skeletonWrapper = style({
 })
 
 export const squareSkeleton = style({
+  borderRadius: theme.radii.default,
   height: 32,
   width: 32,
-  borderRadius: theme.radii.default,
 })

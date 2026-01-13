@@ -41,13 +41,13 @@ describe('selectInputField', () => {
     const select = screen.getByTestId('select-input-test')
     await userEvent.click(select)
     fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
-    const mercury = screen.getByTestId(`option-stack-mercury`)
+    const mercury = screen.getByTestId('option-stack-mercury')
 
     await userEvent.click(mercury)
     await userEvent.click(select)
 
     await waitFor(() => {
-      expect(screen.getByTestId(`option-stack-mercury`)).toBeVisible()
+      expect(screen.getByTestId('option-stack-mercury')).toBeVisible()
     })
     expect(asFragment()).toMatchSnapshot()
   })
@@ -69,7 +69,7 @@ describe('selectInputField', () => {
 
     await userEvent.click(option)
     await waitFor(() => {
-      expect(onChange).toBeCalledTimes(1)
+      expect(onChange).toHaveBeenCalledOnce()
     })
     act(() => select.blur())
 

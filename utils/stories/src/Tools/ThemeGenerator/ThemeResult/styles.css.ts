@@ -17,7 +17,7 @@ export const themeGeneratorStack = style({ gap: 6 })
 
 export const themeGeneratorContainer = style({
   background: theme.colors.neutral.background,
-  boxShadow: theme.shadows.hoverNeutral,
   borderRadius: theme.radii.large,
+  boxShadow: theme.shadows.hoverNeutral,
   padding: theme.space[4],
 })

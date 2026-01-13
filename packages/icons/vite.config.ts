@@ -1,5 +1,5 @@
+import { resolve } from 'node:path'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
-import { resolve } from 'path'
 import { defineConfig, mergeConfig } from 'vite'
 import { defaultConfig } from '../../vite.config'
 

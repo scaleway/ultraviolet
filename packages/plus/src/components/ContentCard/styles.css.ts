@@ -1,16 +1,16 @@
-import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { theme } from '@ultraviolet/themes'
+import { createVar, style, styleVariants } from '@vanilla-extract/css'
 
 export const subContainerHeightVar = createVar()
 export const skeletonHeightVar = createVar({
-  syntax: '*',
   inherits: false,
   initialValue: 'auto',
+  syntax: '*',
 })
 export const skeletonWidthVar = createVar({
-  syntax: '*',
   inherits: false,
   initialValue: 'auto',
+  syntax: '*',
 })
 
 export const activeClass = style({
@@ -24,15 +24,13 @@ export const activeClass = style({
 })
 
 export const cardClass = style({
-  display: 'block',
-  textAlign: 'left',
-  padding: 0,
-  color: theme.colors.neutral.text,
-  textDecoration: 'none',
+  background: theme.colors.neutral.background,
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
-  background: theme.colors.neutral.background,
+  color: theme.colors.neutral.text,
+  display: 'block',
   overflowWrap: 'break-word',
+  padding: 0,
   selectors: {
     '&[disabled]': {
       cursor: 'not-allowed',
@@ -42,14 +40,16 @@ export const cardClass = style({
       boxShadow: 'none',
     },
   },
+  textAlign: 'left',
+  textDecoration: 'none',
 })
 
 export const iconContainer = style({
-  display: 'flex',
-  width: 'fit-content',
   background: theme.colors.neutral.backgroundWeak,
-  padding: theme.space['1'],
   borderRadius: theme.radii.default,
+  display: 'flex',
+  padding: theme.space['1'],
+  width: 'fit-content',
 })
 
 export const iconStack = styleVariants({
@@ -72,16 +72,16 @@ export const subContainer = styleVariants({
       padding: `${theme.space['3']} ${theme.space['3']} 0 ${theme.space['3']}`,
     },
   ],
-  row: [
-    subContainerBase,
-    {
-      padding: `${theme.space['3']} 0 ${theme.space['3']} ${theme.space['3']}`,
-    },
-  ],
   noHref: [
     subContainerBase,
     {
       padding: `${theme.space['3']}`,
+    },
+  ],
+  row: [
+    subContainerBase,
+    {
+      padding: `${theme.space['3']} 0 ${theme.space['3']} ${theme.space['3']}`,
     },
   ],
 })

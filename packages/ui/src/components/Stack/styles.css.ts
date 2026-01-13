@@ -1,14 +1,14 @@
-import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
+import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles'
 import { flexVar, maxWidthVar, minWidthVar, widthVar } from './variables.css'
 
 export const stack = style({
   display: 'flex',
-  width: widthVar,
+  flex: flexVar,
   maxWidth: maxWidthVar,
   minWidth: minWidthVar,
-  flex: flexVar,
+  width: widthVar,
 })
 
 // Get the keys and sort them by their pixel value. It's important to define breakpoints priority
@@ -82,11 +82,11 @@ export const responsiveProperties = defineProperties({
   conditions: themeBreakpoints,
   defaultCondition: 'xxsmall',
   properties: {
-    gap: themeSpace,
-    flexDirection: ['column', 'row', 'row-reverse', 'column-reverse'],
     alignItems: alignItemsValues,
-    justifyContent: justifyContentValues,
+    flexDirection: ['column', 'row', 'row-reverse', 'column-reverse'],
     flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
+    gap: themeSpace,
+    justifyContent: justifyContentValues,
   },
   responsiveArray: ['xxsmall', 'xsmall', 'small', 'medium', 'large'],
 })

@@ -1,12 +1,8 @@
 {
-  "extends": "@repo/config/tsconfig/build.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "rootDir": "src"
   },
-  "include": [
-    "src"
-  ],
   "exclude": [
     "*.config.ts",
     "*.setup.ts",
@@ -14,5 +10,7 @@
     "**/__mocks__",
     "**/__stories__",
     "src/**/*.test.tsx"
-  ]
+  ],
+  "extends": "@repo/config/tsconfig/build.json",
+  "include": ["src"]
 }

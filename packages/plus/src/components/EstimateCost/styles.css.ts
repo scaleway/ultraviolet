@@ -5,25 +5,25 @@ import {
   style,
   styleVariants,
 } from '@vanilla-extract/css'
-import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 import { recipe } from '@vanilla-extract/recipes'
+import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 
 export const paddingLeftCell = createVar()
 export const overlayMarginVar = createVar()
 
 export const estimateCostImage = style({
-  width: 15,
   marginRight: theme.space[1],
+  width: 15,
 })
 
 const estimateCostTableBase = style({
-  width: '100%',
   border: `1px solid ${theme.colors.neutral.border}`,
+  width: '100%',
 })
 
 export const estimateCostTable = styleVariants({
-  total: [estimateCostTableBase, { borderRadius: '4px 4px 0 4px' }],
   noTotal: [estimateCostTableBase, { borderRadius: '4px' }],
+  total: [estimateCostTableBase, { borderRadius: '4px 4px 0 4px' }],
 })
 
 export const estimateCostFeesTable = style([
@@ -44,33 +44,33 @@ export const estimateCostPriceColumn = style({
 })
 
 export const estimateCostPriceCell = style({
-  borderLeft: `1px solid ${theme.colors.neutral.border}`,
   backgroundColor: theme.colors.neutral.backgroundWeak,
-  width: PRICE_MAX_CELL_WIDTH,
+  borderLeft: `1px solid ${theme.colors.neutral.border}`,
   minWidth: 126,
+  width: PRICE_MAX_CELL_WIDTH,
 })
 
 export const estimateCostCell = recipe({
   base: {
+    minWidth: 230,
+    paddingLeft: paddingLeftCell,
     paddingRight: theme.space[2],
     position: 'relative',
     width: MAX_CELL_WIDTH,
-    minWidth: 230,
-    paddingLeft: paddingLeftCell,
   },
   variants: {
     hasBorder: {
       true: {
         selectors: {
           '&:before': {
-            content: "''",
-            position: 'absolute',
-            left: 0,
-            bottom: 0,
-            height: 1,
-            width: 'calc(100% - 32px)',
-            marginLeft: theme.space[2],
             borderBottom: `1px solid ${theme.colors.neutral.border}`,
+            bottom: 0,
+            content: "''",
+            height: 1,
+            left: 0,
+            marginLeft: theme.space[2],
+            position: 'absolute',
+            width: 'calc(100% - 32px)',
           },
         },
       },
@@ -84,42 +84,42 @@ export const estimateCostCell = recipe({
 })
 
 export const estimateCostTotalPriceCell = style({
+  backgroundColor: theme.colors.primary.background,
   borderColor: theme.colors.neutral.border,
+  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+  borderRight: 'none',
   borderStyle: 'solid',
   borderWidth: '0 1px 1px 1px',
-  borderRight: 'none',
-  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
   height: theme.sizing[700],
-  backgroundColor: theme.colors.primary.background,
-  width: PRICE_MAX_CELL_WIDTH,
   minWidth: 126,
+  width: PRICE_MAX_CELL_WIDTH,
 })
 
 export const estimateCostEmptyTable = style({
+  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+  borderRight: `1px solid ${theme.colors.neutral.border}`,
   margin: 0,
   width: '100%',
-  borderRight: `1px solid ${theme.colors.neutral.border}`,
-  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
 })
 
 export const estimateCostTitle = style({
-  display: 'flex',
   alignItems: 'center',
-  margin: 0,
-  fontSize: 18,
   color: theme.colors.neutral.text,
+  display: 'flex',
+  fontSize: 18,
   fontWeight: 500,
+  margin: 0,
   padding: theme.space[2],
 })
 
 export const estimateCostEmptyCell = style({ width: MAX_CELL_WIDTH })
 
 export const estimateCostTimeCell = style({
+  alignItems: 'start',
+  float: 'right',
   maxWidth: 200,
   padding: theme.space[2],
-  alignItems: 'start',
   textAlign: 'left',
-  float: 'right',
 })
 
 const estimateCostBadgeBetaBase = style({
@@ -133,9 +133,9 @@ export const estimateCostBadgeBeta = styleVariants({
 
 export const estimateCostOverlayRow = recipe({
   base: {
+    borderLeft: `1px solid ${theme.colors.neutral.border}`,
     minWidth: 200,
     padding: '0 24px',
-    borderLeft: `1px solid ${theme.colors.neutral.border}`,
     selectors: {
       '&:first-of-type, &:last-child': {
         border: 0,
@@ -143,6 +143,11 @@ export const estimateCostOverlayRow = recipe({
     },
   },
   variants: {
+    hideFromOverlay: {
+      true: {
+        display: 'none',
+      },
+    },
     isFirstElement: {
       true: {
         border: 0,
@@ -155,19 +160,14 @@ export const estimateCostOverlayRow = recipe({
         },
       },
     },
-    hideFromOverlay: {
-      true: {
-        display: 'none',
-      },
-    },
   },
 })
 
 export const estimateCostBadge = style({
   display: 'inline-block',
+  fontSize: 12,
   height: theme.sizing[300],
   lineHeight: 18,
-  fontSize: 12,
   marginRight: theme.space[1],
 })
 
@@ -177,8 +177,8 @@ export const estimatecostFeesText = style({
 
 export const estimateCostText = styleVariants({
   beta: {
-    textAlign: 'right',
     marginLeft: theme.space[2],
+    textAlign: 'right',
   },
   notBeta: {
     textAlign: 'right',
@@ -193,26 +193,26 @@ export const estimateCostPriceCellContent = style({
 
 export const estimateCostOverlayContainer = recipe({
   base: {
-    position: 'fixed',
-    left: 0,
-    right: 0,
-    height: 120,
     backgroundColor: theme.colors.neutral.background,
-    margin: overlayMarginVar,
     display: 'flex',
+    height: 120,
     justifyContent: 'center',
+    left: 0,
+    margin: overlayMarginVar,
+    position: 'fixed',
+    right: 0,
     transition: 'bottom 0.3s, box-shadow 0.3s',
     zIndex: 1,
   },
   variants: {
     inView: {
-      true: {
-        bottom: '-120px',
-        boxShadow: '0',
-      },
       false: {
         bottom: 0,
         boxShadow: theme.shadows.defaultShadow,
+      },
+      true: {
+        bottom: '-120px',
+        boxShadow: '0',
       },
     },
   },
@@ -229,8 +229,8 @@ export const estimateCostList = style({
 
 export const estimateCostSideItem = style({
   display: 'flex',
-  padding: '12px 0',
   minWidth: 158,
+  padding: '12px 0',
 })
 
 export const estimateCostContent = styleVariants({
@@ -246,9 +246,9 @@ export const estimateCostCompact = style({
 })
 
 export const estimateCostCompactText = style({
+  alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',
   gap: theme.space[1],
-  alignItems: 'center',
   justifyContent: 'center',
 })

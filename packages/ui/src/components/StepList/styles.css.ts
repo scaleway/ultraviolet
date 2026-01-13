@@ -3,29 +3,29 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const steps = style({
+  display: 'flex',
+  flexDirection: 'column',
+  fontSize: theme.typography.body.fontSize,
+  gap: theme.space[3],
   listStyle: 'none',
   paddingLeft: 0,
   textAlign: 'left',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: theme.space[3],
-  fontSize: theme.typography.body.fontSize,
 })
 
 export const step = recipe({
   base: {
-    display: 'flex',
     alignItems: 'flex-start',
+    display: 'flex',
     gap: theme.space[2],
     justifyContent: 'center',
   },
   variants: {
     disabled: {
-      true: {
-        color: theme.colors.neutral.textDisabled,
-      },
       false: {
         color: theme.colors.neutral.textStrong,
+      },
+      true: {
+        color: theme.colors.neutral.textDisabled,
       },
     },
   },
@@ -39,13 +39,13 @@ export const stepDiv = recipe({
   },
   variants: {
     size: {
-      small: {
-        lineHeight: '24px',
-        fontSize: '16px',
-      },
       medium: {
-        lineHeight: '32px',
         fontSize: '24px',
+        lineHeight: '32px',
+      },
+      small: {
+        fontSize: '16px',
+        lineHeight: '24px',
       },
     },
   },

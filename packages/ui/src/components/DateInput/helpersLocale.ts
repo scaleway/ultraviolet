@@ -2,7 +2,7 @@ import type { Locale } from 'date-fns'
 
 const getLocalizedDays = (locale: string) => {
   const formatter = new Intl.DateTimeFormat(locale, { weekday: 'long' })
-  const days = []
+  const days: string[] = []
   for (let i = 0; i < 7; i += 1) {
     const date = new Date(1970, 0, i + 4)
     days.push(formatter.format(date))
@@ -15,7 +15,7 @@ export const getLocalizedMonths = (locale: Locale | string) => {
   const computedLocale = typeof locale === 'string' ? locale : locale.code
 
   const formatter = new Intl.DateTimeFormat(computedLocale, { month: 'long' })
-  const months = []
+  const months: string[] = []
   for (let i = 0; i < 12; i += 1) {
     const date = new Date(1970, i)
     months.push(formatter.format(date))
@@ -26,7 +26,7 @@ export const getLocalizedMonths = (locale: Locale | string) => {
 
 const getLocalizedShortMonths = (locale: string) => {
   const formatter = new Intl.DateTimeFormat(locale, { month: 'short' })
-  const months = []
+  const months: string[] = []
   for (let i = 0; i < 12; i += 1) {
     const date = new Date(1970, i)
     months.push(formatter.format(date))

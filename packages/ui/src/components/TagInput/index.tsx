@@ -244,19 +244,19 @@ export const TagInput = ({
                   isLoading={status[tag.index] === STATUS.LOADING}
                   key={tag.index}
                   onClose={
-                    !readOnly
-                      ? e => {
+                    readOnly
+                      ? undefined
+                      : e => {
                           e.stopPropagation()
                           deleteTag(tag.index)
                         }
-                      : undefined
                   }
                   sentiment="neutral"
                 >
                   {tag.label}
                 </Tag>
               ))}
-              {!disabled ? (
+              {disabled ? null : (
                 <input
                   aria-label={ariaLabel}
                   className={tagInput}
@@ -273,7 +273,7 @@ export const TagInput = ({
                   type="text"
                   value={input}
                 />
-              ) : null}
+              )}
             </div>
             {computedClearable || success || error ? (
               <div className={tagInputStateContainer}>
@@ -312,7 +312,7 @@ export const TagInput = ({
         <Text
           as="span"
           disabled={disabled || readOnly}
-          prominence={!error && !success ? 'weak' : undefined}
+          prominence={error || success ? undefined : 'weak'}
           sentiment={helperSentiment}
           variant="caption"
         >

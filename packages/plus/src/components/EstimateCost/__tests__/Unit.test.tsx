@@ -128,7 +128,7 @@ describe('estimateCost - Unit Item', () => {
       </EstimateCost>,
     ))
 
-  test(`render with value update`, async () => {
+  test('render with value update', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Unit">
@@ -144,7 +144,7 @@ describe('estimateCost - Unit Item', () => {
     await waitFor(() => expect(input.value).toBe('10'))
   })
 
-  test(`render with negative value update`, async () => {
+  test('render with negative value update', async () => {
     renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Unit">

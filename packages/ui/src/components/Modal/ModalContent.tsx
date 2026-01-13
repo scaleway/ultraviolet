@@ -1,3 +1,5 @@
+// biome-ignore-all lint/complexity/noUselessFragments: ok
+
 'use client'
 
 import { CloseIcon } from '@ultraviolet/icons'

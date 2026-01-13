@@ -23,15 +23,12 @@ const BaseContentCardGroup = forwardRef<
     ref={ref}
     style={style}
   >
-    {!loading ? (
-      children
-    ) : (
-      <>
-        {Children.map(children, (_child, index) => (
+    {loading
+      ? Children.map(children, (_child, index) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: error
           <SkeletonCard key={index} />
-        ))}
-      </>
-    )}
+        ))
+      : children}
   </Stack>
 ))
 

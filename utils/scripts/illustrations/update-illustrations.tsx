@@ -6,7 +6,7 @@ import {
 } from './update-components'
 
 const ILLUSTRATIONS_DIR = 'packages/illustrations/src/assets'
-const BASE_URL = `https://assets.scaleway.com/illustrations`
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 const ILLUSTRATIONS_CATEGORIES: { dir: string; category: string }[] = []
 const DYNAMIC_ILLUSTRATIONS: { dir: string; category: string }[] = []
 const OXLINT_RULES = `

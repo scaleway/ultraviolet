@@ -4,35 +4,30 @@ import { recipe } from '@vanilla-extract/recipes'
 
 export const paddingRightVar = createVar()
 export const textareaWrapper = style({
-  position: 'relative',
   display: 'flex',
+  position: 'relative',
   width: '100%',
 })
 
 export const textAreaClearableContainer = style({
   position: 'absolute',
-  top: theme.space['1.5'],
   right: theme.space[1],
+  top: theme.space['1.5'],
 })
 
 export const textArea = recipe({
   base: {
-    width: '100%',
-    minHeight: theme.sizing[600],
-    resize: 'vertical',
     background: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,
-    color: theme.colors.neutral.text,
     borderRadius: theme.radii.default,
+    color: theme.colors.neutral.text,
+    minHeight: theme.sizing[600],
     padding: `${theme.space['1.5']} ${theme.space['1']} ${theme.space['1.5']} ${theme.space['2']}`,
     paddingRight: paddingRightVar,
+    resize: 'vertical',
     selectors: {
       '&::placeholder': {
         color: theme.colors.neutral.textWeak,
-      },
-      '&:read-only': {
-        background: theme.colors.neutral.backgroundWeak,
-        borderColor: theme.colors.neutral.border,
       },
       '&:disabled': {
         background: theme.colors.neutral.backgroundDisabled,
@@ -42,30 +37,35 @@ export const textArea = recipe({
       '&:disabled::placeholder': {
         color: theme.colors.neutral.textWeakDisabled,
       },
+      '&:not(:disabled):focus': {
+        borderColor: theme.colors.primary.border,
+        boxShadow: theme.shadows.focusPrimary,
+        outline: 'none',
+      },
       '&:not(:disabled):hover': {
         borderColor: theme.colors.primary.border,
       },
-      '&:not(:disabled):focus': {
-        outline: 'none',
-        borderColor: theme.colors.primary.border,
-        boxShadow: theme.shadows.focusPrimary,
+      '&:read-only': {
+        background: theme.colors.neutral.backgroundWeak,
+        borderColor: theme.colors.neutral.border,
       },
     },
+    width: '100%',
+  },
+  defaultVariants: {
+    error: false,
+    success: false,
   },
   variants: {
-    success: {
-      true: {
-        borderColor: theme.colors.success.border,
-      },
-    },
     error: {
       true: {
         borderColor: theme.colors.danger.border,
       },
     },
-  },
-  defaultVariants: {
-    success: false,
-    error: false,
+    success: {
+      true: {
+        borderColor: theme.colors.success.border,
+      },
+    },
   },
 })

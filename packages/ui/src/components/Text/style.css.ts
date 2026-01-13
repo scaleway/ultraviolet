@@ -1,10 +1,10 @@
 import { theme } from '@ultraviolet/themes'
+import { capitalize } from '@ultraviolet/utils'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 import type { ExtendedColor } from '../../theme'
 import { typography } from '../../theme'
 import { PROMINENCES } from './constants'
-import { capitalize } from '@ultraviolet/utils'
 import { placementText, whiteSpaceText } from './variables.css'
 
 type TypographyKey = keyof typeof typography
@@ -28,8 +28,8 @@ function generateVariants() {
   return variants.reduce<Record<TypographyKey, object>>(
     (acc, key) => {
       acc[key] = {
-        fontSize: theme.typography[key].fontSize,
         fontFamily: theme.typography[key].fontFamily,
+        fontSize: theme.typography[key].fontSize,
         fontWeight: theme.typography[key].weight,
         letterSpacing: theme.typography[key].letterSpacing,
         lineHeight: theme.typography[key].lineHeight,
@@ -70,9 +70,9 @@ function generateStyles(
 
   if (sentiment) {
     return {
-      color: !isSentimentMonochrome
-        ? textColor
-        : theme.colors.other.monochrome[(sentiment as 'black') || 'white'].text,
+      color: isSentimentMonochrome
+        ? theme.colors.other.monochrome[(sentiment as 'black') || 'white'].text
+        : textColor,
     }
   }
 
@@ -82,8 +82,8 @@ function generateStyles(
 function getArrayOfVariants() {
   const array = sentiments.map(sentiment =>
     prominences.map(prominence => ({
-      variants: { sentiment, prominence, disabled: false },
       style: generateStyles(prominence, false, sentiment),
+      variants: { disabled: false, prominence, sentiment },
     })),
   )
 
@@ -93,8 +93,8 @@ function getArrayOfVariants() {
 function getArrayOfVariantsDisabled() {
   const array = sentiments.map(sentiment =>
     prominences.map(prominence => ({
-      variants: { sentiment, prominence, disabled: true },
       style: generateStyles(prominence, true, sentiment),
+      variants: { disabled: true, prominence, sentiment },
     })),
   )
 
@@ -103,8 +103,8 @@ function getArrayOfVariantsDisabled() {
 
 function getArrayOfVariantNoSentiment() {
   const array = prominences.map(prominence => ({
-    variants: { prominence, disabled: false },
     style: generateStyles(prominence, true),
+    variants: { disabled: false, prominence },
   }))
 
   return array.flat()
@@ -115,58 +115,6 @@ export const text = recipe({
     textAlign: placementText,
     whiteSpace: whiteSpaceText,
   },
-  variants: {
-    strikeThrough: {
-      true: {
-        textDecoration: 'line-through',
-      },
-      false: {},
-    },
-    italic: {
-      true: {
-        fontStyle: 'italic',
-      },
-      false: {},
-    },
-    underline: {
-      true: {
-        textDecoration: 'underline',
-      },
-      false: {},
-    },
-
-    oneLine: {
-      true: {
-        whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis',
-        overflow: 'hidden',
-      },
-      false: {},
-    },
-    sentiment: {
-      primary: {},
-      secondary: {},
-      neutral: {},
-      success: {},
-      danger: {},
-      warning: {},
-      info: {},
-      black: {},
-      white: {},
-    },
-    prominence: {
-      default: {},
-      strong: {},
-      stronger: {},
-      weak: {},
-    },
-
-    variant: generateVariants(),
-    disabled: {
-      true: {},
-      false: {},
-    },
-  },
   compoundVariants: [
     ...getArrayOfVariants(),
     ...getArrayOfVariantsDisabled(),
@@ -174,14 +122,66 @@ export const text = recipe({
   ],
 
   defaultVariants: {
-    strikeThrough: false,
-    italic: false,
-    underline: false,
-    oneLine: false,
-    sentiment: undefined,
-    prominence: 'default',
-    variant: 'body',
     disabled: false,
+    italic: false,
+    oneLine: false,
+    prominence: 'default',
+    sentiment: undefined,
+    strikeThrough: false,
+    underline: false,
+    variant: 'body',
+  },
+  variants: {
+    disabled: {
+      false: {},
+      true: {},
+    },
+    italic: {
+      false: {},
+      true: {
+        fontStyle: 'italic',
+      },
+    },
+
+    oneLine: {
+      false: {},
+      true: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+      },
+    },
+    prominence: {
+      default: {},
+      strong: {},
+      stronger: {},
+      weak: {},
+    },
+    sentiment: {
+      black: {},
+      danger: {},
+      info: {},
+      neutral: {},
+      primary: {},
+      secondary: {},
+      success: {},
+      warning: {},
+      white: {},
+    },
+    strikeThrough: {
+      false: {},
+      true: {
+        textDecoration: 'line-through',
+      },
+    },
+    underline: {
+      false: {},
+      true: {
+        textDecoration: 'underline',
+      },
+    },
+
+    variant: generateVariants(),
   },
 })
 

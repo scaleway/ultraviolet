@@ -19,6 +19,7 @@ export const Blocks = ({
     })}
   >
     {Array.from({ length }, (_, i) => (
+      // biome-ignore lint/suspicious/noArrayIndexKey: to fix
       <div className={blocksSkeleton} key={`skeleton-blocks-${i}`}>
         <IconSkeleton />
         <Line />

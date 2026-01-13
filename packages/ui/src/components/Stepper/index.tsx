@@ -76,6 +76,7 @@ export const Stepper = ({
           const temporal = getTemporal()
 
           return (
+            // biome-ignore lint/suspicious/noArrayIndexKey: to fix
             <Fragment key={`creation-progress-${index}`}>
               <Step index={index} {...(child.props as object)} />
               {isNotLast && separator && labelPosition === 'right' ? (

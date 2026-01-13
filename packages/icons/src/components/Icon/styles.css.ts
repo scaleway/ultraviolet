@@ -1,15 +1,15 @@
 import { theme } from '@ultraviolet/themes'
-import { recipe } from '@vanilla-extract/recipes'
-import { PROMINENCES, SENTIMENTS, SIZES } from './constants'
 import { capitalize } from '@ultraviolet/utils'
 import { globalStyle } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
+import { PROMINENCES, SENTIMENTS, SIZES } from './constants'
 
 function generateSizeStyle(size: keyof typeof SIZES) {
   return {
     height: theme.sizing[SIZES[size]],
-    width: theme.sizing[SIZES[size]],
-    minWidth: theme.sizing[SIZES[size]],
     minHeight: theme.sizing[SIZES[size]],
+    minWidth: theme.sizing[SIZES[size]],
+    width: theme.sizing[SIZES[size]],
   }
 }
 
@@ -35,10 +35,40 @@ function getIconColor(
 
 export const icon = recipe({
   base: {
-    verticalAlign: 'middle',
     fill: 'currentcolor',
+    verticalAlign: 'middle',
+  },
+  compoundVariants: [true, false].flatMap(disabled =>
+    Object.keys(PROMINENCES).flatMap(prominence =>
+      [...SENTIMENTS, undefined].map(sentiment => ({
+        style: {
+          fill: getIconColor(
+            prominence as keyof typeof PROMINENCES,
+            sentiment,
+            disabled,
+          ),
+        },
+        // We need to add undefined to have the variant where sentiment is undefined
+        variants: {
+          disabled,
+          prominence: prominence as keyof typeof PROMINENCES,
+          sentiment,
+        },
+      })),
+    ),
+  ),
+  defaultVariants: {
+    disabled: false,
+    prominence: 'default',
   },
   variants: {
+    disabled: {
+      false: {},
+      true: {},
+    },
+    prominence: Object.fromEntries(
+      Object.keys(PROMINENCES).map(prominence => [prominence, {}]),
+    ) as Record<keyof typeof PROMINENCES, object>,
     sentiment: Object.fromEntries(
       SENTIMENTS.map(sentiment => [sentiment, {}]),
     ) as Record<(typeof SENTIMENTS)[number], object>,
@@ -48,47 +78,17 @@ export const icon = recipe({
         generateSizeStyle(size as keyof typeof SIZES),
       ]),
     ),
-    disabled: {
-      true: {},
-      false: {},
-    },
-    prominence: Object.fromEntries(
-      Object.keys(PROMINENCES).map(prominence => [prominence, {}]),
-    ) as Record<keyof typeof PROMINENCES, object>,
-  },
-  compoundVariants: [true, false].flatMap(disabled =>
-    Object.keys(PROMINENCES).flatMap(prominence =>
-      [...SENTIMENTS, undefined].map(sentiment => ({
-        // We need to add undefined to have the variant where sentiment is undefined
-        variants: {
-          sentiment,
-          prominence: prominence as keyof typeof PROMINENCES,
-          disabled,
-        },
-        style: {
-          fill: getIconColor(
-            prominence as keyof typeof PROMINENCES,
-            sentiment,
-            disabled,
-          ),
-        },
-      })),
-    ),
-  ),
-  defaultVariants: {
-    prominence: 'default',
-    disabled: false,
   },
 })
 
-Object.keys(PROMINENCES).forEach(prominence =>
+Object.keys(PROMINENCES).forEach(prominence => {
   SENTIMENTS.forEach(sentiment => {
     globalStyle(
-      `${icon({ sentiment, prominence: prominence as keyof typeof PROMINENCES })} .fillStroke`,
+      `${icon({ prominence: prominence as keyof typeof PROMINENCES, sentiment })} .fillStroke`,
       {
         fill: 'none',
         stroke: getIconColor(prominence as keyof typeof PROMINENCES, sentiment),
       },
     )
-  }),
-)
+  })
+})

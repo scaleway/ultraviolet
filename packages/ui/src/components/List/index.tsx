@@ -27,11 +27,11 @@ type ListProps = {
   children: ReactNode
   /**
    * Set it to true if you want to display a placeholder during loading
-   * */
+   */
   loading?: boolean
   /**
    * Auto collapse is collapsing expandable row when another is expanding
-   * */
+   */
   autoCollapse?: boolean
   /**
    * Action when selection changes (get the list of selected rows)
@@ -102,6 +102,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
               <HeaderCell
                 info={column.info}
                 isOrdered={column.isOrdered}
+                // biome-ignore lint/suspicious/noArrayIndexKey: to fix
                 key={`header-column-${index}`}
                 maxWidth={column.maxWidth}
                 minWidth={column.minWidth}
@@ -134,6 +135,7 @@ const BaseList = forwardRef<HTMLTableElement, NewListProps | LegacyListProps>(
  * List is a component that displays a list of items based on the columns you provide and the data you pass.
  */
 type ListType = {
+  // biome-ignore  lint/style/useUnifiedTypeSignatures: ok
   (props: NewListProps & RefAttributes<HTMLTableElement>): ReactNode
   /**
    * @deprecated Use `colMode="strict"`

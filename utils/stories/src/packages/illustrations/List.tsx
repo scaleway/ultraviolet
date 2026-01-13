@@ -1,4 +1,5 @@
 // oxlint-disable import/no-namespace
+// biome-ignore-all lint/correctness/useImageSize: should be fix
 
 import {
   ArrowDownIcon,

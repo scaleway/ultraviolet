@@ -78,13 +78,13 @@ export const fadeOut = keyframes({
 })
 
 export const scaleUp = keyframes({
-  '0%': { transform: 'scale(.8) translateY(1000px)', opacity: 0 },
-  '100%': { transform: 'scale(1) translateY(0px)', opacity: 1 },
+  '0%': { opacity: 0, transform: 'scale(.8) translateY(1000px)' },
+  '100%': { opacity: 1, transform: 'scale(1) translateY(0px)' },
 })
 
 export const scaleDown = keyframes({
-  '0%': { transform: 'scale(1) translateY(0px)', opacity: 1 },
-  '100%': { transform: 'scale(.8) translateY(1000px)', opacity: 0 },
+  '0%': { opacity: 1, transform: 'scale(1) translateY(0px)' },
+  '100%': { opacity: 0, transform: 'scale(.8) translateY(1000px)' },
 })
 
 export const quickScaleDown = keyframes({

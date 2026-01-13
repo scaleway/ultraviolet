@@ -1,6 +1,6 @@
 import { theme } from '@ultraviolet/themes'
-import { recipe } from '@vanilla-extract/recipes'
 import { style } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
 
 export const SENTIMENTS = [
   'danger',
@@ -14,51 +14,17 @@ export const SENTIMENTS = [
 
 export const containerTag = recipe({
   base: {
-    display: 'inline-flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    whiteSpace: 'nowrap',
     borderRadius: theme.radii.default,
-    padding: `0 ${theme.space[1]}`,
+    display: 'inline-flex',
     gap: theme.space[1],
-    width: 'fit-content',
     height: theme.sizing[300],
-  },
-  variants: {
-    copiable: {
-      true: {
-        selectors: {
-          '&:hover, &:active': {
-            cursor: 'pointer',
-          },
-          '&:active': {
-            boxShadow: theme.shadows.focusNeutral,
-          },
-        },
-      },
-    },
-
-    sentiment: Object.fromEntries(
-      SENTIMENTS.map(sentiment => [
-        sentiment,
-        {
-          color: theme.colors[sentiment].text,
-          background: theme.colors[sentiment].background,
-          border: `solid 1px ${sentiment === 'neutral' ? theme.colors.neutral.border : theme.colors[sentiment].background}`,
-        },
-      ]),
-    ),
-    disabled: {
-      true: {
-        color: theme.colors.neutral.textDisabled,
-        background: theme.colors.neutral.backgroundDisabled,
-        border: `solid 1px ${theme.colors.neutral.borderDisabled}`,
-        cursor: 'not-allowed',
-      },
-    },
+    justifyContent: 'center',
+    padding: `0 ${theme.space[1]}`,
+    whiteSpace: 'nowrap',
+    width: 'fit-content',
   },
   compoundVariants: SENTIMENTS.map(sentiment => ({
-    variants: { copiable: true, sentiment },
     style: {
       selectors: {
         '&:hover, &:active': {
@@ -70,11 +36,45 @@ export const containerTag = recipe({
         },
       },
     },
+    variants: { copiable: true, sentiment },
   })),
   defaultVariants: {
     copiable: false,
     disabled: false,
     sentiment: 'neutral',
+  },
+  variants: {
+    copiable: {
+      true: {
+        selectors: {
+          '&:active': {
+            boxShadow: theme.shadows.focusNeutral,
+          },
+          '&:hover, &:active': {
+            cursor: 'pointer',
+          },
+        },
+      },
+    },
+    disabled: {
+      true: {
+        background: theme.colors.neutral.backgroundDisabled,
+        border: `solid 1px ${theme.colors.neutral.borderDisabled}`,
+        color: theme.colors.neutral.textDisabled,
+        cursor: 'not-allowed',
+      },
+    },
+
+    sentiment: Object.fromEntries(
+      SENTIMENTS.map(sentiment => [
+        sentiment,
+        {
+          background: theme.colors[sentiment].background,
+          border: `solid 1px ${sentiment === 'neutral' ? theme.colors.neutral.border : theme.colors[sentiment].background}`,
+          color: theme.colors[sentiment].text,
+        },
+      ]),
+    ),
   },
 })
 
@@ -83,7 +83,7 @@ export const textTag = style({
 })
 
 export const closeButtonTag = style({
-  width: 'fit-content',
   height: 'fit-content',
   padding: theme.space['0.25'],
+  width: 'fit-content',
 })

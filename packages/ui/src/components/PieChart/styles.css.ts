@@ -23,54 +23,54 @@ const bulletFlashAnimation = keyframes({
 })
 
 export const containerPie = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   height: heightContainerPie,
 })
 
 export const emptyLegendPie = style({
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
   marginLeft: theme.space[5],
 })
 
 export const contentPie = style({
   display: 'inline-block',
-  position: 'absolute',
-  inset: 0,
   fontSize: theme.typography.headingStrong.fontSize,
-  lineHeight: '100px',
   height: 100,
-  width: 100,
+  inset: 0,
+  lineHeight: '100px',
   margin: 'auto',
+  position: 'absolute',
   textAlign: 'center',
   verticalAlign: 'middle',
+  width: 100,
 })
 
 export const listPie = style({
-  fontSize: theme.typography.bodySmall.fontSize,
-  listStyleType: 'none',
   display: 'flex',
   flex: '1',
   flexDirection: 'column',
+  fontSize: theme.typography.bodySmall.fontSize,
+  listStyleType: 'none',
   maxHeight: '100%',
   overflowY: 'auto',
 })
 
 export const listItemPie = recipe({
   base: {
-    display: 'flex',
     alignItems: 'center',
+    display: 'flex',
     marginTop: theme.space[1],
     width: '100%',
   },
   variants: {
     isFocused: {
-      true: {
-        color: theme.colors.primary.text,
-      },
       false: {
         color: theme.colors.neutral.text,
+      },
+      true: {
+        color: theme.colors.primary.text,
       },
     },
   },
@@ -78,12 +78,12 @@ export const listItemPie = recipe({
 
 export const bulletPie = recipe({
   base: {
-    display: 'inline-block',
+    background: colorBullet,
     borderRadius: theme.radii.circle,
-    width: 10,
+    display: 'inline-block',
     height: 10,
     margin: `0 ${theme.space[1]}`,
-    background: colorBullet,
+    width: 10,
   },
   variants: {
     isFocused: {
@@ -95,19 +95,19 @@ export const bulletPie = recipe({
 })
 
 export const labelPie = style({
+  alignItems: 'baseline',
   display: 'flex',
   flex: '1',
-  alignItems: 'baseline',
 })
 
 export const valuePie = styleVariants({
   default: {
-    marginLeft: theme.space[1],
     fontWeight: 400,
+    marginLeft: theme.space[1],
   },
   isFocused: {
-    marginLeft: theme.space[1],
     fontWeight: 500,
+    marginLeft: theme.space[1],
   },
 })
 
@@ -119,20 +119,20 @@ export const textPie = recipe({
   },
   variants: {
     isFocused: {
-      true: {
-        fontWeight: 500,
-      },
       false: {
         fontWeight: 400,
+      },
+      true: {
+        fontWeight: 500,
       },
     },
   },
 })
 
 export const toggleBoxPie = style({
-  width: 250,
   height: 21,
   position: 'absolute',
+  width: 250,
 })
 
 export const linePie = style({
@@ -144,35 +144,35 @@ export const linePie = style({
 export const progressiveLinePie = recipe({
   base: {
     borderBottom: `1px solid ${theme.colors.primary.border}`,
-    position: 'absolute',
-    left: 0,
-    top: 0,
     bottom: -1,
+    left: 0,
+    position: 'absolute',
+    top: 0,
     transition: 'width 500ms ease',
   },
   variants: {
     isFocused: {
-      true: {
-        width: '100%',
-      },
       false: {
         width: '0%',
+      },
+      true: {
+        width: '100%',
       },
     },
   },
 })
 
 export const listTooltipPie = style({
-  padding: `0 ${theme.space[1]} ${theme.space[1]} ${theme.space[1]}`,
   margin: 0,
+  padding: `0 ${theme.space[1]} ${theme.space[1]} ${theme.space[1]}`,
   width: '100%',
 })
 
 export const itemTooltipPie = style({
   display: 'flex',
-  marginTop: 6,
-  width: '100%',
-  justifyContent: 'space-between',
-  textAlign: 'left',
   gap: theme.space[1],
+  justifyContent: 'space-between',
+  marginTop: 6,
+  textAlign: 'left',
+  width: '100%',
 })

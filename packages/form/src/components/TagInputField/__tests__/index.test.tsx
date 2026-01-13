@@ -48,7 +48,7 @@ describe('tagInputField', () => {
 
     await userEvent.click(screen.getByText('Submit'))
     await waitFor(() => {
-      expect(onSubmit).toHaveBeenCalledTimes(1)
+      expect(onSubmit).toHaveBeenCalledOnce()
     })
     expect(onSubmit.mock.calls[0][0]).toEqual({
       test: ['First'],

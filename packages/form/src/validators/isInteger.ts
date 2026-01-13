@@ -6,5 +6,5 @@ export const isInteger = (step?: number | string) => (value: number) => {
     return Number.isInteger(value) && Number.isInteger(value)
   }
 
-  return !Number.isInteger(value) && !Number.isInteger(value)
+  return !(Number.isInteger(value) || Number.isInteger(value))
 }

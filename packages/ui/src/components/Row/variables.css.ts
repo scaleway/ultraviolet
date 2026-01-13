@@ -1,39 +1,39 @@
-import { createVar } from '@vanilla-extract/css'
 import type { theme } from '@ultraviolet/themes'
+import { createVar } from '@vanilla-extract/css'
 
 export const templateColumn: Record<
   keyof typeof theme.breakpoints,
   ReturnType<typeof createVar>
 > = {
   large: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: 'none',
-  }),
-  xlarge: createVar({
     syntax: '*',
-    inherits: false,
-    initialValue: 'none',
   }),
   medium: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: 'none',
+    syntax: '*',
   }),
   small: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: 'none',
+    syntax: '*',
+  }),
+  xlarge: createVar({
+    inherits: false,
+    initialValue: 'none',
+    syntax: '*',
   }),
   xsmall: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: 'none',
+    syntax: '*',
   }),
   xxsmall: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: 'none',
+    syntax: '*',
   }),
 }
 
@@ -42,33 +42,33 @@ export const paddings: Record<
   ReturnType<typeof createVar>
 > = {
   large: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: '0',
-  }),
-  xlarge: createVar({
     syntax: '*',
-    inherits: false,
-    initialValue: '0',
   }),
   medium: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: '0',
+    syntax: '*',
   }),
   small: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: '0',
+    syntax: '*',
+  }),
+  xlarge: createVar({
+    inherits: false,
+    initialValue: '0',
+    syntax: '*',
   }),
   xsmall: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: '0',
+    syntax: '*',
   }),
   xxsmall: createVar({
-    syntax: '*',
     inherits: false,
     initialValue: '0',
+    syntax: '*',
   }),
 }

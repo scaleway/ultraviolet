@@ -16,7 +16,7 @@ describe('popup', () => {
   test('should render correctly without text', () =>
     shouldMatchSnapshotWithPortal(<Popup debounceDelay={0}>Hover me</Popup>))
 
-  test(`should display Popup on hover`, async () => {
+  test('should display Popup on hover', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -30,7 +30,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test(`should display Popup on hover with no animation`, async () => {
+  test('should display Popup on hover with no animation', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} disableAnimation id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -44,7 +44,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test(`should display Popup on hover with maxHeight`, async () => {
+  test('should display Popup on hover with maxHeight', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" maxHeight="200px" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -58,7 +58,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test(`should display Popup on hover with function children`, async () => {
+  test('should display Popup on hover with function children', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         {props => (
@@ -76,7 +76,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test(`should display Popup on hover and hide when exit`, async () => {
+  test('should display Popup on hover and hide when exit', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -95,7 +95,7 @@ describe('popup', () => {
     })
   })
 
-  test(`should display Popup on hover and hide when exit and hover back before animation ends`, async () => {
+  test('should display Popup on hover and hide when exit and hover back before animation ends', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -112,7 +112,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test(`should create Popup with random id`, async () => {
+  test('should create Popup with random id', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -126,7 +126,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  test(`should renders Popup with maxWidth`, async () => {
+  test('should renders Popup with maxWidth', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -140,7 +140,7 @@ describe('popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
-  describe(`defined placement`, () => {
+  describe('defined placement', () => {
     ;[
       'top',
       'left',
@@ -172,7 +172,7 @@ describe('popup', () => {
     })
   })
 
-  test(`should verify accessibility`, async () => {
+  test('should verify accessibility', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <p data-testid="children">Hover me</p>
@@ -190,7 +190,7 @@ describe('popup', () => {
     })
   })
 
-  test(`should verify trap focus`, async () => {
+  test('should verify trap focus', async () => {
     renderWithTheme(
       <Popup debounceDelay={0} maxWidth={100} text="test success!">
         <button data-testid="1" type="button">
@@ -218,7 +218,7 @@ describe('popup', () => {
     })
   })
 
-  test(`should handle unmount correctly`, async () => {
+  test('should handle unmount correctly', async () => {
     const onClose = vi.fn()
     const { unmount } = renderWithTheme(
       <Popup onClose={onClose} text="test unmount!">

@@ -87,6 +87,7 @@ export const formatValue = (
 export const createDate = (value: string, showMonthYearPicker: boolean) => {
   if (showMonthYearPicker) {
     // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
+    // biome-ignore lint/performance/useTopLevelRegex: to fix
     const res = value.split(/\D+/).map(val => Number.parseInt(val, 10))
     const year =
       Math.max(...res) < 100 ? Math.max(...res) + 2000 : Math.max(...res) // MM/YY should be seen as MM/20YY instead of MM/19YY

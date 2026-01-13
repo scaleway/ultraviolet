@@ -93,9 +93,9 @@ export const categoryRequest = {
   category: 'Requests cost',
   subCategories: [
     {
-      amount: 200000,
+      amount: 200_000,
       fixedPrice: true,
-      price: 0.00000015,
+      price: 0.000_000_15,
       priceUnit: 'request',
       title: '200000 requests',
     },
@@ -114,7 +114,7 @@ export const categoryStorage = {
     {
       amount: 100,
       amountFree: 75,
-      price: 0.003425,
+      price: 0.003_425,
       priceUnit: 'GB/hours',
       title: '100 GB of storage',
     },

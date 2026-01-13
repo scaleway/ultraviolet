@@ -348,9 +348,9 @@ export const computePositions = ({
         arrowWidth +
         SPACE
 
-      const computedPositionX = !isAligned
-        ? positionX + popupOverflow
-        : positionX
+      const computedPositionX = isAligned
+        ? positionX
+        : positionX + popupOverflow
 
       // To make sure the popup does not overflow (negative X position)
       const finalPositionX = isPopupPortalTargetBody
@@ -494,9 +494,9 @@ export const computePositions = ({
         arrowWidth -
         SPACE
 
-      const computedPositionX = !isAligned
-        ? positionX + popupOverflow
-        : positionX
+      const computedPositionX = isAligned
+        ? positionX
+        : positionX + popupOverflow
 
       // To make sure the popup does not overflow (negative X position)
       const finalPositionX = isPopupPortalTargetBody

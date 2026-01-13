@@ -136,7 +136,7 @@ export const Popover = forwardRef(
         return undefined
       }
 
-      if (!portalTarget && !isInsideModal) {
+      if (!(portalTarget || isInsideModal)) {
         return document.body
       }
 

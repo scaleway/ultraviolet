@@ -75,6 +75,7 @@ describe('lineChart', () => {
       />,
     ))
 
+  // biome-ignore lint/suspicious/noSkippedTests: to fix
   test.skip('renders correctly when chart is hovered', async () => {
     const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,

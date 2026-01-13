@@ -4,8 +4,8 @@ import { style } from '@vanilla-extract/css'
 export const steppedListCard = style({ padding: 0 })
 
 export const steppedListCardWrapper = style({
-  padding: theme.space[3],
   borderRight: `1px solid ${theme.colors.neutral.border}`,
+  padding: theme.space[3],
 })
 
 export const steppedListCardContent = style({
@@ -25,20 +25,20 @@ export const steppedListCardSubHeader = style({
 
 export const steppedListCardStepTitle = style({
   cursor: 'pointer',
-  transition: 'text-decoration-color 250ms ease-out',
-  textDecoration: 'underline',
-  textDecorationThickness: 1,
-  textUnderlineOffset: 2,
-  textDecorationColor: 'transparent',
   selectors: {
+    '&:active': {
+      textDecorationThickness: 2,
+    },
     '&:hover': {
       textDecoration: 'underline',
       textDecorationThickness: 1,
     },
-    '&:active': {
-      textDecorationThickness: 2,
-    },
   },
+  textDecoration: 'underline',
+  textDecorationColor: 'transparent',
+  textDecorationThickness: 1,
+  textUnderlineOffset: 2,
+  transition: 'text-decoration-color 250ms ease-out',
 })
 
 export const steppedListCardStep = style({

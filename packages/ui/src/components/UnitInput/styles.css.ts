@@ -16,14 +16,13 @@ const INPUT_SIZE_HEIGHT = {
 } as const
 
 const unitInputNumberBase = style({
-  flex: 1,
-  border: 'none',
-  outline: 'none',
-  height: '100%',
-  width: '100%',
-  paddingLeft: theme.space[2],
   background: 'transparent',
+  border: 'none',
   color: theme.colors.neutral.text,
+  flex: 1,
+  height: '100%',
+  outline: 'none',
+  paddingLeft: theme.space[2],
   selectors: {
     '&::placeholder': {
       color: theme.colors.neutral.textWeak,
@@ -38,48 +37,36 @@ const unitInputNumberBase = style({
       outline: 'none',
     },
   },
+  width: '100%',
 })
 
 export const unitInputNumber = styleVariants({
-  small: [unitInputNumberBase, { paddingLeft: theme.space[1] }],
-  medium: [unitInputNumberBase],
   large: [unitInputNumberBase, { fontSize: theme.typography.body.fontSize }],
+  medium: [unitInputNumberBase],
+  small: [unitInputNumberBase, { paddingLeft: theme.space[1] }],
 })
 
 const unitInputNumberWrapperBase = style({
-  width: '100%',
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
   selectors: {
-    '&:focus, &:active': {
-      boxShadow: theme.shadows.focusPrimary,
-      borderColor: theme.colors.primary.borderHover,
-    },
     '&:focus-within': {
       borderColor: theme.colors.primary.borderHover,
     },
+    '&:focus, &:active': {
+      borderColor: theme.colors.primary.borderHover,
+      boxShadow: theme.shadows.focusPrimary,
+    },
     '&:hover, &:focus': {
-      textDecoration: 'none',
       borderColor: theme.colors.primary.border,
+      textDecoration: 'none',
     },
   },
+  width: '100%',
 })
 
 export const unitInputState = styleVariants({
-  readOnly: [
-    unitInputNumberWrapperBase,
-    {
-      background: theme.colors.neutral.backgroundWeak,
-      borderColor: theme.colors.neutral.border,
-      cursor: 'default',
-      selectors: {
-        '&:active, &:focus, &:focus-within, &:hover': {
-          borderColor: theme.colors.neutral.borderHover,
-          boxShadow: 'none',
-        },
-      },
-    },
-  ],
+  default: [unitInputNumberWrapperBase],
   disabled: [
     unitInputNumberWrapperBase,
     {
@@ -89,6 +76,34 @@ export const unitInputState = styleVariants({
       selectors: {
         '&:active, &:focus, &:focus-within, &:hover': {
           borderColor: theme.colors.neutral.borderDisabled,
+          boxShadow: 'none',
+        },
+      },
+    },
+  ],
+  error: [
+    unitInputNumberWrapperBase,
+    {
+      border: `1px solid ${theme.colors.danger.border}`,
+      selectors: {
+        '&:active': {
+          boxShadow: theme.shadows.focusDanger,
+        },
+        '&:focus, &:active, &:focus-within, &:hover': {
+          border: `1px solid ${theme.colors.danger.border}`,
+        },
+      },
+    },
+  ],
+  readOnly: [
+    unitInputNumberWrapperBase,
+    {
+      background: theme.colors.neutral.backgroundWeak,
+      borderColor: theme.colors.neutral.border,
+      cursor: 'default',
+      selectors: {
+        '&:active, &:focus, &:focus-within, &:hover': {
+          borderColor: theme.colors.neutral.borderHover,
           boxShadow: 'none',
         },
       },
@@ -108,31 +123,15 @@ export const unitInputState = styleVariants({
       },
     },
   ],
-  error: [
-    unitInputNumberWrapperBase,
-    {
-      border: `1px solid ${theme.colors.danger.border}`,
-      selectors: {
-        '&:active': {
-          boxShadow: theme.shadows.focusDanger,
-        },
-        '&:focus, &:active, &:focus-within, &:hover': {
-          border: `1px solid ${theme.colors.danger.border}`,
-        },
-      },
-    },
-  ],
-  default: [unitInputNumberWrapperBase],
 })
 
 export const unitInputNumberWrapper = style({
-  display: 'flex',
   alignItems: 'center',
-  flexDirection: 'row',
-  paddingRight: theme.space[2],
   borderRight: `1px solid ${theme.colors.neutral.border}`,
-  width: '100%',
+  display: 'flex',
+  flexDirection: 'row',
   height: '100%',
+  paddingRight: theme.space[2],
   selectors: {
     [`${unitInputNumberWrapperBase}:focus > &`]: {
       borderRightColor: theme.colors.primary.border,
@@ -159,6 +158,7 @@ export const unitInputNumberWrapper = style({
       borderRightColor: theme.colors.danger.border,
     },
   },
+  width: '100%',
 })
 
 function getSizeUnitInput(size: 'small' | 'medium' | 'large') {
@@ -168,9 +168,9 @@ function getSizeUnitInput(size: 'small' | 'medium' | 'large') {
   }
 }
 export const unitInputSize = styleVariants({
-  small: getSizeUnitInput('small'),
-  medium: getSizeUnitInput('medium'),
   large: getSizeUnitInput('large'),
+  medium: getSizeUnitInput('medium'),
+  small: getSizeUnitInput('small'),
 })
 
 export const unitInputUnitWidth = style({
@@ -180,8 +180,8 @@ export const unitInputUnitWidth = style({
 export const unitInputUnit = style({})
 
 globalStyle(`${unitInputUnit} ${selectBarBase}`, {
-  border: 'none',
   background: 'transparent',
+  border: 'none',
 })
 
 globalStyle(

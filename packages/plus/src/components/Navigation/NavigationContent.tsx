@@ -91,7 +91,7 @@ export const NavigationContent = ({
         }
 
         if (navigationRef.current) {
-          if (!shouldCollapseOnMouseUp && !shouldExpandOnMouseUp) {
+          if (!(shouldCollapseOnMouseUp || shouldExpandOnMouseUp)) {
             onWidthResize?.(navigationRef.current.offsetWidth)
             setWidth?.(navigationRef.current.offsetWidth)
           }

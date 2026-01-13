@@ -25,11 +25,11 @@ export default {
 
       return (
         <Form
+          errors={mockErrors}
+          methods={methods}
           onSubmit={() => {
             methods.reset({})
           }}
-          errors={mockErrors}
-          methods={methods}
         >
           <Stack gap={2}>
             <div
@@ -40,15 +40,15 @@ export default {
               <ChildStory />
             </div>
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form input values:
               </Text>
-              <Snippet prefix="lines" initiallyExpanded>
+              <Snippet initiallyExpanded prefix="lines">
                 {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
-              <Text variant="bodyStrong" as="p">
+              <Text as="p" variant="bodyStrong">
                 Form values:
               </Text>
               <Snippet prefix="lines">
