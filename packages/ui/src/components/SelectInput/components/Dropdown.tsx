@@ -265,7 +265,7 @@ const CreateDropdown = ({
         id="add-option"
         onClick={handleClickCustomValue}
         onKeyDown={event => {
-          if (['Enter', 'Tab'].includes(event.key)) {
+          if (['Enter', ' '].includes(event.key)) {
             handleClickCustomValue()
           }
         }}
@@ -377,7 +377,7 @@ const CreateDropdown = ({
           id="add-option"
           onClick={handleClickCustomValue}
           onKeyDown={event => {
-            if (['Enter', 'Tab'].includes(event.key)) {
+            if (['Enter', ' '].includes(event.key)) {
               handleClickCustomValue()
             }
           }}
@@ -553,7 +553,7 @@ const CreateDropdown = ({
               id="add-option"
               onClick={handleClickCustomValue}
               onKeyDown={event => {
-                if (['Enter', 'Tab'].includes(event.key)) {
+                if (['Enter', ' '].includes(event.key)) {
                   handleClickCustomValue()
                 }
               }}
