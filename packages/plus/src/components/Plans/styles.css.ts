@@ -108,6 +108,11 @@ export const plansCell = recipe({
       true: {
         paddingLeft: theme.space[3],
         textAlign: 'start',
+        selectors: {
+          'thead &': {
+            paddingLeft: theme.space[1],
+          },
+        },
       },
     },
     selectable: {
