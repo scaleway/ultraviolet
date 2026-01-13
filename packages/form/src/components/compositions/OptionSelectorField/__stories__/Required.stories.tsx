@@ -11,8 +11,8 @@ export const Required: StoryFn<
   <Stack gap={1}>
     <OptionSelectorField
       {...args}
-      firstSelector={{ options: firstSelectorOptions }}
-      secondSelector={{ options: secondSelectorOptions }}
+      firstSelector={{ label: 'OS', options: firstSelectorOptions }}
+      secondSelector={{ label: 'Version', options: secondSelectorOptions }}
     />
     <Submit>Submit</Submit>
   </Stack>

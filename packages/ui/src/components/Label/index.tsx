@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Stack } from '../Stack'
@@ -16,6 +17,7 @@ const LabelRequiredOrNot = ({
   sentiment,
   disabled,
   style,
+  className,
 }: LabelProps) => {
   const textPointerValue = useMemo(() => {
     if (disabled) {
@@ -31,7 +33,13 @@ const LabelRequiredOrNot = ({
 
   if (required) {
     return (
-      <Stack alignItems="flex-start" direction="row" gap="0.5" style={style}>
+      <Stack
+        alignItems="flex-start"
+        className={className}
+        direction="row"
+        gap="0.5"
+        style={style}
+      >
         <Text
           as={as === 'label' ? 'label' : 'legend'}
           className={textPointer[textPointerValue]}
@@ -59,7 +67,7 @@ const LabelRequiredOrNot = ({
   return (
     <Text
       as={as === 'label' ? 'label' : 'legend'}
-      className={textPointer[textPointerValue]}
+      className={cn(textPointer[textPointerValue], className)}
       disabled={disabled}
       htmlFor={htmlFor}
       id={id}
@@ -130,6 +138,7 @@ export const Label = ({
   ) : (
     <LabelRequiredOrNot
       as={as}
+      className={className}
       disabled={disabled}
       htmlFor={htmlFor}
       id={id}
