@@ -1,21 +1,16 @@
-import { createVar } from '@vanilla-extract/css'
+import { createThemeContract } from '@vanilla-extract/css'
 
-const arrowTop = createVar()
-const arrowLeft = createVar()
-const arrowTransform = createVar()
-const maxHeightPopup = createVar()
-const popupPosition = createVar()
-const animationDurationPopup = createVar()
-const popupInitialPosition = createVar()
-const maxWidthPopup = createVar()
+export const popupTheme = createThemeContract({
+  maxHeight: null,
+  maxWidth: null,
+  initialPosition: null,
+  position: null,
+  animationDuration: null,
 
-export {
-  arrowTop,
-  arrowLeft,
-  arrowTransform,
-  maxHeightPopup,
-  popupInitialPosition,
-  popupPosition,
-  animationDurationPopup,
-  maxWidthPopup,
-}
+})
+
+export const arrowTheme = createThemeContract({
+    top: null,
+    left: null,
+    transform: null
+});

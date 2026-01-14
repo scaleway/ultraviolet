@@ -1,4 +1,12 @@
-import { createVar } from '@vanilla-extract/css'
+import { createThemeContract } from '@vanilla-extract/css'
+import type { CSSProperties } from 'react'
 
-export const placementText = createVar()
-export const whiteSpaceText = createVar()
+
+
+export const textVars = createThemeContract<{
+  textAlign:NonNullable< CSSProperties['textAlign']> | null,
+  whiteSpace: NonNullable<CSSProperties['whiteSpace']> | null,
+}>({
+    textAlign: null,
+    whiteSpace: null,
+});

@@ -5,7 +5,7 @@ import { recipe } from '@vanilla-extract/recipes'
 import type { ExtendedColor } from '../../theme'
 import { typography } from '../../theme'
 import { PROMINENCES } from './constants'
-import { placementText, whiteSpaceText } from './variables.css'
+import { textVars } from './variables.css'
 
 type TypographyKey = keyof typeof typography
 type ProminenceProps = keyof typeof PROMINENCES
@@ -54,18 +54,13 @@ function generateStyles(
 
   const isSentimentMonochrome = sentiment === 'black' || sentiment === 'white'
 
-  const themeColor =
-    sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment as keyof typeof theme.colors]
-      : undefined
-
   const text = `text${definedProminence}${
     disabled ? 'Disabled' : ''
-  }` as keyof typeof themeColor
+  }` as const
 
   const textColor =
     sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment as keyof typeof theme.colors][text]
+      ? theme.colors[sentiment][text]
       : undefined
 
   if (sentiment) {
@@ -112,8 +107,8 @@ function getArrayOfVariantNoSentiment() {
 
 export const text = recipe({
   base: {
-    textAlign: placementText,
-    whiteSpace: whiteSpaceText,
+    textAlign: textVars.textAlign,
+    whiteSpace: textVars.whiteSpace,
   },
   compoundVariants: [
     ...getArrayOfVariants(),

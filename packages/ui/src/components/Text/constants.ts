@@ -5,7 +5,7 @@ export const PROMINENCES = {
   strong: 'strong',
   stronger: 'stronger',
   weak: 'weak',
-}
+} as const
 
 export type TextVariant = keyof typeof typography
 
