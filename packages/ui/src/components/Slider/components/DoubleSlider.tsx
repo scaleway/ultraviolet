@@ -350,7 +350,7 @@ export const DoubleSlider = ({
                 ref={refSlider}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${((selectedIndexes[0] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [leftVar]: `calc(${((selectedIndexes[0] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px)`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background
@@ -397,7 +397,7 @@ export const DoubleSlider = ({
                 onFocus={onFocus}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${(((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [leftVar]: `calc(${(((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px)`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background

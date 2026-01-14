@@ -175,7 +175,6 @@ export const sliderDouble = recipe({
     padding: 0,
     pointerEvents: 'none',
     position: 'absolute',
-
     selectors: {
       '&::-moz-range-thumb': {
         ...sliderThumbDefaultStyle,
@@ -186,6 +185,7 @@ export const sliderDouble = recipe({
       '&::-webkit-slider-thumb': {
         ...sliderThumbDefaultStyle,
         left: leftVar,
+        top: `calc(-1 * ${theme.space['1']})`,
       },
     },
     width: '100%',
@@ -209,7 +209,11 @@ export const sliderDouble = recipe({
 
     hasTooltip: {
       true: {
-        transform: 'translate(0, -10px)',
+        selectors: {
+          '&::-moz-range-thumb': {
+            transform: 'translate(0, -10px)',
+          },
+        },
       },
     },
   },
