@@ -26,8 +26,8 @@ type MockedNodeType = {
 
 type MockedResponsiveTreeMapHtmlType = {
   data: DataType
-  nodeComponent?: (props: { node: unknown }) => ReactNode
-  tooltip?: (props: { node: unknown }) => ReactNode
+  tooltip?: (props: { node: MockedNodeType }) => ReactNode
+  label?: (node: { data: DataType; id: string }) => string | ReactNode
 }
 
 // ResponsiveTreeMapHtml is mocked because Nivo's HTML rendering doesn't produce an output
@@ -38,8 +38,8 @@ type MockedResponsiveTreeMapHtmlType = {
 vi.mock('@nivo/treemap', () => ({
   ResponsiveTreeMapHtml: ({
     data,
-    nodeComponent,
     tooltip,
+    label,
   }: MockedResponsiveTreeMapHtmlType) => {
     const [hoveredNode, setHoveredNode] = useState<MockedNodeType | null>(null)
 
@@ -64,9 +64,26 @@ vi.mock('@nivo/treemap', () => ({
               y: 0,
             }
 
+            const labelContent = label
+              ? label({ data: child, id: child.id })
+              : child.content
+
             return (
-              <div data-testid={`node-${child.id}`} key={child.id}>
-                {nodeComponent?.({ node: mockNode })}
+              <div
+                data-testid={`node.${child.id}`}
+                key={child.id}
+                onMouseEnter={mockNode.onMouseEnter}
+                onMouseLeave={mockNode.onMouseLeave}
+                style={{
+                  background: mockNode.color,
+                  height: mockNode.height,
+                  left: mockNode.x,
+                  position: 'absolute',
+                  top: mockNode.y,
+                  width: mockNode.width,
+                }}
+              >
+                <span>{labelContent}</span>
               </div>
             )
           })}
@@ -124,7 +141,7 @@ describe('treeMapChart', () => {
 
     // Find the first node element (treemap node)
     // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
-    const node = container.querySelector('[data-testid^="node-"] > div')
+    const node = container.querySelector('[data-testid^="node."]')
     expect(node).toBeInTheDocument()
 
     // Hover over the node to trigger tooltip

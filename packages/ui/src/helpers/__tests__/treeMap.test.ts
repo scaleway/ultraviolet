@@ -142,8 +142,7 @@ describe('getDataColors', () => {
     const data: DefaultTreeMapDatum = { id: 'root' }
     const colors = getDataColors(data, mockTheme)
 
-    expect(colors).toHaveProperty('root')
-    expect(colors['root']).toMatch(/^#3B82F6[0-9A-F]{2}$/)
+    expect(colors[0]).toMatch(/^#3B82F6[0-9A-F]{2}$/)
   })
 
   it('should generate different colors for multiple nodes', () => {
@@ -154,8 +153,8 @@ describe('getDataColors', () => {
     const colors = getDataColors(data, mockTheme)
 
     expect(Object.keys(colors)).toHaveLength(3)
-    expect(colors['root']).not.toBe(colors['child1'])
-    expect(colors['child1']).not.toBe(colors['child2'])
+    expect(colors[0]).not.toBe(colors[1])
+    expect(colors[1]).not.toBe(colors[2])
   })
 
   it('should use base color from theme', () => {
@@ -170,7 +169,7 @@ describe('getDataColors', () => {
     const data: DefaultTreeMapDatum = { id: 'root' }
     const colors = getDataColors(data, customTheme)
 
-    expect(colors['root']).toContain('#FF0000')
+    expect(colors[0]).toContain('#FF0000')
   })
 
   it('should apply graduated opacity based on node order', () => {
@@ -181,9 +180,9 @@ describe('getDataColors', () => {
     const colors = getDataColors(data, mockTheme)
 
     // First node (root) should have highest opacity (100 - 0 = 100 -> 0)
-    expect(colors['root']).toBe('#3B82F6FF')
+    expect(colors[0]).toBe('#3B82F6FF')
     // Second node (child1) should have next opacity (100 - 1 = 99 -> 99)
-    expect(colors['child1']).toBe('#3B82F6FC')
+    expect(colors[1]).toBe('#3B82F6FC')
   })
 
   it('should handle more than 100 nodes using modulo', () => {
@@ -202,10 +201,10 @@ describe('getDataColors', () => {
     expect(Object.keys(colors)).toHaveLength(102)
     // Should cycle back after 100 elements
     // Node at index 100 should have same opacity as node at index 0
-    expect(colors['root'].slice(-2)).toBe(colors['child100'].slice(-2))
+    expect(colors[0].slice(-2)).toBe(colors[100].slice(-2))
   })
 
-  it('should generate colors for complex nested structure', () => {
+  it('should generate the needed colors for a complex nested structure', () => {
     const data: DefaultTreeMapDatum = {
       children: [
         {
@@ -222,11 +221,5 @@ describe('getDataColors', () => {
     const colors = getDataColors(data, mockTheme)
 
     expect(Object.keys(colors)).toHaveLength(6)
-    expect(colors).toHaveProperty('root')
-    expect(colors).toHaveProperty('branch1')
-    expect(colors).toHaveProperty('leaf1')
-    expect(colors).toHaveProperty('leaf2')
-    expect(colors).toHaveProperty('branch2')
-    expect(colors).toHaveProperty('leaf3')
   })
 })
