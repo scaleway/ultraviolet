@@ -136,6 +136,7 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm run build
           pnpm run lint
+          pnpm biome:lint
 
   format:
     runs-on: ubuntu-24.04

@@ -39,11 +39,11 @@ const options = [
 const makeVersions = (os: string) => [
   {
     content: `${os} 19.01`,
-    value: `19.01`,
+    value: '19.01',
   },
   {
     content: `${os} 20.04`,
-    value: `20.04`,
+    value: '20.04',
   },
 ]
 

@@ -29,6 +29,7 @@
     "format:check": "biome check --linter-enabled=false --verbose .",
     "format:ci": "biome ci --linter-enabled=false .",
     "lint": "eslint --report-unused-disable-directives --cache .",
+    "biome:lint": "pnpm -w biome lint . --diagnostic-level=error",
     "lint:fix": "pnpm run lint --fix",
     "oxc": "oxlint -c .oxlintrc.json --type-check",
     "oxc:fix": "pnpm run oxc --fix",

@@ -5,6 +5,7 @@ import * as Flags from '..'
 export const List: StoryFn = props => (
   <Stack gap={1}>
     {Object.keys(Flags).map(iconName => {
+      // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
       const Flag = Flags[iconName as keyof typeof Flags]
 
       return (

@@ -69,7 +69,7 @@ Usage.args = {
 Usage.parameters = {
   docs: {
     description: {
-      story: `The component can be used to display shortcuts`,
+      story: 'The component can be used to display shortcuts',
     },
   },
 }

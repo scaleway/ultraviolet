@@ -13,7 +13,8 @@ Disabled.args = {
 Disabled.parameters = {
   docs: {
     description: {
-      story: `The \`disabled\` prop can be used to disable the input. Disabled inputs cannot be focused.`,
+      story:
+        'The `disabled` prop can be used to disable the input. Disabled inputs cannot be focused.',
     },
   },
 }

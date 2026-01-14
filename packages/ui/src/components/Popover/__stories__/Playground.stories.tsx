@@ -28,7 +28,8 @@ export const Playground: StoryFn<typeof Popover> = args => {
 Playground.parameters = {
   docs: {
     description: {
-      story: `You can controle the state of the popover by passing \`visible\` prop to it and handle the \`onClose\` callback. This is useful when you want to control the state of the popover yourself.`,
+      story:
+        'You can controle the state of the popover by passing `visible` prop to it and handle the `onClose` callback. This is useful when you want to control the state of the popover yourself.',
     },
   },
 }

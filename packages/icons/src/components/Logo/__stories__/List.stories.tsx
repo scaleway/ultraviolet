@@ -5,6 +5,7 @@ import * as ProductIcon from '..'
 export const List: StoryFn = props => (
   <Stack gap={1}>
     {Object.keys(ProductIcon).map(iconName => {
+      // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
       const FoundProductIcon = ProductIcon[iconName as keyof typeof ProductIcon]
 
       return (

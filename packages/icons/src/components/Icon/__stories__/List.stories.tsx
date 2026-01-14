@@ -7,6 +7,7 @@ import type { AddressIcon } from '../__generated__'
 
 export const List = (args: ComponentProps<typeof AddressIcon>) =>
   Object.keys(Icon).map(name => {
+    // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
     const FoundIcon = Icon[name as keyof typeof Icon]
 
     const deprecated = DEPRECATED_ICONS.find(icon => icon.name === name)

@@ -23,7 +23,7 @@ SpecialKeys.args = {
 SpecialKeys.parameters = {
   docs: {
     description: {
-      story: `Some text will generate special keys.`,
+      story: 'Some text will generate special keys.',
     },
   },
 }

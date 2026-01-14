@@ -14,7 +14,8 @@ ReadOnly.args = {
 ReadOnly.parameters = {
   docs: {
     description: {
-      story: `The \`readOnly\` prop can be used to disable the input. Read only inputs cannot be focused but can be highlighted.`,
+      story:
+        'The `readOnly` prop can be used to disable the input. Read only inputs cannot be focused but can be highlighted.',
     },
   },
 }
