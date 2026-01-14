@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 3.1.7
+
+### Patch Changes
+
+- [#5962](https://github.com/scaleway/ultraviolet/pull/5962) [`0f98f5f`](https://github.com/scaleway/ultraviolet/commit/0f98f5fcfe176849e2d0cf00b99c96fa9852e744) Thanks [@lisalupi](https://github.com/lisalupi)! - `EstimteCost`: new prop `compact`
+
+- [#5974](https://github.com/scaleway/ultraviolet/pull/5974) [`813703d`](https://github.com/scaleway/ultraviolet/commit/813703de77f5722a0b2cd2fcaa8f70703c31917c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Plans`: fix padding on header when `hideLabel=true`
+
+- [#5967](https://github.com/scaleway/ultraviolet/pull/5967) [`c82c60c`](https://github.com/scaleway/ultraviolet/commit/c82c60c7b443dd78dc9baf88190ed05de8fe40bb) Thanks [@lisalupi](https://github.com/lisalupi)! - Use `flex-start` and `flex-end` instead of `start` and `end` (css)
+
+- Updated dependencies [[`bc5944a`](https://github.com/scaleway/ultraviolet/commit/bc5944a8a06b9dcec1e2465a99705580cc1cfc5f), [`8941121`](https://github.com/scaleway/ultraviolet/commit/8941121b00778cd24a26ef37e914dae6d10ea173), [`b91a316`](https://github.com/scaleway/ultraviolet/commit/b91a316c7b24041fdf2878a0ea1ac2825f260bbc), [`9ca5894`](https://github.com/scaleway/ultraviolet/commit/9ca5894a892da3331b602541200d2958852ac2d4), [`c82c60c`](https://github.com/scaleway/ultraviolet/commit/c82c60c7b443dd78dc9baf88190ed05de8fe40bb), [`c82c60c`](https://github.com/scaleway/ultraviolet/commit/c82c60c7b443dd78dc9baf88190ed05de8fe40bb)]:
+  - @ultraviolet/ui@3.5.0
+
 ## 3.1.6
 
 ### Patch Changes

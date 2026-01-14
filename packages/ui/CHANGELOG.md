@@ -1,5 +1,24 @@
 # Change Log
 
+## 3.5.0
+
+### Minor Changes
+
+- [#5978](https://github.com/scaleway/ultraviolet/pull/5978) [`bc5944a`](https://github.com/scaleway/ultraviolet/commit/bc5944a8a06b9dcec1e2465a99705580cc1cfc5f) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - chore(TreeMapChart): change styling method so it does break cards size computations
+
+### Patch Changes
+
+- [#5968](https://github.com/scaleway/ultraviolet/pull/5968) [`8941121`](https://github.com/scaleway/ultraviolet/commit/8941121b00778cd24a26ef37e914dae6d10ea173) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextArea`: adapt height & resize when rows and maxRows props are updated
+
+- [#5969](https://github.com/scaleway/ultraviolet/pull/5969) [`b91a316`](https://github.com/scaleway/ultraviolet/commit/b91a316c7b24041fdf2878a0ea1ac2825f260bbc) Thanks [@lisalupi](https://github.com/lisalupi)! - `Label`: properly use classname prop
+  `OptionSelector`: add \* on label when required and fix alignment issue when error
+
+- [#5979](https://github.com/scaleway/ultraviolet/pull/5979) [`9ca5894`](https://github.com/scaleway/ultraviolet/commit/9ca5894a892da3331b602541200d2958852ac2d4) Thanks [@lisalupi](https://github.com/lisalupi)! - `Slider`: fix invalid `calc` and double-slider style
+
+- [#5967](https://github.com/scaleway/ultraviolet/pull/5967) [`c82c60c`](https://github.com/scaleway/ultraviolet/commit/c82c60c7b443dd78dc9baf88190ed05de8fe40bb) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`: replace `p` with `div` to avoid hydration error
+
+- [#5967](https://github.com/scaleway/ultraviolet/pull/5967) [`c82c60c`](https://github.com/scaleway/ultraviolet/commit/c82c60c7b443dd78dc9baf88190ed05de8fe40bb) Thanks [@lisalupi](https://github.com/lisalupi)! - Use `flex-start` and `flex-end` instead of `start` and `end` (css)
+
 ## 3.4.0
 
 ### Minor Changes
