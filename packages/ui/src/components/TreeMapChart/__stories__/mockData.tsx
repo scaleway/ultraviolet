@@ -77,7 +77,7 @@ export const treeMapChartColorsData = {
     {
       content: 'Compute',
       id: 'compute',
-      value: 40,
+      value: 400,
     },
     {
       content: 'Network',
@@ -102,7 +102,7 @@ export const treeMapChartColorsData = {
     {
       content: 'Domain & Webhosting',
       id: 'domain-and-webhosting',
-      value: 9.32,
+      value: 0.32,
     },
     {
       content: 'Containers',

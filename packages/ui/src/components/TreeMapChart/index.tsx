@@ -1,17 +1,15 @@
 'use client'
 
-import type { NodeProps, TooltipProps, TreeMapSvgProps } from '@nivo/treemap'
+import type { TooltipProps, TreeMapSvgProps } from '@nivo/treemap'
 import { ResponsiveTreeMapHtml } from '@nivo/treemap'
 import { useTheme } from '@ultraviolet/themes'
+import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useCallback, useMemo } from 'react'
 import { getDataColors } from '../../helpers/treeMap'
-import { Text } from '../Text'
-import { treeMapContentWrapper } from './styles.css'
+import { treeMapContainer } from './styles.css'
 import { Tooltip } from './Tooltip'
 import type { DataType } from './types'
-
-type NodeComponentProps = NodeProps<DataType>
 
 type TreeMapChartProps = {
   height?: string | number
@@ -26,7 +24,7 @@ type TreeMapChartProps = {
 
 /**
  * TreeMapChart component is used to display data in a TreeMap chart format. It uses the Nivo library under the hood.
- * See https://nivo.rocks/treemap/ for more information.
+ * See https://nivo.rocks/treemap/html/ for more information.
  */
 export const TreeMapChart = ({
   height = '537px', // maintains aspect ratio based on standard 1074px width
@@ -38,9 +36,7 @@ export const TreeMapChart = ({
 }: TreeMapChartProps) => {
   const theme = useTheme()
 
-  const DEFAULT_COLOR = theme.colors.primary.text
-
-  // Generate color mapping for each data node
+  // Generate colors to be used by the TreeMap
   const colors = useMemo(() => getDataColors(data, theme), [data, theme])
 
   // Custom tooltip renderer - uses provided function or defaults to showing content and value
@@ -55,50 +51,43 @@ export const TreeMapChart = ({
     [tooltipFunction],
   )
 
-  // Custom node renderer
-  const nodeComponent = useCallback(
-    ({ node }: NodeComponentProps) => {
-      const backgroundColor = colors[node.data.id] || DEFAULT_COLOR
-      const spacing = 4 // spacing in pixels between boxes
-
-      return (
-        <div
-          className={treeMapContentWrapper}
-          onMouseEnter={node.onMouseEnter}
-          onMouseLeave={node.onMouseLeave}
-          onMouseMove={node.onMouseMove}
-          style={{
-            backgroundColor,
-            height: node.height - spacing,
-            left: node.x + spacing / 2,
-            top: node.y + spacing / 2,
-            width: node.width - spacing,
-          }}
-        >
-          <Text as="div" oneLine variant="captionStrong">
-            {node.data.content}
-          </Text>
-        </div>
-      )
-    },
-    [colors, DEFAULT_COLOR],
+  // Custom Theme configuration for label styling
+  const nivoTheme = useMemo(
+    () => ({
+      labels: {
+        text: theme.typography.captionStrong,
+      },
+    }),
+    [theme.typography.captionStrong],
   )
 
   return (
-    <div className={className} data-testid={dataTestId} style={{ height }}>
+    <div
+      className={cn(className, treeMapContainer)}
+      data-testid={dataTestId}
+      style={{ height }}
+    >
       <ResponsiveTreeMapHtml
         animate={false}
+        borderColor={theme.colors.neutral.background}
+        borderWidth={2}
+        colors={colors}
         data={data}
         enableParentLabel={false}
-        identity="id"
-        labelSkipSize={0}
-        leavesOnly // only show leaf nodes, not parent containers
+        identity="id" // The property name used to uniquely identify each node
+        label={node =>
+          typeof node.data.content === 'string' ? node.data.content : node.id
+        }
+        labelSkipSize={20} // Minimum node size (in pixels) before labels are hidden
+        labelTextColor={theme.colors.neutral.background}
+        leavesOnly // Only show leaf nodes, not parent containers
         motionConfig="none"
-        nodeComponent={nodeComponent}
-        orientLabel={false}
-        tile="squarify" // algorithm that creates more square-like rectangles
+        nodeOpacity={1} // Opacity of nodes (0-1); 1 is fully opaque
+        orientLabel={false} // Disable label rotation so the ellipsis works well on long texts
+        theme={nivoTheme}
+        tile="squarify" // Algorithm that creates more square-like rectangles
         tooltip={tooltip}
-        value="value"
+        value="value" // The property name that determines the size of each node
         {...chartProps}
       />
     </div>

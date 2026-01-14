@@ -2,7 +2,6 @@ import type { DefaultTreeMapDatum } from '@nivo/treemap'
 import type { consoleLightTheme } from '@ultraviolet/themes'
 
 type Theme = typeof consoleLightTheme
-type ReturnType = Record<string, string>
 
 /**
  * Recursively collects all IDs from a tree map data structure.
@@ -103,11 +102,11 @@ export const percentToHex = (percentage: number): string => {
 }
 
 /**
- * Generates a color mapping for tree map data with graduated opacity values.
+ * Generates the needed colors for the tree map with graduated opacity values.
  *
  * @param {DefaultTreeMapDatum} data - The tree map data structure to generate colors for
  * @param {Theme} theme - The theme object containing color configuration
- * @returns {ReturnType} An object mapping node IDs to color strings in hex format with alpha channel
+ * @returns {string[]} An array of color strings in hex format with alpha channel
  *
  * @description
  * This function creates a color scheme for a tree map visualization by:
@@ -123,22 +122,18 @@ export const percentToHex = (percentage: number): string => {
  * const data = { id: 'root', children: [{ id: 'child1' }, { id: 'child2' }] }
  * const theme = { colors: { primary: { text: '#3B82F6' } } }
  * getDataColors(data, theme)
- * // returns { 'root': '#3B82F6FF', 'child1': '#3B82F600', 'child2': '#3B82F610' }
+ * // returns { '#3B82F6FF', '#3B82F600', '#3B82F610' }
  */
 export const getDataColors = (
   data: DefaultTreeMapDatum,
   theme: Theme,
-): ReturnType => {
+): string[] => {
   const baseColor = theme.colors.primary.text
 
-  const colors: ReturnType = {}
-
-  getAllIds(data).forEach((element, key) => {
-    // if we have more than 100 elements, we use the mod function to be able to return to the start
-    // as we only have 100 transparency values for a given color
-    colors[element] =
-      `${baseColor}${percentToHex(getOpacity((100 - key) % 100))}`
-  })
-
-  return colors
+  return getAllIds(data).map(
+    (_, index) =>
+      // if we have more than 100 elements, we use the mod function to be able to return to the start
+      // as we only have 100 transparency values for a given color
+      `${baseColor}${percentToHex(getOpacity((100 - index) % 100))}`,
+  )
 }
