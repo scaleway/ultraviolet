@@ -1,4 +1,4 @@
-export { default as capitalize } from './capitalize'
+export { capitalize } from './capitalize'
 export { cn } from './generateClassname'
 export { getUUID } from './ids'
 export { isJSONString } from './isJSON'

@@ -1,5 +1,7 @@
-import { createVar } from '@vanilla-extract/css'
+import { createThemeContract } from '@vanilla-extract/css'
 
-export const finalSizeAvatar = createVar()
-export const finalColorAvatar = createVar()
-export const halvedColorAvatar = createVar()
+export const avatarTheme = createThemeContract({
+  size: null,
+  color: null,
+  halvedColor: null,
+})
