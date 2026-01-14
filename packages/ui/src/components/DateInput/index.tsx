@@ -207,34 +207,40 @@ export const DateInput = <IsRange extends undefined | boolean>({
   )
 
   useEffect(() => {
-    if (value && !selectsRange) {
-      setValue(new Date(value))
+    if (!selectsRange) {
+      setValue(value ?? null)
       setInputValue(
         formatValue(
-          new Date(value),
+          value ? new Date(value) : null,
           null,
           showMonthYearPicker,
           selectsRange,
           format,
-        ),
+        ) ?? '', // Text Input which will use this value, won't update value if value is undefined, so we need force empty string is there is no date
       )
     }
     if (selectsRange) {
       setRange({
-        end: endDate ?? computedRange.end,
-        start: startDate ?? computedRange.start,
+        end: endDate ?? null,
+        start: startDate ?? null,
       })
     }
-  }, [
-    endDate,
-    startDate,
-    value,
-    computedRange.start,
-    computedRange.end,
-    selectsRange,
-    format,
-    showMonthYearPicker,
-  ])
+  }, [endDate, startDate, value, selectsRange, format, showMonthYearPicker])
+
+  // Update values range when value change
+  // It's probably not perfect, but single value  (not range) are handled above
+  useEffect(() => {
+    if (selectsRange) {
+      const newFormattedValue = formatValue(
+        null,
+        { end: computedRange.end, start: computedRange.start },
+        true,
+        true,
+        format,
+      )
+      setInputValue(newFormattedValue)
+    }
+  }, [selectsRange, computedRange.start, computedRange.end])
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value
@@ -383,7 +389,6 @@ export const DateInput = <IsRange extends undefined | boolean>({
                 {label}
               </Text>
             )}
-
             <Card
               className={calendarContentWrapper({ disabled })}
               disabled={disabled}
