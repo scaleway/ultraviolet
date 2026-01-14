@@ -48,10 +48,10 @@ export const Carousel: StoryFn = props => {
             </Text>
             <Button
               onClick={() => {
-                if (!isLastStep) {
-                  setStep(step + 1)
-                } else {
+                if (isLastStep) {
                   close()
+                } else {
+                  setStep(step + 1)
                 }
               }}
             >

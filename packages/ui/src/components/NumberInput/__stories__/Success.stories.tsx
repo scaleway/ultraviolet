@@ -13,7 +13,8 @@ Success.args = {
 Success.parameters = {
   docs: {
     description: {
-      story: `The \`success\` prop can be used to display a success message below the input. It can be used to provide additional information about the expected input.`,
+      story:
+        'The `success` prop can be used to display a success message below the input. It can be used to provide additional information about the expected input.',
     },
   },
 }

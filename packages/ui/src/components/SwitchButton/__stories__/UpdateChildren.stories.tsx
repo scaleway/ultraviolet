@@ -12,7 +12,9 @@ export const UpdateChildren: StoryFn<
   return (
     <>
       <button
-        onClick={() => setFirstCount(current => (current === 1 ? 10000000 : 1))}
+        onClick={() =>
+          setFirstCount(current => (current === 1 ? 10_000_000 : 1))
+        }
         type="button"
       >
         Change children size

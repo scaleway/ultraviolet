@@ -22,7 +22,8 @@ MinMax.args = {
 MinMax.parameters = {
   docs: {
     description: {
-      story: `The \`min\` and \`max\` props can be used to define the minimum and maximum values that can be entered in the input. When the input is controlled (if a \`value\` prop is passed) and the value is out of range the min. or max. value will be set.`,
+      story:
+        'The `min` and `max` props can be used to define the minimum and maximum values that can be entered in the input. When the input is controlled (if a `value` prop is passed) and the value is out of range the min. or max. value will be set.',
     },
   },
 }

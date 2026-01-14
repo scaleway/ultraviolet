@@ -13,7 +13,8 @@ Helper.args = {
 Helper.parameters = {
   docs: {
     description: {
-      story: `The \`helper\` prop can be used to display a helper message below the input. It can be used to provide additional information about the expected input.`,
+      story:
+        'The `helper` prop can be used to display a helper message below the input. It can be used to provide additional information about the expected input.',
     },
   },
 }

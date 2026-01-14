@@ -26,7 +26,7 @@ const mockItems = (
       {
         amount: requestsAmount ?? 0,
         fixedPrice: true,
-        price: 0.00000015,
+        price: 0.000_000_15,
         priceUnit: 'request',
         title: `${requestsAmount} requests`,
       },
@@ -45,7 +45,7 @@ const mockItems = (
 
 export const Example: StoryFn<ComponentProps<typeof OrderSummary>> = () => {
   const [checked, setChecked] = useState(false)
-  const [requestsAmount, setRequestsAmount] = useState<number | null>(200000)
+  const [requestsAmount, setRequestsAmount] = useState<number | null>(200_000)
 
   return (
     <OrderSummary

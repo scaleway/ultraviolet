@@ -7,7 +7,7 @@ const defaultFile = [
     file: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Photo_Chat_Noir_et_blanc.jpg',
     fileName: 'cat.png',
     lastModified: 1,
-    size: 30460,
+    size: 30_460,
     type: 'image/png',
   },
 ]
