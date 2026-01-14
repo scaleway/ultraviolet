@@ -1469,7 +1469,7 @@ describe('selectInput', () => {
     await userEvent.tab()
     await userEvent.keyboard('[Enter]')
 
-    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).toHaveBeenCalledOnce()
   })
 
   test('handles correctly when adding options - single select and ungrouped options', async () => {
@@ -1507,7 +1507,7 @@ describe('selectInput', () => {
     await userEvent.tab()
     await userEvent.keyboard('[Enter]')
 
-    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).toHaveBeenCalledOnce()
   })
 
   test('handles correctly when adding options - multiselect select', async () => {
