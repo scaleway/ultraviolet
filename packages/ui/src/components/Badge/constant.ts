@@ -8,7 +8,7 @@ export const SIZES = {
 export const PROMINENCES = {
   default: 'default',
   strong: 'strong',
-}
+} as const
 
 export const TEXT_VARIANT = {
   large: 'bodySmall',

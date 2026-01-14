@@ -1,11 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { recipe } from '@vanilla-extract/recipes'
 import { RADIUS_SIZES, sizes } from './constants'
-import {
-  finalColorAvatar,
-  finalSizeAvatar,
-  halvedColorAvatar,
-} from './variables.css'
+import { avatarTheme } from './variables.css'
 
 function getSquareStyle(size: keyof ReturnType<typeof sizes>) {
   return {
@@ -155,10 +151,10 @@ export const elementContainer = recipe({
 export const colorsAvatar = recipe({
   base: {
     ...baseStyle,
-    borderBottom: `calc(${finalSizeAvatar} / 2) solid ${halvedColorAvatar}`,
-    borderLeft: `calc(${finalSizeAvatar} / 2) solid ${finalColorAvatar}`,
-    borderRight: `calc(${finalSizeAvatar} / 2) solid ${halvedColorAvatar}`,
-    borderTop: `calc(${finalSizeAvatar} / 2) solid ${finalColorAvatar}`,
+    borderBottom: `calc(${avatarTheme.size} / 2) solid ${avatarTheme.halvedColor}`,
+    borderLeft: `calc(${avatarTheme.size} / 2) solid ${avatarTheme.size}`,
+    borderRight: `calc(${avatarTheme.size} / 2) solid ${avatarTheme.halvedColor}`,
+    borderTop: `calc(${avatarTheme.size} / 2) solid ${avatarTheme.size}`,
   },
   compoundVariants: borderRadiusSquare,
 

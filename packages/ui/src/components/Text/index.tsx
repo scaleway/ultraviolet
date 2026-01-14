@@ -1,16 +1,22 @@
 'use client'
 
+import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ElementType, ReactNode } from 'react'
+import type {
+  ComponentType,
+  CSSProperties,
+  ElementType,
+  ReactNode,
+} from 'react'
 import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../theme'
 import { Tooltip } from '../Tooltip'
-import type { PROMINENCES, TextVariant } from './constants'
+import type { PROMINENCES } from './constants'
 import { text } from './style.css'
-import { placementText, whiteSpaceText } from './variables.css'
+import { textVars } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = CSSProperties['textAlign']
@@ -41,7 +47,7 @@ type TextProps = {
 /**
  * Text component is used to display text with different variants and sentiments.
  */
-export const Text = ({
+export const Text: ComponentType<TextProps> = ({
   variant,
   children,
   as: Component = 'div',
@@ -61,7 +67,7 @@ export const Text = ({
   'data-testid': dataTestId,
   'aria-hidden': ariaHidden,
   style,
-}: TextProps) => {
+}) => {
   const elementRef = useRef(null)
   const isOverflowing = useIsOverflowing(elementRef)
 
@@ -90,9 +96,9 @@ export const Text = ({
         id={id}
         ref={elementRef}
         style={{
-          ...assignInlineVars({
-            [placementText]: placement,
-            [whiteSpaceText]: whiteSpace,
+          ...assignInlineVars(textVars, {
+            textAlign: placement ?? '',
+            whiteSpace: whiteSpace ?? '',
           }),
           ...style,
         }}

@@ -45,6 +45,25 @@ function getStrongStyle(sentiment: (typeof sentiments)[number]) {
   }
 }
 
+const compoundVariants = [
+  ...sentiments.map(sentiment => ({
+    style: getDefaultStyle(sentiment),
+    variants: {
+      disabled: false,
+      prominence: 'default' as const,
+      sentiment,
+    },
+  })),
+  ...sentiments.map(sentiment => ({
+    style: getStrongStyle(sentiment),
+    variants: {
+      disabled: false,
+      prominence: 'strong' as const,
+      sentiment,
+    },
+  })),
+]
+
 export const badge = recipe({
   base: {
     alignItems: 'center',
@@ -57,25 +76,7 @@ export const badge = recipe({
     textTransform: 'uppercase',
     width: 'fit-content',
   },
-
-  compoundVariants: [
-    ...sentiments.map(sentiment => ({
-      style: getDefaultStyle(sentiment),
-      variants: {
-        disabled: false,
-        prominence: 'default' as const,
-        sentiment,
-      },
-    })),
-    ...sentiments.map(sentiment => ({
-      style: getStrongStyle(sentiment),
-      variants: {
-        disabled: false,
-        prominence: 'strong' as const,
-        sentiment,
-      },
-    })),
-  ],
+  compoundVariants,
   defaultVariants: {
     disabled: false,
     prominence: 'default',
