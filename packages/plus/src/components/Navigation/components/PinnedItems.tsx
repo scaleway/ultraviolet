@@ -58,6 +58,7 @@ export const PinnedItems = ({
     expanded,
     items,
     animation,
+    showHide,
   } = context
   const theme = useTheme()
 
@@ -100,7 +101,7 @@ export const PinnedItems = ({
     return null
   }
 
-  if (pinnedFeature) {
+  if (pinnedFeature && showHide !== 'hide') {
     return (
       <div style={{ width: animation ? '100%' : undefined, ...style }}>
         <Item

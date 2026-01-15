@@ -60,6 +60,7 @@ type ContextProps = {
   setAllowNavigationResize: (value: boolean) => void
   shouldAnimate?: boolean
   animationType?: AnimationType
+  showHide?: 'show' | 'hide'
 }
 
 // oxlint-disable-next-line react/only-export-components
@@ -132,6 +133,7 @@ type NavigationProviderProps = {
    * type of animation
    */
   animationType?: AnimationType
+  showHide?: 'show' | 'hide'
 }
 
 export const NavigationProvider = ({
@@ -146,6 +148,7 @@ export const NavigationProvider = ({
   initialAllowNavigationResize = true,
   animation: shouldAnimate = true,
   animationType,
+  showHide,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
@@ -256,6 +259,7 @@ export const NavigationProvider = ({
       toggleExpand,
       unpinItem,
       width,
+      showHide,
     }),
     [
       expanded,
@@ -273,6 +277,7 @@ export const NavigationProvider = ({
       allowNavigationResize,
       shouldAnimate,
       animationType,
+      showHide,
     ],
   )
 

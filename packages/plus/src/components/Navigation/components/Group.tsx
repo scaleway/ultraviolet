@@ -10,9 +10,15 @@ type GroupProps = {
   children: ReactNode
   label: string
   style?: CSSProperties
+  additionalData?: ReactNode
 }
 
-export const Group = ({ children, label, style }: GroupProps) => {
+export const Group = ({
+  children,
+  label,
+  style,
+  additionalData,
+}: GroupProps) => {
   const context = useNavigation()
 
   if (!context) {
@@ -39,7 +45,14 @@ export const Group = ({ children, label, style }: GroupProps) => {
               sentiment="neutral"
               variant="bodySmallStrong"
             >
-              {label}
+              {additionalData ? (
+                <Stack direction="row" justifyContent="space-between">
+                  {label}
+                  {additionalData}
+                </Stack>
+              ) : (
+                label
+              )}
             </Text>
           ) : null}
           {children}
