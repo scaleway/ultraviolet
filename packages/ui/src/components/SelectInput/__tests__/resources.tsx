@@ -192,3 +192,14 @@ export const cities = [
   { disabled: false, label: 'Amsterdam', value: 'ams' },
   { disabled: false, label: 'Warsaw', value: 'waw' },
 ]
+
+export const dataGroupEmpty = {
+  'jovian planets': [],
+  'terrestrial planets': [
+    {
+      disabled: false,
+      label: 'Mars',
+      value: 'mars',
+    },
+  ],
+}

@@ -29,8 +29,8 @@ export const dropdownContainerUnGrouped = style({
 
 export const dropdownGroup = style({
   display: 'flex',
-  width: '100%',
   justifyContent: 'left',
+  width: '100%',
   alignItems: 'center',
   border: 'none',
   background: theme.colors.neutral.backgroundWeak,
@@ -63,16 +63,21 @@ export const dropdownGroupWrapper = style({
   top: 0,
 })
 
-export const dropdownItemBase = style({
+export const emptyStateGroupStyle = style({
   textAlign: 'left',
-  backgroundColor: theme.colors.other.elevation.background.raised,
   paddingBlock: theme.space['1.5'],
   paddingInline: theme.space[2],
   marginInline: theme.space['0.5'],
-  color: theme.colors.neutral.text,
   borderRadius: theme.radii.default,
   border: '1px solid transparent',
 })
+
+export const dropdownItemBase = style([
+  emptyStateGroupStyle,
+  {
+    backgroundColor: theme.colors.other.elevation.background.raised,
+  },
+])
 
 export const dropdownItem = recipe({
   base: [
@@ -87,6 +92,10 @@ export const dropdownItem = recipe({
       },
     },
   ],
+  defaultVariants: {
+    disabled: false,
+    selected: false,
+  },
   variants: {
     selected: {
       true: {
@@ -107,10 +116,6 @@ export const dropdownItem = recipe({
         },
       },
     },
-  },
-  defaultVariants: {
-    disabled: false,
-    selected: false,
   },
 })
 

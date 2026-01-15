@@ -3,7 +3,13 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInput } from '..'
-import { cities, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
+import {
+  cities,
+  dataGroupEmpty,
+  dataGrouped,
+  dataUnGrouped,
+  OptionalInfo,
+} from './resources'
 
 // export type OptionType = {
 //   value: string
@@ -187,6 +193,57 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('renders correctly with group error', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInput
+        groupError={{
+          'jovian planets': 'error',
+        }}
+        multiselect
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable={false}
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    expect(screen.getByText('error')).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with group empty state', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInput
+        groupEmptyState={{
+          'jovian planets': 'No jovian planets :(',
+          'terrestrial planets': 'No terrestrial planets !',
+        }}
+        multiselect
+        name="test"
+        options={dataGroupEmpty}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    expect(screen.getByText('No jovian planets :(')).toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly with label on the right and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
@@ -196,6 +253,7 @@ describe('selectInput', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        searchable={false}
       />,
     )
     const input = screen.getByText('placeholder')
@@ -204,7 +262,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -505,6 +563,7 @@ describe('selectInput', () => {
     await userEvent.click(venusCloseButton)
     expect(venus).not.toBeVisible()
   })
+
   test('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput

@@ -137,6 +137,8 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    * Please wrap that definition in useCallback
    */
   onOpen?: () => void
+  groupError?: Record<string, ReactNode>
+  groupEmptyState?: Record<string, ReactNode>
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
@@ -182,6 +184,8 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   dropdownAlign,
   portalTarget,
   onOpen,
+  groupEmptyState,
+  groupError,
   style,
   addOption,
 }: SelectInputProps<IsMulti>) => {
@@ -223,6 +227,8 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
           dropdownAlign={dropdownAlign}
           emptyState={emptyState}
           footer={footer}
+          groupEmptyState={groupEmptyState}
+          groupError={groupError}
           id={dropdownId}
           isLoading={isLoading}
           loadMore={loadMore}
