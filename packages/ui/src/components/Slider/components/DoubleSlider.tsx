@@ -51,6 +51,7 @@ export const DoubleSlider = ({
   tooltipPosition,
   'aria-label': ariaLabel,
   labelDescription,
+  customValueDisplay,
 }: DoubleSliderProps) => {
   const theme = useTheme()
   const localId = useId()
@@ -283,6 +284,7 @@ export const DoubleSlider = ({
           >
             {label}
           </Label>
+          {customValueDisplay}
         </Stack>
       ) : null}
       <Stack direction={direction} gap={1} width="100%">
