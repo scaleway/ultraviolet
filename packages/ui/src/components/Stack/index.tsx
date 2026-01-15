@@ -2,8 +2,13 @@
 
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { CSSProperties, ElementType, ReactNode } from 'react'
-import { useMemo } from 'react'
+import type {
+  CSSProperties,
+  ElementType,
+  PropsWithChildren,
+  ReactElement,
+} from 'react'
+import { forwardRef, useMemo } from 'react'
 import type { UltravioletUITheme } from '../../theme'
 import type { AlignItemsType, JustifyContentType } from './styles.css'
 import { sprinkles, stack } from './styles.css'
@@ -61,7 +66,6 @@ type OwnStackProps = {
   minWidth?: CSSProperties['minWidth']
   flex?: CSSProperties['flex']
   className?: string
-  children: ReactNode
   'data-testid'?: string
   id?: string
 }
@@ -69,85 +73,99 @@ type OwnStackProps = {
 export type StackProps<T extends ElementType = 'div'> =
   PolymorphicComponentProps<T, OwnStackProps>
 
-export const Stack = <T extends ElementType = 'div'>({
-  gap,
-  direction = 'column',
-  alignItems = 'normal',
-  justifyContent = 'normal',
-  wrap = 'nowrap',
-  className,
-  children,
-  id,
-  'data-testid': dataTestId,
-  width,
-  maxWidth,
-  minWidth,
-  flex,
-  as,
-  ref,
-  style,
-  ...props
-}: StackProps<T>) => {
-  const wrapValue = useMemo(() => {
-    if (typeof wrap === 'boolean') {
-      return wrap ? 'wrap' : 'nowrap'
-    }
+/**
+ * We can't easily type a GenericComponent with forwardRef
+ * https://stackoverflow.com/questions/58469229/react-with-typescript-generics-while-using-react-forwardref
+ * will be remove when react will drop support of forwardRef into react 20.
+ */
+// oxlint-disable-next-line typescript-eslint/no-explicit-any
+const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
+  (
+    {
+      gap,
+      direction = 'column',
+      alignItems = 'normal',
+      justifyContent = 'normal',
+      wrap = 'nowrap',
+      className,
+      children,
+      id,
+      'data-testid': dataTestId,
+      width,
+      maxWidth,
+      minWidth,
+      flex,
+      as,
+      style,
+      ...props
+    },
+    ref,
+  ) => {
+    const wrapValue = useMemo(() => {
+      if (typeof wrap === 'boolean') {
+        return wrap ? 'wrap' : 'nowrap'
+      }
 
-    if (typeof wrap === 'object') {
-      return Object.keys(wrap).reduce(
-        (acc, key) => ({
-          ...acc,
-          [key]: wrap[key as keyof typeof wrap] ? 'wrap' : 'nowrap',
-        }),
-        {},
-      )
-    }
+      if (typeof wrap === 'object') {
+        return Object.keys(wrap).reduce(
+          (acc, key) => ({
+            ...acc,
+            [key]: wrap[key as keyof typeof wrap] ? 'wrap' : 'nowrap',
+          }),
+          {},
+        )
+      }
 
-    return wrap
-  }, [wrap])
+      return wrap
+    }, [wrap])
 
-  const Component = as || 'div'
+    const Component = as || 'div'
 
-  const sprinkleClassName = sprinkles({
-    alignItems:
-      typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
-    flexDirection:
-      typeof direction === 'object' ? direction : { xxsmall: direction },
-    flexWrap:
-      typeof wrapValue === 'object' ? wrapValue : { xxsmall: wrapValue },
-    gap:
-      typeof gap === 'object'
-        ? mapRepsonsiveGap(gap)
-        : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
-    justifyContent:
-      typeof justifyContent === 'object'
-        ? justifyContent
-        : { xxsmall: justifyContent },
-  })
+    const sprinkleClassName = sprinkles({
+      alignItems:
+        typeof alignItems === 'object' ? alignItems : { xxsmall: alignItems },
+      flexDirection:
+        typeof direction === 'object' ? direction : { xxsmall: direction },
+      flexWrap:
+        typeof wrapValue === 'object' ? wrapValue : { xxsmall: wrapValue },
+      gap:
+        typeof gap === 'object'
+          ? mapRepsonsiveGap(gap)
+          : { xxsmall: gap ? consoleLightTheme.space[gap] : undefined },
+      justifyContent:
+        typeof justifyContent === 'object'
+          ? justifyContent
+          : { xxsmall: justifyContent },
+    })
 
-  const combinedClassName = [className, stack, sprinkleClassName]
-    .filter(Boolean)
-    .join(' ')
+    const combinedClassName = [className, stack, sprinkleClassName]
+      .filter(Boolean)
+      .join(' ')
 
-  return (
-    <Component
-      className={combinedClassName}
-      data-testid={dataTestId}
-      id={id}
-      ref={ref}
-      style={{
-        ...assignInlineVars({
-          [widthVar]: width?.toString(),
-          [maxWidthVar]: maxWidth?.toString(),
-          [minWidthVar]: minWidth?.toString(),
-          [flexVar]: flex?.toString(),
-        }),
-        ...style,
-      }}
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...props}
-    >
-      {children}
-    </Component>
-  )
-}
+    return (
+      <Component
+        className={combinedClassName}
+        data-testid={dataTestId}
+        id={id}
+        ref={ref}
+        style={{
+          ...assignInlineVars({
+            [widthVar]: width?.toString(),
+            [maxWidthVar]: maxWidth?.toString(),
+            [minWidthVar]: minWidth?.toString(),
+            [flexVar]: flex?.toString(),
+          }),
+          ...style,
+        }}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </Component>
+    )
+  },
+)
+
+export const Stack = IStack as <T extends ElementType = 'div'>(
+  props: StackProps<T>,
+) => ReactElement
