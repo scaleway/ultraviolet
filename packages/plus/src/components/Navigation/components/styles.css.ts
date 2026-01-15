@@ -52,6 +52,7 @@ export const navigationPinnedItemDropableArea = style({
 
 export const navigationPinnedItemRelativeDiv = style({
   position: 'relative',
+  color: 'transparent',
 })
 
 export const navigationPinnedItemContainer = recipe({
@@ -70,4 +71,14 @@ export const navigationPinnedItemContainer = recipe({
 
 export const navigationSeparator = style({
   margin: `${theme.space['2']} calc(${theme.space['2']} * -1)`,
+  flexShrink: 0,
+})
+
+export const navigationShowHideButton = style({
+  width: 'fit-content',
+  alignSelf: 'center',
+})
+
+export const navigationShowHideStack = style({
+  height: '100%',
 })
