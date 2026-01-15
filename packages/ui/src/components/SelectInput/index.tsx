@@ -45,10 +45,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    */
   emptyState?: ReactNode
   /**
-   * Whether it is possible to search through the input
-   */
-  searchable?: boolean
-  /**
    * Whether the component in disabled
    */
   disabled?: boolean
@@ -88,6 +84,11 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
    * Display an error message under the select bar
    */
   error?: string | boolean
+  searchable?: boolean
+  /**
+   * When searchable, set a combobox to dynamically add an option
+   */
+  addOption?: { text: string; onClick: (searchText: string) => void }
   /**
    * Display a success message under the select bar
    */
@@ -140,7 +141,6 @@ type SelectInputProps<IsMulti extends undefined | boolean = false> = {
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className' | 'style'
 >
-
 /**
  * SelectInput component is used to select one or many elements from a selection.
  */
@@ -183,6 +183,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   portalTarget,
   onOpen,
   style,
+  addOption,
 }: SelectInputProps<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
@@ -217,6 +218,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
         style={style}
       >
         <Dropdown
+          addOption={addOption}
           descriptionDirection={descriptionDirection}
           dropdownAlign={dropdownAlign}
           emptyState={emptyState}

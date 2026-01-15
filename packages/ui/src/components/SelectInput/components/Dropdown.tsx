@@ -1,5 +1,6 @@
 'use client'
 
+import { PlusIcon } from '@ultraviolet/icons'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
@@ -28,11 +29,16 @@ import { Popup } from '../../Popup'
 import { Skeleton } from '../../Skeleton'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import {
+  DROPDOWN_MAX_HEIGHT,
+  INPUT_SIZE_HEIGHT,
+  OPTION_SELECTOR,
+} from '../constants'
 import { useSelectInput } from '../SelectInputProvider'
 import type { DataType, OptionType } from '../types'
-import { INPUT_SIZE_HEIGHT } from '../types'
 import { DisplayOption } from './DropdownOption'
 import {
+  comboboxCreate,
   dropdown,
   dropdownCheckbox,
   dropdownContainer,
@@ -47,8 +53,6 @@ import {
   footer as footerStyle,
 } from './dropdown.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
-
-const DROPDOWN_MAX_HEIGHT = 256
 
 export type DropdownProps = {
   id?: string
@@ -65,6 +69,7 @@ export type DropdownProps = {
   size: 'small' | 'medium' | 'large'
   dropdownAlign?: ComponentProps<typeof Popup>['align']
   portalTarget?: ComponentProps<typeof Popup>['portalTarget']
+  addOption?: { text: string; onClick: (searchText: string) => void }
 }
 
 export type CreateDropdownProps = {
@@ -75,6 +80,8 @@ export type CreateDropdownProps = {
   optionalInfoPlacement: 'left' | 'right'
   defaultSearchValue: string | null
   isLoading?: boolean
+  addOption?: { text: string; onClick: (searchText: string) => void }
+  searchable?: boolean
 }
 
 const NON_SEARCHABLE_KEYS = [
@@ -91,9 +98,7 @@ const NON_SEARCHABLE_KEYS = [
 ]
 
 const moveFocusDown = () => {
-  const options = document.querySelectorAll(
-    '#items > div[role="option"]:not([disabled])',
-  )
+  const options = document.querySelectorAll(OPTION_SELECTOR)
   const activeItem = document.activeElement
   if (options) {
     for (let i = 0; i < options?.length; i += 1) {
@@ -105,9 +110,7 @@ const moveFocusDown = () => {
   }
 }
 const moveFocusUp = () => {
-  const options = document.querySelectorAll(
-    '#items > div[role="option"]:not([disabled])',
-  )
+  const options = document.querySelectorAll(OPTION_SELECTOR)
   const activeItem = document.activeElement
 
   if (options) {
@@ -193,6 +196,8 @@ const CreateDropdown = ({
   optionalInfoPlacement,
   defaultSearchValue,
   isLoading,
+  addOption,
+  searchable,
 }: CreateDropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -202,8 +207,11 @@ const CreateDropdown = ({
     selectAll,
     selectAllGroup,
     displayedOptions,
+    onSearch,
     setSelectedData,
     selectedData,
+    searchInput,
+    setSearchInput,
   } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
 
@@ -213,7 +221,15 @@ const CreateDropdown = ({
     }
   }, [defaultSearchValue])
 
-  if (isEmpty) {
+  const handleClickCustomValue = () => {
+    const newOption = { label: searchInput, value: searchInput }
+    addOption?.onClick(searchInput)
+    onSearch([newOption])
+    setIsDropdownVisible(multiselect)
+    setSearchInput('')
+  }
+
+  if (isEmpty && !addOption) {
     return (
       <Stack alignItems="center" className={dropdownEmptyState} gap={2}>
         {emptyState ?? (
@@ -222,6 +238,46 @@ const CreateDropdown = ({
           </Text>
         )}
       </Stack>
+    )
+  }
+
+  if (isEmpty && addOption && searchable) {
+    const text = (
+      <Stack alignItems="center" direction="row" gap="1">
+        <PlusIcon sentiment="primary" size="small" />
+        <Text as="span" sentiment="primary" variant="bodySmallStrong">
+          {addOption.text} {searchInput}
+        </Text>
+      </Stack>
+    )
+
+    const option = {
+      label: text,
+      searchText: searchInput,
+      value: `${addOption.text} ${searchInput}`,
+    }
+
+    return (
+      <div
+        aria-selected="false"
+        className={comboboxCreate}
+        data-testid="add-option"
+        id="add-option"
+        onClick={handleClickCustomValue}
+        onKeyDown={event => {
+          if (['Enter', ' '].includes(event.key)) {
+            handleClickCustomValue()
+          }
+        }}
+        role="option"
+        tabIndex={-1}
+      >
+        <DisplayOption
+          descriptionDirection="row"
+          option={option}
+          optionalInfoPlacement="left"
+        />
+      </div>
     )
   }
 
@@ -313,6 +369,39 @@ const CreateDropdown = ({
       onKeyDown={handleKeyDownSelect}
       role="listbox"
     >
+      {addOption && searchInput && searchable ? (
+        <div
+          aria-selected="false"
+          className={comboboxCreate}
+          data-testid="add-option"
+          id="add-option"
+          onClick={handleClickCustomValue}
+          onKeyDown={event => {
+            if (['Enter', ' '].includes(event.key)) {
+              handleClickCustomValue()
+            }
+          }}
+          role="option"
+          tabIndex={-1}
+        >
+          <DisplayOption
+            descriptionDirection="row"
+            option={{
+              label: (
+                <Stack alignItems="center" direction="row" gap="1">
+                  <PlusIcon sentiment="primary" size="small" />
+                  <Text as="span" sentiment="primary" variant="bodySmallStrong">
+                    {addOption.text} {searchInput}
+                  </Text>
+                </Stack>
+              ),
+              searchText: searchInput,
+              value: `${addOption.text} ${searchInput}`,
+            }}
+            optionalInfoPlacement="left"
+          />
+        </div>
+      ) : null}
       {selectAll && multiselect ? (
         <Stack gap={0.25} id="items" tabIndex={-1}>
           <div
@@ -456,6 +545,43 @@ const CreateDropdown = ({
         <Skeleton variant="block" />
       ) : (
         <>
+          {addOption && searchInput && searchable ? (
+            <div
+              aria-selected="false"
+              className={comboboxCreate}
+              data-testid="add-option"
+              id="add-option"
+              onClick={handleClickCustomValue}
+              onKeyDown={event => {
+                if (['Enter', ' '].includes(event.key)) {
+                  handleClickCustomValue()
+                }
+              }}
+              role="option"
+              tabIndex={-1}
+            >
+              <DisplayOption
+                descriptionDirection="row"
+                option={{
+                  label: (
+                    <Stack alignItems="center" direction="row" gap="1">
+                      <PlusIcon sentiment="primary" size="small" />
+                      <Text
+                        as="span"
+                        sentiment="primary"
+                        variant="bodySmallStrong"
+                      >
+                        {addOption.text} {searchInput}
+                      </Text>
+                    </Stack>
+                  ),
+                  searchText: searchInput,
+                  value: `${addOption.text} ${searchInput}`,
+                }}
+                optionalInfoPlacement="left"
+              />
+            </div>
+          ) : null}
           {selectAll && multiselect ? (
             <Stack id="items">
               <div
@@ -674,6 +800,7 @@ export const Dropdown = ({
   dropdownAlign,
   portalTarget,
   id,
+  addOption,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -849,7 +976,7 @@ export const Dropdown = ({
       tabIndex={-1}
       text={
         <Stack>
-          {searchable && !isLoading && numberOfOptions >= 6 ? (
+          {searchable && !isLoading && (numberOfOptions >= 6 || addOption) ? (
             <SearchBarDropdown
               displayedOptions={displayedOptions}
               placeholder={placeholder}
@@ -857,6 +984,7 @@ export const Dropdown = ({
             />
           ) : null}
           <CreateDropdown
+            addOption={addOption}
             defaultSearchValue={defaultSearchValue}
             descriptionDirection={descriptionDirection}
             emptyState={emptyState}
@@ -864,6 +992,7 @@ export const Dropdown = ({
             isLoading={isLoading}
             loadMore={loadMore}
             optionalInfoPlacement={optionalInfoPlacement}
+            searchable={searchable}
           />
           {computedFooter}
         </Stack>
