@@ -1,72 +1,72 @@
 {
-  "name": "@ultraviolet/themes",
-  "version": "3.0.2",
+  "dependencies": {
+    "@vanilla-extract/css": "1.17.4",
+    "@vanilla-extract/dynamic": "2.1.5"
+  },
   "description": "Ultraviolet Themes",
-  "homepage": "https://github.com/scaleway/ultraviolet#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scaleway/ultraviolet.git",
-    "directory": "packages/themes"
-  },
-  "scripts": {
-    "type:generate": "tsc --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
-    "build": "vite build --config vite.config.ts && pnpm run type:generate",
-    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsc --noEmit",
-    "lintpublish": "pnpm publint"
-  },
-  "keywords": [
-    "themes",
-    "ui"
-  ],
-  "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "engines": {
     "node": ">=18.x",
     "pnpm": ">=9.x"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*.css": "./dist/style/*.css",
+    "./console/*": {
+      "import": "./dist/themes/console/*/index.js",
+      "require": "./dist/themes/console/*/index.cjs",
+      "types": "./dist/themes/console/*/index.d.ts"
+    },
+    "./global": "./dist/themes.css",
+    "./theme.css": "./dist/themes.css"
+  },
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "keywords": [
+    "themes",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "name": "@ultraviolet/themes",
   "os": [
     "darwin",
     "linux"
   ],
+  "peerDependencies": {
+    "react": "18.x || 19.x",
+    "react-dom": "18.x || 19.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/themes",
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git"
+  },
+  "scripts": {
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "lintpublish": "pnpm publint",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch"
+  },
   "sideEffects": [
     "**/*.css",
     "**/*.css.ts"
   ],
   "type": "module",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
-    },
-    "./*.css": "./dist/style/*.css",
-    "./console/*": {
-      "types": "./dist/themes/console/*/index.d.ts",
-      "require": "./dist/themes/console/*/index.cjs",
-      "import": "./dist/themes/console/*/index.js"
-    },
-    "./global": "./dist/themes.css",
-    "./theme.css": "./dist/themes.css"
-  },
-  "peerDependencies": {
-    "react": "18.x || 19.x",
-    "react-dom": "18.x || 19.x"
-  },
-  "dependencies": {
-    "@vanilla-extract/css": "1.17.4",
-    "@vanilla-extract/dynamic": "2.1.5"
-  },
-  "devDependencies": {
-    "@repo/config": "workspace:*",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
-  }
+  "version": "3.0.2"
 }
