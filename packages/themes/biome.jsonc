@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/@biomejs/biome/configuration_schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on",
+        "useSortedProperties": "on"
+      }
+    },
+    "includes": ["**"]
+  },
+  "extends": "//",
+  "files": {
+    "includes": ["**", "**/__generated_"]
+  },
+  "root": false
+}

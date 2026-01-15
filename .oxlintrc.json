@@ -64,8 +64,8 @@
         "jsx_a11y/label-has-associated-control": "off",
         "no-console": "off",
         "node/no-process-env": "off",
-        "vitest/prefer-describe-function-title": "warn",
         "vitest/prefer-called-times": "off",
+        "vitest/prefer-describe-function-title": "warn",
         "vitest/prefer-lowercase-title": "error"
       }
     },
@@ -114,13 +114,13 @@
       }
     ],
     "import/no-unassigned-import": "off",
-    "react/jsx-no-useless-fragment": "off",
     "react/jsx-max-depth": [
       "error",
       {
         "max": 10
       }
     ],
+    "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
     "unicorn/empty-brace-spaces": "off",
     "unicorn/prefer-global-this": "off"
