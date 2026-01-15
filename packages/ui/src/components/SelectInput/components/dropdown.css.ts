@@ -11,7 +11,7 @@ export const dropdown = style({
   color: theme.colors.neutral.text,
   marginBottom: theme.space[10],
   minWidth: 320,
-  overflow: 'auto',
+  overflow: 'hidden',
   padding: theme.space[0],
   width: dropdownWidth,
 })
