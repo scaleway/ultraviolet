@@ -58,6 +58,7 @@ type RowProps = {
   'data-dragging'?: boolean
   onMouseEnter?: MouseEventHandler<HTMLTableRowElement>
   onMouseLeave?: MouseEventHandler<HTMLTableRowElement>
+  onClick?: (id: string) => void
 }
 
 export const Row = forwardRef<HTMLTableRowElement, RowProps>(
@@ -78,6 +79,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       'data-dragging': dataDragging,
       onMouseEnter,
       onMouseLeave,
+      onClick,
     },
     forwardedRef,
   ) => {
@@ -163,7 +165,12 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           data-dragging={dataDragging}
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}
-          onClick={canClickRowToExpand ? toggleRowExpand : undefined}
+          onClick={() => {
+            onClick?.(id)
+            if (canClickRowToExpand) {
+              toggleRowExpand()
+            }
+          }}
           onKeyDown={
             canClickRowToExpand
               ? event => {
@@ -216,7 +223,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                   aria-label="expand"
                   data-testid="list-expand-button"
                   disabled={disabled || !expandable}
-                  onClick={toggleRowExpand}
+                  onClick={() => toggleRowExpand()}
                   sentiment={sentiment}
                   size="small"
                   variant="ghost"

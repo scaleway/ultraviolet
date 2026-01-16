@@ -171,7 +171,9 @@ export const offerListNoPaddingCell = style({
 export const offerListRowSelected = style({
   color: theme.colors.primary.text,
 })
-export const offerListRowSelectedNotExpandable = style({})
+export const offerListRowSelectedNotExpandable = style({
+  cursor: 'pointer',
+})
 export const offerListRowSelectedExpandable = style({})
 
 export const offerListRowBanner = style({})
