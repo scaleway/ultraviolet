@@ -7,7 +7,7 @@ import { Button, Stack } from '@ultraviolet/ui'
 import type { CSSProperties, ReactNode } from 'react'
 import { memo, useState } from 'react'
 import { useNavigation } from '../NavigationProvider'
-import { navigationShowHideButton, navigationShowHideStack } from './styles.css'
+import { navigationShowHideStack } from './styles.css'
 
 type ShowAllProp = {
   showContent: ReactNode
@@ -52,7 +52,6 @@ export const ShowHide = memo(
           style={style}
         >
           <Button
-            className={navigationShowHideButton}
             data-testid={dataTestId}
             onClick={onClick}
             sentiment="primary"
@@ -75,7 +74,6 @@ export const ShowHide = memo(
         style={style}
       >
         <Button
-          className={navigationShowHideButton}
           data-testid={dataTestId}
           onClick={onClick}
           sentiment="primary"
