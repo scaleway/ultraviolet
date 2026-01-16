@@ -74,11 +74,6 @@ export const navigationSeparator = style({
   flexShrink: 0,
 })
 
-export const navigationShowHideButton = style({
-  width: 'fit-content',
-  alignSelf: 'center',
-})
-
 export const navigationShowHideStack = style({
   height: '100%',
 })
