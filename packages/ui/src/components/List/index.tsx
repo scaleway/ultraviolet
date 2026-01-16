@@ -46,9 +46,6 @@ type NewListProps = Omit<ListProps, 'colMode'> & {
   colMode: 'strict'
 }
 type LegacyListProps = Omit<ListProps, 'colMode'> & {
-  /**
-   * @deprecated use `colMode="strict"` instead
-   */
   colMode?: 'flexible' | undefined
 }
 
