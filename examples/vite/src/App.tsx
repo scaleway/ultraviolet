@@ -1,17 +1,15 @@
 import { PlusIcon } from '@ultraviolet/icons'
-import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import {
-  Alert,
-  Button,
-  Card,
-  Row,
-  Stack,
-  Text,
+  consoleDarkTheme,
+  consoleLightTheme,
   ThemeProvider,
-} from '@ultraviolet/ui'
+} from '@ultraviolet/themes'
+import { Alert, Button, Card, Row, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
-import '@ultraviolet/ui/styles' // Import styles for the UI components
 import '@ultraviolet/themes/global'
+import '@ultraviolet/ui/styles' // Import styles for the UI components
+import '@ultraviolet/plus/styles' // Import styles for the Plus components
+import { Navigation } from './components/Navigation'
 
 export const App = () => {
   const [count, setCount] = useState(0)
@@ -19,25 +17,42 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={darkMode ? consoleDarkTheme : consoleLightTheme}>
-      <Row gap="3" templateColumns="9fr 3fr">
-        <Card>
-          <Text as="h1" variant="headingSmall">
-            Classic
+      <Row gap="2" templateColumns="auto 9fr">
+        <Navigation />
+        <Stack direction="column" gap="4">
+          <Text
+            as="h1"
+            placement="center"
+            sentiment="neutral"
+            variant="headingStronger"
+          >
+            headingLargeStrong h1
           </Text>
-          <Stack direction="row" gap="2">
-            <Button onClick={() => setCount(prevCount => prevCount + 1)}>
-              <PlusIcon />
-            </Button>
-            <Button onClick={() => setCount(0)}>Reset</Button>
-            <Button onClick={() => setDarkMode(!darkMode)} sentiment="danger">
-              Switch Theme
-            </Button>
-          </Stack>
-          <Text as="p" variant="body">
-            Count:{count}
-          </Text>
-        </Card>
-        <Alert sentiment="info">Alert</Alert>
+          <Card>
+            <Text as="h2" variant="headingSmallStrong">
+              headingSmallStrong h2
+            </Text>
+            <Stack direction="column" gap="2">
+              <Stack direction="row" gap="2">
+                <Button onClick={() => setCount(prevCount => prevCount + 1)}>
+                  <PlusIcon />
+                </Button>
+                <Button onClick={() => setCount(0)}>Reset</Button>
+                <Button
+                  onClick={() => setDarkMode(!darkMode)}
+                  sentiment="danger"
+                >
+                  Switch Theme
+                </Button>
+              </Stack>
+
+              <Text as="p" variant="body">
+                Count:{count}
+              </Text>
+              <Alert sentiment="info">Alert</Alert>
+            </Stack>
+          </Card>
+        </Stack>
       </Row>
     </ThemeProvider>
   )
