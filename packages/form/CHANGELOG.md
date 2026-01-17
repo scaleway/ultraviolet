@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.0.9
+
+### Patch Changes
+
+- Updated dependencies [[`94bf725`](https://github.com/scaleway/ultraviolet/commit/94bf7250328c6ac91cfd3aac3f8bff6df75e1bd4), [`3c88802`](https://github.com/scaleway/ultraviolet/commit/3c8880208839eae1a25cac5b341dd2882713dbbd), [`98abf07`](https://github.com/scaleway/ultraviolet/commit/98abf07b11fd74bb458cb7907f18167f5613aae5), [`6e4bbf2`](https://github.com/scaleway/ultraviolet/commit/6e4bbf23dc97370604609c11fed75f079f78f48b), [`648e6ca`](https://github.com/scaleway/ultraviolet/commit/648e6cafb7a2e2d090e1b234f5b86d9986b852e9), [`2fa66cb`](https://github.com/scaleway/ultraviolet/commit/2fa66cba74f8809b3c93708519003f8cd563dcd0), [`fe79b43`](https://github.com/scaleway/ultraviolet/commit/fe79b43d8bda3660fff2e00ad566befb1bbbc90b), [`5961951`](https://github.com/scaleway/ultraviolet/commit/5961951efb3c41c1407d48885fb315b6f1272ee7)]:
+  - @ultraviolet/ui@3.5.1
+  - @ultraviolet/themes@3.0.3
+  - @ultraviolet/icons@5.0.4
+
 ## 6.0.8
 
 ### Patch Changes
