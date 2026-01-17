@@ -1,5 +1,34 @@
 # Change Log
 
+## 3.5.1
+
+### Patch Changes
+
+- [#5987](https://github.com/scaleway/ultraviolet/pull/5987) [`94bf725`](https://github.com/scaleway/ultraviolet/commit/94bf7250328c6ac91cfd3aac3f8bff6df75e1bd4) Thanks [@lisalupi](https://github.com/lisalupi)! - `List`: fix deprecated message. Note that in future major version, prop `colMode` will be removed and default behavior will `colMode="strict"`.
+
+- [#5975](https://github.com/scaleway/ultraviolet/pull/5975) [`98abf07`](https://github.com/scaleway/ultraviolet/commit/98abf07b11fd74bb458cb7907f18167f5613aae5) Thanks [@lisalupi](https://github.com/lisalupi)! - `Link`:
+
+  - new dotted underline for accessibility
+  - switch `:visited` color from primary to secondary to avoid confusion with `sentiment="primary"`
+
+- [#5981](https://github.com/scaleway/ultraviolet/pull/5981) [`6e4bbf2`](https://github.com/scaleway/ultraviolet/commit/6e4bbf23dc97370604609c11fed75f079f78f48b) Thanks [@philibea](https://github.com/philibea)! - Add a missing forwardRef for Stack component which was remove during vanilla-extract migration
+
+- [#5984](https://github.com/scaleway/ultraviolet/pull/5984) [`648e6ca`](https://github.com/scaleway/ultraviolet/commit/648e6cafb7a2e2d090e1b234f5b86d9986b852e9) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix overflow inside dropdown
+  `TextInput`: fix prefix border-color
+
+- [#5949](https://github.com/scaleway/ultraviolet/pull/5949) [`2fa66cb`](https://github.com/scaleway/ultraviolet/commit/2fa66cba74f8809b3c93708519003f8cd563dcd0) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`:
+
+  - new prop `combobox` to dynamically add options when searchable
+  - fix navigation in the dropdown using keys when searchable
+
+- [#5971](https://github.com/scaleway/ultraviolet/pull/5971) [`fe79b43`](https://github.com/scaleway/ultraviolet/commit/fe79b43d8bda3660fff2e00ad566befb1bbbc90b) Thanks [@lisalupi](https://github.com/lisalupi)! - `Slider`: new prop `customValueDisplay`
+
+- [#5918](https://github.com/scaleway/ultraviolet/pull/5918) [`5961951`](https://github.com/scaleway/ultraviolet/commit/5961951efb3c41c1407d48885fb315b6f1272ee7) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: new props "groupEmptyState" and "groupError"
+
+- Updated dependencies [[`3c88802`](https://github.com/scaleway/ultraviolet/commit/3c8880208839eae1a25cac5b341dd2882713dbbd)]:
+  - @ultraviolet/themes@3.0.3
+  - @ultraviolet/icons@5.0.4
+
 ## 3.5.0
 
 ### Minor Changes
