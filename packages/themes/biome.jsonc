@@ -13,7 +13,7 @@
   },
   "extends": "//",
   "files": {
-    "includes": ["**", "**/__generated_"]
+    "includes": ["**", "!package.json", "**/__generated_"]
   },
   "root": false
 }

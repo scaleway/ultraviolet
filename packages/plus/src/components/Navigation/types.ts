@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, PropsWithChildren, ReactNode } from 'react'
 
 export type DragNDropData = {
   index: number
@@ -20,8 +20,7 @@ export type PinUnPinType = {
   totalPinned?: string[]
 }
 
-export type NavigationProps = {
-  children: ReactNode
+export type NavigationProps = PropsWithChildren<{
   /**
    * The logo to be displayed in header of the navigation
    * It can be a component or a function. The function will retrun you
@@ -41,4 +40,4 @@ export type NavigationProps = {
   onToggleExpand?: (expanded: boolean) => void
   'data-testid'?: string
   style?: CSSProperties
-}
+}>
