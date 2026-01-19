@@ -181,18 +181,14 @@ export const Row = ({
         highlightAnimation={highlightAnimation}
         id={id}
         onClick={() => {
-          if (
-            !(selectDisabled || disabled) &&
-            selectable === 'radio' &&
-            !expandable
-          ) {
+          if (selectDisabled || disabled || expandable) {
+            return
+          }
+
+          if (selectable === 'radio') {
             handleChangeRadio()
           }
-          if (
-            !(selectDisabled || disabled) &&
-            selectable === 'checkbox' &&
-            !expandable
-          ) {
+          if (selectable === 'checkbox') {
             handleChangeCheckbox()
           }
         }}
