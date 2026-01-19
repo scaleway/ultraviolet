@@ -139,6 +139,49 @@ describe('single slider', () => {
     shouldMatchSnapshot(<Slider label="Label" name="Name" tooltip value={1} />)
   })
 
+  test('renders correctly custom value', () => {
+    shouldMatchSnapshot(
+      <Slider
+        customValueDisplay="custom value"
+        label="Label"
+        name="Name"
+        tooltip
+        value={1}
+      />,
+    )
+  })
+
+  test('renders correctly custom value - direction row', () => {
+    shouldMatchSnapshot(
+      <Slider
+        customValueDisplay="custom value"
+        direction="row"
+        label="Label"
+        name="Name"
+        tooltip
+        value={1}
+      />,
+    )
+  })
+
+  test('renders correctly custom value with input ', () => {
+    const { asFragment } = renderWithTheme(
+      <Slider
+        customValueDisplay="customValue"
+        direction="row"
+        input
+        label="Label"
+        name="Name"
+        tooltip
+        value={1}
+      />,
+    )
+    // The input overrides the custom input
+    expect(screen.queryByText('customValue')).not.toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly with custom ticks', () => {
     shouldMatchSnapshot(
       <Slider label="Label" name="Name" options={options} unit="%" value={1} />,

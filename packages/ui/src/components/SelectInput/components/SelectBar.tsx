@@ -23,6 +23,7 @@ import { Stack } from '../../Stack'
 import { Tag } from '../../Tag'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
+import { SIZES_TAG } from '../constants'
 import { findOptionInOptions } from '../findOptionInOptions'
 import { useSelectInput } from '../SelectInputProvider'
 import type { OptionType } from '../types'
@@ -37,12 +38,6 @@ import {
   selectedValues,
   selectinputPlaceholder,
 } from './selectBar.css'
-
-const SIZES_TAG = {
-  gap: 8,
-  paddings: 16,
-  plusTag: 48,
-}
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'

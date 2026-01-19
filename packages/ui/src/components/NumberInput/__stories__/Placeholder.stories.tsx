@@ -13,7 +13,8 @@ Placeholder.args = {
 Placeholder.parameters = {
   docs: {
     description: {
-      story: `The \`placeholder\` prop can be used to display a placeholder text when the input is empty. It can be used to provide additional information about the expected input.`,
+      story:
+        'The `placeholder` prop can be used to display a placeholder text when the input is empty. It can be used to provide additional information about the expected input.',
     },
   },
 }

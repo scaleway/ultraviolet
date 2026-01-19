@@ -51,6 +51,7 @@ export const DoubleSlider = ({
   tooltipPosition,
   'aria-label': ariaLabel,
   labelDescription,
+  customValueDisplay,
 }: DoubleSliderProps) => {
   const theme = useTheme()
   const localId = useId()
@@ -283,6 +284,7 @@ export const DoubleSlider = ({
           >
             {label}
           </Label>
+          {customValueDisplay}
         </Stack>
       ) : null}
       <Stack direction={direction} gap={1} width="100%">
@@ -350,7 +352,7 @@ export const DoubleSlider = ({
                 ref={refSlider}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${((selectedIndexes[0] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [leftVar]: `calc(${((selectedIndexes[0] - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px)`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background
@@ -397,7 +399,7 @@ export const DoubleSlider = ({
                 onFocus={onFocus}
                 step={step}
                 style={assignInlineVars({
-                  [leftVar]: `calc(${(((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px`,
+                  [leftVar]: `calc(${(((selectedIndexes[1] ?? 0) - min) * 100) / (max - min)}% - ${THUMB_SIZE / 2}px)`,
                   [thumbColor]:
                     theme.theme === 'light'
                       ? theme.colors.neutral.background

@@ -37,7 +37,6 @@ type DefaultProps = {
    * Prefix of the value - only visible when prop `input = false`
    */
   prefix?: ReactNode
-
   /**
    * Unit of the value
    */
@@ -50,6 +49,11 @@ type DefaultProps = {
    * Whether an error occured
    */
   error?: string | boolean
+  /**
+   * Display this content instead of the slider value.
+   * For a single slider (`double="false"`), if a prefix or a suffix is defined, this prop overrides them
+   */
+  customValueDisplay?: ReactNode
   /**
    * Options for a non-linear scale, overrides `min`, `max`. This is usefull if step is not enough to get the desired granularity.
    */

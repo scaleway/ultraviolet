@@ -115,11 +115,57 @@ describe('double slider', () => {
     )
   })
 
-  test('renders correctly double default toolipt ', () => {
+  test('renders correctly double default toolip ', () => {
     shouldMatchSnapshot(
       <Slider double label="Label" name="Name" tooltip value={[12, 14]} />,
     )
   })
+
+  test('renders correctly custom value ', () => {
+    shouldMatchSnapshot(
+      <Slider
+        customValueDisplay="customValue"
+        double
+        label="Label"
+        name="Name"
+        tooltip
+        value={[12, 14]}
+      />,
+    )
+  })
+
+  test('renders correctly custom value - direction "row"', () => {
+    shouldMatchSnapshot(
+      <Slider
+        customValueDisplay="customValue"
+        direction="row"
+        double
+        label="Label"
+        name="Name"
+        tooltip
+        value={[12, 14]}
+      />,
+    )
+  })
+
+  test('renders correctly custom value with input ', () => {
+    const { asFragment } = renderWithTheme(
+      <Slider
+        customValueDisplay="customValue"
+        double
+        input
+        label="Label"
+        name="Name"
+        tooltip
+        value={[12, 14]}
+      />,
+    )
+
+    expect(screen.getByText('customValue')).toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly double with single tooltip', () => {
     shouldMatchSnapshot(
       <Slider

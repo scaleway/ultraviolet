@@ -7,6 +7,7 @@ export const List: StoryFn<typeof CategoryIcon> = props => (
   <Stack gap={1}>
     {Object.keys(CategoryIcon).map(iconName => {
       const FoundCategoryIcon =
+        // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
         CategoryIcon[iconName as keyof typeof CategoryIcon]
 
       const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)

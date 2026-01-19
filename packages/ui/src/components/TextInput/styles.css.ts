@@ -10,8 +10,8 @@ import { TEXTINPUT_SIZE_HEIGHT } from './constants'
 export const hasFocusVar = createVar()
 
 export const basicPrefix = style({
-  borderColor: 'inherit',
   borderRight: '1px solid',
+  borderRightColor: 'inherit',
   height: '100%',
   padding: theme.space['2'],
 

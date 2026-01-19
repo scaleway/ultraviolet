@@ -56,7 +56,8 @@ export const Overflowing: StoryFn<typeof Menu> = () => (
 Overflowing.parameters = {
   docs: {
     description: {
-      story: `This story is only to check the behavior of the menu when it overflows the parent container.`,
+      story:
+        'This story is only to check the behavior of the menu when it overflows the parent container.',
     },
   },
 }

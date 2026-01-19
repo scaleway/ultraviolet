@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.3
+
+### Patch Changes
+
+- [#5995](https://github.com/scaleway/ultraviolet/pull/5995) [`3c88802`](https://github.com/scaleway/ultraviolet/commit/3c8880208839eae1a25cac5b341dd2882713dbbd) Thanks [@renovate](https://github.com/apps/renovate)! - Add new typography codeSmall
+
 ## 3.0.2
 
 ### Patch Changes

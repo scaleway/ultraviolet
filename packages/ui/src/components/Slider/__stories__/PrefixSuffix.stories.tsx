@@ -53,6 +53,33 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
     <Stack gap={4}>
       <Slider
         {...args}
+        customValueDisplay={
+          <Text as="p" variant="bodySmallStrong">
+            This is a custom value
+          </Text>
+        }
+        label="With custom value"
+        max={100}
+        onChange={() => {}}
+        tooltip={false}
+        value={34}
+      />
+      <Slider
+        customValueDisplay={
+          <Text as="p" variant="bodySmallStrong">
+            This is a custom value
+          </Text>
+        }
+        double
+        label="Double with custom value"
+        onChange={() => {}}
+        suffix={undefined}
+        tooltip={false}
+        unit="GB"
+        value={[15, 70]}
+      />
+      <Slider
+        {...args}
         label="Suffix"
         max={100}
         onChange={() => {}}
@@ -106,7 +133,7 @@ PrefixSuffix.parameters = {
   docs: {
     description: {
       story:
-        'Add a prefix and/or a suffix to the values. The component supports custom prefixes and suffixes but please note that prefixes and non-string suffixes are not compatible with prop `input = true`. \n Use prop `unit` to add unit to the values. For double slider, non-string suffix must be arrays.',
+        'Add a prefix and/or a suffix to the values. The component supports custom prefixes and suffixes but please note that prefixes and non-string suffixes are not compatible with prop `input = true`. \n Use prop `unit` to add unit to the values. For double slider, non-string suffix must be arrays. It is also possible to completely replace the value with a `customValue`. If both a `customValue` and a suffix/prefix is defined, only the `customValue` will be shown for a single slider.',
     },
   },
 }

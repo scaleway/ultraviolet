@@ -64,7 +64,8 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
 AdvancedUsage.parameters = {
   docs: {
     description: {
-      story: `An advanced usage of a Popover with inputs inside and a button to open a modal with also inputs inside.`,
+      story:
+        'An advanced usage of a Popover with inputs inside and a button to open a modal with also inputs inside.',
     },
   },
 }

@@ -1,7 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { INPUT_SIZE_HEIGHT } from '../types'
+import { INPUT_SIZE_HEIGHT } from '../constants'
 
 export const maxWidthTag = createVar({
   inherits: false,

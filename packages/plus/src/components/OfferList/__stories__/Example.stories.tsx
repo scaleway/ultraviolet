@@ -114,6 +114,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
               <Stack direction="row" gap={0.5}>
                 {Array.from({ length: offer.score }).map((_, i) => (
                   <LeafIcon
+                    // biome-ignore lint/suspicious/noArrayIndexKey: to fix
                     key={`green-${i}`}
                     sentiment="success"
                     size="small"
@@ -122,6 +123,7 @@ export const Example: StoryFn<ComponentProps<typeof OfferList>> = props => {
                 {Array.from({ length: 3 - offer.score }).map((_, i) => (
                   <LeafIcon
                     disabled
+                    // biome-ignore lint/suspicious/noArrayIndexKey: to fix
                     key={`grey-${i}`}
                     sentiment="neutral"
                     size="small"

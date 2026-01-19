@@ -49,6 +49,7 @@ export const SingleSlider = ({
   suffix,
   required,
   labelDescription,
+  customValueDisplay,
   'aria-label': ariaLabel,
   tooltipPosition,
 }: SingleSliderProps) => {
@@ -206,12 +207,22 @@ export const SingleSlider = ({
           >
             {label}
           </Label>
-          {direction === 'column' ? styledValue(valueToShow) : null}
+          {direction === 'column' && (input || !customValueDisplay)
+            ? styledValue(valueToShow)
+            : null}
+          {direction === 'column' && customValueDisplay && !input
+            ? customValueDisplay
+            : null}
         </Stack>
       ) : null}
 
       <Stack direction="row" justifyContent="flex-end">
-        {direction === 'column' && !label ? styledValue(valueToShow) : null}
+        {direction === 'column' && !label && (input || !customValueDisplay)
+          ? styledValue(valueToShow)
+          : null}
+        {direction === 'column' && !label && customValueDisplay && !input
+          ? customValueDisplay
+          : null}
       </Stack>
       <Stack direction="column" gap={1} justifyContent="center" width="100%">
         <Tooltip
@@ -270,7 +281,12 @@ export const SingleSlider = ({
           />
         ) : null}
       </Stack>
-      {direction === 'row' ? styledValue(valueToShow) : null}
+      {direction === 'row' && (input || !customValueDisplay)
+        ? styledValue(valueToShow)
+        : null}
+      {direction === 'row' && customValueDisplay && !input
+        ? customValueDisplay
+        : null}
     </Stack>
   )
 }

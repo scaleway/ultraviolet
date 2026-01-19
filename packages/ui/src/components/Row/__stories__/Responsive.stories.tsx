@@ -73,6 +73,7 @@ export const Responsive: StoryFn = props => {
             <div
               className={divWithBackground}
               data-sentiment={sentiments[idx]}
+              // biome-ignore lint/suspicious/noArrayIndexKey: to fix
               key={idx}
             >
               {col}
@@ -100,6 +101,7 @@ export const Responsive: StoryFn = props => {
             <div
               className={divWithBackground}
               data-sentiment={sentiments[idx]}
+              // biome-ignore lint/suspicious/noArrayIndexKey: to fix
               key={idx}
             >
               {col}

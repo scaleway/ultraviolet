@@ -3,7 +3,13 @@ import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInput } from '..'
-import { cities, dataGrouped, dataUnGrouped, OptionalInfo } from './resources'
+import {
+  cities,
+  dataGroupEmpty,
+  dataGrouped,
+  dataUnGrouped,
+  OptionalInfo,
+} from './resources'
 
 // export type OptionType = {
 //   value: string
@@ -187,6 +193,57 @@ describe('selectInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('renders correctly with group error', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInput
+        groupError={{
+          'jovian planets': 'error',
+        }}
+        multiselect
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable={false}
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    expect(screen.getByText('error')).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with group empty state', async () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInput
+        groupEmptyState={{
+          'jovian planets': 'No jovian planets :(',
+          'terrestrial planets': 'No terrestrial planets !',
+        }}
+        multiselect
+        name="test"
+        options={dataGroupEmpty}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    expect(screen.getByText('No jovian planets :(')).toBeInTheDocument()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly with label on the right and optional info on the left', async () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
@@ -196,6 +253,7 @@ describe('selectInput', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        searchable={false}
       />,
     )
     const input = screen.getByText('placeholder')
@@ -204,7 +262,7 @@ describe('selectInput', () => {
     await waitFor(() => {
       expect(dropdown).toBeVisible()
     })
-    await userEvent.click(screen.getByTestId('search-bar'))
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -505,6 +563,7 @@ describe('selectInput', () => {
     await userEvent.click(venusCloseButton)
     expect(venus).not.toBeVisible()
   })
+
   test('renders correctly unclosable tags when readonly', () => {
     const { asFragment } = renderWithTheme(
       <SelectInput
@@ -741,6 +800,7 @@ describe('selectInput', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
+
   test('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInput
@@ -1431,5 +1491,187 @@ describe('selectInput', () => {
     })
 
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handles correctly when adding options - single select', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+
+    expect(venus).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new value')
+
+    expect(venus).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+    await userEvent.tab()
+    await userEvent.keyboard('[Enter]')
+
+    expect(onClick).toHaveBeenCalledOnce()
+  })
+
+  test('handles correctly when adding options - single select and ungrouped options', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+
+    expect(venus).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new value')
+
+    expect(venus).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+    await userEvent.tab()
+    await userEvent.keyboard('[Enter]')
+
+    expect(onClick).toHaveBeenCalledOnce()
+  })
+
+  test('handles correctly when adding options - multiselect select', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        multiselect
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+    const earth = screen.getByTestId('option-earth')
+
+    expect(venus).toBeVisible()
+    expect(earth).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('ven')
+
+    expect(venus).toBeVisible()
+    expect(earth).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[Enter]')
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new-planet')
+
+    expect(screen.getByTestId('add-option')).toBeVisible()
+    expect(venus).not.toBeVisible()
+    expect(earth).not.toBeVisible()
+
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[Enter]')
+
+    expect(onClick).toHaveBeenCalledTimes(2)
+  })
+
+  test('handles correctly when adding options - multiselect select and ungrouped data', async () => {
+    const onClick = vi.fn()
+
+    renderWithTheme(
+      <SelectInput
+        addOption={{ onClick, text: 'create' }}
+        multiselect
+        name="test"
+        onChange={(values: (string | undefined)[]) => values}
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-input-test')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    await waitFor(() => {
+      expect(dropdown).toBeVisible()
+    })
+    const venus = screen.getByTestId('option-venus')
+    const earth = screen.getByTestId('option-earth')
+
+    expect(venus).toBeVisible()
+    expect(earth).toBeVisible()
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('ven')
+
+    expect(venus).toBeVisible()
+    expect(earth).not.toBeVisible()
+
+    const addOption = screen.getByTestId('add-option')
+
+    expect(addOption).toBeVisible()
+
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[Enter]')
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.keyboard('new-planet')
+
+    expect(screen.getByTestId('add-option')).toBeVisible()
+    expect(venus).not.toBeVisible()
+    expect(earth).not.toBeVisible()
+
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[Enter]')
+
+    expect(onClick).toHaveBeenCalledTimes(2)
   })
 })

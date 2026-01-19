@@ -14,7 +14,7 @@ Unit.args = {
 Unit.parameters = {
   docs: {
     description: {
-      story: `The \`unit\` prop can be used to display a unit next to the input.`,
+      story: 'The `unit` prop can be used to display a unit next to the input.',
     },
   },
 }

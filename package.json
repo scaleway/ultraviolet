@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.28.0",
   "engines": {
     "node": ">=18.x",
     "pnpm": ">=9.x"
@@ -29,6 +29,7 @@
     "format:check": "biome check --linter-enabled=false --verbose .",
     "format:ci": "biome ci --linter-enabled=false .",
     "lint": "eslint --report-unused-disable-directives --cache .",
+    "biome:lint": "pnpm -w biome lint . --diagnostic-level=error",
     "lint:fix": "pnpm run lint --fix",
     "oxc": "oxlint -c .oxlintrc.json --type-check",
     "oxc:fix": "pnpm run oxc --fix",
@@ -179,7 +180,7 @@
     "svgo": "4.0.0",
     "timekeeper": "2.3.1",
     "tsx": "4.21.0",
-    "turbo": "2.7.3",
+    "turbo": "2.7.5",
     "typescript": "5.9.3",
     "vite": "7.3.1",
     "vitest": "4.0.16",

@@ -20,7 +20,8 @@ jobs:
           cache: "pnpm"
       - run: pnpm install
       - name: Generate json files
-        run: pnpm run tokens:update
+        run: |
+          pnpm run tokens:update
 
       - name: Compare & Create Pull Request
         uses: peter-evans/create-pull-request@v8

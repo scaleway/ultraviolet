@@ -114,7 +114,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
         </Stack>
         Selected chip{multiSelected.length > 1 ? 's' : null}:{' '}
         {multiSelected.includes(0)
-          ? `1 2 3`
+          ? '1 2 3'
           : multiSelected.map(id => `${id} `)}
       </Stack>
     </Stack>
