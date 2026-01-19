@@ -27,7 +27,8 @@ export const navigationGroupText = recipe({
 export const navigationGroupStack = style({ paddingTop: theme.space[1] })
 
 export const navigationPinnedItemDropableArea = style({
-  borderTop: '2px solid transparent',
+  borderTop: '2px solid',
+  borderColor: 'transparent',
   height: 2,
   left: 0,
   padding: `${theme.space['0.5']} 0`,
@@ -35,7 +36,8 @@ export const navigationPinnedItemDropableArea = style({
   right: 0,
   selectors: {
     '&::before': {
-      border: '3px solid inherit',
+      border: '3px solid',
+      borderColor: 'inherit',
       borderRadius: theme.radii.circle,
       content: "''",
       height: 0,
@@ -50,7 +52,6 @@ export const navigationPinnedItemDropableArea = style({
 
 export const navigationPinnedItemRelativeDiv = style({
   position: 'relative',
-  color: 'transparent',
 })
 
 export const navigationPinnedItemContainer = recipe({
