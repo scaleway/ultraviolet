@@ -4,6 +4,7 @@ import { Group } from './components/Group'
 import { Item } from './components/Item'
 import { PinnedItems } from './components/PinnedItems'
 import { Separator } from './components/Separator'
+import { ShowHide } from './components/ShowHide'
 import { NavigationContent } from './NavigationContent'
 import type { NavigationProps } from './types'
 
@@ -39,3 +40,4 @@ Navigation.Group = Group
 Navigation.Item = Item
 Navigation.PinnedItems = PinnedItems
 Navigation.Separator = Separator
+Navigation.ShowHide = ShowHide

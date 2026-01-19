@@ -90,7 +90,7 @@ type ItemProps = {
    */
   labelDescription?: ReactNode
   /**
-   * It should be a unique id and will be used for pin/unpin feature.
+   * It should be a unique id and will be used for pin/unpin and show/hide feature.
    */
   id: string
   /**
@@ -148,6 +148,10 @@ type ItemProps = {
    * has sub items.
    */
   noExpand?: boolean
+  /**
+   * When set to true, the item is still visible even when `showHide='hide'` (NavigationProvider)
+   */
+  alwaysVisible?: boolean
   disabled?: boolean
   'data-testid'?: string
   style?: CSSProperties
@@ -183,6 +187,7 @@ export const Item = memo(
     id,
     'data-testid': dataTestId,
     style,
+    alwaysVisible,
   }: ItemProps) => {
     const context = useNavigation()
     if (!context) {
@@ -206,6 +211,7 @@ export const Item = memo(
       registerItem,
       shouldAnimate,
       animationType,
+      showHide,
     } = context
 
     const makeRegisterRef = useRef<() => void>(null)
@@ -358,6 +364,10 @@ export const Item = memo(
 
     const shouldHaveWeakText =
       !!children && !active && shouldShowPinnedButton && !disabled
+
+    if (!alwaysVisible && showHide === 'hide') {
+      return null
+    }
 
     if (expanded || (!expanded && animation === 'expand')) {
       return (

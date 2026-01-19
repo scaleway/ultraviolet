@@ -3,7 +3,7 @@ import { userEvent } from '@testing-library/user-event'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { Navigation, NavigationProvider } from '..'
 
 type BasicNavigationProps = Pick<
@@ -16,7 +16,7 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
     <Navigation logo={<p>Logo</p>}>
       <Navigation.PinnedItems />
       <Navigation.Separator />
-      <Navigation.Group label="Products">
+      <Navigation.Group additionalData="additional data" label="Products">
         <Navigation.Item
           active
           categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
@@ -28,6 +28,44 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
           categoryIcon={<UseCaseCategoryIcon />}
           id="item2"
           label="Servers"
+        />
+      </Navigation.Group>
+      {/* @ts-expect-error we try to test when no children is provided */}
+      <Navigation.Group label="Empty Group" />
+    </Navigation>
+  </NavigationProvider>
+)
+
+const NavigationShowHide = ({
+  pinnedFeature = true,
+  onShowHide,
+}: BasicNavigationProps & { onShowHide?: () => void }) => (
+  <NavigationProvider
+    animation={false}
+    pinnedFeature={pinnedFeature}
+    showHide="hide"
+  >
+    <Navigation logo={<p>Logo</p>}>
+      <Navigation.PinnedItems />
+      <Navigation.Separator />
+      <Navigation.Group label="Products">
+        <Navigation.Item
+          alwaysVisible
+          categoryIcon={<UseCaseCategoryIcon variant="neutral" />}
+          id="item1"
+          label="Dashboard"
+          noPinButton
+        />
+        <Navigation.Item
+          categoryIcon={<UseCaseCategoryIcon />}
+          id="item2"
+          label="Servers"
+        />
+        <Navigation.ShowHide
+          data-testid="show-hide"
+          hideContent="hide"
+          onShowHide={onShowHide}
+          showContent="show"
         />
       </Navigation.Group>
       {/* @ts-expect-error we try to test when no children is provided */}
@@ -152,6 +190,46 @@ describe('navigation', () => {
     if (unpinButton) {
       await userEvent.click(unpinButton)
     }
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('with show hide feature', async () => {
+    const onShowHide = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <NavigationShowHide onShowHide={onShowHide} pinnedFeature />,
+    )
+
+    expect(screen.getByText('Dashboard')).toBeVisible() // alwaysVisible set to true for this item
+    expect(screen.queryByText('Servers')).not.toBeInTheDocument() // alwaysVisible not set to true for this item
+    expect(screen.queryByTestId('pinned-group')).not.toBeInTheDocument() // pinned items are hidden when showHide="hide"
+
+    const showButton = screen.getByTestId('show-hide')
+    await userEvent.click(showButton)
+    expect(onShowHide).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('with show hide feature - collapsed', async () => {
+    const onShowHide = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <NavigationShowHide onShowHide={onShowHide} pinnedFeature />,
+    )
+
+    const collapseButton = screen.getByRole('button', {
+      name: 'Collapse sidebar',
+    })
+    await userEvent.click(collapseButton)
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', { name: 'Expand sidebar' }),
+      ).toBeVisible()
+    })
+
+    const showButton = screen.getByTestId('show-hide')
+    await userEvent.click(showButton)
+    expect(onShowHide).toHaveBeenCalledOnce()
 
     expect(asFragment()).toMatchSnapshot()
   })
