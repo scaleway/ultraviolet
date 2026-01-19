@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 3.2.0
+
+### Minor Changes
+
+- [#5986](https://github.com/scaleway/ultraviolet/pull/5986) [`d811852`](https://github.com/scaleway/ultraviolet/commit/d811852062e7bfb1de9981aa6fecb5546358512a) Thanks [@lisalupi](https://github.com/lisalupi)! - `Navigation`:
+  - Fix issue with `Navigation.Separator` height
+  - New subComponent `Navigation.ShowHide`, paired with new props such as `showHide` (`NavigationProvider`) and `alwaysVisible` (`Navigation.Item`). With this feature, it is possible to add a "show/hide" button to only display items with the `alwaysVisible` prop set to true.
+  - New prop `additionalData` (`Navigation.Group`) to display information on the right of a group
+  - `PinnedItem`: fix color of dropable area indicator
+
 ## 3.1.9
 
 ### Patch Changes
