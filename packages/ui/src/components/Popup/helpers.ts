@@ -361,7 +361,7 @@ export const computePositions = ({
         arrowLeft: isAligned
           ? childrenWidth / 2 - arrowWidth
           : popupWidth / 2 + popupOverflow * -1,
-        arrowTop: -arrowWidth - 5,
+        arrowTop: `${-arrowWidth - 5}px`,
         arrowTransform: '',
         placement: 'bottom',
         popupInitialPosition: `translate3d(${
@@ -383,9 +383,7 @@ export const computePositions = ({
 
       return {
         arrowLeft: popupWidth + arrowWidth + 5,
-        arrowTop: isAligned
-          ? childrenHeight / 2 - arrowWidth
-          : popupHeight / 2 + popupOverflow * -1,
+        arrowTop: '50%',
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
         popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
@@ -408,9 +406,7 @@ export const computePositions = ({
 
       return {
         arrowLeft: -arrowWidth - 5,
-        arrowTop: isAligned
-          ? childrenHeight / 2 - arrowWidth
-          : popupHeight / 2 + popupOverflow * -1,
+        arrowTop: '50%',
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
         popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${
@@ -441,9 +437,7 @@ export const computePositions = ({
 
         return {
           arrowLeft: -arrowWidth - 5,
-          arrowTop: isAligned
-            ? childrenHeight / 2 - arrowWidth
-            : popupHeight / 2 + popupOverflow * -1,
+          arrowTop: '50%',
           arrowTransform: 'translate(50%, -50%)',
           placement: 'right',
           popupInitialPosition: `translate3d(${
@@ -468,9 +462,7 @@ export const computePositions = ({
 
       return {
         arrowLeft: popupWidth + arrowWidth + 5,
-        arrowTop: isAligned
-          ? childrenHeight / 2 - arrowWidth
-          : popupHeight / 2 + popupOverflow * -1,
+        arrowTop: '50%',
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
         popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
@@ -507,7 +499,7 @@ export const computePositions = ({
         arrowLeft: isAligned
           ? childrenWidth / 2 - arrowWidth
           : popupWidth / 2 + popupOverflow * -1,
-        arrowTop: popupHeight - 1,
+        arrowTop: `${popupHeight - 1}px`,
         arrowTransform: '',
         placement: 'top',
         popupInitialPosition: `translate3d(${
