@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 3.1.9
+
+### Patch Changes
+
+- [#5998](https://github.com/scaleway/ultraviolet/pull/5998) [`9029fe7`](https://github.com/scaleway/ultraviolet/commit/9029fe74683a6b4d8ac16dd1d4e2404d6f6ce08d) Thanks [@philibea](https://github.com/philibea)! - Fix navigation item pinned border css issue
+
 ## 3.1.8
 
 ### Patch Changes
