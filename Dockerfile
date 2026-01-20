@@ -1,4 +1,4 @@
-FROM node:24.12.0-alpine
+FROM node:24.13.0-alpine
 WORKDIR /build
 
 ARG TURBO_TOKEN=token
