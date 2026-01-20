@@ -1,6 +1,7 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import { unitInputUnit } from '../../UnitInput/styles.css'
 import { INPUT_SIZE_HEIGHT } from '../constants'
 
 export const maxWidthTag = createVar({
@@ -73,6 +74,12 @@ export const selectBarBase = style({
   paddingLeft: theme.space[2],
   paddingRight: 0,
   width: '100%',
+  selectors: {
+    [`.${unitInputUnit} &`]: {
+      background: 'transparent',
+      border: 'none !important',
+    },
+  },
 })
 
 export const selectBar = recipe({
