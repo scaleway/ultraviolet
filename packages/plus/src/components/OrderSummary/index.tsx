@@ -71,6 +71,16 @@ export const OrderSummary = ({
   const totalPrice = useMemo(() => {
     const price = Object.values(categoriesPrice).reduce<[number, number]>(
       (acc, categoryPrice) => [
+        acc[0] + categoryPrice.totalPrice,
+        acc[1] + categoryPrice.maxPrice,
+      ],
+      [0, 0],
+    )
+
+    const priceDiscounted = Object.values(categoriesPrice).reduce<
+      [number, number]
+    >(
+      (acc, categoryPrice) => [
         acc[0] + categoryPrice.totalPriceWithDiscount,
         acc[1] + categoryPrice.maxPriceWithDiscount,
       ],
@@ -80,14 +90,14 @@ export const OrderSummary = ({
     const computedPrice = {
       maxPrice: Math.max(price[1], 0),
       maxPriceWithDiscount: Math.max(
-        price[1] * (discount <= 1 ? 1 - discount : 1) -
+        priceDiscounted[1] * (discount <= 1 ? 1 - discount : 1) -
           (discount > 1 ? Math.abs(discount) : 0),
         0,
       ),
       timeUnit: unitUnitInput,
       totalPrice: Math.max(price[0], 0),
       totalPriceWithDiscount: Math.max(
-        price[0] * (discount <= 1 ? 1 - discount : 1) -
+        priceDiscounted[0] * (discount <= 1 ? 1 - discount : 1) -
           (discount > 1 ? Math.abs(discount) : 0),
         0,
       ),

@@ -214,23 +214,23 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
             sentiment="neutral"
             variant="bodySmallStrong"
           >
-            {subCategoryPrice[0] === subCategoryPrice[1] ||
-            subCategory.priceUnit
+            {subCategoryPrice.discounted[0] ===
+              subCategoryPrice.discounted[1] || subCategory.priceUnit
               ? formatNumber(
                   subCategory.priceUnit
                     ? subCategory.price
-                    : subCategoryPrice[0],
+                    : subCategoryPrice.discounted[0],
                   localeFormat,
                   currency,
                   fractionDigits,
                 )
               : `${formatNumber(
-                  subCategoryPrice[0],
+                  subCategoryPrice.discounted[0],
                   localeFormat,
                   currency,
                   fractionDigits,
                 )} - ${formatNumber(
-                  subCategoryPrice[1],
+                  subCategoryPrice.discounted[1],
                   localeFormat,
                   currency,
                   fractionDigits,

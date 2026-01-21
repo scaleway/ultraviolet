@@ -66,9 +66,28 @@ export const calculateSubCategoryPrice = (
   hideTimeUnit: boolean,
   timePeriodAmount: number,
   timePeriodUnit: TimeUnit,
-): [number, number] => {
+): { discounted: [number, number]; default: [number, number] } => {
   if (Array.isArray(subCategory.amount)) {
     const minPrice =
+      calculatePrice({
+        amount: subCategory.amount?.[0] ?? 1,
+        amountFree: subCategory.amountFree,
+        fixedPrice: subCategory.fixedPrice,
+        price: subCategory.price ?? 0,
+        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+      }) || 0
+    const maxPrice =
+      calculatePrice({
+        amount: subCategory.amount?.[1] ?? 1,
+        amountFree: subCategory.amountFree,
+        fixedPrice: subCategory.fixedPrice,
+        price: subCategory.price ?? 0,
+        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+      }) || 0
+
+    const minPriceWithDiscount =
       calculatePrice({
         amount: subCategory.amount?.[0] ?? 1,
         amountFree: subCategory.amountFree,
@@ -78,7 +97,8 @@ export const calculateSubCategoryPrice = (
         timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
         timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
       }) || 0
-    const maxPrice =
+
+    const maxPriceWithDiscount =
       calculatePrice({
         amount: subCategory.amount?.[1] ?? 1,
         amountFree: subCategory.amountFree,
@@ -89,9 +109,22 @@ export const calculateSubCategoryPrice = (
         timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
       }) || 0
 
-    return [minPrice, maxPrice]
+    return {
+      discounted: [minPriceWithDiscount, maxPriceWithDiscount],
+      default: [minPrice, maxPrice],
+    }
   }
   const price =
+    calculatePrice({
+      amount: subCategory.amount ?? 1,
+      amountFree: subCategory.amountFree,
+      fixedPrice: subCategory.fixedPrice,
+      price: subCategory.price ?? 0,
+      timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
+      timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+    }) || 0
+
+  const priceWithDiscount =
     calculatePrice({
       amount: subCategory.amount ?? 1,
       amountFree: subCategory.amountFree,
@@ -102,7 +135,10 @@ export const calculateSubCategoryPrice = (
       timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
     }) || 0
 
-  return [price, price]
+  return {
+    discounted: [priceWithDiscount, priceWithDiscount],
+    default: [price, price],
+  }
 }
 
 export const calculateCategoryPrice = (
@@ -111,7 +147,10 @@ export const calculateCategoryPrice = (
   timePeriodAmount: number,
   timePeriodUnit: TimeUnit,
 ): { categoryPrice: [number, number]; discountedPrice: [number, number] } => {
-  const categoryPrice: [number, number] = category.subCategories?.reduce(
+  const categoryPrice: {
+    discounted: [number, number]
+    default: [number, number]
+  } = category.subCategories?.reduce(
     (acc, subCategory) => {
       const computedPrices = calculateSubCategoryPrice(
         subCategory,
@@ -120,26 +159,35 @@ export const calculateCategoryPrice = (
         timePeriodUnit,
       )
 
-      return [acc[0] + computedPrices[0], acc[1] + computedPrices[1]]
+      return {
+        discounted: [
+          acc.discounted[0] + computedPrices.discounted[0],
+          acc.discounted[1] + computedPrices.discounted[1],
+        ],
+        default: [
+          acc.default[0] + computedPrices.default[0],
+          acc.default[1] + computedPrices.default[1],
+        ],
+      }
     },
-    [0, 0],
-  ) || [0, 0]
+    { discounted: [0, 0], default: [0, 0] },
+  ) ?? { discounted: [0, 0], default: [0, 0] }
 
   const discountedPriceMin =
     category.discount && category.discount <= 1
-      ? categoryPrice[0] * category.discount
-      : categoryPrice[0] - (category.discount ?? 0)
+      ? categoryPrice.discounted[0] * (1 - category.discount)
+      : categoryPrice.discounted[0] - (category.discount ?? 0)
 
   const discountedPriceMax =
     category.discount && category.discount <= 1
-      ? categoryPrice[1] * category.discount
-      : categoryPrice[1] - (category.discount ?? 0)
+      ? categoryPrice.discounted[1] * (1 - category.discount)
+      : categoryPrice.discounted[1] - (category.discount ?? 0)
 
   const discountedPrice: [number, number] = category.allowNegative
     ? [discountedPriceMin, discountedPriceMax]
     : [Math.max(discountedPriceMin, 0), Math.max(discountedPriceMax, 0)]
 
-  categoryPrice.map(price =>
+  categoryPrice.default.map(price =>
     Math.max(
       category.discount && category.discount <= 1
         ? price * category.discount
@@ -148,7 +196,7 @@ export const calculateCategoryPrice = (
     ),
   )
 
-  return { categoryPrice, discountedPrice }
+  return { categoryPrice: categoryPrice.default, discountedPrice }
 }
 
 type DisplayPriceProps = {
