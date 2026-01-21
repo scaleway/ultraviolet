@@ -14,10 +14,10 @@ $ pnpm add @ultraviolet/plus
 
 ### Usage
 
-In order for the library to work you will need to import both Ultraviolet UI and Ultraviolet Plus styles in your project.
+In order for the library to work you will need to import both Ultraviolet UI and Ultraviolet Plus styles in your project as well as Ultraviolet Theme.
 
 ```tsx
-import { ThemeProvider } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/themes'
 import { normalize, theme } from '@ultraviolet/ui'
 import { ContentCard } from '@ultraviolet/plus'
 import '@ultraviolet/ui/styles'
