@@ -40,7 +40,6 @@ export const checkboxInput = style({
 })
 
 export const checkboxContainer = style({
-  alignItems: 'center',
   display: 'inline-flex',
   gap: theme.space['1'],
   position: 'relative',
