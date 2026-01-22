@@ -136,6 +136,31 @@ export const Row = ({
       ? radioSelectedRow === offerName
       : checkboxSelectedRows.includes(offerName)
 
+  const handleChangeCheckbox = () => {
+    if (isRowSelected) {
+      const newSelectedList = checkboxSelectedRows.filter(
+        element => element !== offerName,
+      )
+      setCheckboxSelectedRows(newSelectedList)
+      onChangeSelect?.(newSelectedList)
+    } else {
+      const newSelectedList = [...checkboxSelectedRows, offerName]
+      setCheckboxSelectedRows(newSelectedList)
+      onChangeSelect?.(newSelectedList)
+    }
+
+    if (expandedRowIds[id]) {
+      expandRow(id)
+    } else if (!autoCollapse) {
+      collapseRow(id)
+    }
+  }
+
+  const handleChangeRadio = () => {
+    setRadioSelectedRow(offerName)
+    onChangeSelect?.(offerName)
+  }
+
   return (
     <>
       <List.Row
@@ -155,6 +180,18 @@ export const Row = ({
         expanded={expanded ?? expandedRowIds[id]}
         highlightAnimation={highlightAnimation}
         id={id}
+        onClick={() => {
+          if (selectDisabled || disabled || expandable) {
+            return
+          }
+
+          if (selectable === 'radio') {
+            handleChangeRadio()
+          }
+          if (selectable === 'checkbox') {
+            handleChangeCheckbox()
+          }
+        }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={style}
@@ -184,8 +221,10 @@ export const Row = ({
                   id={id}
                   name={`radio-offer-list-${id}`}
                   onChange={() => {
-                    setRadioSelectedRow(offerName)
-                    onChangeSelect?.(offerName)
+                    // When !expandable, selection is triggered in the onClick of List.Row
+                    if (expandable) {
+                      handleChangeRadio()
+                    }
                     if (expandedRowIds[id]) {
                       expandRow(id)
                     } else if (!autoCollapse) {
@@ -202,25 +241,8 @@ export const Row = ({
                   id={id}
                   name={`checkbox-offer-list-${id}`}
                   onChange={() => {
-                    if (isRowSelected) {
-                      const newSelectedList = checkboxSelectedRows.filter(
-                        element => element !== offerName,
-                      )
-                      setCheckboxSelectedRows(newSelectedList)
-                      onChangeSelect?.(newSelectedList)
-                    } else {
-                      const newSelectedList = [
-                        ...checkboxSelectedRows,
-                        offerName,
-                      ]
-                      setCheckboxSelectedRows(newSelectedList)
-                      onChangeSelect?.(newSelectedList)
-                    }
-
-                    if (expandedRowIds[id]) {
-                      expandRow(id)
-                    } else if (!autoCollapse) {
-                      collapseRow(id)
+                    if (expandable) {
+                      handleChangeCheckbox()
                     }
                   }}
                   value={id}

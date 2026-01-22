@@ -253,7 +253,7 @@ globalStyle(`${listRowBase} > td:last-child`, {
 })
 
 globalStyle(
-  `${listRowBase}:not([aria-disabled='true']):hover > td, ${listRowBase}:not([aria-disabled='true']):hover > td:first-child, ${listRowBase}:not([aria-disabled='true']):hover > td:last-child`,
+  `${listRowBase}:not([aria-disabled='true']):hover > td, ${listRowBase}:not([aria-disabled='true']):hover > td:first-child, ${listRowBase}:not([aria-disabled='true']):hover > td:last-child, ${listRowBase}:not([aria-disabled='true']):focus-within > td`,
   {
     borderColor: theme.colors.primary.border,
   },
