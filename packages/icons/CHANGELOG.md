@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.5
+
+### Patch Changes
+
+- [#6008](https://github.com/scaleway/ultraviolet/pull/6008) [`ce69316`](https://github.com/scaleway/ultraviolet/commit/ce693160ffa3d471fd58235304b6826f33bf6640) Thanks [@lisalupi](https://github.com/lisalupi)! - New icons `ShieldCheckIcon`, `ShieldCheckOutlineIcon`, `ShieldIcon` and `ShieldOutlineIcon`
+
 ## 5.0.4
 
 ### Patch Changes
