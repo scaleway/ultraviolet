@@ -50,16 +50,16 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
       border: 'none',
       color: monochrome.white.text,
       selectors: {
+        '&:hover, &:active': {
+          background: monochrome.black.backgroundHover,
+          color: monochrome.white.textHover,
+        },
         '&:active:not(:disabled)': {
           boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
         '&:disabled': {
           background: monochrome.black.backgroundDisabled,
           color: monochrome.black.textDisabled,
-        },
-        '&:hover, &:active': {
-          background: monochrome.black.backgroundHover,
-          color: monochrome.white.textHover,
         },
       },
     }
@@ -70,16 +70,16 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
       border: 'none',
       color: monochrome.black.text,
       selectors: {
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+        '&:hover, &:active': {
+          background: monochrome.white.backgroundHover,
+          color: monochrome.black.textHover,
         },
         '&:disabled': {
           background: monochrome.white.backgroundDisabled,
           color: monochrome.white.textDisabled,
         },
-        '&:hover, &:active': {
-          background: monochrome.white.backgroundHover,
-          color: monochrome.black.textHover,
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -91,16 +91,16 @@ function getFilledStyle(sentiment: (typeof sentiments)[number]) {
     border: 'none',
     color: selectedSentiment.textStrong,
     selectors: {
-      '&:active:not(:disabled)': {
-        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
+      '&:hover, &:active': {
+        background: selectedSentiment.backgroundStrongHover,
+        color: selectedSentiment.textStrongHover,
       },
       '&:disabled': {
         background: selectedSentiment.backgroundStrongDisabled,
         color: selectedSentiment.textStrongDisabled,
       },
-      '&:hover, &:active': {
-        background: selectedSentiment.backgroundStrongHover,
-        color: selectedSentiment.textStrongHover,
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
     },
   }
@@ -113,18 +113,18 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
       border: `1px solid ${monochrome.black.border}`,
       color: monochrome.black.text,
       selectors: {
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-        },
-        '&:disabled': {
-          background: 'none',
-          border: `1px solid ${monochrome.black.borderDisabled}`,
-          color: monochrome.black.textDisabled,
-        },
         '&:hover, &:active': {
           background: monochrome.black.backgroundHover,
-          border: `1px solid ${monochrome.black.borderHover}`,
           color: monochrome.white.textHover,
+          border: `1px solid ${monochrome.black.borderHover}`,
+        },
+        '&:disabled': {
+          color: monochrome.black.textDisabled,
+          border: `1px solid ${monochrome.black.borderDisabled}`,
+          background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -135,18 +135,18 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
       border: `1px solid ${monochrome.white.border}`,
       color: monochrome.white.text,
       selectors: {
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-        },
-        '&:disabled': {
-          background: 'none',
-          border: `1px solid ${monochrome.white.borderDisabled}`,
-          color: monochrome.white.textDisabled,
-        },
         '&:hover, &:active': {
           background: monochrome.white.backgroundHover,
-          border: `1px solid ${monochrome.white.borderHover}`,
           color: monochrome.black.textHover,
+          border: `1px solid ${monochrome.white.borderHover}`,
+        },
+        '&:disabled': {
+          color: monochrome.white.textDisabled,
+          border: `1px solid ${monochrome.white.borderDisabled}`,
+          background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -159,18 +159,18 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
       border: `1px solid ${selectedSentiment.borderStrong}`,
       color: selectedSentiment.text,
       selectors: {
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-        },
-        '&:disabled': {
-          background: 'none',
-          border: `1px solid ${selectedSentiment.borderStrongDisabled}`,
-          color: selectedSentiment.textDisabled,
-        },
         '&:hover, &:active': {
           background: selectedSentiment.backgroundHover,
-          border: `1px solid ${selectedSentiment.borderStrongHover}`,
           color: selectedSentiment.textHover,
+          border: `1px solid ${selectedSentiment.borderStrongHover}`,
+        },
+        '&:disabled': {
+          color: selectedSentiment.textDisabled,
+          border: `1px solid ${selectedSentiment.borderStrongDisabled}`,
+          background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -182,18 +182,18 @@ function getOutlinedStyle(sentiment: (typeof sentiments)[number]) {
     border: `1px solid ${selectedSentiment.border}`,
     color: selectedSentiment.text,
     selectors: {
-      '&:active:not(:disabled)': {
-        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-      },
-      '&:disabled': {
-        background: 'none',
-        border: `1px solid ${selectedSentiment.borderDisabled}`,
-        color: selectedSentiment.textDisabled,
-      },
       '&:hover, &:active': {
         background: selectedSentiment.backgroundHover,
-        border: `1px solid ${selectedSentiment.borderHover}`,
         color: selectedSentiment.textHover,
+        border: `1px solid ${selectedSentiment.borderHover}`,
+      },
+      '&:disabled': {
+        color: selectedSentiment.textDisabled,
+        border: `1px solid ${selectedSentiment.borderDisabled}`,
+        background: 'none',
+      },
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
     },
   }
@@ -206,16 +206,16 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
       border: 'none',
       color: monochrome.black.text,
       selectors: {
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-        },
-        '&:disabled': {
-          background: 'none',
-          color: monochrome.black.textDisabled,
-        },
         '&:hover, &:active': {
           background: monochrome.black.backgroundHover,
           color: monochrome.white.textHover,
+        },
+        '&:disabled': {
+          color: monochrome.black.textDisabled,
+          background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -226,16 +226,16 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
       border: 'none',
       color: monochrome.white.text,
       selectors: {
-        '&:active:not(:disabled)': {
-          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-        },
-        '&:disabled': {
-          background: 'none',
-          color: monochrome.white.textDisabled,
-        },
         '&:hover, &:active': {
           background: monochrome.white.backgroundHover,
           color: monochrome.black.textHover,
+        },
+        '&:disabled': {
+          color: monochrome.white.textDisabled,
+          background: 'none',
+        },
+        '&:active:not(:disabled)': {
+          boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
         },
       },
     }
@@ -247,16 +247,16 @@ function getGhostStyle(sentiment: (typeof sentiments)[number]) {
     border: 'none',
     color: selectedSentiment.text,
     selectors: {
-      '&:active:not(:disabled)': {
-        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
-      },
-      '&:disabled': {
-        background: 'none',
-        color: selectedSentiment.textDisabled,
-      },
       '&:hover, &:active': {
         background: selectedSentiment.backgroundHover,
         color: selectedSentiment.textHover,
+      },
+      '&:disabled': {
+        color: selectedSentiment.textDisabled,
+        background: 'none',
+      },
+      '&:active:not(:disabled)': {
+        boxShadow: theme.shadows[FOCUS_RING_KEY[sentiment]],
       },
     },
   }
