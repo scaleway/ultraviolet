@@ -16,7 +16,10 @@ export const GlobalAlertLink = ({
   oneLine = false,
   'data-testid': dataTestId,
   style,
-}: Omit<ComponentProps<typeof Link>, 'sentiment' | 'prominence' | 'size'>) => {
+}: Omit<
+  ComponentProps<typeof Link>,
+  'sentiment' | 'prominence' | 'size' | 'render'
+> & { href: string }) => {
   const { theme } = useTheme()
 
   return (

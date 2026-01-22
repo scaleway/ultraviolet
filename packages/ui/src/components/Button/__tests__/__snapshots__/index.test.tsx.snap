@@ -47,6 +47,132 @@ exports[`button > render medium 1`] = `
 </DocumentFragment>
 `;
 
+exports[`button > render prop > element form > render correctly with render prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and different sentiments 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      Primary
+    </a>
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_danger__e1wcoe6 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_2__e1wcoen"
+      href="/about"
+    >
+      Danger
+    </a>
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_neutral__e1wcoe8 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_6__e1wcoer"
+      href="/about"
+    >
+      Neutral
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and different variants 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      Filled
+    </a>
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_outlined__e1wcoek styles_undefined_compound_9__e1wcoeu"
+      href="/about"
+    >
+      Outlined
+    </a>
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_ghost__e1wcoej styles_undefined_compound_18__e1wcoe13"
+      href="/about"
+    >
+      Ghost
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and fullWidth 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_true__e1wcoe4 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > element form > render correctly with render prop and sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      Large
+    </a>
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_medium__e1wcoef styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      Medium
+    </a>
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_small__e1wcoeg styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      Small
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`button > render prop > function form > render correctly with render function 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__e1wcoe0 styles_disabled_false__e1wcoe1 styles_fullWidth_false__e1wcoe3 styles_sentiment_primary__e1wcoe9 styles_size_large__e1wcoee styles_variant_filled__e1wcoei styles_undefined_compound_0__e1wcoel"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`button > render small 1`] = `
 <DocumentFragment>
   <div
