@@ -1,10 +1,6 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  createVar,
-  globalStyle,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
+import { createVar, style, styleVariants } from '@vanilla-extract/css'
+import { searchInput } from '../SearchInput/styles.css'
 import { TEXTINPUT_SIZE_HEIGHT } from './constants'
 
 export const hasFocusVar = createVar()
@@ -19,6 +15,9 @@ export const basicPrefix = style({
     '&[data-size="small"]': {
       padding: theme.space['1'],
     },
+    [`${searchInput} &`]: {
+      border: 'none',
+    },
   },
 })
 
@@ -31,40 +30,19 @@ export const basicSuffix = style({
   borderLeft: '1px solid',
   height: '100%',
   padding: `0 ${theme.space['2']}`,
+  selectors: {
+    [`${searchInput} &`]: {
+      border: 'none',
+    },
+  },
 })
 
 export const ctaSuffix = style({
-  borderColor: 'inherit',
-  borderLeft: '1px solid',
+  borderLeftColor: 'inherit',
+  borderLeftWidth: 1,
+  borderLeftStyle: 'solid',
   height: '100%',
   padding: `0 ${theme.space['1']}`,
-})
-
-export const inputClass = style({
-  background: 'transparent',
-  border: 'none',
-  flex: 1,
-  fontSize: theme.typography.bodySmall.fontSize,
-  height: '100%',
-  outline: 'none',
-  paddingLeft: theme.space['2'],
-
-  selectors: {
-    '&:disabled': {
-      cursor: 'not-allowed',
-      userSelect: 'none',
-    },
-    '&:focus': {
-      outline: 'none',
-    },
-    '&[data-size="large"]': {
-      fontSize: theme.typography.body.fontSize,
-    },
-    '&[data-size="small"]': {
-      paddingLeft: theme.space['1'],
-    },
-  },
-  width: '100%',
 })
 
 export const inputWrapperSizes = styleVariants(
@@ -116,21 +94,44 @@ export const inputWrapper = style({
   width: '100%',
 })
 
-globalStyle(`${inputWrapper} > ${inputClass}`, {
-  color: theme.colors.neutral.text,
-})
+export const inputClass = style({
+  background: 'transparent',
+  border: 'none',
+  flex: 1,
+  fontSize: theme.typography.bodySmall.fontSize,
+  height: '100%',
+  outline: 'none',
+  paddingLeft: theme.space['2'],
 
-globalStyle(`${inputWrapper} > ${inputClass}::placeholder`, {
-  color: theme.colors.neutral.textWeak,
-})
-
-globalStyle(`${inputWrapper}[data-disabled='true'] > ${inputClass}`, {
-  color: theme.colors.neutral.textDisabled,
-})
-
-globalStyle(
-  `${inputWrapper}[data-disabled='true'] > ${inputClass}::placeholder`,
-  {
-    color: theme.colors.neutral.textWeakDisabled,
+  selectors: {
+    '&:disabled': {
+      cursor: 'not-allowed',
+      userSelect: 'none',
+    },
+    '&:focus': {
+      outline: 'none',
+    },
+    '&[data-size="large"]': {
+      fontSize: theme.typography.body.fontSize,
+    },
+    '&[data-size="small"]': {
+      paddingLeft: theme.space['1'],
+    },
+    [`${searchInput} &`]: {
+      padding: 0,
+    },
+    [`${inputWrapper} > &`]: {
+      color: theme.colors.neutral.text,
+    },
+    [`${inputWrapper} > &::placeholder`]: {
+      color: theme.colors.neutral.textWeak,
+    },
+    [`${inputWrapper}[data-disabled='true'] > &`]: {
+      color: theme.colors.neutral.textDisabled,
+    },
+    [`${inputWrapper}[data-disabled='true'] > &::placeholder`]: {
+      color: theme.colors.neutral.textWeakDisabled,
+    },
   },
-)
+  width: '100%',
+})

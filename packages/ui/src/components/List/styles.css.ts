@@ -138,29 +138,7 @@ export const listExpandableWrapper = style({
   width: '100%',
 })
 
-globalStyle(
-  `${listExpandableWrapper} > td, ${listExpandableWrapper} > td:first-child, ${listExpandableWrapper} > td:last-child`,
-  {
-    transition: 'box-shadow 200ms ease, border-color 200ms ease',
-  },
-)
-
-globalStyle(`${listExpandableWrapper} > td`, {
-  border: `1px solid ${theme.colors.neutral.border}`,
-  borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
-  borderTop: 'none',
-})
-
-globalStyle(`${listExpandableWrapper}[data-highlight="true"] > td`, {
-  borderColor: theme.colors.primary.border,
-})
-
 export const listCheckboxInRange = style({})
-
-globalStyle(`${listCheckboxInRange} rect`, {
-  fill: theme.colors.neutral.backgroundHover,
-  stroke: theme.colors.neutral.borderHover,
-})
 
 const listRowBase = style({
   backgroundColor: theme.colors.neutral.background,
@@ -228,6 +206,35 @@ export const listCell = style({
     [`${listRowBase}[aria-expanded='true'] > &`]: {
       borderBottomColor: theme.colors.primary.border,
     },
+    [`${listRowBase}[data-highlight='true'] > &`]: {
+      borderColor: theme.colors.primary.border,
+    },
+    '&:last-child': {
+      borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
+      borderRight: `1px solid ${theme.colors.neutral.border}`,
+    },
+    [`${listRowBase}[aria-expanded='true'] > &:last-child`]: {
+      borderRadius: `0 ${theme.radii.default} 0 0`,
+      borderRight: `1px solid ${theme.colors.primary.border}`,
+    },
+    [`${listRowBase}[data-highlight='true'] > &:last-child`]: {
+      borderRight: `1px solid ${theme.colors.primary.border}`,
+    },
+    '&:first-child': {
+      borderLeft: `1px solid ${theme.colors.neutral.border}`,
+      borderRadius: ` ${theme.radii.default} 0 0 ${theme.radii.default}`,
+    },
+    [`${listRowBase}[aria-expanded='true'] > &:first-child`]: {
+      borderLeft: `1px solid ${theme.colors.primary.border}`,
+      borderRadius: `${theme.radii.default} 0 0 0`,
+    },
+    [`${listRowBase}[data-highlight='true'] > &:first-child`]: {
+      borderRadius: `${theme.radii.default} 0 0 0`,
+    },
+    [`${listRowBase}:not([aria-disabled='true']):hover > &, ${listRowBase}:not([aria-disabled='true']):focus-within > &`]:
+      {
+        borderColor: theme.colors.primary.border,
+      },
   },
   transition: 'box-shadow 200ms ease, border-color 200ms ease',
   verticalAlign: 'middle',
@@ -242,40 +249,6 @@ globalStyle(`${listCellStrict} > *`, {
   width: widthChildrenCell,
 })
 
-globalStyle(`${listRowBase} > td:first-child`, {
-  borderLeft: `1px solid ${theme.colors.neutral.border}`,
-  borderRadius: ` ${theme.radii.default} 0 0 ${theme.radii.default}`,
-})
-
-globalStyle(`${listRowBase} > td:last-child`, {
-  borderRadius: `0 ${theme.radii.default} ${theme.radii.default} 0`,
-  borderRight: `1px solid ${theme.colors.neutral.border}`,
-})
-
-globalStyle(
-  `${listRowBase}:not([aria-disabled='true']):hover > td, ${listRowBase}:not([aria-disabled='true']):hover > td:first-child, ${listRowBase}:not([aria-disabled='true']):hover > td:last-child, ${listRowBase}:not([aria-disabled='true']):focus-within > td`,
-  {
-    borderColor: theme.colors.primary.border,
-  },
-)
-
-globalStyle(`${listRowBase}[aria-expanded='true'] > td:first-child`, {
-  borderLeft: `1px solid ${theme.colors.primary.border}`,
-  borderRadius: `${theme.radii.default} 0 0 0`,
-})
-
-globalStyle(`${listRowBase}[aria-expanded='true'] > td:last-child`, {
-  borderRadius: `0 ${theme.radii.default} 0 0`,
-  borderRight: `1px solid ${theme.colors.primary.border}`,
-})
-
-globalStyle(
-  `${listRowBase}[data-highlight='true'] > td, ${listRowBase}[data-highlight='true'] > td:first-child, ${listRowBase}[data-highlight='true'] > td:last-child`,
-  {
-    borderColor: theme.colors.primary.border,
-  },
-)
-
 export const listCheckboxContainer = style({ display: 'flex' })
 
 export const listNoPaddingCell = style({
@@ -288,10 +261,6 @@ export const listNoPaddingCell = style({
   },
 })
 
-export const listExpandableCell = style({
-  padding: paddingExpandableCell,
-})
-
 export const listLoadingRow = style({
   cursor: 'progress',
 })
@@ -301,4 +270,22 @@ export const listSkeleton = style({
   justifyContent: 'center',
   maxWidth: '100%',
   width: '80%',
+})
+
+export const listExpandableCell = style({
+  padding: paddingExpandableCell,
+  selectors: {
+    [`${listExpandableWrapper} > &, ${listExpandableWrapper} > &:first-child, ${listExpandableWrapper} > &:last-child`]:
+      {
+        transition: 'box-shadow 200ms ease, border-color 200ms ease',
+      },
+    [`${listExpandableWrapper} > &`]: {
+      border: `1px solid ${theme.colors.neutral.border}`,
+      borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
+      borderTop: 'none',
+    },
+    [`${listExpandableWrapper}[data-highlight="true"] > &`]: {
+      borderColor: theme.colors.primary.border,
+    },
+  },
 })

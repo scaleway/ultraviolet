@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, keyframes, style } from '@vanilla-extract/css'
+import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import {
@@ -28,14 +28,6 @@ export const table = style({
 
 export const tableStripped = style({})
 export const tableBordered = style({})
-
-globalStyle(`${tableStripped} tbody tr:nth-of-type(even)`, {
-  background: theme.colors.neutral.backgroundWeak,
-})
-
-globalStyle(`${tableBordered} tbody tr`, {
-  borderBottom: `1px solid ${theme.colors.neutral.borderWeak}`,
-})
 
 export const tableCell = recipe({
   base: {
@@ -133,3 +125,13 @@ export const tableTrAnimation = style({
 
 export const tableSkeletonRow = style({ cursor: 'progress' })
 export const tableSkeleton = style({ maxWidth: '100%', width: '80%' })
+export const tableRow = style({
+  selectors: {
+    [`${tableStripped} tbody &:nth-of-type(even)`]: {
+      background: theme.colors.neutral.backgroundWeak,
+    },
+    [`${tableBordered} tbody &`]: {
+      borderBottom: `1px solid ${theme.colors.neutral.borderWeak}`,
+    },
+  },
+})

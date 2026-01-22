@@ -152,7 +152,7 @@ export const OrderSummary = ({
     <OrderSummaryContext.Provider value={valueContext}>
       <Stack
         className={cn(className, orderSummaryContainer)}
-        data-testId={dataTestId}
+        data-testid={dataTestId}
         justifyContent={hideDetails ? 'flex-start' : 'space-between'}
         style={style}
       >

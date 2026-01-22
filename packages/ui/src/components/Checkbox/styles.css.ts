@@ -1,6 +1,8 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { checkboxGroup } from '../CheckboxGroup/styles.css'
+import { listCheckboxInRange } from '../List/styles.css'
+import { labelContainerSelectableCardLabel } from '../SelectableCard/styles.css'
 
 export const errorText = style({
   paddingTop: theme.space['0.5'],
@@ -14,6 +16,9 @@ export const checkboxContainer = style({
     "&[aria-disabled='true']": {
       color: theme.colors.neutral.textDisabled,
       cursor: 'not-allowed',
+    },
+    [`${labelContainerSelectableCardLabel} &`]: {
+      width: '100%',
     },
   },
 })
@@ -169,6 +174,10 @@ export const innerCheckbox = style({
       {
         stroke: theme.colors.danger.border,
       },
+    [`${listCheckboxInRange} &`]: {
+      fill: theme.colors.neutral.backgroundHover,
+      stroke: theme.colors.neutral.borderHover,
+    },
   },
 })
 
