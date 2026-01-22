@@ -15,27 +15,26 @@ export const containerSelectableCard = recipe({
     padding: theme.space[2],
     position: 'relative',
     selectors: {
-      '&:hover:not([data-error="true"]):not([data-disabled="true"]), &:active:not([data-error="true"]):not([data-disabled="true"])':
-        {
-          border: `1px solid ${theme.colors.primary.border}`,
-        },
-
-      '&[data-checked="false"]:hover:not([data-error="true"]):not([data-disabled="true"]), &[data-checked="false"]:active:not([data-error="true"]):not([data-disabled="true"])':
-        {
-          boxShadow: theme.shadows.hoverPrimary,
-        },
       '&[data-checked="true"]': {
         border: `1px solid ${theme.colors.primary.border}`,
-      },
-      '&[data-disabled="true"]': {
-        background: theme.colors.neutral.backgroundDisabled,
-        border: `1px solid ${theme.colors.neutral.borderDisabled}`,
-        color: theme.colors.neutral.textDisabled,
-        cursor: 'not-allowed',
       },
       '&[data-error="true"]': {
         border: `1px solid ${theme.colors.danger.border}`,
       },
+      '&[data-disabled="true"]': {
+        border: `1px solid ${theme.colors.neutral.borderDisabled}`,
+        color: theme.colors.neutral.textDisabled,
+        background: theme.colors.neutral.backgroundDisabled,
+        cursor: 'not-allowed',
+      },
+      '&:hover:not([data-error="true"]):not([data-disabled="true"]), &:active:not([data-error="true"]):not([data-disabled="true"])':
+        {
+          border: `1px solid ${theme.colors.primary.border}`,
+        },
+      '&[data-checked="false"]:hover:not([data-error="true"]):not([data-disabled="true"]), &[data-checked="false"]:active:not([data-error="true"]):not([data-disabled="true"])':
+        {
+          boxShadow: theme.shadows.hoverPrimary,
+        },
     },
     transition: `
     border-color 200ms ease,
