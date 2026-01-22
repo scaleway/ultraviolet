@@ -352,6 +352,91 @@ exports[`link > render correctly with variants props 1`] = `
 </DocumentFragment>
 `;
 
+exports[`link > render prop > element form > render correctly with render prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_primary__1dtqm9e1 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_0__1dtqm9ee styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > element form > render correctly with render prop and different sentiments 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_primary__1dtqm9e1 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_0__1dtqm9ee styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      Primary
+    </a>
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      Info
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > element form > render correctly with render prop and sizes 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      Large
+    </a>
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_bodySmallStrong__1dtqm9ea styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      Small
+    </a>
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_info__1dtqm9e2 styles_oneLine_false__1dtqm9e8 styles_variant_captionStrong__1dtqm9e9 styles_type_standalone__1dtqm9ed styles_undefined_compound_4__1dtqm9ei styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      XSmall
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`link > render prop > function form > render correctly with render function 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <a
+      class="styles__1dtqm9e0 styles_prominence_default__1dtqm9e3 styles_sentiment_primary__1dtqm9e1 styles_oneLine_false__1dtqm9e8 styles_variant_bodyStrong__1dtqm9eb styles_type_standalone__1dtqm9ed styles_undefined_compound_0__1dtqm9ee styles__1dtqm9en"
+      data-variant="standalone"
+      href="/about"
+    >
+      About
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`link > sentiment > render info 1`] = `
 <DocumentFragment>
   <div

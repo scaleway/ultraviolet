@@ -14,6 +14,8 @@ import type {
   RefObject,
 } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import type { RenderProp } from '../../helpers/polymorphic'
+import { renderElement } from '../../helpers/polymorphic'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES } from './constants'
@@ -29,6 +31,7 @@ export type ProminenceProps = keyof typeof PROMINENCES
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
+
 type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
@@ -39,7 +42,6 @@ type LinkProps = {
   iconPosition?: LinkIconPosition
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
   className?: string
-  href: string
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   'aria-label'?: string
@@ -49,13 +51,33 @@ type LinkProps = {
   'data-testid'?: string
   variant?: 'inline' | 'standalone'
   style?: CSSProperties
-}
+} & XOR<[{
+   href?: string
+}, {
+  /**
+ * Custom element or render function to use instead of the default anchor.
+ *
+ * Element form (props auto-merged):
+ * ```tsx
+ * <Link render={<NextLink href="/about" />}>About</Link>
+ * ```
+ *
+ * Function form (you control prop merging):
+ * ```tsx
+ * <Link render={(props) => <NextLink {...props} href="/about" />}>About</Link>
+ * ```
+ */
+render: RenderProp<AnchorHTMLAttributes<HTMLAnchorElement>>
+}]>
+
+
 
 const ICON_SIZE = 'small'
 const BLANK_TARGET_ICON_SIZE = 'small'
 
 /**
  * Link is a component used to navigate between pages or to external websites.
+ * Use `render` prop to render a custom element (e.g., Next.js Link) while preserving Link's styling.
  */
 export const Link = forwardRef(
   (
@@ -78,6 +100,7 @@ export const Link = forwardRef(
       'data-testid': dataTestId,
       variant = 'standalone',
       style,
+      render,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -106,23 +129,40 @@ export const Link = forwardRef(
       }
     }, [oneLine, ref, usedRef])
 
+    const computedClassName = cn(
+      className,
+      link({
+        oneLine,
+        prominence,
+        sentiment,
+        type: variant,
+        variant: textVariant,
+      }),
+      defaultLink,
+    )
+
+    if (render) {
+      return (
+        <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
+          {renderElement(render, {
+            children,
+            className: computedClassName,
+            'data-testid': dataTestId,
+            'data-variant': variant,
+            ref: usedRef,
+            style,
+          })}
+        </Tooltip>
+      )
+    }
+
     return (
       <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
         <a
           aria-current={ariaCurrent}
           aria-keyshortcuts={ariaKeyshortcuts}
           aria-label={ariaLabel}
-          className={cn(
-            className,
-            link({
-              oneLine,
-              prominence,
-              sentiment,
-              type: variant,
-              variant: textVariant,
-            }),
-            defaultLink,
-          )}
+          className={computedClassName}
           data-testid={dataTestId}
           data-variant={variant}
           download={download}

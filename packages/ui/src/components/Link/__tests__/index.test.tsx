@@ -1,8 +1,22 @@
-import { shouldMatchSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { screen } from '@testing-library/react'
+import { userEvent } from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import { forwardRef } from 'react'
+import { describe, expect, test, vi } from 'vitest'
 import type { ProminenceProps } from '..'
 import { Link } from '..'
 import { PROMINENCES } from '../constants'
+
+// Mock component simulating Next.js Link
+const MockNextLink = forwardRef<
+  HTMLAnchorElement,
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }
+>(({ href, children, ...props }, ref) => (
+  <a href={href} ref={ref} {...props}>
+    {children}
+  </a>
+))
+MockNextLink.displayName = 'MockNextLink'
 
 describe('link', () => {
   test('render correctly with no sentiment', () =>
@@ -113,4 +127,136 @@ describe('link', () => {
         </Link>
       </div>,
     ))
+
+  describe('render prop', () => {
+    describe('element form', () => {
+      test('render correctly with render prop', () =>
+        shouldMatchSnapshot(
+          <Link render={<MockNextLink href="/about" />} sentiment="primary">
+            About
+          </Link>,
+        ))
+
+      test('render correctly with render prop and different sentiments', () =>
+        shouldMatchSnapshot(
+          <>
+            <Link render={<MockNextLink href="/about" />} sentiment="primary">
+              Primary
+            </Link>
+            <Link render={<MockNextLink href="/about" />} sentiment="info">
+              Info
+            </Link>
+          </>,
+        ))
+
+      test('render correctly with render prop and sizes', () =>
+        shouldMatchSnapshot(
+          <>
+            <Link render={<MockNextLink href="/about" />} size="large">
+              Large
+            </Link>
+            <Link render={<MockNextLink href="/about" />} size="small">
+              Small
+            </Link>
+            <Link render={<MockNextLink href="/about" />} size="xsmall">
+              XSmall
+            </Link>
+          </>,
+        ))
+
+      test('merges className correctly with render prop', () => {
+        renderWithTheme(
+          <Link
+            data-testid="link"
+            render={<MockNextLink className="custom-class" href="/about" />}
+            sentiment="primary"
+          >
+            About
+          </Link>,
+        )
+
+        const link = screen.getByTestId('link')
+        expect(link.className).toContain('custom-class')
+      })
+
+      test('forwards ref correctly with render prop', () => {
+        const ref = vi.fn()
+        renderWithTheme(
+          <Link
+            ref={ref}
+            render={<MockNextLink href="/about" />}
+            sentiment="primary"
+          >
+            About
+          </Link>,
+        )
+
+        expect(ref).toHaveBeenCalled()
+      })
+
+      test('handles click events with render prop', async () => {
+        const onClick = vi.fn()
+        renderWithTheme(
+          <Link
+            data-testid="link"
+            render={
+              <a href="/about" onClick={onClick}>
+                test
+              </a>
+            }
+            sentiment="primary"
+          >
+            About
+          </Link>,
+        )
+
+        await userEvent.click(screen.getByTestId('link'))
+        expect(onClick).toHaveBeenCalledOnce()
+      })
+    })
+
+    describe('function form', () => {
+      test('render correctly with render function', () =>
+        shouldMatchSnapshot(
+          <Link
+            render={props => <MockNextLink {...props} href="/about" />}
+            sentiment="primary"
+          >
+            About
+          </Link>,
+        ))
+
+      test('passes props to render function', () => {
+        renderWithTheme(
+          <Link
+            className="link-class"
+            render={props => (
+              <MockNextLink {...props} data-testid="link" href="/about" />
+            )}
+            sentiment="primary"
+          >
+            About
+          </Link>,
+        )
+
+        const link = screen.getByTestId('link')
+        expect(link.className).toContain('link-class')
+      })
+
+      test('forwards ref correctly with render function', () => {
+        const ref = vi.fn()
+        renderWithTheme(
+          <Link
+            ref={ref}
+            render={props => <MockNextLink {...props} href="/about" />}
+            sentiment="primary"
+          >
+            About
+          </Link>,
+        )
+
+        expect(ref).toHaveBeenCalled()
+      })
+    })
+  })
 })
