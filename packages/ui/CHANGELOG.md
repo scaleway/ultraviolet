@@ -1,5 +1,22 @@
 # Change Log
 
+## 3.6.0
+
+### Minor Changes
+
+- [#6000](https://github.com/scaleway/ultraviolet/pull/6000) [`e32a1c6`](https://github.com/scaleway/ultraviolet/commit/e32a1c607ce28322ffe0c31d8f722f9040ddffd8) Thanks [@lisalupi](https://github.com/lisalupi)! - `Popup`: fix arrow position when (computed) position is "left" or "right"
+
+### Patch Changes
+
+- [#6012](https://github.com/scaleway/ultraviolet/pull/6012) [`f8c97f3`](https://github.com/scaleway/ultraviolet/commit/f8c97f3746a2e3e0ffc8580935f28bb00212fd2d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Button`: fix disabled style
+
+- [#5988](https://github.com/scaleway/ultraviolet/pull/5988) [`bace03b`](https://github.com/scaleway/ultraviolet/commit/bace03b4aa3dba12f50d214b73d6033e2fc051dd) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Row`: new prop `onClick` & primary border when focus-within
+
+- [#6004](https://github.com/scaleway/ultraviolet/pull/6004) [`7a70c84`](https://github.com/scaleway/ultraviolet/commit/7a70c843313863916f6520c4a69418dd1c421856) Thanks [@lisalupi](https://github.com/lisalupi)! - `Checkbox`: input aligned with the first line of the label instead of centered
+
+- Updated dependencies [[`ce69316`](https://github.com/scaleway/ultraviolet/commit/ce693160ffa3d471fd58235304b6826f33bf6640)]:
+  - @ultraviolet/icons@5.0.5
+
 ## 3.5.1
 
 ### Patch Changes

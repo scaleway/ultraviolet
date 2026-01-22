@@ -1,5 +1,23 @@
 # @ultraviolet/plus
 
+## 3.3.0
+
+### Minor Changes
+
+- [#6011](https://github.com/scaleway/ultraviolet/pull/6011) [`ac1d8a9`](https://github.com/scaleway/ultraviolet/commit/ac1d8a9162c528053a66404b38a4c0f7dbebc588) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: fix discounts
+
+  - Show undiscounted total price when the discount is applied to a category/subcategory
+  - Show the undiscounted price of the category when a discount is applied to a subcategory
+  - Fix category discount in %
+
+- [#5988](https://github.com/scaleway/ultraviolet/pull/5988) [`bace03b`](https://github.com/scaleway/ultraviolet/commit/bace03b4aa3dba12f50d214b73d6033e2fc051dd) Thanks [@lisalupi](https://github.com/lisalupi)! - `OfferList.Row`: click anywhere on the row to select it when it is not expandable. When expandable, only a click on the checkbox/radio will trigger the selection
+
+### Patch Changes
+
+- Updated dependencies [[`f8c97f3`](https://github.com/scaleway/ultraviolet/commit/f8c97f3746a2e3e0ffc8580935f28bb00212fd2d), [`bace03b`](https://github.com/scaleway/ultraviolet/commit/bace03b4aa3dba12f50d214b73d6033e2fc051dd), [`e32a1c6`](https://github.com/scaleway/ultraviolet/commit/e32a1c607ce28322ffe0c31d8f722f9040ddffd8), [`7a70c84`](https://github.com/scaleway/ultraviolet/commit/7a70c843313863916f6520c4a69418dd1c421856), [`ce69316`](https://github.com/scaleway/ultraviolet/commit/ce693160ffa3d471fd58235304b6826f33bf6640)]:
+  - @ultraviolet/ui@3.6.0
+  - @ultraviolet/icons@5.0.5
+
 ## 3.2.0
 
 ### Minor Changes
