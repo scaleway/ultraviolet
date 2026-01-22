@@ -262,6 +262,39 @@ describe('menu', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('parent menu should stay visible after opening nested menu', async () => {
+    renderWithTheme(
+      <Menu disclosure={() => disclosure}>
+        <Menu.Item>Item 1</Menu.Item>
+        <Menu
+          disclosure={<Menu.Item>SubMenu</Menu.Item>}
+          placement="right"
+          triggerMethod="click"
+        >
+          <Menu.Item>Nested Item</Menu.Item>
+        </Menu>
+        <Menu.Item>Item 2</Menu.Item>
+      </Menu>,
+    )
+
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+
+    await userEvent.click(menuButton)
+    const parentDialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(parentDialog).toBeVisible()
+    })
+
+    const nestedElement = screen.getByText('SubMenu')
+    await userEvent.click(nestedElement)
+
+    expect(parentDialog).toBeVisible()
+    expect(screen.getByText('Item 1')).toBeVisible()
+    expect(screen.getByText('Item 2')).toBeVisible()
+    expect(screen.getByText('Nested Item')).toBeVisible()
+  })
+
   test('can navigate with arrow keys', async () => {
     const { asFragment } = renderWithTheme(
       <Menu disclosure={() => disclosure}>
