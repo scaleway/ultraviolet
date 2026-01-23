@@ -37,8 +37,8 @@ export const productIconVariants = styleVariants({
   ...Object.fromEntries(VARIANTS.map(variant => [`${variant}Disabled`, []])),
 })
 
-PROMINENCES.forEach(prominence => {
-  VARIANTS.forEach(variant => {
+for (const prominence of PROMINENCES) {
+  for (const variant of VARIANTS) {
     const variantClass = productIconVariants[variant]
     const variantClassDisabled = productIconVariants[`${variant}Disabled`]
 
@@ -78,5 +78,5 @@ PROMINENCES.forEach(prominence => {
       selectorPathField(),
       generateVariantStyle(variant, false, prominence),
     )
-  })
-})
+  }
+}
