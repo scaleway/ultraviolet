@@ -16,11 +16,7 @@ import {
   uploadContainer,
 } from './styles.css'
 import type { AvatarProps, SentimentColors } from './types'
-import {
-  finalColorAvatar,
-  finalSizeAvatar,
-  halvedColorAvatar,
-} from './variables.css'
+import { avatarTheme } from './variables.css'
 
 /**
  * The Avatar component is used to represent a user, product, or entity. It can be used to display an image, an icon, a text or a set of colors.
@@ -92,10 +88,10 @@ export const Avatar = ({
       {variant === 'colors' ? (
         <span
           className={colorsAvatar({ shape, size })}
-          style={assignInlineVars({
-            [finalSizeAvatar]: finalSize,
-            [finalColorAvatar]: finalColors[0],
-            [halvedColorAvatar]: isHalved ? finalColors[1] : finalColors[0],
+          style={assignInlineVars(avatarTheme, {
+            size: finalSize,
+            color: finalColors[0],
+            halvedColor: isHalved ? finalColors[1] : finalColors[0],
           })}
         />
       ) : null}

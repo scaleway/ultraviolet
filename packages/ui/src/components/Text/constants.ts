@@ -1,12 +1,13 @@
-import { typography } from '../../theme'
+import type { TextVariant } from '@ultraviolet/themes'
+import { consoleLightTheme } from '@ultraviolet/themes'
+
+const { typography } = consoleLightTheme
 
 export const PROMINENCES = {
   default: '',
   strong: 'strong',
   stronger: 'stronger',
   weak: 'weak',
-}
-
-export type TextVariant = keyof typeof typography
+} as const
 
 export const textVariants = Object.keys(typography) as TextVariant[]

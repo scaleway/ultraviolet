@@ -1,0 +1,1 @@
+export { isSentimentMonochrome } from './isSentimentMonochrome'

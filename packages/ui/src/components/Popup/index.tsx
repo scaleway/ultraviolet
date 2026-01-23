@@ -33,16 +33,7 @@ import {
   containerPopup,
   popup,
 } from './styles.css'
-import {
-  animationDurationPopup,
-  arrowLeft,
-  arrowTop,
-  arrowTransform,
-  maxHeightPopup,
-  maxWidthPopup,
-  popupInitialPosition,
-  popupPosition,
-} from './variables.css'
+import { arrowTheme, popupTheme } from './variables.css'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
@@ -642,31 +633,25 @@ export const Popup = forwardRef(
                 ref={innerPopupRef}
                 role={role}
                 style={{
-                  ...assignInlineVars({
-                    [arrowTop]: `${positions.arrowTop}`,
-                    [arrowLeft]: `${positions.arrowLeft}px`,
-                    [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
-                    [popupPosition]: positions.popupPosition,
-                    [animationDurationPopup]: `${animationDuration}ms`,
-                    [popupInitialPosition]: positions.popupInitialPosition,
-                    [maxWidthPopup]: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
-                    [maxHeightPopup]:
+                  ...assignInlineVars(arrowTheme, {
+                    top: `${positions.arrowTop}px`,
+                    left: `${positions.arrowLeft}px`,
+                    transform: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
+                  }),
+                  ...assignInlineVars(popupTheme, {
+                    position: positions.popupPosition,
+                    animationDuration: `${animationDuration}ms`,
+                    initialPosition: positions.popupInitialPosition,
+                    maxWidth: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
+                    maxHeight:
                       typeof maxHeight === 'number'
                         ? `${maxHeight}px`
-                        : maxHeight,
+                        : (maxHeight ?? 'initial'),
                   }),
                   ...style,
                 }}
               >
-                <div
-                  className={containerPopup({ hasMaxHeight: !!maxHeight })}
-                  style={assignInlineVars({
-                    [maxHeightPopup]:
-                      typeof maxHeight === 'number'
-                        ? `${maxHeight}px`
-                        : maxHeight,
-                  })}
-                >
+                <div className={containerPopup({ hasMaxHeight: !!maxHeight })}>
                   {text}
                 </div>
               </div>,

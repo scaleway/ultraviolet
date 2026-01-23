@@ -2,36 +2,27 @@ import { theme } from '@ultraviolet/themes'
 import { keyframes, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { DEFAULT_ARROW_WIDTH } from './helpers'
-import {
-  animationDurationPopup,
-  arrowLeft,
-  arrowTop,
-  arrowTransform,
-  maxHeightPopup,
-  maxWidthPopup,
-  popupInitialPosition,
-  popupPosition,
-} from './variables.css'
+import { arrowTheme, popupTheme } from './variables.css'
 
 const animation = keyframes({
   ' 0%': {
     opacity: 0,
-    transform: popupInitialPosition,
+    transform: popupTheme.initialPosition,
   },
   '100%': {
     opacity: 1,
-    transform: popupPosition,
+    transform: popupTheme.position,
   },
 })
 
 const exitAnimation = keyframes({
   '0%': {
     opacity: 1,
-    transform: popupPosition,
+    transform: popupTheme.position,
   },
   '100% ': {
     opacity: 0,
-    transform: popupInitialPosition,
+    transform: popupTheme.initialPosition,
   },
 })
 
@@ -43,7 +34,7 @@ export const containerPopup = recipe({
   variants: {
     hasMaxHeight: {
       true: {
-        maxHeight: `calc(${maxHeightPopup} - ${theme.space[2]})`,
+        maxHeight: `calc(${popupTheme.maxHeight} - ${theme.space[2]})`,
       },
     },
   },
@@ -57,15 +48,15 @@ export const popup = recipe({
     fontSize: '0.8rem',
     inset: '0 auto auto 0',
     left: 0,
-    maxHeight: maxHeightPopup,
-    maxWidth: maxWidthPopup,
+    maxHeight: popupTheme.maxHeight,
+    maxWidth: popupTheme.maxWidth,
     opacity: 0,
     overflowWrap: 'break-word',
     padding: `${theme.space['0.5']} ${theme.space[1]}`,
     position: 'absolute',
     textAlign: 'center',
     top: 0,
-    transform: popupPosition,
+    transform: popupTheme.position,
     zIndex: 1,
   },
   defaultVariants: {
@@ -81,12 +72,12 @@ export const popup = recipe({
             borderStyle: 'solid',
             borderWidth: `${DEFAULT_ARROW_WIDTH}px`,
             content: ' ',
-            left: arrowLeft,
+            left: arrowTheme.left,
             marginLeft: `-${DEFAULT_ARROW_WIDTH}px`,
             pointerEvents: 'none',
             position: 'absolute',
-            top: arrowTop,
-            transform: arrowTransform,
+            top: arrowTheme.top,
+            transform: arrowTheme.transform,
           },
         },
       },
@@ -101,10 +92,10 @@ export const popup = recipe({
 
 export const animationPopup = styleVariants({
   notReverse: {
-    animation: `${animationDurationPopup} ${animation} forwards`,
+    animation: `${popupTheme.animationDuration} ${animation} forwards`,
   },
   reverse: {
-    animation: `${animationDurationPopup} ${exitAnimation} forwards`,
+    animation: `${popupTheme.animationDuration} ${exitAnimation} forwards`,
   },
 })
 

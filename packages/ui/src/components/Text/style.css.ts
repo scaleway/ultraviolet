@@ -1,16 +1,18 @@
-import { theme } from '@ultraviolet/themes'
+import type { ExtendedColor, TextVariant } from '@ultraviolet/themes'
+import {
+  consoleLightTheme,
+  isSentimentMonochrome,
+  theme,
+} from '@ultraviolet/themes'
 import { capitalize } from '@ultraviolet/utils'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
-import type { ExtendedColor } from '../../theme'
-import { typography } from '../../theme'
 import { PROMINENCES } from './constants'
-import { placementText, whiteSpaceText } from './variables.css'
+import { textVars } from './variables.css'
 
-type TypographyKey = keyof typeof typography
 type ProminenceProps = keyof typeof PROMINENCES
 
-const variants = Object.keys(typography) as TypographyKey[]
+const variants = Object.keys(consoleLightTheme.typography) as TextVariant[]
 const sentiments = [
   'primary',
   'secondary',
@@ -25,7 +27,7 @@ const sentiments = [
 const prominences = Object.keys(PROMINENCES) as (keyof typeof PROMINENCES)[]
 
 function generateVariants() {
-  return variants.reduce<Record<TypographyKey, object>>(
+  return variants.reduce<Record<TextVariant, object>>(
     (acc, key) => {
       acc[key] = {
         fontFamily: theme.typography[key].fontFamily,
@@ -38,41 +40,35 @@ function generateVariants() {
 
       return acc
     },
-    {} as Record<TypographyKey, object>,
+    {} as Record<TextVariant, object>,
   )
 }
+
+const isStronger = (prominence: ProminenceProps): prominence is 'stronger' =>
+  prominence === 'stronger'
 
 function generateStyles(
   prominence: ProminenceProps,
   disabled: boolean,
   sentiment?: ExtendedColor,
 ) {
-  const definedProminence =
-    sentiment !== 'neutral' && prominence === 'stronger'
-      ? capitalize(PROMINENCES.default)
-      : capitalize(PROMINENCES[prominence])
-
-  const isSentimentMonochrome = sentiment === 'black' || sentiment === 'white'
-
-  const themeColor =
-    sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment as keyof typeof theme.colors]
-      : undefined
-
-  const text = `text${definedProminence}${
-    disabled ? 'Disabled' : ''
-  }` as keyof typeof themeColor
-
-  const textColor =
-    sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment as keyof typeof theme.colors][text]
-      : undefined
-
   if (sentiment) {
-    return {
-      color: isSentimentMonochrome
-        ? theme.colors.other.monochrome[(sentiment as 'black') || 'white'].text
-        : textColor,
+    if (isSentimentMonochrome(sentiment)) {
+      return theme.colors.other.monochrome[sentiment].text
+    }
+
+    if (sentiment === 'neutral') {
+      const definedProminence = capitalize(PROMINENCES[prominence])
+      const text =
+        `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
+
+      return theme.colors[sentiment][text]
+    }
+
+    if (isStronger(prominence)) {
+      const text = `text${disabled ? 'Disabled' : ''}` as const
+
+      return theme.colors[sentiment][text]
     }
   }
 
@@ -112,8 +108,8 @@ function getArrayOfVariantNoSentiment() {
 
 export const text = recipe({
   base: {
-    textAlign: placementText,
-    whiteSpace: whiteSpaceText,
+    textAlign: textVars.textAlign,
+    whiteSpace: textVars.whiteSpace,
   },
   compoundVariants: [
     ...getArrayOfVariants(),
