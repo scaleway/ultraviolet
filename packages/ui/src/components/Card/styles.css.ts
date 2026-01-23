@@ -15,11 +15,11 @@ export const borderedBox = style({
   flex: '1 1 auto',
   padding: theme.space[3],
   selectors: {
-    "&[data-disabled='true']": {
-      border: `1px solid ${theme.colors.neutral.borderDisabled}`,
-    },
     "&[data-is-active='true']": {
       border: `1px solid ${theme.colors.primary.border}`,
+    },
+    "&[data-disabled='true']": {
+      border: `1px solid ${theme.colors.neutral.borderDisabled}`,
     },
   },
 })

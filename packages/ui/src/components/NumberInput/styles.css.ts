@@ -88,31 +88,31 @@ export const numberinput = recipe({
     outline: 'none',
     padding: theme.space[1],
     selectors: {
+      '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+        WebkitAppearance: 'none',
+        margin: 0,
+      },
       '&': {
         appearance: 'textarea',
         MozAppearance: 'textfield',
       },
-      '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
-        margin: 0,
-        WebkitAppearance: 'none',
+      '&:read-only': {
+        color: theme.colors.neutral.text,
+        background: theme.colors.neutral.backgroundWeak,
+        borderBlock: `1px solid ${theme.colors.neutral.border}`,
+      },
+      '&:disabled': {
+        color: theme.colors.neutral.textDisabled,
+        background: theme.colors.neutral.backgroundDisabled,
+        cursor: 'not-allowed',
+        borderBlock: `1px solid ${theme.colors.neutral.borderDisabled}`,
       },
       '&::placeholder': {
         color: theme.colors.neutral.textWeak,
         fontSize: theme.typography.body.fontSize,
       },
-      '&:disabled': {
-        background: theme.colors.neutral.backgroundDisabled,
-        borderBlock: `1px solid ${theme.colors.neutral.borderDisabled}`,
-        color: theme.colors.neutral.textDisabled,
-        cursor: 'not-allowed',
-      },
       '&:focus': {
         outline: 'none',
-      },
-      '&:read-only': {
-        background: theme.colors.neutral.backgroundWeak,
-        borderBlock: `1px solid ${theme.colors.neutral.border}`,
-        color: theme.colors.neutral.text,
       },
     },
     textAlign: 'center',
