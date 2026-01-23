@@ -1,9 +1,7 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { checkboxContainer } from '../Checkbox/styles.css'
-import { radioStack } from '../Radio/styles.css'
-import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
+import { inputDisplay, labelDisplay } from './variables.css'
 
 export const containerSelectableCard = recipe({
   base: {
@@ -67,24 +65,14 @@ export const containerSelectableCard = recipe({
   },
 })
 
-export const labelContainerSelectableCard = styleVariants({
-  label: {
-    selectors: {
-      '&:first-child': {
-        marginBottom: `-${theme.space['0.5']}`,
-      },
+export const labelContainerSelectableCardLabel = style({
+  selectors: {
+    '&:first-child': {
+      marginBottom: `-${theme.space['0.5']}`,
     },
   },
-  noLabel: {},
 })
-
-globalStyle(`${labelContainerSelectableCard.label} ${radioStack}`, {
-  width: '100%',
-})
-
-globalStyle(`${labelContainerSelectableCard.label} ${checkboxContainer}`, {
-  width: '100%',
-})
+export const labelContainerSelectableCardNoLabel = style({})
 
 export const divSelectableCard = style({
   alignItems: 'normal',
@@ -148,8 +136,4 @@ globalStyle(`${selectableElementSelectableCard} > input + svg`, {
 
 globalStyle(`${selectableElementSelectableCard} > label`, {
   display: labelDisplay,
-})
-
-globalStyle(`${selectableElementSelectableCard} > ${radioStack}`, {
-  width: widthSelectable,
 })

@@ -8,6 +8,7 @@ import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 import { TAGS_GAP } from './constant'
 import {
+  ellipsisChild,
   ellipsisContainer,
   popoverTriggerWidthVar,
   tagContainer,
@@ -249,7 +250,7 @@ export const TagList = ({
     typeof tag !== 'string' && tag.icon ? (
       <Tag
         // useful when two tags are identical `${tag}-${index}`
-        className={isEllipsis ? 'ellipsed' : ''}
+        className={cn(isEllipsis ? 'ellipsed' : '', ellipsisChild)}
         copiable={copiable}
         copiedText={copiedText}
         copyText={copyText}
@@ -260,7 +261,7 @@ export const TagList = ({
       </Tag>
     ) : (
       <Tag
-        className={isEllipsis ? 'ellipsed' : ''}
+        className={cn(isEllipsis ? 'ellipsed' : '', ellipsisChild)}
         copiable={copiable}
         copiedText={copiedText}
         copyText={copyText}

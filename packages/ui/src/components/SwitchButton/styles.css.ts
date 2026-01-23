@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 
 const SIZES = {
   medium: '600',
@@ -48,43 +48,8 @@ export const switchButtonOptionBase = style({
 /**
  * Create style variant so it is easier to deal with the global styles
  */
-export const switchButtonOption = styleVariants({
-  neutral: [switchButtonOptionBase],
-  primary: [switchButtonOptionBase],
-})
-
-globalStyle(`${switchButtonOptionBase}[data-checked="true"] label`, {
-  color: theme.colors.neutral.textStrong,
-  transition: 'color 300ms ease-in-out',
-})
-
-globalStyle(`${switchButtonOptionBase} label`, {
-  transition: 'color 300ms ease-in-out',
-})
-
-globalStyle(`${switchButtonOption.primary}[data-checked="true"] label`, {
-  color: theme.colors.primary.textStrong,
-})
-
-globalStyle(`${switchButtonOption.neutral}[data-checked="false"] label:hover`, {
-  color: theme.colors.neutral.textHover,
-})
-
-globalStyle(`${switchButtonOption.primary}[data-checked="false"] label:hover`, {
-  color: theme.colors.primary.text,
-})
-
-globalStyle(`${switchButtonOptionBase}[data-disabled="true"] label`, {
-  color: theme.colors.neutral.textDisabled,
-})
-
-globalStyle(
-  `${switchButtonOptionBase}[data-checked='false'][data-disabled="true"] label:hover`,
-  {
-    background: 'transparent',
-    color: theme.colors.neutral.textDisabled,
-  },
-)
+export const switchButtonOptionPrimary = style({})
+export const switchButtonOptionNeutral = style({})
 
 const focusOverlayBase = style({
   borderRadius: theme.radii.default,

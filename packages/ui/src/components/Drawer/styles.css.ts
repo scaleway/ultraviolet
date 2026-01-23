@@ -1,11 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  globalStyle,
-  keyframes,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
-import { modalBackdropBase } from '../Modal/styles.css'
+import { keyframes, style, styleVariants } from '@vanilla-extract/css'
 
 export const SIZES = {
   large: 75.5,
@@ -78,12 +72,4 @@ export const drawerFooter = style({
   paddingTop: 0,
 })
 
-Object.keys(SIZES).map(size =>
-  globalStyle(
-    `${modalBackdropBase}:has(${drawer[size as keyof typeof drawer]})`,
-    {
-      padding: 0,
-      transition: 'opacity 100ms ease-in-out',
-    },
-  ),
-)
+export const drawerBase = style({})

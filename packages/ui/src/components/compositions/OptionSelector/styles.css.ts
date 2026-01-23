@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 import { dropdownItemBase } from '../../SelectInput/components/dropdown.css'
 
 export const optionSelectorWrapper = style({
@@ -10,29 +10,24 @@ export const optionSelectorWrapper = style({
   gridTemplateColumns: `1fr ${theme.space[4]} 1fr`,
 })
 
-export const revealOnHover = style({})
-
-globalStyle(`${revealOnHover} [data-visibility="hover"]`, {
-  display: 'none',
-})
-globalStyle(`${revealOnHover} [data-visibility="unhover"]`, {
-  display: 'flex',
-})
-
-globalStyle(
-  `${dropdownItemBase}:hover ${revealOnHover} [data-visibility="hover"],
-  ${dropdownItemBase}:focus ${revealOnHover} [data-visibility="hover"]`,
-  {
-    display: 'flex',
+export const revealOnHover = style({
+  selectors: {
+    "&[data-visibility='hover']": {
+      display: 'none',
+    },
+    '&[data-visibility="unhover"]': {
+      display: 'flex',
+    },
+    [`${dropdownItemBase}:hover &[data-visibility="hover"],
+  ${dropdownItemBase}:focus &[data-visibility="hover"]`]: {
+      display: 'flex',
+    },
+    [`${dropdownItemBase}:hover &[data-visibility="unhover"],
+  ${dropdownItemBase}:focus &[data-visibility="unhover"]`]: {
+      display: 'none',
+    },
   },
-)
-globalStyle(
-  `${dropdownItemBase}:hover ${revealOnHover} [data-visibility="unhover"],
-  ${dropdownItemBase}:focus ${revealOnHover} [data-visibility="unhover"]`,
-  {
-    display: 'none',
-  },
-)
+})
 
 export const firstLabel = style({
   gridColumn: '1',

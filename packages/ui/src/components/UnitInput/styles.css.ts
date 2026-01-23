@@ -1,11 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  createVar,
-  globalStyle,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
-import { selectBarBase } from '../SelectInput/components/selectBar.css'
+import { createVar, style, styleVariants } from '@vanilla-extract/css'
 
 export const widthSelectInput = createVar()
 
@@ -178,15 +172,3 @@ export const unitInputUnitWidth = style({
 })
 
 export const unitInputUnit = style({})
-
-globalStyle(`${unitInputUnit} ${selectBarBase}`, {
-  background: 'transparent',
-  border: 'none',
-})
-
-globalStyle(
-  `${unitInputUnit} ${selectBarBase}:focus, ${unitInputUnit} ${selectBarBase}:active`,
-  {
-    boxShadow: 'none',
-  },
-)

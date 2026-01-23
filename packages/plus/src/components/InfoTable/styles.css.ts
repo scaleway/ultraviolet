@@ -28,8 +28,12 @@ export const infoTableRow = style({
   width: rowWidth,
 })
 
-globalStyle(`${infoTableRow} > *:not(:last-child)`, {
-  paddingRight: theme.space[2],
+export const infoTableCell = style({
+  selectors: {
+    '&:not(:last-child)': {
+      paddingRight: theme.space[2],
+    },
+  },
 })
 
 export const term = style({

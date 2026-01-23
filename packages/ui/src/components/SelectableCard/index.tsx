@@ -33,7 +33,8 @@ import {
   illustrationSelectableCard,
   imageSelectableCard,
   indentedCard,
-  labelContainerSelectableCard,
+  labelContainerSelectableCardLabel,
+  labelContainerSelectableCardNoLabel,
   selectableElementSelectableCard,
   stackSelectableCard,
 } from './styles.css'
@@ -262,7 +263,9 @@ export const SelectableCard = forwardRef(
                 type === 'checkbox' && isComplexChildren ? 'default' : 'custom',
               image,
             }),
-            labelContainerSelectableCard[label ? 'label' : 'noLabel'],
+            label
+              ? labelContainerSelectableCardLabel
+              : labelContainerSelectableCardNoLabel,
           )}
           data-checked={checked}
           data-disabled={disabled}

@@ -18,6 +18,7 @@ import { useOfferListContext } from '../OfferListProvider'
 import {
   expandablePadding as expandablePaddingVar,
   offerListBadge,
+  offerListCellNoRadius,
   offerListNoPaddingCell,
   offerListRowBanner,
   offerListRowExpandable,
@@ -25,8 +26,10 @@ import {
   offerListRowSelected,
   offerListRowSelectedExpandable,
   offerListRowSelectedNotExpandable,
+  offerListSelectedCell,
 } from '../styles.css'
 import { Banner } from './Banner'
+import { OfferListRowContext } from './OfferListRowProvider'
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {
@@ -196,7 +199,13 @@ export const Row = ({
         onMouseLeave={() => setHovered(false)}
         style={style}
       >
-        <List.Cell className={offerListNoPaddingCell}>
+        <List.Cell
+          className={cn(
+            offerListNoPaddingCell,
+            isSelected ? offerListSelectedCell : '',
+            banner ? offerListCellNoRadius : '',
+          )}
+        >
           {badge ? (
             <BadgeUV
               className={offerListBadge}
@@ -252,7 +261,12 @@ export const Row = ({
           </div>
         </List.Cell>
         {expandable ? (
-          <List.Cell className={offerListNoPaddingCell}>
+          <List.Cell
+            className={cn(
+              offerListNoPaddingCell,
+              isSelected ? offerListSelectedCell : '',
+            )}
+          >
             <Button
               aria-label="expand"
               data-testid="list-expand-button"
@@ -266,7 +280,11 @@ export const Row = ({
             </Button>
           </List.Cell>
         ) : null}
-        {children}
+        <OfferListRowContext.Provider
+          value={{ selected: isSelected, banner: !!banner }}
+        >
+          {children}
+        </OfferListRowContext.Provider>
       </List.Row>
       {banner && !expandedRowIds[id] ? (
         <Banner

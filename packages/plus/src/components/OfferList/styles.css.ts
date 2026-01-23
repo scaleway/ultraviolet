@@ -48,14 +48,6 @@ export const offerListBanner = style({
   width: '100%',
 })
 
-globalStyle(
-  `${offerListBanner} td, ${offerListBanner} td:first-child, ${offerListBanner} td:last-child`,
-  {
-    borderBottom: '1px solid transparent',
-    transition: 'box-shadow 200ms ease, border-color 200ms ease',
-  },
-)
-
 export const offerListBannerText = recipe({
   base: {
     border: `1px solid ${theme.colors.neutral.border}`,
@@ -118,6 +110,8 @@ export const offerListBannerCell = style({
   height: 'fit-content',
   padding: 0,
   width: '100%',
+  borderBottom: '1px solid transparent',
+  transition: 'box-shadow 200ms ease, border-color 200ms ease',
 })
 
 export const offerListBannerStack = recipe({
@@ -177,34 +171,15 @@ export const offerListRowSelectedNotExpandable = style({
 export const offerListRowSelectedExpandable = style({})
 
 export const offerListRowBanner = style({})
-
-globalStyle(
-  `${offerListRowSelected} td, ${offerListRowSelected} td:first-child, ${offerListRowSelected} td:last-child`,
-  {
-    borderColor: theme.colors.primary.border,
+export const offerListCellNoRadius = style({
+  selectors: {
+    [`${offerListRowBanner} &, ${offerListRowBanner} &:first-child`]: {
+      borderBottomLeftRadius: 0,
+    },
+    [`${offerListRowBanner} &, ${offerListRowBanner} &:last-child`]: {
+      borderBottomRightRadius: 0,
+    },
   },
-)
-
-globalStyle(
-  `${offerListRowSelectedNotExpandable} td:nth-child(2), ${offerListRowSelectedExpandable} td:nth-child(3)`,
-  {
-    fontWeight: theme.typography.bodySmallStrong.weight,
-  },
-)
-
-globalStyle(
-  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, ${offerListRowSelected}[aria-expanded="true"] + tr td`,
-  {
-    borderColor: theme.colors.primary.border,
-  },
-)
-
-globalStyle(`${offerListRowBanner} td, ${offerListRowBanner} td:first-child`, {
-  borderBottomLeftRadius: 0,
-})
-
-globalStyle(`${offerListRowBanner} td, ${offerListRowBanner} td:last-child`, {
-  borderBottomRightRadius: 0,
 })
 
 export const offerListRowSelectableContainer = style({ display: 'flex' })
@@ -213,6 +188,25 @@ export const offerListRowExpandable = style({
   padding: expandablePadding,
 })
 
-export const offerListCell = style({ whiteSpace: 'pre-line' })
+export const offerListCell = style({
+  whiteSpace: 'pre-line',
+  selectors: {
+    [`${offerListRowSelectedNotExpandable} &:nth-child(2), ${offerListRowSelectedExpandable} &:nth-child(3)`]:
+      {
+        fontWeight: theme.typography.bodySmallStrong.weight,
+      },
+  },
+})
+
+globalStyle(
+  `${offerListRowSelected}[aria-expanded="true"] td, ${offerListRowSelected}[aria-expanded="true"] td:first-child, ${offerListRowSelected}[aria-expanded="true"] td:last-child, ${offerListRowSelected}[aria-expanded="true"] + tr td`,
+  {
+    borderColor: theme.colors.primary.border,
+  },
+)
 
 export const offerListLoadingCell = style({ height: '100%' })
+
+export const offerListSelectedCell = style({
+  borderColor: `${theme.colors.primary.border} !important`,
+})
