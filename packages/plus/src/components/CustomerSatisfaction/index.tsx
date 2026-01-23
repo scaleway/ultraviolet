@@ -13,7 +13,10 @@ import rating4 from './assets/4-5.svg'
 import rating4NS from './assets/4-5NB.svg'
 import rating5 from './assets/5-5.svg'
 import rating5NS from './assets/5-5NB.svg'
-import { customerStatisfaction } from './styles.css'
+import {
+  customerSatisfactionButtonContainer,
+  customerStatisfaction,
+} from './styles.css'
 
 const ratings = [
   {
@@ -78,13 +81,8 @@ export const CustomerSatisfaction = ({
         const animated = isHappy ? 'happy' : 'angry'
 
         return (
-          <img
-            alt="rating"
-            className={customerStatisfaction({
-              animated: isSelected ? animated : undefined,
-              isScaled,
-            })}
-            data-testid={`${dataTestId}-${rating.value}`}
+          <button
+            className={customerSatisfactionButtonContainer}
             key={rating.value}
             onClick={() => {
               onChange(rating.value)
@@ -96,12 +94,24 @@ export const CustomerSatisfaction = ({
             onMouseLeave={() => {
               setHoveredValue(0)
             }}
-            src={
-              isSelected || isOverfly || rating.value <= value
-                ? rating.imgSelected
-                : rating.imgNotSelected
-            }
-          />
+            type="button"
+          >
+            <img
+              alt="rating"
+              className={customerStatisfaction({
+                animated: isSelected ? animated : undefined,
+                isScaled,
+              })}
+              data-testid={`${dataTestId}-${rating.value}`}
+              height="auto"
+              src={
+                isSelected || isOverfly || rating.value <= value
+                  ? rating.imgSelected
+                  : rating.imgNotSelected
+              }
+              width="auto"
+            />
+          </button>
         )
       })}
     </Stack>

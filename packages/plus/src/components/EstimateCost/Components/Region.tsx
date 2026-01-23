@@ -62,7 +62,13 @@ export const Region = memo(
         style={style}
       >
         <Strong>
-          <img alt={label} className={estimateCostImage} src={image} />
+          <img
+            alt={label}
+            className={estimateCostImage}
+            height="auto"
+            src={image}
+            width="auto"
+          />
           {label}
         </Strong>
       </Item>
