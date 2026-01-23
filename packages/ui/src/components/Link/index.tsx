@@ -3,7 +3,8 @@
 import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
-import { cn } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
+import { cn, renderElement } from '@ultraviolet/utils'
 import type {
   AnchorHTMLAttributes,
   CSSProperties,
@@ -14,8 +15,6 @@ import type {
   RefObject,
 } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
-import type { RenderProp } from '../../helpers/polymorphic'
-import { renderElement } from '../../helpers/polymorphic'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { Tooltip } from '../Tooltip'
 import type { PROMINENCES } from './constants'

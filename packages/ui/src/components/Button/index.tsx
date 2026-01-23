@@ -3,7 +3,8 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-import { cn } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
+import { cn, renderElement } from '@ultraviolet/utils'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -13,8 +14,6 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef, useMemo } from 'react'
-import type { RenderProp } from '../../helpers/polymorphic'
-import { renderElement } from '../../helpers/polymorphic'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
 import type { ButtonVariants } from './styles.css'
