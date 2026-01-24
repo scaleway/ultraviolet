@@ -3,8 +3,8 @@
   "private": true,
   "packageManager": "pnpm@10.28.0",
   "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
+    "node": ">=20.x",
+    "pnpm": ">=10.x"
   },
   "type": "module",
   "os": [
@@ -133,6 +133,7 @@
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@types/zxcvbn": "4.4.5",
+    "@typescript/native-preview": "7.0.0-dev.20260112.1",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
@@ -148,7 +149,6 @@
     "cross-env": "10.1.0",
     "cz-conventional-changelog": "3.3.0",
     "date-fns": "4.1.0",
-    "esbuild-plugin-browserslist": "2.0.0",
     "eslint": "9.39.2",
     "eslint-plugin-oxlint": "1.39.0",
     "eslint-plugin-storybook": "10.1.11",
@@ -182,10 +182,12 @@
     "tsx": "4.21.0",
     "turbo": "2.7.5",
     "typescript": "5.9.3",
-    "vite": "7.3.1",
+    "vite": "8.0.0-beta.9",
     "vitest": "4.0.17",
     "vitest-canvas-mock": "1.1.3",
     "vitest-localstorage-mock": "0.1.2",
     "zxcvbn": "4.4.2"
-  }
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {}
 }
