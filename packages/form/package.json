@@ -41,16 +41,16 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./compositions/*": {
       "types": "./dist/components/compositions/*/index.d.ts",
-      "require": "./dist/components/compositions/*/index.cjs",
+      "require": "./dist/components/compositions/*/index.js",
       "default": "./dist/components/compositions/*/index.js"
     }
   },
