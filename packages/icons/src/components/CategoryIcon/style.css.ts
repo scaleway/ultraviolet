@@ -13,8 +13,8 @@ export const categoryIcon = styleVariants({
 
 const color = theme.colors.other.icon.category
 
-VARIANTS.forEach(variant => {
-  FILL_CLASSES.forEach(fillClass => {
+for (const variant of VARIANTS) {
+  for (const fillClass of FILL_CLASSES) {
     // Default style
     globalStyle(`${categoryIcon[variant]} .${fillClass}`, {
       fill: color[variant][fillClass],
@@ -27,5 +27,5 @@ VARIANTS.forEach(variant => {
         fill: color[variant][`${fillClass}Disabled`],
       },
     )
-  })
-})
+  }
+}

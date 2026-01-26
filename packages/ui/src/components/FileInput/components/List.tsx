@@ -43,7 +43,15 @@ const getIllustration = (
     )
   }
   if (type === 'image' && !error) {
-    return <img alt="" className={fileViewerImage.default} src={file} />
+    return (
+      <img
+        alt=""
+        className={fileViewerImage.default}
+        height="auto"
+        src={file}
+        width="auto"
+      />
+    )
   }
 
   if (type === 'image' && error) {

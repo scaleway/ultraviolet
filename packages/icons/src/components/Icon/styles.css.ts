@@ -81,8 +81,8 @@ export const icon = recipe({
   },
 })
 
-Object.keys(PROMINENCES).forEach(prominence => {
-  SENTIMENTS.forEach(sentiment => {
+for (const prominence of Object.keys(PROMINENCES)) {
+  for (const sentiment of SENTIMENTS) {
     globalStyle(
       `${icon({ prominence: prominence as keyof typeof PROMINENCES, sentiment })} .fillStroke`,
       {
@@ -90,5 +90,5 @@ Object.keys(PROMINENCES).forEach(prominence => {
         stroke: getIconColor(prominence as keyof typeof PROMINENCES, sentiment),
       },
     )
-  })
-})
+  }
+}

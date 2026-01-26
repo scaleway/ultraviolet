@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const DockerLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const DockerLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="DockerLogo">
     <path
       clipRule="evenodd"
       d="M11.53 7.94h1.77v1.8h0.89c0.41 0 0.83-0.08 1.22-0.2 0.19-0.06 0.41-0.16 0.59-0.27-0.25-0.33-0.38-0.73-0.41-1.14-0.05-0.55 0.06-1.27 0.44-1.69l0.19-0.22 0.22 0.17c0.56 0.45 1.02 1.06 1.11 1.78 0.67-0.2 1.45-0.16 2.05 0.19l0.23 0.14-0.13 0.25c-0.5 0.97-1.55 1.28-2.56 1.22-1.53 3.8-4.84 5.59-8.88 5.59-2.08 0-3.98-0.78-5.08-2.63l-0.02-0.03-0.16-0.33c-0.38-0.82-0.48-1.7-0.41-2.59l0.03-0.27h1.5V7.94h1.77V6.19h3.52V4.42h2.11v3.52z"

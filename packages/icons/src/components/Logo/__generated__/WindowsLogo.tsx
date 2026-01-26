@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const WindowsLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const WindowsLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="WindowsLogo">
     <g>
       <path
         d="M0.0308228 2.83167L8.179 1.72197L8.18257 9.58155L0.0382661 9.62793L0.0308228 2.83167ZM8.17512 10.4871L8.18145 18.3536L0.0371473 17.2338L0.0366907 10.4344L8.17512 10.4871ZM9.16287 1.5768L19.9667 0V9.48159L9.16287 9.56736V1.5768ZM19.9692 10.5611L19.9667 20L9.16285 18.4752L9.14771 10.5434L19.9692 10.5611Z"

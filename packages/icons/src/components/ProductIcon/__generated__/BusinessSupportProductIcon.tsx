@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const BusinessSupportProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="BusinessSupportProductIcon">
     <g
       className="sentiment=original, size=xlarge, disabled=false"
       clipPath="url(#a)"

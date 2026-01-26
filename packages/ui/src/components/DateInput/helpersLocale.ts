@@ -41,18 +41,22 @@ export const getDays = (locale: Locale | string) => {
   const days: Record<string, string> = {}
 
   // Map long day names (localized) to short day names (localized)
-  longDays.forEach(longDay => {
+  for (const longDay of longDays) {
     days[longDay] = longDay.slice(0, 2)
-  })
+  }
 
   const dayKeys = Object.keys(days)
-  // oxlint-disable-next-line no-non-null-assertion
-  dayKeys.push(dayKeys.shift()!)
+
+  const dayKeysShifted = dayKeys.shift()
+  if (dayKeysShifted) {
+    dayKeys.push(dayKeysShifted)
+  }
 
   const orderedDaysMap: Record<string, string> = {}
-  dayKeys.forEach(key => {
+
+  for (const key of dayKeys) {
     orderedDaysMap[key] = days[key]
-  })
+  }
 
   return orderedDaysMap
 }

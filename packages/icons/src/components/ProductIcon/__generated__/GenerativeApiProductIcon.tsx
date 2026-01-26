@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const GenerativeApiProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="GenerativeApiProductIcon">
     <g className="generative-api">
       <g className=".Square">
         <path

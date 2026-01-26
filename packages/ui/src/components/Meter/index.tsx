@@ -48,6 +48,7 @@ export const Meter = ({
   const text = strength[value]?.text ?? strength[0].text
 
   return (
+    // biome-ignore lint/a11y/useSemanticElements: style issue
     <div
       aria-labelledby="meter-label"
       aria-live="polite"

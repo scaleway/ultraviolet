@@ -71,7 +71,8 @@ const findFiles = (dir: string, output: string, illustrations: string[]) => {
     `${WARNING}\n
       const BASE_URL = '${BASE_URL}'\n\n`,
   )
-  files.forEach(file => {
+
+  for (const file of files) {
     const fullPath = path.join(dir, file)
     const isDirectory = statSync(fullPath).isDirectory()
     if (isDirectory) {
@@ -79,7 +80,7 @@ const findFiles = (dir: string, output: string, illustrations: string[]) => {
     } else {
       importIllustration(fullPath, file, output, illustrations)
     }
-  })
+  }
 }
 
 const exportIllustrations = (output: string, illustrations: string[]) => {
@@ -92,7 +93,7 @@ const updateIndexes = () => {
   const subDirs = readdirSync(ILLUSTRATIONS_DIR)
 
   // Go through first subdirectories (product, various)
-  subDirs.forEach(subDir => {
+  for (const subDir of subDirs) {
     const subDirPath = path.join(ILLUSTRATIONS_DIR, subDir)
 
     if (
@@ -102,16 +103,16 @@ const updateIndexes = () => {
       const files = readdirSync(subDirPath)
 
       // Create index for each directory inside the subdirectories
-      files.forEach(element => {
+      for (const element of files) {
         const fullPath = path.join(subDirPath, element)
         if (statSync(fullPath).isDirectory()) {
           const illustrations: string[] = []
           findFiles(fullPath, `${fullPath}/index.ts`, illustrations)
           exportIllustrations(`${fullPath}/index.ts`, illustrations)
         }
-      })
+      }
     }
-  })
+  }
 }
 
 // Export all products in products/index.ts
@@ -121,7 +122,7 @@ const exportProducts = () => {
   const productExports: string[] = []
   writeFileSync(`${PRODUCTS_DIR}/index.ts`, `${WARNING}\n`)
   appendFileSync(`${PRODUCTS_DIR}/index.ts`, `${OXLINT_RULES}\n`)
-  productsDirs.forEach(productDir => {
+  for (const productDir of productsDirs) {
     const fullPath = path.join(PRODUCTS_DIR, productDir)
     if (statSync(fullPath).isDirectory()) {
       appendFileSync(
@@ -130,7 +131,7 @@ const exportProducts = () => {
       )
       productExports.push(productDir)
     }
-  })
+  }
 
   appendFileSync(
     `${PRODUCTS_DIR}/index.ts`,

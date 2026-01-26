@@ -212,6 +212,7 @@ export const navigationItemBadge = style({
 })
 
 export const navigationItemPinnedButton = style({
+  all: 'unset',
   bottom: 0,
   left: '-24px',
   margin: 'auto',
@@ -220,7 +221,7 @@ export const navigationItemPinnedButton = style({
   position: 'absolute',
   right: 0,
   selectors: {
-    '&:hover, &:focus, &:active': {
+    '&:hover, &:focus-visible, &:active': {
       opacity: 1,
       pointerEvents: 'auto',
     },

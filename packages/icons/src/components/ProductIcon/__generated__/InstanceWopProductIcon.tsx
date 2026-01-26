@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const InstanceWopProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="InstanceWopProductIcon">
     <g className="Instance-WOP" clipPath="url(#a)">
       <g className=".Square">
         <path

@@ -266,7 +266,13 @@ export const Dialog = ({
               className={modalImageContainer}
               justifyContent="center"
             >
-              <img alt="illustration" className={modalImage} src={image} />
+              <img
+                alt="illustration"
+                className={modalImage}
+                height="auto"
+                src={image}
+                width="auto"
+              />
             </Stack>
             <Stack className={modalContent} gap={5}>
               {children}

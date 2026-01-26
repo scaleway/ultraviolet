@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const CloseCircleOutlineIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="CloseCircleOutlineIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M10 16.67c-3.675 0-6.67-2.995-6.67-6.67S6.325 3.33 10 3.33s6.67 2.995 6.67 6.67-2.995 6.67-6.67 6.67m0-15c-4.61 0-8.33 3.72-8.33 8.33s3.72 8.33 8.33 8.33 8.33-3.72 8.33-8.33S14.61 1.67 10 1.67m2.16 5L10 8.83 7.84 6.67 6.67 7.84 8.83 10l-2.16 2.16 1.17 1.17L10 11.17l2.16 2.16 1.17-1.17L11.17 10l2.16-2.16z" />

@@ -18,14 +18,14 @@ export const updateWireIllustrations = (
   baseUrl: string,
 ) => {
   // Delete everything inside the WIRE_ILLUSTRATIONS_DIR folder to clean
-  fs.readdirSync(WIRE_ILLUSTRATIONS_DIR).forEach(file => {
+  for (const file of fs.readdirSync(WIRE_ILLUSTRATIONS_DIR)) {
     const fullPath = path.join(WIRE_ILLUSTRATIONS_DIR, file)
     if (fs.statSync(fullPath).isDirectory()) {
       fs.rmdirSync(fullPath, { recursive: true })
     } else {
       fs.unlinkSync(fullPath)
     }
-  })
+  }
 
   // Create illustration.tsx file
   const indexPath = path.join(WIRE_ILLUSTRATIONS_DIR, 'Illustrations.tsx')

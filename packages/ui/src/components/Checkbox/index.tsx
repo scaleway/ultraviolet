@@ -104,6 +104,23 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const uniqId = useId()
     const localId = id ?? uniqId
 
+    const styledChildren =
+      typeof children === 'string' ? (
+        <Text
+          as="label"
+          className={label}
+          htmlFor={localId}
+          prominence="default"
+          sentiment="neutral"
+          variant="body"
+        >
+          {children}
+        </Text>
+      ) : (
+        <label className={label} htmlFor={localId}>
+          {children}
+        </label>
+      )
     const isCheck = checked === true ? checked : false
 
     return (
@@ -139,6 +156,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           />
 
           <svg className={icon} fill="none" viewBox="0 0 24 24">
+            <title>checkbox</title>
             <CheckboxIconContainer>
               {checked !== 'indeterminate' ? (
                 <path
@@ -169,26 +187,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             <Stack flex={1} gap={0.5}>
               {children || required ? (
                 <Stack alignItems="center" direction="row" flex={1} gap={0.5}>
-                  {children ? (
-                    <>
-                      {typeof children === 'string' ? (
-                        <Text
-                          as="label"
-                          className={label}
-                          htmlFor={localId}
-                          prominence="default"
-                          sentiment="neutral"
-                          variant="body"
-                        >
-                          {children}
-                        </Text>
-                      ) : (
-                        <label className={label} htmlFor={localId}>
-                          {children}
-                        </label>
-                      )}
-                    </>
-                  ) : null}
+                  {children ? styledChildren : null}
                   {required ? (
                     <Text as="sup" sentiment="danger" variant="body">
                       *

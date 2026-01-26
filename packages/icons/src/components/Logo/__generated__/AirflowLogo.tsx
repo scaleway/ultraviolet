@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const AirflowLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const AirflowLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="AirflowLogo">
     <path
       d="M0.322527 19.9201L9.89813 10.1044C9.95811 10.0429 9.96961 9.94787 9.91958 9.87804C9.33709 9.06495 8.26285 8.92402 7.86462 8.37776C6.68501 6.75963 6.38571 5.84376 5.87882 5.90056C5.84341 5.90453 5.81185 5.92359 5.78697 5.94909L2.32776 9.49504C0.337737 11.5349 0.0523569 16.0263 2.01603e-05 19.7871C-0.00234433 19.9571 0.20384 20.0417 0.322527 19.9201Z"
       fill="#017CEE"

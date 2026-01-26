@@ -66,7 +66,13 @@ export const EmptyState = ({
     >
       <Stack alignItems="center" gap={2} justifyContent="center">
         {image && typeof image === 'string' ? (
-          <img alt="" className={emptyStateImage[size]} src={image} />
+          <img
+            alt=""
+            className={emptyStateImage[size]}
+            height="auto"
+            src={image}
+            width="auto"
+          />
         ) : (
           image
         )}

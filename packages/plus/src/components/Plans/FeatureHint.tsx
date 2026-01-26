@@ -30,7 +30,7 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
       title={hint.title}
       visible={visible}
     >
-      <div
+      <button
         className={plansIconWrapper}
         data-testid="hint-popover"
         onClick={() => setVisible(true)}
@@ -39,12 +39,11 @@ export const FeatureHint = ({ hint }: FeatureHintProps) => {
             setVisible(true)
           }
         }}
-        // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
-        role="button"
         tabIndex={0}
+        type="button"
       >
         <InformationOutlineIcon prominence="weak" sentiment="neutral" />
-      </div>
+      </button>
     </Popover>
   )
 }

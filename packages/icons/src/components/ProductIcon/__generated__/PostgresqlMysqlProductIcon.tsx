@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const PostgresqlMysqlProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="PostgresqlMysqlProductIcon">
     <g className="PostgreSQL-and-MySQL">
       <g className=".Square">
         <path

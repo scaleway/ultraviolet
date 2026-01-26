@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const RedisProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const RedisProductIcon = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="RedisProductIcon">
     <g className="Redis-For-Cache" clipPath="url(#b)">
       <g className=".Square">
         <path

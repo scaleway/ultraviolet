@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const HungaryFlag = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const HungaryFlag = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="HungaryFlag">
     {props.disabled ? (
       <>
         <g>

@@ -134,6 +134,8 @@ export const PinnedItems = ({
 
                 return (
                   <div className={navigationPinnedItemRelativeDiv} key={itemId}>
+                    {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
+                    {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
                     <div
                       className={navigationPinnedItemDropableArea}
                       onDragLeave={onDragLeave}
@@ -163,6 +165,8 @@ export const PinnedItems = ({
           )}
 
           <div className={navigationPinnedItemRelativeDiv}>
+            {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
+            {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
             <div
               className={navigationPinnedItemDropableArea}
               onDragLeave={onDragLeave}

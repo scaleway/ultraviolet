@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const UbuntuLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const UbuntuLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="UbuntuLogo">
     <circle cx="10" cy="10" fill="#f47421" r="9" />
     <circle
       cx="10"

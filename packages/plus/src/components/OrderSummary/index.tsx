@@ -134,12 +134,12 @@ export const OrderSummary = ({
   const computePeriodOptions = useMemo(() => {
     const computedPeriodOptions: { label: string; value: string }[] = []
 
-    periodOptions.forEach(option =>
+    for (const option of periodOptions) {
       computedPeriodOptions.push({
         label: locales[`order.summary.units.${option}.label` as const],
         value: option,
-      }),
-    )
+      })
+    }
 
     return computedPeriodOptions
   }, [periodOptions, locales])
