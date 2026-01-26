@@ -1,5 +1,28 @@
 # Change Log
 
+## 3.7.0
+
+### Minor Changes
+
+- [#6016](https://github.com/scaleway/ultraviolet/pull/6016) [`c8fd687`](https://github.com/scaleway/ultraviolet/commit/c8fd68734ec9b8fa38420414ff6ebd7741f89846) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - `LineChart`: new tooltipfunction prop
+
+- [#6009](https://github.com/scaleway/ultraviolet/pull/6009) [`1c76a24`](https://github.com/scaleway/ultraviolet/commit/1c76a246cc1113ec8238dedf0312706f5ed32807) Thanks [@lisalupi](https://github.com/lisalupi)! - Reduce usage of `globalStyle`
+
+### Patch Changes
+
+- [#6033](https://github.com/scaleway/ultraviolet/pull/6033) [`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa) Thanks [@philibea](https://github.com/philibea)! - Fix require export based on .cjs files instead of .js
+
+- [#6015](https://github.com/scaleway/ultraviolet/pull/6015) [`e93190f`](https://github.com/scaleway/ultraviolet/commit/e93190fc9a6ae8c18a3dd558f62dabe499cba14c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu`: clicking on a menu item to open a nested menu should not close the parent menu
+
+- [#5990](https://github.com/scaleway/ultraviolet/pull/5990) [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.9`.
+
+- [#6013](https://github.com/scaleway/ultraviolet/pull/6013) [`8f4eb5c`](https://github.com/scaleway/ultraviolet/commit/8f4eb5c6dd994d597bc48abd503906841178156d) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix various broken styles caused by css selector re-ordering
+
+- Updated dependencies [[`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa), [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a)]:
+  - @ultraviolet/themes@3.0.4
+  - @ultraviolet/icons@5.0.6
+  - @ultraviolet/utils@1.0.1
+
 ## 3.6.0
 
 ### Minor Changes
