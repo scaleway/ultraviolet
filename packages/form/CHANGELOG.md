@@ -1,5 +1,18 @@
 # Change Log
 
+## 6.0.11
+
+### Patch Changes
+
+- [#6033](https://github.com/scaleway/ultraviolet/pull/6033) [`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa) Thanks [@philibea](https://github.com/philibea)! - Fix require export based on .cjs files instead of .js
+
+- [#5990](https://github.com/scaleway/ultraviolet/pull/5990) [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.9`.
+
+- Updated dependencies [[`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa), [`c8fd687`](https://github.com/scaleway/ultraviolet/commit/c8fd68734ec9b8fa38420414ff6ebd7741f89846), [`e93190f`](https://github.com/scaleway/ultraviolet/commit/e93190fc9a6ae8c18a3dd558f62dabe499cba14c), [`1c76a24`](https://github.com/scaleway/ultraviolet/commit/1c76a246cc1113ec8238dedf0312706f5ed32807), [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a), [`8f4eb5c`](https://github.com/scaleway/ultraviolet/commit/8f4eb5c6dd994d597bc48abd503906841178156d)]:
+  - @ultraviolet/themes@3.0.4
+  - @ultraviolet/icons@5.0.6
+  - @ultraviolet/ui@3.7.0
+
 ## 6.0.10
 
 ### Patch Changes
