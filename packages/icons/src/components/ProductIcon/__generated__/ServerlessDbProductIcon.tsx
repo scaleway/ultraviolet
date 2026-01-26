@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const ServerlessDbProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="ServerlessDbProductIcon">
     <g className="Serverless-DB">
       <g className="icon" clipPath="url(#a)">
         <g className=".Square">

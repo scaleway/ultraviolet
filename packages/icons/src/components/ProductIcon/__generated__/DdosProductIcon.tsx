@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const DdosProductIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const DdosProductIcon = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="DdosProductIcon">
     <g className="DDoS">
       <g className="DDoS-icon" clipPath="url(#a)">
         <g className=".Square">

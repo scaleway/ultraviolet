@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const MultiUserProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="MultiUserProductIcon">
     <g className="Multi-Users">
       <g className=".Square">
         <path

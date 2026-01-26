@@ -14,6 +14,7 @@ export type IconProps = {
   className?: string
   children: ReactNode
   style?: CSSProperties
+  title: string
 }
 
 /**
@@ -27,6 +28,7 @@ export const Icon = ({
   className,
   children,
   style,
+  title,
 }: IconProps) => (
   <svg
     className={cn(
@@ -37,6 +39,7 @@ export const Icon = ({
     style={style}
     viewBox="0 0 64 64"
   >
+    <title>{title}</title>
     {children}
   </svg>
 )

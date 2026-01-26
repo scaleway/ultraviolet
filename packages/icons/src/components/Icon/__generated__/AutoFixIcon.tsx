@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const AutoFixIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const AutoFixIcon = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="AutoFixIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="m16.547 5.386.387-.836.835-.387a.395.395 0 0 0 0-.717l-.835-.387-.387-.828a.394.394 0 0 0-.717 0l-.386.836-.828.387a.395.395 0 0 0 0 .717l.836.387.386.828a.388.388 0 0 0 .71 0m-9.067 0 .386-.836.836-.387a.395.395 0 0 0 0-.717l-.835-.379-.387-.836a.388.388 0 0 0-.71 0l-.386.836-.835.387a.395.395 0 0 0 0 .717l.835.387.387.828a.388.388 0 0 0 .71 0m8.356 5.915-.386.836-.836.387a.395.395 0 0 0 0 .718l.836.386.386.836a.394.394 0 0 0 .717 0l.387-.836.827-.394a.395.395 0 0 0 0-.718l-.835-.386-.387-.837c-.134-.3-.575-.3-.71.008m-1.45-3.454-2.23-2.232a.785.785 0 0 0-1.112 0l-8.814 8.81a.786.786 0 0 0 0 1.112l2.23 2.232a.785.785 0 0 0 1.112 0l8.806-8.81a.78.78 0 0 0 .008-1.112m-2.76 1.648-1.11-1.112 1.087-1.088 1.112 1.112z" />

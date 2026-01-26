@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const MacMiniM2ProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="MacMiniM2ProductIcon">
     <g className="MacMini-M2">
       <g className=".Fill">
         <path

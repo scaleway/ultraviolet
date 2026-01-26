@@ -79,7 +79,9 @@ describe('snippet', () => {
       <Snippet>{TEST_VALUE_MULTILINE}</Snippet>,
     )
 
-    await userEvent.click(screen.getByRole('button', { name: 'Show' }))
+    await userEvent.click(
+      screen.getByRole('button', { name: 'Show ArrowDownIcon' }),
+    )
 
     expect(asFragment()).toMatchSnapshot()
   })

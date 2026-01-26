@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const TwitterIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const TwitterIcon = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="TwitterIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M15.203 1.875h2.757l-6.023 6.883 7.085 9.367h-5.547l-4.345-5.68-4.972 5.68H1.4l6.442-7.363-6.797-8.887h5.688l3.928 5.193zm-.967 14.6h1.527L5.903 3.438H4.264z" />

@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const OwnCloudLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const OwnCloudLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="OwnCloudLogo">
     <path
       clipRule="evenodd"
       d="M1.1332 12.8985C0.623431 12.8985 0.210185 13.3117 0.210185 13.8215C0.210185 14.3313 0.623431 14.7445 1.1332 14.7445C1.64296 14.7445 2.05621 14.3313 2.05621 13.8215C2.05621 13.3117 1.64296 12.8985 1.1332 12.8985ZM0.0255737 13.8215C0.0255737 13.2098 0.521473 12.7139 1.1332 12.7139C1.74492 12.7139 2.24082 13.2098 2.24082 13.8215C2.24082 14.4332 1.74492 14.9291 1.1332 14.9291C0.521473 14.9291 0.0255737 14.4332 0.0255737 13.8215Z"

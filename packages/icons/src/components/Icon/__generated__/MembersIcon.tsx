@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const MembersIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const MembersIcon = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="MembersIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M10 8.663a2.667 2.667 0 1 0 0-5.333 2.667 2.667 0 0 0 0 5.333m-3.556-.888a1.778 1.778 0 1 1-3.555 0 1.778 1.778 0 0 1 3.555 0m-4.008 6.511a.7.7 0 0 1-.318-.392 2.667 2.667 0 0 1 3.83-3.126 5.76 5.76 0 0 0-1.695 3.52 2 2 0 0 0 .023.58 4.4 4.4 0 0 1-1.84-.582m13.289.583a4.4 4.4 0 0 0 1.839-.583.7.7 0 0 0 .318-.392q.117-.374.118-.786a2.667 2.667 0 0 0-3.947-2.34 5.76 5.76 0 0 1 1.694 3.52q.03.297-.022.58m1.386-7.093a1.778 1.778 0 1 1-3.555 0 1.778 1.778 0 0 1 3.555 0m-11.285 7.28a.75.75 0 0 1-.247-.631 4.445 4.445 0 0 1 8.842 0 .75.75 0 0 1-.246.631A6.2 6.2 0 0 1 10 16.663a6.2 6.2 0 0 1-4.174-1.608" />

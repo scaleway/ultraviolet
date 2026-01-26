@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const BoxEssentialsOutlineIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="BoxEssentialsOutlineIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M17.2502 6.7793L10.8306 10.1021V17.2883L17.2502 14.0999V6.7793ZM3.66626 5.55005L10.0774 8.802L16.3604 5.55005L10.0762 2.3396L3.66626 5.55005ZM2.74951 14.095L9.33032 17.2993V10.1057L2.74951 6.76709V14.095ZM18.7505 14.5649C18.7504 14.8494 18.5889 15.1096 18.3342 15.2363L10.4143 19.1719C10.2061 19.2752 9.96166 19.276 9.75269 19.1743L1.67163 15.2388C1.41381 15.1132 1.25058 14.8517 1.25049 14.5649V5.54639C1.25066 5.26267 1.4106 5.00329 1.66431 4.87622L9.74536 0.829591L9.82715 0.794191C10.0208 0.724541 10.236 0.737273 10.4216 0.832032L18.3416 4.87866C18.5922 5.0068 18.7503 5.26489 18.7505 5.54639V14.5649Z" />
