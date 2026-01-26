@@ -54,17 +54,17 @@
     "access": "public"
   },
   "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsgo --noEmit",
+    "lintpublish": "publint",
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vitest.config.ts",
-    "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "lintpublish": "publint"
+    "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "typecheck": "tsgo --noEmit",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch"
   },
   "dependencies": {
     "@nivo/bar": "0.89.1",
@@ -76,9 +76,9 @@
     "@scaleway/fuzzy-search": "1.0.2",
     "@scaleway/random-name": "5.1.4",
     "@scaleway/use-media": "3.0.7",
-    "@uiw/codemirror-extensions-langs": "4.25.2",
-    "@uiw/codemirror-theme-material": "4.25.2",
-    "@uiw/react-codemirror": "4.25.2",
+    "@uiw/codemirror-extensions-langs": "4.25.8",
+    "@uiw/codemirror-theme-material": "4.25.8",
+    "@uiw/react-codemirror": "4.25.8",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/utils": "workspace:*",
@@ -86,6 +86,7 @@
     "@vanilla-extract/dynamic": "2.1.5",
     "@vanilla-extract/recipes": "0.5.7",
     "@vanilla-extract/sprinkles": "1.6.5",
+    "codemirror": "6.0.2",
     "csstype": "3.2.3",
     "deepmerge": "4.3.1",
     "react-intersection-observer": "10.0.3",
@@ -98,7 +99,7 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
-    "@vanilla-extract/vite-plugin": "5.1.4",
+    "@vanilla-extract/vite-plugin": "5.2.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "vite": "8.0.1"

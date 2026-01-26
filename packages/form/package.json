@@ -39,19 +39,19 @@
     "access": "public"
   },
   "scripts": {
-    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "lintpublish": "publint",
     "size": "size-limit",
-    "test:unit:coverage": "pnpm test:unit --coverage",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
+    "test:unit:coverage": "pnpm test:unit --coverage",
     "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "typecheck": "tsgo --noEmit",
-    "watch:build": "vite build --config vite.config.ts --watch",
     "watch": "pnpm run '/^watch:.*/'",
-    "lintpublish": "publint"
+    "watch:build": "vite build --config vite.config.ts --watch"
   },
   "dependencies": {
-    "@babel/runtime": "7.28.6",
+    "@babel/runtime": "7.29.2",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",

@@ -13,7 +13,11 @@
   "bracketSpacing": true,
   "sortImports": {
     "order": "asc",
-    "groups": ["builtin", "internal", "external", "parent", "sibling", "type"]
+    "groups": ["builtin", "internal", "external", "parent", "sibling", "type"],
+    "newlinesBetween": true
+  },
+  "sortPackageJson": {
+    "sortScripts": true
   },
   "ignorePatterns": [
     "CHANGELOG.md",

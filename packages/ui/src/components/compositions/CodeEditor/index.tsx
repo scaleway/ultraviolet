@@ -1,9 +1,7 @@
 'use client'
 
-
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
-import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
 import CodeMirror from '@uiw/react-codemirror'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
@@ -18,13 +16,8 @@ import { Text } from '../../Text'
 
 import { codeEditorStyle, disabledStack, maxHeightVar } from './styles.css'
 
-import type {
-  ComponentProps,
-  CSSProperties,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-} from 'react'
+import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
+import type { CSSProperties, Dispatch, ReactNode, SetStateAction } from 'react'
 
 type CodeEditorProps = {
   value: string
@@ -160,7 +153,7 @@ export const CodeEditor = ({
         className={className}
         data-testid={dataTestId}
         editable={isEditable}
-        extensions={[langs[extensions]?.() ?? langs['sh']}
+        extensions={[langs[extensions]?.() ?? langs['sh']]}
         height={expandableEnabled ? undefined : height}
         id={id}
         onBlur={onBlur}

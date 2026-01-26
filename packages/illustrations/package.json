@@ -73,16 +73,16 @@
     "access": "public"
   },
   "scripts": {
-    "type:generate": "tsgo --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsgo --noEmit",
+    "lintpublish": "publint",
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "lintpublish": "publint"
+    "type:generate": "tsgo --declaration -p tsconfig.build.json",
+    "typecheck": "tsgo --noEmit",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch"
   },
   "dependencies": {
     "@ultraviolet/themes": "workspace:*",
@@ -95,7 +95,7 @@
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
     "@utils/test": "workspace:*",
-    "@vanilla-extract/vite-plugin": "5.1.4",
+    "@vanilla-extract/vite-plugin": "5.2.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "tinyglobby": "0.2.15",
