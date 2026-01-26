@@ -38,7 +38,7 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "sideEffects": [
     "**/*.css",
     "**/*.css.ts"
@@ -46,60 +46,60 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./*": {
       "types": "./dist/components/Icon/__generated__/*.d.ts",
-      "require": "./dist/components/Icon/__generated__/*.cjs",
+      "require": "./dist/components/Icon/__generated__/*.js",
       "import": "./dist/components/Icon/__generated__/*.js",
       "default": "./dist/components/Icon/__generated__/*.js"
     },
     "./product": {
       "types": "./dist/components/ProductIcon/index.d.ts",
-      "require": "./dist/components/ProductIcon/index.cjs",
+      "require": "./dist/components/ProductIcon/index.js",
       "import": "./dist/components/ProductIcon/index.js",
       "default": "./dist/components/ProductIcon/index.js"
     },
     "./product/*": {
       "types": "./dist/components/ProductIcon/__generated__/*.d.ts",
-      "require": "./dist/components/ProductIcon/__generated__/*.cjs",
+      "require": "./dist/components/ProductIcon/__generated__/*.js",
       "import": "./dist/components/ProductIcon/__generated__/*.js",
       "default": "./dist/components/ProductIcon/__generated__/*.js"
     },
     "./category": {
       "types": "./dist/components/CategoryIcon/index.d.ts",
-      "require": "./dist/components/CategoryIcon/index.cjs",
+      "require": "./dist/components/CategoryIcon/index.js",
       "import": "./dist/components/CategoryIcon/index.js",
       "default": "./dist/components/CategoryIcon/index.js"
     },
     "./category/*": {
       "types": "./dist/components/CategoryIcon/__generated__/*.d.ts",
-      "require": "./dist/components/CategoryIcon/__generated__/*.cjs",
+      "require": "./dist/components/CategoryIcon/__generated__/*.js",
       "import": "./dist/components/CategoryIcon/__generated__/*.js",
       "default": "./dist/components/CategoryIcon/__generated__/*.js"
     },
     "./logo": {
       "types": "./dist/components/Logo/index.d.ts",
-      "require": "./dist/components/Logo/index.cjs",
+      "require": "./dist/components/Logo/index.js",
       "import": "./dist/components/Logo/index.js",
       "default": "./dist/components/Logo/index.js"
     },
     "./logo/*": {
       "types": "./dist/components/Logo/__generated__/*.d.ts",
-      "require": "./dist/components/Logo/__generated__/*.cjs",
+      "require": "./dist/components/Logo/__generated__/*.js",
       "import": "./dist/components/Logo/__generated__/*.js",
       "default": "./dist/components/Logo/__generated__/*.js"
     },
     "./flags": {
       "types": "./dist/components/Flags/index.d.ts",
-      "require": "./dist/components/Flags/index.cjs",
+      "require": "./dist/components/Flags/index.js",
       "import": "./dist/components/Flags/index.js",
       "default": "./dist/components/Flags/index.js"
     },
     "./flags/*": {
       "types": "./dist/components/Flags/__generated__/*.d.ts",
-      "require": "./dist/components/Flags/__generated__/*.cjs",
+      "require": "./dist/components/Flags/__generated__/*.js",
       "import": "./dist/components/Flags/__generated__/*.js",
       "default": "./dist/components/Flags/__generated__/*.js"
     }

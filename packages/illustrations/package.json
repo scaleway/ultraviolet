@@ -43,41 +43,48 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/components/index.d.ts",
-      "require": "./dist/components/index.cjs",
+      "import": "./dist/components/index.js",
+      "require": "./dist/components/index.js",
       "default": "./dist/components/index.js"
     },
     "./products/*": {
       "types": "./dist/assets/products/*/index.d.ts",
-      "require": "./dist/assets/products/*/index.cjs",
+      "import": "./dist/assets/products/*/index.js",
+      "require": "./dist/assets/products/*/index.js",
       "default": "./dist/assets/products/*/index.js"
     },
     "./products": {
       "types": "./dist/assets/products/index.d.ts",
-      "require": "./dist/assets/products/index.cjs",
+      "import": "./dist/assets/products/index.js",
+      "require": "./dist/assets/products/index.js",
       "default": "./dist/assets/products/index.js"
     },
     "./various/*": {
       "types": "./dist/assets/various/*/index.d.ts",
-      "require": "./dist/assets/various/*/index.cjs",
+      "import": "./dist/assets/various/*/index.js",
+      "require": "./dist/assets/various/*/index.js",
       "default": "./dist/assets/various/*/index.js"
     },
     "./various": {
       "types": "./dist/assets/various/index.d.ts",
-      "require": "./dist/assets/various/index.cjs",
+      "import": "./dist/assets/various/index.js",
+      "require": "./dist/assets/various/index.js",
       "default": "./dist/assets/various/index.js"
     },
     "./components": {
       "types": "./dist/components/index.d.ts",
-      "require": "./dist/components/index.cjs",
+      "import": "./dist/components/index.js",
+      "require": "./dist/components/index.js",
       "default": "./dist/components/index.js"
     },
     "./components/*": {
       "types": "./dist/components/*/index.d.ts",
-      "require": "./dist/components/*index.cjs",
+      "import": "./dist/components/*index.js",
+      "require": "./dist/components/*index.js",
       "default": "./dist/components/*/index.js"
     }
   },

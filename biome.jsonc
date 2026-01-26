@@ -9,7 +9,7 @@
         "useSortedProperties": "off"
       }
     },
-    "includes": ["**", "!.storybook/vite.config.ts"]
+    "includes": ["**", "!.storybook/vite.config.ts", "!**/package.json"]
   },
   "extends": ["@scaleway/biome/core", "@scaleway/biome/react"],
   "overrides": [
