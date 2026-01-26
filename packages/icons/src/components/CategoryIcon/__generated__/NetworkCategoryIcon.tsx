@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const NetworkCategoryIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="NetworkCategoryIcon">
     <g className="Network">
       <g className="fillStrong" fill="#A365F6">
         <path

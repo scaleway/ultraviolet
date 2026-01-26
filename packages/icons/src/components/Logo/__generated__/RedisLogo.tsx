@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const RedisLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const RedisLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="RedisLogo">
     <path
       d="M8.56677 11.8926C8.13204 12.12 5.87592 13.048 5.38991 13.3027C4.90391 13.5574 4.64363 13.5502 4.26352 13.3685C3.88342 13.1868 1.49074 12.2137 1.05713 12.0063C0.838649 11.9038 0.72718 11.8163 0.72718 11.7344V10.9089C0.72718 10.9089 3.85276 10.2307 4.35716 10.0478C4.86155 9.86503 5.036 9.86058 5.4646 10.0177C5.89319 10.1749 8.46255 10.6386 8.88669 10.7925V11.6062C8.88669 11.6909 8.78915 11.7734 8.56677 11.8921V11.8926Z"
       fill="#A32422"

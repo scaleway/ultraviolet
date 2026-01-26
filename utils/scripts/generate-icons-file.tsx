@@ -83,15 +83,15 @@ const templateIcon = (
     svgSmall
       ? `export const ${iconName} = ({
     ...props
-  }: Omit<IconProps, 'children'>) => (
+  }: Omit<IconProps, 'children' | 'title'>) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <Icon {...props}>{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
+      <Icon {...props} title="${iconName}">{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
   )`
       : `export const ${iconName} = ({
     ...props
-  }: Omit<IconProps, 'children'>) => (
+  }: Omit<IconProps, 'children' | 'title'>) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <Icon {...props}>${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
+      <Icon {...props} title="${iconName}">${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
   )`
   }
 

@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const GmailLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const GmailLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="GmailLogo">
     <g clipPath="url(#a)">
       <path
         d="M3.09 16h2.546V9.818L2 7.091v7.818c0 .604.49 1.09 1.09 1.09"

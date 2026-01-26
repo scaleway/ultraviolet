@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const OutlookLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const OutlookLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="OutlookLogo">
     <g clipPath="url(#a)">
       <path
         d="M18 10.858a.36.36 0 0 0-.17-.309h-.002l-.007-.003-5.544-3.3a.74.74 0 0 0-.831 0l-5.545 3.3-.006.003a.365.365 0 0 0 .008.623l5.544 3.3a.74.74 0 0 0 .831 0l5.545-3.3a.36.36 0 0 0 .177-.314"

@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const AnsibleProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="AnsibleProductIcon">
     <g className="Ansible">
       <g className=".Square">
         <path

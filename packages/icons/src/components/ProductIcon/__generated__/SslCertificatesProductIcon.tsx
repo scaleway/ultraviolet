@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const SslCertificatesProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="SslCertificatesProductIcon">
     <g className="SSL-Certificates">
       <g className=".Square">
         <path

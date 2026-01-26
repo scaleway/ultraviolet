@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const CloudHostingProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="CloudHostingProductIcon">
     <g className="Cloud-Hosting">
       <g className="Cloud-Hosting-icon" clipPath="url(#a)">
         <g className=".Square">

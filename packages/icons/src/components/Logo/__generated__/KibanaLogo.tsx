@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const KibanaLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const KibanaLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="KibanaLogo">
     <path
       d="M2.79091 7.49092C5.44546 7.49092 7.95455 8.18183 10.1364 9.34546L17.9182 0H2.5V18.5455V7.49092H2.79091Z"
       fill="#E9478B"
