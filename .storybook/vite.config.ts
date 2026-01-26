@@ -7,7 +7,11 @@ import type { UserConfigExport } from 'vite'
 
 export const defaultConfig: UserConfigExport = {
   assetsInclude: ['**/*.md'],
+
   build: {
+    rollupOptions: {
+      external: ['@codemirror/*'],
+    },
     outDir: 'build',
     reportCompressedSize: true,
 
