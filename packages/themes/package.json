@@ -21,9 +21,9 @@
     },
     "./*.css": "./dist/style/*.css",
     "./console/*": {
+      "types": "./dist/themes/console/*/index.d.ts",
       "import": "./dist/themes/console/*/index.js",
-      "require": "./dist/themes/console/*/index.js",
-      "types": "./dist/themes/console/*/index.d.ts"
+      "require": "./dist/themes/console/*/index.cjs"
     },
     "./global": "./dist/themes.css",
     "./theme.css": "./dist/themes.css"
