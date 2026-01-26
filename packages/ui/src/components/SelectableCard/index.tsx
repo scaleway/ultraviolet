@@ -192,13 +192,14 @@ export const SelectableCard = forwardRef(
                   {illustration.endsWith('.svg') && svgContent ? (
                     <div
                       className={imageSelectableCard}
-                      // oxlint-disable-next-line  react/no-danger
+                      // oxlint-disable-next-line react/no-danger
                       dangerouslySetInnerHTML={{ __html: svgContent }}
                     />
                   ) : (
                     <img
                       alt="illustration"
                       className={imageSelectableCard}
+                      height="auto"
                       src={illustration}
                       width={220}
                     />
@@ -310,6 +311,7 @@ export const SelectableCard = forwardRef(
                 ref={innerRef}
                 tabIndex={-1}
                 value={value}
+                // eslint-disable-next-line react/jsx-props-no-spreading
                 {...(label ? { label } : { 'aria-label': ariaLabel as string })}
               />
             ) : (
@@ -327,6 +329,7 @@ export const SelectableCard = forwardRef(
                 ref={innerRef}
                 tabIndex={-1}
                 value={value}
+                // eslint-disable-next-line react/jsx-props-no-spreading
                 {...(label
                   ? { 'aria-label': undefined, children: label }
                   : { 'aria-label': ariaLabel as string })}

@@ -648,7 +648,6 @@ const CreateDropdown = ({
                     id={selectAllGroup ? 'items' : undefined}
                   >
                     {group ? (
-                      // biome-ignore  lint/a11y/noInteractiveElementToNoninteractiveRole: to fix
                       <button
                         className={cn(
                           selectAllGroup ? dropdownGroupSelectable : '',
@@ -666,7 +665,6 @@ const CreateDropdown = ({
                             handleSelectGroup(group)
                           }
                         }}
-                        role="group"
                         tabIndex={selectAllGroup ? 0 : -1}
                         type="button"
                       >

@@ -49,6 +49,8 @@ export const Avatar = ({
   const finalSize = sizes(UVTheme)[size]
 
   return (
+    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: event handler only when role="button"
+    // biome-ignore lint/a11y/noStaticElementInteractions:  event handler only when role="button"
     <div
       className={cn(className, containerAvatar({ sentiment, shape, size }))}
       data-has-background={!['user', 'image'].includes(variant)}

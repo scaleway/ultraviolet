@@ -214,6 +214,7 @@ const BaseExpandableCard = forwardRef(
           ref={ref}
           tabIndex={disabled ? -1 : undefined}
         >
+          {/** biome-ignore lint/a11y/noStaticElementInteractions: need to add onClick/onKeyDown to use onToggleExpand */}
           <summary
             className={summaryClass}
             data-disabled={!!disabled}
@@ -255,6 +256,8 @@ const BaseExpandableCard = forwardRef(
           <div className={content}>{children}</div>
         </details>
         {draggable && index === 0 ? (
+          // biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop
+          // biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop
           <div
             className={dropableArea}
             data-first
@@ -267,6 +270,8 @@ const BaseExpandableCard = forwardRef(
           />
         ) : null}
         {draggable ? (
+          // biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop
+          // biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop
           <div
             className={dropableArea}
             data-testid={`${value}-dropable-area`}

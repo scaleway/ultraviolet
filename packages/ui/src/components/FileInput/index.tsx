@@ -140,6 +140,8 @@ const FileInputBase = ({
         }}
       >
         <Stack direction="column" gap={1}>
+          {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
+          {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
           <div
             className={className}
             data-testid="drag-container"
@@ -161,6 +163,8 @@ const FileInputBase = ({
               {typeof children === 'function'
                 ? children(inputId, inputRef)
                 : children}
+              {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
+              {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
               <div
                 className={
                   disabled

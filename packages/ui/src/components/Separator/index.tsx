@@ -28,11 +28,12 @@ export const Separator = ({
 }: SeparatorProps) =>
   children ? (
     // biome-ignore  lint/a11y/useFocusableInteractive: to fix
+    // biome-ignore lint/a11y/useSemanticElements: cannot have a separator inside a separator
     <div
       aria-orientation={direction}
       className={cn(className, iconWraperSeparator({ direction, sentiment }))}
       data-testid={dataTestId}
-      // biome-ignore lint/a11y/useAriaPropsForRole: to fix
+      // biome-ignore lint/a11y/useAriaPropsForRole: cannot have a separator inside a separator
       role="separator"
       style={style}
     >

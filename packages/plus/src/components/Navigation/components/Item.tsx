@@ -501,6 +501,7 @@ export const Item = memo(
                   {shouldShowPinnedButton ? (
                     <Tooltip
                       placement="right"
+                      tabIndex={-1}
                       text={
                         isItemPinned
                           ? locales['navigation.unpin.tooltip']
@@ -508,11 +509,11 @@ export const Item = memo(
                       }
                     >
                       <div className={navigationItemRelative}>
-                        <div
+                        <button
                           aria-disabled={isItemPinned ? false : isPinDisabled}
                           aria-label={isItemPinned ? 'unpin' : 'pin'}
                           className={navigationItemPinnedButton}
-                          onClick={(event: MouseEvent<HTMLDivElement>) => {
+                          onClick={(event: MouseEvent<HTMLButtonElement>) => {
                             if (pinnedItems.length < pinLimit || isItemPinned) {
                               event.preventDefault()
                               event.stopPropagation() // This is to avoid click spread to the parent and change the routing
@@ -531,8 +532,7 @@ export const Item = memo(
                             }
                           }}
                           onKeyDown={() => {}}
-                          // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
-                          role="button"
+                          type="button"
                         >
                           <PinUnpinIcon
                             className={
@@ -544,7 +544,7 @@ export const Item = memo(
                             sentiment={active ? 'primary' : 'neutral'}
                             size="medium"
                           />
-                        </div>
+                        </button>
                       </div>
                     </Tooltip>
                   ) : null}
@@ -765,11 +765,11 @@ export const Item = memo(
                   }
                 >
                   <div className={navigationItemRelative}>
-                    <div
+                    <button
                       aria-disabled={isItemPinned ? false : isPinDisabled}
                       aria-label={isItemPinned ? 'unpin' : 'pin'}
                       className={navigationItemPinnedButton}
-                      onClick={(event: MouseEvent<HTMLDivElement>) => {
+                      onClick={(event: MouseEvent<HTMLButtonElement>) => {
                         if (pinnedItems.length < pinLimit || isItemPinned) {
                           event.preventDefault()
                           event.stopPropagation() // This is to avoid click spread to the parent and change the routing
@@ -788,8 +788,7 @@ export const Item = memo(
                         }
                       }}
                       onKeyDown={() => {}}
-                      // oxlint-disable-next-line jsx_a11y/prefer-tag-over-role
-                      role="button"
+                      type="button"
                     >
                       <PinUnpinIcon
                         className={
@@ -799,7 +798,7 @@ export const Item = memo(
                         sentiment={active ? 'primary' : 'neutral'}
                         size="medium"
                       />
-                    </div>
+                    </button>
                   </div>
                 </Tooltip>
               ) : null}
