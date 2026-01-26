@@ -267,6 +267,26 @@ describe('list', () => {
       </List>,
     ))
 
+  test('should render correctly with children fragment', () =>
+    shouldMatchSnapshot(
+      <List columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row expandable={columnF} id={id} key={id} sentiment="info">
+              {/** biome-ignore lint/complexity/noUselessFragments: needed for the test */}
+              <>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+              </>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
+        )}
+      </List>,
+    ))
+
   test('should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns} selectable>
