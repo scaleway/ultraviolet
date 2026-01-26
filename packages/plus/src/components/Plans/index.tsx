@@ -58,7 +58,7 @@ export const Plans = <T extends string>({
           {plans.map(plan => {
             const computedDisabled = !!(plan.outOfStock || plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
-            const isHighlighted = highlight && plan.value === highlight.plan
+            const isHighlighted = plan.value === highlight?.plan
 
             return (
               <td
@@ -147,8 +147,7 @@ export const Plans = <T extends string>({
                   </Stack>
                 </td>
                 {plans.map(plan => {
-                  const isHighlighted =
-                    highlight && plan.value === highlight.plan
+                  const isHighlighted = plan.value === highlight?.plan
 
                   return (
                     <td
@@ -197,7 +196,7 @@ export const Plans = <T extends string>({
               {plans.map(plan => {
                 const computedDisabled = plan.outOfStock || plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
-                const isHighlighted = highlight && plan.value === highlight.plan
+                const isHighlighted = plan.value === highlight?.plan
 
                 return (
                   <td
