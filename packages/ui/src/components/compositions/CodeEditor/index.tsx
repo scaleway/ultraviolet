@@ -1,7 +1,9 @@
 'use client'
 
+
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
+import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
 import CodeMirror from '@uiw/react-codemirror'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
@@ -26,7 +28,7 @@ import type {
 
 type CodeEditorProps = {
   value: string
-  onChange: ComponentProps<typeof CodeMirror>['onChange']
+  onChange: ReactCodeMirrorProps['onChange']
   extensions: keyof typeof langs
   onBlur?: () => void
   height?: string
@@ -158,7 +160,7 @@ export const CodeEditor = ({
         className={className}
         data-testid={dataTestId}
         editable={isEditable}
-        extensions={[langs[extensions]?.() ?? langs['sh']]}
+        extensions={[langs[extensions]?.() ?? langs['sh']}
         height={expandableEnabled ? undefined : height}
         id={id}
         onBlur={onBlur}
