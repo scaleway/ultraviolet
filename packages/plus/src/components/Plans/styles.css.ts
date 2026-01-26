@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const plansIconWrapper = style({ cursor: 'pointer' })
+export const plansIconWrapper = style({ all: 'unset', cursor: 'pointer' })
 
 export const plans = style({
   borderCollapse: 'separate',

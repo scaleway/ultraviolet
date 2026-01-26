@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -155,50 +156,48 @@ export const SwitchButton = ({
   return (
     <SwitchButtonContext.Provider value={valueContext}>
       <Tooltip text={tooltip}>
-        <Stack className={className} data-testid={dataTestId} direction="row">
-          <div
-            className={switchButtonContainer[size]}
-            onMouseDown={event => {
-              const rect = event.currentTarget.getBoundingClientRect()
-              const clickX = event.clientX - rect.left
-              const clickInCurrentElement =
-                clickX > position && clickX < position + width
-              if (clickInCurrentElement) {
-                setMouseDownSide(null)
-              } else {
-                setMouseDownSide(
-                  clickX < getPosition(getElement(localValue))
-                    ? 'left'
-                    : 'right',
-                )
-                setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
-              }
-            }}
-            onMouseLeave={() => {
+        <Stack
+          className={cn(className, switchButtonContainer[size])}
+          data-testid={dataTestId}
+          direction="row"
+          onMouseDown={event => {
+            const rect = event.currentTarget.getBoundingClientRect()
+            const clickX = event.clientX - rect.left
+            const clickInCurrentElement =
+              clickX > position && clickX < position + width
+            if (clickInCurrentElement) {
               setMouseDownSide(null)
-              if (mouseDownSide) {
-                setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
-              }
-            }}
-            onMouseUp={() => {
-              setMouseDownSide(null)
-              if (mouseDownSide) {
-                setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
-              }
-            }}
-            ref={containerRef}
-            style={style}
-          >
-            {width ? (
-              <FocusOverlay
-                cardWidth={width}
-                mouseDownSide={mouseDownSide}
-                position={position}
-                sentiment={sentiment}
-              />
-            ) : null}
-            {children}
-          </div>
+            } else {
+              setMouseDownSide(
+                clickX < getPosition(getElement(localValue)) ? 'left' : 'right',
+              )
+              setWidth(width + FOCUS_OVERLAY_SCALE_RATIO)
+            }
+          }}
+          onMouseLeave={() => {
+            setMouseDownSide(null)
+            if (mouseDownSide) {
+              setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+            }
+          }}
+          onMouseUp={() => {
+            setMouseDownSide(null)
+            if (mouseDownSide) {
+              setWidth(width - FOCUS_OVERLAY_SCALE_RATIO)
+            }
+          }}
+          ref={containerRef}
+          style={style}
+        >
+          {width ? (
+            <FocusOverlay
+              cardWidth={width}
+              mouseDownSide={mouseDownSide}
+              position={position}
+              sentiment={sentiment}
+            />
+          ) : null}
+          {children}
         </Stack>
       </Tooltip>
     </SwitchButtonContext.Provider>

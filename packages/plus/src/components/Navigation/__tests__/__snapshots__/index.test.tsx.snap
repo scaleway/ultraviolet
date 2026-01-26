@@ -266,16 +266,16 @@ exports[`navigation > click on expand / collapse button 1`] = `
                       aria-controls="_r_g_"
                       aria-describedby="_r_g_"
                       class="uv_w40vpo9"
-                      tabindex="0"
+                      tabindex="-1"
                     >
                       <div
                         class="items__x6an4g1"
                       >
-                        <div
+                        <button
                           aria-disabled="false"
                           aria-label="pin"
                           class="items__x6an4gs"
-                          role="button"
+                          type="button"
                         >
                           <svg
                             class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -291,7 +291,7 @@ exports[`navigation > click on expand / collapse button 1`] = `
                               d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
                             />
                           </svg>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -736,16 +736,16 @@ exports[`navigation > pin and unpin an item 1`] = `
                           aria-controls="_r_1k_"
                           aria-describedby="_r_1k_"
                           class="uv_w40vpo9"
-                          tabindex="0"
+                          tabindex="-1"
                         >
                           <div
                             class="items__x6an4g1"
                           >
-                            <div
+                            <button
                               aria-disabled="false"
                               aria-label="unpin"
                               class="items__x6an4gs"
-                              role="button"
+                              type="button"
                             >
                               <svg
                                 class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -760,7 +760,7 @@ exports[`navigation > pin and unpin an item 1`] = `
                                   d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
                                 />
                               </svg>
-                            </div>
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -915,16 +915,16 @@ exports[`navigation > pin and unpin an item 1`] = `
                       aria-controls="_r_1e_"
                       aria-describedby="_r_1e_"
                       class="uv_w40vpo9"
-                      tabindex="0"
+                      tabindex="-1"
                     >
                       <div
                         class="items__x6an4g1"
                       >
-                        <div
+                        <button
                           aria-disabled="false"
                           aria-label="unpin"
                           class="items__x6an4gs"
-                          role="button"
+                          type="button"
                         >
                           <svg
                             class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -939,7 +939,7 @@ exports[`navigation > pin and unpin an item 1`] = `
                               d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
                             />
                           </svg>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1145,16 +1145,16 @@ exports[`navigation > pin and unpin an item 2`] = `
                           aria-controls="_r_1k_"
                           aria-describedby="_r_1k_"
                           class="uv_w40vpo9"
-                          tabindex="0"
+                          tabindex="-1"
                         >
                           <div
                             class="items__x6an4g1"
                           >
-                            <div
+                            <button
                               aria-disabled="false"
                               aria-label="unpin"
                               class="items__x6an4gs"
-                              role="button"
+                              type="button"
                             >
                               <svg
                                 class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -1169,7 +1169,7 @@ exports[`navigation > pin and unpin an item 2`] = `
                                   d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
                                 />
                               </svg>
-                            </div>
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -1324,16 +1324,16 @@ exports[`navigation > pin and unpin an item 2`] = `
                       aria-controls="_r_1e_"
                       aria-describedby="_r_1e_"
                       class="uv_w40vpo9"
-                      tabindex="0"
+                      tabindex="-1"
                     >
                       <div
                         class="items__x6an4g1"
                       >
-                        <div
+                        <button
                           aria-disabled="false"
                           aria-label="unpin"
                           class="items__x6an4gs"
-                          role="button"
+                          type="button"
                         >
                           <svg
                             class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -1348,7 +1348,7 @@ exports[`navigation > pin and unpin an item 2`] = `
                               d="M3.17 2.2a.686.686 0 0 0-.976.963L16.4 17.37l.007.007.422.422a.686.686 0 0 0 .97-.97l-4.292-4.292 2.853-2.854a1.6 1.6 0 0 0 0-2.266L12.583 3.64a1.6 1.6 0 0 0-2.266 0L7.463 6.493zm9.297 13.176L4.624 7.533a7 7 0 0 0-1.767.63c-.822.425-.853 1.515-.199 2.17l2.75 2.749-2.268 2.267a1.068 1.068 0 1 0 1.511 1.51l2.267-2.267 2.75 2.75c.654.654 1.744.623 2.17-.199.292-.565.502-1.16.629-1.767"
                             />
                           </svg>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1665,16 +1665,16 @@ exports[`navigation > pin and unpin an item 3`] = `
                       aria-controls="_r_1e_"
                       aria-describedby="_r_1e_"
                       class="uv_w40vpo9"
-                      tabindex="0"
+                      tabindex="-1"
                     >
                       <div
                         class="items__x6an4g1"
                       >
-                        <div
+                        <button
                           aria-disabled="false"
                           aria-label="pin"
                           class="items__x6an4gs"
-                          role="button"
+                          type="button"
                         >
                           <svg
                             class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -1690,7 +1690,7 @@ exports[`navigation > pin and unpin an item 3`] = `
                               d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
                             />
                           </svg>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -2007,16 +2007,16 @@ exports[`navigation > render with basic content 1`] = `
                       aria-controls="_r_3_"
                       aria-describedby="_r_3_"
                       class="uv_w40vpo9"
-                      tabindex="0"
+                      tabindex="-1"
                     >
                       <div
                         class="items__x6an4g1"
                       >
-                        <div
+                        <button
                           aria-disabled="false"
                           aria-label="pin"
                           class="items__x6an4gs"
-                          role="button"
+                          type="button"
                         >
                           <svg
                             class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -2032,7 +2032,7 @@ exports[`navigation > render with basic content 1`] = `
                               d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
                             />
                           </svg>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -2560,16 +2560,16 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
                       aria-controls="_r_16_"
                       aria-describedby="_r_16_"
                       class="uv_w40vpo9"
-                      tabindex="0"
+                      tabindex="-1"
                     >
                       <div
                         class="items__x6an4g1"
                       >
-                        <div
+                        <button
                           aria-disabled="false"
                           aria-label="pin"
                           class="items__x6an4gs"
-                          role="button"
+                          type="button"
                         >
                           <svg
                             class="items_inactive__x6an4g5 items__x6an4g3 styles__dkdfcq0 styles_disabled_false__dkdfcq1 styles_prominence_default__dkdfcq3 styles_sentiment_neutral__dkdfcq9 styles_size_medium__dkdfcqf styles_undefined_compound_34__dkdfcq1i"
@@ -2585,7 +2585,7 @@ exports[`navigation > resize manually the navigation using slider 1`] = `
                               d="M10.602 2.581a1.985 1.985 0 0 1 2.807 0l4.01 4.01a1.985 1.985 0 0 1 0 2.807l-3.581 3.581c-.056.056-.112.173-.095.35.142 1.538-.31 2.832-1.112 3.933-.733 1.006-2.09.898-2.831.157l-2.206-2.206-2.206 2.206a1.985 1.985 0 1 1-2.807-2.807l2.206-2.206L2.58 10.2c-.74-.74-.85-2.098.157-2.83 1.1-.803 2.395-1.255 3.933-1.113.177.017.294-.039.35-.095zm.4 13.635c.06.058.13.08.18.079a.1.1 0 0 0 .047-.01.1.1 0 0 0 .027-.025c.59-.81.892-1.7.793-2.774-.054-.578.105-1.23.586-1.71l3.58-3.58a.284.284 0 0 0 0-.402l-4.01-4.01a.284.284 0 0 0-.4 0L8.224 7.365c-.48.48-1.132.64-1.71.587-1.074-.1-1.964.202-2.774.792a.1.1 0 0 0-.025.027.1.1 0 0 0-.01.047c0 .05.02.12.08.18zM5.99 13.609l-2.206 2.206a.284.284 0 0 0 .401.4l2.206-2.205z"
                             />
                           </svg>
-                        </div>
+                        </button>
                       </div>
                     </div>
                   </div>

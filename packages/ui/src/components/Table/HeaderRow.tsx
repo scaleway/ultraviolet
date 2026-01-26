@@ -20,8 +20,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
   const selectableRowCount = Object.keys(selectedRowIds).length
 
   return (
-    // biome-ignore  lint/a11y/noRedundantRoles: to fix
-    <tr role="row">
+    <tr>
       {hasSelectAllColumn ? (
         <HeaderCell
           isCheckbox

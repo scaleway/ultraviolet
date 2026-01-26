@@ -6,138 +6,140 @@ exports[`switchButton > renders correctly 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+      class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
     >
       <div
-        class="styles_small__m5izgx2 styles__m5izgx0"
+        class="styles_primary__m5izgx8 styles__m5izgx6"
+        style="left: 0px; width: 500px;"
+      />
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="true"
+        data-disabled="false"
+        data-testid="switch-button-left"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
       >
         <div
-          class="styles_primary__m5izgx8 styles__m5izgx6"
-          style="left: 0px; width: 500px;"
-        />
-        <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="true"
-          data-disabled="false"
-          data-testid="switch-button-left"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="true"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="styles__17da2jl6"
+              id="_r_2_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="left"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                checked=""
-                class="styles__17da2jl6"
-                id="_r_2_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="left"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_2_"
-              >
-                Left
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_2_"
+            >
+              Left
+            </label>
           </div>
         </div>
+      </div>
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="false"
+        data-disabled="false"
+        data-testid="switch-button-right"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
+      >
         <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="false"
-          data-disabled="false"
-          data-testid="switch-button-right"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="false"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="false"
+              aria-invalid="false"
+              class="styles__17da2jl6"
+              id="_r_6_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="right"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                class="styles__17da2jl6"
-                id="_r_6_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="right"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_6_"
-              >
-                Right
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_6_"
+            >
+              Right
+            </label>
           </div>
         </div>
       </div>
@@ -152,138 +154,140 @@ exports[`switchButton > renders correctly medium 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+      class="styles_medium__m5izgx1 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
     >
       <div
-        class="styles_medium__m5izgx1 styles__m5izgx0"
+        class="styles_primary__m5izgx8 styles__m5izgx6"
+        style="left: 0px; width: 500px;"
+      />
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="true"
+        data-disabled="false"
+        data-testid="switch-button-left"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
       >
         <div
-          class="styles_primary__m5izgx8 styles__m5izgx6"
-          style="left: 0px; width: 500px;"
-        />
-        <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="true"
-          data-disabled="false"
-          data-testid="switch-button-left"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="true"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="styles__17da2jl6"
+              id="_r_b_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="left"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                checked=""
-                class="styles__17da2jl6"
-                id="_r_b_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="left"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_b_"
-              >
-                Left
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_b_"
+            >
+              Left
+            </label>
           </div>
         </div>
+      </div>
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="false"
+        data-disabled="false"
+        data-testid="switch-button-right"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
+      >
         <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="false"
-          data-disabled="false"
-          data-testid="switch-button-right"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="false"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="false"
+              aria-invalid="false"
+              class="styles__17da2jl6"
+              id="_r_f_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="right"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                class="styles__17da2jl6"
-                id="_r_f_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="right"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_f_"
-              >
-                Right
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_f_"
+            >
+              Right
+            </label>
           </div>
         </div>
       </div>
@@ -298,138 +302,140 @@ exports[`switchButton > renders correctly with children changing 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+      class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
     >
       <div
-        class="styles_small__m5izgx2 styles__m5izgx0"
+        class="styles_primary__m5izgx8 styles__m5izgx6"
+        style="left: 0px; width: 500px;"
+      />
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="false"
+        data-disabled="false"
+        data-testid="switch-button-left"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
       >
         <div
-          class="styles_primary__m5izgx8 styles__m5izgx6"
-          style="left: 0px; width: 500px;"
-        />
-        <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="false"
-          data-disabled="false"
-          data-testid="switch-button-left"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="false"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="false"
+              aria-invalid="false"
+              class="styles__17da2jl6"
+              id="_r_t_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="left"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                class="styles__17da2jl6"
-                id="_r_t_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="left"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_t_"
-              >
-                Left
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_t_"
+            >
+              Left
+            </label>
           </div>
         </div>
+      </div>
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="true"
+        data-disabled="false"
+        data-testid="switch-button-right"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
+      >
         <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="true"
-          data-disabled="false"
-          data-testid="switch-button-right"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="true"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="styles__17da2jl6"
+              id="_r_11_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="right"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                checked=""
-                class="styles__17da2jl6"
-                id="_r_11_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="right"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_11_"
-              >
-                Right
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_11_"
+            >
+              Right
+            </label>
           </div>
         </div>
       </div>
@@ -444,138 +450,140 @@ exports[`switchButton > renders correctly with right value 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+      class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
     >
       <div
-        class="styles_small__m5izgx2 styles__m5izgx0"
+        class="styles_primary__m5izgx8 styles__m5izgx6"
+        style="left: 0px; width: 500px;"
+      />
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="false"
+        data-disabled="false"
+        data-testid="switch-button-left"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
       >
         <div
-          class="styles_primary__m5izgx8 styles__m5izgx6"
-          style="left: 0px; width: 500px;"
-        />
-        <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="false"
-          data-disabled="false"
-          data-testid="switch-button-left"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="false"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="false"
+              aria-invalid="false"
+              class="styles__17da2jl6"
+              id="_r_k_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="left"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                class="styles__17da2jl6"
-                id="_r_k_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="left"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_k_"
-              >
-                Left
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_k_"
+            >
+              Left
+            </label>
           </div>
         </div>
+      </div>
+      <div
+        class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="true"
+        data-disabled="false"
+        data-testid="switch-button-right"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
+      >
         <div
-          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="true"
-          data-disabled="false"
-          data-testid="switch-button-right"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="true"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="styles__17da2jl6"
+              id="_r_o_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="right"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                checked=""
-                class="styles__17da2jl6"
-                id="_r_o_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="right"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_o_"
-              >
-                Right
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_o_"
+            >
+              Right
+            </label>
           </div>
         </div>
       </div>
@@ -590,138 +598,140 @@ exports[`switchButton > renders neutral 1`] = `
     data-testid="testing"
   >
     <div
-      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+      class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
     >
       <div
-        class="styles_small__m5izgx2 styles__m5izgx0"
+        class="styles_neutral__m5izgx7 styles__m5izgx6"
+        style="left: 0px; width: 100px;"
+      />
+      <div
+        class="styles__m5izgx5 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="true"
+        data-disabled="false"
+        data-testid="switch-button-left"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
       >
         <div
-          class="styles_neutral__m5izgx7 styles__m5izgx6"
-          style="left: 0px; width: 100px;"
-        />
-        <div
-          class="styles__m5izgx5 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="true"
-          data-disabled="false"
-          data-testid="switch-button-left"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="true"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="true"
+              aria-invalid="false"
+              checked=""
+              class="styles__17da2jl6"
+              id="_r_1o_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="left"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                checked=""
-                class="styles__17da2jl6"
-                id="_r_1o_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="left"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_1o_"
-              >
-                Left
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_1o_"
+            >
+              Left
+            </label>
           </div>
         </div>
+      </div>
+      <div
+        class="styles__m5izgx5 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-checked="false"
+        data-disabled="false"
+        data-testid="switch-button-right"
+        data-type="radio"
+        role="button"
+        style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+        tabindex="0"
+      >
         <div
-          class="styles__m5izgx5 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-          data-checked="false"
-          data-disabled="false"
-          data-testid="switch-button-right"
-          data-type="radio"
-          role="button"
-          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-          tabindex="0"
+          class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
         >
           <div
-            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+            aria-disabled="false"
+            class="styles__475tndd styles__17da2jl2"
+            data-checked="false"
           >
-            <div
+            <input
               aria-disabled="false"
-              class="styles__475tndd styles__17da2jl2"
-              data-checked="false"
+              aria-invalid="false"
+              class="styles__17da2jl6"
+              id="_r_1s_"
+              name="test"
+              tabindex="-1"
+              type="radio"
+              value="right"
+            />
+            <svg
+              class="styles__17da2jl7"
+              viewBox="0 0 24 24"
             >
-              <input
-                aria-disabled="false"
-                aria-invalid="false"
-                class="styles__17da2jl6"
-                id="_r_1s_"
-                name="test"
-                tabindex="-1"
-                type="radio"
-                value="right"
-              />
-              <svg
-                class="styles__17da2jl7"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke-width="2"
-                  />
-                  <circle
-                    class="styles__17da2jl9"
-                    cx="12"
-                    cy="12"
-                    r="8"
-                  />
-                  <circle
-                    class="styles__17da2jl8"
-                    cx="12"
-                    cy="12"
-                    r="5"
-                  />
-                </g>
-              </svg>
-              <label
-                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                for="_r_1s_"
-              >
-                Right
-              </label>
-            </div>
+              <title>
+                radio
+              </title>
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke-width="2"
+                />
+                <circle
+                  class="styles__17da2jl9"
+                  cx="12"
+                  cy="12"
+                  r="8"
+                />
+                <circle
+                  class="styles__17da2jl8"
+                  cx="12"
+                  cy="12"
+                  r="5"
+                />
+              </g>
+            </svg>
+            <label
+              class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+              for="_r_1s_"
+            >
+              Right
+            </label>
           </div>
         </div>
       </div>
@@ -742,150 +752,152 @@ exports[`switchButton > renders with disabled and tooltip on SwitchButton.Option
       tabindex="0"
     >
       <div
-        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
       >
         <div
-          class="styles_small__m5izgx2 styles__m5izgx0"
+          class="styles_primary__m5izgx8 styles__m5izgx6"
+          style="left: 0px; width: 100px;"
+        />
+        <div
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+          style="--_4k0ekn3: 1;"
         >
           <div
-            class="styles_primary__m5izgx8 styles__m5izgx6"
-            style="left: 0px; width: 100px;"
-          />
-          <div
-            class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
-            style="--_4k0ekn3: 1;"
+            aria-controls="_r_1e_"
+            aria-describedby="_r_1e_"
+            class="styles__w40vpo9 styles_fullHeight_true__w40vpoa"
+            tabindex="0"
           >
             <div
-              aria-controls="_r_1e_"
-              aria-describedby="_r_1e_"
-              class="styles__w40vpo9 styles_fullHeight_true__w40vpoa"
-              tabindex="0"
+              class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+              data-checked="true"
+              data-disabled="true"
+              data-testid="switch-button-left"
+              data-type="radio"
+              role="button"
+              style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
             >
               <div
-                class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-                data-checked="true"
-                data-disabled="true"
-                data-testid="switch-button-left"
-                data-type="radio"
-                role="button"
-                style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+                class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
               >
                 <div
-                  class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+                  aria-disabled="true"
+                  class="styles__475tndd styles__17da2jl2"
+                  data-checked="true"
                 >
-                  <div
+                  <input
                     aria-disabled="true"
-                    class="styles__475tndd styles__17da2jl2"
-                    data-checked="true"
+                    aria-invalid="false"
+                    checked=""
+                    class="styles__17da2jl6"
+                    disabled=""
+                    id="_r_1f_"
+                    name="test"
+                    tabindex="-1"
+                    type="radio"
+                    value="left"
+                  />
+                  <svg
+                    class="styles__17da2jl7"
+                    viewBox="0 0 24 24"
                   >
-                    <input
-                      aria-disabled="true"
-                      aria-invalid="false"
-                      checked=""
-                      class="styles__17da2jl6"
-                      disabled=""
-                      id="_r_1f_"
-                      name="test"
-                      tabindex="-1"
-                      type="radio"
-                      value="left"
-                    />
-                    <svg
-                      class="styles__17da2jl7"
-                      viewBox="0 0 24 24"
-                    >
-                      <g>
-                        <circle
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke-width="2"
-                        />
-                        <circle
-                          class="styles__17da2jl9"
-                          cx="12"
-                          cy="12"
-                          r="8"
-                        />
-                        <circle
-                          class="styles__17da2jl8"
-                          cx="12"
-                          cy="12"
-                          r="5"
-                        />
-                      </g>
-                    </svg>
-                    <label
-                      class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                      for="_r_1f_"
-                    >
-                      Left
-                    </label>
-                  </div>
+                    <title>
+                      radio
+                    </title>
+                    <g>
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke-width="2"
+                      />
+                      <circle
+                        class="styles__17da2jl9"
+                        cx="12"
+                        cy="12"
+                        r="8"
+                      />
+                      <circle
+                        class="styles__17da2jl8"
+                        cx="12"
+                        cy="12"
+                        r="5"
+                      />
+                    </g>
+                  </svg>
+                  <label
+                    class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+                    for="_r_1f_"
+                  >
+                    Left
+                  </label>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+          data-checked="false"
+          data-disabled="false"
+          data-testid="switch-button-right"
+          data-type="radio"
+          role="button"
+          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+          tabindex="0"
+        >
           <div
-            class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-            data-checked="false"
-            data-disabled="false"
-            data-testid="switch-button-right"
-            data-type="radio"
-            role="button"
-            style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-            tabindex="0"
+            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
           >
             <div
-              class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+              aria-disabled="false"
+              class="styles__475tndd styles__17da2jl2"
+              data-checked="false"
             >
-              <div
+              <input
                 aria-disabled="false"
-                class="styles__475tndd styles__17da2jl2"
-                data-checked="false"
+                aria-invalid="false"
+                class="styles__17da2jl6"
+                id="_r_1j_"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="right"
+              />
+              <svg
+                class="styles__17da2jl7"
+                viewBox="0 0 24 24"
               >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  class="styles__17da2jl6"
-                  id="_r_1j_"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="right"
-                />
-                <svg
-                  class="styles__17da2jl7"
-                  viewBox="0 0 24 24"
-                >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="styles__17da2jl9"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="styles__17da2jl8"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
-                </svg>
-                <label
-                  class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                  for="_r_1j_"
-                >
-                  Right
-                </label>
-              </div>
+                <title>
+                  radio
+                </title>
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="styles__17da2jl9"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="styles__17da2jl8"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+                for="_r_1j_"
+              >
+                Right
+              </label>
             </div>
           </div>
         </div>
@@ -907,186 +919,188 @@ exports[`switchButton > renders with icons 1`] = `
       tabindex="0"
     >
       <div
-        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
       >
         <div
-          class="styles_small__m5izgx2 styles__m5izgx0"
+          class="styles_primary__m5izgx8 styles__m5izgx6"
+          style="left: 0px; width: 100px;"
+        />
+        <div
+          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+          data-checked="true"
+          data-disabled="false"
+          data-testid="switch-button-left"
+          data-type="radio"
+          role="button"
+          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+          tabindex="0"
         >
           <div
-            class="styles_primary__m5izgx8 styles__m5izgx6"
-            style="left: 0px; width: 100px;"
-          />
-          <div
-            class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-            data-checked="true"
-            data-disabled="false"
-            data-testid="switch-button-left"
-            data-type="radio"
-            role="button"
-            style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-            tabindex="0"
+            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
           >
             <div
-              class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+              aria-disabled="false"
+              class="styles__475tndd styles__17da2jl2"
+              data-checked="true"
             >
-              <div
+              <input
                 aria-disabled="false"
-                class="styles__475tndd styles__17da2jl2"
-                data-checked="true"
+                aria-invalid="false"
+                checked=""
+                class="styles__17da2jl6"
+                id="_r_21_"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="left"
+              />
+              <svg
+                class="styles__17da2jl7"
+                viewBox="0 0 24 24"
               >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  checked=""
-                  class="styles__17da2jl6"
-                  id="_r_21_"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="left"
-                />
+                <title>
+                  radio
+                </title>
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="styles__17da2jl9"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="styles__17da2jl8"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="styles__17da2jl5 styles__17da2jl4"
+                for="_r_21_"
+              >
                 <svg
-                  class="styles__17da2jl7"
-                  viewBox="0 0 24 24"
+                  class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
+                  height="20"
+                  viewBox="0 0 16 16"
+                  width="20"
                 >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="styles__17da2jl9"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="styles__17da2jl8"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
+                  <title>
+                    MoonIcon
+                  </title>
+                  <path
+                    d="M14.9543 10.6781C15.1672 10.2014 14.5937 9.79573 14.1149 10.0038C13.3621 10.3309 12.5313 10.5123 11.6581 10.5123C8.25024 10.5123 5.48762 7.74964 5.48762 4.34178C5.48762 3.46865 5.66897 2.63787 5.99605 1.88507C6.20408 1.40628 5.79836 0.832829 5.32171 1.0457C2.77491 2.1831 1 4.73805 1 7.70756C1 11.735 4.26491 14.9999 8.29238 14.9999C11.2619 14.9999 13.8169 13.225 14.9543 10.6781Z"
+                  />
                 </svg>
-                <label
-                  class="styles__17da2jl5 styles__17da2jl4"
-                  for="_r_21_"
-                >
-                  <svg
-                    class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
-                    height="20"
-                    viewBox="0 0 16 16"
-                    width="20"
-                  >
-                    <title>
-                      MoonIcon
-                    </title>
-                    <path
-                      d="M14.9543 10.6781C15.1672 10.2014 14.5937 9.79573 14.1149 10.0038C13.3621 10.3309 12.5313 10.5123 11.6581 10.5123C8.25024 10.5123 5.48762 7.74964 5.48762 4.34178C5.48762 3.46865 5.66897 2.63787 5.99605 1.88507C6.20408 1.40628 5.79836 0.832829 5.32171 1.0457C2.77491 2.1831 1 4.73805 1 7.70756C1 11.735 4.26491 14.9999 8.29238 14.9999C11.2619 14.9999 13.8169 13.225 14.9543 10.6781Z"
-                    />
-                  </svg>
-                </label>
-              </div>
+              </label>
             </div>
           </div>
+        </div>
+        <div
+          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+          data-checked="false"
+          data-disabled="false"
+          data-testid="switch-button-right"
+          data-type="radio"
+          role="button"
+          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+          tabindex="0"
+        >
           <div
-            class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-            data-checked="false"
-            data-disabled="false"
-            data-testid="switch-button-right"
-            data-type="radio"
-            role="button"
-            style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-            tabindex="0"
+            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
           >
             <div
-              class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+              aria-disabled="false"
+              class="styles__475tndd styles__17da2jl2"
+              data-checked="false"
             >
-              <div
+              <input
                 aria-disabled="false"
-                class="styles__475tndd styles__17da2jl2"
-                data-checked="false"
+                aria-invalid="false"
+                class="styles__17da2jl6"
+                id="_r_24_"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="right"
+              />
+              <svg
+                class="styles__17da2jl7"
+                viewBox="0 0 24 24"
               >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  class="styles__17da2jl6"
-                  id="_r_24_"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="right"
-                />
+                <title>
+                  radio
+                </title>
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="styles__17da2jl9"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="styles__17da2jl8"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="styles__17da2jl5 styles__17da2jl4"
+                for="_r_24_"
+              >
                 <svg
-                  class="styles__17da2jl7"
-                  viewBox="0 0 24 24"
+                  class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
+                  height="20"
+                  viewBox="0 0 16 16"
+                  width="20"
                 >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="styles__17da2jl9"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="styles__17da2jl8"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
+                  <title>
+                    SunIcon
+                  </title>
+                  <path
+                    d="M8 1C8.41421 1 8.75 1.33579 8.75 1.75V3.25C8.75 3.66421 8.41421 4 8 4C7.58579 4 7.25 3.66421 7.25 3.25V1.75C7.25 1.33579 7.58579 1 8 1Z"
+                  />
+                  <path
+                    d="M10.5 8C10.5 9.38071 9.38071 10.5 8 10.5C6.61929 10.5 5.5 9.38071 5.5 8C5.5 6.61929 6.61929 5.5 8 5.5C9.38071 5.5 10.5 6.61929 10.5 8Z"
+                  />
+                  <path
+                    d="M12.9498 4.11089C13.2427 3.81799 13.2427 3.34312 12.9498 3.05023C12.6569 2.75733 12.182 2.75733 11.8891 3.05023L10.8284 4.11089C10.5356 4.40378 10.5356 4.87865 10.8284 5.17155C11.1213 5.46444 11.5962 5.46444 11.8891 5.17155L12.9498 4.11089Z"
+                  />
+                  <path
+                    d="M15 8C15 8.41421 14.6642 8.75 14.25 8.75H12.75C12.3358 8.75 12 8.41421 12 8C12 7.58579 12.3358 7.25 12.75 7.25H14.25C14.6642 7.25 15 7.58579 15 8Z"
+                  />
+                  <path
+                    d="M11.8891 12.9498C12.182 13.2427 12.6569 13.2427 12.9498 12.9498C13.2427 12.6569 13.2427 12.182 12.9498 11.8891L11.8891 10.8284C11.5962 10.5356 11.1213 10.5356 10.8285 10.8284C10.5356 11.1213 10.5356 11.5962 10.8285 11.8891L11.8891 12.9498Z"
+                  />
+                  <path
+                    d="M8 12C8.41421 12 8.75 12.3358 8.75 12.75V14.25C8.75 14.6642 8.41421 15 8 15C7.58579 15 7.25 14.6642 7.25 14.25V12.75C7.25 12.3358 7.58579 12 8 12Z"
+                  />
+                  <path
+                    d="M5.17157 11.8891C5.46446 11.5962 5.46446 11.1213 5.17157 10.8284C4.87867 10.5355 4.4038 10.5355 4.11091 10.8284L3.05025 11.8891C2.75735 12.182 2.75735 12.6569 3.05025 12.9497C3.34314 13.2426 3.81801 13.2426 4.11091 12.9497L5.17157 11.8891Z"
+                  />
+                  <path
+                    d="M4 8C4 8.41421 3.66421 8.75 3.25 8.75H1.75C1.33579 8.75 1 8.41421 1 8C1 7.58579 1.33579 7.25 1.75 7.25H3.25C3.66421 7.25 4 7.58579 4 8Z"
+                  />
+                  <path
+                    d="M4.11091 5.17157C4.40381 5.46446 4.87868 5.46446 5.17157 5.17157C5.46447 4.87867 5.46447 4.4038 5.17157 4.11091L4.11091 3.05025C3.81802 2.75735 3.34315 2.75735 3.05025 3.05024C2.75736 3.34314 2.75736 3.81801 3.05025 4.11091L4.11091 5.17157Z"
+                  />
                 </svg>
-                <label
-                  class="styles__17da2jl5 styles__17da2jl4"
-                  for="_r_24_"
-                >
-                  <svg
-                    class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_size_small__vbm0wqg styles_undefined_compound_39__vbm0wq1n"
-                    height="20"
-                    viewBox="0 0 16 16"
-                    width="20"
-                  >
-                    <title>
-                      SunIcon
-                    </title>
-                    <path
-                      d="M8 1C8.41421 1 8.75 1.33579 8.75 1.75V3.25C8.75 3.66421 8.41421 4 8 4C7.58579 4 7.25 3.66421 7.25 3.25V1.75C7.25 1.33579 7.58579 1 8 1Z"
-                    />
-                    <path
-                      d="M10.5 8C10.5 9.38071 9.38071 10.5 8 10.5C6.61929 10.5 5.5 9.38071 5.5 8C5.5 6.61929 6.61929 5.5 8 5.5C9.38071 5.5 10.5 6.61929 10.5 8Z"
-                    />
-                    <path
-                      d="M12.9498 4.11089C13.2427 3.81799 13.2427 3.34312 12.9498 3.05023C12.6569 2.75733 12.182 2.75733 11.8891 3.05023L10.8284 4.11089C10.5356 4.40378 10.5356 4.87865 10.8284 5.17155C11.1213 5.46444 11.5962 5.46444 11.8891 5.17155L12.9498 4.11089Z"
-                    />
-                    <path
-                      d="M15 8C15 8.41421 14.6642 8.75 14.25 8.75H12.75C12.3358 8.75 12 8.41421 12 8C12 7.58579 12.3358 7.25 12.75 7.25H14.25C14.6642 7.25 15 7.58579 15 8Z"
-                    />
-                    <path
-                      d="M11.8891 12.9498C12.182 13.2427 12.6569 13.2427 12.9498 12.9498C13.2427 12.6569 13.2427 12.182 12.9498 11.8891L11.8891 10.8284C11.5962 10.5356 11.1213 10.5356 10.8285 10.8284C10.5356 11.1213 10.5356 11.5962 10.8285 11.8891L11.8891 12.9498Z"
-                    />
-                    <path
-                      d="M8 12C8.41421 12 8.75 12.3358 8.75 12.75V14.25C8.75 14.6642 8.41421 15 8 15C7.58579 15 7.25 14.6642 7.25 14.25V12.75C7.25 12.3358 7.58579 12 8 12Z"
-                    />
-                    <path
-                      d="M5.17157 11.8891C5.46446 11.5962 5.46446 11.1213 5.17157 10.8284C4.87867 10.5355 4.4038 10.5355 4.11091 10.8284L3.05025 11.8891C2.75735 12.182 2.75735 12.6569 3.05025 12.9497C3.34314 13.2426 3.81801 13.2426 4.11091 12.9497L5.17157 11.8891Z"
-                    />
-                    <path
-                      d="M4 8C4 8.41421 3.66421 8.75 3.25 8.75H1.75C1.33579 8.75 1 8.41421 1 8C1 7.58579 1.33579 7.25 1.75 7.25H3.25C3.66421 7.25 4 7.58579 4 8Z"
-                    />
-                    <path
-                      d="M4.11091 5.17157C4.40381 5.46446 4.87868 5.46446 5.17157 5.17157C5.46447 4.87867 5.46447 4.4038 5.17157 4.11091L4.11091 3.05025C3.81802 2.75735 3.34315 2.75735 3.05025 3.05024C2.75736 3.34314 2.75736 3.81801 3.05025 4.11091L4.11091 5.17157Z"
-                    />
-                  </svg>
-                </label>
-              </div>
+              </label>
             </div>
           </div>
         </div>
@@ -1108,138 +1122,140 @@ exports[`switchButton > renders with tooltip 1`] = `
       tabindex="0"
     >
       <div
-        class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        class="styles_small__m5izgx2 styles__m5izgx0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
       >
         <div
-          class="styles_small__m5izgx2 styles__m5izgx0"
+          class="styles_primary__m5izgx8 styles__m5izgx6"
+          style="left: 0px; width: 100px;"
+        />
+        <div
+          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+          data-checked="true"
+          data-disabled="false"
+          data-testid="switch-button-left"
+          data-type="radio"
+          role="button"
+          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+          tabindex="0"
         >
           <div
-            class="styles_primary__m5izgx8 styles__m5izgx6"
-            style="left: 0px; width: 100px;"
-          />
-          <div
-            class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-            data-checked="true"
-            data-disabled="false"
-            data-testid="switch-button-left"
-            data-type="radio"
-            role="button"
-            style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-            tabindex="0"
+            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
           >
             <div
-              class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+              aria-disabled="false"
+              class="styles__475tndd styles__17da2jl2"
+              data-checked="true"
             >
-              <div
+              <input
                 aria-disabled="false"
-                class="styles__475tndd styles__17da2jl2"
-                data-checked="true"
+                aria-invalid="false"
+                checked=""
+                class="styles__17da2jl6"
+                id="_r_16_"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="left"
+              />
+              <svg
+                class="styles__17da2jl7"
+                viewBox="0 0 24 24"
               >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  checked=""
-                  class="styles__17da2jl6"
-                  id="_r_16_"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="left"
-                />
-                <svg
-                  class="styles__17da2jl7"
-                  viewBox="0 0 24 24"
-                >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="styles__17da2jl9"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="styles__17da2jl8"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
-                </svg>
-                <label
-                  class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                  for="_r_16_"
-                >
-                  Left
-                </label>
-              </div>
+                <title>
+                  radio
+                </title>
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="styles__17da2jl9"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="styles__17da2jl8"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+                for="_r_16_"
+              >
+                Left
+              </label>
             </div>
           </div>
+        </div>
+        <div
+          class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+          data-checked="false"
+          data-disabled="false"
+          data-testid="switch-button-right"
+          data-type="radio"
+          role="button"
+          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+          tabindex="0"
+        >
           <div
-            class="styles__m5izgx4 styles__m5izgx3 styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
-            data-checked="false"
-            data-disabled="false"
-            data-testid="switch-button-right"
-            data-type="radio"
-            role="button"
-            style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
-            tabindex="0"
+            class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
           >
             <div
-              class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+              aria-disabled="false"
+              class="styles__475tndd styles__17da2jl2"
+              data-checked="false"
             >
-              <div
+              <input
                 aria-disabled="false"
-                class="styles__475tndd styles__17da2jl2"
-                data-checked="false"
+                aria-invalid="false"
+                class="styles__17da2jl6"
+                id="_r_1a_"
+                name="test"
+                tabindex="-1"
+                type="radio"
+                value="right"
+              />
+              <svg
+                class="styles__17da2jl7"
+                viewBox="0 0 24 24"
               >
-                <input
-                  aria-disabled="false"
-                  aria-invalid="false"
-                  class="styles__17da2jl6"
-                  id="_r_1a_"
-                  name="test"
-                  tabindex="-1"
-                  type="radio"
-                  value="right"
-                />
-                <svg
-                  class="styles__17da2jl7"
-                  viewBox="0 0 24 24"
-                >
-                  <g>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="styles__17da2jl9"
-                      cx="12"
-                      cy="12"
-                      r="8"
-                    />
-                    <circle
-                      class="styles__17da2jl8"
-                      cx="12"
-                      cy="12"
-                      r="5"
-                    />
-                  </g>
-                </svg>
-                <label
-                  class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
-                  for="_r_1a_"
-                >
-                  Right
-                </label>
-              </div>
+                <title>
+                  radio
+                </title>
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="styles__17da2jl9"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="styles__17da2jl8"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+                for="_r_1a_"
+              >
+                Right
+              </label>
             </div>
           </div>
         </div>
