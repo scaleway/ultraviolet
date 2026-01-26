@@ -2,10 +2,11 @@
 
 import { langs } from '@uiw/codemirror-extensions-langs'
 import { material } from '@uiw/codemirror-theme-material'
+import type { ReactCodeMirrorProps } from '@uiw/react-codemirror'
 import CodeMirror from '@uiw/react-codemirror'
 import { CopyButton, Label, Stack, Text } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import {
   codeEditor,
   copyButton as copyButtonStyle,
@@ -14,7 +15,7 @@ import {
 
 type CodeEditorProps = {
   value: string
-  onChange: ComponentProps<typeof CodeMirror>['onChange']
+  onChange: ReactCodeMirrorProps['onChange']
   extensions: keyof typeof langs
   onBlur?: () => void
   height?: string
