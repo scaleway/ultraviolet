@@ -1,16 +1,26 @@
-import { theme } from '@ultraviolet/themes'
-import { capitalize } from '@ultraviolet/utils'
+import type {
+  ExtendedColor,
+  TextStyleObject,
+  TextVariant,
+} from '@ultraviolet/themes'
+import { isColorMonochrome, textVariants, theme } from '@ultraviolet/themes'
+import { capitalize, filterByProperty } from '@ultraviolet/utils'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
-import type { ExtendedColor } from '../../theme'
-import { typography } from '../../theme'
 import { PROMINENCES } from './constants'
-import { placementText, whiteSpaceText } from './variables.css'
+import { textVars } from './variables.css'
 
-type TypographyKey = keyof typeof typography
 type ProminenceProps = keyof typeof PROMINENCES
 
-const variants = Object.keys(typography) as TypographyKey[]
+const isStronger = (prominence: ProminenceProps): prominence is 'stronger' =>
+  prominence === 'stronger'
+
+const isStrong = (prominence: ProminenceProps): prominence is 'strong' =>
+  prominence === 'strong'
+
+const isWeak = (prominence: ProminenceProps): prominence is 'weak' =>
+  prominence === 'weak'
+
 const sentiments = [
   'primary',
   'secondary',
@@ -24,8 +34,15 @@ const sentiments = [
 ] as const
 const prominences = Object.keys(PROMINENCES) as (keyof typeof PROMINENCES)[]
 
+type StyleText = Omit<
+  TextStyleObject,
+  'paragraphSpacing' | 'textCase' | 'textDecoration' | 'weight'
+> & {
+  textTransform: string
+}
+
 function generateVariants() {
-  return variants.reduce<Record<TypographyKey, object>>(
+  return textVariants.reduce<Record<TextVariant, StyleText>>(
     (acc, key) => {
       acc[key] = {
         fontFamily: theme.typography[key].fontFamily,
@@ -38,7 +55,7 @@ function generateVariants() {
 
       return acc
     },
-    {} as Record<TypographyKey, object>,
+    {} as Record<TextVariant, StyleText>,
   )
 }
 
@@ -47,36 +64,40 @@ function generateStyles(
   disabled: boolean,
   sentiment?: ExtendedColor,
 ) {
-  const definedProminence =
-    sentiment !== 'neutral' && prominence === 'stronger'
-      ? capitalize(PROMINENCES.default)
-      : capitalize(PROMINENCES[prominence])
-
-  const isSentimentMonochrome = sentiment === 'black' || sentiment === 'white'
-
-  const themeColor =
-    sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment as keyof typeof theme.colors]
-      : undefined
-
-  const text = `text${definedProminence}${
-    disabled ? 'Disabled' : ''
-  }` as keyof typeof themeColor
-
-  const textColor =
-    sentiment && !isSentimentMonochrome
-      ? theme.colors[sentiment as keyof typeof theme.colors][text]
-      : undefined
-
-  if (sentiment) {
-    return {
-      color: isSentimentMonochrome
-        ? theme.colors.other.monochrome[(sentiment as 'black') || 'white'].text
-        : textColor,
-    }
+  if (isColorMonochrome(sentiment)) {
+    return { color: theme.colors.other.monochrome[sentiment].text }
   }
 
-  return {}
+  if (sentiment === 'neutral') {
+    const definedProminence = capitalize(PROMINENCES[prominence])
+    const text =
+      `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
+
+    return { color: theme.colors[sentiment][text] }
+  }
+
+  /*
+   * Actually (weak | stronger | strong) prominence are only define inside neutral sentiment.
+   * We should ask to define theses var inside the theme instead
+   */
+  if (sentiment) {
+    if (
+      !(isWeak(prominence) || isStronger(prominence) || isStrong(prominence))
+    ) {
+      const definedProminence = capitalize(PROMINENCES[prominence])
+      const text =
+        `text${definedProminence}${disabled ? 'Disabled' : ''}` as const
+
+      return { color: theme.colors[sentiment][text] }
+    }
+
+    const text = `text${disabled ? 'Disabled' : ''}` as const
+
+    return { color: theme.colors[sentiment][text] }
+  }
+
+  // return undefined to filter on empty variant instead of {}
+  return undefined
 }
 
 function getArrayOfVariants() {
@@ -110,17 +131,21 @@ function getArrayOfVariantNoSentiment() {
   return array.flat()
 }
 
-export const text = recipe({
-  base: {
-    textAlign: placementText,
-    whiteSpace: whiteSpaceText,
-  },
-  compoundVariants: [
+const compoundVariants = filterByProperty(
+  [
     ...getArrayOfVariants(),
     ...getArrayOfVariantsDisabled(),
     ...getArrayOfVariantNoSentiment(),
   ],
+  'style',
+)
 
+export const text = recipe({
+  base: {
+    textAlign: textVars.textAlign,
+    whiteSpace: textVars.whiteSpace,
+  },
+  compoundVariants,
   defaultVariants: {
     disabled: false,
     italic: false,
@@ -142,7 +167,6 @@ export const text = recipe({
         fontStyle: 'italic',
       },
     },
-
     oneLine: {
       false: {},
       true: {
