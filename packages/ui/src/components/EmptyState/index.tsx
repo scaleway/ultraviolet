@@ -83,7 +83,14 @@ export const EmptyState = ({
             </Text>
           ) : null}
           <Text
-            as="p"
+            as={
+              description &&
+              ['string', 'number', 'bigint', 'boolean'].includes(
+                typeof description,
+              )
+                ? 'p'
+                : 'div'
+            }
             placement="center"
             sentiment="neutral"
             variant={size === 'small' ? 'bodySmall' : 'body'}
