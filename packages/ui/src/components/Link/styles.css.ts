@@ -32,8 +32,8 @@ function getLinkStyle(
         textDecorationThickness: '2px',
       },
       '&:visited': {
-        color: theme.colors.secondary[text],
-        textDecorationColor: theme.colors.secondary[text],
+        color: theme.colors.secondary.text,
+        textDecorationColor: theme.colors.secondary.text,
       },
     },
   }
