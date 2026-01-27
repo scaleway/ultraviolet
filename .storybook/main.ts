@@ -40,8 +40,8 @@ export default {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      shouldExtractValuesFromUnion: true,
+      shouldExtractLiteralValuesFromEnum: false,
+      shouldExtractValuesFromUnion: false,
       shouldSortUnions: true,
       tsconfigPath: 'tsconfig.json',
     },

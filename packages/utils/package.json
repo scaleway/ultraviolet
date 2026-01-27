@@ -14,6 +14,9 @@
     "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vitest.config.ts",
+    "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
+    "test:unit:coverage": "pnpm test:unit --coverage",
     "typecheck": "tsc --noEmit",
     "size": "size-limit",
     "lintpublish": "publint"
