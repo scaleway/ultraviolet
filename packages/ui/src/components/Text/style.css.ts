@@ -32,6 +32,7 @@ const sentiments = [
   'black',
   'white',
 ] as const
+
 const prominences = Object.keys(PROMINENCES) as (keyof typeof PROMINENCES)[]
 
 type StyleText = Omit<
@@ -96,8 +97,7 @@ function generateStyles(
     return { color: theme.colors[sentiment][text] }
   }
 
-  // return undefined to filter on empty variant instead of {}
-  return undefined
+  return { color: 'inherit' }
 }
 
 function getArrayOfVariants() {
@@ -133,12 +133,14 @@ function getArrayOfVariantNoSentiment() {
 
 const compoundVariants = filterByProperty(
   [
-    ...getArrayOfVariants(),
-    ...getArrayOfVariantsDisabled(),
     ...getArrayOfVariantNoSentiment(),
+    ...getArrayOfVariantsDisabled(),
+    ...getArrayOfVariants(),
   ],
   'style',
 )
+
+const variant = generateVariants()
 
 export const text = recipe({
   base: {
@@ -158,17 +160,14 @@ export const text = recipe({
   },
   variants: {
     disabled: {
-      false: {},
       true: {},
     },
     italic: {
-      false: {},
       true: {
         fontStyle: 'italic',
       },
     },
     oneLine: {
-      false: {},
       true: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
@@ -193,19 +192,16 @@ export const text = recipe({
       white: {},
     },
     strikeThrough: {
-      false: {},
       true: {
         textDecoration: 'line-through',
       },
     },
     underline: {
-      false: {},
       true: {
         textDecoration: 'underline',
       },
     },
-
-    variant: generateVariants(),
+    variant,
   },
 })
 
