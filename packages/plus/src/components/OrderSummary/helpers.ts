@@ -71,7 +71,6 @@ export const calculateSubCategoryPrice = (
     const minPrice =
       calculatePrice({
         amount: subCategory.amount?.[0] ?? 1,
-        amountFree: subCategory.amountFree,
         fixedPrice: subCategory.fixedPrice,
         price: subCategory.price ?? 0,
         timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
@@ -80,7 +79,6 @@ export const calculateSubCategoryPrice = (
     const maxPrice =
       calculatePrice({
         amount: subCategory.amount?.[1] ?? 1,
-        amountFree: subCategory.amountFree,
         fixedPrice: subCategory.fixedPrice,
         price: subCategory.price ?? 0,
         timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
@@ -117,7 +115,6 @@ export const calculateSubCategoryPrice = (
   const price =
     calculatePrice({
       amount: subCategory.amount ?? 1,
-      amountFree: subCategory.amountFree,
       fixedPrice: subCategory.fixedPrice,
       price: subCategory.price ?? 0,
       timeAmount: hideTimeUnit ? 1 : timePeriodAmount,

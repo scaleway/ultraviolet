@@ -35,7 +35,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_ed_"
+                  id="_r_er_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -51,8 +51,8 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_ef_"
-                  aria-describedby="_r_ef_"
+                  aria-controls="_r_et_"
+                  aria-describedby="_r_et_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -60,7 +60,7 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_ef_"
+                      aria-controls="_r_et_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -185,8 +185,8 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_er_"
-                  aria-describedby="_r_er_"
+                  aria-controls="_r_f9_"
+                  aria-describedby="_r_f9_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -231,8 +231,8 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_ev_"
-                      aria-describedby="_r_ev_"
+                      aria-controls="_r_fd_"
+                      aria-describedby="_r_fd_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -609,11 +609,20 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -629,11 +638,20 @@ exports[`orderSummary > should work with additionalInfo 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -762,7 +780,7 @@ exports[`orderSummary > should work with anchors 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_k1_"
+                  id="_r_kh_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -778,8 +796,8 @@ exports[`orderSummary > should work with anchors 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_k3_"
-                  aria-describedby="_r_k3_"
+                  aria-controls="_r_kj_"
+                  aria-describedby="_r_kj_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -787,7 +805,7 @@ exports[`orderSummary > should work with anchors 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_k3_"
+                      aria-controls="_r_kj_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -999,7 +1017,7 @@ exports[`orderSummary > should work with children 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_49_"
+                  id="_r_4d_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -1015,8 +1033,8 @@ exports[`orderSummary > should work with children 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_4b_"
-                  aria-describedby="_r_4b_"
+                  aria-controls="_r_4f_"
+                  aria-describedby="_r_4f_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -1024,7 +1042,7 @@ exports[`orderSummary > should work with children 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_4b_"
+                      aria-controls="_r_4f_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -1149,8 +1167,8 @@ exports[`orderSummary > should work with children 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_4n_"
-                  aria-describedby="_r_4n_"
+                  aria-controls="_r_4r_"
+                  aria-describedby="_r_4r_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -1195,8 +1213,8 @@ exports[`orderSummary > should work with children 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_4r_"
-                      aria-describedby="_r_4r_"
+                      aria-controls="_r_4v_"
+                      aria-describedby="_r_4v_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -1573,11 +1591,20 @@ exports[`orderSummary > should work with children 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -1593,11 +1620,20 @@ exports[`orderSummary > should work with children 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -2167,11 +2203,20 @@ exports[`orderSummary > should work with default props 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -2187,11 +2232,20 @@ exports[`orderSummary > should work with default props 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -2276,7 +2330,7 @@ exports[`orderSummary > should work with discount 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_ib_"
+                  id="_r_ir_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -2292,8 +2346,8 @@ exports[`orderSummary > should work with discount 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_id_"
-                  aria-describedby="_r_id_"
+                  aria-controls="_r_it_"
+                  aria-describedby="_r_it_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -2301,7 +2355,7 @@ exports[`orderSummary > should work with discount 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_id_"
+                      aria-controls="_r_it_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -2462,7 +2516,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_h2_"
+                  id="_r_hi_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -2478,8 +2532,8 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_h4_"
-                  aria-describedby="_r_h4_"
+                  aria-controls="_r_hk_"
+                  aria-describedby="_r_hk_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -2487,7 +2541,7 @@ exports[`orderSummary > should work with discount in  % 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_h4_"
+                      aria-controls="_r_hk_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -2648,7 +2702,7 @@ exports[`orderSummary > should work with discount of 100% 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_hg_"
+                  id="_r_i0_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -2664,8 +2718,8 @@ exports[`orderSummary > should work with discount of 100% 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_hi_"
-                  aria-describedby="_r_hi_"
+                  aria-controls="_r_i2_"
+                  aria-describedby="_r_i2_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -2673,7 +2727,7 @@ exports[`orderSummary > should work with discount of 100% 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_hi_"
+                      aria-controls="_r_i2_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -2834,7 +2888,7 @@ exports[`orderSummary > should work with footer 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_67_"
+                  id="_r_6d_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -2850,8 +2904,8 @@ exports[`orderSummary > should work with footer 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_69_"
-                  aria-describedby="_r_69_"
+                  aria-controls="_r_6f_"
+                  aria-describedby="_r_6f_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -2859,7 +2913,7 @@ exports[`orderSummary > should work with footer 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_69_"
+                      aria-controls="_r_6f_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -2984,8 +3038,8 @@ exports[`orderSummary > should work with footer 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_6l_"
-                  aria-describedby="_r_6l_"
+                  aria-controls="_r_6r_"
+                  aria-describedby="_r_6r_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -3030,8 +3084,8 @@ exports[`orderSummary > should work with footer 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_6p_"
-                      aria-describedby="_r_6p_"
+                      aria-controls="_r_6v_"
+                      aria-describedby="_r_6v_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -3408,11 +3462,20 @@ exports[`orderSummary > should work with footer 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -3428,11 +3491,20 @@ exports[`orderSummary > should work with footer 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -3518,7 +3590,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_ip_"
+                  id="_r_j9_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -3534,8 +3606,8 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_ir_"
-                  aria-describedby="_r_ir_"
+                  aria-controls="_r_jb_"
+                  aria-describedby="_r_jb_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -3543,7 +3615,7 @@ exports[`orderSummary > should work with fractionDigits 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_ir_"
+                      aria-controls="_r_jb_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -3704,7 +3776,7 @@ exports[`orderSummary > should work with hide before price 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_hu_"
+                  id="_r_ie_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -3720,8 +3792,8 @@ exports[`orderSummary > should work with hide before price 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_i0_"
-                  aria-describedby="_r_i0_"
+                  aria-controls="_r_ig_"
+                  aria-describedby="_r_ig_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -3729,7 +3801,7 @@ exports[`orderSummary > should work with hide before price 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_i0_"
+                      aria-controls="_r_ig_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -3881,7 +3953,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_gb_"
+                  id="_r_gr_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -3897,8 +3969,8 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_gd_"
-                  aria-describedby="_r_gd_"
+                  aria-controls="_r_gt_"
+                  aria-describedby="_r_gt_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -3906,7 +3978,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_gd_"
+                      aria-controls="_r_gt_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -3996,7 +4068,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                   >
                     <input
                       class="uv_1ce7gb6b uv_1ce7gb6g"
-                      id="_r_gi_"
+                      id="_r_h2_"
                       max="9007199254740991"
                       min="0"
                       placeholder=""
@@ -4078,7 +4150,7 @@ exports[`orderSummary > should work with numberInputs 1`] = `
                       >
                         <input
                           class="uv_1ce7gb6b uv_1ce7gb6c uv_1ce7gb6d uv_1ce7gb6g"
-                          id="_r_gp_"
+                          id="_r_h9_"
                           max="9007199254740991"
                           min="0"
                           placeholder=""
@@ -4209,7 +4281,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_a3_"
+                  id="_r_ad_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -4225,8 +4297,8 @@ exports[`orderSummary > should work with price as a range 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_a5_"
-                  aria-describedby="_r_a5_"
+                  aria-controls="_r_af_"
+                  aria-describedby="_r_af_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -4234,7 +4306,7 @@ exports[`orderSummary > should work with price as a range 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_a5_"
+                      aria-controls="_r_af_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -4396,7 +4468,7 @@ exports[`orderSummary > should work with price information 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_85_"
+                  id="_r_8d_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -4412,8 +4484,8 @@ exports[`orderSummary > should work with price information 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_87_"
-                  aria-describedby="_r_87_"
+                  aria-controls="_r_8f_"
+                  aria-describedby="_r_8f_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -4421,7 +4493,7 @@ exports[`orderSummary > should work with price information 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_87_"
+                      aria-controls="_r_8f_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -4546,8 +4618,8 @@ exports[`orderSummary > should work with price information 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_8j_"
-                  aria-describedby="_r_8j_"
+                  aria-controls="_r_8r_"
+                  aria-describedby="_r_8r_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -4592,8 +4664,8 @@ exports[`orderSummary > should work with price information 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_8n_"
-                      aria-describedby="_r_8n_"
+                      aria-controls="_r_8v_"
+                      aria-describedby="_r_8v_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -4970,11 +5042,20 @@ exports[`orderSummary > should work with price information 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -4990,11 +5071,20 @@ exports[`orderSummary > should work with price information 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -5080,7 +5170,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_ah_"
+                  id="_r_ar_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -5096,8 +5186,8 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_aj_"
-                  aria-describedby="_r_aj_"
+                  aria-controls="_r_at_"
+                  aria-describedby="_r_at_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -5105,7 +5195,7 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_aj_"
+                      aria-controls="_r_at_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -5230,8 +5320,8 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_av_"
-                  aria-describedby="_r_av_"
+                  aria-controls="_r_b9_"
+                  aria-describedby="_r_b9_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -5276,8 +5366,8 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_b3_"
-                      aria-describedby="_r_b3_"
+                      aria-controls="_r_bd_"
+                      aria-describedby="_r_bd_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -5654,11 +5744,20 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -5674,11 +5773,20 @@ exports[`orderSummary > should work with totalPriceInfo 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -5768,7 +5876,7 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_cf_"
+                  id="_r_cr_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -5784,8 +5892,8 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_ch_"
-                  aria-describedby="_r_ch_"
+                  aria-controls="_r_ct_"
+                  aria-describedby="_r_ct_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -5793,7 +5901,7 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_ch_"
+                      aria-controls="_r_ct_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
@@ -5918,8 +6026,8 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_ct_"
-                  aria-describedby="_r_ct_"
+                  aria-controls="_r_d9_"
+                  aria-describedby="_r_d9_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -5964,8 +6072,8 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_d1_"
-                      aria-describedby="_r_d1_"
+                      aria-controls="_r_dd_"
+                      aria-describedby="_r_dd_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -6342,11 +6450,20 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -6362,11 +6479,20 @@ exports[`orderSummary > should work with totalPriceInfo and totalPriceInfoPlacem
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -6521,8 +6647,8 @@ exports[`orderSummary > should work without unitInput 1`] = `
                 class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
               >
                 <div
-                  aria-controls="_r_22_"
-                  aria-describedby="_r_22_"
+                  aria-controls="_r_24_"
+                  aria-describedby="_r_24_"
                   class="uv_w40vpo9"
                   tabindex="0"
                 >
@@ -6567,8 +6693,8 @@ exports[`orderSummary > should work without unitInput 1`] = `
                     class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow4 uv_m4c9ow5 uv_m4c9ow7 uv_m4c9owf uv_m4c9owk uv_m4c9owm uv_m4c9owp uv_m4c9ow1f"
                   >
                     <div
-                      aria-controls="_r_26_"
-                      aria-describedby="_r_26_"
+                      aria-controls="_r_28_"
+                      aria-describedby="_r_28_"
                       class="uv_w40vpo9"
                       tabindex="0"
                     >
@@ -6945,11 +7071,20 @@ exports[`orderSummary > should work without unitInput 1`] = `
                 75GB free on public images
               </span>
             </div>
-            <span
-              class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+            <div
+              class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
             >
-              €0.00
-            </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+              >
+                €0.00
+              </span>
+              <span
+                class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9ows uv_m4c9ow24"
+              >
+                €0.00
+              </span>
+            </div>
           </div>
           <div
             class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u3p uv_toi52u5v"
@@ -6965,11 +7100,20 @@ exports[`orderSummary > should work without unitInput 1`] = `
                 >
                   100 GB of storage
                 </span>
-                <span
-                  class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                <div
+                  class="uv_toi52u0 uv_toi52ud uv_toi52u2j uv_toi52u31 uv_toi52u3p uv_toi52u5v"
                 >
-                  €0.00003425 /GB/hours
-                </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9owa uv_m4c9owe uv_m4c9owl uv_m4c9owm uv_m4c9owq uv_m4c9ow26"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                  <span
+                    class="uv_m4c9ow0 uv_m4c9ow1 uv_m4c9ow3 uv_m4c9ow5 uv_m4c9ow8 uv_m4c9owe uv_m4c9owk uv_m4c9owm uv_m4c9owq uv_m4c9ow24"
+                  >
+                    €0.00003425 /GB/hours
+                  </span>
+                </div>
               </div>
               <div
                 class="styles__1q5g1ma8 uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
@@ -7161,7 +7305,7 @@ exports[`orderSummary > works with negative category price 1`] = `
                   aria-invalid="false"
                   class="uv_gwf0fl4 uv_gwf0fl1"
                   data-testid="unit-input"
-                  id="_r_jf_"
+                  id="_r_jv_"
                   max="9007199254740991"
                   min="0"
                   name="-value"
@@ -7177,8 +7321,8 @@ exports[`orderSummary > works with negative category price 1`] = `
                 style="--uv_gwf0fl0: 100%;"
               >
                 <div
-                  aria-controls="_r_jh_"
-                  aria-describedby="_r_jh_"
+                  aria-controls="_r_k1_"
+                  aria-describedby="_r_k1_"
                   class="uv_w40vpo9 uv_w40vpob"
                   tabindex="-1"
                 >
@@ -7186,7 +7330,7 @@ exports[`orderSummary > works with negative category price 1`] = `
                     class="uv_toi52u0 uv_toi52u1 uv_toi52u2d uv_toi52u31 uv_toi52u5d uv_toi52u5v"
                   >
                     <div
-                      aria-controls="_r_jh_"
+                      aria-controls="_r_k1_"
                       aria-expanded="false"
                       class="uv_1ba7knd6 uv_1ba7knd5 uv_1ba7kndc uv_1ba7knde"
                       data-disabled="false"
