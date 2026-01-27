@@ -29,6 +29,7 @@ import { useListContext } from './ListContext'
 import {
   listCheckboxContainer,
   listCheckboxInRange,
+  listExpandableButton,
   listExpandableCell,
   listExpandableWrapper,
   listNoPaddingCell,
@@ -221,6 +222,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
               <Cell className={listNoPaddingCell}>
                 <Button
                   aria-label="expand"
+                  className={listExpandableButton}
                   data-testid="list-expand-button"
                   disabled={disabled || !expandable}
                   onClick={() => toggleRowExpand()}
