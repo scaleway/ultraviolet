@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowDownIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import type {
   ButtonHTMLAttributes,

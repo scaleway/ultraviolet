@@ -1,6 +1,6 @@
 'use client'
 
-import { OpenInNewIcon } from '@ultraviolet/icons'
+import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { Stack, Text } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'

@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRightIcon } from '@ultraviolet/icons'
+import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { cn } from '@ultraviolet/utils'
 import type {
   CSSProperties,

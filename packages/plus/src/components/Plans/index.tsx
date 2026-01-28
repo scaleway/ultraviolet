@@ -1,4 +1,5 @@
-import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
 import type { CSSProperties } from 'react'
 import { useState } from 'react'

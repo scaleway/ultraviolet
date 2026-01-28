@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { InformationIcon } from '@ultraviolet/icons'
+import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'
 import { Snippet } from '../index'

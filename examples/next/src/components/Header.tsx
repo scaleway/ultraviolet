@@ -1,4 +1,5 @@
-import { MoonIcon, SunIcon } from '@ultraviolet/icons'
+import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
+import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { Toggle } from '@ultraviolet/ui'
 import styles from '../../styles/component.module.scss'

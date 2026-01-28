@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { DeleteIcon } from '@ultraviolet/icons'
+import { DeleteIcon } from '@ultraviolet/icons/DeleteIcon'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'

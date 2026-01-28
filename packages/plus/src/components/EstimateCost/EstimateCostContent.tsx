@@ -2,7 +2,7 @@
 
 'use client'
 
-import { CalculatorIcon } from '@ultraviolet/icons'
+import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { Alert, Badge, Stack, Text } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'

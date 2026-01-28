@@ -398,7 +398,7 @@
   - prop `size` no longer support `string` and `number`. You shoud use the sizes supported by the component (`xmsall`, `small`, ect.). Example:
 
     ```tsx
-    import { DragIcon } from '@ultraviolet/icons'
+    import { DragIcon } from '@ultraviolet/icons/DragIcon'
 
     // Before
     <DragIcon size={16} />
@@ -572,7 +572,7 @@
   - prop `size` no longer support `string` and `number`. You shoud use the sizes supported by the component (`xmsall`, `small`, ect.). Example:
 
     ```tsx
-    import { DragIcon } from '@ultraviolet/icons'
+    import { DragIcon } from '@ultraviolet/icons/DragIcon'
 
     // Before
     <DragIcon size={16} />

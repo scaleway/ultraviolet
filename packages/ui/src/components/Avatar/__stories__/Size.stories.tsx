@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { MosaicIcon } from '@ultraviolet/icons'
+import { MosaicIcon } from '@ultraviolet/icons/MosaicIcon'
 import { Stack } from '../../Stack'
 import { Avatar } from '..'
 

@@ -4,15 +4,13 @@
 
 'use client'
 
-import {
-  ArrowDownIcon,
-  ArrowRightIcon,
-  DragIcon,
-  OpenInNewIcon,
-  PinOutlineIcon,
-  UnpinIcon,
-} from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
+import { DragIcon } from '@ultraviolet/icons/DragIcon'
+import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
+import { PinOutlineIcon } from '@ultraviolet/icons/PinOutlineIcon'
+import { UnpinIcon } from '@ultraviolet/icons/UnpinIcon'
 import {
   Badge,
   Button,

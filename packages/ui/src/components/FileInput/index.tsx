@@ -1,6 +1,6 @@
 'use client'
 
-import { UploadIcon } from '@ultraviolet/icons'
+import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import type { ChangeEvent, DragEvent } from 'react'
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { Label } from '../Label'

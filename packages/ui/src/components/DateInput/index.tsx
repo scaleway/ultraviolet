@@ -1,6 +1,6 @@
 'use client'
 
-import { CalendarRangeIcon } from '@ultraviolet/icons'
+import { CalendarRangeIcon } from '@ultraviolet/icons/CalendarRangeIcon'
 import { cn } from '@ultraviolet/utils'
 import type { Locale } from 'date-fns'
 import type { ChangeEvent, CSSProperties, FocusEvent } from 'react'
