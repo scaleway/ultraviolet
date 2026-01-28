@@ -1,12 +1,10 @@
 'use client'
 
-import {
-  AlertCircleIcon,
-  CheckCircleOutlineIcon,
-  CloseIcon,
-  InformationOutlineIcon,
-  LightBulbIcon,
-} from '@ultraviolet/icons'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
+import { LightBulbIcon } from '@ultraviolet/icons/LightBulbIcon'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'
 import { useState } from 'react'
