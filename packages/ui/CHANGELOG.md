@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.7.1
+
+### Patch Changes
+
+- [#6037](https://github.com/scaleway/ultraviolet/pull/6037) [`31ddb5d`](https://github.com/scaleway/ultraviolet/commit/31ddb5d664b7a5a6193f1f290b85fdfd714aec95) Thanks [@lisalupi](https://github.com/lisalupi)! - `Link`: no prominence on visited links
+
+- [#6038](https://github.com/scaleway/ultraviolet/pull/6038) [`4e17bc7`](https://github.com/scaleway/ultraviolet/commit/4e17bc7c713ce7e751f28f4b71e2413d055808e8) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Make splash description handle complex React node
+
+- [#6032](https://github.com/scaleway/ultraviolet/pull/6032) [`f35febd`](https://github.com/scaleway/ultraviolet/commit/f35febdb8fdd6960b365fc6b8e42462069e77048) Thanks [@philibea](https://github.com/philibea)! - Fix Text component variant style, apply default color of the sentiment instead of of nothing
+
 ## 3.7.0
 
 ### Minor Changes
