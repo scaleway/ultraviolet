@@ -2,7 +2,7 @@
 
 import { Stack, Text } from '@ultraviolet/ui'
 import type { CSSProperties, ReactNode } from 'react'
-import { cellText, desc, term } from '../styles.css'
+import { cellText, desc, infoTableCell, term } from '../styles.css'
 
 type CellProps = {
   children: ReactNode
@@ -17,7 +17,13 @@ export const InfoTableCell = ({
   multiline = false,
   style,
 }: CellProps) => (
-  <Stack gap="0.5" minWidth="0" style={style} width="100%">
+  <Stack
+    className={infoTableCell}
+    gap="0.5"
+    minWidth="0"
+    style={style}
+    width="100%"
+  >
     <dt className={term}>
       <Text
         as="div"

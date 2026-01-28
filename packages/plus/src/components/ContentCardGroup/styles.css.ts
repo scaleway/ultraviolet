@@ -1,15 +1,8 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 
 export const customStack = style({
   minWidth: 0,
-})
-
-export const iconWrapper = style({
-  background: theme.colors.neutral.backgroundWeak,
-  borderRadius: theme.radii.default,
-  display: 'inline-flex',
-  padding: theme.space['1'],
 })
 
 export const styledWrapper = style({
@@ -32,13 +25,16 @@ export const styledWrapper = style({
   },
   textDecoration: 'none',
 })
-
-globalStyle(`${styledWrapper} .${iconWrapper}`, {
+export const iconWrapper = style({
   background: theme.colors.neutral.backgroundWeak,
-})
-
-globalStyle(`${styledWrapper}:hover .${iconWrapper}`, {
-  background: 'none',
+  borderRadius: theme.radii.default,
+  display: 'inline-flex',
+  padding: theme.space['1'],
+  selectors: {
+    [`${styledWrapper}:hover &`]: {
+      background: 'none',
+    },
+  },
 })
 
 export const fullHeightStack = style({

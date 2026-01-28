@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/form",
-  "version": "6.0.9",
+  "version": "6.0.11",
   "description": "Ultraviolet Form",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -41,16 +41,16 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./compositions/*": {
       "types": "./dist/components/compositions/*/index.d.ts",
-      "require": "./dist/components/compositions/*/index.cjs",
+      "require": "./dist/components/compositions/*/index.js",
       "default": "./dist/components/compositions/*/index.js"
     }
   },
@@ -75,7 +75,7 @@
     "@babel/core": "7.28.6",
     "@repo/config": "workspace:*",
     "@types/final-form-focus": "1.1.7",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
     "react": "19.2.3",

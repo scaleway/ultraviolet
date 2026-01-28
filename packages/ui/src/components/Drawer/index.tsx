@@ -11,6 +11,7 @@ import { Text } from '../Text'
 import type { SizeProp } from './styles.css'
 import {
   drawer,
+  drawerBase,
   drawerChildrenWrapper,
   drawerContent,
   drawerContentWrapper,
@@ -101,7 +102,7 @@ export const BaseDrawer = ({
     <Modal
       ariaLabel={ariaLabel}
       backdropClassName="backdrop-drawer"
-      className={cn(className, drawer[size])}
+      className={cn(className, drawer[size], drawerBase)}
       data-size={size}
       data-testid={dataTestId}
       disclosure={disclosure}

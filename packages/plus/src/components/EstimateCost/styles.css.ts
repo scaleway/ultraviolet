@@ -1,10 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  createVar,
-  globalStyle,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
+import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 
@@ -30,14 +25,6 @@ export const estimateCostFeesTable = style([
   estimateCostTableBase,
   { borderRadius: '4px', marginTop: theme.space[2] },
 ])
-
-globalStyle(`${estimateCostTableBase} > *`, {
-  marginTop: 0,
-})
-
-globalStyle(`${estimateCostTableBase} > * + *`, {
-  marginTop: theme.space[2],
-})
 
 export const estimateCostPriceColumn = style({
   backgroundColor: theme.colors.neutral.background,

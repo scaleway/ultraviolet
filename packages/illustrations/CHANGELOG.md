@@ -1,5 +1,15 @@
 # @ultraviolet/illustrations
 
+## 6.0.5
+
+### Patch Changes
+
+- [#6033](https://github.com/scaleway/ultraviolet/pull/6033) [`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa) Thanks [@philibea](https://github.com/philibea)! - Fix require export based on .cjs files instead of .js
+
+- Updated dependencies [[`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa), [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a)]:
+  - @ultraviolet/themes@3.0.4
+  - @ultraviolet/utils@1.0.1
+
 ## 6.0.4
 
 ### Patch Changes

@@ -115,8 +115,9 @@ export const categoryStorage = {
       amount: 100,
       amountFree: 75,
       price: 0.003_425,
-      priceUnit: 'GB/hours',
       title: '100 GB of storage',
+      customContent: '0.003425 GB/hours',
+      hidePrice: true,
     },
   ],
 }

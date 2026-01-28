@@ -111,6 +111,7 @@ export default [
     files: [
       '**/__stories__/**/*.{ts,tsx}',
       '**/__tests__/**/*.{ts,tsx}',
+      '**/*.test.{ts,tsx}',
       '**/vite.config.*',
       '**/vitest.config.*',
       'utils/test/**/*.{ts,tsx}',
@@ -139,6 +140,7 @@ export default [
     files: [
       '**/__stories__/**/*.{ts,tsx}',
       '**/__tests__/**/*.{ts,tsx}',
+      '**/*.test.{ts,tsx}',
       '**/vite.config.*',
       '**/vitest.config.*',
       'utils/test/**/*.{ts,tsx}',

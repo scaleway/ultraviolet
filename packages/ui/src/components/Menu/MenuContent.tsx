@@ -93,6 +93,10 @@ export const Menu = forwardRef(
       'aria-haspopup': 'dialog',
       onClick: (event: MouseEvent<HTMLButtonElement>) => {
         target.props.onClick?.(event)
+        if (isNested) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
         setIsVisible(!isVisible)
       },
       // @ts-expect-error not sure how to fix this

@@ -2,6 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { slideFromBottom } from '../../utils'
+import { drawerBase } from '../Drawer/styles.css'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 
 export const topModal = createVar()
@@ -41,6 +42,12 @@ export const modalBackdropBase = style({
   top: 0,
   width: 0,
   zIndex: 1,
+  selectors: {
+    [`&:has(${drawerBase})`]: {
+      padding: 0,
+      transition: 'opacity 100ms ease-in-out',
+    },
+  },
 })
 
 export const modalBackdrop = recipe({

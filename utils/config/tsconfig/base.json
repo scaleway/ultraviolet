@@ -22,7 +22,12 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["vite/client", "@testing-library/jest-dom", "../../global.d.ts"]
+    "types": [
+      "vite/client",
+      "@testing-library/jest-dom",
+      "../../global.d.ts",
+      "../../utils.d.ts"
+    ]
   },
   "display": "Ultraviolet UI Base Config",
   "exclude": ["node_modules", "dist", "build", "coverage"],

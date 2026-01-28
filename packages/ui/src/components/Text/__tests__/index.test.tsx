@@ -1,7 +1,7 @@
+import { textVariants } from '@ultraviolet/themes'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Text } from '..'
-import { textVariants } from '../constants'
 
 describe('text', () => {
   test.each(textVariants)('renders correctly with type="%s"', variant =>

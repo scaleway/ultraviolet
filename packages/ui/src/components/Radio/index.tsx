@@ -10,6 +10,7 @@ import { Tooltip } from '../Tooltip'
 import {
   container,
   innerCircleRing,
+  labelRadio,
   labelStyle,
   margedText,
   radio,
@@ -122,7 +123,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                 {typeof label === 'string' ? (
                   <Text
                     as="label"
-                    className={textLabel}
+                    className={cn(textLabel, labelRadio)}
                     htmlFor={localId}
                     prominence="default"
                     variant="body"
@@ -130,7 +131,10 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
                     {label}
                   </Text>
                 ) : (
-                  <label className={labelStyle} htmlFor={localId}>
+                  <label
+                    className={cn(labelStyle, labelRadio)}
+                    htmlFor={localId}
+                  >
                     {label}
                   </label>
                 )}

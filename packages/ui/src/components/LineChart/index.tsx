@@ -1,7 +1,7 @@
 'use client'
 
 import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
-import type { LineSvgProps, Serie } from '@nivo/line'
+import type { LineSvgProps, Point, Serie } from '@nivo/line'
 import { ResponsiveLine } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import type { theme as UVTheme } from '@ultraviolet/themes'
@@ -21,6 +21,11 @@ type LineChartProps = {
   yScale?: ScaleSpec
   data?: Serie[]
   withLegend?: boolean
+  tooltipFunction?: (props: {
+    point: Point
+  }) => Partial<
+    Pick<ComponentProps<typeof LineChartTooltip>, 'xFormatted' | 'yFormatted'>
+  >
   axisFormatters?: Partial<
     Record<
       'bottom' | 'left' | 'right' | 'top',
@@ -46,6 +51,20 @@ const DEFAULT_XSCALE: LineChartProps['xScale'] = {
 const DEFAULT_YSCALE: LineChartProps['yScale'] = { type: 'linear' }
 const DEFAULT_CHARTPROPS = {}
 
+const createCustomTooltip =
+  (tooltipFunction?: LineChartProps['tooltipFunction']) =>
+  (props: { point: Point }) => {
+    const customProps = tooltipFunction ? tooltipFunction(props) : {}
+
+    return (
+      <LineChartTooltip
+        point={props.point}
+        xFormatted={customProps.xFormatted}
+        yFormatted={customProps.yFormatted}
+      />
+    )
+  }
+
 /**
  * LineChart component is a wrapper around Nivo's ResponsiveLine component used to display data in a line chart.
  * See https://nivo.rocks/line/ for more information.
@@ -58,6 +77,7 @@ export const LineChart = ({
   yScale = DEFAULT_YSCALE,
   data,
   withLegend = false,
+  tooltipFunction,
   axisFormatters,
   pointFormatters,
   tickValues,
@@ -91,6 +111,8 @@ export const LineChart = ({
 
   const localColors = getLegendColor(theme as typeof UVTheme)
 
+  const CustomTooltip = createCustomTooltip(tooltipFunction)
+
   return (
     <>
       <div style={{ height, ...style }}>
@@ -116,7 +138,7 @@ export const LineChart = ({
           margin={margin}
           pointSize={10}
           theme={getNivoTheme(theme)}
-          tooltip={LineChartTooltip}
+          tooltip={CustomTooltip}
           useMesh
           xFormat={pointFormatters?.x}
           xScale={xScale}

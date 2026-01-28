@@ -14,6 +14,7 @@ import { Cell } from './Cell'
 import {
   tableCheckboxContainer,
   tableExpandableWrapper,
+  tableRow,
   tableTrAnimation,
 } from './styles.css'
 import { useTableContext } from './TableContext'
@@ -109,7 +110,11 @@ export const Row = ({
   return (
     <>
       <tr
-        className={cn(className, highlightAnimation ? tableTrAnimation : '')}
+        className={cn(
+          className,
+          highlightAnimation ? tableTrAnimation : '',
+          tableRow,
+        )}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
         style={style}

@@ -187,6 +187,10 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
             data-testid={dataTestId}
             disabled={disabled}
             onClick={event => {
+              if (isNested) {
+                event.stopPropagation()
+                event.preventDefault()
+              }
               onClick?.(event)
               if (hideOnClickItem) {
                 setIsVisible(false)

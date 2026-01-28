@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 
 export const tabsMenuContainer = style({
   display: 'flex',
@@ -38,18 +38,6 @@ export const tabsContainer = style({
     },
   },
   zIndex: 0,
-})
-
-export const tabsBadge = style({
-  marginLeft: theme.space[1],
-  padding: `0 ${theme.space[1]}`,
-})
-
-export const tabsTextSelected = styleVariants({
-  default: {},
-  selected: {
-    color: theme.colors.primary.text,
-  },
 })
 
 export const tabsBadgeContainer = style({
@@ -122,26 +110,42 @@ export const tabsButton = style({
   whiteSpace: 'nowrap',
 })
 
-globalStyle(
-  `${tabsButton}[aria-selected="false"]:hover ${tabsBadge}, ${tabsButton}[aria-selected="false"]:active ${tabsBadge}`,
-  {
-    backgroundColor: theme.colors.primary.background,
-    borderColor: theme.colors.primary.background,
-    color: theme.colors.primary.text,
+export const tabsBadge = style({
+  marginLeft: theme.space[1],
+  padding: `0 ${theme.space[1]}`,
+  selectors: {
+    [`${tabsButton}[aria-selected="false"]:hover &, ${tabsButton}[aria-selected="false"]:active &`]:
+      {
+        backgroundColor: theme.colors.primary.background,
+        borderColor: theme.colors.primary.background,
+        color: theme.colors.primary.text,
+      },
   },
-)
+})
 
-globalStyle(
-  `${tabsButton}:hover ${tabsTextSelected.default}, ${tabsButton}:focus ${tabsTextSelected.default}, ${tabsButton}:active ${tabsTextSelected.default}`,
-  {
+export const tabsTextSelected = styleVariants({
+  default: {
+    selectors: {
+      [`${tabsButton}:hover &, ${tabsButton}:focus &, ${tabsButton}:active &`]:
+        {
+          color: theme.colors.primary.text,
+        },
+    },
+  },
+  selected: {
     color: theme.colors.primary.text,
   },
-)
+})
 
 export const tabsArrowIcon = style({
   color: 'inherit',
   marginLeft: theme.space[1],
   transition: '300ms transform ease-out',
+  selectors: {
+    [`${tabsButton}[aria-expanded="true"] &`]: {
+      transform: 'rotate(-180deg)',
+    },
+  },
 })
 
 export const tabsMenuWrapper = style({
@@ -150,8 +154,4 @@ export const tabsMenuWrapper = style({
   position: 'sticky',
   right: 0,
   top: 0,
-})
-
-globalStyle(`${tabsButton}[aria-expanded="true"] ${tabsArrowIcon}`, {
-  transform: 'rotate(-180deg)',
 })

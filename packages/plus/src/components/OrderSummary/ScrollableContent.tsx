@@ -207,36 +207,104 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
             value={subCategory.numberInputValue}
           />
         ) : null}
-        {subCategory.price !== undefined && !subCategory.hidePrice ? (
+        {subCategory.price !== undefined &&
+        !subCategory.hidePrice &&
+        subCategoryPrice.default[0] === subCategoryPrice.discounted[1] ? (
           <Text
             as="span"
             prominence="strong"
             sentiment="neutral"
             variant="bodySmallStrong"
           >
-            {subCategoryPrice[0] === subCategoryPrice[1] ||
-            subCategory.priceUnit
+            {subCategoryPrice.discounted[0] ===
+              subCategoryPrice.discounted[1] || subCategory.priceUnit
               ? formatNumber(
                   subCategory.priceUnit
                     ? subCategory.price
-                    : subCategoryPrice[0],
+                    : subCategoryPrice.discounted[0],
                   localeFormat,
                   currency,
                   fractionDigits,
                 )
               : `${formatNumber(
-                  subCategoryPrice[0],
+                  subCategoryPrice.discounted[0],
                   localeFormat,
                   currency,
                   fractionDigits,
                 )} - ${formatNumber(
-                  subCategoryPrice[1],
+                  subCategoryPrice.discounted[1],
                   localeFormat,
                   currency,
                   fractionDigits,
                 )}`}
             {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
           </Text>
+        ) : null}
+        {subCategory.price !== undefined &&
+        !subCategory.hidePrice &&
+        subCategoryPrice.default[0] !== subCategoryPrice.discounted[1] ? (
+          <Stack alignItems="center" direction="row" gap={1}>
+            <Text
+              as="span"
+              prominence="weak"
+              sentiment="neutral"
+              strikeThrough
+              variant="bodySmallStrong"
+            >
+              {subCategoryPrice.default[0] === subCategoryPrice.default[1] ||
+              subCategory.priceUnit
+                ? formatNumber(
+                    subCategory.priceUnit
+                      ? subCategory.price
+                      : subCategoryPrice.default[0],
+                    localeFormat,
+                    currency,
+                    fractionDigits,
+                  )
+                : `${formatNumber(
+                    subCategoryPrice.default[0],
+                    localeFormat,
+                    currency,
+                    fractionDigits,
+                  )} - ${formatNumber(
+                    subCategoryPrice.default[1],
+                    localeFormat,
+                    currency,
+                    fractionDigits,
+                  )}`}
+              {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
+            </Text>
+
+            <Text
+              as="span"
+              prominence="strong"
+              sentiment="neutral"
+              variant="bodySmallStrong"
+            >
+              {subCategoryPrice.discounted[0] ===
+                subCategoryPrice.discounted[1] || subCategory.priceUnit
+                ? formatNumber(
+                    subCategory.priceUnit
+                      ? subCategory.price
+                      : subCategoryPrice.discounted[0],
+                    localeFormat,
+                    currency,
+                    fractionDigits,
+                  )
+                : `${formatNumber(
+                    subCategoryPrice.discounted[0],
+                    localeFormat,
+                    currency,
+                    fractionDigits,
+                  )} - ${formatNumber(
+                    subCategoryPrice.discounted[1],
+                    localeFormat,
+                    currency,
+                    fractionDigits,
+                  )}`}
+              {subCategory.priceUnit ? ` /${subCategory.priceUnit}` : ''}
+            </Text>
+          </Stack>
         ) : null}
       </Stack>
       <Stack className={orderSummaryDetails} direction="column" gap={0.5}>

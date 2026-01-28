@@ -1,6 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
-import { basicPrefix, basicSuffix, inputClass } from '../TextInput/styles.css'
+import { style } from '@vanilla-extract/css'
 
 export const searchInputPopup = style({
   background: theme.colors.other.elevation.background.raised,
@@ -12,13 +11,5 @@ export const searchInputPopup = style({
 })
 
 export const searchInput = style({})
-
-globalStyle(`${searchInput} ${basicPrefix}, ${searchInput} ${basicSuffix}`, {
-  border: 'none',
-})
-
-globalStyle(`${searchInput} ${inputClass}`, {
-  padding: 0,
-})
 
 export const clickableStack = style({ cursor: 'text' })

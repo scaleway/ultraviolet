@@ -1,5 +1,23 @@
 # Change Log
 
+## 5.0.6
+
+### Patch Changes
+
+- [#6033](https://github.com/scaleway/ultraviolet/pull/6033) [`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa) Thanks [@philibea](https://github.com/philibea)! - Fix require export based on .cjs files instead of .js
+
+- [#5990](https://github.com/scaleway/ultraviolet/pull/5990) [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.9`.
+
+- Updated dependencies [[`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa), [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a)]:
+  - @ultraviolet/themes@3.0.4
+  - @ultraviolet/utils@1.0.1
+
+## 5.0.5
+
+### Patch Changes
+
+- [#6008](https://github.com/scaleway/ultraviolet/pull/6008) [`ce69316`](https://github.com/scaleway/ultraviolet/commit/ce693160ffa3d471fd58235304b6826f33bf6640) Thanks [@lisalupi](https://github.com/lisalupi)! - New icons `ShieldCheckIcon`, `ShieldCheckOutlineIcon`, `ShieldIcon` and `ShieldOutlineIcon`
+
 ## 5.0.4
 
 ### Patch Changes
