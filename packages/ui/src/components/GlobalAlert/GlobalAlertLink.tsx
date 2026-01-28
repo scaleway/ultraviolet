@@ -4,6 +4,12 @@ import { useTheme } from '@ultraviolet/themes'
 import type { ComponentProps } from 'react'
 import { Link } from '../Link'
 
+type GlobalAlertLinkProps = Omit<
+  ComponentProps<typeof Link>,
+  'sentiment' | 'prominence' | 'size' | 'render'
+> &
+  NonNullable<Pick<ComponentProps<typeof Link>, 'href'>>
+
 export const GlobalAlertLink = ({
   children,
   href,
@@ -16,10 +22,7 @@ export const GlobalAlertLink = ({
   oneLine = false,
   'data-testid': dataTestId,
   style,
-}: Omit<
-  ComponentProps<typeof Link>,
-  'sentiment' | 'prominence' | 'size' | 'render'
-> & { href: string }) => {
+}: GlobalAlertLinkProps) => {
   const { theme } = useTheme()
 
   return (

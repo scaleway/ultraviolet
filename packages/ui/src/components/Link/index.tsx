@@ -50,26 +50,29 @@ type LinkProps = {
   'data-testid'?: string
   variant?: 'inline' | 'standalone'
   style?: CSSProperties
-} & XOR<[{
-   href?: string
-}, {
-  /**
- * Custom element or render function to use instead of the default anchor.
- *
- * Element form (props auto-merged):
- * ```tsx
- * <Link render={<NextLink href="/about" />}>About</Link>
- * ```
- *
- * Function form (you control prop merging):
- * ```tsx
- * <Link render={(props) => <NextLink {...props} href="/about" />}>About</Link>
- * ```
- */
-render: RenderProp<AnchorHTMLAttributes<HTMLAnchorElement>>
-}]>
-
-
+} & XOR<
+  [
+    {
+      href?: string
+    },
+    {
+      /**
+       * Custom element or render function to use instead of the default anchor.
+       *
+       * Element form (props auto-merged):
+       * ```tsx
+       * <Link render={<NextLink href="/about" />}>About</Link>
+       * ```
+       *
+       * Function form (you control prop merging):
+       * ```tsx
+       * <Link render={(props) => <NextLink {...props} href="/about" />}>About</Link>
+       * ```
+       */
+      render: RenderProp<AnchorHTMLAttributes<HTMLAnchorElement>>
+    },
+  ]
+>
 
 const ICON_SIZE = 'small'
 const BLANK_TARGET_ICON_SIZE = 'small'

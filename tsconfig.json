@@ -11,7 +11,7 @@
     "types": ["vite/client", "@testing-library/jest-dom"]
   },
   "exclude": ["node_modules", "coverage", "dist"],
-  "extends": "@scaleway/tsconfig",
+  "extends": ["@scaleway/tsconfig"],
   "include": [
     "**/*.ts",
     "**/*.tsx",

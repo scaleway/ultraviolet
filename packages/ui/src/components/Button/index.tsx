@@ -53,27 +53,31 @@ type CommonProps = {
 type BaseButtonProps = CommonProps & {
   children: ReactNode
   name?: string
-} & XOR<[{
-  href: string
-  target?: string,
-  download?: string
-}, {
-  /**
-   * Custom element or render function to use instead of the default button.
-   *
-   * Element form (props auto-merged):
-   * ```tsx
-   * <Button render={<NextLink href="/about" />}>About</Button>
-   * ```
-   *
-   * Function form (you control prop merging):
-   * ```tsx
-   * <Button render={(props) => <NextLink {...props} href="/about" />}>About</Button>
-   * ```
-   */
-   render: RenderProp
-}]>
-
+} & XOR<
+    [
+      {
+        href?: string
+        target?: string
+        download?: string
+      },
+      {
+        /**
+         * Custom element or render function to use instead of the default button.
+         *
+         * Element form (props auto-merged):
+         * ```tsx
+         * <Button render={<NextLink href="/about" />}>About</Button>
+         * ```
+         *
+         * Function form (you control prop merging):
+         * ```tsx
+         * <Button render={(props) => <NextLink {...props} href="/about" />}>About</Button>
+         * ```
+         */
+        render: RenderProp
+      },
+    ]
+  >
 
 /**
  * Button component is used to trigger an action or event, such as submitting a form, opening a dialog,
