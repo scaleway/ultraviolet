@@ -6,15 +6,13 @@ import { TEXTINPUT_SIZE_HEIGHT } from './constants'
 export const hasFocusVar = createVar()
 
 export const basicPrefix = style({
-  borderRight: '1px solid',
-  borderRightColor: 'inherit',
-  height: '100%',
   padding: theme.space['2'],
+  borderRight: '1px solid',
+  borderColor: 'inherit',
+  height: '100%',
 
   selectors: {
-    '&[data-size="small"]': {
-      padding: theme.space['1'],
-    },
+    '&[data-size="small"]': { padding: theme.space['1'] },
     [`${searchInput} &`]: {
       border: 'none',
     },
@@ -26,10 +24,10 @@ export const stateStack = style({
 })
 
 export const basicSuffix = style({
-  borderColor: 'inherit',
-  borderLeft: '1px solid',
-  height: '100%',
   padding: `0 ${theme.space['2']}`,
+  borderLeft: '1px solid',
+  borderColor: 'inherit',
+  height: '100%',
   selectors: {
     [`${searchInput} &`]: {
       border: 'none',
@@ -38,11 +36,10 @@ export const basicSuffix = style({
 })
 
 export const ctaSuffix = style({
-  borderLeftColor: 'inherit',
-  borderLeftWidth: 1,
-  borderLeftStyle: 'solid',
-  height: '100%',
   padding: `0 ${theme.space['1']}`,
+  borderLeft: '1px solid',
+  borderColor: 'inherit',
+  height: '100%',
 })
 
 export const inputWrapperSizes = styleVariants(
@@ -95,27 +92,28 @@ export const inputWrapper = style({
 })
 
 export const inputClass = style({
-  background: 'transparent',
-  border: 'none',
   flex: 1,
-  fontSize: theme.typography.bodySmall.fontSize,
-  height: '100%',
+  border: 'none',
   outline: 'none',
+  height: '100%',
+  width: '100%',
   paddingLeft: theme.space['2'],
+  background: 'transparent',
+  fontSize: theme.typography.bodySmall.fontSize,
 
   selectors: {
+    '&[data-size="large"]': {
+      fontSize: theme.typography.body.fontSize,
+    },
+    '&[data-size="small"]': {
+      paddingLeft: theme.space['1'],
+    },
     '&:disabled': {
       cursor: 'not-allowed',
       userSelect: 'none',
     },
     '&:focus': {
       outline: 'none',
-    },
-    '&[data-size="large"]': {
-      fontSize: theme.typography.body.fontSize,
-    },
-    '&[data-size="small"]': {
-      paddingLeft: theme.space['1'],
     },
     [`${searchInput} &`]: {
       padding: 0,
@@ -133,5 +131,4 @@ export const inputClass = style({
       color: theme.colors.neutral.textWeakDisabled,
     },
   },
-  width: '100%',
 })
