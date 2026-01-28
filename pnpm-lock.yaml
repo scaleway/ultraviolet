@@ -66,8 +66,8 @@ importers:
         specifier: 5.2.13
         version: 5.2.13(eslint@9.39.2(jiti@2.4.2))(typescript@5.9.3)
       '@scaleway/oxlint-config':
-        specifier: 0.1.5
-        version: 0.1.5(oxlint@1.41.0)
+        specifier: 0.1.6
+        version: 0.1.6(oxlint@1.41.0)
       '@scaleway/tsconfig':
         specifier: 1.1.3
         version: 1.1.3
@@ -3262,10 +3262,10 @@ packages:
     resolution: {integrity: sha512-/90OjAeF0xryT4FjT1TYEJu1cISDbBmd14V3dot2Sk0XIMEWy6ZnpVYR87+JSMsogrMzGiRXKdt1S+iwIOv9hw==}
     engines: {node: '>=20.x'}
 
-  '@scaleway/oxlint-config@0.1.5':
-    resolution: {integrity: sha512-+PBhz2GWxBQHtd0oCyBu6I8aQo0DDGW3ERhfTmfB78Igce7uq+p5LmwSO17My07aTD8QfSSgg7J9X5Vmdg0QJQ==}
+  '@scaleway/oxlint-config@0.1.6':
+    resolution: {integrity: sha512-Qp3NEe2JWvtWn+cSARHInIPxGR/BUlAimxKdQXrpJ4TluRmB7b/hJ1AzT36AApiPcc9IC7b3HEHTjWD/s4VMvw==}
     peerDependencies:
-      oxlint: 1.39.0
+      oxlint: 1.41.0
 
   '@scaleway/random-name@5.1.3':
     resolution: {integrity: sha512-LVzkcJ67CSU3T8NQMcIz89JIMh2Oo05E0mqNHPQtHYt5joHAbgEBPITZIq+6rO8Shzrzvw8WsRZKpEGYIKp+cA==}
@@ -11386,7 +11386,7 @@ snapshots:
 
   '@scaleway/fuzzy-search@1.0.1': {}
 
-  '@scaleway/oxlint-config@0.1.5(oxlint@1.41.0)':
+  '@scaleway/oxlint-config@0.1.6(oxlint@1.41.0)':
     dependencies:
       oxlint: 1.41.0
 
