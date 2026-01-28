@@ -53,6 +53,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       className={cn(className, icon({ disabled, prominence, sentiment, size }))}
       cursor={cursor}
       data-testid={dataTestId}
+      height="20"
       ref={ref}
       stroke={stroke}
       strokeWidth={strokeWidth}
@@ -62,6 +63,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
           ? '0 0 16 16'
           : '0 0 20 20'
       }
+      width="20"
     >
       {children}
     </svg>

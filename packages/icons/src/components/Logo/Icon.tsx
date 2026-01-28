@@ -21,7 +21,13 @@ export const Icon = ({
   children,
   style,
 }: IconProps) => (
-  <svg className={cn(className, logo[size])} style={style} viewBox="0 0 20 20">
+  <svg
+    className={cn(className, logo[size])}
+    height="20"
+    style={style}
+    viewBox="0 0 20 20"
+    width="20"
+  >
     {children}
   </svg>
 )
