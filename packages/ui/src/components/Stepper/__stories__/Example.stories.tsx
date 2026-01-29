@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { AutoFixIcon } from '@ultraviolet/icons'
+import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'

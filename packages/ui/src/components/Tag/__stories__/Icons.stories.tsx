@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { CheckIcon } from '@ultraviolet/icons'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { Tag } from '..'
 
 export const Icons: StoryFn<typeof Tag> = args => (

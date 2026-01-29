@@ -1,9 +1,7 @@
-import {
-  AlertCircleIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  ClockOutlineIcon,
-} from '@ultraviolet/icons'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+import { ClockOutlineIcon } from '@ultraviolet/icons/ClockOutlineIcon'
 import {
   Alert,
   Avatar,

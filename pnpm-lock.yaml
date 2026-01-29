@@ -470,9 +470,6 @@ importers:
 
   examples/vite:
     dependencies:
-      '@ultraviolet/icons':
-        specifier: workspace:*
-        version: link:../../packages/icons
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../../packages/themes

@@ -24,12 +24,15 @@ export default mergeConfig(defineConfig(defaultConfig), {
           'src/components/ProductIcon/index.ts',
         ),
         index: resolve(__dirname, 'src/index.ts'),
+        iconStyles: resolve(__dirname, 'src/iconStyles.ts'),
       },
     },
   },
   plugins: [
     vanillaExtractPlugin({
-      identifiers: ({ hash }) => `uv_${hash}`,
+      identifiers: ({ hash }) => `uv_icons_${hash}`,
+      unstable_mode: 'emitCss',
+      // unstable_mode: 'transform' will generate a style scoped to the component
     }),
   ],
 })

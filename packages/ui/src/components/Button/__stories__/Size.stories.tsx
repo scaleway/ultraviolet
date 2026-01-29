@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { PencilIcon } from '@ultraviolet/icons'
+import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { Stack } from '../..'
 import { Button } from '..'
 import { SIZE_KEY } from '../constants'

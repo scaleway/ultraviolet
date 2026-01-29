@@ -1,12 +1,10 @@
 // oxlint-disable import/no-namespace
 // biome-ignore-all lint/correctness/useImageSize: should be fix
 
-import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  MinusIcon,
-  PlusIcon,
-} from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
+import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 
 import * as productsIllustrations from '@ultraviolet/illustrations/products'
 import * as variousIllustrations from '@ultraviolet/illustrations/various'

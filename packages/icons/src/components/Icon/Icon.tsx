@@ -47,26 +47,36 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       title,
     },
     ref,
-  ) => (
-    <svg
-      aria-label={ariaLabel}
-      className={cn(className, icon({ disabled, prominence, sentiment, size }))}
-      cursor={cursor}
-      data-testid={dataTestId}
-      height="20"
-      ref={ref}
-      stroke={stroke}
-      strokeWidth={strokeWidth}
-      style={style}
-      viewBox={
-        typeof size === 'string' && ['xsmall', 'small'].includes(size)
-          ? '0 0 16 16'
-          : '0 0 20 20'
-      }
-      width="20"
-    >
-      <title>{title}</title>
-      {children}
-    </svg>
-  ),
+  ) => {
+    const defaultHW =
+      typeof size === 'string' && ['xsmall', 'small'].includes(size)
+        ? '16'
+        : '20'
+
+    return (
+      <svg
+        aria-label={ariaLabel}
+        className={cn(
+          className,
+          icon({ disabled, prominence, sentiment, size }),
+        )}
+        cursor={cursor}
+        data-testid={dataTestId}
+        height={defaultHW}
+        ref={ref}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        style={style}
+        viewBox={
+          typeof size === 'string' && ['xsmall', 'small'].includes(size)
+            ? '0 0 16 16'
+            : '0 0 20 20'
+        }
+        width={defaultHW}
+      >
+        <title>{title}</title>
+        {children}
+      </svg>
+    )
+  },
 )

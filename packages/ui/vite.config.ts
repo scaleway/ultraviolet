@@ -13,6 +13,11 @@ export default mergeConfig(defineConfig(defaultConfig), {
         ),
         index: 'src/index.ts',
       },
+      rollupOptions: {
+        output: {
+          assetFileNames: 'ui.css',
+        },
+      },
     },
   },
   plugins: [

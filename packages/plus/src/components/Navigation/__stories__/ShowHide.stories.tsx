@@ -1,20 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
-import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  InformationIcon,
-  SettingsIcon,
-} from '@ultraviolet/icons'
-import {
-  BaremetalCategoryIcon,
-  DataAndAnalyticsCategoryIcon,
-  DatabaseCategoryIcon,
-  MonitoringCategoryIcon,
-  NetworkCategoryIcon,
-  OrganizationDashboardCategoryIcon,
-  SecurityCategoryIcon,
-  UseCaseCategoryIcon,
-} from '@ultraviolet/icons/category'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
+import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
+import { SettingsIcon } from '@ultraviolet/icons/SettingsIcon'
+import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
+import { DataAndAnalyticsCategoryIcon } from '@ultraviolet/icons/category/DataAndAnalyticsCategoryIcon'
+import { DatabaseCategoryIcon } from '@ultraviolet/icons/category/DatabaseCategoryIcon'
+import { MonitoringCategoryIcon } from '@ultraviolet/icons/category/MonitoringCategoryIcon'
+import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategoryIcon'
+import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
+import { SecurityCategoryIcon } from '@ultraviolet/icons/category/SecurityCategoryIcon'
+import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategoryIcon'
 import { Badge, Button, Stack, Tooltip } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'

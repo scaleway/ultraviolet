@@ -1,13 +1,11 @@
 'use client'
 
-import {
-  AlertCircleIcon,
-  AutoFixIcon,
-  CheckCircleIcon,
-  CloseIcon,
-  EyeIcon,
-  EyeOffIcon,
-} from '@ultraviolet/icons'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { AutoFixIcon } from '@ultraviolet/icons/AutoFixIcon'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
+import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import { cn } from '@ultraviolet/utils'
 import type {
   ChangeEvent,

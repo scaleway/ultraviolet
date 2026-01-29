@@ -1,4 +1,4 @@
-import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Tooltip } from '../../Tooltip'
 import { Template } from './Template.stories'
 

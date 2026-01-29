@@ -1,4 +1,3 @@
-import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import {
   Alert,
@@ -11,6 +10,7 @@ import {
 } from '@ultraviolet/ui'
 import { useState } from 'react'
 import '@ultraviolet/ui/styles' // Import styles for the UI components
+// import '@ultraviolet/icons/styles' // Import styles for the UI components
 import '@ultraviolet/themes/global'
 
 export const App = () => {
@@ -26,8 +26,9 @@ export const App = () => {
           </Text>
           <Stack direction="row" gap="2">
             <Button onClick={() => setCount(prevCount => prevCount + 1)}>
-              <PlusIcon />
+              +
             </Button>
+            <Alert>Alert General</Alert>
             <Button onClick={() => setCount(0)}>Reset</Button>
             <Button onClick={() => setDarkMode(!darkMode)} sentiment="danger">
               Switch Theme
