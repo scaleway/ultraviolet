@@ -12,13 +12,13 @@ export const WithTooltip: StoryFn = props => (
         This-is-a-really-long-file-name-that-will-be-truncated.svg
       </Text>
 
-      <Stack alignItems="end" justifyContent="center">
+      <Stack alignItems="flex-end" justifyContent="center">
         <Text as="span" variant="body">
           130.5 MB
         </Text>
       </Stack>
 
-      <Stack alignItems="end" justifyContent="center">
+      <Stack alignItems="flex-end" justifyContent="center">
         <Text as="span" variant="body">
           Uploaded
         </Text>

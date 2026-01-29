@@ -115,7 +115,7 @@ export const indentedCard = style({
 })
 
 export const selectableElementSelectableCard = style({
-  alignItems: 'start',
+  alignItems: 'flex-start',
   display: 'inline-flex',
   selectors: {
     '&[data-checked="true"]': {

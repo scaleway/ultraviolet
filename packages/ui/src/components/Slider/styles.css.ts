@@ -145,7 +145,7 @@ export const sliderDoubleText = recipe({
   variants: {
     isDouble: {
       false: {
-        alignSelf: 'end',
+        alignSelf: 'flex-end',
       },
       true: {
         alignSelf: 'center',

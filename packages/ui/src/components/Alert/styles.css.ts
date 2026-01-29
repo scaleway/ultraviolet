@@ -62,7 +62,7 @@ export const buttonAlert = styleVariants({
 })
 
 export const buttonCloseAlert = style({
-  alignSelf: 'start',
+  alignSelf: 'flex-start',
 })
 
 export type AlertVariants = NonNullable<RecipeVariants<typeof alert>>

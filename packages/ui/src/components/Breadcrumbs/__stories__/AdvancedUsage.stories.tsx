@@ -62,7 +62,7 @@ export const AdvancedUsage: StoryFn<
             <Stack
               alignItems="center"
               direction="row"
-              justifyContent="end"
+              justifyContent="flex-end"
               width="100%"
             >
               <Button sentiment="info" size="xsmall" variant="ghost">

@@ -4,7 +4,7 @@ import { createVar, globalStyle, style } from '@vanilla-extract/css'
 export const rowWidth = createVar()
 
 export const dl = style({
-  alignItems: 'start',
+  alignItems: 'flex-start',
   display: 'flex',
   flexDirection: 'column',
   fontSize: theme.typography.body.fontSize,

@@ -15,7 +15,7 @@ export const Placement: StoryFn<typeof Menu> = ({
   ...props
 }) => (
   <>
-    <Stack alignItems="end" justifyContent="left" width="100%">
+    <Stack alignItems="flex-end" justifyContent="left" width="100%">
       <>
         Placement = &quot;auto-right&quot;: not enough room on the right, so
         second priority (left)

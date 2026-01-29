@@ -34,7 +34,7 @@ export const Carousel: StoryFn = props => {
             {TEXT_STEP[step]}
           </Text>
           <Stack
-            alignItems="end"
+            alignItems="flex-end"
             direction="row"
             justifyContent="space-between"
           >
