@@ -1,5 +1,14 @@
 # Change Log
 
+## 5.0.7
+
+### Patch Changes
+
+- [#6047](https://github.com/scaleway/ultraviolet/pull/6047) [`9999889`](https://github.com/scaleway/ultraviolet/commit/9999889888c8cec1fa304ff3b903523232401957) Thanks [@philibea](https://github.com/philibea)! - Added explicit width and height attributes to SVG elements in Icon components across the codebase. This ensures consistent sizing and improves rendering behavior by providing explicit dimensions for the SVG elements in Flags, Icon, Logo, and ProductIcon components.
+
+- Updated dependencies [[`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e)]:
+  - @ultraviolet/themes@3.0.5
+
 ## 5.0.6
 
 ### Patch Changes

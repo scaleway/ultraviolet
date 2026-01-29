@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.5
+
+### Patch Changes
+
+- [#6048](https://github.com/scaleway/ultraviolet/pull/6048) [`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e) Thanks [@philibea](https://github.com/philibea)! - Add a genereObjectStyle based on the theme
+
 ## 3.0.4
 
 ### Patch Changes
