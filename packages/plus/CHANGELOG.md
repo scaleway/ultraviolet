@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 3.4.1
+
+### Patch Changes
+
+- [#6036](https://github.com/scaleway/ultraviolet/pull/6036) [`8181dd2`](https://github.com/scaleway/ultraviolet/commit/8181dd2a540251c47a2019c7a3527c63ab10b49b) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: prop `amountFree` should be seen as a discount
+
+- Updated dependencies [[`31ddb5d`](https://github.com/scaleway/ultraviolet/commit/31ddb5d664b7a5a6193f1f290b85fdfd714aec95), [`405191b`](https://github.com/scaleway/ultraviolet/commit/405191b6d45bca78b5f519d8f3a0b834673d3f7b), [`4e17bc7`](https://github.com/scaleway/ultraviolet/commit/4e17bc7c713ce7e751f28f4b71e2413d055808e8), [`9999889`](https://github.com/scaleway/ultraviolet/commit/9999889888c8cec1fa304ff3b903523232401957), [`f35febd`](https://github.com/scaleway/ultraviolet/commit/f35febdb8fdd6960b365fc6b8e42462069e77048), [`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e)]:
+  - @ultraviolet/ui@3.7.1
+  - @ultraviolet/icons@5.0.7
+  - @ultraviolet/themes@3.0.5
+
 ## 3.4.0
 
 ### Minor Changes

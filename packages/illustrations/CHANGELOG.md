@@ -1,5 +1,12 @@
 # @ultraviolet/illustrations
 
+## 6.0.6
+
+### Patch Changes
+
+- Updated dependencies [[`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e)]:
+  - @ultraviolet/themes@3.0.5
+
 ## 6.0.5
 
 ### Patch Changes

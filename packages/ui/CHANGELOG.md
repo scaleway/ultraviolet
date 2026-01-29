@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.7.1
+
+### Patch Changes
+
+- [#6037](https://github.com/scaleway/ultraviolet/pull/6037) [`31ddb5d`](https://github.com/scaleway/ultraviolet/commit/31ddb5d664b7a5a6193f1f290b85fdfd714aec95) Thanks [@lisalupi](https://github.com/lisalupi)! - `Link`: no prominence on visited links
+
+- [#5849](https://github.com/scaleway/ultraviolet/pull/5849) [`405191b`](https://github.com/scaleway/ultraviolet/commit/405191b6d45bca78b5f519d8f3a0b834673d3f7b) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - add per page dropdown target portal
+
+- [#6038](https://github.com/scaleway/ultraviolet/pull/6038) [`4e17bc7`](https://github.com/scaleway/ultraviolet/commit/4e17bc7c713ce7e751f28f4b71e2413d055808e8) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Make splash description handle complex React node
+
+- [#6032](https://github.com/scaleway/ultraviolet/pull/6032) [`f35febd`](https://github.com/scaleway/ultraviolet/commit/f35febdb8fdd6960b365fc6b8e42462069e77048) Thanks [@philibea](https://github.com/philibea)! - Fix Text component variant style, apply default color of the sentiment instead of of nothing
+
+- Updated dependencies [[`9999889`](https://github.com/scaleway/ultraviolet/commit/9999889888c8cec1fa304ff3b903523232401957), [`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e)]:
+  - @ultraviolet/icons@5.0.7
+  - @ultraviolet/themes@3.0.5
+
 ## 3.7.0
 
 ### Minor Changes
