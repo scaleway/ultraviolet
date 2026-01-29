@@ -129,7 +129,7 @@ export const menuItem = recipe({
     display: 'flex',
     fontSize: theme.typography.bodySmall.fontSize,
     fontWeight: 'inherit',
-    justifyContent: 'start',
+    justifyContent: 'flex-start',
     lineHeight: theme.typography.bodySmall.lineHeight,
     maxHeight: theme.sizing[500],
     minHeight: theme.sizing[400],

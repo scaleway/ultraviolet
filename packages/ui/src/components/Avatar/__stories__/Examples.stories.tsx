@@ -16,7 +16,7 @@ export const Examples: StoryFn<typeof Avatar> = props => {
         </Avatar>
         Locked Profile
       </Stack>
-      <Stack alignItems="start" direction="row" gap={1}>
+      <Stack alignItems="flex-start" direction="row" gap={1}>
         {image ? (
           <Avatar
             image={image}
@@ -44,7 +44,7 @@ export const Examples: StoryFn<typeof Avatar> = props => {
           style={{ display: 'none' }}
           type="file"
         />
-        <Stack alignItems="start" direction="column">
+        <Stack alignItems="flex-start" direction="column">
           <p>
             <b>My Profile</b>
           </p>

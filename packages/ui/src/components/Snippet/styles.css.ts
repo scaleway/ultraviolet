@@ -92,7 +92,7 @@ const snippetContainerBase = style({
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: theme.radii.default,
   display: 'flex',
-  justifyContent: 'start',
+  justifyContent: 'flex-start',
   maxWidth: '100%',
   position: 'relative',
 })

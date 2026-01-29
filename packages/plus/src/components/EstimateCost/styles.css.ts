@@ -102,7 +102,7 @@ export const estimateCostTitle = style({
 export const estimateCostEmptyCell = style({ width: MAX_CELL_WIDTH })
 
 export const estimateCostTimeCell = style({
-  alignItems: 'start',
+  alignItems: 'flex-start',
   float: 'right',
   maxWidth: 200,
   padding: theme.space[2],

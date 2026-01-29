@@ -266,7 +266,7 @@ export const listLoadingRow = style({
 })
 
 export const listSkeleton = style({
-  alignItems: 'start',
+  alignItems: 'flex-start',
   justifyContent: 'center',
   maxWidth: '100%',
   width: '80%',
