@@ -1,12 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type {
-  ChangeEventHandler,
-  InputHTMLAttributes,
-  ReactNode,
-  Ref,
-} from 'react'
+import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
 import { forwardRef, useId } from 'react'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -15,22 +10,31 @@ import { Tooltip } from '../Tooltip'
 import { checkbox, label as labelReceipe, toggle } from './styles.css'
 
 type ToggleProps = {
-  id?: string
   checked?: boolean
-  name?: string
   tooltip?: string
-  onChange?: ChangeEventHandler<HTMLInputElement>
   size?: 'large' | 'small'
   labelPosition?: 'left' | 'right'
   label?: ReactNode
   'aria-label'?: string
   helper?: ReactNode
-  disabled?: boolean
   className?: string
-  required?: boolean
   error?: boolean | string
   'data-testid'?: string
-} & Pick<InputHTMLAttributes<HTMLInputElement>, 'value' | 'style'>
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  | 'id'
+  | 'disabled'
+  | 'name'
+  | 'tabIndex'
+  | 'required'
+  | 'onChange'
+  | 'onKeyDown'
+  | 'onFocus'
+  | 'onBlur'
+  | 'value'
+  | 'checked'
+  | 'style'
+>
 
 export const Toggle = forwardRef(
   (
@@ -40,11 +44,15 @@ export const Toggle = forwardRef(
       id,
       name,
       onChange,
+      onFocus,
+      onBlur,
+      onKeyDown,
       size = 'large',
       tooltip,
       labelPosition = 'right',
       label,
       helper,
+      tabIndex,
       required,
       className,
       'data-testid': dataTestId,
@@ -56,6 +64,7 @@ export const Toggle = forwardRef(
     ref: Ref<HTMLInputElement>,
   ) => {
     const uniqueId = useId()
+    const localId = id ?? uniqueId
 
     return (
       <Tooltip text={tooltip}>
@@ -69,6 +78,7 @@ export const Toggle = forwardRef(
             }),
           )}
           data-testid={dataTestId}
+          htmlFor={localId}
         >
           <Stack alignItems="baseline" gap={0.25}>
             {label ? (
@@ -76,6 +86,7 @@ export const Toggle = forwardRef(
                 {typeof label === 'string' ? (
                   <Text
                     as="span"
+                    htmlFor={localId}
                     prominence="default"
                     sentiment="neutral"
                     variant={size === 'large' ? 'body' : 'bodySmall'}
@@ -122,17 +133,22 @@ export const Toggle = forwardRef(
             })}
           >
             <input
+              aria-disabled={disabled}
               aria-invalid={!!error}
               aria-label={ariaLabel}
               checked={checked}
               className={checkbox}
               disabled={disabled}
-              id={id ?? uniqueId}
+              id={localId}
               name={name}
+              onBlur={onBlur}
               onChange={onChange}
+              onFocus={onFocus}
+              onKeyDown={onKeyDown}
               ref={ref}
               required={required}
               style={style}
+              tabIndex={tabIndex}
               type="checkbox"
               value={value}
             />

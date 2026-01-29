@@ -5,10 +5,10 @@ test.describe('SelectableCard type checkbox', () => {
     await page.goto(`${baseURL}/selectableCardComplexChildren`)
 
     const option1Checkbox = page.getByRole('checkbox', {
-      name: 'Optional option 1',
+      name: 'Optional checkbox 1',
     })
     const option2Checkbox = page.getByRole('checkbox', {
-      name: 'Optional option 2',
+      name: 'Optional checkbox 2',
     })
     const option1Selection = page.getByRole('combobox', {
       name: 'Select a sub option checkbox',
@@ -37,10 +37,10 @@ test.describe('SelectableCard type checkbox', () => {
     await page.goto(`${baseURL}/selectableCardComplexChildren`)
 
     const option1Checkbox = page.getByRole('checkbox', {
-      name: 'Optional option 1',
+      name: 'Optional checkbox 1',
     })
     const option2Checkbox = page.getByRole('checkbox', {
-      name: 'Optional option 2',
+      name: 'Optional checkbox 2',
     })
 
     // We check the 2nd selectable card when the children is simple
@@ -66,10 +66,10 @@ test.describe('SelectableCard type checkbox', () => {
     await page.goto(`${baseURL}/selectableCardComplexChildren`)
 
     const option1Checkbox = page.getByRole('checkbox', {
-      name: 'Optional option 1',
+      name: 'Optional checkbox 1',
     })
     const option3Checkbox = page.getByRole('checkbox', {
-      name: 'Optional option 3',
+      name: 'Optional checkbox 3',
     })
 
     // We check the 2nd selectable card when the children is simple
@@ -83,7 +83,7 @@ test.describe('SelectableCard type checkbox', () => {
     await expect(option1Checkbox).not.toBeChecked()
 
     // We click and type in the input of the children to verify it will not check the checkbox
-    const input = page.getByLabel('TextArea')
+    const input = page.getByLabel('TextArea Checkbox')
 
     await input.click()
     await page.keyboard.press(' ')
@@ -97,10 +97,10 @@ test.describe('SelectableCard type radio', () => {
     await page.goto(`${baseURL}/selectableCardComplexChildren`)
 
     const option1Radio = page.getByRole('radio', {
-      name: 'Optional option 1',
+      name: 'Optional radio 1',
     })
     const option2Radio = page.getByRole('radio', {
-      name: 'Optional option 2',
+      name: 'Optional radio 2',
     })
     const option1Selection = page.getByRole('combobox', {
       name: 'Select a sub option radio',
@@ -120,8 +120,8 @@ test.describe('SelectableCard type radio', () => {
     await option1Selection.click()
     await expect(option1Radio).toBeChecked()
     await expect(option2Radio).not.toBeChecked()
-    await page.getByTestId('option-option1').click()
-    await expect(option1Selection).toHaveText('Sub option 1ArrowDownIcon')
+    await page.getByTestId('option-radio1').click()
+    await expect(option1Selection).toHaveText('Sub radio 1ArrowDownIcon')
     await expect(option1Radio).toBeChecked()
     await expect(option2Radio).not.toBeChecked()
 
@@ -129,17 +129,17 @@ test.describe('SelectableCard type radio', () => {
     await option2Radio.click()
     await expect(option1Radio).not.toBeChecked()
     await expect(option2Radio).toBeChecked()
-    await expect(option1Selection).toHaveText('Sub option 1ArrowDownIcon')
+    await expect(option1Selection).toHaveText('Sub radio 1ArrowDownIcon')
   })
 
   test('with text children', async ({ page, baseURL }) => {
     await page.goto(`${baseURL}/selectableCardComplexChildren`)
 
     const option1Checkbox = page.getByRole('radio', {
-      name: 'Optional option 1',
+      name: 'Optional radio 1',
     })
     const option2Checkbox = page.getByRole('radio', {
-      name: 'Optional option 2',
+      name: 'Optional radio 2',
     })
 
     // We check the 2nd selectable card when the children is simple

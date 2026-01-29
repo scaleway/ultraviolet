@@ -26,7 +26,7 @@ export default {
       return (
         <Form errors={mockErrors} methods={methods} onSubmit={() => {}}>
           <Stack gap={2}>
-            <ChildStory />
+            <ChildStory control={methods.control} />
             <Stack gap={1}>
               <Text as="p" variant="bodyStrong">
                 Form input values:
@@ -75,5 +75,8 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
+export { Template } from './Template.stories'
 export { Checkbox } from './Checkbox.stories'
+export { Radio } from './Radio.stories'
+export { Toggle } from './Toggle.stories'
 export { Required } from './Required.stories'
