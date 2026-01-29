@@ -373,8 +373,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       next:
-        specifier: 16.1.4
-        version: 16.1.4(@babel/core@7.28.6)(@playwright/test@1.58.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)
+        specifier: 16.1.5
+        version: 16.1.5(@babel/core@7.28.6)(@playwright/test@1.58.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -641,8 +641,8 @@ importers:
         specifier: workspace:*
         version: link:../../utils/config
       next:
-        specifier: 16.1.4
-        version: 16.1.4(@babel/core@7.28.6)(@playwright/test@1.58.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)
+        specifier: 16.1.5
+        version: 16.1.5(@babel/core@7.28.6)(@playwright/test@1.58.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -2755,31 +2755,16 @@ packages:
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
 
-  '@next/env@16.1.4':
-    resolution: {integrity: sha512-gkrXnZyxPUy0Gg6SrPQPccbNVLSP3vmW8LU5dwEttEEC1RwDivk8w4O+sZIjFvPrSICXyhQDCG+y3VmjlJf+9A==}
-
   '@next/env@16.1.5':
     resolution: {integrity: sha512-CRSCPJiSZoi4Pn69RYBDI9R7YK2g59vLexPQFXY0eyw+ILevIenCywzg+DqmlBik9zszEnw2HLFOUlLAcJbL7g==}
 
   '@next/eslint-plugin-next@16.1.4':
     resolution: {integrity: sha512-38WMjGP8y+1MN4bcZFs+GTcBe0iem5GGTzFE5GWW/dWdRKde7LOXH3lQT2QuoquVWyfl2S0fQRchGmeacGZ4Wg==}
 
-  '@next/swc-darwin-arm64@16.1.4':
-    resolution: {integrity: sha512-T8atLKuvk13XQUdVLCv1ZzMPgLPW0+DWWbHSQXs0/3TjPrKNxTmUIhOEaoEyl3Z82k8h/gEtqyuoZGv6+Ugawg==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [darwin]
-
   '@next/swc-darwin-arm64@16.1.5':
     resolution: {integrity: sha512-eK7Wdm3Hjy/SCL7TevlH0C9chrpeOYWx2iR7guJDaz4zEQKWcS1IMVfMb9UKBFMg1XgzcPTYPIp1Vcpukkjg6Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
-    os: [darwin]
-
-  '@next/swc-darwin-x64@16.1.4':
-    resolution: {integrity: sha512-AKC/qVjUGUQDSPI6gESTx0xOnOPQ5gttogNS3o6bA83yiaSZJek0Am5yXy82F1KcZCx3DdOwdGPZpQCluonuxg==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
     os: [darwin]
 
   '@next/swc-darwin-x64@16.1.5':
@@ -2788,20 +2773,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@16.1.4':
-    resolution: {integrity: sha512-POQ65+pnYOkZNdngWfMEt7r53bzWiKkVNbjpmCt1Zb3V6lxJNXSsjwRuTQ8P/kguxDC8LRkqaL3vvsFrce4dMQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-
   '@next/swc-linux-arm64-gnu@16.1.5':
     resolution: {integrity: sha512-qNIb42o3C02ccIeSeKjacF3HXotGsxh/FMk/rSRmCzOVMtoWH88odn2uZqF8RLsSUWHcAqTgYmPD3pZ03L9ZAA==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@next/swc-linux-arm64-musl@16.1.4':
-    resolution: {integrity: sha512-3Wm0zGYVCs6qDFAiSSDL+Z+r46EdtCv/2l+UlIdMbAq9hPJBvGu/rZOeuvCaIUjbArkmXac8HnTyQPJFzFWA0Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -2812,20 +2785,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-x64-gnu@16.1.4':
-    resolution: {integrity: sha512-lWAYAezFinaJiD5Gv8HDidtsZdT3CDaCeqoPoJjeB57OqzvMajpIhlZFce5sCAH6VuX4mdkxCRqecCJFwfm2nQ==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-
   '@next/swc-linux-x64-gnu@16.1.5':
     resolution: {integrity: sha512-gq2UtoCpN7Ke/7tKaU7i/1L7eFLfhMbXjNghSv0MVGF1dmuoaPeEVDvkDuO/9LVa44h5gqpWeJ4mRRznjDv7LA==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-
-  '@next/swc-linux-x64-musl@16.1.4':
-    resolution: {integrity: sha512-fHaIpT7x4gA6VQbdEpYUXRGyge/YbRrkG6DXM60XiBqDM2g2NcrsQaIuj375egnGFkJow4RHacgBOEsHfGbiUw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2836,22 +2797,10 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-win32-arm64-msvc@16.1.4':
-    resolution: {integrity: sha512-MCrXxrTSE7jPN1NyXJr39E+aNFBrQZtO154LoCz7n99FuKqJDekgxipoodLNWdQP7/DZ5tKMc/efybx1l159hw==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [win32]
-
   '@next/swc-win32-arm64-msvc@16.1.5':
     resolution: {integrity: sha512-LZli0anutkIllMtTAWZlDqdfvjWX/ch8AFK5WgkNTvaqwlouiD1oHM+WW8RXMiL0+vAkAJyAGEzPPjO+hnrSNQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
-    os: [win32]
-
-  '@next/swc-win32-x64-msvc@16.1.4':
-    resolution: {integrity: sha512-JSVlm9MDhmTXw/sO2PE/MRj+G6XOSMZB+BcZ0a7d6KwVFZVpkHcb2okyoYFBaco6LeiL53BBklRlOrDDbOeE5w==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
     os: [win32]
 
   '@next/swc-win32-x64-msvc@16.1.5':
@@ -6849,27 +6798,6 @@ packages:
 
   next-transpile-modules@10.0.1:
     resolution: {integrity: sha512-4VX/LCMofxIYAVV58UmD+kr8jQflpLWvas/BQ4Co0qWLWzVh06FoZkECkrX5eEZT6oJFqie6+kfbTA3EZCVtdQ==}
-
-  next@16.1.4:
-    resolution: {integrity: sha512-gKSecROqisnV7Buen5BfjmXAm7Xlpx9o2ueVQRo5DxQcjC8d330dOM1xiGWc2k3Dcnz0In3VybyRPOsudwgiqQ==}
-    engines: {node: '>=20.9.0'}
-    hasBin: true
-    peerDependencies:
-      '@opentelemetry/api': ^1.1.0
-      '@playwright/test': ^1.51.1
-      babel-plugin-react-compiler: '*'
-      react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
-      react-dom: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
-      sass: ^1.3.0
-    peerDependenciesMeta:
-      '@opentelemetry/api':
-        optional: true
-      '@playwright/test':
-        optional: true
-      babel-plugin-react-compiler:
-        optional: true
-      sass:
-        optional: true
 
   next@16.1.5:
     resolution: {integrity: sha512-f+wE+NSbiQgh3DSAlTaw2FwY5yGdVViAtp8TotNQj4kk4Q8Bh1sC/aL9aH+Rg1YAVn18OYXsRDT7U/079jgP7w==}
@@ -10938,57 +10866,31 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@next/env@16.1.4': {}
-
   '@next/env@16.1.5': {}
 
   '@next/eslint-plugin-next@16.1.4':
     dependencies:
       fast-glob: 3.3.1
 
-  '@next/swc-darwin-arm64@16.1.4':
-    optional: true
-
   '@next/swc-darwin-arm64@16.1.5':
-    optional: true
-
-  '@next/swc-darwin-x64@16.1.4':
     optional: true
 
   '@next/swc-darwin-x64@16.1.5':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@16.1.4':
-    optional: true
-
   '@next/swc-linux-arm64-gnu@16.1.5':
-    optional: true
-
-  '@next/swc-linux-arm64-musl@16.1.4':
     optional: true
 
   '@next/swc-linux-arm64-musl@16.1.5':
     optional: true
 
-  '@next/swc-linux-x64-gnu@16.1.4':
-    optional: true
-
   '@next/swc-linux-x64-gnu@16.1.5':
-    optional: true
-
-  '@next/swc-linux-x64-musl@16.1.4':
     optional: true
 
   '@next/swc-linux-x64-musl@16.1.5':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@16.1.4':
-    optional: true
-
   '@next/swc-win32-arm64-msvc@16.1.5':
-    optional: true
-
-  '@next/swc-win32-x64-msvc@16.1.4':
     optional: true
 
   '@next/swc-win32-x64-msvc@16.1.5':
@@ -15756,32 +15658,6 @@ snapshots:
   next-transpile-modules@10.0.1:
     dependencies:
       enhanced-resolve: 5.18.1
-
-  next@16.1.4(@babel/core@7.28.6)(@playwright/test@1.58.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2):
-    dependencies:
-      '@next/env': 16.1.4
-      '@swc/helpers': 0.5.15
-      baseline-browser-mapping: 2.9.5
-      caniuse-lite: 1.0.30001760
-      postcss: 8.4.31
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      styled-jsx: 5.1.6(@babel/core@7.28.6)(babel-plugin-macros@3.1.0)(react@19.2.3)
-    optionalDependencies:
-      '@next/swc-darwin-arm64': 16.1.4
-      '@next/swc-darwin-x64': 16.1.4
-      '@next/swc-linux-arm64-gnu': 16.1.4
-      '@next/swc-linux-arm64-musl': 16.1.4
-      '@next/swc-linux-x64-gnu': 16.1.4
-      '@next/swc-linux-x64-musl': 16.1.4
-      '@next/swc-win32-arm64-msvc': 16.1.4
-      '@next/swc-win32-x64-msvc': 16.1.4
-      '@playwright/test': 1.58.0
-      sass: 1.97.2
-      sharp: 0.34.5
-    transitivePeerDependencies:
-      - '@babel/core'
-      - babel-plugin-macros
 
   next@16.1.5(@babel/core@7.28.6)(@playwright/test@1.58.0)(babel-plugin-macros@3.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2):
     dependencies:
