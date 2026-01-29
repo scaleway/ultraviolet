@@ -4,15 +4,13 @@
 
 'use client'
 
-import {
-  ArrowDownIcon,
-  ArrowRightIcon,
-  DragIcon,
-  OpenInNewIcon,
-  PinOutlineIcon,
-  UnpinIcon,
-} from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category'
+import { DragIcon } from '@ultraviolet/icons/DragIcon'
+import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
+import { PinOutlineIcon } from '@ultraviolet/icons/PinOutlineIcon'
+import { UnpinIcon } from '@ultraviolet/icons/UnpinIcon'
 import {
   Badge,
   Button,
@@ -90,7 +88,7 @@ type ItemProps = {
    */
   labelDescription?: ReactNode
   /**
-   * It should be a unique id and will be used for pin/unpin feature.
+   * It should be a unique id and will be used for pin/unpin and show/hide feature.
    */
   id: string
   /**
@@ -148,6 +146,10 @@ type ItemProps = {
    * has sub items.
    */
   noExpand?: boolean
+  /**
+   * When set to true, the item is still visible even when `showHide='hide'` (NavigationProvider)
+   */
+  alwaysVisible?: boolean
   disabled?: boolean
   'data-testid'?: string
   style?: CSSProperties
@@ -183,6 +185,7 @@ export const Item = memo(
     id,
     'data-testid': dataTestId,
     style,
+    alwaysVisible,
   }: ItemProps) => {
     const context = useNavigation()
     if (!context) {
@@ -206,6 +209,7 @@ export const Item = memo(
       registerItem,
       shouldAnimate,
       animationType,
+      showHide,
     } = context
 
     const makeRegisterRef = useRef<() => void>(null)
@@ -358,6 +362,10 @@ export const Item = memo(
 
     const shouldHaveWeakText =
       !!children && !active && shouldShowPinnedButton && !disabled
+
+    if (!alwaysVisible && showHide === 'hide') {
+      return null
+    }
 
     if (expanded || (!expanded && animation === 'expand')) {
       return (

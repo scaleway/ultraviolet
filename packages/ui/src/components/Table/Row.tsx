@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode, RefObject } from 'react'
@@ -14,6 +15,7 @@ import { Cell } from './Cell'
 import {
   tableCheckboxContainer,
   tableExpandableWrapper,
+  tableRow,
   tableTrAnimation,
 } from './styles.css'
 import { useTableContext } from './TableContext'
@@ -109,7 +111,11 @@ export const Row = ({
   return (
     <>
       <tr
-        className={cn(className, highlightAnimation ? tableTrAnimation : '')}
+        className={cn(
+          className,
+          highlightAnimation ? tableTrAnimation : '',
+          tableRow,
+        )}
         data-testid={dataTestid}
         role={canClickRowToExpand ? 'button row' : 'row'}
         style={style}

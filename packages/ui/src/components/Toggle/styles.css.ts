@@ -164,7 +164,7 @@ export const checkbox = style({
 
 export const label = recipe({
   base: {
-    alignItems: 'start',
+    alignItems: 'flex-start',
     cursor: 'pointer',
     display: 'flex',
     gap: theme.space['1'],

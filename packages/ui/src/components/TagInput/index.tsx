@@ -1,10 +1,8 @@
 'use client'
 
-import {
-  AlertCircleIcon,
-  CheckCircleOutlineIcon,
-  CloseIcon,
-} from '@ultraviolet/icons'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn, getUUID } from '@ultraviolet/utils'
 import type {
   ChangeEvent,

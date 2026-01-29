@@ -51,7 +51,7 @@ const noop = () => {}
 
 export type PositionsType = {
   arrowLeft: number
-  arrowTop: number
+  arrowTop: string | number
   arrowTransform: string
   placement: string
   rotate: number
@@ -643,7 +643,7 @@ export const Popup = forwardRef(
                 role={role}
                 style={{
                   ...assignInlineVars({
-                    [arrowTop]: `${positions.arrowTop}px`,
+                    [arrowTop]: `${positions.arrowTop}`,
                     [arrowLeft]: `${positions.arrowLeft}px`,
                     [arrowTransform]: `${positions.arrowTransform} rotate(${positions.rotate}deg)`,
                     [popupPosition]: positions.popupPosition,

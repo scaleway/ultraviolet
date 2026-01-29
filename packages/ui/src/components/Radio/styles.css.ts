@@ -1,8 +1,33 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
+import {
+  labelContainerSelectableCardLabel,
+  selectableElementSelectableCard,
+} from '../SelectableCard/styles.css'
+import { widthSelectable } from '../SelectableCard/variables.css'
+import { selectableCard } from '../SelectableCardOptionGroup/styles.css'
+import {
+  switchButtonOptionBase,
+  switchButtonOptionNeutral,
+  switchButtonOptionPrimary,
+} from '../SwitchButton/styles.css'
 
-export const innerCircleRing = style({})
-export const radioStack = style({})
+export const radioStack = style({
+  selectors: {
+    [`${selectableCard} &`]: {
+      marginTop: `calc(-1 * ${theme.space[2]})`,
+      padding: theme.space[1],
+      position: 'absolute',
+    },
+    [`${labelContainerSelectableCardLabel} &`]: {
+      width: '100%',
+    },
+    [`${selectableElementSelectableCard} > &`]: {
+      width: widthSelectable,
+    },
+  },
+})
+
 export const margedText = style({
   marginLeft: theme.space['4'],
 })
@@ -32,6 +57,35 @@ export const textLabel = style({
       color: theme.colors.neutral.textDisabled,
       cursor: 'not-allowed',
     },
+  },
+})
+
+export const labelRadio = style({
+  selectors: {
+    [`${switchButtonOptionBase}[data-checked='true'] &`]: {
+      color: theme.colors.neutral.textStrong,
+      transition: 'color 300ms ease-in-out',
+    },
+    [`${switchButtonOptionBase} &`]: {
+      transition: 'color 300ms ease-in-out',
+    },
+    [`${switchButtonOptionPrimary}[data-checked="true"] &`]: {
+      color: theme.colors.primary.textStrong,
+    },
+    [`${switchButtonOptionNeutral}[data-checked="false"] &:hover`]: {
+      color: theme.colors.neutral.textHover,
+    },
+    [`${switchButtonOptionPrimary}[data-checked="false"] &:hover`]: {
+      color: theme.colors.primary.text,
+    },
+    [`${switchButtonOptionBase}[data-disabled="true"] &`]: {
+      color: theme.colors.neutral.textDisabled,
+    },
+    [`${switchButtonOptionBase}[data-checked='false'][data-disabled="true"] &:hover`]:
+      {
+        background: 'transparent',
+        color: theme.colors.neutral.textDisabled,
+      },
   },
 })
 
@@ -112,28 +166,22 @@ export const radioMark = style({
   transition: '200ms transform ease-in-out',
 })
 
-globalStyle(
-  `${container}:hover[aria-disabled='false'] ${ring} ${innerCircleRing}`,
-  {
-    fill: theme.colors.primary.backgroundHover,
+export const innerCircleRing = style({
+  selectors: {
+    [`${container}:hover[aria-disabled='false'] ${ring} &`]: {
+      fill: theme.colors.primary.backgroundHover,
+    },
+    [`${container}[aria-disabled='true'] ${ring} &`]: {
+      fill: theme.colors.neutral.backgroundDisabled,
+    },
+    [`${container}:hover ${radio}[aria-invalid='true'] + ${ring} &`]: {
+      fill: theme.colors.danger.backgroundHover,
+    },
+    [`${ring} &`]: {
+      fill: theme.colors.neutral.background,
+    },
+    [`${container}[aria-disabled='true'] ${ring} &`]: {
+      fill: theme.colors.neutral.backgroundDisabled,
+    },
   },
-)
-
-globalStyle(`${container}[aria-disabled='true'] ${ring} ${innerCircleRing}`, {
-  fill: theme.colors.neutral.backgroundDisabled,
-})
-
-globalStyle(
-  `${container}:hover ${radio}[aria-invalid='true'] + ${ring} ${innerCircleRing}`,
-  {
-    fill: theme.colors.danger.backgroundHover,
-  },
-)
-
-globalStyle(`${ring} ${innerCircleRing}`, {
-  fill: theme.colors.neutral.background,
-})
-
-globalStyle(`${container}[aria-disabled='true'] ${ring} ${innerCircleRing}`, {
-  fill: theme.colors.neutral.backgroundDisabled,
 })

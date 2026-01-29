@@ -5,7 +5,7 @@ import { DefaultDisclosure } from './Template.stories'
 
 export const Overflowing: StoryFn<typeof Menu> = () => (
   <Stack gap={9}>
-    <div style={{ alignItems: 'start', display: 'flex', flex: 1 }}>
+    <div style={{ alignItems: 'flex-start', display: 'flex', flex: 1 }}>
       <Menu disclosure={DefaultDisclosure} placement="right">
         <Menu.Item>Default</Menu.Item>
         <Menu.Item>Default</Menu.Item>
@@ -16,7 +16,7 @@ export const Overflowing: StoryFn<typeof Menu> = () => (
         <Menu.Item>Default</Menu.Item>
       </Menu>
     </div>
-    <div style={{ display: 'flex', flex: 1, justifyContent: 'start' }}>
+    <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-start' }}>
       <Menu disclosure={DefaultDisclosure} placement="bottom">
         <Menu.Item>Default</Menu.Item>
         <Menu.Item>Default</Menu.Item>
@@ -28,7 +28,7 @@ export const Overflowing: StoryFn<typeof Menu> = () => (
         <Menu.Item>Default</Menu.Item>
       </Menu>
     </div>
-    <div style={{ display: 'flex', flex: 1, justifyContent: 'end' }}>
+    <div style={{ display: 'flex', flex: 1, justifyContent: 'flex-end' }}>
       <Menu disclosure={DefaultDisclosure} placement="top">
         <Menu.Item>Default</Menu.Item>
         <Menu.Item>Default</Menu.Item>

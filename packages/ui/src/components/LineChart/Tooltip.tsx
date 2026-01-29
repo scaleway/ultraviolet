@@ -5,9 +5,17 @@ import { assignInlineVars } from '@vanilla-extract/dynamic'
 import { Text } from '../Text'
 import { colorLine, lineColorSquare, lineTooltipContainer } from './styles.css'
 
-type LineChartTooltipProps = { point: Point }
+type LineChartTooltipProps = {
+  point: Point
+  xFormatted?: string
+  yFormatted?: string
+}
 
-export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
+export const LineChartTooltip = ({
+  point,
+  xFormatted,
+  yFormatted,
+}: LineChartTooltipProps) => (
   <div className={lineTooltipContainer}>
     <div>
       <span
@@ -24,7 +32,7 @@ export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
         sentiment="neutral"
         variant="bodyStronger"
       >
-        {point.data.yFormatted}
+        {yFormatted ?? point.data.yFormatted}
       </Text>
       <Text
         as="div"
@@ -32,7 +40,7 @@ export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
         sentiment="neutral"
         variant="bodySmall"
       >
-        {point.data.xFormatted}
+        {xFormatted ?? point.data.xFormatted}
       </Text>
     </div>
   </div>

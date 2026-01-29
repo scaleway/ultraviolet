@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { PencilIcon, PencilOutlineIcon } from '@ultraviolet/icons'
+import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
+import { PencilOutlineIcon } from '@ultraviolet/icons/PencilOutlineIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { SENTIMENTS } from '../../../theme'

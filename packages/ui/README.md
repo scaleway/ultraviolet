@@ -45,7 +45,7 @@ For the library to work properly, you need to wrap your application with the `Th
 You will also need to import styles of components for them to have the correct styles.
 
 ```tsx
-import { ThemeProvider } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/themes'
 import { Button, theme } from '@ultraviolet/ui'
 import '@ultraviolet/ui/styles'
 

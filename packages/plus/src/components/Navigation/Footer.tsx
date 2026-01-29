@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowLeftDoubleIcon, ArrowRightDoubleIcon } from '@ultraviolet/icons'
+import { ArrowLeftDoubleIcon } from '@ultraviolet/icons/ArrowLeftDoubleIcon'
+import { ArrowRightDoubleIcon } from '@ultraviolet/icons/ArrowRightDoubleIcon'
 import { Button, Tooltip } from '@ultraviolet/ui'
 import type { RefObject } from 'react'
 import { useCallback, useLayoutEffect, useMemo, useState } from 'react'

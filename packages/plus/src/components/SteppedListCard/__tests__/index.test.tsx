@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { EscapeIcon } from '@ultraviolet/icons'
+import { EscapeIcon } from '@ultraviolet/icons/EscapeIcon'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, it, test } from 'vitest'

@@ -1,23 +1,20 @@
 import { theme } from '@ultraviolet/themes'
-import {
-  createVar,
-  globalStyle,
-  style,
-  styleVariants,
-} from '@vanilla-extract/css'
+import { createVar, style, styleVariants } from '@vanilla-extract/css'
+import { searchInput } from '../SearchInput/styles.css'
 import { TEXTINPUT_SIZE_HEIGHT } from './constants'
 
 export const hasFocusVar = createVar()
 
 export const basicPrefix = style({
-  borderRight: '1px solid',
-  borderRightColor: 'inherit',
-  height: '100%',
   padding: theme.space['2'],
+  borderRight: '1px solid',
+  borderColor: 'inherit',
+  height: '100%',
 
   selectors: {
-    '&[data-size="small"]': {
-      padding: theme.space['1'],
+    '&[data-size="small"]': { padding: theme.space['1'] },
+    [`${searchInput} &`]: {
+      border: 'none',
     },
   },
 })
@@ -27,44 +24,22 @@ export const stateStack = style({
 })
 
 export const basicSuffix = style({
-  borderColor: 'inherit',
-  borderLeft: '1px solid',
-  height: '100%',
   padding: `0 ${theme.space['2']}`,
+  borderLeft: '1px solid',
+  borderColor: 'inherit',
+  height: '100%',
+  selectors: {
+    [`${searchInput} &`]: {
+      border: 'none',
+    },
+  },
 })
 
 export const ctaSuffix = style({
-  borderColor: 'inherit',
-  borderLeft: '1px solid',
-  height: '100%',
   padding: `0 ${theme.space['1']}`,
-})
-
-export const inputClass = style({
-  background: 'transparent',
-  border: 'none',
-  flex: 1,
-  fontSize: theme.typography.bodySmall.fontSize,
+  borderLeft: '1px solid',
+  borderColor: 'inherit',
   height: '100%',
-  outline: 'none',
-  paddingLeft: theme.space['2'],
-
-  selectors: {
-    '&:disabled': {
-      cursor: 'not-allowed',
-      userSelect: 'none',
-    },
-    '&:focus': {
-      outline: 'none',
-    },
-    '&[data-size="large"]': {
-      fontSize: theme.typography.body.fontSize,
-    },
-    '&[data-size="small"]': {
-      paddingLeft: theme.space['1'],
-    },
-  },
-  width: '100%',
 })
 
 export const inputWrapperSizes = styleVariants(
@@ -116,21 +91,44 @@ export const inputWrapper = style({
   width: '100%',
 })
 
-globalStyle(`${inputWrapper} > ${inputClass}`, {
-  color: theme.colors.neutral.text,
-})
+export const inputClass = style({
+  flex: 1,
+  border: 'none',
+  outline: 'none',
+  height: '100%',
+  width: '100%',
+  paddingLeft: theme.space['2'],
+  background: 'transparent',
+  fontSize: theme.typography.bodySmall.fontSize,
 
-globalStyle(`${inputWrapper} > ${inputClass}::placeholder`, {
-  color: theme.colors.neutral.textWeak,
-})
-
-globalStyle(`${inputWrapper}[data-disabled='true'] > ${inputClass}`, {
-  color: theme.colors.neutral.textDisabled,
-})
-
-globalStyle(
-  `${inputWrapper}[data-disabled='true'] > ${inputClass}::placeholder`,
-  {
-    color: theme.colors.neutral.textWeakDisabled,
+  selectors: {
+    '&[data-size="large"]': {
+      fontSize: theme.typography.body.fontSize,
+    },
+    '&[data-size="small"]': {
+      paddingLeft: theme.space['1'],
+    },
+    '&:disabled': {
+      cursor: 'not-allowed',
+      userSelect: 'none',
+    },
+    '&:focus': {
+      outline: 'none',
+    },
+    [`${searchInput} &`]: {
+      padding: 0,
+    },
+    [`${inputWrapper} > &`]: {
+      color: theme.colors.neutral.text,
+    },
+    [`${inputWrapper} > &::placeholder`]: {
+      color: theme.colors.neutral.textWeak,
+    },
+    [`${inputWrapper}[data-disabled='true'] > &`]: {
+      color: theme.colors.neutral.textDisabled,
+    },
+    [`${inputWrapper}[data-disabled='true'] > &::placeholder`]: {
+      color: theme.colors.neutral.textWeakDisabled,
+    },
   },
-)
+})

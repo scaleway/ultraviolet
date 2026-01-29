@@ -1,4 +1,4 @@
-import { CheckCircleIcon } from '@ultraviolet/icons'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { Button, Text } from '@ultraviolet/ui'
 import { domain, fees, gb, pipeline, ssl } from './features'
 import { Template } from './Template.stories'

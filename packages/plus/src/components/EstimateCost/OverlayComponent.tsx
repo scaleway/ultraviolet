@@ -1,6 +1,6 @@
 'use client'
 
-import { CalculatorIcon } from '@ultraviolet/icons'
+import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { Badge, Stack } from '@ultraviolet/ui'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { JSX, ReactNode } from 'react'

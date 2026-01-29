@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { InformationIcon } from '@ultraviolet/icons'
+import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
 import {
   BaremetalCategoryIcon,
   DataAndAnalyticsCategoryIcon,

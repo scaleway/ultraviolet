@@ -1,3 +1,4 @@
 /** Function to create a valid className given a list of strings/undefined classNames, needed because we use vanilla-extract */
-export const cn = (...props: (string | undefined)[]) =>
-  props.filter(Boolean).join(' ')
+type CN = (...props: (string | undefined | null)[]) => string
+
+export const cn: CN = (...props) => props.filter(Boolean).join(' ').trim()

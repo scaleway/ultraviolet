@@ -1,10 +1,8 @@
 'use client'
 
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  OpenInNewIcon,
-} from '@ultraviolet/icons'
+import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
+import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
+import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { cn } from '@ultraviolet/utils'
 import type {
   AnchorHTMLAttributes,

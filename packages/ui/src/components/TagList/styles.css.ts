@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, globalStyle, style } from '@vanilla-extract/css'
+import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { TAGS_GAP } from './constant'
 
@@ -32,9 +32,13 @@ export const ellipsisContainer = style({
   },
 })
 
-globalStyle(`${ellipsisContainer} span, ${ellipsisContainer} div`, {
-  maxWidth: 'fit-content',
-  width: '100%',
+export const ellipsisChild = style({
+  selectors: {
+    [`${ellipsisContainer} &`]: {
+      maxWidth: 'fit-content',
+      width: '100%',
+    },
+  },
 })
 
 export const tagsWrapper = style({

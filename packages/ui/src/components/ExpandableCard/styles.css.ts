@@ -1,9 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style } from '@vanilla-extract/css'
-
-export const arrowIcon = style({
-  transition: 'transform 0.2s ease-in-out',
-})
+import { style } from '@vanilla-extract/css'
 
 export const dropableArea = style({
   borderBottom: '2px solid',
@@ -52,6 +48,10 @@ export const summaryClass = style({
   },
 })
 
+export const stackClass = style({
+  position: 'relative',
+})
+
 export const detailsClass = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
@@ -64,9 +64,21 @@ export const detailsClass = style({
     '&[open]': {
       borderColor: theme.colors.primary.border,
     },
+    [`${stackClass}:hover > &`]: {
+      borderColor: theme.colors.primary.border,
+    },
   },
   transition: 'border-color 0.2s ease-in-out',
   width: '100%',
+})
+
+export const arrowIcon = style({
+  transition: 'transform 0.2s ease-in-out',
+  selectors: {
+    [`${detailsClass}[open] &`]: {
+      transform: 'rotate(180deg)',
+    },
+  },
 })
 
 export const content = style({
@@ -77,17 +89,6 @@ export const content = style({
       borderColor: theme.colors.primary.border,
     },
   },
-})
-globalStyle(`${detailsClass}[open] ${arrowIcon}`, {
-  transform: 'rotate(180deg)',
-})
-
-export const stackClass = style({
-  position: 'relative',
-})
-
-globalStyle(`${stackClass}:hover > ${detailsClass}`, {
-  borderColor: theme.colors.primary.border,
 })
 
 export const dragIconContainer = style({

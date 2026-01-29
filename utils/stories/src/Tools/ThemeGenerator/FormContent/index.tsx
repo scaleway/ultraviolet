@@ -5,7 +5,9 @@ import {
   useFormContext,
   useFormState,
 } from '@ultraviolet/form'
-import { CheckIcon, CloseIcon, RestoreIcon } from '@ultraviolet/icons'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { Button, Row, Stack, Text, Tooltip } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { hexadecimalColorRegex, INITIAL_VALUES } from '../contants'

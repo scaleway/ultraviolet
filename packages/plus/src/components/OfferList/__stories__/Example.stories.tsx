@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { LeafIcon } from '@ultraviolet/icons'
+import { LeafIcon } from '@ultraviolet/icons/LeafIcon'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useMemo, useState } from 'react'

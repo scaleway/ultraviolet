@@ -14,7 +14,7 @@ export const List = (args: ComponentProps<typeof AddressIcon>) =>
 
     return (
       <Stack alignItems="center" direction="row" gap={1} key={name}>
-        <Stack alignItems="start" direction="column">
+        <Stack alignItems="flex-start" direction="column">
           <Stack alignItems="center" direction="row" gap={1}>
             <FoundIcon {...args} size="small" />
             <FoundIcon {...args} size="large" />

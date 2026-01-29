@@ -10,7 +10,12 @@ export const AlignItems: StoryFn = args => (
     <Text as="p" variant="bodyStrong">
       alignItems=&ldquo;start&ldquo;
     </Text>
-    <Row {...args} alignItems="start" gap={1} templateColumns="repeat(3, 1fr)">
+    <Row
+      {...args}
+      alignItems="flex-start"
+      gap={1}
+      templateColumns="repeat(3, 1fr)"
+    >
       <div style={{ height: '100px' }}>1fr</div>
       <div className={divWithBackground} style={{ height: '50px' }}>
         1fr
@@ -34,7 +39,12 @@ export const AlignItems: StoryFn = args => (
     <Text as="p" variant="bodyStrong">
       alignItems=&ldquo;end&ldquo;
     </Text>
-    <Row {...args} alignItems="end" gap={1} templateColumns="repeat(3, 1fr)">
+    <Row
+      {...args}
+      alignItems="flex-end"
+      gap={1}
+      templateColumns="repeat(3, 1fr)"
+    >
       <div className={divWithBackground} style={{ height: '100px' }}>
         1fr
       </div>

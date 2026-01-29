@@ -1,4 +1,5 @@
-import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { Badge, Stack, Text } from '@ultraviolet/ui'
 import type { CSSProperties } from 'react'
 import { useState } from 'react'
@@ -58,7 +59,7 @@ export const Plans = <T extends string>({
           {plans.map(plan => {
             const computedDisabled = !!(plan.outOfStock || plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
-            const isHighlighted = highlight && plan.value === highlight.plan
+            const isHighlighted = plan.value === highlight?.plan
 
             return (
               <td
@@ -147,8 +148,7 @@ export const Plans = <T extends string>({
                   </Stack>
                 </td>
                 {plans.map(plan => {
-                  const isHighlighted =
-                    highlight && plan.value === highlight.plan
+                  const isHighlighted = plan.value === highlight?.plan
 
                   return (
                     <td
@@ -197,7 +197,7 @@ export const Plans = <T extends string>({
               {plans.map(plan => {
                 const computedDisabled = plan.outOfStock || plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
-                const isHighlighted = highlight && plan.value === highlight.plan
+                const isHighlighted = plan.value === highlight?.plan
 
                 return (
                   <td

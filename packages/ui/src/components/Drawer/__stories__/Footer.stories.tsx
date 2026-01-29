@@ -5,7 +5,7 @@ import { DefaultDisclosure, Template } from './Template.stories'
 
 export const Footer = Template.bind({})
 const FooterComponent = () => (
-  <Stack direction="row" gap="1" justifyContent="end">
+  <Stack direction="row" gap="1" justifyContent="flex-end">
     <Button fullWidth sentiment="primary" variant="outlined">
       Secondary
     </Button>

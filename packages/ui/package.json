@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/ui",
-  "version": "3.5.1",
+  "version": "3.7.1",
   "description": "Ultraviolet UI",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -48,17 +48,19 @@
   ],
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./styles": "./dist/ui.css",
     "./compositions/*": {
       "types": "./dist/components/compositions/*/index.d.ts",
-      "require": "./dist/components/compositions/*/index.cjs",
+      "import": "./dist/components/compositions/*/index.js",
+      "require": "./dist/components/compositions/*/index.js",
       "default": "./dist/components/compositions/*/index.js"
     }
   },
@@ -82,7 +84,7 @@
   "devDependencies": {
     "@babel/core": "7.28.6",
     "@repo/config": "workspace:*",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
     "@vanilla-extract/vite-plugin": "5.1.1",

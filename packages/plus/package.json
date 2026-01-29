@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/plus",
-  "version": "3.1.8",
+  "version": "3.4.1",
   "description": "Ultraviolet Plus",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -41,11 +41,12 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./styles": "./dist/plus.css"
@@ -70,7 +71,7 @@
   "devDependencies": {
     "@babel/core": "7.28.6",
     "@repo/config": "workspace:*",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "@ultraviolet/illustrations": "workspace:*",
     "@utils/test": "workspace:*",
@@ -89,6 +90,6 @@
     "@vanilla-extract/dynamic": "2.1.5",
     "@vanilla-extract/recipes": "0.5.7",
     "csstype": "3.2.3",
-    "react-intersection-observer": "10.0.0"
+    "react-intersection-observer": "10.0.2"
   }
 }

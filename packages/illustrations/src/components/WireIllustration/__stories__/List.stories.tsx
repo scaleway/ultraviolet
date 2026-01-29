@@ -11,7 +11,7 @@ const illustrationKeys = Object.keys(ILLUSTRATIONS).filter(
 export const List = (args: ComponentProps<typeof WireIllustration>) =>
   illustrationKeys.map(name => (
     <Stack alignItems="center" direction="row" gap={1} key={name}>
-      <Stack alignItems="start" direction="column">
+      <Stack alignItems="flex-start" direction="column">
         <Stack alignItems="center" direction="row" gap={1}>
           <WireIllustration
             {...args}

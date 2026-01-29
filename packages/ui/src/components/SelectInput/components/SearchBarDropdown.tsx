@@ -1,7 +1,7 @@
 'use client'
 
 import { isFuzzyMatch, normalizeString } from '@scaleway/fuzzy-search'
-import { SearchIcon } from '@ultraviolet/icons'
+import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import type { Dispatch, KeyboardEvent, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { TextInput } from '../../TextInput'

@@ -1,4 +1,5 @@
-import { AlertCircleOutlineIcon, CheckIcon } from '@ultraviolet/icons'
+import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { StepList } from '..'

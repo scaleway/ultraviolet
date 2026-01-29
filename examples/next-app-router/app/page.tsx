@@ -1,7 +1,4 @@
-import { Alert, Stack, Text } from '@ultraviolet/ui'
-import '@ultraviolet/fonts/fonts.css'
-import '@ultraviolet/ui/styles'
-import '@ultraviolet/themes/global'
+import { Alert, Button, Stack, Text } from '@ultraviolet/ui'
 
 export default function Home() {
   return (
@@ -52,6 +49,7 @@ export default function Home() {
             </ul>
           </Stack>
         </Alert>
+        <Button>Button</Button>
       </Stack>
     </main>
   )

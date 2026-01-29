@@ -1,5 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { ArrowDownIcon, DotsHorizontalIcon, PlusIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import type { ComponentProps } from 'react'
 import { Avatar } from '../../Avatar'
 import { Button } from '../../Button'
@@ -62,7 +64,7 @@ export const AdvancedUsage: StoryFn<
             <Stack
               alignItems="center"
               direction="row"
-              justifyContent="end"
+              justifyContent="flex-end"
               width="100%"
             >
               <Button sentiment="info" size="xsmall" variant="ghost">

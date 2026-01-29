@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { BookOpenOutlineIcon } from '@ultraviolet/icons'
+import { BookOpenOutlineIcon } from '@ultraviolet/icons/BookOpenOutlineIcon'
 import {
   AdvancedSettingsProductIcon,
   ConsoleProductIcon,

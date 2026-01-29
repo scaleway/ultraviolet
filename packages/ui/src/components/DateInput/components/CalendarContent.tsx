@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowLeftIcon, ArrowRightIcon } from '@ultraviolet/icons'
+import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
+import { ArrowRightIcon } from '@ultraviolet/icons/ArrowRightIcon'
 import { useContext } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'

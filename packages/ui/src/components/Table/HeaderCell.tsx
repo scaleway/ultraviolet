@@ -1,10 +1,8 @@
 'use client'
 
-import {
-  InformationOutlineIcon,
-  SortIcon as SortIconUV,
-  SouthShortIcon,
-} from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
+import { SortIcon as SortIconUV } from '@ultraviolet/icons/SortIcon'
+import { SouthShortIcon } from '@ultraviolet/icons/SouthShortIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'

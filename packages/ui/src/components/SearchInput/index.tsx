@@ -1,6 +1,6 @@
 'use client'
 
-import { SearchIcon } from '@ultraviolet/icons'
+import { SearchIcon } from '@ultraviolet/icons/SearchIcon'
 import { cn } from '@ultraviolet/utils'
 import type { Ref } from 'react'
 import {

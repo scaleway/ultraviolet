@@ -1,6 +1,7 @@
 'use client'
 
-import { DeleteIcon, PlusIcon } from '@ultraviolet/icons'
+import { DeleteIcon } from '@ultraviolet/icons/DeleteIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'

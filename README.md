@@ -29,7 +29,7 @@ pnpm add @ultraviolet/ui @ultraviolet/fonts
 ```
 
 ```tsx
-import { ThemeProvider } from '@ultraviolet/ui'
+import { ThemeProvider } from '@ultraviolet/themes'
 import { Button, normalize, theme } from '@ultraviolet/ui'
 import '@ultraviolet/ui/styles'
 import '@ultraviolet/fonts/fonts.css'

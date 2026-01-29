@@ -15,15 +15,15 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./*.css": "./dist/style/*.css",
     "./console/*": {
+      "types": "./dist/themes/console/*/index.d.ts",
       "import": "./dist/themes/console/*/index.js",
-      "require": "./dist/themes/console/*/index.cjs",
-      "types": "./dist/themes/console/*/index.d.ts"
+      "require": "./dist/themes/console/*/index.cjs"
     },
     "./global": "./dist/themes.css",
     "./theme.css": "./dist/themes.css"
@@ -67,6 +67,5 @@
     "**/*.css.ts"
   ],
   "type": "module",
-  "types": "./dist/index.d.ts",
-  "version": "3.0.3"
+  "version": "3.0.5"
 }

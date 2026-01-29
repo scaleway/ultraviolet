@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
@@ -12,6 +13,7 @@ import type {
 } from 'react'
 import {
   Children,
+  Fragment,
   forwardRef,
   isValidElement,
   useCallback,
@@ -29,6 +31,7 @@ import { useListContext } from './ListContext'
 import {
   listCheckboxContainer,
   listCheckboxInRange,
+  listExpandableButton,
   listExpandableCell,
   listExpandableWrapper,
   listNoPaddingCell,
@@ -58,6 +61,7 @@ type RowProps = {
   'data-dragging'?: boolean
   onMouseEnter?: MouseEventHandler<HTMLTableRowElement>
   onMouseLeave?: MouseEventHandler<HTMLTableRowElement>
+  onClick?: (id: string) => void
 }
 
 export const Row = forwardRef<HTMLTableRowElement, RowProps>(
@@ -78,6 +82,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       'data-dragging': dataDragging,
       onMouseEnter,
       onMouseLeave,
+      onClick,
     },
     forwardedRef,
   ) => {
@@ -144,10 +149,21 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       }
     }, [refList, setRefList])
 
-    const validChildrenArray = Children.toArray(children).filter(child =>
-      isValidElement(child),
+    // Without this, <><List.Cell /><List.Cell /></> is seen as 1 column
+    // which can be problematic when column widths are defined
+    const childrenArrayNoFragment = Children.toArray(children).flatMap(
+      (node: ReactNode) => {
+        if (isValidElement(node) && node.type === Fragment) {
+          return (node.props as { children?: ReactNode }).children
+        }
+
+        return node
+      },
     )
 
+    const validChildrenArray = Children.toArray(childrenArrayNoFragment).filter(
+      child => isValidElement(child),
+    )
     const totalColumns =
       columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
@@ -163,7 +179,12 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
           data-dragging={dataDragging}
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}
-          onClick={canClickRowToExpand ? toggleRowExpand : undefined}
+          onClick={() => {
+            onClick?.(id)
+            if (canClickRowToExpand) {
+              toggleRowExpand()
+            }
+          }}
           onKeyDown={
             canClickRowToExpand
               ? event => {
@@ -214,9 +235,10 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
               <Cell className={listNoPaddingCell}>
                 <Button
                   aria-label="expand"
+                  className={listExpandableButton}
                   data-testid="list-expand-button"
                   disabled={disabled || !expandable}
-                  onClick={toggleRowExpand}
+                  onClick={() => toggleRowExpand()}
                   sentiment={sentiment}
                   size="small"
                   variant="ghost"

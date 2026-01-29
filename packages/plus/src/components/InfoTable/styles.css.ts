@@ -4,7 +4,7 @@ import { createVar, globalStyle, style } from '@vanilla-extract/css'
 export const rowWidth = createVar()
 
 export const dl = style({
-  alignItems: 'start',
+  alignItems: 'flex-start',
   display: 'flex',
   flexDirection: 'column',
   fontSize: theme.typography.body.fontSize,
@@ -28,8 +28,12 @@ export const infoTableRow = style({
   width: rowWidth,
 })
 
-globalStyle(`${infoTableRow} > *:not(:last-child)`, {
-  paddingRight: theme.space[2],
+export const infoTableCell = style({
+  selectors: {
+    '&:not(:last-child)': {
+      paddingRight: theme.space[2],
+    },
+  },
 })
 
 export const term = style({

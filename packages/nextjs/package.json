@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/nextjs",
-  "version": "3.0.9",
+  "version": "3.0.12",
   "description": "Ultraviolet NextJS utility package",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -42,11 +42,12 @@
   ],
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.js"
     }
   },
@@ -57,7 +58,7 @@
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
-    "next": "16.1.1",
+    "next": "16.1.5",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

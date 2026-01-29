@@ -1,6 +1,6 @@
 'use client'
 
-import { PlusIcon } from '@ultraviolet/icons'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'

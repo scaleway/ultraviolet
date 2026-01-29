@@ -515,7 +515,7 @@ exports[`list > should not collapse a row by clicking on expandable content 1`] 
         </thead>
         <tbody>
           <tr
-            aria-controls="_r_a3_"
+            aria-controls="_r_ad_"
             aria-expanded="true"
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
             data-highlight="false"
@@ -557,10 +557,10 @@ exports[`list > should not collapse a row by clicking on expandable content 1`] 
             class="styles__inoh548"
             data-expandable-content="true"
             data-highlight="false"
-            id="_r_a3_"
+            id="_r_ad_"
           >
             <td
-              class="styles__inoh54o styles__inoh54k"
+              class="styles__inoh54r styles__inoh54k"
               colspan="5"
               style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto; --_1431nf63: var(--rwwhsl9v);"
             >
@@ -1777,6 +1777,461 @@ exports[`list > should render correctly with bad sort value 1`] = `
 </DocumentFragment>
 `;
 
+exports[`list > should render correctly with children fragment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__inoh541"
+    >
+      <table
+        class="styles__inoh542"
+      >
+        <thead>
+          <tr
+            class="styles__inoh546"
+          >
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 1
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 2
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 3
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 4
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 5
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 5
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`list > should render correctly with column width 1`] = `
 <DocumentFragment>
   <div
@@ -1801,7 +2256,7 @@ exports[`list > should render correctly with column width 1`] = `
               >
                 <div
                   aria-disabled="true"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -1809,7 +2264,7 @@ exports[`list > should render correctly with column width 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select all"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     disabled=""
                     id="_r_2a_"
                     name="list-select-checkbox"
@@ -1823,7 +2278,7 @@ exports[`list > should render correctly with column width 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -1832,6 +2287,7 @@ exports[`list > should render correctly with column width 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -1872,7 +2328,7 @@ exports[`list > should render correctly with column width 1`] = `
         </thead>
         <tbody>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-0"
             role="row"
           >
@@ -1884,7 +2340,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -1902,7 +2358,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -1915,7 +2371,7 @@ exports[`list > should render correctly with column width 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-1"
             role="row"
           >
@@ -1927,7 +2383,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -1945,7 +2401,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -1958,7 +2414,7 @@ exports[`list > should render correctly with column width 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-2"
             role="row"
           >
@@ -1970,7 +2426,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -1988,7 +2444,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2001,7 +2457,7 @@ exports[`list > should render correctly with column width 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-3"
             role="row"
           >
@@ -2013,7 +2469,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2031,7 +2487,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2044,7 +2500,7 @@ exports[`list > should render correctly with column width 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-4"
             role="row"
           >
@@ -2056,7 +2512,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2074,7 +2530,7 @@ exports[`list > should render correctly with column width 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2117,7 +2573,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               >
                 <div
                   aria-disabled="true"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -2125,7 +2581,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select all"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     disabled=""
                     id="_r_2c_"
                     name="list-select-checkbox"
@@ -2139,7 +2595,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -2148,6 +2604,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -2188,7 +2645,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
         </thead>
         <tbody>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-0"
             role="row"
           >
@@ -2200,7 +2657,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2218,7 +2675,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2231,7 +2688,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-1"
             role="row"
           >
@@ -2243,7 +2700,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2261,7 +2718,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2274,7 +2731,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-2"
             role="row"
           >
@@ -2286,7 +2743,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2304,7 +2761,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2317,7 +2774,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-3"
             role="row"
           >
@@ -2329,7 +2786,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2347,7 +2804,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2360,7 +2817,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-4"
             role="row"
           >
@@ -2372,7 +2829,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -2390,7 +2847,7 @@ exports[`list > should render correctly with column width and colMode strict 1`]
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -3333,14 +3790,16 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 1
                 <div
-                  aria-controls="_r_ad_"
-                  aria-describedby="_r_ad_"
+                  aria-controls="_r_an_"
+                  aria-describedby="_r_an_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_weak__vbm0wq6 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_58__vbm0wq26"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -3360,14 +3819,16 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 2
                 <div
-                  aria-controls="_r_ae_"
-                  aria-describedby="_r_ae_"
+                  aria-controls="_r_ao_"
+                  aria-describedby="_r_ao_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_weak__vbm0wq6 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_58__vbm0wq26"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -3387,14 +3848,16 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 3
                 <div
-                  aria-controls="_r_af_"
-                  aria-describedby="_r_af_"
+                  aria-controls="_r_ap_"
+                  aria-describedby="_r_ap_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_weak__vbm0wq6 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_58__vbm0wq26"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -3414,14 +3877,16 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 4
                 <div
-                  aria-controls="_r_ag_"
-                  aria-describedby="_r_ag_"
+                  aria-controls="_r_aq_"
+                  aria-describedby="_r_aq_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_weak__vbm0wq6 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_58__vbm0wq26"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -3441,14 +3906,16 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 5
                 <div
-                  aria-controls="_r_ah_"
-                  aria-describedby="_r_ah_"
+                  aria-controls="_r_ar_"
+                  aria-describedby="_r_ar_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_weak__vbm0wq6 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_58__vbm0wq26"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -3935,7 +4402,7 @@ exports[`list > should render correctly with isExpandable and autoClose rows the
             </td>
           </tr>
           <tr
-            aria-controls="_r_6l_"
+            aria-controls="_r_6v_"
             aria-expanded="true"
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
             data-highlight="false"
@@ -3977,10 +4444,10 @@ exports[`list > should render correctly with isExpandable and autoClose rows the
             class="styles__inoh548"
             data-expandable-content="true"
             data-highlight="false"
-            id="_r_6l_"
+            id="_r_6v_"
           >
             <td
-              class="styles__inoh54o styles__inoh54k"
+              class="styles__inoh54r styles__inoh54k"
               colspan="5"
               style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto; --_1431nf63: var(--rwwhsl9v);"
             >
@@ -4814,7 +5281,7 @@ exports[`list > should render correctly with loading 1`] = `
         </thead>
         <tbody>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-0"
             role="row"
           >
@@ -4825,7 +5292,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4843,7 +5310,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4861,7 +5328,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4879,7 +5346,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4897,7 +5364,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4910,7 +5377,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-1"
             role="row"
           >
@@ -4921,7 +5388,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4939,7 +5406,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4957,7 +5424,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4975,7 +5442,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -4993,7 +5460,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5006,7 +5473,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-2"
             role="row"
           >
@@ -5017,7 +5484,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5035,7 +5502,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5053,7 +5520,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5071,7 +5538,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5089,7 +5556,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5102,7 +5569,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-3"
             role="row"
           >
@@ -5113,7 +5580,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5131,7 +5598,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5149,7 +5616,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5167,7 +5634,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5185,7 +5652,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5198,7 +5665,7 @@ exports[`list > should render correctly with loading 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-4"
             role="row"
           >
@@ -5209,7 +5676,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5227,7 +5694,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5245,7 +5712,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5263,7 +5730,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5281,7 +5748,7 @@ exports[`list > should render correctly with loading 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5640,7 +6107,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               >
                 <div
                   aria-disabled="true"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -5648,7 +6115,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select all"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     disabled=""
                     id="_r_28_"
                     name="list-select-checkbox"
@@ -5662,7 +6129,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -5671,6 +6138,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -5739,7 +6207,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
         </thead>
         <tbody>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-0"
             role="row"
           >
@@ -5751,7 +6219,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5769,7 +6237,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5787,7 +6255,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5805,7 +6273,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5823,7 +6291,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5836,7 +6304,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-1"
             role="row"
           >
@@ -5848,7 +6316,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5866,7 +6334,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5884,7 +6352,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5902,7 +6370,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5920,7 +6388,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5933,7 +6401,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-2"
             role="row"
           >
@@ -5945,7 +6413,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5963,7 +6431,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5981,7 +6449,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -5999,7 +6467,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6017,7 +6485,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6030,7 +6498,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-3"
             role="row"
           >
@@ -6042,7 +6510,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6060,7 +6528,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6078,7 +6546,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6096,7 +6564,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6114,7 +6582,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6127,7 +6595,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
             </td>
           </tr>
           <tr
-            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54p"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f styles__inoh54o"
             id="skeleton-4"
             role="row"
           >
@@ -6139,7 +6607,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6157,7 +6625,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6175,7 +6643,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6193,7 +6661,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6211,7 +6679,7 @@ exports[`list > should render correctly with loading with selectable 1`] = `
               <div
                 aria-busy="true"
                 aria-live="polite"
-                class="styles__inoh54q styles__c2hb451"
+                class="styles__inoh54p styles__c2hb451"
               >
                 <div
                   class="stylesVariants__fr4c0td"
@@ -6689,7 +7157,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -6697,7 +7165,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select all"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_u_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -6710,7 +7178,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -6719,6 +7187,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -6800,7 +7269,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -6808,7 +7277,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_12_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -6821,7 +7290,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -6830,6 +7299,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -6889,7 +7359,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -6897,7 +7367,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_16_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -6910,7 +7380,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -6919,6 +7389,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -6978,7 +7449,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -6986,7 +7457,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_1a_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -6999,7 +7470,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7008,6 +7479,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7067,7 +7539,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7075,7 +7547,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_1e_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7088,7 +7560,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7097,6 +7569,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7156,7 +7629,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7164,7 +7637,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_1i_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7177,7 +7650,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7186,6 +7659,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7245,7 +7719,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7253,7 +7727,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_1m_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7266,7 +7740,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7275,6 +7749,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7334,7 +7809,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7342,7 +7817,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_1q_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7355,7 +7830,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7364,6 +7839,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7423,7 +7899,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7431,7 +7907,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_1u_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7444,7 +7920,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7453,6 +7929,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7512,7 +7989,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7520,7 +7997,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_22_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7533,7 +8010,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7542,6 +8019,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7601,7 +8079,7 @@ exports[`list > should render correctly with selectable 1`] = `
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -7609,7 +8087,7 @@ exports[`list > should render correctly with selectable 1`] = `
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
+                    class="styles__9pjq8o2"
                     id="_r_26_"
                     name="list-select-checkbox"
                     type="checkbox"
@@ -7622,7 +8100,7 @@ exports[`list > should render correctly with selectable 1`] = `
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7631,6 +8109,7 @@ exports[`list > should render correctly with selectable 1`] = `
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7707,7 +8186,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -7715,8 +8194,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select all"
-                    class="styles__9pjq8o5"
-                    id="_r_3c_"
+                    class="styles__9pjq8o2"
+                    id="_r_3m_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -7728,7 +8207,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7737,6 +8216,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7818,7 +8298,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -7826,8 +8306,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_3g_"
+                    class="styles__9pjq8o2"
+                    id="_r_3q_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -7839,7 +8319,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7848,6 +8328,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7907,7 +8388,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -7915,8 +8396,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_3k_"
+                    class="styles__9pjq8o2"
+                    id="_r_3u_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -7928,7 +8409,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -7937,6 +8418,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -7996,7 +8478,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8004,8 +8486,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_3o_"
+                    class="styles__9pjq8o2"
+                    id="_r_42_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -8017,7 +8499,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8026,6 +8508,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8085,7 +8568,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8093,8 +8576,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_3s_"
+                    class="styles__9pjq8o2"
+                    id="_r_46_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -8106,7 +8589,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8115,6 +8598,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8174,7 +8658,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8182,8 +8666,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_40_"
+                    class="styles__9pjq8o2"
+                    id="_r_4a_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -8195,7 +8679,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8204,6 +8688,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8263,7 +8748,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8271,8 +8756,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_44_"
+                    class="styles__9pjq8o2"
+                    id="_r_4e_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -8284,7 +8769,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8293,6 +8778,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8352,7 +8838,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8360,8 +8846,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_48_"
+                    class="styles__9pjq8o2"
+                    id="_r_4i_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -8373,7 +8859,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8382,6 +8868,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8441,7 +8928,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8449,8 +8936,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_4c_"
+                    class="styles__9pjq8o2"
+                    id="_r_4m_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -8462,7 +8949,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8471,6 +8958,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8530,7 +9018,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8538,8 +9026,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_4g_"
+                    class="styles__9pjq8o2"
+                    id="_r_4q_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -8551,7 +9039,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8560,6 +9048,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8619,7 +9108,7 @@ exports[`list > should render correctly with selectable then click on first row 
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8627,8 +9116,8 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_4k_"
+                    class="styles__9pjq8o2"
+                    id="_r_4u_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"
@@ -8640,7 +9129,7 @@ exports[`list > should render correctly with selectable then click on first row 
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8649,6 +9138,7 @@ exports[`list > should render correctly with selectable then click on first row 
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8725,7 +9215,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="indeterminate"
                   data-error="false"
                 >
@@ -8733,8 +9223,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="mixed"
                     aria-invalid="false"
                     aria-label="select all"
-                    class="styles__9pjq8o5"
-                    id="_r_as_"
+                    class="styles__9pjq8o2"
+                    id="_r_b6_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -8746,7 +9236,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8755,7 +9245,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <rect
-                        class="styles__9pjq8o2"
+                        class="styles__9pjq8o6"
                         height="2"
                         rx="1"
                         width="12"
@@ -8834,7 +9324,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -8842,8 +9332,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_b0_"
+                    class="styles__9pjq8o2"
+                    id="_r_ba_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -8855,7 +9345,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8864,6 +9354,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -8923,7 +9414,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -8931,8 +9422,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_b4_"
+                    class="styles__9pjq8o2"
+                    id="_r_be_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -8944,7 +9435,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -8953,6 +9444,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9012,7 +9504,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9020,8 +9512,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_b8_"
+                    class="styles__9pjq8o2"
+                    id="_r_bi_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -9033,7 +9525,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9042,6 +9534,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9101,7 +9594,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="true"
                   data-error="false"
                 >
@@ -9109,8 +9602,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="true"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_bc_"
+                    class="styles__9pjq8o2"
+                    id="_r_bm_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -9122,7 +9615,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9131,6 +9624,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9190,7 +9684,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9198,8 +9692,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_bg_"
+                    class="styles__9pjq8o2"
+                    id="_r_bq_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -9211,7 +9705,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9220,6 +9714,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9279,7 +9774,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9287,8 +9782,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_bk_"
+                    class="styles__9pjq8o2"
+                    id="_r_bu_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -9300,7 +9795,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9309,6 +9804,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9368,7 +9864,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9376,8 +9872,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_bo_"
+                    class="styles__9pjq8o2"
+                    id="_r_c2_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -9389,7 +9885,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9398,6 +9894,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9457,7 +9954,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9465,8 +9962,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_bs_"
+                    class="styles__9pjq8o2"
+                    id="_r_c6_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -9478,7 +9975,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9487,6 +9984,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9546,7 +10044,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9554,8 +10052,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_c0_"
+                    class="styles__9pjq8o2"
+                    id="_r_ca_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -9567,7 +10065,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9576,6 +10074,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -9635,7 +10134,7 @@ exports[`list > should render correctly with selectable with shift click for mul
               >
                 <div
                   aria-disabled="false"
-                  class="styles__9pjq8o6"
+                  class="styles__9pjq8o1"
                   data-checked="false"
                   data-error="false"
                 >
@@ -9643,8 +10142,8 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
-                    class="styles__9pjq8o5"
-                    id="_r_c4_"
+                    class="styles__9pjq8o2"
+                    id="_r_ce_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"
@@ -9656,7 +10155,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                   >
                     <g>
                       <rect
-                        class="styles__9pjq8o1"
+                        class="styles__9pjq8o4"
                         height="16"
                         rx="0.125rem"
                         stroke-width="2"
@@ -9665,6 +10164,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                         y="4"
                       />
                       <path
+                        class="styles__9pjq8o5"
                         clip-rule="evenodd"
                         d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                         fill="white"
@@ -10634,7 +11134,9 @@ exports[`list > should render correctly with sort then click 1`] = `
                   Column 1
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_34__vbm0wq1i"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -10655,7 +11157,9 @@ exports[`list > should render correctly with sort then click 1`] = `
                   Column 2
                   <svg
                     class="styles_ascending__inoh543 styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_sentiment_primary__vbm0wq7 styles_size_small__vbm0wqg styles_undefined_compound_32__vbm0wq1g"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -10675,7 +11179,9 @@ exports[`list > should render correctly with sort then click 1`] = `
                   Column 3
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_34__vbm0wq1i"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -10695,7 +11201,9 @@ exports[`list > should render correctly with sort then click 1`] = `
                   Column 4
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_34__vbm0wq1i"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"
@@ -10715,7 +11223,9 @@ exports[`list > should render correctly with sort then click 1`] = `
                   Column 5
                   <svg
                     class="styles__vbm0wq0 styles_disabled_false__vbm0wq1 styles_prominence_default__vbm0wq3 styles_sentiment_neutral__vbm0wq9 styles_size_small__vbm0wqg styles_undefined_compound_34__vbm0wq1i"
+                    height="20"
                     viewBox="0 0 16 16"
+                    width="20"
                   >
                     <path
                       clip-rule="evenodd"

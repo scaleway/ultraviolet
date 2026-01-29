@@ -1,5 +1,61 @@
 # Change Log
 
+## 3.7.1
+
+### Patch Changes
+
+- [#6037](https://github.com/scaleway/ultraviolet/pull/6037) [`31ddb5d`](https://github.com/scaleway/ultraviolet/commit/31ddb5d664b7a5a6193f1f290b85fdfd714aec95) Thanks [@lisalupi](https://github.com/lisalupi)! - `Link`: no prominence on visited links
+
+- [#5849](https://github.com/scaleway/ultraviolet/pull/5849) [`405191b`](https://github.com/scaleway/ultraviolet/commit/405191b6d45bca78b5f519d8f3a0b834673d3f7b) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - add per page dropdown target portal
+
+- [#6038](https://github.com/scaleway/ultraviolet/pull/6038) [`4e17bc7`](https://github.com/scaleway/ultraviolet/commit/4e17bc7c713ce7e751f28f4b71e2413d055808e8) Thanks [@PierreBertinet](https://github.com/PierreBertinet)! - Make splash description handle complex React node
+
+- [#6032](https://github.com/scaleway/ultraviolet/pull/6032) [`f35febd`](https://github.com/scaleway/ultraviolet/commit/f35febdb8fdd6960b365fc6b8e42462069e77048) Thanks [@philibea](https://github.com/philibea)! - Fix Text component variant style, apply default color of the sentiment instead of of nothing
+
+- Updated dependencies [[`9999889`](https://github.com/scaleway/ultraviolet/commit/9999889888c8cec1fa304ff3b903523232401957), [`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e)]:
+  - @ultraviolet/icons@5.0.7
+  - @ultraviolet/themes@3.0.5
+
+## 3.7.0
+
+### Minor Changes
+
+- [#6016](https://github.com/scaleway/ultraviolet/pull/6016) [`c8fd687`](https://github.com/scaleway/ultraviolet/commit/c8fd68734ec9b8fa38420414ff6ebd7741f89846) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - `LineChart`: new tooltipfunction prop
+
+- [#6009](https://github.com/scaleway/ultraviolet/pull/6009) [`1c76a24`](https://github.com/scaleway/ultraviolet/commit/1c76a246cc1113ec8238dedf0312706f5ed32807) Thanks [@lisalupi](https://github.com/lisalupi)! - Reduce usage of `globalStyle`
+
+### Patch Changes
+
+- [#6033](https://github.com/scaleway/ultraviolet/pull/6033) [`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa) Thanks [@philibea](https://github.com/philibea)! - Fix require export based on .cjs files instead of .js
+
+- [#6015](https://github.com/scaleway/ultraviolet/pull/6015) [`e93190f`](https://github.com/scaleway/ultraviolet/commit/e93190fc9a6ae8c18a3dd558f62dabe499cba14c) Thanks [@lisalupi](https://github.com/lisalupi)! - `Menu`: clicking on a menu item to open a nested menu should not close the parent menu
+
+- [#5990](https://github.com/scaleway/ultraviolet/pull/5990) [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.9`.
+
+- [#6013](https://github.com/scaleway/ultraviolet/pull/6013) [`8f4eb5c`](https://github.com/scaleway/ultraviolet/commit/8f4eb5c6dd994d597bc48abd503906841178156d) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix various broken styles caused by css selector re-ordering
+
+- Updated dependencies [[`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa), [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a)]:
+  - @ultraviolet/themes@3.0.4
+  - @ultraviolet/icons@5.0.6
+  - @ultraviolet/utils@1.0.1
+
+## 3.6.0
+
+### Minor Changes
+
+- [#6000](https://github.com/scaleway/ultraviolet/pull/6000) [`e32a1c6`](https://github.com/scaleway/ultraviolet/commit/e32a1c607ce28322ffe0c31d8f722f9040ddffd8) Thanks [@lisalupi](https://github.com/lisalupi)! - `Popup`: fix arrow position when (computed) position is "left" or "right"
+
+### Patch Changes
+
+- [#6012](https://github.com/scaleway/ultraviolet/pull/6012) [`f8c97f3`](https://github.com/scaleway/ultraviolet/commit/f8c97f3746a2e3e0ffc8580935f28bb00212fd2d) Thanks [@lisalupi](https://github.com/lisalupi)! - `Button`: fix disabled style
+
+- [#5988](https://github.com/scaleway/ultraviolet/pull/5988) [`bace03b`](https://github.com/scaleway/ultraviolet/commit/bace03b4aa3dba12f50d214b73d6033e2fc051dd) Thanks [@lisalupi](https://github.com/lisalupi)! - `List.Row`: new prop `onClick` & primary border when focus-within
+
+- [#6004](https://github.com/scaleway/ultraviolet/pull/6004) [`7a70c84`](https://github.com/scaleway/ultraviolet/commit/7a70c843313863916f6520c4a69418dd1c421856) Thanks [@lisalupi](https://github.com/lisalupi)! - `Checkbox`: input aligned with the first line of the label instead of centered
+
+- Updated dependencies [[`ce69316`](https://github.com/scaleway/ultraviolet/commit/ce693160ffa3d471fd58235304b6826f33bf6640)]:
+  - @ultraviolet/icons@5.0.5
+
 ## 3.5.1
 
 ### Patch Changes
@@ -1150,7 +1206,8 @@
   ```tsx
   // After
   import { Bullet } from '@ultraviolet/ui'
-  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+  import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+  import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 
   <Bullet>
     <CheckIcon />
@@ -1175,7 +1232,7 @@
   ```tsx
   // After
   import { AvatarV2 } from "@ultraviolet/ui";
-  import { MosaicIcon } from "@ultraviolet/icons";
+  import { MosaicIcon } from "@ultraviolet/icons/MosaicIcon";
 
   <AvatarV2 variant="icon" shape="circle" sentiment="primary">
     <MosaicIcon size="xlarge" />
@@ -1196,7 +1253,7 @@
   ```tsx
   // After
   import { Separator } from "@ultraviolet/ui";
-  import { RayTopArrowIcon } from "@ultraviolet/icons";
+  import { RayTopArrowIcon } from "@ultraviolet/icons/RayTopArrowIcon";
 
   <Separator direction="vertical">
     <RayTopArrowIcon size="medium" />
@@ -1217,7 +1274,7 @@
   ```tsx
   // After
   import { Tag } from "@ultraviolet/ui";
-  import { CheckIcon } from "@ultraviolet/icons";
+  import { CheckIcon } from "@ultraviolet/icons/CheckIcon";
 
   <Tag>
     <CheckIcon size="small" />
@@ -2279,7 +2336,8 @@
   ```tsx
   // After
   import { Bullet } from '@ultraviolet/ui'
-  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+  import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+  import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 
   <Bullet>
     <CheckIcon />

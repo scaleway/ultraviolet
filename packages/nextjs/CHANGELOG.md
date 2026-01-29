@@ -1,5 +1,32 @@
 # @ultraviolet/nextjs
 
+## 3.0.12
+
+### Patch Changes
+
+- Updated dependencies [[`31ddb5d`](https://github.com/scaleway/ultraviolet/commit/31ddb5d664b7a5a6193f1f290b85fdfd714aec95), [`405191b`](https://github.com/scaleway/ultraviolet/commit/405191b6d45bca78b5f519d8f3a0b834673d3f7b), [`4e17bc7`](https://github.com/scaleway/ultraviolet/commit/4e17bc7c713ce7e751f28f4b71e2413d055808e8), [`f35febd`](https://github.com/scaleway/ultraviolet/commit/f35febdb8fdd6960b365fc6b8e42462069e77048), [`428a597`](https://github.com/scaleway/ultraviolet/commit/428a59713015f9b04bc2b324baef7fe28f57d49e)]:
+  - @ultraviolet/ui@3.7.1
+  - @ultraviolet/themes@3.0.5
+
+## 3.0.11
+
+### Patch Changes
+
+- [#6033](https://github.com/scaleway/ultraviolet/pull/6033) [`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa) Thanks [@philibea](https://github.com/philibea)! - Fix require export based on .cjs files instead of .js
+
+- [#6024](https://github.com/scaleway/ultraviolet/pull/6024) [`15efe75`](https://github.com/scaleway/ultraviolet/commit/15efe75b96a707250ef892613e36c81f289d7e46) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `16.1.4`.
+  Updated dependency `eslint-config-next` to `16.1.4`.
+- Updated dependencies [[`fb32c13`](https://github.com/scaleway/ultraviolet/commit/fb32c131a4b4b4643285dd0371342fed4c3dceaa), [`c8fd687`](https://github.com/scaleway/ultraviolet/commit/c8fd68734ec9b8fa38420414ff6ebd7741f89846), [`e93190f`](https://github.com/scaleway/ultraviolet/commit/e93190fc9a6ae8c18a3dd558f62dabe499cba14c), [`1c76a24`](https://github.com/scaleway/ultraviolet/commit/1c76a246cc1113ec8238dedf0312706f5ed32807), [`7c676d2`](https://github.com/scaleway/ultraviolet/commit/7c676d2023946b7315844d25d7617ac3120fb74a), [`8f4eb5c`](https://github.com/scaleway/ultraviolet/commit/8f4eb5c6dd994d597bc48abd503906841178156d)]:
+  - @ultraviolet/themes@3.0.4
+  - @ultraviolet/ui@3.7.0
+
+## 3.0.10
+
+### Patch Changes
+
+- Updated dependencies [[`f8c97f3`](https://github.com/scaleway/ultraviolet/commit/f8c97f3746a2e3e0ffc8580935f28bb00212fd2d), [`bace03b`](https://github.com/scaleway/ultraviolet/commit/bace03b4aa3dba12f50d214b73d6033e2fc051dd), [`e32a1c6`](https://github.com/scaleway/ultraviolet/commit/e32a1c607ce28322ffe0c31d8f722f9040ddffd8), [`7a70c84`](https://github.com/scaleway/ultraviolet/commit/7a70c843313863916f6520c4a69418dd1c421856)]:
+  - @ultraviolet/ui@3.6.0
+
 ## 3.0.9
 
 ### Patch Changes

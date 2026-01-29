@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckIcon } from '@ultraviolet/icons'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { StepList, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useContext } from 'react'

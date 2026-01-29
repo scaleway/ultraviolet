@@ -1,5 +1,6 @@
 'use client'
 
+import type { TextVariant } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, ElementType, ReactNode } from 'react'
@@ -8,9 +9,9 @@ import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenSt
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
 import type { ExtendedColor } from '../../theme'
 import { Tooltip } from '../Tooltip'
-import type { PROMINENCES, TextVariant } from './constants'
+import type { PROMINENCES } from './constants'
 import { text } from './style.css'
-import { placementText, whiteSpaceText } from './variables.css'
+import { textVars } from './variables.css'
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = CSSProperties['textAlign']
@@ -90,9 +91,9 @@ export const Text = ({
         id={id}
         ref={elementRef}
         style={{
-          ...assignInlineVars({
-            [placementText]: placement,
-            [whiteSpaceText]: whiteSpace,
+          ...assignInlineVars(textVars, {
+            textAlign: placement ?? '',
+            whiteSpace: whiteSpace ?? '',
           }),
           ...style,
         }}

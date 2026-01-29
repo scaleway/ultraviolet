@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckIcon } from '@ultraviolet/icons'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { useMemo } from 'react'

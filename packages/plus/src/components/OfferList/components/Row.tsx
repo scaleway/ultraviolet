@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { theme } from '@ultraviolet/themes'
 import {
   Badge as BadgeUV,
@@ -18,6 +19,7 @@ import { useOfferListContext } from '../OfferListProvider'
 import {
   expandablePadding as expandablePaddingVar,
   offerListBadge,
+  offerListCellNoRadius,
   offerListNoPaddingCell,
   offerListRowBanner,
   offerListRowExpandable,
@@ -25,8 +27,10 @@ import {
   offerListRowSelected,
   offerListRowSelectedExpandable,
   offerListRowSelectedNotExpandable,
+  offerListSelectedCell,
 } from '../styles.css'
 import { Banner } from './Banner'
+import { OfferListRowContext } from './OfferListRowProvider'
 
 type RowProps = ComponentProps<typeof List.Row> & {
   banner?: {
@@ -136,6 +140,31 @@ export const Row = ({
       ? radioSelectedRow === offerName
       : checkboxSelectedRows.includes(offerName)
 
+  const handleChangeCheckbox = () => {
+    if (isRowSelected) {
+      const newSelectedList = checkboxSelectedRows.filter(
+        element => element !== offerName,
+      )
+      setCheckboxSelectedRows(newSelectedList)
+      onChangeSelect?.(newSelectedList)
+    } else {
+      const newSelectedList = [...checkboxSelectedRows, offerName]
+      setCheckboxSelectedRows(newSelectedList)
+      onChangeSelect?.(newSelectedList)
+    }
+
+    if (expandedRowIds[id]) {
+      expandRow(id)
+    } else if (!autoCollapse) {
+      collapseRow(id)
+    }
+  }
+
+  const handleChangeRadio = () => {
+    setRadioSelectedRow(offerName)
+    onChangeSelect?.(offerName)
+  }
+
   return (
     <>
       <List.Row
@@ -155,11 +184,29 @@ export const Row = ({
         expanded={expanded ?? expandedRowIds[id]}
         highlightAnimation={highlightAnimation}
         id={id}
+        onClick={() => {
+          if (selectDisabled || disabled || expandable) {
+            return
+          }
+
+          if (selectable === 'radio') {
+            handleChangeRadio()
+          }
+          if (selectable === 'checkbox') {
+            handleChangeCheckbox()
+          }
+        }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={style}
       >
-        <List.Cell className={offerListNoPaddingCell}>
+        <List.Cell
+          className={cn(
+            offerListNoPaddingCell,
+            isSelected ? offerListSelectedCell : '',
+            banner ? offerListCellNoRadius : '',
+          )}
+        >
           {badge ? (
             <BadgeUV
               className={offerListBadge}
@@ -184,8 +231,10 @@ export const Row = ({
                   id={id}
                   name={`radio-offer-list-${id}`}
                   onChange={() => {
-                    setRadioSelectedRow(offerName)
-                    onChangeSelect?.(offerName)
+                    // When !expandable, selection is triggered in the onClick of List.Row
+                    if (expandable) {
+                      handleChangeRadio()
+                    }
                     if (expandedRowIds[id]) {
                       expandRow(id)
                     } else if (!autoCollapse) {
@@ -202,25 +251,8 @@ export const Row = ({
                   id={id}
                   name={`checkbox-offer-list-${id}`}
                   onChange={() => {
-                    if (isRowSelected) {
-                      const newSelectedList = checkboxSelectedRows.filter(
-                        element => element !== offerName,
-                      )
-                      setCheckboxSelectedRows(newSelectedList)
-                      onChangeSelect?.(newSelectedList)
-                    } else {
-                      const newSelectedList = [
-                        ...checkboxSelectedRows,
-                        offerName,
-                      ]
-                      setCheckboxSelectedRows(newSelectedList)
-                      onChangeSelect?.(newSelectedList)
-                    }
-
-                    if (expandedRowIds[id]) {
-                      expandRow(id)
-                    } else if (!autoCollapse) {
-                      collapseRow(id)
+                    if (expandable) {
+                      handleChangeCheckbox()
                     }
                   }}
                   value={id}
@@ -230,7 +262,12 @@ export const Row = ({
           </div>
         </List.Cell>
         {expandable ? (
-          <List.Cell className={offerListNoPaddingCell}>
+          <List.Cell
+            className={cn(
+              offerListNoPaddingCell,
+              isSelected ? offerListSelectedCell : '',
+            )}
+          >
             <Button
               aria-label="expand"
               data-testid="list-expand-button"
@@ -244,7 +281,11 @@ export const Row = ({
             </Button>
           </List.Cell>
         ) : null}
-        {children}
+        <OfferListRowContext.Provider
+          value={{ selected: isSelected, banner: !!banner }}
+        >
+          {children}
+        </OfferListRowContext.Provider>
       </List.Row>
       {banner && !expandedRowIds[id] ? (
         <Banner

@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { PlusIcon, RestoreIcon } from '@ultraviolet/icons'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
+import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import type { ComponentProps, MouseEvent } from 'react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'

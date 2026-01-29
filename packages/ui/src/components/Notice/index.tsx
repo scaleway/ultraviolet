@@ -1,6 +1,6 @@
 'use client'
 
-import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { Text } from '../Text'

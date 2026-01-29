@@ -1,4 +1,5 @@
-import { MoonIcon, MoonOutlineIcon } from '@ultraviolet/icons'
+import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
+import { MoonOutlineIcon } from '@ultraviolet/icons/MoonOutlineIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { SENTIMENTS } from '../../../theme'

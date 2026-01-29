@@ -1,5 +1,5 @@
 import { theme } from '@ultraviolet/themes'
-import { createVar, globalStyle, style } from '@vanilla-extract/css'
+import { createVar, style } from '@vanilla-extract/css'
 
 export const colorLine = createVar()
 export const backgroundColorLegend = createVar()
@@ -44,18 +44,18 @@ export const lineColorSquare = style({
 
 export const lineChartBody = style({})
 
-globalStyle(`${lineChartBody} > :not(:last-child)`, {
-  borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
-})
-
 export const lineChartHead = style({
   borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
   display: 'flex',
   paddingBottom: theme.space[1],
 })
 
-globalStyle(`${lineChartHead} > :not(:last-child)`, {
-  marginRight: theme.space[1],
+export const lineChartHeadTitle = style({
+  selectors: {
+    '&:not(:last-child)': {
+      marginRight: theme.space[1],
+    },
+  },
 })
 
 export const lineChartLegend = style({
@@ -68,8 +68,17 @@ export const lineChartLegend = style({
 export const lineChartRow = style({
   display: 'flex',
   padding: `${theme.space['0.5']} 0`,
+  selectors: {
+    [`${lineChartBody} > &:not(:last-child)`]: {
+      borderBottom: `1px solid ${theme.colors.neutral.backgroundStrong}`,
+    },
+  },
 })
 
-globalStyle(`${lineChartRow} > :not(:last-child)`, {
-  marginRight: theme.space[1],
+export const lineChartRowContent = style({
+  selectors: {
+    [`${lineChartRow} > &:not(:last-child)`]: {
+      marginRight: theme.space[1],
+    },
+  },
 })

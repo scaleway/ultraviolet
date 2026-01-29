@@ -1,4 +1,4 @@
-import { PlusIcon } from '@ultraviolet/icons'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import {
   Alert,

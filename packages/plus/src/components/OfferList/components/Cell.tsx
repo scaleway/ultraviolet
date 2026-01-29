@@ -4,7 +4,13 @@ import { List, Skeleton } from '@ultraviolet/ui'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useOfferListContext } from '../OfferListProvider'
-import { offerListCell, offerListLoadingCell } from '../styles.css'
+import {
+  offerListCell,
+  offerListCellNoRadius,
+  offerListLoadingCell,
+  offerListSelectedCell,
+} from '../styles.css'
+import { useOfferListRowContext } from './OfferListRowProvider'
 
 export const Cell = ({
   children,
@@ -14,6 +20,7 @@ export const Cell = ({
   style,
 }: ComponentProps<typeof List.Cell>) => {
   const { loading } = useOfferListContext()
+  const { selected, banner } = useOfferListRowContext()
 
   return loading ? (
     <List.Cell className={offerListLoadingCell} style={style}>
@@ -21,7 +28,12 @@ export const Cell = ({
     </List.Cell>
   ) : (
     <List.Cell
-      className={cn(className, offerListCell)}
+      className={cn(
+        className,
+        offerListCell,
+        selected ? offerListSelectedCell : '',
+        banner ? offerListCellNoRadius : '',
+      )}
       colSpan={colSpan}
       data-testid={dataTestId}
       style={style}

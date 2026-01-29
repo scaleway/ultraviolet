@@ -1,10 +1,15 @@
 'use client'
 
+import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { useSwitchButton } from './SwitchButtonContext'
-import { switchButtonOption } from './styles.css'
+import {
+  switchButtonOptionBase,
+  switchButtonOptionNeutral,
+  switchButtonOptionPrimary,
+} from './styles.css'
 
 type OptionProps = {
   value: string
@@ -51,7 +56,12 @@ export const Option = ({
   return (
     <SelectableCard
       checked={localValue === value}
-      className={switchButtonOption[sentiment]}
+      className={cn(
+        sentiment === 'neutral'
+          ? switchButtonOptionNeutral
+          : switchButtonOptionPrimary,
+        switchButtonOptionBase,
+      )}
       data-checked={localValue === value}
       data-testid={dataTestId ?? `switch-button-${value}`}
       disabled={!!disabled}

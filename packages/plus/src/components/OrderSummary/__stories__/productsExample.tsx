@@ -1,5 +1,5 @@
-import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Stack, Text, Tooltip } from '@ultraviolet/ui'
 
 const AdditionalInfo = () => (
@@ -115,8 +115,9 @@ export const categoryStorage = {
       amount: 100,
       amountFree: 75,
       price: 0.003_425,
-      priceUnit: 'GB/hours',
       title: '100 GB of storage',
+      customContent: '0.003425 GB/hours',
+      hidePrice: true,
     },
   ],
 }

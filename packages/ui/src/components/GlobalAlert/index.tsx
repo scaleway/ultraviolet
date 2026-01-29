@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseIcon } from '@ultraviolet/icons'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { useReducer } from 'react'

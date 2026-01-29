@@ -1,9 +1,7 @@
 import { theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { checkboxContainer } from '../Checkbox/styles.css'
-import { radioStack } from '../Radio/styles.css'
-import { inputDisplay, labelDisplay, widthSelectable } from './variables.css'
+import { inputDisplay, labelDisplay } from './variables.css'
 
 export const containerSelectableCard = recipe({
   base: {
@@ -15,27 +13,26 @@ export const containerSelectableCard = recipe({
     padding: theme.space[2],
     position: 'relative',
     selectors: {
-      '&:hover:not([data-error="true"]):not([data-disabled="true"]), &:active:not([data-error="true"]):not([data-disabled="true"])':
-        {
-          border: `1px solid ${theme.colors.primary.border}`,
-        },
-
-      '&[data-checked="false"]:hover:not([data-error="true"]):not([data-disabled="true"]), &[data-checked="false"]:active:not([data-error="true"]):not([data-disabled="true"])':
-        {
-          boxShadow: theme.shadows.hoverPrimary,
-        },
       '&[data-checked="true"]': {
         border: `1px solid ${theme.colors.primary.border}`,
-      },
-      '&[data-disabled="true"]': {
-        background: theme.colors.neutral.backgroundDisabled,
-        border: `1px solid ${theme.colors.neutral.borderDisabled}`,
-        color: theme.colors.neutral.textDisabled,
-        cursor: 'not-allowed',
       },
       '&[data-error="true"]': {
         border: `1px solid ${theme.colors.danger.border}`,
       },
+      '&[data-disabled="true"]': {
+        border: `1px solid ${theme.colors.neutral.borderDisabled}`,
+        color: theme.colors.neutral.textDisabled,
+        background: theme.colors.neutral.backgroundDisabled,
+        cursor: 'not-allowed',
+      },
+      '&:hover:not([data-error="true"]):not([data-disabled="true"]), &:active:not([data-error="true"]):not([data-disabled="true"])':
+        {
+          border: `1px solid ${theme.colors.primary.border}`,
+        },
+      '&[data-checked="false"]:hover:not([data-error="true"]):not([data-disabled="true"]), &[data-checked="false"]:active:not([data-error="true"]):not([data-disabled="true"])':
+        {
+          boxShadow: theme.shadows.hoverPrimary,
+        },
     },
     transition: `
     border-color 200ms ease,
@@ -68,24 +65,14 @@ export const containerSelectableCard = recipe({
   },
 })
 
-export const labelContainerSelectableCard = styleVariants({
-  label: {
-    selectors: {
-      '&:first-child': {
-        marginBottom: `-${theme.space['0.5']}`,
-      },
+export const labelContainerSelectableCardLabel = style({
+  selectors: {
+    '&:first-child': {
+      marginBottom: `-${theme.space['0.5']}`,
     },
   },
-  noLabel: {},
 })
-
-globalStyle(`${labelContainerSelectableCard.label} ${radioStack}`, {
-  width: '100%',
-})
-
-globalStyle(`${labelContainerSelectableCard.label} ${checkboxContainer}`, {
-  width: '100%',
-})
+export const labelContainerSelectableCardNoLabel = style({})
 
 export const divSelectableCard = style({
   alignItems: 'normal',
@@ -128,7 +115,7 @@ export const indentedCard = style({
 })
 
 export const selectableElementSelectableCard = style({
-  alignItems: 'start',
+  alignItems: 'flex-start',
   display: 'inline-flex',
   selectors: {
     '&[data-checked="true"]': {
@@ -149,8 +136,4 @@ globalStyle(`${selectableElementSelectableCard} > input + svg`, {
 
 globalStyle(`${selectableElementSelectableCard} > label`, {
   display: labelDisplay,
-})
-
-globalStyle(`${selectableElementSelectableCard} > ${radioStack}`, {
-  width: widthSelectable,
 })

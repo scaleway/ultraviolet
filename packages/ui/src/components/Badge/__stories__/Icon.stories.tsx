@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Badge } from '..'
 
 export const Icon: StoryFn = props => (

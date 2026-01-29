@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { InformationOutlineIcon, LockIcon } from '@ultraviolet/icons'
+import { LockIcon } from '@ultraviolet/icons/LockIcon'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import {
   Button,
   Card,

@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { MoonIcon, SunIcon } from '@ultraviolet/icons'
+import { MoonIcon } from '@ultraviolet/icons/MoonIcon'
+import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { SwitchButton } from '..'

@@ -1,6 +1,7 @@
 'use client'
 
-import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
+import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {
   forwardRef,

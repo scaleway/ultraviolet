@@ -1,6 +1,8 @@
 'use client'
 
-import { CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties } from 'react'
 import { Stack } from '../Stack'

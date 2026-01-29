@@ -10,7 +10,9 @@ export default {
     'Navigation.Item': Navigation.Item,
     'Navigation.PinnedItems': Navigation.PinnedItems,
     'Navigation.Separator': Navigation.Separator,
+    'Navigation.ShowHide': Navigation.ShowHide,
   },
 } as Meta
 
 export { Playground } from './Playground.stories'
+export { ShowHide } from './ShowHide.stories'

@@ -16,8 +16,10 @@ import {
   container,
   lineChartBody,
   lineChartHead,
+  lineChartHeadTitle,
   lineChartLegend,
   lineChartRow,
+  lineChartRowContent,
   longContainer,
   textLegend,
 } from './styles.css'
@@ -28,7 +30,12 @@ type CellProps = {
 }
 
 const Cell = ({ value, variant }: CellProps) => (
-  <Text as="span" className={textLegend} sentiment="neutral" variant={variant}>
+  <Text
+    as="span"
+    className={cn(textLegend, lineChartHeadTitle)}
+    sentiment="neutral"
+    variant={variant}
+  >
     {value as string | number}
   </Text>
 )
@@ -56,7 +63,7 @@ export const CustomLegend = ({
 }: CustomLegendProps) => (
   <div className={cn(className, container)} data-testid={dataTestId}>
     <div className={lineChartHead}>
-      <div className={longContainer}>Legend</div>
+      <div className={cn(longContainer, lineChartHeadTitle)}>Legend</div>
       <Cell value="Minimum" variant="body" />
       <Cell value="Maximum" variant="body" />
       <Cell value="Average" variant="body" />
@@ -74,7 +81,7 @@ export const CustomLegend = ({
             // oxlint-disable-next-line no-unknown-property
             key={labelIndexed}
           >
-            <div className={longContainer}>
+            <div className={cn(longContainer, lineChartRowContent)}>
               <Checkbox
                 checked={selected.includes(labelIndexed)}
                 name={id}
