@@ -52,6 +52,10 @@ type PaginationProps = {
        * Number of items in the list
        */
       numberOfItems: number
+      /**
+       * Defines the target element for the perPage dropdown menu
+       */
+      perPagePortalTarget?: HTMLElement
     }
   | {
       perPage?: never
@@ -59,6 +63,7 @@ type PaginationProps = {
       perPageText?: never
       numberOfItemsText?: never
       numberOfItems?: never
+      perPagePortalTarget?: never
     }
 )
 
@@ -78,6 +83,7 @@ export const Pagination = ({
   perPageText,
   numberOfItemsText,
   numberOfItems,
+  perPagePortalTarget,
   'data-testid': dataTestId,
   style,
 }: PaginationProps) => {
@@ -108,6 +114,7 @@ export const Pagination = ({
           page={page}
           perPage={perPageComputed}
           perPageText={perPageText}
+          portalTarget={perPagePortalTarget}
           setPerPage={setPerPage}
         />
       ) : null}
