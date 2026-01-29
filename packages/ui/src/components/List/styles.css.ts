@@ -272,6 +272,10 @@ export const listSkeleton = style({
   width: '80%',
 })
 
+export const listExpandableButton = style({
+  minWidth: theme.sizing[400],
+})
+
 export const listExpandableCell = style({
   padding: paddingExpandableCell,
   selectors: {
