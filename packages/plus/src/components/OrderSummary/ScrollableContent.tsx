@@ -1,4 +1,4 @@
-import { AttachIcon } from '@ultraviolet/icons'
+import { AttachIcon } from '@ultraviolet/icons/AttachIcon'
 import { NumberInput, Stack, Text } from '@ultraviolet/ui'
 import { useContext } from 'react'
 import {

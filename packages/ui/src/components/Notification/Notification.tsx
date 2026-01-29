@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseIcon } from '@ultraviolet/icons'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { ReactNode } from 'react'
 import type {
   Theme as ThemeToastify,

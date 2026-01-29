@@ -1,4 +1,4 @@
-import { InformationOutlineIcon } from '@ultraviolet/icons'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Popover, Tooltip } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { plansIconWrapper } from './styles.css'

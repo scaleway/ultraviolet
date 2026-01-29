@@ -1,6 +1,6 @@
 'use client'
 
-import { OpenInNewIcon } from '@ultraviolet/icons'
+import { OpenInNewIcon } from '@ultraviolet/icons/OpenInNewIcon'
 import { Stack, Text } from '@ultraviolet/ui'
 import type {
   AnchorHTMLAttributes,

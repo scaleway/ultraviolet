@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseIcon } from '@ultraviolet/icons'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, CSSProperties, ReactNode } from 'react'

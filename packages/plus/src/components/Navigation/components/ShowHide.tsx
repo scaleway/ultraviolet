@@ -2,7 +2,8 @@
 
 // oxlint-disable eslint/max-statements
 
-import { ArrowDownIcon, ArrowUpIcon } from '@ultraviolet/icons'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
+import { ArrowUpIcon } from '@ultraviolet/icons/ArrowUpIcon'
 import { Button, Stack } from '@ultraviolet/ui'
 import type { CSSProperties, ReactNode } from 'react'
 import { memo, useState } from 'react'

@@ -1,4 +1,4 @@
-import { RayTopArrowIcon } from '@ultraviolet/icons'
+import { RayTopArrowIcon } from '@ultraviolet/icons/RayTopArrowIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
 import { Separator } from '..'

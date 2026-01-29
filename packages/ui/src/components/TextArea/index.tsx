@@ -1,6 +1,8 @@
 'use client'
 
-import { AlertCircleIcon, CheckCircleIcon, CloseIcon } from '@ultraviolet/icons'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import { useTheme } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { CSSProperties, DOMAttributes, ReactNode } from 'react'

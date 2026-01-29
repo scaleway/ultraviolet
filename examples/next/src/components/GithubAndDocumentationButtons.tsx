@@ -1,4 +1,4 @@
-import { GithubIcon } from '@ultraviolet/icons'
+import { GithubIcon } from '@ultraviolet/icons/GithubIcon'
 import { Button, Stack } from '@ultraviolet/ui'
 
 const GithubAndDocumentationButtons = () => (

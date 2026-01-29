@@ -1,5 +1,5 @@
-import { InformationOutlineIcon } from '@ultraviolet/icons'
 import { FranceFlag } from '@ultraviolet/icons/flags/FranceFlag'
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
 import { Stack, Text, Tooltip } from '@ultraviolet/ui'
 
 const AdditionalInfo = () => (

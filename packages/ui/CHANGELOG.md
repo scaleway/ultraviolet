@@ -1190,7 +1190,8 @@
   ```tsx
   // After
   import { Bullet } from '@ultraviolet/ui'
-  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+  import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+  import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 
   <Bullet>
     <CheckIcon />
@@ -1215,7 +1216,7 @@
   ```tsx
   // After
   import { AvatarV2 } from "@ultraviolet/ui";
-  import { MosaicIcon } from "@ultraviolet/icons";
+  import { MosaicIcon } from "@ultraviolet/icons/MosaicIcon";
 
   <AvatarV2 variant="icon" shape="circle" sentiment="primary">
     <MosaicIcon size="xlarge" />
@@ -1236,7 +1237,7 @@
   ```tsx
   // After
   import { Separator } from "@ultraviolet/ui";
-  import { RayTopArrowIcon } from "@ultraviolet/icons";
+  import { RayTopArrowIcon } from "@ultraviolet/icons/RayTopArrowIcon";
 
   <Separator direction="vertical">
     <RayTopArrowIcon size="medium" />
@@ -1257,7 +1258,7 @@
   ```tsx
   // After
   import { Tag } from "@ultraviolet/ui";
-  import { CheckIcon } from "@ultraviolet/icons";
+  import { CheckIcon } from "@ultraviolet/icons/CheckIcon";
 
   <Tag>
     <CheckIcon size="small" />
@@ -2319,7 +2320,8 @@
   ```tsx
   // After
   import { Bullet } from '@ultraviolet/ui'
-  import { CheckIcon, CheckCircleOutlineIcon } from '@ultraviolet/icons'
+  import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+  import { CheckCircleOutlineIcon } from '@ultraviolet/icons/CheckCircleOutlineIcon'
 
   <Bullet>
     <CheckIcon />

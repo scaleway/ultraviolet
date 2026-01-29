@@ -34,8 +34,10 @@ export const Icon = ({
       productIconSizes[size],
       productIconVariants[`${variant}${disabled ? 'Disabled' : ''}`],
     )}
+    height="64"
     style={style}
     viewBox="0 0 64 64"
+    width="64"
   >
     {children}
   </svg>

@@ -2,7 +2,7 @@
 
 'use client'
 
-import { CloseIcon } from '@ultraviolet/icons'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { ComponentProps, CSSProperties } from 'react'
 import { Button } from '../Button'
 import type { Modal } from '.'

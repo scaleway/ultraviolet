@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseIcon } from '@ultraviolet/icons'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
 import type { SENTIMENTS } from '../../../theme'
 import { Button } from '../../Button'
 import { closeButtonToaster } from '../styles.css'

@@ -7,7 +7,7 @@ import {
   useForm,
   useWatch,
 } from '@ultraviolet/form'
-import { ProfileIcon } from '@ultraviolet/icons'
+import { ProfileIcon } from '@ultraviolet/icons/ProfileIcon'
 import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import styles from '../../../styles/login.module.scss'

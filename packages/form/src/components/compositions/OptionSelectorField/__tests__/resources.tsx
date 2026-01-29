@@ -1,9 +1,10 @@
-import { LeafIcon, RestoreIcon } from '@ultraviolet/icons'
 import {
   FranceFlag,
   NetherlandsFlag,
   PolandFlag,
 } from '@ultraviolet/icons/flags'
+import { LeafIcon } from '@ultraviolet/icons/LeafIcon'
+import { RestoreIcon } from '@ultraviolet/icons/RestoreIcon'
 import { Stack, Text, Tooltip } from '@ultraviolet/ui'
 
 export const firstSelectorOptions = [
