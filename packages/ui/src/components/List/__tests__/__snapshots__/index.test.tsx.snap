@@ -515,7 +515,7 @@ exports[`list > should not collapse a row by clicking on expandable content 1`] 
         </thead>
         <tbody>
           <tr
-            aria-controls="_r_a3_"
+            aria-controls="_r_ad_"
             aria-expanded="true"
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
             data-highlight="false"
@@ -557,7 +557,7 @@ exports[`list > should not collapse a row by clicking on expandable content 1`] 
             class="styles__inoh548"
             data-expandable-content="true"
             data-highlight="false"
-            id="_r_a3_"
+            id="_r_ad_"
           >
             <td
               class="styles__inoh54r styles__inoh54k"
@@ -1738,6 +1738,461 @@ exports[`list > should render correctly with bad sort value 1`] = `
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
             data-highlight="false"
             tabindex="-1"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 10 Column 5
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`list > should render correctly with children fragment 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__inoh541"
+    >
+      <table
+        class="styles__inoh542"
+      >
+        <thead>
+          <tr
+            class="styles__inoh546"
+          >
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 1
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 2
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 3
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 4
+              </div>
+            </th>
+            <th
+              class="styles__inoh545"
+              tabindex="-1"
+            >
+              <div
+                class="styles__toi52u0 styles_alignItems_center_xxsmall__toi52ud styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.5rem_xxsmall__toi52u3p styles_justifyContent_normal_xxsmall__toi52u5v"
+              >
+                Column 5
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 1 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 2 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 3 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 4 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 5 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 6 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 7 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 8 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
+          >
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 1
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 2
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 3
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 4
+            </td>
+            <td
+              class="styles__inoh54k"
+              style="--_1431nf64: auto; --_1431nf66: auto; --_1431nf65: none; --_1431nf67: auto; --_1431nf68: none; --_1431nf69: auto;"
+            >
+              Row 9 Column 5
+            </td>
+          </tr>
+          <tr
+            aria-expanded="false"
+            class="styles__inoh54b styles__inoh54a styles_sentiment_info__inoh54j"
+            data-highlight="false"
+            role="button row"
+            tabindex="0"
           >
             <td
               class="styles__inoh54k"
@@ -3335,8 +3790,8 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 1
                 <div
-                  aria-controls="_r_ad_"
-                  aria-describedby="_r_ad_"
+                  aria-controls="_r_an_"
+                  aria-describedby="_r_an_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
@@ -3364,8 +3819,8 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 2
                 <div
-                  aria-controls="_r_ae_"
-                  aria-describedby="_r_ae_"
+                  aria-controls="_r_ao_"
+                  aria-describedby="_r_ao_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
@@ -3393,8 +3848,8 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 3
                 <div
-                  aria-controls="_r_af_"
-                  aria-describedby="_r_af_"
+                  aria-controls="_r_ap_"
+                  aria-describedby="_r_ap_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
@@ -3422,8 +3877,8 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 4
                 <div
-                  aria-controls="_r_ag_"
-                  aria-describedby="_r_ag_"
+                  aria-controls="_r_aq_"
+                  aria-describedby="_r_aq_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
@@ -3451,8 +3906,8 @@ exports[`list > should render correctly with info 1`] = `
               >
                 Column 5
                 <div
-                  aria-controls="_r_ah_"
-                  aria-describedby="_r_ah_"
+                  aria-controls="_r_ar_"
+                  aria-describedby="_r_ar_"
                   class="styles__w40vpo9"
                   tabindex="0"
                 >
@@ -3947,7 +4402,7 @@ exports[`list > should render correctly with isExpandable and autoClose rows the
             </td>
           </tr>
           <tr
-            aria-controls="_r_6l_"
+            aria-controls="_r_6v_"
             aria-expanded="true"
             class="styles__inoh54b styles__inoh54a styles_sentiment_neutral__inoh54f"
             data-highlight="false"
@@ -3989,7 +4444,7 @@ exports[`list > should render correctly with isExpandable and autoClose rows the
             class="styles__inoh548"
             data-expandable-content="true"
             data-highlight="false"
-            id="_r_6l_"
+            id="_r_6v_"
           >
             <td
               class="styles__inoh54r styles__inoh54k"
@@ -7740,7 +8195,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select all"
                     class="styles__9pjq8o2"
-                    id="_r_3c_"
+                    id="_r_3m_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -7852,7 +8307,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_3g_"
+                    id="_r_3q_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -7942,7 +8397,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_3k_"
+                    id="_r_3u_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -8032,7 +8487,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_3o_"
+                    id="_r_42_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -8122,7 +8577,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_3s_"
+                    id="_r_46_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -8212,7 +8667,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_40_"
+                    id="_r_4a_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -8302,7 +8757,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_44_"
+                    id="_r_4e_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -8392,7 +8847,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_48_"
+                    id="_r_4i_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -8482,7 +8937,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_4c_"
+                    id="_r_4m_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -8572,7 +9027,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_4g_"
+                    id="_r_4q_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -8662,7 +9117,7 @@ exports[`list > should render correctly with selectable then click on first row 
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_4k_"
+                    id="_r_4u_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"
@@ -8769,7 +9224,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select all"
                     class="styles__9pjq8o2"
-                    id="_r_as_"
+                    id="_r_b6_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="all"
@@ -8878,7 +9333,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_b0_"
+                    id="_r_ba_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -8968,7 +9423,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_b4_"
+                    id="_r_be_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -9058,7 +9513,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_b8_"
+                    id="_r_bi_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -9148,7 +9603,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_bc_"
+                    id="_r_bm_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -9238,7 +9693,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_bg_"
+                    id="_r_bq_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -9328,7 +9783,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_bk_"
+                    id="_r_bu_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -9418,7 +9873,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_bo_"
+                    id="_r_c2_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -9508,7 +9963,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_bs_"
+                    id="_r_c6_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -9598,7 +10053,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_c0_"
+                    id="_r_ca_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -9688,7 +10143,7 @@ exports[`list > should render correctly with selectable with shift click for mul
                     aria-invalid="false"
                     aria-label="select"
                     class="styles__9pjq8o2"
-                    id="_r_c4_"
+                    id="_r_ce_"
                     name="list-select-checkbox"
                     type="checkbox"
                     value="10"

@@ -13,6 +13,7 @@ import type {
 } from 'react'
 import {
   Children,
+  Fragment,
   forwardRef,
   isValidElement,
   useCallback,
@@ -148,10 +149,21 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       }
     }, [refList, setRefList])
 
-    const validChildrenArray = Children.toArray(children).filter(child =>
-      isValidElement(child),
+    // Without this, <><List.Cell /><List.Cell /></> is seen as 1 column
+    // which can be problematic when column widths are defined
+    const childrenArrayNoFragment = Children.toArray(children).flatMap(
+      (node: ReactNode) => {
+        if (isValidElement(node) && node.type === Fragment) {
+          return (node.props as { children?: ReactNode }).children
+        }
+
+        return node
+      },
     )
 
+    const validChildrenArray = Children.toArray(childrenArrayNoFragment).filter(
+      child => isValidElement(child),
+    )
     const totalColumns =
       columns.length + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
 
