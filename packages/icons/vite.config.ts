@@ -30,7 +30,6 @@ export default mergeConfig(defineConfig(defaultConfig), {
   plugins: [
     vanillaExtractPlugin({
       identifiers: ({ hash }) => `uv_${hash}`,
-      unstable_mode: 'transform',
     }),
   ],
 })
