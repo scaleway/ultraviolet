@@ -6,6 +6,7 @@ import { SelectableCard } from '..'
 export const ShowTick: StoryFn = args => {
   const [value, onChange] = useState('label-5')
   const [value2, onChange2] = useState({ 'label-1': true, 'label-2': true })
+  const [value3, onChange3] = useState({ 'label-1': true, 'label-2': true })
 
   return (
     <>
@@ -54,6 +55,33 @@ export const ShowTick: StoryFn = args => {
           }
           showTick
           type="checkbox"
+          value="label-2"
+        />
+      </Stack>
+
+      <Stack direction="row" gap={2}>
+        <SelectableCard
+          {...args}
+          checked={value3['label-1']}
+          label="Toggle 1"
+          name="label-1"
+          onChange={event =>
+            onChange3({ ...value3, 'label-1': event.currentTarget.checked })
+          }
+          showTick
+          type="toggle"
+          value="label-1"
+        />
+        <SelectableCard
+          {...args}
+          checked={value3['label-2']}
+          label="Toggle 2"
+          name="label-2"
+          onChange={event =>
+            onChange3({ ...value3, 'label-2': event.currentTarget.checked })
+          }
+          showTick
+          type="toggle"
           value="label-2"
         />
       </Stack>

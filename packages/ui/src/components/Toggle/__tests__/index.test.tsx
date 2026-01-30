@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { Toggle } from '..'
 
 describe('toggle', () => {
@@ -76,11 +76,17 @@ describe('toggle', () => {
     ))
 
   test('renders and click on toggle on', async () => {
-    renderWithTheme(<Toggle label="This is a label" name="test" />)
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <Toggle label="labelName" name="test" onChange={onChange} />,
+    )
 
-    const input = screen.getByRole('checkbox')
+    const input = screen.getByRole('checkbox', {
+      name: 'labelName',
+    })
     await userEvent.click(input)
     expect(input).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with helper', () =>

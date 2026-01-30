@@ -69,7 +69,7 @@ exports[`selectableCard > checkbox > renders correctly with aria label 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -146,7 +146,7 @@ exports[`selectableCard > checkbox > renders correctly with checked prop 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -240,7 +240,7 @@ exports[`selectableCard > checkbox > renders correctly with complex children 1`]
         <div
           style="background: gray; color: gray;"
         >
-          Complex radio card
+          Complex SelectableCard
         </div>
       </div>
     </div>
@@ -322,7 +322,7 @@ exports[`selectableCard > checkbox > renders correctly with default props 1`] = 
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -398,7 +398,7 @@ exports[`selectableCard > checkbox > renders correctly with disabled prop 1`] = 
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -508,7 +508,7 @@ exports[`selectableCard > checkbox > renders correctly with illustration 1`] = `
           <img
             alt="illustration"
             class="styles__475tnd9"
-            height="auto"
+            height="220"
             src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
@@ -696,7 +696,7 @@ exports[`selectableCard > checkbox > renders correctly with isError prop 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -924,7 +924,7 @@ exports[`selectableCard > checkbox > renders correctly with showTick 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Checkbox card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1025,7 +1025,7 @@ exports[`selectableCard > checkbox > renders correctly with tooltip prop 1`] = `
             data-has-label="false"
             style="--_4k0ekn0: 100%;"
           >
-            Checkbox card
+            SelectableCard
           </div>
         </div>
       </div>
@@ -1103,7 +1103,7 @@ exports[`selectableCard > radio > renders correctly with aria label 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1180,7 +1180,7 @@ exports[`selectableCard > radio > renders correctly with checked prop 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1264,7 +1264,7 @@ exports[`selectableCard > radio > renders correctly with complex children 1`] = 
         <div
           style="background: gray; color: gray;"
         >
-          Complex radio card
+          Complex SelectableCard
         </div>
       </div>
     </div>
@@ -1346,7 +1346,7 @@ exports[`selectableCard > radio > renders correctly with default props 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1422,7 +1422,7 @@ exports[`selectableCard > radio > renders correctly with disabled prop 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1522,7 +1522,7 @@ exports[`selectableCard > radio > renders correctly with illustration 1`] = `
           <img
             alt="illustration"
             class="styles__475tnd9"
-            height="auto"
+            height="220"
             src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
@@ -1690,7 +1690,7 @@ exports[`selectableCard > radio > renders correctly with isError prop 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Radio card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1908,7 +1908,7 @@ exports[`selectableCard > radio > renders correctly with showTick 1`] = `
         data-has-label="false"
         style="--_4k0ekn0: 100%;"
       >
-        Checkbox card
+        SelectableCard
       </div>
     </div>
   </div>
@@ -1999,7 +1999,791 @@ exports[`selectableCard > radio > renders correctly with tooltip prop 1`] = `
             data-has-label="false"
             style="--_4k0ekn0: 100%;"
           >
-            Checkbox card
+            SelectableCard
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with aria label 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd7 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-type="radio"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: none; --_18vc4d32: auto;"
+      tabindex="0"
+    >
+      <div
+        class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      >
+        <div
+          aria-disabled="false"
+          class="styles__475tndd styles__17da2jl2"
+          data-checked="false"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            aria-label="test"
+            class="styles__17da2jl6"
+            id="_r_3l_"
+            name="test"
+            tabindex="-1"
+            type="radio"
+            value="choice"
+          />
+          <svg
+            class="styles__17da2jl7"
+            viewBox="0 0 24 24"
+          >
+            <title>
+              radio
+            </title>
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke-width="2"
+              />
+              <circle
+                class="styles__17da2jl9"
+                cx="12"
+                cy="12"
+                r="8"
+              />
+              <circle
+                class="styles__17da2jl8"
+                cx="12"
+                cy="12"
+                r="5"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        SelectableCard
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with checked prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd7 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="true"
+      data-disabled="false"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: none; --_18vc4d32: auto;"
+      tabindex="0"
+    >
+      <label
+        aria-disabled="false"
+        class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+        for="_r_3r_"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+        />
+        <div
+          class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_false__adn1w23 styles_size_large__adn1w25"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            aria-label="test"
+            checked=""
+            class="styles__adn1w28"
+            id="_r_3r_"
+            name="test"
+            tabindex="-1"
+            type="checkbox"
+            value="choice"
+          />
+        </div>
+      </label>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        SelectableCard
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with complex children 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_default__475tnd2 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="true"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+    >
+      <label
+        aria-disabled="true"
+        class="styles__475tndd styles__adn1w29 styles_disabled_true__adn1w2b styles_labelPosition_right__adn1w2d"
+        for="_r_49_"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+        >
+          <div
+            class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_gap_0.5rem_xxsmall__x6hyh52j"
+            style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
+          >
+            <span
+              class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+              for="_r_49_"
+            >
+              test
+            </span>
+          </div>
+        </div>
+        <div
+          class="styles__adn1w20 styles_disabled_true__adn1w22 styles_error_false__adn1w23 styles_size_large__adn1w25"
+        >
+          <input
+            aria-disabled="true"
+            aria-invalid="false"
+            class="styles__adn1w28"
+            disabled=""
+            id="_r_49_"
+            name="test"
+            tabindex="-1"
+            type="checkbox"
+            value="choice"
+          />
+        </div>
+      </label>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="true"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        <div
+          style="background: gray; color: gray;"
+        >
+          Complex SelectableCard
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with default props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-type="radio"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+      tabindex="0"
+    >
+      <div
+        class="styles__17da2jl0 styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      >
+        <div
+          aria-disabled="false"
+          class="styles__475tndd styles__17da2jl2"
+          data-checked="false"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            class="styles__17da2jl6"
+            id="_r_3h_"
+            name="test"
+            tabindex="-1"
+            type="radio"
+            value="choice"
+          />
+          <svg
+            class="styles__17da2jl7"
+            viewBox="0 0 24 24"
+          >
+            <title>
+              radio
+            </title>
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke-width="2"
+              />
+              <circle
+                class="styles__17da2jl9"
+                cx="12"
+                cy="12"
+                r="8"
+              />
+              <circle
+                class="styles__17da2jl8"
+                cx="12"
+                cy="12"
+                r="5"
+              />
+            </g>
+          </svg>
+          <label
+            class="styles__17da2jl3 styles__17da2jl4 style__m4c9ow0 style_prominence_default__m4c9ow4 style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a"
+            for="_r_3h_"
+          >
+            test
+          </label>
+        </div>
+      </div>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        SelectableCard
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with disabled prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd7 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="true"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: none; --_18vc4d32: auto;"
+    >
+      <label
+        aria-disabled="true"
+        class="styles__475tndd styles__adn1w29 styles_disabled_true__adn1w2b styles_labelPosition_right__adn1w2d"
+        for="_r_3u_"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+        />
+        <div
+          class="styles__adn1w20 styles_disabled_true__adn1w22 styles_error_false__adn1w23 styles_size_large__adn1w25"
+        >
+          <input
+            aria-disabled="true"
+            aria-invalid="false"
+            aria-label="test"
+            class="styles__adn1w28"
+            disabled=""
+            id="_r_3u_"
+            name="test"
+            tabindex="-1"
+            type="checkbox"
+            value="choice"
+          />
+        </div>
+      </label>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        SelectableCard
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with illustration 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_illustration__475tnd4 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: inline; --_18vc4d31: inline; --_18vc4d32: 100%;"
+      tabindex="0"
+    >
+      <div
+        class="styles__toi52u0 styles_alignItems_stretch_xxsmall__toi52u7 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_space-between_xxsmall__toi52u77"
+        style="--_4k0ekn0: 100%; --_4k0ekn3: 1;"
+      >
+        <div
+          class="styles__475tnda styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        >
+          <label
+            aria-disabled="false"
+            class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+            for="_r_4d_"
+          >
+            <div
+              class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+            >
+              <div
+                class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_gap_0.5rem_xxsmall__x6hyh52j"
+                style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
+              >
+                <span
+                  class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+                  for="_r_4d_"
+                >
+                  label
+                </span>
+              </div>
+            </div>
+            <div
+              class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_false__adn1w23 styles_size_large__adn1w25"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="styles__adn1w28"
+                id="_r_4d_"
+                name="label-14"
+                tabindex="-1"
+                type="checkbox"
+                value="label-14"
+              />
+            </div>
+          </label>
+          <div
+            class="styles__475tndb styles__475tndc styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            style="--_4k0ekn0: 100%;"
+          >
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
+          </div>
+        </div>
+        <div
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_center_xxsmall__toi52u61"
+        />
+        <div
+          class="styles__475tnd8"
+        >
+          <img
+            alt="illustration"
+            class="styles__475tnd9"
+            height="220"
+            src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
+            width="220"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with indented disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: inline; --_18vc4d31: inline; --_18vc4d32: 100%;"
+      tabindex="0"
+    >
+      <label
+        aria-disabled="false"
+        class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+        for="_r_4h_"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+        >
+          <div
+            class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_gap_0.5rem_xxsmall__x6hyh52j"
+            style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
+          >
+            <span
+              class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+              for="_r_4h_"
+            >
+              label
+            </span>
+          </div>
+        </div>
+        <div
+          class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_false__adn1w23 styles_size_large__adn1w25"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            class="styles__adn1w28"
+            id="_r_4h_"
+            name="label-14"
+            tabindex="-1"
+            type="checkbox"
+            value="label-14"
+          />
+        </div>
+      </label>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="true"
+        style="--_4k0ekn0: 100%;"
+      >
+        Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with isError prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-error="true"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+      tabindex="0"
+    >
+      <label
+        aria-disabled="false"
+        class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+        for="_r_41_"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+        >
+          <div
+            class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_gap_0.5rem_xxsmall__x6hyh52j"
+            style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
+          >
+            <span
+              class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+              for="_r_41_"
+            >
+              test
+            </span>
+          </div>
+        </div>
+        <div
+          class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_true__adn1w24 styles_size_large__adn1w25"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="true"
+            class="styles__adn1w28"
+            id="_r_41_"
+            name="test"
+            tabindex="-1"
+            type="checkbox"
+            value="choice"
+          />
+        </div>
+      </label>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        SelectableCard
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with productIcon 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_icon__475tnd3 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: inline; --_18vc4d31: inline; --_18vc4d32: 100%;"
+      tabindex="0"
+    >
+      <div
+        class="styles__toi52u0 styles_alignItems_stretch_xxsmall__toi52u7 styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_space-between_xxsmall__toi52u77"
+        style="--_4k0ekn0: 100%; --_4k0ekn3: 1;"
+      >
+        <div
+          class="styles__475tnda styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        >
+          <label
+            aria-disabled="false"
+            class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+            for="_r_4l_"
+          >
+            <div
+              class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+            >
+              <div
+                class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_gap_0.5rem_xxsmall__x6hyh52j"
+                style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
+              >
+                <span
+                  class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+                  for="_r_4l_"
+                >
+                  label
+                </span>
+              </div>
+            </div>
+            <div
+              class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_false__adn1w23 styles_size_large__adn1w25"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="styles__adn1w28"
+                id="_r_4l_"
+                name="label-14"
+                tabindex="-1"
+                type="checkbox"
+                value="label-14"
+              />
+            </div>
+          </label>
+          <div
+            class="styles__475tndb styles__475tndc styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+            data-has-default-cursor="false"
+            data-has-label="true"
+            style="--_4k0ekn0: 100%;"
+          >
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
+          </div>
+        </div>
+        <div
+          class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_center_xxsmall__toi52u61"
+        >
+          <svg
+            class="uv_icons_q76b9r0 uv_icons_q76b9r5"
+            height="64"
+            viewBox="0 0 64 64"
+            width="64"
+          >
+            <title>
+              MacMiniProductIcon
+            </title>
+            <g
+              class="MacMini"
+            >
+              <g
+                class=".Square"
+              >
+                <path
+                  class="fillWeak"
+                  d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+                  fill="#F1EEFC"
+                />
+              </g>
+              <g
+                class="Icon MacMini"
+              >
+                <g
+                  class="MacMini"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    class="fill"
+                    d="M40 8.5c5.523 0 10 4.477 10 10v16c0 5.523-4.477 10-10 10h-7v5.17a3 3 0 0 1 1.83 1.83h13.334a1 1 0 0 1 .117 1.993l-.117.007H34.83a3.001 3.001 0 0 1-5.658 0H15a1 1 0 0 1-.117-1.993L15 51.5h14.171A3 3 0 0 1 31 49.67V44.5h-7c-5.523 0-10-4.477-10-10v-16c0-5.523 4.477-10 10-10zm-8 34h-8l-.25-.004A8 8 0 0 1 16 34.5v-16l.004-.25A8 8 0 0 1 24 10.5h16l.25.004A8 8 0 0 1 48 18.5v16l-.004.25A8 8 0 0 1 40 42.5zm0 9a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                    fill="#521094"
+                  />
+                  <path
+                    class="fillStrong"
+                    d="M45 18.5a5 5 0 0 0-5-5H24a5 5 0 0 0-5 5v16a5 5 0 0 0 5 5h16a5 5 0 0 0 5-5zm-21-3h16l.176.005A3 3 0 0 1 43 18.5v16l-.005.176A3 3 0 0 1 40 37.5H24l-.176-.005A3 3 0 0 1 21 34.5v-16l.005-.176A3 3 0 0 1 24 15.5"
+                    fill="#A060F6"
+                  />
+                  <path
+                    class="fillStrong"
+                    d="M34.5 24h-5v5h5zm-5-2a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2z"
+                    fill="#A060F6"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with showTick 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd7 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_row_xxsmall__toi52u2j styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+      data-checked="false"
+      data-disabled="false"
+      data-type="toggle"
+      role="button"
+      style="--_4k0ekn3: 1; --_18vc4d30: inline; --_18vc4d31: inline; --_18vc4d32: auto;"
+      tabindex="0"
+    >
+      <label
+        aria-disabled="false"
+        class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+        for="_r_3o_"
+      >
+        <div
+          class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+        />
+        <div
+          class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_false__adn1w23 styles_size_large__adn1w25"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            aria-label="test"
+            class="styles__adn1w28"
+            id="_r_3o_"
+            name="test"
+            tabindex="-1"
+            type="checkbox"
+            value="choice"
+          />
+        </div>
+      </label>
+      <div
+        class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+        data-has-default-cursor="false"
+        data-has-label="false"
+        style="--_4k0ekn0: 100%;"
+      >
+        SelectableCard
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`selectableCard > toggle > renders correctly with tooltip prop 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <div
+      class="styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+      style="--_4k0ekn3: 1;"
+    >
+      <div
+        aria-controls="_r_44_"
+        aria-describedby="_r_44_"
+        class="styles__w40vpo9 styles_fullHeight_true__w40vpoa"
+        tabindex="0"
+      >
+        <div
+          class="styles__475tnd0 styles_cursor_custom__475tnd1 styles_image_none__475tnd5 styles__475tnd6 styles__toi52u0 styles_alignItems_flex-start_xxsmall__toi52uv styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.25rem_xxsmall__toi52u5d styles_justifyContent_normal_xxsmall__toi52u5v"
+          data-checked="false"
+          data-disabled="false"
+          data-type="toggle"
+          role="button"
+          style="--_4k0ekn3: 1; --_18vc4d30: none; --_18vc4d31: inline; --_18vc4d32: 100%;"
+          tabindex="0"
+        >
+          <label
+            aria-disabled="false"
+            class="styles__475tndd styles__adn1w29 styles_disabled_false__adn1w2a styles_labelPosition_right__adn1w2d"
+            for="_r_45_"
+          >
+            <div
+              class="styles__toi52u0 styles_alignItems_baseline_xxsmall__toi52u1j styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_gap_0.125rem_xxsmall__toi52u5j styles_justifyContent_normal_xxsmall__toi52u5v"
+            >
+              <div
+                class="styles__x6hyh50 styles_alignItems_center_xxsmall__x6hyh5d styles_gap_0.5rem_xxsmall__x6hyh52j"
+                style="--_3mg8xe0: auto 1fr; --_3mg8xe1: auto 1fr; --_3mg8xe2: auto 1fr; --_3mg8xe3: auto 1fr; --_3mg8xe4: auto 1fr; --_3mg8xe5: auto 1fr;"
+              >
+                <span
+                  class="style__m4c9ow0 style_prominence_default__m4c9ow4 style_sentiment_neutral__m4c9owb style_variant_body__m4c9owj style_undefined_compound_0__m4c9ow1a style_undefined_compound_64__m4c9ow32"
+                  for="_r_45_"
+                >
+                  test
+                </span>
+              </div>
+            </div>
+            <div
+              class="styles__adn1w20 styles_disabled_false__adn1w21 styles_error_false__adn1w23 styles_size_large__adn1w25"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="styles__adn1w28"
+                id="_r_45_"
+                name="test"
+                tabindex="-1"
+                type="checkbox"
+                value="choice"
+              />
+            </div>
+          </label>
+          <div
+            class="styles__475tndb styles__toi52u0 styles_alignItems_normal_xxsmall__toi52u1 styles_flexDirection_column_xxsmall__toi52u2d styles_flexWrap_nowrap_xxsmall__toi52u31 styles_justifyContent_normal_xxsmall__toi52u5v"
+            data-has-default-cursor="false"
+            data-has-label="false"
+            style="--_4k0ekn0: 100%;"
+          >
+            SelectableCard
           </div>
         </div>
       </div>

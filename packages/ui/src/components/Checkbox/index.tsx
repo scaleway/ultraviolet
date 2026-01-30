@@ -64,6 +64,7 @@ type CheckboxProps = {
   | 'name'
   | 'onBlur'
   | 'onChange'
+  | 'onKeyDown'
   | 'onClick'
   | 'onFocus'
   | 'tabIndex'
@@ -83,6 +84,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       onChange,
       onFocus,
       onBlur,
+      onKeyDown,
       error,
       name,
       helper,
@@ -147,6 +149,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             onBlur={onBlur}
             onChange={onChange}
             onFocus={onFocus}
+            onKeyDown={onKeyDown}
             ref={ref}
             required={required}
             style={style}
