@@ -1,6 +1,6 @@
 'use client'
 
-import type { CSSProperties, ReactElement, ReactNode } from 'react'
+import type { CSSProperties, ReactElement, ReactNode, RefObject } from 'react'
 import { useCallback, useContext, useId, useRef, useState } from 'react'
 import { Disclosure } from './components/Disclosure'
 import { ModalContent } from './ModalContent'
@@ -16,6 +16,7 @@ export type ModalProps = {
   disclosure?: ReactElement | ((state: ModalState) => ReactElement)
   isClosable?: boolean
   onClose?: () => void
+  onOpen?: () => void
   onBeforeClose?: () => Promise<void> | void
   open?: boolean
   placement?: ModalPlacement
@@ -29,6 +30,7 @@ export type ModalProps = {
    */
   image?: string
   style?: CSSProperties
+  ref?: RefObject<HTMLDialogElement | null>
 }
 /**
  * Modal is a component that allows you to display content on top of other content.
@@ -44,6 +46,7 @@ export const Modal = ({
   isClosable = true,
   onClose,
   onBeforeClose,
+  onOpen,
   open = false,
   placement = 'center',
   preventBodyScroll = true,
@@ -53,6 +56,7 @@ export const Modal = ({
   backdropClassName,
   image,
   style,
+  ref,
 }: ModalProps) => {
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
@@ -60,7 +64,8 @@ export const Modal = ({
   const disclosureRef = useRef<HTMLDivElement>(null)
   const handleOpen = useCallback(() => {
     setVisible(true)
-  }, [])
+    onOpen?.()
+  }, [onOpen])
 
   const handleClose = useCallback(() => {
     disclosureRef.current?.focus()
@@ -118,6 +123,7 @@ export const Modal = ({
           open={open}
           placement={placement}
           preventBodyScroll={preventBodyScroll}
+          ref={ref}
           style={style}
           visible={visible}
         >
@@ -142,6 +148,7 @@ export const Modal = ({
             open={open}
             placement={placement}
             preventBodyScroll={preventBodyScroll}
+            ref={ref}
             style={style}
             visible={visible}
           >

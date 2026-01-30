@@ -1,7 +1,8 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode, RefObject } from 'react'
+import { useCallback, useLayoutEffect, useRef } from 'react'
 import type { ModalProps } from '../Modal'
 import { Modal } from '../Modal'
 import type { ModalState } from '../Modal/types'
@@ -10,6 +11,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import type { SizeProp } from './styles.css'
 import {
+  contentToPushStyle,
   drawer,
   drawerBase,
   drawerChildrenWrapper,
@@ -17,6 +19,7 @@ import {
   drawerContentWrapper,
   drawerFooter,
   drawerHeader,
+  drawerPush,
 } from './styles.css'
 
 type DrawerProps = Pick<
@@ -42,6 +45,7 @@ type DrawerProps = Pick<
   footer?: ModalProps['children']
   separator?: boolean
   noPadding?: boolean
+  push?: RefObject<HTMLDivElement | null> | 'body'
 }
 
 export const DrawerContent = ({ children }: { children: ReactNode }) => (
@@ -63,10 +67,39 @@ export const BaseDrawer = ({
   hideOnEsc,
   id,
   isClosable,
+  push,
   separator = true,
   noPadding = false,
   style,
 }: DrawerProps) => {
+  const modalRef = useRef<HTMLDialogElement>(null)
+
+  const onOpenPush = useCallback(() => {
+    const targetElement = push === 'body' ? document?.body : push?.current
+    if (targetElement && push) {
+      targetElement.dataset['drawer'] = size
+      if (!targetElement.classList.contains(contentToPushStyle)) {
+        targetElement.classList.add(contentToPushStyle)
+      }
+    }
+  }, [size, push])
+
+  const onClosePush = useCallback(() => {
+    const targetElement = push === 'body' ? document?.body : push?.current
+
+    if (targetElement && push) {
+      targetElement.dataset['drawer'] = 'none'
+      targetElement.classList.remove(contentToPushStyle)
+    }
+  }, [push])
+
+  // Add the push style when the drawer is open by default
+  useLayoutEffect(() => {
+    if (modalRef.current) {
+      onOpenPush()
+    }
+  }, [onOpenPush, onClosePush])
+
   const computeHeader = (modalProps: ModalState) => {
     if (typeof header === 'string') {
       return (
@@ -98,11 +131,26 @@ export const BaseDrawer = ({
     return header
   }
 
+  useLayoutEffect(() => {
+    const targetElement = push === 'body' ? document?.body : push?.current
+
+    return () => {
+      if (targetElement && push) {
+        targetElement.classList.remove(contentToPushStyle)
+      }
+    }
+  }, [open, push, size])
+
   return (
     <Modal
       ariaLabel={ariaLabel}
       backdropClassName="backdrop-drawer"
-      className={cn(className, drawer[size], drawerBase)}
+      className={cn(
+        className,
+        drawer[size],
+        drawerBase,
+        push ? drawerPush : '',
+      )}
       data-size={size}
       data-testid={dataTestId}
       disclosure={disclosure}
@@ -110,9 +158,12 @@ export const BaseDrawer = ({
       hideOnEsc={hideOnEsc}
       id={id}
       isClosable={isClosable}
+      onBeforeClose={onClosePush}
       onClose={onClose}
+      onOpen={onOpenPush}
       open={open}
       placement="top-right"
+      ref={modalRef}
       size={size}
       style={style}
     >
