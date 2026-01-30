@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { AlertCircleOutlineIcon } from '@ultraviolet/icons'
+import { AlertCircleOutlineIcon } from '@ultraviolet/icons/AlertCircleOutlineIcon'
 import { useState } from 'react'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'

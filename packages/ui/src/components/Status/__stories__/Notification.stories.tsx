@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { NotificationIcon } from '@ultraviolet/icons'
+import { NotificationIcon } from '@ultraviolet/icons/NotificationIcon'
 import { Button } from '../../Button'
 import { Status } from '..'
 

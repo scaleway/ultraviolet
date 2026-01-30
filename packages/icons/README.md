@@ -13,6 +13,7 @@ $ pnpm add @ultraviolet/icons @ultraviolet/themes
 You can then add `ThemeProvider` to your applications and use the provided theme from `@ultraviolet/themes` or use your own.
 
 ```tsx
+import '@ultraviolet/icons/styles'
 import { SdkGoProductIcon } from '@ultraviolet/icons/product'
 import { theme, ThemeProvider } from '@ultraviolet/themes'
 

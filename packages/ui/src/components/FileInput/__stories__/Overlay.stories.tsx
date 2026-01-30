@@ -1,5 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { RebootIcon, SendIcon, UploadIcon } from '@ultraviolet/icons'
+import { RebootIcon } from '@ultraviolet/icons/RebootIcon'
+import { SendIcon } from '@ultraviolet/icons/SendIcon'
+import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import type { Dispatch, RefObject, SetStateAction } from 'react'
 import { useState } from 'react'
 import { Button } from '../../Button'

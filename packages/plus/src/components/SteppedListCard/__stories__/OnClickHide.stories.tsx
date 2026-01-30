@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
+import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { WireIllustration } from '@ultraviolet/illustrations'
 import { Button, Expandable, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'

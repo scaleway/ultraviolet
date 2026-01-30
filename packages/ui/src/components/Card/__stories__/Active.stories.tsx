@@ -1,5 +1,7 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { CancelIcon, CheckIcon, PencilIcon } from '@ultraviolet/icons'
+import { CancelIcon } from '@ultraviolet/icons/CancelIcon'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
+import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'

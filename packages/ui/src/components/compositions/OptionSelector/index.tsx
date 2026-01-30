@@ -1,6 +1,6 @@
 'use client'
 
-import { RayStartArrowIcon } from '@ultraviolet/icons'
+import { RayStartArrowIcon } from '@ultraviolet/icons/RayStartArrowIcon'
 import { cn } from '@ultraviolet/utils'
 import type { ComponentProps, ReactNode } from 'react'
 import { useMemo } from 'react'

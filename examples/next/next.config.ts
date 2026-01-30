@@ -1,8 +1,7 @@
-const nextConfig = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   compress: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     formats: ['image/avif', 'image/webp'],
     loader: 'imgix',
@@ -10,6 +9,9 @@ const nextConfig = {
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  experimental: {
+    cssChunking: true,
+  },
 }
 
 export default nextConfig

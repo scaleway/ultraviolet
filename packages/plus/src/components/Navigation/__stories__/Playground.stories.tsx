@@ -1,15 +1,13 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { InformationIcon } from '@ultraviolet/icons/InformationIcon'
-import {
-  BaremetalCategoryIcon,
-  DataAndAnalyticsCategoryIcon,
-  DatabaseCategoryIcon,
-  MonitoringCategoryIcon,
-  NetworkCategoryIcon,
-  OrganizationDashboardCategoryIcon,
-  SecurityCategoryIcon,
-  UseCaseCategoryIcon,
-} from '@ultraviolet/icons/category'
+import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon'
+import { DataAndAnalyticsCategoryIcon } from '@ultraviolet/icons/category/DataAndAnalyticsCategoryIcon'
+import { DatabaseCategoryIcon } from '@ultraviolet/icons/category/DatabaseCategoryIcon'
+import { MonitoringCategoryIcon } from '@ultraviolet/icons/category/MonitoringCategoryIcon'
+import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategoryIcon'
+import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
+import { SecurityCategoryIcon } from '@ultraviolet/icons/category/SecurityCategoryIcon'
+import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategoryIcon'
 import { Stack, Tooltip } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'

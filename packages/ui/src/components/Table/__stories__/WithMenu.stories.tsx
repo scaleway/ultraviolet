@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { DotsHorizontalIcon } from '@ultraviolet/icons'
+import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import { Button } from '../../Button'
 import { Menu } from '../../Menu'
 import { Table } from '..'

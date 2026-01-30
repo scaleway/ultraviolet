@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
+import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'

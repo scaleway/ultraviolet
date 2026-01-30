@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { SunIcon } from '@ultraviolet/icons'
+import { SunIcon } from '@ultraviolet/icons/SunIcon'
 import { Text } from '../../Text'
 import { Stepper } from '..'
 

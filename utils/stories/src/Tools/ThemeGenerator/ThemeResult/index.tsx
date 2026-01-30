@@ -1,4 +1,6 @@
-import { ArrowLeftIcon, EyeIcon, EyeOffIcon } from '@ultraviolet/icons'
+import { ArrowLeftIcon } from '@ultraviolet/icons/ArrowLeftIcon'
+import { EyeIcon } from '@ultraviolet/icons/EyeIcon'
+import { EyeOffIcon } from '@ultraviolet/icons/EyeOffIcon'
 import { ThemeProvider } from '@ultraviolet/themes'
 import type { UltravioletUITheme } from '@ultraviolet/ui'
 import {

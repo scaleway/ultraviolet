@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { DotsHorizontalIcon } from '@ultraviolet/icons'
+import { DotsHorizontalIcon } from '@ultraviolet/icons/DotsHorizontalIcon'
 import type { ComponentProps, ReactNode } from 'react'
 import { Avatar } from '../../Avatar'
 import { Badge } from '../../Badge'
