@@ -24,6 +24,8 @@ export const ToggleField = <
   name,
   control,
   onChange,
+  onBlur,
+  onFocus,
   required,
   parse,
   format,
@@ -64,6 +66,10 @@ export const ToggleField = <
       )}
       label={label}
       name={field.name}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
       onChange={event => {
         if (parse) {
           field.onChange(parse(event.target.checked))
@@ -73,6 +79,9 @@ export const ToggleField = <
         onChange?.(
           event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
         )
+      }}
+      onFocus={event => {
+        onFocus?.(event)
       }}
       ref={field.ref}
       required={required}

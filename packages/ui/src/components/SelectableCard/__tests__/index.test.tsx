@@ -1,14 +1,17 @@
 import { act, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
+import type { ComponentProps } from 'react'
 import { describe, expect, test, vi } from 'vitest'
 import { SelectableCard } from '..'
 import illustration from './illustrationTest.svg'
 
 describe('selectableCard', () => {
-  const types = ['radio', 'checkbox'] as const
+  const types: TupleUnion<
+    NonNullable<ComponentProps<typeof SelectableCard>['type']>
+  > = ['radio', 'checkbox', 'toggle'] as const
 
-  types.forEach(type => {
+  for (const type of types) {
     describe(`${type}`, () => {
       test('renders correctly with default props', () =>
         shouldMatchSnapshot(
@@ -18,7 +21,7 @@ describe('selectableCard', () => {
             onChange={() => {}}
             value="choice"
           >
-            Radio card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -30,7 +33,7 @@ describe('selectableCard', () => {
             onChange={() => {}}
             value="choice"
           >
-            Radio card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -44,7 +47,7 @@ describe('selectableCard', () => {
             type={type}
             value="choice"
           >
-            Checkbox card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -58,7 +61,7 @@ describe('selectableCard', () => {
             type={type}
             value="choice"
           >
-            Radio card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -72,7 +75,7 @@ describe('selectableCard', () => {
             type={type}
             value="choice"
           >
-            Radio card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -86,7 +89,7 @@ describe('selectableCard', () => {
             type={type}
             value="choice"
           >
-            Radio card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -100,7 +103,7 @@ describe('selectableCard', () => {
             type={type}
             value="choice"
           >
-            Checkbox card
+            SelectableCard
           </SelectableCard>,
         ))
 
@@ -121,7 +124,7 @@ describe('selectableCard', () => {
                   color: checked ? 'green' : 'gray',
                 }}
               >
-                Complex radio card
+                Complex SelectableCard
               </div>
             )}
           </SelectableCard>,
@@ -227,7 +230,7 @@ describe('selectableCard', () => {
 
         renderWithTheme(
           <SelectableCard
-            label="test"
+            label="labelName"
             name="test"
             onChange={onChange}
             type={type}
@@ -237,7 +240,10 @@ describe('selectableCard', () => {
           </SelectableCard>,
         )
 
-        const label = screen.getByRole(type, { name: 'test' })
+        const role = type === 'toggle' ? 'checkbox' : type
+        const label = screen.getByRole(role, {
+          name: 'labelName',
+        })
         await userEvent.click(label)
 
         await waitFor(() => {
@@ -268,5 +274,5 @@ describe('selectableCard', () => {
         })
       })
     })
-  })
+  }
 })

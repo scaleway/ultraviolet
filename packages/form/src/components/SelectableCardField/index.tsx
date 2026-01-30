@@ -46,7 +46,9 @@ export const SelectableCardField = <
   })
 
   const isChecked =
-    type === 'checkbox' && Array.isArray(field.value) && value
+    (type === 'checkbox' || type === 'toggle') &&
+    Array.isArray(field.value) &&
+    value
       ? (field.value ?? []).includes(value)
       : field.value === value
 
@@ -63,7 +65,7 @@ export const SelectableCardField = <
         onBlur?.(event)
       }}
       onChange={event => {
-        if (type === 'checkbox') {
+        if (type === 'checkbox' || type === 'toggle') {
           const fieldValue = (field.value ?? []) as string[]
           if (fieldValue?.includes(event.currentTarget.value)) {
             field.onChange(

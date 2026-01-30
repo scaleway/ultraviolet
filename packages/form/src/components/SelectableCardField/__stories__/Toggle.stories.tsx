@@ -3,7 +3,7 @@ import { Row } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { SelectableCardField } from '..'
 
-export const Checkbox: StoryFn<
+export const Toggle: StoryFn<
   ComponentProps<typeof SelectableCardField>
 > = args => (
   <Row gap={1} templateColumns="repeat(2, 2fr)">
@@ -12,7 +12,7 @@ export const Checkbox: StoryFn<
       id="option1"
       name="option1"
       showTick
-      type="checkbox"
+      type="toggle"
       value="option1"
     />
     <SelectableCardField
@@ -20,8 +20,13 @@ export const Checkbox: StoryFn<
       id="option2"
       name="option1"
       showTick
-      type="checkbox"
+      type="toggle"
       value="option2"
     />
   </Row>
 )
+
+Toggle.args = {
+  label: 'Toggle',
+  name: 'Toggle',
+}
