@@ -55,21 +55,7 @@ export type IllustrationsKeys = {
 }
 
 export const ILLUSTRATIONS = {
-  dark: {
-    danger: dangerDark,
-    empty: emptyDark,
-    failed: failedDark,
-    generic: genericDark,
-    loading: loadingDark,
-    lock: lockDark,
-    plus: plusDark,
-    resources: resourcesDark,
-    search: searchDark,
-    success: successDark,
-    warning: warningDark,
-  } satisfies IllustrationsKeys,
   light: {
-    danger: dangerLight,
     empty: emptyLight,
     failed: failedLight,
     generic: genericLight,
@@ -78,7 +64,22 @@ export const ILLUSTRATIONS = {
     plus: plusLight,
     resources: resourcesLight,
     search: searchLight,
+    danger: dangerLight,
     success: successLight,
     warning: warningLight,
+  } satisfies IllustrationsKeys,
+
+  dark: {
+    empty: emptyDark,
+    failed: failedDark,
+    generic: genericDark,
+    loading: loadingDark,
+    lock: lockDark,
+    plus: plusDark,
+    resources: resourcesDark,
+    search: searchDark,
+    danger: dangerDark,
+    success: successDark,
+    warning: warningDark,
   } satisfies IllustrationsKeys,
 }

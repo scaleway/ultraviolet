@@ -65,6 +65,7 @@ import * as supportPlans from './supportPlans'
 import * as terraform from './terraform'
 import * as transactionalEmail from './transactionalEmail'
 import * as vpc from './vpc'
+import * as vpcPeering from './vpcPeering'
 import * as vpn from './vpn'
 import * as waf from './waf'
 import * as webHosting from './webHosting'
@@ -131,6 +132,7 @@ export {
   terraform,
   transactionalEmail,
   vpc,
+  vpcPeering,
   vpn,
   waf,
   webHosting,
