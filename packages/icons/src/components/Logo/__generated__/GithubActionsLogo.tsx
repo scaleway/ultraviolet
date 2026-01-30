@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const GithubActionsLogo = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="GithubActionsLogo">
     <path
       d="M2.91669 2.83823C2.91669 2.51031 3.27797 2.3109 3.55544 2.48569L5.68594 3.82778C5.94648 3.99191 5.9451 4.37219 5.68344 4.53444L3.55292 5.85548C3.27535 6.02756 2.91669 5.82794 2.91669 5.50136V2.83823Z"
       stroke="#2088FF"

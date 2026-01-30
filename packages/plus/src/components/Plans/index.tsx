@@ -62,6 +62,7 @@ export const Plans = <T extends string>({
             const isHighlighted = plan.value === highlight?.plan
 
             return (
+              // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table interactive table with a clickable button for accessibility
               <td
                 className={plansCell({
                   activeColor:
@@ -200,6 +201,7 @@ export const Plans = <T extends string>({
                 const isHighlighted = plan.value === highlight?.plan
 
                 return (
+                  // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
                   <td
                     className={plansCell({
                       activeColor:

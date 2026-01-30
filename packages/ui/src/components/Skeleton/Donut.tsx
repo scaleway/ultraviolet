@@ -12,6 +12,7 @@ import {
 export const Donut = () => (
   <div className={donutSkeletonContainer}>
     <svg className={donutSkeletonSvg}>
+      <title>donut skeleton</title>
       <circle
         className={donutSkeletonCircle}
         cx={`${CIRCLE_SIZE / 2}rem`}

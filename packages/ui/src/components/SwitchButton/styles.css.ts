@@ -13,6 +13,7 @@ const switchButtonContainerBase = style({
   gap: theme.space[1],
   padding: theme.space['0.5'],
   position: 'relative',
+  width: 'fit-content',
 })
 
 export const switchButtonContainer = styleVariants({

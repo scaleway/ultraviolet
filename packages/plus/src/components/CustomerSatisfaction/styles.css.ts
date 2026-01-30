@@ -1,4 +1,4 @@
-import { keyframes } from '@vanilla-extract/css'
+import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const angryAnimation = keyframes({
@@ -58,4 +58,12 @@ export const customerStatisfaction = recipe({
       },
     },
   },
+})
+
+export const customerSatisfactionButtonContainer = style({
+  border: 'none',
+  background: 'transparent',
+  padding: 0,
+  margin: 0,
+  outline: 'none',
 })

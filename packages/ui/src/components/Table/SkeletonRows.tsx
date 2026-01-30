@@ -17,13 +17,7 @@ export const SkeletonRows = ({ selectable, rows, cols }: SkeletonRowsProps) => {
   return (
     <>
       {rowArray.map(index => (
-        <tr
-          className={tableSkeletonRow}
-          id={`skeleton-${index}`}
-          key={index}
-          // biome-ignore  lint/a11y/noRedundantRoles: to fix
-          role="row"
-        >
+        <tr className={tableSkeletonRow} id={`skeleton-${index}`} key={index}>
           {selectable ? <Cell /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>

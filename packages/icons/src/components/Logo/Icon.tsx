@@ -10,6 +10,7 @@ export type IconProps = {
   className?: string
   children: ReactNode
   style?: CSSProperties
+  title: string
 }
 
 /**
@@ -20,6 +21,7 @@ export const Icon = ({
   className,
   children,
   style,
+  title,
 }: IconProps) => (
   <svg
     className={cn(className, logo[size])}
@@ -28,6 +30,7 @@ export const Icon = ({
     viewBox="0 0 20 20"
     width="20"
   >
+    <title>{title}</title>
     {children}
   </svg>
 )

@@ -93,9 +93,9 @@ const evalValue = (value: string, variables: string | object) => {
       const keyParts = match.slice(1).split('.')
 
       let base = variables
-      keyParts.forEach(key => {
+      for (const key of keyParts) {
         base = (base as Record<string, unknown>)[key] as string | object
-      })
+      }
 
       return typeof base === 'string' ? base : JSON.stringify(base)
     })

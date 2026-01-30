@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const LogstashLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const LogstashLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="LogstashLogo">
     <path
       d="M10.3092 10.691H1.03639V0H3.8364C7.43641 0 10.3092 2.90911 10.3092 6.47277V10.691Z"
       fill="#F3BD19"

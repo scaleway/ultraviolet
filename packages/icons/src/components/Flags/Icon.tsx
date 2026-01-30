@@ -1,5 +1,3 @@
-// biome-ignore-all lint/a11y/noSvgWithoutTitle: to check
-
 'use client'
 
 import { cn } from '@ultraviolet/utils'
@@ -9,6 +7,7 @@ import { flag } from './style.css'
 
 export type IconProps = {
   size?: keyof typeof SIZES
+  title: string
   className?: string
   children: ReactNode
   disabled?: boolean
@@ -17,13 +16,19 @@ export type IconProps = {
 /**
  * Logo component is used to render a set of flags. Their style cannot be changed
  */
-export const Icon = ({ size = 'medium', className, children }: IconProps) => (
+export const Icon = ({
+  size = 'medium',
+  className,
+  children,
+  title,
+}: IconProps) => (
   <svg
     className={cn(className, flag[size])}
     height="24"
     viewBox="0 0 24 24"
     width="24"
   >
+    <title>{title}</title>
     {children}
   </svg>
 )
