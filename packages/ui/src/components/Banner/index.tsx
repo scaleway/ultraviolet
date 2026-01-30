@@ -87,11 +87,15 @@ export const Banner = ({
     >
       {image ? (
         <Stack className={imageStackBanner[size]} justifyContent="center">
-          {typeof image === 'string' ? <img alt="" src={image} /> : image}
+          {typeof image === 'string' ? (
+            <img alt="" height="auto" src={image} width="auto" />
+          ) : (
+            image
+          )}
         </Stack>
       ) : (
         <Stack className={imageStackBanner[size]} justifyContent="center">
-          <img alt="" src={defaultImage} />
+          <img alt="" height="auto" src={defaultImage} width="auto" />
         </Stack>
       )}
       <Stack

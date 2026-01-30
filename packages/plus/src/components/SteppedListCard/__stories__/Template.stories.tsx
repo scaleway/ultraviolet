@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { CheckIcon } from '@ultraviolet/icons'
+import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { WireIllustration } from '@ultraviolet/illustrations'
 import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'

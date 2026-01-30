@@ -63,6 +63,7 @@ export const defaultConfig: ViteUserConfig = {
       },
       preserveSymlinks: true,
     },
+    cssCodeSplit: false,
     ssr: true,
     target: [...targets],
   },

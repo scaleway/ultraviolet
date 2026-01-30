@@ -313,7 +313,9 @@ export const ListProvider = ({
     })
 
     return () => {
-      handlers.forEach(cleanup => cleanup())
+      for (const cleanup of handlers) {
+        cleanup()
+      }
     }
     // oxlint-disable react/exhaustive-deps
   }, [lastCheckedCheckbox, selectRows])

@@ -1,3 +1,4 @@
+import { AbuseProductIcon } from '@ultraviolet/icons/product/AbuseProductIcon'
 import { Alert, Button, Stack, Text } from '@ultraviolet/ui'
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <main>
       <Stack gap={2}>
         <Text as="h1" variant="heading">
-          Welcome to Ultraviolet!
+          Welcome to Ultraviolet! <AbuseProductIcon />
         </Text>
         <Text as="p" variant="body">
           Ultraviolet is a powerful and flexible UI library for building modern

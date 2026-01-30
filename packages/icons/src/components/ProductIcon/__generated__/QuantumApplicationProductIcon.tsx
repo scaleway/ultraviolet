@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const QuantumApplicationProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="QuantumApplicationProductIcon">
     <g className="quantum-application">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">

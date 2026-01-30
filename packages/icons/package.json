@@ -14,6 +14,7 @@
     "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "postbuild": "node ./process-css.ts",
     "typecheck": "tsc --noEmit",
     "size": "size-limit",
     "lintpublish": "publint"
@@ -49,6 +50,12 @@
       "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
+    "./iconStyles": {
+      "types": "./dist/iconStyles.d.ts",
+      "require": "./dist/iconStyles.js",
+      "default": "./dist/iconStyles.js"
+    },
+    "./styles": "./dist/icons.css",
     "./*": {
       "types": "./dist/components/Icon/__generated__/*.d.ts",
       "require": "./dist/components/Icon/__generated__/*.js",

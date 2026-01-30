@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const OpenVpnLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const OpenVpnLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="OpenVpnLogo">
     <g>
       <path
         d="M18 10.1692C18 5.65966 14.3067 2.00391 9.74986 2.00391C5.19498 2.00391 1.5 5.65966 1.5 10.1692C1.5 13.1647 3.13533 15.7751 5.56398 17.1979L6.09286 13.6978C5.30917 12.8345 4.82818 11.6963 4.82818 10.4442C4.82818 7.75396 7.03229 5.57236 9.74986 5.57236C12.4694 5.57236 14.6718 7.75396 14.6718 10.4442C14.6718 11.7076 14.185 12.8537 13.3901 13.7168L13.9168 17.2094C16.3567 15.7902 18 13.174 18 10.1692V10.1692Z"

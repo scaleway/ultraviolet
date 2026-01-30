@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { PlusIcon, UploadIcon } from '@ultraviolet/icons'
+import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
+import { UploadIcon } from '@ultraviolet/icons/UploadIcon'
 import { Stack } from '../../Stack'
 import { FileInput } from '..'
 

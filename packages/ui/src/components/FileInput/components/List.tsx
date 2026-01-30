@@ -1,10 +1,8 @@
-import {
-  AudioIcon,
-  CloseIcon,
-  DocIcon,
-  ImageIcon,
-  VideoIcon,
-} from '@ultraviolet/icons'
+import { AudioIcon } from '@ultraviolet/icons/AudioIcon'
+import { CloseIcon } from '@ultraviolet/icons/CloseIcon'
+import { DocIcon } from '@ultraviolet/icons/DocIcon'
+import { ImageIcon } from '@ultraviolet/icons/ImageIcon'
+import { VideoIcon } from '@ultraviolet/icons/VideoIcon'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Loader } from '../../Loader'
@@ -43,7 +41,15 @@ const getIllustration = (
     )
   }
   if (type === 'image' && !error) {
-    return <img alt="" className={fileViewerImage.default} src={file} />
+    return (
+      <img
+        alt=""
+        className={fileViewerImage.default}
+        height="auto"
+        src={file}
+        width="auto"
+      />
+    )
   }
 
   if (type === 'image' && error) {

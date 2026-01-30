@@ -1,10 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
-import {
-  DebianLogo,
-  ProxmoxLogo,
-  UbuntuLogo,
-  WindowsLogo,
-} from '@ultraviolet/icons/logo'
+import { DebianLogo } from '@ultraviolet/icons/logo/DebianLogo'
+import { WindowsLogo } from '@ultraviolet/icons/logo/WindowsLogo'
+import { ProxmoxLogo } from '@ultraviolet/icons/logo/ProxmoxLogo'
+import { UbuntuLogo } from '@ultraviolet/icons/logo/UbuntuLogo'
 import { capitalize } from '@ultraviolet/utils'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'

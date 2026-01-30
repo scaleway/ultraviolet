@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const ToucanTocoLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const ToucanTocoLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="ToucanTocoLogo">
     <path
       d="M8.66583 1.02971C8.54698 1.01621 8.34979 1.00541 8.22554 1.00271L8.00895 1C8.00667 3.32587 7.9878 5.65282 8.00895 7.97861H14.9864C14.9826 7.67733 14.978 7.48654 14.973 7.42767C14.7839 5.25361 13.6602 3.36311 11.8397 2.1478C11.4939 1.91824 10.8024 1.56715 10.3946 1.41861C9.90836 1.24037 9.20065 1.08102 8.66583 1.02971Z"
       fill="#A0D1C5"

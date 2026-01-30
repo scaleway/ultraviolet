@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { PencilIcon } from '@ultraviolet/icons'
+import { PencilIcon } from '@ultraviolet/icons/PencilIcon'
 import { useMemo, useState } from 'react'
 import { Button } from '../../Button/index'
 import { Menu } from '../../Menu'

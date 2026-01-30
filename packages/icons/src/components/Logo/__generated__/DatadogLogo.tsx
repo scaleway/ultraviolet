@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const DatadogLogo = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const DatadogLogo = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="DatadogLogo">
     <g transform="scale(0.35714285714285715)">
       <path
         clipRule="evenodd"

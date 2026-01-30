@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const DeleteOutlineIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="DeleteOutlineIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path

@@ -1,7 +1,5 @@
 'use client'
 
-// biome-ignore-all lint/a11y/noSvgWithoutTitle: to check
-
 import { cn } from '@ultraviolet/utils'
 import type { ReactNode, SVGProps } from 'react'
 import { forwardRef } from 'react'
@@ -21,6 +19,7 @@ export type IconProps = {
   'data-testid'?: string
   disabled?: boolean
   children: ReactNode
+  title: string
 } & Pick<
   SVGProps<SVGSVGElement>,
   'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label' | 'style'
@@ -45,27 +44,39 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       'aria-label': ariaLabel,
       children,
       style,
+      title,
     },
     ref,
-  ) => (
-    <svg
-      aria-label={ariaLabel}
-      className={cn(className, icon({ disabled, prominence, sentiment, size }))}
-      cursor={cursor}
-      data-testid={dataTestId}
-      height="20"
-      ref={ref}
-      stroke={stroke}
-      strokeWidth={strokeWidth}
-      style={style}
-      viewBox={
-        typeof size === 'string' && ['xsmall', 'small'].includes(size)
-          ? '0 0 16 16'
-          : '0 0 20 20'
-      }
-      width="20"
-    >
-      {children}
-    </svg>
-  ),
+  ) => {
+    const defaultHW =
+      typeof size === 'string' && ['xsmall', 'small'].includes(size)
+        ? '16'
+        : '20'
+
+    return (
+      <svg
+        aria-label={ariaLabel}
+        className={cn(
+          className,
+          icon({ disabled, prominence, sentiment, size }),
+        )}
+        cursor={cursor}
+        data-testid={dataTestId}
+        height={defaultHW}
+        ref={ref}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        style={style}
+        viewBox={
+          typeof size === 'string' && ['xsmall', 'small'].includes(size)
+            ? '0 0 16 16'
+            : '0 0 20 20'
+        }
+        width={defaultHW}
+      >
+        <title>{title}</title>
+        {children}
+      </svg>
+    )
+  },
 )

@@ -29,8 +29,6 @@ export const SkeletonRows = ({
           className={cn(listRow({ sentiment: 'neutral' }), listLoadingRow)}
           id={`skeleton-${index}`}
           key={index}
-          // biome-ignore  lint/a11y/noRedundantRoles: ok
-          role="row"
         >
           {selectable ? <td /> : null}
           {colArray.map(columnIndex => (

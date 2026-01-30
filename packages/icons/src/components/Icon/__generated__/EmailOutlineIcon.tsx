@@ -8,9 +8,11 @@ import type { IconProps } from '../Icon'
  */
 import { Icon } from '../Icon'
 
-export const EmailOutlineIcon = ({ ...props }: Omit<IconProps, 'children'>) => (
+export const EmailOutlineIcon = ({
+  ...props
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="EmailOutlineIcon">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path

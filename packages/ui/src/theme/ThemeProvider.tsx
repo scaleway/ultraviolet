@@ -1,9 +1,10 @@
 'use client'
 
+import { iconStyles } from '@ultraviolet/icons/iconStyles'
 import { consoleLightTheme, theme as themeContract } from '@ultraviolet/themes'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type { ReactNode } from 'react'
-import { createContext, useContext, useEffect } from 'react'
+import { createContext, useContext, useLayoutEffect } from 'react'
 
 const ThemeContext = createContext(consoleLightTheme)
 
@@ -39,8 +40,11 @@ export const ThemeProvider = ({
   children,
   theme = consoleLightTheme,
 }: ThemeProviderProps) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const styleId = 'uv-theme'
+    const iconsStyleId = 'uv-icons'
+
+    const existingIconsStyle = document.getElementById(iconsStyleId)
     const existingStyle = document.getElementById(styleId)
     const cssVars = assignInlineVars(themeContract, theme)
     const cssString = `:root { ${Object.entries(cssVars)
@@ -56,10 +60,24 @@ export const ThemeProvider = ({
       document.head.appendChild(style)
     }
 
+    if (existingIconsStyle) {
+      existingIconsStyle.textContent = iconStyles
+    } else {
+      const iconsStyle = document.createElement('style')
+      iconsStyle.id = iconsStyleId
+      iconsStyle.textContent = iconStyles
+      document.head.appendChild(iconsStyle)
+    }
+
     return () => {
       const style = document.getElementById(styleId)
+      const iconsStyle = document.getElementById(iconsStyleId)
+
       if (style) {
         style.remove()
+      }
+      if (iconsStyle) {
+        iconsStyle.remove()
       }
     }
   }, [theme])

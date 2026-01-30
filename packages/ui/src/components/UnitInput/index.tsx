@@ -1,6 +1,7 @@
 'use client'
 
-import { AlertCircleIcon, CheckCircleIcon } from '@ultraviolet/icons'
+import { AlertCircleIcon } from '@ultraviolet/icons/AlertCircleIcon'
+import { CheckCircleIcon } from '@ultraviolet/icons/CheckCircleIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
 import type {

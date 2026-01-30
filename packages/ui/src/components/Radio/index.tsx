@@ -115,10 +115,10 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
               value={value}
             />
             <svg className={ring} viewBox="0 0 24 24">
+              <title>radio</title>
               <RadioMarkedIcon />
             </svg>
             {label ? (
-              // biome-ignore lint/complexity/noUselessFragments: ok
               <>
                 {typeof label === 'string' ? (
                   <Text

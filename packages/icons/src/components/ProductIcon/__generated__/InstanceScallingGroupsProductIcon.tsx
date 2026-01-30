@@ -10,9 +10,9 @@ import { Icon } from '../Icon'
 
 export const InstanceScallingGroupsProductIcon = ({
   ...props
-}: Omit<IconProps, 'children'>) => (
+}: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props}>
+  <Icon {...props} title="InstanceScallingGroupsProductIcon">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">
