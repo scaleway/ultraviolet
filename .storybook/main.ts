@@ -39,11 +39,5 @@ export default {
 
   typescript: {
     reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: false,
-      shouldExtractValuesFromUnion: false,
-      shouldSortUnions: true,
-      tsconfigPath: 'tsconfig.json',
-    },
   },
 } satisfies StorybookConfig
