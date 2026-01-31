@@ -68,7 +68,7 @@ type ExtraProps = {
 }
 
 const DescriptionComponent = memo(
-  ({
+  async ({
     description,
     locales,
   }: {
@@ -77,7 +77,7 @@ const DescriptionComponent = memo(
   }) =>
     description === undefined || typeof description === 'string' ? (
       <Text as="span" variant="body">
-        {description || locales['estimate.cost.description']}
+        {description ?? locales['estimate.cost.description']}
       </Text>
     ) : (
       description
@@ -549,7 +549,7 @@ export const EstimateCostContent = ({
                           : monthlyFeesLabel
                       }
                       noIteration
-                      price={commitmentFees || monthlyFees}
+                      price={commitmentFees ?? monthlyFees}
                       productsCallback={{
                         add: () => {},
                         remove: () => {},

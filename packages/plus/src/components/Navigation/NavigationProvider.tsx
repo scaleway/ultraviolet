@@ -194,11 +194,11 @@ export const NavigationProvider = ({
         setAnimation(expanded ? 'collapse' : 'expand')
 
         setTimeout(() => {
-          setExpanded(toggle !== undefined ? toggle : !expanded)
+          setExpanded(toggle ?? !expanded)
           setAnimation(false)
         }, ANIMATION_DURATION)
       } else {
-        setExpanded(toggle !== undefined ? toggle : !expanded)
+        setExpanded(toggle ?? !expanded)
       }
     },
     [expanded, onExpandChange, shouldAnimate],

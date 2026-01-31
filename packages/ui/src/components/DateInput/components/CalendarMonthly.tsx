@@ -61,21 +61,21 @@ export const Monthly = () => {
             constructedDate > range.start &&
             hoveredDate &&
             constructedDate < hoveredDate &&
-            !range.end) ||
+            !range.end) ??
           (selectsRange &&
             range?.start &&
             constructedDate < range.start &&
             hoveredDate &&
             constructedDate > hoveredDate &&
-            !range.end) ||
+            !range.end) ??
           (range?.start &&
             range.end &&
             constructedDate < range.end &&
             constructedDate > range.start)
 
         const isSelected =
-          (value && isSameMonth(constructedDate, value)) ||
-          (range?.start && isSameMonth(constructedDate, range.start)) ||
+          (value && isSameMonth(constructedDate, value)) ??
+          (range?.start && isSameMonth(constructedDate, range.start)) ??
           (range?.end && isSameMonth(constructedDate, range.end))
 
         const onClickRange = (event: MouseEventReact, newDate: Date) => {

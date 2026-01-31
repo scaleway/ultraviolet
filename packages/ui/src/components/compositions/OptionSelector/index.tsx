@@ -152,8 +152,8 @@ export const OptionSelector = ({
       <SelectInput
         className={firstSelectInput}
         data-testid="first-selector"
-        disabled={firstSelector.disabled || disabled}
-        error={error || !!firstSelector.error}
+        disabled={firstSelector.disabled ?? disabled}
+        error={error ?? !!firstSelector.error}
         helper={firstSelector.helper}
         labelDescription={firstSelector.labelDescription}
         onChange={onChangeFirstSelector}
@@ -161,8 +161,7 @@ export const OptionSelector = ({
         options={firstSelectorOptions}
         placeholder={firstSelector.placeholder}
         readOnly={
-          firstSelector.options.length === 1 ||
-          firstSelector.readOnly ||
+          (firstSelector.options.length === 1 || firstSelector.readOnly) ??
           readOnly
         }
         required={required}
@@ -181,7 +180,7 @@ export const OptionSelector = ({
             className={secondSelectInput}
             data-testid="second-selector"
             disabled={
-              !!firstSelector.error || secondSelector.disabled || disabled
+              (!!firstSelector.error || secondSelector.disabled) ?? disabled
             }
             error={!!error || !!secondSelector.error}
             helper={secondSelector.helper}
@@ -191,8 +190,8 @@ export const OptionSelector = ({
             options={secondSelectorOptions}
             placeholder={secondSelector.placeholder}
             readOnly={
-              secondSelector.options.length === 1 ||
-              secondSelector.readOnly ||
+              (secondSelector.options.length === 1 ||
+                secondSelector.readOnly) ??
               readOnly
             }
             size={size}

@@ -51,7 +51,7 @@ describe('copyButton', () => {
     await userEvent.click(screen.getByRole('button'))
     expect(onCopy).toHaveBeenCalledOnce()
     // @ts-expect-error we are voluntarily based on an older browser spec
-
+    // oxlint-disable-next-line typescript/no-unsafe-call
     expect(window.clipboardData.getData()).toBe('test')
   })
 })

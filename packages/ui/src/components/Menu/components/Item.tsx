@@ -181,7 +181,7 @@ export const Item = forwardRef<HTMLElement, ItemProps>(
               className,
               menuItem({ borderless, disabled, sentiment }),
             )}
-            data-active={active || (isVisible && isDisclosure)}
+            data-active={active ?? (isVisible && isDisclosure)}
             data-is-disclosure={isDisclosure}
             data-is-menu-item
             data-testid={dataTestId}

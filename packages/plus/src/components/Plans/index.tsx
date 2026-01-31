@@ -57,7 +57,7 @@ export const Plans = <T extends string>({
             )}
           </td>
           {plans.map(plan => {
-            const computedDisabled = !!(plan.outOfStock || plan.disabled)
+            const computedDisabled = !!(plan.outOfStock ?? plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
             const isHighlighted = plan.value === highlight?.plan
 
@@ -158,7 +158,7 @@ export const Plans = <T extends string>({
                           value === plan.value ||
                           hoveredPlan === plan.value ||
                           (isHighlighted && !plan.outOfStock),
-                        disabled: plan.outOfStock || plan.disabled,
+                        disabled: plan.outOfStock ?? plan.disabled,
                         focus: focusedPlan === plan.value,
                         hide: hideLabels,
                       })}
@@ -196,7 +196,7 @@ export const Plans = <T extends string>({
                 </Stack>
               </td>
               {plans.map(plan => {
-                const computedDisabled = plan.outOfStock || plan.disabled
+                const computedDisabled = plan.outOfStock ?? plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
                 const isHighlighted = plan.value === highlight?.plan
 

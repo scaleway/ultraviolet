@@ -84,7 +84,7 @@ export const CodeEditor = ({
             document.getSelection()?.empty()
           }
         }}
-        readOnly={readOnly || disabled}
+        readOnly={readOnly ?? disabled}
         theme={material}
         value={value}
         width="100%"

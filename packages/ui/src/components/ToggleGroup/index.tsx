@@ -50,7 +50,7 @@ export const ToggleGroupToggle = ({
   const { groupName, onChange, groupValues, error: contextError } = context
 
   const ToggleName = `${groupName}.${name}`
-  const ToggleValue = `${value}`
+  const ToggleValue = value.toString()
 
   return (
     <Toggle
@@ -58,7 +58,7 @@ export const ToggleGroupToggle = ({
       className={className}
       data-testid={dataTestId}
       disabled={disabled}
-      error={error || contextError}
+      error={error ?? contextError}
       helper={helper}
       label={label}
       name={ToggleName}

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { getPageNumbers } from '../getPageNumbers'
 
-describe('getPageNumbers', () => {
+describe(getPageNumbers, () => {
   describe('with 5 numbers range', () => {
     it('should get 1 if current page is 1, with 1 pages', () => {
       expect(getPageNumbers(1, 1)).toEqual([1])

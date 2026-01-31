@@ -78,10 +78,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
     const innerSearchInputRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(
-      ref,
-      () => innerSearchInputRef.current as HTMLInputElement,
-    )
+    useImperativeHandle(ref, () => innerSearchInputRef.current!)
 
     const content =
       typeof children === 'function'

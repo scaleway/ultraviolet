@@ -8,7 +8,7 @@ export const FileInputButton = ({
   ...props
 }: ComponentProps<typeof Button>) => {
   const context = useFileInput()
-  const isDisabled = disabled || context.disabled
+  const isDisabled = disabled ?? context.disabled
 
   return (
     <Button

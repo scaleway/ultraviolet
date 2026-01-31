@@ -9,7 +9,7 @@ export const CustomTooltip: StoryFn<typeof TreeMapChart> = props => (
     height="300px"
     tooltipFunction={({ value, content }) => ({
       content: <>Custom: {content}</>,
-      value: (value || 0) * 2,
+      value: (value ?? 0) * 2,
     })}
   />
 )
