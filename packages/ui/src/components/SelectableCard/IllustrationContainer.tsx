@@ -62,7 +62,9 @@ export const IllustrationContainer = ({
       >
         <Stack className={illustrationSelectableCard}>{subChildren}</Stack>
         <Stack justifyContent="center">
-          {ProductIconUsed ? <ProductIconUsed size="large" /> : null}
+          {ProductIconUsed && productIcon ? (
+            <ProductIconUsed size="large" title={productIcon} />
+          ) : null}
         </Stack>
 
         {illustration ? (
