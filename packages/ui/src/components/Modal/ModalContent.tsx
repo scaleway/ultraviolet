@@ -44,6 +44,7 @@ export const ModalContent = ({
   finalId,
   image,
   style,
+  ref,
 }: ModalContentProps) =>
   visible || open ? (
     <Dialog
@@ -59,6 +60,7 @@ export const ModalContent = ({
       open={visible || open}
       placement={placement}
       preventBodyScroll={preventBodyScroll}
+      ref={ref}
       size={finalSize}
       style={style}
     >

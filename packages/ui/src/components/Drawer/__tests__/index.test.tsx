@@ -372,4 +372,33 @@ describe('drawer', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
+  test('renders with push', async () => {
+    const { asFragment } = renderWithTheme(
+      <Drawer
+        ariaLabel="drawer-test"
+        disclosure={<button type="button">Open</button>}
+        footer="footer"
+        header={({ close }) => (
+          <button
+            data-testid="buttonClose"
+            onClick={() => {
+              close()
+            }}
+            type="button"
+          >
+            Close
+          </button>
+        )}
+        id="drawer-test"
+        push="body"
+      >
+        <div> test</div>
+      </Drawer>,
+    )
+    await userEvent.click(screen.getByText('Open'))
+    await userEvent.click(screen.getByText('Close'))
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

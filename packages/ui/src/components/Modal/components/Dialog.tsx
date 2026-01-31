@@ -44,11 +44,13 @@ export const Dialog = ({
   backdropClassName,
   image,
   style,
+  ref,
 }: DialogProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
   const containerRef = useRef(document.createElement('div'))
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  const nonDefaultRef = useRef<HTMLDialogElement>(null)
+  const dialogRef = ref ?? nonDefaultRef
   const onCloseRef = useRef(onClose)
   const {
     registerModal,
@@ -68,7 +70,7 @@ export const Dialog = ({
     return () => {
       unregisterModal(id)
     }
-  }, [id, registerModal, unregisterModal])
+  }, [id, registerModal, unregisterModal, dialogRef])
 
   // Portal to put the modal in
   useEffect(() => {
@@ -90,7 +92,7 @@ export const Dialog = ({
   // On open focus the modal
   useEffect(() => {
     dialogRef.current?.focus()
-  }, [])
+  }, [dialogRef])
 
   // Handle body scroll
   useEffect(() => {
@@ -145,58 +147,61 @@ export const Dialog = ({
         onCloseRef.current()
       }
     },
-    [hideOnClickOutside, position],
+    [hideOnClickOutside, position, dialogRef],
   )
 
   // Enable focus trap inside the modal
-  const handleFocusTrap: KeyboardEventHandler = useCallback(event => {
-    event.stopPropagation()
-    if (event.key === 'Escape') {
-      event.preventDefault()
+  const handleFocusTrap: KeyboardEventHandler = useCallback(
+    event => {
+      event.stopPropagation()
+      if (event.key === 'Escape') {
+        event.preventDefault()
 
-      return
-    }
-    const isTabPressed = event.key === 'Tab'
+        return
+      }
+      const isTabPressed = event.key === 'Tab'
 
-    if (!isTabPressed) {
-      return
-    }
+      if (!isTabPressed) {
+        return
+      }
 
-    const focusableEls = dialogRef.current?.querySelectorAll(
-      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
-    )
+      const focusableEls = dialogRef.current?.querySelectorAll(
+        'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+      )
 
-    // Handle case when no interactive element are within the modal (including close icon)
-    if (focusableEls?.length === 0) {
-      event.preventDefault()
-    }
+      // Handle case when no interactive element are within the modal (including close icon)
+      if (focusableEls?.length === 0) {
+        event.preventDefault()
+      }
 
-    if (focusableEls) {
-      const elems = [...focusableEls]
-      const firstFocusableEl = elems[0]
-      const lastFocusableEl = elems.at(-1)
+      if (focusableEls) {
+        const elems = [...focusableEls]
+        const firstFocusableEl = elems[0]
+        const lastFocusableEl = elems.at(-1)
 
-      if (event.shiftKey) {
-        if (
-          document.activeElement === firstFocusableEl ||
+        if (event.shiftKey) {
+          if (
+            document.activeElement === firstFocusableEl ||
+            document.activeElement === dialogRef.current
+          ) {
+            if (lastFocusableEl instanceof HTMLElement) {
+              lastFocusableEl.focus()
+            }
+            event.preventDefault()
+          }
+        } else if (
+          document.activeElement === lastFocusableEl ||
           document.activeElement === dialogRef.current
         ) {
-          if (lastFocusableEl instanceof HTMLElement) {
-            lastFocusableEl.focus()
+          if (firstFocusableEl instanceof HTMLElement) {
+            firstFocusableEl.focus()
           }
           event.preventDefault()
         }
-      } else if (
-        document.activeElement === lastFocusableEl ||
-        document.activeElement === dialogRef.current
-      ) {
-        if (firstFocusableEl instanceof HTMLElement) {
-          firstFocusableEl.focus()
-        }
-        event.preventDefault()
       }
-    }
-  }, [])
+    },
+    [dialogRef],
+  )
 
   if (
     modalAbove?.ref &&

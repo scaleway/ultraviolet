@@ -1,16 +1,27 @@
 import { theme } from '@ultraviolet/themes'
-import { keyframes, style, styleVariants } from '@vanilla-extract/css'
+import {
+  globalStyle,
+  keyframes,
+  style,
+  styleVariants,
+} from '@vanilla-extract/css'
 
 export const SIZES = {
   large: 75.5,
   medium: 49,
   small: 22.25,
-}
+} as const
 
-const slideIn = (translation: number) =>
+export const DURATION = {
+  large: 0.3,
+  medium: 0.25,
+  small: 0.15,
+} as const
+
+const slideIn = () =>
   keyframes({
     '0%': {
-      transform: `translateX(${translation}rem)`,
+      transform: 'translateX(90%)',
     },
     '100%': {
       transform: 'translateX(0)',
@@ -20,28 +31,16 @@ const slideIn = (translation: number) =>
 export type SizeProp = keyof typeof SIZES
 
 function makeStyleSize(size: SizeProp) {
-  const translations = {
-    large: 70,
-    medium: 48,
-    small: 21,
-  } as const
-
-  const animationDuration = {
-    large: 300,
-    medium: 250,
-    small: 150,
-  }
-
   return {
-    animation: `${slideIn(translations[size])} linear ${animationDuration[size]}ms`,
-    borderRadius: 0,
+    marginRight: '0 !important',
     height: '100%',
-    marginRight: 0,
-    padding: 0,
-    width: `${SIZES[size]}rem`,
+    borderRadius: '0 !important',
+    padding: '0 !important',
+    width: `${SIZES[size]}rem !important`,
+    transform: 'translateX(0)',
+    animation: `${slideIn()} linear ${DURATION[size]}s`,
   }
 }
-
 export const drawer = styleVariants({
   large: makeStyleSize('large'),
   medium: makeStyleSize('medium'),
@@ -73,3 +72,22 @@ export const drawerFooter = style({
 })
 
 export const drawerBase = style({})
+
+export const drawerPush = style({})
+
+export const contentToPushStyle = style({})
+
+globalStyle(`${contentToPushStyle}[data-drawer="small"]`, {
+  paddingRight: `${SIZES.small}rem`,
+  transition: `padding-right ${DURATION.small}s !important`,
+})
+
+globalStyle(`${contentToPushStyle}[data-drawer="medium"]`, {
+  transition: `padding-right ${DURATION.small}s !important`,
+  paddingRight: `${SIZES.medium}rem`,
+})
+
+globalStyle(`${contentToPushStyle}[data-drawer="large"]`, {
+  paddingRight: `${SIZES.large}rem`,
+  transition: `padding-right ${DURATION.large}s !important`,
+})
