@@ -1,5 +1,24 @@
 # Change Log
 
+## 3.7.2
+
+### Patch Changes
+
+- [#6018](https://github.com/scaleway/ultraviolet/pull/6018) [`e4238e6`](https://github.com/scaleway/ultraviolet/commit/e4238e6ecfa439ba078b629ce7d44127ccae48f9) Thanks [@lisalupi](https://github.com/lisalupi)! - `List`: `<><List.Cell /><List.Cell /></>` should be seen as 2 columns instead of 1. This was problematic when column width were defined.
+
+- [#6049](https://github.com/scaleway/ultraviolet/pull/6049) [`3e8b0fe`](https://github.com/scaleway/ultraviolet/commit/3e8b0feeee6904619b03fbe44c61b79bfadcf13d) Thanks [@lisalupi](https://github.com/lisalupi)! - Replace remaining `end` and `start` by `flex-end/start`
+
+- [#6034](https://github.com/scaleway/ultraviolet/pull/6034) [`4d53257`](https://github.com/scaleway/ultraviolet/commit/4d53257eeee42b8dadae0c17898608b6f30b1e9d) Thanks [@lisalupi](https://github.com/lisalupi)! - `TextInput`: fix css causing broken suffix separator on DateInput
+
+- [#6021](https://github.com/scaleway/ultraviolet/pull/6021) [`9461d8c`](https://github.com/scaleway/ultraviolet/commit/9461d8c764fe59a13450e8880b76a731718e1ca2) Thanks [@lisalupi](https://github.com/lisalupi)! - Add title to svg for accessibility
+
+- [#6020](https://github.com/scaleway/ultraviolet/pull/6020) [`5ea2afe`](https://github.com/scaleway/ultraviolet/commit/5ea2afe47e6f6f2bbebca207e25498055d3588ee) Thanks [@lisalupi](https://github.com/lisalupi)! - `List`: expandable button should not shrink when `colMode="strict"`
+
+- [#6051](https://github.com/scaleway/ultraviolet/pull/6051) [`3a7eb2a`](https://github.com/scaleway/ultraviolet/commit/3a7eb2ad19a47b65c2fcac84dcb3be94271dcc4c) Thanks [@philibea](https://github.com/philibea)! - Support for toggle type in addition to radio and checkbox inside SelectableCard, Proper label-input associations using `for` attributes for Toggle
+
+- Updated dependencies [[`ba37cc2`](https://github.com/scaleway/ultraviolet/commit/ba37cc2143d766db0d86c31dc3bae7c35d889e16), [`00b7be6`](https://github.com/scaleway/ultraviolet/commit/00b7be62fcb42d1639e90c6f7c81fbe588806c56), [`9461d8c`](https://github.com/scaleway/ultraviolet/commit/9461d8c764fe59a13450e8880b76a731718e1ca2)]:
+  - @ultraviolet/icons@5.1.0
+
 ## 3.7.1
 
 ### Patch Changes

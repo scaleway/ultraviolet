@@ -1,5 +1,17 @@
 # Change Log
 
+## 5.1.0
+
+### Minor Changes
+
+- [#6019](https://github.com/scaleway/ultraviolet/pull/6019) [`ba37cc2`](https://github.com/scaleway/ultraviolet/commit/ba37cc2143d766db0d86c31dc3bae7c35d889e16) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix all `Ray` icons so that they are centered
+
+- [#6052](https://github.com/scaleway/ultraviolet/pull/6052) [`00b7be6`](https://github.com/scaleway/ultraviolet/commit/00b7be62fcb42d1639e90c6f7c81fbe588806c56) Thanks [@atissedrescaleway](https://github.com/atissedrescaleway)! - Emit static CSS + expose a styles entry to avoid icon size flashing on first paint
+
+### Patch Changes
+
+- [#6021](https://github.com/scaleway/ultraviolet/pull/6021) [`9461d8c`](https://github.com/scaleway/ultraviolet/commit/9461d8c764fe59a13450e8880b76a731718e1ca2) Thanks [@lisalupi](https://github.com/lisalupi)! - Add title to svg for accessibility
+
 ## 5.0.7
 
 ### Patch Changes
