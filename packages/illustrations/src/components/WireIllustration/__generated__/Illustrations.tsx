@@ -10,12 +10,12 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/accountExperience/account-experience-wire.svg',
   apiGateway:
     'https://assets.scaleway.com/illustrations/products/apiGateway/api-gateway-wire.svg',
-  appleSilicon:
-    'https://assets.scaleway.com/illustrations/products/appleSilicon/apple-silicon-wire.svg',
   appleSiliconM2:
     'https://assets.scaleway.com/illustrations/products/appleSilicon/apple-silicon-m2-wire.svg',
   appleSiliconM4:
     'https://assets.scaleway.com/illustrations/products/appleSilicon/apple-silicon-m4-wire.svg',
+  appleSilicon:
+    'https://assets.scaleway.com/illustrations/products/appleSilicon/apple-silicon-wire.svg',
   auditTrail:
     'https://assets.scaleway.com/illustrations/products/auditTrail/audit-trail-wire.svg',
   blockStorage:
@@ -33,8 +33,6 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/costManager/cost-manager-wire.svg',
   dataWarehouse:
     'https://assets.scaleway.com/illustrations/products/dataWarehouse/data-warehouse-wire.svg',
-  dedibox:
-    'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-wire.svg',
   dediboxCore:
     'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-core-wire.svg',
   dediboxGpu:
@@ -47,12 +45,14 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-start-wire.svg',
   dediboxStore:
     'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-store-wire.svg',
-  dediboxVps:
-    'https://assets.scaleway.com/illustrations/products/dediboxVps/dedibox-vps-wire.svg',
+  dedibox:
+    'https://assets.scaleway.com/illustrations/products/dedibox/dedibox-wire.svg',
   dediboxVpsPro:
     'https://assets.scaleway.com/illustrations/products/dediboxVps/dedibox-vps-pro-wire.svg',
   dediboxVpsStart:
     'https://assets.scaleway.com/illustrations/products/dediboxVps/dedibox-vps-start-wire.svg',
+  dediboxVps:
+    'https://assets.scaleway.com/illustrations/products/dediboxVps/dedibox-vps-wire.svg',
   dedilink:
     'https://assets.scaleway.com/illustrations/products/dedilink/dedilink-wire.svg',
   distributedDataLab:
@@ -72,10 +72,6 @@ export const ILLUSTRATIONS = {
   iam: 'https://assets.scaleway.com/illustrations/products/iam/iam-wire.svg',
   inference:
     'https://assets.scaleway.com/illustrations/products/inference/inference-wire.svg',
-  inferenceMoshi:
-    'https://assets.scaleway.com/illustrations/products/moshiInference/inference-moshi-wire.svg',
-  instance:
-    'https://assets.scaleway.com/illustrations/products/instance/instance-wire.svg',
   instanceCop:
     'https://assets.scaleway.com/illustrations/products/instance/instance-cop-wire.svg',
   instanceGpu:
@@ -86,6 +82,8 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/instance/instance-pop-wire.svg',
   instanceScalingGroups:
     'https://assets.scaleway.com/illustrations/products/instance/instance-scaling-groups-wire.svg',
+  instance:
+    'https://assets.scaleway.com/illustrations/products/instance/instance-wire.svg',
   instanceWop:
     'https://assets.scaleway.com/illustrations/products/instance/instance-wop-wire.svg',
   interlink:
@@ -116,12 +114,14 @@ export const ILLUSTRATIONS = {
     'https://assets.scaleway.com/illustrations/products/managedSearchDatabase/managed-search-database-wire.svg',
   mongoDB:
     'https://assets.scaleway.com/illustrations/products/mongoDB/mongoDB-wire.svg',
+  inferenceMoshi:
+    'https://assets.scaleway.com/illustrations/products/moshiInference/inference-moshi-wire.svg',
   nabu: 'https://assets.scaleway.com/illustrations/products/nabu/nabu-wire.svg',
   nats: 'https://assets.scaleway.com/illustrations/products/nats/nats-wire.svg',
-  objectStorage:
-    'https://assets.scaleway.com/illustrations/products/objectStorage/object-storage-wire.svg',
   objectStorageGlacier:
     'https://assets.scaleway.com/illustrations/products/objectStorage/object-storage-glacier-wire.svg',
+  objectStorage:
+    'https://assets.scaleway.com/illustrations/products/objectStorage/object-storage-wire.svg',
   publicGateway:
     'https://assets.scaleway.com/illustrations/products/publicGateway/public-gateway-wire.svg',
   quantum:
@@ -147,6 +147,8 @@ export const ILLUSTRATIONS = {
   transactionalEmail:
     'https://assets.scaleway.com/illustrations/products/transactionalEmail/transactional-email-wire.svg',
   vpc: 'https://assets.scaleway.com/illustrations/products/vpc/vpc-wire.svg',
+  vpcPeering:
+    'https://assets.scaleway.com/illustrations/products/vpcPeering/vpc-peering-wire.svg',
   vpn: 'https://assets.scaleway.com/illustrations/products/vpn/vpn-wire.svg',
   waf: 'https://assets.scaleway.com/illustrations/products/waf/waf-wire.svg',
   webHosting:
