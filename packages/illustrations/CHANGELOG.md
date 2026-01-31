@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 6.0.7
+
+### Patch Changes
+
+- [#6058](https://github.com/scaleway/ultraviolet/pull/6058) [`b3e80d1`](https://github.com/scaleway/ultraviolet/commit/b3e80d14a48bfdbe1cb6564990865e67aa831d9b) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `vpcPeeringContent`, `vpcPeeringKeyvisual`, `vpcPeeringOriginal` and `vpcPeeringWire`
+
 ## 6.0.6
 
 ### Patch Changes
