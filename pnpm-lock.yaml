@@ -60,8 +60,8 @@ importers:
         specifier: 1.58.0
         version: 1.58.0
       '@scaleway/biome':
-        specifier: 0.0.5
-        version: 0.0.5(@biomejs/biome@2.3.11)
+        specifier: 0.0.6
+        version: 0.0.6(@biomejs/biome@2.3.11)
       '@scaleway/eslint-config-react':
         specifier: 5.2.13
         version: 5.2.13(eslint@9.39.2(jiti@2.4.2))(typescript@5.9.3)
@@ -3245,10 +3245,10 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@scaleway/biome@0.0.5':
-    resolution: {integrity: sha512-4zruFpyNfAdTGN/RvEUXTmCgjd4+y/li7o0LiVbWmSWOS+gkgq1CvCvpHqEWypgFV+FppfeMBRPuJ4fyFeo3hg==}
+  '@scaleway/biome@0.0.6':
+    resolution: {integrity: sha512-fWVilKYpe/k/NRBPnWsflLzDmIMD6MRgYUnpjTp/+5jMIq2AoRVBB1eQv6kI4gzL/c5VWl1PpytT28KJuXgqlQ==}
     peerDependencies:
-      '@biomejs/biome': 2.3.11
+      '@biomejs/biome': 2.3.12
 
   '@scaleway/eslint-config-react@5.2.13':
     resolution: {integrity: sha512-fBnjw/jPX3oR2HgaXFO/n+lUe6hQzjyTT0sQN2lG3+yRdxGInVovnc8/MQyq+eoCiO/eyJTuhvM2wOzBY30lrA==}
@@ -11312,7 +11312,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@scaleway/biome@0.0.5(@biomejs/biome@2.3.11)':
+  '@scaleway/biome@0.0.6(@biomejs/biome@2.3.11)':
     dependencies:
       '@biomejs/biome': 2.3.11
 
