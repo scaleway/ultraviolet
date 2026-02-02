@@ -63,11 +63,11 @@ type DisplayValuesProps = {
   overflowed: boolean
   overflowAmount: number
   measureRef: RefObject<HTMLDivElement | null>
-  size: 'small' | 'medium' | 'large'
   lastElementMaxWidth: number
   overflow?: boolean
   refPlusTag: RefObject<HTMLDivElement | null>
   displayShadowCopy?: boolean
+  textVariant: 'body' | 'bodySmall' | 'caption'
 }
 
 const DisplayValues = ({
@@ -78,12 +78,12 @@ const DisplayValues = ({
   readOnly,
   overflowed,
   overflowAmount,
-  size,
   measureRef,
   lastElementMaxWidth,
   overflow,
   refPlusTag,
   displayShadowCopy,
+  textVariant,
 }: DisplayValuesProps) => {
   const { multiselect, selectedData, setSelectedData, options, onChange } =
     useSelectInput()
@@ -174,7 +174,7 @@ const DisplayValues = ({
       disabled={disabled}
       prominence="default"
       sentiment="neutral"
-      variant={size === 'large' ? 'body' : 'bodySmall'}
+      variant={textVariant}
     >
       {selectedData.selectedValues[0]
         ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
@@ -422,6 +422,17 @@ const SelectBar = ({
     selectedData.selectedValues,
   ])
 
+  const textVariant = useMemo(() => {
+    if (size === 'large') {
+      return 'body'
+    }
+    if (size === 'medium') {
+      return 'bodySmall'
+    }
+
+    return 'caption'
+  }, [size])
+
   return (
     <Tooltip disableAnimation text={tooltip}>
       <div
@@ -478,7 +489,7 @@ const SelectBar = ({
             readOnly={readOnly}
             refPlusTag={refPlusTag}
             refTag={refTag}
-            size={size}
+            textVariant={textVariant}
           />
         ) : (
           <Text
@@ -487,7 +498,7 @@ const SelectBar = ({
             disabled={disabled}
             prominence="weak"
             sentiment="neutral"
-            variant={size === 'large' ? 'body' : 'bodySmall'}
+            variant={textVariant}
           >
             {placeholder}
           </Text>

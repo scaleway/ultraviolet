@@ -212,6 +212,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
       refSelect={ref}
       selectAll={selectAll}
       selectAllGroup={selectAllGroup}
+      size={size}
       value={value}
     >
       <div
@@ -274,7 +275,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             className={selectinputHelper}
             prominence="weak"
             sentiment="neutral"
-            variant="caption"
+            variant={size === 'small' ? 'captionSmall' : 'caption'}
           >
             {helper}
           </Text>
@@ -285,7 +286,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             className={selectinputHelper}
             prominence="default"
             sentiment={error ? 'danger' : 'success'}
-            variant="caption"
+            variant={size === 'small' ? 'captionSmall' : 'caption'}
           >
             {error || success}
           </Text>

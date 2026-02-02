@@ -1,5 +1,6 @@
 'use client'
 
+import { useMemo } from 'react'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
@@ -14,13 +15,27 @@ type DisplayOptionProps = {
   option: OptionType
   descriptionDirection: 'row' | 'column'
   optionalInfoPlacement: 'left' | 'right'
+  textVariant: 'body' | 'bodySmall' | 'caption'
 }
 
 export const DisplayOption = ({
   option,
   optionalInfoPlacement,
   descriptionDirection,
+  textVariant,
 }: DisplayOptionProps) => {
+  const captionSize = useMemo(() => {
+    if (textVariant === 'body') {
+      return 'bodySmall'
+    }
+
+    if (textVariant === 'bodySmall') {
+      return 'caption'
+    }
+
+    return 'captionSmall'
+  }, [textVariant])
+
   if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
     return (
       <Tooltip disableAnimation text={option.tooltip}>
@@ -41,7 +56,7 @@ export const DisplayOption = ({
               as="span"
               className={dropdownInfoTextItem}
               placement="left"
-              variant="body"
+              variant={textVariant}
             >
               {option.label}
             </Text>
@@ -51,7 +66,7 @@ export const DisplayOption = ({
                 placement="left"
                 prominence="weak"
                 sentiment={option.disabled ? undefined : 'neutral'}
-                variant="bodySmall"
+                variant={captionSize}
               >
                 {option.description}
               </Text>
@@ -82,12 +97,12 @@ export const DisplayOption = ({
               as="span"
               className={dropdownInfoTextItem}
               placement="left"
-              variant="body"
+              variant={textVariant}
             >
               {option.label}
             </Text>
             {option.description ? (
-              <Text as="span" placement="left" variant="bodySmall">
+              <Text as="span" placement="left" variant={captionSize}>
                 {option.description}
               </Text>
             ) : null}
@@ -121,7 +136,7 @@ export const DisplayOption = ({
               as="span"
               className={dropdownInfoTextItem}
               placement="left"
-              variant="body"
+              variant={textVariant}
             >
               {option.label}
             </Text>
@@ -131,7 +146,7 @@ export const DisplayOption = ({
                 placement="left"
                 prominence="weak"
                 sentiment={option.disabled ? undefined : 'neutral'}
-                variant="bodySmall"
+                variant={captionSize}
               >
                 {option.description}
               </Text>
@@ -160,7 +175,7 @@ export const DisplayOption = ({
             as="span"
             className={dropdownInfoTextItem}
             placement="left"
-            variant="body"
+            variant={textVariant}
           >
             {option.label}
           </Text>
@@ -174,7 +189,7 @@ export const DisplayOption = ({
             placement="left"
             prominence="weak"
             sentiment={option.disabled ? undefined : 'neutral'}
-            variant="bodySmall"
+            variant={captionSize}
           >
             {option.description}
           </Text>

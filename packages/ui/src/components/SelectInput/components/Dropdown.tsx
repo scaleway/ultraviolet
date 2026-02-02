@@ -219,6 +219,7 @@ const CreateDropdown = ({
     selectedData,
     searchInput,
     setSearchInput,
+    size,
   } = useSelectInput()
   const focusedItemRef = useRef<HTMLDivElement>(null)
 
@@ -227,6 +228,21 @@ const CreateDropdown = ({
       focusedItemRef.current.focus()
     }
   }, [defaultSearchValue])
+
+  const textVariant = useMemo(() => {
+    if (size === 'large') {
+      return 'body'
+    }
+    if (size === 'medium') {
+      return 'bodySmall'
+    }
+
+    return 'caption'
+  }, [size])
+
+  const textVariantSmall =
+    size === 'small' ? 'captionStrong' : 'bodySmallStrong'
+  const sizeVariantIcon = size === 'small' ? 'xsmall' : 'small'
 
   const handleClickCustomValue = () => {
     const newOption = { label: searchInput, value: searchInput }
@@ -240,7 +256,10 @@ const CreateDropdown = ({
     return (
       <Stack alignItems="center" className={dropdownEmptyState} gap={2}>
         {emptyState ?? (
-          <Text as="p" variant="bodyStrong">
+          <Text
+            as="p"
+            variant={size === 'small' ? 'bodySmallStrong' : 'bodyStrong'}
+          >
             No options
           </Text>
         )}
@@ -251,8 +270,8 @@ const CreateDropdown = ({
   if (isEmpty && addOption && searchable) {
     const text = (
       <Stack alignItems="center" direction="row" gap="1">
-        <PlusIcon sentiment="primary" size="small" />
-        <Text as="span" sentiment="primary" variant="bodySmallStrong">
+        <PlusIcon sentiment="primary" size={sizeVariantIcon} />
+        <Text as="span" sentiment="primary" variant={textVariantSmall}>
           {addOption.text} {searchInput}
         </Text>
       </Stack>
@@ -283,6 +302,7 @@ const CreateDropdown = ({
           descriptionDirection="row"
           option={option}
           optionalInfoPlacement="left"
+          textVariant={textVariant}
         />
       </div>
     )
@@ -396,8 +416,12 @@ const CreateDropdown = ({
             option={{
               label: (
                 <Stack alignItems="center" direction="row" gap="1">
-                  <PlusIcon sentiment="primary" size="small" />
-                  <Text as="span" sentiment="primary" variant="bodySmallStrong">
+                  <PlusIcon sentiment="primary" size={sizeVariantIcon} />
+                  <Text
+                    as="span"
+                    sentiment="primary"
+                    variant={textVariantSmall}
+                  >
                     {addOption.text} {searchInput}
                   </Text>
                 </Stack>
@@ -406,6 +430,7 @@ const CreateDropdown = ({
               value: `${addOption.text} ${searchInput}`,
             }}
             optionalInfoPlacement="left"
+            textVariant={textVariant}
           />
         </div>
       ) : null}
@@ -415,7 +440,12 @@ const CreateDropdown = ({
             aria-disabled={false}
             aria-label="select-all"
             aria-selected={selectedData.allSelected}
-            className={cn(dropdownItem({ selected: selectedData.allSelected }))}
+            className={cn(
+              dropdownItem({
+                selected: selectedData.allSelected,
+                size: size === 'small' ? 'small' : 'default',
+              }),
+            )}
             data-testid="select-all"
             onClick={selectAllOptions}
             onKeyDown={event =>
@@ -434,7 +464,7 @@ const CreateDropdown = ({
               value="select-all"
             >
               <Stack direction="column">
-                <Text as="span" placement="left" variant="body">
+                <Text as="span" placement="left" variant={textVariant}>
                   {selectAll.label}
                 </Text>
                 <Text
@@ -442,7 +472,7 @@ const CreateDropdown = ({
                   placement="left"
                   prominence="weak"
                   sentiment="neutral"
-                  variant="bodySmall"
+                  variant={size === 'small' ? 'captionSmall' : 'bodySmall'}
                 >
                   {selectAll.description}
                 </Text>
@@ -469,6 +499,7 @@ const CreateDropdown = ({
                   selected:
                     selectedData.selectedValues.includes(option.value) &&
                     !option.disabled,
+                  size: size === 'small' ? 'small' : 'default',
                 }),
               )}
               data-testid={`option-${option.value}`}
@@ -523,6 +554,7 @@ const CreateDropdown = ({
                     descriptionDirection={descriptionDirection}
                     option={option}
                     optionalInfoPlacement={optionalInfoPlacement}
+                    textVariant={textVariant}
                   />
                 </Checkbox>
               ) : (
@@ -530,6 +562,7 @@ const CreateDropdown = ({
                   descriptionDirection={descriptionDirection}
                   option={option}
                   optionalInfoPlacement={optionalInfoPlacement}
+                  textVariant={textVariant}
                 />
               )}
             </div>
@@ -572,11 +605,11 @@ const CreateDropdown = ({
                 option={{
                   label: (
                     <Stack alignItems="center" direction="row" gap="1">
-                      <PlusIcon sentiment="primary" size="small" />
+                      <PlusIcon sentiment="primary" size={sizeVariantIcon} />
                       <Text
                         as="span"
                         sentiment="primary"
-                        variant="bodySmallStrong"
+                        variant={textVariantSmall}
                       >
                         {addOption.text} {searchInput}
                       </Text>
@@ -586,6 +619,7 @@ const CreateDropdown = ({
                   value: `${addOption.text} ${searchInput}`,
                 }}
                 optionalInfoPlacement="left"
+                textVariant={textVariant}
               />
             </div>
           ) : null}
@@ -596,7 +630,10 @@ const CreateDropdown = ({
                 aria-label="select-all"
                 aria-selected={selectedData.allSelected}
                 className={cn(
-                  dropdownItem({ selected: selectedData.allSelected }),
+                  dropdownItem({
+                    selected: selectedData.allSelected,
+                    size: size === 'small' ? 'small' : 'default',
+                  }),
                 )}
                 data-testid="select-all"
                 id="select-all"
@@ -618,7 +655,7 @@ const CreateDropdown = ({
                   value="select-all"
                 >
                   <Stack direction="column">
-                    <Text as="span" placement="left" variant="body">
+                    <Text as="span" placement="left" variant={textVariant}>
                       {selectAll.label}
                     </Text>
                     <Text
@@ -626,7 +663,7 @@ const CreateDropdown = ({
                       placement="left"
                       prominence="weak"
                       sentiment="neutral"
-                      variant="bodySmall"
+                      variant={size === 'small' ? 'captionSmall' : 'bodySmall'}
                     >
                       {selectAll.description}
                     </Text>
@@ -650,7 +687,11 @@ const CreateDropdown = ({
                     {group ? (
                       <button
                         className={cn(
-                          selectAllGroup ? dropdownGroupSelectable : '',
+                          selectAllGroup
+                            ? dropdownGroupSelectable({
+                                size: size === 'small' ? 'small' : 'default',
+                              })
+                            : '',
                           dropdownGroup,
                         )}
                         data-selectgroup={selectAllGroup}
@@ -686,7 +727,9 @@ const CreateDropdown = ({
                               as="span"
                               placement="left"
                               sentiment="neutral"
-                              variant="caption"
+                              variant={
+                                size === 'small' ? 'captionSmall' : 'caption'
+                              }
                             >
                               {group.toUpperCase()}
                             </Text>
@@ -696,7 +739,9 @@ const CreateDropdown = ({
                             as="span"
                             placement="left"
                             sentiment="neutral"
-                            variant="caption"
+                            variant={
+                              size === 'small' ? 'captionSmall' : 'caption'
+                            }
                           >
                             {group.toUpperCase()}
                           </Text>
@@ -712,7 +757,7 @@ const CreateDropdown = ({
                       className={emptyStateGroupStyle}
                       prominence="weak"
                       sentiment="neutral"
-                      variant="body"
+                      variant={textVariant}
                     >
                       {emptyStateGroup}
                     </Text>
@@ -722,7 +767,7 @@ const CreateDropdown = ({
                       as="span"
                       className={emptyStateGroupStyle}
                       sentiment="danger"
-                      variant="body"
+                      variant={textVariant}
                     >
                       {errorGroup}
                     </Text>
@@ -739,6 +784,7 @@ const CreateDropdown = ({
                         className={cn(
                           dropdownItem({
                             disabled: !!option.disabled,
+                            size: size === 'small' ? 'small' : 'default',
                             selected:
                               selectedData.selectedValues.includes(
                                 option.value,
@@ -801,6 +847,7 @@ const CreateDropdown = ({
                               descriptionDirection={descriptionDirection}
                               option={option}
                               optionalInfoPlacement={optionalInfoPlacement}
+                              textVariant={textVariant}
                             />
                           </Checkbox>
                         ) : (
@@ -808,6 +855,7 @@ const CreateDropdown = ({
                             descriptionDirection={descriptionDirection}
                             option={option}
                             optionalInfoPlacement={optionalInfoPlacement}
+                            textVariant={textVariant}
                           />
                         )}
                       </div>
