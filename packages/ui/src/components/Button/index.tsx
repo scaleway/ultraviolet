@@ -3,7 +3,8 @@
 'use client'
 
 import { useTheme } from '@ultraviolet/themes'
-import { cn } from '@ultraviolet/utils'
+import type { RenderProp } from '@ultraviolet/utils'
+import { cn, renderElement } from '@ultraviolet/utils'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -49,19 +50,41 @@ type CommonProps = {
   style?: CSSProperties
 } & ButtonVariants
 
-type FinalProps = CommonProps & {
+type BaseButtonProps = CommonProps & {
   children: ReactNode
   name?: string
-  href?: string
-  target?: string
-  download?: string
-}
+} & XOR<
+    [
+      {
+        href?: string
+        target?: string
+        download?: string
+      },
+      {
+        /**
+         * Custom element or render function to use instead of the default button.
+         *
+         * Element form (props auto-merged):
+         * ```tsx
+         * <Button render={<NextLink href="/about" />}>About</Button>
+         * ```
+         *
+         * Function form (you control prop merging):
+         * ```tsx
+         * <Button render={(props) => <NextLink {...props} href="/about" />}>About</Button>
+         * ```
+         */
+        render: RenderProp
+      },
+    ]
+  >
 
 /**
  * Button component is used to trigger an action or event, such as submitting a form, opening a dialog,
  * canceling an action, or performing a delete operation.
+ * Use `render` prop to render a custom element (e.g., Next.js Link) while preserving Button's styling.
  */
-export const Button = forwardRef<Element, FinalProps>(
+export const Button = forwardRef<Element, BaseButtonProps>(
   (
     {
       type = 'button' as const,
@@ -102,6 +125,7 @@ export const Button = forwardRef<Element, FinalProps>(
       tabIndex,
       autoFocus,
       style,
+      render,
     },
     ref,
   ) => {
@@ -128,6 +152,26 @@ export const Button = forwardRef<Element, FinalProps>(
       </>
     )
 
+    const computedClassName = cn(
+      className,
+      button({ disabled, fullWidth, sentiment, size, variant }),
+    )
+
+    // render prop: render custom element with Button styling
+    if (render) {
+      return (
+        <Tooltip containerFullWidth={fullWidth} text={tooltip}>
+          {renderElement(render, {
+            children,
+            className: computedClassName,
+            'data-testid': dataTestId,
+            ref: ref as Ref<HTMLElement>,
+            style,
+          })}
+        </Tooltip>
+      )
+    }
+
     // @note: an anchor can't be disabled
     if (href && !computeIsDisabled) {
       return (
@@ -144,10 +188,7 @@ export const Button = forwardRef<Element, FinalProps>(
             aria-pressed={ariaPressed}
             aria-roledescription={ariaRoledescription}
             autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-            className={cn(
-              className,
-              button({ disabled, fullWidth, sentiment, size, variant }),
-            )}
+            className={computedClassName}
             data-testid={dataTestId}
             download={download}
             href={href}
@@ -180,10 +221,7 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-haspopup={ariaHaspopup}
           aria-label={ariaLabel}
           autoFocus={autoFocus} // oxlint-disable-line jsx_a11y/no-autofocus
-          className={cn(
-            className,
-            button({ disabled, fullWidth, sentiment, size, variant }),
-          )}
+          className={computedClassName}
           data-testid={dataTestId}
           disabled={computeIsDisabled}
           name={name}
