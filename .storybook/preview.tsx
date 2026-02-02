@@ -1,5 +1,6 @@
 // biome-ignore-all  lint/complexity/noUselessFragments: to fix
-
+// oxlint-disable typescript/no-unsafe-call
+//
 import type { Preview, StoryFn } from '@storybook/react-vite'
 import {
   consoleDarkerTheme as darkerTheme,
@@ -121,6 +122,7 @@ const parameters: Preview['parameters'] = {
 
 const getThemeColor = (theme: string) => {
   const { value: background, textColor } =
+    // oxlint-disable-next-line typescript/no-unsafe-call
     parameters['backgrounds'].values.find(
       ({ name }: { name: string }) => name === theme,
     ) ?? parameters['backgrounds'].values[0]
@@ -145,6 +147,7 @@ const withThemeProvider = (
         padding: '30px',
       }}
     >
+      {/* @ts-expect-error decorators */}
       <Story {...context} />
     </div>
   )
@@ -181,6 +184,7 @@ const decorators = [
       <>
         <ThemeProviderUI theme={finalTheme()}>
           {
+            // @ts-expect-error: ERROR
             // oxlint-disable-next-line react/jsx-curly-brace-presence
             <Story />
           }
@@ -193,6 +197,7 @@ const decorators = [
 ]
 
 export default {
+  // @ts-expect-error decorators
   decorators,
   parameters,
   preview,

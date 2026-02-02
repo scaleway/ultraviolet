@@ -48,7 +48,7 @@ const Wrapper = ({ children, defaultValues }: Wrapers) => {
   )
 }
 
-describe('useOnFieldChange', () => {
+describe(useOnFieldChange, () => {
   test('should render correctly', () => {
     const callback = vi.fn((value, values) => {
       expect(value).toBe(updated.textInputName)

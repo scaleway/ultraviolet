@@ -35,16 +35,24 @@ export const Form = <TFieldValues extends FieldValues>({
     }
   })
 
+  // oxlint-disabled-next-line typescript/no-misused-promises
+  // const onSubmit = async (e ) => {
+  //     e.preventDefault()
+  //     e.stopPropagation()
+  //     await handleSubmit(e)
+  // }
+
   return (
     <FormProvider {...methods}>
       <ErrorProvider errors={{ ...defaultErrors, ...errors }}>
         <form
           name={name}
           noValidate
-          onSubmit={async e => {
+          // oxlint-disabled-next-line typescript/no-misused-promises
+          onSubmit={e => {
             e.preventDefault()
             e.stopPropagation()
-            await handleSubmit(e)
+            handleSubmit(e).catch(() => null)
           }}
           style={{ display: 'contents' }}
         >

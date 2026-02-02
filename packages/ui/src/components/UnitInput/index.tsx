@@ -231,7 +231,7 @@ export const UnitInput = ({
           sentiment={sentiment}
           variant="caption"
         >
-          {error || success || helper}
+          {error ?? success ?? helper}
         </Text>
       ) : null}
       {!(error || success) && typeof helper !== 'string' && helper

@@ -133,7 +133,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const localId = useId()
     const theme = useTheme()
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
-    useImperativeHandle(ref, () => textAreaRef.current as HTMLTextAreaElement)
+    useImperativeHandle(ref, () => textAreaRef.current!)
 
     useEffect(() => {
       const textArea = textAreaRef.current
@@ -187,7 +187,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
       return 'neutral'
     }, [error, success])
-    const notice = success || error || helper
+    const notice = success ?? error ?? helper
 
     const computedClearable = clearable && !!value
 
@@ -277,7 +277,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   sentiment={sentiment}
                   variant="caption"
                 >
-                  {error || success || helper}
+                  {error ?? success ?? helper}
                 </Text>
               ) : null}
               {!(error || success) && typeof helper !== 'string' && helper

@@ -70,7 +70,7 @@ export const Playground: StoryFn<typeof Form> = () => {
     <Form
       errors={mockErrors}
       methods={methods}
-      onSubmit={() =>
+      onSubmit={async () =>
         new Promise(rejects => {
           setTimeout(() => rejects('SERVER ERROR'), 5000)
         })

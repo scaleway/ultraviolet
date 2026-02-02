@@ -365,7 +365,7 @@ export const Item = memo(
       >
         <Cell
           className={estimateCostCell({
-            hasBorder: !(isLastElement || noBorder || isOverlay),
+            hasBorder: !((isLastElement || noBorder) ?? isOverlay),
           })}
           style={assignInlineVars({
             [paddingLeftCell]: `${(tabulation ?? 0) * 8 + 16}px`,
@@ -438,7 +438,7 @@ export const Item = memo(
                         })
                       : null,
                   )
-                : textNotDefined || locales['estimate.cost.notDefined']}
+                : (textNotDefined ?? locales['estimate.cost.notDefined'])}
             </div>
           </LeftSide>
         </Cell>

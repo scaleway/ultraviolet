@@ -38,7 +38,7 @@ export const Group = ({
           >
             {label}
           </Text>
-          {labelDescription || null}
+          {labelDescription ?? null}
         </Stack>
       </span>
       {isChildrenEmpty && emptyState ? emptyState : children}

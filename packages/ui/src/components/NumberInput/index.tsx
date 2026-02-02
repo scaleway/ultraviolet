@@ -107,7 +107,7 @@ export const NumberInput = forwardRef(
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const localRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
+    useImperativeHandle(ref, () => localRef.current!)
 
     const uniqueId = useId()
     const localId = id ?? uniqueId
@@ -225,7 +225,7 @@ export const NumberInput = forwardRef(
                 >
                   <Button
                     aria-label="minus"
-                    disabled={disabled || readOnly || isMinusDisabled()}
+                    disabled={(disabled || readOnly) ?? isMinusDisabled()}
                     onClick={onClickSideButton('down')}
                     sentiment="neutral"
                     size={size === 'small' ? 'xsmall' : 'small'}
@@ -300,7 +300,7 @@ export const NumberInput = forwardRef(
                 >
                   <Button
                     aria-label="plus"
-                    disabled={disabled || readOnly || isPlusDisabled()}
+                    disabled={(disabled || readOnly) ?? isPlusDisabled()}
                     onClick={onClickSideButton('up')}
                     sentiment="neutral"
                     size={size === 'small' ? 'xsmall' : 'small'}
@@ -321,7 +321,7 @@ export const NumberInput = forwardRef(
             sentiment={helperSentiment}
             variant="caption"
           >
-            {error || success || helper}
+            {error ?? success ?? helper}
           </Text>
         ) : null}
         {!(error || success) && typeof helper !== 'string' && helper

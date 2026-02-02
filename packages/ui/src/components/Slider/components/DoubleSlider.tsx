@@ -116,8 +116,8 @@ export const DoubleSlider = ({
 
   const internalOnChangeRef = useCallback(
     (localValue: (number | null)[]) => {
-      let leftSliderValue = localValue[0] === null ? min : localValue[0]
-      let rightSliderValue = localValue[1] === null ? max : localValue[1]
+      let leftSliderValue = localValue[0] ?? min
+      let rightSliderValue = localValue[1] ?? max
 
       leftSliderValue = Math.max(min, Math.min(leftSliderValue, max))
       rightSliderValue = Math.max(min, Math.min(rightSliderValue, max))

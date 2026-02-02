@@ -110,7 +110,7 @@ const SelectableCardOptionGroupComponent = ({
             sentiment={error ? 'danger' : 'neutral'}
             variant="caption"
           >
-            {helper || error}
+            {helper ?? error}
           </Text>
         ) : null}
       </Stack>

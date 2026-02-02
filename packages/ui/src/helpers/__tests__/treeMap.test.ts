@@ -5,7 +5,7 @@ import { getAllIds, getDataColors, getOpacity, percentToHex } from '../treeMap'
 
 type Theme = typeof consoleLightTheme
 
-describe('getOpacity', () => {
+describe(getOpacity, () => {
   it('should return 100 for input 0', () => {
     expect(getOpacity(0)).toBe(100)
   })
@@ -34,7 +34,7 @@ describe('getOpacity', () => {
   })
 })
 
-describe('percentToHex', () => {
+describe(percentToHex, () => {
   it('should convert 0% to "00"', () => {
     expect(percentToHex(0)).toBe('00')
   })
@@ -68,7 +68,7 @@ describe('percentToHex', () => {
   })
 })
 
-describe('getAllIds', () => {
+describe(getAllIds, () => {
   it('should return single ID for node without children', () => {
     const datum: DefaultTreeMapDatum = { id: 'root' }
     expect(getAllIds(datum)).toEqual(['root'])
@@ -129,7 +129,7 @@ describe('getAllIds', () => {
   })
 })
 
-describe('getDataColors', () => {
+describe(getDataColors, () => {
   const mockTheme = {
     colors: {
       primary: {

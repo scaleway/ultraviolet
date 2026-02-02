@@ -287,7 +287,7 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
             sentiment={error ? 'danger' : 'success'}
             variant="caption"
           >
-            {error || success}
+            {error ?? success}
           </Text>
         ) : null}
       </div>

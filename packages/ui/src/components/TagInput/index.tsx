@@ -314,7 +314,7 @@ export const TagInput = ({
           sentiment={helperSentiment}
           variant="caption"
         >
-          {error || success || helper}
+          {error ?? success ?? helper}
         </Text>
       ) : null}
     </Stack>
