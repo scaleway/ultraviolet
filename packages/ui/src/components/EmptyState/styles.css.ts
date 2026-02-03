@@ -19,6 +19,7 @@ export type SizesTypes = keyof typeof CONTAINER_SIZES
 export const emptyStateContainer = recipe({
   base: {
     margin: '0 auto',
+    width: '100%',
   },
   defaultVariants: {
     bordered: false,
