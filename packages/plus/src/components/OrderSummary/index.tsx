@@ -202,6 +202,9 @@ export const OrderSummary = ({
         {hideDetails ? null : <ScrollableContent />}
         <NonScrollableContent
           additionalInfo={additionalInfo}
+          defaultPriceInformation={
+            priceInformation === true || (hideDetails && !priceInformation)
+          }
           discount={discount}
           footer={footer}
           hideBeforePrice={hideBeforePrice}
@@ -211,7 +214,7 @@ export const OrderSummary = ({
           totalPriceDescription={totalPriceDescription}
           totalPriceInfo={totalPriceInfo}
           totalPriceInfoPlacement={totalPriceInfoPlacement}
-          unit={unitUnitInput}
+          unit={timePeriodUnit}
         >
           {children}
         </NonScrollableContent>

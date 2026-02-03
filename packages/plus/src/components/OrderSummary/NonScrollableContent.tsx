@@ -19,6 +19,7 @@ type NonScrollableContentProps = {
   unit: TimeUnit
   priceInformation?: ReactNode
   hideBeforePrice?: boolean
+  defaultPriceInformation: boolean
 }
 
 export const NonScrollableContent = ({
@@ -33,8 +34,10 @@ export const NonScrollableContent = ({
   additionalInfo,
   priceInformation,
   hideBeforePrice,
+  defaultPriceInformation,
 }: NonScrollableContentProps) => {
   const { locales } = useContext(OrderSummaryContext)
+  const unitSingular = unit.endsWith('s') ? unit.slice(0, -1) : unit
 
   return (
     <Stack className={orderSummaryNonScrollableContainer} gap={3}>
@@ -102,7 +105,7 @@ export const NonScrollableContent = ({
                 variant="headingSmallStrong"
               >
                 <DisplayPrice beforeOrAfter="after" price={totalPrice} />
-                {hideDetails && !priceInformation ? `/${unit}` : null}
+                {defaultPriceInformation ? `/${unitSingular}` : null}
                 {priceInformation}
               </Text>
             </Stack>
