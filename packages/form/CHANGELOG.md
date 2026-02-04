@@ -1,5 +1,17 @@
 # Change Log
 
+## 6.0.15
+
+### Patch Changes
+
+- [#6064](https://github.com/scaleway/ultraviolet/pull/6064) [`6de2594`](https://github.com/scaleway/ultraviolet/commit/6de2594c6254bb98f51a05e22b3c4b70504fe2e3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react` to `19.2.4`.
+  Updated dependency `@types/react` to `19.2.10`.
+  Updated dependency `react-dom` to `19.2.4`.
+- Updated dependencies [[`6de2594`](https://github.com/scaleway/ultraviolet/commit/6de2594c6254bb98f51a05e22b3c4b70504fe2e3)]:
+  - @ultraviolet/icons@5.1.2
+  - @ultraviolet/themes@3.0.6
+  - @ultraviolet/ui@3.8.2
+
 ## 6.0.14
 
 ### Patch Changes
