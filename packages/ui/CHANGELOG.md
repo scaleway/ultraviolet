@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.8.1
+
+### Patch Changes
+
+- [#6066](https://github.com/scaleway/ultraviolet/pull/6066) [`f4d92c5`](https://github.com/scaleway/ultraviolet/commit/f4d92c5db0098b1e19fce048088d6185fa8191fc) Thanks [@lisalupi](https://github.com/lisalupi)! - `EmptyState`: add full width
+
+- Updated dependencies [[`9413c49`](https://github.com/scaleway/ultraviolet/commit/9413c495b7e614f4d6e73e421b0be7319ad35e22), [`75c6cce`](https://github.com/scaleway/ultraviolet/commit/75c6ccec42acedc701defe36f82f48e0b8ecb679)]:
+  - @ultraviolet/utils@1.0.2
+  - @ultraviolet/icons@5.1.1
+
 ## 3.8.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @ultraviolet/utils
 
+## 1.0.2
+
+### Patch Changes
+
+- [#6072](https://github.com/scaleway/ultraviolet/pull/6072) [`9413c49`](https://github.com/scaleway/ultraviolet/commit/9413c495b7e614f4d6e73e421b0be7319ad35e22) Thanks [@philibea](https://github.com/philibea)! - Added `polymorphic` utility for render prop handling and props merging
+
 ## 1.0.1
 
 ### Patch Changes
