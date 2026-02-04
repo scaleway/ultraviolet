@@ -1,0 +1,50 @@
+import { InformationOutlineIcon } from '@ultraviolet/icons/InformationOutlineIcon'
+import { useState } from 'react'
+import { Popover } from '../../Popover'
+import { Tooltip } from '../../Tooltip'
+import { plansIconWrapper } from './styles.css'
+import type { Hint } from './types'
+
+type FeatureHintProps = {
+  hint?: Hint
+}
+
+export const FeatureHint = ({ hint }: FeatureHintProps) => {
+  const [visible, setVisible] = useState(false)
+
+  if (!hint) {
+    return <div />
+  }
+
+  if (hint.type === 'tooltip') {
+    return (
+      <Tooltip text={hint.text}>
+        <InformationOutlineIcon prominence="weak" sentiment="neutral" />
+      </Tooltip>
+    )
+  }
+
+  return (
+    <Popover
+      content={hint.content}
+      onClose={() => setVisible(false)}
+      title={hint.title}
+      visible={visible}
+    >
+      <button
+        className={plansIconWrapper}
+        data-testid="hint-popover"
+        onClick={() => setVisible(true)}
+        onKeyDown={event => {
+          if (event.key === 'Space' || event.key === 'Enter') {
+            setVisible(true)
+          }
+        }}
+        tabIndex={0}
+        type="button"
+      >
+        <InformationOutlineIcon prominence="weak" sentiment="neutral" />
+      </button>
+    </Popover>
+  )
+}

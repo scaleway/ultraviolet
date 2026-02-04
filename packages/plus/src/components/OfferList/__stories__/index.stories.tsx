@@ -9,13 +9,15 @@ export default {
     'OfferList.Row': OfferList.Row,
     'OfferList.Cell': OfferList.Cell,
   },
+  tags: ['deprecated'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'This component is deprecated, please import it from `@ultraviolet/ui/compositions/OfferList` instead. [Click here to see the full documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/compositions-offerlist--docs).',
+      },
+    },
+  },
 } satisfies Meta
 
 export { Playground } from './Playground.stories'
-export { Type } from './Type.stories'
-export { Expandable } from './Expandable.stories'
-export { Loading } from './Loading.stories'
-export { Banner } from './Banner.stories'
-export { Badge } from './Badge.stories'
-export { OnChange } from './OnChangeSelect.stories'
-export { Example } from './Example.stories'
