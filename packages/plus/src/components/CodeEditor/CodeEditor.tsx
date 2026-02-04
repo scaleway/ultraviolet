@@ -80,6 +80,8 @@ export const CodeEditor = ({
   style,
 }: CodeEditorProps) => {
   const [expanded, setExpanded] = useState(false)
+  const expandableEnabled = expandableHeight !== undefined
+
   const expandableHeightComputed = useMemo(() => {
     if (!expanded && expandableHeight) {
       return typeof expandableHeight === 'string'
@@ -89,6 +91,52 @@ export const CodeEditor = ({
 
     return 'none'
   }, [expandableHeight, expanded])
+
+  // Non-editable when disabled, readOnly or not-expanded
+  const isEditable = !(disabled && readOnly) && (!expandableEnabled || expanded)
+
+  const content = (
+    <>
+      <CodeMirror
+        aria-disabled={disabled}
+        aria-label={ariaLabel}
+        basicSetup={{
+          autocompletion: autoCompletion,
+          highlightActiveLine: false,
+          highlightActiveLineGutter: false,
+          lineNumbers,
+        }}
+        className={className}
+        data-testid={dataTestId}
+        editable={isEditable}
+        extensions={[langs[extensions]?.() ?? langs['sh']]}
+        height={expandableEnabled ? undefined : height}
+        id={id}
+        onBlur={onBlur}
+        onChange={onChange}
+        onUpdate={() => {
+          if (disabled) {
+            document.getSelection()?.empty()
+          }
+        }}
+        readOnly={readOnly || disabled}
+        theme={material}
+        value={value}
+        width="100%"
+      />
+      {copyButton && !disabled ? (
+        <CopyButton
+          bordered
+          className={copyButtonStyle}
+          sentiment="neutral"
+          size="small"
+          value={value}
+        >
+          {typeof copyButton === 'string' ? copyButton : undefined}
+        </CopyButton>
+      ) : null}
+    </>
+  )
 
   return (
     <Stack
@@ -103,95 +151,18 @@ export const CodeEditor = ({
         <div
           className={cn(codeEditor[disabled ? 'disabled' : 'default'])}
           style={assignInlineVars({
-            [maxHeightVar]: expandableHeight
-              ? expandableHeightComputed
-              : 'none',
+            [maxHeightVar]: expandableHeightComputed,
           })}
         >
-          {expandableHeight ? (
+          {expandableEnabled ? (
             <Expandable minHeight={expandableHeight} opened={expanded}>
-              <CodeMirror
-                aria-disabled={disabled}
-                aria-label={ariaLabel}
-                basicSetup={{
-                  autocompletion: autoCompletion,
-                  highlightActiveLine: false,
-                  highlightActiveLineGutter: false,
-                  lineNumbers,
-                }}
-                className={className}
-                data-testid={dataTestId}
-                editable={!(disabled && readOnly) && expanded}
-                extensions={[langs[extensions]?.() ?? langs['sh']]}
-                id={id}
-                onBlur={onBlur}
-                onChange={onChange}
-                onUpdate={() => {
-                  if (disabled) {
-                    document.getSelection()?.empty()
-                  }
-                }}
-                readOnly={readOnly || disabled}
-                theme={material}
-                value={value}
-                width="100%"
-              />
-              {copyButton && !disabled ? (
-                <CopyButton
-                  bordered
-                  className={copyButtonStyle}
-                  sentiment="neutral"
-                  size="small"
-                  value={value}
-                >
-                  {typeof copyButton === 'string' ? copyButton : undefined}
-                </CopyButton>
-              ) : null}
+              {content}
             </Expandable>
           ) : (
-            <>
-              <CodeMirror
-                aria-disabled={disabled}
-                aria-label={ariaLabel}
-                basicSetup={{
-                  autocompletion: autoCompletion,
-                  highlightActiveLine: false,
-                  highlightActiveLineGutter: false,
-                  lineNumbers,
-                }}
-                className={className}
-                data-testid={dataTestId}
-                editable={!(disabled && readOnly)}
-                extensions={[langs[extensions]?.() ?? langs['sh']]}
-                height={height}
-                id={id}
-                onBlur={onBlur}
-                onChange={onChange}
-                onUpdate={() => {
-                  if (disabled) {
-                    document.getSelection()?.empty()
-                  }
-                }}
-                readOnly={readOnly || disabled}
-                theme={material}
-                value={value}
-                width="100%"
-              />
-              {copyButton && !disabled ? (
-                <CopyButton
-                  bordered
-                  className={copyButtonStyle}
-                  sentiment="neutral"
-                  size="small"
-                  value={value}
-                >
-                  {typeof copyButton === 'string' ? copyButton : undefined}
-                </CopyButton>
-              ) : null}
-            </>
+            content
           )}
         </div>
-        {expandableHeight ? (
+        {expandableEnabled ? (
           <div className={showMoreContainer[expanded ? 'true' : 'false']}>
             <button
               aria-expanded={expanded}

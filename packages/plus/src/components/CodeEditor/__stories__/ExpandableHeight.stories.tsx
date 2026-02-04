@@ -15,9 +15,9 @@ function findSequence(goal) {
   }
 `
 
-export const MaxLines = Template.bind({})
+export const ExpandableHeight = Template.bind({})
 
-MaxLines.args = {
+ExpandableHeight.args = {
   ...Template.args,
   expandableHeight: 100,
   showText: 'Show',
@@ -25,7 +25,7 @@ MaxLines.args = {
   value: DEFAULT_VALUE,
 }
 
-MaxLines.parameters = {
+ExpandableHeight.parameters = {
   docs: {
     description: {
       story:
