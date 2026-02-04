@@ -19,9 +19,38 @@ import {
 } from './styles.css'
 import type { FileInputProps, FilesType } from './types'
 
+const fileIsAccepted = (fileType: string, accept?: string) => {
+  if (!accept) {
+    return true
+  }
+
+  const acceptItems = accept
+    .split(',')
+    .map(a => a.trim())
+    .filter(Boolean)
+
+  if (acceptItems.length === 0) {
+    return true
+  }
+
+  for (const item of acceptItems) {
+    if (item.endsWith('/*')) {
+      const prefix = item.slice(0, item.indexOf('/'))
+      if (fileType.startsWith(`${prefix}/`)) {
+        return true
+      }
+    } else if (fileType === item) {
+      return true
+    }
+  }
+
+  return false
+}
+
 /**
  * FileInput allow user to drag & drop and upload one or multiple files.
  */
+// oxlint-disable-next-line complexity
 const FileInputBase = ({
   style,
   className,
@@ -94,14 +123,18 @@ const FileInputBase = ({
 
     if (!disabled) {
       const droppedFiles = [...(event.dataTransfer?.files ?? [])]
-      const newFiles = droppedFiles.map(file => ({
+      const acceptedDropped = droppedFiles.filter(file =>
+        fileIsAccepted(file.type, accept),
+      )
+
+      const newFiles = acceptedDropped.map(file => ({
         file: URL.createObjectURL(file),
         fileName: file.name,
         lastModified: file.lastModified,
         size: file.size,
         type: file.type,
       }))
-      const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
+      const formattedFiles = multiple ? [...files, ...newFiles] : [newFiles[0]]
 
       setFiles(formattedFiles)
       onDrop?.(event)
@@ -114,7 +147,10 @@ const FileInputBase = ({
 
     if (!disabled) {
       const addedFiles = [...(event.target.files ?? [])]
-      const newFiles = addedFiles.map(file => ({
+      const acceptedAdded = addedFiles.filter(file =>
+        fileIsAccepted(file.type, accept),
+      )
+      const newFiles = acceptedAdded.map(file => ({
         file: URL.createObjectURL(file),
         fileName: file.name,
         lastModified: file.lastModified,
@@ -122,7 +158,7 @@ const FileInputBase = ({
         type: file.type,
       }))
 
-      const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
+      const formattedFiles = multiple ? [...files, ...newFiles] : [newFiles[0]]
       setFiles(formattedFiles)
       onChangeFiles?.(formattedFiles)
     }
