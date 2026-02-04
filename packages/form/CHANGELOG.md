@@ -1,5 +1,13 @@
 # Change Log
 
+## 6.0.14
+
+### Patch Changes
+
+- Updated dependencies [[`f4d92c5`](https://github.com/scaleway/ultraviolet/commit/f4d92c5db0098b1e19fce048088d6185fa8191fc), [`75c6cce`](https://github.com/scaleway/ultraviolet/commit/75c6ccec42acedc701defe36f82f48e0b8ecb679)]:
+  - @ultraviolet/ui@3.8.1
+  - @ultraviolet/icons@5.1.1
+
 ## 6.0.13
 
 ### Patch Changes
