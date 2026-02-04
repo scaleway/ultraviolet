@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, JSX, ReactNode } from 'react'
 import type { SIZES } from './constant'
 import { logo } from './style.css'
 
@@ -13,10 +13,12 @@ export type IconProps = {
   title: string
 }
 
+type IconType = (props: IconProps) => JSX.Element
+
 /**
  * Logo component is used to render a set of logos. Their style cannot be changed
  */
-export const Icon = ({
+export const Icon: IconType = ({
   size = 'small',
   className,
   children,

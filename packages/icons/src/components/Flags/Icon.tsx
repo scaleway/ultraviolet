@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ReactNode } from 'react'
+import type { JSX, ReactNode } from 'react'
 import type { SIZES } from './constant'
 import { flag } from './style.css'
 
@@ -13,15 +13,17 @@ export type IconProps = {
   disabled?: boolean
 }
 
+type IconType = (props: IconProps) => JSX.Element
+
 /**
  * Logo component is used to render a set of flags. Their style cannot be changed
  */
-export const Icon = ({
+export const Icon: IconType = ({
   size = 'medium',
   className,
   children,
   title,
-}: IconProps) => (
+}) => (
   <svg
     className={cn(className, flag[size])}
     height="24"

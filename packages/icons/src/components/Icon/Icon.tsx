@@ -1,7 +1,12 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ReactNode, SVGProps } from 'react'
+import type {
+  ForwardRefExoticComponent,
+  ReactNode,
+  RefAttributes,
+  SVGProps,
+} from 'react'
 import { forwardRef } from 'react'
 import type { PROMINENCES, SENTIMENTS, SIZES } from './constants'
 import { icon } from './styles.css'
@@ -25,11 +30,15 @@ export type IconProps = {
   'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label' | 'style'
 >
 
+type IconType = ForwardRefExoticComponent<
+  IconProps & RefAttributes<SVGSVGElement>
+>
+
 /**
  * Icon component is our set of system icons in the design system. All of them are SVGs.
  */
 
-export const Icon = forwardRef<SVGSVGElement, IconProps>(
+export const Icon: IconType = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       sentiment,

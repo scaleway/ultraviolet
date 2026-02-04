@@ -68,8 +68,11 @@ const templateIcon = (
   const deprecated = DEPRECATED_ICONS.find(icon => icon.name === iconName)
 
   return `${COMMENT_HEADER}
+  import type { JSX } from 'react'
   import { Icon } from '../Icon'
   import type { IconProps } from '../Icon'
+
+  type IconType = (props: Omit<IconProps, 'children' | 'title'>) => JSX.Element
 
   ${
     deprecated
@@ -81,15 +84,15 @@ const templateIcon = (
   }
   ${
     svgSmall
-      ? `export const ${iconName} = ({
+      ? `export const ${iconName}: IconType = ({
     ...props
-  }: Omit<IconProps, 'children' | 'title'>) => (
+  }) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
       <Icon {...props} title="${iconName}">{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
   )`
-      : `export const ${iconName} = ({
+      : `export const ${iconName}: IconType = ({
     ...props
-  }: Omit<IconProps, 'children' | 'title'>) => (
+  }) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
       <Icon {...props} title="${iconName}">${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
   )`

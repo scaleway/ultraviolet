@@ -4,7 +4,12 @@ import { globalStyle, styleVariants } from '@vanilla-extract/css'
 export const VARIANTS = ['primary', 'neutral'] as const
 const FILL_CLASSES = ['fill', 'fillStrong'] as const
 
-export const categoryIcon = styleVariants({
+type CategoryIcon = Record<
+  'primary' | 'neutral' | 'primaryDisabled' | 'neutralDisabled',
+  string
+>
+
+export const categoryIcon: CategoryIcon = styleVariants({
   neutral: {},
   neutralDisabled: {},
   primary: {},

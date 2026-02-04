@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, JSX, ReactNode } from 'react'
 import type { SIZES, VARIANTS } from './constants'
 import { productIconSizes, productIconVariants } from './styles.css'
 
@@ -17,11 +17,12 @@ export type IconProps = {
   title: string
 }
 
+type IconType = (props: IconProps) => JSX.Element
 /**
  * ProductIcon component is used to render a set of icons that are linked to a product or service.
  * Those icons are made of multiple colors that changes automatically based on the current theme.
  */
-export const Icon = ({
+export const Icon: IconType = ({
   variant = 'primary',
   disabled,
   size = 'small',

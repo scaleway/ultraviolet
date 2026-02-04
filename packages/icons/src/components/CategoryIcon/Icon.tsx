@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, JSX, ReactNode } from 'react'
 import type { VARIANTS } from './style.css'
 import { categoryIcon } from './style.css'
 
@@ -14,11 +14,13 @@ export type IconProps = {
   title: string
 }
 
+type IconType = (props: IconProps) => JSX.Element
+
 /**
  * CategoryIcon component is used to render category icons, those icons are more complex than system icons
  * as they involve multiple colors that changes depending on theme.
  */
-export const Icon = ({
+export const Icon: IconType = ({
   variant = 'primary',
   disabled,
   children,

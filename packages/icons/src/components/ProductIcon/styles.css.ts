@@ -23,7 +23,10 @@ function generateVariantStyle(
     fill: theme.colors.other.icon.product[variant][fillColor],
   }
 }
-export const productIconSizes = styleVariants(
+
+type StyleVariant = ReturnType<typeof styleVariants>
+
+export const productIconSizes: StyleVariant = styleVariants(
   Object.fromEntries(
     Object.keys(SIZES).map(size => [
       size,
@@ -32,7 +35,7 @@ export const productIconSizes = styleVariants(
   ),
 )
 
-export const productIconVariants = styleVariants({
+export const productIconVariants: StyleVariant = styleVariants({
   ...Object.fromEntries(VARIANTS.map(variant => [variant, {}])),
   ...Object.fromEntries(VARIANTS.map(variant => [`${variant}Disabled`, []])),
 })

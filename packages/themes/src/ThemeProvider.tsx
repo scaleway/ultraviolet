@@ -1,7 +1,7 @@
 'use client'
 
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ReactNode } from 'react'
+import type { JSX, PropsWithChildren } from 'react'
 import { createContext, useContext, useLayoutEffect } from 'react'
 import { consoleLightTheme } from './themes'
 import { theme as themeContract } from './vanilla/themes.css'
@@ -11,8 +11,11 @@ const ThemeContext = createContext(consoleLightTheme)
 /**
  * Provide an object of the theme variables.
  */
+
+type UseTheme = () => typeof consoleLightTheme
+
 // oxlint-disable-next-line react/only-export-components
-export const useTheme = () => {
+export const useTheme: UseTheme = () => {
   const context = useContext(ThemeContext)
   if (!context) {
     throw new Error(
@@ -23,23 +26,19 @@ export const useTheme = () => {
   return context
 }
 
-type ThemeProviderProps = {
-  /**
-   * Change the theme by passing a vanilla theme object.
-   * If no theme is provided, it will default to `consolelightTheme`.
-   */
-  theme?: typeof consoleLightTheme
-  children: ReactNode
-}
-
+type ThemeProviderComponent = (
+  args: PropsWithChildren<{
+    theme: typeof consoleLightTheme
+  }>,
+) => JSX.Element
 /**
  * ThemeProvider will apply generated global CSS variables to the application in the `<head>`.
  * If no theme is provided, it will default to `lightTheme`.
  */
-export const ThemeProvider = ({
+export const ThemeProvider: ThemeProviderComponent = ({
   children,
   theme = consoleLightTheme,
-}: ThemeProviderProps) => {
+}) => {
   useLayoutEffect(() => {
     const styleId = 'uv-theme'
     const existingStyle = document.getElementById(styleId)

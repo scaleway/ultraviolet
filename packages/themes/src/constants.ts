@@ -1,6 +1,12 @@
 import { lightTheme } from './themes/console/light/__generated__/index'
 
-export const { colors, typography, sizing } = lightTheme
+type Colors = typeof lightTheme.colors
+type Typography = typeof lightTheme.typography
+type Sizing = typeof lightTheme.sizing
+
+export const { colors } = lightTheme
+export const { typography } = lightTheme
+export const { sizing } = lightTheme
 
 // This type exclude overlay | other color
 export type Color = Extract<
