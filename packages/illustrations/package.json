@@ -75,17 +75,17 @@
       "require": "./dist/assets/various/index.js",
       "default": "./dist/assets/various/index.js"
     },
+    "./components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "import": "./dist/components/*/index.js",
+      "require": "./dist/components/*/index.js",
+      "default": "./dist/components/*/index.js"
+    },
     "./components": {
       "types": "./dist/components/index.d.ts",
       "import": "./dist/components/index.js",
       "require": "./dist/components/index.js",
       "default": "./dist/components/index.js"
-    },
-    "./components/*": {
-      "types": "./dist/components/*/index.d.ts",
-      "import": "./dist/components/*index.js",
-      "require": "./dist/components/*index.js",
-      "default": "./dist/components/*/index.js"
     }
   },
   "size-limit": [
