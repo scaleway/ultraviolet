@@ -1,6 +1,9 @@
-// biome-ignore-all  lint/complexity/noUselessFragments: to fix
-
-import type { Preview, StoryFn } from '@storybook/react-vite'
+import addonA11y from '@storybook/addon-a11y'
+import addonDocs from '@storybook/addon-docs'
+import addonLinks from '@storybook/addon-links'
+import addonTheme, { withThemeByClassName } from '@storybook/addon-themes'
+import type { Decorator, Preview } from '@storybook/react-vite'
+import { definePreview } from '@storybook/react-vite'
 import {
   consoleDarkerTheme as darkerTheme,
   consoleDarkTheme as darkTheme,
@@ -12,7 +15,6 @@ import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
-import { withThemeByClassName } from '@storybook/addon-themes'
 
 import { scan } from 'react-scan'
 
@@ -23,7 +25,7 @@ const BREAKPOINT_ORDER = [
   'small',
   'xsmall',
   'xxsmall',
-]
+] as const
 
 const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
   if (key in lightTheme.breakpoints) {
@@ -128,44 +130,14 @@ const getThemeColor = (theme: string) => {
   return { background, textColor }
 }
 
-const withThemeProvider = (
-  Story: StoryFn,
-  context: { globals: { theme: string } },
-) => {
-  const { theme } = context.globals
-  const { background, textColor } = getThemeColor(theme)
+const decorators: Decorator[] = [
+  (Story, args) => {
+    // const { theme } = args.context.globals
+    const { context } = args
+    const theme = args.context.globals['theme'] || 'light'
+    console.debug(context, 'theme', theme)
 
-  return (
-    <div
-      style={{
-        background,
-        backgroundPosition: '-4px -4px',
-        backgroundSize: '12px 12px',
-        color: textColor,
-        padding: '30px',
-      }}
-    >
-      <Story {...context} />
-    </div>
-  )
-}
-
-const preview: Preview = {
-  decorators: [
-    withThemeByClassName({
-      defaultTheme: 'light',
-      themes: {
-        dark: 'dark',
-        darker: 'darker',
-        light: '',
-      },
-    }),
-  ],
-}
-
-const decorators = [
-  (Story: StoryFn, context: { globals: { theme: string } }) => {
-    const theme = context.globals.theme || 'light'
+    const { background, textColor } = getThemeColor(theme)
     const finalTheme = () => {
       if (theme === 'light') {
         return lightTheme
@@ -178,23 +150,34 @@ const decorators = [
     }
 
     return (
-      <>
+      <div
+        style={{
+          background,
+          backgroundPosition: '-4px -4px',
+          backgroundSize: '12px 12px',
+          color: textColor,
+          padding: '30px',
+        }}
+      >
         <ThemeProviderUI theme={finalTheme()}>
-          {
-            // oxlint-disable-next-line react/jsx-curly-brace-presence
-            <Story />
-          }
+          <Story {...context} />
         </ThemeProviderUI>
-      </>
+      </div>
     )
-  }, // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
-
-  withThemeProvider,
+  },
+  withThemeByClassName({
+    defaultTheme: 'dark',
+    themes: {
+      dark: 'dark',
+      darker: 'darker',
+      light: 'light',
+    },
+  }),
 ]
 
-export default {
+export default definePreview({
   decorators,
   parameters,
-  preview,
+  addons: [addonLinks(), addonA11y(), addonDocs(), addonTheme()],
   tags: ['autodocs'],
-} satisfies Preview
+})
