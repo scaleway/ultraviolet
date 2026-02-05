@@ -224,23 +224,17 @@ export const DateInput = <IsRange extends undefined | boolean>({
         end: endDate ?? null,
         start: startDate ?? null,
       })
+      setInputValue(
+        formatValue(
+          null,
+          { start: startDate ?? null, end: endDate ?? null },
+          showMonthYearPicker,
+          true,
+          format,
+        ),
+      )
     }
   }, [endDate, startDate, value, selectsRange, format, showMonthYearPicker])
-
-  // Update values range when value change
-  // It's probably not perfect, but single value  (not range) are handled above
-  useEffect(() => {
-    if (selectsRange) {
-      const newFormattedValue = formatValue(
-        null,
-        { end: computedRange.end, start: computedRange.start },
-        true,
-        true,
-        format,
-      )
-      setInputValue(newFormattedValue)
-    }
-  }, [selectsRange, computedRange.start, computedRange.end])
 
   const manageOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newValue = event.currentTarget.value
