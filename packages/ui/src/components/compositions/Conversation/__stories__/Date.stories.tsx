@@ -1,12 +1,12 @@
 import { Template } from './Template.stories'
 
-export const Date = Template.bind({})
+export const DateStory = Template.bind({})
 
-Date.args = {
+DateStory.args = {
   children: '2024-02-14',
 }
 
-Date.parameters = {
+DateStory.parameters = {
   docs: {
     description: {
       story:
