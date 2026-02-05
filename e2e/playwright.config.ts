@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig, devices } from '@playwright/test'
 
-const isCI = process.env['CI']
+const isCI = process.env.CI
 
 const baseURL = 'http://localhost:5173'
 

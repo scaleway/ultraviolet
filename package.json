@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "size": "turbo run size",
+    "typecheck:root": "tsc -p tsconfig.json --noEmit",
     "typecheck": "turbo run typecheck",
     "build": "turbo run build --filter='./packages/*' ",
     "build:examples": "turbo run build --filter './examples/*' ",
