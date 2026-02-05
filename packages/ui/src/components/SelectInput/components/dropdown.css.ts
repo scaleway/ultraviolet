@@ -48,13 +48,26 @@ export const dropdownGroup = style({
   },
 })
 
-export const dropdownGroupSelectable = style({
-  paddingLeft: theme.space[2],
-  borderLeft: `${theme.space['0.5']} solid ${theme.colors.neutral.backgroundWeak}`,
-  selectors: {
-    '&:focus': {
-      backgroundColor: theme.colors.neutral.backgroundHover,
+export const dropdownGroupSelectable = recipe({
+  base: {
+    paddingLeft: theme.space[2],
+    borderLeft: `${theme.space['0.5']} solid ${theme.colors.neutral.backgroundWeak}`,
+    selectors: {
+      '&:focus': {
+        backgroundColor: theme.colors.neutral.backgroundHover,
+      },
     },
+  },
+  variants: {
+    size: {
+      small: {
+        paddingLeft: theme.space[1],
+      },
+      default: {},
+    },
+  },
+  defaultVariants: {
+    size: 'default',
   },
 })
 
@@ -95,11 +108,18 @@ export const dropdownItem = recipe({
   defaultVariants: {
     disabled: false,
     selected: false,
+    size: 'default',
   },
   variants: {
     selected: {
       true: {
         backgroundColor: theme.colors.primary.background,
+      },
+    },
+    size: {
+      default: {},
+      small: {
+        padding: theme.space[1],
       },
     },
     disabled: {

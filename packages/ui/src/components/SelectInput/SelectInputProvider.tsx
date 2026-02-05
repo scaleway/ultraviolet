@@ -24,6 +24,7 @@ type ContextProps = {
   numberOfOptions: number
   displayedOptions: DataType
   selectedData: ReducerState
+  size: 'small' | 'medium' | 'large'
   setSelectedData: Dispatch<ReducerAction>
 } & (
   | {
@@ -51,6 +52,7 @@ const SelectInputContext = createContext<ContextProps>({
   setIsDropdownVisible: () => {},
   setSearchInput: () => {},
   setSelectedData: () => {},
+  size: 'large',
 })
 
 // oxlint-disable-next-line react/only-export-components
@@ -61,6 +63,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   selectAll?: { label: ReactNode; description?: string }
   children: ReactNode
   value?: string | string[]
+  size: 'small' | 'medium' | 'large'
   selectAllGroup: boolean
   numberOfOptions: number
   multiselect: IsMulti
@@ -82,6 +85,7 @@ export const SelectInputProvider = <T extends boolean>({
   onChange,
   refSelect,
   onOpen,
+  size,
 }: SelectInputProviderProps<T>) => {
   const currentValue = useMemo(() => {
     if (value) {
@@ -308,6 +312,7 @@ export const SelectInputProvider = <T extends boolean>({
         setIsDropdownVisible: handleDropDownVisible,
         setSearchInput,
         setSelectedData,
+        size,
       }) as ContextProps,
     [
       isDropdownVisible,
@@ -320,6 +325,7 @@ export const SelectInputProvider = <T extends boolean>({
       numberOfOptions,
       displayedOptions,
       selectedData,
+      size,
       onChange,
     ],
   )

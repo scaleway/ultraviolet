@@ -98,6 +98,7 @@ export const SearchBarDropdown = ({
     multiselect,
     setSelectedData,
     selectedData,
+    size,
   } = useSelectInput()
 
   const handleChange = (search: string) => {
@@ -190,9 +191,14 @@ export const SearchBarDropdown = ({
       onFocus={() => setSearchBarActive(true)}
       onKeyDown={event => handleKeyDown(event, searchInput)}
       placeholder={placeholder}
-      prefix={<SearchIcon sentiment="neutral" size="small" />}
+      prefix={
+        <SearchIcon
+          sentiment="neutral"
+          size={size === 'small' ? 'xsmall' : 'small'}
+        />
+      }
       ref={searchInputRef}
-      size="medium"
+      size={size === 'small' ? 'small' : 'medium'}
       value={searchInput}
     />
   )
