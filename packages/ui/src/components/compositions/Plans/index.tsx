@@ -62,9 +62,14 @@ export const Plans = <T extends string>({
             const computedDisabled = !!(plan.outOfStock || plan.disabled)
             const selectable = hasCardBehavior && !computedDisabled
             const isHighlighted = plan.value === highlight?.plan
+            const hoverPlan = (newValue?: string) => {
+              if (selectable) {
+                setHoveredPlan(newValue)
+              }
+            }
 
             return (
-              // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table interactive table with a clickable button for accessibility
+              // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
               <td
                 className={plansCell({
                   activeColor:
@@ -77,24 +82,16 @@ export const Plans = <T extends string>({
                   selectable,
                 })}
                 key={plan.value}
-                onBlur={
-                  selectable ? () => setHoveredPlan(undefined) : undefined
-                }
+                onBlur={() => hoverPlan()}
                 onClick={selectable ? () => onChange(plan.value) : undefined}
-                onFocus={
-                  selectable ? () => setHoveredPlan(plan.value) : undefined
-                }
+                onFocus={() => hoverPlan(plan.value)}
                 onKeyDown={event => {
                   if ([' ', 'Enter'].includes(event.key) && selectable) {
                     onChange(plan.value)
                   }
                 }}
-                onMouseOut={
-                  selectable ? () => setHoveredPlan(undefined) : undefined
-                }
-                onMouseOver={
-                  selectable ? () => setHoveredPlan(plan.value) : undefined
-                }
+                onMouseOut={() => hoverPlan()}
+                onMouseOver={() => hoverPlan(plan.value)}
               >
                 {plan.outOfStock ? (
                   <Badge className={plansOutOfStockBadge} size="small">
@@ -201,6 +198,11 @@ export const Plans = <T extends string>({
                 const computedDisabled = plan.outOfStock || plan.disabled
                 const selectable = hasCardBehavior && !computedDisabled
                 const isHighlighted = plan.value === highlight?.plan
+                const hoverPlan = (newValue?: string) => {
+                  if (selectable) {
+                    setHoveredPlan(newValue)
+                  }
+                }
 
                 return (
                   // biome-ignore lint/a11y/noNoninteractiveElementInteractions: interactive table with a clickable button for accessibility
@@ -223,20 +225,8 @@ export const Plans = <T extends string>({
                     }
                     onFocus={() => {}}
                     onKeyDown={() => {}}
-                    onMouseOut={
-                      selectable
-                        ? () => {
-                            setHoveredPlan(undefined)
-                          }
-                        : undefined
-                    }
-                    onMouseOver={
-                      selectable
-                        ? () => {
-                            setHoveredPlan(plan.value)
-                          }
-                        : undefined
-                    }
+                    onMouseOut={() => hoverPlan()}
+                    onMouseOver={() => hoverPlan(plan.value)}
                   >
                     {plan.data[featureKey] === false ? (
                       <CloseIcon

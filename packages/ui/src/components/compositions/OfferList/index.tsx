@@ -11,7 +11,7 @@ import { offerList } from './styles.css'
 
 type OfferListProps = Omit<
   ComponentProps<typeof List>,
-  'selectable' | 'onSelectedChange'
+  'selectable' | 'onSelectedChange' | 'colMode'
 > & {
   /**
    * Make offerList selectable by choosing its type
