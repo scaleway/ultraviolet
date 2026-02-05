@@ -47,4 +47,5 @@ export type DialogProps = {
   children: ReactNode
   image?: string
   style?: CSSProperties
+  ref?: RefObject<HTMLDialogElement | null>
 }

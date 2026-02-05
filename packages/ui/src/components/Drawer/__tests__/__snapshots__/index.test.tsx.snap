@@ -256,6 +256,22 @@ exports[`drawer > renders with open={true} 1`] = `
 </DocumentFragment>
 `;
 
+exports[`drawer > renders with push 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`drawer > renders without disclosure 1`] = `
 <DocumentFragment>
   <div
