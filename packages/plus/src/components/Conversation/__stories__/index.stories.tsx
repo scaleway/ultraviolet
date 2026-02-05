@@ -1,25 +1,24 @@
 import type { Meta } from '@storybook/react-vite'
-import {
-  Conversation,
-  DateComponent,
-  Message,
-  MessageInfos,
-  MessageTag as Tag,
-} from '..'
+import { Conversation } from '..'
 
 export default {
   component: Conversation,
   subcomponents: {
-    'Conversation.Date': DateComponent,
-    'Conversation.Message': Message,
-    'Conversation.Tag': Tag,
-    'Conversation.MessageInfos': MessageInfos,
+    'Conversation.Date': Conversation.Date,
+    'Conversation.Message': Conversation.Message,
+    'Conversation.Tag': Conversation.Tag,
+    'Conversation.MessageInfos': Conversation.MessageInfos,
   },
+  tags: ['deprecated'],
   title: 'Plus/Compositions/Conversation',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'This component is deprecated, please import it from `@ultraviolet/ui/compositions/Conversation` instead. [Click here to see the full documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/compositions-conversation--docs).',
+      },
+    },
+  },
 } as Meta<typeof Conversation>
 
 export { Playground } from './Playground.stories'
-export { Date } from './Date.stories'
-export { Message } from './Message.stories'
-export { Tag } from './Tag.stories'
-export { MessageInfos } from './MessageInfos.stories'

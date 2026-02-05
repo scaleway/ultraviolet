@@ -1,5 +1,8 @@
+export { CodeEditor } from './CodeEditor'
 export { ContentCard } from './ContentCard'
 export { ContentCardGroup } from './ContentCardGroup'
+export { Conversation } from './Conversation'
+export { CustomerSatisfaction } from './CustomerSatisfaction'
 export { EstimateCost, estimateCostDefaultLocales } from './EstimateCost'
 export { FAQ } from './FAQ'
 export { InfoTable } from './InfoTable'
