@@ -305,7 +305,11 @@ describe('fileInput', () => {
   test('should add a file with drag and drop', async () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
-      <FileInput aria-label="label" onChangeFiles={onChangeFiles}>
+      <FileInput
+        accept="image/*"
+        aria-label="label"
+        onChangeFiles={onChangeFiles}
+      >
         <FileInput.List />
       </FileInput>,
     )
@@ -329,5 +333,134 @@ describe('fileInput', () => {
 
     const added = screen.getByTestId('dnd.png')
     expect(added).toBeInTheDocument()
+  })
+
+  test('should add a file with drag and drop which when accept is defined', async () => {
+    const onChangeFiles = vi.fn()
+    renderWithTheme(
+      <FileInput
+        accept="image/*"
+        aria-label="label"
+        onChangeFiles={onChangeFiles}
+      />,
+    )
+
+    const dropzone = screen.getByTestId('drag-container')
+    const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
+    const filePdf = new File(['not-added'], 'not-added.pdf', {
+      type: 'application/pdf',
+    })
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [file],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'dnd.png' }),
+      ]),
+    )
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [filePdf],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).not.toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'not-added.pdf' }),
+      ]),
+    )
+  })
+
+  test('should add a file with drag and drop which when accept is defined and precise', async () => {
+    const onChangeFiles = vi.fn()
+    renderWithTheme(
+      <FileInput
+        accept="image/png"
+        aria-label="label"
+        onChangeFiles={onChangeFiles}
+      />,
+    )
+
+    const dropzone = screen.getByTestId('drag-container')
+    const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
+    const fileJpg = new File(['dnd'], 'dnd.jpg', { type: 'image/jpg' })
+    const filePdf = new File(['not-added'], 'not-added.pdf', {
+      type: 'application/pdf',
+    })
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [file],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'dnd.png' }),
+      ]),
+    )
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [filePdf],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).not.toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'not-added.pdf' }),
+      ]),
+    )
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [fileJpg],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).not.toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'dnd.jpg' }),
+      ]),
+    )
+  })
+
+  test('should add a file with drag and drop which when accept but not valid', async () => {
+    const onChangeFiles = vi.fn()
+    renderWithTheme(
+      <FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />,
+    )
+
+    const dropzone = screen.getByTestId('drag-container')
+    const file = new File(['dnd'], 'dnd.png', { type: 'image/png' })
+
+    fireEvent.drop(dropzone, {
+      dataTransfer: {
+        files: [file],
+        items: [],
+        types: ['Files'],
+      },
+    } as unknown as DragEvent)
+
+    expect(onChangeFiles).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({ fileName: 'dnd.png' }),
+      ]),
+    )
   })
 })

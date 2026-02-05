@@ -9,6 +9,7 @@ import { Text } from '../Text'
 import { FileInputButton } from './components/Button'
 import { ListFiles } from './components/List'
 import { FileInputContext } from './FileInputProvider'
+import { fileIsAccepted } from './helpers'
 import {
   dropzone,
   dropzoneOverlay,
@@ -89,23 +90,30 @@ const FileInputBase = ({
     }
   }, [defaultFiles])
 
+  const addFiles = (addedFiles: FileList | null) => {
+    const droppedFiles = [...(addedFiles ?? [])]
+    const acceptedDropped = droppedFiles.filter(file =>
+      fileIsAccepted(file.type, accept),
+    )
+
+    const newFiles = acceptedDropped.map(file => ({
+      file: URL.createObjectURL(file),
+      fileName: file.name,
+      lastModified: file.lastModified,
+      size: file.size,
+      type: file.type,
+    }))
+    const formattedFiles = multiple ? [...files, ...newFiles] : [newFiles[0]]
+    setFiles(formattedFiles)
+    onChangeFiles?.(formattedFiles)
+  }
+
   const manageDrop = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault()
 
     if (!disabled) {
-      const droppedFiles = [...(event.dataTransfer?.files ?? [])]
-      const newFiles = droppedFiles.map(file => ({
-        file: URL.createObjectURL(file),
-        fileName: file.name,
-        lastModified: file.lastModified,
-        size: file.size,
-        type: file.type,
-      }))
-      const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
-
-      setFiles(formattedFiles)
+      addFiles(event.dataTransfer?.files)
       onDrop?.(event)
-      onChangeFiles?.(formattedFiles)
     }
   }
 
@@ -113,20 +121,20 @@ const FileInputBase = ({
     event.preventDefault()
 
     if (!disabled) {
-      const addedFiles = [...(event.target.files ?? [])]
-      const newFiles = addedFiles.map(file => ({
-        file: URL.createObjectURL(file),
-        fileName: file.name,
-        lastModified: file.lastModified,
-        size: file.size,
-        type: file.type,
-      }))
-
-      const formattedFiles = multiple ? [...files, ...newFiles] : newFiles
-      setFiles(formattedFiles)
-      onChangeFiles?.(formattedFiles)
+      addFiles(event.target.files)
     }
   }
+
+  const computedChildren =
+    typeof children === 'function' ? children(inputId, inputRef) : children
+
+  const computedError =
+    error && typeof error === 'string' ? (
+      <Text as="p" sentiment="danger" variant="bodySmall">
+        {error}
+      </Text>
+    ) : null
+
   if (variant === 'overlay') {
     return (
       <FileInputContext.Provider
@@ -160,9 +168,7 @@ const FileInputBase = ({
               type="file"
             />
             <div className={overlayWrapper}>
-              {typeof children === 'function'
-                ? children(inputId, inputRef)
-                : children}
+              {computedChildren}
               {/** biome-ignore lint/a11y/noNoninteractiveElementInteractions: needed for drag and drop */}
               {/** biome-ignore lint/a11y/noStaticElementInteractions: needed for drag and drop */}
               <div
@@ -206,11 +212,7 @@ const FileInputBase = ({
               {bottom}
             </Text>
           ) : null}
-          {error && typeof error === 'string' ? (
-            <Text as="p" sentiment="danger" variant="bodySmall">
-              {error}
-            </Text>
-          ) : null}
+          {computedError}
         </Stack>
       </FileInputContext.Provider>
     )
@@ -291,9 +293,7 @@ const FileInputBase = ({
               >
                 {typeof title === 'function' ? title(inputId, inputRef) : title}
               </Text>
-              {typeof children === 'function'
-                ? children(inputId, inputRef)
-                : children}
+              {computedChildren}
             </Stack>
           </Text>
           {helper ? (
@@ -307,11 +307,7 @@ const FileInputBase = ({
             </Text>
           ) : null}
         </Stack>
-        {error && typeof error === 'string' ? (
-          <Text as="p" sentiment="danger" variant="bodySmall">
-            {error}
-          </Text>
-        ) : null}
+        {computedError}
         {bottom ? (
           <Text
             as="div"

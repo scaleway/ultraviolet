@@ -24,3 +24,31 @@ export const formatFileSize = (bytes: number): string => {
 
   return `${formattedSize} ${units[unitIndex]}`
 }
+
+export const fileIsAccepted = (fileType: string, accept?: string) => {
+  if (!accept) {
+    return true
+  }
+
+  const acceptItems = accept
+    .split(',')
+    .map(a => a.trim())
+    .filter(Boolean)
+
+  if (acceptItems.length === 0) {
+    return true
+  }
+
+  for (const item of acceptItems) {
+    if (item.endsWith('/*')) {
+      const prefix = item.slice(0, item.indexOf('/'))
+      if (fileType.startsWith(`${prefix}/`)) {
+        return true
+      }
+    } else if (fileType === item) {
+      return true
+    }
+  }
+
+  return false
+}
