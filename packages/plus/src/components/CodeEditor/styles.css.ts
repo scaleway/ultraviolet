@@ -1,6 +1,12 @@
 import { consoleDarkTheme, theme } from '@ultraviolet/themes'
-import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
+import {
+  createVar,
+  globalStyle,
+  style,
+  styleVariants,
+} from '@vanilla-extract/css'
 
+export const maxHeightVar = createVar()
 export const disabledStack = style({ cursor: 'not-allowed' })
 
 export const copyButton = style({
@@ -22,6 +28,7 @@ globalStyle(`${copyButton} svg > path`, {
 const codeEditorBase = style({
   position: 'relative',
   width: '100%',
+  maxHeight: maxHeightVar,
 })
 
 export const codeEditor = styleVariants({
@@ -39,9 +46,8 @@ globalStyle(`${codeEditorBase} .cm-editor`, {
 })
 
 globalStyle(`${codeEditorBase} .cm-editor.cm-focused`, {
-  border: `1px solid ${theme.colors.primary.border}`,
-  boxShadow: theme.shadows.focusPrimary,
   outline: 'none',
+  boxShadow: 'none',
 })
 
 globalStyle(`${codeEditorBase} .cm-content`, {
@@ -96,4 +102,68 @@ globalStyle(`${codeEditor.disabled} .cm-selectionLayer`, {
 globalStyle(`${codeEditor.disabled} .cm-editor.cm-focused`, {
   border: '1px solid transparent',
   boxShadow: 'none',
+})
+
+const showMoreContainerBase = style({
+  width: '100%',
+  backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
+  borderRadius: theme.space['0.5'],
+  position: 'relative',
+  marginTop: `calc(-1 * ${theme.space[1]})`,
+  transition: 'box-shadow .5s',
+})
+export const showMoreContainer = styleVariants({
+  false: [
+    showMoreContainerBase,
+    {
+      boxShadow: `0px -22px 19px -6px ${consoleDarkTheme.colors.neutral.backgroundWeak}`,
+    },
+  ],
+  true: [
+    showMoreContainerBase,
+    {
+      boxShadow: 'none',
+    },
+  ],
+})
+
+export const showMoreButton = style({
+  background: 'none',
+  border: 'none',
+  cursor: 'pointer',
+  padding: theme.space[2],
+  paddingTop: theme.space[1],
+  width: '100%',
+})
+
+export const centeredText = style({
+  alignItems: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+  color: consoleDarkTheme.colors.neutral.text,
+})
+
+export const animatedArrowIcon = styleVariants({
+  false: {
+    transform: 'rotate(0deg)',
+    transformOrigin: 'center',
+    transition: 'transform 300ms ease-in-out',
+  },
+  true: {
+    transform: 'rotate(180deg)',
+    transformOrigin: 'center',
+    transition: 'transform 300ms ease-in-out',
+  },
+})
+
+export const codeEditorWrapper = style({
+  borderRadius: theme.space['0.5'],
+  border: '1px solid transparent',
+
+  selectors: {
+    [`&:has(${codeEditorBase} .cm-editor.cm-focused)`]: {
+      boxShadow: theme.shadows.focusPrimary,
+      border: `1px solid ${theme.colors.primary.border}`,
+    },
+  },
 })
