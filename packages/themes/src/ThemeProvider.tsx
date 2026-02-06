@@ -46,7 +46,13 @@ export const ThemeProvider = ({
     const cssVars = assignInlineVars(themeContract, theme)
     const cssString = `:root { ${Object.entries(cssVars)
       .map(([key, value]) => `${key}: ${value};`)
-      .join(' ')} }`
+      .join(' ')} }
+      
+      body {
+        color: ${theme.colors.neutral.text};
+        background-color: ${theme.colors.neutral.background};
+      }
+    `
 
     if (existingStyle) {
       existingStyle.textContent = cssString
