@@ -1,5 +1,27 @@
 # Change Log
 
+## 3.9.0
+
+### Minor Changes
+
+- [#6077](https://github.com/scaleway/ultraviolet/pull/6077) [`884a3c5`](https://github.com/scaleway/ultraviolet/commit/884a3c5b913a618e2fffc82b98753f7c493bd5a1) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`:
+
+  - cannot drop files which do not respect the accept prop
+  - when `multiple = false`, if multiple files are dropped at once, only the first one should be added
+
+- [#6056](https://github.com/scaleway/ultraviolet/pull/6056) [`5517d73`](https://github.com/scaleway/ultraviolet/commit/5517d731dcbb46da670c9695043d83c61677fe1a) Thanks [@lisalupi](https://github.com/lisalupi)! - - `Drawer`: new prop `push`, fix style (override modal style) and fix slide in animation
+  - `Modal`: new prop `ref`
+
+### Patch Changes
+
+- [#6065](https://github.com/scaleway/ultraviolet/pull/6065) [`a96c4d8`](https://github.com/scaleway/ultraviolet/commit/a96c4d82a5bdf30822d4aaadaceaaafe616e6883) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: sizes fixes:
+  - adapt font size on dropdown and placeholder depending on SelectInput size
+  - small textInput when small
+  - smaller icons when small
+  - fix item padding when small
+- Updated dependencies [[`da1a564`](https://github.com/scaleway/ultraviolet/commit/da1a5646dbc078e6ee12527cf2ce07f374dea1ff)]:
+  - @ultraviolet/icons@5.1.3
+
 ## 3.8.2
 
 ### Patch Changes
