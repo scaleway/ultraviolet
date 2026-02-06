@@ -52,7 +52,7 @@ export default async function RootLayout({
         </style>
       </head>
       <body>
-        <ThemeRegistry theme={consoleLightTheme}>{children}</ThemeRegistry>
+        <ThemeRegistry theme={currentTheme}>{children}</ThemeRegistry>
       </body>
     </html>
   )
