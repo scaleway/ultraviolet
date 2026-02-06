@@ -5,6 +5,7 @@ import {
   style,
   styleVariants,
 } from '@vanilla-extract/css'
+import { recipe } from '@vanilla-extract/recipes'
 
 export const maxHeightVar = createVar()
 export const disabledStack = style({ cursor: 'not-allowed' })
@@ -112,19 +113,18 @@ const showMoreContainerBase = style({
   marginTop: `calc(-1 * ${theme.space[1]})`,
   transition: 'box-shadow .5s',
 })
-export const showMoreContainer = styleVariants({
-  false: [
-    showMoreContainerBase,
-    {
-      boxShadow: `0px -22px 19px -6px ${consoleDarkTheme.colors.neutral.backgroundWeak}`,
+export const showMoreContainer = recipe({
+  base: showMoreContainerBase,
+  variants: {
+    expanded: {
+      true: {
+        boxShadow: 'none',
+      },
+      false: {
+        boxShadow: `0px -22px 19px -6px ${consoleDarkTheme.colors.neutral.backgroundWeak}`,
+      },
     },
-  ],
-  true: [
-    showMoreContainerBase,
-    {
-      boxShadow: 'none',
-    },
-  ],
+  },
 })
 
 export const showMoreButton = style({

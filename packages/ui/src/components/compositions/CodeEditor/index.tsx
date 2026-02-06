@@ -6,7 +6,13 @@ import CodeMirror from '@uiw/react-codemirror'
 import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { cn } from '@ultraviolet/utils'
 import { assignInlineVars } from '@vanilla-extract/dynamic'
-import type { ComponentProps, CSSProperties, ReactNode } from 'react'
+import type {
+  ComponentProps,
+  CSSProperties,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+} from 'react'
 import { useMemo, useState } from 'react'
 import { CopyButton } from '../../CopyButton'
 import { Expandable } from '../../Expandable'
@@ -57,7 +63,60 @@ type CodeEditorProps = {
   error?: string
   lineNumbers?: boolean
   style?: CSSProperties
+  required?: boolean
 }
+
+const CodeEditorCopyButton = ({
+  copyButton,
+  value,
+}: {
+  copyButton: CodeEditorProps['copyButton']
+  value: CodeEditorProps['value']
+}) => (
+  <CopyButton
+    bordered
+    className={copyButtonStyle}
+    sentiment="neutral"
+    size="small"
+    value={value}
+  >
+    {typeof copyButton === 'string' ? copyButton : undefined}
+  </CopyButton>
+)
+
+const CodeEditorExpandable = ({
+  expanded,
+  setExpanded,
+  hideText,
+  showText,
+}: {
+  expanded: boolean
+  setExpanded: Dispatch<SetStateAction<boolean>>
+  hideText: string
+  showText: string
+}) => (
+  <div className={showMoreContainer({ expanded })}>
+    <button
+      aria-expanded={expanded}
+      className={showMoreButton}
+      onClick={() => setExpanded(prevState => !prevState)}
+      type="button"
+    >
+      <Text
+        as="span"
+        className={centeredText}
+        sentiment="neutral"
+        variant="bodySmallStrong"
+      >
+        {expanded ? hideText : showText}
+        &nbsp;
+        <ArrowDownIcon
+          className={animatedArrowIcon[expanded ? 'true' : 'false']}
+        />
+      </Text>
+    </button>
+  </div>
+)
 
 export const CodeEditor = ({
   value,
@@ -82,6 +141,7 @@ export const CodeEditor = ({
   error,
   lineNumbers = true,
   style,
+  required,
 }: CodeEditorProps) => {
   const [expanded, setExpanded] = useState(false)
   const expandableEnabled = expandableHeight !== undefined
@@ -129,15 +189,7 @@ export const CodeEditor = ({
         width="100%"
       />
       {copyButton && !disabled ? (
-        <CopyButton
-          bordered
-          className={copyButtonStyle}
-          sentiment="neutral"
-          size="small"
-          value={value}
-        >
-          {typeof copyButton === 'string' ? copyButton : undefined}
-        </CopyButton>
+        <CodeEditorCopyButton copyButton={copyButton} value={value} />
       ) : null}
     </>
   )
@@ -149,7 +201,9 @@ export const CodeEditor = ({
       style={style}
     >
       {label ? (
-        <Label labelDescription={labelDescription}>{label}</Label>
+        <Label labelDescription={labelDescription} required={required}>
+          {label}
+        </Label>
       ) : null}
       <div className={codeEditorWrapper}>
         <div
@@ -167,27 +221,12 @@ export const CodeEditor = ({
           )}
         </div>
         {expandableEnabled ? (
-          <div className={showMoreContainer[expanded ? 'true' : 'false']}>
-            <button
-              aria-expanded={expanded}
-              className={showMoreButton}
-              onClick={() => setExpanded(prevState => !prevState)}
-              type="button"
-            >
-              <Text
-                as="span"
-                className={centeredText}
-                sentiment="neutral"
-                variant="bodySmallStrong"
-              >
-                {expanded ? hideText : showText}
-                &nbsp;
-                <ArrowDownIcon
-                  className={animatedArrowIcon[expanded ? 'true' : 'false']}
-                />
-              </Text>
-            </button>
-          </div>
+          <CodeEditorExpandable
+            expanded={expanded}
+            hideText={hideText}
+            setExpanded={setExpanded}
+            showText={showText}
+          />
         ) : null}
       </div>
       {error && typeof error !== 'boolean' ? (
