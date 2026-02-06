@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.3
+
+### Patch Changes
+
+- [#6070](https://github.com/scaleway/ultraviolet/pull/6070) [`da1a564`](https://github.com/scaleway/ultraviolet/commit/da1a5646dbc078e6ee12527cf2ce07f374dea1ff) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icon `FileStorageProductIcon`
+
 ## 5.1.2
 
 ### Patch Changes

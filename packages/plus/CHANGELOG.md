@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 3.4.5
+
+### Patch Changes
+
+- [#6071](https://github.com/scaleway/ultraviolet/pull/6071) [`035691d`](https://github.com/scaleway/ultraviolet/commit/035691dbc90acf0193136072cb2fd840a7e2f10e) Thanks [@lisalupi](https://github.com/lisalupi)! - `CodeEditor`: new props `expandableHeight`, `showText` and `hideText` to add a show/hide button and a max height
+
+- Updated dependencies [[`884a3c5`](https://github.com/scaleway/ultraviolet/commit/884a3c5b913a618e2fffc82b98753f7c493bd5a1), [`5517d73`](https://github.com/scaleway/ultraviolet/commit/5517d731dcbb46da670c9695043d83c61677fe1a), [`a96c4d8`](https://github.com/scaleway/ultraviolet/commit/a96c4d82a5bdf30822d4aaadaceaaafe616e6883), [`da1a564`](https://github.com/scaleway/ultraviolet/commit/da1a5646dbc078e6ee12527cf2ce07f374dea1ff)]:
+  - @ultraviolet/ui@3.9.0
+  - @ultraviolet/icons@5.1.3
+
 ## 3.4.4
 
 ### Patch Changes
