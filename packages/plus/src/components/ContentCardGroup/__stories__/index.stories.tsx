@@ -5,12 +5,15 @@ export default {
   component: ContentCardGroup,
   title: 'Plus/Compositions/ContentCardGroup',
   subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
-} as Meta
+  tags: ['deprecated'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'This component is deprecated, please import it from `@ultraviolet/ui/compositions/ContentCardGroup` instead. [Click here to see the full documentation](https://storybook.ultraviolet.scaleway.com/?path=/docs/compositions-contentcardgroup--docs).',
+      },
+    },
+  },
+} satisfies Meta
 
 export { Playground } from './Playground.stories'
-export { Loading } from './Loading.stories'
-export { Subtitle } from './Subtitle.stories'
-export { Description } from './Description.stories'
-export { Custom } from './Custom.stories'
-export { WithRow } from './WithRow.stories'
-export { WithLargeHeight } from './WithLargeHeight.stories'
