@@ -111,6 +111,18 @@ describe('orderSummary', () => {
       />,
     ))
 
+  test('should work with price information boolean', () =>
+    shouldMatchSnapshot(
+      <OrderSummary
+        currency="EUR"
+        footer="footer"
+        header="summary"
+        items={mockItems}
+        localeFormat="en-EN"
+        priceInformation
+      />,
+    ))
+
   test('should work with price as a range', () =>
     shouldMatchSnapshot(
       <OrderSummary
