@@ -751,7 +751,7 @@ const CreateDropdown = ({
                   </div>
                 ) : null}
                 <Stack gap="0.25" id="items">
-                  {hasElements ? null : (
+                  {!hasElements && emptyStateGroup ? (
                     <Text
                       as="span"
                       className={emptyStateGroupStyle}
@@ -761,7 +761,7 @@ const CreateDropdown = ({
                     >
                       {emptyStateGroup}
                     </Text>
-                  )}
+                  ) : null}
                   {errorGroup ? (
                     <Text
                       as="span"
