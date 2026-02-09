@@ -195,16 +195,22 @@ export const SelectInput = <IsMulti extends undefined | boolean>({
   const ref = useRef<HTMLDivElement | null>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
+    : Object.values(options).reduce((acc, current) => acc + current.length, 0)
+
+  const numberOfDisabledOptions = Array.isArray(options)
+    ? options.filter(option => option.disabled).length
     : Object.values(options).reduce(
         (acc, current) =>
-          acc + current.filter(option => !option.disabled).length,
+          acc + current.filter(option => option.disabled).length,
         0,
       )
+
   const finalDataTestId = dataTestId ?? `select-input-${name ?? 'name'}`
 
   return (
     <SelectInputProvider
       multiselect={multiselect}
+      numberOfDisabledOptions={numberOfDisabledOptions}
       numberOfOptions={numberOfOptions}
       onChange={onChange}
       onOpen={onOpen}

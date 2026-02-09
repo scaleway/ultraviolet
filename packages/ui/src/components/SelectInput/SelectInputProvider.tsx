@@ -66,6 +66,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   size: 'small' | 'medium' | 'large'
   selectAllGroup: boolean
   numberOfOptions: number
+  numberOfDisabledOptions: number
   multiselect: IsMulti
   refSelect?: RefObject<HTMLDivElement | null>
   onChange?: IsMulti extends true
@@ -81,6 +82,7 @@ export const SelectInputProvider = <T extends boolean>({
   value,
   selectAllGroup,
   numberOfOptions,
+  numberOfDisabledOptions,
   children,
   onChange,
   refSelect,
@@ -135,7 +137,7 @@ export const SelectInputProvider = <T extends boolean>({
       )
     }
 
-    return options
+    return options.filter(option => !option.disabled)
   }, [options])
 
   const allGroups: string[] = useMemo(() => {
@@ -189,7 +191,9 @@ export const SelectInputProvider = <T extends boolean>({
           )
 
           return {
-            allSelected: newSelectedValues.length === numberOfOptions,
+            allSelected:
+              newSelectedValues.length ===
+              numberOfOptions - numberOfDisabledOptions,
             selectedGroups: [...state.selectedGroups, action.selectedGroup],
             selectedValues: newSelectedValues,
           }
@@ -216,7 +220,9 @@ export const SelectInputProvider = <T extends boolean>({
           }
 
           return {
-            allSelected: state.selectedValues.length + 1 === numberOfOptions,
+            allSelected:
+              state.selectedValues.length + 1 ===
+              numberOfOptions - numberOfDisabledOptions,
             selectedGroups:
               !Array.isArray(options) &&
               action.group &&
@@ -302,6 +308,7 @@ export const SelectInputProvider = <T extends boolean>({
         isDropdownVisible,
         multiselect,
         numberOfOptions,
+        numberOfDisabledOptions,
         onChange,
         onSearch: setDisplayedOptions,
         options,
@@ -327,6 +334,7 @@ export const SelectInputProvider = <T extends boolean>({
       selectedData,
       size,
       onChange,
+      numberOfDisabledOptions,
     ],
   )
 
