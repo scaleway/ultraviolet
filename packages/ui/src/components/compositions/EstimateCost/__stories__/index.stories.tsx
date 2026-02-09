@@ -20,7 +20,7 @@ export default {
     Unit,
   },
   title: 'Compositions/EstimateCost',
-} as Meta
+} satisfies Meta
 
 export { Playground } from './Playground.stories'
 export { DefaultLocales } from './DefaultLocales.stories'
