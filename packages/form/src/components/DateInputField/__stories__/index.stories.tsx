@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react-vite'
-import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { DateInputField, Form } from '../..'
 import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
@@ -62,6 +62,14 @@ export default {
               </Snippet>
             </Stack>
           </Stack>
+          <Button
+            onClick={() => {
+              methods.reset()
+            }}
+            type="button"
+          >
+            Reset
+          </Button>
         </Form>
       )
     },
