@@ -5,25 +5,28 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start",
-    "typecheck": "tsgo --noEmit"
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
-    "@scaleway/regex": "5.8.1",
+    "@scaleway/regex": "5.8.0",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
     "@ultraviolet/nextjs": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "next": "16.2.4",
-    "react": "19.2.5",
-    "react-dom": "19.2.5"
+    "next": "16.1.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@types/node": "24.12.2",
+    "@eslint/eslintrc": "3.3.3",
+    "@types/node": "24.10.12",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "typescript": "6.0.3"
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.1.6",
+    "typescript": "5.9.3"
   }
 }

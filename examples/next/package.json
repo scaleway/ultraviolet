@@ -1,40 +1,38 @@
 {
   "name": "@examples/next",
   "version": "1.0.0",
-  "private": true,
   "homepage": "https://ultraviolet.scaleway.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scaleway/ultraviolet.git",
     "directory": "examples/next-advanced"
   },
+  "private": true,
   "scripts": {
-    "build": "next build --webpack",
     "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "export": "next export",
-    "start": "next start",
-    "typecheck": "tsgo --noEmit"
+    "start": "next start"
   },
   "dependencies": {
-    "@scaleway/regex": "5.8.1",
+    "@scaleway/regex": "5.8.0",
     "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/form": "workspace:*",
     "@ultraviolet/icons": "workspace:*",
-    "@ultraviolet/illustrations": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
-    "@ultraviolet/utils": "workspace:*",
-    "next": "16.2.4",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
-    "react-schemaorg": "2.0.1",
-    "react-syntax-highlighter": "16.1.1",
-    "sass": "1.99.0",
-    "schema-dts": "2.0.0"
+    "next": "16.1.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-schemaorg": "2.0.0",
+    "react-syntax-highlighter": "16.1.0",
+    "react-use-clipboard": "1.0.9",
+    "sass": "1.97.3",
+    "schema-dts": "1.1.5"
   },
   "devDependencies": {
     "@babel/core": "7.29.0",
-    "@types/node": "24.12.2",
+    "@types/node": "24.10.12",
     "@types/react": "19.2.14",
     "@types/react-syntax-highlighter": "15.5.13",
     "next-transpile-modules": "10.0.1"
