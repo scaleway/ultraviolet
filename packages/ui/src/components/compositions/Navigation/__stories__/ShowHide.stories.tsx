@@ -16,7 +16,11 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Navigation, NavigationProvider } from '..'
 import logo from './assets/logo.svg'
 import logoSmall from './assets/logo-small.svg'
-import { Badge, Button, Stack, Tooltip } from '@ultraviolet/ui'
+import { animation } from './styles.css'
+import { Badge } from '../../../Badge'
+import { Stack } from '../../../Stack'
+import { Tooltip } from '../../../Tooltip'
+import { Button } from '../../../Button'
 
 const hideContent = (
   <>
@@ -106,6 +110,7 @@ export const ShowHide: StoryFn<ComponentProps<typeof Navigation>> = props => {
                 <img alt="" height="22px" src={logoSmall} width="auto" />
                 <img
                   alt=""
+                  className={animation}
                   data-expanded={expanded}
                   height="22px"
                   src={logo}

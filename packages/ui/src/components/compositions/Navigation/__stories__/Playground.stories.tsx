@@ -8,12 +8,14 @@ import { NetworkCategoryIcon } from '@ultraviolet/icons/category/NetworkCategory
 import { OrganizationDashboardCategoryIcon } from '@ultraviolet/icons/category/OrganizationDashboardCategoryIcon'
 import { SecurityCategoryIcon } from '@ultraviolet/icons/category/SecurityCategoryIcon'
 import { UseCaseCategoryIcon } from '@ultraviolet/icons/category/UseCaseCategoryIcon'
-import { Stack, Tooltip } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import logo from './assets/logo.svg'
 import logoSmall from './assets/logo-small.svg'
+import { animation } from './styles.css'
+import { Stack } from '../../../Stack'
+import { Tooltip } from '../../../Tooltip'
 
 const onClickPinUnpin: ComponentProps<
   typeof Navigation.Item
@@ -60,8 +62,15 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           target="_blank"
         >
           <Stack direction="row" gap={1}>
-            <img alt="" height="22px" src={logoSmall} />
-            <img alt="" data-expanded={expanded} height="22px" src={logo} />
+            <img alt="" height="22px" src={logoSmall} width="auto" />
+            <img
+              alt=""
+              className={animation}
+              data-expanded={expanded}
+              height="22px"
+              src={logo}
+              width="auto"
+            />
           </Stack>
         </a>
       }
