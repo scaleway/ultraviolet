@@ -7,6 +7,10 @@ export default mergeConfig(defineConfig(defaultConfig), {
   build: {
     lib: {
       entry: {
+        'components/compositions/Navigation/index': resolve(
+          __dirname,
+          'src/components/compositions/Navigation/index.tsx',
+        ),
         'components/compositions/index': resolve(
           __dirname,
           'src/components/compositions/index.ts',
