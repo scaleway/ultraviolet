@@ -203,12 +203,12 @@ export const OrderSummary = ({
         <NonScrollableContent
           additionalInfo={additionalInfo}
           defaultPriceInformation={
-            priceInformation === true || (hideDetails && !priceInformation)
+            priceInformation === true ||
+            (hideDetails && !priceInformation && priceInformation !== false)
           }
           discount={discount}
           footer={footer}
           hideBeforePrice={hideBeforePrice}
-          hideDetails={hideDetails}
           priceInformation={priceInformation}
           totalPrice={totalPrice}
           totalPriceDescription={totalPriceDescription}

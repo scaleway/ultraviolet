@@ -3,7 +3,10 @@ import type { ReactNode } from 'react'
 import { useContext } from 'react'
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
-import { orderSummaryNonScrollableContainer } from './styles.css'
+import {
+  orderSummaryNonScrollableContainer,
+  orderSummaryTotalPrice,
+} from './styles.css'
 import type { PriceTypeSingle, TimeUnit } from './types'
 
 type NonScrollableContentProps = {
@@ -15,7 +18,6 @@ type NonScrollableContentProps = {
   totalPriceInfoPlacement?: 'left' | 'right'
   totalPriceDescription?: ReactNode
   additionalInfo?: string
-  hideDetails: boolean
   unit: TimeUnit
   priceInformation?: ReactNode
   hideBeforePrice?: boolean
@@ -28,7 +30,6 @@ export const NonScrollableContent = ({
   children,
   totalPriceInfo,
   totalPriceInfoPlacement,
-  hideDetails,
   unit,
   totalPriceDescription,
   additionalInfo,
@@ -77,13 +78,20 @@ export const NonScrollableContent = ({
           hideBeforePrice ? (
             <Text
               as="span"
+              className={
+                orderSummaryTotalPrice[
+                  defaultPriceInformation && !priceInformation
+                    ? 'default'
+                    : 'priceInformation'
+                ]
+              }
               data-testid="total-price"
               prominence="strong"
               sentiment="neutral"
               variant="headingSmallStrong"
             >
               <DisplayPrice beforeOrAfter="after" price={totalPrice} />
-              {hideDetails && !priceInformation ? `/${unit}` : null}
+              {defaultPriceInformation ? `/${unitSingular}` : null}
               {priceInformation}
             </Text>
           ) : (
@@ -99,6 +107,11 @@ export const NonScrollableContent = ({
               </Text>
               <Text
                 as="span"
+                className={
+                  orderSummaryTotalPrice[
+                    priceInformation ? 'priceInformation' : 'default'
+                  ]
+                }
                 data-testid="total-price"
                 prominence="strong"
                 sentiment="neutral"

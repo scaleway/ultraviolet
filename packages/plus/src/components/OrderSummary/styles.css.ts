@@ -96,3 +96,12 @@ export const orderSummaryAnchorIcon = recipe({
     },
   },
 })
+
+export const orderSummaryTotalPrice = styleVariants({
+  priceInformation: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.space[1],
+  },
+  default: {},
+})
