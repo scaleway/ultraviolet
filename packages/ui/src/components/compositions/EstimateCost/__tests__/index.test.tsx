@@ -243,4 +243,79 @@ describe('estimateCost - index', () => {
         </EstimateCost.Item>
       </EstimateCost>,
     ))
+
+  test('render with alert variant', () =>
+    shouldMatchSnapshot(
+      <EstimateCost alertVariant="danger">
+        <EstimateCost.Item label="Test" monthlyPrice={99}>
+          <EstimateCost.Strong>Test</EstimateCost.Strong>
+        </EstimateCost.Item>
+      </EstimateCost>,
+    ))
+
+  test('render with hideOverlay', () =>
+    shouldMatchSnapshot(
+      <EstimateCost hideOverlay>
+        <EstimateCost.Item label="Test" monthlyPrice={99}>
+          <EstimateCost.Strong>Test</EstimateCost.Strong>
+        </EstimateCost.Item>
+      </EstimateCost>,
+    ))
+
+  test('render with disableOverlayLeft', () =>
+    shouldMatchSnapshot(
+      <EstimateCost disableOverlayLeft>
+        <EstimateCost.Item label="Test" monthlyPrice={99}>
+          <EstimateCost.Strong>Test</EstimateCost.Strong>
+        </EstimateCost.Item>
+      </EstimateCost>,
+    ))
+  test('render with disableOverlayRight', () =>
+    shouldMatchSnapshot(
+      <EstimateCost disableOverlayRight>
+        <EstimateCost.Item label="Test" monthlyPrice={99}>
+          <EstimateCost.Strong>Test</EstimateCost.Strong>
+        </EstimateCost.Item>
+      </EstimateCost>,
+    ))
+  test('render with overlayUnit', () =>
+    shouldMatchSnapshot(
+      <EstimateCost overlayUnit="days">
+        <EstimateCost.Item label="Test" monthlyPrice={99}>
+          <EstimateCost.Strong>Test</EstimateCost.Strong>
+        </EstimateCost.Item>
+      </EstimateCost>,
+    ))
+
+  test('render with custom locales', () => {
+    const customLocales = {
+      'estimate.cost.az.label': 'zone',
+      'estimate.cost.beta.badge': 'beta',
+      'estimate.cost.beta.discount': '% off during',
+      'estimate.cost.beta.free': 'free!',
+      'estimate.cost.description': 'description',
+      'estimate.cost.fees.commitment': 'Commitment',
+      'estimate.cost.fees.monthly.title': 'montlhy',
+      'estimate.cost.fees.oneTime.title': 'oneTime',
+      'estimate.cost.label': 'label',
+      'estimate.cost.notDefined': 'not defined',
+      'estimate.cost.region.label': 'region',
+      'estimate.cost.submit.label': 'create',
+      'estimate.cost.units.days.label': 'days',
+      'estimate.cost.units.gb.label': 'gb',
+      'estimate.cost.units.hours.label': 'hours',
+      'estimate.cost.units.minutes.label': 'minutes',
+      'estimate.cost.units.months.label': 'months',
+      'estimate.cost.units.seconds.label': 'seconds',
+      'estimate.cost.units.years.label': 'years',
+    } as const
+
+    shouldMatchSnapshot(
+      <EstimateCost locales={customLocales}>
+        <EstimateCost.Item label="Test" monthlyPrice={99}>
+          <EstimateCost.Strong>Test</EstimateCost.Strong>
+        </EstimateCost.Item>
+      </EstimateCost>,
+    )
+  })
 })
