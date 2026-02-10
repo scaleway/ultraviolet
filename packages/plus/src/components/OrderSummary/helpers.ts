@@ -67,44 +67,51 @@ export const calculateSubCategoryPrice = (
   timePeriodAmount: number,
   timePeriodUnit: TimeUnit,
 ): { discounted: [number, number]; default: [number, number] } => {
+  const timeAmount = hideTimeUnit ? 1 : timePeriodAmount
+  const timeUnit = hideTimeUnit ? 'hours' : timePeriodUnit
+
   if (Array.isArray(subCategory.amount)) {
+    const minAmount = subCategory.amount?.[0] ?? 1
+    const maxAmount = subCategory.amount?.[1] ?? 1
+    const subCategoryPrice = subCategory.price ?? 0
+
     const minPrice =
       calculatePrice({
-        amount: subCategory.amount?.[0] ?? 1,
+        amount: minAmount,
         fixedPrice: subCategory.fixedPrice,
-        price: subCategory.price ?? 0,
-        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
-        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+        price: subCategoryPrice,
+        timeAmount,
+        timeUnit,
       }) || 0
     const maxPrice =
       calculatePrice({
-        amount: subCategory.amount?.[1] ?? 1,
+        amount: maxAmount,
         fixedPrice: subCategory.fixedPrice,
-        price: subCategory.price ?? 0,
-        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
-        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+        price: subCategoryPrice,
+        timeAmount,
+        timeUnit,
       }) || 0
 
     const minPriceWithDiscount =
       calculatePrice({
-        amount: subCategory.amount?.[0] ?? 1,
+        amount: minAmount,
         amountFree: subCategory.amountFree,
         discount: subCategory.discount,
         fixedPrice: subCategory.fixedPrice,
-        price: subCategory.price ?? 0,
-        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
-        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+        price: subCategoryPrice,
+        timeAmount,
+        timeUnit,
       }) || 0
 
     const maxPriceWithDiscount =
       calculatePrice({
-        amount: subCategory.amount?.[1] ?? 1,
+        amount: maxAmount,
         amountFree: subCategory.amountFree,
         discount: subCategory.discount,
         fixedPrice: subCategory.fixedPrice,
-        price: subCategory.price ?? 0,
-        timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
-        timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+        price: subCategoryPrice,
+        timeAmount,
+        timeUnit,
       }) || 0
 
     return {
@@ -112,24 +119,27 @@ export const calculateSubCategoryPrice = (
       default: [minPrice, maxPrice],
     }
   }
+  const subCategoryAmount = subCategory.amount ?? 1
+  const subCategoryPrice = subCategory.price ?? 0
+
   const price =
     calculatePrice({
-      amount: subCategory.amount ?? 1,
+      amount: subCategoryAmount,
       fixedPrice: subCategory.fixedPrice,
-      price: subCategory.price ?? 0,
-      timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
-      timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+      price: subCategoryPrice,
+      timeAmount,
+      timeUnit,
     }) || 0
 
   const priceWithDiscount =
     calculatePrice({
-      amount: subCategory.amount ?? 1,
+      amount: subCategoryAmount,
       amountFree: subCategory.amountFree,
       discount: subCategory.discount,
       fixedPrice: subCategory.fixedPrice,
-      price: subCategory.price ?? 0,
-      timeAmount: hideTimeUnit ? 1 : timePeriodAmount,
-      timeUnit: hideTimeUnit ? 'hours' : timePeriodUnit,
+      price: subCategoryPrice,
+      timeAmount,
+      timeUnit,
     }) || 0
 
   return {
@@ -199,27 +209,32 @@ export const calculateCategoryPrice = (
 type DisplayPriceProps = {
   price: PriceTypeSingle
   beforeOrAfter: 'before' | 'after'
+  divisor?: number
 }
 
-export const DisplayPrice = ({ price, beforeOrAfter }: DisplayPriceProps) => {
+export const DisplayPrice = ({
+  price,
+  beforeOrAfter,
+  divisor = 1,
+}: DisplayPriceProps) => {
   const { localeFormat, currency, fractionDigits } =
     useContext(OrderSummaryContext)
   const withDiscount = beforeOrAfter === 'after' ? 'WithDiscount' : ''
 
   return price.totalPrice === price.maxPrice
     ? formatNumber(
-        price[`totalPrice${withDiscount}`],
+        price[`totalPrice${withDiscount}`] / divisor,
         localeFormat,
         currency,
         fractionDigits ?? 2,
       )
     : `${formatNumber(
-        price[`totalPrice${withDiscount}`],
+        price[`totalPrice${withDiscount}`] / divisor,
         localeFormat,
         currency,
         fractionDigits ?? 2,
       )} - ${formatNumber(
-        price[`maxPrice${withDiscount}`],
+        price[`maxPrice${withDiscount}`] / divisor,
         localeFormat,
         currency,
         fractionDigits ?? 2,

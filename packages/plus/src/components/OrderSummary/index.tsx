@@ -210,6 +210,7 @@ export const OrderSummary = ({
           footer={footer}
           hideBeforePrice={hideBeforePrice}
           priceInformation={priceInformation}
+          timePeriodAmount={timePeriodAmount}
           totalPrice={totalPrice}
           totalPriceDescription={totalPriceDescription}
           totalPriceInfo={totalPriceInfo}
