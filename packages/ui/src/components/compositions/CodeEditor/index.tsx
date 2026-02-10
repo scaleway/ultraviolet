@@ -13,7 +13,7 @@ import type {
   ReactNode,
   SetStateAction,
 } from 'react'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { CopyButton } from '../../CopyButton'
 import { Expandable } from '../../Expandable'
 import { Label } from '../../Label'
@@ -121,7 +121,7 @@ const CodeEditorExpandable = ({
 export const CodeEditor = ({
   value,
   onChange,
-  extensions = 'js',
+  extensions,
   onBlur,
   height,
   readOnly,
@@ -145,16 +145,6 @@ export const CodeEditor = ({
 }: CodeEditorProps) => {
   const [expanded, setExpanded] = useState(false)
   const expandableEnabled = expandableHeight !== undefined
-
-  const expandableHeightComputed = useMemo(() => {
-    if (!expanded && expandableHeight) {
-      return typeof expandableHeight === 'string'
-        ? expandableHeight
-        : `${expandableHeight}px`
-    }
-
-    return 'none'
-  }, [expandableHeight, expanded])
 
   // Non-editable when disabled, readOnly or not-expanded
   const isEditable = !(disabled && readOnly) && (!expandableEnabled || expanded)
@@ -209,7 +199,8 @@ export const CodeEditor = ({
         <div
           className={cn(codeEditor[disabled ? 'disabled' : 'default'])}
           style={assignInlineVars({
-            [maxHeightVar]: expandableHeightComputed,
+            [maxHeightVar]:
+              !expanded && expandableHeight ? `${expandableHeight}px` : 'none',
           })}
         >
           {expandableEnabled ? (

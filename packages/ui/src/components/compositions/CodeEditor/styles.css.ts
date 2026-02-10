@@ -12,11 +12,13 @@ export const disabledStack = style({ cursor: 'not-allowed' })
 
 export const copyButton = style({
   backgroundColor: consoleDarkTheme.colors.neutral.backgroundWeak,
+  color: consoleDarkTheme.colors.neutral.textStrong,
   position: 'absolute',
   right: theme.space[1],
   selectors: {
     '&:hover': {
       backgroundColor: consoleDarkTheme.colors.neutral.backgroundHover,
+      color: consoleDarkTheme.colors.neutral.textStrongHover,
     },
   },
   top: theme.space[1],
