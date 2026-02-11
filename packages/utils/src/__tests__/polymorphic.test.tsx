@@ -4,7 +4,7 @@ import { mergeProps, renderElement } from '../polymorphic'
 import '@testing-library/jest-dom/vitest'
 
 describe('polymorphic', () => {
-  describe('mergeProps', () => {
+  describe(mergeProps, () => {
     test('merges basic props, child overrides parent', () => {
       const parent = { id: 'parent', title: 'parent' }
       const child = { id: 'child' }
@@ -34,7 +34,7 @@ describe('polymorphic', () => {
     })
   })
 
-  describe('renderElement', () => {
+  describe(renderElement, () => {
     test('renders function form', () => {
       const renderFn = vi.fn(props => <a {...props}>test link content</a>)
       const props = { href: '/test', className: 'test' }

@@ -77,7 +77,7 @@ const emptyValues: never[] = []
 const errorValues = undefined
 
 describe('line Chart', () => {
-  describe('getMinChartValue', () => {
+  describe(getMinChartValue, () => {
     it('should return the smallest value of integer values', () => {
       expect(getMinChartValue(chartValues)).toBe(4)
     })
@@ -92,7 +92,7 @@ describe('line Chart', () => {
     })
   })
 
-  describe('getMaxChartValue', () => {
+  describe(getMaxChartValue, () => {
     it('should return the highest value of integer values', () => {
       expect(getMaxChartValue(chartValues)).toBe(21)
     })
@@ -107,7 +107,7 @@ describe('line Chart', () => {
     })
   })
 
-  describe('getMin', () => {
+  describe(getMin, () => {
     it('should return the smallest value of integer values', () => {
       expect(getMin(values)).toBe(20)
     })
@@ -125,7 +125,7 @@ describe('line Chart', () => {
     })
   })
 
-  describe('getMax', () => {
+  describe(getMax, () => {
     it('should return the greatest value of integer values', () => {
       expect(getMax(values)).toBe(80)
     })
@@ -142,7 +142,7 @@ describe('line Chart', () => {
       expect(getMax(errorValues)).toBe(0)
     })
   })
-  describe('getAverage', () => {
+  describe(getAverage, () => {
     it('should return the average value', () => {
       expect(getAverage(values)).toBe(48.4)
     })
@@ -156,7 +156,7 @@ describe('line Chart', () => {
       expect(getAverage(errorValues)).toBe(0)
     })
   })
-  describe('getCurrent', () => {
+  describe(getCurrent, () => {
     it('should return the last value', () => {
       expect(getCurrent(values)).toBe(20)
     })
@@ -167,7 +167,7 @@ describe('line Chart', () => {
       expect(getCurrent(errorValues)).toBe(0)
     })
   })
-  describe('getSelected', () => {
+  describe(getSelected, () => {
     it('should remove label already selected', () => {
       expect(getSelected('one', 0, ['one0', 'two1'])).toStrictEqual(['two1'])
     })

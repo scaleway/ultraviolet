@@ -6,7 +6,7 @@ import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
 import recursivelyGetChildrenString from '../recursivelyGetChildrenString'
 
-describe('isJSONString', () => {
+describe(isJSONString, () => {
   test.each`
     test                      | value            | expected
     ${'is correct JSON'}      | ${'{ "a": 10 }'} | ${true}
@@ -22,7 +22,7 @@ describe('isJSONString', () => {
   })
 })
 
-describe('recursivelyGetChildrenString', () => {
+describe(recursivelyGetChildrenString, () => {
   const complexChildrenWithStringNestedChildren = {
     props: { children: 'hello' },
   }
@@ -48,7 +48,7 @@ describe('recursivelyGetChildrenString', () => {
   })
 })
 
-describe('onKeyOnlyNumbers', () => {
+describe(onKeyOnlyNumbers, () => {
   test('should only prevent numbers keyCodes', () => {
     ;[...new Array(100).keys()].forEach(keyCode => {
       const preventDefault = vi.fn()
@@ -65,7 +65,7 @@ describe('onKeyOnlyNumbers', () => {
   })
 })
 
-describe('parseIntOr', () => {
+describe(parseIntOr, () => {
   const fallback = 987_654_321
 
   test.each`
