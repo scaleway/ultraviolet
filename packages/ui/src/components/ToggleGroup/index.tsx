@@ -50,7 +50,7 @@ export const ToggleGroupToggle = ({
   const { groupName, onChange, groupValues, error: contextError } = context
 
   const ToggleName = `${groupName}.${name}`
-  const ToggleValue = `${value}`
+  const ToggleValue = value.toString()
 
   return (
     <Toggle

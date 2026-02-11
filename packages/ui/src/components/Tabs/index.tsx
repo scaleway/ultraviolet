@@ -58,9 +58,11 @@ export const Tabs = ({
   useEffect(() => {
     const tab = tabsRef.current.querySelector(
       `[role='tab'][aria-selected='true']`,
-    ) as HTMLElement
+    )
 
-    if (tab && tabsRef.current.scrollTo) {
+    if (tabsRef.current.scrollTo && tab) {
+      // @ts-expect-error: doesn't exit on Element
+      // oxlint-disable-next-line typescript-eslint/no-unsafe-assignment
       tabsRef.current.scrollTo({ behavior: 'smooth', left: tab.offsetLeft })
     }
   }, [selected])

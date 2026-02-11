@@ -107,7 +107,7 @@ export const Link = forwardRef(
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const isBlank = target === '_blank'
-    const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
+    const computedRel = rel ?? (isBlank ? 'noopener noreferrer' : undefined)
     const [isTruncated, setIsTruncated] = useState(false)
     const elementRef = useRef<HTMLAnchorElement>(null)
 

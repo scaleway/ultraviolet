@@ -7,7 +7,7 @@ export const notification = style({
   borderRadius: theme.radii.default,
 })
 
-globalStyle(`${PREFIX}`, {
+globalStyle(PREFIX, {
   backgroundColor: theme.colors.other.elevation.background.raised,
   position: 'fixed',
   zIndex: 1,

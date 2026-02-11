@@ -26,7 +26,8 @@ const pagesToRender = Object.keys(modules)
     path.includes('render.tsx')
       ? {
           Component: lazy(
-            () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
+            // oxlint-disable-next-line typescript/no-unsafe-return
+            async () => import(`./tests/${path?.split('/')[2]}/render.tsx`),
           ),
           name: path.replace('.tsx', ''),
         }

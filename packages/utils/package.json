@@ -18,6 +18,7 @@
     "test:watch": "LC_ALL=en_US.UTF-8  pnpm vitest watch --config vitest.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
     "typecheck": "tsc --noEmit",
+    "typecheck:go": "tsgo --noEmit",
     "size": "size-limit",
     "lintpublish": "publint"
   },

@@ -90,17 +90,14 @@ export const Row = ({
     }
   }, [collapseRow, expandRow, expandedRowIds, id, loading])
 
-  const computedExpandableContent = useMemo(() => {
+  const computedExpandableContent = useMemo(async () => {
     if (expandable && !loading && expandedRowIds[id] && banner) {
       return (
         <>
           <div
             className={offerListRowExpandable}
             style={assignInlineVars({
-              [expandablePaddingVar]:
-                theme.space[
-                  (expandablePadding ?? 2) as keyof typeof theme.space
-                ],
+              [expandablePaddingVar]: theme.space[expandablePadding ?? 2],
             })}
           >
             {expandableContent}
@@ -165,6 +162,8 @@ export const Row = ({
     onChangeSelect?.(offerName)
   }
 
+  const isSelectableDisable = disabled || loading || !!selectDisabled
+
   return (
     <>
       <List.Row
@@ -181,7 +180,7 @@ export const Row = ({
         disabled={disabled}
         expandable={computedExpandableContent}
         expandablePadding={banner ? '0' : undefined}
-        expanded={expanded ?? expandedRowIds[id]}
+        expanded={expanded || expandedRowIds[id]}
         highlightAnimation={highlightAnimation}
         id={id}
         onClick={() => {
@@ -227,7 +226,7 @@ export const Row = ({
               {selectable === 'radio' ? (
                 <Radio
                   checked={isRowSelected}
-                  disabled={disabled || loading || !!selectDisabled}
+                  disabled={isSelectableDisable}
                   id={id}
                   name={`radio-offer-list-${id}`}
                   onChange={() => {
@@ -247,7 +246,7 @@ export const Row = ({
                 <Checkbox
                   aria-label="select"
                   checked={isRowSelected}
-                  disabled={disabled || loading || !!selectDisabled}
+                  disabled={isSelectableDisable}
                   id={id}
                   name={`checkbox-offer-list-${id}`}
                   onChange={() => {
@@ -271,7 +270,7 @@ export const Row = ({
             <Button
               aria-label="expand"
               data-testid="list-expand-button"
-              disabled={disabled || !expandable || loading}
+              disabled={(disabled ?? !expandable) || loading}
               onClick={toggleRowExpand}
               sentiment="neutral"
               size="small"

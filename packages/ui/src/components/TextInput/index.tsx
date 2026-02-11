@@ -139,7 +139,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
     const [hasFocus, setHasFocus] = useState(false)
     const [localValue, setLocalValue] = useState(defaultValue)
     const inputRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(ref, () => inputRef.current as HTMLInputElement)
+    useImperativeHandle(ref, () => inputRef.current!)
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
     const computedType =
@@ -166,7 +166,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
       [onChange, onChangeValue],
     )
 
-    const computedValue = value !== undefined ? value : localValue
+    const computedValue = value ?? localValue
 
     const computedClearable = clearable && !!computedValue
 

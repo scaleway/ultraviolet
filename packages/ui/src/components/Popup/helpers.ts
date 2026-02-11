@@ -267,9 +267,7 @@ export const computePositions = ({
   align,
 }: ComputePositionsTypes) => {
   const arrowWidth = hasArrow ? DEFAULT_ARROW_WIDTH : 0
-  const childrenRect = (
-    childrenRef.current as HTMLDivElement
-  ).getBoundingClientRect()
+  const childrenRect = childrenRef.current!.getBoundingClientRect()
   const offsetParent = findOffsetParent(
     childrenRef as RefObject<HTMLDivElement>,
   )
@@ -279,9 +277,7 @@ export const computePositions = ({
     top: 0,
   }
 
-  const popupStructuredRef = (
-    popupRef.current as HTMLDivElement
-  ).getBoundingClientRect()
+  const popupStructuredRef = popupRef.current!.getBoundingClientRect()
 
   const placementBasedOnWindowSize = isGenericPlacement(placement)
     ? placement
@@ -472,6 +468,41 @@ export const computePositions = ({
           positionY + popupOverflow
         }px, 0)`,
         rotate: -90,
+      }
+    }
+    case 'top': {
+      // top placement is default value
+      const positionX = isAligned
+        ? overloadedChildrenLeft
+        : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
+      const positionY =
+        overloadedChildrenTop +
+        scrollTopValue -
+        popupHeight -
+        arrowWidth -
+        SPACE
+
+      const computedPositionX = isAligned
+        ? positionX
+        : positionX + popupOverflow
+
+      // To make sure the popup does not overflow (negative X position)
+      const finalPositionX = isPopupPortalTargetBody
+        ? Math.max(computedPositionX, 0)
+        : computedPositionX
+
+      return {
+        arrowLeft: isAligned
+          ? childrenWidth / 2 - arrowWidth
+          : popupWidth / 2 + popupOverflow * -1,
+        arrowTop: `${popupHeight - 1}px`,
+        arrowTransform: '',
+        placement: 'top',
+        popupInitialPosition: `translate3d(${
+          finalPositionX
+        }px, ${positionY + TOTAL_USED_SPACE}px, 0)`,
+        popupPosition: `translate3d(${finalPositionX}px, ${positionY}px, 0)`,
+        rotate: 0,
       }
     }
     default: {

@@ -162,7 +162,7 @@ describe('navigation', () => {
     // Wait for unpin buttons to appear
     let unpinButton: HTMLButtonElement | undefined
     await waitFor(
-      async () => {
+      () => {
         const unpinButtons = screen.queryAllByRole('button', {
           name: 'unpin',
         }) satisfies HTMLButtonElement[]

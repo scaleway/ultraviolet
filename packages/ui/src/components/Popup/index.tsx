@@ -66,6 +66,7 @@ const stopClickPropagation: MouseEventHandler = event => {
   event.stopPropagation()
 }
 
+// oxlint-disable-next-line typescript/no-redundant-type-constituents
 type PopupRole = 'dialog' | 'tooltip' | 'popup' | (string & object)
 
 type PopupProps = {
@@ -213,10 +214,10 @@ export const Popup = forwardRef(
     ref: Ref<HTMLDivElement>,
   ) => {
     const childrenRef = useRef<HTMLDivElement>(null)
-    useImperativeHandle(innerRef, () => childrenRef.current as HTMLDivElement)
+    useImperativeHandle(innerRef, () => childrenRef.current!)
 
     const innerPopupRef = useRef<HTMLDivElement>(null)
-    useImperativeHandle(ref, () => innerPopupRef.current as HTMLDivElement)
+    useImperativeHandle(ref, () => innerPopupRef.current!)
 
     const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
     const popupPortalTarget = getPopupPortalTarget({
@@ -649,7 +650,8 @@ export const Popup = forwardRef(
                     [popupPosition]: positions.popupPosition,
                     [animationDurationPopup]: `${animationDuration}ms`,
                     [popupInitialPosition]: positions.popupInitialPosition,
-                    [maxWidthPopup]: `${typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth}`,
+                    [maxWidthPopup]:
+                      typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
                     [maxHeightPopup]:
                       typeof maxHeight === 'number'
                         ? `${maxHeight}px`
@@ -670,7 +672,7 @@ export const Popup = forwardRef(
                   {text}
                 </div>
               </div>,
-              popupPortalTarget as HTMLElement,
+              popupPortalTarget!,
             )
           : null}
       </>

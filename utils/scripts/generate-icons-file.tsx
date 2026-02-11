@@ -188,7 +188,7 @@ const appendTypeToIndex = async (
 const resetIconsFolder = async (folderPath: string) => {
   try {
     const files = await promises.readdir(folderPath)
-    const deletePromises = files.map(file =>
+    const deletePromises = files.map(async file =>
       promises.unlink(path.join(folderPath, file)),
     )
     await Promise.all(deletePromises)

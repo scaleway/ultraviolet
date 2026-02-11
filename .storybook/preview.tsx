@@ -35,8 +35,7 @@ const VIEWPORTS = BREAKPOINT_ORDER.reduce((acc, key) => {
         name: key,
         styles: {
           height: '600px',
-          width:
-            lightTheme.breakpoints[key as keyof typeof lightTheme.breakpoints],
+          width: lightTheme.breakpoints[key],
         },
       },
     }
@@ -123,6 +122,7 @@ const parameters: Preview['parameters'] = {
 
 const getThemeColor = (theme: string) => {
   const { value: background, textColor } =
+    // oxlint-disable-next-line typescript/no-unsafe-call
     parameters['backgrounds'].values.find(
       ({ name }: { name: string }) => name === theme,
     ) ?? parameters['backgrounds'].values[0]
@@ -134,7 +134,7 @@ const decorators: Decorator[] = [
   (Story, args) => {
     // const { theme } = args.context.globals
     const { context } = args
-    const theme = args.context.globals['theme'] || 'light'
+    const theme = args.context.globals['theme'] ?? 'light'
     console.debug(context, 'theme', theme)
 
     const { background, textColor } = getThemeColor(theme)

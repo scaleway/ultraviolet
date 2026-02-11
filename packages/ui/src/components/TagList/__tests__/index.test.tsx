@@ -18,7 +18,7 @@ const mockOffsetWidth = (
   const TAG_CHAR_WIDTH = 6
   const POPOVER_TRIGGER_WIDTH = 50
 
-  const containerWidth = customContainerWidth || TAGS_PARENT_WIDTH
+  const containerWidth = customContainerWidth ?? TAGS_PARENT_WIDTH
 
   const mockOffsetWidthFunction = vi.spyOn(
     HTMLElement.prototype,
@@ -47,7 +47,7 @@ const mockOffsetWidth = (
       this.children.length === 0
     ) {
       // This is a tag, return computed size based on text length
-      const text = this.childNodes[0].textContent || ''
+      const text = this.childNodes[0].textContent ?? ''
 
       return 8 + text.length * TAG_CHAR_WIDTH + 8
     }
@@ -60,7 +60,7 @@ const mockOffsetWidth = (
       this.children[0].tagName === 'BUTTON'
     ) {
       // This is a copiable tag
-      const text = this.childNodes[0].textContent || ''
+      const text = this.childNodes[0].textContent ?? ''
 
       return 8 + text.length * TAG_CHAR_WIDTH + 8
     }
@@ -75,7 +75,7 @@ const mockOffsetWidth = (
       this.children[0].children.length === 0
     ) {
       // This is a tag, return computed size based on text length
-      const text = this.childNodes[0].textContent || ''
+      const text = this.childNodes[0].textContent ?? ''
 
       return 8 + text.length * TAG_CHAR_WIDTH + 8
     }

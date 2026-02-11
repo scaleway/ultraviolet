@@ -669,7 +669,7 @@ export const Item = memo(
                   gap={1}
                   justifyContent="center"
                 >
-                  {categoryIcon || (
+                  {categoryIcon ?? (
                     <OrganizationDashboardCategoryIcon
                       variant={active ? 'primary' : 'neutral'}
                     />

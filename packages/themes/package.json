@@ -59,6 +59,7 @@
     "lintpublish": "pnpm publint",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
+    "typecheck:go": "tsgo --noEmit",
     "watch": "pnpm run '/^watch:.*/'",
     "watch:build": "vite build --config vite.config.ts --watch"
   },

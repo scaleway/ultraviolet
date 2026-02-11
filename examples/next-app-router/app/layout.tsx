@@ -28,7 +28,7 @@ export default async function RootLayout({
 }>) {
   // Generate the SSR theme CSS string
   const cookieStore = await cookies()
-  const themePreference = cookieStore.get('theme-preference')?.value || 'light'
+  const themePreference = cookieStore.get('theme-preference')?.value ?? 'light'
 
   const currentTheme =
     {

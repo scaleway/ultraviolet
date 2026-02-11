@@ -12,7 +12,7 @@ describe('selectableCard', () => {
   > = ['radio', 'checkbox', 'toggle'] as const
 
   for (const type of types) {
-    describe(`${type}`, () => {
+    describe(type, () => {
       test('renders correctly with default props', () =>
         shouldMatchSnapshot(
           <SelectableCard

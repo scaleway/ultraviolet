@@ -76,7 +76,7 @@ export const RadioField = <
       onFocus={onFocus}
       required={required}
       value={value ?? ''}
-      {...(label ? { label } : { 'aria-label': ariaLabel as string })}
+      {...(label ? { label } : { 'aria-label': ariaLabel! })}
     />
   )
 }

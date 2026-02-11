@@ -13,7 +13,7 @@ export const Submitting: StoryFn = () => {
     <Form
       errors={mockErrors}
       methods={methods}
-      onSubmit={() =>
+      onSubmit={async () =>
         new Promise(resolve => {
           setTimeout(() => resolve(undefined), 5000)
         })

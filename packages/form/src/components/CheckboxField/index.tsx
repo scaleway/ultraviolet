@@ -68,7 +68,7 @@ export const CheckboxField = <
       ref={field.ref}
       {...(children
         ? { 'aria-label': undefined, children }
-        : { 'aria-label': ariaLabel as string })}
+        : { 'aria-label': ariaLabel! })}
     />
   )
 }

@@ -56,7 +56,7 @@ export const SelectableCardField = <
     <SelectableCard
       {...props}
       {...(productIcon ? { productIcon } : { illustration })}
-      {...(label ? { label } : { 'aria-label': ariaLabel as string })}
+      {...(label ? { label } : { 'aria-label': ariaLabel! })}
       checked={isChecked}
       isError={!!error}
       name={field.name}

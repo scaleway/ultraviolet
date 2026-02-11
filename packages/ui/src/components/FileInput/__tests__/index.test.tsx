@@ -179,7 +179,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with FileInput.Button', async () => {
+  test('renders correctly with FileInput.Button', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -196,7 +196,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should throw error with FileInput.Button outside of FileInput', async () => {
+  test('should throw error with FileInput.Button outside of FileInput', () => {
     expect(() =>
       shouldMatchSnapshot(<FileInput.Button>button</FileInput.Button>),
     ).toThrowError(
@@ -204,7 +204,7 @@ describe('fileInput', () => {
     )
   })
 
-  test('should work with function children and title', async () => {
+  test('should work with function children and title', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -236,7 +236,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly ondrop, ondrag', async () => {
+  test('renders correctly ondrop, ondrag', () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <FileInput
@@ -261,7 +261,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should handle drag state in dropzone variant', async () => {
+  test('should handle drag state in dropzone variant', () => {
     const { asFragment } = renderWithTheme(
       <FileInput aria-label="label" title="upload files" variant="dropzone" />,
     )
@@ -302,7 +302,7 @@ describe('fileInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should add a file with drag and drop', async () => {
+  test('should add a file with drag and drop', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput

@@ -86,7 +86,9 @@ describe('sliderField', () => {
       <Form
         errors={mockFormErrors}
         methods={result.current}
-        onSubmit={value => onSubmit(value)}
+        onSubmit={value => {
+          onSubmit(value)
+        }}
       >
         <SliderField
           input

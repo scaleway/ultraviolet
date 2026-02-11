@@ -107,7 +107,7 @@ export const NumberInput = forwardRef(
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const localRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
+    useImperativeHandle(ref, () => localRef.current!)
 
     const uniqueId = useId()
     const localId = id ?? uniqueId
@@ -196,7 +196,7 @@ export const NumberInput = forwardRef(
       <Stack className={className} gap="0.5">
         {label || labelDescription ? (
           <Label
-            htmlFor={id ?? localId}
+            htmlFor={localId}
             labelDescription={labelDescription}
             required={required}
             size={size}
