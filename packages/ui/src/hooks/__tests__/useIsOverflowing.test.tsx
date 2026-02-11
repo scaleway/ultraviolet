@@ -2,7 +2,7 @@ import { renderHook, waitFor } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { useIsOverflowing } from '../useIsOverflowing'
 
-describe('useIsOverflowing', () => {
+describe(useIsOverflowing, () => {
   it('should be false with no overflow', async () => {
     const { result } = renderHook(() =>
       useIsOverflowing({ current: document.createElement('div') }),

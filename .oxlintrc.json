@@ -78,6 +78,7 @@
             "max": 30
           }
         ],
+        "react/no-multi-comp": "off",
         "node/no-process-env": "off"
       }
     }
@@ -122,6 +123,8 @@
     ],
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/no-multi-comp": "warn",
+    "import/no-nodejs-modules": "warn",
     "unicorn/empty-brace-spaces": "off",
     "unicorn/prefer-global-this": "off"
   }

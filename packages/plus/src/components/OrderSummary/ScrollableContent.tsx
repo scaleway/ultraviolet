@@ -312,6 +312,7 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
           detail ? (
             <Text
               as="span"
+              // oxlint-disable-next-line react/no-array-index-key
               key={`${subCategory.title}-${index}`}
               sentiment="neutral"
               variant="bodySmall"
@@ -350,6 +351,7 @@ export const ScrollableContent = () => {
               <Stack gap={1}>
                 {category.subCategories.map((subCategory, index) => (
                   <SubCategory
+                    // oxlint-disable-next-line react/no-array-index-key
                     key={subCategory.title ?? `${index}`}
                     subCategory={subCategory}
                   />

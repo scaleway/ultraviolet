@@ -263,7 +263,7 @@ export const VerificationCode = ({
             data-testid={index}
             disabled={disabled}
             id={`${id}-${index}`}
-            // biome-ignore lint/suspicious/noArrayIndexKey: should be safe as we can have the same value
+            // oxlint-disable-next-line react/no-array-index-key
             key={`field-${index}`}
             onChange={inputOnChange(index)}
             onFocus={inputOnFocus}
