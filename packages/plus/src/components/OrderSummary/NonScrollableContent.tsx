@@ -3,7 +3,10 @@ import type { ReactNode } from 'react'
 import { useContext } from 'react'
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
-import { orderSummaryNonScrollableContainer } from './styles.css'
+import {
+  orderSummaryNonScrollableContainer,
+  orderSummaryTotalPrice,
+} from './styles.css'
 import type { PriceTypeSingle, TimeUnit } from './types'
 
 type NonScrollableContentProps = {
@@ -15,10 +18,11 @@ type NonScrollableContentProps = {
   totalPriceInfoPlacement?: 'left' | 'right'
   totalPriceDescription?: ReactNode
   additionalInfo?: string
-  hideDetails: boolean
   unit: TimeUnit
   priceInformation?: ReactNode
   hideBeforePrice?: boolean
+  defaultPriceInformation: boolean
+  timePeriodAmount: number
 }
 
 export const NonScrollableContent = ({
@@ -27,14 +31,17 @@ export const NonScrollableContent = ({
   children,
   totalPriceInfo,
   totalPriceInfoPlacement,
-  hideDetails,
   unit,
   totalPriceDescription,
   additionalInfo,
   priceInformation,
   hideBeforePrice,
+  defaultPriceInformation,
+  timePeriodAmount,
 }: NonScrollableContentProps) => {
   const { locales } = useContext(OrderSummaryContext)
+  const unitSingular = unit.endsWith('s') ? unit.slice(0, -1) : unit
+  const divisor = defaultPriceInformation ? timePeriodAmount : undefined
 
   return (
     <Stack className={orderSummaryNonScrollableContainer} gap={3}>
@@ -74,13 +81,24 @@ export const NonScrollableContent = ({
           hideBeforePrice ? (
             <Text
               as="span"
+              className={
+                orderSummaryTotalPrice[
+                  defaultPriceInformation && !priceInformation
+                    ? 'default'
+                    : 'priceInformation'
+                ]
+              }
               data-testid="total-price"
               prominence="strong"
               sentiment="neutral"
               variant="headingSmallStrong"
             >
-              <DisplayPrice beforeOrAfter="after" price={totalPrice} />
-              {hideDetails && !priceInformation ? `/${unit}` : null}
+              <DisplayPrice
+                beforeOrAfter="after"
+                divisor={divisor}
+                price={totalPrice}
+              />
+              {defaultPriceInformation ? `/${unitSingular}` : null}
               {priceInformation}
             </Text>
           ) : (
@@ -92,17 +110,30 @@ export const NonScrollableContent = ({
                 strikeThrough
                 variant="bodySmallStrong"
               >
-                <DisplayPrice beforeOrAfter="before" price={totalPrice} />
+                <DisplayPrice
+                  beforeOrAfter="before"
+                  divisor={divisor}
+                  price={totalPrice}
+                />
               </Text>
               <Text
                 as="span"
+                className={
+                  orderSummaryTotalPrice[
+                    priceInformation ? 'priceInformation' : 'default'
+                  ]
+                }
                 data-testid="total-price"
                 prominence="strong"
                 sentiment="neutral"
                 variant="headingSmallStrong"
               >
-                <DisplayPrice beforeOrAfter="after" price={totalPrice} />
-                {hideDetails && !priceInformation ? `/${unit}` : null}
+                <DisplayPrice
+                  beforeOrAfter="after"
+                  divisor={divisor}
+                  price={totalPrice}
+                />
+                {defaultPriceInformation ? `/${unitSingular}` : null}
                 {priceInformation}
               </Text>
             </Stack>
