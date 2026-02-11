@@ -20,6 +20,12 @@ export type SelectorProps = Pick<
   | 'helper'
   | 'readOnly'
   | 'placeholder'
+  | 'emptyState'
+  | 'searchable'
+  | 'footer'
+  | 'tooltip'
+  | 'loadMore'
+  | 'isLoading'
 > & { options: SelectorOption[] }
 
 export type OptionSelectorProps = {
