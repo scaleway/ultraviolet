@@ -44,6 +44,7 @@ export default [
       '**/.vitest/',
       '**/coverage/',
       '.storybook',
+      'e2e/vite.config.ts',
       'eslint.config.mjs',
       'next-env.d.ts',
     ],
@@ -58,8 +59,10 @@ export default [
       parserOptions: {
         project: [
           'tsconfig.json',
+          'e2e/tsconfig.json',
           'packages/*/tsconfig.json',
           'tools/*/tsconfig.json',
+          'examples/*/tsconfig.json',
         ],
         tsconfigRootDir: dirname,
       },
@@ -92,7 +95,14 @@ export default [
       ecmaVersion: 5,
 
       parserOptions: {
-        project: ['tsconfig.json'],
+        project: [
+          'tsconfig.json',
+          'e2e/tsconfig.json',
+          'packages/*/tsconfig.json',
+          'tools/*/tsconfig.json',
+          'examples/*/tsconfig.json',
+        ],
+        tsconfigRootDir: dirname,
       },
       sourceType: 'script',
     },

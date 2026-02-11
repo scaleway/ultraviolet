@@ -10,14 +10,17 @@
     "target": "esnext",
     "types": ["vite/client", "@testing-library/jest-dom"]
   },
-  "exclude": ["node_modules", "coverage", "dist"],
+  "exclude": ["node_modules", "coverage", "dist", "examples", "e2e"],
   "extends": ["@scaleway/tsconfig"],
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.spec.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
+    "**/__stories/*.stories.tsx",
     "vitest.setup.ts",
+    "vite.config.ts",
     "utils.d.ts",
     "global.d.ts",
     "expect.d.ts",
