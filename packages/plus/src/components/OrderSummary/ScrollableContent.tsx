@@ -209,7 +209,8 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         ) : null}
         {subCategory.price !== undefined &&
         !subCategory.hidePrice &&
-        subCategoryPrice.default[0] === subCategoryPrice.discounted[1] ? (
+        subCategoryPrice.default[0] === subCategoryPrice.discounted[0] &&
+        subCategoryPrice.default[1] === subCategoryPrice.discounted[1] ? (
           <Text
             as="span"
             prominence="strong"
@@ -242,7 +243,8 @@ const SubCategory = ({ subCategory }: { subCategory: SubCategoryType }) => {
         ) : null}
         {subCategory.price !== undefined &&
         !subCategory.hidePrice &&
-        subCategoryPrice.default[0] !== subCategoryPrice.discounted[1] ? (
+        (subCategoryPrice.default[0] !== subCategoryPrice.discounted[0] ||
+          subCategoryPrice.default[1] !== subCategoryPrice.discounted[1]) ? (
           <Stack alignItems="center" direction="row" gap={1}>
             <Text
               as="span"
