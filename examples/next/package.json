@@ -12,7 +12,8 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@scaleway/regex": "5.8.0",

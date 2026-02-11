@@ -100,6 +100,7 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm typecheck
+          pnpm typecheck:root
 
   oxlint:
     runs-on: ubuntu-24.04

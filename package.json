@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "size": "turbo run size",
+    "typecheck:root": "tsc -p tsconfig.json --noEmit",
     "typecheck": "turbo run typecheck",
     "build": "turbo run build --filter='./packages/*' ",
     "build:examples": "turbo run build --filter './examples/*' ",
@@ -180,7 +181,7 @@
     "svgo": "4.0.0",
     "timekeeper": "2.3.1",
     "tsx": "4.21.0",
-    "turbo": "2.8.3",
+    "turbo": "2.8.5",
     "typescript": "5.9.3",
     "vite": "7.3.1",
     "vitest": "4.0.18",
