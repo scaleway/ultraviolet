@@ -153,9 +153,13 @@ export const OptionSelector = ({
         className={firstSelectInput}
         data-testid="first-selector"
         disabled={firstSelector.disabled || disabled}
+        emptyState={firstSelector.emptyState}
         error={error || !!firstSelector.error}
+        footer={firstSelector.footer}
         helper={firstSelector.helper}
+        isLoading={firstSelector.isLoading}
         labelDescription={firstSelector.labelDescription}
+        loadMore={firstSelector.loadMore}
         onChange={onChangeFirstSelector}
         optionalInfoPlacement="right"
         options={firstSelectorOptions}
@@ -166,7 +170,9 @@ export const OptionSelector = ({
           readOnly
         }
         required={required}
+        searchable={firstSelector.searchable}
         size={size}
+        tooltip={firstSelector.tooltip}
         value={firstValue}
       />
       {firstValue && secondSelector && secondSelectorOptions ? (
@@ -183,9 +189,13 @@ export const OptionSelector = ({
             disabled={
               !!firstSelector.error || secondSelector.disabled || disabled
             }
+            emptyState={secondSelector.emptyState}
             error={!!error || !!secondSelector.error}
+            footer={secondSelector.footer}
             helper={secondSelector.helper}
+            isLoading={secondSelector.isLoading}
             labelDescription={secondSelector.labelDescription}
+            loadMore={secondSelector.loadMore}
             onChange={onChangeSecondSelector}
             optionalInfoPlacement="right"
             options={secondSelectorOptions}
@@ -195,7 +205,9 @@ export const OptionSelector = ({
               secondSelector.readOnly ||
               readOnly
             }
+            searchable={secondSelector.searchable}
             size={size}
+            tooltip={secondSelector.tooltip}
             value={secondValue}
           />
         </>
