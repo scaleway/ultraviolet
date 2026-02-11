@@ -14,5 +14,5 @@
   },
   "exclude": ["node_modules", "coverage", "dist"],
   "extends": "@scaleway/tsconfig",
-  "include": ["global.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["global.d.ts", "**/*.ts", "*.ts", "**/*.tsx", "vite.config.ts"]
 }

@@ -1,4 +1,5 @@
 import {
+  consoleDarkerTheme,
   consoleDarkTheme,
   consoleLightTheme,
   useTheme,
@@ -62,6 +63,7 @@ export {
   radii,
   breakpoints as screens,
   consoleDarkTheme as darkTheme,
+  consoleDarkerTheme as darkerTheme,
   extendTheme,
   SENTIMENTS,
   SENTIMENTS_WITHOUT_NEUTRAL,
