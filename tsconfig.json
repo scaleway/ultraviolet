@@ -7,7 +7,14 @@
     "noUncheckedIndexedAccess": false,
     "skipLibCheck": true,
     "target": "esnext",
-    "types": ["vite/client", "@testing-library/jest-dom"]
+    "types": [
+      "vite/client",
+      "@testing-library/jest-dom",
+      "./utils.d.ts",
+      "./global.d.ts",
+      "./expect.d.ts",
+      "./jest-axe.d.ts"
+    ]
   },
   "exclude": ["node_modules", "coverage", "dist", "examples", "e2e"],
   "extends": ["@scaleway/tsconfig"],
@@ -19,10 +26,6 @@
     ".storybook/**/*.tsx",
     "**/__stories/*.stories.tsx",
     "vitest.setup.ts",
-    "vite.config.ts",
-    "utils.d.ts",
-    "global.d.ts",
-    "expect.d.ts",
-    "jest-axe.d.ts"
+    "vite.config.ts"
   ]
 }

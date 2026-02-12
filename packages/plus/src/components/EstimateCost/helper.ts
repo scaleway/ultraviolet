@@ -21,7 +21,7 @@ export const calculatePrice = ({
   const nonNanTimeAmount = Number.isNaN(timeAmount) ? 0 : timeAmount
   const value =
     (price - price * discount) *
-    (nonNanTimeAmount * multiplier[`${timeUnit}`]) *
+    (nonNanTimeAmount * multiplier[timeUnit]) *
     Math.max(amount - amountFree, 0)
 
   return value

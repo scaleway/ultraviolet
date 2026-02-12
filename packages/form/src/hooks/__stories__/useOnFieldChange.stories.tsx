@@ -1,11 +1,11 @@
-import preview from '../../../../../.storybook/preview'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { Form, useForm, useOnFieldChange } from '../..'
 import { TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
 
-const meta = preview.meta({
+export default {
   argTypes: {
     argName: {
       control: {},
@@ -53,7 +53,7 @@ useOnFieldChange('email', () => {
     },
   },
   title: 'Form/Hooks/useOnFieldChange',
-})
+} as Meta
 
 const FormContent = () => {
   const [valid, setValid] = useState(true)
@@ -83,7 +83,7 @@ const FormContent = () => {
   )
 }
 
-export const Usage = meta.story(() => {
+export const Usage: StoryFn = () => {
   const methods = useForm({ defaultValues: { email: 'test@test.com' } })
 
   return (
@@ -91,4 +91,4 @@ export const Usage = meta.story(() => {
       <FormContent />
     </Form>
   )
-})
+}

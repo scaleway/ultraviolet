@@ -134,7 +134,8 @@ const decorators: Decorator[] = [
   (Story, args) => {
     // const { theme } = args.context.globals
     const { context } = args
-    const theme = args.context.globals['theme'] ?? 'light'
+    const { theme: globalTheme } = args.context.globals
+    const theme = (globalTheme as 'light' | 'dark' | undefined) ?? 'light'
     console.debug(context, 'theme', theme)
 
     const { background, textColor } = getThemeColor(theme)

@@ -90,7 +90,7 @@ export const Row = ({
     }
   }, [collapseRow, expandRow, expandedRowIds, id, loading])
 
-  const computedExpandableContent = useMemo(async () => {
+  const computedExpandableContent = useMemo(() => {
     if (expandable && !loading && expandedRowIds[id] && banner) {
       return (
         <>
@@ -180,7 +180,7 @@ export const Row = ({
         disabled={disabled}
         expandable={computedExpandableContent}
         expandablePadding={banner ? '0' : undefined}
-        expanded={expanded || expandedRowIds[id]}
+        expanded={expanded ?? expandedRowIds[id]}
         highlightAnimation={highlightAnimation}
         id={id}
         onClick={() => {

@@ -40,6 +40,7 @@ type ExtraProps = {
 
 type DocsContainerProps = BaseContainerProps & {
   context?: {
+    // oxlint-disable-next-line typescript/no-explicit-any
     attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }
