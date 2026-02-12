@@ -2,7 +2,7 @@ import { theme } from '@ultraviolet/themes'
 import { createVar, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { slideFromBottom } from '../../utils'
-import { drawerBase, drawerPush } from '../Drawer/styles.css'
+import { drawer, drawerBase, drawerPush, SIZES } from '../Drawer/styles.css'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 
 export const topModal = createVar()
@@ -85,6 +85,26 @@ export const modal = recipe({
     position: 'relative',
     transition: 'width 0.3s ease-in-out, transform 0.3s ease-in-out',
     width: `${MODAL_WIDTH.medium}rem`,
+    selectors: {
+      [`&${drawerPush}`]: {
+        borderLeft: `1px solid ${theme.colors.neutral.border}`,
+        boxShadow: 'none',
+      },
+      [`&${drawer.large}, &${drawer.small}, &${drawer.medium}`]: {
+        borderRadius: '0',
+        marginRight: '0',
+        padding: '0',
+      },
+      [`&${drawer.large}`]: {
+        width: `${SIZES.large}rem`,
+      },
+      [`&${drawer.small}`]: {
+        width: `${SIZES.small}rem`,
+      },
+      [`&${drawer.medium}`]: {
+        width: `${SIZES.medium}rem`,
+      },
+    },
   },
   compoundVariants: Object.keys(MODAL_WIDTH).map(size => ({
     style: {

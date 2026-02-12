@@ -3,6 +3,7 @@ import { createVar } from '@vanilla-extract/css'
 import type { RecipeVariants } from '@vanilla-extract/recipes'
 import { recipe } from '@vanilla-extract/recipes'
 import type { Color } from '../../theme'
+import { drawerBase } from '../Drawer/styles.css'
 
 export const thicknessSeparator = createVar()
 
@@ -76,6 +77,12 @@ export const hr = recipe({
       info: makeColors(true, 'info'),
       neutral: {
         backgroundColor: theme.colors.neutral.borderWeak,
+        selectors: {
+          [`${drawerBase} &`]: {
+            backgroundColor: theme.colors.neutral.border,
+            minHeight: 1,
+          },
+        },
       },
       primary: makeColors(true, 'primary'),
       secondary: makeColors(true, 'secondary'),

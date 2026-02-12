@@ -32,11 +32,7 @@ export type SizeProp = keyof typeof SIZES
 
 function makeStyleSize(size: SizeProp) {
   return {
-    marginRight: '0 !important',
     height: '100%',
-    borderRadius: '0 !important',
-    padding: '0 !important',
-    width: `${SIZES[size]}rem !important`,
     transform: 'translateX(0)',
     animation: `${slideIn()} linear ${DURATION[size]}s`,
   }
