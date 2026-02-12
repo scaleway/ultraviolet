@@ -83,7 +83,7 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm exec manypkg check
 
-  typecheck:go:
+  typecheck_go:
     runs-on: ubuntu-24.04
     needs: [build]
     env:
@@ -94,9 +94,9 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
           cache: "pnpm"
-      - name: typecheck-go
+      - name: typecheck_go
         run: |
           pnpm install --frozen-lockfile
           pnpm typecheck
