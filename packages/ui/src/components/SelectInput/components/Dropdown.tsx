@@ -548,6 +548,7 @@ const CreateDropdown = ({
                     }
                   }}
                   tabIndex={-1}
+                  tooltip={option.tooltip}
                   value={option.value}
                 >
                   <DisplayOption
@@ -841,6 +842,7 @@ const CreateDropdown = ({
                               }
                             }}
                             tabIndex={-1}
+                            tooltip={option.tooltip}
                             value={option.value}
                           >
                             <DisplayOption
