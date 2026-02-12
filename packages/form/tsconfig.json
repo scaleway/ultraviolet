@@ -3,12 +3,7 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "exclude": [
-    "node_modules",
-    "coverage",
-    "dist",
-    "**/__stories__/*.stories.tsx"
-  ],
+  "exclude": ["node_modules", "coverage", "dist"],
   "extends": "@repo/config/tsconfig/base.json",
   "include": ["src"]
 }

@@ -133,7 +133,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const localId = useId()
     const theme = useTheme()
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
-    useImperativeHandle(ref, () => textAreaRef.current as HTMLTextAreaElement)
+    useImperativeHandle(ref, () => textAreaRef.current!)
 
     useEffect(() => {
       const textArea = textAreaRef.current

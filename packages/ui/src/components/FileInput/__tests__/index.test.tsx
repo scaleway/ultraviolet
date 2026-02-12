@@ -335,7 +335,7 @@ describe('fileInput', () => {
     expect(added).toBeInTheDocument()
   })
 
-  test('should add a file with drag and drop which when accept is defined', async () => {
+  test('should add a file with drag and drop which when accept is defined', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
@@ -380,7 +380,7 @@ describe('fileInput', () => {
     )
   })
 
-  test('should add a file with drag and drop which when accept is defined and precise', async () => {
+  test('should add a file with drag and drop which when accept is defined and precise', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput
@@ -440,7 +440,7 @@ describe('fileInput', () => {
     )
   })
 
-  test('should add a file with drag and drop which when accept but not valid', async () => {
+  test('should add a file with drag and drop which when accept but not valid', () => {
     const onChangeFiles = vi.fn()
     renderWithTheme(
       <FileInput accept=" " aria-label="label" onChangeFiles={onChangeFiles} />,
