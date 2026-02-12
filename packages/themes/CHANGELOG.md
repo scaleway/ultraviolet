@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.0
+
+### Minor Changes
+
+- [#6081](https://github.com/scaleway/ultraviolet/pull/6081) [`fcb3341`](https://github.com/scaleway/ultraviolet/commit/fcb33414be9c1994e367a2b288472f1ad6bfeeb1) Thanks [@lisalupi](https://github.com/lisalupi)! - `ThemeProvider`: Inject a default font color (`theme.colors.neutral.text`) so that all text in the app inherits this color. This allows the text color to adapt dynamically with the theme, rather than defaulting to black regardless of the active theme (e.g., dark mode). A default background color is added too (`theme.colors.neutral.background`).
+
 ## 3.0.6
 
 ### Patch Changes

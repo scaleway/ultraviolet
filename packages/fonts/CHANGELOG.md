@@ -1,5 +1,14 @@
 # @ultraviolet/fonts
 
+## 2.1.0
+
+### Minor Changes
+
+- [#6116](https://github.com/scaleway/ultraviolet/pull/6116) [`bdba6bb`](https://github.com/scaleway/ultraviolet/commit/bdba6bb02a2796a74572675edf46723521c9c374) Thanks [@atissedrescaleway](https://github.com/atissedrescaleway)! - Switch `@ultraviolet/fonts` to variable font sources for `Inter` and `Space Grotesk`.
+
+  - `Inter` now declares a variable weight range of `100 900` instead of static `400`, `500`, and `600` faces.
+  - `Space Grotesk` now declares a variable weight range of `300 700` instead of a single static face.
+
 ## 2.0.1
 
 ### Patch Changes
