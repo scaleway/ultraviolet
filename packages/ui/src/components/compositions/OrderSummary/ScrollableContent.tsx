@@ -42,7 +42,7 @@ const SubCategoryPrice = ({
   const getCorrectPrice = (variant: 'discounted' | 'default', index: number) =>
     (subCategory.priceUnit
       ? subCategory.price
-      : subCategoryPrice[variant][index]) as number
+      : subCategoryPrice[variant][index])!
 
   return (
     <>
