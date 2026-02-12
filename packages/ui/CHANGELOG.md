@@ -1,5 +1,59 @@
 # Change Log
 
+## 3.9.0
+
+### Minor Changes
+
+- [#6077](https://github.com/scaleway/ultraviolet/pull/6077) [`884a3c5`](https://github.com/scaleway/ultraviolet/commit/884a3c5b913a618e2fffc82b98753f7c493bd5a1) Thanks [@lisalupi](https://github.com/lisalupi)! - `FileInput`:
+
+  - cannot drop files which do not respect the accept prop
+  - when `multiple = false`, if multiple files are dropped at once, only the first one should be added
+
+- [#6081](https://github.com/scaleway/ultraviolet/pull/6081) [`fcb3341`](https://github.com/scaleway/ultraviolet/commit/fcb33414be9c1994e367a2b288472f1ad6bfeeb1) Thanks [@lisalupi](https://github.com/lisalupi)! - `ThemeProvider`: Inject a default font color (`theme.colors.neutral.text`) so that all text in the app inherits this color. This allows the text color to adapt dynamically with the theme, rather than defaulting to black regardless of the active theme (e.g., dark mode). A default background color is added too (`theme.colors.neutral.background`).
+
+- [#6056](https://github.com/scaleway/ultraviolet/pull/6056) [`5517d73`](https://github.com/scaleway/ultraviolet/commit/5517d731dcbb46da670c9695043d83c61677fe1a) Thanks [@lisalupi](https://github.com/lisalupi)! - - `Drawer`: new prop `push`, fix style (override modal style) and fix slide in animation
+  - `Modal`: new prop `ref`
+
+### Patch Changes
+
+- [#6065](https://github.com/scaleway/ultraviolet/pull/6065) [`a96c4d8`](https://github.com/scaleway/ultraviolet/commit/a96c4d82a5bdf30822d4aaadaceaaafe616e6883) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: sizes fixes:
+
+  - adapt font size on dropdown and placeholder depending on SelectInput size
+  - small textInput when small
+  - smaller icons when small
+  - fix item padding when small
+
+- [#5982](https://github.com/scaleway/ultraviolet/pull/5982) [`9092995`](https://github.com/scaleway/ultraviolet/commit/90929953481b4c7cd24bc57a74fe3143135ee231) Thanks [@fabienhebert](https://github.com/fabienhebert)! - DateInput: fix reset value
+
+- [#6093](https://github.com/scaleway/ultraviolet/pull/6093) [`0eb656f`](https://github.com/scaleway/ultraviolet/commit/0eb656f02dd4b10ac99757ff71de97b0c0b0acc4) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix count of options so that is does not display an empty state when all options are disabled
+
+- [#6105](https://github.com/scaleway/ultraviolet/pull/6105) [`a623c0f`](https://github.com/scaleway/ultraviolet/commit/a623c0ff315e8e77a4b030e52d76cacc272b3d70) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-media` to `3.0.7`.
+
+- [#6103](https://github.com/scaleway/ultraviolet/pull/6103) [`7c5e8aa`](https://github.com/scaleway/ultraviolet/commit/7c5e8aacbc4c34c42d828b1f3633bfce9e1c649e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.1.4`.
+
+- [#6112](https://github.com/scaleway/ultraviolet/pull/6112) [`76d82e1`](https://github.com/scaleway/ultraviolet/commit/76d82e13d008ffdfbdab115e53f6da3e359ffa9b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.14`.
+
+- [#6085](https://github.com/scaleway/ultraviolet/pull/6085) [`3b0c551`](https://github.com/scaleway/ultraviolet/commit/3b0c551b1092de318878a3c17f795a244e949569) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.13`.
+
+- [#6087](https://github.com/scaleway/ultraviolet/pull/6087) [`81af8ef`](https://github.com/scaleway/ultraviolet/commit/81af8ef520ca38208a5b5f118957f2ff56b1db7f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.29.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.29.0`.
+  Updated dependency `@babel/preset-env` to `7.29.0`.
+
+- [#6102](https://github.com/scaleway/ultraviolet/pull/6102) [`0ae6194`](https://github.com/scaleway/ultraviolet/commit/0ae61943b9891e4abf9ad3294a7c7689dc6a7ae3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/fuzzy-search` to `1.0.2`.
+
+- [#6083](https://github.com/scaleway/ultraviolet/pull/6083) [`9ec1f47`](https://github.com/scaleway/ultraviolet/commit/9ec1f473d91909a79eb8ef4156e10d76304bfc24) Thanks [@lisalupi](https://github.com/lisalupi)! - `OptionSelector`: can add a footer, search bar, empty state, load more and tooltip to the selectors
+
+- [#6097](https://github.com/scaleway/ultraviolet/pull/6097) [`eb2ca15`](https://github.com/scaleway/ultraviolet/commit/eb2ca15481ac0be4a41430789dc904aaa653cb46) Thanks [@lisalupi](https://github.com/lisalupi)! - `Drawer`: remove box shadow and add border when push and refactor of some style to avoid "!important"
+
+- [#6091](https://github.com/scaleway/ultraviolet/pull/6091) [`246960e`](https://github.com/scaleway/ultraviolet/commit/246960e87d80fd02c01fbd905e515d1e01e7bc6a) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: fix empty div when searching
+
+- [#6115](https://github.com/scaleway/ultraviolet/pull/6115) [`2f268dd`](https://github.com/scaleway/ultraviolet/commit/2f268dd0c904c56128db3a50ace7f5f87286d72d) Thanks [@lisalupi](https://github.com/lisalupi)! - `SelectInput`: tooltips on options should be visible when `multiselect = true`
+
+- Updated dependencies [[`fcb3341`](https://github.com/scaleway/ultraviolet/commit/fcb33414be9c1994e367a2b288472f1ad6bfeeb1), [`da1a564`](https://github.com/scaleway/ultraviolet/commit/da1a5646dbc078e6ee12527cf2ce07f374dea1ff), [`76d82e1`](https://github.com/scaleway/ultraviolet/commit/76d82e13d008ffdfbdab115e53f6da3e359ffa9b), [`3b0c551`](https://github.com/scaleway/ultraviolet/commit/3b0c551b1092de318878a3c17f795a244e949569), [`81af8ef`](https://github.com/scaleway/ultraviolet/commit/81af8ef520ca38208a5b5f118957f2ff56b1db7f)]:
+  - @ultraviolet/themes@3.1.0
+  - @ultraviolet/icons@5.1.3
+  - @ultraviolet/utils@1.0.4
+
 ## 3.8.2
 
 ### Patch Changes

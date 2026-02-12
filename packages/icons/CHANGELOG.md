@@ -1,5 +1,22 @@
 # Change Log
 
+## 5.1.3
+
+### Patch Changes
+
+- [#6070](https://github.com/scaleway/ultraviolet/pull/6070) [`da1a564`](https://github.com/scaleway/ultraviolet/commit/da1a5646dbc078e6ee12527cf2ce07f374dea1ff) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icon `FileStorageProductIcon`
+
+- [#6112](https://github.com/scaleway/ultraviolet/pull/6112) [`76d82e1`](https://github.com/scaleway/ultraviolet/commit/76d82e13d008ffdfbdab115e53f6da3e359ffa9b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.14`.
+
+- [#6085](https://github.com/scaleway/ultraviolet/pull/6085) [`3b0c551`](https://github.com/scaleway/ultraviolet/commit/3b0c551b1092de318878a3c17f795a244e949569) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.13`.
+
+- [#6087](https://github.com/scaleway/ultraviolet/pull/6087) [`81af8ef`](https://github.com/scaleway/ultraviolet/commit/81af8ef520ca38208a5b5f118957f2ff56b1db7f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.29.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.29.0`.
+  Updated dependency `@babel/preset-env` to `7.29.0`.
+- Updated dependencies [[`fcb3341`](https://github.com/scaleway/ultraviolet/commit/fcb33414be9c1994e367a2b288472f1ad6bfeeb1), [`76d82e1`](https://github.com/scaleway/ultraviolet/commit/76d82e13d008ffdfbdab115e53f6da3e359ffa9b), [`3b0c551`](https://github.com/scaleway/ultraviolet/commit/3b0c551b1092de318878a3c17f795a244e949569)]:
+  - @ultraviolet/themes@3.1.0
+  - @ultraviolet/utils@1.0.4
+
 ## 5.1.2
 
 ### Patch Changes

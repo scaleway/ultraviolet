@@ -1,5 +1,31 @@
 # @ultraviolet/plus
 
+## 3.4.5
+
+### Patch Changes
+
+- [#6071](https://github.com/scaleway/ultraviolet/pull/6071) [`035691d`](https://github.com/scaleway/ultraviolet/commit/035691dbc90acf0193136072cb2fd840a7e2f10e) Thanks [@lisalupi](https://github.com/lisalupi)! - `CodeEditor`: new props `expandableHeight`, `showText` and `hideText` to add a show/hide button and a max height
+
+- [#6111](https://github.com/scaleway/ultraviolet/pull/6111) [`3458287`](https://github.com/scaleway/ultraviolet/commit/3458287bd6f3eaa35bd92e7c46b3935a5545d477) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Fix strikethrough price condition on order summary
+
+- [#6073](https://github.com/scaleway/ultraviolet/pull/6073) [`73acf0b`](https://github.com/scaleway/ultraviolet/commit/73acf0bd2e818b3cbc04c2daa4782cbbd09cf2c3) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`:
+
+  - when prop `priceInformation` is set to true, automatically display "/unit" (unit is the selected unit on the UnitInput)
+  - remove "s" on unit when showing "/unit" ("/hours" -> "/hour")
+
+- [#6112](https://github.com/scaleway/ultraviolet/pull/6112) [`76d82e1`](https://github.com/scaleway/ultraviolet/commit/76d82e13d008ffdfbdab115e53f6da3e359ffa9b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.14`.
+
+- [#6085](https://github.com/scaleway/ultraviolet/pull/6085) [`3b0c551`](https://github.com/scaleway/ultraviolet/commit/3b0c551b1092de318878a3c17f795a244e949569) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `19.2.13`.
+
+- [#6087](https://github.com/scaleway/ultraviolet/pull/6087) [`81af8ef`](https://github.com/scaleway/ultraviolet/commit/81af8ef520ca38208a5b5f118957f2ff56b1db7f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.29.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.29.0`.
+  Updated dependency `@babel/preset-env` to `7.29.0`.
+- Updated dependencies [[`884a3c5`](https://github.com/scaleway/ultraviolet/commit/884a3c5b913a618e2fffc82b98753f7c493bd5a1), [`fcb3341`](https://github.com/scaleway/ultraviolet/commit/fcb33414be9c1994e367a2b288472f1ad6bfeeb1), [`5517d73`](https://github.com/scaleway/ultraviolet/commit/5517d731dcbb46da670c9695043d83c61677fe1a), [`a96c4d8`](https://github.com/scaleway/ultraviolet/commit/a96c4d82a5bdf30822d4aaadaceaaafe616e6883), [`9092995`](https://github.com/scaleway/ultraviolet/commit/90929953481b4c7cd24bc57a74fe3143135ee231), [`da1a564`](https://github.com/scaleway/ultraviolet/commit/da1a5646dbc078e6ee12527cf2ce07f374dea1ff), [`0eb656f`](https://github.com/scaleway/ultraviolet/commit/0eb656f02dd4b10ac99757ff71de97b0c0b0acc4), [`a623c0f`](https://github.com/scaleway/ultraviolet/commit/a623c0ff315e8e77a4b030e52d76cacc272b3d70), [`7c5e8aa`](https://github.com/scaleway/ultraviolet/commit/7c5e8aacbc4c34c42d828b1f3633bfce9e1c649e), [`76d82e1`](https://github.com/scaleway/ultraviolet/commit/76d82e13d008ffdfbdab115e53f6da3e359ffa9b), [`3b0c551`](https://github.com/scaleway/ultraviolet/commit/3b0c551b1092de318878a3c17f795a244e949569), [`81af8ef`](https://github.com/scaleway/ultraviolet/commit/81af8ef520ca38208a5b5f118957f2ff56b1db7f), [`0ae6194`](https://github.com/scaleway/ultraviolet/commit/0ae61943b9891e4abf9ad3294a7c7689dc6a7ae3), [`9ec1f47`](https://github.com/scaleway/ultraviolet/commit/9ec1f473d91909a79eb8ef4156e10d76304bfc24), [`eb2ca15`](https://github.com/scaleway/ultraviolet/commit/eb2ca15481ac0be4a41430789dc904aaa653cb46), [`246960e`](https://github.com/scaleway/ultraviolet/commit/246960e87d80fd02c01fbd905e515d1e01e7bc6a), [`2f268dd`](https://github.com/scaleway/ultraviolet/commit/2f268dd0c904c56128db3a50ace7f5f87286d72d)]:
+  - @ultraviolet/ui@3.9.0
+  - @ultraviolet/themes@3.1.0
+  - @ultraviolet/icons@5.1.3
+  - @ultraviolet/utils@1.0.4
+
 ## 3.4.4
 
 ### Patch Changes
