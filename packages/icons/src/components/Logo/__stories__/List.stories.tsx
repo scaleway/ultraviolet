@@ -12,7 +12,7 @@ export const List: StoryFn = props => (
         <Stack alignItems="center" direction="row" gap={1} key={iconName}>
           <FoundProductIcon size="large" {...props} />
           <Text as="span" variant="bodyStrong">
-            <Snippet>{`import { ${iconName} } from '@ultraviolet/icons/logo'`}</Snippet>
+            <Snippet>{`import { ${iconName} } from '@ultraviolet/icons/logo/${iconName}'`}</Snippet>
           </Text>
         </Stack>
       )

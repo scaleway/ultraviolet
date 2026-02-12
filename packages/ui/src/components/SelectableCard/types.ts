@@ -1,5 +1,3 @@
-// oxlint-disable-next-line import/no-namespace
-import type * as ProductIcon from '@ultraviolet/icons/product'
 import type {
   ChangeEventHandler,
   CSSProperties,
@@ -8,7 +6,7 @@ import type {
   RefObject,
 } from 'react'
 
-import type { LabelProp, PascalToCamelCaseWithoutSuffix } from '../../types'
+import type { LabelProp } from '../../types'
 
 export type SelectableCardProps = {
   name?: string
@@ -35,14 +33,11 @@ export type SelectableCardProps = {
   indented?: boolean
 } & (
   | {
-      illustration?: string
+      illustration?: ReactNode
       productIcon?: never
     }
   | {
-      productIcon?: PascalToCamelCaseWithoutSuffix<
-        keyof typeof ProductIcon,
-        'ProductIcon'
-      >
+      productIcon?: ReactNode
       illustration?: never
     }
 ) &

@@ -135,8 +135,7 @@ const decorators: Decorator[] = [
     // const { theme } = args.context.globals
     const { context } = args
     const { theme: globalTheme } = args.context.globals
-    const theme = (globalTheme as 'light' | 'dark' | undefined) ?? 'light'
-    console.debug(context, 'theme', theme)
+    const theme = (globalTheme as 'light' | 'dark' | undefined) || 'light'
 
     const { background, textColor } = getThemeColor(theme)
     const finalTheme = () => {
@@ -167,11 +166,11 @@ const decorators: Decorator[] = [
     )
   },
   withThemeByClassName({
-    defaultTheme: 'dark',
+    defaultTheme: 'light',
     themes: {
       dark: 'dark',
       darker: 'darker',
-      light: 'light',
+      light: '',
     },
   }),
 ]
