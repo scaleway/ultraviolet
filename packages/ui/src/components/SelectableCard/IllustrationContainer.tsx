@@ -1,10 +1,6 @@
 'use client'
 
-// oxlint-disable-next-line import/no-namespace
-import * as ProductIcon from '@ultraviolet/icons/product'
-import { useTheme } from '@ultraviolet/themes'
 import type { ReactNode } from 'react'
-import { useEffect, useState } from 'react'
 import { Stack } from '../Stack'
 import {
   divSelectableCard,
@@ -22,36 +18,7 @@ export const IllustrationContainer = ({
   productIcon: SelectableCardProps['productIcon']
   illustration: SelectableCardProps['illustration']
 }) => {
-  const theme = useTheme()
-  const [svgContent, setSvgContent] = useState<string | null>(null)
-  const ProductIconUsed = productIcon
-    ? // biome-ignore lint/performance/noDynamicNamespaceImportAccess: to fix
-      ProductIcon[
-        `${
-          productIcon.charAt(0).toUpperCase() + productIcon.slice(1)
-        }ProductIcon` as keyof typeof ProductIcon
-      ]
-    : null
-  useEffect(() => {
-    // Check if the illustration ends with .svg to handle it as an SVG to ensure the 'fill' property and "width" are correct by changing them directly to what we want
-    if (illustration?.endsWith('.svg')) {
-      fetch(illustration)
-        .then(async response => response.text())
-        .then(svg => {
-          const updatedSvg = svg
-            .replace(
-              /fill="[^"]*"/g,
-              `fill="${theme.colors.neutral.backgroundStronger}"`,
-            ) // adapt fill property to theme
-            .replace(/width="[^"]*"/g, `width="220px"`) // fixed width
-            .replace(/height="[^"]*"/g, `height="220px"`) // fixed height
-
-          setSvgContent(updatedSvg)
-        })
-        .catch(() => null)
-    }
-  })
-  if (ProductIconUsed || illustration) {
+  if (productIcon || illustration) {
     return (
       <Stack
         alignItems="stretch"
@@ -62,26 +29,14 @@ export const IllustrationContainer = ({
       >
         <Stack className={illustrationSelectableCard}>{subChildren}</Stack>
         <Stack justifyContent="center">
-          {ProductIconUsed ? <ProductIconUsed size="large" /> : null}
+          {productIcon ? productIcon : null}
         </Stack>
 
         {illustration ? (
           <div className={divSelectableCard}>
-            {illustration.endsWith('.svg') && svgContent ? (
-              <div
-                className={imageSelectableCard}
-                // oxlint-disable-next-line  react/no-danger
-                dangerouslySetInnerHTML={{ __html: svgContent }}
-              />
-            ) : (
-              <img
-                alt="illustration"
-                className={imageSelectableCard}
-                height={220}
-                src={illustration}
-                width={220}
-              />
-            )}
+            {illustration ? (
+              <div className={imageSelectableCard}>{illustration}</div>
+            ) : null}
           </div>
         ) : null}
       </Stack>
