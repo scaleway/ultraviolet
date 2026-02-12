@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - "main"
-    # to test
-    pull_request:
-      types: ["opened", "edited", "reopened", "synchronize"]
     paths:
       - packages/fonts/**
 env:
@@ -22,12 +19,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
         with:
-          aws-access-key-id: ${{ secrets.SCALEWAY_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.SCALEWAY_SECRET_KEY }}
-          aws-region: ${{ env.BUCKET_REGION }}
+          version: 2 # default
+          verbose: false
 
       - name: AWS CLI configuration
         run: |
@@ -35,9 +31,12 @@ jobs:
           cp ./.aws/* ~/.aws/
           sed -i -e 's/${BUCKET_REGION}/${{env.BUCKET_REGION}}/g' ~/.aws/config
 
+      - run: aws configure list
+        shell: bash
+
       - name: Upload fonts on bucket
         run: |
-          aws s3 sync packages/fonts/src/assets s3://${{ env.BUCKET_NAME }}/fonts/ --endpoint-url=https://s3.${{ env.BUCKET_REGION }}.scw.cloud --include "*" --acl public-read --cache-control max-age=2592000,public
+          aws s3 sync packages/fonts/src/assets s3://${{ env.BUCKET_NAME }}/fonts/  --include "*" --acl public-read --cache-control max-age=2592000,public --endpoint-url=https://s3.${{ env.BUCKET_REGION }}.scw.cloud
           aws s3api put-bucket-cors --bucket ${{ env.BUCKET_NAME }} --cors-configuration file://.aws/cors.json --endpoint-url=https://s3.${{ env.BUCKET_REGION }}.scw.cloud
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
