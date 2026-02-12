@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, ReactNode, RefObject } from 'react'
+import type { ComponentProps, RefObject } from 'react'
 import { useCallback, useLayoutEffect, useRef } from 'react'
 import type { ModalProps } from '../Modal'
 import { Modal } from '../Modal'
@@ -9,13 +9,13 @@ import type { ModalState } from '../Modal/types'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { DrawerContent } from './DrawerContent'
 import type { SizeProp } from './styles.css'
 import {
   contentToPushStyle,
   drawer,
   drawerBase,
   drawerChildrenWrapper,
-  drawerContent,
   drawerContentWrapper,
   drawerFooter,
   drawerHeader,
@@ -47,10 +47,6 @@ type DrawerProps = Pick<
   noPadding?: boolean
   push?: RefObject<HTMLDivElement | null> | 'body'
 }
-
-export const DrawerContent = ({ children }: { children: ReactNode }) => (
-  <div className={drawerContent}>{children}</div>
-)
 
 export const BaseDrawer = ({
   size = 'medium',
