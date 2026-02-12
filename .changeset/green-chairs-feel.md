@@ -22,7 +22,7 @@ import { FilterIcon } from '@ultraviolet/icons/FilterIcon'
 </Chip>
 ```
 
-`SelectableCard`: prop `productIcon` and `illustration ` are now a ReactNode, like in `Chip.Icon`. Be careful with the sizes: to obtain the same result as before, the product icons must have `size="large"` and the illustrations a height and width of `220px`.
+`SelectableCard`: prop `productIcon` and `illustration ` are now a ReactNode, like in `Chip.Icon`. Be careful with the sizes: to obtain the same result as before, the product icons must have `size="large"`.
 
 
 Before: 

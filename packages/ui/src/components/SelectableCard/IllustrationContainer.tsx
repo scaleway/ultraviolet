@@ -1,6 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
+import { cloneElement, isValidElement } from 'react'
 import { Stack } from '../Stack'
 import {
   divSelectableCard,
@@ -19,6 +20,12 @@ export const IllustrationContainer = ({
   illustration: SelectableCardProps['illustration']
 }) => {
   if (productIcon || illustration) {
+    const computedIllustration = isValidElement(illustration)
+      ? cloneElement(illustration, {
+          style: { height: '220px', width: '220px' },
+        })
+      : null
+
     return (
       <Stack
         alignItems="stretch"
@@ -35,7 +42,7 @@ export const IllustrationContainer = ({
         {illustration ? (
           <div className={divSelectableCard}>
             {illustration ? (
-              <div className={imageSelectableCard}>{illustration}</div>
+              <div className={imageSelectableCard}>{computedIllustration}</div>
             ) : null}
           </div>
         ) : null}

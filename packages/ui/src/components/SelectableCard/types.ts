@@ -2,6 +2,7 @@ import type {
   ChangeEventHandler,
   CSSProperties,
   FocusEventHandler,
+  ReactElement,
   ReactNode,
   RefObject,
 } from 'react'
@@ -33,11 +34,11 @@ export type SelectableCardProps = {
   indented?: boolean
 } & (
   | {
-      illustration?: ReactNode
+      illustration?: ReactElement<{ style?: CSSProperties }>
       productIcon?: never
     }
   | {
-      productIcon?: ReactNode
+      productIcon?: ReactElement<{ style?: CSSProperties }>
       illustration?: never
     }
 ) &
