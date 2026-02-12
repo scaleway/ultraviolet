@@ -1,10 +1,10 @@
-import fs from 'node:fs'
-import path from 'node:path'
+import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { dirname, join, relative } from 'node:path'
 
 const cwd = process.cwd()
 const args = process.argv.slice(2)
 
-const srcDir = path.join(cwd, args[0] ?? 'packages/ui/src/components')
+const srcDir = join(cwd, args[0] ?? 'packages/ui/src/components')
 
 type DependencyGraph = {
   [componentName: string]: {
@@ -16,12 +16,12 @@ const graph: DependencyGraph = {}
 
 const walk = (dir: string): string[] => {
   const results: string[] = []
-  const list = fs.readdirSync(dir)
+  const list = readdirSync(dir)
 
   for (const file of list) {
-    const filePath = path.join(dir, file)
+    const filePath = join(dir, file)
 
-    const stat = fs.statSync(filePath)
+    const stat = statSync(filePath)
     if (stat.isDirectory()) {
       const subDirResult = walk(filePath)
 
@@ -41,10 +41,10 @@ for (const file of filesToAnalyze) {
     (file.endsWith('.ts') || file.endsWith('.tsx')) &&
     !['stories.tsx', 'test.tsx'].some(end => file.endsWith(end))
   ) {
-    const relativePath = path.relative(srcDir, file)
+    const relativePath = relative(srcDir, file)
     const componentName = relativePath.split('/')[0]
 
-    const content = fs.readFileSync(file, 'utf8')
+    const content = readFileSync(file, 'utf8')
 
     const matches = content.matchAll(
       /import\s+(?:.*?from\s+)?(['"])(.*?)(['"])|export\s+{?\s*(\w+)?\s*}?$/g,
@@ -53,9 +53,10 @@ for (const file of filesToAnalyze) {
     for (const match of matches) {
       const importedFile = match[2] || null
       if (importedFile) {
-        const normalizedFile = path
-          .relative(srcDir, path.join(path.dirname(file), importedFile))
-          .replace(/\.tsx?$/, '')
+        const normalizedFile = relative(
+          srcDir,
+          join(dirname(file), importedFile),
+        ).replace(/\.tsx?$/, '')
 
         if (
           !['react', 'react-vite', 'vitest', 'styled', 'components/'].some(
@@ -108,7 +109,7 @@ const sortedComponent = sortGraphByDependencySize({
 
 const { info } = console
 info('sortedComponent', JSON.stringify(graph, null, 2))
-fs.writeFileSync('deps.json', JSON.stringify(sortedComponent, null, 2))
+writeFileSync('deps.json', JSON.stringify(sortedComponent, null, 2))
 
 const componentNames = new Set(
   sortedComponent.sortedComponent.map(([name]) => name),
@@ -126,4 +127,4 @@ const asRecord = Object.fromEntries(
     .toSorted(([, aCount], [, bCount]) => aCount - bCount),
 )
 
-fs.writeFileSync('depsFiltered.json', JSON.stringify(asRecord, null, 2))
+writeFileSync('depsFiltered.json', JSON.stringify(asRecord, null, 2))

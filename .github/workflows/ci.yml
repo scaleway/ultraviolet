@@ -83,24 +83,6 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm exec manypkg check
 
-  typecheck_go:
-    runs-on: ubuntu-24.04
-    needs: [build]
-    env:
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_CACHE: "remote:rw"
-    steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v4.2.0
-      - uses: actions/setup-node@v6.2.0
-        with:
-          node-version: 24.13.1
-          cache: "pnpm"
-      - name: typecheck_go
-        run: |
-          pnpm install --frozen-lockfile
-          pnpm typecheck
-          pnpm typecheck:root
 
   typecheck:
     runs-on: ubuntu-24.04

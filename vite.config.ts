@@ -1,6 +1,4 @@
 import react from '@vitejs/plugin-react'
-import browserslist from 'browserslist'
-import { resolveToEsbuildTarget } from 'esbuild-plugin-browserslist'
 import { readPackage } from 'read-pkg'
 import preserveDirectives from 'rollup-preserve-directives'
 import { defineConfig } from 'vite'
@@ -27,17 +25,9 @@ const external = (id: string) => {
   return isExternal && !isBundled
 }
 
-const targets = resolveToEsbuildTarget(
-  browserslist('defaults', {
-    ignoreUnknownVersions: false,
-  }),
-  {
-    printUnknownTargets: false,
-  },
-)
-
 export const defaultConfig: ViteUserConfig = {
   build: {
+    cssCodeSplit: false,
     emitAssets: true,
     emptyOutDir: true,
     lib: {
@@ -52,20 +42,39 @@ export const defaultConfig: ViteUserConfig = {
       formats: ['es'],
       name: pkg.name,
     },
+    license: true,
     minify: false,
     outDir: 'dist',
-    rollupOptions: {
-      external,
-      output: {
-        interop: 'compat',
-        preserveModules: true,
-        preserveModulesRoot: './src',
+    rolldownOptions: {
+      experimental: {
+        // lazyBarrel: true,
       },
-      preserveSymlinks: true,
+      external,
+      makeAbsoluteExternalsRelative: true,
+      optimization: {
+        inlineConst: {
+          mode: 'smart',
+        },
+        pifeForModuleWrappers: false,
+      },
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        keepNames: true,
+        legalComments: 'none',
+        minify: false,
+        minifyInternalExports: false,
+        strictExecutionOrder: false,
+        topLevelVar: false,
+      },
+      platform: 'browser',
+      preserveEntrySignatures: 'exports-only',
+      tsconfig: true,
+      treeshake: true,
     },
-    cssCodeSplit: false,
+
     ssr: true,
-    target: [...targets],
+    target: 'es2015',
   },
   plugins: [
     react({
