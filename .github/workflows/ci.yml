@@ -60,7 +60,7 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
       - name: build
         run: |
           pnpm install --frozen-lockfile
@@ -76,7 +76,7 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
           cache: "pnpm"
       - name: manypkg
         run: |
@@ -84,25 +84,6 @@ jobs:
           pnpm exec manypkg check
 
   typecheck:go:
-  runs-on: ubuntu-24.04
-  needs: [build]
-  env:
-    TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-    TURBO_CACHE: "remote:rw"
-  steps:
-    - uses: actions/checkout@v6
-    - uses: pnpm/action-setup@v4.2.0
-    - uses: actions/setup-node@v6.2.0
-      with:
-        node-version: 24.13.0
-        cache: "pnpm"
-    - name: typecheck
-      run: |
-        pnpm install --frozen-lockfile
-        pnpm typecheck
-        pnpm typecheck:root
-
-  typecheck:
     runs-on: ubuntu-24.04
     needs: [build]
     env:
@@ -115,14 +96,15 @@ jobs:
         with:
           node-version: 24.13.0
           cache: "pnpm"
-      - name: typecheck
+      - name: typecheck-go
         run: |
           pnpm install --frozen-lockfile
           pnpm typecheck
           pnpm typecheck:root
 
-  lint:
+  typecheck:
     runs-on: ubuntu-24.04
+    needs: [build]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_CACHE: "remote:rw"
@@ -131,7 +113,26 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
+          cache: "pnpm"
+      - name: typecheck
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm typecheck
+          pnpm typecheck:root
+
+  lint:
+    runs-on: ubuntu-24.04
+    need: []
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_CACHE: "remote:rw"
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4.2.0
+      - uses: actions/setup-node@v6.2.0
+        with:
+          node-version: 24.13.1
           cache: "pnpm"
       - name: lint
         run: |
@@ -150,7 +151,7 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
           cache: "pnpm"
       - run: |
           pnpm install --frozen-lockfile
@@ -212,7 +213,7 @@ jobs:
       - name: publint
         uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
           cache: "pnpm"
       - run: |
           pnpm install --frozen-lockfile
@@ -355,7 +356,7 @@ jobs:
       - uses: pnpm/action-setup@v4.2.0
       - uses: actions/setup-node@v6.2.0
         with:
-          node-version: 24.13.0
+          node-version: 24.13.1
           cache: "pnpm"
       - name: install pnpm deps
         run: |
