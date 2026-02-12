@@ -29,7 +29,48 @@ const BasicNavigation = ({ pinnedFeature = true }: BasicNavigationProps) => (
           id="item2"
           label="Servers"
         />
+        <Navigation.Item
+          categoryIcon={<UseCaseCategoryIcon />}
+          id="item3"
+          label="Not servers"
+        >
+          <Navigation.Item id="item4" label="Thing" />
+        </Navigation.Item>
       </Navigation.Group>
+      {/* @ts-expect-error we try to test when no children is provided */}
+      <Navigation.Group label="Empty Group" />
+    </Navigation>
+  </NavigationProvider>
+)
+
+const BasicNavigationNoExpand = ({
+  pinnedFeature = true,
+}: BasicNavigationProps) => (
+  <NavigationProvider animation pinnedFeature={pinnedFeature}>
+    <Navigation logo={<p>Logo</p>}>
+      <Navigation.PinnedItems />
+      <Navigation.Group label="Products">
+        <Navigation.Item
+          id="compute"
+          label="Compute"
+          subLabel="All compute ressources"
+        >
+          <Navigation.Item
+            badgeSentiment="success"
+            badgeText="new"
+            href="http://scaleway.com"
+            id="instance"
+            label="Instance"
+            target="_blank"
+          />
+          <Navigation.Item disabled id="elastic-metal" label="Elastic Metal" />
+          <Navigation.Item id="advanced" label="Advanced" noExpand>
+            <Navigation.Item id="kubernetes" label="Kubernetes" />
+            <Navigation.Item id="openstack" label="OpenStack" />
+          </Navigation.Item>
+        </Navigation.Item>
+      </Navigation.Group>
+      <Navigation.Separator />
       {/* @ts-expect-error we try to test when no children is provided */}
       <Navigation.Group label="Empty Group" />
     </Navigation>
@@ -81,6 +122,9 @@ describe('navigation', () => {
   test('render without pinnedFeature', () =>
     shouldMatchSnapshot(<BasicNavigation pinnedFeature={false} />))
 
+  test('render with basic content and no expand', () =>
+    shouldMatchSnapshot(<BasicNavigationNoExpand />))
+
   test('click on expand / collapse button', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
 
@@ -96,6 +140,11 @@ describe('navigation', () => {
       ).toBeVisible()
     })
     expect(asFragment()).toMatchSnapshot()
+
+    const itemMenu = screen.getByRole('button', { name: 'Servers' })
+    await userEvent.hover(itemMenu)
+
+    expect(screen.getByText('Thing')).toBeInTheDocument()
 
     const expandButton = screen.getByRole('button', {
       name: 'Expand sidebar',
@@ -162,7 +211,7 @@ describe('navigation', () => {
     // Wait for unpin buttons to appear
     let unpinButton: HTMLButtonElement | undefined
     await waitFor(
-      async () => {
+      () => {
         const unpinButtons = screen.queryAllByRole('button', {
           name: 'unpin',
         }) satisfies HTMLButtonElement[]
