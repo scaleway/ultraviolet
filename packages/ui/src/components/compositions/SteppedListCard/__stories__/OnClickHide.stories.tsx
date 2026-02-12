@@ -1,11 +1,14 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { MinusIcon } from '@ultraviolet/icons/MinusIcon'
 import { PlusIcon } from '@ultraviolet/icons/PlusIcon'
-import { WireIllustration } from '@ultraviolet/illustrations'
-import { Button, Expandable, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import { SteppedListCard } from '../SteppedListCard'
+import { SteppedListCard } from '..'
+import { Button } from '../../../Button'
+import { Expandable } from '../../../Expandable'
+import { Text } from '../../../Text'
+import { Stack } from '../../../Stack'
+import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
 export const OnClickHide: StoryFn<
   ComponentProps<typeof SteppedListCard>
@@ -21,9 +24,7 @@ export const OnClickHide: StoryFn<
       <Expandable opened={visible}>
         <SteppedListCard {...props} onClickHide={() => setVisible(!visible)}>
           <SteppedListCard.Step
-            image={
-              <WireIllustration height={200} name="blockStorage" width={200} />
-            }
+            image={blockStorageWire}
             stepNumber={1}
             subHeader={
               <Text as="h3" sentiment="primary" variant="headingSmallStrong">
@@ -46,9 +47,7 @@ export const OnClickHide: StoryFn<
             )}
           </SteppedListCard.Step>
           <SteppedListCard.Step
-            image={
-              <WireIllustration height={200} name="blockStorage" width={200} />
-            }
+            image={blockStorageWire}
             stepNumber={2}
             subHeader="Second step"
           >

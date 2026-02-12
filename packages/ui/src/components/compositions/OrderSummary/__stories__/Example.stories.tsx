@@ -1,5 +1,4 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Button, Checkbox, Link, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps, Dispatch } from 'react'
 import { useState } from 'react'
 import { OrderSummary } from '..'
@@ -9,6 +8,11 @@ import {
   categoryStorage,
   negativeItem,
 } from './productsExample'
+import { Stack } from '../../../Stack'
+import { Checkbox } from '../../../Checkbox'
+import { Button } from '../../../Button'
+import { Text } from '../../../Text'
+import { Link } from '../../../Link'
 
 const mockItems = (
   requestsAmount: number | null,

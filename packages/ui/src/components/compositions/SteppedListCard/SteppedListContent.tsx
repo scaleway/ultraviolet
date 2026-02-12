@@ -1,8 +1,9 @@
 'use client'
 
-import { Stack, Text } from '@ultraviolet/ui'
 import type { CSSProperties, ReactNode } from 'react'
 import { useContext, useEffect } from 'react'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 import { Data, nextStep } from './helper'
 import {
   steppedListCardContent,

@@ -1,9 +1,10 @@
 'use client'
 
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
-import { StepList, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useContext } from 'react'
+import { StepList } from '../../StepList'
+import { Text } from '../../Text'
 import { Data } from './helper'
 import { steppedListCardStep, steppedListCardStepTitle } from './styles.css'
 
