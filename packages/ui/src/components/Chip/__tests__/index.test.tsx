@@ -1,5 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
+import { AddressIcon } from '@ultraviolet/icons/AddressIcon'
+import { ArrowDownIcon } from '@ultraviolet/icons/ArrowDownIcon'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
 import { Chip } from '..'
@@ -9,7 +11,7 @@ describe('checkbox', () => {
   test('renders correctly wiht icon', () =>
     shouldMatchSnapshot(
       <Chip>
-        <Chip.Icon name="address" onClick={() => {}} />
+        <Chip.Icon icon={<AddressIcon />} onClick={() => {}} />
         test
       </Chip>,
     ))
@@ -17,35 +19,35 @@ describe('checkbox', () => {
   test('renders correctly active', () =>
     shouldMatchSnapshot(
       <Chip active>
-        test <Chip.Icon name="address" />
+        test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
   test('renders correctly large', () =>
     shouldMatchSnapshot(
       <Chip size="large">
-        test <Chip.Icon name="address" />
+        test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
   test('renders correctly disabled', () =>
     shouldMatchSnapshot(
       <Chip disabled>
-        test <Chip.Icon name="address" />
+        test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
   test('renders correctly active disabled', () =>
     shouldMatchSnapshot(
       <Chip active disabled>
-        test <Chip.Icon name="address" />
+        test <Chip.Icon icon={<AddressIcon />} />
       </Chip>,
     ))
 
   test('throw error when using Chip.Icon outside of Chip', () => {
-    expect(() => renderWithTheme(<Chip.Icon name="address" />)).toThrowError(
-      'Chip.Icon can only be used inside a Chip component',
-    )
+    expect(() =>
+      renderWithTheme(<Chip.Icon icon={<AddressIcon />} />),
+    ).toThrowError('Chip.Icon can only be used inside a Chip component')
   })
 
   test('renders correctly onClick', async () => {
@@ -60,7 +62,7 @@ describe('checkbox', () => {
           test
           <Chip.Icon
             data-testid="test-icon"
-            name="arrowDown"
+            icon={<ArrowDownIcon />}
             onClick={mockOnClickIcon1}
           />
         </Chip>
@@ -68,7 +70,7 @@ describe('checkbox', () => {
           test Disabled
           <Chip.Icon
             data-testid="test-icon-disabled"
-            name="arrowDown"
+            icon={<ArrowDownIcon />}
             onClick={mockOnClickIcon2}
           />
         </Chip>

@@ -7,6 +7,7 @@ export const buttonContainer = style({
   borderRadius: theme.radii.default,
   cursor: 'pointer',
   padding: 0,
+  color: 'inherit',
 
   selectors: {
     '&[data-disabled="true"]': {
