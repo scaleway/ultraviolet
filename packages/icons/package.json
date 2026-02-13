@@ -16,7 +16,6 @@
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "postbuild": "node ./process-css.ts",
     "typecheck": "tsgo --noEmit",
-
     "size": "size-limit",
     "lintpublish": "publint"
   },
@@ -136,7 +135,8 @@
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "vite": "8.0.0-beta.14"
   },
   "dependencies": {
     "@ultraviolet/themes": "workspace:*",

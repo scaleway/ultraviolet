@@ -15,7 +15,6 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsgo --noEmit",
-
     "lintpublish": "publint"
   },
   "keywords": [

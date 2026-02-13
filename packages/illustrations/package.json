@@ -15,7 +15,6 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsgo --noEmit",
-
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
@@ -119,6 +118,7 @@
     "@utils/test": "workspace:*",
     "@vanilla-extract/vite-plugin": "5.1.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "vite": "8.0.0-beta.14"
   }
 }

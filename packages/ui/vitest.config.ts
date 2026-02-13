@@ -1,17 +1,30 @@
+import { createVitestConfig } from '@utils/test/config'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
-import { defineConfig, mergeConfig } from 'vite'
-import { defaultConfig } from '../../vite.config'
 
-export default mergeConfig(defineConfig(defaultConfig), {
+export const vitestConfig = {
   plugins: [
     vanillaExtractPlugin({
       identifiers: ({ hash }) => `uv_${hash}`,
+      // Enable unstable mode for better compatibility with Vitest
       unstable_mode: 'transform',
     }),
-  ], // Enable unstable mode for better compatibility with Vitest
+  ],
   test: {
-    environment: 'happy-dom',
-    name: 'uv/ui happy-dom',
-    setupFiles: ['./vitest.setup.ts'],
+    ...createVitestConfig({
+      environment: 'happy-dom',
+      dom: true,
+      name: 'uv/ui',
+      setupFiles: ['./vitest.setup.ts'],
+      deps: {
+        optimizer: {
+          web: {
+            enabled: true,
+            include: ['@nivo/*'],
+          },
+        },
+      },
+    }),
   },
-})
+}
+
+export default vitestConfig

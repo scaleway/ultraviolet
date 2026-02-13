@@ -1,8 +1,8 @@
-import * as nivo from '@nivo/core'
+import type * as Nivo from '@nivo/core'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
-import { beforeAll, describe, test, vi } from 'vitest'
+import { describe, test, vi } from 'vitest'
 import { BarChart } from '..'
 import {
   barChartMultiData,
@@ -10,15 +10,20 @@ import {
   barChartSimpleData,
 } from '../__stories__/mockData'
 
-describe('barChart', () => {
-  beforeAll(() => {
-    vi.spyOn(nivo, 'ResponsiveWrapper').mockImplementation(
-      ({ children }: ComponentProps<typeof nivo.ResponsiveWrapper>) => (
-        <div>{children({ height: 500, width: 1000 })}</div>
-      ),
-    )
-  })
+// Mock the ResponsiveWrapper component
+vi.mock('@nivo/core', async importOriginal => {
+  const actual = await importOriginal<typeof Nivo>()
+  return {
+    ...actual,
+    ResponsiveWrapper: ({
+      children,
+    }: ComponentProps<typeof actual.ResponsiveWrapper>) => (
+      <div>{children({ height: 500, width: 1000 })}</div>
+    ),
+  }
+})
 
+describe('barChart', () => {
   test('renders correctly without data', () =>
     shouldMatchSnapshot(<BarChart />))
 

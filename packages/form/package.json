@@ -13,10 +13,9 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "size": "size-limit",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vite.config.ts",
+    "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vitest.config.ts",
     "type:generate": "tsgo --declaration -p tsconfig.build.json",
     "typecheck": "tsgo --noEmit",
-
     "watch:build": "vite build --config vite.config.ts --watch",
     "watch": "pnpm run '/^watch:.*/'",
     "lintpublish": "publint"
@@ -80,7 +79,8 @@
     "@types/react-dom": "19.2.3",
     "@utils/test": "workspace:*",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "vite": "8.0.0-beta.14"
   },
   "dependencies": {
     "@babel/runtime": "7.28.6",

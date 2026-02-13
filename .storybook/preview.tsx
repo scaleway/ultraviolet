@@ -179,6 +179,6 @@ const decorators: Decorator[] = [
 export default definePreview({
   decorators,
   parameters,
-  addons: [addonLinks(), addonA11y(), addonDocs(), addonTheme()],
+  addons: [addonDocs(), addonLinks(), addonA11y(), addonTheme()],
   tags: ['autodocs'],
 })
