@@ -1,12 +1,8 @@
-import type { StorybookConfig } from '@storybook/react-vite'
+import { defineMain } from '@storybook/react-vite/node'
 import remarkGfm from 'remark-gfm'
 
-export default {
+const main = defineMain({
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-a11y',
-    '@storybook/addon-themes',
-    'storybook-addon-tag-badges',
     {
       name: '@storybook/addon-docs',
       options: {
@@ -17,6 +13,10 @@ export default {
         },
       },
     },
+    '@storybook/addon-links',
+    '@storybook/addon-a11y',
+    '@storybook/addon-themes',
+    'storybook-addon-tag-badges',
   ],
 
   core: {
@@ -40,4 +40,6 @@ export default {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-} satisfies StorybookConfig
+})
+
+export default main

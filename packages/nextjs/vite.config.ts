@@ -1,4 +1,3 @@
-import { defineConfig } from 'vite'
-import { defaultConfig } from '../../vite.config'
+import { defaultConfig } from '@repo/config/vite/vite.config'
 
-export default defineConfig(defaultConfig)
+export default defaultConfig

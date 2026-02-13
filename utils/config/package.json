@@ -6,8 +6,11 @@
     "tsconfig/"
   ],
   "export": {
-    "./tsconfig/*": "./tsconfig/*.json"
+    "./tsconfig/*": "./tsconfig/*.json",
+    "./vite/*": "./vite/*.config.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vite": "8.0.0-beta.14"
+  },
   "devDependencies": {}
 }

@@ -1,6 +1,5 @@
 // @vitest-environment jsdom
-
-import * as nivo from '@nivo/core'
+import type * as Nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchSnapshot } from '@utils/test'
@@ -14,11 +13,18 @@ import {
   lineChartMultipleData,
 } from '../__stories__/mockData'
 
-vi.spyOn(nivo, 'ResponsiveWrapper').mockImplementation(
-  ({ children }: ComponentProps<typeof nivo.ResponsiveWrapper>) => (
-    <div>{children({ height: 500, width: 1000 })}</div>
-  ),
-)
+// Mock the ResponsiveWrapper component
+vi.mock('@nivo/core', async importOriginal => {
+  const actual = await importOriginal<typeof Nivo>()
+  return {
+    ...actual,
+    ResponsiveWrapper: ({
+      children,
+    }: ComponentProps<typeof actual.ResponsiveWrapper>) => (
+      <div>{children({ height: 500, width: 1000 })}</div>
+    ),
+  }
+})
 
 describe('lineChart', () => {
   test('renders correctly without data', () =>

@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["tsconfig.json"],
   "globalEnv": ["STORYBOOK_ENVIRONMENT", "ENVIRONMENT"],
+  "concurrency": "50%",
   "tasks": {
     "//#build:storybook": {
       "dependsOn": ["^build"],
@@ -56,11 +57,7 @@
       "passThroughEnv": ["VITEST_*"]
     },
     "typecheck": {
-      "dependsOn": ["^build"],
-      "inputs": ["**/*.{ts,tsx}"]
-    },
-    "typecheck:go": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["build"],
       "inputs": ["**/*.{ts,tsx}"]
     }
   },

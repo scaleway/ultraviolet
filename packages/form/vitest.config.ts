@@ -1,8 +1,7 @@
+import { createVitestConfig } from '@utils/test/config'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
-import { mergeConfig } from 'vite'
-import viteConfig from './vite.config'
 
-export default mergeConfig(viteConfig, {
+export const vitestConfig = {
   plugins: [
     vanillaExtractPlugin({
       identifiers: ({ hash }) => `uv_${hash}`,
@@ -10,8 +9,12 @@ export default mergeConfig(viteConfig, {
     }),
   ],
   test: {
-    environment: 'happy-dom',
-    name: 'uv/form happy-dom',
-    setupFiles: ['./vitest.setup.ts'],
+    ...createVitestConfig({
+      environment: 'happy-dom',
+      name: 'uv/form happy-dom',
+      setupFiles: ['./vitest.setup.ts'],
+    }),
   },
-})
+}
+
+export default vitestConfig

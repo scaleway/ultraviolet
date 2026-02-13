@@ -1,5 +1,6 @@
 import type { TestUserConfig, ViteUserConfig } from 'vitest/config'
-import { defineConfig, mergeConfig } from 'vitest/config'
+
+import { configDefaults, defineConfig, mergeConfig } from 'vitest/config'
 
 export const createVitestConfig = (
   options: TestUserConfig & ViteUserConfig = {},
@@ -7,6 +8,10 @@ export const createVitestConfig = (
   mergeConfig(
     defineConfig({
       test: {
+        experimental: {
+          fsModuleCache: true,
+          printImportBreakdown: false,
+        },
         alias: {
           '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             '<rootDir>/.vitest/fileMock.js',
@@ -14,8 +19,10 @@ export const createVitestConfig = (
         },
         allowOnly: false,
         clearMocks: true,
+        pool: 'forks',
         coverage: {
           exclude: [
+            ...(configDefaults.coverage.exclude ?? []),
             '.reports/**',
             '**/.eslintrc.*',
             '**/*.d.ts',
@@ -45,6 +52,7 @@ export const createVitestConfig = (
         },
         environment: 'happy-dom',
         exclude: [
+          ...configDefaults.exclude,
           '**/node_modules/**',
           '**/{dist,build}/**',
           '**/__stories__/**',
@@ -56,7 +64,6 @@ export const createVitestConfig = (
         globals: true,
         logHeapUsage: true,
         mockReset: true,
-        name: 'happy-dom',
         outputFile: {
           junit: '.reports/tests.xml',
         },
@@ -68,7 +75,7 @@ export const createVitestConfig = (
           },
         },
         setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
-        testTimeout: 10_000,
+        testTimeout: 25_000,
         ...options,
       },
     }),

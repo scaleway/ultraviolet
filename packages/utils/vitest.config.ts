@@ -1,5 +1,5 @@
+import { createVitestConfig } from '@utils/test/config'
 import { mergeConfig } from 'vite'
-import { createVitestConfig } from '../../vitest.config'
 import viteConfig from './vite.config'
 
 export default mergeConfig(
