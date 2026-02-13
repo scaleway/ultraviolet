@@ -12,7 +12,7 @@ export const EnvironmentalFootprintCalculatorProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="EnvironmentalFootprintCalculatorProductIcon">
+  <Icon {...props} title="EnvironmentalFootprintCalculator">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">

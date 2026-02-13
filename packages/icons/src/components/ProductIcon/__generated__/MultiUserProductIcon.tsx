@@ -12,7 +12,7 @@ export const MultiUserProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="MultiUserProductIcon">
+  <Icon {...props} title="MultiUser">
     <g className="Multi-Users">
       <g className=".Square">
         <path

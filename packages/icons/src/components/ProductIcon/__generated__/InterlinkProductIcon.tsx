@@ -12,7 +12,7 @@ export const InterlinkProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="InterlinkProductIcon">
+  <Icon {...props} title="Interlink">
     <g className="Direct-Connect">
       <g className=".Square">
         <path

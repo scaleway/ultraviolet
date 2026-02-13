@@ -12,7 +12,7 @@ export const NabuProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="NabuProductIcon">
+  <Icon {...props} title="Nabu">
     <g className="Nabu">
       <g className="Container-Registry">
         <g className=".Square">

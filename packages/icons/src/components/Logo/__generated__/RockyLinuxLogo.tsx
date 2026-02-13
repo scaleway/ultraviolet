@@ -12,7 +12,7 @@ export const RockyLinuxLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="RockyLinuxLogo">
+  <Icon {...props} title="RockyLinux">
     <path
       clipRule="evenodd"
       d="M19.4437 13.3021C19.8042 12.2698 20 11.1562 20 10C20 4.47917 15.5208 0 10 0C4.47917 0 0 4.47917 0 10C0 12.7292 1.09375 15.2083 2.875 17.0104L13.0208 6.86458L19.4479 13.2917L19.4437 13.3021ZM17.6208 16.4792L13.0167 11.875L5.80833 19.0833C7.07917 19.6719 8.49583 20 9.99583 20C13.0479 20 15.7771 18.6354 17.6104 16.4792H17.6208Z"

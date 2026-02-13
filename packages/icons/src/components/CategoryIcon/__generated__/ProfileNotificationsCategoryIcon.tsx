@@ -12,7 +12,7 @@ export const ProfileNotificationsCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ProfileNotificationsCategoryIcon">
+  <Icon {...props} title="ProfileNotifications">
     <path
       className="fillStrong"
       d="M11.0908 11C12.1452 11 13 11.8548 13 12.9092V16L10 17L7 16V12.9092C7 11.8548 7.85482 11 8.90918 11H11.0908ZM10.1006 6.00488C10.3322 7.14035 10.9494 8.13539 11.8086 8.84863C11.4891 9.5283 10.8007 10 10 10C8.89543 10 8 9.10457 8 8C8 6.89543 8.89543 6 10 6C10.0338 6 10.0672 6.00323 10.1006 6.00488Z"

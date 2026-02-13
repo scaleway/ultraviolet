@@ -12,7 +12,7 @@ export const PrivacyCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="PrivacyCategoryIcon">
+  <Icon {...props} title="Privacy">
     <path
       className="fillStrong"
       d="M12 5.41309C11.9999 3.90976 11.0869 3 10 3C8.9131 3 8.00013 3.90976 8 5.41309V6H6V5.41309C6.00014 3.10268 7.53283 1 10 1C12.4672 1 13.9999 3.10268 14 5.41309V6H12V5.41309Z"

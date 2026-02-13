@@ -12,7 +12,7 @@ export const KeyManagerCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="KeyManagerCategoryIcon">
+  <Icon {...props} title="KeyManager">
     <path
       className="fill"
       clipRule="evenodd"

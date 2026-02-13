@@ -12,7 +12,7 @@ export const InstanceGpuProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="InstanceGpuProductIcon">
+  <Icon {...props} title="InstanceGpu">
     <g className="Instance-GPU">
       <g className=".Square">
         <path

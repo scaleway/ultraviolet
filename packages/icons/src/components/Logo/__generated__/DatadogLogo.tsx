@@ -12,7 +12,7 @@ export const DatadogLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="DatadogLogo">
+  <Icon {...props} title="Datadog">
     <g transform="scale(0.35714285714285715)">
       <path
         clipRule="evenodd"

@@ -12,7 +12,7 @@ export const RabbitMqProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="RabbitMqProductIcon">
+  <Icon {...props} title="RabbitMq">
     <g className="Managed-RabbitMQ">
       <g className=".Square">
         <path

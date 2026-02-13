@@ -12,7 +12,7 @@ export const VpnProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="VpnProductIcon">
+  <Icon {...props} title="Vpn">
     <g className="sentiment=original, size=xlarge, disabled=false">
       <g className=".Square">
         <g className="fillWeak">

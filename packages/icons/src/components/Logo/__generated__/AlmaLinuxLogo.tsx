@@ -12,7 +12,7 @@ export const AlmaLinuxLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="AlmaLinuxLogo">
+  <Icon {...props} title="AlmaLinux">
     <path
       d="M18.3573 11.512C19.2061 11.4467 19.8917 12.0017 19.957 12.8505C20.0223 13.7319 19.402 14.4501 18.5532 14.5154C17.737 14.5807 17.0188 13.9605 16.9535 13.1443C16.8882 12.2628 17.4759 11.6099 18.3573 11.512Z"
       fill="#86DA2F"

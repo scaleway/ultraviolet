@@ -12,7 +12,7 @@ export const MemoryOptimizedInstancesProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="MemoryOptimizedInstancesProductIcon">
+  <Icon {...props} title="MemoryOptimizedInstances">
     <g clipPath="url(#clip0_791_2096)">
       <path
         className="fillWeak"

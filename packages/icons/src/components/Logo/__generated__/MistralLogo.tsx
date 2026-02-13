@@ -12,7 +12,7 @@ export const MistralLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="MistralLogo">
+  <Icon {...props} title="Mistral">
     <g>
       <path
         d="M7.47199 11.4011H4.78154L4.7828 8.71204H7.47332L7.47199 11.4011Z"

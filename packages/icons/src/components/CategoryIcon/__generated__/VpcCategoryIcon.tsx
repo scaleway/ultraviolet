@@ -12,7 +12,7 @@ export const VpcCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="VpcCategoryIcon">
+  <Icon {...props} title="Vpc">
     <g className="VPC">
       <path
         className="fillStrong"

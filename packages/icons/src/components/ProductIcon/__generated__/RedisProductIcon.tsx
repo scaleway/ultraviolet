@@ -12,7 +12,7 @@ export const RedisProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="RedisProductIcon">
+  <Icon {...props} title="Redis">
     <g className="Redis-For-Cache" clipPath="url(#b)">
       <g className=".Square">
         <path

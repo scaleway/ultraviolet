@@ -60,6 +60,7 @@ const COMMENT_HEADER = `
 */`
 
 const templateIcon = (
+  icon: string,
   iconName: string,
   svg: string,
   svgSmall?: string,
@@ -85,13 +86,13 @@ const templateIcon = (
     ...props
   }: Omit<IconProps, 'children' | 'title'>) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <Icon {...props} title="${iconName}">{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
+      <Icon {...props} title="${icon}">{typeof props.size === 'string' && ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? ${wrapSvg(svg)} : ${wrapSvg(svgSmall)}}</Icon>
   )`
       : `export const ${iconName} = ({
     ...props
   }: Omit<IconProps, 'children' | 'title'>) => (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <Icon {...props} title="${iconName}">${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
+      <Icon {...props} title="${icon}">${svgDisabled ? `{props.disabled ? ${wrapSvg(svgDisabled)} : ${wrapSvg(svg)}}` : svg}</Icon>
   )`
   }
 
@@ -101,7 +102,7 @@ const templateIcon = (
 const toPascalCase = (str: string) =>
   str.replace(/(^\w|-\w)/g, match => match.replace('-', '').toUpperCase())
 
-const generateVariableName = (filePath: string) => {
+const generateVariableName = (filePath: string, withoutSuffixe?: boolean) => {
   const parsedPath = path.parse(filePath)
   const fileName = toPascalCase(parsedPath.name)
   const parentDir = path.basename(path.dirname(filePath))
@@ -109,7 +110,7 @@ const generateVariableName = (filePath: string) => {
   const isOutline = parentDir.includes('outline')
   const iconName = `${fileName}${isOutline ? 'Outline' : ''}`
 
-  return iconName
+  return withoutSuffixe ? fileName : iconName
 }
 
 const readDirectoryRecursive = async (dir: string) => {
@@ -245,6 +246,7 @@ const main = async () => {
             : undefined
 
         const generatedComponent = templateIcon(
+          generateVariableName(file, true),
           generatedName,
           svgContent,
           svgContentSmall,
