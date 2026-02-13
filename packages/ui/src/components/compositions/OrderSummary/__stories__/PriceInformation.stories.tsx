@@ -1,8 +1,10 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Badge, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { OrderSummary } from '..'
 import { categoryAZ, categoryDefault } from './productsExample'
+import { Stack } from '../../../Stack'
+import { Text } from '../../../Text'
+import { Badge } from '../../../Badge'
 
 const elements = [categoryAZ, categoryDefault]
 export const PriceInformation: StoryFn<

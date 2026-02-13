@@ -1,4 +1,4 @@
-import { Snippet } from '@ultraviolet/ui'
+import { Snippet } from '../../../Snippet'
 import locales from '../locales/en'
 
 export const DefaultLocales = () => (

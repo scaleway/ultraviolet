@@ -1,17 +1,20 @@
 import type { StoryFn } from '@storybook/react-vite'
 import { CheckIcon } from '@ultraviolet/icons/CheckIcon'
 import { EastIcon } from '@ultraviolet/icons/EastIcon'
-import { WireIllustration } from '@ultraviolet/illustrations'
-import { Button, Snippet, Stack, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SteppedListCard } from '../SteppedListCard'
+import { SteppedListCard } from '..'
+import { Text } from '../../../Text'
+import { Stack } from '../../../Stack'
+import { Snippet } from '../../../Snippet'
+import { Button } from '../../../Button'
+import { blockStorageWire } from '../__mocks__/blockStorageWire'
 
 export const IconStep: StoryFn<
   ComponentProps<typeof SteppedListCard>
 > = props => (
   <SteppedListCard {...props}>
     <SteppedListCard.Step
-      image={<WireIllustration height={200} name="blockStorage" width={200} />}
+      image={blockStorageWire}
       stepNumber={1}
       subHeader={
         <Text as="h3" sentiment="primary" variant="headingSmallStrong">
@@ -56,7 +59,7 @@ export const IconStep: StoryFn<
       )}
     </SteppedListCard.Step>
     <SteppedListCard.Step
-      image={<WireIllustration height={200} name="blockStorage" width={200} />}
+      image={blockStorageWire}
       stepNumber={2}
       subHeader="Second step"
     >
@@ -75,7 +78,7 @@ export const IconStep: StoryFn<
       )}
     </SteppedListCard.Step>
     <SteppedListCard.Step
-      image={<WireIllustration height={200} name="blockStorage" width={200} />}
+      image={blockStorageWire}
       stepNumber={3}
       subHeader="Last step"
     >

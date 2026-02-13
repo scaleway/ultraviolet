@@ -1,6 +1,7 @@
-import { Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useContext } from 'react'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 import { DisplayPrice } from './helpers'
 import { OrderSummaryContext } from './Provider'
 import {

@@ -1,4 +1,4 @@
-import { Badge } from '@ultraviolet/ui'
+import { Badge } from '../../../Badge'
 import { Template } from './Template.stories'
 
 export const TotalPriceInfo = Template.bind({})

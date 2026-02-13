@@ -1,4 +1,4 @@
-import { Alert } from '@ultraviolet/ui'
+import { Alert } from '../../../Alert'
 import { Template } from './Template.stories'
 
 const alert = (

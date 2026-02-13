@@ -1,7 +1,8 @@
 import type { StoryFn } from '@storybook/react-vite'
-import { Button, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { SteppedListCard } from '../SteppedListCard'
+import { SteppedListCard } from '..'
+import { Stack } from '../../../Stack'
+import { Button } from '../../../Button'
 
 export const NextStep: StoryFn<
   ComponentProps<typeof SteppedListCard>
