@@ -12,7 +12,7 @@ export const ElasticMetalLithiumProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ElasticMetalLithiumProductIcon">
+  <Icon {...props} title="ElasticMetalLithium">
     <g className="Elasticmetal-Lithium">
       <g className="Elasticmetal-Lithium-icon" clipPath="url(#a)">
         <g className=".Square">

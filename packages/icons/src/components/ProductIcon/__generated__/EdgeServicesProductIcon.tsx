@@ -12,7 +12,7 @@ export const EdgeServicesProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="EdgeServicesProductIcon">
+  <Icon {...props} title="EdgeServices">
     <g className="edge-services" clipPath="url(#a)">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">

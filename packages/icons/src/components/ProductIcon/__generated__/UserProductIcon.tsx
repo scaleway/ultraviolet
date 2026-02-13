@@ -12,7 +12,7 @@ export const UserProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="UserProductIcon">
+  <Icon {...props} title="User">
     <g className="User">
       <g className=".Square">
         <path

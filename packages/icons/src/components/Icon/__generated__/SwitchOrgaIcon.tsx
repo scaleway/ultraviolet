@@ -12,7 +12,7 @@ export const SwitchOrgaIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="SwitchOrgaIcon">
+  <Icon {...props} title="SwitchOrga">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M10.91 5.818c1.694 0 5.09.851 5.09 2.546v1.818h-4.364V8.364c0-1.091-.589-1.899-1.425-2.51l.698-.036zm-5.82 0c1.695 0 5.092.851 5.092 2.546v1.818H0V8.364c0-1.695 3.396-2.546 5.09-2.546m0-1.454A2.182 2.182 0 1 1 5.09 0a2.182 2.182 0 0 1 0 4.364m5.82 0a2.182 2.182 0 1 1 0-4.364 2.182 2.182 0 0 1 0 4.364m-5.092 7.09v1.637h4.364v-1.636l2.363 2.363-2.363 2.364v-1.637H5.818v1.637l-2.363-2.364 2.363-2.363z" />

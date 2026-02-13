@@ -12,7 +12,7 @@ export const TransactionalEmailProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="TransactionalEmailProductIcon">
+  <Icon {...props} title="TransactionalEmail">
     <g className="Transactional-Email" clipPath="url(#b)">
       <g className=".Square">
         <path

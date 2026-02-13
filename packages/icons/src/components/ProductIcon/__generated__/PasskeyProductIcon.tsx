@@ -12,7 +12,7 @@ export const PasskeyProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="PasskeyProductIcon">
+  <Icon {...props} title="Passkey">
     <g className="sentiment=original, size=xlarge, disabled=false">
       <g className=".Square">
         <g className="fillWeak">

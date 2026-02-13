@@ -12,7 +12,7 @@ export const ThumbsDownIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ThumbsDownIcon">
+  <Icon {...props} title="ThumbsDown">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <path d="M19 11.717a1.257 1.257 0 0 1-2.513 0v-7.54a1.257 1.257 0 0 1 2.513 0zM8.947 15.99v1.306c0 .27-.14.529-.397.61Q8.26 18 7.942 18c-1.11 0-2.01-.9-2.01-2.01 0-1 .182-1.959.515-2.842.206-.543-.166-1.18-.747-1.18H3.166c-1.249 0-2.273-1.015-2.157-2.259.194-2.09.655-4.104 1.348-6.005.404-1.108 1.49-1.789 2.67-1.789h3.208c.468 0 .93.11 1.349.319l2.747 1.373c.42.21.88.319 1.35.319h1.298v7.037h-.968c-.689 0-1.265.485-1.621 1.074a4.03 4.03 0 0 1-2.177 1.738c-.435.145-.858.389-1.017.819a4 4 0 0 0-.249 1.395" />
