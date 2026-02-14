@@ -22,7 +22,7 @@ export const List = (args: ComponentProps<typeof AddressIcon>) =>
         </Stack>
         <div style={{ width: '880px' }}>
           <Text as="code" strikeThrough={!!deprecated} variant="code">
-            <Snippet>{`import { ${name} } from '@ultraviolet/icons'`}</Snippet>
+            <Snippet>{`import { ${name} } from '@ultraviolet/icons/${name}'`}</Snippet>
           </Text>
         </div>
         {deprecated ? (

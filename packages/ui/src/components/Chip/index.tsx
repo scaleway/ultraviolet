@@ -36,7 +36,7 @@ export const Chip = ({
   const [isActive, setIsActive] = useState(active)
   const [hasTrailingIcon, setTrailingIcon] = useState(false)
   const chipRef = useRef<HTMLDivElement>(null) // ref to the parent container
-  const iconRef = useRef<HTMLButtonElement>(null)
+  const iconRef = useRef<HTMLButtonElement | HTMLDivElement>(null)
   const prominence = useMemo(() => {
     if (isActive) {
       return 'stronger'
