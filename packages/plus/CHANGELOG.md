@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 3.5.0
+
+### Minor Changes
+
+- [#6076](https://github.com/scaleway/ultraviolet/pull/6076) [`00f05de`](https://github.com/scaleway/ultraviolet/commit/00f05dea8a72043d276644c3dc8df62968d299c6) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecated `OfferList` and `Plans` - use the `@ultraviolet/ui/compositions` version
+
+- [#6114](https://github.com/scaleway/ultraviolet/pull/6114) [`5d8d786`](https://github.com/scaleway/ultraviolet/commit/5d8d7862f586f9e2dcbf2ea80117ce45d24535b8) Thanks [@lisalupi](https://github.com/lisalupi)! - Deprecated `OrderSummary` and `SteppedListCard` - use the `@ultraviolet/ui/composition` version instead
+
+### Patch Changes
+
+- Updated dependencies [[`5d8d786`](https://github.com/scaleway/ultraviolet/commit/5d8d7862f586f9e2dcbf2ea80117ce45d24535b8), [`6525fe4`](https://github.com/scaleway/ultraviolet/commit/6525fe4974a18e2660b73857b01722ab2fe7bcef), [`00f05de`](https://github.com/scaleway/ultraviolet/commit/00f05dea8a72043d276644c3dc8df62968d299c6)]:
+  - @ultraviolet/ui@3.10.0
+
 ## 3.4.5
 
 ### Patch Changes

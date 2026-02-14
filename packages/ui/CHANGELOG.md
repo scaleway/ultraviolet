@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.10.0
+
+### Minor Changes
+
+- [#6120](https://github.com/scaleway/ultraviolet/pull/6120) [`6525fe4`](https://github.com/scaleway/ultraviolet/commit/6525fe4974a18e2660b73857b01722ab2fe7bcef) Thanks [@lisalupi](https://github.com/lisalupi)! - `Toaster`: add icon
+
+- [#6076](https://github.com/scaleway/ultraviolet/pull/6076) [`00f05de`](https://github.com/scaleway/ultraviolet/commit/00f05dea8a72043d276644c3dc8df62968d299c6) Thanks [@lisalupi](https://github.com/lisalupi)! - New compositions `OfferList` and `Plans`
+
+### Patch Changes
+
+- [#6114](https://github.com/scaleway/ultraviolet/pull/6114) [`5d8d786`](https://github.com/scaleway/ultraviolet/commit/5d8d7862f586f9e2dcbf2ea80117ce45d24535b8) Thanks [@lisalupi](https://github.com/lisalupi)! - New compositions `OrderSummary` and `SteppedListCard` (migrated from `@ultraviolet/plus`, with a small refactor to reduce code complexity)
+
 ## 3.9.0
 
 ### Minor Changes
