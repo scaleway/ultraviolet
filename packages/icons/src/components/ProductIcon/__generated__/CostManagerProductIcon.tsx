@@ -12,7 +12,7 @@ export const CostManagerProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="CostManagerProductIcon">
+  <Icon {...props} title="CostManager">
     <defs>
       <path className="d" d="M0 0h64v64H0z" fill="#fff" id="d" />
     </defs>

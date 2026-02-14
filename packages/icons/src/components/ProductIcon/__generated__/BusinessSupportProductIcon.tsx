@@ -12,7 +12,7 @@ export const BusinessSupportProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="BusinessSupportProductIcon">
+  <Icon {...props} title="BusinessSupport">
     <g
       className="sentiment=original, size=xlarge, disabled=false"
       clipPath="url(#a)"

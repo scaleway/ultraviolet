@@ -12,7 +12,7 @@ export const RayEndArrowIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="RayEndArrowIcon">
+  <Icon {...props} title="RayEndArrow">
     {typeof props.size === 'string' &&
     ['medium', 'large', 'xlarge', 'xxlarge'].includes(props.size) ? (
       <>

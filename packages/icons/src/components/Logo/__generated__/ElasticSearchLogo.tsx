@@ -12,7 +12,7 @@ export const ElasticSearchLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ElasticSearchLogo">
+  <Icon {...props} title="ElasticSearch">
     <g>
       <path
         d="M15.21 5.59879H1.61741C1.27526 5.59879 0.995325 5.31885 0.995325 4.9767V0.622087C0.995325 0.279939 1.27526 0 1.61741 0H19.3469C19.689 0 19.969 0.279939 19.969 0.622087V0.839818C19.9379 3.45258 17.8228 5.59879 15.21 5.59879Z"

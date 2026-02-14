@@ -80,7 +80,7 @@ describe('snippet', () => {
     )
 
     await userEvent.click(
-      screen.getByRole('button', { name: 'Show ArrowDownIcon' }),
+      screen.getByRole('button', { name: 'Show ArrowDown' }),
     )
 
     expect(asFragment()).toMatchSnapshot()

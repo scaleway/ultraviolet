@@ -12,7 +12,7 @@ export const InterlinkDedicatedProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="InterlinkDedicatedProductIcon">
+  <Icon {...props} title="InterlinkDedicated">
     <g className="sentiment=primary, size=xlarge, disabled=false">
       <g className="interlink-dedicated" clipPath="url(#a)">
         <g className=".Square">

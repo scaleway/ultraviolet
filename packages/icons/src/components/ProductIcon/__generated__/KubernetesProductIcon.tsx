@@ -12,7 +12,7 @@ export const KubernetesProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="KubernetesProductIcon">
+  <Icon {...props} title="Kubernetes">
     <g className="K8S-Kapsule">
       <g className=".Square">
         <path

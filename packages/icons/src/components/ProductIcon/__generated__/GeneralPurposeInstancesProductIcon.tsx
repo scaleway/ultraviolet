@@ -12,7 +12,7 @@ export const GeneralPurposeInstancesProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="GeneralPurposeInstancesProductIcon">
+  <Icon {...props} title="GeneralPurposeInstances">
     <g clipPath="url(#clip0_791_2094)">
       <path
         className="fillWeak"
