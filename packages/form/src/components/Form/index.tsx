@@ -7,7 +7,12 @@ import { ErrorProvider } from '../../providers'
 import type { FormErrors } from '../../types'
 import { defaultErrors } from './defaultErrors'
 
-type OnSubmitReturn = string | null | undefined | void
+type OnSubmitReturn =
+  | string
+  | null
+  | undefined
+  // oxlint-disable-next-line typescript/no-invalid-void-type
+  | void
 
 type FormProps<TFieldValues extends FieldValues> = {
   children?: ReactNode
@@ -41,7 +46,7 @@ export const Form = <TFieldValues extends FieldValues>({
         <form
           name={name}
           noValidate
-          // oxlint-disabled-next-line typescript/no-misused-promises
+          // oxlint-disable-next-line typescript/no-misused-promises
           onSubmit={e => {
             e.preventDefault()
             e.stopPropagation()

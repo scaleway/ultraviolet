@@ -8,23 +8,23 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
     lib: {
       entry: {
         'components/CategoryIcon/index': resolve(
-          __dirname,
+          import.meta.dirname,
           'src/components/CategoryIcon/index.ts',
         ),
         'components/Flags/index': resolve(
-          __dirname,
+          import.meta.dirname,
           'src/components/Flags/index.ts',
         ),
         'components/Logo/index': resolve(
-          __dirname,
+          import.meta.dirname,
           'src/components/Logo/index.ts',
         ),
         'components/ProductIcon/index': resolve(
-          __dirname,
+          import.meta.dirname,
           'src/components/ProductIcon/index.ts',
         ),
-        index: resolve(__dirname, 'src/index.ts'),
-        iconStyles: resolve(__dirname, 'src/iconStyles.ts'),
+        index: resolve(import.meta.dirname, 'src/index.ts'),
+        iconStyles: resolve(import.meta.dirname, 'src/iconStyles.ts'),
       },
     },
   },

@@ -6,10 +6,10 @@ export const config = mergeConfig(
   defineConfig({
     build: {
       rolldownOptions: {
-        input: path.resolve(__dirname, 'src/fonts.css'),
+        input: path.resolve(import.meta.dirname, 'src/fonts.css'),
         output: {
           assetFileNames: '[name][extname]',
-          dir: path.resolve(__dirname, 'dist'),
+          dir: path.resolve(import.meta.dirname, 'dist'),
         },
       },
     },

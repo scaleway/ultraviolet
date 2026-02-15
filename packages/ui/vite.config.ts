@@ -8,7 +8,7 @@ export const config = mergeConfig(defineConfig(defaultConfig), {
     lib: {
       entry: {
         'components/compositions/index': resolve(
-          __dirname,
+          import.meta.dirname,
           'src/components/compositions/index.ts',
         ),
         index: 'src/index.ts',
