@@ -57,7 +57,7 @@ export const OptionSelectorField = <
       error={getError({ label: label ?? ariaLabel ?? name }, error)}
       name={field.name}
       onChange={val => {
-        field.onChange(val)
+        field.onChange({ first: val.first, second: val.second })
         onChange?.(
           val as {
             first?: string
