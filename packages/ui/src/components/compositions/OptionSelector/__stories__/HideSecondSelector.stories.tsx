@@ -11,7 +11,7 @@ import {
 } from '../__mock__/resources'
 import type { SelectorOption } from '../types'
 
-export const Playground: StoryFn<
+export const HideSecondSelector: StoryFn<
   ComponentProps<typeof OptionSelector>
 > = props => {
   const [zone, setZone] = useState<SelectorOption[]>(franceOptions)
@@ -44,9 +44,21 @@ export const Playground: StoryFn<
       secondSelector={{
         label: 'Zone',
         options: zone,
-        tooltip: value.first ? undefined : 'Select a region first',
       }}
       value={value}
     />
   )
+}
+
+HideSecondSelector.parameters = {
+  docs: {
+    description: {
+      story:
+        'When set to `hideWhenEmpty` is set to true, the second selector is visible only when the first selector has a selected value.',
+    },
+  },
+}
+
+HideSecondSelector.args = {
+  hideWhenEmpty: true,
 }

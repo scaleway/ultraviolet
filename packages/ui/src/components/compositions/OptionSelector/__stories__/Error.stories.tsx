@@ -79,6 +79,10 @@ export const Error: StoryFn<ComponentProps<typeof OptionSelector>> = props => {
               : '',
           label: 'Zone',
           options: zone,
+          tooltip:
+            valueFirstExample.first === 'fr'
+              ? 'Select a valid region'
+              : undefined,
         }}
         value={valueFirstExample}
       />

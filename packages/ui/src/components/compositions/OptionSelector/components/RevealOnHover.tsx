@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { revealOnHover } from './styles.css'
+import { revealOnHover } from '../styles.css'
 
 export const RevealOnHover = ({
   content,

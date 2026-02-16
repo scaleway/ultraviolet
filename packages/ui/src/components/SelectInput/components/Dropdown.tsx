@@ -948,7 +948,6 @@ export const Dropdown = ({
               top: overflow,
             })
           }
-          resizeDropdown()
         } else {
           window.scrollBy({ behavior: 'smooth', top: overflow })
         }
@@ -962,7 +961,7 @@ export const Dropdown = ({
     window.addEventListener('resize', resizeDropdown)
 
     return () => window.removeEventListener('resize', resizeDropdown)
-  }, [resizeDropdown])
+  }, [resizeDropdown, refSelect.current?.offsetWidth])
 
   useEffect(() => {
     if (!searchInput) {

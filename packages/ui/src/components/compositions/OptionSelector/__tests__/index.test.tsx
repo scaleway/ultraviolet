@@ -26,6 +26,63 @@ describe('optionSelector', () => {
         }}
       />,
     ))
+
+  it('should work with direction vertical', () =>
+    shouldMatchSnapshot(
+      <OptionSelector
+        direction="vertical"
+        firstSelector={{
+          label: 'Region',
+          options: firstSelectorOptions,
+        }}
+        secondSelector={{
+          label: 'Zone',
+          options: franceOptions,
+        }}
+      />,
+    ))
+
+  it('should work without hideWhenEmpty', () => {
+    const { asFragment } = renderWithTheme(
+      <OptionSelector
+        direction="vertical"
+        firstSelector={{
+          label: 'Region',
+          options: firstSelectorOptions,
+        }}
+        secondSelector={{
+          label: 'Zone',
+          options: franceOptions,
+        }}
+      />,
+    )
+    const secondSelector = screen.getByTestId('second-selector')
+    expect(secondSelector).toBeInTheDocument()
+    expect(secondSelector).toHaveAttribute('data-disabled', 'true')
+
+    expect(asFragment).toMatchSnapshot()
+  })
+
+  it('should work with hideWhenEmpty', () => {
+    const { asFragment } = renderWithTheme(
+      <OptionSelector
+        direction="vertical"
+        firstSelector={{
+          label: 'Region',
+          options: firstSelectorOptions,
+        }}
+        hideWhenEmpty
+        secondSelector={{
+          label: 'Zone',
+          options: franceOptions,
+        }}
+      />,
+    )
+
+    expect(screen.queryByTestId('second-selector')).not.toBeInTheDocument()
+    expect(asFragment).toMatchSnapshot()
+  })
+
   it('should work with default values', () => {
     const { asFragment } = renderWithTheme(
       <OptionSelector
@@ -34,6 +91,7 @@ describe('optionSelector', () => {
           label: 'Region',
           options: firstSelectorOptions,
         }}
+        hideWhenEmpty
         secondSelector={{
           label: 'Zone',
           options: franceOptions,
@@ -68,7 +126,7 @@ describe('optionSelector', () => {
     expect(asFragment).toMatchSnapshot()
   })
 
-  it('should work with error - first selector', () => {
+  it('should work with error - second selector', () => {
     const { asFragment } = renderWithTheme(
       <OptionSelector
         firstSelector={{
@@ -86,6 +144,7 @@ describe('optionSelector', () => {
 
     expect(asFragment).toMatchSnapshot()
   })
+
   it('should work with disabled', () =>
     shouldMatchSnapshot(
       <OptionSelector
@@ -143,7 +202,7 @@ describe('optionSelector', () => {
     expect(asFragment).toMatchSnapshot()
   })
 
-  it('should work onChang - first selector', async () => {
+  it('should work onChange - first selector', async () => {
     const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
       <OptionSelector
@@ -152,6 +211,7 @@ describe('optionSelector', () => {
           options: firstSelectorOptions,
           placeholder: 'placeholder',
         }}
+        hideWhenEmpty
         onChange={onChange}
         secondSelector={{
           label: 'Zone',

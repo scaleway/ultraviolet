@@ -1,38 +1,17 @@
 'use client'
 
-import { RayStartArrowIcon } from '@ultraviolet/icons/RayStartArrowIcon'
 import { cn } from '@ultraviolet/utils'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { Label } from '../../Label'
-import { SelectInput } from '../../SelectInput'
-import { Stack } from '../../Stack'
-import { Text } from '../../Text'
-import { RevealOnHover } from './RevealOnHover'
-import {
-  arrow,
-  errorFirstSelector,
-  errorSecondSelector,
-  firstLabel,
-  firstSelectInput,
-  optionSelectorWrapper,
-  secondLabel,
-  secondSelectInput,
-} from './styles.css'
+import type { SelectInput } from '../../SelectInput'
+import { Arrow } from './components/ArrowIcon'
+import { IconWithContent } from './components/IconWithContent'
+import { RevealOnHover } from './components/RevealOnHover'
+import { Selector } from './components/Selector'
+import { SelectorHelper } from './components/SelectorLabel'
+import { firstLabel, optionSelectorWrapper, secondLabel } from './styles.css'
 import type { OptionSelectorProps, SelectorOption } from './types'
-
-const IconWithContent = ({
-  content,
-  icon,
-}: {
-  content: ReactNode
-  icon: ReactNode
-}) => (
-  <Stack alignItems="center" direction="row" gap="1.5">
-    {icon}
-    {content}
-  </Stack>
-)
 
 const makeSelectInputOptions = (
   options: SelectorOption[],
@@ -85,6 +64,8 @@ export const OptionSelector = ({
   onChange,
   name,
   value,
+  hideWhenEmpty,
+  direction = 'horizontal',
 }: OptionSelectorProps) => {
   const firstValue = useMemo(() => {
     if (value?.first) {
@@ -93,8 +74,9 @@ export const OptionSelector = ({
 
     if (firstSelector.options.length === 1) {
       onChange?.({
-        first: firstSelector.options[0].value as string & string[],
+        first: firstSelector.options[0].value,
         second: value?.second,
+        changingValue: 'first',
       })
 
       return firstSelector.options[0].value
@@ -111,7 +93,8 @@ export const OptionSelector = ({
     if (secondSelector?.options.length === 1) {
       onChange?.({
         first: value?.first,
-        second: secondSelector.options[0].value as string & string[],
+        second: secondSelector.options[0].value,
+        changingValue: 'second',
       })
 
       return secondSelector?.options[0].value
@@ -126,112 +109,89 @@ export const OptionSelector = ({
     : undefined
 
   const onChangeFirstSelector = (val: string) => {
-    onChange?.({ first: val, second: value?.second })
+    onChange?.({ first: val, second: value?.second, changingValue: 'first' })
   }
-  const onChangeSecondSelector = (val: string) =>
-    onChange?.({ first: value?.first, second: val as string & string[] })
+  const onChangeSecondSelector = (val: string) => {
+    onChange?.({ first: value?.first, second: val, changingValue: 'second' })
+  }
+
+  const isReadOnly = (selector: OptionSelectorProps['firstSelector']) =>
+    selector.options.length === 1 || selector.readOnly || readOnly
+
+  const isHorizontal = direction === 'horizontal'
+  const firstSelectorStringError = typeof firstSelector.error === 'string'
+  const secondSelectorStringError = typeof secondSelector?.error === 'string'
 
   return (
-    // biome-ignore lint/a11y/useAriaPropsSupportedByRole: to fix
     <fieldset
       aria-label={ariaLabel}
-      aria-required={required}
-      className={cn(className, optionSelectorWrapper)}
+      className={cn(className, optionSelectorWrapper({ direction }))}
       data-testid={dataTestId}
       name={name}
       style={style}
     >
-      <Label className={firstLabel} required={required}>
-        {firstSelector.label}
-      </Label>
-      {firstValue && secondSelector && secondSelectorOptions ? (
+      {isHorizontal ? (
+        <Label className={firstLabel} required={required} size={size}>
+          {firstSelector.label}
+        </Label>
+      ) : null}
+      {firstValue && secondSelector && secondSelectorOptions && isHorizontal ? (
         <Label className={secondLabel} required={required}>
           {secondSelector?.label}
         </Label>
       ) : null}
-      <SelectInput
-        className={firstSelectInput}
-        data-testid="first-selector"
-        disabled={firstSelector.disabled || disabled}
-        emptyState={firstSelector.emptyState}
-        error={error || !!firstSelector.error}
-        footer={firstSelector.footer}
-        helper={firstSelector.helper}
-        isLoading={firstSelector.isLoading}
-        labelDescription={firstSelector.labelDescription}
-        loadMore={firstSelector.loadMore}
+      <Selector
+        direction={direction}
+        disabled={disabled}
+        error={error}
+        firstSelector={firstSelector}
+        isFirst
+        isHorizontal={isHorizontal}
         onChange={onChangeFirstSelector}
-        optionalInfoPlacement="right"
         options={firstSelectorOptions}
-        placeholder={firstSelector.placeholder}
-        readOnly={
-          firstSelector.options.length === 1 ||
-          firstSelector.readOnly ||
-          readOnly
-        }
+        readOnly={isReadOnly(firstSelector)}
         required={required}
-        searchable={firstSelector.searchable}
         size={size}
-        tooltip={firstSelector.tooltip}
         value={firstValue}
       />
-      {firstValue && secondSelector && secondSelectorOptions ? (
+      {secondSelector &&
+      secondSelectorOptions &&
+      !(hideWhenEmpty && !firstValue) ? (
         <>
-          <RayStartArrowIcon
-            className={arrow}
-            prominence="weak"
-            sentiment="neutral"
-            size={size}
-          />
-          <SelectInput
-            className={secondSelectInput}
-            data-testid="second-selector"
-            disabled={
-              !!firstSelector.error || secondSelector.disabled || disabled
-            }
-            emptyState={secondSelector.emptyState}
-            error={!!error || !!secondSelector.error}
-            footer={secondSelector.footer}
-            helper={secondSelector.helper}
-            isLoading={secondSelector.isLoading}
-            labelDescription={secondSelector.labelDescription}
-            loadMore={secondSelector.loadMore}
+          <Arrow direction={direction} size={size} />
+          <Selector
+            direction={direction}
+            // The second selector is disabled when the first selector has no selected value or is in an error state
+            disabled={disabled || !firstValue || !!firstSelector.error}
+            error={error}
+            firstSelector={secondSelector}
+            isHorizontal={isHorizontal}
             onChange={onChangeSecondSelector}
-            optionalInfoPlacement="right"
             options={secondSelectorOptions}
-            placeholder={secondSelector.placeholder}
-            readOnly={
-              secondSelector.options.length === 1 ||
-              secondSelector.readOnly ||
-              readOnly
-            }
-            searchable={secondSelector.searchable}
+            readOnly={isReadOnly(secondSelector)}
+            required={required}
             size={size}
-            tooltip={secondSelector.tooltip}
             value={secondValue}
           />
         </>
       ) : null}
-      {/** Do not use error directly from SelectInput to avoid misalignment issues */}
-      {firstSelector.error && typeof firstSelector.error === 'string' ? (
-        <Text
-          as="p"
-          className={errorFirstSelector}
-          sentiment="danger"
-          variant="caption"
-        >
-          {firstSelector.error}
-        </Text>
+      {/** Do not use error and helper directly from SelectInput to avoid misalignment issues when direction="horizontal" */}
+      {isHorizontal && (firstSelectorStringError || firstSelector.helper) ? (
+        <SelectorHelper
+          error={firstSelector.error}
+          helper={firstSelector.helper}
+          isError={firstSelectorStringError}
+          isFirst
+        />
       ) : null}
-      {secondSelector?.error && typeof secondSelector?.error === 'string' ? (
-        <Text
-          as="p"
-          className={errorSecondSelector}
-          sentiment="danger"
-          variant="caption"
-        >
-          {secondSelector.error}
-        </Text>
+      {secondSelector &&
+      isHorizontal &&
+      (secondSelectorStringError || secondSelector?.helper) ? (
+        <SelectorHelper
+          error={secondSelector.error}
+          helper={secondSelector.helper}
+          isError={secondSelectorStringError}
+        />
       ) : null}
     </fieldset>
   )

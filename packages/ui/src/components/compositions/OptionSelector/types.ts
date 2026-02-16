@@ -26,7 +26,8 @@ export type SelectorProps = Pick<
   | 'tooltip'
   | 'loadMore'
   | 'isLoading'
-> & { options: SelectorOption[] }
+  | 'aria-label'
+> & { options: SelectorOption[]; tooltip?: string }
 
 export type OptionSelectorProps = {
   className?: string
@@ -41,6 +42,13 @@ export type OptionSelectorProps = {
   'aria-label'?: string
   error?: string | boolean
   required?: boolean
-  onChange?: (values: { first?: string; second?: string }) => void
+  onChange?: (values: {
+    first?: string
+    second?: string
+    changingValue: 'first' | 'second'
+  }) => void
   value?: { first?: string; second?: string }
+  /** Hide the second selector when the first does not have a selected value */
+  hideWhenEmpty?: boolean
+  direction?: 'vertical' | 'horizontal'
 }
