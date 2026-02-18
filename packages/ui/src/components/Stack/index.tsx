@@ -91,9 +91,9 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
       children,
       id,
       'data-testid': dataTestId,
-      width,
-      maxWidth,
-      minWidth,
+      width = 'auto',
+      maxWidth = 'none',
+      minWidth = 'auto',
       flex,
       as,
       style,
@@ -150,9 +150,9 @@ const IStack = forwardRef<any, PropsWithChildren<StackProps>>(
         ref={ref}
         style={{
           ...assignInlineVars({
-            [widthVar]: width ? String(width) : undefined,
-            [maxWidthVar]: maxWidth ? String(maxWidth) : undefined,
-            [minWidthVar]: minWidth ? String(minWidth) : undefined,
+            [widthVar]: String(width),
+            [maxWidthVar]: String(maxWidth),
+            [minWidthVar]: String(minWidth),
             [flexVar]: flex ? String(flex) : undefined,
           }),
           ...style,
