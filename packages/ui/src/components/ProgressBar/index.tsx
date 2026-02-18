@@ -115,7 +115,7 @@ export const ProgressBar = ({
       <Stack direction="row" gap={1} width="fit-content">
         <Text
           as="label"
-          className={customText}
+          className={customText[suffix ? 'withSuffix' : 'noSuffix']}
           sentiment="neutral"
           variant="bodySmall"
         >
