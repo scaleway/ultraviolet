@@ -18,7 +18,7 @@ const loadingAnimationStepSmall = keyframes({
     width: 0,
   },
   '100%': {
-    width: 'calc(100% - 24px - 8px)',
+    width: `calc(100% - ${theme.space[5]})`,
   },
 })
 
@@ -27,7 +27,7 @@ const loadingAnimationStepMedium = keyframes({
     width: 0,
   },
   '100%': {
-    width: 'calc(100% - 32px - 8px)',
+    width: `calc(100% - ${theme.space[6]})`,
   },
 })
 
