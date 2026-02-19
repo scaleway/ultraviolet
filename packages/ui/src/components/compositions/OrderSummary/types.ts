@@ -21,7 +21,7 @@ type PeriodProps =
       periodOptions?: TimeUnit[]
       valueUnitInput?: ComponentProps<typeof UnitInput>['value']
       unitUnitInput?: TimeUnit
-      onChangeUnitInput?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
+      onChangeUnitInput?: (unit?: string, amount?: number) => void
     }
 type NumberInputType = {
   /**
@@ -123,10 +123,17 @@ export type OrderSummaryProps = {
    */
   fractionDigits?: number
   /**
-   * Get the computed price for each category and the totalPrice of all the categories and a global discount (if defined).
-   * `price.category = { before: [total, totalMax], after: [totalWithDiscount, totalMaxWithDiscount]}`
+   * Get the computed price for each category.
+   * `price.category = { before: [total, totalMax], after: [totalWithDiscount, totalMaxWithDiscount]}` +
+   * Get the total price +
+   * Get the unitary categories- and total-prices (for 1 hour)
    */
-  onChange?: (price: PriceType, totalPrice: PriceTypeSingle) => void
+  onChange?: (
+    price: PriceType,
+    totalPrice: PriceTypeSingle,
+    unitaryCategoriesPrice: PriceType,
+    unitaryTotalPrice: PriceTypeSingle,
+  ) => void
   hideDetails?: boolean
   className?: string
   ['data-testid']?: string
