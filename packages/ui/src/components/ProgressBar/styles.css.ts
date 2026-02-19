@@ -19,8 +19,15 @@ export const progressContainer = style({
   width: '100%',
 })
 
-export const customText = style({
-  width: 'max-content',
+export const customText = styleVariants({
+  withSuffix: {
+    minWidth: theme.sizing[500],
+    width: 'max-content',
+  },
+  noSuffix: {
+    minWidth: theme.sizing[300],
+    width: 'max-content',
+  },
 })
 
 export const progressBar = style({
