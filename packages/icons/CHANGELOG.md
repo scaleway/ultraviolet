@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#6119](https://github.com/scaleway/ultraviolet/pull/6119) [`41ce87d`](https://github.com/scaleway/ultraviolet/commit/41ce87dc2359476b739ed75884dd83df1a19ef62) Thanks [@lisalupi](https://github.com/lisalupi)! - Two new icons : `InstanceTemplateProductIcon` and `ArtifactRegistryProductIcon`
+
 ## 5.1.3
 
 ### Patch Changes
