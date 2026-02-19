@@ -123,7 +123,7 @@ export type OrderSummaryProps = {
    */
   fractionDigits?: number
   /**
-   * Get the computed price for each category.
+   * Get the computed price for each category and the totalPrice of all the categories and a global discount (if defined).
    * `price.category = { before: [total, totalMax], after: [totalWithDiscount, totalMaxWithDiscount]}`
    */
   onChange?: (price: PriceType, totalPrice: PriceTypeSingle) => void

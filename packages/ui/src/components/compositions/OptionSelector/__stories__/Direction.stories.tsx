@@ -11,7 +11,7 @@ import {
 } from '../__mock__/resources'
 import type { SelectorOption } from '../types'
 
-export const Playground: StoryFn<
+export const Direction: StoryFn<
   ComponentProps<typeof OptionSelector>
 > = props => {
   const [zone, setZone] = useState<SelectorOption[]>(franceOptions)
@@ -49,4 +49,16 @@ export const Playground: StoryFn<
       value={value}
     />
   )
+}
+
+Direction.parameters = {
+  docs: {
+    description: {
+      story:
+        'By default the component has a horizontal direction, but it can be changed to be `vertical`',
+    },
+  },
+}
+Direction.args = {
+  direction: 'vertical',
 }
