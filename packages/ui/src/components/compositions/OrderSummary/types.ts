@@ -21,7 +21,7 @@ type PeriodProps =
       periodOptions?: TimeUnit[]
       valueUnitInput?: ComponentProps<typeof UnitInput>['value']
       unitUnitInput?: TimeUnit
-      onChangeUnitInput?: (unit?: string, amount?: number) => void
+      onChangeUnitInput?: (unit: string, amount: number) => void
     }
 type NumberInputType = {
   /**
