@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.10.1
+
+### Patch Changes
+
+- [#6145](https://github.com/scaleway/ultraviolet/pull/6145) [`7aee29b`](https://github.com/scaleway/ultraviolet/commit/7aee29bbab4b2c046bd0228ab76453855215f3d6) Thanks [@lisalupi](https://github.com/lisalupi)! - `Stack`: revert to default width/flex values in variable definition
+
+- [#6137](https://github.com/scaleway/ultraviolet/pull/6137) [`cbcbfa7`](https://github.com/scaleway/ultraviolet/commit/cbcbfa77e5e849c1858f0eb6e4fd257323dc35f0) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: `onChangeInput` should give both unit input amount and unit + `onChange` gives unitary price (price/hour)
+
 ## 3.10.0
 
 ### Minor Changes
