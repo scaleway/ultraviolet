@@ -16,7 +16,7 @@ export const List: StoryFn = props => (
           <div style={{ width: '880px' }}>
             <Text as="code" strikeThrough={!!deprecated} variant="code">
               <Snippet>
-                {`import { ${iconName} } from '@ultraviolet/icons/product'`}
+                {`import { ${iconName} } from '@ultraviolet/icons/product/${iconName}'`}
               </Snippet>
             </Text>
           </div>

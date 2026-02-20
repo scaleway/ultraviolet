@@ -1,15 +1,16 @@
 import type { StoryFn } from '@storybook/react-vite'
 import {
-  appleSiliconM2Wire,
-  appleSiliconWire,
+  WireIllustration,
   // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
-} from '@ultraviolet/illustrations/products/appleSilicon'
+} from '@ultraviolet/illustrations'
 import { useState } from 'react'
 import { Badge } from '../../Badge'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { SelectableCard } from '..'
+import { MacMiniProductIcon } from '@ultraviolet/icons/product/MacMiniProductIcon'
+import { ColdStorageProductIcon } from '@ultraviolet/icons/product/ColdStorageProductIcon'
 
 export const Illustration: StoryFn = args => {
   const [value, onChange] = useState('label-30')
@@ -34,7 +35,7 @@ export const Illustration: StoryFn = args => {
           }
           name="label-30"
           onChange={event => onChange(event.currentTarget.value)}
-          productIcon="macMini"
+          productIcon={<MacMiniProductIcon size="large" />}
           showTick
           type="radio"
           value="label-30"
@@ -62,7 +63,7 @@ export const Illustration: StoryFn = args => {
           }
           name="label-31"
           onChange={event => onChange(event.currentTarget.value)}
-          productIcon="macMiniM2"
+          productIcon={<ColdStorageProductIcon size="large" />}
           showTick
           type="radio"
           value="label-31"
@@ -80,7 +81,7 @@ export const Illustration: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value2 === 'label-24'}
-          illustration={appleSiliconWire as string}
+          illustration={<WireIllustration name="appleSiliconM2" />}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <Text as="span" variant="bodyStrong">
@@ -108,7 +109,7 @@ export const Illustration: StoryFn = args => {
         <SelectableCard
           {...args}
           checked={value2 === 'label-25'}
-          illustration={appleSiliconM2Wire as string}
+          illustration={<WireIllustration name="appleSiliconM2" />}
           label={
             <Stack alignItems="center" direction="row" flex={1} gap={1}>
               <Text as="span" variant="bodyStrong">

@@ -1,3 +1,4 @@
+import { SupportProductIcon } from '@ultraviolet/icons/product/SupportProductIcon'
 import { shouldMatchSnapshot } from '@utils/test'
 import { describe, it } from 'vitest'
 import { FAQ } from '..'
@@ -15,6 +16,10 @@ describe('fAQ', () => {
     ))
   it('should work with productIconName', () =>
     shouldMatchSnapshot(
-      <FAQ description="Description" productIconName="support" title="Title" />,
+      <FAQ
+        description="Description"
+        productIcon={<SupportProductIcon size="xlarge" />}
+        title="Title"
+      />,
     ))
 })
