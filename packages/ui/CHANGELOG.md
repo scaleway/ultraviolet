@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.10.2
+
+### Patch Changes
+
+- [#6146](https://github.com/scaleway/ultraviolet/pull/6146) [`695a610`](https://github.com/scaleway/ultraviolet/commit/695a6102e42bd25120d75fc74b7abd3d05cd5af4) Thanks [@lisalupi](https://github.com/lisalupi)! - `OrderSummary`: fix type of onChangeUnitInput
+
 ## 3.10.1
 
 ### Patch Changes
