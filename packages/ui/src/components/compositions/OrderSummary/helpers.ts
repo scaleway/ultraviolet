@@ -5,6 +5,7 @@ import type {
   CurrencyType,
   ItemsType,
   LocalesFormatType,
+  PriceType,
   PriceTypeSingle,
   SubCategoryType,
   TimeUnit,
@@ -239,4 +240,72 @@ export const DisplayPrice = ({
         currency,
         fractionDigits ?? 2,
       )}`
+}
+
+export const computeCategoriesPrice = (
+  items: ItemsType[],
+  hideTimeUnit: boolean,
+  timePeriodAmount: number,
+  timePeriodUnit: TimeUnit,
+) =>
+  items.reduce<PriceType>((acc, category) => {
+    const { categoryPrice, discountedPrice } = calculateCategoryPrice(
+      category,
+      hideTimeUnit,
+      timePeriodAmount,
+      timePeriodUnit,
+    )
+
+    return {
+      ...acc,
+      [category.category]: {
+        maxPrice: categoryPrice[1],
+        maxPriceWithDiscount: discountedPrice[1],
+        timeUnit: timePeriodUnit,
+        totalPrice: categoryPrice[0],
+        totalPriceWithDiscount: discountedPrice[0],
+      },
+    }
+  }, {})
+
+export const computeTotalPrice = (
+  categoriesPrice: PriceType,
+  discount: number,
+  timePeriodUnit: TimeUnit,
+) => {
+  const price = Object.values(categoriesPrice).reduce<[number, number]>(
+    (acc, categoryPrice) => [
+      acc[0] + categoryPrice.totalPrice,
+      acc[1] + categoryPrice.maxPrice,
+    ],
+    [0, 0],
+  )
+
+  const priceDiscounted = Object.values(categoriesPrice).reduce<
+    [number, number]
+  >(
+    (acc, categoryPrice) => [
+      acc[0] + categoryPrice.totalPriceWithDiscount,
+      acc[1] + categoryPrice.maxPriceWithDiscount,
+    ],
+    [0, 0],
+  )
+
+  const computedPrice = {
+    maxPrice: Math.max(price[1], 0),
+    maxPriceWithDiscount: Math.max(
+      priceDiscounted[1] * (discount <= 1 ? 1 - discount : 1) -
+        (discount > 1 ? Math.abs(discount) : 0),
+      0,
+    ),
+    timeUnit: timePeriodUnit,
+    totalPrice: Math.max(price[0], 0),
+    totalPriceWithDiscount: Math.max(
+      priceDiscounted[0] * (discount <= 1 ? 1 - discount : 1) -
+        (discount > 1 ? Math.abs(discount) : 0),
+      0,
+    ),
+  }
+
+  return computedPrice
 }
