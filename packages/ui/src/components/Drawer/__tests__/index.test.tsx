@@ -40,14 +40,14 @@ describe('drawer', () => {
       <Drawer disclosure={<button type="button">Open</button>} header="header">
         {({ close }) => (
           <button onClick={close} type="button">
-            Close
+            Close button
           </button>
         )}
       </Drawer>,
     )
 
     await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByText('Close button'))
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -292,7 +292,7 @@ describe('drawer', () => {
             }}
             type="button"
           >
-            Close
+            Close button
           </button>
         )}
         header="header"
@@ -303,7 +303,7 @@ describe('drawer', () => {
     )
 
     await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByText('Close button'))
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -358,7 +358,7 @@ describe('drawer', () => {
             }}
             type="button"
           >
-            Close
+            Close button
           </button>
         )}
         id="drawer-test"
@@ -368,7 +368,7 @@ describe('drawer', () => {
       </Drawer>,
     )
     await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByText('Close button'))
 
     expect(asFragment()).toMatchSnapshot()
   })
@@ -387,7 +387,7 @@ describe('drawer', () => {
             }}
             type="button"
           >
-            Close
+            Close button
           </button>
         )}
         id="drawer-test"
@@ -397,7 +397,7 @@ describe('drawer', () => {
       </Drawer>,
     )
     await userEvent.click(screen.getByText('Open'))
-    await userEvent.click(screen.getByText('Close'))
+    await userEvent.click(screen.getByText('Close button'))
 
     expect(asFragment()).toMatchSnapshot()
   })

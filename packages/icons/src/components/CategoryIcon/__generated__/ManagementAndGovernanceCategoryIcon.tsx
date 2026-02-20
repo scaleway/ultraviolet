@@ -12,7 +12,7 @@ export const ManagementAndGovernanceCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="ManagementAndGovernanceCategoryIcon">
+  <Icon {...props} title="ManagementAndGovernance">
     <g className="Tools-Services">
       <g className="tool_icon">
         <path

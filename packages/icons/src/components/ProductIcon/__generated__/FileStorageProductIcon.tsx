@@ -12,7 +12,7 @@ export const FileStorageProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="FileStorageProductIcon">
+  <Icon {...props} title="FileStorage">
     <g
       className="sentiment=original, size=xlarge, disabled=false"
       clipPath="url(#a)"

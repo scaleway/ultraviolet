@@ -12,7 +12,7 @@ export const PowerBiLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="PowerBiLogo">
+  <Icon {...props} title="PowerBi">
     <g clipPath="url(#clip0_116_656025)">
       <path
         d="M15.7404 2H11.4991C11.1344 2 10.8388 2.29563 10.8388 2.66032V17.3397C10.8388 17.7044 11.1344 18 11.4991 18H15.7404C16.1051 18 16.4007 17.7044 16.4007 17.3397V2.66032C16.4007 2.29563 16.1051 2 15.7404 2Z"

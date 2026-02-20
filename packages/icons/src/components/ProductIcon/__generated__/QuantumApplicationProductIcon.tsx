@@ -12,7 +12,7 @@ export const QuantumApplicationProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="QuantumApplicationProductIcon">
+  <Icon {...props} title="QuantumApplication">
     <g className="quantum-application">
       <g className=".Square">
         <g className="fillWeak" fill="#F1EEFC">

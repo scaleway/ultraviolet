@@ -12,7 +12,7 @@ export const GenerativeApiProductIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="GenerativeApiProductIcon">
+  <Icon {...props} title="GenerativeApi">
     <g className="generative-api">
       <g className=".Square">
         <path

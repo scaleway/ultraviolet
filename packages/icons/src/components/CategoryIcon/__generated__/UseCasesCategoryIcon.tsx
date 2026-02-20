@@ -12,7 +12,7 @@ export const UseCasesCategoryIcon = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="UseCasesCategoryIcon">
+  <Icon {...props} title="UseCases">
     <path
       className="fillStrong"
       d="M14 14C15.1046 14 16 14.8954 16 16C16 17.1046 15.1046 18 14 18C12.8954 18 12 17.1046 12 16C12 14.8954 12.8954 14 14 14Z"

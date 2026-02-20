@@ -12,7 +12,7 @@ export const GitlabRunnerLogo = ({
   ...props
 }: Omit<IconProps, 'children' | 'title'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Icon {...props} title="GitlabRunnerLogo">
+  <Icon {...props} title="GitlabRunner">
     <rect fill="url(#pattern0_341_672)" />
     <defs>
       <pattern id="pattern0_341_672" patternContentUnits="objectBoundingBox">
