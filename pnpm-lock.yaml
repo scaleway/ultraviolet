@@ -337,8 +337,8 @@ importers:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
       react-schemaorg:
-        specifier: 2.0.0
-        version: 2.0.0(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3)
+        specifier: 2.0.1
+        version: 2.0.1(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3)
       react-syntax-highlighter:
         specifier: 16.1.0
         version: 16.1.0(react@19.2.4)
@@ -6648,8 +6648,8 @@ packages:
       react-router-dom:
         optional: true
 
-  react-schemaorg@2.0.0:
-    resolution: {integrity: sha512-UqciFKA203ewNjn0zC09uYKuJSvMD8L75L1s/cW4rc7cS64w8l7vaI3SYkuoI/nwCBkJRmOkSJedWDUZBlYZwg==}
+  react-schemaorg@2.0.1:
+    resolution: {integrity: sha512-3mS63dmMFYgKmmaBB2TWtQ9MHCzy/YJfDKxyCMUmJ2V3VzFMwVqCCagazsRA93BnOAkXfX0t29GTJx+2CoaL+Q==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       react: '>=16.3.0'
@@ -14084,7 +14084,7 @@ snapshots:
       - rollup
       - supports-color
 
-  react-schemaorg@2.0.0(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3):
+  react-schemaorg@2.0.1(react@19.2.4)(schema-dts@1.1.5)(typescript@5.9.3):
     dependencies:
       react: 19.2.4
       schema-dts: 1.1.5
