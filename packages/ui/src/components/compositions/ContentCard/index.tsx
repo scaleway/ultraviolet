@@ -5,7 +5,7 @@ import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Stack } from '../../Stack'
 import { CardContent, ImageContent, LinkContent } from './Content'
 import { Skeleton } from './Skeleton'
-import { cardClass, fullHeight, subContainer } from './styles.css'
+import { contentCardStyle } from './styles.css'
 import type { ContentCardProps } from './type'
 
 /**
@@ -63,7 +63,10 @@ export const ContentCard = forwardRef<
 
     return (
       <Container
-        className={cn(className, cardClass({ active: !!(onClick || href) }))}
+        className={cn(
+          className,
+          contentCardStyle.card({ active: !!(onClick || href) }),
+        )}
         disabled={disabled}
         href={disabled ? undefined : href}
         onClick={disabled ? undefined : onClick}
@@ -75,7 +78,7 @@ export const ContentCard = forwardRef<
         {loading ? (
           <Skeleton direction={direction} />
         ) : (
-          <Stack className={fullHeight} direction={direction}>
+          <Stack className={contentCardStyle.fullHeight} direction={direction}>
             {image ? (
               <ImageContent
                 direction={direction}
@@ -89,7 +92,9 @@ export const ContentCard = forwardRef<
                 alignItems={
                   subtitle || description || children ? undefined : 'center'
                 }
-                className={subContainer[href ? direction : 'noHref']}
+                className={
+                  contentCardStyle.subContainer[href ? direction : 'noHref']
+                }
                 direction={direction}
                 flex="1 1 auto"
                 gap={2}

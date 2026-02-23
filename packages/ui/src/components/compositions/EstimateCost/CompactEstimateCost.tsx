@@ -1,7 +1,7 @@
 import { CalculatorIcon } from '@ultraviolet/icons/CalculatorIcon'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { estimateCostCompact, estimateCostCompactText } from './styles.css'
+import { estimateCostStyle } from './styles.css'
 import type { Iteration } from './types'
 
 type TotalPrice = {
@@ -24,11 +24,11 @@ export const CompactEstimateCost = ({
 }) => (
   <Stack
     alignItems="center"
-    className={estimateCostCompact}
+    className={estimateCostStyle.compact}
     direction="row"
     justifyContent="space-between"
   >
-    <Text as="p" className={estimateCostCompactText} variant="bodyStrong">
+    <Text as="p" className={estimateCostStyle.compactText} variant="bodyStrong">
       <CalculatorIcon sentiment="primary" size="medium" />
       {label}
     </Text>

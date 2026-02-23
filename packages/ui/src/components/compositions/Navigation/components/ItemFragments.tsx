@@ -5,13 +5,8 @@ import { useMemo } from 'react'
 import { Badge } from '../../../Badge'
 import { Tooltip } from '../../../Tooltip'
 import { useNavigation } from '../NavigationProvider'
+import { navigationStyle } from '../styles.css'
 import type { ItemExpandedType } from './ComponentsTypes'
-import {
-  navigationItemBadge,
-  navigationItemPinIcon,
-  navigationItemPinnedButton,
-  navigationItemRelative,
-} from './items.css'
 
 export const ItemBadge = ({
   badgeText,
@@ -23,7 +18,7 @@ export const ItemBadge = ({
 }) =>
   badgeText && !animation ? (
     <Badge
-      className={navigationItemBadge}
+      className={navigationStyle.itemBadge}
       disabled={disabled}
       prominence="strong"
       sentiment={badgeSentiment}
@@ -73,11 +68,11 @@ export const ItemPinnedButton = ({
         isItemPinned ? locales['navigation.unpin.tooltip'] : pinTooltipLocale
       }
     >
-      <div className={navigationItemRelative}>
+      <div className={navigationStyle.itemRelative}>
         <button
           aria-disabled={isItemPinned ? false : isPinDisabled}
           aria-label={isItemPinned ? 'unpin' : 'pin'}
-          className={navigationItemPinnedButton}
+          className={navigationStyle.itemPinnedButton}
           onClick={(event: MouseEvent<HTMLButtonElement>) => {
             if (pinnedItems.length < pinLimit || isItemPinned) {
               event.preventDefault()
@@ -100,7 +95,9 @@ export const ItemPinnedButton = ({
           type="button"
         >
           <PinUnpinIcon
-            className={navigationItemPinIcon[active ? 'active' : 'inactive']}
+            className={
+              navigationStyle.itemPinIcon[active ? 'active' : 'inactive']
+            }
             disabled={isItemPinned ? false : isPinDisabled}
             sentiment={active ? 'primary' : 'neutral'}
             size="medium"

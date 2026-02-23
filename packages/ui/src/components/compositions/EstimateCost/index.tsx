@@ -18,7 +18,7 @@ import { EstimateCostContent } from './EstimateCostContent'
 import { EstimateCostProvider } from './EstimateCostProvider'
 import estimateCostDefaultLocales from './locales/en'
 import { useOverlay } from './OverlayContext'
-import { estimateCostImage } from './styles.css'
+import { estimateCostStyle } from './styles.css'
 import type { EstimateCostProps, Units } from './types'
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
@@ -31,7 +31,7 @@ const Image = (props: ComponentProps<'img'>) => (
     width={props.width}
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
-    className={cn(props.className, estimateCostImage)}
+    className={cn(props.className, estimateCostStyle.image)}
   />
 )
 

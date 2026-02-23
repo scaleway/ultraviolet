@@ -1,11 +1,11 @@
 import { theme } from '@ultraviolet/themes'
 import { style } from '@vanilla-extract/css'
 
-export const customStack = style({
+const customStack = style({
   minWidth: 0,
 })
 
-export const styledWrapper = style({
+const cardWrapper = style({
   height: '100%',
   padding: theme.space['3'],
 
@@ -25,30 +25,31 @@ export const styledWrapper = style({
   },
   textDecoration: 'none',
 })
-export const iconWrapper = style({
+
+const iconWrapper = style({
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: theme.radii.default,
   display: 'inline-flex',
   padding: theme.space['1'],
   selectors: {
-    [`${styledWrapper}:hover &`]: {
+    [`${cardWrapper}:hover &`]: {
       background: 'none',
     },
   },
 })
 
-export const fullHeightStack = style({
+const cardContentStack = style({
   height: '100%',
 })
 
-export const groupCardWrapper = style({
+const groupCardWrapper = style({
   background: theme.colors.neutral.background,
   border: `1px solid ${theme.colors.neutral.border}`,
   borderRadius: theme.radii.default,
   minWidth: 0,
 })
 
-export const skeletonWrapper = style({
+const skeletonWrapper = style({
   padding: theme.space['3'],
   selectors: {
     '&:not(:first-child)': {
@@ -57,8 +58,18 @@ export const skeletonWrapper = style({
   },
 })
 
-export const squareSkeleton = style({
+const squareSkeleton = style({
   borderRadius: theme.radii.default,
   height: 32,
   width: 32,
 })
+
+export const contentCardGroupStyle = {
+  customStack,
+  cardWrapper,
+  iconWrapper,
+  cardContentStack,
+  groupCardWrapper,
+  skeletonWrapper,
+  squareSkeleton,
+}

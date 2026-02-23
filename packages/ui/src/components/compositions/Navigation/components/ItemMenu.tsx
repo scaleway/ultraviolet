@@ -8,18 +8,10 @@ import { Stack } from '../../../Stack'
 import { Text } from '../../../Text'
 import { Tooltip } from '../../../Tooltip'
 import { useNavigation } from '../NavigationProvider'
+import { navigationStyle } from '../styles.css'
 import type { ItemMenuItemType, ItemMenuType } from './ComponentsTypes'
 import { ItemBadge, ItemPinnedButton } from './ItemFragments'
 import { ItemProvider } from './ItemProvider'
-import {
-  navigationItemAnimatedIcon,
-  navigationItemMenu,
-  navigationItemMenuContainer,
-  navigationItemMenuPinned,
-  navigationItemMenuStack,
-  navigationItemPadded,
-  navigationItemWrapText,
-} from './items.css'
 
 export const ItemMenu = ({
   style,
@@ -31,14 +23,14 @@ export const ItemMenu = ({
 }: ItemMenuType) => (
   <Stack
     alignItems="flex-start"
-    className={navigationItemMenuStack}
+    className={navigationStyle.itemMenuStack}
     gap={1}
     justifyContent="flex-start"
     style={style}
   >
     {Children.count(children) > 0 ? (
       <Menu
-        className={navigationItemMenuContainer}
+        className={navigationStyle.itemMenuContainer}
         disclosure={
           <Button
             aria-label={label}
@@ -128,8 +120,10 @@ export const ItemMenuItem = ({
       active={active}
       borderless
       className={cn(
-        navigationItemMenu,
-        pinnedFeature && shouldShowPinnedButton ? navigationItemMenuPinned : '',
+        navigationStyle.itemMenu,
+        pinnedFeature && shouldShowPinnedButton
+          ? navigationStyle.itemMenuPinned
+          : '',
       )}
       disabled={disabled}
       href={href}
@@ -151,7 +145,7 @@ export const ItemMenuItem = ({
         {animation ? null : (
           <Text
             as="span"
-            className={navigationItemWrapText({
+            className={navigationStyle.itemWrapText({
               disabled,
               weak: hasActiveChildren && !noExpand && !disabled && !!active,
             })}
@@ -162,7 +156,7 @@ export const ItemMenuItem = ({
           </Text>
         )}
         {labelDescription ? (
-          <span className={navigationItemPadded}>{labelDescription}</span>
+          <span className={navigationStyle.itemPadded}>{labelDescription}</span>
         ) : null}
         <Stack direction="row">
           <ItemBadge
@@ -173,7 +167,7 @@ export const ItemMenuItem = ({
           />
           {hasHrefAndNoChildren && target === '_blank' ? (
             <OpenInNewIcon
-              className={navigationItemAnimatedIcon({
+              className={navigationStyle.itemAnimatedIcon({
                 animated: shouldAnimate && animationType === 'complex',
                 animation: computedAnimation,
               })}

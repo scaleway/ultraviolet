@@ -1,43 +1,60 @@
 import { theme } from '@ultraviolet/themes'
 import { createVar, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+import {
+  badgeItem,
+  div,
+  estimateCostImage,
+  estimateCostMaxWidthText,
+  itemResourceName,
+  leftSide,
+  lineThrough,
+  maxWidthText,
+  numberInput,
+  regular,
+  resourceName,
+  strong,
+  textItem,
+  tooltip,
+  tr,
+} from './Components/components.css'
 import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 
 export const paddingLeftCell = createVar()
 export const overlayMarginVar = createVar()
 
-export const estimateCostImage = style({
+const image = style({
   marginRight: theme.space[1],
   width: 15,
 })
 
-const estimateCostTableBase = style({
+const tableBase = style({
   border: `1px solid ${theme.colors.neutral.border}`,
   width: '100%',
 })
 
-export const estimateCostTable = styleVariants({
-  noTotal: [estimateCostTableBase, { borderRadius: '4px' }],
-  total: [estimateCostTableBase, { borderRadius: '4px 4px 0 4px' }],
+const table = styleVariants({
+  noTotal: [tableBase, { borderRadius: '4px' }],
+  total: [tableBase, { borderRadius: '4px 4px 0 4px' }],
 })
 
-export const estimateCostFeesTable = style([
-  estimateCostTableBase,
+const feesTable = style([
+  tableBase,
   { borderRadius: '4px', marginTop: theme.space[2] },
 ])
 
-export const estimateCostPriceColumn = style({
+const priceColumn = style({
   backgroundColor: theme.colors.neutral.background,
 })
 
-export const estimateCostPriceCell = style({
+const priceCell = style({
   backgroundColor: theme.colors.neutral.backgroundWeak,
   borderLeft: `1px solid ${theme.colors.neutral.border}`,
   minWidth: 126,
   width: PRICE_MAX_CELL_WIDTH,
 })
 
-export const estimateCostCell = recipe({
+const cell = recipe({
   base: {
     minWidth: 230,
     paddingLeft: paddingLeftCell,
@@ -70,7 +87,7 @@ export const estimateCostCell = recipe({
   },
 })
 
-export const estimateCostTotalPriceCell = style({
+const totalPriceCell = style({
   backgroundColor: theme.colors.primary.background,
   borderColor: theme.colors.neutral.border,
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
@@ -82,14 +99,14 @@ export const estimateCostTotalPriceCell = style({
   width: PRICE_MAX_CELL_WIDTH,
 })
 
-export const estimateCostEmptyTable = style({
+const emptyTable = style({
   borderRadius: `0 0 ${theme.radii.default} ${theme.radii.default}`,
   borderRight: `1px solid ${theme.colors.neutral.border}`,
   margin: 0,
   width: '100%',
 })
 
-export const estimateCostTitle = style({
+const title = style({
   alignItems: 'center',
   color: theme.colors.neutral.text,
   display: 'flex',
@@ -99,9 +116,9 @@ export const estimateCostTitle = style({
   padding: theme.space[2],
 })
 
-export const estimateCostEmptyCell = style({ width: MAX_CELL_WIDTH })
+const emptyCell = style({ width: MAX_CELL_WIDTH })
 
-export const estimateCostTimeCell = style({
+const timeCell = style({
   alignItems: 'flex-start',
   float: 'right',
   maxWidth: 200,
@@ -109,16 +126,17 @@ export const estimateCostTimeCell = style({
   textAlign: 'left',
 })
 
-const estimateCostBadgeBetaBase = style({
+const badgeBetaBase = style({
   position: 'absolute',
   top: 'calc(50% - 16px)',
 })
-export const estimateCostBadgeBeta = styleVariants({
-  long: [estimateCostBadgeBetaBase, { marginLeft: '-185px' }],
-  short: [estimateCostBadgeBetaBase, { marginLeft: '-115px' }],
+
+const badgeBeta = styleVariants({
+  long: [badgeBetaBase, { marginLeft: '-185px' }],
+  short: [badgeBetaBase, { marginLeft: '-115px' }],
 })
 
-export const estimateCostOverlayRow = recipe({
+const overlayRow = recipe({
   base: {
     borderLeft: `1px solid ${theme.colors.neutral.border}`,
     minWidth: 200,
@@ -150,7 +168,7 @@ export const estimateCostOverlayRow = recipe({
   },
 })
 
-export const estimateCostBadge = style({
+const badge = style({
   display: 'inline-block',
   fontSize: 12,
   height: theme.sizing[300],
@@ -158,11 +176,11 @@ export const estimateCostBadge = style({
   marginRight: theme.space[1],
 })
 
-export const estimatecostFeesText = style({
+const feesText = style({
   marginTop: theme.space[3],
 })
 
-export const estimateCostText = recipe({
+const text = recipe({
   base: {
     textAlign: 'right',
   },
@@ -175,13 +193,13 @@ export const estimateCostText = recipe({
   },
 })
 
-export const estimateCostCalculatorIcon = style({ marginRight: theme.space[1] })
+const calculatorIcon = style({ marginRight: theme.space[1] })
 
-export const estimateCostPriceCellContent = style({
+const priceCellContent = style({
   padding: 0,
 })
 
-export const estimateCostOverlayContainer = recipe({
+const overlayContainer = recipe({
   base: {
     backgroundColor: theme.colors.neutral.background,
     display: 'flex',
@@ -208,7 +226,7 @@ export const estimateCostOverlayContainer = recipe({
   },
 })
 
-export const estimateCostList = style({
+const list = style({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
@@ -217,28 +235,71 @@ export const estimateCostList = style({
   padding: `${theme.space[3]} 0`,
 })
 
-export const estimateCostSideItem = style({
+const sideItem = style({
   display: 'flex',
   minWidth: 158,
   padding: '12px 0',
 })
 
-export const estimateCostContent = styleVariants({
+const content = styleVariants({
   compact: {
     display: 'none',
   },
   default: {},
 })
 
-export const estimateCostCompact = style({
+const compact = style({
   background: theme.colors.neutral.backgroundWeak,
   padding: theme.space[2],
 })
 
-export const estimateCostCompactText = style({
+const compactText = style({
   alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',
   gap: theme.space[1],
   justifyContent: 'center',
 })
+
+export const estimateCostStyle = {
+  image,
+  tableBase,
+  table,
+  feesTable,
+  priceColumn,
+  priceCell,
+  cell,
+  totalPriceCell,
+  emptyTable,
+  title,
+  emptyCell,
+  timeCell,
+  badgeBeta,
+  overlayRow,
+  badge,
+  feesText,
+  text,
+  calculatorIcon,
+  priceCellContent,
+  overlayContainer,
+  list,
+  sideItem,
+  content,
+  compact,
+  compactText,
+  maxWidthText,
+  estimateCostImage,
+  tr,
+  div,
+  leftSide,
+  itemResourceName,
+  resourceName,
+  badgeItem,
+  textItem,
+  estimateCostMaxWidthText,
+  tooltip,
+  lineThrough,
+  regular,
+  strong,
+  numberInput,
+}

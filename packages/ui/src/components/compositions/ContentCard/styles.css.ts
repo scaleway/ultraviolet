@@ -14,7 +14,7 @@ export const skeletonWidthVar = createVar({
   syntax: '*',
 })
 
-export const cardClass = recipe({
+const card = recipe({
   base: {
     background: theme.colors.neutral.background,
     border: `1px solid ${theme.colors.neutral.border}`,
@@ -50,7 +50,7 @@ export const cardClass = recipe({
   },
 })
 
-export const iconContainer = style({
+const iconContainer = style({
   background: theme.colors.neutral.backgroundWeak,
   borderRadius: theme.radii.default,
   display: 'flex',
@@ -58,7 +58,7 @@ export const iconContainer = style({
   width: 'fit-content',
 })
 
-export const iconStack = styleVariants({
+const iconStack = styleVariants({
   column: {
     padding: `0 ${theme.space['3']} ${theme.space['3']} ${theme.space['3']}`,
   },
@@ -71,7 +71,7 @@ const subContainerBase = style({
   height: 'fit-content',
 })
 
-export const subContainer = styleVariants({
+const subContainer = styleVariants({
   column: [
     subContainerBase,
     {
@@ -101,7 +101,7 @@ const imageBase = style({
   },
 })
 
-export const imageClass = styleVariants({
+const image = styleVariants({
   column: [
     imageBase,
     {
@@ -117,7 +117,7 @@ export const imageClass = styleVariants({
   ],
 })
 
-export const fullHeight = style({
+const fullHeight = style({
   height: '100%',
 })
 
@@ -126,7 +126,7 @@ const skeletonImageBase = style({
   width: skeletonWidthVar,
 })
 
-export const skeletonImage = styleVariants({
+const skeletonImage = styleVariants({
   column: [
     skeletonImageBase,
     {
@@ -141,6 +141,20 @@ export const skeletonImage = styleVariants({
   ],
 })
 
-export const paddedStack = style({
+const paddedStack = style({
   padding: theme.space['3'],
 })
+
+export const contentCardStyle = {
+  card,
+  iconContainer,
+  iconStack,
+  subContainer,
+  subContainerBase,
+  image,
+  imageBase,
+  fullHeight,
+  skeletonImageBase,
+  skeletonImage,
+  paddedStack,
+}

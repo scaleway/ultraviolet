@@ -3,7 +3,7 @@
 import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { memo } from 'react'
-import { estimateCostRegular, estimateCostStrong } from './components.css'
+import { estimateCostStyle } from '../styles.css'
 
 type StrongProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'
@@ -15,8 +15,8 @@ export const Strong = memo(
   ({ variant = 'normal', children = null, style }: StrongProps) => (
     <div
       className={cn(
-        estimateCostRegular({ variant }),
-        estimateCostStrong({ variant }),
+        estimateCostStyle.regular({ variant }),
+        estimateCostStyle.strong({ variant }),
       )}
       style={style}
     >

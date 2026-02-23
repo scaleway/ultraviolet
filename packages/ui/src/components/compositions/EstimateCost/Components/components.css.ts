@@ -14,11 +14,11 @@ export const estimateCostImage = style({
   width: 15,
 })
 
-export const estimateCostTr = style({})
+export const tr = style({})
 
-export const styledDiv = style({ marginLeft: theme.space['0.5'] })
+export const div = style({ marginLeft: theme.space['0.5'] })
 
-export const estimateCostLeftSide = style({
+export const leftSide = style({
   alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',
@@ -29,7 +29,7 @@ export const estimateCostLeftSide = style({
   WebkitBoxPack: 'justify',
 })
 
-export const estimateCostItemResourceName = recipe({
+export const itemResourceName = recipe({
   base: {
     display: 'flex',
     flexDirection: 'column',
@@ -49,7 +49,7 @@ export const estimateCostItemResourceName = recipe({
   },
 })
 
-export const estimateCostResourceName = recipe({
+export const resourceName = recipe({
   defaultVariants: {
     isAnimated: false,
     isOverlay: false,
@@ -76,12 +76,12 @@ export const estimateCostResourceName = recipe({
   },
 })
 
-export const estimateCostBadgeItem = style({
+export const badgeItem = style({
   alignSelf: 'center',
   marginLeft: theme.space[1],
 })
 
-export const estimateCostTextItem = style({
+export const textItem = style({
   marginLeft: theme.space[1],
 })
 
@@ -89,14 +89,14 @@ export const estimateCostMaxWidthText = style({
   maxWidth: '75%',
 })
 
-export const estimateCostTooltip = style({ verticalAlign: 'text-top' })
+export const tooltip = style({ verticalAlign: 'text-top' })
 
-export const estimateCostLineThrough = style({
+export const lineThrough = style({
   textDecorationColor: theme.colors.warning.border,
   textDecorationLine: 'line-through',
 })
 
-export const estimateCostRegular = recipe({
+export const regular = recipe({
   base: {
     alignItems: 'center',
     color: theme.colors.neutral.textStrong,
@@ -131,7 +131,7 @@ export const estimateCostRegular = recipe({
   },
 })
 
-export const estimateCostStrong = recipe({
+export const strong = recipe({
   base: {
     alignItems: 'center',
     color: theme.colors.neutral.textStrong,
@@ -161,7 +161,7 @@ export const estimateCostStrong = recipe({
   },
 })
 
-export const estimateCostNumberInput = style({
+export const numberInput = style({
   MozAppearance: 'textfield',
   selectors: {
     '&::-webkit-inner-spin-button, &::-webkit-outer-spin-button': {

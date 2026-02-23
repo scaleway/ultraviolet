@@ -4,10 +4,7 @@ import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { NumberInput } from '../../../NumberInput'
 import { useOverlay } from '../OverlayContext'
-import {
-  estimateCostItemResourceName,
-  estimateCostNumberInput,
-} from './components.css'
+import { estimateCostStyle } from '../styles.css'
 import { Regular } from './Regular'
 
 type UnitProps = {
@@ -35,13 +32,13 @@ export const Unit = ({
   }, [getAmountValue, itemCallback, capacity, amount])
 
   return isOverlay ? (
-    <div className={estimateCostItemResourceName()} style={style}>
+    <div className={estimateCostStyle.resourceName()} style={style}>
       <Regular>{capacity}</Regular>
     </div>
   ) : (
     <div style={{ width: '150px', ...style }}>
       <NumberInput
-        className={estimateCostNumberInput}
+        className={estimateCostStyle.numberInput}
         controls={false}
         name="capacity"
         onChange={capacityText => {

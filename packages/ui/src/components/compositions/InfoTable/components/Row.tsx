@@ -5,7 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { useContext } from 'react'
 import { Row } from '../../../Row'
 import { InfoTableContext } from '../Context'
-import { infoTableRow, rowWidth } from '../styles.css'
+import { infoTableStyle, rowWidth } from '../styles.css'
 
 type RowProps = {
   children: ReactNode
@@ -22,7 +22,7 @@ export const InfoTableRow = ({
 
   return (
     <Row
-      className={infoTableRow}
+      className={infoTableStyle.row}
       style={{
         ...assignInlineVars({
           [rowWidth]: width ?? '100%',

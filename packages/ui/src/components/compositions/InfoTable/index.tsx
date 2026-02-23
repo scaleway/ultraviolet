@@ -5,7 +5,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { InfoTableContext } from './Context'
 import { InfoTableCell } from './components/Cell'
 import { InfoTableRow } from './components/Row'
-import { dl } from './styles.css'
+import { infoTableStyle } from './styles.css'
 
 type InfoTableProps = {
   children: ReactNode
@@ -27,7 +27,11 @@ export const InfoTable = ({
   'data-testid': dataTestId,
 }: InfoTableProps) => (
   <InfoTableContext.Provider value={{ width }}>
-    <dl className={cn(className, dl)} data-testid={dataTestId} style={style}>
+    <dl
+      className={cn(className, infoTableStyle.dl)}
+      data-testid={dataTestId}
+      style={style}
+    >
       {children}
     </dl>
   </InfoTableContext.Provider>

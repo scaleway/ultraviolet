@@ -13,14 +13,8 @@ import {
 import { useEstimateCost } from '../EstimateCostProvider'
 import { calculatePrice } from '../helper'
 import { useOverlay } from '../OverlayContext'
-import {
-  estimateCostCell,
-  estimateCostOverlayRow,
-  estimateCostPriceCell,
-  paddingLeftCell,
-} from '../styles.css'
+import { estimateCostStyle, paddingLeftCell } from '../styles.css'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
-import { estimateCostTr } from './components.css'
 import { ItemLeftSide } from './ItemLeftSide'
 import { ItemPrice } from './ItemPrice'
 
@@ -312,17 +306,17 @@ export const Item = memo(
       <Row
         className={
           isOverlay
-            ? estimateCostOverlayRow({
+            ? estimateCostStyle.overlayRow({
                 hideFromOverlay,
                 isFirstElement,
                 shouldBeHidden,
               })
-            : estimateCostTr
+            : estimateCostStyle.tr
         }
         style={style}
       >
         <Cell
-          className={estimateCostCell({
+          className={estimateCostStyle.cell({
             hasBorder: !(isLastElement || noBorder || isOverlay),
           })}
           style={assignInlineVars({
@@ -352,11 +346,11 @@ export const Item = memo(
         {isOverlay ? null : (
           <td
             className={cn(
-              estimateCostCell({
+              estimateCostStyle.cell({
                 hasBorder: !(isLastElement || noBorder),
                 primary: isPrimaryBackground,
               }),
-              estimateCostPriceCell,
+              estimateCostStyle.priceCell,
             )}
             style={assignInlineVars({
               [paddingLeftCell]: '16px',

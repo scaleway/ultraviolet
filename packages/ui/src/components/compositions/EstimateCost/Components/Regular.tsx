@@ -4,7 +4,7 @@ import { cn } from '@ultraviolet/utils'
 import type { CSSProperties, ReactNode } from 'react'
 import { memo } from 'react'
 import { useOverlay } from '../OverlayContext'
-import { estimateCostRegular } from './components.css'
+import { estimateCostStyle } from '../styles.css'
 
 type RegularProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'
@@ -26,7 +26,10 @@ export const Regular = memo(
 
     return isDisabledOnOverlay && isOverlay ? null : (
       <div
-        className={cn(className, estimateCostRegular({ isOverlay, variant }))}
+        className={cn(
+          className,
+          estimateCostStyle.regular({ isOverlay, variant }),
+        )}
         style={style}
       >
         {children}

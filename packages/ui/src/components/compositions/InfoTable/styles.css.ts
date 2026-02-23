@@ -3,7 +3,7 @@ import { createVar, globalStyle, style } from '@vanilla-extract/css'
 
 export const rowWidth = createVar()
 
-export const dl = style({
+const dl = style({
   alignItems: 'flex-start',
   display: 'flex',
   flexDirection: 'column',
@@ -13,7 +13,7 @@ export const dl = style({
   width: '100%',
 })
 
-export const infoTableRow = style({
+const row = style({
   borderBottom: `1px ${theme.colors.neutral.border} solid`,
   paddingBlock: theme.space[2],
   selectors: {
@@ -28,7 +28,7 @@ export const infoTableRow = style({
   width: rowWidth,
 })
 
-export const infoTableCell = style({
+const cell = style({
   selectors: {
     '&:not(:last-child)': {
       paddingRight: theme.space[2],
@@ -36,7 +36,7 @@ export const infoTableCell = style({
   },
 })
 
-export const term = style({
+const term = style({
   alignItems: 'center',
   color: theme.colors.neutral.textStrong,
   display: 'inline-flex',
@@ -44,14 +44,14 @@ export const term = style({
   minWidth: 0,
 })
 
-export const desc = style({
+const desc = style({
   color: theme.colors.neutral.text,
   margin: 0,
   minWidth: 0,
   width: '100%',
 })
 
-export const cellText = style({
+const cellText = style({
   display: 'inline-block',
   minWidth: 0,
   width: '100%',
@@ -62,3 +62,12 @@ globalStyle(`${cellText} > *`, {
   display: 'inline-flex',
   marginRight: theme.space[1],
 })
+
+export const infoTableStyle = {
+  dl,
+  row,
+  cell,
+  term,
+  desc,
+  cellText,
+}

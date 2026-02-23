@@ -5,13 +5,13 @@ import { fadeIn } from '../../../../utils'
 import { shrinkHeight } from '../animations.css'
 import { ANIMATION_DURATION } from '../constants'
 
-export const navigationItemMenuContainer = style({ width: 180 })
+export const itemMenuContainer = style({ width: 180 })
 
-export const navigationItemRelative = style({ position: 'relative' })
+export const itemRelative = style({ position: 'relative' })
 
-export const navigationItemPadded = style({ paddingLeft: theme.space[1] })
+export const itemPadded = style({ paddingLeft: theme.space[1] })
 
-const navigationItemPinIconBase = style({
+const itemPinIconBase = style({
   borderRadius: theme.radii.default,
   bottom: 0,
   margin: 'auto 0',
@@ -20,9 +20,9 @@ const navigationItemPinIconBase = style({
   top: 0,
 })
 
-export const navigationItemPinIcon = styleVariants({
+export const itemPinIcon = styleVariants({
   active: [
-    navigationItemPinIconBase,
+    itemPinIconBase,
     {
       selectors: {
         '&:hover': { background: theme.colors.primary.backgroundHover },
@@ -30,7 +30,7 @@ export const navigationItemPinIcon = styleVariants({
     },
   ],
   inactive: [
-    navigationItemPinIconBase,
+    itemPinIconBase,
     {
       selectors: {
         '&:hover': { background: theme.colors.neutral.backgroundWeakHover },
@@ -39,13 +39,13 @@ export const navigationItemPinIcon = styleVariants({
   ],
 })
 
-export const navigationItemMenu = style({
+export const itemMenu = style({
   textAlign: 'left',
 })
 
-export const navigationItemMenuPinned = style({})
+export const itemMenuPinned = style({})
 
-export const navigationItemContainerBase = style({
+export const itemContainerBase = style({
   backgroundColor: 'inherit',
   border: 'none',
   borderRadius: theme.radii.default,
@@ -57,8 +57,8 @@ export const navigationItemContainerBase = style({
   width: '100%',
 })
 
-export const navigationItemContainer = recipe({
-  base: navigationItemContainerBase,
+export const itemContainer = recipe({
+  base: itemContainerBase,
   compoundVariants: [
     {
       style: {
@@ -138,7 +138,7 @@ export const navigationItemContainer = recipe({
   },
 })
 
-export const navigationItemContainerAnimated = recipe({
+export const itemContainerAnimated = recipe({
   variants: {
     animated: {
       true: {},
@@ -164,42 +164,42 @@ export const navigationItemContainerAnimated = recipe({
   ],
 })
 
-export const navigationItemShowDraggable = style({})
-export const navigationItemShowPinButton = style({})
-export const navigationItemWeakText = style({})
+export const itemShowDraggable = style({})
+export const itemShowPinButton = style({})
+export const itemWeakText = style({})
 
-export const navigationItemVariants = recipe({
+export const itemVariants = recipe({
   variants: {
     showDraggableIcon: {
-      true: navigationItemShowDraggable,
+      true: itemShowDraggable,
     },
     showPinIcon: {
-      true: navigationItemShowPinButton,
+      true: itemShowPinButton,
     },
     shouldHaveWeakText: {
-      true: navigationItemWeakText,
+      true: itemWeakText,
     },
   },
 })
 
-export const navigationItemDragIcon = style({
+export const itemDragIcon = style({
   cursor: 'grab',
   margin: `0 ${theme.space['0.25']}`,
   opacity: 0,
   selectors: {
-    [`${navigationItemShowDraggable}:hover &, ${navigationItemShowDraggable}:focus &, ${navigationItemShowDraggable}:active & `]:
+    [`${itemShowDraggable}:hover &, ${itemShowDraggable}:focus &, ${itemShowDraggable}:active & `]:
       {
         opacity: 1,
       },
   },
 })
-export const navigationItemWrapText = recipe({
+export const itemWrapText = recipe({
   base: {
     display: '-webkit-box',
     overflow: 'hidden',
     overflowWrap: 'anywhere',
     selectors: {
-      [`${navigationItemWeakText}:hover &`]: {
+      [`${itemWeakText}:hover &`]: {
         color: theme.colors.neutral.textWeakHover,
       },
     },
@@ -224,25 +224,24 @@ export const navigationItemWrapText = recipe({
   },
 })
 
-export const navigationItemBadge = style({
+export const itemBadge = style({
   selectors: {
-    [`${navigationItemMenu}:hover &, ${navigationItemMenu}:focus &, ${navigationItemMenu}:active &`]:
-      {
-        opacity: 1,
-      },
+    [`${itemMenu}:hover &, ${itemMenu}:focus &, ${itemMenu}:active &`]: {
+      opacity: 1,
+    },
 
-    [`${navigationItemMenuPinned}:hover &, ${navigationItemMenuPinned}:focus &, ${navigationItemMenuPinned}:active &`]:
+    [`${itemMenuPinned}:hover &, ${itemMenuPinned}:focus &, ${itemMenuPinned}:active &`]:
       {
         opacity: 0,
       },
-    [`${navigationItemShowPinButton}:hover &, ${navigationItemShowPinButton}:active &, ${navigationItemShowPinButton}:focus &`]:
+    [`${itemShowPinButton}:hover &, ${itemShowPinButton}:active &, ${itemShowPinButton}:focus &`]:
       {
         opacity: 0,
       },
   },
 })
 
-export const navigationItemPinnedButton = style({
+export const itemPinnedButton = style({
   all: 'unset',
   bottom: 0,
   left: '-24px',
@@ -256,12 +255,11 @@ export const navigationItemPinnedButton = style({
       opacity: 1,
       pointerEvents: 'auto',
     },
-    [`${navigationItemMenu}:hover &, ${navigationItemMenu}:focus &, ${navigationItemMenu}:active &`]:
-      {
-        opacity: 1,
-        pointerEvents: 'auto',
-      },
-    [`${navigationItemShowPinButton}:hover &, ${navigationItemShowPinButton}:active &, ${navigationItemShowPinButton}:focus &`]:
+    [`${itemMenu}:hover &, ${itemMenu}:focus &, ${itemMenu}:active &`]: {
+      opacity: 1,
+      pointerEvents: 'auto',
+    },
+    [`${itemShowPinButton}:hover &, ${itemShowPinButton}:active &, ${itemShowPinButton}:focus &`]:
       {
         opacity: 1,
         pointerEvents: 'auto',
@@ -271,7 +269,7 @@ export const navigationItemPinnedButton = style({
   visibility: 'visible',
 })
 
-export const navigationItemAnimatedIcon = recipe({
+export const itemAnimatedIcon = recipe({
   variants: {
     animated: {
       true: {},
@@ -297,21 +295,21 @@ export const navigationItemAnimatedIcon = recipe({
   ],
 })
 
-export const navigationItemMenuStack = style({
+export const itemMenuStack = style({
   marginTop: theme.space['0.25'],
   padding: `0 ${theme.space[2]}`,
   width: 'fit-content',
 })
 
-export const navigationItemStackIcon = style({
+export const itemStackIcon = style({
   paddingTop: theme.space['0.5'],
 })
 
-export const navigationItemCategoryIcon = style({
+export const itemCategoryIcon = style({
   minWidth: 20,
 })
 
-export const navigationItemPaddingStack = recipe({
+export const itemPaddingStack = recipe({
   base: {
     paddingLeft: 28, // This value need to be hardcoded because of the category icon size
   },

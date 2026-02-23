@@ -7,7 +7,7 @@ import { useCallback, useLayoutEffect, useMemo, useState } from 'react'
 import { Button } from '../../Button'
 import { Tooltip } from '../../Tooltip'
 import { useNavigation } from './NavigationProvider'
-import { navigationStickyFooter } from './styles.css'
+import { navigationStyle } from './styles.css'
 import type { NavigationProps } from './types'
 
 type FooterProps = {
@@ -78,7 +78,9 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
 
   return (
     <div
-      className={navigationStickyFooter({ overflow: footerHasOverflowStyle })}
+      className={navigationStyle.stickyFooter({
+        overflow: footerHasOverflowStyle,
+      })}
     >
       <Tooltip
         disableAnimation={animation === false}

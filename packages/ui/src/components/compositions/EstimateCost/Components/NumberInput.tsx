@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { NumberInput as NumberInputUV } from '../../../NumberInput'
 import { useOverlay } from '../OverlayContext'
-import { estimateCostItemResourceName } from './components.css'
+import { estimateCostStyle } from '../styles.css'
 import { Regular } from './Regular'
 
 type NumberInputProps = {
@@ -31,7 +31,7 @@ export const NumberInput = ({
   }, [getAmountValue, amount])
 
   return isOverlay ? (
-    <div className={estimateCostItemResourceName()}>
+    <div className={estimateCostStyle.resourceName()}>
       <Regular>{amount}</Regular>
     </div>
   ) : (

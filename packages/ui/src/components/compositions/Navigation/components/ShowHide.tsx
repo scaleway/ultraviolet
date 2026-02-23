@@ -9,7 +9,7 @@ import { memo, useState } from 'react'
 import { Button } from '../../../Button'
 import { Stack } from '../../../Stack'
 import { useNavigation } from '../NavigationProvider'
-import { navigationShowHideStack } from './styles.css'
+import { navigationStyle } from '../styles.css'
 
 type ShowAllProp = {
   showContent: ReactNode
@@ -49,7 +49,7 @@ export const ShowHide = memo(
     if (expanded) {
       return (
         <Stack
-          className={navigationShowHideStack}
+          className={navigationStyle.showHideStack}
           justifyContent="flex-end"
           style={style}
         >
@@ -71,7 +71,7 @@ export const ShowHide = memo(
     return (
       <Stack
         alignItems="center"
-        className={navigationShowHideStack}
+        className={navigationStyle.showHideStack}
         justifyContent="flex-end"
         style={style}
       >

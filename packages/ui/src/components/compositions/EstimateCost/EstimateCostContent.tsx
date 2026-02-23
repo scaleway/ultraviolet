@@ -20,11 +20,7 @@ import { calculatePrice } from './helper'
 import EstimateCostLocales from './locales/en'
 import { OverlayComponent } from './OverlayComponent'
 import { OverlayContextProvider } from './OverlayContext'
-import {
-  estimateCostContent,
-  estimateCostFeesTable,
-  estimatecostFeesText,
-} from './styles.css'
+import { estimateCostStyle } from './styles.css'
 import type {
   BareEstimateProduct,
   EstimateCostProps,
@@ -240,7 +236,7 @@ export const EstimateCostContent = ({
         />
       ) : null}
       <Stack
-        className={estimateCostContent[compact ? 'compact' : 'default']}
+        className={estimateCostStyle.content[compact ? 'compact' : 'default']}
         gap={2}
         style={style}
       >
@@ -300,7 +296,7 @@ export const EstimateCostContent = ({
               <>
                 <Text
                   as="h3"
-                  className={estimatecostFeesText}
+                  className={estimateCostStyle.feesText}
                   variant="headingSmall"
                 >
                   {
@@ -311,7 +307,7 @@ export const EstimateCostContent = ({
                     ]
                   }
                 </Text>
-                <table className={estimateCostFeesTable}>
+                <table className={estimateCostStyle.feesTable}>
                   <tbody>
                     <Item
                       isLastElement

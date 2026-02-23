@@ -3,7 +3,7 @@
 import { memo } from 'react'
 import { Stack } from '../../Stack'
 import { useNavigation } from './NavigationProvider'
-import { navigationHeader, navigationLogoContainer } from './styles.css'
+import { navigationStyle } from './styles.css'
 import type { NavigationProps } from './types'
 
 type HeaderProps = {
@@ -14,10 +14,10 @@ export const Header = memo(({ logo }: HeaderProps) => {
   const { animation, expanded } = useNavigation()
 
   return (
-    <div className={navigationHeader}>
+    <div className={navigationStyle.header}>
       <Stack
         alignItems="flex-start"
-        className={navigationLogoContainer}
+        className={navigationStyle.logoContainer}
         justifyContent={expanded ? undefined : 'center'}
       >
         {typeof logo === 'function' ? logo(animation ? false : expanded) : logo}

@@ -1,6 +1,8 @@
 'use client'
 
 import { Separator as UVSeparator } from '../../../Separator'
-import { navigationSeparator } from './styles.css'
+import { navigationStyle } from '../styles.css'
 
-export const Separator = () => <UVSeparator className={navigationSeparator} />
+export const Separator = () => (
+  <UVSeparator className={navigationStyle.separator} />
+)
