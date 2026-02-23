@@ -1,1 +1,0 @@
-export { InfoTable } from './InfoTable'
